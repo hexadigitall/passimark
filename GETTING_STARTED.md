@@ -1,5 +1,8 @@
 # Getting Started: Passimark Development
 
+⚠️ **PREREQUISITE:** Before starting, ensure you have PHP 8.2+, Composer, and Node.js installed.  
+See [docs/S0-1-0-php-setup.md](docs/S0-1-0-php-setup.md) if you need help setting these up (takes 10-15 minutes).
+
 ## Quick Start for New Contributors
 
 Welcome to Passimark! This guide will help you get up to speed and start contributing to the project.
@@ -15,8 +18,6 @@ Passimark is a premium adaptive assessment platform built with Laravel 11, React
 ---
 
 ## Step 1: Understand the Project (30 min read)
-
-Start with these in order:
 
 1. **[docs/product-spec.md](docs/product-spec.md)** — What is Passimark? Who uses it? What problems does it solve?
    - Read this first to understand the product vision
