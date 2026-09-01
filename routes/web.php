@@ -1,7 +1,19 @@
 <?php
-use App\Http\Controllers\{PassimarkController, PassimarkAdminController};
+use App\Http\Controllers\{PassimarkController, PassimarkAdminController, AuthController};
 use Illuminate\Support\Facades\Route;
 
+// Auth routes (guest only)
+Route::middleware(['guest'])->group(function(){
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
+});
+
+// Logout route
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
+
+// Authenticated routes
 Route::middleware(['auth'])->group(function(){
     Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
     Route::post('/passimark/session/{session}/start', [PassimarkController::class,'start'])->name('passimark.start');

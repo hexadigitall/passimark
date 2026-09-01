@@ -1,170 +1,205 @@
 # Passimark MVP Backlog
 
 ## Objective
-Turn the current concept into a usable, testable, polished adaptive assessment app with a complete learner flow and a working admin approval workflow.
+Build a working, polished adaptive assessment platform with a complete learner flow, admin approval flow, and a realistic multi-platform product foundation.
 
-## Milestone 1: Foundation and setup
-### Tasks
-- verify Laravel app boots successfully
-- configure environment and database connection
-- run migrations and seeders
-- confirm auth system works
-- confirm role setup for student and instructor/admin
-- verify dashboard routes and controllers are reachable
-- ensure all assets load correctly
-
-### Acceptance criteria
-- app runs locally with no fatal errors
-- default seeded users can log in
-- database tables are created and populated
-- dashboard route loads with session data
+## Delivery order
+This backlog is grouped into completion phases. The project should not attempt all work at once; it should move in this sequence to keep the system coherent and testable.
 
 ---
 
-## Milestone 2: Core learner flow
+## Epic 1: Foundation and environment
+### Priority: P0
+### Tasks
+- validate Laravel app startup and environment config
+- configure database connection and cache/session settings
+- run migrations and seeders successfully
+- confirm default auth flow works
+- ensure admin/student roles exist and behave correctly
+- confirm core routes and page loading behavior
+- validate static assets and logo integration
+
+### Definition of done
+- app boots cleanly locally
+- seeded users can be authenticated
+- initial database state is correct
+- no fatal startup issues in the base app
+
+---
+
+## Epic 2: Student learner flow
+### Priority: P0
 ### Tasks
 - build the real student dashboard UI
-- add session listing and progress display
-- implement start exam flow
-- support CAT exam progression
-- support timed exam mode
-- support practice mode
-- store answer responses correctly
-- calculate score and pass/fail results
-- update progress state after completion
+- display user progress and session roadmap
+- support session launch and exam start flow
+- implement CAT exam mode
+- implement timed exam mode
+- implement practice mode
+- persist answers and response data
+- calculate result score and overall pass/fail
+- update learner progress after each attempt
+- support retake flow and session re-entry rules
 
-### Acceptance criteria
-- a learner can access and start a session
-- answers are persisted and scored
-- progress status updates correctly
-- at least one full session flow works end-to-end
+### Definition of done
+- a student can log in and see available sessions
+- a student can start and complete at least one valid session
+- scores and progress are stored and displayed
+- the exam flow works end-to-end for the MVP
 
 ---
 
-## Milestone 3: Admin and approval workflow
+## Epic 3: Admin approval and management flow
+### Priority: P0
 ### Tasks
 - build admin dashboard UI
-- list pending learner submissions
-- review learner session completion
-- approve or reject completion
-- unlock next session correctly
-- restrict instructor-only routes and actions
+- list learner completion requests
+- display session and learner metadata in approval queue
+- approve and reject learner submissions
+- unlock next session or stage after approval
+- lock content appropriately after rejection
+- secure admin routes and actions behind role checks
 
-### Acceptance criteria
-- admin can review learner completion requests
-- approval unlocks the next session
-- reject path keeps the learner locked
+### Definition of done
+- an instructor/admin can view pending learner progress
+- approval action changes learner state correctly
+- learners are only unlocked when conditions are met
 
 ---
 
-## Milestone 4: Content management
+## Epic 4: Content and question management
+### Priority: P0 / P1
 ### Tasks
 - build session CRUD screens
 - build exam CRUD screens
 - build question CRUD screens
-- add bulk question import flow
-- add domain, difficulty, and taxonomy management
-- support sample and production question sets
+- add question import flow
+- add `.psmk` import/export and import audit history
+- add CSV/XLSX import with draft review and source-license attestation
+- plan QTI and Moodle XML/GIFT adapters; defer PDF/OCR and proprietary formats until review tooling is proven
+- manage domains and curriculum categories
+- support tagging by difficulty, domain, and taxonomy
+- handle question explanation and reference metadata
+- build sample and production data workflows
 
-### Acceptance criteria
-- admin can create and edit sessions, exams, and questions
-- imported or created questions are available in exam flows
-- the system can support multiple domains and certification tracks
-
----
-
-## Milestone 5: UX polish and responsiveness
-### Tasks
-- finalize design token system
-- standardize colors, typography, spacing
-- finish dashboard styling
-- improve exam UI layout
-- implement responsive behavior for desktop, tablet, and mobile
-- optimize navigation and action buttons for touch
-- verify dark theme consistency and accessibility
-
-### Acceptance criteria
-- pages render cleanly across sizes
-- exam flow remains usable on phones and tablets
-- UI matches product branding and mockups closely
+### Definition of done
+- admins can add, edit, and delete sessions, exams, and questions
+- imported questions are available in actual exams
+- the system can support multi-domain content packages
 
 ---
 
-## Milestone 6: Native and multi-platform packaging
+## Epic 5: UX and responsive product polish
+### Priority: P1
 ### Tasks
-- package web app for browser deployment
-- prepare native Windows packaging (.exe / MSIX)
-- prepare Linux packaging (.deb / .rpm / AppImage)
-- prepare Android APK and AAB builds
-- prepare macOS app packaging
-- prepare iOS build pipeline
-- standardize icon and splash assets for each platform
+- finalize UI design tokens
+- standardize typography, spacing, and colors
+- finish dark-mode app styling and contrast
+- refine dashboard cards and stats blocks
+- polish the exam interface for readability and usability
+- implement responsive layout for desktop, tablet, and mobile
+- optimize touch interactions for mobile devices
+- ensure keyboard access and accessibility basics
 
-### Acceptance criteria
-- each platform has a packaging strategy and build path
-- assets are correctly sized for each target platform
-- app feels native on each device class
+### Definition of done
+- the product feels premium and consistent across screens
+- the exam flow remains usable on smaller screens
+- branding and UX match the mockups and product vision
 
 ---
 
-## Milestone 7: Analytics and reporting
+## Epic 6: Analytics and reporting
+### Priority: P1
 ### Tasks
-- dashboard analytics for learner performance
-- domain mastery summary
-- question performance and difficulty tracking
-- cohort benchmarking
-- reporting for admin review
+- build learner progress analytics dashboard
+- show mastery by domain and phase
+- track attempts, completions, and pass rates
+- provide item difficulty and performance overview
+- support cohort or class-level reporting
+- expose admin reporting views for completion and progress
 
-### Acceptance criteria
-- admin can view learner performance trends
-- key metrics are visible in dashboard widgets
-- domain-level progress is understandable
+### Definition of done
+- admins can review learner performance trends
+- the product has a measurable score and mastery view
+- domain-level readiness is visible and interpretable
 
 ---
 
-## Milestone 8: Production hardening
+## Epic 7: Platform packaging and multi-device support
+### Priority: P1 / P2
 ### Tasks
-- add automated tests
-- verify auth, route, and model behavior
+- prepare browser deployment strategy
+- plan Windows desktop packaging (.exe and MSIX)
+- plan Linux packaging (.deb, .rpm, AppImage)
+- prepare Android APK and AAB build flow
+- prepare macOS package strategy
+- prepare iOS packaging path
+- create final app icon and splash asset variants
+- test layout behavior across screen sizes and densities
+
+### Definition of done
+- each target platform has a packaging path
+- native screen sizing and design adaptation are planned
+- branding assets are finalized for each install target
+
+---
+
+## Epic 8: QA, quality gates, and production hardening
+### Priority: P1
+### Tasks
+- add unit tests for adaptive logic
+- add integration tests for routes and progress transitions
+- add UI smoke tests for core screens
+- validate auth and role enforcement
+- review security boundaries and permission checks
 - add linting and build validation
-- improve error handling and validation
-- audit security permissions
-- set up environment management and deployment pipeline
+- check performance bottlenecks and slow routes
+- define release process and environment management
 
-### Acceptance criteria
-- project passes build and test checks
-- release workflow is repeatable
-- app is stable enough for staging and deployment
+### Definition of done
+- build and test checks pass reliably
+- no critical auth or role bypass issues remain
+- the app is stable enough for staging deployment
 
 ---
 
-## Prioritization
-### P0 (must ship for MVP)
-- login/auth
-- learner dashboard
+## Prioritization summary
+### P0: must-have for MVP
+- auth and roles
+- student dashboard
 - exam flow
-- admin approvals
-- progress tracking
-- session and question CRUD
+- result scoring
+- admin approval flow
+- session and question CRUD basics
 
-### P1 (important for adoption)
-- analytics
-- responsive UX polish
-- question import
-- multi-domain content support
+### P1: strong product maturity
+- responsive UI polish
+- analytics and reports
+- content management tooling
+- QA and build quality
 
-### P2 (platform expansion)
-- native desktop/mobile packaging
-- enterprise admin tooling
-- deeper reporting and benchmarking
+### P2: platform scale and distribution
+- native packaging for desktop/mobile
+- multi-domain catalog expansion
+- enterprise features and cohort management
+
+---
 
 ## Definition of done for MVP
 The MVP is complete when a learner can:
-- log in
-- view sessions
-- take an exam in at least one mode
-- see results
-- trigger the approval flow
-- and an admin can unlock progression.
+- sign in
+- view sessions and progress
+- take an exam in an operational mode
+- see score and results
+- request approval when required
+- and an admin can review and unlock progression.
 
-This creates a working product loop and foundation for expansion.
+This creates the minimum working loop for the platform and gives a reliable base for the next stage of growth.
+
+---
+
+## Engineering notes
+- Keep the adaptive CAT engine as the product differentiator.
+- Build the app in vertical slices rather than broad parallel work.
+- Validate each completed milestone with real end-to-end behavior.
+- Treat the mockups as the product direction, not the final implementation requirement.

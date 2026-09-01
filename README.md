@@ -40,6 +40,7 @@ Current focus: **Sprint 0 & Sprint 1** (environment hardening and student dashbo
 - [docs/product-spec.md](docs/product-spec.md) - vision and features
 - [docs/missing-pieces-roadmap.md](docs/missing-pieces-roadmap.md) - known gaps and roadmap
 - [docs/full-implementation-plan.md](docs/full-implementation-plan.md) - detailed product and UX spec
+- [docs/passimark-file-format-rfc.md](docs/passimark-file-format-rfc.md) - proposed portable `.psmk` assessment package
 
 ## Key Files
 - database/seeders/PassimarkSeeder.php - 46 sessions + 500+ questions

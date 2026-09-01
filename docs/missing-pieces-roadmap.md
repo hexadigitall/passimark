@@ -1,135 +1,155 @@
-# Passimark: Likely Missing Pieces Before It Can Run as a Complete App
+# Passimark: Missing Pieces and Completion Roadmap
 
-## Executive summary
-The project already contains a strong conceptual foundation and a coherent adaptive assessment architecture. However, it still reads like a partially implemented product rather than a completed end-to-end application.
+## 1. Executive summary
+Passimark already has a strong concept, a sensible data model, and a real adaptive testing foundation. The main gap is not in the core idea; it is in the completeness of the product layer: full UI delivery, stronger operational quality, and broader product tooling.
 
-## High-priority missing pieces
-### 1. Full frontend implementation
-The UI files are scaffolded rather than fully complete. Several pages contain notes explaining that the full CAT UI is implemented elsewhere or in artifact previews.
+## 2. What is already working well
+The project already includes:
+- a structured session model
+- a multi-mode exam system
+- a domain-based curriculum architecture
+- an adaptive CAT logic layer
+- role-aware progression and approval flows
+- seeded sample content and a credible assessment format
 
-Needed:
-- complete student dashboard
-- full exam flow screen
-- real timer and item navigation
-- review / flagged-question flow
-- admin dashboard polish
+That means the application has a solid conceptual foundation and a real product engine behind it.
 
-### 2. End-to-end state machine enforcement
-The progress states exist in the database schema, but the business logic must be enforced consistently across the app.
+## 3. Highest-priority gaps
+### 3.1 Full frontend completion
+The current UI screens are still skeletal relative to the product vision. The app contains mockups and placeholder screens, but the user-facing implementation still needs to be completed.
 
-Needed:
-- validation that a learner cannot start locked sessions
-- consistent status transitions from open to in_progress to completed
-- approval workflow enforcement
-- transition logic for unlock behavior
+Missing work:
+- polished student dashboard
+- completed exam flow
+- timer and navigation UX
+- review screen and explanation display
+- admin dashboard and decision screens
 
-### 3. Production-grade content management
-The seeder provides example content, but a real app requires a robust question management workflow.
+### 3.2 State integrity and business logic enforcement
+The database tracks states such as locked, open, in progress, pending approval, and approved, but those states must be enforced more rigorously in the app logic.
 
-Needed:
-- authoring tools for questions
-- import/export support
-- tagging and domain management
-- content review and moderation
-- curriculum versioning
+Missing work:
+- hard validation against locked sessions
+- consistent state transitions
+- explicit approval workflow rules
+- deterministic unlock logic for next-stage access
 
-### 4. Detailed analytics and reporting
-There are progress records and scores, but a complete product needs richer analytics.
+### 3.3 Real content authoring and management
+The project contains seed data, but not yet a robust content system for scaling beyond demo content.
 
-Needed:
-- domain-level mastery reports
-- time-to-readiness metrics
-- item analysis
-- cohort performance dashboards
-- student progress trends
+Missing work:
+- question bank management
+- bulk import and export
+- session and exam editing screens
+- taxonomy / domain management
+- content author review workflow
 
-### 5. Real deployment readiness
-The app is not yet clearly prepared for production-level deployment.
+### 3.4 Product analytics and reporting
+The app tracks attempts and scores, but higher-level reporting is still limited.
 
-Needed:
-- environment configuration review
-- deployment scripts
-- database migration verification
-- staging and production settings
+Missing work:
+- mastery trends by domain
+- learner readiness reports
+- item-level analytics
+- cohort comparisons
+- pass-rate and completion dashboards
+
+### 3.5 Deployment and production readiness
+The codebase is structured like an app, but it is not yet fully hardened for production deployment.
+
+Missing work:
+- deployment config review
+- staging/production settings
+- migration verification
 - CI/CD pipeline
-- production security review
+- environment-based secrets handling
+- production-level security review
 
-## Missing product-level features
-### Learning management features
-- instructor comments and feedback
-- learner recommendations
-- retake policies
-- mastery thresholds
-- certificates and completions
+## 4. Product-level missing features
+### Learning features
+- learner feedback after completion
+- recommendations based on weak domains
+- retake policy handling
+- mastery progression milestones
+- completion certificates and recognition
+
+### Admin features
+- cohort and organization management
+- advanced learner filtering
+- approval audit trails
+- rules-based unlock logic
+- report exports
 
 ### Enterprise features
 - multi-tenant support
-- organization-level management
-- custom exam tracks
-- cohort and team tracking
-- admin permissions beyond a single instructor role model
+- vendor or organization-level management
+- multiple assessment tracks
+- team benchmarking dashboards
 
-### Content expansion tools
-- taxonomies and categories beyond domains
-- reusable question banks
-- certification package templates
-- exam assembly and scheduling
-
-## Missing operational quality
+## 5. Operational quality gaps
 ### Testing
 Needed:
 - unit tests for CAT logic
-- integration tests for progress transitions
-- controller tests for route authorization
-- UI smoke tests for major flows
+- tests for permission enforcement
+- route and controller validation tests
+- UI smoke tests for key flows
 
-### Monitoring and maintenance
+### Monitoring and support
 Needed:
-- logs and error tracking
-- health monitoring
-- performance tuning
-- queueing or background tasks if content imports grow
+- application logging
+- error tracking
+- performance metrics
+- session health checks
+- regression checks for scoring logic
 
-## Frontend completeness gap
-The code suggests a strong backend and a partial UX implementation. The pages look like starter scaffolding rather than the final product experience.
+## 6. Frontend completeness gap
+The product concept is strong, but the actual exam UI and dashboard experience still need to be fully implemented. The current codebase includes design intent and scaffolded pages, but not yet the complete product interface described by the mockups and the product vision.
 
-Important gap:
-- a full Pearson VUE-style exam engine is not yet present in the app codebase
-- mockups and design references suggest this is intended, but the UI implementation still needs to be completed
+## 7. Data and platform expansion gaps
+### Data management
+The schema is strong, but real-world usage requires:
+- better bulk import flows
+- scheduled exam generation
+- result export functionality
+- detailed audit trails
 
-## Data management gaps
-The schema is strong, but real products usually need:
-- bulk question import
-- scheduled or dynamic exam creation
-- performance snapshots
-- review history and audit trails
-- exam result exports
+### Platform expansion
+The product is conceptually ready for multi-platform deployment, but the actual packaging path still needs to be defined for:
+- Windows desktop (.exe / MSIX)
+- macOS
+- Linux
+- Android APK / AAB
+- iOS app packaging
 
-## Content and branding gaps
-The project has logo assets and visual concepts, but the app still needs:
-- visual standardization across screens
-- consistent branding across all pages
-- final asset set for web, mobile, and social contexts
+## 8. Branding and asset standardization
+The project already has logo and image assets, which is a strength. But the project still needs:
+- one final approved logo set
+- standard usage across screens and packaging
+- consistent favicon and app icon usage
+- platform-specific icon sizes and variants
 
-## Recommendation: what to build next
-### Phase 1: product readiness
-- complete student dashboard
-- complete exam UI flow
+## 9. Recommended order of implementation
+### Phase 1: Product core
+- complete learner dashboard
+- complete exam flow
 - complete admin approval workflow
-- strong validation and state transitions
+- fix scoring and progress transitions
 
-### Phase 2: product depth
-- analytics dashboards
-- richer question management
-- better reporting and progress insights
+### Phase 2: Product depth
+- richer reporting and analytics
+- stronger question management tools
+- improved UX responsiveness
 
-### Phase 3: platform expansion
-- additional domains and tracks
-- cohort management
-- enterprise roles and dashboards
-- broader assessment catalog support
+### Phase 3: Product expansion
+- cross-platform packaging and distribution
+- enterprise features
+- multi-domain catalog support
 
-## Bottom line
-The application already has the core concept and the core data model needed for an adaptive exam platform. What remains is the complete experience layer, quality assurance, operational readiness, and a richer content/analytics infrastructure.
+## 10. Final conclusion
+The project is conceptually strong and already contains a working adaptive exam framework. The remaining gap is not the idea itself; it is the completion of the product layer: polished experiences, better content tooling, stronger validation, analytics, and platform packaging.
 
-This means it is conceptually strong, but not yet a finished end-to-end product in its current state.
+This means the app is at a promising stage, but it still needs implementation work before being considered a finished, production-grade platform.
+
+---
+
+This document reflects the project’s current state, including the adaptive engine, content model, and the visible gaps in the user experience and deployment readiness.
