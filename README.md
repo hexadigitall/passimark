@@ -22,6 +22,25 @@ student@passimark.com / password
 - Gating: student completes -> pending_approval -> admin approves -> next unlocks
 - Modes: cat (150Q adaptive), timed (180min), practice (instant feedback)
 
+## Development
+
+### For new developers
+Start here:
+1. [DEVELOPMENT.md](DEVELOPMENT.md) - local setup guide (see docs/ after Sprint 0)
+2. [docs/technical-architecture.md](docs/technical-architecture.md) - how the app works
+3. [docs/mvp-backlog.md](docs/mvp-backlog.md) - what we're building
+
+### For implementation tasks
+Current focus: **Sprint 0 & Sprint 1** (environment hardening and student dashboard)
+- [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) - concrete task breakdown
+- [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - daily progress tracking
+- [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) - full sprint roadmap
+
+### For product context
+- [docs/product-spec.md](docs/product-spec.md) - vision and features
+- [docs/missing-pieces-roadmap.md](docs/missing-pieces-roadmap.md) - known gaps and roadmap
+- [docs/full-implementation-plan.md](docs/full-implementation-plan.md) - detailed product and UX spec
+
 ## Key Files
 - database/seeders/PassimarkSeeder.php - 46 sessions + 500+ questions
 - app/Services/CatEngine.php - adaptive logic
