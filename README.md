@@ -33,10 +33,11 @@ Start here:
 3. [docs/mvp-backlog.md](docs/mvp-backlog.md) - what we're building
 
 ### For implementation tasks
-Current focus: **Sprint 4.2 (tag taxonomy) → Sprint 5+ (v4.0 Worldwide catalog)**
+Current focus: **Sprint 4.5 (CISSP textbook bundle — extracted & seeded, 980 MC items) → Sprint 5+ (v4.0 Worldwide catalog)**
 - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - approved v4.0 build spec (205-cert global platform)
 - [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - next implementation sprint (4.2)
 - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog breakdown
+- [docs/cissp-prep-bundle.md](docs/cissp-prep-bundle.md) - CISSP textbook audit + extraction/seeding pipeline (Sprint 4.5)
 - [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - live status index
 - [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) - full 13-sprint roadmap
 

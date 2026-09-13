@@ -1,16 +1,18 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\{PassimarkSession, PassimarkProgress, PassimarkQuestion, PassimarkApprovalEvent, PassimarkExam, PassimarkAttempt, User, PassimarkCertificationTrack};
+use App\Models\{PassimarkSession, PassimarkProgress, PassimarkQuestion, PassimarkApprovalEvent, PassimarkExam, PassimarkAttempt, User, PassimarkCertificationTrack, PassimarkTag};
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Str;
 use Inertia\Inertia;
 
 class PassimarkAdminController extends Controller
 {
     public function index(){ 
         $pending = PassimarkProgress::with(['user','session'])->where('status','pending_approval')->get();
-        $sessions = PassimarkSession::with(['exams', 'questions', 'certificationTrack'])->orderBy('order')->get();
+        $sessions = PassimarkSession::with(['exams', 'questions.tags', 'certificationTrack', 'tags'])->orderBy('order')->get();
         $tracks = PassimarkCertificationTrack::withCount('sessions')->orderBy('title')->get();
+        $tags = PassimarkTag::withCount(['questions', 'sessions'])->orderBy('type')->orderBy('label')->get();
         $events = PassimarkApprovalEvent::with(['reviewer','progress.user','progress.session'])->latest()->limit(20)->get();
         $report = [
             'learners' => User::where('role', 'student')->count(),
@@ -19,7 +21,7 @@ class PassimarkAdminController extends Controller
             'average_score' => round((float) PassimarkAttempt::whereNotNull('score')->avg('score'), 2),
             'pending_approvals' => $pending->count(),
         ];
-        return Inertia::render('Passimark/Admin', compact('pending','sessions','events','report','tracks'));
+        return Inertia::render('Passimark/Admin', compact('pending','sessions','events','report','tracks','tags'));
     }
     public function approve(Request $request, PassimarkProgress $progress){
         abort_unless($progress->status === PassimarkProgress::PENDING, 422, 'Progress is not awaiting approval.');
@@ -52,11 +54,13 @@ class PassimarkAdminController extends Controller
             'questions.*.domain'=>'required|string|max:255',
             'questions.*.explanation'=>'nullable|string',
             'questions.*.bloom'=>'nullable|string|max:255',
+            'questions.*.tag_ids'=>'nullable|array',
+            'questions.*.tag_ids.*'=>'integer|exists:passimark_tags,id',
         ]);
         $count=0;
         foreach($data['questions'] as $q){
             abort_unless(collect($q['options'])->contains('is_correct', true), 422, 'Each question must have at least one correct option.');
-            PassimarkQuestion::create([
+            $question = PassimarkQuestion::create([
                 'session_id'=>$data['session_id'],
                 'content'=>$q['content'],
                 'options'=>$q['options'],
@@ -64,7 +68,9 @@ class PassimarkAdminController extends Controller
                 'domain'=>$q['domain']??'General',
                 'explanation'=>$q['explanation']??'',
                 'bloom_level'=>$q['bloom']??'Apply'
-            ]); $count++;
+            ]);
+            $question->tags()->sync($q['tag_ids'] ?? []);
+            $count++;
         }
         return response()->json(['imported'=>$count]);
     }
@@ -78,14 +84,22 @@ class PassimarkAdminController extends Controller
 
     public function storeSession(Request $request)
     {
-        $session = PassimarkSession::create($this->sessionData($request));
-        return response()->json(['data' => $session], 201);
+        $data = $this->sessionData($request);
+        $session = PassimarkSession::create($data);
+        if (array_key_exists('tag_ids', $data)) {
+            $session->tags()->sync($data['tag_ids']);
+        }
+        return response()->json(['data' => $session->load('tags')], 201);
     }
 
     public function updateSession(Request $request, PassimarkSession $session)
     {
-        $session->update($this->sessionData($request, true));
-        return response()->json(['data' => $session->fresh()]);
+        $data = $this->sessionData($request, true);
+        $session->update($data);
+        if (array_key_exists('tag_ids', $data)) {
+            $session->tags()->sync($data['tag_ids']);
+        }
+        return response()->json(['data' => $session->fresh()->load('tags')]);
     }
 
     public function destroySession(PassimarkSession $session)
@@ -132,16 +146,46 @@ class PassimarkAdminController extends Controller
         return response()->json([], 204);
     }
 
+    public function storeTag(Request $request)
+    {
+        $tag = PassimarkTag::create($this->tagData($request));
+        return response()->json(['data' => $tag], 201);
+    }
+
+    public function updateTag(Request $request, PassimarkTag $tag)
+    {
+        $tag->update($this->tagData($request, true));
+        return response()->json(['data' => $tag->fresh()]);
+    }
+
+    public function destroyTag(PassimarkTag $tag)
+    {
+        abort_if($tag->questions()->exists() || $tag->sessions()->exists(), 422, 'Reassign or remove this tag\'s content before deleting it.');
+        $tag->delete();
+        return response()->json([], 204);
+    }
+
     public function storeQuestion(Request $request)
     {
-        $question = PassimarkQuestion::create($this->questionData($request));
-        return response()->json(['data' => $question], 201);
+        $data = $this->questionData($request);
+        $question = PassimarkQuestion::create($data);
+        if (array_key_exists('tag_ids', $data)) {
+            $question->tags()->sync($data['tag_ids']);
+        }
+        if (empty($data['domain'] ?? null) && ($domainTag = $question->tags()->where('type', 'domain')->first())) {
+            $question->update(['domain' => $domainTag->label]);
+        }
+        return response()->json(['data' => $question->fresh()->load('tags')], 201);
     }
 
     public function updateQuestion(Request $request, PassimarkQuestion $question)
     {
-        $question->update($this->questionData($request, true));
-        return response()->json(['data' => $question->fresh()]);
+        $data = $this->questionData($request, true);
+        $question->update($data);
+        if (array_key_exists('tag_ids', $data)) {
+            $question->tags()->sync($data['tag_ids']);
+        }
+        return response()->json(['data' => $question->fresh()->load('tags')]);
     }
 
     public function destroyQuestion(PassimarkQuestion $question)
@@ -160,6 +204,8 @@ class PassimarkAdminController extends Controller
             'description' => ['nullable', 'string'],
             'domain' => ['nullable', 'string', 'max:255'],
             'is_open' => ['sometimes', 'boolean'],
+            'tag_ids' => ['nullable', 'array'],
+            'tag_ids.*' => ['integer', 'exists:passimark_tags,id'],
             'order' => [$partial ? 'sometimes' : 'required', 'integer', 'min:1'],
             'pass_score' => ['sometimes', 'integer', 'between:1,100'],
             'time_limit' => ['sometimes', 'integer', 'min:1'],
@@ -192,8 +238,10 @@ class PassimarkAdminController extends Controller
             'difficulty' => ['sometimes', 'numeric'],
             'discrimination' => ['sometimes', 'numeric', 'min:0'],
             'guessing' => ['sometimes', 'numeric', 'between:0,1'],
-            'domain' => [$partial ? 'sometimes' : 'required', 'string', 'max:255'],
+            'domain' => [$partial ? 'sometimes' : 'nullable', 'string', 'max:255'],
             'bloom_level' => ['nullable', 'string', 'max:255'],
+            'tag_ids' => ['nullable', 'array'],
+            'tag_ids.*' => ['integer', 'exists:passimark_tags,id'],
             'explanation' => ['nullable', 'string'],
             'reference' => ['nullable', 'string', 'max:255'],
         ]);
@@ -219,5 +267,24 @@ class PassimarkAdminController extends Controller
             'description' => ['nullable', 'string'],
             'is_active' => ['sometimes', 'boolean'],
         ]);
+    }
+
+    private function tagData(Request $request, bool $partial = false): array
+    {
+        $data = $request->validate([
+            'type' => [$partial ? 'sometimes' : 'required', Rule::in(PassimarkTag::TYPES)],
+            'label' => [$partial ? 'sometimes' : 'required', 'string', 'max:255'],
+        ]);
+        if (array_key_exists('label', $data) && $data['label'] !== '') {
+            $slug = Str::slug($data['label']);
+            $type = $data['type'] ?? $request->route('tag')?->type ?? 'domain';
+            $query = PassimarkTag::where('type', $type)->where('slug', $slug);
+            if ($current = $request->route('tag')) {
+                $query->where('id', '!=', $current->id);
+            }
+            abort_if($query->exists(), 422, 'A tag with this label already exists for this type.');
+            $data['slug'] = $slug;
+        }
+        return $data;
     }
 }

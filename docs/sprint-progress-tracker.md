@@ -40,13 +40,14 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - Remaining: richer bulk-operation history, deeper learner-level reporting
 
 ## Sprint 4: Certification track and tag taxonomy
-**Status:** in progress
+**Status:** complete
 **Evidence:** [sprint-4-taxonomy-plan.md](sprint-4-taxonomy-plan.md)
 - Web favicon, apple-touch-icon, and manifest icon set wired into the app shell — done
 - Coherence pass: real logo wired into the app shell, flash messages now render as a dismissible banner, admin control center has a return path to the dashboard, and Register visually matches Login — done
 - Certification track model, CRUD, and admin UI — done; a second certification track and independently-scoped session can now be created without touching code
-- Tag taxonomy for `domain`/`bloom_level` — not started
-- Blocks the v4.0 Worldwide catalog (Sprint 5) until the tag model exists (see plan doc for rationale and scope)
+- Tag taxonomy for `domain`/`bloom_level` — done: `passimark_tags` + question/session pivots, `PassimarkTag` model, `passimark:backfill-tags` console command (idempotent, non-destructive), admin Tags screen + tag selectors in session/question forms, `tag_ids` validated against `passimark_tags`, in-use tag deletes blocked, legacy `domain`/`bloom_level` columns retained as read-compat and deprecated
+- Full PHPUnit suite (19 tests / 160 assertions) and `npm run build` green
+- **Sprint 4.5 — CISSP textbook bundle (content extraction) — done:** Hexadigitall 45-day textbook audited and extracted into a committed bundle ([cissp-prep-bundle.md](cissp-prep-bundle.md)); 46 sessions, 980 MC items (daily CAT drills, Phase 1 diagnostic, simulated CAT, 2 full mocks), 105 flashcards; `passimark:extract-cissp` + `CISSPBundleSeeder` prove the bundle-per-cert design (track + ordered sessions + approval gating + tags); PHPUnit **24 tests / 6084 assertions** green
 
 ## Sprint 5-8: v4.0 Worldwide catalog (NEW — approved spec JAN 2026)
 **Status:** planned
@@ -62,4 +63,4 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
 - `.psmk` file-format and course/import tooling remains an RFC only ([passimark-file-format-rfc.md](passimark-file-format-rfc.md))
 - v4.0 brand assets still use legacy `passimark_*` filenames and `manifest.json` background is `#ffffff` instead of `#0F172A` (tracked in Sprint 8.3)
-- Sprint 1-3 feature work is sitting uncommitted in the working tree (next commit should land it before Sprint 5 starts)
+- Sprint 4.2 + 4.5 feature work is sitting uncommitted on `feature/sprint-4-taxonomy` (Sprints 1-3 committed as `9474a20` on `feature/sprint-0-environment`; next commit should land the taxonomy + bundle work before Sprint 5 starts)

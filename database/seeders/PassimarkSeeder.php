@@ -1,8 +1,9 @@
 <?php
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-use App\Models\{PassimarkSession, PassimarkExam, PassimarkQuestion, User, PassimarkProgress, PassimarkCertificationTrack};
+use App\Models\{PassimarkSession, PassimarkExam, PassimarkQuestion, User, PassimarkProgress, PassimarkCertificationTrack, PassimarkTag};
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class PassimarkSeeder extends Seeder
 {
@@ -80,6 +81,7 @@ class PassimarkSeeder extends Seeder
                 'time_limit'=>$phase==4?180:90,
                 'question_count'=>$phase==4?150:25
             ]);
+            $sess->tags()->syncWithoutDetaching([$this->ensureTag('domain', $sess->domain)->id]);
             // Create 3 exam modes
             foreach(['cat','timed','practice'] as $mode){
                 PassimarkExam::create(['session_id'=>$sess->id,'title'=>"{$sess->title} - ".strtoupper($mode),'mode'=>$mode,'question_count'=>$mode==='cat'?150:25]);
@@ -137,7 +139,7 @@ class PassimarkSeeder extends Seeder
             $qs[] = $filler;
         }
         foreach($qs as $s){
-            PassimarkQuestion::create([
+            $question = PassimarkQuestion::create([
                 'session_id'=>$sess->id,
                 'content'=>$s['q'],
                 'options'=>array_map(fn($o)=>['key'=>$o[0],'text'=>$o[1],'is_correct'=>$o[2]], $s['opts']),
@@ -148,7 +150,16 @@ class PassimarkSeeder extends Seeder
                 'explanation'=>$s['exp'],
                 'bloom_level'=>'Apply'
             ]);
+            $question->tags()->syncWithoutDetaching([
+                $this->ensureTag('domain', $sess->domain)->id,
+                $this->ensureTag('bloom', 'Apply')->id,
+            ]);
         }
+    }
+
+    private function ensureTag(string $type, string $label): PassimarkTag
+    {
+        return PassimarkTag::firstOrCreate(['type'=>$type,'slug'=>Str::slug($label)],['label'=>$label]);
     }
 
     // Deterministic filler used only to top up a session to 25 questions; never assigns a random or missing correct answer.

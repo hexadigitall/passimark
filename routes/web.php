@@ -40,6 +40,9 @@ Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(func
     Route::post('/certification-tracks', [PassimarkAdminController::class,'storeCertificationTrack'])->name('admin.tracks.store');
     Route::put('/certification-tracks/{certificationTrack}', [PassimarkAdminController::class,'updateCertificationTrack'])->name('admin.tracks.update');
     Route::delete('/certification-tracks/{certificationTrack}', [PassimarkAdminController::class,'destroyCertificationTrack'])->name('admin.tracks.destroy');
+    Route::post('/tags', [PassimarkAdminController::class,'storeTag'])->name('admin.tags.store');
+    Route::put('/tags/{tag}', [PassimarkAdminController::class,'updateTag'])->name('admin.tags.update');
+    Route::delete('/tags/{tag}', [PassimarkAdminController::class,'destroyTag'])->name('admin.tags.destroy');
     Route::post('/exams', [PassimarkAdminController::class,'storeExam'])->name('admin.exams.store');
     Route::put('/exams/{exam}', [PassimarkAdminController::class,'updateExam'])->name('admin.exams.update');
     Route::delete('/exams/{exam}', [PassimarkAdminController::class,'destroyExam'])->name('admin.exams.destroy');

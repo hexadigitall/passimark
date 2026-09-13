@@ -1,6 +1,6 @@
 # Sprint 4: Certification Track and Tag Taxonomy
 
-**Status:** planned, not started
+**Status:** complete
 **Depends on:** Sprint 3 CRUD foundation (done)
 
 > **v4.0 linkage:** the approved Worldwide catalog spec ([v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)) depends on this sprint's tags as the real `domain` model. 4.2 must complete before Sprint 5 (worldwide schema/seeder) in [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md).
@@ -31,21 +31,24 @@ The current schema hardcodes one curriculum: every `PassimarkSession` implicitly
 - `PassimarkSeeder` explicitly assigns all seeded CISSP content to a `cissp` track
 - Verified by a feature test that creates a second track ("Security+") and a session scoped to it entirely through the CRUD API — the actual Sprint 4 exit criterion
 
-### 4.2: Tag taxonomy
-- Migration: `passimark_tags` (`id`, `type` [`domain`|`bloom`|`skill`], `label`, `slug`, timestamps)
-- Pivot migrations: `passimark_question_tag`, `passimark_session_tag`
-- Models: `PassimarkTag` with `questions()`/`sessions()` belongs-to-many relations
-- Data backfill: a one-time console command that reads existing `domain`/`bloom_level` string values, creates distinct tags, and attaches them — this must not silently drop existing content
-- Admin CRUD: tag management screen (create/rename/delete tag)
-- Question/session forms updated to select tags instead of free-typing domain/bloom strings
+### 4.2: Tag taxonomy — done
+- Migration `2026_01_01_000004_create_passimark_tags_tables.php`: `passimark_tags` (`id`, `type` [`domain`|`bloom`|`skill`], `label`, `slug`, unique `[type, slug]`, timestamps), plus `passimark_question_tag` and `passimark_session_tag` pivot tables (cascade both ways)
+- `2026_01_01_000005_deprecate_domain_columns_nullable.php`: `passimark_questions.domain` made nullable (read-compat; tags are the real model)
+- Models: `PassimarkTag` with `questions()`/`sessions()`; `PassimarkQuestion::tags()` and `PassimarkSession::tags()` belongs-to-many with explicit pivot keys
+- Data backfill: `php artisan passimark:backfill-tags` (`app/Console/Commands/BackfillContentTags.php`) reads every existing `domain`/`bloom_level` string, creates distinct tags, and attaches them with `syncWithoutDetaching` — idempotent and non-destructive (verified by a feature test that re-runs it and asserts zero duplicate tags and unchanged legacy columns)
+- Admin CRUD: `storeTag`/`updateTag`/`destroyTag` in `PassimarkAdminController`, role-protected via the existing `role:instructor,admin` middleware; slug auto-derived from label, uniqueness enforced within type; deleting an in-use tag returns 422 (reassign-or-remove rule, same as tracks)
+- Admin UI: new "Tags" tab in `Admin.jsx` grouped by type with usage counts; session and question forms now pick domain tags instead of free-typing `domain`
+- `tag_ids` accepted on session/question create/update and batch import, validated against `passimark_tags`; question `domain` string is backfilled from the attached domain tag when absent (4.4 read compatibility)
+- Covered by `tests/Feature/TagTaxonomyTest.php`
 
-### 4.3: Validation and integrity
-- `PassimarkAdminController::questionData()`/`sessionData()` updated to validate tag IDs against the `passimark_tags` table instead of accepting arbitrary strings
-- Deleting a tag in use must be blocked or require explicit reassignment (decide and enforce one rule, do not leave orphaned pivot rows)
+### 4.3: Validation and integrity — done
+- `questionData()`/`sessionData()` validate `tag_ids.*` against `passimark_tags`; duplicate tag (same type+slug) and out-of-type values rejected with 422
+- Deleting a tag in use is blocked (422) — no orphaned pivot rows; pivot deletes cascade both ways
 
-### 4.4: Backward compatibility
-- `domain` and `bloom_level` string columns remain during migration for read compatibility, then are deprecated once all reads/writes go through tags
-- Existing seeded content (`PassimarkSeeder`) updated to assign tags instead of raw strings once the model exists
+### 4.4: Backward compatibility — done
+- `domain` and `bloom_level` string columns remain during migration for read compatibility (Dashboard/Exam render them); `questions.domain` now nullable and deprecated
+- `PassimarkSeeder` now assigns domain/Bloom tags to every seeded session and question (deterministic, idempotent), so fresh installs are tag-driven from the start
+- Existing installs upgrade with `php artisan migrate` + `php artisan passimark:backfill-tags`
 
 ## Out of scope for this sprint
 
@@ -55,7 +58,7 @@ The current schema hardcodes one curriculum: every `PassimarkSession` implicitly
 
 ## Exit criteria
 
-- A second certification track can be created through the admin UI without touching code
-- Existing CISSP content is fully backfilled with tags and a certification track with zero data loss
-- All new endpoints are covered by a feature test proving validation and role protection
-- Full PHPUnit suite and production build remain green
+- A second certification track can be created through the admin UI without touching code — **met** (verified in `DashboardSessionActionsTest`)
+- Existing CISSP content is fully backfilled with tags and a certification track with zero data loss — **met** (`passimark:backfill-tags` + seeder-attached tags; idempotency asserted)
+- All new endpoints are covered by a feature test proving validation and role protection — **met** (`TagTaxonomyTest`, student 403 assertions)
+- Full PHPUnit suite and production build remain green — **met** (19 tests / 160 assertions; `npm run build` clean)

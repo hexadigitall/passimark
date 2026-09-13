@@ -1,0 +1,118 @@
+# CISSP Prep Bundle — Textbook Audit & Content Pipeline
+
+**Status:** shipped (Sprint 4.5)
+**Source:** Hexadigitall *Enterprise Security Architecture & CISSP Mastery* — 45-Day CISSP Prep Curriculum
+**Companion docs:** [sprint-progress-tracker.md](sprint-progress-tracker.md), [implementation-sprint-plan.md](implementation-sprint-plan.md), [sprint-4-taxonomy-plan.md](sprint-4-taxonomy-plan.md)
+
+---
+
+## 1. What this is
+
+The full CISSP prep textbook packaged as a real, seedable assessment module inside Passimark:
+
+- **46 sessions** across 4 phases (45 study days + a final pacing/summary session)
+- **980 multiple-choice assessment items** — daily CAT drills, a Phase 1 diagnostic, a simulated CAT, and two full-length mocks
+- **105 flashcard Q/A drills** (Active Recall Rapid Flashcard Drills)
+- Every question tagged with its **ISC2 domain** (or benchmark/simulation/cert category) and a **Bloom level**, and wired to the existing approval-gated session ladder.
+
+This is the first *bundle-per-cert* proof: the same track → ordered-sessions → per-user approval-gating → tag-taxonomy design that Sprint 5-8 generalises to the 205-cert Worldwide catalog.
+
+---
+
+## 2. Textbook structure audited
+
+| Thing | Value |
+|---|---|
+| Package | `D:\Downloads\CISSP\CISSP\index.html` (1.6 MB) + `CISSP_45_Day_Prep_Curriculum_Hexadigitall.pdf` (105 KB) |
+| Phases | 4 (Foundation → domains 1-5 → domains 6-8 → strategy/remediation) |
+| Sessions | 45 numbered sessions; each normal session = `X.1 Hour 1` (theory, `h3` lessons) + `X.2 Hour 2` (flashcard callout + **15 CAT practice questions**) |
+| Session 46 | Pacing strategy + comprehensive summary/executive conclusion (no MC items) |
+| MC assessment bank | 980 items (derivation below) |
+| Flashcard drills | 105 (37 sessions × ~3 expected; not every session carries a drill) |
+
+### Assessment inventory (980 MC items)
+| Block | Sessions | Pool size | Count |
+|---|---|---|---|
+| Daily CAT drills (15 per session) | 1-14, 16-29, 31-39 (37 sessions) | 15 | 555 |
+| Phase 1 benchmark diagnostic (domains 1-5) | 15 | 50 | 50 |
+| Simulated CAT exam (sections I + II, parts A/B/C, **continuous numbering 1-125**) | 30 | 125 | 125 |
+| Mock exam #1 (parts 40.1-40.5, continuous 1-125) | 40 | 125 | 125 |
+| Mock exam #2 | 42 | 125 | 125 |
+| Remediation / error-analysis / final-prep sessions | 41, 43, 44, 45 | — | 0 |
+| **Total** | | | **980** |
+
+### Source quirks the extractor handles
+- **Session 23 headers are mislabelled `19.1/19.2`** in the textbook (content is SDLC). A part-based mapping rule (`part == 1` → new/last session, `part > 1` → continuation) reconstructs the numbering correctly.
+- **Session 37, question 3** uses a wrapper with `background-color: #CBD5E1` (a typo for the normal `#FFFFFF`); the question-regex is background-colour agnostic.
+- Mocks number **continuously per session** (e.g. mock #1 = 1-125 across parts 40.1-40.5); the parser chains them into one pool per session.
+
+---
+
+## 3. Bundle-per-cert design (confirmed)
+
+Multiple modules/bundles per certification are supported today by combining:
+
+1. **Track scoping** — `passimark_certification_tracks` (`slug`, `title`); a bundle belongs to a track via `passimark_sessions.certification_track_id`.
+2. **Ordered session ladder** — `passimark_sessions.order` along with `number`/`phase`; a track can hold many sessions, so several bundles can share one cert (e.g. "v4 pedagogy" + "textbook drill pack" + "flashcard pack").
+3. **Approval-gated unlock** — only sessions with an `open` progress row for the user are startable. `PassimarkAdminController::approve()` (a `pending_approval` progress completes → next session's progress is created `open` by `order`). Ladder states: `locked → open → in_progress → completed → pending_approval → approved`.
+4. **Tag taxonomy as the real domain model** — sessions/questions carry `domain` + `bloom` tags (`passimark_tags` + pivots); legacy `domain`/`bloom_level` columns remain read-compat/deprecated. A bundle defines its own domain set per session.
+
+The CISSP bundle uses **phase** on sessions (1-4) and sets `time_limit` 90 min (phase 1-3) / 180 min (phase 4 mock exams), `pass_score` 70.
+
+---
+
+## 4. Content pipeline
+
+### Extract
+```bash
+php artisan passimark:extract-cissp
+# (defaults: source D:\Downloads\CISSP\CISSP\index.html, out database/seeders/data/cissp/cissp-bundle.json)
+```
+`app/Console/Commands/ExtractCisspBundle.php` parses the HTML into a deterministic JSON bundle (sessions + stem/options/answer/explanation + drill cards). Final run: **46 sessions, 980 items, 105 drill cards, 0 warnings**.
+
+### Seed
+```bash
+php artisan db:seed --class=CISSPBundleSeeder --force
+```
+`database/seeders/CISSPBundleSeeder.php` (idempotent — deletes the `cissp` track's sessions first, then rebuilds):
+- users, `cissp` certification track, 46 sessions (only session 1 `is_open`; session-1 progress row `open` for `student@passimark.com`)
+- pool sessions get all three exam modes (`cat`, `timed`, `practice`) sized to the pool
+- questions: exactly 4 options with exactly one `is_correct`, `difficulty` = `-0.6 + 0.30×(phase-1) + 0.45×(i/(n-1))`, `discrimination` 1.2, `guessing` 0.25, `reference` = textbook + session title
+- each question tagged `domain` + `bloom` (11 domains / 3 Bloom levels across the bundle)
+
+`DatabaseSeeder` prefers the bundle (`CISSPBundleSeeder::BUNDLE_JSON` present) and otherwise falls back to `PassimarkSeeder`, so fresh environments and CI (which seeds `PassimarkSeeder` explicitly) are unaffected.
+
+> Performance note: SQLite auto-commits each insert (~0.15 s each). The seeder wraps the whole load in `DB::transaction` (+ `DB::disableQueryLog()`) — full 46-session / 980-question load takes ~2.5 s.
+
+### Verify
+`tests/Feature/CISSPBundleSeederTest.php` (5 tests, ~5,900 assertions):
+- full curriculum shape (46 sessions, 1 open, pool sizes 15/50/125/125/125, session-23 title fix, 41 pool sessions × 3 exams)
+- every question is well-formed (4 options, exactly 1 correct) and domain+bloom tagged
+- locked session (no progress row) cannot be started
+- end-to-end CAT drill on session 1 answers the real 15-item pool and completes the progress row
+- seeder idempotency
+
+---
+
+## 5. Quick numeric reference
+
+| Metric | Value |
+|---|---|
+| Track slug | `cissp` |
+| Sessions / phases | 46 / 4 |
+| Total MC questions | 980 |
+| Daily drill sessions | 37 × 15 = 555 |
+| Diagnostic / simulated / mocks | 50 / 125 / 125 / 125 |
+| Flashcard items | 105 |
+| Exam rows | 41 pool sessions × 3 modes = 123 |
+| Tags | 11 domains, 3 Bloom levels (1,960 question-tag pivots) |
+| Session 1 open? | yes (only session 1) |
+| Seed time (SQLite, transaction) | ~2.5 s |
+
+---
+
+## 6. Usage in the app
+
+- **Student:** log in as `student@passimark.com` / `password`, complete "Session 1 • Security Governance & Frameworks" in any mode; finishing with ≥70 opens the approval request, and instructor approval unlocks Session 2, and so on through the ladder.
+- **Admin:** `/admin/passimark` shows the approval queue; approve/reject per progress row.
+- **Extend:** re-extract after the textbook is updated, or add a second bundle (different `tag` namespace / phase range) to the same track to exercise multi-bundle-per-cert.

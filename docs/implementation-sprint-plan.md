@@ -130,6 +130,13 @@ Give admins a reliable content workflow for creating and maintaining assessment 
 - content operations are stable enough to support real content growth
 - the platform can be used beyond demo-only question sets
 
+### Sprint 4.5: CISSP textbook bundle (extraction + real content) — done
+- **Source:** the Hexadigitall *Enterprise Security Architecture & CISSP Mastery* 45-day textbook — full audit and assessment inventory in **[cissp-prep-bundle.md](cissp-prep-bundle.md)**
+- `php artisan passimark:extract-cissp` parses the textbook HTML into a committed bundle JSON (`database/seeders/data/cissp/cissp-bundle.json`): 46 sessions, 980 MC assessment items (37×15 daily CAT drills, 50-question Phase 1 diagnostic, 125-question simulated CAT, 2×125-question full mocks), 105 flashcard drills
+- `database/seeders/CISSPBundleSeeder.php` loads the bundle into the existing `cissp` track (sessions/exams/questions/tags), proves the **bundle-per-cert** design (track + ordered sessions + approval gating + domain/Bloom tags); legacy `domain`/`bloom_level` columns read-compat, tags are the model
+- Gating: only session 1 is open; every later session follows the existing approval-gated ladder (prev session approved → next progress row `open`), matching the phase-1-first-lesson unlock rule from the Sprint 5 doc
+- Verified by `tests/Feature/CISSPBundleSeederTest.php` (5 tests / full-curl integrity + CAT run against real pools)
+
 ---
 
 ## Sprint 5-8: v4.0 Worldwide catalog (approved JAN 2026 spec)

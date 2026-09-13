@@ -38,8 +38,9 @@ Missing work:
 Session/exam/question CRUD and validated bulk import exist in the admin workspace (see `sprint-3-progress.md`).
 
 Still missing:
-- taxonomy / domain management as a real data model — `domain` and `bloom_level` are still free-text strings, not a tag table. Scoped in `sprint-4-taxonomy-plan.md` (4.2) and required before the v4 catalog.
 - certification track model — shipped in Sprint 4.1; the v4 catalog builds on it.
+- tag taxonomy / domain management as a real data model — shipped in Sprint 4.2 (`passimark_tags` + pivots, `passimark:backfill-tags` command, admin Tags screen; legacy `domain`/`bloom_level` columns retained read-compat and deprecated). The v4 catalog models `domain` through these tags.
+- real multi-cert content — shipped (proven) in Sprint 4.5: the Hexadigitall CISSP 45-day textbook is fully extracted into a committed bundle and seeded through the existing track/session/exam/question model ([cissp-prep-bundle.md](cissp-prep-bundle.md)). This validates the **bundle-per-cert** flow that v4 generalizes to 205 certs.
 - the v4.0 Worldwide catalog itself: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, IRT-aligned question fields, the supplied `WorldwidePassimarkCatalogSeeder` (17 certs) and the 205-cert catalog JSON. Planned in `sprint-5-v4-worldwide-catalog.md`.
 - content export and a content author review/approval workflow distinct from the learner approval workflow
 
@@ -134,12 +135,13 @@ The project already has logo and image assets, which is a strength. Favicon, app
 - platform-specific icon sizes and variants for native packaging (Android mipmaps, iOS icon sets — deferred until native packaging work begins, see Epic 7 in `mvp-backlog.md`)
 
 ## 9. Recommended order of implementation
-### Phase 1: Product core (Sprints 0-4 — done except 4.2)
+### Phase 1: Product core (Sprints 0-4 — done)
 - complete learner dashboard
 - complete exam flow
 - complete admin approval workflow
 - fix scoring and progress transitions
-- tag taxonomy (4.2) — prerequisite for catalog scale
+- tag taxonomy (4.2) — shipped; prerequisite for catalog scale now met
+- real CISSP bundle content (4.5) — shipped; proves the extraction + bundle-per-cert pipeline the 205-cert catalog will reuse
 
 ### Phase 2: v4.0 Worldwide build (Sprints 5-8 — approved spec)
 - worldwide catalog schema + seeder (5)

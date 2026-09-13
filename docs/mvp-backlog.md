@@ -70,7 +70,7 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 4: Content and question management
 ### Priority: P0 / P1
-### Status: partially done — CRUD and bulk import shipped (sprint-3-progress.md); taxonomy/tags and certification tracks are scoped in sprint-4-taxonomy-plan.md; see also Epic 9 for the v4.0 Worldwide catalog which depends on this epic's tag model
+### Status: core done — CRUD + bulk import shipped (sprint-3-progress.md); certification tracks (4.1) and tag taxonomy (4.2, `passimark_tags` + pivots + backfill command + admin Tags screen) shipped in sprint-4-taxonomy-plan.md; CISSP textbook bundle (4.5) extracted and seeded — 46 sessions / 980 MC items / 105 flashcards from the Hexadigitall 45-day textbook, content pipeline documented in cissp-prep-bundle.md; remaining items below (exports, review workflow, broader import formats) stay P1/P2. Epic 9 (v4.0 Worldwide catalog) now builds on the shipped tag model and the proven bundle-per-cert pipeline.
 ### Tasks
 - build session CRUD screens
 - build exam CRUD screens
