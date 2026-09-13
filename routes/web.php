@@ -16,6 +16,12 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->n
 // Authenticated routes
 Route::middleware(['auth'])->group(function(){
     Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
+    Route::get('/profile', [PassimarkController::class,'profile'])->name('profile');
+    Route::get('/settings', [PassimarkController::class,'settings'])->name('settings');
+    Route::get('/api/sessions', [PassimarkController::class,'sessionsApi'])->name('api.sessions');
+    Route::get('/api/progress', [PassimarkController::class,'progressApi'])->name('api.progress');
+    Route::get('/passimark/attempt/{attempt}', [PassimarkController::class,'exam'])->name('passimark.exam');
+    Route::get('/passimark/attempt/{attempt}/result', [PassimarkController::class,'result'])->name('passimark.result');
     Route::post('/passimark/session/{session}/start', [PassimarkController::class,'start'])->name('passimark.start');
     Route::post('/passimark/attempt/{attempt}/answer', [PassimarkController::class,'answer'])->name('passimark.answer');
     Route::post('/passimark/attempt/{attempt}/finish', [PassimarkController::class,'finish'])->name('passimark.finish');
@@ -27,4 +33,17 @@ Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(func
     Route::post('/passimark/progress/{progress}/approve', [PassimarkAdminController::class,'approve'])->name('admin.approve');
     Route::post('/passimark/progress/{progress}/reject', [PassimarkAdminController::class,'reject'])->name('admin.reject');
     Route::post('/passimark/questions/import', [PassimarkAdminController::class,'importQuestions'])->name('admin.import');
+    Route::get('/import', [PassimarkAdminController::class,'importPage'])->name('admin.import.page');
+    Route::post('/sessions', [PassimarkAdminController::class,'storeSession'])->name('admin.sessions.store');
+    Route::put('/sessions/{session}', [PassimarkAdminController::class,'updateSession'])->name('admin.sessions.update');
+    Route::delete('/sessions/{session}', [PassimarkAdminController::class,'destroySession'])->name('admin.sessions.destroy');
+    Route::post('/certification-tracks', [PassimarkAdminController::class,'storeCertificationTrack'])->name('admin.tracks.store');
+    Route::put('/certification-tracks/{certificationTrack}', [PassimarkAdminController::class,'updateCertificationTrack'])->name('admin.tracks.update');
+    Route::delete('/certification-tracks/{certificationTrack}', [PassimarkAdminController::class,'destroyCertificationTrack'])->name('admin.tracks.destroy');
+    Route::post('/exams', [PassimarkAdminController::class,'storeExam'])->name('admin.exams.store');
+    Route::put('/exams/{exam}', [PassimarkAdminController::class,'updateExam'])->name('admin.exams.update');
+    Route::delete('/exams/{exam}', [PassimarkAdminController::class,'destroyExam'])->name('admin.exams.destroy');
+    Route::post('/questions', [PassimarkAdminController::class,'storeQuestion'])->name('admin.questions.store');
+    Route::put('/questions/{question}', [PassimarkAdminController::class,'updateQuestion'])->name('admin.questions.update');
+    Route::delete('/questions/{question}', [PassimarkAdminController::class,'destroyQuestion'])->name('admin.questions.destroy');
 });

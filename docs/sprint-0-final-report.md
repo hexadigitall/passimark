@@ -203,7 +203,7 @@ Tested all Eloquent relationships work correctly:
 ## S0.5: Documentation & Logging ✅
 
 ### S0.5.1: Comprehensive Documentation ✅
-- ✓ [DEVELOPMENT.md](DEVELOPMENT.md) - 500+ line dev guide
+- ✓ [DEVELOPMENT.md](../DEVELOPMENT.md) - 500+ line dev guide
   - Quick start (5-10 min setup)
   - Project structure explained
   - Git workflow documented
@@ -212,12 +212,12 @@ Tested all Eloquent relationships work correctly:
   - Performance tips
   - Deployment checklist
 
-- ✓ [docs/S0-testing-checklist.md](docs/S0-testing-checklist.md)
+- ✓ [docs/S0-testing-checklist.md](S0-testing-checklist.md)
   - 100+ test items for S0 and S1
   - Blocking conditions noted
   - Verification commands provided
 
-- ✓ [GETTING_STARTED.md](GETTING_STARTED.md)
+- ✓ [GETTING_STARTED.md](../GETTING_STARTED.md)
   - Project overview and context
   - Task selection guide
   - Contribution workflow
@@ -385,9 +385,9 @@ npm run dev
 ## Team Handoff
 
 All developers should:
-1. Read [DEVELOPMENT.md](DEVELOPMENT.md) for setup and workflow
-2. Review [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) for task breakdown
-3. Use [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) for daily standup
+1. Read [DEVELOPMENT.md](../DEVELOPMENT.md) for setup and workflow
+2. Review [docs/sprint-0-1-tasks.md](sprint-0-1-tasks.md) for task breakdown
+3. Use [docs/sprint-progress-tracker.md](sprint-progress-tracker.md) for daily standup
 4. Follow commit message format: `[S1.1.2] Brief description`
 5. Create feature branches from `develop` for each task
 

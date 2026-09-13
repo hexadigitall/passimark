@@ -8,4 +8,5 @@ class PassimarkProgress extends Model {
     const COMPLETED='completed'; const PENDING='pending_approval'; const APPROVED='approved';
     public function user(){ return $this->belongsTo(User::class); }
     public function session(){ return $this->belongsTo(PassimarkSession::class,'session_id'); }
+    public function approvalEvents(){ return $this->hasMany(PassimarkApprovalEvent::class,'progress_id'); }
 }

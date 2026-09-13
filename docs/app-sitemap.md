@@ -20,14 +20,14 @@
 - Logout
 
 ## Learner dashboard
-- Overview
-- My Sessions
-- Active Exam
-- Practice Lab
-- Results
-- Progress
-- Study Recommendations
-- Profile Settings
+- Overview (built)
+- My Sessions (built — part of the dashboard session grid)
+- Active Exam (built)
+- Practice Lab (not built — practice mode exists as an exam mode, not a distinct lab screen)
+- Results (built)
+- Progress (built — dashboard metric cards)
+- Study Recommendations (not built)
+- Profile Settings (built — split into separate Profile and Settings pages)
 
 ## Session / exam flow
 - Session list
@@ -43,15 +43,15 @@
 - Retake path
 
 ## Admin section
-- Overview
-- Learners
-- Pending Approvals
-- Session Management
-- Exam Management
-- Question Library
-- Content Import
-- Reports
-- Settings
+- Overview (built — reporting cards on the Approvals tab)
+- Learners (not built as a dedicated list; learner data only appears inside approval/report views)
+- Pending Approvals (built)
+- Session Management (built)
+- Exam Management (built)
+- Question Library (built)
+- Content Import (built)
+- Reports (partially built — summary cards only, no domain/cohort-level reporting)
+- Settings (not built)
 
 ## Admin task flows
 - approve learner completion

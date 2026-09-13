@@ -51,6 +51,7 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 3: Admin approval and management flow
 ### Priority: P0
+### Status: done — see sprint-3-progress.md
 ### Tasks
 - build admin dashboard UI
 - list learner completion requests
@@ -69,6 +70,7 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 4: Content and question management
 ### Priority: P0 / P1
+### Status: partially done — CRUD and bulk import shipped (sprint-3-progress.md); taxonomy/tags and certification tracks are scoped in sprint-4-taxonomy-plan.md; see also Epic 9 for the v4.0 Worldwide catalog which depends on this epic's tag model
 ### Tasks
 - build session CRUD screens
 - build exam CRUD screens
@@ -163,6 +165,22 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ---
 
+## Epic 9: v4.0 Worldwide certification catalog — approved JAN 2026 spec
+### Priority: P0 (v4.0 build target)
+### Status: planned — see v4-worldwide-catalog-spec.md and sprint-5-v4-worldwide-catalog.md
+### Tasks
+- session model gains `phase_type` (`cert|lesson|phase|domain|mock|final`), `cert_slug`, `theta_required`; exam gains `time_minutes`/`is_final`/`irt_enabled`; question gains `correct_key`/IRT field alignment
+- wire `WorldwidePassimarkCatalogSeeder` (17 certs) + 205-cert catalog JSON ([worldwide-205-cert-catalog.json](worldwide-205-cert-catalog.json), ~2,870 sessions) — Lessons 25Q @UP → Phases 50-75Q @UP → Domains 75Q @UP+Pressure → Mocks 70/100/120% → Final 100% real spec
+- CAT engine v4: IRT 3PL, MLE theta (Newton-Raphson), Fisher-information item selection, per-cert `passTheta`/`passScoreScaled`, real adaptive cutoffs (e.g. NCLEX 75-145)
+- Pearson VUE exam chrome (timer, palette, flag/review, strike-through, calculator, break dialogs) and mastery dashboard (dotted→solid progress rings, theta trendline, weak-zone heatmaps)
+- verifiable certificates: `Certificate.jsx`, credential ID `PMK-{CERT}-2026-{HEX}`, QR → verify.passimark.com, pass probability, blockchain-hash placeholder (Polygon/IPFS)
+- PWA manifest brand compliance (`#0F172A` background) and deployment guide
+### Definition of done
+- a learner can take any shipped cert through the full CAT ladder and earn a verifiable credential
+- seeded catalog counts match the v4 spec; full PHPUnit + production build green
+
+---
+
 ## Prioritization summary
 ### P0: must-have for MVP
 - auth and roles
@@ -180,7 +198,7 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ### P2: platform scale and distribution
 - native packaging for desktop/mobile
-- multi-domain catalog expansion
+- multi-domain catalog expansion (v4.0 Worldwide — now P0-approved, see Epic 9)
 - enterprise features and cohort management
 
 ---

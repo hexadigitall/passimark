@@ -3,6 +3,8 @@
 ## 1. Executive summary
 Passimark already has a strong concept, a sensible data model, and a real adaptive testing foundation. The main gap is not in the core idea; it is in the completeness of the product layer: full UI delivery, stronger operational quality, and broader product tooling.
 
+An approved **v4.0 Worldwide specification (JAN 2026)** has been audited and distilled into [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md). It expands the single-CISSP prototype into a 200-cert, 5-stage CAT platform and is now the primary forward scope (Sprints 5-8 in [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md)).
+
 ## 2. What is already working well
 The project already includes:
 - a structured session model
@@ -15,15 +17,13 @@ The project already includes:
 That means the application has a solid conceptual foundation and a real product engine behind it.
 
 ## 3. Highest-priority gaps
-### 3.1 Full frontend completion
-The current UI screens are still skeletal relative to the product vision. The app contains mockups and placeholder screens, but the user-facing implementation still needs to be completed.
+### 3.1 Full frontend completion — mostly done
+Student dashboard, exam flow (timer, instructions gate, progress indicator, exit control), result/review screen, and admin decision screens are implemented and covered by feature tests (see `sprint-1-detailed-tasks.md`, `sprint-2-progress.md`, `sprint-3-progress.md`).
 
-Missing work:
-- polished student dashboard
-- completed exam flow
-- timer and navigation UX
-- review screen and explanation display
-- admin dashboard and decision screens
+Still missing:
+- Practice Lab, Study Recommendations, and a dedicated flagged-questions review screen from `app-sitemap.md`
+- public marketing pages (Home/Features/Pricing)
+- design tokens and a typography scale (Tailwind config is currently unmodified defaults)
 
 ### 3.2 State integrity and business logic enforcement
 The database tracks states such as locked, open, in progress, pending approval, and approved, but those states must be enforced more rigorously in the app logic.
@@ -34,15 +34,20 @@ Missing work:
 - explicit approval workflow rules
 - deterministic unlock logic for next-stage access
 
-### 3.3 Real content authoring and management
-The project contains seed data, but not yet a robust content system for scaling beyond demo content.
+### 3.3 Real content authoring and management — partially done
+Session/exam/question CRUD and validated bulk import exist in the admin workspace (see `sprint-3-progress.md`).
 
-Missing work:
-- question bank management
-- bulk import and export
-- session and exam editing screens
-- taxonomy / domain management
-- content author review workflow
+Still missing:
+- taxonomy / domain management as a real data model — `domain` and `bloom_level` are still free-text strings, not a tag table. Scoped in `sprint-4-taxonomy-plan.md` (4.2) and required before the v4 catalog.
+- certification track model — shipped in Sprint 4.1; the v4 catalog builds on it.
+- the v4.0 Worldwide catalog itself: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, IRT-aligned question fields, the supplied `WorldwidePassimarkCatalogSeeder` (17 certs) and the 205-cert catalog JSON. Planned in `sprint-5-v4-worldwide-catalog.md`.
+- content export and a content author review/approval workflow distinct from the learner approval workflow
+
+### 3.3a CAT engine v4 (IRT 3PL)
+The current `CatEngine` selects the nearest-difficulty question and terminates on a fixed rule. The v4 spec requires true adaptive intelligence:
+- 3PL item model, MLE theta via Newton-Raphson (clamp [−3,3]), Fisher-information next-question selection
+- per-cert `passTheta`/`passScoreScaled`, real adaptive cutoffs (e.g. NCLEX 75-145)
+Planned in Sprint 6 (`sprint-5-v4-worldwide-catalog.md`).
 
 ### 3.4 Product analytics and reporting
 The app tracks attempts and scores, but higher-level reporting is still limited.
@@ -68,10 +73,10 @@ Missing work:
 ## 4. Product-level missing features
 ### Learning features
 - learner feedback after completion
-- recommendations based on weak domains
+- recommendations based on weak domains (v4: dotted→solid mastery rings + weak-zone heatmaps, Sprint 7)
 - retake policy handling
 - mastery progression milestones
-- completion certificates and recognition
+- completion certificates and recognition (v4: verifiable certificate with QR/credential ID, Sprint 8)
 
 ### Admin features
 - cohort and organization management
@@ -122,25 +127,32 @@ The product is conceptually ready for multi-platform deployment, but the actual 
 - iOS app packaging
 
 ## 8. Branding and asset standardization
-The project already has logo and image assets, which is a strength. But the project still needs:
-- one final approved logo set
+The project already has logo and image assets, which is a strength. Favicon, apple-touch-icon, and web manifest icons are now wired into `resources/views/app.blade.php` and `public/manifest.json` (Sprint 4). Still needed:
+- one final approved logo set (v4.0 approved source `photo6321858088250300469.jpeg`; target filenames `logo-final-*.png`, `icon-*.png`)
+- `public/manifest.json` background must change `#ffffff` → `#0F172A` (brand `#1A9E2D` theme already correct) — tracked in Sprint 8.3
 - standard usage across screens and packaging
-- consistent favicon and app icon usage
-- platform-specific icon sizes and variants
+- platform-specific icon sizes and variants for native packaging (Android mipmaps, iOS icon sets — deferred until native packaging work begins, see Epic 7 in `mvp-backlog.md`)
 
 ## 9. Recommended order of implementation
-### Phase 1: Product core
+### Phase 1: Product core (Sprints 0-4 — done except 4.2)
 - complete learner dashboard
 - complete exam flow
 - complete admin approval workflow
 - fix scoring and progress transitions
+- tag taxonomy (4.2) — prerequisite for catalog scale
 
-### Phase 2: Product depth
+### Phase 2: v4.0 Worldwide build (Sprints 5-8 — approved spec)
+- worldwide catalog schema + seeder (5)
+- CAT engine v4 IRT 3PL (6)
+- Pearson VUE chrome + mastery dashboard (7)
+- certificates + PWA + deployment (8)
+
+### Phase 3: Product depth (Sprints 9-10)
 - richer reporting and analytics
 - stronger question management tools
 - improved UX responsiveness
 
-### Phase 3: Product expansion
+### Phase 4: Product expansion (Sprints 11-12)
 - cross-platform packaging and distribution
 - enterprise features
 - multi-domain catalog support

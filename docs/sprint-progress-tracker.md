@@ -1,1 +1,65 @@
-# Sprint Progress Tracker\n\n## Sprint 0 Status\n**Start Date:** [TBD]  \n**Target Completion:** [TBD]  \n**Status:** Not Started\n\n### Task Summary\n| Task Group | Total | Completed | In Progress | Blocked |\n|---|---|---|---|---|\n| S0.1: Environment & Config | 3 | 0 | 0 | 0 |\n| S0.2: Auth & Roles | 2 | 0 | 0 | 0 |\n| S0.3: Routes & Controllers | 2 | 0 | 0 | 0 |\n| S0.4: Git & Workflow | 2 | 0 | 0 | 0 |\n| S0.5: Documentation | 3 | 0 | 0 | 0 |\n| **Sprint 0 Total** | **12** | **0** | **0** | **0** |\n\n### Subtask Progress\n- [ ] S0.1.1: Environment and configuration setup\n- [ ] S0.1.2: Database setup and migrations\n- [ ] S0.1.3: Frontend build and asset compilation\n- [ ] S0.2.1: Test auth flow\n- [ ] S0.2.2: Validate role and permission structure\n- [ ] S0.3.1: Test web routes\n- [ ] S0.3.2: Verify model relationships\n- [ ] S0.4.1: Confirm Git repository state\n- [ ] S0.4.2: Create development branch structure\n- [ ] S0.5.1: Create Sprint 0 completion checklist\n- [ ] S0.5.2: Document local development setup\n- [ ] S0.5.3: Establish logging and debugging baseline\n\n### Known Issues\n(None yet)\n\n---\n\n## Sprint 1 Status\n**Start Date:** [After Sprint 0]  \n**Target Completion:** [TBD]  \n**Status:** Waiting for Sprint 0\n\n### Task Summary\n| Task Group | Total | Completed | In Progress | Blocked |\n|---|---|---|---|---|\n| S1.1: Login & Auth UI | 3 | 0 | 0 | 0 |\n| S1.2: Dashboard Layout & Nav | 3 | 0 | 0 | 0 |\n| S1.3: Dashboard & Sessions | 3 | 0 | 0 | 0 |\n| S1.4: Progress & Roadmap | 3 | 0 | 0 | 0 |\n| S1.5: Profile & Settings | 2 | 0 | 0 | 0 |\n| S1.6: Backend Data API | 3 | 0 | 0 | 0 |\n| S1.7: UI/UX & Styling | 3 | 0 | 0 | 0 |\n| S1.8: Testing & Validation | 3 | 0 | 0 | 0 |\n| **Sprint 1 Total** | **23** | **0** | **0** | **0** |\n\n### Subtask Progress\n- [ ] S1.1.1: Build login page UI\n- [ ] S1.1.2: Test login flow end-to-end\n- [ ] S1.1.3: Build logout flow\n- [ ] S1.2.1: Create main dashboard layout component\n- [ ] S1.2.2: Build sidebar navigation for student\n- [ ] S1.2.3: Build top navigation bar\n- [ ] S1.3.1: Create dashboard main page component\n- [ ] S1.3.2: Build session list display\n- [ ] S1.3.3: Implement session filtering and search\n- [ ] S1.4.1: Build progress overview\n- [ ] S1.4.2: Create session-level progress detail\n- [ ] S1.4.3: Build phase roadmap visualization\n- [ ] S1.5.1: Create profile page\n- [ ] S1.5.2: Add basic profile settings\n- [ ] S1.6.1: Create PassimarkController methods\n- [ ] S1.6.2: Create session list endpoint\n- [ ] S1.6.3: Create progress calculation methods\n- [ ] S1.7.1: Apply design tokens to dashboard\n- [ ] S1.7.2: Test responsive behavior\n- [ ] S1.7.3: Add empty states and loading states\n- [ ] S1.8.1: Write unit tests for dashboard logic\n- [ ] S1.8.2: Manual testing checklist\n- [ ] S1.8.3: Create user acceptance criteria\n\n### Known Issues\n(None yet)\n\n---\n\n## How to Update This File\n1. Mark tasks as completed: `- [x]` instead of `- [ ]`\n2. Update the summary table counts manually\n3. Log any issues or blockers in the \"Known Issues\" section\n4. Commit changes after each completed task group\n\n## Standup Template\nUse this structure for daily standups:\n- **Yesterday:** [completed tasks]\n- **Today:** [planned tasks]\n- **Blockers:** [any issues or dependencies]\n\n## Definition of Done for Sprint\n- All subtasks are marked complete\n- All tests pass\n- Code is reviewed and merged\n- Documentation is updated\n- No critical issues remain\n\n"
+# Sprint Progress Tracker
+
+This is the live index of sprint status. Detailed task lists and evidence live in each sprint's own document; this file only tracks status and links.
+
+## Status legend
+- `done` — implemented and verified by a passing automated test and a production build
+- `in progress` — partially implemented, tracked in the linked doc's "Next slices" section
+- `planned` — scoped but not started
+
+## Sprint 0: Environment and foundation
+**Status:** done
+**Evidence:** [sprint-0-final-report.md](sprint-0-final-report.md), [sprint-0-closure-verification.md](sprint-0-closure-verification.md)
+- App boots, migrates, and seeds cleanly
+- Auth flow and roles verified
+- Git repository initialized and pushed to `origin`
+
+## Sprint 1: Student dashboard and auth UI
+**Status:** done
+**Evidence:** [sprint-1-detailed-tasks.md](sprint-1-detailed-tasks.md)
+- Login/registration with validation error handling
+- Dashboard, profile, and settings pages
+- Session status cards wired to real backend state
+- Sessions/progress API with phase and status filtering
+
+## Sprint 2: Adaptive exam flow and result scoring
+**Status:** done
+**Evidence:** [sprint-2-progress.md](sprint-2-progress.md)
+- Real CAT/timed/practice exam UI with timer, instructions gate, and progress indicator
+- Answer submission, theta updates, and automatic completion
+- Dedicated result screen with answer review and attempt history
+- Attempt/question ownership and option validation
+
+## Sprint 3: Admin approval and educator workflow
+**Status:** in progress
+**Evidence:** [sprint-3-progress.md](sprint-3-progress.md)
+- Role middleware, approval queue, and approve/reject with required notes — done
+- Session/exam/question CRUD with validation — done
+- Admin content workspace and reporting cards — done
+- Bulk question import with nested validation — done
+- Remaining: richer bulk-operation history, deeper learner-level reporting
+
+## Sprint 4: Certification track and tag taxonomy
+**Status:** in progress
+**Evidence:** [sprint-4-taxonomy-plan.md](sprint-4-taxonomy-plan.md)
+- Web favicon, apple-touch-icon, and manifest icon set wired into the app shell — done
+- Coherence pass: real logo wired into the app shell, flash messages now render as a dismissible banner, admin control center has a return path to the dashboard, and Register visually matches Login — done
+- Certification track model, CRUD, and admin UI — done; a second certification track and independently-scoped session can now be created without touching code
+- Tag taxonomy for `domain`/`bloom_level` — not started
+- Blocks the v4.0 Worldwide catalog (Sprint 5) until the tag model exists (see plan doc for rationale and scope)
+
+## Sprint 5-8: v4.0 Worldwide catalog (NEW — approved spec JAN 2026)
+**Status:** planned
+**Evidence:** [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md), [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)
+- **Sprint 5 — worldwide catalog schema + seeder**: `phase_type` session model (`cert|lesson|phase|domain|mock|final`), `theta_required`, exam `time_minutes`/`is_final`/`irt_enabled`, correct/IRT key on questions, wire `WorldwidePassimarkCatalogSeeder` (17 certs) + 205-cert catalog JSON (~2,870 sessions)
+- **Sprint 6 — CAT engine v4 (IRT 3PL)**: Newton-Raphson MLE theta + Fisher-information item selection, `passTheta`/`passScoreScaled`
+- **Sprint 7 — Pearson VUE chrome + mastery dashboard**: question palette, flag/review, strike-through, calculator, break dialogs; dotted→solid progress rings, theta trendline, design tokens
+- **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx`, credential IDs `PMK-…`, QR verification, manifest background fix (`#0F172A`), deployment guide
+
+## Known open risks (not yet scheduled)
+- No frontend/browser automated tests — only PHPUnit backend coverage exists
+- No design tokens / typography scale — Tailwind defaults are used everywhere ([tailwind.config.js](../tailwind.config.js)); scoped in Sprint 7.4
+- CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
+- `.psmk` file-format and course/import tooling remains an RFC only ([passimark-file-format-rfc.md](passimark-file-format-rfc.md))
+- v4.0 brand assets still use legacy `passimark_*` filenames and `manifest.json` background is `#ffffff` instead of `#0F172A` (tracked in Sprint 8.3)
+- Sprint 1-3 feature work is sitting uncommitted in the working tree (next commit should land it before Sprint 5 starts)

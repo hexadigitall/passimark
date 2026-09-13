@@ -1,0 +1,49 @@
+name: Passimark CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, sqlite3, pdo_sqlite, fileinfo
+          coverage: none
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Install JavaScript dependencies
+        run: npm ci
+
+      - name: Prepare application
+        run: |
+          cp .env.example .env
+          mkdir -p database storage/framework/cache storage/framework/sessions storage/framework/views
+          touch database/database.sqlite
+          php artisan key:generate
+          php artisan migrate --force
+          php artisan db:seed --class=PassimarkSeeder --force
+
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
+
+      - name: Build frontend
+        run: npm run build

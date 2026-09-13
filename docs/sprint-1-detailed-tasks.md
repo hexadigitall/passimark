@@ -43,16 +43,15 @@
 
 ---
 
-### S1.1.2: Build Registration Form  
+### S1.1.2: Build Registration Form ✅
 **File:** `resources/js/Pages/Auth/Register.jsx`
 **Tasks:**
-- [ ] Create registration component
-- [ ] Name, email, password, password_confirm fields
-- [ ] Client-side validation (email format, password length)
-- [ ] Form submission to `/register` endpoint
-- [ ] Error handling and display
-- [ ] Link to login page
-- [ ] Responsive layout
+- [x] Create registration component
+- [x] Name, email, password, password confirmation fields
+- [x] Form submission to `/register` endpoint
+- [x] Error handling and display
+- [x] Link to login page
+- [x] Responsive layout
 
 **Definition of Done:**
 - Registration form submits without errors
@@ -77,7 +76,7 @@
 
 ## S1.2: Dashboard Layout & Navigation (1 day)
 
-### S1.2.1: Create Main Dashboard Layout ✅ (In Progress)
+### S1.2.1: Create Main Dashboard Layout ✅
 **File:** `resources/js/Layouts/DashboardLayout.jsx`
 **Status:** Layout structure created
 **Tasks:**
@@ -85,7 +84,7 @@
 - [x] Top navigation bar
 - [x] User profile dropdown / menu
 - [x] Main content area (children)
-- [ ] Dark theme with emerald accents
+- [x] Dark theme with emerald accents
 - [ ] Smooth transitions and animations
 - [ ] Active route highlighting
 - [ ] Mobile-responsive sidebar toggle
@@ -133,18 +132,18 @@
 
 ## S1.3: Sessions List & Dashboard Display (2 days)
 
-### S1.3.1: Build Sessions Grid Component ✅ (In Progress)
+### S1.3.1: Build Sessions Grid Component ✅
 **File:** `resources/js/Pages/Passimark/Dashboard.jsx`
 **Tasks:**
 - [x] Fetch sessions from backend
 - [x] Display session cards in grid
-- [ ] Responsive: 1 col mobile, 2 cols tablet, 3 cols desktop
+- [x] Responsive: 1 col mobile, 2 cols tablet, 3 cols desktop
 - [ ] Session card content:
-  - [ ] Session number/title
-  - [ ] Domain (subject area)
-  - [ ] Question count
-  - [ ] Pass score requirement
-  - [ ] Current user score (if attempted)
+  - [x] Session number/title
+  - [x] Domain (subject area)
+  - [x] Question count
+  - [x] Pass score requirement
+  - [x] Current user score (if attempted)
 
 **Definition of Done:**
 - Sessions load from backend without errors
@@ -174,17 +173,17 @@
 
 ### S1.3.3: Add Session Action Buttons  
 **Functionality:**
-- [ ] "Start Session" button (if open) → POST /passimark/session/{id}/start
-- [ ] "Resume" button (if in_progress) → POST /passimark/session/{id}/start
+- [x] "Start Session" button (if open) → POST /passimark/session/{id}/start
+- [x] "Resume" button (if in_progress) → POST /passimark/session/{id}/start
 - [ ] "Locked" button (if locked) → disabled state
 - [ ] Show approval message (if pending_approval)
-- [ ] Button loading state during submission
-- [ ] Error handling and display
+- [x] Button loading state during submission
+- [x] Error handling and display
 
 **Behavior:**
-- [ ] Clicking start → redirect to exam interface (S2)
-- [ ] Show loading spinner while processing
-- [ ] Handle errors gracefully
+- [x] Clicking start → redirect to exam interface (S2)
+- [x] Show loading state while processing
+- [x] Handle errors gracefully
 
 ---
 
@@ -192,10 +191,10 @@
 
 ### S1.4.1: Create Progress Overview Section  
 **Display:**
-- [ ] Current phase indicator
-- [ ] Total progress percentage
-- [ ] Sessions completed / total sessions
-- [ ] Current ability level (theta estimate)
+- [x] Current phase indicator
+- [x] Total progress percentage
+- [x] Sessions completed / total sessions
+- [x] Current ability level (theta estimate)
 - [ ] Session history list
 
 **Components:**
@@ -222,14 +221,13 @@
 ## S1.5: User Profile & Settings (1 day)
 
 ### S1.5.1: Build Profile Page  
-**File:** `resources/js/Pages/Profile/Show.jsx`
+**File:** `resources/js/Pages/Passimark/Profile.jsx`
 **Content:**
-- [ ] User name
-- [ ] Email address
-- [ ] Account creation date
-- [ ] Role badge (Student/Instructor/Admin)
-- [ ] Total sessions attempted
-- [ ] Average score
+- [x] User name
+- [x] Email address
+- [x] Role badge (Student/Instructor/Admin)
+- [x] Total sessions attempted
+- [x] Average score
 
 ---
 
@@ -251,7 +249,7 @@
 
 ### S1.5.3: Settings Panel  
 **Options:**
-- [ ] Notifications (email alerts for approvals)
+- [x] Notifications (email alerts for approvals)
 - [ ] Timezone
 - [ ] Theme preference (if adding light theme later)
 - [ ] Download data
@@ -284,9 +282,9 @@
 ```
 
 **Filtering:**
-- [ ] Filter by phase
-- [ ] Filter by status (for learner's own sessions)
-- [ ] Order by session number
+- [x] Filter by phase
+- [x] Filter by status (for learner's own sessions)
+- [x] Order by session number
 
 ---
 
@@ -311,8 +309,8 @@
 **File:** `app/Http/Middleware/HandleInertiaRequests.php`
 **Shared Data:**
 - [x] `auth.user` (current user)
-- [ ] `auth.user.role` (user role for conditionals)
-- [ ] `flash` (success/error messages)
+- [x] `auth.user.role` (user role for conditionals)
+- [x] `flash` (success/error messages)
 - [ ] `csrf_token` (for forms)
 
 ---

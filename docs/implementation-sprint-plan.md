@@ -132,7 +132,19 @@ Give admins a reliable content workflow for creating and maintaining assessment 
 
 ---
 
-## Sprint 5: UX polish and responsive product quality
+## Sprint 5-8: v4.0 Worldwide catalog (approved JAN 2026 spec)
+These four sprints replace the single-curriculum CISSP prototype with the global 200-cert, 5-stage CAT platform from the approved v4.0 build. Full details and exit criteria in **[sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md)** and the distilled **[v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)**.
+
+- **Sprint 5 — worldwide catalog schema + seeder**: `phase_type` session model (`cert|lesson|phase|domain|mock|final`), `theta_required`, exam `time_minutes`/`is_final`/`irt_enabled`, question IRT/correct-key fields; wire `WorldwidePassimarkCatalogSeeder` (17 certs) + the 205-cert catalog JSON ([worldwide-205-cert-catalog.json](worldwide-205-cert-catalog.json); ~2,870 sessions); phase-1-first-lesson gating
+- **Sprint 6 — CAT engine v4 (IRT 3PL)**: Newton-Raphson MLE theta (clamp [−3,3]), Fisher-information next-question selection, real CAT termination, `passTheta` + `passScoreScaled`; unit-tested on synthetic responses
+- **Sprint 7 — Pearson VUE exam chrome + mastery dashboard**: question palette, flag/review, strike-through, calculator, break dialogs; dotted→solid progress rings (`stroke-dasharray 4 6`), theta trendline, domain weak-zone heatmap; extract v4 design tokens
+- **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx` (θ, pass probability, credential ID `PMK-…`, QR verification), `certified_at`/`credential_id` on progress, manifest background `#0F172A`, v4 deployment guide
+
+Requires Sprint 4.2 (tag taxonomy) before Sprint 5, since the catalog models `domain` through tags.
+
+---
+
+## Sprint 9: UX polish and responsive product quality
 ### Goal
 Elevate the app from functional to polished and trustworthy.
 
@@ -155,7 +167,7 @@ Elevate the app from functional to polished and trustworthy.
 
 ---
 
-## Sprint 6: analytics, reporting, and domain mastery views
+## Sprint 10: analytics, reporting, and domain mastery views
 ### Goal
 Add operational insight and learning visibility.
 
@@ -176,7 +188,7 @@ Add operational insight and learning visibility.
 
 ---
 
-## Sprint 7: platform packaging and distribution preparation
+## Sprint 11: platform packaging and distribution preparation
 ### Goal
 Prepare Passimark for real-world deployment beyond the browser-only prototype.
 
@@ -199,7 +211,7 @@ Prepare Passimark for real-world deployment beyond the browser-only prototype.
 
 ---
 
-## Sprint 8: QA, security, and production hardening
+## Sprint 12: QA, security, and production hardening
 ### Goal
 Move the app from a working demo to a stable deployment candidate.
 
@@ -227,11 +239,15 @@ Move the app from a working demo to a stable deployment candidate.
 2. Sprint 1
 3. Sprint 2
 4. Sprint 3
-5. Sprint 4
-6. Sprint 5
-7. Sprint 6
-8. Sprint 7
-9. Sprint 8
+5. Sprint 4 (incl. 4.2 tag taxonomy before Sprint 5)
+6. Sprint 5 — v4 worldwide catalog schema + seeder
+7. Sprint 6 — v4 CAT engine (IRT 3PL)
+8. Sprint 7 — Pearson VUE chrome + mastery dashboard
+9. Sprint 8 — certificates + PWA + deployment
+10. Sprint 9
+11. Sprint 10
+12. Sprint 11
+13. Sprint 12
 
 ## Working principles
 - keep the adaptive CAT engine at the center of product value
@@ -241,9 +257,14 @@ Move the app from a working demo to a stable deployment candidate.
 - treat packaging as a product readiness task, not a separate afterthought
 
 ## Execution roadmap
-Starting with Sprint 0 and 1, concrete task lists and daily tracking are available in:
+Current focus is the approved v4.0 Worldwide build:
+- **[docs/v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)** — distilled v4.0 spec (brand, 5-stage CAT ladder, catalog, schema delta, IRT 3PL engine, UI, certificates, deployment)
+- **[docs/sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md)** — Sprints 5-8 task breakdown and exit criteria
+- **[docs/sprint-4-taxonomy-plan.md](sprint-4-taxonomy-plan.md)** — prerequisite Sprint 4 tag taxonomy
+
+Older tracking:
 - **[docs/sprint-0-1-tasks.md](sprint-0-1-tasks.md)** — detailed task breakdown for Sprints 0 and 1
-- **[docs/sprint-progress-tracker.md](sprint-progress-tracker.md)** — daily progress tracking and standup template
+- **[docs/sprint-progress-tracker.md](sprint-progress-tracker.md)** — live status index and standup template
 
 ## Final delivery target
-The project should reach a dependable MVP first, then expand into richer analytics, stronger content tools, and multi-platform deployment. The goal is to build a real product loop before widening scope.
+The project should reach a dependable MVP first (Sprints 0-4). The approved v4.0 Worldwide build (Sprints 5-8) then widens the single-cert prototype into the global 200-cert, 5-stage CAT platform — after that, richer analytics, stronger content tools, and multi-platform deployment (Sprints 9-12). The goal is to build a real product loop before widening scope.

@@ -1,5 +1,7 @@
 # Passimark Full Implementation Plan
 
+> **v4.0 note:** The approved Worldwide build target is captured in [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md) (205-cert catalog, 5-stage ladder, IRT 3PL, Pearson VUE chrome, certificates), with execution in [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md). Sprint scoping below is superseded by [implementation-sprint-plan.md](implementation-sprint-plan.md) (13-sprint roadmap). This doc keeps the deeper product/UX detail.
+
 ## Executive summary
 Passimark is a modular adaptive assessment and certification-prep platform designed to scale across many subject domains. This document expands the earlier product and architecture notes into a full implementation brief covering product structure, UI/UX, branding, CRUD and functionality, responsive design, deployment targets, and platform-native packaging strategy.
 
@@ -64,7 +66,7 @@ Passimark transforms static study into adaptive readiness by combining test inte
 - add/edit/delete exams
 - add/edit/delete questions
 - import bulk questions
-- tag by domain, phase, difficulty, bloom level
+- tag by domain, phase, difficulty, bloom level — **not yet modeled**; domain/bloom are still free-text strings, see `docs/sprint-4-taxonomy-plan.md`
 - support metadata such as explanation and reference
 
 ### Reporting and analytics features

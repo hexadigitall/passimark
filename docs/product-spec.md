@@ -1,5 +1,7 @@
 # Passimark Product Specification
 
+> **Superseded in part by the approved v4.0 Worldwide specification** ([v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)): the product becomes a 200+-cert global CAT platform (205-cert catalog, 5-stage ladder, IRT 3PL engine, Pearson VUE UI, verifiable certificates). This v1 spec remains authoritative for the current code and the learner/admin loop; read the v4 spec for forward scope.
+
 ## 1. Product vision
 Passimark is a modular adaptive assessment and certification-prep platform. The current CISSP-style curriculum is only one example of how the system can be configured for a real-world domain or certification track. The product is intended to serve as a reusable assessment engine for learning, mastery, and exam-readiness across many subject areas.
 
@@ -84,6 +86,7 @@ This makes it more than a quiz tool. It becomes a readiness platform for exam pr
 ### 7.6 Domain-based curriculum
 - content can be mapped to different specialties or certifications
 - domains can be organized by knowledge area, learning track, or certification objective
+- **current implementation note:** domains are still free-text strings and there is no certification-track entity yet — only one hardcoded curriculum exists. Scoped for implementation in `docs/sprint-4-taxonomy-plan.md`.
 
 ### 7.7 Question metadata model
 Each question can include:

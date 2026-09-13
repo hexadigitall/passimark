@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useForm } from '@inertiajs/react';
+import { Link, useForm } from '@inertiajs/react';
 import { ArrowRight, Mail, Lock } from 'lucide-react';
 
 export default function Login() {
@@ -115,6 +115,12 @@ export default function Login() {
           {/* Footer */}
           <p className="text-center text-slate-400 text-sm mt-6">
             Demo credentials: <span className="text-emerald-400 font-mono">student@passimark.com / password</span>
+          </p>
+          <p className="mt-3 text-center text-sm text-slate-400">
+            New to Passimark?{' '}
+            <Link href="/register" className="font-medium text-emerald-400 hover:text-emerald-300">
+              Create an account
+            </Link>
           </p>
         </form>
       </div>

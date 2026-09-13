@@ -9,7 +9,7 @@ class CatEngine {
         if($attempt->mode==='cat'){
             return $query->orderByRaw('ABS(difficulty - ?) ASC', [$attempt->theta])->first();
         }
-        return $query->inRandomOrder()->first();
+        return $query->orderBy('id')->first();
     }
     public static function shouldTerminate(PassimarkAttempt $attempt): bool {
         $count = $attempt->answers()->count();

@@ -358,8 +358,10 @@ Before pushing to production:
    - [docs/technical-architecture.md](docs/technical-architecture.md) - How it's built
 
 2. **Check task tracking:**
-   - [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) - Current sprint tasks
-   - [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - Daily progress
+   - [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - Live status index (start here)
+   - [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - Current implementation sprint (4.2 tag taxonomy)
+   - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - Approved v4.0 build target
+   - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog
 
 3. **Search codebase:**
    ```bash
@@ -392,5 +394,5 @@ VITE_ASSET_URL=http://localhost:5173   # Frontend dev server
 
 ---
 
-**Last Updated:** Sprint 0  
+**Last Updated:** Sprint 4 (v4.0 audit, Sep 2026)  
 **Maintainer:** Development Team

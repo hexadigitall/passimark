@@ -24,7 +24,7 @@
 - [ ] Run Vite development server: `npm run dev`
 - [ ] Verify no build errors in console
 - [ ] Check that JS and CSS assets compile correctly
-- [ ] Confirm logo and branding assets load from `public/images/` and `resources/images/`
+- [x] Confirm logo and branding assets load from `public/images/` and `resources/images/` — favicon/app-icon/manifest wiring completed in Sprint 4 (see `sprint-4-taxonomy-plan.md`)
 - **Definition of done:** Frontend build completes without errors; assets are accessible
 
 ### S0.2: Authentication and Role Verification

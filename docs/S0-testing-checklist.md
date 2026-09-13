@@ -102,18 +102,18 @@
 ### S0.5: Documentation & Logging Setup ✅
 
 #### S0.5.1: Documentation Complete
-- [x] [DEVELOPMENT.md](DEVELOPMENT.md) - Developer onboarding guide
+- [x] [DEVELOPMENT.md](../DEVELOPMENT.md) - Developer onboarding guide
   - Quick start setup (5-10 minutes)
   - Project structure explained
   - Git workflow documented
   - Common tasks and debugging
   - Performance tips
   - Deployment checklist
-- [x] [GETTING_STARTED.md](GETTING_STARTED.md) - Project context and task selection
-- [x] [docs/product-spec.md](docs/product-spec.md) - Product vision and features
-- [x] [docs/technical-architecture.md](docs/technical-architecture.md) - System design
-- [x] [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) - Task breakdown
-- [x] [README.md](README.md) - Project quick reference
+- [x] [GETTING_STARTED.md](../GETTING_STARTED.md) - Project context and task selection
+- [x] [docs/product-spec.md](product-spec.md) - Product vision and features
+- [x] [docs/technical-architecture.md](technical-architecture.md) - System design
+- [x] [docs/sprint-0-1-tasks.md](sprint-0-1-tasks.md) - Task breakdown
+- [x] [README.md](../README.md) - Project quick reference
 
 #### S0.5.2: Logging & Monitoring
 - [ ] Laravel logs accessible at `storage/logs/laravel.log`

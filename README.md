@@ -4,6 +4,8 @@ Master Every Session. Unlock Your Certification.
 
 Laravel 11 + Inertia + React CAT Simulator with Session Gating.
 
+> **v4.0 Worldwide (approved JAN 2026):** the product is expanding to a 200+-cert global CAT platform. See [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) and [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) for scope and status. The code below still reflects v1 (single CISSP track).
+
 ## Install
 composer install
 cp .env.example .env
@@ -31,10 +33,12 @@ Start here:
 3. [docs/mvp-backlog.md](docs/mvp-backlog.md) - what we're building
 
 ### For implementation tasks
-Current focus: **Sprint 0 & Sprint 1** (environment hardening and student dashboard)
-- [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) - concrete task breakdown
-- [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - daily progress tracking
-- [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) - full sprint roadmap
+Current focus: **Sprint 4.2 (tag taxonomy) → Sprint 5+ (v4.0 Worldwide catalog)**
+- [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - approved v4.0 build spec (205-cert global platform)
+- [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - next implementation sprint (4.2)
+- [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog breakdown
+- [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - live status index
+- [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) - full 13-sprint roadmap
 
 ### For product context
 - [docs/product-spec.md](docs/product-spec.md) - vision and features

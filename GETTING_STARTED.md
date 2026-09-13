@@ -79,13 +79,18 @@ npm run dev                          # Frontend with Vite hot reload
 ## Step 3: Understand Current Work (5 min)
 
 ### Where are we in development?
-We are in **Sprint 0: Environment Hardening and Sprint 1: Student Dashboard** phase.
+Live status index: **[docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md)**.
+
+Quick summary (as of the v4.0 audit):
+- ✅ Sprints 0-3 done (environment, student auth/dashboard, exam flow, admin workflow)
+- 🔶 Sprint 4 in progress — certification track model done; **tag taxonomy (4.2) is the next implementation task**, and the entry point to start coding
+- ⏭️ Sprints 5-8 planned — v4.0 Worldwide catalog (approved JAN 2026 spec): see [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) and [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md)
 
 This means:
 - ✅ Backend is scaffolded and functional
 - ✅ Database schema and seeders are in place
-- ⚠️ Frontend dashboard and auth UI are NOT fully built yet
-- ⚠️ Exam flow is NOT implemented yet
+- ✅ Dashboard, auth UI, exam flow, and admin workspace are built
+- ⏳ Worldwide 205-cert catalog, IRT 3PL engine upgrade, Pearson VUE UI, and certificates remain
 
 ### What needs to be built?
 See [docs/mvp-backlog.md](docs/mvp-backlog.md) for the full feature roadmap.
@@ -94,23 +99,14 @@ See [docs/mvp-backlog.md](docs/mvp-backlog.md) for the full feature roadmap.
 
 ## Step 4: Pick a Task (10 min)
 
-### If you're setting up your environment
-Work through [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) **Sprint 0** section:
-- Environment setup
-- Database validation
-- Auth testing
-- Git workflow setup
+### If you're onboarding
+Read [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) (approved build target) and [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) (next implementation sprint).
 
 ### If you're ready to code
-Work through [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md) **Sprint 1** section:
-- Sprint 1.1: Build login page UI
-- Sprint 1.2: Dashboard layout and navigation
-- Sprint 1.3: Session display
-- Sprint 1.4: Progress visualization
-- Sprint 1.5: Profile page
-- Sprint 1.6: Backend API endpoints
-- Sprint 1.7: Styling and responsiveness
-- Sprint 1.8: Testing
+Start with **Sprint 4.2 (tag taxonomy)** from [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md):
+- 4.2 tag model: migration, pivot tables, models, data backfill, admin CRUD
+- 4.3 validation and integrity
+- 4.4 backward compatibility
 
 Each task is broken into sub-tasks that take 2-4 hours to complete.
 
@@ -206,14 +202,15 @@ Keep these bookmarks handy while coding:
 
 ---
 
-## Next Steps After Sprint 1
+## Next Steps
 
-Once the student dashboard is complete, we move to:
-- **Sprint 2:** Adaptive exam flow and scoring
-- **Sprint 3:** Admin approval workflow
-- **Sprint 4:** Content management
-- **Sprint 5:** UX polish and responsive design
-- And so on...
+Sprints 0-3 are done. The queue ahead:
+- **Sprint 4 (remaining):** tag taxonomy 4.2-4.4 — [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md)
+- **Sprint 5:** Worldwide catalog schema + seeder (17-cert + 205-cert JSON)
+- **Sprint 6:** CAT engine v4 (IRT 3PL MLE + Fisher)
+- **Sprint 7:** Pearson VUE exam chrome + mastery dashboard
+- **Sprint 8:** Certificates + PWA + deployment
+- **Sprints 9-12:** UX polish, analytics, packaging, QA
 
 See [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) for the full roadmap.
 
@@ -228,6 +225,6 @@ See [docs/implementation-sprint-plan.md](docs/implementation-sprint-plan.md) for
 
 ## Let's go!
 
-Pick a task from [docs/sprint-0-1-tasks.md](docs/sprint-0-1-tasks.md), set up your local environment, and start building.
+Start with [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) (4.2 tag taxonomy), set up your local environment, and begin building.
 
 Welcome to Passimark! 🚀
