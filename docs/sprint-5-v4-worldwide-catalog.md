@@ -1,7 +1,7 @@
 # Sprint 5-8: v4.0 Worldwide Catalog — Implementation Plan
 
-**Status:** planned (approved v4.0 spec, JAN 2026)
-**Depends on:** Sprint 4.1 certification tracks + 4.2 tag taxonomy (tracks done; tags are a prerequisite for tag-driven catalog scale — see [sprint-4-taxonomy-plan.md](sprint-4-taxonomy-plan.md))
+**Status:** Sprint 5 **done** (Sprints 6-8 still planned). **Evidence:** [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md), `tests/Feature/WorldwideCatalogSeederTest.php` (28 tests / 6,660 assertions green), full live seeds verified on SQLite (17-cert = 346 sessions / 1,038 exams; uniform 205 = 2,870 sessions / 8,610 exams / 9 regions).
+**Depends on:** Sprint 4.1 certification tracks + 4.2 tag taxonomy (done)
 **Source spec:** [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)
 
 These four sprints convert the single-curriculum CISSP prototype into the global 200-cert, 5-stage CAT platform defined by the approved v4.0 build. Each sprint is a vertical slice with its own exit criteria.
@@ -24,9 +24,19 @@ Make the data model express the 5-stage CAT ladder and populate it with the 17-c
 - **5.5 Verify** — feature test asserts: cert container + first lesson open; phase gates; ≥3 exams per session (cat/timed/practice); session count for seeded certs; second cert fully independent (reuse Sprint 4.1 pattern)
 
 ### Exit criteria
-- Fresh `migrate:fresh --seed --seeder=WorldwidePassimarkCatalogSeeder` produces the expected session/exam/question counts across ≥2 regions
-- A learner can enroll in a non-CISSP cert (e.g. AWS-SAA) and see lesson 1 open, everything else locked
-- Existing CISSP demo data still seeds and passes regression suite
+- Fresh `migrate:fresh --seed --seeder=WorldwidePassimarkCatalogSeeder` produces the expected session/exam/question counts across ≥2 regions — **done**: 17 certs / 346 sessions / 1,038 exams / 7 regions (~2.5 s)
+- A learner can enroll in a non-CISSP cert (e.g. AWS-SAA) and see lesson 1 open, everything else locked — **done**: phase-1 first lesson is the only lesson with `open` progress; phases/domains/mocks/finals gated; passing a lesson auto-opens the next (v4 rule), finals remain approval-gated
+- Existing CISSP demo data still seeds and passes regression suite — **done**: CISSP bundle tests + all legacy tests green
+
+### Sprint 5 delivery notes
+- **5.1 Schema:** migration `2026_01_01_000006` adds `passimark_sessions.phase_type` (`cert|lesson|phase|domain|mock|final`), `cert_slug`, `theta_required`, `questions_target`, `time_minutes`; `passimark_exams.time_minutes`/`is_final`/`irt_enabled`; `passimark_questions.correct_key`; `passimark_certification_tracks.region`. Legacy `time_limit`/`question_count`/`difficulty`/`discrimination`/`guessing` retained as read-compat (models write both canonical aliases).
+- **5.2 Models:** stage scopes (`lessons()`, `phases()`, `domains()`, `mocks()`, `finals()`, `cert()`, `byCert()`), IRT aliases (`a_discrimination`/`b_difficulty`/`c_guessing`), region on tracks.
+- **5.3 Seeders (canonical paths):**
+  - `WorldwidePassimarkCatalogSeeder` — 17 flagship certs, content faithful to the approved v4.0 source (`getWorldwideCatalog()`); per-cert ladder: cert container → lessons (25Q @UP) → phase CATs → domain assessments → mocks (70/100/120%) → final real-spec; 3 exam modes per session (adaptive = 1.5× time, timed = session time, practice = 0, IRT on CAT, `is_final` on finals). Filters: `SEED_REGIONS`, `SEED_CERTS`.
+  - `Uniform205CatalogSeeder` — 205-cert generator JSON → uniform 14-session ladder per cert (2,870 sessions / 8,610 exams / 9 regions, ~7 s). Filters: `SEED_REGIONS`, `SEED_CERTS`, `SEED_LIMIT`.
+  - `DatabaseSeeder` picks `worldwide` / `uniform` via `SEED_CATALOG`; bundle/prototype paths otherwise (CI still seeds `PassimarkSeeder` explicitly).
+- **5.4 Gating:** `PassimarkController::autoUnlockNext()` — passing a lesson/phase/domain/mock opens the next session by track order (theta/pass gate); finals stay instructor-approved (certificate issuance, Sprint 8). `finish()` now honors per-cert `pass_score`. Both seeders enroll the demo student in every cert's first open lesson.
+- **5.5 Verify:** full suite 28 tests / 6,660 assertions green.
 
 ---
 

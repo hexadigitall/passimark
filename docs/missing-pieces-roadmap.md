@@ -41,7 +41,7 @@ Still missing:
 - certification track model — shipped in Sprint 4.1; the v4 catalog builds on it.
 - tag taxonomy / domain management as a real data model — shipped in Sprint 4.2 (`passimark_tags` + pivots, `passimark:backfill-tags` command, admin Tags screen; legacy `domain`/`bloom_level` columns retained read-compat and deprecated). The v4 catalog models `domain` through these tags.
 - real multi-cert content — shipped (proven) in Sprint 4.5: the Hexadigitall CISSP 45-day textbook is fully extracted into a committed bundle and seeded through the existing track/session/exam/question model ([cissp-prep-bundle.md](cissp-prep-bundle.md)). This validates the **bundle-per-cert** flow that v4 generalizes to 205 certs.
-- the v4.0 Worldwide catalog itself: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, IRT-aligned question fields, the supplied `WorldwidePassimarkCatalogSeeder` (17 certs) and the 205-cert catalog JSON. Planned in `sprint-5-v4-worldwide-catalog.md`.
+- the v4.0 Worldwide catalog — **shipped in Sprint 5**: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, question `correct_key`, track `region`; `WorldwidePassimarkCatalogSeeder` (17 flagship certs) + `Uniform205CatalogSeeder` (205-cert JSON → 2,870 sessions / 8,610 exams, spec §4b drift zero); phase-1-first-lesson gating + pass-gated auto-unlock. Remaining in `phase_type` scope: IRT **engine** enforcement (Sprint 6). See [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md).
 - content export and a content author review/approval workflow distinct from the learner approval workflow
 
 ### 3.3a CAT engine v4 (IRT 3PL)

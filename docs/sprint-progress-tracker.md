@@ -50,12 +50,12 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Sprint 4.5 — CISSP textbook bundle (content extraction) — done:** Hexadigitall 45-day textbook audited and extracted into a committed bundle ([cissp-prep-bundle.md](cissp-prep-bundle.md)); 46 sessions, 980 MC items (daily CAT drills, Phase 1 diagnostic, simulated CAT, 2 full mocks), 105 flashcards; `passimark:extract-cissp` + `CISSPBundleSeeder` prove the bundle-per-cert design (track + ordered sessions + approval gating + tags); PHPUnit **24 tests / 6084 assertions** green
 
 ## Sprint 5-8: v4.0 Worldwide catalog (NEW — approved spec JAN 2026)
-**Status:** planned
-**Evidence:** [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md), [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)
-- **Sprint 5 — worldwide catalog schema + seeder**: `phase_type` session model (`cert|lesson|phase|domain|mock|final`), `theta_required`, exam `time_minutes`/`is_final`/`irt_enabled`, correct/IRT key on questions, wire `WorldwidePassimarkCatalogSeeder` (17 certs) + 205-cert catalog JSON (~2,870 sessions)
-- **Sprint 6 — CAT engine v4 (IRT 3PL)**: Newton-Raphson MLE theta + Fisher-information item selection, `passTheta`/`passScoreScaled`
-- **Sprint 7 — Pearson VUE chrome + mastery dashboard**: question palette, flag/review, strike-through, calculator, break dialogs; dotted→solid progress rings, theta trendline, design tokens
-- **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx`, credential IDs `PMK-…`, QR verification, manifest background fix (`#0F172A`), deployment guide
+**Status:** Sprint 5 **done** (6-8 planned)
+**Evidence:** [sprint-5-v4-worldwide-catalog.md](sprint-5-v4-worldwide-catalog.md), [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md), [v4-worldwide-catalog-spec.md](v4-worldwide-catalog-spec.md)
+- **Sprint 5 — worldwide catalog schema + seeder — done**: migration 000006 (sessions `phase_type`/`cert_slug`/`theta_required`/`questions_target`/`time_minutes`, exams `time_minutes`/`is_final`/`irt_enabled`, questions `correct_key`, tracks `region`); `WorldwidePassimarkCatalogSeeder` (17 flagship certs, 346 sessions / 1,038 exams / 7 regions) + `Uniform205CatalogSeeder` (205 certs, uniform 14-session ladder: 2,870 sessions / 8,610 exams / 9 regions — spec §4b drift zero); `SEED_CATALOG`/`SEED_REGIONS`/`SEED_CERTS`/`SEED_LIMIT` switches; v4 pass-gated auto-unlock (`PassimarkController::autoUnlockNext`), phase-1 first lesson open per cert, finals approval-gated; full suite **28 tests / 6,660 assertions** green
+- **Sprint 6 — CAT engine v4 (IRT 3PL)**: Newton-Raphson MLE theta + Fisher-information item selection, `passTheta`/`passScoreScaled` — planned
+- **Sprint 7 — Pearson VUE chrome + mastery dashboard**: question palette, flag/review, strike-through, calculator, break dialogs; dotted→solid progress rings, theta trendline, design tokens — planned
+- **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx`, credential IDs `PMK-…`, QR verification, manifest background fix (`#0F172A`), deployment guide — planned
 
 ## Known open risks (not yet scheduled)
 - No frontend/browser automated tests — only PHPUnit backend coverage exists
@@ -63,4 +63,4 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
 - `.psmk` file-format and course/import tooling remains an RFC only ([passimark-file-format-rfc.md](passimark-file-format-rfc.md))
 - v4.0 brand assets still use legacy `passimark_*` filenames and `manifest.json` background is `#ffffff` instead of `#0F172A` (tracked in Sprint 8.3)
-- Sprint 4.2 + 4.5 feature work is sitting uncommitted on `feature/sprint-4-taxonomy` (Sprints 1-3 committed as `9474a20` on `feature/sprint-0-environment`; next commit should land the taxonomy + bundle work before Sprint 5 starts)
+- Sprint 5 feature work is sitting uncommitted on `feature/sprint-5-worldwide-catalog` (Sprints 4.2+4.5 landed as `504e2ca` on `feature/sprint-4-taxonomy`; next commit should land Sprint 5 before Sprint 6 starts)

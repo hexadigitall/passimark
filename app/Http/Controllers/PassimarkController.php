@@ -143,9 +143,14 @@ class PassimarkController extends Controller
         }
         $result = DB::transaction(function () use ($attempt) {
             $score = CatEngine::calculateScore($attempt);
-            $attempt->update(['finished_at'=>now(),'score'=>$score,'is_passed'=>$score>=70]);
+            $session = $attempt->session;
+            $passScore = $session?->pass_score ?? 70;
+            $attempt->update(['finished_at'=>now(),'score'=>$score,'is_passed'=>$score>=$passScore]);
             $prog = PassimarkProgress::where('user_id',$attempt->user_id)->where('session_id',$attempt->session_id)->firstOrFail();
-            $prog->update(['status'=>$score>=70?'completed':'open','score'=>$score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
+            $prog->update(['status'=>$score>=$passScore?'completed':'open','score'=>$score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
+            if ($attempt->is_passed) {
+                $this->autoUnlockNext($session, $attempt->user_id);
+            }
             return $this->attemptResult($attempt->fresh());
         });
         return response()->json($result);
@@ -156,6 +161,29 @@ class PassimarkController extends Controller
         $total = $attempt->answers()->count();
         $correct = $attempt->answers()->where('is_correct',true)->count();
         return ['score'=>$attempt->score,'passed'=>(bool) $attempt->is_passed,'theta'=>$attempt->theta,'total'=>$total,'correct'=>$correct];
+    }
+
+    /**
+     * v4 ladder rule: passing a lesson/phase/domain/mock opens the next session in the same
+     * certification track (theta/pass gate). Finals stay approval-gated (certificate issuance,
+     * Sprint 8). Legacy prototype seeds have phase_type null and keep the instructor-approval flow.
+     */
+    private function autoUnlockNext(PassimarkSession $session, int $userId): void
+    {
+        if ($session->phase_type === null || in_array($session->phase_type, ['cert', 'final'], true)) {
+            return;
+        }
+        $next = PassimarkSession::where('certification_track_id', $session->certification_track_id)
+            ->where('order', '>', $session->order)
+            ->orderBy('order')
+            ->first();
+        if (!$next) {
+            return;
+        }
+        PassimarkProgress::firstOrCreate(
+            ['user_id' => $userId, 'session_id' => $next->id],
+            ['status' => 'open', 'ability_theta' => 0, 'attempts' => 0]
+        );
     }
     public function requestApproval(PassimarkSession $session){
         $prog = PassimarkProgress::where('user_id',Auth::id())->where('session_id',$session->id)->firstOrFail();

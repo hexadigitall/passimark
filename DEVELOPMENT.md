@@ -96,7 +96,16 @@ passimark/
 │   ├── migrations/               # Database schema definitions
 │   │   └── 2026_01_01_000001_create_passimark_tables.php
 │   └── seeders/
-│       └── PassimarkSeeder.php   # Test data: users, sessions, questions
+│       ├── PassimarkSeeder.php            # Prototype: users, sessions, questions
+│       ├── CISSPBundleSeeder.php          # Hexadigitall textbook bundle (46 sessions / 980 Q)
+│       ├── WorldwidePassimarkCatalogSeeder.php  # 17 flagship certs (v4)
+│       └── Uniform205CatalogSeeder.php    # 205-cert uniform ladder (v4)
+│
+│   # Seeding paths (DatabaseSeeder):
+│   #   SEED_CATALOG=worldwide -> 17 flagship certs
+│   #   SEED_CATALOG=uniform   -> 205-cert uniform ladder
+│   #   (default) CISSP bundle JSON present -> CISSPBundleSeeder; else PassimarkSeeder
+│   # Filters: SEED_REGIONS=..., SEED_CERTS=..., SEED_LIMIT=N
 │
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)

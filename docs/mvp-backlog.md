@@ -167,7 +167,7 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 9: v4.0 Worldwide certification catalog — approved JAN 2026 spec
 ### Priority: P0 (v4.0 build target)
-### Status: planned — see v4-worldwide-catalog-spec.md and sprint-5-v4-worldwide-catalog.md
+### Status: schema + seeders + gating **shipped (Sprint 5)** — see [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md); CAT engine v4, VUE chrome, and certificates remain (Sprints 6-8)
 ### Tasks
 - session model gains `phase_type` (`cert|lesson|phase|domain|mock|final`), `cert_slug`, `theta_required`; exam gains `time_minutes`/`is_final`/`irt_enabled`; question gains `correct_key`/IRT field alignment
 - wire `WorldwidePassimarkCatalogSeeder` (17 certs) + 205-cert catalog JSON ([worldwide-205-cert-catalog.json](worldwide-205-cert-catalog.json), ~2,870 sessions) — Lessons 25Q @UP → Phases 50-75Q @UP → Domains 75Q @UP+Pressure → Mocks 70/100/120% → Final 100% real spec
