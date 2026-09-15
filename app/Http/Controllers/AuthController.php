@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Services\Curriculum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -65,6 +66,8 @@ class AuthController extends Controller
         ]);
 
         Auth::login($user);
+
+        Curriculum::enrollFirstSteps($user);
 
         return redirect()->route('dashboard');
     }

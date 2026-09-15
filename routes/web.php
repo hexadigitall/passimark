@@ -18,6 +18,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
     Route::get('/profile', [PassimarkController::class,'profile'])->name('profile');
     Route::get('/settings', [PassimarkController::class,'settings'])->name('settings');
+    Route::patch('/settings', [PassimarkController::class,'updateSettings'])->name('settings.update');
     Route::get('/api/sessions', [PassimarkController::class,'sessionsApi'])->name('api.sessions');
     Route::get('/api/progress', [PassimarkController::class,'progressApi'])->name('api.progress');
     Route::get('/passimark/attempt/{attempt}', [PassimarkController::class,'exam'])->name('passimark.exam');

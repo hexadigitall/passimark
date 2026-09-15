@@ -12,11 +12,26 @@ export default function Admin({ pending = [], sessions = [], events = [], report
   const [tab, setTab] = useState('approvals');
   const [processingId, setProcessingId] = useState(null);
   const [editing, setEditing] = useState(null);
-  const review = (id, action) => {
+  const review = async (id, action) => {
     const note = action === 'reject' ? window.prompt('Reason for returning this submission:') : window.prompt('Optional approval note:');
     if (action === 'reject' && !note) return;
     setProcessingId(id);
-    router.post(`/admin/passimark/progress/${id}/${action}`, { note: note || '' }, { preserveScroll: true, onFinish: () => setProcessingId(null) });
+    try {
+      const xsrf = decodeURIComponent((document.cookie.match(/(?:^|; )XSRF-TOKEN=([^;]+)/) || [])[1] || '');
+      const res = await fetch(`/admin/passimark/progress/${id}/${action}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest', 'X-XSRF-TOKEN': xsrf },
+        credentials: 'same-origin',
+        body: JSON.stringify({ note: note || '' }),
+      });
+      const data = await res.json().catch(() => ({}));
+      window.alert(data.message || (res.ok ? 'Done.' : `Request failed (${res.status}).`));
+    } catch (error) {
+      window.alert('Network error — could not reach the server.');
+    } finally {
+      setProcessingId(null);
+      router.reload({ only: ['pending', 'events', 'report'] });
+    }
   };
   const remove = (type, id) => { if (window.confirm('Delete this content? This cannot be undone.')) router.delete(`/admin/${type}/${id}`, { preserveScroll: true }); };
   const exams = sessions.flatMap((session) => (session.exams || []).map((exam) => ({ ...exam, sessionTitle: session.title })));

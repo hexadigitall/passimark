@@ -57,6 +57,17 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Sprint 7 — Pearson VUE exam chrome + mastery dashboard — done** (`feature/sprint-7-exam-chrome`): Exam.jsx gains a question palette (answered/current/flagged cells + flagged-review modal), one-click strike-through, on-screen calculator (dependency-free shunting-yard, no eval), and natural-break dialogs that pause the timer on mocks/finals; finals suppress per-question feedback (answer recorded only). Dashboard.jsx rewrites as the region-grouped Worldwide mastery view: certified tracks grouped by region, dotted→solid progress rings (`ProgressRing`, dasharray `4 6`, θ + % in the hub), compact SVG θ trendlines (per-track `theta_history` from finished attempts), and weak-zone/domain-mastery heatmaps sourced from per-domain answer accuracy; shell (DashboardLayout) gains the θ ability badge + region nav fed by shared props. Backend: `PassimarkController::dashboard()` now ships `tracks` (region param filter, per-track sessions + theta_history + domains) via `thetaHistory()`/`domainAccuracy()`; `HandleInertiaRequests` shares `regions` + `ability.theta`. Design tokens landed in `tailwind.config.js` (`pm.deep #0F172A`, `pm.brand #1A9E2D`, `pm.accent #7CFC8F`) closing the design-tokens risk. Full suite **52 tests / 6,865 assertions** green; `npm run build` green.
 - **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx`, credential IDs `PMK-…`, QR verification, manifest background fix (`#0F172A`), deployment guide — planned
 
+## Sprint 7.5: Content coherence, learner onboarding & flow hardening
+**Status:** **done** (interim sprint between 7 and 8; audit follow-up)
+**Evidence:** [sprint-7-5-content-coherence.md](sprint-7-5-content-coherence.md), [sprint-7-5-content-coherence-report.md](sprint-7-5-content-coherence-report.md)
+- **Curriculum service** (`App\Services\Curriculum`): shared enrollment (`enrollFirstSteps`/`enrollInTrack`) + track-scoped ladder (`unlockNext`, skips contentless sessions, finals never auto-unlock)
+- **Real-content v4 metadata** (`CISSPBundleSeeder`): region `USA-IT-SECURITY`, `phase_type` lesson/mock/final ladder, `theta_required` gating, CAT exams `irt_enabled=1`, final `is_final`, 1.5× adaptive time — the v4 IRT engine + Sprint 7 regions/θ now run on real questions
+- **Onboarding**: registration auto-enrolls a learner at each track's first lesson; the dashboard's hardcoded `session_id=1` guard replaced with the shared enrollment path
+- **Profile data-driven**: `profile()` ships a real `summary` (phase/θ/completion/next milestone); Profile.jsx renders it with a curriculum progress bar (hardcoded "Phase 1"/"Session 2" removed)
+- **Settings persistence**: migration 000009 `users.preferences`; `PATCH /settings`; Settings.jsx rebuilt on `useForm`
+- **Admin approval hardening**: idempotent approve/reject (no 422 "not awaiting approval"), track-scoped unlock, queue refresh + friendly alert (`fetch` + XSRF + `router.reload`)
+- Full suite **58 tests / 6,916 assertions** green; `npm run build` green; live learner smoke passes (login → dashboard → IRT CAT → result → profile/settings)
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

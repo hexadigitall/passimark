@@ -16,7 +16,7 @@ class PassimarkController extends Controller
         $sessions = PassimarkSession::orderBy('order')->get();
         $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
         if($progress->isEmpty()){
-            PassimarkProgress::create(['user_id'=>Auth::id(),'session_id'=>1,'status'=>'open']);
+            \App\Services\Curriculum::enrollFirstSteps(Auth::user());
             $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
         }
 
@@ -97,8 +97,31 @@ class PassimarkController extends Controller
 
     public function profile()
     {
+        $records = PassimarkProgress::with('session.certificationTrack')->where('user_id', Auth::id())->get();
+        $scored = $records->filter(fn ($record) => $record->score !== null);
+        $active = $records
+            ->filter(fn ($record) => in_array($record->status, ['open', 'in_progress'], true) && $record->session)
+            ->sortBy(fn ($record) => $record->session->order);
+        $current = $active->first();
+
+        $summary = [
+            'current_phase' => $current?->session?->phase,
+            'current_session' => $current?->session?->number,
+            'current_title' => $current?->session?->title,
+            'current_track' => $current?->session?->certificationTrack?->title,
+            'next_milestone' => $current?->session?->title,
+            'sessions_completed' => $records->whereIn('status', ['completed', 'pending_approval', 'approved'])->count(),
+            'sessions_enrolled' => $records->count(),
+            'sessions_total' => PassimarkSession::where('question_count', '>', 0)->count(),
+            'average_score' => $scored->isEmpty() ? null : round($scored->avg('score'), 2),
+            'ability_theta' => round((float) ($records->max('ability_theta') ?? 0), 4),
+            'pending_approvals' => $records->where('status', 'pending_approval')->count(),
+            'tracks' => \App\Models\PassimarkCertificationTrack::where('is_active', true)->count(),
+        ];
+
         return Inertia::render('Passimark/Profile', [
             'user' => Auth::user(),
+            'summary' => $summary,
         ]);
     }
 
@@ -106,7 +129,46 @@ class PassimarkController extends Controller
     {
         return Inertia::render('Passimark/Settings', [
             'user' => Auth::user(),
+            'preferences' => $this->preferences(),
         ]);
+    }
+
+    public function updateSettings(Request $request)
+    {
+        $data = $request->validate([
+            'notifications' => ['nullable', 'array'],
+            'notifications.session_reminders' => ['boolean'],
+            'notifications.approval_updates' => ['boolean'],
+            'notifications.assessment_deadlines' => ['boolean'],
+            'notifications.weekly_digest' => ['boolean'],
+            'theme' => ['nullable', Rule::in(['dark', 'light', 'system'])],
+            'language' => ['nullable', 'string', 'max:8'],
+        ]);
+
+        $user = $request->user();
+        $user->preferences = array_replace($this->preferences(), $data);
+        $user->save();
+
+        return back()->with('success', 'Preferences saved.');
+    }
+
+    /**
+     * Learner preferences with defaults, tolerant of pre-migration / legacy rows.
+     */
+    private function preferences(): array
+    {
+        $defaults = [
+            'notifications' => [
+                'session_reminders' => true,
+                'approval_updates' => true,
+                'assessment_deadlines' => false,
+                'weekly_digest' => true,
+            ],
+            'theme' => 'dark',
+            'language' => 'en',
+        ];
+        $stored = Auth::user()->preferences ?? [];
+        return array_replace_recursive($defaults, is_array($stored) ? $stored : []);
     }
 
     public function sessionsApi(Request $request)
@@ -261,20 +323,7 @@ class PassimarkController extends Controller
      */
     private function autoUnlockNext(PassimarkSession $session, int $userId): void
     {
-        if ($session->phase_type === null || in_array($session->phase_type, ['cert', 'final'], true)) {
-            return;
-        }
-        $next = PassimarkSession::where('certification_track_id', $session->certification_track_id)
-            ->where('order', '>', $session->order)
-            ->orderBy('order')
-            ->first();
-        if (!$next) {
-            return;
-        }
-        PassimarkProgress::firstOrCreate(
-            ['user_id' => $userId, 'session_id' => $next->id],
-            ['status' => 'open', 'ability_theta' => 0, 'attempts' => 0]
-        );
+        \App\Services\Curriculum::unlockNext($session, $userId);
     }
     public function requestApproval(PassimarkSession $session){
         $prog = PassimarkProgress::where('user_id',Auth::id())->where('session_id',$session->id)->firstOrFail();

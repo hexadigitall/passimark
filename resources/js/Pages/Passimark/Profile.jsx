@@ -1,7 +1,10 @@
 import { Head } from '@inertiajs/react';
 import DashboardLayout from '../../Layouts/DashboardLayout';
 
-export default function Profile({ user }) {
+export default function Profile({ user, summary = {} }) {
+  const hasProgress = (summary.sessions_enrolled || 0) > 0;
+  const completion = summary.sessions_total ? Math.round(((summary.sessions_completed || 0) / summary.sessions_total) * 100) : 0;
+
   return (
     <DashboardLayout>
       <Head title="Profile" />
@@ -12,6 +15,7 @@ export default function Profile({ user }) {
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Account</p>
               <h2 className="mt-2 text-3xl font-bold text-white">{user?.name}</h2>
+              {summary.current_track && <p className="mt-1 text-sm text-slate-400">{summary.current_track}</p>}
             </div>
             <div className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300">
               {user?.role || 'student'}
@@ -47,15 +51,36 @@ export default function Profile({ user }) {
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-slate-700 bg-slate-900 p-4">
                 <p className="text-sm text-slate-400">Current phase</p>
-                <p className="mt-2 text-2xl font-semibold text-white">Phase 1</p>
+                <p className="mt-2 text-2xl font-semibold text-white">{summary.current_phase ? `Phase ${summary.current_phase}` : '—'}</p>
               </div>
               <div className="rounded-xl border border-slate-700 bg-slate-900 p-4">
-                <p className="text-sm text-slate-400">Next milestone</p>
-                <p className="mt-2 text-2xl font-semibold text-white">Session 2</p>
+                <p className="text-sm text-slate-400">Ability (θ)</p>
+                <p className="mt-2 text-2xl font-semibold text-white">{(summary.ability_theta ?? 0).toFixed(2)}</p>
+              </div>
+              <div className="rounded-xl border border-slate-700 bg-slate-900 p-4">
+                <p className="text-sm text-slate-400">Sessions completed</p>
+                <p className="mt-2 text-2xl font-semibold text-white">{summary.sessions_completed || 0}<span className="text-base font-normal text-slate-500">/{summary.sessions_total || 0}</span></p>
+              </div>
+              <div className="rounded-xl border border-slate-700 bg-slate-900 p-4">
+                <p className="text-sm text-slate-400">Average score</p>
+                <p className="mt-2 text-2xl font-semibold text-white">{summary.average_score != null ? `${summary.average_score}%` : '—'}</p>
               </div>
             </div>
+
+            <div className="mt-5">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-slate-400">Curriculum progress</span>
+                <span className="font-medium text-white">{completion}%</span>
+              </div>
+              <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-900">
+                <div className="h-full rounded-full bg-emerald-500" style={{ width: `${completion}%` }} />
+              </div>
+            </div>
+
             <p className="mt-5 text-sm leading-6 text-slate-400">
-              Your account is aligned with the adaptive certification path. Progress updates and session approvals will continue to appear here as your learning record grows.
+              {hasProgress
+                ? `Next milestone: ${summary.next_milestone || 'all sessions completed'}. Progress updates and session approvals will continue to appear here as your learning record grows.`
+                : 'You are not enrolled in a certification track yet. Enrolment unlocks the first lesson of each available track.'}
             </p>
           </div>
         </div>

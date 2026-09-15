@@ -24,22 +24,31 @@ class PassimarkAdminController extends Controller
         return Inertia::render('Passimark/Admin', compact('pending','sessions','events','report','tracks','tags'));
     }
     public function approve(Request $request, PassimarkProgress $progress){
-        abort_unless($progress->status === PassimarkProgress::PENDING, 422, 'Progress is not awaiting approval.');
         $data = $request->validate(['note'=>'nullable|string|max:2000']);
+        if ($progress->status !== PassimarkProgress::PENDING) {
+            return response()->json([
+                'status' => 'skipped',
+                'message' => $progress->status === PassimarkProgress::APPROVED
+                    ? 'This submission was already approved.'
+                    : "This submission is no longer awaiting approval (status: {$progress->status}).",
+            ]);
+        }
         $progress->update(['status'=>'approved']);
         PassimarkApprovalEvent::create(['progress_id'=>$progress->id,'reviewer_id'=>$request->user()->id,'action'=>'approved','note'=>$data['note'] ?? null]);
-        $next = PassimarkSession::where('order','>',$progress->session->order)->orderBy('order')->first();
-        if($next){
-            PassimarkProgress::firstOrCreate(['user_id'=>$progress->user_id,'session_id'=>$next->id],['status'=>'open']);
-        }
-        return response()->json(['message'=>$next ? "Approved. Session {$next->number} unlocked" : 'Approved. Final session completed.']);
+        $next = \App\Services\Curriculum::unlockNext($progress->session, $progress->user_id);
+        return response()->json(['status'=>'approved','message'=>$next ? "Approved. Session {$next->number} unlocked" : 'Approved. Track completed.']);
     }
     public function reject(Request $request, PassimarkProgress $progress){
-        abort_unless($progress->status === PassimarkProgress::PENDING, 422, 'Progress is not awaiting approval.');
         $data = $request->validate(['note'=>'required|string|max:2000']);
+        if ($progress->status !== PassimarkProgress::PENDING) {
+            return response()->json([
+                'status' => 'skipped',
+                'message' => "This submission is no longer awaiting approval (status: {$progress->status}).",
+            ]);
+        }
         $progress->update(['status'=>'completed']);
         PassimarkApprovalEvent::create(['progress_id'=>$progress->id,'reviewer_id'=>$request->user()->id,'action'=>'rejected','note'=>$data['note']]);
-        return response()->json(['message'=>'Rejected - returned to completed']);
+        return response()->json(['status'=>'rejected','message'=>'Rejected - returned to completed.']);
     }
     public function importQuestions(Request $r){
         $data = $r->validate([

@@ -97,7 +97,7 @@ passimark/
 │   │   └── 2026_01_01_000001_create_passimark_tables.php
 │   └── seeders/
 │       ├── PassimarkSeeder.php            # Prototype: users, sessions, questions
-│       ├── CISSPBundleSeeder.php          # Hexadigitall textbook bundle (46 sessions / 980 Q)
+│       ├── CISSPBundleSeeder.php          # Hexadigitall textbook bundle (46 sessions / 980 Q) + v4 metadata (region, phases, IRT CAT)
 │       ├── WorldwidePassimarkCatalogSeeder.php  # 17 flagship certs (v4)
 │       └── Uniform205CatalogSeeder.php    # 205-cert uniform ladder (v4)
 │
@@ -131,6 +131,16 @@ passimark/
 │ #   HandleInertiaRequests                      - shares 'regions' + 'ability.theta' (head badge + region nav)
 │ #   tailwind.config.js                         - pm.deep/brand/accent tokens (#0F172A / #1A9E2D / #7CFC8F)
 │ #   sees docs/sprint-6-irt-cat-engine.md
+│
+│ # Content coherence + onboarding + flow hardening (Sprint 7.5):
+│ #   App\Services\Curriculum            - enrollment (enrollFirstSteps/InTrack) + track-scoped unlockNext
+│ #   AuthController::register()         - auto-enrolls a new learner at each active track's first lesson
+│ #   CISSPBundleSeeder                  - real-content v4 metadata: region USA-IT-SECURITY, phase_type
+│ #                                          lesson/mock/final, theta_required, irt_enabled CAT exams, is_final
+│ #   PassimarkController::profile()     - ships real 'summary' (phase/θ/completion/next milestone)
+│ #   users.preferences + PATCH /settings - persisted Settings (migration 000009)
+│ #   PassimarkAdminController            - idempotent approve/reject (no 422), track-scoped unlock
+│ #   sees docs/sprint-7-5-content-coherence-report.md
 │
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)
@@ -430,5 +440,5 @@ VITE_ASSET_URL=http://localhost:5173   # Frontend dev server
 
 ---
 
-**Last Updated:** Sprint 7 (Pearson VUE exam chrome + Worldwide mastery dashboard, Sep 2026)  
+**Last Updated:** Sprint 7.5 (content coherence, learner onboarding & flow hardening, Sep 2026)  
 **Maintainer:** Development Team

@@ -42,16 +42,23 @@ class CISSPBundleSeeder extends Seeder
         $trackDef = $bundle['track'];
         $track = PassimarkCertificationTrack::firstOrCreate(
             ['slug' => $trackDef['slug']],
-            ['title' => $trackDef['title'], 'description' => $trackDef['description'], 'is_active' => $trackDef['is_active'] ?? true]
+            [
+                'title' => $trackDef['title'],
+                'description' => $trackDef['description'],
+                'is_active' => $trackDef['is_active'] ?? true,
+                'region' => 'USA-IT-SECURITY',
+            ]
         );
+        if (!$track->region) {
+            $track->update(['region' => 'USA-IT-SECURITY']);
+        }
 
-        // Replace the track's seeded curriculum with the extracted textbook bundle
-        // (idempotent; cascades exams/questions/progress/attempts for the track).
         PassimarkSession::where('certification_track_id', $track->id)->delete();
 
         $order = 1;
         $totalQuestions = 0;
         $totalDrills = 0;
+        $lastAssessment = null;
         foreach ($bundle['sessions'] as $def) {
             $number = $def['number'];
             $pool = $def['questions'];
@@ -59,19 +66,34 @@ class CISSPBundleSeeder extends Seeder
             $domain = $def['domain'];
             $totalDrills += count($def['drills']);
 
+            $isAssessment = $pool && (stripos($def['title'], 'Diagnostic') !== false || stripos($def['title'], 'Simulat') !== false || stripos($def['title'], 'Mock Exam') !== false);
+            $phaseType = $isAssessment ? 'mock' : 'lesson';
+
+            $timeMinutes = ($def['phase'] ?? 1) >= 4 ? 180 : 90;
+            $qCount = max(count($pool), 0);
+
             $session = PassimarkSession::create([
                 'certification_track_id' => $track->id,
+                'cert_slug' => $track->slug,
                 'number' => $number,
                 'phase' => $def['phase'],
-                'order' => $order++,
+                'phase_type' => $phaseType,
                 'title' => "Session {$number} • {$def['title']}",
-                'description' => $def['description'] ?? ("Session {$number}: ".$def['title']),
+                'description' => $def['description'] ?? ("Session {$number}: " . $def['title']),
                 'domain' => $domain,
                 'is_open' => $number === 1,
+                'order' => $order++,
                 'pass_score' => 70,
-                'time_limit' => $def['phase'] == 4 ? 180 : 90,
-                'question_count' => max(count($pool), 15),
+                'theta_required' => $phaseType === 'mock' ? 0.0 : -0.5,
+                'time_limit' => $timeMinutes,
+                'time_minutes' => $timeMinutes,
+                'question_count' => $qCount,
+                'questions_target' => $qCount ?: null,
             ]);
+
+            if ($isAssessment) {
+                $lastAssessment = $session;
+            }
 
             $session->tags()->syncWithoutDetaching([
                 $this->ensureTag('domain', $domain)->id,
@@ -79,12 +101,16 @@ class CISSPBundleSeeder extends Seeder
             ]);
 
             if ($pool) {
+                $catTime = (int) round($timeMinutes * 1.5);
                 foreach (['cat', 'timed', 'practice'] as $mode) {
                     PassimarkExam::create([
                         'session_id' => $session->id,
-                        'title' => "{$session->title} - ".strtoupper($mode),
+                        'title' => "{$session->title} - " . strtoupper($mode),
                         'mode' => $mode,
                         'question_count' => count($pool),
+                        'time_minutes' => $mode === 'cat' ? $catTime : ($mode === 'timed' ? $timeMinutes : 0),
+                        'is_final' => false,
+                        'irt_enabled' => $mode === 'cat',
                     ]);
                 }
                 $totalQuestions += count($pool);
@@ -92,10 +118,14 @@ class CISSPBundleSeeder extends Seeder
             }
         }
 
-        // First session starts open for the demo student; everything else follows the approval-gated ladder.
+        if ($lastAssessment) {
+            $lastAssessment->update(['phase_type' => 'final', 'theta_required' => 0.5]);
+            PassimarkExam::where('session_id', $lastAssessment->id)->update(['is_final' => true]);
+        }
+
+        // Open the first assessable step for the demo student using the shared enrollment path.
         $student = User::where('email', 'student@passimark.com')->first();
-        $first = PassimarkSession::where('certification_track_id', $track->id)->where('number', 1)->first();
-        PassimarkProgress::firstOrCreate(['user_id' => $student->id, 'session_id' => $first->id], ['status' => 'open']);
+        \App\Services\Curriculum::enrollInTrack($student, $track);
 
         return [
             'sessions' => count($bundle['sessions']),
