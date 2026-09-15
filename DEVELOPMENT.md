@@ -121,6 +121,15 @@ passimark/
 │ #                                    Fisher selection | per-exam min/max cutoffs | theta-gated pass
 │ #   migration 000008               - passimark_exams.min_questions / max_questions
 │ #   Legacy CAT (irt_enabled = false), timed, and practice modes are unchanged
+│
+│ # Exam chrome + mastery dashboard (Sprint 7, Pearson VUE):
+│ #   resources/js/Pages/Passimark/Exam.jsx      - palette, flag/review, strike-through, calculator,
+│ #                                                 natural breaks (timer pauses on mocks/finals), finals no-hint
+│ #   resources/js/Pages/Passimark/Dashboard.jsx - region-grouped cert cards, dotted→solid ProgressRing,
+│ #                                                 ThetaSparkline, domain heatmap (from tracks payload)
+│ #   PassimarkController::dashboard()           - 'tracks' = region-filterable per-cert sessions/theta_history/domains
+│ #   HandleInertiaRequests                      - shares 'regions' + 'ability.theta' (head badge + region nav)
+│ #   tailwind.config.js                         - pm.deep/brand/accent tokens (#0F172A / #1A9E2D / #7CFC8F)
 │ #   sees docs/sprint-6-irt-cat-engine.md
 │
 ├── routes/
@@ -388,6 +397,7 @@ Before pushing to production:
    - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - Approved v4.0 build target
    - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog
    - [docs/sprint-6-irt-cat-engine.md](docs/sprint-6-irt-cat-engine.md) - Sprint 6 IRT 3PL CAT engine
+   - [docs/sprint-7-exam-chrome.md](docs/sprint-7-exam-chrome.md) - Sprint 7 exam chrome + mastery dashboard
 
 3. **Search codebase:**
    ```bash
@@ -420,5 +430,5 @@ VITE_ASSET_URL=http://localhost:5173   # Frontend dev server
 
 ---
 
-**Last Updated:** Sprint 6 (IRT 3PL CAT engine, Sep 2026)  
+**Last Updated:** Sprint 7 (Pearson VUE exam chrome + Worldwide mastery dashboard, Sep 2026)  
 **Maintainer:** Development Team

@@ -4,11 +4,18 @@ import { BarChart3, BookOpen, Database, LogOut, Menu, Settings, X } from 'lucide
 
 export default function DashboardLayout({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const { auth = {}, flash = {} } = usePage().props;
+    const { auth = {}, flash = {}, regions = [], ability = {} } = usePage().props;
     const user = auth.user;
     const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
     const [flashVisible, setFlashVisible] = useState(Boolean(flash.success));
     useEffect(() => setFlashVisible(Boolean(flash.success)), [flash.success]);
+    const currentRegion = typeof window !== 'undefined'
+        ? new URL(window.location.href).searchParams.get('region') || ''
+        : '';
+
+    const selectRegion = (region) => {
+        router.get('/', region ? { region } : {}, { preserveState: true, replace: true });
+    };
 
     const navigation = [
         { href: '/', label: 'Dashboard', icon: BookOpen },
@@ -118,6 +125,29 @@ export default function DashboardLayout({ children }) {
                             </div>
 
                             <div className="flex items-center space-x-4">
+                                <label className="hidden items-center gap-2 text-sm text-slate-400 md:flex">
+                                    <span>Region</span>
+                                    <select
+                                        value={currentRegion}
+                                        onChange={(event) => selectRegion(event.target.value)}
+                                        className="rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                                    >
+                                        <option value="">All regions</option>
+                                        {regions.map((region) => (
+                                            <option key={region.name} value={region.name}>{region.name} ({region.count})</option>
+                                        ))}
+                                    </select>
+                                </label>
+
+                                {typeof ability.theta === 'number' && (
+                                    <span
+                                        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-semibold text-emerald-300"
+                                        title="Current ability estimate (IRT theta)"
+                                    >
+                                        θ {ability.theta.toFixed(2)}
+                                    </span>
+                                )}
+
                                 <div className="text-right hidden sm:block">
                                     <p className="text-sm font-medium text-white">{user?.name}</p>
                                     <p className="text-xs capitalize text-slate-400">{user?.role}</p>

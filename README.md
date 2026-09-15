@@ -33,7 +33,7 @@ Start here:
 3. [docs/mvp-backlog.md](docs/mvp-backlog.md) - what we're building
 
 ### For implementation tasks
-Current focus: **Sprint 6 done (CAT engine v4 — IRT 3PL) → Sprints 7-8 (Pearson VUE chrome, certificates) + Sprint 9 Phase C-E (upload UI, update modes, source adapters)**
+Current focus: **Sprint 7 done (Pearson VUE exam chrome + Worldwide mastery dashboard) → Sprint 8 (certificates + PWA) + Sprint 9 Phase C-E (upload UI, update modes, source adapters)**
 - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - approved v4.0 build spec (205-cert global platform)
 - [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - next implementation sprint (4.2)
 - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog breakdown
@@ -41,6 +41,8 @@ Current focus: **Sprint 6 done (CAT engine v4 — IRT 3PL) → Sprints 7-8 (Pear
 - [docs/worldwide-catalog-sprint-5-report.md](docs/worldwide-catalog-sprint-5-report.md) - Sprint 5: v4 Worldwide schema + 17/205-cert seeders (verified counts)
 - [docs/sprint-6-irt-cat-engine.md](docs/sprint-6-irt-cat-engine.md) - Sprint 6: CAT engine v4 (IRT 3PL) plan + status
 - [docs/sprint-6-irt-cat-engine-report.md](docs/sprint-6-irt-cat-engine-report.md) - Sprint 6: IRT engine shipped (MLE theta, Fisher selection, theta-gated pass)
+- [docs/sprint-7-exam-chrome.md](docs/sprint-7-exam-chrome.md) - Sprint 7: Pearson VUE exam chrome + mastery dashboard (plan + status)
+- [docs/sprint-7-exam-chrome-report.md](docs/sprint-7-exam-chrome-report.md) - Sprint 7: palette/strike/calculator/breaks, region rings + θ trends + heatmaps shipped
 - [docs/sprint-9-portable-packages-sharing.md](docs/sprint-9-portable-packages-sharing.md) - Sprint 9: portable `.psmk`/`.psme`/`.psmm` packages, sharing, and source conversion (RFC adopted; V1 shipped)
 - [docs/passimark-file-format-rfc.md](docs/passimark-file-format-rfc.md) - the adopted `.psmk` package format contract (Decision)
 - [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - live status index

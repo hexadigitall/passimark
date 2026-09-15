@@ -48,6 +48,9 @@ Still missing:
 ### 3.3a CAT engine v4 (IRT 3PL) — **shipped in Sprint 6**
 `App\Services\Irt\Irt3PL` + `CatEngine` rewrite: 3PL item model, Newton-Raphson MLE theta (clamp [−3,3], restart-from-zero fallback), Fisher-information selection (prefer `|b−θ|≤0.5`, tie-break high a, answered excluded), per-exam cutoffs (`min_questions`/`max_questions` migration 000008), theta-gated passing via `session.theta_required`, θ→0-100 scaled score, confident early stop inside open bands. Legacy CAT/timed/practice unchanged. See [sprint-6-irt-cat-engine-report.md](sprint-6-irt-cat-engine-report.md). Remaining in scope: explicit real-spec finals bands (NCLEX 75–145) in catalog data + admin calibration UI.
 
+### 3.3b Pearson VUE exam chrome + Worldwide mastery dashboard — **shipped in Sprint 7**
+Exam.jsx: question palette (answered/current/flagged), flagged-review modal, strike-through, dependency-free on-screen calculator, natural-break dialogs that pause the timer on mocks/finals, and finals feedback suppression (answer recorded only). Dashboard.jsx: region-grouped cert cards with dotted→solid progress rings, per-cert θ trendlines (from finished attempts), and domain-mastery heatmaps (per-domain answer accuracy); shell shares `regions` + `ability.theta` with a θ badge + region nav. Design tokens (`pm.deep/brand/accent`) closed the design-tokens risk. Backend: `PassimarkController::dashboard()` ships `tracks` (region-filterable, `theta_history` + `domains` per track) via `thetaHistory()`/`domainAccuracy()`; `HandleInertiaRequests` shares the new props. See [sprint-7-exam-chrome-report.md](sprint-7-exam-chrome-report.md).
+
 ### 3.4 Product analytics and reporting
 The app tracks attempts and scores, but higher-level reporting is still limited.
 
@@ -108,6 +111,8 @@ Needed:
 
 ## 6. Frontend completeness gap
 The product concept is strong, but the actual exam UI and dashboard experience still need to be fully implemented. The current codebase includes design intent and scaffolded pages, but not yet the complete product interface described by the mockups and the product vision.
+
+> **Progress — Sprint 7 shipped** the Pearson VUE exam chrome (question palette, flag/review, strike-through, on-screen calculator, natural breaks that pause the timer, finals feedback suppression) and the Worldwide mastery dashboard (region-grouped cert cards, dotted→solid progress rings, per-cert θ trendlines, domain-mastery heatmaps), plus a shared θ ability badge + region nav in the shell and design tokens in `tailwind.config.js`. Remaining frontend work is scoped in Sprint 8 (certificates + PWA) — see [sprint-7-exam-chrome-report.md](sprint-7-exam-chrome-report.md).
 
 ## 7. Data and platform expansion gaps
 ### Data management

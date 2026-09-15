@@ -67,6 +67,8 @@ Replace nearest-difficulty selection with true MLE theta + Fisher-information it
 
 ## Sprint 7: Pearson VUE exam chrome + mastery dashboard
 
+**Status: done** — see [sprint-7-exam-chrome.md](sprint-7-exam-chrome.md) and [sprint-7-exam-chrome-report.md](sprint-7-exam-chrome-report.md). Full suite now 52 tests / 6,865 assertions green; `npm run build` green.
+
 ### Goal
 Match the exam-day experience and the dotted→solid mastery UI.
 

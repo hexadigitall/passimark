@@ -11,14 +11,88 @@ use Inertia\Inertia;
 
 class PassimarkController extends Controller
 {
-    public function dashboard(){
+    public function dashboard(Request $request){
+        $region = $request->string('region')->toString();
         $sessions = PassimarkSession::orderBy('order')->get();
         $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
         if($progress->isEmpty()){
             PassimarkProgress::create(['user_id'=>Auth::id(),'session_id'=>1,'status'=>'open']);
             $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
         }
-        return Inertia::render('Passimark/Dashboard', compact('sessions','progress'));
+
+        $tracks = \App\Models\PassimarkCertificationTrack::query()
+            ->with('sessions', fn ($q) => $q->orderBy('order'))
+            ->when($region, fn ($q) => $q->where('region', $region))
+            ->orderBy('region')
+            ->orderBy('title')
+            ->get()
+            ->map(fn ($track) => [
+                'id' => $track->id,
+                'title' => $track->title,
+                'slug' => $track->slug,
+                'region' => $track->region,
+                'sessions' => $track->sessions->map(fn ($session) => [
+                    'id' => $session->id,
+                    'number' => $session->number,
+                    'title' => $session->title,
+                    'phase_type' => $session->phase_type,
+                    'questions_target' => $session->questions_target ?? $session->question_count,
+                    'progress' => isset($progress[$session->id])
+                        ? $progress[$session->id]->only('status', 'score', 'ability_theta', 'attempts')
+                        : ['status' => 'locked', 'score' => null, 'ability_theta' => null, 'attempts' => 0],
+                ]),
+                'theta_history' => $this->thetaHistory($track->id),
+                'domains' => $this->domainAccuracy($track->id),
+            ])
+            ->values();
+
+        return Inertia::render('Passimark/Dashboard', compact('sessions', 'progress', 'tracks'));
+    }
+
+    /**
+     * Per-cert theta trendline: final theta of each finished attempt, oldest first.
+     *
+     * @return list<float>
+     */
+    private function thetaHistory(int $trackId): array
+    {
+        return PassimarkAttempt::query()
+            ->join('passimark_sessions', 'passimark_sessions.id', '=', 'passimark_attempts.session_id')
+            ->where('passimark_sessions.certification_track_id', $trackId)
+            ->where('passimark_attempts.user_id', Auth::id())
+            ->whereNotNull('passimark_attempts.finished_at')
+            ->whereNotNull('passimark_attempts.theta')
+            ->orderBy('passimark_attempts.finished_at')
+            ->limit(12)
+            ->pluck('passimark_attempts.theta')
+            ->map(fn ($theta) => (float) $theta)
+            ->values()
+            ->all();
+    }
+
+    /**
+     * Weak-zone heatmap: per-domain accuracy across this cert's answered items.
+     *
+     * @return list<array{name: string, total: int, correct: int, accuracy: float}>
+     */
+    private function domainAccuracy(int $trackId): array
+    {
+        $rows = \App\Models\PassimarkAttemptAnswer::query()
+            ->join('passimark_questions', 'passimark_questions.id', '=', 'passimark_attempt_answers.question_id')
+            ->join('passimark_sessions', 'passimark_sessions.id', '=', 'passimark_questions.session_id')
+            ->where('passimark_sessions.certification_track_id', $trackId)
+            ->whereNotNull('passimark_questions.domain')
+            ->selectRaw('passimark_questions.domain as name, COUNT(*) as total, SUM(CASE WHEN passimark_attempt_answers.is_correct = 1 THEN 1 ELSE 0 END) as correct')
+            ->groupBy('passimark_questions.domain')
+            ->orderByDesc('total')
+            ->get();
+
+        return $rows->map(fn ($row) => [
+            'name' => $row->name,
+            'total' => (int) $row->total,
+            'correct' => (int) $row->correct,
+            'accuracy' => $row->total > 0 ? round($row->correct / $row->total, 4) : 0.0,
+        ])->values()->all();
     }
 
     public function profile()
