@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\{PassimarkSession, PassimarkExam, PassimarkQuestion, PassimarkAttempt, PassimarkProgress};
 use App\Services\CatEngine;
+use App\Services\Irt\Irt3PL;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -130,8 +131,15 @@ class PassimarkController extends Controller
         abort_unless(collect($q->options)->pluck('key')->contains($r->selected), 422, 'Selected option is invalid.');
         $correctKey = collect($q->options)->firstWhere('is_correct',true)['key'] ?? null;
         $isCorrect = $r->selected === $correctKey;
-        if($attempt->mode==='cat'){ $attempt->updateTheta($isCorrect,$q->difficulty,$q->discrimination,$q->guessing); }
         $attempt->answers()->create(['question_id'=>$q->id,'selected_option'=>$r->selected,'is_correct'=>$isCorrect,'time_spent'=>$r->time_spent??0]);
+        if($attempt->mode==='cat'){
+            if(CatEngine::usesIrt($attempt)){
+                $attempt->update(['theta'=>Irt3PL::mle(CatEngine::answeredParams($attempt), $attempt->theta)['theta']]);
+            } else {
+                $attempt->updateTheta($isCorrect,$q->difficulty,$q->discrimination,$q->guessing);
+            }
+            $attempt->refresh();
+        }
         $next = CatEngine::nextQuestion($attempt);
         if(CatEngine::shouldTerminate($attempt) || !$next){ return $this->finish($attempt); }
         return response()->json(['correct'=>$isCorrect,'explanation'=>$attempt->mode==='practice'?$q->explanation:null,'next'=>$next,'theta'=>$attempt->theta,'answeredCount'=>$attempt->answers()->count()]);
@@ -142,12 +150,21 @@ class PassimarkController extends Controller
             return response()->json($this->attemptResult($attempt));
         }
         $result = DB::transaction(function () use ($attempt) {
-            $score = CatEngine::calculateScore($attempt);
             $session = $attempt->session;
-            $passScore = $session?->pass_score ?? 70;
-            $attempt->update(['finished_at'=>now(),'score'=>$score,'is_passed'=>$score>=$passScore]);
+            if (CatEngine::usesIrt($attempt)) {
+                $mle = Irt3PL::mle(CatEngine::answeredParams($attempt), $attempt->theta);
+                $theta = $mle['theta'];
+                $passed = $theta >= ($session?->theta_required ?? 0.0);
+                $score = Irt3PL::scaledScore($theta);
+                $attempt->update(['finished_at'=>now(),'theta'=>$theta,'score'=>$score,'is_passed'=>$passed]);
+            } else {
+                $score = CatEngine::calculateScore($attempt);
+                $passScore = $session?->pass_score ?? 70;
+                $passed = $score >= $passScore;
+                $attempt->update(['finished_at'=>now(),'score'=>$score,'is_passed'=>$passed]);
+            }
             $prog = PassimarkProgress::where('user_id',$attempt->user_id)->where('session_id',$attempt->session_id)->firstOrFail();
-            $prog->update(['status'=>$score>=$passScore?'completed':'open','score'=>$score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
+            $prog->update(['status'=>$passed?'completed':'open','score'=>$attempt->score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
             if ($attempt->is_passed) {
                 $this->autoUnlockNext($session, $attempt->user_id);
             }

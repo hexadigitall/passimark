@@ -115,6 +115,14 @@ passimark/
 │ #   (App\Services\PassimarkPackage\{Validator,Exporter,Importer}; App\Support\PsmkZip;
 │ #    sees docs/passimark-file-format-rfc.md and docs/sprint-9-portable-packages-sharing.md)
 │
+│ # CAT engine v4 (Sprint 6, IRT 3PL):
+│ #   App\Services\Irt\Irt3PL        - pure 3PL math (P, Fisher info, MLE theta, scaled score)
+│ #   App\Services\CatEngine         - usesIrt() = cat mode AND exam.irt_enabled (v4 path)
+│ #                                    Fisher selection | per-exam min/max cutoffs | theta-gated pass
+│ #   migration 000008               - passimark_exams.min_questions / max_questions
+│ #   Legacy CAT (irt_enabled = false), timed, and practice modes are unchanged
+│ #   sees docs/sprint-6-irt-cat-engine.md
+│
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)
 │   └── api.php                   # (Future) REST API routes
@@ -379,6 +387,7 @@ Before pushing to production:
    - [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - Current implementation sprint (4.2 tag taxonomy)
    - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - Approved v4.0 build target
    - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog
+   - [docs/sprint-6-irt-cat-engine.md](docs/sprint-6-irt-cat-engine.md) - Sprint 6 IRT 3PL CAT engine
 
 3. **Search codebase:**
    ```bash
@@ -411,5 +420,5 @@ VITE_ASSET_URL=http://localhost:5173   # Frontend dev server
 
 ---
 
-**Last Updated:** Sprint 4 (v4.0 audit, Sep 2026)  
+**Last Updated:** Sprint 6 (IRT 3PL CAT engine, Sep 2026)  
 **Maintainer:** Development Team

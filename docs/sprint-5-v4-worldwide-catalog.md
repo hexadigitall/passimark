@@ -42,6 +42,8 @@ Make the data model express the 5-stage CAT ladder and populate it with the 17-c
 
 ## Sprint 6: CAT engine v4 — IRT 3PL
 
+**Status: done** — see [sprint-6-irt-cat-engine.md](sprint-6-irt-cat-engine.md) and [sprint-6-irt-cat-engine-report.md](sprint-6-irt-cat-engine-report.md).
+
 ### Goal
 Replace nearest-difficulty selection with true MLE theta + Fisher-information item selection.
 

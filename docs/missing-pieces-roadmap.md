@@ -41,15 +41,12 @@ Still missing:
 - certification track model — shipped in Sprint 4.1; the v4 catalog builds on it.
 - tag taxonomy / domain management as a real data model — shipped in Sprint 4.2 (`passimark_tags` + pivots, `passimark:backfill-tags` command, admin Tags screen; legacy `domain`/`bloom_level` columns retained read-compat and deprecated). The v4 catalog models `domain` through these tags.
 - real multi-cert content — shipped (proven) in Sprint 4.5: the Hexadigitall CISSP 45-day textbook is fully extracted into a committed bundle and seeded through the existing track/session/exam/question model ([cissp-prep-bundle.md](cissp-prep-bundle.md)). This validates the **bundle-per-cert** flow that v4 generalizes to 205 certs.
-- the v4.0 Worldwide catalog — **shipped in Sprint 5**: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, question `correct_key`, track `region`; `WorldwidePassimarkCatalogSeeder` (17 flagship certs) + `Uniform205CatalogSeeder` (205-cert JSON → 2,870 sessions / 8,610 exams, spec §4b drift zero); phase-1-first-lesson gating + pass-gated auto-unlock. Remaining in `phase_type` scope: IRT **engine** enforcement (Sprint 6). See [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md).
+- the v4.0 Worldwide catalog — **shipped in Sprint 5**: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, question `correct_key`, track `region`; `WorldwidePassimarkCatalogSeeder` (17 flagship certs) + `Uniform205CatalogSeeder` (205-cert JSON → 2,870 sessions / 8,610 exams, spec §4b drift zero); phase-1-first-lesson gating + pass-gated auto-unlock. The IRT engine now enforces it (Sprint 6). See [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md).
 - content export and a content author review/approval workflow distinct from the learner approval workflow
 - **portable packages** — the `.psmk` V1 author format **shipped in Sprint 9**: RFC adopted; one canonical ZIP package with `.psme`/`.psmm` aliases; `PassimarkPackage\{Validator,Exporter,Importer}`, `PsmkZip` codec, `external_id` UUIDs, `passimark_package_imports` audit; CLI export/import; standard-ZIP verified. Remaining (Phase C-E): upload UI + preview, update-by-external_id, media/signatures, CSV→QTI→PDF adapters via a review staging model ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)).
 
-### 3.3a CAT engine v4 (IRT 3PL)
-The current `CatEngine` selects the nearest-difficulty question and terminates on a fixed rule. The v4 spec requires true adaptive intelligence:
-- 3PL item model, MLE theta via Newton-Raphson (clamp [−3,3]), Fisher-information next-question selection
-- per-cert `passTheta`/`passScoreScaled`, real adaptive cutoffs (e.g. NCLEX 75-145)
-Planned in Sprint 6 (`sprint-5-v4-worldwide-catalog.md`).
+### 3.3a CAT engine v4 (IRT 3PL) — **shipped in Sprint 6**
+`App\Services\Irt\Irt3PL` + `CatEngine` rewrite: 3PL item model, Newton-Raphson MLE theta (clamp [−3,3], restart-from-zero fallback), Fisher-information selection (prefer `|b−θ|≤0.5`, tie-break high a, answered excluded), per-exam cutoffs (`min_questions`/`max_questions` migration 000008), theta-gated passing via `session.theta_required`, θ→0-100 scaled score, confident early stop inside open bands. Legacy CAT/timed/practice unchanged. See [sprint-6-irt-cat-engine-report.md](sprint-6-irt-cat-engine-report.md). Remaining in scope: explicit real-spec finals bands (NCLEX 75–145) in catalog data + admin calibration UI.
 
 ### 3.4 Product analytics and reporting
 The app tracks attempts and scores, but higher-level reporting is still limited.
@@ -146,7 +143,7 @@ The project already has logo and image assets, which is a strength. Favicon, app
 
 ### Phase 2: v4.0 Worldwide build (Sprints 5-8 — approved spec)
 - worldwide catalog schema + seeder (5) — shipped
-- CAT engine v4 IRT 3PL (6)
+- CAT engine v4 IRT 3PL (6) — shipped
 - Pearson VUE chrome + mastery dashboard (7)
 - certificates + PWA + deployment (8)
 

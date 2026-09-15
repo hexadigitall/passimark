@@ -168,11 +168,11 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 9: v4.0 Worldwide certification catalog — approved JAN 2026 spec
 ### Priority: P0 (v4.0 build target)
-### Status: schema + seeders + gating **shipped (Sprint 5)** — see [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md); CAT engine v4, VUE chrome, and certificates remain (Sprints 6-8)
+### Status: schema + seeders + gating **shipped (Sprint 5)** + CAT engine v4 IRT 3PL **shipped (Sprint 6)** — see [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md) and [sprint-6-irt-cat-engine-report.md](sprint-6-irt-cat-engine-report.md); VUE chrome and certificates remain (Sprints 7-8)
 ### Tasks
 - session model gains `phase_type` (`cert|lesson|phase|domain|mock|final`), `cert_slug`, `theta_required`; exam gains `time_minutes`/`is_final`/`irt_enabled`; question gains `correct_key`/IRT field alignment
 - wire `WorldwidePassimarkCatalogSeeder` (17 certs) + 205-cert catalog JSON ([worldwide-205-cert-catalog.json](worldwide-205-cert-catalog.json), ~2,870 sessions) — Lessons 25Q @UP → Phases 50-75Q @UP → Domains 75Q @UP+Pressure → Mocks 70/100/120% → Final 100% real spec
-- CAT engine v4: IRT 3PL, MLE theta (Newton-Raphson), Fisher-information item selection, per-cert `passTheta`/`passScoreScaled`, real adaptive cutoffs (e.g. NCLEX 75-145)
+- CAT engine v4: IRT 3PL, MLE theta (Newton-Raphson), Fisher-information item selection, per-cert `passTheta`/`passScoreScaled`, real adaptive cutoffs (e.g. NCLEX 75-145) — **shipped (Sprint 6)**
 - Pearson VUE exam chrome (timer, palette, flag/review, strike-through, calculator, break dialogs) and mastery dashboard (dotted→solid progress rings, theta trendline, weak-zone heatmaps)
 - verifiable certificates: `Certificate.jsx`, credential ID `PMK-{CERT}-2026-{HEX}`, QR → verify.passimark.com, pass probability, blockchain-hash placeholder (Polygon/IPFS)
 - PWA manifest brand compliance (`#0F172A` background) and deployment guide
