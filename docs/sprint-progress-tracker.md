@@ -77,6 +77,14 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **No-expo reattempt payloads**: the exam render and answer `next` payload strip `is_correct`/`correct_key` outside practice mode (`presentQuestion`), so a CAT/timed reattempt's client payload never leaks answer keys ahead of time.
 - Full suite **64 tests / 7,060 assertions** green; `npm run build` + `php -l` clean; live dashboards ship `cissp` as `advancement=approval`.
 
+## Sprint 7.5c: Role-branched admin dashboard
+**Status:** **done** (follow-up of the Sprint 7.5b dashboard audit: admins/instructors previously landed on the exact learner path)
+**Evidence:** [sprint-7-5c-admin-dashboard.md](sprint-7-5c-admin-dashboard.md)
+- **Role-branched landing**: `PassimarkController::dashboard()` dispatches on `user->role`; admin/instructor get a new `Passimark/AdminDashboard` (operations) page, students keep the mastery path at `/`. Learners, admins, and instructors are each covered by `tests/Feature/AdminDashboardTest.php`.
+- **Admin operations dashboard** (`PassimarkAdminController::dashboard()` sets the new home payload; rendered inside the shared `DashboardLayout`): pending-approval queue with inline approve/reject, report cards (learners, attempts, completed, average score, 7-day approvals, completions, sessions, questions, tracks, pending), recent decisions feed, and a "content needs attention" strip (contentless sessions, empty tracks, untagged questions). Light payload on the landing; the full Control Center tabs and Import keep their own screens.
+- **Learner chrome gated**: the shell's region filter and θ ability badge render only for students; staff see "Passimark Operations" chrome and a sidebar with Overview / Control Center / Import Questions / Profile / Settings.
+- Full suite **68 tests / 7,112 assertions** green; `npm run build` + `php -l` clean.
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

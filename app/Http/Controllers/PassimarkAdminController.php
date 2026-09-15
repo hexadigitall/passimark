@@ -8,6 +8,35 @@ use Inertia\Inertia;
 
 class PassimarkAdminController extends Controller
 {
+    /**
+     * Admin/instructor landing at "/" — operations overview, not the learner path.
+     * The full content-management Control Center stays at /admin/passimark (index()).
+     */
+    public function dashboard()
+    {
+        $pending = PassimarkProgress::with(['user', 'session'])->where('status', 'pending_approval')->get();
+        $events = PassimarkApprovalEvent::with(['progress.user', 'progress.session'])->latest()->limit(20)->get();
+        $report = [
+            'learners' => User::where('role', 'student')->count(),
+            'attempts' => PassimarkAttempt::count(),
+            'completed_attempts' => PassimarkAttempt::whereNotNull('finished_at')->count(),
+            'average_score' => round((float) PassimarkAttempt::whereNotNull('score')->avg('score'), 2),
+            'pending_approvals' => $pending->count(),
+            'sessions' => PassimarkSession::count(),
+            'questions' => PassimarkQuestion::count(),
+            'tracks' => PassimarkCertificationTrack::count(),
+            'completions' => PassimarkProgress::whereIn('status', ['completed', PassimarkProgress::APPROVED])->count(),
+            'approved_7d' => PassimarkApprovalEvent::where('action', 'approved')->where('created_at', '>=', now()->subDays(7))->count(),
+        ];
+        $needsAttention = [
+            'contentless_sessions' => PassimarkSession::doesntHave('questions')->count(),
+            'empty_tracks' => PassimarkCertificationTrack::withCount('sessions')->get()->where('sessions_count', 0)->count(),
+            'untagged_questions' => PassimarkQuestion::doesntHave('tags')->count(),
+        ];
+
+        return Inertia::render('Passimark/AdminDashboard', compact('pending', 'events', 'report', 'needsAttention'));
+    }
+
     public function index(){ 
         $pending = PassimarkProgress::with(['user','session'])->where('status','pending_approval')->get();
         $sessions = PassimarkSession::with(['exams', 'questions.tags', 'certificationTrack', 'tags'])->orderBy('order')->get();

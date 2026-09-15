@@ -12,6 +12,11 @@ use Inertia\Inertia;
 class PassimarkController extends Controller
 {
     public function dashboard(Request $request){
+        // Staff land on the operations dashboard; only learners see the mastery path.
+        if (in_array(Auth::user()?->role, ['admin', 'instructor'], true)) {
+            return app(PassimarkAdminController::class)->dashboard();
+        }
+
         $region = $request->string('region')->toString();
         $sessions = PassimarkSession::orderBy('order')->get();
         $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');

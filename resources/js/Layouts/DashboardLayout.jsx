@@ -12,19 +12,25 @@ export default function DashboardLayout({ children }) {
     const currentRegion = typeof window !== 'undefined'
         ? new URL(window.location.href).searchParams.get('region') || ''
         : '';
+    const isStaff = user?.role === 'admin' || user?.role === 'instructor';
 
     const selectRegion = (region) => {
         router.get('/', region ? { region } : {}, { preserveState: true, replace: true });
     };
 
-    const navigation = [
-        { href: '/', label: 'Dashboard', icon: BookOpen },
-        { href: '/profile', label: 'Profile', icon: BarChart3 },
-        { href: '/settings', label: 'Settings', icon: Settings },
-        ...(user?.role === 'admin' || user?.role === 'instructor'
-            ? [{ href: '/admin/passimark', label: 'Control Center', icon: Settings }, { href: '/admin/import', label: 'Import Questions', icon: Database }]
-            : []),
-    ];
+    const navigation = isStaff
+        ? [
+            { href: '/', label: 'Overview', icon: BookOpen },
+            { href: '/admin/passimark', label: 'Control Center', icon: Database },
+            { href: '/admin/import', label: 'Import Questions', icon: Database },
+            { href: '/profile', label: 'Profile', icon: BarChart3 },
+            { href: '/settings', label: 'Settings', icon: Settings },
+          ]
+        : [
+            { href: '/', label: 'Dashboard', icon: BookOpen },
+            { href: '/profile', label: 'Profile', icon: BarChart3 },
+            { href: '/settings', label: 'Settings', icon: Settings },
+          ];
 
     const logout = () => router.post('/logout');
 
@@ -121,10 +127,11 @@ export default function DashboardLayout({ children }) {
                             </button>
 
                             <div className="flex-1 lg:flex-none">
-                                <h1 className="text-xl font-bold text-white">Adaptive Certification Assessment</h1>
+                                <h1 className="text-xl font-bold text-white">{isStaff ? 'Passimark Operations' : 'Adaptive Certification Assessment'}</h1>
                             </div>
 
                             <div className="flex items-center space-x-4">
+                                {!isStaff && (
                                 <label className="hidden items-center gap-2 text-sm text-slate-400 md:flex">
                                     <span>Region</span>
                                     <select
@@ -138,8 +145,9 @@ export default function DashboardLayout({ children }) {
                                         ))}
                                     </select>
                                 </label>
+                                )}
 
-                                {typeof ability.theta === 'number' && (
+                                {!isStaff && typeof ability.theta === 'number' && (
                                     <span
                                         className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-semibold text-emerald-300"
                                         title="Current ability estimate (IRT theta)"
