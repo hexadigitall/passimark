@@ -72,6 +72,7 @@ class WorldwidePassimarkCatalogSeeder extends Seeder
                         'title' => $cert['name'],
                         'description' => $cert['desc'],
                         'region' => $region,
+                        'advancement' => 'auto',
                         'is_active' => true,
                     ]
                 );

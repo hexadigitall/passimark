@@ -82,6 +82,7 @@ class Uniform205CatalogSeeder extends Seeder
                     'title' => $entry['name'],
                     'description' => "Uniform 205 catalog — {$entry['code']} ({$entry['final_q']}Q / {$entry['final_time']}min final).",
                     'region' => $entry['track'],
+                    'advancement' => 'auto',
                     'is_active' => true,
                 ]
             );

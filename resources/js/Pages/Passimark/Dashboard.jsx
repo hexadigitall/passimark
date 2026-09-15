@@ -42,25 +42,16 @@ const statusPresentation = {
     label: 'Completed',
     badge: 'bg-sky-500/15 text-sky-300',
     icon: CheckCircle2,
-    action: 'Request instructor approval',
-    cta: 'Request approval',
-    disabled: false,
   },
   pending_approval: {
     label: 'Awaiting approval',
     badge: 'bg-orange-500/15 text-orange-300',
     icon: Clock3,
-    action: 'Instructor review in progress',
-    cta: 'Awaiting approval',
-    disabled: true,
   },
   approved: {
     label: 'Approved',
     badge: 'bg-emerald-500/15 text-emerald-300',
     icon: ShieldCheck,
-    action: 'Unlocked for the next stage',
-    cta: 'Continue',
-    disabled: false,
   },
 };
 
@@ -90,8 +81,13 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
     return acc;
   }, {});
 
-  const handleSessionAction = (sessionId, status) => {
-    const isApprovalRequest = status === 'completed';
+  const handleSessionAction = (sessionId, action) => {
+    if (action === 'review') {
+      router.visit(`/passimark/session/${sessionId}/review`);
+      return;
+    }
+
+    const isApprovalRequest = action === 'request-approval';
     const endpoint = isApprovalRequest
       ? `/passimark/session/${sessionId}/request-approval`
       : `/passimark/session/${sessionId}/start`;
@@ -196,8 +192,20 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
 
                       <div className="mt-5 space-y-2.5 border-t border-slate-800 pt-4">
                         {track.sessions.map((session) => {
-                          const state = statusPresentation[session.progress?.status || 'locked'];
+                          const approvalGated = track.advancement !== 'auto';
+                          const status = session.progress?.status || 'locked';
+                          const state = statusPresentation[status];
                           const StatusIcon = state.icon;
+                          const done = ['completed', 'pending_approval', 'approved'].includes(status);
+                          const actions = done
+                            ? [
+                                { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'emerald' },
+                                { key: 'review', label: 'Review answers', action: 'review', tone: 'slate' },
+                                ...(status === 'completed' && approvalGated
+                                  ? [{ key: 'approval', label: 'Request approval', action: 'request-approval', tone: 'amber' }]
+                                  : []),
+                              ]
+                            : [{ key: 'main', label: state.cta, action: 'start', tone: 'emerald', disabled: state.disabled }];
                           return (
                             <div key={session.id} className="flex items-center gap-3">
                               <span className={`inline-flex shrink-0 items-center gap-1 rounded px-2 py-0.5 text-[11px] font-medium ${state.badge}`}>
@@ -211,18 +219,27 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
                               {session.progress?.score !== null && session.progress?.score !== undefined && (
                                 <span className="shrink-0 font-mono text-xs text-slate-400">{session.progress.score}%</span>
                               )}
-                              <button
-                                type="button"
-                                className={`shrink-0 rounded px-2.5 py-1 text-xs font-medium transition ${
-                                  state.disabled
-                                    ? 'cursor-not-allowed bg-slate-800 text-slate-500'
-                                    : 'bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25'
-                                }`}
-                                disabled={state.disabled || submittingSessionId === session.id}
-                                onClick={() => handleSessionAction(session.id, session.progress?.status || 'locked')}
-                              >
-                                {submittingSessionId === session.id ? 'Working...' : state.cta}
-                              </button>
+                              <div className="flex shrink-0 items-center gap-1.5">
+                                {actions.map((action) => (
+                                  <button
+                                    key={action.key}
+                                    type="button"
+                                    className={`rounded px-2.5 py-1 text-xs font-medium transition ${
+                                      action.disabled
+                                        ? 'cursor-not-allowed bg-slate-800 text-slate-500'
+                                        : action.tone === 'amber'
+                                          ? 'bg-amber-500/15 text-amber-200 hover:bg-amber-500/25'
+                                          : action.tone === 'slate'
+                                            ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                                            : 'bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25'
+                                    }`}
+                                    disabled={action.disabled || submittingSessionId === session.id}
+                                    onClick={() => handleSessionAction(session.id, action.action)}
+                                  >
+                                    {submittingSessionId === session.id ? 'Working...' : action.label}
+                                  </button>
+                                ))}
+                              </div>
                             </div>
                           );
                         })}

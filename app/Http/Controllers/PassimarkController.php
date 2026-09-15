@@ -31,6 +31,7 @@ class PassimarkController extends Controller
                 'title' => $track->title,
                 'slug' => $track->slug,
                 'region' => $track->region,
+                'advancement' => $track->advancement,
                 'sessions' => $track->sessions->map(fn ($session) => [
                     'id' => $session->id,
                     'number' => $session->number,
@@ -219,7 +220,7 @@ class PassimarkController extends Controller
 
         return Inertia::render('Passimark/Exam', [
             'attempt' => $attempt->load('session', 'exam'),
-            'question' => CatEngine::nextQuestion($attempt),
+            'question' => $this->presentQuestion(CatEngine::nextQuestion($attempt), $attempt->mode),
             'answeredCount' => $attempt->answers()->count(),
         ]);
     }
@@ -228,15 +229,49 @@ class PassimarkController extends Controller
     {
         abort_unless($attempt->user_id === Auth::id() && $attempt->finished_at, 404);
 
-        return Inertia::render('Passimark/Result', [
-            'attempt' => $attempt->load('session', 'exam'),
-            'answers' => $attempt->answers()->with('question')->get(),
-            'history' => PassimarkAttempt::where('user_id', Auth::id())
-                ->where('session_id', $attempt->session_id)
-                ->whereNotNull('finished_at')
-                ->latest('finished_at')
-                ->get(['id', 'mode', 'score', 'is_passed', 'finished_at']),
-        ]);
+        return Inertia::render('Passimark/Result', \App\Services\ReviewService::payload($attempt, Auth::id()));
+    }
+
+    public function review(PassimarkSession $session)
+    {
+        $attempt = PassimarkAttempt::where('user_id', Auth::id())
+            ->where('session_id', $session->id)
+            ->whereNotNull('finished_at')
+            ->latest('finished_at')
+            ->first();
+        abort_unless($attempt, 404, 'No completed attempt to review for this session.');
+
+        return Inertia::render('Passimark/Result', \App\Services\ReviewService::payload($attempt, Auth::id()));
+    }
+
+    /**
+     * Client-safe question shape. Answer keys stay hidden unless the mode gives per-question
+     * feedback (practice), so a reattempt never exposes the correct answer ahead of time.
+     */
+    private function presentQuestion(?PassimarkQuestion $question, string $mode): ?array
+    {
+        if (!$question) {
+            return null;
+        }
+        $reveal = $mode === 'practice';
+        $options = collect($question->options);
+
+        $payload = [
+            'id' => $question->id,
+            'content' => $question->content,
+            'domain' => $question->domain,
+            'b_difficulty' => $question->difficulty,
+            'options' => $options->map(fn ($option) => array_merge(
+                ['key' => $option['key'], 'text' => $option['text']],
+                $reveal ? ['is_correct' => (bool) ($option['is_correct'] ?? false)] : []
+            ))->values(),
+        ];
+
+        if ($reveal) {
+            $payload['correct_key'] = $question->correct_key ?? ($options->firstWhere('is_correct', true)['key'] ?? null);
+        }
+
+        return $payload;
     }
 
     public function start(Request $r, PassimarkSession $session){
@@ -278,7 +313,7 @@ class PassimarkController extends Controller
         }
         $next = CatEngine::nextQuestion($attempt);
         if(CatEngine::shouldTerminate($attempt) || !$next){ return $this->finish($attempt); }
-        return response()->json(['correct'=>$isCorrect,'explanation'=>$attempt->mode==='practice'?$q->explanation:null,'next'=>$next,'theta'=>$attempt->theta,'answeredCount'=>$attempt->answers()->count()]);
+        return response()->json(['correct'=>$isCorrect,'explanation'=>$attempt->mode==='practice'?$q->explanation:null,'next'=>$this->presentQuestion($next, $attempt->mode),'theta'=>$attempt->theta,'answeredCount'=>$attempt->answers()->count()]);
     }
     public function finish(PassimarkAttempt $attempt){
         abort_unless($attempt->user_id === Auth::id(), 404);
@@ -301,7 +336,9 @@ class PassimarkController extends Controller
             }
             $prog = PassimarkProgress::where('user_id',$attempt->user_id)->where('session_id',$attempt->session_id)->firstOrFail();
             $prog->update(['status'=>$passed?'completed':'open','score'=>$attempt->score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
-            if ($attempt->is_passed) {
+            // v4 auto-catalog tracks unlock the next session on a pass; approval-gated tracks
+            // (real-content CISSP bundle) stay completed until the learner requests approval.
+            if ($attempt->is_passed && optional($session->certificationTrack)->advancement === 'auto') {
                 $this->autoUnlockNext($session, $attempt->user_id);
             }
             return $this->attemptResult($attempt->fresh());
@@ -317,9 +354,11 @@ class PassimarkController extends Controller
     }
 
     /**
-     * v4 ladder rule: passing a lesson/phase/domain/mock opens the next session in the same
-     * certification track (theta/pass gate). Finals stay approval-gated (certificate issuance,
-     * Sprint 8). Legacy prototype seeds have phase_type null and keep the instructor-approval flow.
+     * v4 auto-catalog rule: on tracks with advancement=auto a passed lesson/phase/domain/mock
+     * opens the next session in the same certification track (theta/pass gate). Approval-gated
+     * tracks (real-content bundle, advancement=approval) never auto-unlock — the learner
+     * requests approval and an instructor unlocks the next step. Finals stay approval-gated
+     * regardless (certificate issuance, Sprint 8).
      */
     private function autoUnlockNext(PassimarkSession $session, int $userId): void
     {

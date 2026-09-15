@@ -142,6 +142,16 @@ passimark/
 │ #   PassimarkAdminController            - idempotent approve/reject (no 422), track-scoped unlock
 │ #   sees docs/sprint-7-5-content-coherence-report.md
 │
+│ # Approval-gated progression + gated answer review (Sprint 7.5b):
+│ #   migration 000010 + certification_tracks.advancement - 'auto'|'approval' per track
+│ #      (bundle = approval, Worldwide/Uniform catalogs = auto)
+│ #   PassimarkController::finish()       - auto-unlock only when advancement === 'auto'
+│ #   PassimarkController::review()       - GET /passimark/session/{session}/review (latest finished attempt)
+│ #   App\Services\ReviewService          - exposure rule: correct item / all-correct / approved?
+│ #   PassimarkController::presentQuestion- strips is_correct/correct_key outside practice mode
+│ #   Dashboard.jsx / Result.jsx          - Reattempt + Review answers CTAs; locked/unlocked review items
+│ #   sees docs/sprint-7-5b-approval-gating-review-report.md
+│
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)
 │   └── api.php                   # (Future) REST API routes
@@ -440,5 +450,5 @@ VITE_ASSET_URL=http://localhost:5173   # Frontend dev server
 
 ---
 
-**Last Updated:** Sprint 7.5 (content coherence, learner onboarding & flow hardening, Sep 2026)  
+**Last Updated:** Sprint 7.5b (approval-gated progression & gated answer review, Sep 2026)  
 **Maintainer:** Development Team

@@ -47,6 +47,7 @@ class CISSPBundleSeeder extends Seeder
                 'description' => $trackDef['description'],
                 'is_active' => $trackDef['is_active'] ?? true,
                 'region' => 'USA-IT-SECURITY',
+                'advancement' => 'approval',
             ]
         );
         if (!$track->region) {

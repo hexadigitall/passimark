@@ -157,7 +157,7 @@ class CatEngineV4Test extends TestCase
     /** Build a v4 ladder: lesson 1 (with cat exam) → lesson 2 (for unlock assertions). */
     private function track(int $questionCount, ?float $thetaRequired = 0.0, bool $irt = true, int $min = 0): array
     {
-        $track = PassimarkCertificationTrack::create(['slug' => 'irt-v4', 'title' => 'IRT v4', 'region' => 'TEST']);
+        $track = PassimarkCertificationTrack::create(['slug' => 'irt-v4', 'title' => 'IRT v4', 'region' => 'TEST', 'advancement' => 'auto']);
 
         $session = PassimarkSession::create([
             'certification_track_id' => $track->id, 'cert_slug' => 'irtv4', 'number' => 1, 'phase' => 1,

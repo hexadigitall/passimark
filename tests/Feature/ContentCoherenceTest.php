@@ -7,6 +7,8 @@ use App\Models\PassimarkAttempt;
 use App\Models\PassimarkExam;
 use App\Models\PassimarkProgress;
 use App\Models\PassimarkSession;
+use App\Models\PassimarkQuestion;
+use App\Services\CatEngine;
 use Database\Seeders\CISSPBundleSeeder;
 use Tests\TestCase;
 
@@ -195,5 +197,55 @@ class ContentCoherenceTest extends TestCase
 
         $this->actingAs($student)->post("/passimark/attempt/{$attempt->id}/finish")->assertOk();
         $this->assertNotNull($attempt->fresh()->finished_at);
+    }
+
+    public function test_passing_a_bundle_session_is_approval_gated_until_instructor_approves(): void
+    {
+        $student = $this->student();
+        $admin = User::where('email', 'admin@passimark.com')->firstOrFail();
+        $session1 = PassimarkSession::where('number', 1)->firstOrFail();
+        $session2 = PassimarkSession::where('number', 2)->firstOrFail();
+        $this->assertSame('approval', $session1->certificationTrack->advancement);
+
+        $this->actingAs($student)->post("/passimark/session/{$session1->id}/start", ['mode' => 'cat'])->assertRedirect();
+        $attempt = PassimarkAttempt::where('user_id', $student->id)->where('session_id', $session1->id)->firstOrFail();
+
+        // Answer every question correctly — the pool ends the attempt on its own.
+        $question = CatEngine::nextQuestion($attempt);
+        $answered = 0;
+        while ($question) {
+            $correct = collect($question->options)->firstWhere('is_correct', true);
+            $this->actingAs($student)->post("/passimark/attempt/{$attempt->id}/answer", [
+                'question_id' => $question->id,
+                'selected' => $correct['key'],
+            ])->assertOk();
+            $answered++;
+            $question = CatEngine::nextQuestion($attempt->fresh());
+        }
+        $this->assertSame(15, $answered);
+
+        $progress1 = PassimarkProgress::where('user_id', $student->id)->where('session_id', $session1->id)->first();
+        $this->assertSame('completed', $progress1->status);
+
+        // Approval-gated: the next session must NOT auto-unlock on a pass.
+        $this->assertDatabaseMissing('passimark_progress', [
+            'user_id' => $student->id,
+            'session_id' => $session2->id,
+        ]);
+
+        // Learner requests approval; the session goes pending.
+        $this->actingAs($student)->post("/passimark/session/{$session1->id}/request-approval")->assertRedirect();
+        $this->assertSame('pending_approval', $progress1->fresh()->status);
+
+        // Instructor approval unlocks the next session.
+        $this->actingAs($admin)
+            ->postJson("/admin/passimark/progress/{$progress1->id}/approve", ['note' => 'Approved for Session 2.'])
+            ->assertOk()
+            ->assertJsonPath('message', 'Approved. Session 2 unlocked');
+        $this->assertDatabaseHas('passimark_progress', [
+            'user_id' => $student->id,
+            'session_id' => $session2->id,
+            'status' => 'open',
+        ]);
     }
 }

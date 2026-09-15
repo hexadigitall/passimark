@@ -68,6 +68,15 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Admin approval hardening**: idempotent approve/reject (no 422 "not awaiting approval"), track-scoped unlock, queue refresh + friendly alert (`fetch` + XSRF + `router.reload`)
 - Full suite **58 tests / 6,916 assertions** green; `npm run build` green; live learner smoke passes (login → dashboard → IRT CAT → result → profile/settings)
 
+## Sprint 7.5b: Approval-gated progression & gated answer review
+**Status:** **done** (follow-up hardening of Sprint 7.5; item-first advancement UX)
+**Evidence:** [sprint-7-5b-approval-gating-review.md](sprint-7-5b-approval-gating-review.md), [sprint-7-5b-approval-gating-review-report.md](sprint-7-5b-approval-gating-review-report.md)
+- **Per-track advancement mode** — migration 000010 `certification_tracks.advancement` (`auto` | `approval`): the real-content CISSP bundle is `approval` (a pass never auto-opens the next session), while the Worldwide/Uniform catalogs stay `auto` (v4 pass-gated ladder unchanged). `PassimarkController::finish()` only auto-unlocks on `advancement === 'auto'`; admin approval still unlocks next via `Curriculum::unlockNext`. CatEngineV4Test fixture explicitly `auto`.
+- **Concluded-session CTA redefined** — completed/pending/approved rows now offer **Reattempt** + **Review answers** (plus **Request approval** on approval-gated completed sessions). No more "Continue"/"Done" on a concluded session; the dashboard ships each track's `advancement` so the UI stays honest about what unlocks what.
+- **Gated answer review** (`App\Services\ReviewService` + `GET /passimark/session/{session}/review`): an item's correct answer + explanation is exposed only when the learner answered it correctly, every item was answered correctly, or the session is instructor-approved; locked items show the question + the learner's own selection only ("no expo on reattempt"). The Result screen shows a partial-lock banner with a **Request approval to unlock full review** path.
+- **No-expo reattempt payloads**: the exam render and answer `next` payload strip `is_correct`/`correct_key` outside practice mode (`presentQuestion`), so a CAT/timed reattempt's client payload never leaks answer keys ahead of time.
+- Full suite **64 tests / 7,060 assertions** green; `npm run build` + `php -l` clean; live dashboards ship `cissp` as `advancement=approval`.
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

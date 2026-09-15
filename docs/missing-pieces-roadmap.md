@@ -54,6 +54,9 @@ Exam.jsx: question palette (answered/current/flagged), flagged-review modal, str
 ### 3.3c Content coherence, learner onboarding & flow hardening — **shipped in Sprint 7.5**
 Resolved the audit follow-ups: real-content bundle now carries v4 metadata (region/phase ladder/θ gates/IRT CAT), registration auto-enrolls learners via `App\Services\Curriculum`, Profile is data-driven with a real `summary`, Settings persist (`users.preferences` + `PATCH /settings`), and admin approve/reject are idempotent + track-scoped (no more "not awaiting approval" 422). See [sprint-7-5-content-coherence-report.md](sprint-7-5-content-coherence-report.md). **Still missing:** admin track form `region` field; admin learner-enrollment UI; real-spec finals bands (NCLEX 75–145) calibration UI.
 
+### 3.3d Approval-gated progression + gated answer review — **shipped in Sprint 7.5b**
+The real-content CISSP bundle now runs a **per-track approval gate** (`certification_tracks.advancement` = `auto`|`approval`; bundle `approval`, catalogs `auto`): a pass never auto-opens the next session on the bundle — the learner requests approval and an instructor unlocks. Concluded sessions surface **Reattempt** + **Review answers** (no stale "Continue"/"Done"). Answer review exposes a correct answer + explanation only for correctly answered items, perfect attempts, or instructor-approved sessions (`App\Services\ReviewService`), and exam/answer payloads strip answer keys outside practice mode so reattempts never leak the key. See [sprint-7-5b-approval-gating-review-report.md](sprint-7-5b-approval-gating-review-report.md). **Remaining:** uniform explanation authoring on legacy bundle items (many explanations are null — gating renders correct-answer-only); admin track form `region` field; admin learner-enrollment UI.
+
 ### 3.4 Product analytics and reporting
 The app tracks attempts and scores, but higher-level reporting is still limited.
 
