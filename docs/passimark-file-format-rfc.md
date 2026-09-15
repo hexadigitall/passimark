@@ -1,6 +1,6 @@
-# Passimark Portable Assessment Format (Draft)
+# Passimark Portable Assessment Format
 
-**Status:** Proposed
+**Status:** Decision adopted (Sprint 9). `format_version` 1.0 is implemented in-app: validator, exporter, importer, audit trail, and CLI. `.psmk` is the canonical extension; `.psme` (single exam) and `.psmm` (module) are accepted convenience aliases of the same package. See [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md) and [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md). The Decision below is the adopted contract; the Layout / Validation / Conversion sections are the normative design it implements.
 
 ## Decision
 
@@ -282,3 +282,5 @@ The CAT engine already consumes the three IRT values required by the format. It 
 ## Recommendation
 
 Proceed, but treat `.psmk` as a product platform feature after the core exam delivery flow is stable. The correct first milestone is a schema plus fixture package and a module-only round-trip test, not a broad UI uploader. That proves the contract while keeping the work isolated from the active Sprint 1 dashboard and later Sprint 2 exam workflow.
+
+**Superseded by Sprint 9 (adopted):** the first milestone shipped — schema, fixture+tamper tests, module/exam/course round-trip, create-only transactional import, and the audit table — before any broad UI uploader.

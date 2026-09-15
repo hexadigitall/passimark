@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PassimarkSession extends Model {
     protected $table='passimark_sessions';
-    protected $fillable=['certification_track_id','cert_slug','number','phase','phase_type','title','description','domain','is_open','order','pass_score','theta_required','time_limit','time_minutes','question_count','questions_target'];
+    protected $fillable=['external_id','certification_track_id','cert_slug','number','phase','phase_type','title','description','domain','is_open','order','pass_score','theta_required','time_limit','time_minutes','question_count','questions_target'];
     protected $casts=['is_open'=>'boolean','theta_required'=>'float','time_minutes'=>'integer','questions_target'=>'integer'];
     public function certificationTrack(){ return $this->belongsTo(PassimarkCertificationTrack::class,'certification_track_id'); }
     public function tags(){ return $this->belongsToMany(PassimarkTag::class, 'passimark_session_tag', 'session_id', 'tag_id'); }

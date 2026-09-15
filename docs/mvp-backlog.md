@@ -70,14 +70,15 @@ This backlog is grouped into completion phases. The project should not attempt a
 
 ## Epic 4: Content and question management
 ### Priority: P0 / P1
-### Status: core done — CRUD + bulk import shipped (sprint-3-progress.md); certification tracks (4.1) and tag taxonomy (4.2, `passimark_tags` + pivots + backfill command + admin Tags screen) shipped in sprint-4-taxonomy-plan.md; CISSP textbook bundle (4.5) extracted and seeded — 46 sessions / 980 MC items / 105 flashcards from the Hexadigitall 45-day textbook, content pipeline documented in cissp-prep-bundle.md; remaining items below (exports, review workflow, broader import formats) stay P1/P2. Epic 9 (v4.0 Worldwide catalog) now builds on the shipped tag model and the proven bundle-per-cert pipeline.
+### Status: core done — CRUD + bulk import shipped (sprint-3-progress.md); certification tracks (4.1) and tag taxonomy (4.2, `passimark_tags` + pivots + backfill command + admin Tags screen) shipped in sprint-4-taxonomy-plan.md; CISSP textbook bundle (4.5) extracted and seeded — 46 sessions / 980 MC items / 105 flashcards from the Hexadigitall 45-day textbook, content pipeline documented in cissp-prep-bundle.md; portable packages (4.6/9) — `.psmk` V1 author package shipped (validator/exporter/importer, `.psme`/`.psmm` aliases, audit, CLI) in sprint-9-portable-packages-sharing.md. Remaining below (upload UI, update/conflict modes, media, CSV/QTI/PDF source adapters, exports review workflow) stay P1/P2. Epic 9 (v4.0 Worldwide catalog) now builds on the shipped tag model and the proven bundle-per-cert pipeline.
 ### Tasks
 - build session CRUD screens
 - build exam CRUD screens
 - build question CRUD screens
 - add question import flow
-- add `.psmk` import/export and import audit history
-- add CSV/XLSX import with draft review and source-license attestation
+- add `.psmk` import/export and import audit history — **V1 shipped (Sprint 9)**: dependency-free ZIP codec (`PsmkZip`), `PackageValidator`/`PackageExporter`/`PackageImporter` (module/exam/course, transactional create-only), `external_id` UUIDs + `passimark_package_imports` audit, CLI `passimark:package:export`/`import`, `.psme`/`.psmm` aliases; see sprint-9-portable-packages-sharing.md
+- add upload UI + dry-run preview + policy-protected endpoints (Phase C), update-by-external_id/duplicate modes, media assets + signatures
+- add CSV/XLSX source adapter with draft review and source-license attestation (Phase D)
 - plan QTI and Moodle XML/GIFT adapters; defer PDF/OCR and proprietary formats until review tooling is proven
 - manage domains and curriculum categories
 - support tagging by difficulty, domain, and taxonomy

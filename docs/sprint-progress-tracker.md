@@ -57,10 +57,19 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Sprint 7 — Pearson VUE chrome + mastery dashboard**: question palette, flag/review, strike-through, calculator, break dialogs; dotted→solid progress rings, theta trendline, design tokens — planned
 - **Sprint 8 — certificates + PWA + deployment**: `Certificate.jsx`, credential IDs `PMK-…`, QR verification, manifest background fix (`#0F172A`), deployment guide — planned
 
+## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
+**Status:** Phase A+B **done** (C-E planned)
+**Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
+- RFC **adopted** — one canonical `.psmk` ZIP package (manifest + content), `.psme`/`.psmm` as accepted aliases (extension is a hint; `manifest.content_type` authoritative)
+- migration 000007: `external_id` UUIDs on sessions/exams/questions + `passimark_package_imports` audit — done
+- `App\Support\PsmkZip` dependency-free ZIP codec + `PassimarkPackage\{Validator,Exporter,Importer}` + `PackagingSpec` — done; module/exam/course export + transactional **create-only** import that never unlocks progression and always audits
+- CLI `passimark:package:export` / `passimark:package:import` — done; standard-ZIP output verified with system `tar`; full suite **36 tests / 6,733 assertions** green
+- Remaining (Phase C-E): admin upload/preview UI, update-by-external_id & conflict modes, media assets/signatures, CSV→QTI→PDF source adapters via a review staging model, schema publication
+
 ## Known open risks (not yet scheduled)
 - No frontend/browser automated tests — only PHPUnit backend coverage exists
 - No design tokens / typography scale — Tailwind defaults are used everywhere ([tailwind.config.js](../tailwind.config.js)); scoped in Sprint 7.4
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
-- `.psmk` file-format and course/import tooling remains an RFC only ([passimark-file-format-rfc.md](passimark-file-format-rfc.md))
+- `.psmk` source conversion (PDF/VCE/CSV/QTI adapters), upload UI, and update modes remain Phase C-E of Sprint 9 ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)); the V1 author package (export/import/audit) is shipped
 - v4.0 brand assets still use legacy `passimark_*` filenames and `manifest.json` background is `#ffffff` instead of `#0F172A` (tracked in Sprint 8.3)
-- Sprint 5 feature work is sitting uncommitted on `feature/sprint-5-worldwide-catalog` (Sprints 4.2+4.5 landed as `504e2ca` on `feature/sprint-4-taxonomy`; next commit should land Sprint 5 before Sprint 6 starts)
+- Sprint 9 feature work is sitting uncommitted on `feature/sprint-9-psmk-packages` (Sprint 5 landed as `55268cf` on `feature/sprint-5-worldwide-catalog`; next commit should land Sprint 9 before Sprint 6 starts)

@@ -43,6 +43,7 @@ Still missing:
 - real multi-cert content — shipped (proven) in Sprint 4.5: the Hexadigitall CISSP 45-day textbook is fully extracted into a committed bundle and seeded through the existing track/session/exam/question model ([cissp-prep-bundle.md](cissp-prep-bundle.md)). This validates the **bundle-per-cert** flow that v4 generalizes to 205 certs.
 - the v4.0 Worldwide catalog — **shipped in Sprint 5**: `phase_type` session ladder (`cert|lesson|phase|domain|mock|final`), exam `time_minutes`/`is_final`/`irt_enabled`, question `correct_key`, track `region`; `WorldwidePassimarkCatalogSeeder` (17 flagship certs) + `Uniform205CatalogSeeder` (205-cert JSON → 2,870 sessions / 8,610 exams, spec §4b drift zero); phase-1-first-lesson gating + pass-gated auto-unlock. Remaining in `phase_type` scope: IRT **engine** enforcement (Sprint 6). See [worldwide-catalog-sprint-5-report.md](worldwide-catalog-sprint-5-report.md).
 - content export and a content author review/approval workflow distinct from the learner approval workflow
+- **portable packages** — the `.psmk` V1 author format **shipped in Sprint 9**: RFC adopted; one canonical ZIP package with `.psme`/`.psmm` aliases; `PassimarkPackage\{Validator,Exporter,Importer}`, `PsmkZip` codec, `external_id` UUIDs, `passimark_package_imports` audit; CLI export/import; standard-ZIP verified. Remaining (Phase C-E): upload UI + preview, update-by-external_id, media/signatures, CSV→QTI→PDF adapters via a review staging model ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)).
 
 ### 3.3a CAT engine v4 (IRT 3PL)
 The current `CatEngine` selects the nearest-difficulty question and terminates on a fixed rule. The v4 spec requires true adaptive intelligence:
@@ -144,10 +145,13 @@ The project already has logo and image assets, which is a strength. Favicon, app
 - real CISSP bundle content (4.5) — shipped; proves the extraction + bundle-per-cert pipeline the 205-cert catalog will reuse
 
 ### Phase 2: v4.0 Worldwide build (Sprints 5-8 — approved spec)
-- worldwide catalog schema + seeder (5)
+- worldwide catalog schema + seeder (5) — shipped
 - CAT engine v4 IRT 3PL (6)
 - Pearson VUE chrome + mastery dashboard (7)
 - certificates + PWA + deployment (8)
+
+### Phase 2.5: Portable packages & sharing (Sprint 9)
+- `.psmk` V1 author package (validator/exporter/importer, aliases, audit, CLI) — **shipped**; upload UI, update modes, media, and source adapters remain Phase C-E
 
 ### Phase 3: Product depth (Sprints 9-10)
 - richer reporting and analytics

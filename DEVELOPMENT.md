@@ -107,6 +107,14 @@ passimark/
 │   #   (default) CISSP bundle JSON present -> CISSPBundleSeeder; else PassimarkSeeder
 │   # Filters: SEED_REGIONS=..., SEED_CERTS=..., SEED_LIMIT=N
 │
+│ # Portable packages (Sprint 9, format_version 1.0):
+│ #   php artisan passimark:package:export --course=cissp --dest=out.psmk
+│ #   php artisan passimark:package:export --module=42 --dest=out.psme
+│ #   php artisan passimark:package:export --exam=17 --dest=out.psmm
+│ #   php artisan passimark:package:import out.psmk [--cert_slug=override]
+│ #   (App\Services\PassimarkPackage\{Validator,Exporter,Importer}; App\Support\PsmkZip;
+│ #    sees docs/passimark-file-format-rfc.md and docs/sprint-9-portable-packages-sharing.md)
+│
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)
 │   └── api.php                   # (Future) REST API routes
