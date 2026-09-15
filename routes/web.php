@@ -32,6 +32,12 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(function(){
     Route::get('/passimark', [PassimarkAdminController::class,'index'])->name('admin.passimark');
+    Route::get('/reports/learners', [PassimarkAdminController::class,'reportLearners'])->name('admin.reports.learners');
+    Route::get('/reports/attempts', [PassimarkAdminController::class,'reportAttempts'])->name('admin.reports.attempts');
+    Route::get('/reports/sessions', [PassimarkAdminController::class,'reportSessions'])->name('admin.reports.sessions');
+    Route::get('/reports/questions', [PassimarkAdminController::class,'reportQuestions'])->name('admin.reports.questions');
+    Route::get('/reports/tracks', [PassimarkAdminController::class,'reportTracks'])->name('admin.reports.tracks');
+    Route::get('/reports/approvals', [PassimarkAdminController::class,'reportApprovals'])->name('admin.reports.approvals');
     Route::post('/passimark/progress/{progress}/approve', [PassimarkAdminController::class,'approve'])->name('admin.approve');
     Route::post('/passimark/progress/{progress}/reject', [PassimarkAdminController::class,'reject'])->name('admin.reject');
     Route::post('/passimark/questions/import', [PassimarkAdminController::class,'importQuestions'])->name('admin.import');

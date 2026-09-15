@@ -152,6 +152,15 @@ passimark/
 │ #   Dashboard.jsx / Result.jsx          - Reattempt + Review answers CTAs; locked/unlocked review items
 │ #   sees docs/sprint-7-5b-approval-gating-review-report.md
 │
+│ # Role-branched admin dashboard + analytics (Sprint 7.5c-d):
+│ #   PassimarkController::dashboard()     - admin/instructor -> PassimarkAdminController::dashboard()
+│ #   App\Services\AdminAnalytics          - single source of truth for KPI tiles + 6 drill-down reports
+│ #   Passimark/AdminDashboard.jsx         - 10 clickable KPI tiles (value + sub-line + weekly delta)
+│ #   Passimark/Reports/*                  - Learners, Attempts, Sessions, Questions, Tracks, Approvals
+│ #      (ReportHeader + StatStrip shared chrome; zero-data safe, bounded rows, empty states)
+│ #   routes/web.php                       - GET /admin/reports/{learners|attempts|sessions|questions|tracks|approvals}
+│ #   sees docs/sprint-7-5d-admin-analytics-reports.md
+│
 ├── routes/
 │   ├── web.php                   # Web routes (auth, dashboard, exams)
 │   └── api.php                   # (Future) REST API routes

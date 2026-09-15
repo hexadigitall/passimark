@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\{PassimarkSession, PassimarkProgress, PassimarkQuestion, PassimarkApprovalEvent, PassimarkExam, PassimarkAttempt, User, PassimarkCertificationTrack, PassimarkTag};
+use App\Services\AdminAnalytics;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
@@ -14,19 +15,23 @@ class PassimarkAdminController extends Controller
      */
     public function dashboard()
     {
+        $analytics = new AdminAnalytics;
+
         $pending = PassimarkProgress::with(['user', 'session'])->where('status', 'pending_approval')->get();
         $events = PassimarkApprovalEvent::with(['progress.user', 'progress.session'])->latest()->limit(20)->get();
+        $tiles = $analytics->tiles();
+        $by = array_column($tiles, 'value', 'key');
         $report = [
-            'learners' => User::where('role', 'student')->count(),
-            'attempts' => PassimarkAttempt::count(),
-            'completed_attempts' => PassimarkAttempt::whereNotNull('finished_at')->count(),
-            'average_score' => round((float) PassimarkAttempt::whereNotNull('score')->avg('score'), 2),
-            'pending_approvals' => $pending->count(),
-            'sessions' => PassimarkSession::count(),
-            'questions' => PassimarkQuestion::count(),
-            'tracks' => PassimarkCertificationTrack::count(),
-            'completions' => PassimarkProgress::whereIn('status', ['completed', PassimarkProgress::APPROVED])->count(),
-            'approved_7d' => PassimarkApprovalEvent::where('action', 'approved')->where('created_at', '>=', now()->subDays(7))->count(),
+            'learners' => $by['learners'],
+            'attempts' => $by['attempts'],
+            'completed_attempts' => $by['completed'],
+            'average_score' => $by['average_score'],
+            'approved_7d' => $by['approvals_7d'],
+            'completions' => $by['completions'],
+            'sessions' => $by['sessions'],
+            'questions' => $by['questions'],
+            'tracks' => $by['tracks'],
+            'pending_approvals' => $by['pending'],
         ];
         $needsAttention = [
             'contentless_sessions' => PassimarkSession::doesntHave('questions')->count(),
@@ -34,7 +39,39 @@ class PassimarkAdminController extends Controller
             'untagged_questions' => PassimarkQuestion::doesntHave('tags')->count(),
         ];
 
-        return Inertia::render('Passimark/AdminDashboard', compact('pending', 'events', 'report', 'needsAttention'));
+        return Inertia::render('Passimark/AdminDashboard', compact('pending', 'events', 'report', 'tiles', 'needsAttention'));
+    }
+
+    public function reportLearners()
+    {
+        return Inertia::render('Passimark/Reports/Learners', app(AdminAnalytics::class)->learners());
+    }
+
+    public function reportAttempts(Request $request)
+    {
+        $analytics = app(AdminAnalytics::class);
+        return Inertia::render('Passimark/Reports/Attempts', $analytics->attempts($request->string('status')->toString(), $request->string('mode')->toString()));
+    }
+
+    public function reportSessions()
+    {
+        return Inertia::render('Passimark/Reports/Sessions', app(AdminAnalytics::class)->sessions());
+    }
+
+    public function reportQuestions()
+    {
+        return Inertia::render('Passimark/Reports/Questions', app(AdminAnalytics::class)->questions());
+    }
+
+    public function reportTracks()
+    {
+        return Inertia::render('Passimark/Reports/Tracks', app(AdminAnalytics::class)->tracks());
+    }
+
+    public function reportApprovals(Request $request)
+    {
+        $analytics = app(AdminAnalytics::class);
+        return Inertia::render('Passimark/Reports/Approvals', $analytics->approvals($request->string('filter', 'all')->toString()));
     }
 
     public function index(){ 

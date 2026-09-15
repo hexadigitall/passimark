@@ -85,6 +85,15 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Learner chrome gated**: the shell's region filter and θ ability badge render only for students; staff see "Passimark Operations" chrome and a sidebar with Overview / Control Center / Import Questions / Profile / Settings.
 - Full suite **68 tests / 7,112 assertions** green; `npm run build` + `php -l` clean.
 
+## Sprint 7.5d: Admin analytics — richer KPI tiles + drill-down reports
+**Status:** **done** (follow-up of the 7.5c dashboard audit: tiles were bare counts with no context and no destination)
+**Evidence:** [sprint-7-5d-admin-analytics-reports.md](sprint-7-5d-admin-analytics-reports.md)
+- **`App\Services\AdminAnalytics`** is the single source of truth for every landing KPI and report — zero-data safe (no NaN), deterministic ordering, bounded score stats (latest 2,000 finished attempts) so distribution/median stay fast at catalogue scale.
+- **Landing tiles** (`Passimark/AdminDashboard`) are now clickable KPI cards: value + context sub-line + weekly delta pill, each linking to its report (Learners, Attempts, Completed, Average score, Approvals 7d, Completions, Sessions, Questions, Tracks, Pending).
+- **Six drill-down screens** under `/admin/reports/*`: Learners (roster + engagement), Attempts (ledger + score distribution + per-mode + 7-day cadence + status/mode filters), Questions (domain/bloom × accuracy, difficulty bands, quality flags, top-10 weakest items, never-used samples), Sessions (per-session engagement + contentless/never-used flags), Tracks (per-cert completion matrix), Approvals (decision ledger + review lag + 8-week trend + pending queue with aging). Shared `ReportHeader` + `StatStrip`; every table has an empty state and capped-list note.
+- `PassimarkAttempt::user()` relation added; difficulty band keys made dot-free for Laravel dot-path safety.
+- New `tests/Feature/AdminReportsTest.php` (9 tests); landing keeps flat `report.*` keys for back-compat. Full suite **77 tests / 7,365 assertions** green; `npm run build` + `php -l` clean.
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

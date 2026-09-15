@@ -6,6 +6,7 @@ class PassimarkAttempt extends Model {
     protected $fillable=['user_id','session_id','exam_id','mode','theta','started_at','finished_at','score','is_passed','responses'];
     protected $casts=['responses'=>'array','started_at'=>'datetime','finished_at'=>'datetime'];
     public function answers(){ return $this->hasMany(PassimarkAttemptAnswer::class,'attempt_id'); }
+    public function user(){ return $this->belongsTo(User::class,'user_id'); }
     public function session(){ return $this->belongsTo(PassimarkSession::class,'session_id'); }
     public function exam(){ return $this->belongsTo(PassimarkExam::class,'exam_id'); }
     public function updateTheta(bool $correct, float $b, float $a=1.0, float $c=0.25){

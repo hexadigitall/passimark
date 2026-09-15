@@ -1,9 +1,24 @@
 import { useState } from 'react';
-import { Head, router } from '@inertiajs/react';
-import { AlertTriangle, BookOpen, Check, Database, ShieldCheck, Timer, X } from 'lucide-react';
+import { Head, Link, router } from '@inertiajs/react';
+import { AlertTriangle, ArrowUpRight, BookOpen, Check, Database, ShieldCheck, Timer, X } from 'lucide-react';
 import DashboardLayout from '../../Layouts/DashboardLayout';
 
-export default function AdminDashboard({ report = {}, pending = [], events = [], needsAttention = {} }) {
+const tileValue = (tile) => {
+  if (tile.key === 'average_score') {
+    const n = Number(tile.value);
+    return Number.isNaN(n) ? '—' : `${Number.isInteger(n) ? n : n.toFixed(1)}%`;
+  }
+  return tile.value ?? 0;
+};
+
+const deltaTone = (text) => {
+  if (!text) return 'text-slate-500';
+  if (text.includes('▲')) return 'text-emerald-400';
+  if (text.includes('▼')) return 'text-red-400';
+  return 'text-slate-500';
+};
+
+export default function AdminDashboard({ pending = [], events = [], needsAttention = {}, tiles = [] }) {
   const [processingId, setProcessingId] = useState(null);
 
   const review = async (id, action) => {
@@ -24,7 +39,7 @@ export default function AdminDashboard({ report = {}, pending = [], events = [],
       window.alert('Network error — could not reach the server.');
     } finally {
       setProcessingId(null);
-      router.reload({ only: ['pending', 'events', 'report'] });
+      router.reload({ only: ['pending', 'events', 'tiles'] });
     }
   };
 
@@ -33,19 +48,6 @@ export default function AdminDashboard({ report = {}, pending = [], events = [],
     needsAttention.empty_tracks ? `${needsAttention.empty_tracks} empty track${needsAttention.empty_tracks === 1 ? '' : 's'}` : null,
     needsAttention.untagged_questions ? `${needsAttention.untagged_questions} untagged question${needsAttention.untagged_questions === 1 ? '' : 's'}` : null,
   ].filter(Boolean);
-
-  const cards = [
-    ['Learners', report.learners || 0],
-    ['Attempts', report.attempts || 0],
-    ['Completed', report.completed_attempts || 0],
-    ['Average score', `${report.average_score || 0}%`],
-    ['Approvals (7d)', report.approved_7d || 0],
-    ['Completions', report.completions || 0],
-    ['Sessions', report.sessions || 0],
-    ['Questions', report.questions || 0],
-    ['Tracks', report.tracks || 0],
-    ['Pending', report.pending_approvals || 0],
-  ];
 
   return (
     <DashboardLayout>
@@ -80,11 +82,20 @@ export default function AdminDashboard({ report = {}, pending = [], events = [],
         )}
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-          {cards.map(([label, value]) => (
-            <div key={label} className="rounded-xl border border-slate-700 bg-slate-900 p-4">
-              <p className="text-sm text-slate-400">{label}</p>
-              <p className="mt-2 text-2xl font-semibold text-white">{value}</p>
-            </div>
+          {tiles.map((tile) => (
+            <Link
+              key={tile.key}
+              href={tile.href}
+              className="group rounded-xl border border-slate-700 bg-slate-900 p-4 transition hover:border-emerald-500/40 hover:bg-slate-800/60"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm text-slate-400">{tile.label}</p>
+                <ArrowUpRight className="h-4 w-4 text-slate-600 transition group-hover:text-emerald-400" />
+              </div>
+              <p className="mt-2 text-2xl font-semibold text-white">{tileValue(tile)}</p>
+              <p className="mt-1 truncate text-xs text-slate-500" title={tile.sub}>{tile.sub}</p>
+              {tile.deltaText && <p className={`mt-1 truncate text-xs font-medium ${deltaTone(tile.deltaText)}`}>{tile.deltaText}</p>}
+            </Link>
           ))}
         </div>
 
