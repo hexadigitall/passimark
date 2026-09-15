@@ -31,6 +31,7 @@
 - **Adjusted:** `CatEngineV4Test` fixture track is explicitly `advancement=auto` (it asserts the v4 pass→unlock ladder); `WorldwideCatalogSeederTest` auto-unlock assertion untouched and still green.
 - **Suite:** 64 tests / 7,060 assertions **OK**. Build + lint green.
 - **Live:** dev DB reseeded; `http://127.0.0.1:8010` serves the bundle track as `advancement=approval`, session 1 `open`.
+- **UI tuning follow-up:** the region card grid was a fixed `lg:grid-cols-2 xl:grid-cols-3`, which squeezed the single CISSP bundle card to one third of the row and leaked session-row content (long titles + Reattempt/Review/Request-approval buttons). Region sections now use a wrapping flex layout (`flex flex-wrap gap-6`, cards `flex-1 min-w-[320px]`) so a lone track card expands to full content width and multiple certs share rows only as wide as their content allows; session rows also wrap (`flex-wrap`) instead of overflowing. `npm run build` green (app `C44y7PWU.js`).
 
 ## Open notes
 

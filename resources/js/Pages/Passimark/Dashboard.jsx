@@ -144,7 +144,7 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
                 <h3 className="text-xl font-semibold text-white">{region}</h3>
                 <span className="text-sm text-slate-500">{regionTracks.length} {regionTracks.length === 1 ? 'track' : 'tracks'}</span>
               </div>
-              <div className="mt-4 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+              <div className="mt-4 flex flex-wrap gap-6">
                 {regionTracks.map((track) => {
                   const ringTotal = track.sessions.length;
                   const ringDone = track.sessions.filter((session) => doneStatuses.includes(session.progress?.status)).length;
@@ -152,7 +152,7 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
                   const lastTheta = track.theta_history.length ? track.theta_history[track.theta_history.length - 1] : null;
 
                   return (
-                    <article key={track.id} className="flex flex-col border border-slate-700 bg-slate-900 p-5">
+                    <article key={track.id} className="flex min-w-[320px] flex-1 flex-col border border-slate-700 bg-slate-900 p-5">
                       <div className="flex items-start justify-between gap-4">
                         <div>
                           <span className="font-mono text-xs uppercase tracking-widest text-slate-500">{track.region}</span>
@@ -207,7 +207,7 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
                               ]
                             : [{ key: 'main', label: state.cta, action: 'start', tone: 'emerald', disabled: state.disabled }];
                           return (
-                            <div key={session.id} className="flex items-center gap-3">
+                            <div key={session.id} className="flex flex-wrap items-center gap-x-3 gap-y-2">
                               <span className={`inline-flex shrink-0 items-center gap-1 rounded px-2 py-0.5 text-[11px] font-medium ${state.badge}`}>
                                 <StatusIcon className="h-3 w-3" />
                                 {state.label}
