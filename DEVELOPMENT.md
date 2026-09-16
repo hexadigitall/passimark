@@ -155,6 +155,8 @@ passimark/
 │ # Role-branched admin dashboard + analytics (Sprint 7.5c-d):
 │ #   PassimarkController::dashboard()     - admin/instructor -> PassimarkAdminController::dashboard()
 │ #   App\Services\AdminAnalytics          - single source of truth for KPI tiles + 6 drill-down reports
+│ #      brokenSessionCount() = sessions with exams but no questions only
+│ #      (reference/remediation lessons, skipped by the ladder, are not flagged)
 │ #   Passimark/AdminDashboard.jsx         - 10 clickable KPI tiles (value + sub-line + weekly delta)
 │ #   Passimark/Reports/*                  - Learners, Attempts, Sessions, Questions, Tracks, Approvals
 │ #      (ReportHeader + StatStrip shared chrome; zero-data safe, bounded rows, empty states)

@@ -40,6 +40,14 @@ Every tile is now a clickable card with a value, a context sub-line, a weekly de
 - Added `PassimarkAttempt::user()` relation (needed by the ledger eager load).
 - Difficulty bands use dot-free keys (`easy`/`mid`/`hard`) — Laravel's dot-path assertion/serialization splits on `.`, which breaks keys like `"<0.33"`.
 
+### Follow-up (alert refinement)
+The landing "Content needs attention" banner flagged every session with no questions — including the 5 end-of-course **reference/remediation lessons** (e.g. "Error Analysis & Targeted Remediation I", "CAT Pacing Strategy") that are *intentionally* contentless and that the curriculum ladder deliberately skips (`question_count > 0` gate in `Curriculum`). That made a healthy catalog look broken.
+
+- The definition is now **"broken attemptable session"**: `AdminAnalytics::brokenSessionCount()` = sessions that **carry exams but have zero questions**. Reference lessons (no exam, no questions) are no longer flagged.
+- Applied consistently everywhere: landing `needsAttention.contentless_sessions`, the Sessions tile sub-line, and the per-session `contentless` flag + summary in the Sessions report.
+- Banner copy now reads "N sessions with exams but no questions".
+- Test `test_sessions_report_flags_contentless_and_counts_attempts` proves both sides: a reference session (no exam) is **not** flagged while an exam-bearing session with no questions **is**.
+
 ## Verification
 - New `tests/Feature/AdminReportsTest.php` (9 tests): all six routes render for admin; students forbidden; learners roster counts; attempts scores/distribution/modes/trend + filters; sessions contentless flags + counts; questions usage/accuracy/weakest; tracks sessions/completions/pending; approvals ledger/lag/trend/pending; landing tiles carry rich metrics and correct links.
 - Landing `Passimark/AdminDashboard` keeps the flat `report.*` keys (back-compat with `AdminDashboardTest`) while the UI drives off the new `tiles` prop.

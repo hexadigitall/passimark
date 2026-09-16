@@ -34,7 +34,7 @@ class PassimarkAdminController extends Controller
             'pending_approvals' => $by['pending'],
         ];
         $needsAttention = [
-            'contentless_sessions' => PassimarkSession::doesntHave('questions')->count(),
+            'contentless_sessions' => \App\Services\AdminAnalytics::brokenSessionCount(),
             'empty_tracks' => PassimarkCertificationTrack::withCount('sessions')->get()->where('sessions_count', 0)->count(),
             'untagged_questions' => PassimarkQuestion::doesntHave('tags')->count(),
         ];

@@ -44,7 +44,7 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
   };
 
   const attention = [
-    needsAttention.contentless_sessions ? `${needsAttention.contentless_sessions} session${needsAttention.contentless_sessions === 1 ? '' : 's'} with no questions` : null,
+    needsAttention.contentless_sessions ? `${needsAttention.contentless_sessions} session${needsAttention.contentless_sessions === 1 ? '' : 's'} with exams but no questions` : null,
     needsAttention.empty_tracks ? `${needsAttention.empty_tracks} empty track${needsAttention.empty_tracks === 1 ? '' : 's'}` : null,
     needsAttention.untagged_questions ? `${needsAttention.untagged_questions} untagged question${needsAttention.untagged_questions === 1 ? '' : 's'}` : null,
   ].filter(Boolean);

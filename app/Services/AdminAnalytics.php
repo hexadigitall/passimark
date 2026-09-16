@@ -18,6 +18,16 @@ class AdminAnalytics
         return round(((float) $part / (float) $total) * 100, $decimals);
     }
 
+    /**
+     * Broken attemptable sessions: sessions that carry exams but have no questions.
+     * Reference/remediation lessons (no exam, no questions) are intentionally contentless
+     * (the curriculum ladder skips them) and must NOT be flagged as broken.
+     */
+    public static function brokenSessionCount(): int
+    {
+        return PassimarkSession::whereHas('exams')->doesntHave('questions')->count();
+    }
+
     /** Average of an id-to-value map (nullable values skipped). */
     private function avgOf(array $values, ?float $floor = null): ?float
     {
@@ -86,7 +96,7 @@ class AdminAnalytics
 
         $sessionsTotal = PassimarkSession::count();
         $questionsTotal = PassimarkQuestion::count();
-        $contentless = PassimarkSession::doesntHave('questions')->count();
+        $contentless = self::brokenSessionCount();
 
         $untagged = PassimarkQuestion::doesntHave('tags')->count();
         $missingExplanation = PassimarkQuestion::where(function ($q) {
@@ -364,7 +374,7 @@ class AdminAnalytics
     public function sessions(): array
     {
         $sessions = PassimarkSession::with('certificationTrack:id,title')
-            ->withCount(['questions' => fn ($q) => $q->select(DB::raw('count(*)'))])
+            ->withCount(['questions' => fn ($q) => $q->select(DB::raw('count(*)')), 'exams' => fn ($q) => $q->select(DB::raw('count(*)'))])
             ->orderBy('order')
             ->get();
 
@@ -397,7 +407,7 @@ class AdminAnalytics
                 'avg_score' => $a && $a->avg_score !== null ? round((float) $a->avg_score, 1) : null,
                 'pass_rate' => $this->pct($passed, $finished),
                 'pending' => (int) ($pending[$s->id] ?? 0),
-                'contentless' => $s->questions_count === 0,
+                'contentless' => $s->exams_count > 0 && $s->questions_count === 0,
                 'unused' => $total === 0,
                 'last_activity' => $a?->last_finished,
             ];

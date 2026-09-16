@@ -93,6 +93,7 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Six drill-down screens** under `/admin/reports/*`: Learners (roster + engagement), Attempts (ledger + score distribution + per-mode + 7-day cadence + status/mode filters), Questions (domain/bloom × accuracy, difficulty bands, quality flags, top-10 weakest items, never-used samples), Sessions (per-session engagement + contentless/never-used flags), Tracks (per-cert completion matrix), Approvals (decision ledger + review lag + 8-week trend + pending queue with aging). Shared `ReportHeader` + `StatStrip`; every table has an empty state and capped-list note.
 - `PassimarkAttempt::user()` relation added; difficulty band keys made dot-free for Laravel dot-path safety.
 - New `tests/Feature/AdminReportsTest.php` (9 tests); landing keeps flat `report.*` keys for back-compat. Full suite **77 tests / 7,365 assertions** green; `npm run build` + `php -l` clean.
+- **Refinement:** "Content needs attention" alert sharpened — `AdminAnalytics::brokenSessionCount()` flags only *broken attemptable* sessions (have exams, zero questions). Intentional reference/remediation lessons (no exam, no questions, skipped by the curriculum ladder) are no longer flagged; banner copy updated; sessions-report flag + summary in sync; test proves both cases. Suite now **77 tests / 7,367 assertions**.
 
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)

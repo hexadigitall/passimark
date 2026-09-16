@@ -128,18 +128,22 @@ class AdminReportsTest extends TestCase
     public function test_sessions_report_flags_contentless_and_counts_attempts(): void
     {
         $this->makeAttempt($this->student(), 'cat', 80, true);
-        PassimarkSession::create(['certification_track_id' => 1, 'number' => 99, 'phase' => 4, 'title' => 'Empty CRUD session', 'order' => 999]);
+
+        $reference = PassimarkSession::create(['certification_track_id' => 1, 'number' => 99, 'phase' => 4, 'title' => 'Reference reading session', 'order' => 999]);
+        $broken = PassimarkSession::create(['certification_track_id' => 1, 'number' => 100, 'phase' => 4, 'title' => 'Empty exam session', 'order' => 1000]);
+        PassimarkExam::create(['session_id' => $broken->id, 'title' => 'Broken cat', 'mode' => 'cat', 'question_count' => 0]);
 
         $this->actingAs($this->admin())->get('/admin/reports/sessions')
             ->assertInertia(function (Assert $page) {
                 $page->component('Passimark/Reports/Sessions')
-                    ->where('summary.sessions', 47)
+                    ->where('summary.sessions', 48)
                     ->where('summary.contentless', 42)
                     ->where('summary.attempts', 1)
-                    ->has('rows', 47)
+                    ->has('rows', 48)
                     ->where('rows.0.contentless', false)
                     ->where('rows.0.unused', false)
-                    ->where('rows.46.contentless', true);
+                    ->where('rows.46.contentless', false)
+                    ->where('rows.47.contentless', true);
             });
     }
 

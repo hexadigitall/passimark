@@ -24,7 +24,7 @@ const Flag = ({ text, tone }) => (
 export default function Sessions({ summary = {}, rows = [] }) {
   const stats = [
     { label: 'Sessions', value: summary.sessions ?? 0, sub: 'in the catalog' },
-    { label: 'Contentless', value: summary.contentless ?? 0, sub: 'no questions attached' },
+    { label: 'Contentless', value: summary.contentless ?? 0, sub: 'exams but no questions' },
     { label: 'Never attempted', value: summary.unused ?? 0, sub: 'zero attempts recorded' },
     { label: 'Attempts', value: summary.attempts ?? 0, sub: `${summary.questions ?? 0} questions in total` },
     { label: 'Avg pass rate', value: `${summary.avg_pass_rate ?? 0}%`, sub: 'across finished attempts' },
