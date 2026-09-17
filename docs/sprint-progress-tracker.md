@@ -113,6 +113,15 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - New `MultiBundleCatalogTest` (9 tests) + `DashboardV4PayloadTest` updated for `cissp`/`cissp-v2` coexistence; `AdminReportsTest` tile count 10→11. Full suite **85 tests / 7,428 assertions** green; `npm run build` + `php -l` clean.
 - **Tracked doc:** [sprint-7-6-multi-bundle-cert-catalog.md](sprint-7-6-multi-bundle-cert-catalog.md)
 
+## Sprint 7.7: Original question bank (Worldwide certs)
+**Status:** **done** (Sprint 7.6 shipped 17 worldwide tracks with zero questions in every session)
+- **Deterministic generator ported server-side** from the client-side `Passimark-Original-Question-Bank.html`: `App\Services\PracticeQuestionBank\SeededRandom` (mulberry32, byte-for-byte verified against Node) + `QuestionBankGenerator` (dispatch `S1()` + `y1/m1/v1/g1/w1/yu` scenario templates; `finish`/`mapOptions` envelope with 4 re-keyed options, IRT fields, guessing `0.25`).
+- **Catalog** `database/seeders/data/original-bank/catalog.json` (16 certs): 12 mapped from the generator + 4 synthesized generic-`yu` entries (ACCA-F1-F4, CFA-L1, ICAN-SKILLS, JEE-MAIN) with worldwide-phase domains.
+- **`WorldwideOriginalQuestionBankSeeder`** (`seed:worldwide-17`) fills each session to its exact `questions_target`; **skips CISSP** (own real bundle) and skips already-populated sessions (idempotent); per-question seed `crc32(code|session.order|index)` so pools never duplicate; bulk insert + `domain`/`bloom` tagging (mirrors `CISSPBundleSeeder`). `DatabaseSeeder` worldwide path runs it after `WorldwidePassimarkCatalogSeeder`.
+- **Verified:** new `OriginalQuestionBankSeederTest` (8 tests, 20,064 assertions); full suite **93 tests / 27,492 assertions** green; `php -l` + `npm run build` clean; fresh `migrate:fresh --seed` → **16 certs, 319 sessions, 16,725 questions (~12.7 s)**; integrity probe: 16,725/16,725 distinct `external_id`, 0 untagged, 0 CISSP-generated, 319/319 sessions match target exactly.
+- **Bugs caught in verification:** `yu` emitted 5 options (JS slices 3 distractors — fixed + re-key after shuffle); idempotency test compared first-vs-second run counts instead of asserting zero new inserts; variety test pinned two indices to one seed (corrected to compare across seeds).
+- **Tracked doc:** [sprint-7-7-original-question-bank.md](sprint-7-7-original-question-bank.md)
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
