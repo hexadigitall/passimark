@@ -1,4 +1,5 @@
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
+import { ArrowUpRight } from 'lucide-react';
 import DashboardLayout from '../../../Layouts/DashboardLayout';
 import ReportHeader from './ReportHeader';
 import StatStrip from './StatStrip';
@@ -49,12 +50,13 @@ export default function Tracks({ summary = {}, rows = [] }) {
                 <th className="px-4 py-3">Pass rate</th>
                 <th className="px-4 py-3">Completions</th>
                 <th className="px-4 py-3">Pending</th>
+                <th className="px-4 py-3">Manage</th>
               </tr>
             </thead>
             <tbody>
               {rows.length === 0 && (
                 <tr>
-                  <td colSpan={11} className="px-4 py-8 text-center text-slate-500">No certification tracks yet.</td>
+                  <td colSpan={12} className="px-4 py-8 text-center text-slate-500">No certification tracks yet.</td>
                 </tr>
               )}
               {rows.map((track) => (
@@ -82,6 +84,11 @@ export default function Tracks({ summary = {}, rows = [] }) {
                     {track.pending > 0
                       ? <span className="inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300">{track.pending}</span>
                       : <span className="text-slate-600">0</span>}
+                  </td>
+                  <td className="px-4 py-3">
+                    <Link href="/admin/passimark?tab=tracks" className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 transition hover:text-emerald-300">
+                      Manage <ArrowUpRight className="h-3.5 w-3.5" />
+                    </Link>
                   </td>
                 </tr>
               ))}

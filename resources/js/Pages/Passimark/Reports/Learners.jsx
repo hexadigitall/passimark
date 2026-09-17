@@ -1,4 +1,4 @@
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import DashboardLayout from '../../../Layouts/DashboardLayout';
 import ReportHeader from './ReportHeader';
 import StatStrip from './StatStrip';
@@ -52,9 +52,11 @@ export default function Learners({ summary = {}, rows = [] }) {
                 </tr>
               )}
               {rows.map((learner) => (
-                <tr key={learner.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
+                <tr key={learner.id} className={`border-b border-slate-800 transition ${learner.pending ? 'hover:bg-slate-800/40' : ''}`}>
                   <td className="px-4 py-3">
-                    <p className="font-medium text-white">{learner.name}</p>
+                    {learner.pending
+                      ? <Link href="/admin/reports/approvals?filter=pending" className="font-medium text-emerald-400 transition hover:text-emerald-300">{learner.name}</Link>
+                      : <p className="font-medium text-white">{learner.name}</p>}
                     <p className="text-xs text-slate-500">{learner.email}</p>
                   </td>
                   <td className="px-4 py-3 text-slate-300">{learner.attempts}</td>
@@ -63,7 +65,7 @@ export default function Learners({ summary = {}, rows = [] }) {
                   <td className="px-4 py-3 text-slate-300"><NullCell value={learner.avg_score} /></td>
                   <td className="px-4 py-3">
                     {learner.pending > 0
-                      ? <span className="inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300">{learner.pending}</span>
+                      ? <Link href="/admin/reports/approvals?filter=pending" className="inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300 transition hover:bg-amber-500/20">{learner.pending}</Link>
                       : <span className="text-slate-600">0</span>}
                   </td>
                   <td className="px-4 py-3 text-slate-300">{learner.completed}</td>

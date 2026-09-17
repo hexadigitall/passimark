@@ -9,7 +9,7 @@ const trackDefaults = { slug: '', title: '', description: '', is_active: true };
 const tagDefaults = { type: '', label: '' };
 
 export default function Admin({ pending = [], sessions = [], events = [], report = {}, tracks = [], tags = [] }) {
-  const [tab, setTab] = useState('approvals');
+  const [tab, setTab] = useState(() => new URLSearchParams(window.location.search).get('tab') || 'approvals');
   const [processingId, setProcessingId] = useState(null);
   const [editing, setEditing] = useState(null);
   const review = async (id, action) => {

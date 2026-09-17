@@ -161,7 +161,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
                 <tr key={attempt.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
                   <td className="px-4 py-3 font-medium text-white">{attempt.learner}</td>
                   <td className="max-w-[300px] px-4 py-3">
-                    <p className="truncate text-slate-300">{attempt.session}</p>
+                    <Link href="/admin/reports/sessions" className="group truncate text-slate-300 transition hover:text-emerald-400">{attempt.session}</Link>
                     <p className="text-xs text-slate-500">{attempt.exam}</p>
                   </td>
                   <td className="px-4 py-3 capitalize text-slate-300">{attempt.mode}</td>

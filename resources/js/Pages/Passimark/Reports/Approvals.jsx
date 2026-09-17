@@ -1,4 +1,6 @@
-import { Head, Link } from '@inertiajs/react';
+import { useState } from 'react';
+import { Head, Link, router } from '@inertiajs/react';
+import { Check, X } from 'lucide-react';
 import DashboardLayout from '../../../Layouts/DashboardLayout';
 import ReportHeader from './ReportHeader';
 import StatStrip from './StatStrip';
@@ -29,6 +31,30 @@ const actionChip = (action) =>
     : <span className="inline-flex rounded-full bg-red-500/10 px-2 py-0.5 text-xs font-medium text-red-300">Rejected</span>;
 
 export default function Approvals({ summary = {}, rows = [], pending = [], trend = [], activeFilter = 'all' }) {
+  const [processingId, setProcessingId] = useState(null);
+
+  const review = async (id, action) => {
+    const note = action === 'reject' ? window.prompt('Reason for returning this submission:') : window.prompt('Optional approval note:');
+    if (action === 'reject' && !note) return;
+    setProcessingId(id);
+    try {
+      const xsrf = decodeURIComponent((document.cookie.match(/(?:^|; )XSRF-TOKEN=([^;]+)/) || [])[1] || '');
+      const res = await fetch(`/admin/passimark/progress/${id}/${action}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest', 'X-XSRF-TOKEN': xsrf },
+        credentials: 'same-origin',
+        body: JSON.stringify({ note: note || '' }),
+      });
+      const data = await res.json().catch(() => ({}));
+      window.alert(data.message || (res.ok ? 'Done.' : `Request failed (${res.status}).`));
+    } catch {
+      window.alert('Network error — could not reach the server.');
+    } finally {
+      setProcessingId(null);
+      router.reload({ only: ['pending', 'rows', 'trend', 'summary'] });
+    }
+  };
+
   const stats = [
     { label: 'Decisions', value: summary.decisions ?? 0, sub: 'approved + rejected' },
     { label: 'Approved', value: summary.approved ?? 0, sub: 'unlocked next step' },
@@ -83,10 +109,10 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
               ? (
                 <>
                   <h3 className="text-lg font-semibold text-white">Pending queue</h3>
-                  <p className="mt-1 text-xs text-slate-500">Oldest first — age is time since the approval was requested.</p>
+                  <p className="mt-1 text-xs text-slate-500">Oldest first — age is time since the approval was requested. Decide directly from the ledger.</p>
                   <table className="mt-4 w-full text-left text-sm">
                     <thead className="text-xs uppercase tracking-wide text-slate-400">
-                      <tr><th className="py-2 pr-2">Learner</th><th className="py-2 pr-2">Session</th><th className="py-2 pr-2">Score</th><th className="py-2 pr-2">Requested</th><th className="py-2">Age</th></tr>
+                      <tr><th className="py-2 pr-2">Learner</th><th className="py-2 pr-2">Session</th><th className="py-2 pr-2">Score</th><th className="py-2 pr-2">Requested</th><th className="py-2 pr-2">Age</th><th className="py-2">Actions</th></tr>
                     </thead>
                     <tbody>
                       {pending.map((item) => (
@@ -95,14 +121,26 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
                           <td className="max-w-[240px] truncate py-2 pr-2 text-slate-300">{item.session}</td>
                           <td className="py-2 pr-2 text-slate-300">{item.score !== null ? `${item.score}%` : '—'}</td>
                           <td className="py-2 pr-2 text-slate-400">{fmtDate(item.requested_at)}</td>
-                          <td className="py-2">
+                          <td className="py-2 pr-2">
                             {Number(item.age_days) > 1
                               ? <span className="inline-flex rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-300">{item.age_days} d</span>
                               : <span className="text-slate-400">{item.age_days ?? 0} d</span>}
                           </td>
+                          <td className="py-2">
+                            <div className="flex gap-2">
+                              <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'approve')}
+                                className="inline-flex items-center gap-1 rounded-lg bg-emerald-500 px-2.5 py-1.5 text-xs font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:opacity-50">
+                                <Check className="h-3.5 w-3.5" /> Approve
+                              </button>
+                              <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'reject')}
+                                className="inline-flex items-center gap-1 rounded-lg bg-red-500 px-2.5 py-1.5 text-xs font-semibold text-white transition hover:bg-red-400 disabled:opacity-50">
+                                <X className="h-3.5 w-3.5" /> Reject
+                              </button>
+                            </div>
+                          </td>
                         </tr>
                       ))}
-                      {pending.length === 0 && <tr><td colSpan={5} className="py-6 text-center text-slate-500">Nothing is awaiting approval.</td></tr>}
+                      {pending.length === 0 && <tr><td colSpan={6} className="py-6 text-center text-slate-500">Nothing is awaiting approval.</td></tr>}
                     </tbody>
                   </table>
                 </>

@@ -62,12 +62,12 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
             </p>
           </div>
           <div className="flex shrink-0 gap-2">
-            <a href="/admin/passimark" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">
+            <Link href="/admin/passimark" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">
               <Database className="h-4 w-4" /> Control Center
-            </a>
-            <a href="/admin/import" className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700">
+            </Link>
+            <Link href="/admin/import" className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700">
               <BookOpen className="h-4 w-4" /> Import questions
-            </a>
+            </Link>
           </div>
         </div>
 

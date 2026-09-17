@@ -95,6 +95,14 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - New `tests/Feature/AdminReportsTest.php` (9 tests); landing keeps flat `report.*` keys for back-compat. Full suite **77 tests / 7,365 assertions** green; `npm run build` + `php -l` clean.
 - **Refinement:** "Content needs attention" alert sharpened — `AdminAnalytics::brokenSessionCount()` flags only *broken attemptable* sessions (have exams, zero questions). Intentional reference/remediation lessons (no exam, no questions, skipped by the curriculum ladder) are no longer flagged; banner copy updated; sessions-report flag + summary in sync; test proves both cases. Suite now **77 tests / 7,367 assertions**.
 
+## Sprint 7.5e: Quick-pass UX fixes (dashboard links, report CTAs, PWA manifest)
+**Status:** **done** (follow-up of the 7.5d runtime + source audit: raw anchors caused full reloads, report tables were non-interactive, manifest was unstyled)
+- `AdminDashboard` Control-Center / Import-questions CTAs switched from raw `<a href>` to Inertia `<Link>` (SPA navigation, no reloads).
+- Report screens now drill into management surfaces: Tracks rows → Control Center `?tab=tracks`; Sessions rows + title → `?tab=sessions`; Questions header + weakest/never-used items → `?tab=questions`; Learners pending badge/name → approvals `?filter=pending`; Attempts session → sessions report. `Admin` (Control Center) now honours a `?tab=` query param so these links land on the right tab.
+- Approvals "Pending queue" gained working **Approve / Reject** buttons (inline note prompt, reuse of the existing `fetch` + XSRF pattern, `router.reload` of pending/rows/trend/summary). Non-actionable rows (learners with no pending) drop the misleading hover affordance.
+- `public/manifest.json`: background `#0F172A` (matches slate-900 theme), added `id` + `start_url`, added 180×180 icon (existing asset).
+- Full suite **77 tests / 7,367 assertions** green; `npm run build` + `php -l` clean; live-server check confirms all six reports + admin landing render the updated components.
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
@@ -110,4 +118,4 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - No design tokens / typography scale — **closed in Sprint 7**: `tailwind.config.js` now extends `pm.deep`/`pm.brand`/`pm.accent` + display font + ring shadow (typography scale remains optional polish)
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
 - `.psmk` source conversion (PDF/VCE/CSV/QTI adapters), upload UI, and update modes remain Phase C-E of Sprint 9 ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)); the V1 author package (export/import/audit) is shipped
-- v4.0 brand assets still use legacy `passimark_*` filenames and `manifest.json` background is `#ffffff` instead of `#0F172A` (tracked in Sprint 8.3)
+- v4.0 brand assets still use legacy `passimark_*` filenames (renaming/180-icon tile set tracked in Sprint 8.3; manifest `#ffffff` background was already fixed in 7.5e)

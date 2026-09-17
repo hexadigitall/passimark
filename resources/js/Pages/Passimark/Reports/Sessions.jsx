@@ -1,4 +1,5 @@
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
+import { ArrowUpRight } from 'lucide-react';
 import DashboardLayout from '../../../Layouts/DashboardLayout';
 import ReportHeader from './ReportHeader';
 import StatStrip from './StatStrip';
@@ -56,19 +57,20 @@ export default function Sessions({ summary = {}, rows = [] }) {
                 <th className="px-4 py-3">Pending</th>
                 <th className="px-4 py-3">Health</th>
                 <th className="px-4 py-3">Last activity</th>
+                <th className="px-4 py-3">Manage</th>
               </tr>
             </thead>
             <tbody>
               {rows.length === 0 && (
                 <tr>
-                  <td colSpan={12} className="px-4 py-8 text-center text-slate-500">No sessions in the catalog yet.</td>
+                  <td colSpan={13} className="px-4 py-8 text-center text-slate-500">No sessions in the catalog yet.</td>
                 </tr>
               )}
               {rows.map((session) => (
                 <tr key={session.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
                   <td className="px-4 py-3 text-slate-400">{session.number}</td>
                   <td className="max-w-[320px] px-4 py-3">
-                    <p className="truncate font-medium text-white">{session.title}</p>
+                    <Link href="/admin/passimark?tab=sessions" className="group truncate font-medium text-white transition hover:text-emerald-400">{session.title}</Link>
                   </td>
                   <td className="max-w-[160px] truncate px-4 py-3 text-slate-300">{session.track ?? '—'}</td>
                   <td className="px-4 py-3 capitalize text-slate-300">{session.phase_type ?? '—'}</td>
@@ -88,6 +90,11 @@ export default function Sessions({ summary = {}, rows = [] }) {
                     {!session.contentless && !session.unused && <span className="text-slate-600">ok</span>}
                   </td>
                   <td className="px-4 py-3 text-slate-400">{fmtDate(session.last_activity)}</td>
+                  <td className="px-4 py-3">
+                    <Link href="/admin/passimark?tab=sessions" className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 transition hover:text-emerald-300">
+                      Manage <ArrowUpRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
