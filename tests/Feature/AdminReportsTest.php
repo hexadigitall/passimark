@@ -248,7 +248,7 @@ class AdminReportsTest extends TestCase
         $this->actingAs($this->admin())->get('/')
             ->assertInertia(function (Assert $page) {
                 $page->component('Passimark/AdminDashboard')
-                    ->has('tiles', 10)
+                    ->has('tiles', 11)
                     ->where('tiles.0.key', 'learners')
                     ->where('tiles.0.value', 1)
                     ->where('tiles.0.href', '/admin/reports/learners')
@@ -257,6 +257,8 @@ class AdminReportsTest extends TestCase
                     ->where('tiles.3.key', 'average_score')
                     ->where('tiles.3.value', 67.5)
                     ->where('tiles.3.sub', 'median 67.5 · best 80')
+                    ->where('tiles.9.key', 'certs')
+                    ->where('tiles.9.href', '/admin/reports/tracks')
                     ->where('report.average_score', 67.5)
                     ->has('report.sessions');
             });

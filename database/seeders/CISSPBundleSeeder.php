@@ -40,16 +40,20 @@ class CISSPBundleSeeder extends Seeder
         User::firstOrCreate(['email' => 'admin@passimark.com'], ['name' => 'Passimark Instructor', 'password' => Hash::make('password'), 'role' => 'admin']);
 
         $trackDef = $bundle['track'];
-        $track = PassimarkCertificationTrack::firstOrCreate(
-            ['slug' => $trackDef['slug']],
+        $placed = PassimarkCertificationTrack::placeBundle(
             [
+                'slug' => $trackDef['slug'],
                 'title' => $trackDef['title'],
                 'description' => $trackDef['description'],
                 'is_active' => $trackDef['is_active'] ?? true,
                 'region' => 'USA-IT-SECURITY',
                 'advancement' => 'approval',
-            ]
+                'cert_key' => $bundle['cert_key'] ?? $trackDef['slug'],
+                'variant_label' => $bundle['variant_label'] ?? $trackDef['title'],
+            ],
+            'seed:cissp-bundle'
         );
+        $track = $placed['track'];
         if (!$track->region) {
             $track->update(['region' => 'USA-IT-SECURITY']);
         }

@@ -35,6 +35,8 @@ class PassimarkController extends Controller
                 'id' => $track->id,
                 'title' => $track->title,
                 'slug' => $track->slug,
+                'cert_key' => $track->certKey(),
+                'variant_label' => $track->variant_label,
                 'region' => $track->region,
                 'advancement' => $track->advancement,
                 'sessions' => $track->sessions->map(fn ($session) => [

@@ -105,6 +105,9 @@ class AdminAnalytics
 
         $tracksTotal = PassimarkCertificationTrack::count();
         $regions = PassimarkCertificationTrack::query()->whereNotNull('region')->distinct()->count('region');
+        $certsTotal = (int) (DB::table('passimark_certification_tracks')
+            ->select(DB::raw('count(distinct coalesce(cert_key, slug)) as c'))
+            ->value('c') ?? 0);
 
         $activeLearners = PassimarkAttempt::query()->whereNotNull('finished_at')->distinct('user_id')->count('user_id');
         $activeLearnersPrior7d = PassimarkAttempt::query()->whereNotNull('finished_at')->whereBetween('finished_at', [$twoWeeksAgo, $weekAgo])->distinct('user_id')->count('user_id');
@@ -164,6 +167,11 @@ class AdminAnalytics
             [
                 'key' => 'tracks', 'label' => 'Tracks', 'value' => $tracksTotal, 'href' => '/admin/reports/tracks',
                 'sub' => "regions {$regions} · sessions {$sessionsTotal}",
+                'deltaText' => null,
+            ],
+            [
+                'key' => 'certs', 'label' => 'Certifications', 'value' => $certsTotal, 'href' => '/admin/reports/tracks',
+                'sub' => "bundles {$tracksTotal} · regions {$regions}",
                 'deltaText' => null,
             ],
             [
@@ -541,6 +549,8 @@ class AdminAnalytics
             return [
                 'id' => $t->id,
                 'slug' => $t->slug,
+                'cert_key' => $t->certKey(),
+                'variant_label' => $t->variant_label,
                 'title' => $t->title,
                 'region' => $t->region,
                 'advancement' => $t->advancement,
@@ -560,12 +570,29 @@ class AdminAnalytics
         return [
             'summary' => [
                 'tracks' => $tracks->count(),
+                'certs' => $tracks->map(fn ($t) => $t->certKey())->unique()->count(),
                 'sessions' => $allSessionIds->count(),
                 'questions' => (int) $allSessionIds->map(fn ($sid) => (int) ($questionsBySession[$sid] ?? 0))->sum(),
                 'enrolled' => (clone $allProgress)->distinct('user_id')->count('user_id'),
                 'completions' => (clone $allProgress)->whereIn('status', [PassimarkProgress::COMPLETED, PassimarkProgress::APPROVED])->count(),
                 'pending' => (clone $allProgress)->where('status', PassimarkProgress::PENDING)->count(),
             ],
+            'categories' => $tracks->groupBy(fn ($t) => $t->certKey())->map(function ($group, $certKey) {
+                return [
+                    'cert_key' => $certKey,
+                    'label' => $group->first()->title,
+                    'variants' => $group->count(),
+                    'tracks' => $group->map(fn ($t) => [
+                        'id' => $t->id,
+                        'slug' => $t->slug,
+                        'variant_label' => $t->variant_label,
+                        'region' => $t->region,
+                        'advancement' => $t->advancement,
+                        'sessions' => $t->sessions_count,
+                        'is_active' => $t->is_active,
+                    ])->values(),
+                ];
+            })->values(),
             'rows' => $rows->all(),
         ];
     }

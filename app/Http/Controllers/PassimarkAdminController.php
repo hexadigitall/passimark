@@ -336,11 +336,16 @@ class PassimarkAdminController extends Controller
 
     private function certificationTrackData(Request $request, bool $partial = false): array
     {
+        // `source` stays server-managed (seed:<class> / import:<package_id>); the admin sets
+        // cert category (cert_key) + human-readable variant label so multiple bundles can
+        // share a category and land in their own rows.
         return $request->validate([
             'slug' => [$partial ? 'sometimes' : 'required', 'string', 'max:255', Rule::unique('passimark_certification_tracks', 'slug')->ignore($request->route('certificationTrack'))],
             'title' => [$partial ? 'sometimes' : 'required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'is_active' => ['sometimes', 'boolean'],
+            'cert_key' => ['nullable', 'string', 'max:255'],
+            'variant_label' => ['nullable', 'string', 'max:255'],
         ]);
     }
 

@@ -16,9 +16,10 @@ const Chip = ({ label, tone = 'slate' }) => (
   </span>
 );
 
-export default function Tracks({ summary = {}, rows = [] }) {
+export default function Tracks({ summary = {}, rows = [], categories = [] }) {
   const stats = [
-    { label: 'Tracks', value: summary.tracks ?? 0, sub: 'certification programs' },
+    { label: 'Tracks', value: summary.tracks ?? 0, sub: 'certification programs / bundles' },
+    { label: 'Certifications', value: summary.certs ?? 0, sub: 'categories across the catalog' },
     { label: 'Sessions', value: summary.sessions ?? 0, sub: `${summary.questions ?? 0} questions` },
     { label: 'Enrolled learners', value: summary.enrolled ?? 0, sub: 'with progression records' },
     { label: 'Completions', value: summary.completions ?? 0, sub: 'completed or approved' },
@@ -34,6 +35,21 @@ export default function Tracks({ summary = {}, rows = [] }) {
           description="The certification completion matrix: content size, learners enrolled, engagement, pass performance, and how far each track's cohort has progressed."
         />
         <StatStrip stats={stats} />
+
+        {categories?.length > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="text-xs uppercase tracking-wide text-slate-400">Categories</span>
+            {categories.map((cat) => (
+              <span key={cat.cert_key} className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs">
+                <span className="font-medium text-white">{cat.label}</span>
+                <span className="text-slate-500">{cat.cert_key}</span>
+                <span className={`rounded-full px-1.5 py-0.5 ${cat.variants > 1 ? 'bg-amber-500/10 text-amber-300' : 'bg-emerald-500/10 text-emerald-300'}`}>
+                  {cat.variants} bundle{cat.variants > 1 ? 's' : ''}
+                </span>
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900">
           <table className="w-full min-w-[1000px] text-left text-sm">
@@ -63,7 +79,11 @@ export default function Tracks({ summary = {}, rows = [] }) {
                 <tr key={track.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
                   <td className="px-4 py-3">
                     <p className="font-medium text-white">{track.title}</p>
-                    <p className="text-xs text-slate-500">{track.slug}</p>
+                    <p className="text-xs text-slate-500">
+                      {track.slug}
+                      {track.cert_key && track.cert_key !== track.slug ? ` · ${track.cert_key}` : ''}
+                      {track.variant_label ? ` · ${track.variant_label}` : ''}
+                    </p>
                   </td>
                   <td className="px-4 py-3 text-slate-300">{track.region ?? '—'}</td>
                   <td className="px-4 py-3">

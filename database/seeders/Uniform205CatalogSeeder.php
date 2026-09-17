@@ -76,16 +76,18 @@ class Uniform205CatalogSeeder extends Seeder
         foreach ($entries as $entry) {
             $trackCount++;
             $regions[$entry['track']] = true;
-            $track = PassimarkCertificationTrack::updateOrCreate(
-                ['slug' => Str::slug($entry['code'])],
+            $track = PassimarkCertificationTrack::placeBundle(
                 [
+                    'slug' => Str::slug($entry['code']),
                     'title' => $entry['name'],
                     'description' => "Uniform 205 catalog — {$entry['code']} ({$entry['final_q']}Q / {$entry['final_time']}min final).",
                     'region' => $entry['track'],
                     'advancement' => 'auto',
                     'is_active' => true,
-                ]
-            );
+                    'cert_key' => Str::slug($entry['code']),
+                ],
+                'seed:uniform-205'
+            )['track'];
 
             PassimarkSession::where('certification_track_id', $track->id)->delete();
 

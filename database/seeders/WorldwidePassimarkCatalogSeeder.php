@@ -66,16 +66,18 @@ class WorldwidePassimarkCatalogSeeder extends Seeder
                 }
                 $trackCount++;
                 $regions[$region] = true;
-                $track = PassimarkCertificationTrack::updateOrCreate(
-                    ['slug' => Str::slug($certCode)],
+                $track = PassimarkCertificationTrack::placeBundle(
                     [
+                        'slug' => Str::slug($certCode),
                         'title' => $cert['name'],
                         'description' => $cert['desc'],
                         'region' => $region,
                         'advancement' => 'auto',
                         'is_active' => true,
-                    ]
-                );
+                        'cert_key' => Str::slug($certCode),
+                    ],
+                    'seed:worldwide-17'
+                )['track'];
 
                 PassimarkSession::where('certification_track_id', $track->id)->delete();
 

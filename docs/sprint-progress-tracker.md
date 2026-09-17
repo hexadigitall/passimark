@@ -103,6 +103,16 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - `public/manifest.json`: background `#0F172A` (matches slate-900 theme), added `id` + `start_url`, added 180×180 icon (existing asset).
 - Full suite **77 tests / 7,367 assertions** green; `npm run build` + `php -l` clean; live-server check confirms all six reports + admin landing render the updated components.
 
+## Sprint 7.6: Multi-bundle certification catalog (cert categories + variants)
+**Status:** **done** (a certification is a *category*; each track row is one *bundle* under it)
+- Migration `2026_01_01_000011`: adds `cert_key`, `variant_label`, `source` to `passimark_certification_tracks`; backfills legacy rows (`cert_key=slug`, `source='legacy'`).
+- `PassimarkCertificationTrack` gains `certKey()` (cert_key, else slug), `scopeForCert`, `resolveUniqueSlug()` (`cissp` → `cissp-v2` → `cissp-v3`, …) and the single placement path `placeBundle($attrs, $source)`: reuse same source+category → adopt a leftover null/legacy placeholder (preserves `cissp`, enrollments and URLs) → else create a de-conflicted row. Same-source reuse also requires the category to match (otherwise a second bundle collapses into the first).
+- The old CISSP bundle (`PassimarkSeeder`) is now variant "Legacy v1" (`seed:passimark-v1`); the current bundle is `seed:cissp-bundle`; Worldwide is additive (`seed:worldwide-17`, forks `cissp-v2` against an existing bundle, adopts a placeholder otherwise); Uniform205 stamps `seed:uniform-205`; `.psmk` imports stamp `import:{package_id}`.
+- Admin CRUD accepts `cert_key`/`variant_label` (`source` stays server-managed); Control-Center tracks panel + track form show categories/variants/source and a bundle-count chip row.
+- Analytics gains a `Certifications` tile (distinct cert_key count); the Tracks report adds `categories` groups + `summary.certs` + per-row cert/variant fields; learner Dashboard cards show `cert_key · variant_label`.
+- New `MultiBundleCatalogTest` (9 tests) + `DashboardV4PayloadTest` updated for `cissp`/`cissp-v2` coexistence; `AdminReportsTest` tile count 10→11. Full suite **85 tests / 7,428 assertions** green; `npm run build` + `php -l` clean.
+- **Tracked doc:** [sprint-7-6-multi-bundle-cert-catalog.md](sprint-7-6-multi-bundle-cert-catalog.md)
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

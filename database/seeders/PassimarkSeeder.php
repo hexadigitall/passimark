@@ -10,7 +10,16 @@ class PassimarkSeeder extends Seeder
     public function run(){
         $user = User::firstOrCreate(['email'=>'student@passimark.com'],['name'=>'TechPoet Dimeji','password'=>Hash::make('password')]);
         User::firstOrCreate(['email'=>'admin@passimark.com'],['name'=>'Passimark Instructor','password'=>Hash::make('password'),'role'=>'admin']);
-        $track = PassimarkCertificationTrack::firstOrCreate(['slug'=>'cissp'],['title'=>'CISSP','description'=>'Certified Information Systems Security Professional preparation track.','is_active'=>true]);
+        $track = PassimarkCertificationTrack::placeBundle([
+            'slug'=>'cissp',
+            'title'=>'CISSP',
+            'description'=>'Certified Information Systems Security Professional preparation track.',
+            'is_active'=>true,
+            'region'=>null,
+            'advancement'=>'approval',
+            'cert_key'=>'cissp',
+            'variant_label'=>'Legacy v1',
+        ], 'seed:passimark-v1')['track'];
 
         $phases = [
             1=>['title'=>'Foundational Domain Mastery & Core Principles','sessions'=>15],

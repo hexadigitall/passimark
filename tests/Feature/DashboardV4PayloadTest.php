@@ -65,9 +65,14 @@ class DashboardV4PayloadTest extends TestCase
 
         $this->assertArrayHasKey('tracks', $page['props']);
         $this->assertNotEmpty($page['props']['tracks']);
-        $this->assertGreaterThanOrEqual(3, count($page['props']['tracks']));
+        $this->assertGreaterThanOrEqual(4, count($page['props']['tracks']));
 
-        $regions = array_values(array_unique(array_column($page['props']['tracks'], 'region')));
+        // The worldwide catalog keeps its slug (cissp) on the adopting row and forks the
+        // second bundle to a de-conflicted slug (cissp-v2) — both share cert_key 'cissp'.
+        $this->assertNotNull(collect($page['props']['tracks'])->firstWhere('slug', 'cissp'));
+        $this->assertNotNull(collect($page['props']['tracks'])->firstWhere('slug', 'cissp-v2'));
+
+        $regions = array_values(array_unique(array_filter(array_column($page['props']['tracks'], 'region'))));
         sort($regions);
         $this->assertSame(['GLOBAL-CLOUD', 'USA-IT-SECURITY'], $regions);
 
@@ -134,8 +139,14 @@ class DashboardV4PayloadTest extends TestCase
 
         $page = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
 
-        $cissp = collect($page['props']['tracks'])->firstWhere('slug', 'cissp');
-        $this->assertNotNull($cissp, 'cissp track must be present in payload');
+        // The worldwide CISSP bundle now lives on its own de-conflicted row (cissp-v2);
+        // the legacy Passimark bundle keeps slug 'cissp' under the same cert category.
+        $cissp = collect($page['props']['tracks'])->firstWhere('slug', 'cissp-v2');
+        $this->assertNotNull($cissp, 'worldwide cissp-v2 track must be present in payload');
+        $legacy = collect($page['props']['tracks'])->firstWhere('slug', 'cissp');
+        $this->assertNotNull($legacy, 'legacy cissp track must be preserved');
+        $this->assertSame('cissp', $cissp['cert_key']);
+        $this->assertSame('cissp', $legacy['cert_key']);
         $this->assertContains(1.3, $cissp['theta_history']);
 
         $domain = collect($cissp['domains'])->firstWhere('name', 'Security & Risk Management');

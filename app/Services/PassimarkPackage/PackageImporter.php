@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\DB;
 final class PackageImporter
 {
     /**
-     * @param array $opts cert_slug (override target), uploaded_by (User id|null), original_filename
+     * @param array $opts cert_slug (override target), cert_key, variant_label (bundle category/
+     *        variant placement), uploaded_by (User id|null), original_filename
      * @return array{package_id:string, content_type:string, checksum:string, created:array<string,int>}
      */
     public static function import(string $path, array $opts = []): array
@@ -33,16 +34,28 @@ final class PackageImporter
         $content = $result['content'];
 
         try {
-            $summary = DB::transaction(function () use ($manifest, $content, $opts) {
+            $summary = DB::transaction(function () use ($manifest, $content, $opts, $checksum) {
                 $slug = $opts['cert_slug'] ?? $content['cert_slug'];
+                $packageId = $manifest['package_id'] ?? md5($checksum);
+                $source = 'import:' . $packageId;
 
                 $created = ['tracks' => 0, 'sessions' => 0, 'exams' => 0, 'questions' => 0];
 
-                $track = PassimarkCertificationTrack::firstOrCreate(
-                    ['slug' => $slug],
-                    ['title' => $manifest['title'], 'description' => 'Imported, version 1 .psmk package.', 'region' => null, 'is_active' => true]
+                $placed = PassimarkCertificationTrack::placeBundle(
+                    [
+                        'slug' => $slug,
+                        'title' => $manifest['title'],
+                        'description' => 'Imported, version 1 .psmk package.',
+                        'region' => null,
+                        'advancement' => 'approval',
+                        'is_active' => true,
+                        'cert_key' => $opts['cert_key'] ?? $slug,
+                        'variant_label' => $opts['variant_label'] ?? null,
+                    ],
+                    $source
                 );
-                $created['tracks'] += $track->wasRecentlyCreated ? 1 : 0;
+                $track = $placed['track'];
+                $created['tracks'] += $placed['created'] ? 1 : 0;
 
                 if ($manifest['content_type'] === 'module') {
                     $m = self::importModule($content['module'], $track, $slug);

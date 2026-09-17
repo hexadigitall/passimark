@@ -157,6 +157,12 @@ export default function Dashboard({ sessions = [], progress = {}, tracks = [] })
                         <div>
                           <span className="font-mono text-xs uppercase tracking-widest text-slate-500">{track.region}</span>
                           <h4 className="mt-1 text-lg font-semibold leading-6 text-white">{track.title}</h4>
+                          {track.cert_key && (track.cert_key !== track.slug || track.variant_label) && (
+                            <p className="mt-0.5 text-xs text-slate-500">
+                              {track.cert_key}
+                              {track.variant_label ? ` · ${track.variant_label}` : ''}
+                            </p>
+                          )}
                         </div>
                         <ProgressRing done={ringDone} total={ringTotal} theta={lastTheta} />
                       </div>
