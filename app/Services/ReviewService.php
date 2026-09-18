@@ -46,6 +46,7 @@ class ReviewService
             ])->values(),
             'review_unlocked' => $unlocked,
             'progress_status' => optional($progress)->status ?? PassimarkProgress::LOCKED,
+            'certificate' => CertificateIssuer::summary($progress),
             'history' => PassimarkAttempt::where('user_id', $userId)
                 ->where('session_id', $attempt->session_id)
                 ->whereNotNull('finished_at')

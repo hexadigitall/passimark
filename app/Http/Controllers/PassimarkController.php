@@ -44,9 +44,16 @@ class PassimarkController extends Controller
             'tracks' => \App\Models\PassimarkCertificationTrack::where('is_active', true)->count(),
         ];
 
+        $certificates = $records
+            ->filter(fn ($record) => $record->certified_at !== null && $record->session)
+            ->sortByDesc('certified_at')
+            ->map(fn ($record) => \App\Services\CertificateIssuer::summary($record))
+            ->values();
+
         return Inertia::render('Passimark/Profile', [
             'user' => Auth::user(),
             'summary' => $summary,
+            'certificates' => $certificates,
         ]);
     }
 
@@ -260,6 +267,10 @@ class PassimarkController extends Controller
             }
             $prog = PassimarkProgress::where('user_id',$attempt->user_id)->where('session_id',$attempt->session_id)->firstOrFail();
             $prog->update(['status'=>$passed?'completed':'open','score'=>$attempt->score,'ability_theta'=>$attempt->theta,'attempts'=>$prog->attempts+1]);
+            // Auto-advancement finals certify immediately; approval-gated finals certify on approve.
+            if ($attempt->is_passed) {
+                \App\Services\CertificateIssuer::issueIfEligible($prog);
+            }
             // v4 auto-catalog tracks unlock the next session on a pass; approval-gated tracks
             // (real-content CISSP bundle) stay completed until the learner requests approval.
             if ($attempt->is_passed && optional($session->certificationTrack)->advancement === 'auto') {

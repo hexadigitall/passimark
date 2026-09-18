@@ -1,7 +1,8 @@
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
+import { Award } from 'lucide-react';
 import DashboardLayout from '../../Layouts/DashboardLayout';
 
-export default function Profile({ user, summary = {} }) {
+export default function Profile({ user, summary = {}, certificates = [] }) {
   const hasProgress = (summary.sessions_enrolled || 0) > 0;
   const completion = summary.sessions_total ? Math.round(((summary.sessions_completed || 0) / summary.sessions_total) * 100) : 0;
 
@@ -83,6 +84,29 @@ export default function Profile({ user, summary = {} }) {
                 : 'You are not enrolled in a certification track yet. Enrolment unlocks the first lesson of each available track.'}
             </p>
           </div>
+        </div>
+
+        <div className="rounded-2xl border border-slate-700 bg-slate-800 p-6">
+          <h3 className="flex items-center gap-2 text-lg font-semibold text-white">
+            <Award className="h-5 w-5 text-emerald-400" /> Certificates
+          </h3>
+          {certificates.length === 0 ? (
+            <p className="mt-3 text-sm text-slate-400">No certificates yet — pass a track's final assessment to earn a verifiable credential.</p>
+          ) : (
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {certificates.map((certificate) => (
+                <Link
+                  key={certificate.credential_id}
+                  href={certificate.url}
+                  className="rounded-xl border border-slate-700 bg-slate-900 p-4 transition hover:border-emerald-500/50"
+                >
+                  <p className="text-sm font-semibold text-white">{certificate.certification}</p>
+                  {certificate.variant_label && <p className="mt-0.5 text-xs text-slate-400">{certificate.variant_label}</p>}
+                  <p className="mt-3 font-mono text-xs text-emerald-300">{certificate.credential_id}</p>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </DashboardLayout>

@@ -176,7 +176,7 @@ class PassimarkCatalogController extends Controller
                 'optional' => (bool) $session->is_optional,
                 'questions_target' => $session->questions_target ?? $session->question_count,
                 'progress' => isset($progress[$session->id])
-                    ? $progress[$session->id]->only('status', 'score', 'ability_theta', 'attempts')
+                    ? $progress[$session->id]->only('id', 'status', 'score', 'ability_theta', 'attempts', 'certified_at', 'credential_id')
                     : ['status' => 'locked', 'score' => null, 'ability_theta' => null, 'attempts' => 0],
             ])->values(),
             'theta_history' => $this->progress->thetaHistory($track->id, $userId),

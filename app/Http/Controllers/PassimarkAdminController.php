@@ -101,8 +101,13 @@ class PassimarkAdminController extends Controller
         }
         $progress->update(['status'=>'approved']);
         PassimarkApprovalEvent::create(['progress_id'=>$progress->id,'reviewer_id'=>$request->user()->id,'action'=>'approved','note'=>$data['note'] ?? null]);
+        $certificate = \App\Services\CertificateIssuer::issueIfEligible($progress);
         $next = \App\Services\Curriculum::unlockNext($progress->session, $progress->user_id);
-        return response()->json(['status'=>'approved','message'=>$next ? "Approved. Session {$next->number} unlocked" : 'Approved. Track completed.']);
+        return response()->json([
+            'status'=>'approved',
+            'message'=>$next ? "Approved. Session {$next->number} unlocked" : 'Approved. Track completed.',
+            'certificate' => \App\Services\CertificateIssuer::summary($certificate),
+        ]);
     }
     public function reject(Request $request, PassimarkProgress $progress){
         $data = $request->validate(['note'=>'required|string|max:2000']);

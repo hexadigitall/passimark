@@ -213,6 +213,9 @@ export default function Track({ track, category = {}, siblings = [] }) {
                     ? [
                         { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'emerald' },
                         { key: 'review', label: 'Review answers', action: 'review', tone: 'slate' },
+                        ...(session.progress?.credential_id
+                          ? [{ key: 'certificate', label: 'Certificate', href: `/certificate/${session.progress.id}`, tone: 'sky' }]
+                          : []),
                         ...(status === 'completed' && approvalGated
                           ? [{ key: 'approval', label: 'Request approval', action: 'request-approval', tone: 'amber' }]
                           : []),
@@ -243,25 +246,38 @@ export default function Track({ track, category = {}, siblings = [] }) {
                       <span className="shrink-0 font-mono text-xs text-slate-400">{session.progress.score}%</span>
                     )}
                     <div className="flex shrink-0 items-center gap-1.5">
-                      {actions.map((action) => (
-                        <button
-                          key={action.key}
-                          type="button"
-                          className={`rounded px-2.5 py-1 text-xs font-medium transition ${
-                            action.disabled
-                              ? 'cursor-not-allowed bg-slate-800 text-slate-500'
-                              : action.tone === 'amber'
-                                ? 'bg-amber-500/15 text-amber-200 hover:bg-amber-500/25'
-                                : action.tone === 'slate'
-                                  ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                                  : 'bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25'
-                          }`}
-                          disabled={action.disabled || submittingSessionId === session.id}
-                          onClick={() => handleSessionAction(session.id, action.action)}
-                        >
-                          {submittingSessionId === session.id ? 'Working...' : action.label}
-                        </button>
-                      ))}
+                      {actions.map((action) => {
+                        const toneClass =
+                          action.tone === 'amber'
+                            ? 'bg-amber-500/15 text-amber-200 hover:bg-amber-500/25'
+                            : action.tone === 'sky'
+                              ? 'bg-sky-500/15 text-sky-200 hover:bg-sky-500/25'
+                              : action.tone === 'slate'
+                                ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                                : 'bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25';
+
+                        if (action.href) {
+                          return (
+                            <Link key={action.key} href={action.href} className={`rounded px-2.5 py-1 text-xs font-medium transition ${toneClass}`}>
+                              {action.label}
+                            </Link>
+                          );
+                        }
+
+                        return (
+                          <button
+                            key={action.key}
+                            type="button"
+                            className={`rounded px-2.5 py-1 text-xs font-medium transition ${
+                              action.disabled ? 'cursor-not-allowed bg-slate-800 text-slate-500' : toneClass
+                            }`}
+                            disabled={action.disabled || submittingSessionId === session.id}
+                            onClick={() => handleSessionAction(session.id, action.action)}
+                          >
+                            {submittingSessionId === session.id ? 'Working...' : action.label}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                 );

@@ -1,6 +1,9 @@
 <?php
-use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, AuthController};
+use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, CertificateController, AuthController};
 use Illuminate\Support\Facades\Route;
+
+// Public credential verification (QR target) — no auth so a scanned code resolves anywhere.
+Route::get('/verify/{credentialId}', [CertificateController::class, 'verify'])->name('passimark.verify');
 
 // Auth routes (guest only)
 Route::middleware(['guest'])->group(function(){
@@ -30,6 +33,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/passimark/attempt/{attempt}/finish', [PassimarkController::class,'finish'])->name('passimark.finish');
     Route::post('/passimark/session/{session}/request-approval', [PassimarkController::class,'requestApproval'])->name('passimark.approval.request');
     Route::get('/passimark/session/{session}/review', [PassimarkController::class,'review'])->name('passimark.review');
+    Route::get('/certificate/{progress}', [CertificateController::class,'show'])->name('passimark.certificate');
 });
 
 Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(function(){

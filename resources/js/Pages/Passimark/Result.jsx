@@ -1,7 +1,7 @@
-import { Head, router } from '@inertiajs/react';
-import { CheckCircle2, XCircle, LockKeyhole, UnlockKeyhole, FileQuestion } from 'lucide-react';
+import { Head, Link, router } from '@inertiajs/react';
+import { Award, CheckCircle2, XCircle, LockKeyhole, UnlockKeyhole, FileQuestion } from 'lucide-react';
 
-export default function Result({ attempt, answers = [], history = [], review_unlocked = false, progress_status = 'locked' }) {
+export default function Result({ attempt, answers = [], history = [], review_unlocked = false, progress_status = 'locked', certificate = null }) {
 	const score = Number(attempt.score || 0);
 	const correctCount = answers.filter((answer) => answer.is_correct).length;
 	const lockedCount = answers.filter((answer) => !answer.exposed).length;
@@ -31,6 +31,29 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 							<Metric label="Theta estimate" value={Number(attempt.theta || 0).toFixed(2)} />
 						</div>
 					</div>
+
+					{certificate && (
+						<div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+							<div className="flex items-start gap-3">
+								<Award className="mt-0.5 h-5 w-5 shrink-0 text-emerald-300" />
+								<div>
+									<p className="text-sm font-semibold text-emerald-200">Certificate issued</p>
+									<p className="mt-1 text-sm text-emerald-100/70">
+										Credential <span className="font-mono text-emerald-100">{certificate.credential_id}</span>
+										{certificate.pass_probability != null
+											? ` · ${Math.round(certificate.pass_probability * 1000) / 10}% pass probability`
+											: ''}
+									</p>
+								</div>
+							</div>
+							<Link
+								href={certificate.url}
+								className="shrink-0 rounded-lg bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300"
+							>
+								View certificate
+							</Link>
+						</div>
+					)}
 
 					{!review_unlocked && (
 						<div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-5">
