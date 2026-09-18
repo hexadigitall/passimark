@@ -151,6 +151,15 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Deployment guide** ([deployment-guide.md](deployment-guide.md)): requirements, `.env` matrix, install/build/migrate/seed commands, catalog switches, Nginx/Apache vhosts, production caching, backup/upgrade/scaling notes, and post-deploy verification (including the public verify route + QR round-trip).
 - New `CertificateIssuanceTest` (4 tests: auto issuance + format, owner-only access, public verify valid/unknown, approval-gated issuance, PWA manifest). Full suite **104 tests / 29,906 assertions** green; `npm run build` clean (`app-BlcdREX9.js` 456.94 kB / 132.38 kB gzip); migration applied to the dev DB.
 
+## Sprint 7.9b: Uniform-205 question coverage
+**Status:** **done** (the Uniform-205 catalog gradient shipped in 7.6 with every session pool empty — reviewing was a spreadsheet exercise)
+**Evidence:** [sprint-7-9b-uniform-205-question-coverage.md](sprint-7-9b-uniform-205-question-coverage.md)
+- **`App\Services\PracticeQuestionBank\UniformQuestionBankGenerator`** — deterministic content builder (seed = `crc32('uniform|'.code.'|'.order.'|'.index)`), producing a 4-option, 1-correct item per (cert, session, index) with IRT bounds (difficulty −1.5…2, discrimination 0.8…1.8, guessing 0.25), domain + Bloom tags from the session's own context, explanation, catalog reference, and `external_id = ub-{code}-s{order}-q{index}` — byte-for-byte reproducible across runs/environments.
+- **`Uniform205QuestionBankSeeder`** — idempotent: a session pool is skipped whenever that session already holds any question, so re-runs never double-insert. Fills each session to its exact `questions_target`, tags every question (`passimark_question_tag` domain + Bloom pivots), reports `{certs, sessions, questions}`; `SEED_LIMIT`/`SEED_CERTS` still narrow CI/dev runs.
+- **Migration `2026_01_01_000015`** — index on `passimark_questions.session_id` (*critical perf fix*: the seeder's idempotency `exists()` + per-session bulk inserts stay O(log n) instead of a full table scan — collapsed the 9+ min pre-index run).
+- **`DatabaseSeeder`** uniform path: `Uniform205CatalogSeeder` → **`Uniform205QuestionBankSeeder`**.
+- **Verified:** `SEED_CATALOG=uniform` fresh seed on scratch SQLite — **205 certs / 2,870 sessions / 8,610 exams / 167,133 questions** in ~73 s; new `Uniform205QuestionBankSeederTest` (fills every session to its exact target, deterministic + idempotent re-runs, 4 options / single correct key, tags, IRT bounds, region grouping); full suite **110 tests / 44,586 assertions** green; `npm run build` clean; `php -l` clean; dev DB reseeded to the complete Uniform-205 catalog with full question coverage.
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

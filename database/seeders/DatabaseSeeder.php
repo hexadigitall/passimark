@@ -12,7 +12,9 @@ class DatabaseSeeder extends Seeder
      *   - `worldwide` -> 17 flagship certs (WorldwidePassimarkCatalogSeeder) plus a
      *     deterministic original question bank for every session pool
      *     (WorldwideOriginalQuestionBankSeeder; CISSP keeps its own textbook bundle)
-     *   - `uniform`   -> 205-cert uniform ladder (Uniform205CatalogSeeder)
+     *   - `uniform`   -> 205-cert uniform ladder (Uniform205CatalogSeeder) plus a
+     *     deterministic generic question bank for every session pool
+     *     (Uniform205QuestionBankSeeder)
      * Otherwise fresh installs get the real Hexadigitall CISSP textbook bundle
      * (46 sessions, 980 questions) when the extracted JSON is present; the lightweight
      * prototype seeder is the fallback. CI seeds PassimarkSeeder explicitly, and any
@@ -26,6 +28,7 @@ class DatabaseSeeder extends Seeder
             $this->call(WorldwideOriginalQuestionBankSeeder::class);
         } elseif ($catalog === 'uniform') {
             $this->call(Uniform205CatalogSeeder::class);
+            $this->call(Uniform205QuestionBankSeeder::class);
         } elseif (is_file(database_path(CISSPBundleSeeder::BUNDLE_JSON))) {
             $this->call(CISSPBundleSeeder::class);
         } else {
