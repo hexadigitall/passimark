@@ -33,7 +33,7 @@ Start here:
 3. [docs/mvp-backlog.md](docs/mvp-backlog.md) - what we're building
 
 ### For implementation tasks
-Current focus: **Sprint 7.5b-d done (approval gating + gated review + role-branched admin dashboard + admin analytics/reports) → Sprint 8 (certificates + PWA) + Sprint 9 Phase C-E (upload UI, update modes, source adapters)**
+Current focus: **Sprint 8 done (certificates + QR verification + PWA + deployment guide) → Sprint 9 Phase C-E (upload UI, update modes, source adapters) + remaining catalog question coverage**
 - [docs/v4-worldwide-catalog-spec.md](docs/v4-worldwide-catalog-spec.md) - approved v4.0 build spec (205-cert global platform)
 - [docs/sprint-4-taxonomy-plan.md](docs/sprint-4-taxonomy-plan.md) - next implementation sprint (4.2)
 - [docs/sprint-5-v4-worldwide-catalog.md](docs/sprint-5-v4-worldwide-catalog.md) - Sprints 5-8 worldwide catalog breakdown
@@ -48,6 +48,8 @@ Current focus: **Sprint 7.5b-d done (approval gating + gated review + role-branc
 - [docs/sprint-7-5b-approval-gating-review.md](docs/sprint-7-5b-approval-gating-review.md) - Sprint 7.5b: per-track approval gating + gated answer review (plan + status)
 - [docs/sprint-7-5b-approval-gating-review-report.md](docs/sprint-7-5b-approval-gating-review-report.md) - Sprint 7.5b: bundle approval-gated progression, Reattempt/Review CTAs, no-expo review shipped
 - [docs/sprint-7-5d-admin-analytics-reports.md](docs/sprint-7-5d-admin-analytics-reports.md) - Sprint 7.5c-d: role-branched admin dashboard + richer KPI tiles + drill-down analytics reports
+- [docs/sprint-8-certificates.md](docs/sprint-8-certificates.md) - Sprint 8: certificates, QR verification, completion surfaces
+- [docs/deployment-guide.md](docs/deployment-guide.md) - production deployment guide (env, seed catalogs, web server, upgrades, verification)
 - [docs/sprint-9-portable-packages-sharing.md](docs/sprint-9-portable-packages-sharing.md) - Sprint 9: portable `.psmk`/`.psme`/`.psmm` packages, sharing, and source conversion (RFC adopted; V1 shipped)
 - [docs/passimark-file-format-rfc.md](docs/passimark-file-format-rfc.md) - the adopted `.psmk` package format contract (Decision)
 - [docs/sprint-progress-tracker.md](docs/sprint-progress-tracker.md) - live status index

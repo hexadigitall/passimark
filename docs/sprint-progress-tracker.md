@@ -143,11 +143,12 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 
 ## Sprint 8: Certificates + QR verification
 **Status:** **done** (a passed final marked the session but never the track — no credential, no proof)
-**Evidence:** [sprint-8-certificates.md](sprint-8-certificates.md)
+**Evidence:** [sprint-8-certificates.md](sprint-8-certificates.md), [deployment-guide.md](deployment-guide.md)
 - **`App\Services\CertificateIssuer`** is the single issuance/verification path: a certificate is minted only for `phase_type === 'final'` sessions with `ability_theta >= theta_required`, on `completed` (auto tracks) or `approved` (approval-gated) — approval-gated finals are deliberately **not** certified on a pass, only via the instructor approval path. Idempotent via the `certified_at` guard.
 - **Migration `2026_01_01_000014`** adds `certified_at`, `credential_id` (unique), `pass_probability`, `credential_hash` to `passimark_progress`. Credential ID is deterministic per user+track (`PMK-{CERTCODE}-{YEAR}-{HEX8}`); pass probability is the 1PL logistic `1/(1+exp(-1.7(θ-θ_required)))`.
 - **Surfaces:** owner-only `GET /certificate/{progress}` (auth, 404 otherwise) renders `Certificate.jsx` with a `qrcode.react` QR of the public verify URL; public `GET /verify/{credentialId}` renders `Verify.jsx` (valid/invalid, never an error) and is authenticated by nothing. Result shows a certificate banner + CTA, Track rows gain a Certificate link, Profile lists issued credentials.
 - **Hooks:** `PassimarkController::finish()` issues on a passed attempt; `PassimarkAdminController::approve()` issues on approval and returns a `certificate` key; `ReviewService::payload()` and `PassimarkCatalogController::bundle()` ship the credential fields.
+- **Deployment guide** ([deployment-guide.md](deployment-guide.md)): requirements, `.env` matrix, install/build/migrate/seed commands, catalog switches, Nginx/Apache vhosts, production caching, backup/upgrade/scaling notes, and post-deploy verification (including the public verify route + QR round-trip).
 - New `CertificateIssuanceTest` (4 tests: auto issuance + format, owner-only access, public verify valid/unknown, approval-gated issuance, PWA manifest). Full suite **104 tests / 29,906 assertions** green; `npm run build` clean (`app-BlcdREX9.js` 456.94 kB / 132.38 kB gzip); migration applied to the dev DB.
 
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
