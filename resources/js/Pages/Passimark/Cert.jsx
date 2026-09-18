@@ -16,7 +16,9 @@ function sourceLabel(source = '') {
 export default function Cert({ category = {}, bundles = [] }) {
   const crumbs = [
     { label: 'Dashboard', href: '/' },
-    ...(category.region ? [{ label: category.region }] : []),
+    ...(category.region
+      ? [{ label: category.region, href: `/?region=${encodeURIComponent(category.region)}` }]
+      : []),
     { label: category.title || category.cert_key },
   ];
 

@@ -46,24 +46,31 @@ class Curriculum
     {
         return PassimarkSession::where('certification_track_id', $trackId)
             ->where('question_count', '>', 0)
+            ->where('is_optional', false)
             ->orderBy('order')
             ->first();
     }
 
     /**
-     * Open the next assessable session in the same track after a pass.
-     * Returns the unlocked session, or null when the ladder is closed/finished.
+     * Open the next required assessable session after a pass, plus any optional remediation
+     * sessions positioned before it. Returns the unlocked required session, or null when the
+     * ladder is closed/finished.
      *
-     * Finals never auto-unlock (certificate issuance, Sprint 8). Legacy sessions
-     * (phase_type null) still unlock on instructor approval via the order ladder.
+     * Optional sessions (is_optional — mock-error remediation practice) never gate the ladder:
+     * they are unlocked alongside their checkpoint and skipped when picking the next required step.
+     * Finals never auto-unlock (certificate issuance, Sprint 8). Legacy sessions (phase_type null)
+     * still unlock on instructor approval via the order ladder.
      */
     public static function unlockNext(PassimarkSession $session, int $userId): ?PassimarkSession
     {
+        self::unlockOptionalBetween($session, $userId);
+
         if (in_array($session->phase_type, ['cert', 'final'], true)) {
             return null;
         }
         $next = PassimarkSession::where('certification_track_id', $session->certification_track_id)
             ->where('question_count', '>', 0)
+            ->where('is_optional', false)
             ->where('order', '>', $session->order)
             ->orderBy('order')
             ->first();
@@ -75,5 +82,33 @@ class Curriculum
             ['status' => 'open', 'ability_theta' => 0, 'attempts' => 0]
         );
         return $next;
+    }
+
+    /**
+     * Open the optional remediation sessions that sit between the just-passed session and the
+     * next required step (or all remaining optional sessions when nothing follows).
+     */
+    private static function unlockOptionalBetween(PassimarkSession $session, int $userId): void
+    {
+        $next = PassimarkSession::where('certification_track_id', $session->certification_track_id)
+            ->where('question_count', '>', 0)
+            ->where('is_optional', false)
+            ->where('order', '>', $session->order)
+            ->orderBy('order')
+            ->first();
+
+        $optional = PassimarkSession::where('certification_track_id', $session->certification_track_id)
+            ->where('question_count', '>', 0)
+            ->where('is_optional', true)
+            ->where('order', '>', $session->order)
+            ->when($next, fn ($q) => $q->where('order', '<', $next->order))
+            ->get();
+
+        foreach ($optional as $candidate) {
+            PassimarkProgress::firstOrCreate(
+                ['user_id' => $userId, 'session_id' => $candidate->id],
+                ['status' => 'open', 'ability_theta' => 0, 'attempts' => 0]
+            );
+        }
     }
 }

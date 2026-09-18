@@ -49,6 +49,13 @@ const statusPresentation = {
     badge: 'bg-emerald-500/15 text-emerald-300',
     icon: ShieldCheck,
   },
+  review: {
+    label: 'Reference',
+    badge: 'bg-slate-700 text-slate-400',
+    icon: Circle,
+    cta: 'Reference only',
+    disabled: true,
+  },
 };
 
 export default function Track({ track, category = {}, siblings = [] }) {
@@ -56,18 +63,23 @@ export default function Track({ track, category = {}, siblings = [] }) {
 
   const doneStatuses = ['completed', 'pending_approval', 'approved'];
   const sessions = track.sessions || [];
-  const completed = sessions.filter((session) => doneStatuses.includes(session.progress?.status));
+  // Optional remediation practice is startable but never gates progression, so the ladder
+  // progress reflects required sessions only.
+  const requiredSessions = sessions.filter((session) => !session.optional);
+  const completed = requiredSessions.filter((session) => doneStatuses.includes(session.progress?.status));
   const scored = sessions.filter((session) => session.progress?.score !== null && session.progress?.score !== undefined);
   const averageScore = scored.length
     ? Math.round(scored.reduce((total, item) => total + Number(item.progress.score || 0), 0) / scored.length)
     : null;
-  const completionPercent = sessions.length ? Math.round((completed.length / sessions.length) * 100) : 0;
+  const completionPercent = requiredSessions.length ? Math.round((completed.length / requiredSessions.length) * 100) : 0;
   const lastTheta = track.theta_history?.length ? track.theta_history[track.theta_history.length - 1] : null;
   const approvalGated = track.advancement !== 'auto';
 
   const crumbs = [
     { label: 'Dashboard', href: '/' },
-    ...(category.region ? [{ label: category.region }] : []),
+    ...(category.region
+      ? [{ label: category.region, href: `/?region=${encodeURIComponent(category.region)}` }]
+      : []),
     { label: category.title || track.cert_key, href: category.url },
     { label: track.variant_label || track.title },
   ];
@@ -112,7 +124,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
                 {approvalGated ? 'Instructor approved' : 'Self-paced'}
               </span>
               <span className="rounded-full bg-slate-800 px-2.5 py-0.5 text-slate-400">
-                {completed.length}/{sessions.length} sessions
+                {completed.length}/{requiredSessions.length} required sessions
               </span>
               {averageScore !== null && (
                 <span className="rounded-full bg-slate-800 px-2.5 py-0.5 text-slate-400">avg {averageScore}%</span>
@@ -120,7 +132,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
             </div>
           </div>
           <div className="flex items-center gap-5">
-            <ProgressRing done={completed.length} total={sessions.length} theta={lastTheta} />
+            <ProgressRing done={completed.length} total={requiredSessions.length} theta={lastTheta} />
           </div>
         </div>
 
@@ -189,18 +201,23 @@ export default function Track({ track, category = {}, siblings = [] }) {
             <div className="mt-4 divide-y divide-slate-800 overflow-hidden rounded-2xl border border-slate-700 bg-slate-900">
               {sessions.map((session) => {
                 const status = session.progress?.status || 'locked';
-                const state = statusPresentation[status];
+                const referenceOnly = session.assessable === false;
+                const state = referenceOnly
+                  ? statusPresentation.review
+                  : statusPresentation[status] || statusPresentation.locked;
                 const StatusIcon = state.icon;
                 const done = doneStatuses.includes(status);
-                const actions = done
-                  ? [
-                      { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'emerald' },
-                      { key: 'review', label: 'Review answers', action: 'review', tone: 'slate' },
-                      ...(status === 'completed' && approvalGated
-                        ? [{ key: 'approval', label: 'Request approval', action: 'request-approval', tone: 'amber' }]
-                        : []),
-                    ]
-                  : [{ key: 'main', label: state.cta, action: 'start', tone: 'emerald', disabled: state.disabled }];
+                const actions = referenceOnly
+                  ? []
+                  : done
+                    ? [
+                        { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'emerald' },
+                        { key: 'review', label: 'Review answers', action: 'review', tone: 'slate' },
+                        ...(status === 'completed' && approvalGated
+                          ? [{ key: 'approval', label: 'Request approval', action: 'request-approval', tone: 'amber' }]
+                          : []),
+                      ]
+                    : [{ key: 'main', label: state.cta, action: 'start', tone: 'emerald', disabled: state.disabled }];
 
                 return (
                   <div key={session.id} className="flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
@@ -211,6 +228,16 @@ export default function Track({ track, category = {}, siblings = [] }) {
                     <p className="min-w-0 flex-1 truncate text-sm text-slate-300">
                       <span className="font-mono text-xs text-slate-500">{String(session.number).padStart(2, '0')}&nbsp;</span>
                       {session.title}
+                      {session.optional && (
+                        <span className="ml-2 rounded bg-amber-500/15 px-1.5 py-0.5 align-middle text-[10px] font-medium uppercase tracking-wide text-amber-300">
+                          Remediation
+                        </span>
+                      )}
+                      {referenceOnly && (
+                        <span className="ml-2 rounded bg-slate-700 px-1.5 py-0.5 align-middle text-[10px] font-medium uppercase tracking-wide text-slate-400">
+                          Reference
+                        </span>
+                      )}
                     </p>
                     {session.progress?.score !== null && session.progress?.score !== undefined && (
                       <span className="shrink-0 font-mono text-xs text-slate-400">{session.progress.score}%</span>

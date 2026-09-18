@@ -170,7 +170,10 @@ class PassimarkCatalogController extends Controller
                 'id' => $session->id,
                 'number' => $session->number,
                 'title' => $session->title,
+                'description' => $session->description,
                 'phase_type' => $session->phase_type,
+                'assessable' => (int) $session->question_count > 0,
+                'optional' => (bool) $session->is_optional,
                 'questions_target' => $session->questions_target ?? $session->question_count,
                 'progress' => isset($progress[$session->id])
                     ? $progress[$session->id]->only('status', 'score', 'ability_theta', 'attempts')

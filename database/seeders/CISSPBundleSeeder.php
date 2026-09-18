@@ -11,6 +11,36 @@ class CISSPBundleSeeder extends Seeder
 {
     public const BUNDLE_JSON = 'seeders/data/cissp/cissp-bundle.json';
 
+    private const ALL_DOMAINS = [
+        'Security and Risk Management',
+        'Asset Security',
+        'Security Architecture and Engineering',
+        'Communication and Network Security',
+        'Identity and Access Management',
+        'Security Assessment and Testing',
+        'Security Operations',
+        'Software Development Security',
+    ];
+
+    /**
+     * Textbook sessions that ship narrative/table/flashcard content but no multiple-choice
+     * items. They are optional remediation practice: startable, but never required for the
+     * approval-gated ladder (see Curriculum::unlockNext). Pools are drawn deterministically
+     * from the bundle's real question bank, filtered to the domains each session reviews.
+     *
+     * @var array<int,array{size:int,domains:list<string>}>
+     */
+    private const REMEDIATION_POOLS = [
+        41 => ['size' => 15, 'domains' => self::ALL_DOMAINS],
+        43 => ['size' => 15, 'domains' => self::ALL_DOMAINS],
+        44 => ['size' => 15, 'domains' => [
+            'Security and Risk Management',
+            'Asset Security',
+            'Security Architecture and Engineering',
+            'Communication and Network Security',
+        ]],
+    ];
+
     public function run(): void
     {
         DB::disableQueryLog();
@@ -19,9 +49,10 @@ class CISSPBundleSeeder extends Seeder
 
             if ($this->command) {
                 $this->command->info(sprintf(
-                    'CISSP bundle seeded: %d sessions, %d assessment questions, %d drill items (tagged %d domains / %d blooms).',
+                    'CISSP bundle seeded: %d sessions, %d assessment questions (%d remediation), %d drill items (tagged %d domains / %d blooms).',
                     $result['sessions'],
                     $result['questions'],
+                    $result['remediation_questions'],
                     $result['drills'],
                     PassimarkTag::where('type', 'domain')->count(),
                     PassimarkTag::where('type', 'bloom')->count()
@@ -73,9 +104,13 @@ class CISSPBundleSeeder extends Seeder
 
             $isAssessment = $pool && (stripos($def['title'], 'Diagnostic') !== false || stripos($def['title'], 'Simulat') !== false || stripos($def['title'], 'Mock Exam') !== false);
             $phaseType = $isAssessment ? 'mock' : 'lesson';
+            $remediation = self::REMEDIATION_POOLS[$number] ?? null;
+            $isOptional = $remediation !== null;
 
             $timeMinutes = ($def['phase'] ?? 1) >= 4 ? 180 : 90;
-            $qCount = max(count($pool), 0);
+            // Remediation pools are generated after the base bank is loaded, but their size is
+            // known up front so exams/metadata are staged correctly.
+            $qCount = max(count($pool), $remediation['size'] ?? 0);
 
             $session = PassimarkSession::create([
                 'certification_track_id' => $track->id,
@@ -87,6 +122,7 @@ class CISSPBundleSeeder extends Seeder
                 'description' => $def['description'] ?? ("Session {$number}: " . $def['title']),
                 'domain' => $domain,
                 'is_open' => $number === 1,
+                'is_optional' => $isOptional,
                 'order' => $order++,
                 'pass_score' => 70,
                 'theta_required' => $phaseType === 'mock' ? 0.0 : -0.5,
@@ -106,18 +142,7 @@ class CISSPBundleSeeder extends Seeder
             ]);
 
             if ($pool) {
-                $catTime = (int) round($timeMinutes * 1.5);
-                foreach (['cat', 'timed', 'practice'] as $mode) {
-                    PassimarkExam::create([
-                        'session_id' => $session->id,
-                        'title' => "{$session->title} - " . strtoupper($mode),
-                        'mode' => $mode,
-                        'question_count' => count($pool),
-                        'time_minutes' => $mode === 'cat' ? $catTime : ($mode === 'timed' ? $timeMinutes : 0),
-                        'is_final' => false,
-                        'irt_enabled' => $mode === 'cat',
-                    ]);
-                }
+                $this->createExams($session, count($pool), $timeMinutes);
                 $totalQuestions += count($pool);
                 $this->seedPool($session, $pool, $domain, $bloom);
             }
@@ -128,6 +153,10 @@ class CISSPBundleSeeder extends Seeder
             PassimarkExam::where('session_id', $lastAssessment->id)->update(['is_final' => true]);
         }
 
+        // Optional remediation sessions draw their pools from the now-loaded base bank.
+        $remediation = $this->fillRemediationPools($track);
+        $totalQuestions += $remediation['questions'];
+
         // Open the first assessable step for the demo student using the shared enrollment path.
         $student = User::where('email', 'student@passimark.com')->first();
         \App\Services\Curriculum::enrollInTrack($student, $track);
@@ -135,8 +164,106 @@ class CISSPBundleSeeder extends Seeder
         return [
             'sessions' => count($bundle['sessions']),
             'questions' => $totalQuestions,
+            'remediation_questions' => $remediation['questions'],
             'drills' => $totalDrills,
         ];
+    }
+
+    /** Stage the three exam modes for a pool-bearing session (CAT carries the 1.5x time budget). */
+    private function createExams(PassimarkSession $session, int $poolSize, int $timeMinutes): void
+    {
+        $catTime = (int) round($timeMinutes * 1.5);
+        foreach (['cat', 'timed', 'practice'] as $mode) {
+            PassimarkExam::create([
+                'session_id' => $session->id,
+                'title' => "{$session->title} - " . strtoupper($mode),
+                'mode' => $mode,
+                'question_count' => $poolSize,
+                'time_minutes' => $mode === 'cat' ? $catTime : ($mode === 'timed' ? $timeMinutes : 0),
+                'is_final' => false,
+                'irt_enabled' => $mode === 'cat',
+            ]);
+        }
+    }
+
+    /**
+     * Generate the optional remediation pools for sessions whose textbook content is narrative
+     * only (see REMEDIATION_POOLS). Idempotent: sessions that already carry questions are left
+     * untouched, so it is safe to run against a live database without reseeding.
+     *
+     * @return array{sessions:int,questions:int}
+     */
+    public function fillRemediationPools(PassimarkCertificationTrack $track): array
+    {
+        $sessions = $track->sessions()->get()->keyBy('number');
+        $sourceSessionIds = PassimarkSession::query()
+            ->where('certification_track_id', $track->id)
+            ->where('question_count', '>', 0)
+            ->whereNotIn('number', array_keys(self::REMEDIATION_POOLS))
+            ->pluck('id')
+            ->all();
+
+        $filled = 0;
+        $questions = 0;
+        foreach (self::REMEDIATION_POOLS as $number => $def) {
+            $session = $sessions->get($number);
+            if (!$session || PassimarkQuestion::where('session_id', $session->id)->exists()) {
+                continue;
+            }
+
+            $candidates = PassimarkQuestion::whereIn('session_id', $sourceSessionIds)
+                ->whereIn('domain', $def['domains'])
+                ->orderBy('id')
+                ->pluck('id')
+                ->all();
+            if (count($candidates) < $def['size']) {
+                continue;
+            }
+
+            $picked = $this->pickDeterministic($candidates, $def['size'], (int) crc32('cissp-remediation|'.$track->id.'|'.$number));
+            foreach (PassimarkQuestion::whereIn('id', $picked)->get() as $source) {
+                $clone = $source->replicate();
+                $clone->session_id = $session->id;
+                $clone->exam_id = null;
+                $clone->external_id = null;
+                $clone->reference = 'Targeted remediation — drawn from the CISSP textbook bank';
+                $clone->save();
+                $clone->tags()->syncWithoutDetaching([
+                    $this->ensureTag('domain', $clone->domain)->id,
+                    $this->ensureTag('bloom', $clone->bloom_level)->id,
+                ]);
+                $questions++;
+            }
+
+            $session->update([
+                'question_count' => $def['size'],
+                'questions_target' => $def['size'],
+            ]);
+            $this->createExams($session, $def['size'], (int) ($session->time_minutes ?? 180));
+            $filled++;
+        }
+
+        return ['sessions' => $filled, 'questions' => $questions];
+    }
+
+    /**
+     * Deterministic sample without replacement. Uses a local LCG so results are reproducible
+     * across runs and environments without touching PHP's global RNG state.
+     *
+     * @param  list<int>  $ids
+     * @return list<int>
+     */
+    private function pickDeterministic(array $ids, int $count, int $seed): array
+    {
+        $ids = array_values($ids);
+        $state = ($seed & 0x7fffffff) ?: 1;
+        for ($i = count($ids) - 1; $i > 0; $i--) {
+            $state = (int) (($state * 1103515245 + 12345) & 0x7fffffff);
+            $j = $state % ($i + 1);
+            [$ids[$i], $ids[$j]] = [$ids[$j], $ids[$i]];
+        }
+
+        return array_slice($ids, 0, $count);
     }
 
     private function seedPool(PassimarkSession $session, array $pool, string $domain, string $bloom): void

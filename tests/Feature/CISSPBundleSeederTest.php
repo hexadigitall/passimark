@@ -46,19 +46,26 @@ class CISSPBundleSeederTest extends TestCase
             'status' => 'open',
         ]);
 
-        // Full assessment bank: daily drills (15 q), benchmark (50), simulated CAT + 2 mocks (125 each).
-        $this->assertSame(980, PassimarkQuestion::count());
+        // Full assessment bank: daily drills (15 q), benchmark (50), simulated CAT + 2 mocks (125
+        // each), plus 3 x 15 optional remediation pools generated for narrative-only sessions.
+        $this->assertSame(1025, PassimarkQuestion::count());
         $cases = [
             1 => 15, 15 => 50, 30 => 125, 40 => 125, 42 => 125,
-            23 => 15, 41 => 0, 43 => 0, 44 => 0, 45 => 0, 46 => 0,
+            23 => 15, 41 => 15, 43 => 15, 44 => 15, 45 => 0, 46 => 0,
         ];
         foreach ($cases as $number => $expected) {
             $this->assertSame($expected, $this->cisspSession($number)->questions()->count(), "session {$number} pool");
         }
 
+        // Remediation sessions are optional practice — startable, but never required for the ladder.
+        foreach ([41, 43, 44] as $number) {
+            $this->assertTrue($this->cisspSession($number)->is_optional, "session {$number} optional");
+        }
+        $this->assertFalse($this->cisspSession(42)->is_optional);
+
         // Every pool session gets all three exam modes sized to the pool.
         $poolSessions = PassimarkSession::has('questions')->count();
-        $this->assertSame(41, $poolSessions);
+        $this->assertSame(44, $poolSessions);
         $this->assertSame($poolSessions * 3, PassimarkExam::count());
 
         // The 23rd textbook session headers are mislabelled "19.x" in the source; extraction must still map them.
@@ -126,7 +133,7 @@ class CISSPBundleSeederTest extends TestCase
         $this->seed(CISSPBundleSeeder::class);
 
         $this->assertSame(46, PassimarkSession::count());
-        $this->assertSame(980, PassimarkQuestion::count());
-        $this->assertSame(41 * 3, PassimarkExam::count());
+        $this->assertSame(1025, PassimarkQuestion::count());
+        $this->assertSame(44 * 3, PassimarkExam::count());
     }
 }

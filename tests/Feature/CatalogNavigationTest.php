@@ -111,6 +111,8 @@ class CatalogNavigationTest extends TestCase
         $this->assertSame('cissp', $track['cert_key']);
         $this->assertNotEmpty($track['sessions']);
         $this->assertArrayHasKey('progress', $track['sessions'][0]);
+        $this->assertTrue($track['sessions'][0]['assessable']);
+        $this->assertFalse($track['sessions'][0]['optional']);
         $this->assertArrayHasKey('theta_history', $track);
         $this->assertArrayHasKey('domains', $track);
 

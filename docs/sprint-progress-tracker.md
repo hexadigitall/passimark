@@ -132,6 +132,14 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Verified:** new `CatalogNavigationTest` (7 tests) + `DashboardV4PayloadTest` re-pointed from `tracks`→`sections`/`stats` (θ/domain moved to the bundle route) + `MultiBundleCatalogTest` re-pointed at `/certs/cissp`; full suite **100 tests / 27,529 assertions** green; `php -l` + `npm run build` clean.
 - **Tracked doc:** [sprint-7-8-catalog-navigation.md](sprint-7-8-catalog-navigation.md)
 
+## Sprint 7.9: Optional remediation sessions + catalog navigation polish
+**Status:** **done** (CISSP sessions 41/43/44 shipped narrative-only with zero questions and sat inside the ladder; region breadcrumb was plain text)
+**Evidence:** [sprint-7-9-optional-remediation.md](sprint-7-9-optional-remediation.md)
+- **`is_optional` session flag** (migration `2026_01_01_000012`) instead of new `phase_type` values, keeping `PackagingSpec::PHASE_TYPES` closed. Optional rows are startable but never gate progression; `Curriculum::firstAssessableSession`/`unlockNext` skip them and the new `unlockOptionalBetween()` opens them alongside their checkpoint (pass 40 → open 41 + required 42; pass 42 → open 43 + 44).
+- **`CISSPBundleSeeder::fillRemediationPools()`** generates deterministic 15-item pools for 41/43/44 (41/43 = all 8 domains, 44 = domains 1-4) from the real textbook bank, clones domain/bloom tags, stages all 3 exam modes, and is idempotent so it backfills a live DB without a reseed. Bank **980 → 1025**; pool sessions **41 → 44**; exams **123 → 132**. Sessions 45/46 stay question-less and render as **Reference** milestones.
+- **Catalog payload + UI:** bundle sessions now ship `assessable`/`optional`; `Track.jsx` shows an amber **Remediation** chip and no Start on reference rows, counts required sessions only for the ring; region breadcrumbs on `Cert.jsx`/`Track.jsx` now link `/?region=`.
+- Full suite **100 tests / 27,808 assertions** green; dev DB backfilled in place; `npm run build` clean (`app-Bj7KZE0v.js`).
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)

@@ -33,7 +33,7 @@ class ContentCoherenceTest extends TestCase
         $this->assertDatabaseHas('passimark_certification_tracks', ['slug' => 'cissp', 'region' => 'USA-IT-SECURITY']);
 
         // Every CAT exam on the real-content track runs the v4 IRT engine.
-        $this->assertSame(41, PassimarkExam::where('mode', 'cat')->where('irt_enabled', true)->count());
+        $this->assertSame(44, PassimarkExam::where('mode', 'cat')->where('irt_enabled', true)->count());
         $this->assertSame(0, PassimarkExam::where('mode', 'cat')->where('irt_enabled', false)->count());
         $this->assertSame(0, PassimarkExam::where('mode', '!=', 'cat')->where('irt_enabled', true)->count());
 
@@ -109,7 +109,8 @@ class ContentCoherenceTest extends TestCase
             ->assertJsonPath('status', 'skipped')
             ->assertJsonPath('message', 'This submission was already approved.');
 
-        // Unlock skips contentless (0-question) remediation sessions to the next assessable mock.
+        // Unlock opens the optional remediation session but skips it when picking the next
+        // required step (the final mock at 42).
         $progress40 = PassimarkProgress::firstOrCreate([
             'user_id' => $student->id,
             'session_id' => PassimarkSession::where('number', 40)->value('id'),
@@ -122,8 +123,14 @@ class ContentCoherenceTest extends TestCase
             ->assertJsonPath('message', 'Approved. Session 42 unlocked');
         $this->assertNotNull(PassimarkProgress::where('user_id', $student->id)
             ->where('session_id', PassimarkSession::where('number', 42)->value('id'))->first());
+        $this->assertDatabaseHas('passimark_progress', [
+            'user_id' => $student->id,
+            'session_id' => PassimarkSession::where('number', 41)->value('id'),
+            'status' => 'open',
+        ]);
 
-        // The final has nothing after it -> no further unlock.
+        // The final has nothing required after it -> no further required unlock, but the
+        // post-final remediation sessions open as optional practice.
         $progress42 = PassimarkProgress::where('user_id', $student->id)
             ->where('session_id', PassimarkSession::where('number', 42)->value('id'))->firstOrFail();
         $progress42->update(['status' => PassimarkProgress::PENDING, 'score' => 88]);
@@ -131,6 +138,13 @@ class ContentCoherenceTest extends TestCase
             ->postJson("/admin/passimark/progress/{$progress42->id}/approve")
             ->assertOk()
             ->assertJsonPath('message', 'Approved. Track completed.');
+        foreach ([43, 44] as $number) {
+            $this->assertDatabaseHas('passimark_progress', [
+                'user_id' => $student->id,
+                'session_id' => PassimarkSession::where('number', $number)->value('id'),
+                'status' => 'open',
+            ]);
+        }
     }
 
     public function test_profile_payload_is_data_driven(): void
@@ -143,7 +157,7 @@ class ContentCoherenceTest extends TestCase
         $this->assertSame(1, $summary['current_phase']);
         $this->assertSame(1, $summary['current_session']);
         $this->assertSame(0, $summary['sessions_completed']);
-        $this->assertSame(41, $summary['sessions_total']);
+        $this->assertSame(44, $summary['sessions_total']);
         $this->assertSame(1, $summary['tracks']);
         $this->assertArrayHasKey('ability_theta', $summary);
     }
