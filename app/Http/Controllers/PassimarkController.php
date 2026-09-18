@@ -12,95 +12,12 @@ use Inertia\Inertia;
 class PassimarkController extends Controller
 {
     public function dashboard(Request $request){
-        // Staff land on the operations dashboard; only learners see the mastery path.
+        // Staff land on the operations dashboard; learners get the catalog tile drill-down.
         if (in_array(Auth::user()?->role, ['admin', 'instructor'], true)) {
             return app(PassimarkAdminController::class)->dashboard();
         }
 
-        $region = $request->string('region')->toString();
-        $sessions = PassimarkSession::orderBy('order')->get();
-        $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
-        if($progress->isEmpty()){
-            \App\Services\Curriculum::enrollFirstSteps(Auth::user());
-            $progress = PassimarkProgress::where('user_id', Auth::id())->get()->keyBy('session_id');
-        }
-
-        $tracks = \App\Models\PassimarkCertificationTrack::query()
-            ->with('sessions', fn ($q) => $q->orderBy('order'))
-            ->when($region, fn ($q) => $q->where('region', $region))
-            ->orderBy('region')
-            ->orderBy('title')
-            ->get()
-            ->map(fn ($track) => [
-                'id' => $track->id,
-                'title' => $track->title,
-                'slug' => $track->slug,
-                'cert_key' => $track->certKey(),
-                'variant_label' => $track->variant_label,
-                'region' => $track->region,
-                'advancement' => $track->advancement,
-                'sessions' => $track->sessions->map(fn ($session) => [
-                    'id' => $session->id,
-                    'number' => $session->number,
-                    'title' => $session->title,
-                    'phase_type' => $session->phase_type,
-                    'questions_target' => $session->questions_target ?? $session->question_count,
-                    'progress' => isset($progress[$session->id])
-                        ? $progress[$session->id]->only('status', 'score', 'ability_theta', 'attempts')
-                        : ['status' => 'locked', 'score' => null, 'ability_theta' => null, 'attempts' => 0],
-                ]),
-                'theta_history' => $this->thetaHistory($track->id),
-                'domains' => $this->domainAccuracy($track->id),
-            ])
-            ->values();
-
-        return Inertia::render('Passimark/Dashboard', compact('sessions', 'progress', 'tracks'));
-    }
-
-    /**
-     * Per-cert theta trendline: final theta of each finished attempt, oldest first.
-     *
-     * @return list<float>
-     */
-    private function thetaHistory(int $trackId): array
-    {
-        return PassimarkAttempt::query()
-            ->join('passimark_sessions', 'passimark_sessions.id', '=', 'passimark_attempts.session_id')
-            ->where('passimark_sessions.certification_track_id', $trackId)
-            ->where('passimark_attempts.user_id', Auth::id())
-            ->whereNotNull('passimark_attempts.finished_at')
-            ->whereNotNull('passimark_attempts.theta')
-            ->orderBy('passimark_attempts.finished_at')
-            ->limit(12)
-            ->pluck('passimark_attempts.theta')
-            ->map(fn ($theta) => (float) $theta)
-            ->values()
-            ->all();
-    }
-
-    /**
-     * Weak-zone heatmap: per-domain accuracy across this cert's answered items.
-     *
-     * @return list<array{name: string, total: int, correct: int, accuracy: float}>
-     */
-    private function domainAccuracy(int $trackId): array
-    {
-        $rows = \App\Models\PassimarkAttemptAnswer::query()
-            ->join('passimark_questions', 'passimark_questions.id', '=', 'passimark_attempt_answers.question_id')
-            ->join('passimark_sessions', 'passimark_sessions.id', '=', 'passimark_questions.session_id')
-            ->where('passimark_sessions.certification_track_id', $trackId)
-            ->whereNotNull('passimark_questions.domain')
-            ->selectRaw('passimark_questions.domain as name, COUNT(*) as total, SUM(CASE WHEN passimark_attempt_answers.is_correct = 1 THEN 1 ELSE 0 END) as correct')
-            ->groupBy('passimark_questions.domain')
-            ->orderByDesc('total')
-            ->get();
-
-        return $rows->map(fn ($row) => [
-            'name' => $row->name,
-            'total' => (int) $row->total,
-            'correct' => (int) $row->correct,
-            'accuracy' => $row->total > 0 ? round($row->correct / $row->total, 4) : 0.0,
-        ])->values()->all();
+        return app(PassimarkCatalogController::class)->index($request);
     }
 
     public function profile()

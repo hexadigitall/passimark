@@ -171,20 +171,27 @@ class MultiBundleCatalogTest extends TestCase
         $this->assertSame('Worldwide', $row['variant_label']);
     }
 
-    public function test_learner_dashboard_carries_cert_category_fields_per_bundle(): void
+    public function test_cert_screen_groups_bundles_under_one_category(): void
     {
         PassimarkCertificationTrack::placeBundle(['slug' => 'cissp', 'title' => 'CISSP', 'cert_key' => 'cissp', 'variant_label' => 'Legacy v1'], 'seed:passimark-v1');
         PassimarkCertificationTrack::placeBundle(['slug' => 'cissp', 'title' => 'ISC2 CISSP', 'cert_key' => 'cissp', 'variant_label' => 'Worldwide'], 'seed:worldwide-17');
 
         $student = User::create(['name' => 'Learner', 'email' => 'learner@passimark.com', 'password' => bcrypt('password'), 'role' => 'student']);
 
-        $page = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
-        $tracks = collect($page['props']['tracks']);
+        $page = $this->actingAs($student)->get(route('passimark.cert', ['certKey' => 'cissp']))->assertOk()->viewData('page');
+        $bundles = collect($page['props']['bundles']);
 
-        $this->assertSame(['cissp', 'cissp-v2'], $tracks->pluck('slug')->all());
-        $this->assertSame(['cissp', 'cissp'], $tracks->pluck('cert_key')->all());
-        $this->assertContains('Legacy v1', $tracks->pluck('variant_label')->all());
-        $this->assertContains('Worldwide', $tracks->pluck('variant_label')->all());
+        $this->assertSame('cissp', $page['props']['category']['cert_key']);
+        $this->assertSame(2, $page['props']['category']['bundle_count']);
+        $this->assertSame(['cissp', 'cissp-v2'], $bundles->pluck('slug')->all());
+        $this->assertContains('Legacy v1', $bundles->pluck('variant_label')->all());
+        $this->assertContains('Worldwide', $bundles->pluck('variant_label')->all());
+
+        // The category tile on the dashboard points at the same cert screen.
+        $dashboard = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
+        $tile = collect($dashboard['props']['sections'])->flatMap(fn ($section) => $section['categories'])->firstWhere('cert_key', 'cissp');
+        $this->assertNotNull($tile);
+        $this->assertSame(2, $tile['bundle_count']);
     }
 
     // ---------------------------------------------------------------- fixture

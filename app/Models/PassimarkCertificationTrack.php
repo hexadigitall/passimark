@@ -24,7 +24,8 @@ class PassimarkCertificationTrack extends Model {
 
     public function scopeForCert(Builder $query, string $certKey): Builder
     {
-        return $query->where('cert_key', $certKey)->orWhere(fn ($q) => $q->whereNull('cert_key')->where('slug', $certKey));
+        return $query->where(fn ($q) => $q->where('cert_key', $certKey)
+            ->orWhere(fn ($fallback) => $fallback->whereNull('cert_key')->where('slug', $certKey)));
     }
 
     /**

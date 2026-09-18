@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\User;
 use App\Models\PassimarkAttempt;
 use App\Models\PassimarkAttemptAnswer;
+use App\Models\PassimarkCertificationTrack;
 use App\Models\PassimarkExam;
 use App\Models\PassimarkQuestion;
 use App\Models\PassimarkSession;
@@ -57,52 +58,54 @@ class DashboardV4PayloadTest extends TestCase
         ];
     }
 
-    public function test_dashboard_shares_worldwide_tracks_grouped_by_region(): void
+    public function test_dashboard_shares_certification_categories_grouped_by_region(): void
     {
         $student = User::where('email', 'student@passimark.com')->firstOrFail();
 
         $page = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
 
-        $this->assertArrayHasKey('tracks', $page['props']);
-        $this->assertNotEmpty($page['props']['tracks']);
-        $this->assertGreaterThanOrEqual(4, count($page['props']['tracks']));
+        $this->assertArrayHasKey('sections', $page['props']);
+        $this->assertNotEmpty($page['props']['sections']);
 
-        // The worldwide catalog keeps its slug (cissp) on the adopting row and forks the
-        // second bundle to a de-conflicted slug (cissp-v2) — both share cert_key 'cissp'.
-        $this->assertNotNull(collect($page['props']['tracks'])->firstWhere('slug', 'cissp'));
-        $this->assertNotNull(collect($page['props']['tracks'])->firstWhere('slug', 'cissp-v2'));
+        $sections = collect($page['props']['sections']);
+        $this->assertSame(['GLOBAL-CLOUD', 'General', 'USA-IT-SECURITY'], $sections->pluck('region')->sort()->values()->all());
 
-        $regions = array_values(array_unique(array_filter(array_column($page['props']['tracks'], 'region'))));
-        sort($regions);
-        $this->assertSame(['GLOBAL-CLOUD', 'USA-IT-SECURITY'], $regions);
+        $categories = $sections->flatMap(fn ($section) => $section['categories'])->keyBy('cert_key');
+        $this->assertSame(3, $categories->count());
 
-        $track = $page['props']['tracks'][0];
-        $this->assertArrayHasKey('region', $track);
-        $this->assertArrayHasKey('sessions', $track);
-        $this->assertArrayHasKey('theta_history', $track);
-        $this->assertArrayHasKey('domains', $track);
+        // Two bundles share the cissp category (legacy PassimarkSeeder + worldwide fork).
+        $this->assertSame(2, $categories['cissp']['bundle_count']);
+        $this->assertSame(1, $categories['aws-ccp']['bundle_count']);
 
-        // A fresh learner has no trend or heatmap data yet.
-        $this->assertSame([], $track['theta_history']);
-        $this->assertSame([], $track['domains']);
+        // Tiles carry aggregates, never session arrays.
+        foreach ($categories as $category) {
+            $this->assertArrayHasKey('sessions_total', $category);
+            $this->assertArrayHasKey('percent', $category);
+            $this->assertArrayNotHasKey('sessions', $category);
+        }
+
+        $this->assertArrayHasKey('stats', $page['props']);
+        $this->assertSame(3, $page['props']['stats']['categories']);
     }
 
-    public function test_dashboard_region_filter_returns_only_matching_tracks(): void
+    public function test_dashboard_region_filter_returns_only_matching_categories(): void
     {
         $student = User::where('email', 'student@passimark.com')->firstOrFail();
 
         $pageSingle = $this->actingAs($student)->get('/?region=GLOBAL-CLOUD')->assertOk()->viewData('page');
-        $this->assertNotEmpty($pageSingle['props']['tracks']);
-        $this->assertSame(['aws-ccp'], array_column($pageSingle['props']['tracks'], 'slug'));
+        $singleCategories = collect($pageSingle['props']['sections'])->flatMap(fn ($section) => $section['categories']);
+        $this->assertSame(['aws-ccp'], $singleCategories->pluck('cert_key')->all());
 
         $pageAll = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
-        $this->assertGreaterThan(count($pageSingle['props']['tracks']), count($pageAll['props']['tracks']));
+        $allCategories = collect($pageAll['props']['sections'])->flatMap(fn ($section) => $section['categories']);
+        $this->assertGreaterThan($singleCategories->count(), $allCategories->count());
     }
 
-    public function test_dashboard_reflects_theta_history_and_domain_accuracy_after_final_attempts(): void
+    public function test_track_screen_carries_theta_history_and_domain_accuracy_after_final_attempts(): void
     {
         $student = User::where('email', 'student@passimark.com')->firstOrFail();
-        $session = PassimarkSession::where('cert_slug', 'cissp')->where('phase_type', 'lesson')->orderBy('order')->firstOrFail();
+        $track = PassimarkCertificationTrack::where('slug', 'cissp-v2')->firstOrFail();
+        $session = $track->sessions()->where('phase_type', 'lesson')->orderBy('order')->firstOrFail();
         $exam = PassimarkExam::where('session_id', $session->id)->where('mode', 'cat')->firstOrFail();
 
         $question = PassimarkQuestion::create([
@@ -137,19 +140,13 @@ class DashboardV4PayloadTest extends TestCase
             'time_spent' => 6,
         ]);
 
-        $page = $this->actingAs($student)->get('/')->assertOk()->viewData('page');
+        $page = $this->actingAs($student)->get('/certs/cissp/cissp-v2')->assertOk()->viewData('page');
 
-        // The worldwide CISSP bundle now lives on its own de-conflicted row (cissp-v2);
-        // the legacy Passimark bundle keeps slug 'cissp' under the same cert category.
-        $cissp = collect($page['props']['tracks'])->firstWhere('slug', 'cissp-v2');
-        $this->assertNotNull($cissp, 'worldwide cissp-v2 track must be present in payload');
-        $legacy = collect($page['props']['tracks'])->firstWhere('slug', 'cissp');
-        $this->assertNotNull($legacy, 'legacy cissp track must be preserved');
-        $this->assertSame('cissp', $cissp['cert_key']);
-        $this->assertSame('cissp', $legacy['cert_key']);
-        $this->assertContains(1.3, $cissp['theta_history']);
+        $this->assertSame('cissp-v2', $page['props']['track']['slug']);
+        $this->assertSame('cissp', $page['props']['track']['cert_key']);
+        $this->assertContains(1.3, $page['props']['track']['theta_history']);
 
-        $domain = collect($cissp['domains'])->firstWhere('name', 'Security & Risk Management');
+        $domain = collect($page['props']['track']['domains'])->firstWhere('name', 'Security & Risk Management');
         $this->assertNotNull($domain, 'domain missing from heatmap');
         $this->assertSame(1, $domain['total']);
         $this->assertSame(1, $domain['correct']);

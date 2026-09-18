@@ -122,6 +122,16 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **Bugs caught in verification:** `yu` emitted 5 options (JS slices 3 distractors — fixed + re-key after shuffle); idempotency test compared first-vs-second run counts instead of asserting zero new inserts; variety test pinned two indices to one seed (corrected to compare across seeds).
 - **Tracked doc:** [sprint-7-7-original-question-bank.md](sprint-7-7-original-question-bank.md)
 
+## Sprint 7.8: Catalog navigation (category tiles → cert bundles → track)
+**Status:** **done** (dashboard dumped every track's full ladder on one page; no drill-down)
+- **Three-level IA:** `/` = certification **category tiles** grouped by region → `/certs/{certKey}` = **bundle cards** for that cert → `/certs/{certKey}/{slug}` = the single-bundle track screen (session ladder, θ, domain mastery). Bundle binding uses `{track:slug}` so the model keeps `id` as its default key (admin CRUD unaffected).
+- **Payload discipline:** level 0/1 send aggregates only (no session arrays); `thetaHistory`/`domainAccuracy` extracted to `App\Services\TrackProgressService` and used only at level 2; bulk grouped queries replace per-track N+1. `PassimarkController::dashboard` now delegates to `PassimarkCatalogController::index` for learners (staff branch kept).
+- **`scopeForCert` precedence bug fixed** (nested category filter was escaping the outer `where`).
+- **UX:** responsive tile grid, "continue where you left off" hero, client-side search + region sections, breadcrumbs, Inertia links with preserved scroll/state.
+- **Files:** `app/Http/Controllers/{PassimarkCatalogController,PassimarkController}.php`, `app/Services/TrackProgressService.php`, `app/Models/PassimarkCertificationTrack.php`, `routes/web.php`, `resources/js/Pages/Passimark/{Dashboard,Cert,Track}.jsx`, `resources/js/Components/Breadcrumbs.jsx`, `tests/Feature/{CatalogNavigationTest,DashboardV4PayloadTest,MultiBundleCatalogTest}.php`.
+- **Verified:** new `CatalogNavigationTest` (7 tests) + `DashboardV4PayloadTest` re-pointed from `tracks`→`sections`/`stats` (θ/domain moved to the bundle route) + `MultiBundleCatalogTest` re-pointed at `/certs/cissp`; full suite **100 tests / 27,529 assertions** green; `php -l` + `npm run build` clean.
+- **Tracked doc:** [sprint-7-8-catalog-navigation.md](sprint-7-8-catalog-navigation.md)
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
