@@ -226,6 +226,8 @@ class CISSPBundleSeeder extends Seeder
                 $clone->session_id = $session->id;
                 $clone->exam_id = null;
                 $clone->external_id = null;
+                $clone->correct_key = $source->correct_key
+                    ?: (collect($source->options)->firstWhere('is_correct', true)['key'] ?? null);
                 $clone->reference = 'Targeted remediation — drawn from the CISSP textbook bank';
                 $clone->save();
                 $clone->tags()->syncWithoutDetaching([
@@ -283,6 +285,7 @@ class CISSPBundleSeeder extends Seeder
                     fn ($o) => ['key' => $o['key'], 'text' => $o['text'], 'is_correct' => $o['key'] === $item['answer']],
                     $item['options']
                 ),
+                'correct_key' => $item['answer'],
                 'difficulty' => $difficulty,
                 'discrimination' => 1.2,
                 'guessing' => 0.25,

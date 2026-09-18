@@ -78,6 +78,8 @@ class CISSPBundleSeederTest extends TestCase
             $options = collect($q->options);
             $this->assertCount(4, $options);
             $this->assertSame(1, $options->where('is_correct', true)->count());
+            $this->assertNotEmpty($q->correct_key);
+            $this->assertContains($q->correct_key, $options->pluck('key')->all());
             $this->assertNotEmpty($q->content);
             $this->assertNotEmpty($q->explanation);
             $types = $q->tags->pluck('type')->unique();

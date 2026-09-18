@@ -50,6 +50,15 @@ textbook bank, filtered to the domains each session reviews:
   `fillRemediationPools($track)` can backfill an existing database without a destructive reseed.
 - CISSP bank grows **980 → 1025 questions**; pool sessions **41 → 44**; exams **123 → 132**.
 
+## Answer-key backfill
+Legacy CISSP pools stored correctness only in each option's `is_correct` flag, leaving the
+explicit `correct_key` column (added in migration `000006`) null, unlike the worldwide bank.
+- `CISSPBundleSeeder::seedPool()` now sets `correct_key` from the extracted answer on every
+  question, and `fillRemediationPools()` derives it for clones.
+- Migration `2026_01_01_000013` backfills existing rows from the flagged option (idempotent,
+  no-op where populated). After it ran, all **17,750** questions carry `correct_key`, and it
+  matches the flagged option with zero mismatches.
+
 ## Navigation polish
 - Region crumb is now a link on both the cert screen and the track screen:
   `/?region={region}` (`Cert.jsx`, `Track.jsx`).
