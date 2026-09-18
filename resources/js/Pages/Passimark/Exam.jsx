@@ -118,7 +118,9 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
   const [answeredCount, setAnsweredCount] = useState(initialAnsweredCount);
   const [flagged, setFlagged] = useState(() => new Set());
   const [strikes, setStrikes] = useState(() => new Set());
-  const [secondsLeft, setSecondsLeft] = useState((attempt.exam?.time_minutes ?? attempt.session?.time_limit ?? 180) * 60);
+  const timeLimitSeconds = (attempt.exam?.time_minutes ?? attempt.session?.time_limit ?? 0) * 60;
+  const isTimed = timeLimitSeconds > 0;
+  const [secondsLeft, setSecondsLeft] = useState(timeLimitSeconds);
   const [paletteTab, setPaletteTab] = useState('palette');
   const [calculatorOpen, setCalculatorOpen] = useState(false);
   const [calcExpression, setCalcExpression] = useState('');
@@ -135,14 +137,14 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
   }, [totalQuestions, isPractice]);
 
   useEffect(() => {
-    if (!question || instructionsOpen || breakOpen) return undefined;
+    if (!isTimed || !question || instructionsOpen || breakOpen) return undefined;
     const timer = window.setInterval(() => setSecondsLeft((value) => Math.max(value - 1, 0)), 1000);
     return () => window.clearInterval(timer);
-  }, [question, instructionsOpen, breakOpen]);
+  }, [isTimed, question, instructionsOpen, breakOpen]);
 
   useEffect(() => {
-    if (secondsLeft === 0 && question && !processing) finishAttempt();
-  }, [secondsLeft, question, processing]);
+    if (isTimed && secondsLeft === 0 && question && !processing) finishAttempt();
+  }, [isTimed, secondsLeft, question, processing]);
 
   const finishAttempt = async () => {
     if (processing) return;
@@ -165,7 +167,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
       const response = await axios.post(`/passimark/attempt/${attempt.id}/answer`, {
         question_id: question.id,
         selected,
-        time_spent: Math.max(0, (attempt.exam?.time_minutes ?? attempt.session?.time_limit ?? 180) * 60 - secondsLeft),
+        time_spent: isTimed ? Math.max(0, timeLimitSeconds - secondsLeft) : 0,
       });
 
       if (response.data.next) {
@@ -260,9 +262,9 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
               >
                 <Calculator className="h-4 w-4" /> Calc
               </button>
-              <div className={`flex items-center gap-2 font-mono text-lg ${secondsLeft < 300 ? 'text-orange-300' : 'text-slate-200'}`}>
+              <div className={`flex items-center gap-2 font-mono text-lg ${isTimed && secondsLeft < 300 ? 'text-orange-300' : 'text-slate-200'}`}>
                 <Clock3 className="h-5 w-5" />
-                {minutes}:{seconds}
+                {isTimed ? `${minutes}:${seconds}` : 'Untimed'}
               </div>
               <button type="button" onClick={exitAssessment} className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-3 py-2 text-sm text-slate-300 hover:bg-slate-800">
                 <LogOut className="h-4 w-4" /> Save &amp; exit
