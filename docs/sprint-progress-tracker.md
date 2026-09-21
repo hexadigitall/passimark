@@ -160,6 +160,28 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - **`DatabaseSeeder`** uniform path: `Uniform205CatalogSeeder` → **`Uniform205QuestionBankSeeder`**.
 - **Verified:** `SEED_CATALOG=uniform` fresh seed on scratch SQLite — **205 certs / 2,870 sessions / 8,610 exams / 167,133 questions** in ~73 s; new `Uniform205QuestionBankSeederTest` (fills every session to its exact target, deterministic + idempotent re-runs, 4 options / single correct key, tags, IRT bounds, region grouping); full suite **110 tests / 44,586 assertions** green; `npm run build` clean; `php -l` clean; dev DB reseeded to the complete Uniform-205 catalog with full question coverage.
 
+## Sprint 8.1: First-run funnel + one-student catalog chrome (Lock → Splash → Intro → Auth → Focus → Permissions → Dashboard)
+
+**Status:** planned  ·  **Branch:** `feature/sprint-8-1-first-run-funnel` (from `62ae3c0`)  ·  **Doc:** `docs/sprint-8-1-first-run-funnel.md`
+
+**Why:** Sprint 7.9b proved the complete Uniform-205 catalog is real (205 certs / 2,870 sessions /
+8,610 exams / 167,133 questions, seeded + verified). The one thing left: **surfacing 205 certs to a
+single returning learner without a wall of tiles.** This sprint is the "that one student" funnel +
+chrome. Gating (θ pass-gates, final-approval, enrollment auto-unlock) is NOT touched — this only
+adds *discoverability rails* around it.
+
+**Ladder:** `GET /` (guest → Lock) → `GET /splash` → `GET /intro` (4-screen walkthrough, skip) →
+`/login` `/register` → post-register `/setup` (focus picker, chips ≥1, save) →
+`/permissions` (prime, skippable) → `/` (Dashboard).
+
+**Chrome (every authed page):** global **CertificationOmnibox** (flat typeahead over all 205 certs,
+no region filter, arrow-key nav, Enter → track) + **Browse rails** (region → cert arrow dropdowns).
+
+**Surfaces:** lock, splash, intro walkthrough, login/signup (existing), focus picker (onboarding +
+re-editable via Settings), permission prime (skippable), refactored Dashboard (your-track hero
+resume/θ/next required session above catalog, favorites first).
+
+**Evidence:** tbd after implementation.
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
