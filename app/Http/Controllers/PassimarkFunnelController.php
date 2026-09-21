@@ -33,7 +33,7 @@ class PassimarkFunnelController extends Controller
     {
         $this->ensureEnrolled();
 
-        return Inertia::render('Passimark/Dashboard', [
+        return Inertia::render('Passimark/Funnel/Lock', [
             'funnel' => [
                 'step' => 'lock',
                 'next' => route('passimark.funnel.splash'),
@@ -47,7 +47,7 @@ class PassimarkFunnelController extends Controller
     {
         $this->ensureEnrolled();
 
-        return Inertia::render('Passimark/Dashboard', [
+        return Inertia::render('Passimark/Funnel/Splash', [
             'funnel' => [
                 'step' => 'splash',
                 'next' => route('passimark.funnel.intro'),
@@ -61,7 +61,7 @@ class PassimarkFunnelController extends Controller
     {
         $this->ensureEnrolled();
 
-        return Inertia::render('Passimark/Dashboard', [
+        return Inertia::render('Passimark/Funnel/Intro', [
             'funnel' => [
                 'step' => 'intro',
                 'next' => route('passimark.funnel.auth'),
