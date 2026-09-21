@@ -182,6 +182,12 @@ re-editable via Settings), permission prime (skippable), refactored Dashboard (y
 resume/θ/next required session above catalog, favorites first).
 
 **Evidence:** tbd after implementation.
+## Sprint 8.2: PWA gap closure
+- **Status:** shipped + pushed (passimark/sw.js + blade SW registration; manifest already healthy)
+- **closed:** offline shell SW (network-first nav, cache-first hashed assets, precache '/', '/manifest.json', '/sw.js', skipWaiting+clients.claim; same-origin GET only) — 1.7 kB, node-check clean
+- **verified pre-existing:** public/manifest.json 1,104 B (brand #0F172A/#1A9E2D, standalone, icons 16-1024) already linked in app.blade.php
+- **gates:** suite 110 / 44,586 green; build green
+
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
 **Status:** Phase A+B **done** (C-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
@@ -198,3 +204,4 @@ resume/θ/next required session above catalog, favorites first).
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
 - `.psmk` source conversion (PDF/VCE/CSV/QTI adapters), upload UI, and update modes remain Phase C-E of Sprint 9 ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)); the V1 author package (export/import/audit) is shipped
 - v4.0 brand assets still use legacy `passimark_*` filenames (renaming/180-icon tile set tracked in Sprint 8.3; manifest `#ffffff` background was already fixed in 7.5e)
+

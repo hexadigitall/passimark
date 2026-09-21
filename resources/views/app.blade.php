@@ -15,5 +15,13 @@
     </head>
     <body>
         @inertia
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/sw.js')
+                        .catch(function () { /* non-fatal: offline shell is progressive enhancement */ });
+                });
+            }
+        </script>
     </body>
 </html>
