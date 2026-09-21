@@ -6,6 +6,7 @@ use App\Models\{PassimarkCertificationTrack, PassimarkProgress, PassimarkSession
 use App\Services\{Curriculum, TrackProgressService};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 
 /**
@@ -89,6 +90,37 @@ class PassimarkCatalogController extends Controller
                 'sessions_done' => (int) array_sum(array_intersect_key($done, array_flip($trackIds))),
             ],
             'continueSession' => $this->continuePayload($userId),
+        ]);
+    }
+
+    public function search(Request $request)
+    {
+        $this->ensureEnrolled();
+
+        $query = mb_strtolower(trim($request->string('q')));
+
+        $catalog = Cache::remember('passimark.catalog.search.lean.v1', 300, function () {
+            return PassimarkCertificationTrack::query()
+                ->where('is_active', true)
+                ->orderBy('title')
+                ->get(['cert_key', 'title', 'region', 'slug'])
+                ->map(fn (PassimarkCertificationTrack $track) => [
+                    'cert_key' => $track->cert_key,
+                    'title' => $track->title,
+                    'region' => $track->region,
+                    'bundle_url' => route('passimark.cert', ['certKey' => $track->cert_key]),
+                ]);
+        });
+
+        $hits = $query !== ''
+            ? $catalog->filter(fn ($t) => str_contains(mb_strtolower($t['title']), $query)
+                || str_contains(mb_strtolower($t['cert_key']), $query))
+            : $catalog;
+
+        return response()->json([
+            'data' => $hits->values()->take(50)->all(),
+            'query' => $query,
+            'total' => $hits->count(),
         ]);
     }
 

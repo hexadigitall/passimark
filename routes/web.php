@@ -19,6 +19,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->n
 // Authenticated routes
 Route::middleware(['auth'])->group(function(){
     Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
+    Route::get('/catalog/search', [PassimarkCatalogController::class,'search'])->name('passimark.catalog.search');
     Route::get('/certs/{certKey}', [PassimarkCatalogController::class,'cert'])->name('passimark.cert');
     Route::get('/certs/{certKey}/{track:slug}', [PassimarkCatalogController::class,'bundle'])->name('passimark.bundle');
     Route::get('/profile', [PassimarkController::class,'profile'])->name('profile');
