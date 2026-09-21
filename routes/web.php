@@ -37,6 +37,15 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/certificate/{progress}', [CertificateController::class,'show'])->name('passimark.certificate');
 });
 
+Route::middleware(['auth'])->prefix('passimark')->name('passimark.funnel.')->group(function(){
+    Route::get('/lock', [PassimarkFunnelController::class,'lock'])->name('lock');
+    Route::get('/splash', [PassimarkFunnelController::class,'splash'])->name('splash');
+    Route::get('/intro', [PassimarkFunnelController::class,'intro'])->name('intro');
+    Route::get('/auth', [PassimarkFunnelController::class,'auth'])->name('auth');
+    Route::get('/focus', [PassimarkFunnelController::class,'focus'])->name('focus');
+    Route::get('/permissions', [PassimarkFunnelController::class,'permissions'])->name('permissions');
+});
+
 Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(function(){
     Route::get('/passimark', [PassimarkAdminController::class,'index'])->name('admin.passimark');
     Route::get('/reports/learners', [PassimarkAdminController::class,'reportLearners'])->name('admin.reports.learners');
