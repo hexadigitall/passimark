@@ -20,7 +20,7 @@ export default function Omnibox({ placeholder = 'Find a certification…' }) {
     const [cursor, setCursor] = useState(-1);
     const [busy, setBusy] = useState(false);
     const containerRef = useRef(null);
-    const inputRef = useRef(null hack);
+      const inputRef = useRef(null);
     const queryTimer = useRef(null);
 
     useEffect(() => {

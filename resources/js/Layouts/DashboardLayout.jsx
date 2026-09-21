@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Head, Link, router, usePage } from '@inertiajs/react';
 import { BarChart3, BookOpen, Database, LogOut, Menu, Settings, X } from 'lucide-react';
+import Omnibox from '../Components/Omnibox';
 
 export default function DashboardLayout({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
