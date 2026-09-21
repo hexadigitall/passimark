@@ -130,6 +130,10 @@ export default function DashboardLayout({ children }) {
                                 <h1 className="text-xl font-bold text-white">{isStaff ? 'Passimark Operations' : 'Adaptive Certification Assessment'}</h1>
                             </div>
 
+                            <div className="hidden w-full max-w-md flex-1 px-4 lg:mx-auto lg:block">
+                                <Omnibox />
+                            </div>
+
                             <div className="flex items-center space-x-4">
                                 {!isStaff && (
                                 <label className="hidden items-center gap-2 text-sm text-slate-400 md:flex">
