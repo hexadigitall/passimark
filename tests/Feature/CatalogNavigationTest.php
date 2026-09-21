@@ -139,4 +139,30 @@ class CatalogNavigationTest extends TestCase
         $this->assertArrayHasKey('url', $page['props']['continueSession']);
         $this->assertArrayHasKey('session_id', $page['props']['continueSession']);
     }
+
+    public function test_catalog_search_omnibox_returns_lean_flat_hits(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $json = $this->actingAs($student)->getJson('/catalog/search?q=sec')->assertOk()->json();
+
+        $this->assertSame(['data', 'query', 'total'], array_keys($json));
+        $this->assertSame('sec', $json['query']);
+        $this->assertGreaterThanOrEqual(1, $json['total']);
+        $this->assertArrayHasKey('cert_key', $json['data'][0]);
+        $this->assertArrayHasKey('title', $json['data'][0]);
+        $this->assertArrayHasKey('bundle_url', $json['data'][0]);
+        $this->assertStringContainsString('/certs/', $json['data'][0]['bundle_url']);
+    }
+
+    public function test_catalog_search_blank_query_returns_entire_lean_fixture_catalog(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $json = $this->actingAs($student)->getJson('/catalog/search')->assertOk()->json();
+
+        // The feature fixture seeds exactly 3 active tracks (SEC+, CISSP, AWS-CCP).
+        $this->assertSame(3, $json['total']);
+        $this->assertCount(3, $json['data']);
+    }
 }

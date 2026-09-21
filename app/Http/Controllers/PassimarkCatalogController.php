@@ -109,7 +109,10 @@ class PassimarkCatalogController extends Controller
                     'title' => $track->title,
                     'region' => $track->region,
                     'bundle_url' => route('passimark.cert', ['certKey' => $track->cert_key]),
-                ]);
+                ])
+                ->groupBy('cert_key')
+                ->map(fn ($rows) => $rows->first())
+                ->values();
         });
 
         $hits = $query !== ''
