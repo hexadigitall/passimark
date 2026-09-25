@@ -162,7 +162,7 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 
 ## Sprint 8.1: First-run funnel + one-student catalog chrome (Lock → Splash → Intro → Auth → Focus → Permissions → Dashboard)
 
-**Status:** lock/splash/intro **landed** (real `Passimark/Funnel/{Lock,Splash,Intro}` screens, controller lock/splash/intro re-targeted); auth/focus/permissions rungs **still PENDING** (render Dashboard)  ·  **Branch:** `feature/sprint-8-1-first-run-funnel` (from `62ae3c0`)  ·  **Doc:** `docs/sprint-8-1-first-run-funnel.md`
+**Status:** lock/splash/intro **landed** (real `Passimark/Funnel/{Lock,Splash,Intro}` screens, controller lock/splash/intro re-targeted); ALL SEVEN rungs land real dedicated zero-import screens (Auth/Focus/Permissions LANDED: Pages/Passimark/Funnel/{Auth,Focus,Permissions}.jsx = 1302/1259/1302 B, controller rungs auth/focus/permissions render them verbatim at lines 78/92/106) and the funnel CONVERGES into the real lean suite-bound destination Passimark/Dashboard.jsx (2131 B, zero-import, suite-pinned by name AdminDashboardTest:64) **still PENDING** (render Dashboard)  ·  **Branch:** `feature/sprint-8-1-first-run-funnel` (from `62ae3c0`)  ·  **Doc:** `docs/sprint-8-1-first-run-funnel.md`
 
 **Why:** Sprint 7.9b proved the complete Uniform-205 catalog is real (205 certs / 2,870 sessions /
 8,610 exams / 167,133 questions, seeded + verified). The one thing left: **surfacing 205 certs to a
