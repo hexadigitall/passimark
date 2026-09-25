@@ -23,6 +23,10 @@ class PassimarkFunnelController extends Controller
     /** Verbatim local gate — identical to PassimarkCatalogController::ensureEnrolled(). */
     private function ensureEnrolled(): void
     {
+        if (! Auth::check()) {
+            return;
+        }
+
         if (PassimarkProgress::where('user_id', Auth::id())->doesntExist()) {
             Curriculum::enrollFirstSteps(Auth::user());
         }
@@ -70,7 +74,7 @@ class PassimarkFunnelController extends Controller
         ]);
     }
 
-    /** Rung 4 — Auth (account confirmation). */
+    /** Rung 4 — Auth (account confirmation). Signs the learner in before the gated rungs. */
     public function auth(): \Inertia\Response
     {
         $this->ensureEnrolled();
@@ -78,7 +82,7 @@ class PassimarkFunnelController extends Controller
         return Inertia::render('Passimark/Funnel/Auth', [
             'funnel' => [
                 'step' => 'auth',
-                'next' => route('passimark.funnel.focus'),
+                'next' => route('login'),
                 'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
             ],
         ]);
@@ -106,7 +110,7 @@ class PassimarkFunnelController extends Controller
         return Inertia::render('Passimark/Funnel/Permissions', [
             'funnel' => [
                 'step' => 'permissions',
-                'next' => route('passimark.dashboard'),
+                'next' => route('dashboard'),
                 'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
             ],
         ]);

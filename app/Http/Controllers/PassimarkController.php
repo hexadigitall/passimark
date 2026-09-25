@@ -12,6 +12,11 @@ use Inertia\Inertia;
 class PassimarkController extends Controller
 {
     public function dashboard(Request $request){
+        // A guest lands on the first-run ladder (rung 1, Lock) instead of a login wall.
+        if (! Auth::check()) {
+            return redirect()->route('passimark.funnel.lock');
+        }
+
         // Staff land on the operations dashboard; learners get the catalog tile drill-down.
         if (in_array(Auth::user()?->role, ['admin', 'instructor'], true)) {
             return app(PassimarkAdminController::class)->dashboard();

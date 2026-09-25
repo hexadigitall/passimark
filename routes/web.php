@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, CertificateController, AuthController};
+use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, PassimarkFunnelController, CertificateController, AuthController};
 use Illuminate\Support\Facades\Route;
 
 // Public credential verification (QR target) — no auth so a scanned code resolves anywhere.
@@ -16,9 +16,13 @@ Route::middleware(['guest'])->group(function(){
 // Logout route
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 
+// Entry route. Declared outside the auth group so a guest reaches the controller and is
+// sent to the first-run ladder (rung 1, Lock); an authenticated user still gets the
+// dashboard exactly as before.
+Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
+
 // Authenticated routes
 Route::middleware(['auth'])->group(function(){
-    Route::get('/', [PassimarkController::class,'dashboard'])->name('dashboard');
     Route::get('/catalog/search', [PassimarkCatalogController::class,'search'])->name('passimark.catalog.search');
     Route::get('/certs/{certKey}', [PassimarkCatalogController::class,'cert'])->name('passimark.cert');
     Route::get('/certs/{certKey}/{track:slug}', [PassimarkCatalogController::class,'bundle'])->name('passimark.bundle');
@@ -37,11 +41,18 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/certificate/{progress}', [CertificateController::class,'show'])->name('passimark.certificate');
 });
 
-Route::middleware(['auth'])->prefix('passimark')->name('passimark.funnel.')->group(function(){
+// Funnel — pre-login ladder. Rung 1 (Lock) is what a guest lands on at '/', so the
+// walkthrough is reachable before any account exists. ensureEnrolled() is a no-op for
+// guests, so these rungs render identically signed-in or signed-out.
+Route::prefix('passimark')->name('passimark.funnel.')->group(function(){
     Route::get('/lock', [PassimarkFunnelController::class,'lock'])->name('lock');
     Route::get('/splash', [PassimarkFunnelController::class,'splash'])->name('splash');
     Route::get('/intro', [PassimarkFunnelController::class,'intro'])->name('intro');
     Route::get('/auth', [PassimarkFunnelController::class,'auth'])->name('auth');
+});
+
+// Funnel — post-login rungs. These read/write the learner's own record, so they stay gated.
+Route::middleware(['auth'])->prefix('passimark')->name('passimark.funnel.')->group(function(){
     Route::get('/focus', [PassimarkFunnelController::class,'focus'])->name('focus');
     Route::get('/permissions', [PassimarkFunnelController::class,'permissions'])->name('permissions');
 });
