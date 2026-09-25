@@ -37,7 +37,7 @@ function monogram(title = '') {
     .toUpperCase() || '?';
 }
 
-export default function Dashboard({ sections = [], stats = {}, region = '', continueSession = null }) {
+export default function Dashboard({ sections = [], stats = {}, region = '', continueSession = null, focus = null }) {
   const [query, setQuery] = useState('');
   const [resuming, setResuming] = useState(false);
 
@@ -79,6 +79,24 @@ export default function Dashboard({ sections = [], stats = {}, region = '', cont
             </p>
           </div>
         </div>
+
+        {focus && (
+          <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-slate-700 bg-slate-900 p-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Your focus</p>
+              <p className="mt-1 truncate text-base font-semibold text-white">{focus.title}</p>
+              <p className="text-xs text-slate-400">
+                {focus.region} · {focus.sessions_done} / {focus.sessions_total} sessions ({focus.percent}%)
+              </p>
+            </div>
+            <Link
+              href="/passimark/focus"
+              className="shrink-0 rounded-lg border border-slate-700 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-700"
+            >
+              Change
+            </Link>
+          </div>
+        )}
 
         {continueSession && (
           <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-500/10 to-transparent p-5 sm:flex-row sm:items-center sm:justify-between">

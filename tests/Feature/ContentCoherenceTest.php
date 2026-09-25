@@ -64,7 +64,7 @@ class ContentCoherenceTest extends TestCase
             'email' => 'candidate@example.com',
             'password' => 'secret-pass-1',
             'password_confirmation' => 'secret-pass-1',
-        ])->assertRedirect(route('dashboard'));
+        ])->assertRedirect(route('passimark.funnel.focus'));
 
         $user = User::where('email', 'candidate@example.com')->firstOrFail();
         $this->assertSame('student', $user->role);

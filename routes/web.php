@@ -54,7 +54,9 @@ Route::prefix('passimark')->name('passimark.funnel.')->group(function(){
 // Funnel — post-login rungs. These read/write the learner's own record, so they stay gated.
 Route::middleware(['auth'])->prefix('passimark')->name('passimark.funnel.')->group(function(){
     Route::get('/focus', [PassimarkFunnelController::class,'focus'])->name('focus');
+    Route::post('/focus', [PassimarkFunnelController::class,'saveFocus'])->name('focus.update');
     Route::get('/permissions', [PassimarkFunnelController::class,'permissions'])->name('permissions');
+    Route::post('/permissions/complete', [PassimarkFunnelController::class,'completeFunnel'])->name('permissions.complete');
 });
 
 Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(function(){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Services\Curriculum;
+use App\Http\Controllers\PassimarkFunnelController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -31,12 +32,32 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
-            return redirect()->intended(route('dashboard'));
+
+            return redirect()->intended($this->landingFor(Auth::user()));
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    /**
+     * Where a successful sign-in lands. A learner who has not finished the post-login rungs
+     * continues at rung 5 (focus) so the ladder is actually walked end to end; once
+     * permissions has been completed, returning learners go straight to their dashboard.
+     * Staff never enter the learner funnel.
+     */
+    private function landingFor(?User $user): string
+    {
+        if ($user && in_array($user->role, ['admin', 'instructor'], true)) {
+            return route('dashboard');
+        }
+
+        if ($user && ! PassimarkFunnelController::hasCompletedFunnel($user)) {
+            return route('passimark.funnel.focus');
+        }
+
+        return route('dashboard');
     }
 
     /**
@@ -69,7 +90,9 @@ class AuthController extends Controller
 
         Curriculum::enrollFirstSteps($user);
 
-        return redirect()->route('dashboard');
+        return redirect()->route($this->landingFor($user) === route('dashboard')
+            ? 'dashboard'
+            : 'passimark.funnel.focus');
     }
 
     /**

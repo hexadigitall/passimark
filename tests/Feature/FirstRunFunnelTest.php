@@ -90,4 +90,108 @@ class FirstRunFunnelTest extends TestCase
                 ->component('Passimark/Funnel/Permissions')
                 ->where('funnel.next', route('dashboard'))            );
     }
+
+    public function test_signing_in_continues_the_ladder_at_the_focus_rung(): void
+    {
+        $this->post(route('login'), [
+            'email' => 'student@passimark.com',
+            'password' => 'password',
+        ])->assertRedirect(route('passimark.funnel.focus'));
+    }
+
+    public function test_completing_the_ladder_sends_returning_learners_straight_to_the_dashboard(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+        $student->preferences = ['focus' => 'aws-cp', 'funnel_completed' => true];
+        $student->save();
+
+        $this->post(route('login'), [
+            'email' => 'student@passimark.com',
+            'password' => 'password',
+        ])->assertRedirect(route('dashboard'));
+    }
+
+    public function test_staff_never_enter_the_learner_funnel(): void
+    {
+        $this->post(route('login'), [
+            'email' => 'admin@passimark.com',
+            'password' => 'password',
+        ])->assertRedirect(route('dashboard'));
+    }
+
+    public function test_focus_rung_offers_the_real_catalog_grouped_by_region(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $response = $this->actingAs($student)->get(route('passimark.funnel.focus'));
+        $response->assertOk();
+
+        $props = $response->viewData('page')['props'];
+        $this->assertNotEmpty($props['options']);
+        $this->assertSame('cissp', $props['options'][0]['cert_key']);
+        $this->assertArrayHasKey('region', $props['options'][0]);
+    }
+
+    public function test_saving_a_focus_persists_it_and_advances_to_permissions(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $this->actingAs($student)
+            ->post(route('passimark.funnel.focus.update'), ['cert_key' => 'cissp'])
+            ->assertRedirect(route('passimark.funnel.permissions'));
+
+        $this->assertSame('cissp', $student->fresh()->preferences['focus']);
+    }
+
+    public function test_saving_a_focus_rejects_a_certification_that_does_not_exist(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $this->actingAs($student)
+            ->from(route('passimark.funnel.focus'))
+            ->post(route('passimark.funnel.focus.update'), ['cert_key' => 'not-a-real-cert'])
+            ->assertRedirect(route('passimark.funnel.focus'))
+            ->assertSessionHasErrors('cert_key');
+
+        $this->assertArrayNotHasKey('focus', $student->fresh()->preferences ?? []);
+    }
+
+    public function test_completing_permissions_sets_the_flag_and_lands_on_the_dashboard(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+
+        $this->actingAs($student)
+            ->post(route('passimark.funnel.permissions.complete'))
+            ->assertRedirect(route('dashboard'));
+
+        $this->assertTrue($student->fresh()->preferences['funnel_completed']);
+    }
+
+    public function test_dashboard_reads_the_saved_focus_back(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+        $student->preferences = ['focus' => 'cissp', 'funnel_completed' => true];
+        $student->save();
+
+        $this->actingAs($student)->get('/')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('Passimark/Dashboard')
+                ->where('focus.cert_key', 'cissp')
+                ->where('focus.title', 'CISSP')
+                ->has('focus.sessions_total')
+                ->has('focus.percent')
+            );
+    }
+
+    public function test_dashboard_focus_is_null_when_nothing_was_chosen(): void
+    {
+        $student = User::where('email', 'student@passimark.com')->firstOrFail();
+        $student->preferences = ['funnel_completed' => true];
+        $student->save();
+
+        $this->actingAs($student)->get('/')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page->where('focus', null));
+    }
 }

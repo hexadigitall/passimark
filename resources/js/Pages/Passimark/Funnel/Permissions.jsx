@@ -1,3 +1,5 @@
+import { router } from '@inertiajs/react';
+
 export default function Permissions({ funnel }) {
   const ladder = funnel?.ladder ?? ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'];
   const step = funnel?.step ?? 'permissions';
@@ -50,12 +52,20 @@ export default function Permissions({ funnel }) {
         </ol>
 
         {next ? (
-          <a
-            href={next}
-            className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-400"
+          <form
+            className="mt-6"
+            onSubmit={(event) => {
+              event.preventDefault();
+              router.post(funnel?.submit ?? '/passimark/permissions/complete');
+            }}
           >
-            Skip to dashboard
-          </a>
+            <button
+              type="submit"
+              className="inline-flex w-full items-center justify-center rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-400"
+            >
+              Skip to dashboard
+            </button>
+          </form>
         ) : null}
       </div>
     </div>

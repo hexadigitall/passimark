@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PassimarkProgress;
+use App\Models\{PassimarkCertificationTrack, PassimarkProgress};
 use App\Services\Curriculum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 
 /**
  * Sprint 9.5 Funnel — backend route group for the first-run ladder.
  *
- * Every rung is a REAL named route and renders a REAL Inertia page, so a
- * learner can always advance without a dead anchor. The dedicated React
- * Lock/Splash/Intro/Auth/Focus/Permissions screens land as the funnel-chrome
- * frontend slice (tracker: PENDING). Until then each rung renders the real
- * Dashboard page, so the ladder is navigable end-to-end today and every route
- * name it exposes already resolves.
+ * Rungs 1-4 (lock/splash/intro/auth) are reachable before an account exists. Rungs 5-7
+ * (focus/permissions/dashboard) read and write the learner's own record, so they stay
+ * behind auth and are reached by AuthController after a successful sign-in.
  */
 class PassimarkFunnelController extends Controller
 {
+    private const LADDER = ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'];
+
     /** Verbatim local gate — identical to PassimarkCatalogController::ensureEnrolled(). */
     private function ensureEnrolled(): void
     {
@@ -41,7 +41,7 @@ class PassimarkFunnelController extends Controller
             'funnel' => [
                 'step' => 'lock',
                 'next' => route('passimark.funnel.splash'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'ladder' => self::LADDER,
             ],
         ]);
     }
@@ -55,7 +55,7 @@ class PassimarkFunnelController extends Controller
             'funnel' => [
                 'step' => 'splash',
                 'next' => route('passimark.funnel.intro'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'ladder' => self::LADDER,
             ],
         ]);
     }
@@ -69,7 +69,7 @@ class PassimarkFunnelController extends Controller
             'funnel' => [
                 'step' => 'intro',
                 'next' => route('passimark.funnel.auth'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'ladder' => self::LADDER,
             ],
         ]);
     }
@@ -83,7 +83,7 @@ class PassimarkFunnelController extends Controller
             'funnel' => [
                 'step' => 'auth',
                 'next' => route('login'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'ladder' => self::LADDER,
             ],
         ]);
     }
@@ -94,12 +94,60 @@ class PassimarkFunnelController extends Controller
         $this->ensureEnrolled();
 
         return Inertia::render('Passimark/Funnel/Focus', [
+            'options' => $this->focusOptions(),
+            'selected' => Auth::user()?->preferences['focus'] ?? null,
             'funnel' => [
                 'step' => 'focus',
                 'next' => route('passimark.funnel.permissions'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'submit' => route('passimark.funnel.focus.update'),
+                'ladder' => self::LADDER,
             ],
         ]);
+    }
+
+    /**
+     * The real certification catalog, grouped by region. The picker offers what actually
+     * exists in the DB rather than a hardcoded list, so a retired cert cannot be selected.
+     */
+    private function focusOptions(): array
+    {
+        return PassimarkCertificationTrack::query()
+            ->where('is_active', true)
+            ->orderBy('region')
+            ->orderBy('title')
+            ->get(['cert_key', 'title', 'region'])
+            ->map(fn (PassimarkCertificationTrack $track) => [
+                'cert_key' => $track->certKey(),
+                'title' => $track->title,
+                'region' => $track->region ?: 'General',
+            ])
+            ->sortBy([['region', 'asc'], ['title', 'asc']])
+            ->values()
+            ->all();
+    }
+
+    /** Persist the chosen focus into the users.preferences json column. */
+    public function saveFocus(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $active = PassimarkCertificationTrack::query()
+            ->where('is_active', true)
+            ->pluck('cert_key')
+            ->map(fn ($key) => strtolower((string) $key))
+            ->all();
+
+        $validated = $request->validate([
+            'cert_key' => ['required', 'string', Rule::in($active)],
+        ], [
+            'cert_key.in' => 'That certification is not available. Pick one from the list.',
+        ]);
+
+        $user = Auth::user();
+        $preferences = $user->preferences ?? [];
+        $preferences['focus'] = mb_strtolower($validated['cert_key']);
+        $user->preferences = $preferences;
+        $user->save();
+
+        return redirect()->route('passimark.funnel.permissions');
     }
 
     /** Rung 6 — Permission prime (skippable). */
@@ -111,8 +159,30 @@ class PassimarkFunnelController extends Controller
             'funnel' => [
                 'step' => 'permissions',
                 'next' => route('dashboard'),
-                'ladder' => ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'],
+                'submit' => route('passimark.funnel.permissions.complete'),
+                'ladder' => self::LADDER,
             ],
         ]);
+    }
+
+    /**
+     * Rung 7 — close out the first run. Flipping this flag is what stops AuthController from
+     * bouncing a returning learner back into the ladder on every subsequent login.
+     */
+    public function completeFunnel(): \Illuminate\Http\RedirectResponse
+    {
+        $user = Auth::user();
+        $preferences = $user->preferences ?? [];
+        $preferences['funnel_completed'] = true;
+        $user->preferences = $preferences;
+        $user->save();
+
+        return redirect()->route('dashboard');
+    }
+
+    /** True once the learner has finished the post-login rungs. */
+    public static function hasCompletedFunnel(?object $user): bool
+    {
+        return (bool) ($user->preferences['funnel_completed'] ?? false);
     }
 }

@@ -83,6 +83,7 @@ class PassimarkCatalogController extends Controller
         return Inertia::render('Passimark/Dashboard', [
             'sections' => $sections,
             'region' => $region,
+            'focus' => $this->focusPreference(),
             'stats' => [
                 'categories' => $categories->count(),
                 'bundles' => $tracks->count(),
@@ -91,6 +92,41 @@ class PassimarkCatalogController extends Controller
             ],
             'continueSession' => $this->continuePayload($userId),
         ]);
+    }
+
+    /**
+     * The learner's saved focus (rung 5), resolved back to a real catalog row so the
+     * dashboard can show the title rather than a bare cert_key.
+     */
+    private function focusPreference(): ?array
+    {
+        $key = Auth::user()?->preferences['focus'] ?? null;
+
+        if (! is_string($key) || $key === '') {
+            return null;
+        }
+
+        $track = PassimarkCertificationTrack::query()
+            ->where('is_active', true)
+            ->get()
+            ->first(fn (PassimarkCertificationTrack $candidate) => $candidate->certKey() === mb_strtolower($key));
+
+        if (! $track) {
+            return null;
+        }
+
+        $done = $this->progress->doneCountsByTrack((int) Auth::id());
+        $total = (int) $track->sessions()->count();
+        $completed = (int) ($done[$track->id] ?? 0);
+
+        return [
+            'cert_key' => $track->certKey(),
+            'title' => $track->title,
+            'region' => $track->region ?: 'General',
+            'sessions_done' => $completed,
+            'sessions_total' => $total,
+            'percent' => $total > 0 ? (int) round($completed / $total * 100) : 0,
+        ];
     }
 
     public function search(Request $request)
