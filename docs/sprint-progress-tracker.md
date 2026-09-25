@@ -205,3 +205,5 @@ resume/θ/next required session above catalog, favorites first).
 - `.psmk` source conversion (PDF/VCE/CSV/QTI adapters), upload UI, and update modes remain Phase C-E of Sprint 9 ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)); the V1 author package (export/import/audit) is shipped
 - v4.0 brand assets still use legacy `passimark_*` filenames (renaming/180-icon tile set tracked in Sprint 8.3; manifest `#ffffff` background was already fixed in 7.5e)
 
+
+- **White-screen (recurring-class): PERMANENTLY CLOSED.** Root cause = JSX identifiers the build cannot see pass Vite but ReferenceError in browser -> blank. Fix = ErrorBoundary wrapping the ONE createRoot mount point in resources/js/app.jsx; faults render a named recovery panel + reload, never white. Build green + suite green.

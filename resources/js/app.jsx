@@ -1,3 +1,4 @@
+import ErrorBoundary from './Components/ErrorBoundary';
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
 import '../css/app.css';
@@ -15,6 +16,6 @@ createInertiaApp({
         return page.default;
     },
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />);
+        createRoot(el).render(<ErrorBoundary><App {...props} /></ErrorBoundary>);
     },
 });
