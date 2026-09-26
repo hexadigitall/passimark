@@ -219,6 +219,73 @@ class ScreenCrawlTest extends TestCase
         }
     }
 
+    /**
+     * app.jsx must not eagerly inline every screen. `import.meta.glob(...,
+     * { eager: true })` puts all 28 screens in the entry chunk, so a learner
+     * opening the login form downloads the exam engine and the admin control
+     * center. Assert the source is lazy AND that the built output really split.
+     */
+    public function test_screens_are_code_split_not_eagerly_inlined(): void
+    {
+        $source = file_get_contents(resource_path('js/app.jsx'));
+
+        $this->assertStringNotContainsString(
+            "eager: true",
+            $source,
+            'app.jsx eagerly inlines every page into the entry chunk'
+        );
+
+        $this->assertMatchesRegularExpression(
+            '/import\.meta\.glob\(/',
+            $source,
+            'app.jsx no longer registers its pages at all'
+        );
+
+        $entry = $this->entryChunk();
+
+        if (! $entry) {
+            $this->markTestSkipped('no built entry chunk; run npm run build');
+        }
+
+        $code = file_get_contents($entry);
+
+        // A marker string unique to each heavy screen: if code splitting works,
+        // none of these can be in the entry chunk.
+        foreach ([
+            'Admin Control Center' => 'Passimark/Admin',
+            'Assessment result' => 'Passimark/Result',
+            'Find a certification' => 'Omnibox',
+        ] as $marker => $owner) {
+            $this->assertStringNotContainsString(
+                $marker,
+                $code,
+                "{$owner} is inlined into the entry chunk; code splitting regressed"
+            );
+        }
+
+        $chunks = glob(public_path('build/assets/*.js'));
+        $this->assertGreaterThan(
+            1,
+            count($chunks),
+            'the build emitted a single chunk, so nothing is code split'
+        );
+    }
+
+    /** The entry chunk is whatever the Vite manifest points the app entry at. */
+    private function entryChunk(): ?string
+    {
+        $manifest = public_path('build/manifest.json');
+
+        if (! file_exists($manifest)) {
+            return null;
+        }
+
+        $data = json_decode(file_get_contents($manifest), true);
+        $file = $data['resources/js/app.jsx']['file'] ?? null;
+
+        return $file ? public_path('build/' . $file) : null;
+    }
+
     private function componentFileExists(string $component): bool
     {
         return file_exists(resource_path('js/Pages/' . $component . '.jsx'));

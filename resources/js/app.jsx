@@ -60,12 +60,12 @@ window.addEventListener('error', (event) => showFault(event.error || event.messa
 window.addEventListener('unhandledrejection', (event) => showFault(event.reason));
 
 try {
-  // Lazy, NOT eager. `eager: true` pulled all 28 screens into the single entry
+  // Lazy, NOT eager. An eager glob pulls all 28 screens into the single entry
   // chunk, so a learner downloading the login form also downloaded the exam
   // engine, the admin control center and the whole catalog. Rollup splits each
   // page into its own chunk and the browser fetches only the one it renders.
-  // The lookup is kept synchronous by pre-loading the resolved page component,
-  // which is the contract Inertia's `resolve` expects.
+  // The lookup stays synchronous from Inertia's point of view because its core
+  // awaits the resolve result (Promise.resolve(this.resolveComponent(...))).
   const pages = import.meta.glob('./Pages/**/*.jsx');
 
   createInertiaApp({
