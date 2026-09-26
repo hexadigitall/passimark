@@ -1,10 +1,16 @@
-const CACHE = 'passimark-v1';
-const CORE = ['/', '/manifest.json'];
+const CACHE = 'passimark-v2';
+
+// Only ever cache immutable, content-hashed build output. Documents (HTML) and
+// data responses are NEVER cached: an HTML shell pins a specific bundle hash, so
+// serving a cached shell re-pins a stale bundle and produces runtime errors that
+// match no code on disk. Hashed assets are safe to keep because their filename
+// changes whenever their bytes do.
+const precache = ['/manifest.json'];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE)
-            .then((cache) => cache.addAll(CORE))
+            .then((cache) => cache.addAll(precache))
             .then(() => self.skipWaiting())
     );
 });
@@ -30,25 +36,24 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // App shell navigations + resolved paths: network-first, cache fallback
-    if (request.mode === 'navigate' || !url.pathname.includes('.')) {
-        event.respondWith(
-            fetch(request)
-                .then((response) => {
-                    const copy = response.clone();
-                    caches.open(CACHE).then((cache) => cache.put(request, copy));
-                    return response;
-                })
-                .catch(() => caches.match(request).then((hit) => hit || caches.match('/')))
-        );
+    // Documents and Inertia payloads: network only. When offline, fail cleanly
+    // rather than answering with a shell that references a bundle we no longer have.
+    const isDocument = request.mode === 'navigate'
+        || request.headers.get('X-Inertia')
+        || request.headers.get('Accept')?.includes('text/html');
+
+    if (isDocument) {
+        event.respondWith(fetch(request));
         return;
     }
 
-    // Hashed build assets (app.css/app.[hash].js, images): cache-first, network warm
+    // Hashed build assets: cache-first is correct because the name is the hash.
     event.respondWith(
         caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-            const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put(request, copy));
+            if (response.ok && response.type === 'basic') {
+                const copy = response.clone();
+                caches.open(CACHE).then((cache) => cache.put(request, copy));
+            }
             return response;
         }))
     );
