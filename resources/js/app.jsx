@@ -1,3 +1,4 @@
+import React from 'react';
 import ErrorBoundary from './Components/ErrorBoundary';
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
@@ -5,6 +6,18 @@ import '../css/app.css';
 import '../css/fault.css';
 
 const mount = document.getElementById('app');
+
+/** Branded splash shown while a lazily-loaded screen chunk is in flight. */
+function BootScreen() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-950">
+      <div className="flex flex-col items-center gap-3">
+        <span className="h-8 w-8 animate-spin rounded-full border-2 border-slate-700 border-t-emerald-400" />
+        <p className="text-sm text-slate-400">Loading Passimark...</p>
+      </div>
+    </div>
+  );
+}
 
 function showFault(error) {
   if (!mount) {
@@ -47,20 +60,32 @@ window.addEventListener('error', (event) => showFault(event.error || event.messa
 window.addEventListener('unhandledrejection', (event) => showFault(event.reason));
 
 try {
-  const pages = import.meta.glob('./Pages/**/*.jsx', { eager: true });
+  // Lazy, NOT eager. `eager: true` pulled all 28 screens into the single entry
+  // chunk, so a learner downloading the login form also downloaded the exam
+  // engine, the admin control center and the whole catalog. Rollup splits each
+  // page into its own chunk and the browser fetches only the one it renders.
+  // The lookup is kept synchronous by pre-loading the resolved page component,
+  // which is the contract Inertia's `resolve` expects.
+  const pages = import.meta.glob('./Pages/**/*.jsx');
 
   createInertiaApp({
     resolve: (name) => {
-      const page = pages[`./Pages/${name}.jsx`];
+      const load = pages[`./Pages/${name}.jsx`];
 
-      if (!page) {
+      if (!load) {
         throw new Error(`Inertia page not found: ${name}`);
       }
 
-      return page.default;
+      return load();
     },
     setup({ el, App, props }) {
-      createRoot(el).render(<ErrorBoundary><App {...props} /></ErrorBoundary>);
+      createRoot(el).render(
+        <React.Suspense fallback={<BootScreen />}>
+          <ErrorBoundary>
+            <App {...props} />
+          </ErrorBoundary>
+        </React.Suspense>,
+      );
     },
   });
 } catch (error) {
