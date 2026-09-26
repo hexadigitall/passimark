@@ -1,9 +1,12 @@
+import { Head } from '@inertiajs/react';
 export default function Auth({ funnel }) {
   const ladder = funnel?.ladder ?? ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'];
   const step = funnel?.step ?? 'auth';
   const next = funnel?.next;
 
   return (
+    <>
+      <Head title="Confirm your account" />
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 blur-3xl" />
@@ -59,5 +62,6 @@ export default function Auth({ funnel }) {
         ) : null}
       </div>
     </div>
+    </>
   );
 }

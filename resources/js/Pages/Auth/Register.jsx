@@ -1,4 +1,4 @@
-import { Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/react';
 import { ArrowRight, Lock, Mail, UserRound } from 'lucide-react';
 
 export default function Register() {
@@ -15,6 +15,8 @@ export default function Register() {
     };
 
     return (
+        <>
+            <Head title="Create your account" />
         <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 mix-blend-multiply blur-3xl"></div>
@@ -88,6 +90,7 @@ export default function Register() {
                 </form>
             </main>
         </div>
+        </>
     );
 }
 
