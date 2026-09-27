@@ -61,18 +61,32 @@ appears 0 times by design, and adding it implies a light theme that does not
 exist. Text hierarchy comes from `slate-100` (primary) → `slate-400`
 (secondary) → `slate-500` (placeholder/muted).
 
-> **Unresolved conflict.** These are stock Tailwind values, but
-> `tailwind.config.js` declares a competing brand palette (`pm.brand`
-> `#1A9E2D`, `pm.accent` `#7CFC8F`, `pm.deep` `#0F172A`) and
-> `public/manifest.json` ships `#1A9E2D` as the installed theme colour. The
-> running app and the installed app are therefore different greens. One palette
-> must win and the other must be deleted — see G-12. **Do not add new
-> `emerald-*` surfaces until this is decided**, or the migration grows.
+> **Resolved.** The stock Tailwind greens are gone. `docs/v4-worldwide-catalog-spec.md`
+> §2.2 has specified the brand since Sprint 4 — Primary `#1A9E2D`, Deep `#0F5D2F`,
+> Accent `#7CFC8F`, Dark `#0F172A` — but those tokens reached `tailwind.config.js`
+> in Sprint 7 and were referenced **zero** times, so the UI rendered emerald
+> (hue 160–163°) against the spec's 129° while the manifest and the icon shipped
+> the spec green. Two hue families, and no test noticed.
+>
+> The app now renders the spec's palette as a real scale: `brand-50…950`, with
+> `brand-600` = Primary and `brand-800` = Deep exactly. Primary is anchored at
+> **600, not 500** — as a button fill with `slate-950` ink it only reaches
+> 5.74:1, while `brand-500` reaches 7.76:1. Steps 50–600 are ≥5.08:1 on `#0F172A`;
+> 700 is AA-large; 800+ are fill/border only. `BrandPaletteTest` enforces all of
+> it, including that no `emerald-*` class or raw emerald hex returns.
 
 ### 2.2 Typography
 
-**Now** — no webfont is loaded. Text resolves to the OS UI sans
-(`ui-sans-serif, system-ui, Segoe UI`). Scale usage: `text-sm` 193 · `text-xs`
+**Now** — Inter Variable, latin subset, self-hosted from `public/fonts`, declared
+at `font-weight: 100 900` with `font-display: swap` and an explicit
+`unicode-range`, and preloaded with `crossorigin`. One 47 KB file serves the whole
+weight axis, so the four weights the app uses cost one request rather than four
+static faces. `tailwind.config.js` `fontFamily.sans` and `fault.css` both resolve
+through the `--pm-font-sans` custom property in `app.css`, because the fault
+screen renders outside React and previously sat on its own unbranded stack while
+the JSX looked configured. `TypographyTest` guards it.
+
+Scale usage: `text-sm` 193 · `text-xs`
 123 · `text-lg` 25 · `text-xl` 16 · `text-3xl` 16 · `text-2xl` 13 ·
 `text-4xl` 4 · `text-base` 3.
 
@@ -428,10 +442,10 @@ by decision*. Ordered by user impact.
 | **G-09** | `ContentImport` is full-bleed while every other staff screen is shelled. Under §12.1 this is defensible — it is a single-task FOCUS screen — but it must stay deliberate. | Low | Accepted as FOCUS |
 | **G-10** | `sprint-8-1-first-run-funnel.md` still reads `Status: planned` and names 4 files that do not exist. `app-sitemap.md` has no knowledge of the funnel or the 205 catalog. | Low — documentation debt. | Open |
 | **G-11** | Dark-only with no `prefers-color-scheme` consideration. | — | Deferred by decision — see §2.1. |
-| **G-12** | **Brand split-brain.** `tailwind.config.js` declares `pm.brand` `#1A9E2D` and `pm.accent` `#7CFC8F`; the app renders stock Tailwind emerald (`#10B981`/`#059669`). `public/manifest.json` ships `theme_color: #1A9E2D`, so **the installed app icon and the running app are two different greens.** | **High** — visible in browser/OS chrome on every install. | Open — awaiting a decision |
-| **G-13** | No brand typeface. `font-display` is declared but unused and resolves to the OS default; no webfont is loaded. | Medium — "premium" is not achievable in Segoe UI. | Open — awaiting a decision |
-| **G-14** | `tabular-nums` was used 0 times despite live timers, score tables and attempt counts. Now applied to the dashboard progress strip and session counters. Exam timers and report tables still need it. | Medium — see §12.3a. | Partly closed |
-| **G-15** | `pm.accent`, `shadow-ring` and `font-display` are dead tokens — declared in config, referenced nowhere. | Low — but it is why G-12/G-13 went unnoticed. | Open |
+| **G-12** | **Brand split-brain.** `tailwind.config.js` declared `pm.brand` `#1A9E2D` / `pm.accent` `#7CFC8F` while the app rendered stock Tailwind emerald (hue 160–163° vs the spec's 129°), and the tokens were referenced zero times. | **High** — the running app and the installed app were two different greens, and shipping a library default is why the UI read generic. | **Closed** — the spec palette is implemented as `brand-50…950` (600 = Primary, 800 = Deep), 253 classes across 32 files retinted, and the raw emerald hexes in `fault.css` replaced. `BrandPaletteTest` (9 tests) prevents regression. |
+| **G-13** | No brand typeface. `font-display` was declared but unused, so text resolved to the OS UI sans — Segoe UI on Windows, SF on macOS, Roboto on Android. | Medium — three users on one dashboard saw three typefaces; invisible to a single-OS developer. | **Closed** — Inter Variable, latin subset, self-hosted and preloaded with `crossorigin`, 48,256 B (17.0% of the entry). `TypographyTest` (8 tests) guards it. |
+| **G-14** | `tabular-nums` was used 0 times despite live timers, score tables and attempt counts. | Medium — see §12.3a. | **Closed** — dashboard progress strip, exam timer, `StatStrip` values and all 12 report tables carrying score/θ/duration columns. Inter ships reliable tabular figures, so the webfont also fixes it at the source. |
+| **G-15** | `pm.accent`, `shadow-ring` and `font-display` were dead tokens — declared in config, referenced nowhere. The config advertised a design system the app did not implement. | Low — but it is why G-12/G-13 went unnoticed. | **Closed** — `pm.*` replaced by the real `brand` scale, `shadow-ring` removed (focus is expressed with `ring-*` at 38 call sites), `font-display` replaced by `fontFamily.sans`. No dead config remains. |
 
 **Note on G-08:** the 974 KB logo and 478 KB `icon_1024x1024.png` are referenced
 by nothing. They are repo assets, not page weight, and must not be dropped into
@@ -483,10 +497,14 @@ information design; do not import a foreign personality.
 
 ### 12.3 Three supporting concepts
 
-**a) Tabular figures for all measured data.** **Now:** `tabular-nums` 0 uses,
-`font-mono` 14. Scores, timers, attempt counts and table columns must not jitter
-as digits change. **Rule:** `tabular-nums` on every numeric cell, timer, and
-score. Cheapest visible quality win available.
+**a) Tabular figures for all measured data.** **Now:** applied to the dashboard
+progress strip, the exam timer, `StatStrip` values and all 12 report tables
+carrying score/θ/duration columns — set at the table level rather than per cell.
+Inter provides the figures reliably; several system stacks only do so
+inconsistently, which is part of why the webfont was worth the 48 KB.
+**Rule:** `tabular-nums` on every numeric cell, timer, and score. Cheapest
+visible quality win available, and `TypographyTest` fails the build if the timer
+or the report tables lose it.
 
 **b) Semantic colour as a state machine.** Tighten [§2.1](#21-colour) so the
 accent means exactly one thing per context:

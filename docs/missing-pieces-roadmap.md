@@ -139,7 +139,7 @@ The product is conceptually ready for multi-platform deployment, but the actual 
 ## 8. Branding and asset standardization
 The project already has logo and image assets, which is a strength. Favicon, apple-touch-icon, and web manifest icons are now wired into `resources/views/app.blade.php` and `public/manifest.json` (Sprint 4). Still needed:
 - one final approved logo set (v4.0 approved source `photo6321858088250300469.jpeg`; target filenames `logo-final-*.png`, `icon-*.png`)
-- `public/manifest.json` background must change `#ffffff` → `#0F172A` (brand `#1A9E2D` theme already correct) — tracked in Sprint 8.3
+- `public/manifest.json` background **done** — `#ffffff` → `#0F172A`, asserted by `CertificateIssuanceTest::test_pwa_manifest_matches_the_slate_theme` and extended by `BrandPaletteTest::the_pwa_manifest_reports_the_spec_colours` (theme_color must be the spec Primary `#1A9E2D`, and the blade `theme-color` meta must agree with the manifest)
 - standard usage across screens and packaging
 - platform-specific icon sizes and variants for native packaging (Android mipmaps, iOS icon sets — deferred until native packaging work begins, see Epic 7 in `mvp-backlog.md`)
 

@@ -129,7 +129,7 @@ passimark/
 │ #                                                 ThetaSparkline, domain heatmap (from tracks payload)
 │ #   PassimarkController::dashboard()           - 'tracks' = region-filterable per-cert sessions/theta_history/domains
 │ #   HandleInertiaRequests                      - shares 'regions' + 'ability.theta' (head badge + region nav)
-│ #   tailwind.config.js                         - pm.deep/brand/accent tokens (#0F172A / #1A9E2D / #7CFC8F)
+│ #   tailwind.config.js                         - brand-50…950 scale (600 = #1A9E2D Primary, 800 = #0F5D2F Deep) + accent/deep
 │ #   sees docs/sprint-6-irt-cat-engine.md
 │
 │ # Content coherence + onboarding + flow hardening (Sprint 7.5):
