@@ -90,6 +90,10 @@ class PassimarkCatalogController extends Controller
                 'sessions_total' => (int) $tracks->sum('sessions_count'),
                 'sessions_done' => (int) array_sum(array_intersect_key($done, array_flip($trackIds))),
             ],
+            // The dashboard is focus-first. `sections` is the explore/browse payload and
+            // is only rendered when the learner explicitly opens it, so a single total
+            // is enough to label that affordance honestly.
+            'catalogTotal' => $categories->count(),
             'continueSession' => $this->continuePayload($userId),
         ]);
     }
@@ -97,6 +101,11 @@ class PassimarkCatalogController extends Controller
     /**
      * The learner's saved focus (rung 5), resolved back to a real catalog row so the
      * dashboard can show the title rather than a bare cert_key.
+     *
+     * Carries the two things a one-student dashboard actually needs to be specific:
+     * the next actionable session in that track, and a bounded cohort of related
+     * certifications. Without these the dashboard has nothing to show except the
+     * 205-tile catalog wall, which is the problem this replaces.
      */
     private function focusPreference(): ?array
     {
@@ -115,18 +124,130 @@ class PassimarkCatalogController extends Controller
             return null;
         }
 
-        $done = $this->progress->doneCountsByTrack((int) Auth::id());
+        $userId = (int) Auth::id();
+        $done = $this->progress->doneCountsByTrack($userId);
+        $thetas = $this->progress->thetaByTrack($userId);
         $total = (int) $track->sessions()->count();
         $completed = (int) ($done[$track->id] ?? 0);
 
         return [
             'cert_key' => $track->certKey(),
             'title' => $track->title,
+            'slug' => $track->slug,
             'region' => $track->region ?: 'General',
+            'url' => route('passimark.cert', ['certKey' => $track->certKey()]),
             'sessions_done' => $completed,
             'sessions_total' => $total,
             'percent' => $total > 0 ? (int) round($completed / $total * 100) : 0,
+            'theta' => isset($thetas[$track->id]) ? round($thetas[$track->id], 2) : null,
+            'next_session' => $this->nextSessionFor($track, $userId),
+            'cohort' => $this->focusCohort($track, $done, $thetas),
         ];
+    }
+
+    /**
+     * The one session the learner should do next inside the focused track: the first
+     * still-outstanding assessable session in ladder order. Open work wins over
+     * untouched work so a half-finished session is never buried.
+     *
+     * @return array{session_id:int,title:string,number:?int,status:string,phase_type:?string,question_count:int,url:string,locked:bool}|null
+     */
+    private function nextSessionFor(PassimarkCertificationTrack $track, int $userId): ?array
+    {
+        $statuses = PassimarkProgress::query()
+            ->where('user_id', $userId)
+            ->pluck('status', 'session_id');
+
+        $next = $track->sessions()
+            ->where('question_count', '>', 0)
+            ->orderBy('order')
+            ->orderBy('id')
+            ->get()
+            ->first(function (PassimarkSession $session) use ($statuses) {
+                $status = $statuses[$session->id] ?? 'locked';
+
+                return ! in_array($status, ['passed', 'certified', 'completed'], true);
+            });
+
+        if (! $next) {
+            return null;
+        }
+
+        $status = $statuses[$next->id] ?? 'locked';
+
+        return [
+            'session_id' => $next->id,
+            'title' => $next->title,
+            'number' => $next->number,
+            'status' => $status,
+            'phase_type' => $next->phase_type,
+            'question_count' => (int) $next->question_count,
+            'locked' => $status === 'locked',
+            'url' => route('passimark.bundle', [
+                'certKey' => $track->certKey(),
+                'track' => $track->slug,
+            ]),
+        ];
+    }
+
+    /**
+     * A short, ranked list of certifications related to the focus, so the dashboard
+     * can show "more like this" without ever rendering the full catalog.
+     *
+     * Ranking is deliberate and cheap: other bundles of the same cert first, then
+     * siblings sharing the cert_key family prefix (aws, cissp, jlpt...), then the
+     * rest of the same region. Only the focused track's own progress counts, so the
+     * cohort stays a genuine suggestion rather than a second progress board.
+     *
+     * @return array<int,array<string,mixed>>
+     */
+    private function focusCohort(PassimarkCertificationTrack $track, array $done, array $thetas, int $limit = 6): array
+    {
+        $focusKey = $track->certKey();
+        $family = str_contains($focusKey, '-') ? explode('-', $focusKey)[0] : $focusKey;
+
+        $candidates = PassimarkCertificationTrack::query()
+            ->where('is_active', true)
+            ->where('id', '!=', $track->id)
+            ->where(function ($query) use ($focusKey, $family, $track) {
+                $query->whereRaw('LOWER(cert_key) = ?', [$focusKey])
+                    ->orWhereRaw('LOWER(cert_key) LIKE ?', [$family . '-%'])
+                    ->orWhere('region', $track->region);
+            })
+            ->withCount('sessions')
+            ->get();
+
+        $rank = static function (PassimarkCertificationTrack $candidate) use ($focusKey, $family, $track): int {
+            $key = $candidate->certKey();
+
+            if ($key === $focusKey) {
+                return 0;
+            }
+
+            return str_starts_with($key, $family . '-') ? 1 : ($candidate->region === $track->region ? 2 : 3);
+        };
+
+        return $candidates
+            ->sortBy(fn (PassimarkCertificationTrack $candidate) => [$rank($candidate), $candidate->title])
+            ->take($limit)
+            ->map(function (PassimarkCertificationTrack $candidate) use ($done, $thetas) {
+                $total = (int) $candidate->sessions_count;
+                $completed = (int) ($done[$candidate->id] ?? 0);
+
+                return [
+                    'cert_key' => $candidate->certKey(),
+                    'title' => $candidate->title,
+                    'region' => $candidate->region ?: 'General',
+                    'sessions_done' => $completed,
+                    'sessions_total' => $total,
+                    'percent' => $total > 0 ? (int) round($completed / $total * 100) : 0,
+                    'theta' => isset($thetas[$candidate->id]) ? round($thetas[$candidate->id], 2) : null,
+                    'has_progress' => $completed > 0,
+                    'url' => route('passimark.cert', ['certKey' => $candidate->certKey()]),
+                ];
+            })
+            ->values()
+            ->all();
     }
 
     public function search(Request $request)

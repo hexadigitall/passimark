@@ -169,11 +169,17 @@ class PassimarkFunnelController extends Controller
      * Rung 7 — close out the first run. Flipping this flag is what stops AuthController from
      * bouncing a returning learner back into the ladder on every subsequent login.
      */
-    public function completeFunnel(): \Illuminate\Http\RedirectResponse
+    public function completeFunnel(Request $request): \Illuminate\Http\RedirectResponse
     {
         $user = Auth::user();
         $preferences = $user->preferences ?? [];
         $preferences['funnel_completed'] = true;
+
+        // The opt-in is real and stored, so declining is genuinely different from
+        // accepting rather than the same button wearing two labels. Declining is
+        // always permitted and never blocks progress.
+        $preferences['deadline_reminders'] = $request->boolean('deadline_reminders');
+
         $user->preferences = $preferences;
         $user->save();
 

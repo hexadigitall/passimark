@@ -271,6 +271,51 @@ class ScreenCrawlTest extends TestCase
         );
     }
 
+    /**
+     * Internal route slugs must never reach the screen. The funnel once printed
+     * "1 lock 2 splash 3 intro 4 auth 5 focus 6 permissions 7 dashboard" as
+     * user-facing copy, which is developer plumbing, not a user journey.
+     */
+    public function test_funnel_screens_never_render_internal_rung_slugs(): void
+    {
+        $slugs = ['lock', 'splash', 'intro', 'auth', 'focus', 'permissions', 'dashboard'];
+
+        foreach (glob(resource_path('js/Pages/Passimark/Funnel/*.jsx')) as $file) {
+            $source = file_get_contents($file);
+            $name = basename($file);
+
+            // The ladder array may be referenced, but never rendered as a label.
+            $this->assertDoesNotMatchRegularExpression(
+                '/\{\s*rung\s*\}/',
+                $source,
+                "{$name} renders a raw rung slug as visible text"
+            );
+            $this->assertDoesNotMatchRegularExpression(
+                '/Rung\s*\{/',
+                $source,
+                "{$name} prints an internal 'Rung N of M' label"
+            );
+
+            // No screen may inline its own copy of the ladder as a fallback.
+            $this->assertStringNotContainsString(
+                "'lock', 'splash', 'intro'",
+                $source,
+                "{$name} duplicates the ladder array instead of reading the server value"
+            );
+        }
+
+        // The one place allowed to render position is the shared, wordless indicator.
+        $progress = file_get_contents(resource_path('js/Components/FunnelProgress.jsx'));
+        foreach ($slugs as $slug) {
+            $this->assertStringNotContainsString(
+                "'{$slug}'",
+                $progress,
+                "FunnelProgress hardcodes the '{$slug}' slug"
+            );
+        }
+        $this->assertStringContainsString('role="progressbar"', $progress);
+    }
+
     /** The entry chunk is whatever the Vite manifest points the app entry at. */
     private function entryChunk(): ?string
     {
