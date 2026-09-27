@@ -169,8 +169,11 @@ export default function DashboardLayout({ children }) {
                         </div>
                     </header>
 
-                    {/* Page Content */}
-                    <main className="flex-1 p-6">
+                    {/* Page Content. Padding steps down on small screens, and the
+                        width ceiling stops content stretching on ultrawide displays
+                        (G-01, G-03). Wide report tables scroll inside this, not the page. */}
+                    <main className="flex-1 p-4 sm:p-6">
+                        <div className="mx-auto w-full max-w-7xl">
                         {flashVisible && flash.success && (
                             <div className="mb-4 flex items-start justify-between gap-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
                                 <span>{flash.success}</span>
@@ -180,6 +183,7 @@ export default function DashboardLayout({ children }) {
                             </div>
                         )}
                         {children}
+                        </div>
                     </main>
                 </div>
             </div>

@@ -23,8 +23,8 @@ export default function Register() {
                 <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 mix-blend-multiply blur-3xl"></div>
             </div>
             <main className="relative w-full max-w-md">
-                <header className="mb-8 text-center">
-                    <h1 className="mb-2 text-4xl font-bold text-white">Passimark</h1>
+                <header className="mb-6 text-center sm:mb-8">
+                    <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">Passimark</h1>
                     <p className="text-slate-400">Create your learner account</p>
                 </header>
 

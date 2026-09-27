@@ -9,10 +9,10 @@ export default function Verify({ valid = false, credentialId = '', certificate =
   return (
     <>
       <Head title="Verify credential" />
-      <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-16 text-white">
+      <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-10 sm:px-6 sm:py-16 text-white">
         <section className="w-full max-w-xl">
           {valid ? (
-            <div className="rounded-3xl border border-emerald-500/30 bg-slate-900 p-8 text-center">
+            <div className="rounded-3xl border border-emerald-500/30 bg-slate-900 p-6 text-center sm:p-8">
               <BadgeCheck className="mx-auto h-12 w-12 text-emerald-400" />
               <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-emerald-400">Credential verified</p>
               <h1 className="mt-2 text-2xl font-bold text-white">{certificate.certification}</h1>
@@ -29,7 +29,7 @@ export default function Verify({ valid = false, credentialId = '', certificate =
               <p className="mt-6 break-all font-mono text-[11px] text-slate-600">{certificate.hash}</p>
             </div>
           ) : (
-            <div className="rounded-3xl border border-slate-700 bg-slate-900 p-8 text-center">
+            <div className="rounded-3xl border border-slate-700 bg-slate-900 p-6 text-center sm:p-8">
               <ShieldAlert className="mx-auto h-12 w-12 text-amber-400" />
               <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-amber-300">No valid credential</p>
               <h1 className="mt-2 text-2xl font-bold text-white">We could not verify this code</h1>
