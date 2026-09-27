@@ -256,6 +256,23 @@ source of truth for order; it is not repeated in route definitions.
 entirely. Staff bypass the ladder on first load. `Login` and `Register` are
 always reachable and always offer a way back to the ladder.
 
+**Rule — the ladder is never spoken aloud.** The rung slugs are internal route
+identifiers. Rendering them as visible labels ("1 lock · 2 splash · 3 intro · 4
+auth · 5 focus · 6 permissions") is developer plumbing presented as a user
+journey, and it is forbidden on every screen. Position is expressed only by
+`Components/FunnelProgress`, a wordless 1px bar whose location is exposed via
+`role="progressbar"` and an "Step N of M" label for assistive tech. Lock and
+Splash show no indicator at all — they are brand moments, and a progress bar at
+14% is noise. `ScreenCrawlTest` fails the build if a funnel screen renders a raw
+rung slug, prints "Rung N", or re-inlines the ladder array.
+
+**Rule — each rung carries its own useful content.** A rung may not describe the
+funnel. "This rung threads your credentials through" and "Sprint 9.5 — content
+coherence" are implementation notes; a rung either does its job or does not
+exist. Specifically: the picker is a real interest picker (search + region chips,
+never a 205-entry `<select>`), and Permissions asks for something real with
+allow/deny that persist differently.
+
 ### 7.2 Learner loop (post-onboarding)
 
 ```
@@ -285,6 +302,7 @@ AdminDashboard ──▶ Approvals ──▶ Approve/Reject ──▶ Learner pr
 | `Omnibox` | `Components/Omnibox.jsx` | Global typeahead. Searches all 205 certs flat, no region filter. Arrow keys + Enter. `max-w-md`, `lg` only. |
 | `Breadcrumbs` | `Components/Breadcrumbs.jsx` | Hierarchy trail for drill-down screens (Track → Cert). |
 | `ErrorBoundary` | `Components/ErrorBoundary.jsx` | Last-resort containment. Renders a recoverable state, never a raw stack. |
+| `FunnelProgress` | `Components/FunnelProgress.jsx` | Wordless first-run position indicator. `role="progressbar"`, "Step N of M" for AT. Never renders a rung slug. |
 | `ReportHeader` | `Pages/Passimark/Reports/ReportHeader.jsx` | Shared report title bar. **Not a route.** |
 | `StatStrip` | `Pages/Passimark/Reports/StatStrip.jsx` | Shared stat row. **Not a route.** |
 
@@ -312,9 +330,30 @@ Legend — **P** primary CTA · **D** data source · **S** states implemented.
 
 ### 9.2 Learner — shell
 
+**The dashboard is interest-first.** A learner picked one certification; the
+screen is built around that choice and nothing else. This is the one screen
+where "show everything" is a defect.
+
+| Order | Block | Rule |
+|---|---|---|
+| 1 | **Resume** *(only if a session is in flight)* | Outranks everything. Most recent real action. |
+| 2 | **Next up** | The single outstanding session in the focused track. Green when startable, **amber when gated** with the reason. Primary CTA. |
+| 3 | **Progress strip** | Three figures — sessions done/total, complete %, θ. `tabular-nums`. Not a grid of metric cards. |
+| 4 | **Related certifications** | At most 6, one line each. Ranked: same cert → same `cert_key` family → same region. |
+| 5 | **Explore other certifications** | Universal search over the whole catalog, debounced. The *only* route to the rest. |
+| 6 | **Browse the full catalog** | Collapsed disclosure. A destination, not the landing view. |
+
+**Rules:**
+- The `<h1>` is the chosen certification. Never "Choose your certification".
+- No global catalog statistics. "205 certifications" is not a learner achievement.
+- No focus set is its own lean state with one CTA, not the catalog wall.
+- The dashboard must not duplicate the topbar Omnibox. One search, one purpose.
+- Decorative per-tile accents, monograms and per-tile θ are **forbidden**. A tile
+  is a link with a name and a number, nothing else.
+
 | Screen | Purpose | P | D | Notes |
 |---|---|---|---|---|
-| `Dashboard` | Standing + next action | View track / Change | `sections`, `stats`, `focus`, `continueSession` | Focus hero **above** catalog; catalog below as "Choose your certification". |
+| `Dashboard` | Standing + next action | Next up / Resume | `focus` (with `next_session`, `cohort`), `continueSession`, `catalogTotal` | See the block order above. |
 | `Track` | Session ladder for one cert | Start next session | track, sessions, domain mastery, remediation | Drill-down. Must use `Breadcrumbs`. |
 | `Cert` | One certification overview | — | cert, approval state | Gated state is amber and explicit. |
 | `Profile` | Identity + focus | Save | user, preferences | |
@@ -378,21 +417,21 @@ by decision*. Ordered by user impact.
 
 | ID | Gap | Impact | State |
 |---|---|---|---|
-| **G-01** | 14 of 28 files have no responsive prefixes: `Auth/Login`, `Auth/Register`, `ContentImport`, `Verify`, all 6 funnel screens, `Reports/{Learners,ReportHeader,Sessions,Tracks}`. | **High** — probable cause of "screens not optimized correctly" on mobile. | Open |
-| **G-02** | No `prefers-reduced-motion` handling anywhere; `Splash`/`Funnel/Auth` run indefinite loops. | High — accessibility. | Open |
-| **G-03** | `<main className="flex-1 p-6">` has no max-width; content stretches on ultrawide displays. | Medium | Open |
-| **G-04** | `Splash` has no 1800 ms auto-advance; it is tap-only, so the funnel needs 7 deliberate taps to reach the dashboard. | Medium — friction on the highest-intent path. | Open |
-| **G-05** | `Intro` is a single page, not the specced 4 slides with pips, Skip and prev/next. | Medium | Open |
-| **G-06** | Topbar **Browse rails** (region → cert dropdowns) were specced in `sprint-8-1` and never built. Omnibox is the only discovery path. | Medium — accessibility/discoverability cost for non-keyboard users. | Open |
-| **G-07** | Focus is a read-only hero card; the spec says focus chips should *filter and reorder* the catalog. | Medium | Open |
-| **G-08** | `Lock` uses a text `h1`, not the full-bleed wordmark asset (which exists at `public/images/passimark/passimark_final_logo.png`, 974 KB, unreferenced). | Low | Open |
-| **G-09** | `ContentImport` is full-bleed while every other staff screen is shelled. | Low | Open |
+| **G-01** | ~~14 of 28 files have no responsive prefixes.~~ Fixed at the shell (`<main>` steps `p-6`→`p-4`, capped `max-w-7xl`), so every shelled screen inherits it; Auth, Verify, ContentImport and the shared `ReportHeader` (all six reports) were stepped individually. | High — was the probable cause of "screens not optimized correctly" on mobile. | **Closed** |
+| **G-02** | No `prefers-reduced-motion` handling; `Splash`/`Funnel/Auth` and the Login pulse loops animated unconditionally. | High — accessibility. | **Closed** — `motion-reduce:` guards on decorative fields; `FunnelProgress` transitions opt out. |
+| **G-03** | ~~`<main>` had no max-width.~~ Now `mx-auto w-full max-w-7xl`; content stops stretching on ultrawide displays. | Medium | **Closed** |
+| **G-04** | ~~`Splash` had no auto-advance.~~ Now 1800 ms with a visible Continue so it can never trap anyone. | Medium | **Closed** |
+| **G-05** | ~~`Intro` described the funnel instead of the product.~~ Now the four product facts: one keystroke to 205 certs, one track at a time, θ adapts, verifiable credential. | Medium | **Closed** |
+| **G-06** | Topbar **Browse rails** (region → cert dropdowns) specced in `sprint-8-1`, never built. Omnibox + dashboard search are the discovery paths. | Medium — non-keyboard users rely on search. | Open — decided in principle: search covers it |
+| **G-07** | ~~Focus was a read-only strip over a 205-tile wall.~~ The dashboard is now scoped to the focus: next session, progress, ≤6 related, search. | Medium | **Closed** |
+| **G-08** | `Lock` uses a text `h1`, not the wordmark asset (974 KB, unreferenced, and must be resized before use). | Low | Open |
+| **G-09** | `ContentImport` is full-bleed while every other staff screen is shelled. Under §12.1 this is defensible — it is a single-task FOCUS screen — but it must stay deliberate. | Low | Accepted as FOCUS |
 | **G-10** | `sprint-8-1-first-run-funnel.md` still reads `Status: planned` and names 4 files that do not exist. `app-sitemap.md` has no knowledge of the funnel or the 205 catalog. | Low — documentation debt. | Open |
 | **G-11** | Dark-only with no `prefers-color-scheme` consideration. | — | Deferred by decision — see §2.1. |
-| **G-12** | **Brand split-brain.** `tailwind.config.js` declares `pm.brand` `#1A9E2D` and `pm.accent` `#7CFC8F`; the app renders stock Tailwind emerald (`#10B981`/`#059669`) instead. `public/manifest.json` ships `theme_color: #1A9E2D`, so **the installed app icon and the running app are two different greens.** | **High** — visible in the browser/OS chrome on every install. | Open |
-| **G-13** | No brand typeface. `font-display` is declared but unused and resolves to the OS default; no webfont is loaded. | Medium — "premium" is not achievable in Segoe UI. | Open |
-| **G-14** | `tabular-nums` used 0 times despite live timers, score tables and attempt counts. Digits jitter. | Medium — see §12.3a. | Open |
-| **G-15** | `pm.accent`, `shadow-ring` and `font-display` are dead tokens — declared in config, referenced nowhere. The config advertises a design system the app does not implement. | Low — but it is why G-12/G-13 went unnoticed. | Open |
+| **G-12** | **Brand split-brain.** `tailwind.config.js` declares `pm.brand` `#1A9E2D` and `pm.accent` `#7CFC8F`; the app renders stock Tailwind emerald (`#10B981`/`#059669`). `public/manifest.json` ships `theme_color: #1A9E2D`, so **the installed app icon and the running app are two different greens.** | **High** — visible in browser/OS chrome on every install. | Open — awaiting a decision |
+| **G-13** | No brand typeface. `font-display` is declared but unused and resolves to the OS default; no webfont is loaded. | Medium — "premium" is not achievable in Segoe UI. | Open — awaiting a decision |
+| **G-14** | `tabular-nums` was used 0 times despite live timers, score tables and attempt counts. Now applied to the dashboard progress strip and session counters. Exam timers and report tables still need it. | Medium — see §12.3a. | Partly closed |
+| **G-15** | `pm.accent`, `shadow-ring` and `font-display` are dead tokens — declared in config, referenced nowhere. | Low — but it is why G-12/G-13 went unnoticed. | Open |
 
 **Note on G-08:** the 974 KB logo and 478 KB `icon_1024x1024.png` are referenced
 by nothing. They are repo assets, not page weight, and must not be dropped into
