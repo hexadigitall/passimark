@@ -40,11 +40,18 @@ export default {
                 deep: '#0F172A',
             },
             fontFamily: {
-                sans: ['InterVariable', 'Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'sans-serif'],
+                // Resolved through the custom property in resources/css/app.css so
+                // the utility classes and the raw-CSS fault screen cannot drift
+                // apart. The var() fallback keeps text readable in a sans-serif
+                // even if the stylesheet that defines it is ever dropped --
+                // without it, an unresolved var() would fall back to serif.
+                sans: ['var(--pm-font-sans, ui-sans-serif, system-ui, sans-serif)'],
             },
-            boxShadow: {
-                ring: '0 0 0 3px rgba(124, 252, 143, 0.18)', // accent focus ring
-            },
+            // The old `shadow-ring` token and the `display` font family are gone.
+            // Focus indication is expressed with ring-* utilities (38 call sites)
+            // and there is a single family, so both were dead config advertising a
+            // design system the app did not implement -- which is how the emerald
+            // drift went unnoticed in the first place. See BrandPaletteTest.
         },
     },
     plugins: [],

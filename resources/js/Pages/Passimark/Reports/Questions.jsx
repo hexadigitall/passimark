@@ -45,7 +45,7 @@ export default function Questions({ summary = {}, domains = [], blooms = [], dif
         <div className="mt-6 grid gap-6 lg:grid-cols-2">
           <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
             <h3 className="text-lg font-semibold text-white">By domain</h3>
-            <table className="mt-4 w-full text-left text-sm">
+            <table className="tabular-nums mt-4 w-full text-left text-sm">
               <thead className="text-xs uppercase tracking-wide text-slate-400">
                 <tr><th className="py-2 pr-2">Domain</th><th className="py-2 pr-2">Questions</th><th className="py-2 pr-2">Times used</th><th className="py-2">Accuracy</th></tr>
               </thead>
@@ -66,7 +66,7 @@ export default function Questions({ summary = {}, domains = [], blooms = [], dif
           <div className="space-y-6">
             <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
               <h3 className="text-lg font-semibold text-white">Cognition levels & difficulty</h3>
-              <table className="mt-4 w-full text-left text-sm">
+              <table className="tabular-nums mt-4 w-full text-left text-sm">
                 <thead className="text-xs uppercase tracking-wide text-slate-400">
                   <tr><th className="py-2 pr-2">Bloom level</th><th className="py-2 pr-2">Questions</th><th className="py-2 pr-2">Times used</th><th className="py-2">Accuracy</th></tr>
                 </thead>
@@ -99,7 +99,7 @@ export default function Questions({ summary = {}, domains = [], blooms = [], dif
             <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
               <h3 className="text-lg font-semibold text-white">Weakest items</h3>
               <p className="mt-1 text-xs text-slate-500">Lowest accuracy, requiring at least 5 recorded answers. Ranks from worst upward.</p>
-              <table className="mt-4 w-full text-left text-sm">
+              <table className="tabular-nums mt-4 w-full text-left text-sm">
                 <thead className="text-xs uppercase tracking-wide text-slate-400">
                   <tr><th className="py-2 pr-2">Item</th><th className="py-2 pr-2">Domain</th><th className="py-2 pr-2">Used</th><th className="py-2">Accuracy</th></tr>
                 </thead>

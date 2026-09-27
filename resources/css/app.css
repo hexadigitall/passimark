@@ -1,3 +1,49 @@
+/*
+ * Inter Variable, self-hosted (SIL Open Font License 1.1 — see fonts/OFL.txt).
+ *
+ * Self-hosted rather than loaded from a CDN because this is an assessment
+ * product: a third-party font origin adds a DNS + TLS round trip to first paint
+ * and hands a third party a request on every exam start.
+ *
+ * Latin subset only, one variable file for the whole 100-900 weight axis, so
+ * the four weight utilities the app actually uses (normal/medium/semibold/bold)
+ * cost a single 47 KB request instead of four static faces.
+ *
+ * Why a webfont at all: the previous stack was the OS default, which is Segoe UI
+ * on Windows, San Francisco on macOS and Roboto on Android. Three users on one
+ * dashboard saw three typefaces, so "the brand font" did not exist. Inter also
+ * ships reliable tabular figures, which the exam timer and score tables need and
+ * which several system stacks only provide inconsistently.
+ */
+@font-face {
+    font-family: 'InterVariable';
+    src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2-variations'),
+        url('/fonts/inter-latin-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    /* Latin + Latin Extended Supplement; anything else falls back rather than
+       pulling a second file. */
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Single source of truth for the stack. tailwind.config.js fontFamily.sans and
+   fault.css both resolve through this, so plain CSS and utility classes cannot
+   drift apart — which is how fault.css ended up on an unbranded stack while the
+   JSX looked configured. */
+:root {
+    --pm-font-sans: 'InterVariable', 'Inter', ui-sans-serif, system-ui, -apple-system,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* The fault screen is rendered outside React by the Inertia boot path, so it
+   cannot use a utility class. Point it at the same variable. */
+.passimark-app__fault {
+    font-family: var(--pm-font-sans);
+}

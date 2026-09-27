@@ -9,6 +9,10 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/passimark/passimark_icon_16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/passimark/passimark_icon_32x32.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/passimark/passimark_icon_180x180.png">
+        {{-- Preload the variable font so the first paint is set in Inter rather
+             than swapping to it after the fallback. crossorigin is required even
+             same-origin: font fetches are always CORS-mode. --}}
+        <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="manifest" href="/manifest.json">
         @vite('resources/js/app.jsx')
         @inertiaHead

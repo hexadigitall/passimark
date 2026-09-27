@@ -88,7 +88,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
 
           <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
             <h3 className="text-lg font-semibold text-white">By mode</h3>
-            <table className="mt-4 w-full text-left text-sm">
+            <table className="tabular-nums mt-4 w-full text-left text-sm">
               <thead className="text-xs uppercase tracking-wide text-slate-400">
                 <tr>
                   <th className="py-2 pr-2">Mode</th>
@@ -115,7 +115,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
           <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
             <h3 className="text-lg font-semibold text-white">7-day cadence</h3>
             <p className="mt-1 text-xs text-slate-500">Finished attempts per day, with average score.</p>
-            <table className="mt-4 w-full text-left text-sm">
+            <table className="tabular-nums mt-4 w-full text-left text-sm">
               <thead className="text-xs uppercase tracking-wide text-slate-400">
                 <tr>
                   <th className="py-2 pr-2">Day</th>
@@ -137,7 +137,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
         </div>
 
         <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900">
-          <table className="w-full min-w-[1100px] text-left text-sm">
+          <table className="tabular-nums w-full min-w-[1100px] text-left text-sm">
             <thead className="border-b border-slate-700 text-xs uppercase tracking-wide text-slate-400">
               <tr>
                 <th className="px-4 py-3">Learner</th>

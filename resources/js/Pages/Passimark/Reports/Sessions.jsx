@@ -42,7 +42,7 @@ export default function Sessions({ summary = {}, rows = [] }) {
         <StatStrip stats={stats} />
 
         <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-700 bg-slate-900">
-          <table className="w-full min-w-[1000px] text-left text-sm">
+          <table className="tabular-nums w-full min-w-[1000px] text-left text-sm">
             <thead className="border-b border-slate-700 text-xs uppercase tracking-wide text-slate-400">
               <tr>
                 <th className="px-4 py-3">#</th>

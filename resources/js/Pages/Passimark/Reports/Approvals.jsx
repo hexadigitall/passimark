@@ -88,7 +88,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
           <section className="rounded-2xl border border-slate-700 bg-slate-900 p-5">
             <h3 className="text-lg font-semibold text-white">Weekly decisions</h3>
             <p className="mt-1 text-xs text-slate-500">Last 8 weeks (ISO weeks starting Monday).</p>
-            <table className="mt-4 w-full text-left text-sm">
+            <table className="tabular-nums mt-4 w-full text-left text-sm">
               <thead className="text-xs uppercase tracking-wide text-slate-400">
                 <tr><th className="py-2 pr-2">Week</th><th className="py-2 pr-2 text-right">Approved</th><th className="py-2 text-right">Rejected</th></tr>
               </thead>
@@ -110,7 +110,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
                 <>
                   <h3 className="text-lg font-semibold text-white">Pending queue</h3>
                   <p className="mt-1 text-xs text-slate-500">Oldest first — age is time since the approval was requested. Decide directly from the ledger.</p>
-                  <table className="mt-4 w-full text-left text-sm">
+                  <table className="tabular-nums mt-4 w-full text-left text-sm">
                     <thead className="text-xs uppercase tracking-wide text-slate-400">
                       <tr><th className="py-2 pr-2">Learner</th><th className="py-2 pr-2">Session</th><th className="py-2 pr-2">Score</th><th className="py-2 pr-2">Requested</th><th className="py-2 pr-2">Age</th><th className="py-2">Actions</th></tr>
                     </thead>
@@ -148,7 +148,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
               : (
                 <>
                   <h3 className="text-lg font-semibold text-white">Decision ledger</h3>
-                  <table className="mt-4 w-full text-left text-sm">
+                  <table className="tabular-nums mt-4 w-full text-left text-sm">
                     <thead className="text-xs uppercase tracking-wide text-slate-400">
                       <tr><th className="py-2 pr-2">Action</th><th className="py-2 pr-2">Learner</th><th className="py-2 pr-2">Session</th><th className="py-2 pr-2">Reviewer</th><th className="py-2 pr-2">Note</th><th className="py-2 pr-2">Review lag</th><th className="py-2">Decided</th></tr>
                     </thead>

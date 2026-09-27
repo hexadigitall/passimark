@@ -262,7 +262,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
               >
                 <Calculator className="h-4 w-4" /> Calc
               </button>
-              <div className={`flex items-center gap-2 font-mono text-lg ${isTimed && secondsLeft < 300 ? 'text-orange-300' : 'text-slate-200'}`}>
+              <div className={`flex items-center gap-2 font-mono text-lg tabular-nums ${isTimed && secondsLeft < 300 ? 'text-orange-300' : 'text-slate-200'}`}>
                 <Clock3 className="h-5 w-5" />
                 {isTimed ? `${minutes}:${seconds}` : 'Untimed'}
               </div>
