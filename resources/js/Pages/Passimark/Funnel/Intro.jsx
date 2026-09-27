@@ -34,7 +34,7 @@ export default function Intro({ funnel }) {
 
       <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden motion-reduce:hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 blur-3xl" />
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-500 opacity-20 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 blur-3xl" />
         </div>
 
@@ -52,7 +52,7 @@ export default function Intro({ funnel }) {
                 key={title}
                 className="flex gap-3 rounded-xl border border-slate-700/50 bg-slate-900/40 p-4"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-300 ring-1 ring-emerald-500/30">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500/15 text-brand-300 ring-1 ring-brand-500/30">
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </span>
                 <div className="min-w-0">
@@ -66,7 +66,7 @@ export default function Intro({ funnel }) {
           {next && (
             <a
               href={next}
-              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-brand-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
             >
               Continue
             </a>

@@ -22,7 +22,7 @@ export default function Breadcrumbs({ items = [] }) {
                   {item.label}
                 </span>
               ) : (
-                <Link href={item.href} className="transition hover:text-emerald-300">
+                <Link href={item.href} className="transition hover:text-brand-300">
                   {item.label}
                 </Link>
               )}

@@ -14,7 +14,7 @@ export default function Certificate({ certificate, user = {} }) {
           <Award className="mx-auto h-10 w-10 text-slate-500" />
           <h2 className="mt-4 text-xl font-semibold text-white">Certificate not available</h2>
           <p className="mt-2 text-sm text-slate-400">This credential could not be found or is no longer valid.</p>
-          <Link href="/profile" className="mt-6 inline-block rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950">
+          <Link href="/profile" className="mt-6 inline-block rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950">
             Back to profile
           </Link>
         </section>
@@ -37,14 +37,14 @@ export default function Certificate({ certificate, user = {} }) {
       <section className="mx-auto max-w-4xl">
         <Breadcrumbs items={crumbs} />
 
-        <article className="overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/40 p-8 shadow-2xl">
+        <article className="overflow-hidden rounded-3xl border border-brand-500/30 bg-gradient-to-br from-slate-900 via-slate-900 to-brand-950/40 p-8 shadow-2xl">
           <div className="flex flex-wrap items-start justify-between gap-6">
             <div>
-              <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.3em] text-emerald-400">
+              <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.3em] text-brand-400">
                 <ShieldCheck className="h-4 w-4" /> Passimark Certified
               </p>
               <h1 className="mt-3 text-3xl font-bold text-white">{certificate.certification}</h1>
-              {certificate.variant_label && <p className="mt-1 text-sm text-emerald-200/80">{certificate.variant_label}</p>}
+              {certificate.variant_label && <p className="mt-1 text-sm text-brand-200/80">{certificate.variant_label}</p>}
               <p className="mt-6 text-sm uppercase tracking-wider text-slate-500">Awarded to</p>
               <p className="text-2xl font-semibold text-white">{user.name}</p>
             </div>
@@ -64,10 +64,10 @@ export default function Certificate({ certificate, user = {} }) {
           <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-slate-700/60 pt-6">
             <div>
               <p className="text-xs uppercase tracking-wider text-slate-500">Credential ID</p>
-              <p className="font-mono text-sm text-emerald-200">{certificate.credential_id}</p>
+              <p className="font-mono text-sm text-brand-200">{certificate.credential_id}</p>
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-500/15 px-3 py-1 text-xs font-medium text-brand-300">
                 <BadgeCheck className="h-3.5 w-3.5" /> Verifiable
               </span>
               <Link

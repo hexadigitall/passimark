@@ -19,7 +19,7 @@ export default function Register() {
             <Head title="Create your account" />
         <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 mix-blend-multiply blur-3xl"></div>
+                <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-500 opacity-20 mix-blend-multiply blur-3xl"></div>
                 <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 mix-blend-multiply blur-3xl"></div>
             </div>
             <main className="relative w-full max-w-md">
@@ -75,7 +75,7 @@ export default function Register() {
                     <button
                         type="submit"
                         disabled={processing}
-                        className="mt-2 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-slate-300"
+                        className="mt-2 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-slate-600 disabled:text-slate-300"
                     >
                         {processing ? 'Creating account...' : 'Create account'}
                         {!processing && <ArrowRight className="h-4 w-4" />}
@@ -83,7 +83,7 @@ export default function Register() {
 
                     <p className="mt-5 text-center text-sm text-slate-400">
                         Already have an account?{' '}
-                        <Link href="/login" className="font-medium text-emerald-400 hover:text-emerald-300">
+                        <Link href="/login" className="font-medium text-brand-400 hover:text-brand-300">
                             Sign in
                         </Link>
                     </p>
@@ -107,7 +107,7 @@ function Field({ autoComplete, disabled, error, icon: Icon, id, label, onChange,
                     onChange={(event) => onChange(event.target.value)}
                     autoComplete={autoComplete}
                     disabled={disabled}
-                    className={`min-h-11 w-full rounded-lg border bg-slate-700/50 py-3 pl-10 pr-4 text-white outline-none transition placeholder:text-slate-500 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 ${error ? 'border-red-500' : 'border-slate-600'}`}
+                    className={`min-h-11 w-full rounded-lg border bg-slate-700/50 py-3 pl-10 pr-4 text-white outline-none transition placeholder:text-slate-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-400/20 ${error ? 'border-red-500' : 'border-slate-600'}`}
                 />
             </div>
             {error && <p className="mt-2 text-sm text-red-400">{error}</p>}

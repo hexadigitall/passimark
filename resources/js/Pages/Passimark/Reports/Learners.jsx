@@ -55,7 +55,7 @@ export default function Learners({ summary = {}, rows = [] }) {
                 <tr key={learner.id} className={`border-b border-slate-800 transition ${learner.pending ? 'hover:bg-slate-800/40' : ''}`}>
                   <td className="px-4 py-3">
                     {learner.pending
-                      ? <Link href="/admin/reports/approvals?filter=pending" className="font-medium text-emerald-400 transition hover:text-emerald-300">{learner.name}</Link>
+                      ? <Link href="/admin/reports/approvals?filter=pending" className="font-medium text-brand-400 transition hover:text-brand-300">{learner.name}</Link>
                       : <p className="font-medium text-white">{learner.name}</p>}
                     <p className="text-xs text-slate-500">{learner.email}</p>
                   </td>

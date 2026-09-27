@@ -235,9 +235,9 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
   };
 
   const paletteStyle = {
-    answered: 'bg-emerald-500/70 text-slate-950',
+    answered: 'bg-brand-500/70 text-slate-950',
     flagged: 'bg-amber-400/80 text-slate-950',
-    current: 'bg-white text-slate-900 ring-2 ring-emerald-400',
+    current: 'bg-white text-slate-900 ring-2 ring-brand-400',
     unanswered: 'bg-slate-700 text-slate-300',
   };
 
@@ -248,7 +248,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
         <header className="border-b border-slate-800 bg-slate-900 px-6 py-4">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-400">Adaptive assessment</p>
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-brand-400">Adaptive assessment</p>
               <h1 className="mt-1 text-lg font-semibold">{attempt.session?.title}</h1>
             </div>
             <div className="flex items-center gap-3">
@@ -256,7 +256,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                 type="button"
                 onClick={() => setCalculatorOpen((open) => !open)}
                 className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm transition ${
-                  calculatorOpen ? 'border-emerald-500/60 bg-emerald-500/15 text-emerald-200' : 'border-slate-700 text-slate-300 hover:bg-slate-800'
+                  calculatorOpen ? 'border-brand-500/60 bg-brand-500/15 text-brand-200' : 'border-slate-700 text-slate-300 hover:bg-slate-800'
                 }`}
                 aria-label="Toggle calculator"
               >
@@ -280,7 +280,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
               <span>{progressPercent}% complete</span>
             </div>
             <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-800">
-              <div className="h-full rounded-full bg-emerald-500 transition-all" style={{ width: `${progressPercent}%` }} />
+              <div className="h-full rounded-full bg-brand-500 transition-all" style={{ width: `${progressPercent}%` }} />
             </div>
           </div>
         )}
@@ -288,7 +288,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
         <section className="mx-auto max-w-6xl px-6 py-10">
           {instructionsOpen ? (
             <div className="mx-auto max-w-2xl rounded-2xl border border-slate-700 bg-slate-900 p-8">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Before you begin</p>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-400">Before you begin</p>
               <h2 className="mt-3 text-3xl font-bold">Assessment instructions</h2>
               <ul className="mt-6 list-disc space-y-3 pl-5 text-sm leading-6 text-slate-300">
                 <li>Choose one answer for each question and submit it to continue.</li>
@@ -298,17 +298,17 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                 <li>Your timer begins when you start the assessment. Natural breaks pause it.</li>
                 <li>Your result is recorded automatically when the question set is complete.</li>
               </ul>
-              <button type="button" onClick={() => setInstructionsOpen(false)} className="mt-8 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950">Start assessment</button>
+              <button type="button" onClick={() => setInstructionsOpen(false)} className="mt-8 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950">Start assessment</button>
             </div>
           ) : breakOpen ? (
             <div className="mx-auto max-w-xl rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center">
-              <Coffee className="mx-auto h-10 w-10 text-emerald-400" />
-              <p className="mt-4 text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Natural break</p>
+              <Coffee className="mx-auto h-10 w-10 text-brand-400" />
+              <p className="mt-4 text-sm font-medium uppercase tracking-[0.2em] text-brand-400">Natural break</p>
               <h2 className="mt-2 text-2xl font-bold">Take a breath</h2>
               <p className="mt-4 text-sm leading-6 text-slate-300">
                 You have completed {answeredCount} of {totalQuestions} questions. The timer is paused. When you are ready, continue.
               </p>
-              <button type="button" onClick={() => setBreakOpen(false)} className="mt-8 rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950">Continue assessment</button>
+              <button type="button" onClick={() => setBreakOpen(false)} className="mt-8 rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950">Continue assessment</button>
             </div>
           ) : question ? (
             <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
@@ -323,14 +323,14 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                 <div className="mt-8 space-y-3">
                   {options.map((option) => (
                     <div key={option.key} className="flex items-center gap-3">
-                      <label className={`flex flex-1 cursor-pointer items-start gap-3 rounded-xl border p-4 transition ${selected === option.key ? 'border-emerald-400 bg-emerald-500/10' : 'border-slate-700 bg-slate-800 hover:border-slate-500'}`}>
-                        <input type="radio" name="answer" value={option.key} checked={selected === option.key} onChange={() => setSelected(option.key)} className="mt-1 accent-emerald-500" />
+                      <label className={`flex flex-1 cursor-pointer items-start gap-3 rounded-xl border p-4 transition ${selected === option.key ? 'border-brand-400 bg-brand-500/10' : 'border-slate-700 bg-slate-800 hover:border-slate-500'}`}>
+                        <input type="radio" name="answer" value={option.key} checked={selected === option.key} onChange={() => setSelected(option.key)} className="mt-1 accent-brand-500" />
                         <span className={`text-sm leading-6 text-slate-200 ${strikes.has(option.key) ? 'text-slate-500 line-through' : ''}`}>{option.text || option.label || option.key}</span>
                       </label>
                       <button
                         type="button"
                         onClick={() => toggleStrike(option.key)}
-                        className={`rounded p-2 text-xs transition ${strikes.has(option.key) ? 'text-emerald-300' : 'text-slate-500 hover:text-slate-200'}`}
+                        className={`rounded p-2 text-xs transition ${strikes.has(option.key) ? 'text-brand-300' : 'text-slate-500 hover:text-slate-200'}`}
                         title="Strike through this option (reasonable-elimination aid)"
                         aria-label={`Strike through option ${option.key}`}
                       >
@@ -342,11 +342,11 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                 <p className="mt-3 text-right text-xs text-slate-600">Strikethrough is a visual aid only — evaluation uses your submitted selection.</p>
                 {feedback?.error && <p className="mt-4 text-sm text-red-300">{feedback.error}</p>}
                 {feedback?.correct !== undefined && (
-                  <p className={`mt-4 inline-flex items-center gap-2 text-sm ${isFinal ? 'text-slate-400' : feedback.correct ? 'text-emerald-300' : 'text-orange-300'}`}>
+                  <p className={`mt-4 inline-flex items-center gap-2 text-sm ${isFinal ? 'text-slate-400' : feedback.correct ? 'text-brand-300' : 'text-orange-300'}`}>
                     <CheckCircle2 className="h-4 w-4" /> {isFinal ? 'Answer recorded.' : feedback.correct ? 'Correct answer recorded.' : 'Answer recorded. Keep going.'}
                   </p>
                 )}
-                <button type="button" onClick={submitAnswer} disabled={!selected || processing} className="mt-8 inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-500">
+                <button type="button" onClick={submitAnswer} disabled={!selected || processing} className="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-500">
                   {processing ? 'Submitting...' : 'Submit answer'} <Send className="h-4 w-4" />
                 </button>
               </article>
@@ -356,14 +356,14 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                   <button
                     type="button"
                     onClick={() => setPaletteTab('palette')}
-                    className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${paletteTab === 'palette' ? 'bg-emerald-500/15 text-emerald-300' : 'text-slate-400 hover:text-slate-200'}`}
+                    className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${paletteTab === 'palette' ? 'bg-brand-500/15 text-brand-300' : 'text-slate-400 hover:text-slate-200'}`}
                   >
                     Palette
                   </button>
                   <button
                     type="button"
                     onClick={() => setPaletteTab('details')}
-                    className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${paletteTab === 'details' ? 'bg-emerald-500/15 text-emerald-300' : 'text-slate-400 hover:text-slate-200'}`}
+                    className={`rounded-md px-3 py-1.5 text-xs font-semibold transition ${paletteTab === 'details' ? 'bg-brand-500/15 text-brand-300' : 'text-slate-400 hover:text-slate-200'}`}
                   >
                     Details
                   </button>
@@ -379,7 +379,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
                       ))}
                     </div>
                     <div className="mt-5 space-y-1.5 border-t border-slate-700 pt-4 text-xs text-slate-400">
-                      <p className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded bg-emerald-500/70" /> Answered ({answeredCount})</p>
+                      <p className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded bg-brand-500/70" /> Answered ({answeredCount})</p>
                       <p className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded bg-amber-400/80" /> Flagged ({flagged.size})</p>
                       <p className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded bg-white" /> Current</p>
                     </div>
@@ -401,7 +401,7 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
             <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center">
               <h2 className="text-2xl font-semibold">Assessment complete</h2>
               <p className="mt-2 text-slate-400">Your result is being recorded.</p>
-              <button type="button" onClick={() => router.visit('/')} className="mt-6 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950">Return to dashboard</button>
+              <button type="button" onClick={() => router.visit('/')} className="mt-6 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950">Return to dashboard</button>
             </div>
           )}
         </section>
@@ -442,18 +442,18 @@ export default function Exam({ attempt, question: initialQuestion, answeredCount
             </div>
             <div className="mt-4 rounded-lg bg-slate-950 p-3 text-right font-mono text-sm text-white">
               {calcExpression || '0'}
-              <div className="text-emerald-400">{calcResult === null ? '' : `= ${calcResult}`}</div>
+              <div className="text-brand-400">{calcResult === null ? '' : `= ${calcResult}`}</div>
             </div>
             <div className="mt-4 grid grid-cols-4 gap-2">
               {['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '%', '+'].map((key) => (
-                <button key={key} type="button" onClick={() => appendToCalc(key)} className={`rounded-lg py-3 text-sm font-semibold transition ${'+-*/%'.includes(key) ? 'bg-slate-700 text-emerald-300 hover:bg-slate-600' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
+                <button key={key} type="button" onClick={() => appendToCalc(key)} className={`rounded-lg py-3 text-sm font-semibold transition ${'+-*/%'.includes(key) ? 'bg-slate-700 text-brand-300 hover:bg-slate-600' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
                   {key}
                 </button>
               ))}
               <button type="button" onClick={() => setCalcExpression('')} className="rounded-lg bg-slate-800 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700">C</button>
               <button type="button" onClick={() => appendToCalc('(')} className="rounded-lg bg-slate-800 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700">(</button>
               <button type="button" onClick={() => appendToCalc(')')} className="rounded-lg bg-slate-800 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700">)</button>
-              <button type="button" onClick={() => setCalcExpression((value) => (calcResult === null ? value : String(calcResult)))} className="rounded-lg bg-emerald-500 py-3 text-sm font-bold text-slate-950 hover:bg-emerald-400">=</button>
+              <button type="button" onClick={() => setCalcExpression((value) => (calcResult === null ? value : String(calcResult)))} className="rounded-lg bg-brand-500 py-3 text-sm font-bold text-slate-950 hover:bg-brand-400">=</button>
             </div>
           </div>
         </div>

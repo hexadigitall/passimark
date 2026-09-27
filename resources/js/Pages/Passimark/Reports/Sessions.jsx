@@ -70,7 +70,7 @@ export default function Sessions({ summary = {}, rows = [] }) {
                 <tr key={session.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
                   <td className="px-4 py-3 text-slate-400">{session.number}</td>
                   <td className="max-w-[320px] px-4 py-3">
-                    <Link href="/admin/passimark?tab=sessions" className="group truncate font-medium text-white transition hover:text-emerald-400">{session.title}</Link>
+                    <Link href="/admin/passimark?tab=sessions" className="group truncate font-medium text-white transition hover:text-brand-400">{session.title}</Link>
                   </td>
                   <td className="max-w-[160px] truncate px-4 py-3 text-slate-300">{session.track ?? '—'}</td>
                   <td className="px-4 py-3 capitalize text-slate-300">{session.phase_type ?? '—'}</td>
@@ -91,7 +91,7 @@ export default function Sessions({ summary = {}, rows = [] }) {
                   </td>
                   <td className="px-4 py-3 text-slate-400">{fmtDate(session.last_activity)}</td>
                   <td className="px-4 py-3">
-                    <Link href="/admin/passimark?tab=sessions" className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 transition hover:text-emerald-300">
+                    <Link href="/admin/passimark?tab=sessions" className="inline-flex items-center gap-1 text-xs font-medium text-brand-400 transition hover:text-brand-300">
                       Manage <ArrowUpRight className="h-3.5 w-3.5" />
                     </Link>
                   </td>

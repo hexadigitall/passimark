@@ -20,10 +20,10 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 			<main className="min-h-screen bg-slate-950 px-6 py-10 text-white">
 				<section className="mx-auto max-w-5xl space-y-6">
 					<div className="rounded-2xl border border-slate-700 bg-slate-900 p-8">
-						<p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Assessment result</p>
+						<p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-400">Assessment result</p>
 						<div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
 							<div><h1 className="text-3xl font-bold">{attempt.is_passed ? 'Session passed' : 'Keep building mastery'}</h1><p className="mt-2 text-slate-400">{attempt.session?.title}</p></div>
-							<div className="text-5xl font-bold text-emerald-300">{score}%</div>
+							<div className="text-5xl font-bold text-brand-300">{score}%</div>
 						</div>
 						<div className="mt-8 grid gap-3 sm:grid-cols-3">
 							<Metric label="Answers" value={answers.length} />
@@ -33,13 +33,13 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 					</div>
 
 					{certificate && (
-						<div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+						<div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-brand-500/30 bg-brand-500/10 p-5">
 							<div className="flex items-start gap-3">
-								<Award className="mt-0.5 h-5 w-5 shrink-0 text-emerald-300" />
+								<Award className="mt-0.5 h-5 w-5 shrink-0 text-brand-300" />
 								<div>
-									<p className="text-sm font-semibold text-emerald-200">Certificate issued</p>
-									<p className="mt-1 text-sm text-emerald-100/70">
-										Credential <span className="font-mono text-emerald-100">{certificate.credential_id}</span>
+									<p className="text-sm font-semibold text-brand-200">Certificate issued</p>
+									<p className="mt-1 text-sm text-brand-100/70">
+										Credential <span className="font-mono text-brand-100">{certificate.credential_id}</span>
 										{certificate.pass_probability != null
 											? ` · ${Math.round(certificate.pass_probability * 1000) / 10}% pass probability`
 											: ''}
@@ -48,7 +48,7 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 							</div>
 							<Link
 								href={certificate.url}
-								className="shrink-0 rounded-lg bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300"
+								className="shrink-0 rounded-lg bg-brand-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-300"
 							>
 								View certificate
 							</Link>
@@ -87,17 +87,17 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 								{answers.map((answer, index) => (
 									<div key={answer.id} className={answer.exposed ? 'rounded-xl border border-slate-700 bg-slate-950 p-4' : 'rounded-xl border border-dashed border-slate-700 p-4'}>
 										<div className="flex items-start gap-3">
-											<div className={answer.is_correct ? 'text-emerald-300' : 'text-orange-300'}>
+											<div className={answer.is_correct ? 'text-brand-300' : 'text-orange-300'}>
 												{answer.is_correct ? <CheckCircle2 className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
 											</div>
 											<div className="min-w-0 flex-1">
 												<p className="text-sm text-slate-300"><span className="font-mono text-xs text-slate-500">{index + 1}.</span> {answer.question?.content}</p>
-												<p className="mt-2 text-sm text-slate-400">You selected <span className="font-mono text-slate-200">{answer.selected_option}</span> — <span className={answer.is_correct ? 'text-emerald-300' : 'text-orange-300'}>{answer.is_correct ? 'Correct' : 'Incorrect'}</span></p>
+												<p className="mt-2 text-sm text-slate-400">You selected <span className="font-mono text-slate-200">{answer.selected_option}</span> — <span className={answer.is_correct ? 'text-brand-300' : 'text-orange-300'}>{answer.is_correct ? 'Correct' : 'Incorrect'}</span></p>
 
 												{answer.exposed ? (
 													<div className="mt-3 space-y-2">
 														<p className="text-sm text-slate-300">
-															<span className="text-emerald-300">Correct answer:</span> <span className="font-mono text-slate-100">{answer.question?.correct_key}</span>
+															<span className="text-brand-300">Correct answer:</span> <span className="font-mono text-slate-100">{answer.question?.correct_key}</span>
 															<span className="ml-2 text-slate-400">{answer.question?.options?.find((option) => option.key === answer.question?.correct_key)?.text}</span>
 														</p>
 														{answer.question?.explanation && <p className="rounded-lg bg-slate-800 p-3 text-sm leading-relaxed text-slate-300">{answer.question.explanation}</p>}
@@ -123,14 +123,14 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 								))}
 							</div>
 							<div className="mt-6 flex flex-col gap-2">
-								<button type="button" onClick={() => router.post(`/passimark/session/${attempt.session_id}/start`, { mode: 'cat' })} className="w-full rounded-lg bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950">
+								<button type="button" onClick={() => router.post(`/passimark/session/${attempt.session_id}/start`, { mode: 'cat' })} className="w-full rounded-lg bg-brand-500 px-4 py-3 text-sm font-semibold text-slate-950">
 									Reattempt session
 								</button>
 								<button type="button" onClick={() => router.visit('/')} className="w-full rounded-lg bg-slate-800 px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-700">
 									Return to dashboard
 								</button>
 							</div>
-							{review_unlocked && <p className="mt-4 flex items-center gap-1.5 text-xs text-emerald-300"><UnlockKeyhole className="h-3.5 w-3.5" /> Full review unlocked.</p>}
+							{review_unlocked && <p className="mt-4 flex items-center gap-1.5 text-xs text-brand-300"><UnlockKeyhole className="h-3.5 w-3.5" /> Full review unlocked.</p>}
 							{progress_status === 'pending_approval' && <p className="mt-4 flex items-center gap-1.5 text-xs text-orange-300"><FileQuestion className="h-3.5 w-3.5" /> Approval pending with instructor.</p>}
 						</aside>
 					</div>

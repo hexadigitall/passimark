@@ -11,7 +11,7 @@ const fmtNum = (value) => {
 };
 
 const Chip = ({ label, tone = 'slate' }) => (
-  <span className={`mr-1 inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${tone === 'emerald' ? 'bg-emerald-500/10 text-emerald-300' : 'bg-slate-700/40 text-slate-300'}`}>
+  <span className={`mr-1 inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${tone === 'brand' ? 'bg-brand-500/10 text-brand-300' : 'bg-slate-700/40 text-slate-300'}`}>
     {label}
   </span>
 );
@@ -43,7 +43,7 @@ export default function Tracks({ summary = {}, rows = [], categories = [] }) {
               <span key={cat.cert_key} className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs">
                 <span className="font-medium text-white">{cat.label}</span>
                 <span className="text-slate-500">{cat.cert_key}</span>
-                <span className={`rounded-full px-1.5 py-0.5 ${cat.variants > 1 ? 'bg-amber-500/10 text-amber-300' : 'bg-emerald-500/10 text-emerald-300'}`}>
+                <span className={`rounded-full px-1.5 py-0.5 ${cat.variants > 1 ? 'bg-amber-500/10 text-amber-300' : 'bg-brand-500/10 text-brand-300'}`}>
                   {cat.variants} bundle{cat.variants > 1 ? 's' : ''}
                 </span>
               </span>
@@ -87,7 +87,7 @@ export default function Tracks({ summary = {}, rows = [], categories = [] }) {
                   </td>
                   <td className="px-4 py-3 text-slate-300">{track.region ?? '—'}</td>
                   <td className="px-4 py-3">
-                    <Chip label={track.advancement} tone={track.advancement === 'auto' ? 'emerald' : 'slate'} />
+                    <Chip label={track.advancement} tone={track.advancement === 'auto' ? 'brand' : 'slate'} />
                   </td>
                   <td className="px-4 py-3 text-slate-300">{track.sessions}</td>
                   <td className="px-4 py-3 text-slate-300">{track.questions}</td>
@@ -97,7 +97,7 @@ export default function Tracks({ summary = {}, rows = [], categories = [] }) {
                   <td className="px-4 py-3 text-slate-300">{track.pass_rate}%</td>
                   <td className="px-4 py-3">
                     {track.completions > 0
-                      ? <span className="inline-flex rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-300">{track.completions}</span>
+                      ? <span className="inline-flex rounded-full bg-brand-500/10 px-2 py-0.5 text-xs font-medium text-brand-300">{track.completions}</span>
                       : <span className="text-slate-600">0</span>}
                   </td>
                   <td className="px-4 py-3">
@@ -106,7 +106,7 @@ export default function Tracks({ summary = {}, rows = [], categories = [] }) {
                       : <span className="text-slate-600">0</span>}
                   </td>
                   <td className="px-4 py-3">
-                    <Link href="/admin/passimark?tab=tracks" className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 transition hover:text-emerald-300">
+                    <Link href="/admin/passimark?tab=tracks" className="inline-flex items-center gap-1 text-xs font-medium text-brand-400 transition hover:text-brand-300">
                       Manage <ArrowUpRight className="h-3.5 w-3.5" />
                     </Link>
                   </td>

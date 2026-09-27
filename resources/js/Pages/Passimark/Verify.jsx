@@ -12,9 +12,9 @@ export default function Verify({ valid = false, credentialId = '', certificate =
       <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-10 sm:px-6 sm:py-16 text-white">
         <section className="w-full max-w-xl">
           {valid ? (
-            <div className="rounded-3xl border border-emerald-500/30 bg-slate-900 p-6 text-center sm:p-8">
-              <BadgeCheck className="mx-auto h-12 w-12 text-emerald-400" />
-              <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-emerald-400">Credential verified</p>
+            <div className="rounded-3xl border border-brand-500/30 bg-slate-900 p-6 text-center sm:p-8">
+              <BadgeCheck className="mx-auto h-12 w-12 text-brand-400" />
+              <p className="mt-4 text-sm font-medium uppercase tracking-[0.25em] text-brand-400">Credential verified</p>
               <h1 className="mt-2 text-2xl font-bold text-white">{certificate.certification}</h1>
               {certificate.variant_label && <p className="mt-1 text-sm text-slate-400">{certificate.variant_label}</p>}
 
@@ -52,7 +52,7 @@ function Row({ label, value, mono = false }) {
   return (
     <div className="flex items-center justify-between gap-4 border-b border-slate-800 pb-3">
       <dt className="text-slate-500">{label}</dt>
-      <dd className={mono ? 'font-mono text-emerald-200' : 'font-medium text-white'}>{value ?? '—'}</dd>
+      <dd className={mono ? 'font-mono text-brand-200' : 'font-medium text-white'}>{value ?? '—'}</dd>
     </div>
   );
 }

@@ -13,7 +13,7 @@ const tileValue = (tile) => {
 
 const deltaTone = (text) => {
   if (!text) return 'text-slate-500';
-  if (text.includes('▲')) return 'text-emerald-400';
+  if (text.includes('▲')) return 'text-brand-400';
   if (text.includes('▼')) return 'text-red-400';
   return 'text-slate-500';
 };
@@ -55,14 +55,14 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
       <section className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-3 border-b border-slate-800 pb-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Operations</p>
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-400">Operations</p>
             <h2 className="mt-1 text-3xl font-bold tracking-normal text-white">Learner operations</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">
               Review progression decisions, watch content health, and jump into the content tools.
             </p>
           </div>
           <div className="flex shrink-0 gap-2">
-            <Link href="/admin/passimark" className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">
+            <Link href="/admin/passimark" className="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-400">
               <Database className="h-4 w-4" /> Control Center
             </Link>
             <Link href="/admin/import" className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700">
@@ -86,11 +86,11 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
             <Link
               key={tile.key}
               href={tile.href}
-              className="group rounded-xl border border-slate-700 bg-slate-900 p-4 transition hover:border-emerald-500/40 hover:bg-slate-800/60"
+              className="group rounded-xl border border-slate-700 bg-slate-900 p-4 transition hover:border-brand-500/40 hover:bg-slate-800/60"
             >
               <div className="flex items-center justify-between gap-2">
                 <p className="text-sm text-slate-400">{tile.label}</p>
-                <ArrowUpRight className="h-4 w-4 text-slate-600 transition group-hover:text-emerald-400" />
+                <ArrowUpRight className="h-4 w-4 text-slate-600 transition group-hover:text-brand-400" />
               </div>
               <p className="mt-2 text-2xl font-semibold text-white">{tileValue(tile)}</p>
               <p className="mt-1 truncate text-xs text-slate-500" title={tile.sub}>{tile.sub}</p>
@@ -114,7 +114,7 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
                     <p className="mt-0.5 truncate text-sm text-slate-400">{item.session?.title} · Score {item.score}%</p>
                   </div>
                   <div className="flex shrink-0 gap-2">
-                    <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'approve')} className="inline-flex items-center gap-1 rounded-lg bg-emerald-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:opacity-50">
+                    <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'approve')} className="inline-flex items-center gap-1 rounded-lg bg-brand-500 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-400 disabled:opacity-50">
                       <Check className="h-4 w-4" /> Approve
                     </button>
                     <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'reject')} className="inline-flex items-center gap-1 rounded-lg bg-red-500 px-3 py-2 text-sm font-semibold text-white transition hover:bg-red-400 disabled:opacity-50">
@@ -142,7 +142,7 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
             </section>
 
             <section className="rounded-2xl border border-slate-700 bg-slate-900 p-6">
-              <div className="flex items-center gap-2 text-emerald-300">
+              <div className="flex items-center gap-2 text-brand-300">
                 <ShieldCheck className="h-4 w-4" />
                 <h3 className="text-lg font-semibold text-white">Staff view</h3>
               </div>

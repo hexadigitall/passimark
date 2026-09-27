@@ -12,7 +12,7 @@ function BootScreen() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-950">
       <div className="flex flex-col items-center gap-3">
-        <span className="h-8 w-8 animate-spin rounded-full border-2 border-slate-700 border-t-emerald-400" />
+        <span className="h-8 w-8 animate-spin rounded-full border-2 border-slate-700 border-t-brand-400" />
         <p className="text-sm text-slate-400">Loading Passimark...</p>
       </div>
     </div>

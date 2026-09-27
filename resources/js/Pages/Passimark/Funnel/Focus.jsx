@@ -59,7 +59,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
       <Head title="Choose your focus" />
       <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 blur-3xl" />
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-500 opacity-20 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 blur-3xl" />
         </div>
 
@@ -88,7 +88,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Try &quot;security&quot;, &quot;aws&quot;, &quot;finance&quot;..."
                 autoComplete="off"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/30"
               />
             </div>
 
@@ -99,7 +99,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
                 aria-pressed={regionFilter === ''}
                 className={
                   regionFilter === ''
-                    ? 'rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/40'
+                    ? 'rounded-full bg-brand-500/15 px-3 py-1 text-xs font-medium text-brand-300 ring-1 ring-brand-500/40'
                     : 'rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-400 ring-1 ring-slate-700 hover:text-slate-200'
                 }
               >
@@ -113,7 +113,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
                   aria-pressed={regionFilter === region}
                   className={
                     regionFilter === region
-                      ? 'rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/40'
+                      ? 'rounded-full bg-brand-500/15 px-3 py-1 text-xs font-medium text-brand-300 ring-1 ring-brand-500/40'
                       : 'rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-400 ring-1 ring-slate-700 hover:text-slate-200'
                   }
                 >
@@ -138,7 +138,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
                         key={item.cert_key}
                         className={
                           active
-                            ? 'flex cursor-pointer items-center gap-3 rounded-md border border-emerald-500/50 bg-emerald-500/10 px-3 py-2.5'
+                            ? 'flex cursor-pointer items-center gap-3 rounded-md border border-brand-500/50 bg-brand-500/10 px-3 py-2.5'
                             : 'flex cursor-pointer items-center gap-3 rounded-md border border-transparent px-3 py-2.5 hover:bg-slate-800/70'
                         }
                       >
@@ -154,11 +154,11 @@ export default function Focus({ funnel, options = [], selected = null }) {
                           aria-hidden="true"
                           className={
                             active
-                              ? 'flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-emerald-400'
+                              ? 'flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-brand-400'
                               : 'flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-slate-600'
                           }
                         >
-                          {active && <span className="h-2 w-2 rounded-full bg-emerald-400" />}
+                          {active && <span className="h-2 w-2 rounded-full bg-brand-400" />}
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block truncate text-sm font-medium text-slate-100">
@@ -182,14 +182,14 @@ export default function Focus({ funnel, options = [], selected = null }) {
             {chosen && (
               <p className="mt-3 text-xs text-slate-400">
                 Your dashboard will be built around{' '}
-                <span className="font-semibold text-emerald-300">{chosen.title}</span>.
+                <span className="font-semibold text-brand-300">{chosen.title}</span>.
               </p>
             )}
 
             <button
               type="submit"
               disabled={!certKey || saving}
-              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:opacity-50"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {saving ? 'Saving...' : 'Set focus'}
             </button>

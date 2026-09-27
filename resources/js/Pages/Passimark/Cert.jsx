@@ -29,7 +29,7 @@ export default function Cert({ category = {}, bundles = [] }) {
         <Breadcrumbs items={crumbs} />
 
         <div className="flex flex-col gap-2 border-b border-slate-800 pb-6">
-          <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">{category.cert_key}</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-brand-400">{category.cert_key}</p>
           <h2 className="text-3xl font-bold tracking-normal text-white">{category.title}</h2>
           <p className="text-sm text-slate-400">
             {category.region}
@@ -54,7 +54,7 @@ export default function Cert({ category = {}, bundles = [] }) {
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-medium text-emerald-300">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-brand-500/15 px-2.5 py-0.5 text-[11px] font-medium text-brand-300">
                         <Layers className="h-3 w-3" />
                         {bundle.variant_label || 'Standard'}
                       </span>
@@ -83,7 +83,7 @@ export default function Cert({ category = {}, bundles = [] }) {
                   </div>
                   <div className="h-1.5 overflow-hidden rounded-full bg-slate-800">
                     <div
-                      className="h-full rounded-full bg-emerald-500/80"
+                      className="h-full rounded-full bg-brand-500/80"
                       style={{ width: `${Math.min(bundle.percent, 100)}%` }}
                     />
                   </div>
@@ -104,7 +104,7 @@ export default function Cert({ category = {}, bundles = [] }) {
                   {bundle.is_content_backed ? (
                     <Link
                       href={bundle.url}
-                      className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
+                      className="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-400"
                     >
                       {bundle.has_progress ? 'Continue' : 'Open track'}
                       <ArrowRight className="h-4 w-4" />

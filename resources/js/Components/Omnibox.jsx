@@ -90,11 +90,11 @@ export default function Omnibox({ placeholder = 'Find a certification…' }) {
                 }}
                 onFocus={() => setOpen(true)}
                 onKeyDown={onKeyDown}
-                className="w-full rounded-md border border-slate-700 bg-slate-800 py-2 pl-9 pr-3 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                className="w-full rounded-md border border-slate-700 bg-slate-800 py-2 pl-9 pr-3 text-sm text-slate-200 placeholder-slate-500 focus:border-brand-500/60 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
             />
             {busy && (
                 <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                    <div className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-slate-600 border-t-emerald-500" />
+                    <div className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-slate-600 border-t-brand-500" />
                 </div>
             )}
             {open && hits && (
@@ -117,7 +117,7 @@ export default function Omnibox({ placeholder = 'Find a certification…' }) {
                                     }`}
                                 >
                                     <span className="truncate">{hit.title}</span>
-                                    <span className="shrink-0 text-xs text-emerald-400/80">{hit.region}</span>
+                                    <span className="shrink-0 text-xs text-brand-400/80">{hit.region}</span>
                                 </Link>
                             </li>
                         ))

@@ -27,7 +27,7 @@ const filters = [
 
 const actionChip = (action) =>
   action === 'approved'
-    ? <span className="inline-flex rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-300">Approved</span>
+    ? <span className="inline-flex rounded-full bg-brand-500/10 px-2 py-0.5 text-xs font-medium text-brand-300">Approved</span>
     : <span className="inline-flex rounded-full bg-red-500/10 px-2 py-0.5 text-xs font-medium text-red-300">Rejected</span>;
 
 export default function Approvals({ summary = {}, rows = [], pending = [], trend = [], activeFilter = 'all' }) {
@@ -75,7 +75,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
             <span className="text-xs uppercase tracking-wide text-slate-500">View</span>
             {filters.map(([value, label]) => (
               <Link key={value} href={value === 'all' ? '/admin/reports/approvals' : `/admin/reports/approvals?filter=${value}`}
-                className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${activeFilter === value ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
+                className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${activeFilter === value ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
                 {label}
               </Link>
             ))}
@@ -96,7 +96,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
                 {trend.map((week) => (
                   <tr key={week.week} className="border-t border-slate-800">
                     <td className="py-2 pr-2 text-slate-300">{week.week}</td>
-                    <td className="py-2 pr-2 text-right text-emerald-300">{week.approved}</td>
+                    <td className="py-2 pr-2 text-right text-brand-300">{week.approved}</td>
                     <td className="py-2 text-right text-red-300">{week.rejected}</td>
                   </tr>
                 ))}
@@ -129,7 +129,7 @@ export default function Approvals({ summary = {}, rows = [], pending = [], trend
                           <td className="py-2">
                             <div className="flex gap-2">
                               <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'approve')}
-                                className="inline-flex items-center gap-1 rounded-lg bg-emerald-500 px-2.5 py-1.5 text-xs font-semibold text-slate-950 transition hover:bg-emerald-400 disabled:opacity-50">
+                                className="inline-flex items-center gap-1 rounded-lg bg-brand-500 px-2.5 py-1.5 text-xs font-semibold text-slate-950 transition hover:bg-brand-400 disabled:opacity-50">
                                 <Check className="h-3.5 w-3.5" /> Approve
                               </button>
                               <button type="button" disabled={processingId === item.id} onClick={() => review(item.id, 'reject')}

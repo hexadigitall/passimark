@@ -47,7 +47,7 @@ export default function DashboardLayout({ children }) {
                     <div className="flex items-center justify-between p-6 border-b border-slate-700">
                         <div className="flex items-center space-x-2">
                             <img src="/images/passimark/passimark_icon_128x128.png" alt="Passimark" className="h-10 w-10" />
-                            <span className="text-xl font-bold"><span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">Passi</span><span className="text-white">mark</span></span>
+                            <span className="text-xl font-bold"><span className="bg-gradient-to-r from-brand-400 to-teal-500 bg-clip-text text-transparent">Passi</span><span className="text-white">mark</span></span>
                         </div>
                         <button
                             onClick={() => setSidebarOpen(false)}
@@ -67,7 +67,7 @@ export default function DashboardLayout({ children }) {
                                 onClick={() => setSidebarOpen(false)}
                                 className={`flex items-center space-x-3 rounded-lg px-4 py-3 font-medium transition ${
                                     currentPath === href
-                                        ? 'bg-emerald-600/20 text-emerald-400'
+                                        ? 'bg-brand-600/20 text-brand-400'
                                         : 'text-slate-300 hover:bg-slate-700'
                                 }`}
                             >
@@ -142,7 +142,7 @@ export default function DashboardLayout({ children }) {
                                     <select
                                         value={currentRegion}
                                         onChange={(event) => selectRegion(event.target.value)}
-                                        className="rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                                        className="rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
                                     >
                                         <option value="">All regions</option>
                                         {regions.map((region) => (
@@ -154,7 +154,7 @@ export default function DashboardLayout({ children }) {
 
                                 {!isStaff && typeof ability.theta === 'number' && (
                                     <span
-                                        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-semibold text-emerald-300"
+                                        className="inline-flex items-center gap-1.5 rounded-full border border-brand-500/40 bg-brand-500/10 px-3 py-1 font-mono text-xs font-semibold text-brand-300"
                                         title="Current ability estimate (IRT theta)"
                                     >
                                         θ {ability.theta.toFixed(2)}
@@ -175,9 +175,9 @@ export default function DashboardLayout({ children }) {
                     <main className="flex-1 p-4 sm:p-6">
                         <div className="mx-auto w-full max-w-7xl">
                         {flashVisible && flash.success && (
-                            <div className="mb-4 flex items-start justify-between gap-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">
+                            <div className="mb-4 flex items-start justify-between gap-4 rounded-lg border border-brand-500/40 bg-brand-500/10 px-4 py-3 text-sm text-brand-200">
                                 <span>{flash.success}</span>
-                                <button type="button" onClick={() => setFlashVisible(false)} aria-label="Dismiss" className="text-emerald-300 hover:text-white">
+                                <button type="button" onClick={() => setFlashVisible(false)} aria-label="Dismiss" className="text-brand-300 hover:text-white">
                                     <X className="h-4 w-4" />
                                 </button>
                             </div>

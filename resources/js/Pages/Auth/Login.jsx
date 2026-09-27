@@ -20,7 +20,7 @@ export default function Login() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse motion-reduce:animate-none"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse motion-reduce:animate-none"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse motion-reduce:animate-none animation-delay-2000"></div>
       </div>
 
@@ -49,7 +49,7 @@ export default function Login() {
                 value={data.email}
                 onChange={(e) => setData('email', e.target.value)}
                 placeholder="you@example.com"
-                className={`w-full pl-10 pr-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition ${
+                className={`w-full pl-10 pr-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
                   errors.email ? 'border-red-500' : 'border-slate-600'
                 }`}
                 disabled={processing}
@@ -71,7 +71,7 @@ export default function Login() {
                 value={data.password}
                 onChange={(e) => setData('password', e.target.value)}
                 placeholder="Enter your password"
-                className={`w-full pl-10 pr-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition ${
+                className={`w-full pl-10 pr-4 py-3 bg-slate-700/50 border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition ${
                   errors.password ? 'border-red-500' : 'border-slate-600'
                 }`}
                 disabled={processing}
@@ -87,7 +87,7 @@ export default function Login() {
               type="checkbox"
               checked={data.remember}
               onChange={(e) => setData('remember', e.target.checked)}
-              className="w-4 h-4 rounded border-slate-600 bg-slate-700 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
+              className="w-4 h-4 rounded border-slate-600 bg-slate-700 text-brand-500 focus:ring-brand-500 cursor-pointer"
               disabled={processing}
             />
             <label htmlFor="remember" className="ml-2 text-sm text-slate-400 cursor-pointer">
@@ -99,7 +99,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={processing}
-            className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 disabled:from-slate-600 disabled:to-slate-600 text-white font-semibold rounded-lg transition duration-200 flex items-center justify-center gap-2 shadow-lg"
+            className="w-full py-3 px-4 bg-gradient-to-r from-brand-500 to-teal-500 hover:from-brand-600 hover:to-teal-600 disabled:from-slate-600 disabled:to-slate-600 text-slate-950 font-semibold rounded-lg transition duration-200 flex items-center justify-center gap-2 shadow-lg"
           >
             {processing ? (
               <>
@@ -116,11 +116,11 @@ export default function Login() {
 
           {/* Footer */}
           <p className="text-center text-slate-400 text-sm mt-6">
-            Demo credentials: <span className="text-emerald-400 font-mono">student@passimark.com / password</span>
+            Demo credentials: <span className="text-brand-400 font-mono">student@passimark.com / password</span>
           </p>
           <p className="mt-3 text-center text-sm text-slate-400">
             New to Passimark?{' '}
-            <Link href="/register" className="font-medium text-emerald-400 hover:text-emerald-300">
+            <Link href="/register" className="font-medium text-brand-400 hover:text-brand-300">
               Create an account
             </Link>
           </p>

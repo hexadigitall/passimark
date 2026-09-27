@@ -107,7 +107,7 @@ export default function Questions({ summary = {}, domains = [], blooms = [], dif
                   {weakest.map((row) => (
                     <tr key={row.id} className="border-t border-slate-800">
                       <td className="max-w-[280px] py-2 pr-2 text-slate-200">
-                        <Link href="/admin/passimark?tab=questions" className="group truncate transition hover:text-emerald-400" title={row.snippet}>{row.snippet}</Link>
+                        <Link href="/admin/passimark?tab=questions" className="group truncate transition hover:text-brand-400" title={row.snippet}>{row.snippet}</Link>
                         <p className="text-xs text-slate-500">#{row.id}</p>
                       </td>
                       <td className="py-2 pr-2 text-slate-300">{row.domain}</td>
@@ -131,7 +131,7 @@ export default function Questions({ summary = {}, domains = [], blooms = [], dif
               <ul className="mt-4 space-y-2">
                 {never_used_samples.map((row) => (
                   <li key={row.id} className="flex items-start justify-between gap-4 border-b border-slate-800 py-2 text-sm">
-                    <Link href="/admin/passimark?tab=questions" className="max-w-[660px] truncate text-slate-200 transition hover:text-emerald-400" title={row.snippet}>{row.snippet}</Link>
+                    <Link href="/admin/passimark?tab=questions" className="max-w-[660px] truncate text-slate-200 transition hover:text-brand-400" title={row.snippet}>{row.snippet}</Link>
                     <span className="flex shrink-0 items-center gap-3 text-xs text-slate-500">
                       <span>#{row.id}</span>
                       <span className="max-w-[160px] truncate">{row.domain}</span>

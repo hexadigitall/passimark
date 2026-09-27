@@ -31,7 +31,7 @@ export default function Settings({ user, preferences = {} }) {
 
       <form onSubmit={submit} className="mx-auto max-w-5xl space-y-6">
         <div className="rounded-2xl border border-slate-700 bg-slate-800 p-6">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Preferences</p>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-400">Preferences</p>
           <h2 className="mt-2 text-3xl font-bold text-white">Account Settings</h2>
         </div>
 
@@ -51,7 +51,7 @@ export default function Settings({ user, preferences = {} }) {
                     type="checkbox"
                     checked={!!data.notifications[key]}
                     onChange={(e) => update(key, e.target.checked)}
-                    className="h-4 w-4 accent-emerald-500"
+                    className="h-4 w-4 accent-brand-500"
                   />
                 </label>
               ))}
@@ -70,7 +70,7 @@ export default function Settings({ user, preferences = {} }) {
                 <select
                   value={data.theme}
                   onChange={(e) => setData('theme', e.target.value)}
-                  className="mt-2 w-full rounded-lg border border-slate-600 bg-slate-950 px-3 py-2 text-white focus:border-emerald-500 focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-slate-600 bg-slate-950 px-3 py-2 text-white focus:border-brand-500 focus:outline-none"
                 >
                   <option value="dark">Dark mode</option>
                   <option value="light">Light mode</option>
@@ -82,7 +82,7 @@ export default function Settings({ user, preferences = {} }) {
                 <select
                   value={data.language}
                   onChange={(e) => setData('language', e.target.value)}
-                  className="mt-2 w-full rounded-lg border border-slate-600 bg-slate-950 px-3 py-2 text-white focus:border-emerald-500 focus:outline-none"
+                  className="mt-2 w-full rounded-lg border border-slate-600 bg-slate-950 px-3 py-2 text-white focus:border-brand-500 focus:outline-none"
                 >
                   <option value="en">English</option>
                   <option value="es">Spanish</option>
@@ -94,7 +94,7 @@ export default function Settings({ user, preferences = {} }) {
         </div>
 
         <div className="flex justify-end">
-          <button type="submit" disabled={processing} className="rounded-lg bg-emerald-500 px-5 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400 disabled:opacity-50">{processing ? 'Saving...' : 'Save preferences'}</button>
+          <button type="submit" disabled={processing} className="rounded-lg bg-brand-500 px-5 py-2 text-sm font-semibold text-slate-950 hover:bg-brand-400 disabled:opacity-50">{processing ? 'Saving...' : 'Save preferences'}</button>
         </div>
       </form>
     </DashboardLayout>

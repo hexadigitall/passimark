@@ -71,7 +71,7 @@ export default function Dashboard({
                     <li key={item.cert_key}>
                       <Link
                         href={item.url}
-                        className="group flex items-center justify-between gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 transition hover:border-slate-600 hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+                        className="group flex items-center justify-between gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 transition hover:border-slate-600 hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
                       >
                         <span className="min-w-0">
                           <span className="block truncate text-sm font-medium text-slate-100">
@@ -84,7 +84,7 @@ export default function Dashboard({
                           </span>
                         </span>
                         <ArrowRight
-                          className="h-4 w-4 shrink-0 text-slate-600 transition group-hover:text-emerald-400"
+                          className="h-4 w-4 shrink-0 text-slate-600 transition group-hover:text-brand-400"
                           aria-hidden="true"
                         />
                       </Link>
@@ -116,7 +116,7 @@ function NextUp({ focus }) {
 
   if (!next) {
     return (
-      <div className="mt-6 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-5 py-4">
+      <div className="mt-6 rounded-xl border border-brand-500/30 bg-brand-500/5 px-5 py-4">
         <p className="text-sm text-slate-300">
           Every session in this track is complete. Your certificate is issued.
         </p>
@@ -132,7 +132,7 @@ function NextUp({ focus }) {
         className={
           next.locked
             ? 'mt-2 flex flex-col gap-3 rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 sm:flex-row sm:items-center sm:justify-between'
-            : 'mt-2 flex flex-col gap-3 rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-5 sm:flex-row sm:items-center sm:justify-between'
+            : 'mt-2 flex flex-col gap-3 rounded-xl border border-brand-500/30 bg-brand-500/5 p-5 sm:flex-row sm:items-center sm:justify-between'
         }
       >
         <div className="min-w-0">
@@ -140,7 +140,7 @@ function NextUp({ focus }) {
             {next.locked ? (
               <Lock className="h-4 w-4 shrink-0 text-amber-400" aria-hidden="true" />
             ) : (
-              <Play className="h-4 w-4 shrink-0 text-emerald-400" aria-hidden="true" />
+              <Play className="h-4 w-4 shrink-0 text-brand-400" aria-hidden="true" />
             )}
             <span className="truncate">
               {next.number ? `Session ${next.number} · ` : ''}
@@ -159,7 +159,7 @@ function NextUp({ focus }) {
           className={
             next.locked
               ? 'shrink-0 rounded-lg border border-slate-700 px-4 py-2 text-center text-sm font-medium text-slate-300 transition hover:bg-slate-800'
-              : 'shrink-0 rounded-lg bg-emerald-500 px-4 py-2 text-center text-sm font-semibold text-slate-950 transition hover:bg-emerald-400'
+              : 'shrink-0 rounded-lg bg-brand-500 px-4 py-2 text-center text-sm font-semibold text-slate-950 transition hover:bg-brand-400'
           }
         >
           {next.locked ? 'View track' : 'Start session'}
@@ -176,7 +176,7 @@ function ResumeCard({ session, onResume }) {
         Continue where you left off
       </h2>
 
-      <div className="mt-2 flex flex-col gap-4 rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-2 flex flex-col gap-4 rounded-xl border border-brand-500/30 bg-brand-500/5 p-5 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold text-white">
             {session.number ? `Session ${session.number} · ` : ''}
@@ -200,7 +200,7 @@ function ResumeCard({ session, onResume }) {
           <button
             type="button"
             onClick={onResume}
-            className="rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
+            className="rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-brand-400"
           >
             Resume
           </button>
@@ -307,7 +307,7 @@ function CatalogSearch({ total }) {
           onChange={(event) => setTerm(event.target.value)}
           placeholder="Search certifications..."
           aria-label="Search all certifications"
-          className="w-full rounded-lg border border-slate-700 bg-slate-900 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+          className="w-full rounded-lg border border-slate-700 bg-slate-900 py-2.5 pl-9 pr-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/30"
         />
       </div>
 
@@ -329,7 +329,7 @@ function CatalogSearch({ total }) {
                 <li key={item.cert_key}>
                   <Link
                     href={item.bundle_url}
-                    className="flex items-center justify-between gap-3 px-4 py-2.5 transition hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-500/60"
+                    className="flex items-center justify-between gap-3 px-4 py-2.5 transition hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500/60"
                   >
                     <span className="min-w-0">
                       <span className="block truncate text-sm text-slate-100">{item.title}</span>
@@ -361,7 +361,7 @@ function NoFocus({ catalogTotal }) {
 
       <Link
         href="/passimark/focus"
-        className="mt-6 inline-flex rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
+        className="mt-6 inline-flex rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-brand-400"
       >
         Choose your focus
       </Link>
@@ -385,7 +385,7 @@ function BrowseCatalog({ sections, open, onToggle, activeRegion }) {
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+        className="flex w-full items-center justify-between gap-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
       >
         <span>
           <span className="block text-sm font-semibold text-white">Browse the full catalog</span>
@@ -420,7 +420,7 @@ function BrowseCatalog({ sections, open, onToggle, activeRegion }) {
                     <li key={category.cert_key}>
                       <Link
                         href={`/certs/${category.cert_key}`}
-                        className="group flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2.5 transition hover:border-slate-600 hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+                        className="group flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2.5 transition hover:border-slate-600 hover:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
                       >
                         <span className="min-w-0">
                           <span className="block truncate text-sm text-slate-200">
@@ -431,7 +431,7 @@ function BrowseCatalog({ sections, open, onToggle, activeRegion }) {
                           </span>
                         </span>
                         <ArrowRight
-                          className="h-3.5 w-3.5 shrink-0 text-slate-600 transition group-hover:text-emerald-400"
+                          className="h-3.5 w-3.5 shrink-0 text-slate-600 transition group-hover:text-brand-400"
                           aria-hidden="true"
                         />
                       </Link>

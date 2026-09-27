@@ -19,7 +19,7 @@ export default function Permissions({ funnel }) {
 
       <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden motion-reduce:hidden">
-          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-emerald-500 opacity-20 blur-3xl" />
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-500 opacity-20 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 blur-3xl" />
         </div>
 
@@ -40,9 +40,9 @@ export default function Permissions({ funnel }) {
             <button
               type="button"
               onClick={() => choose(true)}
-              className="flex w-full items-center gap-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-left transition hover:border-emerald-500/60 hover:bg-emerald-500/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+              className="flex w-full items-center gap-3 rounded-xl border border-brand-500/40 bg-brand-500/10 p-4 text-left transition hover:border-brand-500/60 hover:bg-brand-500/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-300">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-500/20 text-brand-300">
                 <BellRing className="h-4 w-4" aria-hidden="true" />
               </span>
               <span className="min-w-0">
@@ -56,7 +56,7 @@ export default function Permissions({ funnel }) {
             <button
               type="button"
               onClick={() => choose(false)}
-              className="flex w-full items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/40 p-4 text-left transition hover:border-slate-600 hover:bg-slate-900/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+              className="flex w-full items-center gap-3 rounded-xl border border-slate-700 bg-slate-900/40 p-4 text-left transition hover:border-slate-600 hover:bg-slate-900/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-700/60 text-slate-300">
                 <BellOff className="h-4 w-4" aria-hidden="true" />

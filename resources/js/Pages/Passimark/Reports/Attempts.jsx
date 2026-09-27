@@ -30,7 +30,7 @@ const modeOptions = [
 ];
 
 const chip = (href, label, active) => (
-  <Link key={label} href={href} className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${active ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
+  <Link key={label} href={href} className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${active ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-200 hover:bg-slate-700'}`}>
     {label}
   </Link>
 );
@@ -79,7 +79,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
                     <span className="font-mono text-slate-400">{count} · {bandTotal ? `${Math.round((count / bandTotal) * 100)}%` : '0%'}</span>
                   </div>
                   <div className="mt-1 h-2 overflow-hidden rounded-full bg-slate-800">
-                    <div className="h-full rounded-full bg-emerald-500/70" style={{ width: `${bar(count, bandTotal)}%` }} />
+                    <div className="h-full rounded-full bg-brand-500/70" style={{ width: `${bar(count, bandTotal)}%` }} />
                   </div>
                 </div>
               ))}
@@ -161,7 +161,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
                 <tr key={attempt.id} className="border-b border-slate-800 transition hover:bg-slate-800/40">
                   <td className="px-4 py-3 font-medium text-white">{attempt.learner}</td>
                   <td className="max-w-[300px] px-4 py-3">
-                    <Link href="/admin/reports/sessions" className="group truncate text-slate-300 transition hover:text-emerald-400">{attempt.session}</Link>
+                    <Link href="/admin/reports/sessions" className="group truncate text-slate-300 transition hover:text-brand-400">{attempt.session}</Link>
                     <p className="text-xs text-slate-500">{attempt.exam}</p>
                   </td>
                   <td className="px-4 py-3 capitalize text-slate-300">{attempt.mode}</td>
@@ -169,7 +169,7 @@ export default function Attempts({ summary = {}, bands = {}, modes = [], trend =
                   <td className="px-4 py-3">
                     {attempt.score !== null
                       ? (attempt.passed
-                        ? <span className="inline-flex rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-300">Pass</span>
+                        ? <span className="inline-flex rounded-full bg-brand-500/10 px-2 py-0.5 text-xs font-medium text-brand-300">Pass</span>
                         : <span className="inline-flex rounded-full bg-red-500/10 px-2 py-0.5 text-xs font-medium text-red-300">Fail</span>)
                       : <span className="text-slate-600">—</span>}
                   </td>

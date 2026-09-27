@@ -22,7 +22,7 @@ const statusPresentation = {
   },
   open: {
     label: 'Ready',
-    badge: 'bg-emerald-500/15 text-emerald-300',
+    badge: 'bg-brand-500/15 text-brand-300',
     icon: Circle,
     cta: 'Start Session',
     disabled: false,
@@ -46,7 +46,7 @@ const statusPresentation = {
   },
   approved: {
     label: 'Approved',
-    badge: 'bg-emerald-500/15 text-emerald-300',
+    badge: 'bg-brand-500/15 text-brand-300',
     icon: ShieldCheck,
   },
   review: {
@@ -112,7 +112,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
 
         <div className="flex flex-col gap-5 border-b border-slate-800 pb-6 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">
+            <p className="font-mono text-xs uppercase tracking-widest text-brand-400">
               {track.cert_key}
               {track.variant_label ? ` · ${track.variant_label}` : ''}
             </p>
@@ -120,7 +120,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
             {track.description && <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">{track.description}</p>}
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
               {track.region && <span className="rounded-full bg-slate-800 px-2.5 py-0.5 text-slate-400">{track.region}</span>}
-              <span className={`rounded-full px-2.5 py-0.5 ${approvalGated ? 'bg-amber-500/15 text-amber-300' : 'bg-emerald-500/15 text-emerald-300'}`}>
+              <span className={`rounded-full px-2.5 py-0.5 ${approvalGated ? 'bg-amber-500/15 text-amber-300' : 'bg-brand-500/15 text-brand-300'}`}>
                 {approvalGated ? 'Instructor approved' : 'Self-paced'}
               </span>
               <span className="rounded-full bg-slate-800 px-2.5 py-0.5 text-slate-400">
@@ -143,7 +143,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
               <Link
                 key={sibling.slug}
                 href={sibling.url}
-                className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 transition hover:border-emerald-500/50 hover:text-emerald-300"
+                className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 transition hover:border-brand-500/50 hover:text-brand-300"
               >
                 {sibling.variant_label || sibling.title}
               </Link>
@@ -165,7 +165,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
             {track.domains?.length ? (
               <div className="mt-3 space-y-2">
                 {track.domains.map((domain) => {
-                  const tone = domain.accuracy >= 0.8 ? 'bg-emerald-500' : domain.accuracy >= 0.5 ? 'bg-amber-500' : 'bg-orange-600/80';
+                  const tone = domain.accuracy >= 0.8 ? 'bg-brand-500' : domain.accuracy >= 0.5 ? 'bg-amber-500' : 'bg-orange-600/80';
                   return (
                     <div key={domain.name} className="grid grid-cols-[1fr_auto] items-center gap-3 text-xs">
                       <div className="flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
                   ? []
                   : done
                     ? [
-                        { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'emerald' },
+                        { key: 'reattempt', label: 'Reattempt', action: 'start', tone: 'brand' },
                         { key: 'review', label: 'Review answers', action: 'review', tone: 'slate' },
                         ...(session.progress?.credential_id
                           ? [{ key: 'certificate', label: 'Certificate', href: `/certificate/${session.progress.id}`, tone: 'sky' }]
@@ -220,7 +220,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
                           ? [{ key: 'approval', label: 'Request approval', action: 'request-approval', tone: 'amber' }]
                           : []),
                       ]
-                    : [{ key: 'main', label: state.cta, action: 'start', tone: 'emerald', disabled: state.disabled }];
+                    : [{ key: 'main', label: state.cta, action: 'start', tone: 'brand', disabled: state.disabled }];
 
                 return (
                   <div key={session.id} className="flex flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
@@ -254,7 +254,7 @@ export default function Track({ track, category = {}, siblings = [] }) {
                               ? 'bg-sky-500/15 text-sky-200 hover:bg-sky-500/25'
                               : action.tone === 'slate'
                                 ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                                : 'bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25';
+                                : 'bg-brand-500/15 text-brand-200 hover:bg-brand-500/25';
 
                         if (action.href) {
                           return (
@@ -308,13 +308,13 @@ function ProgressRing({ done, total, theta }) {
           fill="none"
           strokeWidth="7"
           strokeLinecap="round"
-          className={complete ? 'stroke-emerald-400' : 'stroke-slate-500'}
+          className={complete ? 'stroke-brand-400' : 'stroke-slate-500'}
           strokeDasharray={complete ? `${circumference} ${circumference}` : '4 6'}
           strokeDashoffset={complete ? 0 : dashoffset}
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className={`font-mono text-sm font-semibold ${complete ? 'text-emerald-300' : 'text-slate-300'}`}>
+        <span className={`font-mono text-sm font-semibold ${complete ? 'text-brand-300' : 'text-slate-300'}`}>
           {Math.round(ratio * 100)}%
         </span>
         {theta !== null && theta !== undefined && <span className="font-mono text-[10px] text-slate-500">θ {Number(theta).toFixed(2)}</span>}
@@ -345,9 +345,9 @@ function ThetaSparkline({ points }) {
     <div className="mt-2">
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full">
         <line x1="2" y1={y(0)} x2={width - 2} y2={y(0)} className="stroke-slate-800" strokeWidth="1" strokeDasharray="3 3" />
-        <polyline points={coords} fill="none" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" className="stroke-emerald-400" />
+        <polyline points={coords} fill="none" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" className="stroke-brand-400" />
         {points.map((value, index) => (
-          <circle key={index} cx={x(index)} cy={y(value)} r="2.5" className={value >= 0 ? 'fill-emerald-400' : 'fill-amber-400'} />
+          <circle key={index} cx={x(index)} cy={y(value)} r="2.5" className={value >= 0 ? 'fill-brand-400' : 'fill-amber-400'} />
         ))}
       </svg>
       <p className="mt-1 flex justify-between font-mono text-[10px] text-slate-600">

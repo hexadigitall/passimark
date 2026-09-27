@@ -31,7 +31,7 @@ export default function FunnelProgress({ ladder = [], step, className = '' }) {
         className="h-1 w-full overflow-hidden rounded-full bg-slate-700/60"
       >
         <div
-          className="h-full rounded-full bg-emerald-500 transition-[width] duration-300 ease-out motion-reduce:transition-none"
+          className="h-full rounded-full bg-brand-500 transition-[width] duration-300 ease-out motion-reduce:transition-none"
           style={{ width: `${(current / total) * 100}%` }}
         />
       </div>

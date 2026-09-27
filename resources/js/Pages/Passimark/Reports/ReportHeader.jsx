@@ -5,7 +5,7 @@ export default function ReportHeader({ title, description, backHref = '/', child
     <div className="border-b border-slate-800 pb-6">
       <Link
         href={backHref}
-        className="inline-flex items-center gap-1 text-sm font-medium text-emerald-400 transition hover:text-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
+        className="inline-flex items-center gap-1 text-sm font-medium text-brand-400 transition hover:text-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
       >
         ← Back to overview
       </Link>
