@@ -74,12 +74,20 @@ class PassimarkAdminController extends Controller
         return Inertia::render('Passimark/Reports/Approvals', $analytics->approvals($request->string('filter', 'all')->toString()));
     }
 
-    public function index(){ 
+    public function index(Request $request){ 
         $pending = PassimarkProgress::with(['user','session'])->where('status','pending_approval')->get();
-        $sessions = PassimarkSession::with(['exams', 'questions.tags', 'certificationTrack', 'tags'])->orderBy('order')->get();
+        // Questions are not eager-loaded through the session. That loaded all 162,938 rows
+        // with their tags into a single request and exhausted the 128M PHP limit, so this
+        // page returned 500 with an empty body. Sessions carry a count instead, and the
+        // Questions tab reads the paginated set below.
+        $sessions = PassimarkSession::with(['exams', 'certificationTrack', 'tags'])->withCount('questions')->orderBy('order')->get();
         $tracks = PassimarkCertificationTrack::withCount('sessions')->orderBy('title')->get();
         $tags = PassimarkTag::withCount(['questions', 'sessions'])->orderBy('type')->orderBy('label')->get();
         $events = PassimarkApprovalEvent::with(['reviewer','progress.user','progress.session'])->latest()->limit(20)->get();
+        $questions = PassimarkQuestion::with(['tags','session'])
+            ->orderByDesc('id')
+            ->paginate(25)
+            ->withQueryString();
         $report = [
             'learners' => User::where('role', 'student')->count(),
             'attempts' => PassimarkAttempt::count(),
@@ -87,7 +95,7 @@ class PassimarkAdminController extends Controller
             'average_score' => round((float) PassimarkAttempt::whereNotNull('score')->avg('score'), 2),
             'pending_approvals' => $pending->count(),
         ];
-        return Inertia::render('Passimark/Admin', compact('pending','sessions','events','report','tracks','tags'));
+        return Inertia::render('Passimark/Admin', compact('pending','sessions','events','report','tracks','tags','questions'));
     }
     public function approve(Request $request, PassimarkProgress $progress){
         $data = $request->validate(['note'=>'nullable|string|max:2000']);

@@ -32,6 +32,65 @@ class TagTaxonomyTest extends TestCase
                 ->has('tags'));
     }
 
+    /**
+     * The Questions tab used to arrive via `sessions -> questions.tags`, which loaded every
+     * question in the bank into a single request. On the live database that exhausted the
+     * 128M PHP limit and the page returned 500 with an empty body. Questions must be paginated
+     * and must not be nested on sessions.
+     */
+    public function test_question_bank_is_paginated_instead_of_nested_on_every_session(): void
+    {
+        $admin = User::where('email', 'admin@passimark.com')->firstOrFail();
+
+        PassimarkQuestion::query()->delete();
+
+        for ($i = 1; $i <= 60; $i++) {
+            PassimarkQuestion::create([
+                'session_id' => 1, 'content' => "Paginated question {$i}",
+                'options' => [['key' => 'A', 'text' => 'Correct', 'is_correct' => true]],
+                'correct_key' => 'A', 'domain' => 'Pagination', 'bloom_level' => 'apply',
+            ]);
+        }
+
+        $this->actingAs($admin)->get('/admin/passimark')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('Passimark/Admin')
+                ->has('questions.data')
+                ->where('questions.total', 60)
+                ->where('questions.last_page', 3)
+                ->where('questions.current_page', 1)
+                // No session may carry its questions inline.
+                ->missing('sessions.0.questions')
+                ->where('sessions.0.questions_count', PassimarkSession::where('id', 1)->firstOrFail()->questions()->count()));
+    }
+
+    /** Page 2 must contain different rows, not a repeat of page 1. */
+    public function test_question_pagination_returns_distinct_pages(): void
+    {
+        $admin = User::where('email', 'admin@passimark.com')->firstOrFail();
+
+        PassimarkQuestion::query()->delete();
+        for ($i = 1; $i <= 60; $i++) {
+            PassimarkQuestion::create([
+                'session_id' => 1, 'content' => "Page probe {$i}",
+                'options' => [['key' => 'A', 'text' => 'Correct', 'is_correct' => true]],
+                'correct_key' => 'A', 'domain' => 'Pagination', 'bloom_level' => 'apply',
+            ]);
+        }
+
+        $first = $this->actingAs($admin)->get('/admin/passimark')->viewData('page');
+        $second = $this->actingAs($admin)->get('/admin/passimark?page=2')->viewData('page');
+
+        $firstIds = array_column($first['props']['questions']['data'], 'id');
+        $secondIds = array_column($second['props']['questions']['data'], 'id');
+
+        $this->assertCount(25, $firstIds);
+        $this->assertCount(25, $secondIds);
+        $this->assertEmpty(array_intersect($firstIds, $secondIds), 'pages must not overlap');
+        $this->assertSame(2, $second['props']['questions']['current_page']);
+    }
+
     public function test_admin_can_create_rename_and_delete_tags_and_students_are_blocked(): void
     {
         $student = User::where('email', 'student@passimark.com')->firstOrFail();
