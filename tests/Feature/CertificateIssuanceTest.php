@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\{PassimarkAttempt, PassimarkCertificationTrack, PassimarkExam, PassimarkProgress, PassimarkQuestion, PassimarkSession, User};
-use App\Services\CatEngine;
+use App\Services\{CatEngine, CertificateIssuer};
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
@@ -82,6 +82,46 @@ class CertificateIssuanceTest extends TestCase
         $this->assertSame('approved', $progress->status);
         $this->assertNotNull($progress->certified_at);
         $this->assertMatchesRegularExpression('/^PMK-APPROVALCERT-\d{4}-[A-F0-9]{8}$/', $progress->credential_id);
+    }
+
+    /**
+     * Both catalog seeders leave theta_required null on every session they create, and the
+     * issuer used to read that as 0 - so "the bar was never set" silently became "passed" and
+     * a credential was minted against a requirement nobody had defined. Issuance must fail
+     * closed instead, and say why.
+     */
+    public function test_no_credential_is_issued_when_the_session_defines_no_pass_bar(): void
+    {
+        [$track, $session, $progress] = $this->finalTrack('unbarred-cert', 'auto');
+        $session->update(['theta_required' => null]);
+        $session->refresh();
+
+        $this->passFinal($session);
+
+        $progress->refresh();
+        $this->assertNull($progress->certified_at, 'a null pass bar must not certify');
+        $this->assertNull($progress->credential_id);
+        $this->assertNull($progress->credential_hash);
+        $this->assertStringContainsString(
+            'No pass bar set',
+            (string) CertificateIssuer::blockingReason($progress)
+        );
+
+        // And no code derived from this award can be verified.
+        $page = $this->get('/verify/PMK-UNBARREDCERT-2026-DEADBEEF')->assertOk()->viewData('page');
+        $this->assertFalse($page['props']['valid']);
+        $this->assertNull($page['props']['certificate']);
+    }
+
+    /** A bar that is genuinely set still certifies; fail-closed must not be a blanket denial. */
+    public function test_a_declared_pass_bar_still_issues(): void
+    {
+        [$track, $session, $progress] = $this->finalTrack('barred-cert', 'auto', -3.0);
+        $this->passFinal($session);
+
+        $progress->refresh();
+        $this->assertNotNull($progress->certified_at);
+        $this->assertNull(CertificateIssuer::blockingReason($progress));
     }
 
     public function test_pwa_manifest_matches_the_slate_theme(): void

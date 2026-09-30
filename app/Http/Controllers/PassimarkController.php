@@ -261,7 +261,22 @@ class PassimarkController extends Controller
             if (CatEngine::usesIrt($attempt)) {
                 $mle = Irt3PL::mle(CatEngine::answeredParams($attempt), $attempt->theta);
                 $theta = $mle['theta'];
-                $passed = $theta >= ($session?->theta_required ?? 0.0);
+                // Prefer a declared theta bar. Both catalog seeders leave theta_required
+                // null on every session they create, and reading that as 0 reported a pass
+                // against a requirement nobody had set. Where it is absent, fall back to
+                // the session's real pass_score percentage rather than to zero. This flag
+                // governs lesson completion and unlocking only; CertificateIssuer refuses
+                // to mint a credential on an undefined bar.
+                $required = $session?->theta_required;
+                if ($required !== null) {
+                    $passed = $theta >= (float) $required;
+                } else {
+                    $answered = $attempt->answers()->count();
+                    $rawPercent = $answered
+                        ? round($attempt->answers()->where('is_correct', true)->count() / $answered * 100, 2)
+                        : 0.0;
+                    $passed = $rawPercent >= (float) ($session?->pass_score ?? 70);
+                }
                 $score = Irt3PL::scaledScore($theta);
                 $attempt->update(['finished_at'=>now(),'theta'=>$theta,'score'=>$score,'is_passed'=>$passed]);
             } else {

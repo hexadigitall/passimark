@@ -14,6 +14,14 @@ use App\Models\PassimarkProgress;
  * The credential id is deterministic per learner+track (`PMK-{CERT}-{YEAR}-{HEX8}`), so a
  * re-issue attempt yields the same code; `credential_hash` is a tamper-evident placeholder for
  * future Polygon/IPFS anchoring.
+ *
+ * Issuance fails closed. A pass bar only counts when the session actually declares one:
+ * `theta_required` is nullable, and both Uniform205CatalogSeeder and
+ * WorldwidePassimarkCatalogSeeder leave it null for every session they create. Reading that
+ * null as 0 silently turned "the bar was never defined" into "you passed", so the previous
+ * `?? 0` fallback issued credentials against an invented requirement. There is no defensible
+ * default value to substitute here - each awarding body sets its own pass mark - so issuance
+ * is withheld and blockingReason() explains why until a real bar is set.
  */
 class CertificateIssuer
 {
@@ -44,7 +52,14 @@ class CertificateIssuer
         }
 
         $theta = (float) ($progress->ability_theta ?? 0);
-        $required = (float) ($session->theta_required ?? 0);
+        $required = $session->theta_required;
+
+        // No declared bar means no basis for a credential. See the class docblock.
+        if ($required === null) {
+            return null;
+        }
+        $required = (float) $required;
+
         if ($theta < $required) {
             return null;
         }
@@ -77,6 +92,48 @@ class CertificateIssuer
     public static function passProbability(float $theta, float $required): float
     {
         return 1 / (1 + exp(-1.7 * ($theta - $required)));
+    }
+
+    /**
+     * Why issuance is currently withheld, or null when a credential would be issued.
+     *
+     * Exists so an undefined bar is visible in the product instead of silently reading as
+     * a pass. "No pass bar set" is a data problem someone can fix; a credential minted
+     * against an invented threshold is one nobody can.
+     */
+    public static function blockingReason(PassimarkProgress $progress): ?string
+    {
+        $progress->loadMissing('session.certificationTrack');
+        $session = $progress->session;
+
+        if (! $session || $session->phase_type !== 'final') {
+            return 'Not a final assessment.';
+        }
+        if ($progress->certified_at) {
+            return null;
+        }
+        // Checked before eligibility: with no bar declared the attempt can never be a pass,
+        // so "final not passed" would be a symptom rather than the cause.
+        if ($session->theta_required === null) {
+            return "No pass bar set for this assessment (session.theta_required is null); "
+                ."a credential cannot be issued until the awarding body's pass mark is recorded.";
+        }
+
+        $approvalGated = ($session->certificationTrack->advancement ?? 'approval') !== 'auto';
+        $eligible = $approvalGated
+            ? $progress->status === PassimarkProgress::APPROVED
+            : in_array($progress->status, [PassimarkProgress::COMPLETED, PassimarkProgress::APPROVED], true);
+        if (! $eligible) {
+            return $approvalGated ? 'Awaiting instructor approval.' : 'Final not passed.';
+        }
+
+        $theta = (float) ($progress->ability_theta ?? 0);
+        $required = (float) $session->theta_required;
+        if ($theta < $required) {
+            return sprintf('Ability estimate %.2f is below the required %.2f.', $theta, $required);
+        }
+
+        return null;
     }
 
     /**
