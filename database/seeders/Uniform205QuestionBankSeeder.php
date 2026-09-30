@@ -112,7 +112,7 @@ class Uniform205QuestionBankSeeder extends Seeder
             $rows[] = [
                 'session_id' => $session->id,
                 'exam_id' => null,
-                'external_id' => sprintf('ub-%s-s%02d-q%04d', $slug, (int) $session->order, $i + 1),
+                'external_id' => sprintf('synth-%s-s%02d-q%04d', $slug, (int) $session->order, $i + 1),
                 'content' => $item['content'],
                 'options' => json_encode($item['options']),
                 'correct_key' => $correct['key'] ?? null,

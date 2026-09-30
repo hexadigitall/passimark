@@ -68,17 +68,33 @@ class Uniform205QuestionBankSeederTest extends TestCase
             );
             $this->assertSame(['A', 'B', 'C', 'D'], array_column($options, 'key'), $question->external_id);
 
-            $this->assertGreaterThanOrEqual(-3, $question->difficulty, $question->external_id);
-            $this->assertLessThanOrEqual(3, $question->difficulty, $question->external_id);
-            $this->assertGreaterThanOrEqual(0.1, $question->discrimination, $question->external_id);
-            $this->assertLessThanOrEqual(3, $question->discrimination, $question->external_id);
-            $this->assertSame(0.25, $question->guessing, $question->external_id);
+            // No item asserts a measured psychometric property. These columns were
+            // NOT NULL, so the generator invented values: seeded PRNG draws for
+            // difficulty and discrimination, a hardcoded 0.25 for guessing. Irt3PL
+            // reads a/b/c off the row, the theta becomes pass_probability, and
+            // CertificateIssuer issues on that, so the invented numbers were being
+            // used to decide whether a learner earned a credential. The columns are
+            // nullable now and the values are absent rather than fabricated.
+            $this->assertNull($question->difficulty, $question->external_id);
+            $this->assertNull($question->discrimination, $question->external_id);
+            $this->assertNull($question->guessing, $question->external_id);
 
             $this->assertNotEmpty($question->content, $question->external_id);
             $this->assertNotEmpty($question->domain, $question->external_id);
             $this->assertNotEmpty($question->bloom_level, $question->external_id);
             $this->assertNotEmpty($question->reference, $question->external_id);
-            $this->assertStringStartsWith('ub-', $question->external_id);
+            $this->assertStringStartsWith('synth-', $question->external_id);
+
+            // The citation must name a real body, never a document that does not exist.
+            $this->assertStringNotContainsStringIgnoringCase(
+                'official exam guide',
+                $question->reference,
+                $question->external_id
+            );
+
+            // And the item must admit what it is, since it is not drawn from a
+            // real examination paper.
+            $this->assertStringContainsString('Placeholder item', $question->explanation, $question->external_id);
         }
     }
 
