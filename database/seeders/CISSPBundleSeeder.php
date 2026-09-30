@@ -276,7 +276,6 @@ class CISSPBundleSeeder extends Seeder
         $bloomTagId = $this->ensureTag('bloom', $bloom)->id;
 
         foreach ($pool as $index => $item) {
-            $difficulty = round(-0.6 + 0.30 * ($session->phase - 1) + 0.45 * ($index / ($n - 1)), 2);
             PassimarkQuestion::create([
                 'session_id' => $session->id,
                 'exam_id' => null,
@@ -286,9 +285,16 @@ class CISSPBundleSeeder extends Seeder
                     $item['options']
                 ),
                 'correct_key' => $item['answer'],
-                'difficulty' => $difficulty,
-                'discrimination' => 1.2,
-                'guessing' => 0.25,
+                // No psychometric parameters. This seeder used to write
+                // difficulty = -0.6 + 0.30*(phase-1) + 0.45*(i/(n-1)), a fixed
+                // discrimination of 1.2 and a fixed 0.25 guessing floor. Those are not
+                // measurements of these items - they are a formula applied to row order - and
+                // Irt3PL reads a/b/c off the row, the theta becomes pass_probability, and
+                // CertificateIssuer mints on that. Authentic content deserves honest
+                // unknowns rather than invented calibration. The columns are nullable.
+                'difficulty' => null,
+                'discrimination' => null,
+                'guessing' => null,
                 'domain' => $domain,
                 'bloom_level' => $bloom,
                 'explanation' => $item['explanation'] ?? null,

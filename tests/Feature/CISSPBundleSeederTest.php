@@ -88,6 +88,43 @@ class CISSPBundleSeederTest extends TestCase
         }
     }
 
+    /**
+     * The textbook content is authentic; the psychometric calibration was not.
+     *
+     * This seeder used to write difficulty = -0.6 + 0.30*(phase-1) + 0.45*(i/(n-1)), a fixed
+     * discrimination of 1.2 and a fixed 0.25 guessing floor. Those are a formula applied to
+     * row order, not measurements, and Irt3PL reads a/b/c off the row, the theta becomes
+     * pass_probability, and CertificateIssuer mints on that. Real content should carry honest
+     * unknowns rather than invented calibration.
+     */
+    public function test_no_item_asserts_an_invented_psychometric_parameter(): void
+    {
+        foreach (PassimarkQuestion::all() as $q) {
+            $this->assertNull($q->difficulty, $q->external_id ?: 'question');
+            $this->assertNull($q->discrimination, $q->external_id ?: 'question');
+            $this->assertNull($q->guessing, $q->external_id ?: 'question');
+        }
+    }
+
+/**
+     * Every item must name a real provenance: the textbook itself, or the textbook bank for
+     * the generated remediation pools (which are clones of real items, not new content).
+     * What must never appear is a citation to a document that does not exist.
+     */
+public function test_every_item_cites_its_real_provenance(): void
+    {
+        foreach (PassimarkQuestion::all() as $q) {
+            $reference = (string) $q->reference;
+
+            $this->assertMatchesRegularExpression(
+                '/Hexadigitall CISSP Mastery textbook|textbook bank/',
+                $reference,
+                $q->external_id ?: 'question'
+            );
+            $this->assertStringNotContainsStringIgnoringCase('official exam guide', $reference);
+        }
+    }
+
     public function test_new_student_cannot_start_a_locked_session(): void
     {
         // Sessions beyond #1 have no progress row yet, so the engine treats them as locked (ModelNotFound -> 404).
