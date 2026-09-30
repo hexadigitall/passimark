@@ -1,0 +1,1100 @@
+{
+ "provenance": {
+  "source_file": "Passimark-Laravel-Seeder-4965.html",
+  "source_sha256_prefix": "036fcd4c7f67a46080c6c2591994819e",
+  "extracted": "2026-09-30",
+  "extraction": "Rendered the artifact's own item factories once per template; no content was authored, reworded, or invented here.",
+  "known_defects_in_source": [
+   "66 of 66 items keyed to option A (correctIndex: 0) - the seeder rotates option order to fix this",
+   "difficulty, discrimination and guessing were synthesised from fixed ranges; those values are NOT carried over",
+   "source instructed \"php artisan migrate:fresh --seed\", which is destructive; this seeder never migrates",
+   "source advertised 4,965 questions from 66 authored templates; session sizes here are derived from the 66 real items"
+  ],
+  "item_count": 66
+ },
+ "roles": {
+  "SESA": {
+   "slug": "enterprise-server-entra",
+   "title": "Windows Server & Entra Administration",
+   "short": "Server & Entra"
+  },
+  "MESSS": {
+   "slug": "enterprise-endpoint-security",
+   "title": "Microsoft Endpoint & Security Services",
+   "short": "Endpoint & Security"
+  },
+  "ITADM": {
+   "slug": "enterprise-it-administration",
+   "title": "IT Administration",
+   "short": "IT Administration"
+  },
+  "NETADM": {
+   "slug": "enterprise-network-administration",
+   "title": "Network Administration",
+   "short": "Network Administration"
+  },
+  "ITREP": {
+   "slug": "enterprise-it-repairs",
+   "title": "IT Repairs & Hardware Support",
+   "short": "IT Repairs"
+  }
+ },
+ "items": [
+  {
+   "id": "itadm-001",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Storage & File Services",
+   "stem": "Folder \\\\FS1\\Finance share permission = Read, NTFS = Modify for group Finance-RW. User alice is member of Finance-RW only. What is effective access when accessing via share?",
+   "options": [
+    "Most restrictive of share vs NTFS: if share=Read (Read) and NTFS=Modify (Modify), effective = Read; evaluate via Effective Access tab, share permissions apply only over network",
+    "Sum of share + NTFS = Full Control",
+    "NTFS overrides share always, so Modify",
+    "Share overrides NTFS always, so Read"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Effective access over SMB = most restrictive of share and NTFS. Share Read + NTFS Modify = Read. Local access uses NTFS only. Effective Access tool confirms. CompTIA Server+ / Microsoft Learn.",
+   "reference": "Microsoft Learn: Share vs NTFS permissions - Effective access"
+  },
+  {
+   "id": "itadm-002",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Networking & DHCP",
+   "stem": "DHCP scope 192.168.1.0/24 has 240 leases, pool exhausted, 10 BAD_ADDRESS entries. Need immediate 100 additional hosts for onboarding. Current scope 192.168.1.10-192.168.1.254. What expansion provides /23 without renumbering existing leases?",
+   "options": [
+    "Superscope with second scope 192.168.0.0/24 or extend to /23 192.168.0.0/23 with 510 hosts, reconcile BAD_ADDRESS via dhcpdb, reduce lease time to 8h, enable conflict detection 1",
+    "Create new scope 10.0.0.0/24 and require router reconfiguration",
+    "Delete all leases",
+    "Change to /25"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Scope exhausted: superscope or expand subnet to /23 provides 510 addresses. BAD_ADDRESS indicates IP conflict, needs reconciliation and conflict detection. Reducing lease time recycles faster.",
+   "reference": "Microsoft Learn: DHCP superscope and scope expansion"
+  },
+  {
+   "id": "itadm-003",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Active Directory",
+   "stem": "AD user bob locked after 3 bad attempts, lockout threshold 5. Account shows locked in ADUC, but unlock option greyed on DC2, PDC Emulator is DC1. What correct unlock method and lockout source identification?",
+   "options": [
+    "Unlock on PDC Emulator DC1 via ADUC or Unlock-ADAccount -Identity bob on PDC, then check Security Event 4740 on PDC for source workstation, reset badPwdCount, review lockout threshold GPO",
+    "Wait for lockout duration 30 min only",
+    "Reset password only",
+    "Delete and recreate account"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Account lockout processed on PDC Emulator. Unlock must occur on PDC or replicate. Event 4740 shows lockout source. Unlock-ADAccount is correct. Waiting only delays.",
+   "reference": "Microsoft Learn: AD Account Lockout - PDC Emulator and Event 4740"
+  },
+  {
+   "id": "itadm-004",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Storage & File Services",
+   "stem": "DFS Replication conflict for file report1.xlsx edited simultaneously on FS1 and FS2 at 1:10 PM. ConflictAndDeleted folder contains 2 versions. Which version wins and how to recover losing version?",
+   "options": [
+    "Last writer wins per DFSR conflict algorithm; losing version moved to ConflictAndDeleted with GUID suffix, recover via DfsrPrivate\\ConflictAndDeleted or Restore-DfsrPreservedFiles, enable versioning or use collaborative editing via SharePoint",
+    "First writer wins",
+    "Both versions merge automatically",
+    "File deleted permanently"
+   ],
+   "source_correct_index": 0,
+   "explanation": "DFS Replication uses last writer wins, no merging. Losing file preserved in ConflictAndDeleted for recovery. For collaboration, use SharePoint/OneDrive with co-authoring, not DFSR.",
+   "reference": "Microsoft Learn: DFSR conflict resolution - Last writer wins and ConflictAndDeleted"
+  },
+  {
+   "id": "itadm-005",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Active Directory",
+   "stem": "FSMO role PDC Emulator on DC1 offline for 2 days due to hardware failure, no backup of DC1. Need to seize role to DC2. What is seizure vs transfer distinction and safe step?",
+   "options": [
+    "Seize via Move-ADDirectoryServerOperationMasterRole -Identity DC2 -OperationMasterRole PDC Emulator -Force after confirming DC1 won't return, then clean metadata via ntdsutil, never bring old DC1 back online without OS reinstall",
+    "Transfer role via GUI without Force",
+    "Both DCs can hold same FSMO simultaneously",
+    "Restart DC1 and transfer gracefully always"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Seize is forced transfer when original holder offline permanently. Must not bring old holder back without reinstall to avoid FSMO conflict. Transfer is graceful when both online.",
+   "reference": "Microsoft Learn: FSMO roles - Transfer vs Seize"
+  },
+  {
+   "id": "itadm-006",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Group Policy",
+   "stem": "Group Policy loopback processing needed for kiosk OU: User policy \"Restrict Control Panel\" should apply based on computer location, not user OU. Computer in Kiosk OU, user in Users OU. Loopback set to Replace vs Merge. What behavior difference and correct setting?",
+   "options": [
+    "Replace: User GPOs from user's OU ignored, only user settings from computer's OU (Kiosk) apply. Merge: combines user OU + computer OU, computer OU wins on conflict. For kiosk, use Replace to ensure kiosk restrictions apply regardless of user",
+    "Loopback not needed",
+    "Merge always overrides Replace",
+    "Loopback applies computer settings to user OU"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Loopback processing changes how user settings applied based on computer location. Replace discards user OU GPOs, Merge combines. Kiosk scenario needs Replace.",
+   "reference": "Microsoft Learn: Group Policy loopback processing - Replace vs Merge"
+  },
+  {
+   "id": "itadm-007",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "System Administration",
+   "stem": "Disk Management: Volume D: 200GB free 10GB, need extend 50GB, but Extend Volume greyed out. Disk 0 has C: 500GB, D: 200GB, unallocated 50GB after D:. Partition style GPT. Why greyed and fix?",
+   "options": [
+    "Extend greyed because unallocated not contiguous after D: or D: is FAT32 not NTFS or page file on D:; ensure D: NTFS, unallocated directly after D:, delete recovery partition blocking, use diskpart extend or Extend-Volume PowerShell",
+    "GPT cannot be extended",
+    "Must convert to dynamic disk",
+    "Reboot required"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Disk Management extend requires NTFS, contiguous unallocated after volume, no blocking recovery partition. FAT32 cannot extend via GUI. diskpart or PowerShell can extend if conditions met.",
+   "reference": "Microsoft Learn: Disk Management - Extend Volume requirements"
+  },
+  {
+   "id": "itadm-008",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "System Administration",
+   "stem": "Print Spooler service crashes with Event 7034 after driver HP Universal install on Print Server 1. 10 printers affected. Isolation mode not configured. What fixes spooler isolation?",
+   "options": [
+    "Enable Print Spooler isolation: Set driver isolation to Shared or Isolated via Print Management > Drivers > Isolation, remove faulty driver with printui /s /t2, restart spooler, deploy Type 4 driver via V4",
+    "Disable Print Spooler permanently",
+    "Reinstall all printers manually",
+    "Use Type 3 driver only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Print spooler isolation prevents bad driver crash affecting all printers. Isolation modes: None, Shared, Isolated. Type 4 drivers are more isolated.",
+   "reference": "Microsoft Learn: Print Spooler isolation and Type 4 drivers"
+  },
+  {
+   "id": "itadm-009",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Active Directory",
+   "stem": "AD delegation: Helpdesk needs reset password + unlock for OU=Sales, but not delete users or modify groups. Current delegation grants Full Control. What is least-privilege delegation?",
+   "options": [
+    "Use Delegation of Control Wizard: delegate \"Reset user passwords and force password change at next logon\" + \"Read userAccountControl + Write lockoutTime\" via custom task, verify via DSACLS, remove Full Control",
+    "Grant Full Control but instruct not to delete",
+    "Add to Domain Admins",
+    "Grant only Read"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Least privilege: delegate specific tasks, not Full Control. Wizard creates ACLs for reset password and unlock. DSACLS verifies.",
+   "reference": "Microsoft Learn: Delegating AD administration - Least privilege"
+  },
+  {
+   "id": "itadm-010",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "System Administration",
+   "stem": "Storage: Need 8TB usable for SQL with 4x 4TB disks, workload random IOPS heavy 5000 IOPS. Compare RAID 5 vs RAID 10 usable and IOPS penalty. Which meets IOPS with best fault tolerance?",
+   "options": [
+    "RAID 10: usable 8TB (4TB*2), write penalty 2, IOPS ~ 8000 effective, tolerates 1+ disk failure if not same mirror; RAID 5 usable 12TB but write penalty 4 and rebuild risk, RAID 10 better for heavy random write",
+    "RAID 5 always better IOPS",
+    "RAID 0 for max IOPS",
+    "JBOD"
+   ],
+   "source_correct_index": 0,
+   "explanation": "RAID 10 write penalty 2 vs RAID 5 penalty 4. For random write heavy SQL, RAID 10 better performance and faster rebuild, though less usable space. RAID 5 rebuild risk with large disks.",
+   "reference": "CompTIA Server+ SK0-005: RAID levels IOPS and fault tolerance"
+  },
+  {
+   "id": "itadm-011",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "System Administration",
+   "stem": "Windows Firewall: Server needs inbound TCP 3000 for app, but Domain profile blocks. Firewall rule exists for Private profile only. gpupdate shows rule not applied. What profile and rule fix?",
+   "options": [
+    "Create inbound rule for Domain profile, allow TCP 3000, scope limited to 1 app servers subnet, enable via GPO Computer Config > Windows Settings > Security Settings > Windows Firewall with Advanced Security, ensure network location Domain detected via NLA",
+    "Disable firewall completely",
+    "Add rule for Private profile only and change network to Private",
+    "Use netsh to allow all ports"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Firewall profiles Domain/Private/Public based on NLA. Rule must match active profile. Domain profile detected when domain controller reachable. Scope limits exposure.",
+   "reference": "Microsoft Learn: Windows Firewall profiles and rule scoping"
+  },
+  {
+   "id": "itadm-012",
+   "role": "ITADM",
+   "role_slug": "enterprise-it-administration",
+   "domain": "Storage & File Services",
+   "stem": "User Profile: FSLogix profile containers on \\\\FS1\\Profiles, 20 users report slow logon 30 sec, VHDX 30GB each, concurrent locks. What FSLogix optimization reduces logon time?",
+   "options": [
+    "Enable Profile Container + Office Container separate, enable VHDX compact, set SizeInMBs + IsDynamic, enable concurrent access with lock handling, exclude Teams cache via redirections.xml, enable Cloud Cache for resiliency",
+    "Use roaming profiles only",
+    "Increase VHDX to 100GB each",
+    "Disable FSLogix"
+   ],
+   "source_correct_index": 0,
+   "explanation": "FSLogix optimization: dynamic VHDX, redirections.xml excludes cache, Office container separate, Cloud Cache for HA. Roaming profiles slower.",
+   "reference": "Microsoft Learn: FSLogix profile containers - Performance tuning"
+  },
+  {
+   "id": "itrep-001",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "POST & Hardware Diag",
+   "stem": "POST: Desktop with AMI BIOS emits 3 long beeps on power on, no display, fans spin. RAM is DDR4 8GB kit 2x sticks. What does 3 beeps indicate and first action per repair flow?",
+   "options": [
+    "AMI 3 beeps = Base 64K RAM failure or memory error; reseat RAM, test one stick at a time in DIMM A2 slot, clean contacts, try known-good RAM, check motherboard QVL, reset CMOS",
+    "3 beeps = CPU failure",
+    "3 beeps = GPU failure",
+    "3 beeps = normal POST"
+   ],
+   "source_correct_index": 0,
+   "explanation": "AMI BIOS beep codes: 3 beeps = memory failure. Reseat, single stick test, QVL check, CMOS reset. CompTIA A+ 1101 hardware troubleshooting.",
+   "reference": "CompTIA A+ 1101: AMI BIOS beep codes - Memory failure"
+  },
+  {
+   "id": "itrep-002",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Boot & BSOD",
+   "stem": "BSOD 0x0000007B INACCESSIBLE_BOOT_DEVICE after BIOS change from AHCI to RAID on system with single NVMe drive Windows 10. Boot fails, automatic repair loop. What causes 7B and fix without reinstall?",
+   "options": [
+    "7B = storage controller driver mismatch AHCI vs RAID (Intel RST); boot to BIOS, revert to AHCI, or boot safe mode, install Intel RST driver via dism, enable RAID driver in registry: HKLM\\SYSTEM\\CurrentControlSet\\Services\\iaStorV Start=0, then switch BIOS to RAID",
+    "7B = RAM failure",
+    "Reinstall Windows immediately",
+    "Replace motherboard"
+   ],
+   "source_correct_index": 0,
+   "explanation": "STOP 7B INACCESSIBLE_BOOT_DEVICE often after SATA mode change AHCI<>RAID<>IDE. Driver not loaded. Fix revert or inject driver + registry Start=0. CompTIA A+ BSOD troubleshooting.",
+   "reference": "Microsoft Learn: BSOD 7B - AHCI to RAID driver & CompTIA A+"
+  },
+  {
+   "id": "itrep-003",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Storage & UEFI",
+   "stem": "No boot device found after BIOS update, UEFI mode, Secure Boot enabled, drive is GPT NVMe with Windows Boot Manager entry missing. BIOS shows drive in NVMe list but not boot option. What UEFI boot fix restores Boot Manager?",
+   "options": [
+    "Recreate EFI boot entry: boot from WinPE USB, diskpart list vol, assign letter to EFI partition, bcdboot C:\\Windows /s S: /f UEFI, disable Secure Boot temporarily, enable after boot, verify boot order",
+    "Convert to MBR Legacy",
+    "Replace SSD",
+    "Disable UEFI and use CSM only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "UEFI boot uses EFI partition \\EFI\\Microsoft\\Boot\\bootmgfw.efi. BIOS update can erase NVRAM entry. bcdboot recreates. Secure Boot may block unsigned media. GPT required for UEFI.",
+   "reference": "Microsoft Learn: UEFI boot repair - bcdboot and EFI partition"
+  },
+  {
+   "id": "itrep-004",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "ESD & Safety",
+   "stem": "ESD safety: Technician works on laptop with 15% humidity, carpet floor. Wrist strap 1M ohm resistor purpose and correct connection point? What is safe ESD handling?",
+   "options": [
+    "1M ohm resistor limits current to <0.5mA at 250V for safety, prevents shock, bleeds static slowly; connect strap to unpainted metal chassis or ESD mat grounded, not to PSU mains ground directly, wear strap snug, use mat 1M ohm",
+    "Wrist strap should be 0 ohm for best ground",
+    "No need for strap if touching metal once",
+    "1M ohm increases ESD risk"
+   ],
+   "source_correct_index": 0,
+   "explanation": "ESD wrist strap 1 Mohm resistor is safety: limits current if contact mains, while bleeding static at 1M. Direct ground without resistor risks shock. Low humidity increases ESD. CompTIA A+ safety.",
+   "reference": "CompTIA A+ 1101: ESD safety - 1M ohm wrist strap & mats"
+  },
+  {
+   "id": "itrep-005",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "POST & Hardware Diag",
+   "stem": "Thermal paste: CPU i7-12700 idles 85°C after repaste, paste spread method used excessive 2 grams. What is correct pea-dot method and cause of high idle?",
+   "options": [
+    "Pea method: 3-4mm dot (~0.1g) center of IHS, cooler pressure spreads, excessive paste insulates and causes pump-out + air bubbles, clean with isopropyl 90%+ and lint-free, check cooler mounting pressure and fan curve",
+    "Spread paste manually thick layer for better contact",
+    "No paste needed for modern CPUs",
+    "Use toothpaste as substitute"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Pea dot 3-4mm ~0.1g optimal, excess insulates. High idle after repaste often due to excess paste, improper mount, or plastic film left on cooler. Clean with IPA.",
+   "reference": "CompTIA A+ & Manufacturer guides: Thermal paste application"
+  },
+  {
+   "id": "itrep-006",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "POST & Hardware Diag",
+   "stem": "POST code 00 on diagnostic card after CPU upgrade, no beeps, CPU fan spins. Motherboard BIOS version 1.01 does not support new CPU i9-14900K without update. What is code 00 and fix?",
+   "options": [
+    "POST 00 = CPU not detected / not initialized, often BIOS incompatible; flash BIOS via USB BIOS Flashback with old CPU or supported CPU, verify CPU socket pins, check power 8-pin EPS, reset CMOS, ensure BIOS supports new microcode",
+    "00 = RAM failure",
+    "00 = normal boot",
+    "Replace power supply only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "POST code 00 = CPU initialization failure, often BIOS version incompatible with new CPU stepping. BIOS Flashback without CPU or use old CPU to flash. Check EPS 8-pin.",
+   "reference": "CompTIA A+ 1101: POST codes and BIOS compatibility"
+  },
+  {
+   "id": "itrep-007",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Troubleshooting",
+   "stem": "Laptop no display, black screen, power LED on, external monitor via HDMI shows image at 1920x1080. Laptop screen stays black even after Fn+F4 display toggle. What isolates failure?",
+   "options": [
+    "External display works => GPU and system board ok, failure is laptop panel, backlight, inverter (older CCFL), LVDS/eDP cable, or lid switch; test brightness, reseat eDP cable, check backlight with flashlight, replace panel",
+    "GPU failure, replace motherboard",
+    "RAM failure",
+    "OS corruption"
+   ],
+   "source_correct_index": 0,
+   "explanation": "No laptop display but external works isolates to panel/backlight/cable, not GPU. Flashlight test reveals dim image if backlight failure. eDP cable reseat common fix.",
+   "reference": "CompTIA A+ 1101: Laptop display troubleshooting - external video test"
+  },
+  {
+   "id": "itrep-008",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Storage & UEFI",
+   "stem": "HDD SMART shows Reallocated Sectors Count 100, Current Pending 10, drive 500GB. CrystalDiskInfo Caution. What action per data safety?",
+   "options": [
+    "Reallocated sectors = bad sectors remapped, pending = unstable; backup immediately via clonezilla or robocopy, replace drive, do not run chkdsk /r extensively on failing drive as it stresses, monitor SMART 05, C5, C6",
+    "Run defrag to fix bad sectors",
+    "Reallocated sectors normal, ignore",
+    "Format drive to fix SMART"
+   ],
+   "source_correct_index": 0,
+   "explanation": "SMART 05 Reallocated, C5 Pending, C6 Uncorrectable indicate failing drive. Immediate backup, replacement. Chkdsk /r on failing drive can cause more failure. Defrag worsens.",
+   "reference": "CompTIA A+ 1101: SMART attributes - Reallocated sectors and backup priority"
+  },
+  {
+   "id": "itrep-009",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "POST & Hardware Diag",
+   "stem": "CMOS battery: System loses time after power off, BIOS settings reset, date 01/01/2015. Battery CR2032 measures 1.97V. What voltage indicates replacement and effect?",
+   "options": [
+    "CR2032 nominal 3.0V, replace if <2.8V under load, causes RTC time loss, BIOS reset, POST error 0251, TPM PCR invalid if time wrong; replace with new CR2032 3V, re-enter BIOS settings, enable XMP",
+    "2.0V is normal for CR2032",
+    "CMOS battery not needed for modern UEFI",
+    "Recharge CR2032 via USB"
+   ],
+   "source_correct_index": 0,
+   "explanation": "CR2032 3V lithium, <2.8V indicates depleted, causes RTC/BIOS loss. Replacement restores. Non-rechargeable.",
+   "reference": "CompTIA A+ 1101: CMOS battery - CR2032 voltage and symptoms"
+  },
+  {
+   "id": "itrep-010",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "ESD & Safety",
+   "stem": "Power supply: System with RTX 3060 requires 2x 8-pin PCIe, PSU 500W generic, 24-pin ATX + 8-pin EPS. System shuts off under load, 12V rail drops to 10.69V. What PSU check and replacement guidance?",
+   "options": [
+    "12V rail <11.4V under load = failing PSU or insufficient wattage, need 750W+ 80+ Gold with sufficient PCIe 8-pin, check 24-pin ATX seated, EPS 8-pin, calculate TDP: CPU 65W + GPU 170W + headroom 30%",
+    "500W enough for any GPU",
+    "12V drop normal",
+    "Replace motherboard"
+   ],
+   "source_correct_index": 0,
+   "explanation": "ATX 12V tolerance ±5% (11.4-12.6V). Drop below 11.4 under load indicates failing PSU or overload. GPU power needs dedicated PCIe rails, wattage calculation with headroom. 80+ rating efficiency.",
+   "reference": "CompTIA A+ 1101: Power supply - 12V rail tolerance and wattage calculation"
+  },
+  {
+   "id": "itrep-011",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Troubleshooting",
+   "stem": "Laptop battery: 3-year old, Wear Level 30%, Full Charge Capacity 20000 mWh vs Design 50000 mWh, calibration needed. How to calibrate and when replace?",
+   "options": [
+    "Calibrate: charge to 100%, discharge to 5% via normal use, charge to 100% again without interruption, reset battery gauge via BIOS calibration tool if available; replace if wear >30% or capacity <70% design or swelling",
+    "Calibrate by removing battery while running",
+    "Wear level normal, no action",
+    "Freeze battery to restore capacity"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Battery calibration resets fuel gauge. Wear >30% or capacity <70% indicates replacement. Swelling = immediate replacement, safety hazard.",
+   "reference": "CompTIA A+ 1101: Laptop battery - Wear level and calibration"
+  },
+  {
+   "id": "itrep-012",
+   "role": "ITREP",
+   "role_slug": "enterprise-it-repairs",
+   "domain": "Storage & UEFI",
+   "stem": "USB bootable: Need to create Windows 11 installer USB for UEFI only laptop, ISO 5GB, FAT32 4GB file limit for install.wim 4GB. Rufus GPT UEFI options. How to create bootable USB that boots UEFI and bypasses 4GB limit?",
+   "options": [
+    "Use Rufus GPT + UEFI (non CSM), file system NTFS or split WIM: Rufus creates NTFS + UEFI NTFS driver, or split install.wim via dism /Split-Image to install.swm <4GB, FAT32 for UEFI compatibility, disable Secure Boot temporarily if NTFS driver not signed",
+    "FAT32 cannot boot UEFI with >4GB file ever",
+    "Use MBR + BIOS mode for UEFI laptop",
+    "Copy ISO directly to USB without tool"
+   ],
+   "source_correct_index": 0,
+   "explanation": "UEFI requires FAT32 for boot, but 4GB limit breaks install.wim >4GB. Solutions: NTFS with UEFI NTFS driver (Rufus provides) or split WIM to SWM. GPT required for UEFI.",
+   "reference": "Microsoft Learn & Rufus: UEFI bootable USB - FAT32 4GB limit and split WIM"
+  },
+  {
+   "id": "messs-001",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "SLA & Incident",
+   "stem": "Gold SLA: P1 incident definition: Domain Controller down, 80 users unable to logon at 2:10 AM, business impact critical. Service Desk receives call at 2:10 AM. Gold SLA P1 response is 15 minutes, resolution 4h. It is currently 2:20 AM with single tech on shift. What is correct classification and immediate action per SLA?",
+   "options": [
+    "Classify as P1 Major Incident, page on-call AD engineer + manager, start Major Incident process, update status page, SLA clock starts at 2:10 AM detection, response breach if no update by 2:29 AM",
+    "Classify as P2 because only 80 users and overnight",
+    "Log as P3 and resolve next business day",
+    "Wait until 8 AM to classify"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Gold SLA P1 = DC down >50 users, even overnight is Major Incident. SLA clock starts at detection 2:10 AM. Response 15min requires paging. P2 is wrong per impact matrix. ITIL 4 prioritization uses impact+urgency.",
+   "reference": "ITIL 4 Practice: Incident Management - Priority matrix & Gold SLA P1"
+  },
+  {
+   "id": "messs-002",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Endpoint Management",
+   "stem": "Autopilot deployment for 120 devices: You have hardware hashes CSV imported, but devices show \"Not enrolled - Deployment profile not assigned\". You created deployment profile \"User-driven AADJ\" and ESP with 60-min timeout. What missing assignment causes profile not assigned?",
+   "options": [
+    "Assign deployment profile to Azure AD dynamic group containing Autopilot devices (orderId or ZTDId), ensure group assigned to profile, wait Intune sync, then ESP applies",
+    "Hardware hash alone auto-assigns profile",
+    "Re-import CSV with different Group Tag",
+    "Delete ESP"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Autopilot requires profile assigned to group containing devices. Hash import only creates device object. Without group assignment, profile stays not assigned. ESP is after profile assignment.",
+   "reference": "Microsoft Learn: Autopilot - Deployment profile assignment & ESP"
+  },
+  {
+   "id": "messs-003",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Security & Compliance",
+   "stem": "EDR alert: Device LAPTOP-88 shows Defender for Endpoint alert \"Suspicious PowerShell - Mimikatz pattern\" severity High, active. User is logged on. What is first containment action before investigation per Microsoft IR playbook?",
+   "options": [
+    "Isolate device from network via Defender portal (Isolate machine - full), preserving forensic data, block attacker lateral movement, then collect investigation package",
+    "Immediately wipe device",
+    "Disable user account first",
+    "Ignore because PowerShell is common"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Microsoft IR first step is isolate device, not wipe. Isolation preserves evidence, blocks C2. Account disable is second step if credential theft suspected.",
+   "reference": "Microsoft Learn: Defender for Endpoint - Isolate device response action"
+  },
+  {
+   "id": "messs-004",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Modern Workplace",
+   "stem": "M365 multi-tenant management for MSP managing 3 tenants. Need least-privilege access to manage Intune compliance without Global Admin in customer tenants. Customer granted admin consent. Which model provides granular delegation and audit?",
+   "options": [
+    "GDAP with specific roles: Intune Administrator + Cloud Device Administrator, time-bound, least privilege, with approval workflow and activity log in Partner Center",
+    "DAP (Delegated Admin Privileges) legacy with Global Admin",
+    "Create Global Admin account in each customer tenant",
+    "Use Lighthouse with DAP only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "GDAP replaces DAP, provides granular roles, time-bound, least privilege per Microsoft 365 Lighthouse docs. DAP is deprecated and overprivileged.",
+   "reference": "Microsoft Learn: GDAP - Granular Delegated Admin Privileges for MSP"
+  },
+  {
+   "id": "messs-005",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "SLA & Incident",
+   "stem": "SLA breach calculation: Service \"Email\" Gold SLA 99.5% monthly availability (43,200 min month). Actual downtime 60 minutes due to Exchange Online outage 3 events. Customer claims breach. What is availability % and breach status with error budget?",
+   "options": [
+    "Availability = (43200-60)/43200*100 = 99.861%, below 99.5% so breach, error budget consumed, service credit per contract",
+    "Availability 99.9% no breach",
+    "Downtime excluded because Microsoft outage",
+    "SLA calculated weekly not monthly"
+   ],
+   "source_correct_index": 0,
+   "explanation": "SLA = (Total - Downtime)/Total. Error budget = 100-SLA. Even Microsoft outage counts unless force majeure excluded contractually. ITIL Service Level Management requires transparent calculation.",
+   "reference": "ITIL 4: Service Level Management - Availability calculation & Microsoft SLA credits"
+  },
+  {
+   "id": "messs-006",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Endpoint Management",
+   "stem": "Intune: Compliance policy requires BitLocker + Secure Boot, but configuration profile enables BitLocker silently. Devices show non-compliant due to Secure Boot disabled. Some are compliant after reboot. What is compliance vs config distinction and fix?",
+   "options": [
+    "Compliance policy evaluates state and marks non-compliant if Secure Boot off; config profile enforces setting. Fix: remediation script to enable Secure Boot via BIOS config or Conditional Access block, then compliance re-eval",
+    "Compliance policy enforces setting automatically",
+    "Delete compliance policy",
+    "Compliance policy only reports, no action"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Intune compliance = evaluate/report + Conditional Access; configuration = enforce. Secure Boot requires BIOS change, can't be enforced via profile alone; needs remediation + hardware support.",
+   "reference": "Microsoft Learn: Intune Compliance vs Configuration profiles"
+  },
+  {
+   "id": "messs-007",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Endpoint Management",
+   "stem": "Windows Update for Business rings: Ring 1 pilot 10 devices, Ring 2 broad 100 devices, deferral 2 days. Pilot reports driver BSOD 0x7E after KB5000000. How to halt ring progression using WUfB controls?",
+   "options": [
+    "Pause updates for Ring 2 via Update rings for Windows 10 and later policy - Pause, create expedited quality update rollback, add driver block via Feature update holds, notify via Service Health",
+    "Delete WUfB policies",
+    "Uninstall KB manually on all devices",
+    "Switch to WSUS immediately"
+   ],
+   "source_correct_index": 0,
+   "explanation": "WUfB pause feature halts offering. Expedited policy rollback + driver block prevents BSOD spread. Manual uninstall not scalable.",
+   "reference": "Microsoft Learn: Windows Update for Business - Rings and pause"
+  },
+  {
+   "id": "messs-008",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Security & Compliance",
+   "stem": "Conditional Access: Break-glass accounts bg1@contoso.onmicrosoft.com excluded from all CA policies per best practice, MFA disabled, FIDO2 not configured. Security audit flags risk. What is secure break-glass hardening per Microsoft?",
+   "options": [
+    "Keep exclusion from CA, but enable FIDO2 key + 20-char password in safe, monitor sign-ins via Entra ID Protection alert, require approval for use, store creds in physical safe, exclude from Identity Protection risky user policies? No, monitor only",
+    "Enforce MFA on break-glass and include in all CA",
+    "Delete break-glass accounts",
+    "Use same accounts for daily admin"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Microsoft recommends break-glass excluded from CA to avoid lockout, but hardened with FIDO2, long password, offline storage, monitored via alert, not used daily. Including in CA risks lockout if CA misconfigured.",
+   "reference": "Microsoft Learn: Manage emergency access break-glass accounts"
+  },
+  {
+   "id": "messs-009",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Security & Compliance",
+   "stem": "DLP policy for endpoint: Finance team copies credit card data to USB 1 times flagged. Endpoint DLP shows \"Audit only\" mode, no block. Policy configured for USB removable media. Why no block and how to enforce?",
+   "options": [
+    "DLP policy in audit mode only audits; switch to Block with override for removable media, deploy Endpoint DLP onboarding + extension, ensure device onboarded and policy synced via Intune, check Justification overrides",
+    "DLP doesn't work on USB",
+    "Enable BitLocker only",
+    "Block all USB via Intune device restrictions"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Endpoint DLP has audit vs block modes. Audit only logs. Must switch to block and ensure onboarding package deployed. USB block via device restrictions is separate from DLP classification.",
+   "reference": "Microsoft Learn: Endpoint DLP - Audit vs Block and onboarding"
+  },
+  {
+   "id": "messs-010",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Security & Compliance",
+   "stem": "Defender for Endpoint onboarding via Intune for 200 devices stuck at \"Can be onboarded\". Local onboarding script shows error 0x80070643. What is correct onboarding flow via Intune and fix?",
+   "options": [
+    "Assign Defender onboarding policy in Intune > Endpoint Security > EDR, ensure onboarding blob valid, check conflicting third-party AV uninstall, run onboarding with /quiet, verify sensor via MDATP analyzer",
+    "Install onboarding package manually on each device",
+    "Disable Defender and use third-party AV",
+    "Reinstall Windows"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Intune onboarding policy deploys blob. Error 0x80070643 often due to third-party AV conflict or outdated blob. Analyzer validates sensor.",
+   "reference": "Microsoft Learn: Onboard devices to Defender for Endpoint via Intune"
+  },
+  {
+   "id": "messs-011",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Service Management",
+   "stem": "Service Health vs Message Center: Exchange Online incident EX500000 shows degraded mail flow, but Message Center shows upcoming change to attachment policy in 7 days. Service Desk confuses both. What is difference per ITIL?",
+   "options": [
+    "Service Health = active incident/outage affecting service, requires incident response; Message Center = planned change/feature, requires change planning and user comms; both feed into ITIL Communication Management",
+    "Both are same",
+    "Message Center is only for billing",
+    "Service Health is planned, Message Center is unplanned"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Service Health dashboard tracks active incidents, Message Center tracks planned changes. Confusing leads to wrong response. ITIL distinguishes incident vs change.",
+   "reference": "Microsoft 365: Service Health vs Message Center - ITIL Communication"
+  },
+  {
+   "id": "messs-012",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Service Management",
+   "stem": "eDiscovery hold: Legal hold for case SEC-2024-01 requires preserving mailbox of user leaving company in 2 days. Retention policy 1 year but hold must be indefinite. What action preserves data after account deletion?",
+   "options": [
+    "Create eDiscovery hold or Litigation Hold before deletion, convert mailbox to inactive mailbox, preserve via Microsoft Purview eDiscovery, then delete account; inactive mailbox retains data without license",
+    "Export PST and delete",
+    "Delete account immediately, data preserved by retention policy only",
+    "Disable account but keep license forever"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Inactive mailboxes require hold before deletion. Litigation hold + delete converts to inactive, preserving for eDiscovery. Retention policy alone may not preserve after deletion if not hold.",
+   "reference": "Microsoft Learn: Inactive mailboxes and eDiscovery holds"
+  },
+  {
+   "id": "messs-013",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Endpoint Management",
+   "stem": "Autopilot self-deploying mode vs user-driven: You need 50 kiosk devices with no user affinity, TPM attestation, wired. User-driven asks for credentials and fails at ESP for kiosk account. Which mode and requirements?",
+   "options": [
+    "Self-deploying mode: requires TPM 2.0, device must be registered, no user assigned, uses device token, ESP for device setup only, wired or Windows Configuration Designer profile for WiFi",
+    "User-driven with white glove still needs user",
+    "Self-deploying needs user password",
+    "Use Autopilot Reset only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Self-deploying is for kiosk/shared, no user affinity, TPM attestation, device setup ESP. User-driven requires user credentials.",
+   "reference": "Microsoft Learn: Autopilot self-deploying mode requirements"
+  },
+  {
+   "id": "messs-014",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "Service Management",
+   "stem": "ITIL 4: Incident INC10000 is Outlook crash affecting single user, workaround exists (use OWA). Problem management identifies root cause: faulty add-in deployed via Intune. How should incident vs problem be handled per ITIL?",
+   "options": [
+    "Close incident with workaround and link to problem record, problem record investigates add-in via Intune app deployment, create known error + change request to remove add-in, prevent future incidents",
+    "Keep incident open until problem fixed",
+    "Problem record not needed for single user",
+    "Escalate incident to problem without workaround"
+   ],
+   "source_correct_index": 0,
+   "explanation": "ITIL 4: Incident restores service via workaround, problem investigates root cause. Known Error and change prevent recurrence. Incident can close with workaround linked to problem.",
+   "reference": "ITIL 4 Practice Guide: Incident vs Problem Management"
+  },
+  {
+   "id": "messs-015",
+   "role": "MESSS",
+   "role_slug": "enterprise-endpoint-security",
+   "domain": "SLA & Incident",
+   "stem": "Service Request SR20000 for new laptop per catalog takes 5 days, SLA 3 days. User escalates. Service Desk says it's incident because SLA breach. Is SR vs Incident classification correct and SLA handling?",
+   "options": [
+    "SR is request for standard service via catalog, SLA 3 days is fulfillment SLA; breach does not make it incident; handle via request fulfillment, expedite approval, update catalog expectation; incident is unplanned interruption",
+    "SR becomes incident after SLA breach automatically",
+    "SR and incident are same",
+    "Cancel SR and create incident"
+   ],
+   "source_correct_index": 0,
+   "explanation": "ITIL distinguishes Service Request (pre-approved standard) vs Incident (unplanned outage). SLA breach is fulfillment breach, not incident. Requires service request management, not incident management.",
+   "reference": "ITIL 4: Service Request Management vs Incident Management"
+  },
+  {
+   "id": "netadm-001",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Subnetting & IPAM",
+   "stem": "Site needs 50 hosts now + 30% growth (65 total). Current subnet 10.10.10.0/26 provides 62 usable. Future need 65 hosts for next year. What subnet mask provides sufficient hosts with minimal waste and future room?",
+   "options": [
+    "/25 provides 126 usable hosts (128-2), covers 50+30%=65 with 76 spare, efficient; /26 insufficient after growth, /24 wastes 190 addresses",
+    "/26 still sufficient (62) for 65",
+    "/27 provides 30 hosts enough",
+    "/24 required for any growth"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Subnet sizing: usable = 2^(32-mask)-2. Need 65 => /25=126 fits. /26=62 insufficient after growth. /24 wastes. ITIL capacity planning.",
+   "reference": "CompTIA Network+ N10-008: Subnetting and VLSM sizing"
+  },
+  {
+   "id": "netadm-002",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Routing & OSPF",
+   "stem": "OSPF neighbors stuck in ExStart for 2 hours between R1 and R2, interface MTU 1500 on R1, 1500 on R2, IP connectivity ping works. debug ip ospf adj shows DBD packet with MTU mismatch. What is fix to reach Full?",
+   "options": [
+    "Fix MTU mismatch: configure ip mtu 1500 consistent on both interfaces or ip ospf mtu-ignore on both (not recommended), clear ip ospf process, verify via show ip ospf neighbor Full",
+    "Change OSPF router ID",
+    "Disable OSPF and use static routes",
+    "Increase hello interval"
+   ],
+   "source_correct_index": 0,
+   "explanation": "OSPF ExStart due to MTU mismatch in DBD. Must match MTU or use mtu-ignore (hides issue). MTU mismatch causes DBD exchange failure. RFC 2328.",
+   "reference": "Cisco: OSPF ExStart troubleshooting - MTU mismatch"
+  },
+  {
+   "id": "netadm-003",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "VLAN & Switching",
+   "stem": "Trunk link between SW1 and SW2 carries VLANs 10,20,10 but VLAN 10 traffic not passing, allowed list shows 10,20 only. Native VLAN 1 mismatch warning. What trunk fix allows VLAN 10 and resolves native mismatch?",
+   "options": [
+    "On trunk interface: switchport trunk allowed vlan add 10, ensure native VLAN matches both ends (e.g., switchport trunk native vlan 99), prune unused VLANs, verify via show interfaces trunk",
+    "Set trunk to access mode",
+    "Delete VLAN 10",
+    "Enable VTP transparent"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Allowed list filters VLANs on trunk. Must add 10. Native VLAN mismatch causes CDP warning and untagged traffic issues. Must match.",
+   "reference": "Cisco: VLAN trunking - allowed list and native VLAN"
+  },
+  {
+   "id": "netadm-004",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Wireless & RADIUS",
+   "stem": "WPA3 Enterprise deployment for 100 APs: Requirement 802.1X with RADIUS, EAP-TLS, PMF required, 192-bit security suite. Current WPA2-PSK allows shared key. What configuration upgrades to WPA3 Enterprise 192-bit?",
+   "options": [
+    "Configure WPA3-Enterprise with 192-bit mode (GCMP-256, BIP-GMAC-256, EAP-TLS with ECDSA certs), RADIUS server NPS with cert, enable PMF required, disable WPA2 fallback, validate via 802.11w",
+    "Use WPA3-Personal SAE only",
+    "WPA2-Enterprise enough",
+    "Use open auth + captive portal"
+   ],
+   "source_correct_index": 0,
+   "explanation": "WPA3 Enterprise 192-bit requires GCMP-256, Suite-B 192-bit, EAP-TLS with ECDSA, PMF required per Wi-Fi Alliance. WPA2-PSK not enterprise grade.",
+   "reference": "Wi-Fi Alliance: WPA3 Enterprise 192-bit security & Microsoft NPS EAP-TLS"
+  },
+  {
+   "id": "netadm-005",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Diagnostics & Monitoring",
+   "stem": "Wireshark capture on client shows TLS Client Hello to 10.0.0.5:443, but need filter to see only HTTPS traffic to that IP and decode TLS handshake failure (Alert 40). What display filter isolates HTTPS to 10.0.0.5 and shows TLS alerts?",
+   "options": [
+    "ip.addr==10.0.0.5 && tcp.port==443 && tls, then filter tls.alert_message to see Alert 40 handshake_failure, follow TLS stream, check cipher mismatch",
+    "tcp.port==443 only shows all HTTPS, not filtered to IP",
+    "http filter shows HTTPS decrypted",
+    "ip.addr==10.0.0.5 only shows all traffic"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Wireshark filter tcp.port==443 filters HTTPS, ip.addr filters host, tls filter decodes TLS. Alert 40 = handshake failure often cipher mismatch. Need combined filter.",
+   "reference": "Wireshark: Display filters for TLS and HTTPS troubleshooting"
+  },
+  {
+   "id": "netadm-006",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Routing & OSPF",
+   "stem": "NAT overload (PAT) configured on R1: inside 10.0.0.0/24 to outside 1.1.1.1. Translation table shows many entries but internet fails for new connections after 1000 translations, ports exhausted. What fixes PAT exhaustion?",
+   "options": [
+    "Add second public IP to NAT pool via ip nat pool with overload, increase port range via ip nat translation max-entries, enable NAT ALG for FTP/SIP, clear translations, monitor via show ip nat translations",
+    "Disable NAT and use public IPs internally",
+    "Change to static NAT for each host",
+    "Reduce DHCP lease time"
+   ],
+   "source_correct_index": 0,
+   "explanation": "PAT uses ports 0-65535 per IP, ~64000 usable. Exhaustion after many connections. Solution pool of public IPs for overload, increase max entries. Static NAT not scalable.",
+   "reference": "Cisco: NAT overload PAT - Port exhaustion and pools"
+  },
+  {
+   "id": "netadm-007",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "VLAN & Switching",
+   "stem": "STP: Access port Fa0/1 with PortFast enabled receives BPDU from rogue switch, causes network loop risk. BPDU Guard not enabled. What protection disables port on BPDU receipt?",
+   "options": [
+    "Enable BPDU Guard on PortFast access ports: spanning-tree portfast bpduguard default or interface spanning-tree bpduguard enable; port goes err-disabled on BPDU, protects against rogue switch",
+    "Enable Root Guard on access port",
+    "Disable STP entirely",
+    "Enable PortFast on trunk only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "BPDU Guard disables PortFast ports on BPDU receipt, preventing loop from rogue switch. Root Guard protects root bridge placement, not access. PortFast should only on access.",
+   "reference": "Cisco: STP PortFast BPDU Guard best practice"
+  },
+  {
+   "id": "netadm-008",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "VLAN & Switching",
+   "stem": "DHCP snooping configured on SW1, but clients on VLAN 10 get IP from rogue DHCP server 192.168.1.100, not corporate 10.10.10.5. Snooping database shows untrusted ports. What missing trust configuration allows rogue?",
+   "options": [
+    "Configure uplink to legitimate DHCP server as trusted: ip dhcp snooping trust on interface Gi0/1 to 10.10.10.5, all access ports remain untrusted, enable snooping on VLAN 10, verify via show ip dhcp snooping",
+    "Trust all access ports",
+    "Disable DHCP snooping",
+    "Enable ARP inspection only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "DHCP snooping: trust only ports to legitimate DHCP server/uplinks, untrusted drops DHCP server messages. If uplink not trusted, legitimate server messages dropped and rogue wins.",
+   "reference": "Cisco: DHCP snooping - Trusted vs untrusted ports"
+  },
+  {
+   "id": "netadm-009",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Routing & OSPF",
+   "stem": "BGP peering eBGP between AS 100 and AS 501 stuck in Active state, TCP 179 not establishing, ACL allows 179. No route for peer loopback. What is BGP Active vs Idle cause and fix?",
+   "options": [
+    "Active state means TCP connection failed to establish; check reachability via ping to peer IP, ensure eBGP multihop if loopback used, configure neighbor 10.0.0.2 remote-as with update-source loopback, fix ACL, clear ip bgp *",
+    "Idle means TCP ok",
+    "BGP Active is normal established",
+    "Disable BGP and use OSPF"
+   ],
+   "source_correct_index": 0,
+   "explanation": "BGP state machine: Idle -> Connect -> Active (TCP fails) -> OpenSent -> OpenConfirm -> Established. Active indicates TCP cannot connect. Need reachability, correct source, ACL 179.",
+   "reference": "Cisco: BGP state machine - Active troubleshooting"
+  },
+  {
+   "id": "netadm-010",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Diagnostics & Monitoring",
+   "stem": "QoS: VoIP phones mark DSCP EF (46) but call quality poor during backup window 1 Gbps throughput. WRED drops EF. LLQ configured but bandwidth 10% for voice. What QoS fix prioritizes EF?",
+   "options": [
+    "Configure LLQ priority queue for EF: policy-map VOICE priority percent 18 with police, ensure trust DSCP on access ports via mls qos trust dscp, avoid WRED on priority queue, reserve bandwidth",
+    "Mark voice as BE 0",
+    "Increase WRED drop for EF",
+    "Disable QoS"
+   ],
+   "source_correct_index": 0,
+   "explanation": "LLQ priority queue ensures EF gets strict priority with policing, not WRED. Trust DSCP on ingress, avoid dropping EF. WRED should not drop EF.",
+   "reference": "Cisco: QoS LLQ for voice DSCP EF 46"
+  },
+  {
+   "id": "netadm-011",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Subnetting & IPAM",
+   "stem": "IPv6: Clients get SLAAC address 2001:db8::/64 but no DNS server, RDNSS missing. DHCPv6 server configured but clients prefer SLAAC. Need SLAAC + stateless DHCPv6 for DNS. What RA flag combination provides DNS via DHCPv6?",
+   "options": [
+    "RA flags: A=1, O=1, M=0 for SLAAC + stateless DHCPv6; config ipv6 nd other-config-flag, dhcpv6 server provides DNS via RDNSS or DHCPv6 option 23, clients get address via SLAAC and DNS via DHCPv6",
+    "M=1 O=0 for stateful only",
+    "A=0 M=0 O=0 no info",
+    "SLAAC cannot provide DNS"
+   ],
+   "source_correct_index": 0,
+   "explanation": "SLAAC flags: M (managed) for stateful DHCPv6 address, O (other) for stateless DHCPv6 info like DNS. A flag for prefix. O=1 M=0 = SLAAC + stateless DHCPv6.",
+   "reference": "RFC 4861: IPv6 RA flags - SLAAC vs DHCPv6 stateless"
+  },
+  {
+   "id": "netadm-012",
+   "role": "NETADM",
+   "role_slug": "enterprise-network-administration",
+   "domain": "Wireless & RADIUS",
+   "stem": "VPN: Need split tunnel for Sales to access only 10.10.0.0/16 via VPN, internet direct for 0.0.0.0. Current full tunnel sends all traffic via VPN, saturating 100 Mbps link. What split tunnel config fixes?",
+   "options": [
+    "Configure split tunnel: VPN client profile includes only 10.10.0.0/16 in interesting traffic, 0.0.0.0/0 excluded, push route via split-include, enable split DNS for contoso.com, verify via route print and no internet hairpin",
+    "Full tunnel required for all traffic",
+    "Disable split tunnel for security always",
+    "Use clientless VPN"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Split tunnel sends only corporate subnets via VPN, internet direct, reduces bandwidth. Full tunnel sends all via VPN. Split-include defines corporate routes.",
+   "reference": "Cisco AnyConnect: Split tunnel vs full tunnel design"
+  },
+  {
+   "id": "sesa-001",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Identity & Access",
+   "stem": "Entra Connect sync export error: AttributeValueMustBeUnique for proxyAddresses SMTP:j.miller10@contoso.com. IdFix flags duplicate in OU=Sales-US. User j.miller103 in on-prem AD holds the duplicate SMTP as secondary proxy. Mail flow must be preserved for both users. What is the correct remediation sequence to achieve a successful delta sync?",
+   "options": [
+    "Run IdFix, remove duplicate proxyAddresses SMTP:j.miller10@contoso.com from j.miller103 in on-prem AD, run Start-ADSyncSyncCycle -PolicyType Delta, verify in Synchronization Service Manager",
+    "Force Start-ADSyncSyncCycle -PolicyType Initial and manually delete cloud object via Graph API",
+    "Delete both objects in Entra ID and recreate with new ImmutableIDs",
+    "Disable DirSync for 72 hours, then re-enable and hard-match with SMTP matching"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Duplicate proxyAddresses triggers AttributeValueMustBeUnique. Microsoft Learn recommends IdFix to detect duplicates, remove duplicate from authoritative on-prem AD (not cloud), then delta sync. Initial sync or deleting cloud objects causes mail flow break and does not fix source.",
+   "reference": "Microsoft Learn: Entra ID Connect - Duplicate Attribute Resiliency & IdFix"
+  },
+  {
+   "id": "sesa-002",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Identity & Access",
+   "stem": "Seamless SSO fails for users at branch site. Kerberos ticket shows SPN AZUREADSSOACC/DC1-CONTOSO.com missing. dsregcmd /status shows SSO state NO. You confirmed AZUREADSSOACC account is present but computer object DC1-CONTOSO cannot decrypt Kerberos ticket. What PowerShell remediation restores SSO without recreating the SSO account?",
+   "options": [
+    "On DC1-CONTOSO, run klist purge and update Kerberos decryption key: Import-Module AzureADSSO.psd1; Update-AzureADSSOForest -OnPremCredentials $creds -PreserveCustomPermissionsOnDesktopSSOAccount",
+    "Delete AZUREADSSOACC and re-run Enable-AzureADSSOForest wizard",
+    "Set SPN manually with setspn -A AZUREADSSOACC/contoso.com AZUREADSSOACC",
+    "Disable Seamless SSO and switch to PTA with Seamless fallback"
+   ],
+   "source_correct_index": 0,
+   "explanation": "AZUREADSSOACC SPN decryption failures often due to stale Kerberos keys after DC restore. Microsoft recommends Update-AzureADSSOForest to roll key across forest, preserving ACLs, then klist purge on clients. Manual setspn breaks computer association.",
+   "reference": "Microsoft Learn: Troubleshoot Entra Seamless SSO - Kerberos decryption failure"
+  },
+  {
+   "id": "sesa-003",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Governance",
+   "stem": "PIM request: Helpdesk lead needs Global Admin activation for 8h to remediate Exchange incident INC10000. Current Role Settings max activation is 4 hours. What is the compliant path to grant 8h activation with approval and audit?",
+   "options": [
+    "Edit PIM Role Settings for Global Admin: increase maximum activation duration to 8h, require approval + MFA + justification, then activate via PIM blade; review in Access Reviews",
+    "Assign Global Admin as permanent eligible and let user stay active 8h",
+    "Grant Global Admin permanently for 8h then remove",
+    "Use Privileged Access Group to bypass PIM time limit"
+   ],
+   "source_correct_index": 0,
+   "explanation": "PIM Role Settings control max duration, approval, MFA. ITIL/Entra PIM docs: adjust setting to allow 8h, enforce justification and ticketing. Permanent assignment violates least privilege.",
+   "reference": "Microsoft Learn: PIM - Configure role settings & ITIL 4 Access Management"
+  },
+  {
+   "id": "sesa-004",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Directory Services",
+   "stem": "OU=Workstations has Block Inheritance enabled to stop GPO-Hardening-1 from domain level. However GPO-Hardening-1 contains critical LAPS policy that must apply to all Workstations. GPO-Hardening-1 is linked at domain root. Which GPO setting enforces it despite Block Inheritance without disabling Block Inheritance on Workstations?",
+   "options": [
+    "Set Enforced = Yes on GPO-Hardening-1 link at domain level; Enforced overrides Block Inheritance",
+    "Disable Block Inheritance on Workstations",
+    "Link GPO-Hardening-1 directly to Workstations with higher precedence",
+    "Use Security Filtering to deny Apply for other GPOs"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Enforced flag overrides Block Inheritance per Microsoft Learn GPO processing order: LSDOU + Enforce. Linking again creates duplicate processing. Disabling Block defeats design intent.",
+   "reference": "Microsoft Learn: How Group Policy works - Enforce and Block Inheritance"
+  },
+  {
+   "id": "sesa-005",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Infrastructure & Hybrid",
+   "stem": "Hyper-V Replica configured between Site A and B for VM APP10. SLA requires RPO 5min, RTO 15min. Replica shows 18-min replication lag and extended replication disabled. VSS writer fails. What configuration restores RPO 5min compliance?",
+   "options": [
+    "Set replication frequency to 5min, enable VSS on Replica settings, ensure HRL log size >= 8GB, run Test-Failover and check RPO health via Get-VMReplication",
+    "Enable extended replication to third host",
+    "Increase RPO to 30min and accept lag",
+    "Disable application-consistent snapshots to speed replication"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Hyper-V Replica RPO is frequency + HRL buffer + VSS. 15-min RPO needs 5/15-min frequency, VSS app-consistent, adequate recovery history. Extended replication doesn't fix primary lag. Disabling VSS risks inconsistent restore.",
+   "reference": "Microsoft Learn: Hyper-V Replica - RPO/RTO planning and VSS integration"
+  },
+  {
+   "id": "sesa-006",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Infrastructure & Hybrid",
+   "stem": "AD FS farm token-signing certificate auto-rollover failed after 30 days. Secondary certificate not promoted, Relying Party Salesforce reports signature validation error. AD FS event 335. What ordered fix restores federation without breaking other RPs?",
+   "options": [
+    "Run Update-AdfsCertificate -Urgent on primary, then Get-AdfsSslCertificate thumbprint check, publish federation metadata, instruct RP to pull new metadata, monitor Event 335/336",
+    "Manually import new cert to RP trust store and disable auto-rollover",
+    "Rollback to old certificate via Restore-AdfsCertificate",
+    "Recreate AD FS farm"
+   ],
+   "source_correct_index": 0,
+   "explanation": "AD FS auto-rollover requires Update-AdfsCertificate -Urgent when secondary not promoted, plus metadata publication. Manual import breaks automation. Rollback only temporary.",
+   "reference": "Microsoft Learn: AD FS - Manage certificate rollover and federation metadata"
+  },
+  {
+   "id": "sesa-007",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Directory Services",
+   "stem": "DNS design: Forest contoso.com needs name resolution for contoso-partner.com hosted in partner AD forest with 2 DNS servers. Conditional forwarder vs stub zone decision impacts replication and security. Partner changes NS IPs frequently. Which choice provides auto-NS update and least replication overhead?",
+   "options": [
+    "Conditional forwarder with AD integration + store in forest DNS partition; it resolves via forwarder IPs and does not pull full zone, avoiding stub zone refresh failures when NS IPs change frequently",
+    "Stub zone - it always pulls NS records",
+    "Secondary zone for contoso-partner.com",
+    "Forward all external queries to partner DNS"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Conditional forwarder forwards queries for specific domain, no zone transfer, resilient to NS IP changes if forwarder list updated via PowerShell. Stub zone requires regular NS refresh and can fail if partner NS unavailable. Secondary zone is heavy.",
+   "reference": "Microsoft Learn: DNS - Conditional forwarders vs stub zones"
+  },
+  {
+   "id": "sesa-008",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Directory Services",
+   "stem": "FRS to DFSR SYSVOL migration stuck at Prepared state on DC1. dfsrmig /getmigrationstate shows 2 DCs in Prepared, 1 in Start. DCDIAG /test:sysvolcheck fails. What is the safe progression to Eliminated state?",
+   "options": [
+    "Run dfsrmig /setglobalstate 1 to ensure all reach Prepared, wait replication, dfsrmig /setglobalstate 2 to Redirected, verify SYSVOL_DFSR folder, then /setglobalstate 3 Eliminated; never force via registry",
+    "Manually delete SYSVOL and recreate",
+    "Edit BurFlags D2/D4",
+    "Demote lagging DC"
+   ],
+   "source_correct_index": 0,
+   "explanation": "DFSR migration is 3-step state machine. Must wait for convergence at each state. BurFlags is for Journal Wrap, not migration. Demotion loses data.",
+   "reference": "Microsoft Learn: Migrate SYSVOL replication to DFSR"
+  },
+  {
+   "id": "sesa-009",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Identity & Access",
+   "stem": "Entra Connect Health shows export errors 10 objects, AADConnect Health alert \"Sync errors detected\". Synchronization rule for extensionAttribute1 transforms. How do you identify rule causing errors without disabling sync?",
+   "options": [
+    "Use Synchronization Service Manager > Metaverse Search, filter connector with error, review Applied Rules + Transformation preview, run Troubleshooting task in Connect Health portal, fix rule scoping filter",
+    "Delete all custom sync rules",
+    "Run IdFix again",
+    "Disable extensionAttribute sync globally"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Metaverse Search + Applied Rules shows which sync rule contributed attribute. Connect Health Troubleshooting maps errors to rules. Deleting rules is destructive.",
+   "reference": "Microsoft Learn: Entra Connect Sync - Troubleshooting & Connect Health"
+  },
+  {
+   "id": "sesa-010",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Security & Compliance",
+   "stem": "LAPS deployed: Local admin password for 50 workstations not rotating. admPwdExpirationTime not set, LAPS GPO shows CSE error 0x80070005. Delegation appears correct. What permission fix restores rotation?",
+   "options": [
+    "Grant computer SELF permission to write ms-Mcs-AdmPwd and ms-Mcs-AdmPwdExpirationTime on OU, ensure GPO CSE runs as SYSTEM, run gpupdate /force + Invoke-LapsPolicyProcessing",
+    "Add Domain Admins full control to OU",
+    "Disable UAC on workstations",
+    "Reinstall LAPS MSI x64"
+   ],
+   "source_correct_index": 0,
+   "explanation": "LAPS requires SELF write to its two attributes. Access Denied 0x80070005 indicates SELF missing. Domain Admins not needed. UAC unrelated.",
+   "reference": "Microsoft Learn: Windows LAPS - Permissions and CSE troubleshooting"
+  },
+  {
+   "id": "sesa-011",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Security & Compliance",
+   "stem": "Dynamic Access Control: File server needs claim type department equals Finance to allow access. Central Access Policy shows claim not evaluated, user has department attribute in AD but resource property not applied. What must be enabled for DAC claim to work?",
+   "options": [
+    "Enable KDC support for claims, compound auth, and Kerberos armoring via GPO: Computer Config > Policies > Admin Templates > System > KDC > KDC support for claims, enable claims in forest functional level 2012+, issue DAC capable Kerberos tickets",
+    "Enable only File Server Resource Manager",
+    "Add department to global catalog only",
+    "Use classic NTFS groups instead"
+   ],
+   "source_correct_index": 0,
+   "explanation": "DAC requires forest functional 2012+, KDC claims enabled, Kerberos armoring, and claims transformation policy. FSRM alone insufficient.",
+   "reference": "Microsoft Learn: Dynamic Access Control - Deploy claims and central policies"
+  },
+  {
+   "id": "sesa-012",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Directory Services",
+   "stem": "Need to recover deleted OU Sales-2023 with 120 objects deleted 10 days ago. AD Recycle Bin enabled, forest functional 2016. Tombstone lifetime 180 days. What is authoritative restore path preserving attribute link values?",
+   "options": [
+    "Use LDP.exe or Restore-ADObject with -IncludeDeletedObjects filter to restore OU then Get-ADObject -IncludeDeletedObjects -Filter + Restore-ADObject for children; Recycle Bin preserves all attributes and links",
+    "Authoritative restore via ntdsutil + D4",
+    "Recreate OU manually and re-create users",
+    "Restore from System State backup only"
+   ],
+   "source_correct_index": 0,
+   "explanation": "AD Recycle Bin preserves deleted objects with attributes for full restoration. LDP/Restore-ADObject restores hierarchy. Authoritative restore from backup overwrites newer changes.",
+   "reference": "Microsoft Learn: AD Recycle Bin - Restore deleted objects"
+  },
+  {
+   "id": "sesa-013",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Security & Compliance",
+   "stem": "Web app APP1 needs Kerberos constrained delegation to MSSQLSvc/sql1.contoso.com. Protocol transition required because app uses claims. Delegation fails with KRB_AP_ERR_BADMATCH. What configuration fixes it while following least privilege?",
+   "options": [
+    "Set app pool account to Trust this computer for delegation to specified services only + Use any auth protocol + Add MSSQLSvc SPN, create gMSA or computer account with constrained delegation, ensure SPN uniqueness",
+    "Enable unconstrained delegation for app server",
+    "Use basic authentication to SQL",
+    "Disable Kerberos and use NTLM"
+   ],
+   "source_correct_index": 0,
+   "explanation": "Constrained delegation with protocol transition requires 'any authentication protocol' for claims to Kerberos transition. Unconstrained is security risk per Microsoft Learn.",
+   "reference": "Microsoft Learn: Kerberos Constrained Delegation - KCD and protocol transition"
+  },
+  {
+   "id": "sesa-014",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Governance",
+   "stem": "gMSA svc-backup1 fails to install on HOST10 with error \"Cannot find KDS root key\". Domain has 2 DCs 2019, forest 2016. What prerequisite step installs gMSA correctly?",
+   "options": [
+    "Run Add-KdsRootKey -EffectiveTime ((Get-Date).AddHours(-10)) on Schema Master, wait replication, then New-ADServiceAccount -DNSHostName, add principals, Install-ADServiceAccount on target, Test-ADServiceAccount",
+    "Create KDS root key with EffectiveTime now + 10 hours and immediately install",
+    "Use standalone managed service account instead",
+    "Disable Managed Passwords GPO"
+   ],
+   "source_correct_index": 0,
+   "explanation": "KDS root key requires 10h backward EffectiveTime for immediate test in lab, per docs. Production uses default. Immediate now+10h will not be valid for 10h, causing install fail.",
+   "reference": "Microsoft Learn: Group Managed Service Accounts - KDS root key deployment"
+  },
+  {
+   "id": "sesa-015",
+   "role": "SESA",
+   "role_slug": "enterprise-server-entra",
+   "domain": "Infrastructure & Hybrid",
+   "stem": "Windows Admin Center gateway on WAC1.contoso.com needs constrained Kerberos delegation for remote PowerShell to 5 servers. Users report CredSSP prompt despite Kerberos configured. What fixes WAC SSO delegation?",
+   "options": [
+    "Configure resource-based constrained delegation: Set-ADComputer WAC gateway -PrincipalsAllowedToDelegateToAccount = target computers, enable CredSSP fallback off, use Kerberos for PowerShell remoting, import WAC cert trusted",
+    "Enable CredSSP for all servers",
+    "Use HTTP instead of HTTPS for WAC",
+    "Add users to local admins on all targets"
+   ],
+   "source_correct_index": 0,
+   "explanation": "WAC gateway uses RBCD for delegation. PrincipalsAllowedToDelegateToAccount enables WAC to delegate without storing creds. CredSSP is less secure.",
+   "reference": "Microsoft Learn: Windows Admin Center - Configure Kerberos delegation"
+  }
+ ]
+}
