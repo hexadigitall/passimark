@@ -125,7 +125,12 @@ class CISSPBundleSeeder extends Seeder
                 'is_optional' => $isOptional,
                 'order' => $order++,
                 'pass_score' => 70,
-                'theta_required' => $phaseType === 'mock' ? 0.0 : -0.5,
+                // Deliberately NULL. ISC2 publishes a scaled score (700/1000), not an IRT
+                // theta, so there is no defensible pass bar to encode here. A non-null
+                // value would let CertificateIssuer mint against an invented threshold,
+                // and the -0.5/0.0 this used to seed was exactly that invention. Lesson
+                // progression still works: PassimarkController falls back to pass_score.
+                'theta_required' => null,
                 'time_limit' => $timeMinutes,
                 'time_minutes' => $timeMinutes,
                 'question_count' => $qCount,
@@ -149,7 +154,10 @@ class CISSPBundleSeeder extends Seeder
         }
 
         if ($lastAssessment) {
-            $lastAssessment->update(['phase_type' => 'final', 'theta_required' => 0.5]);
+            // The final mock is flagged as the capstone attempt, but it does not gain a
+            // theta bar: 0.5 here was an invented threshold that would have let the
+            // issuer mint a credential against a score ISC2 never published.
+            $lastAssessment->update(['phase_type' => 'final', 'theta_required' => null]);
             PassimarkExam::where('session_id', $lastAssessment->id)->update(['is_final' => true]);
         }
 

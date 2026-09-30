@@ -41,7 +41,11 @@ class ContentCoherenceTest extends TestCase
         $this->assertSame('lesson', PassimarkSession::where('number', 1)->value('phase_type'));
         $this->assertSame('mock', PassimarkSession::where('number', 15)->value('phase_type'));
         $this->assertSame('final', PassimarkSession::where('number', 42)->value('phase_type'));
-        $this->assertSame(0.5, (float) PassimarkSession::where('number', 42)->value('theta_required'));
+        // The final mock is flagged final but carries no theta bar. ISC2 publishes a scaled
+        // score (700/1000), not an IRT theta, so the 0.5 this used to assert was invented -
+        // and a non-null value is exactly what lets CertificateIssuer mint against it.
+        $this->assertNull(PassimarkSession::where('number', 42)->value('theta_required'));
+        $this->assertSame(0, PassimarkSession::whereNotNull('theta_required')->count(), 'no session may declare an invented pass bar');
         $finalExams = PassimarkExam::where('session_id', PassimarkSession::where('number', 42)->value('id'))->where('is_final', true)->count();
         $this->assertSame(3, $finalExams);
 
