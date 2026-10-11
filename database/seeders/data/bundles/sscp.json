@@ -1,0 +1,1767 @@
+{
+    "cert_key": "sscp",
+    "title": "ISC2 Systems Security Certified Practitioner (SSCP)",
+    "issuer": "ISC2",
+    "outline_file": "outlines/sscp.json",
+    "variant_label": "SSCP Real-Spec Practice",
+    "exam": {
+        "questions": 125,
+        "duration_minutes": 180,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the ISC2 SSCP exam outline (seven official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "SSCP practice bank",
+    "items": [
+        {
+            "id": "sscp-001",
+            "domain": "Security Operations and Administration",
+            "stem": "An organization wants a single high-level document that states management's security intent and the principles all staff must follow. What should security leadership publish first?",
+            "options": [
+                "A security policy",
+                "A configuration baseline",
+                "An incident ticket",
+                "A firewall rule set"
+            ],
+            "correct_index": 0,
+            "explanation": "A security policy is the top-level governance document expressing management intent and principles; standards, baselines, and procedures derive from it. Firewall rules and tickets are operational artifacts.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-002",
+            "domain": "Security Operations and Administration",
+            "stem": "After an employee is terminated, which administrative action best limits the chance that the former insider retains access to corporate systems?",
+            "options": [
+                "Warn the employee in writing",
+                "Immediately revoke all accounts, badges, and credentials",
+                "Ask the employee to return the laptop later",
+                "Wait until the next pay period to act"
+            ],
+            "correct_index": 1,
+            "explanation": "Offboarding procedures require prompt, coordinated revocation of logical and physical access because a disgruntled former employee is a high insider risk. Delaying or merely warning leaves access live.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-003",
+            "domain": "Security Operations and Administration",
+            "stem": "The security team needs an authoritative list of hardware, software, and data assets to assess protection needs. Which practice provides this?",
+            "options": [
+                "Log correlation",
+                "Vulnerability scanning only",
+                "Asset inventory and classification",
+                "Penetration testing"
+            ],
+            "correct_index": 2,
+            "explanation": "You cannot protect what you cannot see, so a maintained asset inventory with classification is the foundation for scoping controls and risk. Testing and monitoring come after asset identification.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-004",
+            "domain": "Security Operations and Administration",
+            "stem": "A developer wants to move a tested configuration change into production. Which process ensures the change is reviewed, approved, and recorded before deployment?",
+            "options": [
+                "Capacity planning",
+                "Security awareness",
+                "Data labeling",
+                "Change management"
+            ],
+            "correct_index": 3,
+            "explanation": "Change management governs request, review, approval, testing, and back-out so modifications are controlled and auditable. Capacity planning and data labeling serve different purposes.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-005",
+            "domain": "Security Operations and Administration",
+            "stem": "An organization must keep critical business functions running during a major disruption and restore normal operations afterward. Which two plans together address this?",
+            "options": [
+                "Business continuity plan and disaster recovery plan",
+                "Acceptable use and privacy policies",
+                "Service level and non-disclosure agreements",
+                "Configuration baseline and patch policy"
+            ],
+            "correct_index": 0,
+            "explanation": "The BCP sustains critical functions through disruption while the DRP restores technology and data afterward. Policies, agreements, and baselines are supporting controls, not continuity plans.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-006",
+            "domain": "Security Operations and Administration",
+            "stem": "In a payments process, no single employee may both create a vendor and approve payments to it. Which control principle does this describe?",
+            "options": [
+                "Job rotation",
+                "Separation of duties",
+                "Least privilege",
+                "Need to know"
+            ],
+            "correct_index": 1,
+            "explanation": "Separation of duties splits sensitive tasks among different people so one person cannot both commit and conceal fraud. Least privilege limits access breadth and rotation detects misuse over time.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-007",
+            "domain": "Security Operations and Administration",
+            "stem": "A system administrator is granted only the rights needed to perform daily tasks rather than full root access. Which principle is being applied?",
+            "options": [
+                "Mandatory access control",
+                "Due diligence",
+                "Least privilege",
+                "Defense in depth"
+            ],
+            "correct_index": 2,
+            "explanation": "Least privilege grants users only the minimum rights required for their duties, shrinking the blast radius of error or compromise. Defense in depth layers controls and MAC enforces labels.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-008",
+            "domain": "Security Operations and Administration",
+            "stem": "Who is accountable for determining the classification level and protection requirements of a specific data set?",
+            "options": [
+                "The data custodian",
+                "The end user",
+                "The auditor",
+                "The data owner"
+            ],
+            "correct_index": 3,
+            "explanation": "The data owner, often a business manager, is accountable for classification and protection decisions. Custodians implement controls, users follow rules, and auditors give independent assurance.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-009",
+            "domain": "Security Operations and Administration",
+            "stem": "Which document tells employees what use of company computer systems is and is not permitted, including personal use?",
+            "options": [
+                "Acceptable use policy",
+                "Business impact analysis",
+                "Access control matrix",
+                "Incident response plan"
+            ],
+            "correct_index": 0,
+            "explanation": "The acceptable use policy defines permitted and prohibited use of organizational IT resources and the consequences of violation. A BIA assesses impact and the other artifacts serve other roles.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-010",
+            "domain": "Security Operations and Administration",
+            "stem": "A new hire is given security awareness training before receiving system credentials. What is the primary purpose of recurring awareness training?",
+            "options": [
+                "To assign data ownership",
+                "To reduce human error and social engineering risk",
+                "To satisfy a backup schedule",
+                "To replace technical controls"
+            ],
+            "correct_index": 1,
+            "explanation": "Awareness training addresses the human element, the most common vector for phishing and error, and must recur because threats and staff change. It supplements rather than replaces technical controls.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-011",
+            "domain": "Security Operations and Administration",
+            "stem": "Which security governance body typically approves security policy and oversees enterprise risk on behalf of the board?",
+            "options": [
+                "The change advisory board only",
+                "The internal audit team",
+                "A security steering committee",
+                "The help desk"
+            ],
+            "correct_index": 2,
+            "explanation": "A security steering committee with executive and business representation sets direction and approves policy, aligning security with objectives. Help desk and change boards handle operational matters.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-012",
+            "domain": "Security Operations and Administration",
+            "stem": "An administrator must ensure servers are built to an approved, documented secure configuration each time. What concept does this reflect?",
+            "options": [
+                "Incident triage",
+                "Media rotation",
+                "Threat hunting",
+                "Configuration management with secure baselines"
+            ],
+            "correct_index": 3,
+            "explanation": "Secure configuration baselines define approved settings for each system type, and configuration management keeps systems conforming and detects drift. The other activities address different phases.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-013",
+            "domain": "Security Operations and Administration",
+            "stem": "An organization relies on a cloud provider for critical services and wants documented expectations for availability and support. Which agreement is most appropriate?",
+            "options": [
+                "A service level agreement",
+                "An acceptable use policy",
+                "A non-disclosure agreement",
+                "A training memorandum of understanding"
+            ],
+            "correct_index": 0,
+            "explanation": "A service level agreement records measurable performance, availability, and support commitments from a provider and underpins third-party risk management. NDAs protect confidentiality only.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-014",
+            "domain": "Security Operations and Administration",
+            "stem": "A decommissioned server that held confidential records must be disposed of. What is the best way to prevent recovery of the data?",
+            "options": [
+                "Reformat only the boot partition",
+                "Degauss, shred, or cryptographically erase the media",
+                "Delete the files and empty the recycle bin",
+                "Change the administrator password"
+            ],
+            "correct_index": 1,
+            "explanation": "Sanitization requires destruction, degaussing, or cryptographic erase so residual data cannot be reconstructed. Simple deletion, reformatting, or password changes leave recoverable data.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-015",
+            "domain": "Security Operations and Administration",
+            "stem": "Which role leads the organization's security program and typically reports progress and risk to executive management?",
+            "options": [
+                "Network technician",
+                "Records clerk",
+                "Chief Information Security Officer",
+                "Data custodian"
+            ],
+            "correct_index": 2,
+            "explanation": "The CISO owns the security strategy and program and communicates risk to leadership. Custodians implement controls while other roles perform operational or administrative duties.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-016",
+            "domain": "Security Operations and Administration",
+            "stem": "An employee stores customer personal data on a personal cloud drive to work from home. Which policy should already address this behavior?",
+            "options": [
+                "An asset disposal policy",
+                "A patch management policy",
+                "A capacity plan",
+                "A privacy and data handling policy"
+            ],
+            "correct_index": 3,
+            "explanation": "A privacy and data handling policy defines where regulated personal data may be stored and how it must be protected, prohibiting uncontrolled copies. Disposal, patching, and capacity do not govern this.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-017",
+            "domain": "Security Operations and Administration",
+            "stem": "During an emergency such as a fire, employees must follow predefined evacuation and safety steps. Which artifact documents these steps?",
+            "options": [
+                "An emergency action plan",
+                "A configuration baseline",
+                "A non-disclosure agreement",
+                "A cost benefit analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "An emergency action plan documents life-safety and evacuation procedures so people act correctly under stress. Baselines, NDAs, and cost analyses address configuration, confidentiality, and budget.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-018",
+            "domain": "Security Operations and Administration",
+            "stem": "Sensitive information must remain readable and protected for a set number of years to meet legal obligations. What does this requirement define?",
+            "options": [
+                "Encryption key escrow",
+                "Data retention requirements",
+                "A job rotation schedule",
+                "Network segmentation rules"
+            ],
+            "correct_index": 1,
+            "explanation": "Retention requirements specify how long records must be kept, how they must be protected, and when to destroy them, driven by legal, regulatory, and business needs. The others are controls.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-019",
+            "domain": "Security Operations and Administration",
+            "stem": "Which control is an example of a physical security measure for a data center?",
+            "options": [
+                "Log correlation",
+                "Digital signatures",
+                "Badge readers and locked cages",
+                "Role based access control"
+            ],
+            "correct_index": 2,
+            "explanation": "Physical controls restrict bodily access to facilities and equipment; badge readers and locked racks are classic examples. RBAC, logging, and signatures are logical or technical controls.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-020",
+            "domain": "Security Operations and Administration",
+            "stem": "An organization wants a verified snapshot of a system's security posture at a point in time, mapped to a recognized control framework. What activity produces this?",
+            "options": [
+                "A user acceptance test",
+                "A data classification exercise only",
+                "A vacation schedule",
+                "A security assessment against a framework"
+            ],
+            "correct_index": 3,
+            "explanation": "Assessing controls against a recognized framework yields an evidence-based view of posture and gaps. UAT validates functionality, and classification or scheduling activities do not measure effectiveness.",
+            "reference": "ISC2 SSCP Exam Outline - Security Operations and Administration"
+        },
+        {
+            "id": "sscp-021",
+            "domain": "Access Controls",
+            "stem": "A user account is created, maintained, and eventually removed as the person joins, moves, and leaves the company. What lifecycle does this describe?",
+            "options": [
+                "Identity management",
+                "Incident management",
+                "Key management",
+                "Change management"
+            ],
+            "correct_index": 0,
+            "explanation": "Identity management covers provisioning, maintaining, and de-provisioning identities and entitlements across their lifecycle. Key management governs cryptographic keys and incident management handles events.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-022",
+            "domain": "Access Controls",
+            "stem": "A user logs in by typing a password and then entering a one-time code from a hardware token. What is the hardware token an example of?",
+            "options": [
+                "Somewhere the user is",
+                "Something the user has",
+                "Something the user knows",
+                "Something the user is"
+            ],
+            "correct_index": 1,
+            "explanation": "A token is a possession factor, something you have; a password is knowledge and a fingerprint is a biometric. Combining different categories is what makes authentication multifactor.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-023",
+            "domain": "Access Controls",
+            "stem": "An organization requires a password and a fingerprint to access a sensitive application. Why is this combination considered strong authentication?",
+            "options": [
+                "It relies on a shared secret",
+                "It removes the need for authorization",
+                "It combines two different factor categories",
+                "It is faster than a password alone"
+            ],
+            "correct_index": 2,
+            "explanation": "Multifactor authentication requires factors from different categories, so a stolen password alone is insufficient. It does not replace authorization or make access inherently faster.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-024",
+            "domain": "Access Controls",
+            "stem": "Employees access many internal applications after a single initial login without re-entering credentials for each. What technology enables this?",
+            "options": [
+                "Role mining",
+                "Data loss prevention",
+                "Load balancing",
+                "Single sign-on"
+            ],
+            "correct_index": 3,
+            "explanation": "Single sign-on authenticates once and issues a trusted session or token used by multiple applications, centralizing authentication. It does not eliminate the need for authorization.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-025",
+            "domain": "Access Controls",
+            "stem": "A company lets employees use corporate credentials to access a partner portal, with authentication performed by the company identity provider. What arrangement is this?",
+            "options": [
+                "Federated identity",
+                "Password vaulting",
+                "Local authentication",
+                "Role explosion"
+            ],
+            "correct_index": 0,
+            "explanation": "Federated identity trusts an external identity provider to vouch for the user, typically using standards such as SAML or OIDC. Vaulting stores secrets and local auth does not cross trust boundaries.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-026",
+            "domain": "Access Controls",
+            "stem": "Permissions are assigned to a job function such as help desk analyst, and users receive that function's permissions. Which authorization model is used?",
+            "options": [
+                "Rule based access control only",
+                "Role based access control",
+                "Discretionary access control",
+                "Mandatory access control"
+            ],
+            "correct_index": 1,
+            "explanation": "RBAC grants access through roles tied to job functions, simplifying administration and enabling least privilege. DAC lets owners set permissions and MAC enforces system labels.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-027",
+            "domain": "Access Controls",
+            "stem": "In a system where every object carries a sensitivity label and users need a matching clearance, which access control model is used?",
+            "options": [
+                "Role based access control",
+                "Attribute exchange",
+                "Mandatory access control",
+                "Discretionary access control"
+            ],
+            "correct_index": 2,
+            "explanation": "MAC enforces access using system-managed labels and clearances that users cannot override. DAC allows owners to assign rights, and RBAC grants access by role instead of labels.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-028",
+            "domain": "Access Controls",
+            "stem": "A file owner right-clicks a document and grants a colleague read access, deciding the permission personally. Which model does this represent?",
+            "options": [
+                "Mandatory access control",
+                "Rule based mandatory control",
+                "Nondiscretionary control",
+                "Discretionary access control"
+            ],
+            "correct_index": 3,
+            "explanation": "In DAC the resource owner decides who may access it, which is flexible but can be inconsistent. MAC and nondiscretionary models rely on system-enforced policy instead of owner discretion.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-029",
+            "domain": "Access Controls",
+            "stem": "Access decisions depend on a user's department, clearance, and the current time of day. Which authorization approach evaluates these attributes at request time?",
+            "options": [
+                "Attribute based access control",
+                "Role based access control only",
+                "Discretionary access control",
+                "Password authentication"
+            ],
+            "correct_index": 0,
+            "explanation": "ABAC evaluates many attributes of subject, object, and context to make fine-grained decisions. RBAC relies mainly on role and DAC is owner-controlled, so neither considers context the same way.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-030",
+            "domain": "Access Controls",
+            "stem": "A table lists each subject and the specific access each may have to each object. What is this structure called?",
+            "options": [
+                "A baseline configuration",
+                "An access control matrix",
+                "A business impact analysis",
+                "A chain of custody"
+            ],
+            "correct_index": 1,
+            "explanation": "An access control matrix maps subjects to objects and permitted operations and can be viewed by row or column. The other terms belong to risk, forensics, and configuration domains.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-031",
+            "domain": "Access Controls",
+            "stem": "An application logs a user out automatically after fifteen minutes of inactivity. What risk does this session timeout primarily reduce?",
+            "options": [
+                "Weak password hashing",
+                "Network address exhaustion",
+                "Unauthorized use of an unattended session",
+                "Data corruption during backup"
+            ],
+            "correct_index": 2,
+            "explanation": "Idle session timeouts terminate access when an authenticated user walks away, limiting session hijacking or misuse. Timeouts do not address hashing, backups, or addressing.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-032",
+            "domain": "Access Controls",
+            "stem": "A password policy bans dictionary words and requires a minimum length. Which attacks is this primarily intended to slow?",
+            "options": [
+                "Denial of service flooding",
+                "SQL injection",
+                "Cross site scripting",
+                "Brute force and dictionary attacks"
+            ],
+            "correct_index": 3,
+            "explanation": "Length and complexity rules raise the work factor for brute force and dictionary guessing. Flooding, injection, and scripting flaws are addressed by other controls entirely.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-033",
+            "domain": "Access Controls",
+            "stem": "A building uses a fingerprint reader to admit employees to a secure room. What type of authentication factor is the fingerprint?",
+            "options": [
+                "Something the user is",
+                "Something the user knows",
+                "Something the user has",
+                "Somewhere the user is"
+            ],
+            "correct_index": 0,
+            "explanation": "A fingerprint is a biometric factor, something the user is. Knowledge factors are memorized secrets and possession factors are physical items such as smart cards or tokens.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-034",
+            "domain": "Access Controls",
+            "stem": "In a Kerberos environment, what does a client receive after authenticating that it presents to access a service?",
+            "options": [
+                "A digital certificate only",
+                "A service ticket",
+                "A private key",
+                "A password hash"
+            ],
+            "correct_index": 1,
+            "explanation": "Kerberos issues tickets, including a ticket-granting ticket and service tickets, so credentials are not resent to each service. Private keys and certificates belong to other systems.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-035",
+            "domain": "Access Controls",
+            "stem": "A network device checks a central server before allowing an administrator to log in. Which protocol family provides this centralized authentication for network gear?",
+            "options": [
+                "DHCP relay",
+                "CDP discovery",
+                "AAA protocols such as RADIUS or TACACS+",
+                "SNMP polling"
+            ],
+            "correct_index": 2,
+            "explanation": "RADIUS and TACACS+ centralize authentication, authorization, and accounting for network devices. SNMP, DHCP, and discovery protocols do not authenticate administrators.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-036",
+            "domain": "Access Controls",
+            "stem": "An employee transfers to a new department but keeps the old team's application access for months. Which process failure does this illustrate?",
+            "options": [
+                "Inadequate encryption strength",
+                "Poor backup rotation",
+                "Weak network segmentation",
+                "Improper access review or de-provisioning"
+            ],
+            "correct_index": 3,
+            "explanation": "Access rights that follow a role change must be reviewed and removed; failing to de-provision creates privilege creep. Encryption, backup, and segmentation concerns are unrelated.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-037",
+            "domain": "Access Controls",
+            "stem": "Administrative credentials for production systems are stored in a vault that checks out passwords and records sessions. What is being implemented?",
+            "options": [
+                "Privileged access management",
+                "Data loss prevention",
+                "Endpoint detection",
+                "Vulnerability management"
+            ],
+            "correct_index": 0,
+            "explanation": "PAM tools vault, rotate, and record privileged credentials and sessions to control and audit high-risk access. DLP, EDR, and vulnerability management serve other purposes.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-038",
+            "domain": "Access Controls",
+            "stem": "Before issuing a digital identity, an organization verifies a person's government identification and address. What step is this?",
+            "options": [
+                "Token rotation",
+                "Identity proofing",
+                "Authorization review",
+                "Key escrow"
+            ],
+            "correct_index": 1,
+            "explanation": "Identity proofing confirms that a person is who they claim before an identity is issued, strengthening trust in that identity. Authorization and key or token operations occur afterward.",
+            "reference": "ISC2 SSCP Exam Outline - Access Controls"
+        },
+        {
+            "id": "sscp-039",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A team identifies threats, evaluates weaknesses, and estimates the resulting business impact. Which activity are they performing?",
+            "options": [
+                "Change control",
+                "Capacity planning",
+                "Risk assessment",
+                "Incident triage"
+            ],
+            "correct_index": 2,
+            "explanation": "Risk assessment identifies threats and vulnerabilities and estimates likelihood and impact so risks can be prioritized and treated. Triage handles incidents and the others plan change or capacity.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-040",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Which statement best expresses how risk arises from the relationship between a threat and a weakness?",
+            "options": [
+                "Risk equals assets plus controls",
+                "Risk equals threat divided by budget",
+                "Risk equals password length minus controls",
+                "Risk equals threat times vulnerability times impact"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk generally combines a plausible threat, an exploitable vulnerability, and the resulting impact. Adding controls reduces risk rather than appearing in the multiplication itself.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-041",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "One risk analysis assigns dollar values to expected losses while another uses rankings of high, medium, and low. Which pairing is correct?",
+            "options": [
+                "Quantitative and qualitative",
+                "Proactive and reactive",
+                "Detective and preventive",
+                "Internal and external"
+            ],
+            "correct_index": 0,
+            "explanation": "Quantitative analysis uses numeric values such as monetary loss, while qualitative analysis uses descriptive ratings. Proactive/reactive and preventive/detective describe control timing and purpose.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-042",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Leadership states the amount of risk the organization is willing to accept while pursuing its objectives. What concept is this?",
+            "options": [
+                "Control gap",
+                "Risk appetite",
+                "Residual risk only",
+                "Inherent risk only"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk appetite, or tolerance, is the level of risk leadership is willing to accept and guides how risks are treated. Residual and inherent risk are measured states, not declared thresholds.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-043",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A risk is judged acceptable because the cost of the control exceeds the potential loss. Which risk treatment option has been chosen?",
+            "options": [
+                "Transfer",
+                "Avoid",
+                "Accept",
+                "Mitigate"
+            ],
+            "correct_index": 2,
+            "explanation": "Risk acceptance keeps the risk when treatment cost outweighs benefit. Mitigation reduces it, transfer shifts it such as through insurance, and avoidance eliminates the activity.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-044",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Where does an organization record identified risks, their owners, and treatment status so they can be tracked over time?",
+            "options": [
+                "An access control list",
+                "A change log",
+                "A chain of custody form",
+                "A risk register"
+            ],
+            "correct_index": 3,
+            "explanation": "A risk register documents identified risks, likelihood, impact, owners, and treatment so management can monitor them. The other artifacts track access, changes, and evidence respectively.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-045",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A team enumerates missing patches and misconfigurations but does not attempt to exploit them. What activity is this?",
+            "options": [
+                "Vulnerability assessment",
+                "Penetration test",
+                "Red team exercise",
+                "Incident response"
+            ],
+            "correct_index": 0,
+            "explanation": "A vulnerability assessment identifies and prioritizes weaknesses without exploiting them, whereas a penetration test attempts exploitation to prove impact. Red teams simulate adversaries more broadly.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-046",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Analysts need a standard way to compare the severity of software vulnerabilities across products. Which scheme provides a common score and vector?",
+            "options": [
+                "SLA",
+                "CVSS",
+                "COBIT",
+                "ITIL"
+            ],
+            "correct_index": 1,
+            "explanation": "The Common Vulnerability Scoring System rates vulnerability severity with a consistent score and vector, aiding prioritization. COBIT and ITIL are governance frameworks and an SLA is a contract.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-047",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "An organization sends logs from many servers to one secured repository with time synchronization. Why is this centralization important?",
+            "options": [
+                "It replaces the need for firewalls",
+                "It prevents all intrusions automatically",
+                "It supports correlation and protects log integrity for analysis",
+                "It increases disk usage on each server"
+            ],
+            "correct_index": 2,
+            "explanation": "Centralized, time-synchronized logs resist tampering and allow correlation across systems during detection and investigation. Logging alone does not prevent intrusions or replace other controls.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-048",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A platform aggregates logs from many sources and alerts on correlated patterns of suspicious activity. What is this platform?",
+            "options": [
+                "Content delivery network",
+                "Load balancer",
+                "Backup appliance",
+                "Security information and event management"
+            ],
+            "correct_index": 3,
+            "explanation": "SIEM systems collect, normalize, and correlate log events and raise alerts, supporting detection and response. CDNs, load balancers, and backups serve availability functions.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-049",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A monitoring sensor inspects network traffic and raises an alert but does not block the traffic. What type of system is this?",
+            "options": [
+                "An intrusion detection system",
+                "An intrusion prevention system",
+                "A web application firewall",
+                "A virtual private network"
+            ],
+            "correct_index": 0,
+            "explanation": "An IDS detects and alerts on suspicious traffic without blocking, while an IPS actively blocks. A WAF protects web apps specifically and a VPN secures transport.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-050",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "An analyst observes an unusual but benign login pattern that causes no harm. Per standard vocabulary, this observation is best described as what?",
+            "options": [
+                "A control failure",
+                "An event",
+                "A confirmed incident",
+                "A disaster"
+            ],
+            "correct_index": 1,
+            "explanation": "An event is an observable occurrence that may or may not be harmful; it becomes an incident only after analysis confirms harm or threat. Disaster and control failure are more serious classifications.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-051",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Rather than reviewing security posture once a year, an organization observes indicators of change continuously. What is this practice called?",
+            "options": [
+                "One-time certification",
+                "Periodic penetration testing only",
+                "Continuous monitoring",
+                "Annual audit only"
+            ],
+            "correct_index": 2,
+            "explanation": "Continuous monitoring provides timely awareness of changes and weaknesses so action can be taken as conditions evolve, unlike point-in-time reviews. Certification and annual audits are periodic.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-052",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Leaders want a metric that reflects how close risk is to exceeding the accepted threshold. Which type of metric is this?",
+            "options": [
+                "A key performance indicator",
+                "A return on investment",
+                "A total cost of ownership",
+                "A key risk indicator"
+            ],
+            "correct_index": 3,
+            "explanation": "A key risk indicator tracks exposure relative to tolerance and warns before a threshold is breached, while a KPI measures performance. ROI and TCO are purely financial measures.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-053",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "Before coding a new payment feature, a team diagrams how an attacker might abuse the design. What activity is this?",
+            "options": [
+                "Threat modeling",
+                "Penetration testing",
+                "Code compilation",
+                "Data migration"
+            ],
+            "correct_index": 0,
+            "explanation": "Threat modeling examines a design to identify likely attack paths early, when changes are cheapest. Penetration testing occurs later against a built system.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-054",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A risk assessment assigns the highest protection to systems whose failure would stop core business. What concept ranks systems this way?",
+            "options": [
+                "Asset tagging only",
+                "Asset criticality",
+                "Asset depreciation",
+                "Asset disposal"
+            ],
+            "correct_index": 1,
+            "explanation": "Asset criticality ranks systems by importance to the mission so protection and recovery effort match business impact. Tagging merely identifies assets and depreciation is financial.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-055",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A study determines how long each business process could be unavailable before harm becomes unacceptable. What is this study called?",
+            "options": [
+                "A code review",
+                "A capacity test",
+                "A business impact analysis",
+                "A vulnerability scan"
+            ],
+            "correct_index": 2,
+            "explanation": "The BIA identifies critical processes and the impact of their loss, yielding recovery objectives that drive continuity planning. Scans, reviews, and capacity tests assess other properties.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-056",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A system must be restored within four hours and may lose at most one hour of data. Which pair of objectives do these values represent?",
+            "options": [
+                "Mean time to failure and mean time to repair",
+                "Service level and cost estimate",
+                "Access and authorization levels",
+                "Recovery time objective and recovery point objective"
+            ],
+            "correct_index": 3,
+            "explanation": "RTO is the target time to restore service and RPO is the acceptable data loss window. MTTF and MTTR describe reliability and repair, not recovery targets.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-057",
+            "domain": "Risk Identification, Monitoring, and Analysis",
+            "stem": "A monitoring tool generates hundreds of alerts for known benign admin activity, distracting analysts from real threats. What is the primary problem?",
+            "options": [
+                "A high false positive rate causing alert fatigue",
+                "Insufficient disk space",
+                "Expired certificates",
+                "Slow network throughput"
+            ],
+            "correct_index": 0,
+            "explanation": "Excessive false positives cause alert fatigue and can mask genuine incidents, so detection rules must be tuned. Disk, certificate, and throughput issues are unrelated symptoms.",
+            "reference": "ISC2 SSCP Exam Outline - Risk Identification, Monitoring, and Analysis"
+        },
+        {
+            "id": "sscp-058",
+            "domain": "Incident Response and Recovery",
+            "stem": "Which sequence correctly orders the core phases of incident response?",
+            "options": [
+                "Recovery, analysis, preparation, containment",
+                "Preparation, detection and analysis, containment, eradication, recovery, lessons learned",
+                "Detection, recovery, containment, preparation",
+                "Containment, preparation, eradication, reinstallation"
+            ],
+            "correct_index": 1,
+            "explanation": "Incident response starts with preparation, moves through detection and analysis, containment, eradication, and recovery, and ends with lessons learned. The other sequences reverse or omit critical phases.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-059",
+            "domain": "Incident Response and Recovery",
+            "stem": "An organization writes playbooks, trains the team, and prepositions forensic tools before any incident occurs. Which phase is this?",
+            "options": [
+                "Eradication",
+                "Recovery",
+                "Preparation",
+                "Containment"
+            ],
+            "correct_index": 2,
+            "explanation": "Preparation readies people, process, and technology so response is fast and consistent. Containment, eradication, and recovery occur only after an incident is detected.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-060",
+            "domain": "Incident Response and Recovery",
+            "stem": "After discovering a malware outbreak, the team isolates affected hosts from the network to stop the spread. Which phase is this?",
+            "options": [
+                "Eradication",
+                "Recovery",
+                "Lessons learned",
+                "Containment"
+            ],
+            "correct_index": 3,
+            "explanation": "Containment limits the incident's scope and impact, such as by isolating systems. Eradication removes the root cause and recovery restores normal operations afterward.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-061",
+            "domain": "Incident Response and Recovery",
+            "stem": "Once an incident is contained, the team removes the malware and closes the exploited vulnerability. Which phase is this?",
+            "options": [
+                "Eradication",
+                "Preparation",
+                "Detection",
+                "Recovery"
+            ],
+            "correct_index": 0,
+            "explanation": "Eradication eliminates the cause, such as malware and the exploited flaw, before restoration. Preparation precedes incidents and recovery follows eradication.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-062",
+            "domain": "Incident Response and Recovery",
+            "stem": "After the threat is removed, the team restores systems from clean backups and confirms normal operation. Which phase is this?",
+            "options": [
+                "Preparation",
+                "Recovery",
+                "Containment",
+                "Eradication"
+            ],
+            "correct_index": 1,
+            "explanation": "Recovery returns affected systems to production and validates they are safe and working. Containment and eradication happen earlier in the process.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-063",
+            "domain": "Incident Response and Recovery",
+            "stem": "A week after an incident is closed, the team meets to improve processes based on what went well and poorly. Which phase is this?",
+            "options": [
+                "Preparation",
+                "Eradication",
+                "Post-incident lessons learned",
+                "Containment"
+            ],
+            "correct_index": 2,
+            "explanation": "The lessons-learned review captures improvements and updates plans, closing the response cycle. It follows recovery rather than occurring during the earlier phases.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-064",
+            "domain": "Incident Response and Recovery",
+            "stem": "The first person to notice a security breach must preserve evidence and document actions taken. What is this role called?",
+            "options": [
+                "The data owner",
+                "The risk owner",
+                "The system owner",
+                "The first responder"
+            ],
+            "correct_index": 3,
+            "explanation": "The first responder secures the scene and preserves evidence before investigators arrive. Data, risk, and system owners have governance duties rather than scene preservation.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-065",
+            "domain": "Incident Response and Recovery",
+            "stem": "Investigators document who handled each piece of evidence, when, and why, from seizure to court. What does this record establish?",
+            "options": [
+                "Chain of custody",
+                "Least privilege",
+                "Separation of duties",
+                "Configuration baseline"
+            ],
+            "correct_index": 0,
+            "explanation": "A chain of custody is the unbroken record of evidence handling that demonstrates integrity for legal use. The other options are access and configuration controls.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-066",
+            "domain": "Incident Response and Recovery",
+            "stem": "When collecting digital evidence, responders capture memory, then running processes, then disk, then archives. What principle guides this order?",
+            "options": [
+                "Need to know",
+                "Order of volatility",
+                "Least privilege",
+                "Defense in depth"
+            ],
+            "correct_index": 1,
+            "explanation": "The order of volatility collects the most perishable evidence first so it is not lost, moving from memory to disk to backups. The other principles concern access, not evidence decay.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-067",
+            "domain": "Incident Response and Recovery",
+            "stem": "An examiner connects a suspect drive through a device that prevents any write to the source disk. Which tool is being used?",
+            "options": [
+                "A cryptographic hasher",
+                "A load balancer",
+                "A write blocker",
+                "A packet sniffer"
+            ],
+            "correct_index": 2,
+            "explanation": "A write blocker permits read-only acquisition so the original media is not altered. Sniffers capture traffic and hashers verify integrity but do not prevent writes.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-068",
+            "domain": "Incident Response and Recovery",
+            "stem": "Before and after copying a disk image, an examiner computes a hash of the source and the copy. Why is this done?",
+            "options": [
+                "To compress the image",
+                "To encrypt the evidence",
+                "To index the filesystem",
+                "To demonstrate the copy is identical to the original"
+            ],
+            "correct_index": 3,
+            "explanation": "Matching hashes provide evidence that the forensic image is a faithful duplicate. Compression, encryption, and indexing do not prove integrity.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-069",
+            "domain": "Incident Response and Recovery",
+            "stem": "During a major incident, a designated lead keeps lawyers, executives, and technical staff informed on a schedule. What activity is this?",
+            "options": [
+                "Incident communication and escalation",
+                "Vulnerability scanning",
+                "Change management",
+                "Capacity planning"
+            ],
+            "correct_index": 0,
+            "explanation": "Defined communication and escalation paths ensure decision makers and stakeholders get accurate, timely information. The other activities are separate processes.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-070",
+            "domain": "Incident Response and Recovery",
+            "stem": "A company simulates a ransomware scenario with key staff to test roles and decisions without touching production. What is this exercise?",
+            "options": [
+                "A vulnerability scan",
+                "A tabletop exercise",
+                "A penetration test",
+                "A code review"
+            ],
+            "correct_index": 1,
+            "explanation": "A tabletop exercise walks a hypothetical scenario to validate the plan, roles, and communication. Penetration tests and scans are technical assessments of live systems.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-071",
+            "domain": "Incident Response and Recovery",
+            "stem": "An alternate site is fully equipped and can take over operations within minutes. Which type of recovery site is this?",
+            "options": [
+                "A cold site",
+                "A mobile site only",
+                "A hot site",
+                "A warm site"
+            ],
+            "correct_index": 2,
+            "explanation": "A hot site is fully provisioned for immediate failover, a warm site is partially ready, and a cold site provides only space and power. Readiness and cost rise together.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-072",
+            "domain": "Incident Response and Recovery",
+            "stem": "A backup strategy keeps three copies of data, on two different media, with one copy off site. What is this commonly called?",
+            "options": [
+                "The CIA triad",
+                "The seven domains model",
+                "The defense in depth layers",
+                "The 3-2-1 backup rule"
+            ],
+            "correct_index": 3,
+            "explanation": "The 3-2-1 rule reduces single-point failures by separating copies across media and locations. The CIA triad and domain models describe concepts, not backup counts.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-073",
+            "domain": "Incident Response and Recovery",
+            "stem": "An investigation shows that regulated personal data was exposed to an attacker. What obligation commonly follows?",
+            "options": [
+                "Notifying affected parties and regulators as required by law",
+                "Deleting all logs",
+                "Rebooting the servers",
+                "Changing the corporate logo"
+            ],
+            "correct_index": 0,
+            "explanation": "Breach notification laws and contracts may require timely disclosure to affected individuals and authorities. Destroying logs or rebooting does not satisfy these legal duties.",
+            "reference": "ISC2 SSCP Exam Outline - Incident Response and Recovery"
+        },
+        {
+            "id": "sscp-074",
+            "domain": "Cryptography",
+            "stem": "Sender and receiver use the same secret key to encrypt and decrypt a message. What type of cryptography is this?",
+            "options": [
+                "Steganography",
+                "Symmetric encryption",
+                "Asymmetric encryption",
+                "Hashing"
+            ],
+            "correct_index": 1,
+            "explanation": "Symmetric cryptography uses one shared secret key for both encryption and decryption, offering speed but requiring secure key distribution. Asymmetric uses key pairs and hashing gives no confidentiality.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-075",
+            "domain": "Cryptography",
+            "stem": "One key is published publicly and a mathematically related private key is kept secret. Which cryptography does this describe?",
+            "options": [
+                "A stream cipher",
+                "A one-time pad",
+                "Asymmetric encryption",
+                "Symmetric encryption"
+            ],
+            "correct_index": 2,
+            "explanation": "Asymmetric cryptography uses a key pair, a public key for encryption or verification and a private key for decryption or signing. Symmetric and stream ciphers use a single shared secret.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-076",
+            "domain": "Cryptography",
+            "stem": "An organization must encrypt bulk data with a modern, widely vetted standard. Which cipher is the strongest general choice?",
+            "options": [
+                "DES",
+                "RC4",
+                "MD5",
+                "AES"
+            ],
+            "correct_index": 3,
+            "explanation": "AES is a modern, standardized block cipher suitable for bulk encryption. DES and RC4 are obsolete and insecure, and MD5 is a broken hash rather than a cipher.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-077",
+            "domain": "Cryptography",
+            "stem": "A protocol needs to establish a shared secret over an untrusted network without pre-sharing a key. Which approach is designed for this?",
+            "options": [
+                "Diffie-Hellman key exchange",
+                "AES encryption of the key",
+                "MD5 hashing of the key",
+                "Base64 encoding of the key"
+            ],
+            "correct_index": 0,
+            "explanation": "Diffie-Hellman lets two parties derive a shared secret over an insecure channel. Hashing and encoding do not create a shared secret and AES requires a key already in place.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-078",
+            "domain": "Cryptography",
+            "stem": "A downloaded file must be shown to be unchanged since it was published. Which cryptographic function is used?",
+            "options": [
+                "A steganographic embed",
+                "A hash function",
+                "A symmetric cipher",
+                "An asymmetric cipher for confidentiality"
+            ],
+            "correct_index": 1,
+            "explanation": "A cryptographic hash yields a fixed-size digest that changes if the data changes, verifying integrity. Ciphers provide confidentiality and steganography hides data.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-079",
+            "domain": "Cryptography",
+            "stem": "A sender signs a hash of a document with a private key so recipients can verify origin and integrity. What is this?",
+            "options": [
+                "A block cipher mode",
+                "A key exchange",
+                "A digital signature",
+                "A digital certificate"
+            ],
+            "correct_index": 2,
+            "explanation": "A digital signature uses the sender's private key over a message digest, which anyone with the public key can verify. Certificates bind keys to identities but are not the signature itself.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-080",
+            "domain": "Cryptography",
+            "stem": "Which component of a public key infrastructure issues and signs digital certificates for entities?",
+            "options": [
+                "A registration desk only",
+                "A hash function",
+                "A symmetric key store",
+                "A certificate authority"
+            ],
+            "correct_index": 3,
+            "explanation": "The certificate authority issues and signs certificates that bind a public key to an identity. A registration authority verifies requests but does not sign the certificates.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-081",
+            "domain": "Cryptography",
+            "stem": "A digital certificate contains a subject identity, a public key, validity dates, and an issuer signature. Who produces that signature?",
+            "options": [
+                "The issuing certificate authority",
+                "The subject's private key",
+                "The relying party",
+                "The registrar's password"
+            ],
+            "correct_index": 0,
+            "explanation": "The issuing CA signs the certificate so relying parties can validate it with the CA public key. A subject cannot sign its own certificate to gain trust.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-082",
+            "domain": "Cryptography",
+            "stem": "An organization stores copies of decryption keys so data can be recovered if an employee leaves or loses a key. What is this called?",
+            "options": [
+                "Tokenization",
+                "Key escrow",
+                "Key stretching",
+                "Salting"
+            ],
+            "correct_index": 1,
+            "explanation": "Key escrow stores keys or shares with a trusted party for recovery. Stretching and salting strengthen passwords and tokenization replaces data rather than preserving keys.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-083",
+            "domain": "Cryptography",
+            "stem": "A browser and server negotiate ciphers, verify a certificate, and derive session keys before sending application data. What protocol handshake is this?",
+            "options": [
+                "Kerberos",
+                "SNMP",
+                "TLS",
+                "DNSSEC"
+            ],
+            "correct_index": 2,
+            "explanation": "The TLS handshake authenticates the server, agrees on cipher suites, and derives session keys for the encrypted tunnel. DNSSEC, Kerberos, and SNMP serve different functions.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-084",
+            "domain": "Cryptography",
+            "stem": "A system encrypts a one-time symmetric key with the recipient's public key, then encrypts the data with that symmetric key. What is this approach?",
+            "options": [
+                "Pure hashing",
+                "Steganography",
+                "Salting",
+                "Hybrid encryption"
+            ],
+            "correct_index": 3,
+            "explanation": "Hybrid encryption combines asymmetric key transport for the session key and fast symmetric encryption for the bulk data, as TLS and PGP do. It does not rely on hashing for confidentiality.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-085",
+            "domain": "Cryptography",
+            "stem": "An investigator finds a hidden message embedded inside an image file so the change is not obvious. What technique is this?",
+            "options": [
+                "Steganography",
+                "Symmetric encryption",
+                "A digital signature",
+                "Key wrapping"
+            ],
+            "correct_index": 0,
+            "explanation": "Steganography conceals the existence of a message inside another carrier such as an image or audio file. Encryption hides content but not the fact that a message exists.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-086",
+            "domain": "Cryptography",
+            "stem": "Which mode of operation processes data one fixed-size block at a time?",
+            "options": [
+                "A message authentication code",
+                "A block cipher",
+                "A stream cipher",
+                "A hash function"
+            ],
+            "correct_index": 1,
+            "explanation": "Block ciphers operate on fixed-size blocks while stream ciphers process data one bit or byte at a time. Hash functions and MACs provide integrity rather than encryption modes.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-087",
+            "domain": "Cryptography",
+            "stem": "A signed contract must be provable so the signer cannot later deny having signed it. Which property must the signature provide?",
+            "options": [
+                "Availability",
+                "Redundancy",
+                "Non-repudiation",
+                "Confidentiality"
+            ],
+            "correct_index": 2,
+            "explanation": "Non-repudiation, provided by a digital signature bound to the signer's private key, prevents denial of the action. Confidentiality and availability are different security goals.",
+            "reference": "ISC2 SSCP Exam Outline - Cryptography"
+        },
+        {
+            "id": "sscp-088",
+            "domain": "Network and Communications Security",
+            "stem": "A device filters traffic based on source and destination IP addresses and ports without tracking connections. What type of firewall is this?",
+            "options": [
+                "A stateful inspection firewall",
+                "An application proxy only",
+                "A virtual private network",
+                "A stateless packet filter"
+            ],
+            "correct_index": 3,
+            "explanation": "A stateless packet filter evaluates each packet against static rules independently. A stateful firewall tracks connection state, an application proxy inspects application data, and a VPN encrypts transport.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-089",
+            "domain": "Network and Communications Security",
+            "stem": "A firewall remembers that an outbound connection was permitted and automatically allows its returning packets. What capability is this?",
+            "options": [
+                "Stateful inspection",
+                "Stateless filtering",
+                "Deep packet inspection of content",
+                "Network address translation"
+            ],
+            "correct_index": 0,
+            "explanation": "Stateful inspection maintains a connection table so replies to permitted sessions are allowed without a separate rule. Stateless filters cannot track sessions and NAT rewrites addresses.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-090",
+            "domain": "Network and Communications Security",
+            "stem": "A company places public web servers in a separate subnet between the internet and the internal network so a compromise is isolated. What is this subnet called?",
+            "options": [
+                "A backup site",
+                "A demilitarized zone",
+                "An intranet",
+                "A management VLAN"
+            ],
+            "correct_index": 1,
+            "explanation": "A DMZ hosts external-facing services in a segment isolated from internal systems and tightly filtered. Intranets are internal, management VLANs serve administration, and backup sites support recovery.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-091",
+            "domain": "Network and Communications Security",
+            "stem": "Remote workers must send traffic over the public internet through an encrypted tunnel to the corporate network. What technology provides this?",
+            "options": [
+                "A proxy cache",
+                "Network address translation",
+                "A virtual private network",
+                "A demilitarized zone"
+            ],
+            "correct_index": 2,
+            "explanation": "A VPN builds an encrypted tunnel so remote traffic is protected and appears to originate inside the trusted network. The other technologies filter, cache, or translate rather than tunnel.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-092",
+            "domain": "Network and Communications Security",
+            "stem": "Two sites need mutually authenticated, encrypted tunnels at the network layer. Which protocol suite is designed for this?",
+            "options": [
+                "HTTPS",
+                "SFTP",
+                "SNMPv1",
+                "IPsec"
+            ],
+            "correct_index": 3,
+            "explanation": "IPsec secures IP traffic with authentication and encryption for site-to-site and host tunnels. HTTPS and SFTP protect specific application traffic and SNMPv1 is insecure management.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-093",
+            "domain": "Network and Communications Security",
+            "stem": "Which protocol secures remote access by running a tunnel inside a TLS session, often over port 443?",
+            "options": [
+                "A TLS based VPN",
+                "A GRE tunnel alone",
+                "Telnet",
+                "FTP"
+            ],
+            "correct_index": 0,
+            "explanation": "TLS-based VPNs encapsulate traffic within TLS, which is easy to pass through firewalls. GRE alone is unencrypted, and Telnet and FTP send data in cleartext.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-094",
+            "domain": "Network and Communications Security",
+            "stem": "An organization wants to detect attacks on a network segment without any chance of blocking legitimate traffic. Which deployment meets this requirement?",
+            "options": [
+                "A firewall drop policy",
+                "A passive IDS sensor receiving a copy of traffic",
+                "An inline IPS in block mode",
+                "A WAF enforcing rules"
+            ],
+            "correct_index": 1,
+            "explanation": "A passive IDS on a mirrored port or tap detects and alerts without influencing traffic. Inline IPS, WAF enforcement, and firewall drops can all block legitimate traffic.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-095",
+            "domain": "Network and Communications Security",
+            "stem": "A company splits its network so payment systems cannot communicate directly with office desktops. What practice is this?",
+            "options": [
+                "Load balancing",
+                "Protocol tunneling",
+                "Network segmentation",
+                "Address translation"
+            ],
+            "correct_index": 2,
+            "explanation": "Segmentation divides the network into zones with enforced boundaries so compromise in one area does not spread freely. NAT, load balancing, and tunneling serve other goals.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-096",
+            "domain": "Network and Communications Security",
+            "stem": "A single physical switch is divided into isolated logical broadcast domains to separate departments. What technology is this?",
+            "options": [
+                "VPNs",
+                "NAT",
+                "DNS zones",
+                "VLANs"
+            ],
+            "correct_index": 3,
+            "explanation": "VLANs logically segment one switch into separate broadcast domains, though policy must still control inter-VLAN routing. VPNs tunnel traffic and NAT translates addresses.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-097",
+            "domain": "Network and Communications Security",
+            "stem": "Administrators should replace Telnet with which protocol to protect interactive management sessions?",
+            "options": [
+                "SSH",
+                "HTTP",
+                "FTP",
+                "SNMPv1"
+            ],
+            "correct_index": 0,
+            "explanation": "SSH encrypts interactive sessions and authenticates the server. HTTP, FTP, and SNMPv1 are cleartext protocols that expose credentials and data.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-098",
+            "domain": "Network and Communications Security",
+            "stem": "Which wireless security protocol provides stronger encryption and better protection against offline password guessing than WPA2?",
+            "options": [
+                "Open authentication",
+                "WPA3",
+                "WEP",
+                "WPA with TKIP"
+            ],
+            "correct_index": 1,
+            "explanation": "WPA3 uses stronger handshakes and forward secrecy, resisting offline dictionary attacks. WEP and TKIP are broken, and open authentication provides no protection at all.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-099",
+            "domain": "Network and Communications Security",
+            "stem": "Before granting network access, a switch checks that a device is patched, has antivirus, and is authenticated. What technology does this?",
+            "options": [
+                "Load balancing",
+                "Content caching",
+                "Network access control",
+                "Network address translation"
+            ],
+            "correct_index": 2,
+            "explanation": "NAC enforces endpoint health and authentication policy before allowing network access, often using 802.1X. NAT, load balancing, and caching do not gate access on health.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-100",
+            "domain": "Network and Communications Security",
+            "stem": "An organization routes employee web browsing through a server that filters requests and caches content. What is this server?",
+            "options": [
+                "A domain controller",
+                "A VPN concentrator",
+                "A backup server",
+                "A proxy server"
+            ],
+            "correct_index": 3,
+            "explanation": "A proxy mediates client requests, enabling content filtering, logging, and caching. Domain controllers handle directory services and VPN concentrators terminate tunnels.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-101",
+            "domain": "Network and Communications Security",
+            "stem": "A website is flooded with traffic from thousands of compromised hosts to exhaust its capacity. What attack is this?",
+            "options": [
+                "A distributed denial of service attack",
+                "A SQL injection",
+                "A cross site scripting attack",
+                "A privilege escalation"
+            ],
+            "correct_index": 0,
+            "explanation": "A DDoS uses many distributed sources to overwhelm availability, often mitigated with scrubbing and rate limiting. Injection, scripting, and escalation target different weaknesses.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-102",
+            "domain": "Network and Communications Security",
+            "stem": "An organization wants to encrypt and digitally sign email messages end to end. Which standard provides this?",
+            "options": [
+                "IMAP",
+                "S/MIME",
+                "SMTP alone",
+                "POP3"
+            ],
+            "correct_index": 1,
+            "explanation": "S/MIME adds encryption and digital signatures to email using certificates. SMTP, POP3, and IMAP move or retrieve mail but do not secure message content.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-103",
+            "domain": "Network and Communications Security",
+            "stem": "An attacker spoofs DNS responses to redirect users to a malicious site. Which technology helps validate DNS answers cryptographically?",
+            "options": [
+                "NTP",
+                "SNMP",
+                "DNSSEC",
+                "DHCP"
+            ],
+            "correct_index": 2,
+            "explanation": "DNSSEC signs DNS records so resolvers can detect forged or altered responses. DHCP assigns addresses, NTP sets time, and SNMP manages devices.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-104",
+            "domain": "Network and Communications Security",
+            "stem": "Network address translation hides internal addresses behind a public address. How should its security value be characterized?",
+            "options": [
+                "It guarantees encryption of all traffic",
+                "It authenticates every user",
+                "It prevents all malware",
+                "It obscures internal structure but is not a security control by itself"
+            ],
+            "correct_index": 3,
+            "explanation": "NAT limits direct inbound reachability and hides internal addressing, but it is not designed as a security control and must not replace firewalls or encryption.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-105",
+            "domain": "Network and Communications Security",
+            "stem": "A decoy system is deployed to attract attackers and record their behavior while real systems stay protected. What is this decoy called?",
+            "options": [
+                "A honeypot",
+                "A jump server",
+                "A bastion host only",
+                "A load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "A honeypot lures attackers so their tactics can be observed while production systems are untouched. Jump hosts and bastions are real administrative access points.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-106",
+            "domain": "Network and Communications Security",
+            "stem": "A load balancer terminates TLS so backend servers do not have to perform decryption. What is a key security consideration of this design?",
+            "options": [
+                "It disables logging",
+                "Traffic between the balancer and backends must also be protected",
+                "It eliminates the need for certificates",
+                "It makes the backend servers public"
+            ],
+            "correct_index": 1,
+            "explanation": "When TLS ends at the balancer the backend hop is decrypted unless re-encrypted, so that internal segment must be secured. Certificates are still required and logging must continue.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-107",
+            "domain": "Network and Communications Security",
+            "stem": "A switch is configured to allow only one specific MAC address on each access port and to disable a port if another appears. What feature is this?",
+            "options": [
+                "Port mirroring",
+                "Link aggregation",
+                "Port security",
+                "Spanning Tree Protocol"
+            ],
+            "correct_index": 2,
+            "explanation": "Port security limits which MAC addresses may use a port and can shut it down on violation. STP prevents loops, mirroring copies traffic, and aggregation bonds links.",
+            "reference": "ISC2 SSCP Exam Outline - Network and Communications Security"
+        },
+        {
+            "id": "sscp-108",
+            "domain": "Systems and Application Security",
+            "stem": "A team adds security reviews and testing at each stage of software development rather than only before release. What is this approach?",
+            "options": [
+                "Post-release patching only",
+                "Ad hoc testing",
+                "Capacity planning",
+                "A secure software development lifecycle"
+            ],
+            "correct_index": 3,
+            "explanation": "Integrating security into each SDLC phase finds and fixes flaws earlier and cheaper. Patching only after release and ad hoc testing are reactive and incomplete.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-109",
+            "domain": "Systems and Application Security",
+            "stem": "An application rejects any user input that does not match an expected pattern before processing it. Which practice is this?",
+            "options": [
+                "Input validation",
+                "Output encoding only",
+                "Load balancing",
+                "Data masking"
+            ],
+            "correct_index": 0,
+            "explanation": "Input validation enforces expected format, type, and range so malformed or malicious data is refused. Output encoding, balancing, and masking serve other purposes.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-110",
+            "domain": "Systems and Application Security",
+            "stem": "A web application concatenates user input directly into database queries. Which vulnerability is most likely?",
+            "options": [
+                "Session fixation",
+                "SQL injection",
+                "Cross site scripting",
+                "A buffer overflow in the browser"
+            ],
+            "correct_index": 1,
+            "explanation": "Untrusted input in queries allows SQL injection; parameterized queries and validation prevent it. XSS affects page rendering and the others have different root causes.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-111",
+            "domain": "Systems and Application Security",
+            "stem": "A comment field echoes user input back into a page without encoding, allowing scripts to run in victims' browsers. What flaw is this?",
+            "options": [
+                "Broken authentication",
+                "Insecure direct object reference",
+                "Cross site scripting",
+                "SQL injection"
+            ],
+            "correct_index": 2,
+            "explanation": "Reflecting unencoded input into a page enables cross site scripting; output encoding and content security policy mitigate it. SQL injection targets databases instead.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-112",
+            "domain": "Systems and Application Security",
+            "stem": "Developers review source code looking for unsafe functions and logic flaws before a release. What activity is this?",
+            "options": [
+                "Penetration testing",
+                "Vulnerability scanning of the network",
+                "Incident triage",
+                "Code review or static analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Reviewing code, manually or with static analysis tools, finds flaws in the implementation itself. Penetration testing and network scanning test running systems.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-113",
+            "domain": "Systems and Application Security",
+            "stem": "Which type of malware replicates by itself and spreads across networks without user interaction?",
+            "options": [
+                "A worm",
+                "A trojan",
+                "A virus",
+                "A rootkit"
+            ],
+            "correct_index": 0,
+            "explanation": "A worm self-replicates and spreads automatically, whereas a virus needs a host file and a trojan masquerades as legitimate software. A rootkit hides persistence.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-114",
+            "domain": "Systems and Application Security",
+            "stem": "Malware encrypts a company's files and demands payment for the decryption key. What type of attack is this?",
+            "options": [
+                "Spyware",
+                "Ransomware",
+                "A keylogger",
+                "Adware"
+            ],
+            "correct_index": 1,
+            "explanation": "Ransomware encrypts data and demands payment, so offline, tested backups are the key recovery control. Keyloggers, adware, and spyware have different objectives.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-115",
+            "domain": "Systems and Application Security",
+            "stem": "An organization tracks vendor updates and deploys them on a scheduled, tested basis. What process is this?",
+            "options": [
+                "Capacity management",
+                "Data classification",
+                "Patch management",
+                "Change detection"
+            ],
+            "correct_index": 2,
+            "explanation": "Patch management identifies, tests, and deploys updates to close known vulnerabilities in a controlled way. The other processes do not remediate software flaws.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-116",
+            "domain": "Systems and Application Security",
+            "stem": "A service monitors endpoints for suspicious behavior, records activity, and can isolate a compromised host. What is this?",
+            "options": [
+                "A packet filter",
+                "A content delivery network",
+                "A directory service",
+                "Endpoint detection and response"
+            ],
+            "correct_index": 3,
+            "explanation": "EDR combines behavioral monitoring, telemetry, and response actions on endpoints. Packet filters and CDNs operate on traffic, and directories manage identities.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-117",
+            "domain": "Systems and Application Security",
+            "stem": "A server is built with only the services and features required for its role, and all others are removed. Which principle is applied?",
+            "options": [
+                "Least functionality or hardening",
+                "Least privilege",
+                "Separation of duties",
+                "Non-repudiation"
+            ],
+            "correct_index": 0,
+            "explanation": "Hardening reduces the attack surface by removing unneeded software and services. Least privilege limits rights, separation of duties splits tasks, and non-repudiation is a signature property.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-118",
+            "domain": "Systems and Application Security",
+            "stem": "Several virtual machines run on one physical host, and a flaw lets code escape a guest to attack the host. What is this concern called?",
+            "options": [
+                "DNS poisoning",
+                "Hypervisor or VM escape risk",
+                "Cross site scripting",
+                "SQL injection"
+            ],
+            "correct_index": 1,
+            "explanation": "A hypervisor breakout, or VM escape, lets a guest compromise the host and other guests, so the hypervisor and management plane must be hardened and patched.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-119",
+            "domain": "Systems and Application Security",
+            "stem": "A public cloud provider secures the physical data centers while the customer secures the data and identities they put in the cloud. What model is this?",
+            "options": [
+                "The OSI model",
+                "The Bell-LaPadula model",
+                "The shared responsibility model",
+                "The three lines of defense"
+            ],
+            "correct_index": 2,
+            "explanation": "Under shared responsibility the provider secures the cloud infrastructure and the customer secures what they place in it, with the split varying by service model. The other models address governance, networking, and access.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-120",
+            "domain": "Systems and Application Security",
+            "stem": "Which cloud deployment model is owned and operated for a single organization rather than shared by many?",
+            "options": [
+                "A public cloud",
+                "A community cloud",
+                "A hybrid cloud",
+                "A private cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "A private cloud is dedicated to one organization, offering more control and isolation. Public clouds serve many tenants, community clouds serve a shared group, and hybrid combines models.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-121",
+            "domain": "Systems and Application Security",
+            "stem": "Untrusted code runs in an isolated environment that limits its access to the host system. What is this technique?",
+            "options": [
+                "Sandboxing",
+                "Load balancing",
+                "Data masking",
+                "Tokenization"
+            ],
+            "correct_index": 0,
+            "explanation": "Sandboxing confines code to a restricted environment so malicious behavior is contained. The other techniques distribute load or protect data in other ways.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-122",
+            "domain": "Systems and Application Security",
+            "stem": "Malware hides its presence and maintains privileged access deep within the operating system. What type of malware is this?",
+            "options": [
+                "A hoax",
+                "A rootkit",
+                "Adware",
+                "A logic bomb"
+            ],
+            "correct_index": 1,
+            "explanation": "A rootkit conceals itself and preserves privileged access, often requiring specialized detection or reimaging. Adware, logic bombs, and hoaxes behave differently.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-123",
+            "domain": "Systems and Application Security",
+            "stem": "Employees use personal phones for work email and documents, and the company enforces encryption and remote wipe through a central tool. What is this program?",
+            "options": [
+                "Disaster recovery",
+                "Change management",
+                "Mobile device management for BYOD",
+                "Network address translation"
+            ],
+            "correct_index": 2,
+            "explanation": "MDM applies policy, encryption, and remote wipe to bring-your-own-device endpoints to protect corporate data. The other options are unrelated network, continuity, and change practices.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-124",
+            "domain": "Systems and Application Security",
+            "stem": "A device inspects HTTP requests to a web application and blocks known attack patterns. What is this device?",
+            "options": [
+                "A stateful packet filter",
+                "A proxy cache",
+                "A load balancer",
+                "A web application firewall"
+            ],
+            "correct_index": 3,
+            "explanation": "A WAF inspects application-layer HTTP traffic and blocks attacks such as injection and scripting. Packet filters work at lower layers, and caches and balancers do not inspect for attacks.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        },
+        {
+            "id": "sscp-125",
+            "domain": "Systems and Application Security",
+            "stem": "An API issues a signed token after login that clients present on later requests. What is a key security requirement for such tokens?",
+            "options": [
+                "They must be validated and expire after a short time",
+                "They must be stored in public logs",
+                "They should never expire",
+                "They must contain the user's password"
+            ],
+            "correct_index": 0,
+            "explanation": "Tokens must be validated on each use and have short lifetimes so a stolen token has limited value. Logging tokens, never expiring them, or embedding passwords weakens security.",
+            "reference": "ISC2 SSCP Exam Outline - Systems and Application Security"
+        }
+    ]
+}

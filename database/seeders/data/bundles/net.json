@@ -1,0 +1,1277 @@
+{
+    "cert_key": "net",
+    "title": "CompTIA Network+ (N10-008)",
+    "issuer": "CompTIA",
+    "outline_file": "outlines/net.json",
+    "variant_label": "Network+ Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 90,
+        "scoring": "720/900 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CompTIA Network+ N10-008 exam objectives (five official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "Network+ practice bank",
+    "items": [
+        {
+            "id": "net-001",
+            "domain": "Networking Fundamentals",
+            "stem": "A router examines the destination IP address on an inbound packet to decide where to forward it. At which OSI layer does this logical addressing occur?",
+            "options": [
+                "Layer 3 Network",
+                "Layer 4 Transport",
+                "Layer 1 Physical",
+                "Layer 2 Data Link"
+            ],
+            "correct_index": 0,
+            "explanation": "Logical addressing and routing are Layer 3 Network functions, where IP addresses are read to select a path. Layer 1 handles bits, Layer 2 handles MAC frames on the local segment, and Layer 4 handles port-based delivery.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-002",
+            "domain": "Networking Fundamentals",
+            "stem": "When an application sends data down the stack, which name describes the protocol data unit at the transport layer?",
+            "options": [
+                "Frames",
+                "Segments",
+                "Packets",
+                "Bits"
+            ],
+            "correct_index": 1,
+            "explanation": "At the transport layer the PDU is a segment for TCP or a datagram for UDP. Frames are Layer 2, packets are Layer 3, and bits are Layer 1.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-003",
+            "domain": "Networking Fundamentals",
+            "stem": "A client and server begin a reliable session, and the client first sends a SYN, receives a SYN-ACK, then sends an ACK. Which protocol performs this three-way handshake?",
+            "options": [
+                "ARP",
+                "UDP",
+                "TCP",
+                "ICMP"
+            ],
+            "correct_index": 2,
+            "explanation": "TCP is connection-oriented and opens a session with the SYN, SYN-ACK, ACK three-way handshake. UDP is connectionless, ICMP carries control and error messages, and ARP resolves IPv4 to MAC.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-004",
+            "domain": "Networking Fundamentals",
+            "stem": "Which default port number is used by the Secure Shell protocol for remote administration?",
+            "options": [
+                "23",
+                "25",
+                "443",
+                "22"
+            ],
+            "correct_index": 3,
+            "explanation": "SSH listens on TCP port 22. Telnet uses 23, SMTP uses 25, and HTTPS uses 443. SSH encrypts the session whereas Telnet sends credentials in clear text.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-005",
+            "domain": "Networking Fundamentals",
+            "stem": "Which default transport port does the Domain Name System use for standard queries and responses?",
+            "options": [
+                "53",
+                "67",
+                "80",
+                "161"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard DNS queries use UDP port 53, with TCP 53 for large transfers and zone transfers. Ports 67 and 68 are DHCP, 80 is HTTP, and 161 is SNMP.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-006",
+            "domain": "Networking Fundamentals",
+            "stem": "A streaming video application tolerates some lost packets but wants minimal delay and overhead. Which transport protocol best fits this requirement?",
+            "options": [
+                "TCP",
+                "UDP",
+                "FTP",
+                "SMB"
+            ],
+            "correct_index": 1,
+            "explanation": "UDP is connectionless with low overhead and no retransmission, which suits real-time streaming that prefers speed over perfect delivery. TCP adds reliability, and FTP and SMB are file-oriented application protocols.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-007",
+            "domain": "Networking Fundamentals",
+            "stem": "Which copper cable category supports 10 Gbps Ethernet at distances up to 100 meters in a typical installation?",
+            "options": [
+                "Cat 3",
+                "Cat 5",
+                "Cat 6a",
+                "Coaxial RG-59"
+            ],
+            "correct_index": 2,
+            "explanation": "Cat 6a is rated for 10GBASE-T over 100 meters and reduces alien crosstalk. Cat 3 and Cat 5 cannot carry 10 Gbps at that distance, and RG-59 coax is a legacy video medium rather than modern Ethernet.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-008",
+            "domain": "Networking Fundamentals",
+            "stem": "A campus link must span several kilometers between two buildings. Which medium is the appropriate choice?",
+            "options": [
+                "Cat 5e twisted pair",
+                "Multimode fiber at 850 nm",
+                "Shielded twisted pair",
+                "Single-mode fiber"
+            ],
+            "correct_index": 3,
+            "explanation": "Single-mode fiber carries a laser over distances from several kilometers to many kilometers. Twisted pair is limited to about 100 meters, and multimode fiber is designed for shorter runs within a building or campus.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-009",
+            "domain": "Networking Fundamentals",
+            "stem": "Which cabling type is correct for connecting a workstation network card directly to a switch port?",
+            "options": [
+                "Straight-through cable",
+                "Rollover cable",
+                "Null modem cable",
+                "Crossover cable"
+            ],
+            "correct_index": 0,
+            "explanation": "Unlike devices such as a PC and a switch use a straight-through cable with the same pinout on both ends. A crossover connects like devices, a rollover is for console access, and a null modem connects two serial ports.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-010",
+            "domain": "Networking Fundamentals",
+            "stem": "How many usable host addresses does a subnet with a 255.255.255.192 mask provide?",
+            "options": [
+                "254",
+                "62",
+                "30",
+                "126"
+            ],
+            "correct_index": 1,
+            "explanation": "255.255.255.192 is a /26 with six host bits, so 2^6 equals 64 addresses. Subtracting the network and broadcast addresses leaves 62 usable hosts. A /27 gives 30 and a /25 gives 126.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-011",
+            "domain": "Networking Fundamentals",
+            "stem": "Which subnet mask corresponds to the prefix length of /25?",
+            "options": [
+                "255.255.0.0",
+                "255.255.255.0",
+                "255.255.255.128",
+                "255.255.255.192"
+            ],
+            "correct_index": 2,
+            "explanation": "A /25 borrows one bit from the last octet, so the mask is 255.255.255.128. A /24 is 255.255.255.0, a /26 is 255.255.255.192, and a /16 is 255.255.0.0.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-012",
+            "domain": "Networking Fundamentals",
+            "stem": "Which address is part of a private range defined by RFC 1918 and is not routable on the public Internet?",
+            "options": [
+                "172.32.5.10",
+                "192.169.1.10",
+                "11.0.0.10",
+                "172.16.5.10"
+            ],
+            "correct_index": 3,
+            "explanation": "RFC 1918 private ranges are 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16. The address 172.16.5.10 falls inside 172.16.0.0/12, while 172.32, 192.169, and 11.0.0.0 are public ranges.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-013",
+            "domain": "Networking Fundamentals",
+            "stem": "A workstation shows the IP address 169.254.10.20 in its configuration. What does this indicate?",
+            "options": [
+                "The host received a link-local APIPA address because DHCP failed",
+                "The host is using a public routable address",
+                "The subnet mask is incorrect",
+                "A static address was assigned by DHCP"
+            ],
+            "correct_index": 0,
+            "explanation": "The 169.254.0.0/16 range is APIPA, which hosts self-assign when no DHCP server responds. It allows link-local communication only and signals a DHCP or connectivity problem.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-014",
+            "domain": "Networking Fundamentals",
+            "stem": "Which IPv6 address type is automatically configured on an interface and is used only on the local link?",
+            "options": [
+                "Unique local",
+                "Link-local",
+                "Multicast",
+                "Global unicast"
+            ],
+            "correct_index": 1,
+            "explanation": "Every IPv6 interface self-generates a link-local address in the FE80::/10 range for on-link communication such as neighbor discovery. Global unicast is Internet-routable, unique local resembles private IPv4, and multicast delivers to groups.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-015",
+            "domain": "Networking Fundamentals",
+            "stem": "Which IPv6 prefix is reserved for global unicast addresses that can be routed on the public Internet?",
+            "options": [
+                "FC00::/7",
+                "FF00::/8",
+                "2000::/3",
+                "FE80::/10"
+            ],
+            "correct_index": 2,
+            "explanation": "Global unicast addresses are taken from 2000::/3. FE80::/10 is link-local, FC00::/7 is unique local, and FF00::/8 is multicast.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-016",
+            "domain": "Networking Fundamentals",
+            "stem": "A client broadcasts a request, receives several offers, and then selects one server to confirm. Which protocol uses this four-step discover, offer, request, and acknowledgment sequence?",
+            "options": [
+                "NTP",
+                "SNMP",
+                "DNS",
+                "DHCP"
+            ],
+            "correct_index": 3,
+            "explanation": "DHCP uses the DORA sequence to lease an address and options such as a mask, gateway, and DNS servers. DNS resolves names, NTP synchronizes time, and SNMP manages devices.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-017",
+            "domain": "Networking Fundamentals",
+            "stem": "An administrator creates a DNS entry that maps a hostname to an IPv6 address. Which record type is used?",
+            "options": [
+                "AAAA",
+                "CNAME",
+                "MX",
+                "A"
+            ],
+            "correct_index": 0,
+            "explanation": "AAAA records map a name to an IPv6 address, while A records map to IPv4. CNAME aliases one name to another, and MX identifies mail exchangers.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-018",
+            "domain": "Networking Fundamentals",
+            "stem": "A company wants email and office applications delivered over the Internet with the provider managing the servers, operating system, and application. Which cloud service model is this?",
+            "options": [
+                "PaaS",
+                "SaaS",
+                "DaaS",
+                "IaaS"
+            ],
+            "correct_index": 1,
+            "explanation": "SaaS delivers a finished application the customer only consumes. IaaS provides raw compute and storage, PaaS provides a managed development platform, and DaaS delivers virtual desktops.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-019",
+            "domain": "Networking Fundamentals",
+            "stem": "An organization runs some workloads in its own data center and others in a public cloud, sharing data between them. Which deployment model does this describe?",
+            "options": [
+                "Public cloud",
+                "Private cloud",
+                "Hybrid cloud",
+                "Community cloud"
+            ],
+            "correct_index": 2,
+            "explanation": "A hybrid cloud combines private and public environments with orchestration between them. A public cloud is shared infrastructure, a private cloud is dedicated to one organization, and a community cloud is shared by several related organizations.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-020",
+            "domain": "Networking Fundamentals",
+            "stem": "Which topology connects every node to every other node with dedicated links, providing high redundancy at the cost of many connections?",
+            "options": [
+                "Star",
+                "Bus",
+                "Ring",
+                "Full mesh"
+            ],
+            "correct_index": 3,
+            "explanation": "A full mesh provides a dedicated link between every pair of nodes, so it survives failures but grows expensive, with n times n minus one divided by two links. Star, bus, and ring topologies use far fewer links.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-021",
+            "domain": "Networking Fundamentals",
+            "stem": "Which layer of the TCP/IP model corresponds most closely to the OSI transport layer?",
+            "options": [
+                "Transport",
+                "Application",
+                "Network access",
+                "Internet"
+            ],
+            "correct_index": 0,
+            "explanation": "The TCP/IP transport layer maps directly to the OSI transport layer and carries TCP and UDP. The Internet layer maps to OSI network, the network access layer maps to data link and physical, and the application layer combines the OSI upper layers.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Networking Fundamentals"
+        },
+        {
+            "id": "net-022",
+            "domain": "Network Implementations",
+            "stem": "Why would an administrator create multiple VLANs on a single physical switch?",
+            "options": [
+                "To enlarge the MAC address table",
+                "To create separate broadcast domains for segmentation",
+                "To eliminate the need for any routing",
+                "To increase the physical port count"
+            ],
+            "correct_index": 1,
+            "explanation": "VLANs divide one switch into separate Layer 2 broadcast domains, which limits broadcast traffic and improves security. They do not remove the need for routing between VLANs, enlarge MAC tables, or add physical ports.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-023",
+            "domain": "Network Implementations",
+            "stem": "Which IEEE standard defines VLAN tagging for frames carried across a trunk link?",
+            "options": [
+                "802.3af",
+                "802.11ac",
+                "802.1Q",
+                "802.1X"
+            ],
+            "correct_index": 2,
+            "explanation": "IEEE 802.1Q inserts a four-byte tag to identify the VLAN of a frame on a trunk. 802.1X is port-based authentication, 802.3af is Power over Ethernet, and 802.11ac is a wireless standard.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-024",
+            "domain": "Network Implementations",
+            "stem": "On an 802.1Q trunk, which VLAN is untagged by default?",
+            "options": [
+                "VLAN 100",
+                "VLAN 4094",
+                "Every VLAN is tagged",
+                "VLAN 1"
+            ],
+            "correct_index": 3,
+            "explanation": "The native VLAN, VLAN 1 by default, traverses a trunk untagged so that untagged frames are still understood. All other VLANs carry 802.1Q tags, and both ends of a trunk should agree on the native VLAN.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-025",
+            "domain": "Network Implementations",
+            "stem": "What problem does Spanning Tree Protocol solve in a network with redundant switch links?",
+            "options": [
+                "Layer 2 switching loops",
+                "Weak wireless signals",
+                "Missing default gateways",
+                "Duplicate IP addresses"
+            ],
+            "correct_index": 0,
+            "explanation": "Redundant Layer 2 paths can create loops that cause broadcast storms and MAC table instability. STP blocks redundant links logically and only activates them if the active path fails. It does not address IP or wireless issues.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-026",
+            "domain": "Network Implementations",
+            "stem": "In the Spanning Tree root bridge election, which switch is chosen?",
+            "options": [
+                "The switch with the most ports",
+                "The switch with the lowest bridge ID",
+                "The switch with the highest IP address",
+                "The switch that was powered on first"
+            ],
+            "correct_index": 1,
+            "explanation": "The root is the switch with the lowest bridge ID, which is the priority value followed by the base MAC address. Lower priority wins, and if priorities tie, the lower MAC address breaks the tie.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-027",
+            "domain": "Network Implementations",
+            "stem": "Which technology bundles several physical switch links into one logical link to add bandwidth and redundancy?",
+            "options": [
+                "Spanning Tree",
+                "Port mirroring",
+                "Link aggregation",
+                "Port security"
+            ],
+            "correct_index": 2,
+            "explanation": "Link aggregation, also called EtherChannel, bonds multiple physical links into one logical link for greater bandwidth and resilience. Port mirroring copies traffic, port security restricts MAC addresses, and Spanning Tree prevents loops.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-028",
+            "domain": "Network Implementations",
+            "stem": "Which Power over Ethernet standard provides up to about 30 watts per port to power devices such as access points?",
+            "options": [
+                "802.3bt",
+                "802.3az",
+                "802.3af",
+                "802.3at"
+            ],
+            "correct_index": 3,
+            "explanation": "802.3at, or PoE plus, delivers roughly 30 watts per port, while 802.3af provides about 15.4 watts and 802.3bt provides up to about 90 or 100 watts. 802.3az is energy-efficient Ethernet, not a powering standard.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-029",
+            "domain": "Network Implementations",
+            "stem": "A small branch office wants predictable forwarding without running a routing protocol. Which routing approach is most appropriate?",
+            "options": [
+                "Static routes",
+                "OSPF in area 0",
+                "BGP peering with the ISP",
+                "RIP version 2"
+            ],
+            "correct_index": 0,
+            "explanation": "Static routes are manually configured and need no protocol overhead, which suits a small and stable branch. Dynamic protocols such as OSPF, RIP, and BGP add convergence and update traffic a simple branch may not need.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-030",
+            "domain": "Network Implementations",
+            "stem": "Which route entry sends all traffic that has no more specific match to the next hop?",
+            "options": [
+                "127.0.0.0/8",
+                "0.0.0.0/0",
+                "224.0.0.0/4",
+                "169.254.0.0/16"
+            ],
+            "correct_index": 1,
+            "explanation": "The default route 0.0.0.0/0 matches any destination not covered by a longer prefix and is used for Internet or upstream traffic. 127.0.0.0/8 is loopback, 224.0.0.0/4 is multicast, and 169.254.0.0/16 is link-local.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-031",
+            "domain": "Network Implementations",
+            "stem": "A router has both a 10.1.1.0/24 route and a 10.1.0.0/16 route for a packet destined to 10.1.1.5. Which route does it choose?",
+            "options": [
+                "Neither route matches",
+                "The /16 route because it summarizes more networks",
+                "The /24 route because it is the longest prefix match",
+                "Both routes are used in round-robin"
+            ],
+            "correct_index": 2,
+            "explanation": "Routers use longest prefix match, so the more specific /24 covering 10.1.1.0 wins over the /16. A summary route is used only when no more specific match exists.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-032",
+            "domain": "Network Implementations",
+            "stem": "Two routing sources offer a path to the same network. Which value does a router compare first to choose the more trusted source?",
+            "options": [
+                "Interface speed",
+                "Packet size",
+                "Hop count",
+                "Administrative distance"
+            ],
+            "correct_index": 3,
+            "explanation": "Administrative distance ranks the trustworthiness of a route source, and the lower value wins regardless of metric. Connected routes are zero, static routes are one, and dynamic protocols have higher values.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-033",
+            "domain": "Network Implementations",
+            "stem": "Which routing protocol is a link-state protocol that builds a complete topology map and runs the shortest path first algorithm?",
+            "options": [
+                "OSPF",
+                "BGP",
+                "EIGRP",
+                "RIP"
+            ],
+            "correct_index": 0,
+            "explanation": "OSPF is link-state and computes shortest paths with the Dijkstra SPF algorithm over a synchronized topology database. RIP is distance vector, BGP is path vector, and EIGRP is an advanced distance vector protocol.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-034",
+            "domain": "Network Implementations",
+            "stem": "In a multi-area OSPF design, which area must act as the backbone that all other areas connect to?",
+            "options": [
+                "The highest-numbered area",
+                "Area 0",
+                "Area 1",
+                "The stub area"
+            ],
+            "correct_index": 1,
+            "explanation": "OSPF designates Area 0 as the backbone, and every other area must connect to it directly or through a virtual link. This keeps inter-area routing consistent and loop free.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-035",
+            "domain": "Network Implementations",
+            "stem": "Several internal hosts must share one public IP address when accessing the Internet. Which technique allows this port-based sharing?",
+            "options": [
+                "VLAN trunking",
+                "Static NAT",
+                "Port address translation",
+                "Dynamic DNS"
+            ],
+            "correct_index": 2,
+            "explanation": "Port address translation maps many private hosts to a single public address by tracking unique source ports. Static NAT maps one private address to one public address, dynamic DNS updates name records, and VLAN trunking is Layer 2.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-036",
+            "domain": "Network Implementations",
+            "stem": "Which wireless standard operates only in the 5 GHz band and introduced wide channels for higher throughput?",
+            "options": [
+                "802.11n",
+                "802.11b",
+                "802.11g",
+                "802.11ac"
+            ],
+            "correct_index": 3,
+            "explanation": "802.11ac works in the 5 GHz band with wider channels and higher throughput. 802.11b and 802.11g use 2.4 GHz, and 802.11n can use both bands but is older than 802.11ac.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-037",
+            "domain": "Network Implementations",
+            "stem": "Which three channels in the 2.4 GHz band are non-overlapping in North America?",
+            "options": [
+                "1, 6, and 11",
+                "2, 5, and 9",
+                "1, 5, and 10",
+                "3, 6, and 12"
+            ],
+            "correct_index": 0,
+            "explanation": "In the 2.4 GHz band the commonly recommended non-overlapping channels are 1, 6, and 11. Choosing adjacent channels such as 1 and 2 causes co-channel interference that degrades performance.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-038",
+            "domain": "Network Implementations",
+            "stem": "A company wants each wireless user authenticated individually against a central server rather than with a shared passphrase. Which method should be used?",
+            "options": [
+                "WPA2-Personal with a pre-shared key",
+                "WPA2-Enterprise with 802.1X and RADIUS",
+                "Open authentication with a hidden SSID",
+                "WEP with a 128-bit key"
+            ],
+            "correct_index": 1,
+            "explanation": "WPA2-Enterprise uses 802.1X with a RADIUS server so each user authenticates individually, often with certificates. WPA2-Personal uses one shared key, and open or WEP networks provide weak or no protection.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-039",
+            "domain": "Network Implementations",
+            "stem": "In software-defined networking, which change does the architecture make compared with traditional devices?",
+            "options": [
+                "It requires each switch to run its own routing protocol",
+                "It removes all need for IP addressing",
+                "It moves the control plane to a centralized controller",
+                "It eliminates the need for any data plane"
+            ],
+            "correct_index": 2,
+            "explanation": "SDN centralizes the control plane in a controller that programs forwarding rules, while the data plane on each device simply forwards packets. Traditional devices combine the control and data planes locally.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Implementations"
+        },
+        {
+            "id": "net-040",
+            "domain": "Network Operations",
+            "stem": "Which protocol allows a management station to poll devices for statistics and to receive unsolicited alerts from them?",
+            "options": [
+                "NTP",
+                "ICMP",
+                "Syslog",
+                "SNMP"
+            ],
+            "correct_index": 3,
+            "explanation": "SNMP polls devices through a manager and agent model and also delivers unsolicited traps or informs for events. Syslog collects messages, NTP synchronizes time, and ICMP carries control and error messages.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-041",
+            "domain": "Network Operations",
+            "stem": "A device sends a syslog message with severity level 0. What does this level represent?",
+            "options": [
+                "Emergency, the most severe condition",
+                "Debug, the least severe information",
+                "Informational, routine events",
+                "Warning, a potential issue"
+            ],
+            "correct_index": 0,
+            "explanation": "Syslog level 0 is Emergency, the highest severity, meaning the system is unusable. Levels rise in number as severity drops, from 0 Emergency to 7 Debug.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-042",
+            "domain": "Network Operations",
+            "stem": "Why is a consistent time source important across network devices?",
+            "options": [
+                "It reduces cable attenuation",
+                "It keeps log timestamps and certificate validity accurate",
+                "It increases wireless throughput",
+                "It assigns IP addresses"
+            ],
+            "correct_index": 1,
+            "explanation": "NTP keeps clocks aligned so log entries can be correlated during troubleshooting and certificates validate correctly. Time does not affect cabling, wireless throughput, or DHCP addressing.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-043",
+            "domain": "Network Operations",
+            "stem": "What is a network baseline used for in operations?",
+            "options": [
+                "To assign addresses to hosts",
+                "To replace a firewall rule set",
+                "To record normal performance so deviations can be detected",
+                "To encrypt management traffic"
+            ],
+            "correct_index": 2,
+            "explanation": "A baseline captures normal utilization, latency, and error rates so operators can compare current behavior against it and spot anomalies. It is a reference, not an encryption, addressing, or filtering mechanism.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-044",
+            "domain": "Network Operations",
+            "stem": "Which documentation artifact depicts actual equipment, racks, and cable runs rather than addresses and traffic flows?",
+            "options": [
+                "IP addressing plan",
+                "Service level agreement",
+                "Logical network diagram",
+                "Physical network diagram"
+            ],
+            "correct_index": 3,
+            "explanation": "A physical diagram shows actual equipment, racks, and cabling. A logical diagram shows addressing and traffic flows, an addressing plan lists subnets, and an SLA states service expectations.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-045",
+            "domain": "Network Operations",
+            "stem": "An administrator must modify a production router configuration. Which process reduces the risk of an unplanned outage?",
+            "options": [
+                "Follow a formal change management process with approval and a rollback plan",
+                "Make the change during peak hours only",
+                "Disable logging before making the change",
+                "Apply the change immediately without review"
+            ],
+            "correct_index": 0,
+            "explanation": "Change management requires review, approval, a backout plan, and often a maintenance window, which limits outages. Unreviewed or peak-hour changes raise risk, and disabling logging reduces accountability.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-046",
+            "domain": "Network Operations",
+            "stem": "Which action best protects a device configuration against loss after a hardware failure?",
+            "options": [
+                "Email the password to the team",
+                "Store a backup copy of the configuration on a separate server",
+                "Rely on the device flash memory alone",
+                "Write the configuration only to RAM"
+            ],
+            "correct_index": 1,
+            "explanation": "Copying configurations to an external server or repository preserves them if the device fails. RAM is lost on reboot, flash can fail with the device, and sharing passwords over email is insecure.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-047",
+            "domain": "Network Operations",
+            "stem": "Which practice ensures that newly deployed devices are configured consistently with the approved standard?",
+            "options": [
+                "Skipping configuration during deployment",
+                "Relying on user-reported settings",
+                "Using a documented golden configuration template",
+                "Letting each technician choose settings freely"
+            ],
+            "correct_index": 2,
+            "explanation": "A golden or baseline configuration template defines the approved settings so every device starts from a known and secure state. Ad hoc settings drift from the standard and complicate support.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-048",
+            "domain": "Network Operations",
+            "stem": "Which system tracks the assignment and status of IP addresses and subnets across an organization?",
+            "options": [
+                "Web application firewall",
+                "Load balancer",
+                "Forward proxy",
+                "IP address management"
+            ],
+            "correct_index": 3,
+            "explanation": "IP address management, or IPAM, documents and manages address allocation, subnet use, and conflicts. A WAF filters web traffic, a load balancer distributes connections, and a forward proxy mediates client requests.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-049",
+            "domain": "Network Operations",
+            "stem": "Clients on one subnet need addresses from a DHCP server located on a different subnet. What must the router do?",
+            "options": [
+                "Forward DHCP requests using a relay or helper address",
+                "Act as a DNS server",
+                "Enable NAT for the clients",
+                "Block the DHCP broadcasts"
+            ],
+            "correct_index": 0,
+            "explanation": "A DHCP relay or IP helper forwards client broadcasts to the DHCP server and returns the reply, since broadcasts do not cross routers by default. The server then leases addresses to the remote subnet.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-050",
+            "domain": "Network Operations",
+            "stem": "Which technology gives hosts a redundant default gateway so they can reach another router if the primary fails?",
+            "options": [
+                "Spanning Tree Protocol",
+                "First-hop redundancy with VRRP or HSRP",
+                "Port address translation",
+                "Dynamic DNS"
+            ],
+            "correct_index": 1,
+            "explanation": "First-hop redundancy protocols such as VRRP and HSRP present a shared virtual gateway address that a backup router can assume when the primary fails. STP is Layer 2, NAT rewrites addresses, and dynamic DNS updates names.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-051",
+            "domain": "Network Operations",
+            "stem": "Which measure increases server network throughput and provides link redundancy at the host level?",
+            "options": [
+                "Using a single unshielded cable",
+                "Assigning an APIPA address",
+                "NIC teaming or bonding",
+                "Disabling the second network card"
+            ],
+            "correct_index": 2,
+            "explanation": "NIC teaming bonds multiple network interfaces into one logical interface for higher throughput and failover. Disabling an adapter, using one cable, or assigning a link-local address reduces or ignores redundancy.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-052",
+            "domain": "Network Operations",
+            "stem": "Which is an appropriate facility measure to protect network equipment from a power outage?",
+            "options": [
+                "Raise the room humidity to the maximum",
+                "Disable ventilation in the rack",
+                "Remove surge protection",
+                "Install an uninterruptible power supply"
+            ],
+            "correct_index": 3,
+            "explanation": "A UPS provides battery power so equipment rides through brief outages or shuts down cleanly. High humidity, poor ventilation, and removed surge protection increase the risk of damage.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-053",
+            "domain": "Network Operations",
+            "stem": "In disaster recovery planning, what does recovery point objective describe?",
+            "options": [
+                "The maximum acceptable amount of data loss measured in time",
+                "The time allowed to restore service",
+                "The number of backup copies kept",
+                "The physical distance to the backup site"
+            ],
+            "correct_index": 0,
+            "explanation": "Recovery point objective defines how much data the business can afford to lose, which drives backup frequency. Recovery time objective defines how long restoration may take.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-054",
+            "domain": "Network Operations",
+            "stem": "Which type of alternate site is fully equipped and ready to take over operations with little or no delay?",
+            "options": [
+                "Warm site",
+                "Hot site",
+                "Reciprocal agreement",
+                "Cold site"
+            ],
+            "correct_index": 1,
+            "explanation": "A hot site is fully equipped with hardware, data, and connectivity and can resume operations almost immediately. A warm site has some equipment, a cold site has only basic facilities, and a reciprocal agreement shares another organization's capacity.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-055",
+            "domain": "Network Operations",
+            "stem": "Which quality of service action helps time-sensitive voice traffic receive priority over bulk file transfers?",
+            "options": [
+                "Increase the MTU for file transfers",
+                "Assign low priority to voice",
+                "Classify voice traffic into a high-priority queue",
+                "Disable queuing on the router"
+            ],
+            "correct_index": 2,
+            "explanation": "QoS classifies and marks voice with high priority so queuing and scheduling favor the low-latency packets. Deprioritizing voice, removing queuing, or enlarging file-transfer MTU would harm call quality.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-056",
+            "domain": "Network Operations",
+            "stem": "A link shows steady throughput but users report choppy voice calls and video. Which performance characteristic should be examined?",
+            "options": [
+                "Cable color coding",
+                "DHCP lease time",
+                "Bandwidth only",
+                "Jitter and latency"
+            ],
+            "correct_index": 3,
+            "explanation": "Choppy real-time media usually points to variable delay, or jitter, and high latency even when raw bandwidth looks adequate. Cable color and lease time do not cause choppiness, and bandwidth alone is already known to be sufficient.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Operations"
+        },
+        {
+            "id": "net-057",
+            "domain": "Network Security",
+            "stem": "A flood of traffic from many compromised hosts overwhelms a public web service. Which attack does this describe?",
+            "options": [
+                "Distributed denial of service",
+                "On-path interception",
+                "SQL injection",
+                "ARP spoofing"
+            ],
+            "correct_index": 0,
+            "explanation": "A distributed denial of service uses many sources, often a botnet, to exhaust the target's resources. On-path interception and ARP spoofing target traffic in transit, and SQL injection targets a database.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-058",
+            "domain": "Network Security",
+            "stem": "An attacker positions a device between a client and a server to read and alter their traffic. Which threat is this?",
+            "options": [
+                "Ransomware",
+                "On-path attack",
+                "VLAN hopping",
+                "Smurf attack"
+            ],
+            "correct_index": 1,
+            "explanation": "An on-path or man-in-the-middle attack secretly relays and can modify traffic between two parties. Ransomware encrypts data, VLAN hopping crosses Layer 2 boundaries, and a Smurf attack abuses directed broadcasts.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-059",
+            "domain": "Network Security",
+            "stem": "Which technique tricks a user into revealing credentials by imitating a legitimate login page?",
+            "options": [
+                "Packet sniffing",
+                "Brute force",
+                "Phishing",
+                "Port scanning"
+            ],
+            "correct_index": 2,
+            "explanation": "Phishing impersonates a trusted party to capture credentials or deliver malware. Port scanning maps open services, packet sniffing captures traffic on a segment, and brute force guesses passwords directly.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-060",
+            "domain": "Network Security",
+            "stem": "An employee connects an unauthorized access point that broadcasts the company SSID. Which threat does this create?",
+            "options": [
+                "A distributed denial of service",
+                "A worm outbreak",
+                "A zero-day exploit",
+                "A rogue access point or evil twin"
+            ],
+            "correct_index": 3,
+            "explanation": "A rogue or evil twin access point mimics a legitimate SSID so clients associate and their traffic can be captured. Wireless surveys and wireless intrusion prevention help detect and locate such devices.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-061",
+            "domain": "Network Security",
+            "stem": "An attacker on an access port sends tagged frames to reach a different VLAN. Which attack is this?",
+            "options": [
+                "VLAN hopping",
+                "DNS poisoning",
+                "Session hijacking",
+                "Buffer overflow"
+            ],
+            "correct_index": 0,
+            "explanation": "VLAN hopping exploits trunk negotiation or double tagging to send traffic into another VLAN. Mitigations include disabling unused ports, preventing access ports from negotiating trunks, and changing the native VLAN.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-062",
+            "domain": "Network Security",
+            "stem": "Which switch feature limits the number of source MAC addresses allowed on a port to prevent address flooding attacks?",
+            "options": [
+                "Link aggregation",
+                "Port security",
+                "Port mirroring",
+                "Spanning Tree"
+            ],
+            "correct_index": 1,
+            "explanation": "Port security restricts how many MAC addresses can appear on a port and can shut the port or drop frames when the limit is exceeded. Port mirroring copies traffic, STP prevents loops, and link aggregation bonds links.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-063",
+            "domain": "Network Security",
+            "stem": "Which action is part of hardening a newly installed network switch?",
+            "options": [
+                "Connect all unused ports to a spare VLAN",
+                "Leave default administrator credentials in place",
+                "Disable unused services and change default credentials",
+                "Enable every management protocol available"
+            ],
+            "correct_index": 2,
+            "explanation": "Hardening removes unnecessary services, changes default passwords, disables unused ports, and restricts management access. Leaving defaults or enabling extra protocols widens the attack surface.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-064",
+            "domain": "Network Security",
+            "stem": "Which control restricts physical entry to a server room so only authorized staff can reach network equipment?",
+            "options": [
+                "A longer Wi-Fi password",
+                "A dynamic routing protocol",
+                "A larger DHCP scope",
+                "An access badge and locked door"
+            ],
+            "correct_index": 3,
+            "explanation": "Physical security such as badge readers, locks, and cameras prevents unauthorized physical access to equipment. Passwords, routing protocols, and address scopes do not control who enters a room.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-065",
+            "domain": "Network Security",
+            "stem": "Which framework authenticates a device before it is allowed onto the network and can place noncompliant devices in a quarantined VLAN?",
+            "options": [
+                "Network access control with 802.1X",
+                "Quality of service",
+                "Port address translation",
+                "Spanning Tree Protocol"
+            ],
+            "correct_index": 0,
+            "explanation": "NAC with 802.1X authenticates users or devices at the port and can enforce posture, placing failures in a remediation VLAN. QoS prioritizes traffic, NAT translates addresses, and STP prevents loops.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-066",
+            "domain": "Network Security",
+            "stem": "A remote worker connects a laptop to the corporate network over the Internet with an encrypted tunnel. Which technology is used?",
+            "options": [
+                "Dynamic NAT",
+                "Remote access VPN",
+                "Site-to-site VPN between two offices",
+                "A forward proxy"
+            ],
+            "correct_index": 1,
+            "explanation": "A remote access VPN gives an individual client an encrypted tunnel to corporate resources. A site-to-site VPN links two networks, a forward proxy mediates web requests, and dynamic NAT translates addresses.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-067",
+            "domain": "Network Security",
+            "stem": "Which firewall type tracks the state of active connections and only allows return traffic for sessions that were initiated from inside?",
+            "options": [
+                "Patch panel",
+                "Stateless packet filter",
+                "Stateful inspection firewall",
+                "Hub"
+            ],
+            "correct_index": 2,
+            "explanation": "A stateful firewall keeps a connection table so replies to outbound sessions are permitted automatically. A stateless filter evaluates each packet alone, and hubs and patch panels are not security devices.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-068",
+            "domain": "Network Security",
+            "stem": "A router access control list ends with an implicit deny. What does this mean for traffic that matches no permit statement?",
+            "options": [
+                "It is copied to the log only",
+                "It is forwarded to the default gateway",
+                "It is allowed by default",
+                "It is dropped by default"
+            ],
+            "correct_index": 3,
+            "explanation": "An ACL has an implicit deny any at the end, so traffic that matches no permit rule is discarded. Explicit permits must be added for traffic that should pass.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-069",
+            "domain": "Network Security",
+            "stem": "Which security principle grants users and systems only the access needed to perform their tasks?",
+            "options": [
+                "Least privilege",
+                "Implicit trust",
+                "Open access",
+                "Security by obscurity"
+            ],
+            "correct_index": 0,
+            "explanation": "Least privilege limits rights to the minimum required for a role, reducing damage from misuse or compromise. Implicit trust and open access widen exposure, and obscurity alone is not a real control.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Security"
+        },
+        {
+            "id": "net-070",
+            "domain": "Network Troubleshooting",
+            "stem": "According to the structured troubleshooting method, what should an administrator do immediately after identifying the problem?",
+            "options": [
+                "Implement the solution",
+                "Establish a theory of probable cause",
+                "Document the outcome",
+                "Replace the device"
+            ],
+            "correct_index": 1,
+            "explanation": "After identifying the problem, the next step is to establish a theory of probable cause, often starting with the most likely or simplest cause. Implementation and documentation come later in the process.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-071",
+            "domain": "Network Troubleshooting",
+            "stem": "A technician pings 127.0.0.1 and it succeeds. What does this confirm?",
+            "options": [
+                "DNS resolves names",
+                "The Internet connection is up",
+                "The local TCP/IP stack is working",
+                "The default gateway is reachable"
+            ],
+            "correct_index": 2,
+            "explanation": "Pinging the loopback address tests the local TCP/IP stack and does not use the network. It does not prove gateway reachability, name resolution, or Internet connectivity.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-072",
+            "domain": "Network Troubleshooting",
+            "stem": "A workstation can ping other hosts on its subnet but cannot reach any remote network. Which check is most useful next?",
+            "options": [
+                "Replace the network cable",
+                "Reinstall the operating system",
+                "Change the wireless channel",
+                "Verify the default gateway setting"
+            ],
+            "correct_index": 3,
+            "explanation": "Local success with remote failure points to the default gateway, which forwards off-subnet traffic. An incorrect or missing gateway breaks remote access while local traffic still works.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-073",
+            "domain": "Network Troubleshooting",
+            "stem": "Which tool shows each hop a packet takes and can reveal the router where a path fails?",
+            "options": [
+                "traceroute",
+                "ipconfig",
+                "netstat",
+                "nslookup"
+            ],
+            "correct_index": 0,
+            "explanation": "Traceroute sends probes with increasing TTL values to list each hop and locate where the path breaks or becomes slow. nslookup queries DNS, ipconfig shows local settings, and netstat lists connections.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-074",
+            "domain": "Network Troubleshooting",
+            "stem": "Which command displays a host's IP address, subnet mask, default gateway, and DNS servers on a Windows system?",
+            "options": [
+                "ping",
+                "ipconfig /all",
+                "tracert",
+                "arp -a"
+            ],
+            "correct_index": 1,
+            "explanation": "ipconfig /all shows the full IP configuration, including adapter details, mask, gateway, and DNS servers. ping tests reachability, tracert maps a path, and arp lists the local address cache.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-075",
+            "domain": "Network Troubleshooting",
+            "stem": "A user can reach a server by IP address but not by its hostname. Which tool should be used to test name resolution?",
+            "options": [
+                "netstat",
+                "arp -a",
+                "nslookup",
+                "traceroute"
+            ],
+            "correct_index": 2,
+            "explanation": "nslookup queries DNS to verify that the hostname resolves and to inspect the returned records. Reaching the server by IP while name lookup fails points to DNS as the cause.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-076",
+            "domain": "Network Troubleshooting",
+            "stem": "An analyst must capture and inspect individual packets on a busy switch port. Which approach provides the needed data?",
+            "options": [
+                "Run ping continuously",
+                "Change the subnet mask",
+                "Disable spanning tree",
+                "Configure port mirroring and capture with a protocol analyzer"
+            ],
+            "correct_index": 3,
+            "explanation": "Port mirroring copies traffic from the port of interest to a monitor port where a protocol analyzer such as Wireshark can capture it. The other actions do not expose packet contents.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-077",
+            "domain": "Network Troubleshooting",
+            "stem": "Which tool measures cable length and locates breaks or shorts in a copper run?",
+            "options": [
+                "Cable tester or time-domain reflectometer",
+                "Protocol analyzer",
+                "Spectrum analyzer",
+                "Loopback plug"
+            ],
+            "correct_index": 0,
+            "explanation": "A cable tester verifies continuity and wiring, and a time-domain reflectometer locates faults and length by timing reflections. A protocol analyzer reads traffic, a spectrum analyzer examines radio, and a loopback plug tests ports.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-078",
+            "domain": "Network Troubleshooting",
+            "stem": "A fiber link that recently worked begins showing high error rates after maintenance. What is the most likely cause?",
+            "options": [
+                "A duplicate MAC address",
+                "Dirty or scratched connectors",
+                "A longer Ethernet cable",
+                "An expired DHCP lease"
+            ],
+            "correct_index": 1,
+            "explanation": "Fiber is very sensitive to contamination and bending, so dirty, scratched, or poorly seated connectors are a common cause of errors after maintenance. Ethernet length, DHCP, and MAC issues do not affect fiber optics.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-079",
+            "domain": "Network Troubleshooting",
+            "stem": "Which condition can cause crosstalk and reduced signal quality on copper cabling?",
+            "options": [
+                "A correctly terminated connector",
+                "A short cable run under ten meters",
+                "Electromagnetic interference from nearby power lines",
+                "Single-mode fiber in the same pathway"
+            ],
+            "correct_index": 2,
+            "explanation": "Electromagnetic interference from power lines, motors, or fluorescent lights can couple into copper pairs and cause crosstalk and errors. Correct terminations and short runs reduce rather than cause problems, and fiber is immune to EMI.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-080",
+            "domain": "Network Troubleshooting",
+            "stem": "A link negotiates full duplex on one end and half duplex on the other, and users report slow, collision-heavy traffic. What is the cause?",
+            "options": [
+                "An incorrect DNS record",
+                "A missing default route",
+                "A weak wireless signal",
+                "A duplex mismatch"
+            ],
+            "correct_index": 3,
+            "explanation": "A duplex mismatch lets one side transmit while the other is listening, producing late collisions and severe performance loss. Both ends should be set to the same duplex, ideally through autonegotiation.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-081",
+            "domain": "Network Troubleshooting",
+            "stem": "A newly installed access point offers lower throughput than expected at close range. Which factor is most likely responsible?",
+            "options": [
+                "A channel width or channel overlap problem",
+                "A missing default gateway",
+                "An expired certificate",
+                "An incorrect MAC address table entry"
+            ],
+            "correct_index": 0,
+            "explanation": "Interference from overlapping channels or a narrow channel width limits wireless throughput even at close range. Gateway, certificate, and switch MAC issues do not dictate radio performance.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-082",
+            "domain": "Network Troubleshooting",
+            "stem": "A workstation reports a duplicate IP address warning. What is the most likely cause?",
+            "options": [
+                "Spanning Tree is disabled",
+                "Two hosts are configured with the same static address",
+                "The DNS zone is too large",
+                "The cable is too short"
+            ],
+            "correct_index": 1,
+            "explanation": "Duplicate IP warnings occur when two devices use the same address, often from manual static configuration or overlapping DHCP scopes. The other options do not cause address collisions.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-083",
+            "domain": "Network Troubleshooting",
+            "stem": "Users on one VLAN can reach local peers but not hosts on other VLANs. Which configuration should be checked?",
+            "options": [
+                "The DHCP client lease length",
+                "The cable category",
+                "Inter-VLAN routing on the router or Layer 3 switch",
+                "The wireless channel plan"
+            ],
+            "correct_index": 2,
+            "explanation": "Traffic between VLANs requires routing, so a missing or misconfigured gateway or routing interface breaks it while intra-VLAN traffic still works. Channel plans, leases, and cable categories do not route between VLANs.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-084",
+            "domain": "Network Troubleshooting",
+            "stem": "A DHCP scope is fully leased and new clients receive APIPA addresses. What is the correct fix?",
+            "options": [
+                "Change the DNS server address",
+                "Replace the switch",
+                "Disable the default gateway",
+                "Expand the address pool or shorten lease time"
+            ],
+            "correct_index": 3,
+            "explanation": "Exhausting a DHCP scope leaves new clients with self-assigned link-local addresses. Expanding the pool or reducing lease duration frees addresses. DNS, switch hardware, and gateway changes do not create more leases.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-085",
+            "domain": "Network Troubleshooting",
+            "stem": "A host has the correct IP address and gateway but uses a mask of 255.255.255.0 on a network designed as 255.255.255.192. What symptom results?",
+            "options": [
+                "The host misidentifies local and remote destinations",
+                "The host cannot power on",
+                "The wireless signal weakens",
+                "The domain name registration expires"
+            ],
+            "correct_index": 0,
+            "explanation": "A wrong mask makes the host treat some off-subnet hosts as local and send ARP instead of forwarding to the gateway, breaking communication. The other options are unrelated to IP configuration.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-086",
+            "domain": "Network Troubleshooting",
+            "stem": "A user cannot open a website by name, yet pinging the site's IP address succeeds. Which service is failing?",
+            "options": [
+                "Port security",
+                "DNS resolution",
+                "DHCP addressing",
+                "Spanning Tree"
+            ],
+            "correct_index": 1,
+            "explanation": "Successful IP reachability with failed name access isolates the fault to name resolution, so the DNS server or its configuration should be checked. DHCP, STP, and port security do not resolve names.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-087",
+            "domain": "Network Troubleshooting",
+            "stem": "Intermittent connectivity occurs only when many hosts are active, and interface error counters rise. Which approach best isolates the cause?",
+            "options": [
+                "Reimage all workstations",
+                "Disable all access control lists",
+                "Compare current utilization with the established baseline",
+                "Change every password on the network"
+            ],
+            "correct_index": 2,
+            "explanation": "Comparing live utilization and error counts against a baseline separates a capacity or physical problem from a configuration change. Password, imaging, and ACL changes do not diagnose intermittent load-related faults.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-088",
+            "domain": "Network Troubleshooting",
+            "stem": "An analyst wants to reduce a large packet capture to view only HTTP requests after the capture is complete. Which Wireshark feature is used?",
+            "options": [
+                "A capture file rotation",
+                "A ring buffer",
+                "A promiscuous mode toggle",
+                "A display filter"
+            ],
+            "correct_index": 3,
+            "explanation": "A Wireshark display filter such as http narrows the visible packets without discarding the capture. Capture filters act before capture, ring buffers manage file size, and promiscuous mode sets what the adapter receives.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-089",
+            "domain": "Network Troubleshooting",
+            "stem": "Wireless clients near a microwave oven experience dropped connections at certain times. What is the most likely cause?",
+            "options": [
+                "Radio frequency interference in the 2.4 GHz band",
+                "An incorrect default gateway",
+                "A duplicate IP address",
+                "A failing hard drive"
+            ],
+            "correct_index": 0,
+            "explanation": "Microwave ovens emit energy in the 2.4 GHz band and can disrupt Wi-Fi on those channels. Moving to 5 GHz or a different channel reduces the interference. Gateway, address, and storage issues do not follow microwave use.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        },
+        {
+            "id": "net-090",
+            "domain": "Network Troubleshooting",
+            "stem": "A real-time voice application reports poor quality while file downloads are unaffected. Which metric should the technician measure?",
+            "options": [
+                "MAC address table size",
+                "Jitter and packet loss",
+                "Cable category",
+                "DHCP scope size"
+            ],
+            "correct_index": 1,
+            "explanation": "Voice quality depends on low jitter and minimal packet loss, which do not necessarily affect bulk downloads. Cable category, DHCP scope, and MAC table size do not describe real-time link quality.",
+            "reference": "CompTIA Network+ N10-008 Exam Objectives - Network Troubleshooting"
+        }
+    ]
+}

@@ -379,6 +379,54 @@ class AuthoredBundleSeederTest extends TestCase
                 'Deployment' => 16,
                 'Troubleshooting and Optimization' => 11,
             ]],
+            'net' => ['net', 90, [
+                'Networking Fundamentals' => 21,
+                'Network Implementations' => 18,
+                'Network Operations' => 17,
+                'Network Security' => 13,
+                'Network Troubleshooting' => 21,
+            ]],
+            'cysa' => ['cysa', 85, [
+                'Security Operations' => 28,
+                'Vulnerability Management' => 26,
+                'Incident Response and Management' => 17,
+                'Reporting and Communication' => 14,
+            ]],
+            'sscp' => ['sscp', 125, [
+                'Security Operations and Administration' => 20,
+                'Access Controls' => 18,
+                'Risk Identification, Monitoring, and Analysis' => 19,
+                'Incident Response and Recovery' => 16,
+                'Cryptography' => 14,
+                'Network and Communications Security' => 20,
+                'Systems and Application Security' => 18,
+            ]],
+            'cism' => ['cism', 150, [
+                'Information Security Governance' => 26,
+                'Information Security Risk Management' => 30,
+                'Information Security Program' => 49,
+                'Incident Management' => 45,
+            ]],
+            'crisc' => ['crisc', 150, [
+                'Governance' => 39,
+                'IT Risk Assessment' => 30,
+                'Risk Response and Reporting' => 48,
+                'Technology and Security' => 33,
+            ]],
+            'capm' => ['capm', 150, [
+                'Project Management Fundamentals and Core Concepts' => 54,
+                'Predictive, Plan-Based Methodologies' => 26,
+                'Agile Frameworks/Methodologies' => 30,
+                'Business Analysis Frameworks' => 40,
+            ]],
+            'aws-soa' => ['aws-soa', 65, [
+                'Monitoring, Logging, and Remediation' => 13,
+                'Reliability and Business Continuity' => 10,
+                'Deployment, Provisioning, and Automation' => 12,
+                'Security and Compliance' => 10,
+                'Networking and Content Delivery' => 12,
+                'Cost and Performance Optimization' => 8,
+            ]],
         ];
     }
 

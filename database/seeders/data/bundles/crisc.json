@@ -1,0 +1,2117 @@
+{
+    "cert_key": "crisc",
+    "title": "ISACA Certified in Risk and Information Systems Control (CRISC)",
+    "issuer": "ISACA",
+    "outline_file": "outlines/crisc.json",
+    "variant_label": "CRISC Real-Spec Practice",
+    "exam": {
+        "questions": 150,
+        "duration_minutes": 240,
+        "scoring": "450/800 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the ISACA CRISC exam content outline (four official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "CRISC practice bank",
+    "items": [
+        {
+            "id": "crisc-001",
+            "domain": "Governance",
+            "stem": "An organization is defining how it will oversee technology-related decisions and risks. Which body should ultimately be accountable for setting the enterprise risk appetite and ensuring it is reflected in IT strategy?",
+            "options": [
+                "The board of directors through its governance structure",
+                "The IT operations manager responsible for daily uptime",
+                "The external service provider that hosts the systems",
+                "The internal audit team during its annual review"
+            ],
+            "correct_index": 0,
+            "explanation": "Setting risk appetite and aligning it with strategy is a governance responsibility owned by the board, which is accountable to stakeholders. Operations, vendors, and internal audit support or provide assurance but do not own appetite.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-002",
+            "domain": "Governance",
+            "stem": "Management is documenting the amount of risk the organization is willing to accept in pursuit of its objectives. What term describes this formally stated level of acceptable risk?",
+            "options": [
+                "Residual risk",
+                "Risk appetite",
+                "Risk tolerance",
+                "Risk capacity"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk appetite is the broad amount and type of risk the organization is willing to accept to achieve its objectives. Tolerance is the acceptable variation around that appetite, capacity is the maximum it could absorb, and residual risk is what remains after controls.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-003",
+            "domain": "Governance",
+            "stem": "A business unit routinely exceeds the variance limits that senior management set around its target risk position. Which concept have those limits exceeded?",
+            "options": [
+                "Risk capacity",
+                "Inherent risk",
+                "Risk tolerance",
+                "Risk appetite"
+            ],
+            "correct_index": 2,
+            "explanation": "Tolerance is the acceptable deviation from the risk appetite or target. Exceeding the tolerance signals the position has moved outside the agreed band and should trigger escalation, rather than being confused with the overall appetite or capacity.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-004",
+            "domain": "Governance",
+            "stem": "Before approving a major expansion, the board must understand the maximum amount of risk the organization could absorb before suffering unacceptable loss. Which concept does this describe?",
+            "options": [
+                "Risk appetite",
+                "Risk tolerance",
+                "Control risk",
+                "Risk capacity"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk capacity is the maximum risk an organization can take on before insolvency or unacceptable harm to its objectives. It is an outer limit that sits above the appetite the board actually chooses to operate within.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-005",
+            "domain": "Governance",
+            "stem": "Which statement best describes the relationship between enterprise governance and IT governance?",
+            "options": [
+                "IT governance is a subset of enterprise governance that directs and controls IT to support enterprise objectives",
+                "IT governance is fully independent of enterprise governance and sets its own strategy",
+                "IT governance supersedes enterprise governance for all technology decisions",
+                "Enterprise governance reports to the IT steering committee for approval"
+            ],
+            "correct_index": 0,
+            "explanation": "IT governance is the part of overall corporate governance that directs and controls technology so it supports enterprise goals. It cannot be independent of, or superior to, the governance of the whole organization.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-006",
+            "domain": "Governance",
+            "stem": "An organization wants independent assurance that risk management and internal controls are effective. Under a three lines of defense model, which function provides this assurance?",
+            "options": [
+                "The board of directors directly",
+                "Internal audit as the third line",
+                "Business management as the first line",
+                "The risk and compliance function as the second line"
+            ],
+            "correct_index": 1,
+            "explanation": "In the three lines of defense model, operations own and manage risk, risk and compliance oversee it, and internal audit provides independent assurance to the governing body. The board receives the assurance rather than producing it.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-007",
+            "domain": "Governance",
+            "stem": "A document states that financial data must use AES-256 encryption at rest, and a separate document lists the step-by-step actions for applying it. How should these two documents be classified?",
+            "options": [
+                "The encryption mandate is a policy and the step-by-step document is a standard",
+                "Both documents are procedures because both can be executed",
+                "The encryption mandate is a standard and the step-by-step document is a procedure",
+                "Both documents are policies because both contain mandatory wording"
+            ],
+            "correct_index": 2,
+            "explanation": "A policy states high-level intent and management direction, a standard states a specific mandatory requirement such as AES-256, and a procedure gives the detailed steps to carry it out. The two documents therefore map to a standard and a procedure.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-008",
+            "domain": "Governance",
+            "stem": "A project sponsor is preparing a justification for a security investment that weighs costs, benefits, and risks. What is this document called?",
+            "options": [
+                "A risk register",
+                "A control matrix",
+                "An audit charter",
+                "A business case"
+            ],
+            "correct_index": 3,
+            "explanation": "A business case quantifies the costs and expected benefits of an investment so decision makers can compare it against alternatives and risk appetite. A risk register, control matrix, and audit charter serve different governance purposes.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-009",
+            "domain": "Governance",
+            "stem": "Before onboarding a critical cloud vendor, what should the risk practitioner ensure is performed FIRST?",
+            "options": [
+                "A due diligence assessment of the vendor's controls, security posture, and financial stability",
+                "Immediate signing of a multi-year contract to secure pricing",
+                "Delegation of all risk decisions to the vendor",
+                "Removal of the vendor from the enterprise risk register"
+            ],
+            "correct_index": 0,
+            "explanation": "Third-party risk begins with due diligence so the organization understands the vendor's control environment and stability before relying on it. Signing first, delegating decisions, or removing oversight all increase exposure without informed acceptance.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-010",
+            "domain": "Governance",
+            "stem": "In the accounts payable process, the same employee can both create a new vendor record and approve payments to it. Which governance control is missing?",
+            "options": [
+                "Least privilege",
+                "Segregation of duties",
+                "Mandatory vacation",
+                "Job rotation"
+            ],
+            "correct_index": 1,
+            "explanation": "Segregation of duties prevents one person from controlling all steps of a transaction that could conceal fraud, such as creating a vendor and paying it. Least privilege limits access scope, while vacation and rotation are fraud-detection supplements, not the direct remedy here.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-011",
+            "domain": "Governance",
+            "stem": "Which practice best demonstrates that IT strategy is aligned with enterprise strategy?",
+            "options": [
+                "IT always purchases the newest technology available",
+                "The CIO avoids business involvement in technology planning",
+                "IT objectives are derived from and reviewed against business objectives",
+                "IT independently sets its own goals without business input"
+            ],
+            "correct_index": 2,
+            "explanation": "Alignment exists when technology objectives descend from and are measured against enterprise goals in a recurring review. Buying new technology, planning in isolation, or excluding the business from planning does not create alignment.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-012",
+            "domain": "Governance",
+            "stem": "Employees at all levels consistently escalate concerns even when they fear blame. Which aspect of governance does this reflect?",
+            "options": [
+                "Risk transfer",
+                "Risk aggregation",
+                "Risk capacity",
+                "A healthy risk culture"
+            ],
+            "correct_index": 3,
+            "explanation": "A strong risk culture encourages open reporting and escalation without fear, so issues surface early. Risk transfer, aggregation, and capacity are technical risk concepts and do not describe willingness to report concerns.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-013",
+            "domain": "Governance",
+            "stem": "An organization follows a regulation because it is the law, but it also improves controls beyond the minimum to reduce risk. Which statement best distinguishes compliance from risk management?",
+            "options": [
+                "Compliance is meeting requirements, while risk management optimizes risk to achieve objectives",
+                "Compliance and risk management are the same activity",
+                "Compliance fully replaces the need for risk management",
+                "Risk management exists only to satisfy regulators"
+            ],
+            "correct_index": 0,
+            "explanation": "Compliance is a floor set by external requirements, whereas risk management is a broader, objective-driven discipline that may go beyond the minimum where exposure warrants. Treating them as identical, or as substitutes, misses this distinction.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-014",
+            "domain": "Governance",
+            "stem": "Who is best positioned to be accountable for the quality and protection of a specific data domain?",
+            "options": [
+                "The network engineer who manages connectivity",
+                "A designated data owner within the business accountable for that domain",
+                "The database administrator who maintains the servers",
+                "The external auditor who reviews controls"
+            ],
+            "correct_index": 1,
+            "explanation": "Data governance assigns accountability to a business-side data owner who understands the data's value and use. Administrators, auditors, and engineers support that ownership but are not accountable for the domain.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-015",
+            "domain": "Governance",
+            "stem": "A critical application cannot meet a new control standard before the deadline, so management documents the reason and gains approval to proceed anyway. What is this called?",
+            "options": [
+                "A risk transfer",
+                "An audit finding",
+                "A policy exception",
+                "A control failure"
+            ],
+            "correct_index": 2,
+            "explanation": "A documented, authorized deviation from a standard is a policy exception, and it should have an owner, an expiry, and a compensating control. A control failure is an unintended breakdown, not an approved deviation.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-016",
+            "domain": "Governance",
+            "stem": "Every key control recorded in the risk register should have which attribute to ensure clear accountability?",
+            "options": [
+                "A purchase order number",
+                "A backup copy on tape",
+                "A marketing description",
+                "A named control owner"
+            ],
+            "correct_index": 3,
+            "explanation": "Each control needs a named owner responsible for its operation and testing. Purchase orders, backups, and marketing text do not establish accountability for whether the control works.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-017",
+            "domain": "Governance",
+            "stem": "What is the primary purpose of an enterprise risk committee?",
+            "options": [
+                "To oversee risk across the enterprise and escalate material risks to the board",
+                "To perform daily transaction processing for the finance team",
+                "To sell insurance products to customers",
+                "To conduct external financial audits"
+            ],
+            "correct_index": 0,
+            "explanation": "An enterprise risk committee provides cross-functional oversight of risk and ensures material exposures reach the board. Processing transactions, selling insurance, and external auditing are separate functions.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-018",
+            "domain": "Governance",
+            "stem": "To preserve independence, to whom should the chief risk officer ideally have a direct reporting line?",
+            "options": [
+                "The external audit firm",
+                "The board or a board-level risk committee",
+                "The head of IT operations",
+                "The sales director"
+            ],
+            "correct_index": 1,
+            "explanation": "Independence is preserved when the risk function reports directly to the board or a board committee. Reporting to an operational or commercial executive creates a conflict that can suppress the escalation of bad news.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-019",
+            "domain": "Governance",
+            "stem": "Management is evaluating whether to enter a new business line that introduces residual risk above the stated appetite. What should the risk practitioner recommend?",
+            "options": [
+                "Approve it, because residual risk is always lower than inherent risk",
+                "Ignore the appetite limit because the activity is profitable",
+                "Escalate the decision to the board and define treatment, or decline the activity",
+                "Proceed, because risk appetite is only informal guidance"
+            ],
+            "correct_index": 2,
+            "explanation": "When residual risk exceeds the appetite, the decision must move to the authority that can change the appetite or approve the exception. Proceeding on profit alone or treating appetite as optional defeats the governance purpose.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-020",
+            "domain": "Governance",
+            "stem": "A contract with a critical outsourcing provider should include which clause to protect the organization?",
+            "options": [
+                "A clause forbidding any performance reporting",
+                "Automatic renewal without any review",
+                "Exclusion of all service level definitions",
+                "The right to audit the provider and to receive prompt breach notifications"
+            ],
+            "correct_index": 3,
+            "explanation": "Right-to-audit and breach-notification clauses preserve visibility and control over an outsourced service. Preventing reporting, auto-renewing without review, and removing service levels all reduce the organization's ability to manage the risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-021",
+            "domain": "Governance",
+            "stem": "An organization moves a core service to the public cloud. Which governance concern is most important to address FIRST?",
+            "options": [
+                "Clarifying accountability for data and the division of controls under shared responsibility",
+                "Selecting the color scheme of the vendor's management console",
+                "Planning the annual marketing campaign",
+                "Confirming the location of the vendor's sales offices"
+            ],
+            "correct_index": 0,
+            "explanation": "Cloud adoption shifts who operates which controls, so governance must first establish accountability for data and the shared responsibility boundary. Cosmetic and commercial details do not address the core risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-022",
+            "domain": "Governance",
+            "stem": "Which risk most directly increases when an organization outsources a critical function without appropriate oversight?",
+            "options": [
+                "Guaranteed regulatory compliance",
+                "Loss of control over the service and the data it handles",
+                "Reduced need for any governance",
+                "Complete elimination of operational risk"
+            ],
+            "correct_index": 1,
+            "explanation": "Outsourcing transfers execution, not accountability, so weak oversight raises the risk of losing control over service quality and data. It cannot eliminate risk, remove governance, or guarantee compliance.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-023",
+            "domain": "Governance",
+            "stem": "An organization adopts COBIT to structure its technology governance. What does COBIT primarily provide?",
+            "options": [
+                "A programming language for enterprise applications",
+                "A payroll and human resources system",
+                "A framework of governance and management objectives and processes",
+                "A mandatory hardware specification"
+            ],
+            "correct_index": 2,
+            "explanation": "COBIT is a governance framework that separates governance from management and supplies objectives and processes for directing and controlling enterprise IT. It is not a hardware spec, language, or business application.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-024",
+            "domain": "Governance",
+            "stem": "What should an organization establish FIRST when creating an enterprise risk management program?",
+            "options": [
+                "A list of every conceivable threat that might occur",
+                "The purchase of insurance policies for all known exposures",
+                "The deployment of an intrusion detection system",
+                "A governance structure with clear ownership, appetite, and reporting lines"
+            ],
+            "correct_index": 3,
+            "explanation": "An ERM program needs governance first, so that risk ownership, appetite, and reporting are defined before tools or tactics are chosen. Threat lists, insurance, and detection tools support a program but do not establish it.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-025",
+            "domain": "Governance",
+            "stem": "The chief executive visibly prioritizes ethical behavior, accountability, and risk awareness. Which governance element does this represent?",
+            "options": [
+                "Tone at the top",
+                "Control self-assessment",
+                "Risk transfer",
+                "Segregation of duties"
+            ],
+            "correct_index": 0,
+            "explanation": "Tone at the top refers to the culture and example set by senior leadership, which shapes how seriously the organization treats risk and ethics. Self-assessment, transfer, and segregation are specific mechanisms, not leadership culture.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-026",
+            "domain": "Governance",
+            "stem": "A regulator issues a new data protection rule. Which action best integrates it into governance?",
+            "options": [
+                "Add it to the marketing plan as a promotional point",
+                "Translate the requirement into policies and assign accountable owners",
+                "Wait until a fine is issued before acting",
+                "Assign responsibility only to the IT help desk"
+            ],
+            "correct_index": 1,
+            "explanation": "Regulatory requirements become governable once translated into policies with assigned accountability and monitoring. Waiting, misassigning ownership, or repurposing it for marketing does not create compliance or control.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-027",
+            "domain": "Governance",
+            "stem": "What is the primary role of an IT steering committee?",
+            "options": [
+                "To process the company payroll",
+                "To perform the annual financial audit",
+                "To prioritize and oversee IT investments and ensure they align with business strategy",
+                "To write and test application code"
+            ],
+            "correct_index": 2,
+            "explanation": "An IT steering committee is a governance forum that prioritizes technology investment and keeps it aligned with business direction. Coding, payroll, and auditing are operational or assurance activities outside its remit.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-028",
+            "domain": "Governance",
+            "stem": "How frequently should material risk information generally be presented to the board?",
+            "options": [
+                "Only once at program inception",
+                "Never, to avoid concerning the board",
+                "Every day for every minor risk",
+                "At a defined cadence, with immediate escalation of significant changes"
+            ],
+            "correct_index": 3,
+            "explanation": "Board reporting follows an agreed cadence with immediate escalation for material changes, so oversight is timely without burying the board in trivia. One-time, never, or daily-for-everything are all ineffective.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-029",
+            "domain": "Governance",
+            "stem": "A limited budget forces a choice among competing risk treatments. What should guide the allocation?",
+            "options": [
+                "Prioritization based on risk magnitude relative to appetite and expected benefit",
+                "The preference of the loudest manager in the room",
+                "Alphabetical order of the project names",
+                "The age of the legacy system regardless of exposure"
+            ],
+            "correct_index": 0,
+            "explanation": "Scarce resources should go where risk reduction is greatest relative to appetite and cost. Personal preference, alphabetical order, and system age are arbitrary and ignore exposure.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-030",
+            "domain": "Governance",
+            "stem": "Who should have the authority to approve a policy exception that leaves high residual risk?",
+            "options": [
+                "The external auditor reviewing the control",
+                "The governance body or executive accountable for the risk, within defined authority limits",
+                "Any developer on the team who is available",
+                "The newest employee needing to complete a task"
+            ],
+            "correct_index": 1,
+            "explanation": "Accepting high residual risk requires authority that matches the exposure, normally the accountable executive or governance body under an authority matrix. Delegating this to unavailable or unauthorized staff undermines accountability.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-031",
+            "domain": "Governance",
+            "stem": "What is the primary benefit of clearly assigning risk ownership?",
+            "options": [
+                "It eliminates the risk entirely",
+                "It transfers all legal liability to the owner",
+                "It ensures a specific person is accountable for monitoring and treating the risk",
+                "It removes the need for any risk reporting"
+            ],
+            "correct_index": 2,
+            "explanation": "Naming an owner creates accountability for monitoring, treating, and reporting a risk. Ownership does not erase the risk, replace reporting, or shift legal liability.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-032",
+            "domain": "Governance",
+            "stem": "Which action best keeps risk appetite aligned with corporate strategy?",
+            "options": [
+                "Fixing the appetite permanently so it never changes",
+                "Allowing each unit to set an unlimited appetite",
+                "Setting the appetite to zero to avoid all risk",
+                "Setting risk limits that reflect strategic objectives and reviewing them as strategy changes"
+            ],
+            "correct_index": 3,
+            "explanation": "Appetite should be derived from strategy and revisited whenever strategy shifts. Freezing it, leaving it unlimited, or driving it to zero all disconnect appetite from the objectives it is meant to support.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-033",
+            "domain": "Governance",
+            "stem": "A multinational firm has inconsistent risk practices across its business units. Which governance approach best addresses this?",
+            "options": [
+                "A common enterprise risk framework with consistent reporting and defined local responsibilities",
+                "Letting each unit invent a private method with no reporting",
+                "Banning all risk discussions outside headquarters",
+                "Outsourcing every unit's risk decisions to one vendor"
+            ],
+            "correct_index": 0,
+            "explanation": "A common framework with consistent reporting and local ownership gives comparable, reliable information across units. Fragmented methods, suppressed discussion, or blanket outsourcing all reduce the quality of governance.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-034",
+            "domain": "Governance",
+            "stem": "Why would an organization use a capability maturity model for technology governance?",
+            "options": [
+                "To calculate its tax liability",
+                "To assess current maturity and plan improvements in a structured way",
+                "To guarantee that no incident will ever occur",
+                "To replace all existing controls immediately"
+            ],
+            "correct_index": 1,
+            "explanation": "A maturity model provides a structured scale against which current capabilities are assessed and improvements planned. It cannot guarantee zero incidents, does not by itself replace controls, and has nothing to do with tax.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-035",
+            "domain": "Governance",
+            "stem": "Which statement best distinguishes governance metrics from management metrics?",
+            "options": [
+                "Governance metrics are always financial and management metrics never are",
+                "Management metrics are set by external auditors rather than leadership",
+                "Governance metrics show whether objectives and risk are overseen at the board level, while management metrics track operational performance",
+                "Governance metrics and management metrics are identical in scope"
+            ],
+            "correct_index": 2,
+            "explanation": "Governance metrics tell the board whether its direction is being achieved and risk overseen, while management metrics track the operational execution of that direction. They serve different audiences and purposes.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-036",
+            "domain": "Governance",
+            "stem": "What is the internal audit function's role in governance?",
+            "options": [
+                "To manage day-to-day risk responses on behalf of management",
+                "To own and operate the organization's controls",
+                "To set the enterprise risk appetite for the board",
+                "To provide independent assurance on governance, risk management, and control"
+            ],
+            "correct_index": 3,
+            "explanation": "Internal audit supplies independent assurance to the board and does not manage or own controls, since doing so would compromise its independence. Setting appetite and executing responses are management and governance tasks.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-037",
+            "domain": "Governance",
+            "stem": "Which statement best describes integrating technology risk management with enterprise risk management?",
+            "options": [
+                "Technology risk is assessed and reported within the enterprise risk framework rather than in isolation",
+                "Technology risk is deliberately kept entirely separate from enterprise risk",
+                "Enterprise risk management excludes all technology matters",
+                "Enterprise risk management applies only to financial reporting"
+            ],
+            "correct_index": 0,
+            "explanation": "Technology risk is a component of overall enterprise risk and should feed the same framework so it is aggregated and prioritized with all other risks. Silos hide the combined exposure from the board.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-038",
+            "domain": "Governance",
+            "stem": "During a merger, what is the MOST important risk governance activity before integration begins?",
+            "options": [
+                "Deleting the target's historical records",
+                "Due diligence that assesses the target's risk profile and control environment",
+                "Immediately merging all IT systems without assessment",
+                "Announcing the deal terms to competitors"
+            ],
+            "correct_index": 1,
+            "explanation": "Due diligence reveals the target's inherent and control risk so the acquirer can plan integration and remediation. Rushing integration, leaking terms, or destroying records increases legal and operational risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-039",
+            "domain": "Governance",
+            "stem": "A business case is approved for a major initiative. What should governance ensure after approval?",
+            "options": [
+                "That no changes to scope are permitted under any circumstances",
+                "That all progress reporting to management stops",
+                "That the projected benefits are tracked and the risks are monitored through delivery and operation",
+                "That the business case document is discarded immediately"
+            ],
+            "correct_index": 2,
+            "explanation": "Approval starts the accountability cycle, so benefits realization and risk monitoring continue through delivery and operation. Discarding the case, forbidding all change, and stopping reporting all defeat governance oversight.",
+            "reference": "ISACA CRISC Exam Content Outline - Governance"
+        },
+        {
+            "id": "crisc-040",
+            "domain": "IT Risk Assessment",
+            "stem": "A risk practitioner is gathering information about events that could affect the achievement of objectives. What is this activity called?",
+            "options": [
+                "Risk treatment",
+                "Risk transfer",
+                "Risk reporting",
+                "Risk identification"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk identification is the step that surfaces the events and conditions that could affect objectives. Treatment, transfer, and reporting occur after risks are identified and analyzed.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-041",
+            "domain": "IT Risk Assessment",
+            "stem": "A system has a known weakness and no compensating controls in place. What term describes the risk level before any controls are applied?",
+            "options": [
+                "Inherent risk",
+                "Residual risk",
+                "Control risk",
+                "Transferred risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Inherent risk is the exposure that exists before controls are considered. Residual risk is what remains after controls, and control risk relates to controls failing to prevent or detect errors.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-042",
+            "domain": "IT Risk Assessment",
+            "stem": "After controls are implemented, management asks how much risk still remains. What is this remaining risk called?",
+            "options": [
+                "Audit risk",
+                "Residual risk",
+                "Inherent risk",
+                "Detection risk"
+            ],
+            "correct_index": 1,
+            "explanation": "Residual risk is the exposure that remains after existing controls are taken into account. Inherent risk is the pre-control level, while detection and audit risk are assurance concepts.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-043",
+            "domain": "IT Risk Assessment",
+            "stem": "Which set of attributes should a risk register record for each identified risk?",
+            "options": [
+                "The color used in the printed report",
+                "The auditor's personal schedule",
+                "Description, likelihood, impact, owner, and planned response",
+                "Only the name of the risk and nothing else"
+            ],
+            "correct_index": 2,
+            "explanation": "A useful register captures the risk description along with likelihood, impact, ownership, and response so it can be prioritized, tracked, and reported. Storing only a name or irrelevant details provides no basis for decisions.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-044",
+            "domain": "IT Risk Assessment",
+            "stem": "Which technique builds plausible sequences of events that could lead to an adverse business outcome?",
+            "options": [
+                "Purchase requisition",
+                "Data archiving",
+                "Password reset",
+                "Scenario analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Scenario analysis constructs credible chains of events from cause to impact, helping teams reason about complex or emerging risks. The other options are administrative or technical actions unrelated to risk analysis.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-045",
+            "domain": "IT Risk Assessment",
+            "stem": "In a risk assessment, what does the combination of likelihood and impact typically represent?",
+            "options": [
+                "The level or magnitude of the risk",
+                "The cost of the control",
+                "The audit fee for the engagement",
+                "The required recovery time"
+            ],
+            "correct_index": 0,
+            "explanation": "Likelihood and impact together express the magnitude or level of a risk and drive its prioritization. Control cost, audit fees, and recovery time are separate considerations, not the definition of risk level.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-046",
+            "domain": "IT Risk Assessment",
+            "stem": "A team compares identified risks against agreed criteria to decide which ones require treatment. What is this step called?",
+            "options": [
+                "Risk avoidance",
+                "Risk evaluation",
+                "Risk identification",
+                "Risk transfer"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk evaluation compares analyzed risks against criteria such as appetite to determine which need treatment. Identification surfaces the risks, while transfer and avoidance are response options chosen afterward.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-047",
+            "domain": "IT Risk Assessment",
+            "stem": "Which statement correctly distinguishes a threat from a vulnerability?",
+            "options": [
+                "A threat is a weakness in a system",
+                "A vulnerability is always an external attacker",
+                "A threat is a potential cause of harm, while a vulnerability is a weakness a threat can exploit",
+                "A threat and a vulnerability are exact synonyms"
+            ],
+            "correct_index": 2,
+            "explanation": "A threat is any potential source of harm and a vulnerability is an internal weakness that a threat may exploit. Conflating the two, calling a threat a weakness, or calling a vulnerability an attacker misunderstands the relationship.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-048",
+            "domain": "IT Risk Assessment",
+            "stem": "Why should an organization select a risk assessment methodology before performing the assessment?",
+            "options": [
+                "To delay the project until the budget is spent",
+                "To avoid having to document any results",
+                "To guarantee that no risks will be found",
+                "To ensure the identification, analysis, and evaluation are consistent and repeatable"
+            ],
+            "correct_index": 3,
+            "explanation": "A defined methodology makes assessments consistent across teams and comparable over time. Delay, lack of documentation, and finding no risk are not legitimate objectives of a methodology.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-049",
+            "domain": "IT Risk Assessment",
+            "stem": "When is a qualitative risk assessment most appropriate?",
+            "options": [
+                "When rapid prioritization is needed and precise numeric values are unavailable",
+                "When an exact monetary loss figure must be produced",
+                "When no professional judgment may be applied",
+                "When regulators accept only quantitative results"
+            ],
+            "correct_index": 0,
+            "explanation": "Qualitative assessment uses descriptive scales and judgment, which is suitable for quick prioritization when hard numbers are lacking. A precise monetary figure, no judgment, or a quantitative-only mandate calls for quantitative methods.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-050",
+            "domain": "IT Risk Assessment",
+            "stem": "What is the main purpose of ranking risks during a risk assessment?",
+            "options": [
+                "To remove the need for any controls",
+                "To focus treatment and limited resources on the most significant risks",
+                "To hide the low risks from management",
+                "To increase the total number of risks recorded"
+            ],
+            "correct_index": 1,
+            "explanation": "Ranking separates significant from minor risks so effort and money are directed where they matter most. Hiding risks, inflating counts, and dropping controls are not legitimate purposes.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-051",
+            "domain": "IT Risk Assessment",
+            "stem": "Several individually small risks combine to create a significant exposure. Which concept does this illustrate?",
+            "options": [
+                "Risk avoidance",
+                "Risk acceptance",
+                "Risk aggregation",
+                "Risk transfer"
+            ],
+            "correct_index": 2,
+            "explanation": "Risk aggregation is the combining of many individual risks into a larger cumulative exposure. Transfer, avoidance, and acceptance are response choices, not the combining effect.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-052",
+            "domain": "IT Risk Assessment",
+            "stem": "A risk practitioner wants to determine whether an existing control reduces risk as intended. What should be assessed?",
+            "options": [
+                "The vendor's share price",
+                "The visual design of the application",
+                "The layout of the office",
+                "The effectiveness of the control in reducing likelihood or impact"
+            ],
+            "correct_index": 3,
+            "explanation": "Control effectiveness is measured by whether the control actually reduces the likelihood or impact it was designed for. Financial, cosmetic, and facilities factors are unrelated to that determination.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-053",
+            "domain": "IT Risk Assessment",
+            "stem": "What is the purpose of assigning a risk owner during a risk assessment?",
+            "options": [
+                "To make a specific person accountable for managing that risk",
+                "To automatically transfer the risk to another party",
+                "To remove the risk from the register",
+                "To increase the likelihood of the risk occurring"
+            ],
+            "correct_index": 0,
+            "explanation": "A risk owner is the individual accountable for monitoring and treating a risk. Ownership does not transfer the risk, delete it, or change its probability.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-054",
+            "domain": "IT Risk Assessment",
+            "stem": "Why should risk assessments be repeated periodically rather than performed only once?",
+            "options": [
+                "Because repetition is a purely cosmetic exercise",
+                "Because threats, vulnerabilities, business context, and controls change over time",
+                "Because regulators forbid performing a single assessment",
+                "Because risks never persist beyond the first assessment"
+            ],
+            "correct_index": 1,
+            "explanation": "The risk landscape is dynamic, so a one-time assessment becomes stale as the environment, threats, and controls evolve. Regular reassessment keeps the risk picture accurate and actionable.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-055",
+            "domain": "IT Risk Assessment",
+            "stem": "What is the foundation of an effective IT risk assessment?",
+            "options": [
+                "The corporate phone directory",
+                "The annual marketing budget",
+                "A current inventory of information assets and an understanding of their value",
+                "A list of employee birthdays"
+            ],
+            "correct_index": 2,
+            "explanation": "You cannot assess the risk to assets you do not know exist or value, so an up-to-date asset inventory is foundational. The other items have no bearing on IT risk.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-056",
+            "domain": "IT Risk Assessment",
+            "stem": "How does a vulnerability assessment differ from a risk assessment?",
+            "options": [
+                "A vulnerability assessment and a risk assessment are identical",
+                "A vulnerability assessment ignores all technical flaws",
+                "A risk assessment only produces a list of hosts",
+                "A vulnerability assessment identifies weaknesses, while a risk assessment determines business impact and prioritizes them"
+            ],
+            "correct_index": 3,
+            "explanation": "A vulnerability assessment enumerates technical weaknesses, while a risk assessment adds context such as business impact, likelihood, and priority. Treating them as identical misses the business dimension.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-057",
+            "domain": "IT Risk Assessment",
+            "stem": "During risk evaluation, how should the stated risk appetite be used?",
+            "options": [
+                "As the benchmark for deciding whether a risk is acceptable or requires treatment",
+                "As a substitute for performing any impact analysis",
+                "As a document that is filed away and ignored",
+                "As a justification for disregarding the findings"
+            ],
+            "correct_index": 0,
+            "explanation": "Appetite is the yardstick against which evaluated risks are judged acceptable or in need of treatment. Using it as a substitute for analysis or as reason to ignore findings subverts its purpose.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-058",
+            "domain": "IT Risk Assessment",
+            "stem": "Why is data classification important for risk assessment?",
+            "options": [
+                "It selects the hardware brand to purchase",
+                "It helps determine the protection appropriate to the value and sensitivity of the data",
+                "It determines the salary levels of employees",
+                "It assigns office space to each department"
+            ],
+            "correct_index": 1,
+            "explanation": "Classification groups data by sensitivity and value so that protection and handling match the risk. It has no relation to salaries, office allocation, or hardware brand selection.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-059",
+            "domain": "IT Risk Assessment",
+            "stem": "Which analysis identifies critical business processes and the impact of their disruption?",
+            "options": [
+                "Penetration test",
+                "Network scan",
+                "Business impact analysis",
+                "Source code review"
+            ],
+            "correct_index": 2,
+            "explanation": "A business impact analysis identifies critical processes and quantifies the effect of their disruption, informing recovery priorities. Code review, penetration testing, and scanning address technical weaknesses, not business impact.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-060",
+            "domain": "IT Risk Assessment",
+            "stem": "What is the purpose of a risk heat map?",
+            "options": [
+                "To replace the risk register entirely",
+                "To encrypt the organization's data",
+                "To assign user passwords automatically",
+                "To visually communicate likelihood and impact so risks can be prioritized"
+            ],
+            "correct_index": 3,
+            "explanation": "A heat map plots risks by likelihood and impact to give a quick visual prioritization for decision makers. It complements, rather than replaces, the register and performs no security function.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-061",
+            "domain": "IT Risk Assessment",
+            "stem": "A metric warns of increasing risk exposure before any losses occur. What type of indicator is this?",
+            "options": [
+                "A leading indicator",
+                "A lagging indicator",
+                "A financial statement line",
+                "A physical control"
+            ],
+            "correct_index": 0,
+            "explanation": "A leading indicator moves ahead of the risk event and provides early warning. A lagging indicator reflects losses that have already happened, and neither a financial statement nor a control is an indicator.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-062",
+            "domain": "IT Risk Assessment",
+            "stem": "When assessing third-party risk, which factors should be evaluated?",
+            "options": [
+                "The color scheme used on the vendor's website",
+                "The vendor's control environment, financial stability, and concentration risk",
+                "Only the vendor's glossy marketing materials",
+                "The number of social media followers the vendor has"
+            ],
+            "correct_index": 1,
+            "explanation": "Third-party risk depends on the vendor's control environment, financial health, and how concentrated the dependence is. Marketing, social following, and website design do not reflect the actual risk.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-063",
+            "domain": "IT Risk Assessment",
+            "stem": "Why should emerging technologies receive a risk assessment before adoption?",
+            "options": [
+                "To avoid having to document the decision",
+                "To deliberately raise the deployment cost",
+                "To understand new threats and control gaps that are not yet well understood",
+                "Because emerging technologies are always risk free"
+            ],
+            "correct_index": 2,
+            "explanation": "New technology brings unfamiliar threats and immature controls, so assessing it first lets the organization make an informed adoption decision. Assuming it is safe or skipping documentation leaves hidden exposure.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-064",
+            "domain": "IT Risk Assessment",
+            "stem": "What is the FIRST step in performing a risk assessment?",
+            "options": [
+                "Purchase new security software immediately",
+                "Hire an external auditor to observe",
+                "Implement controls before any analysis",
+                "Define the scope, objectives, and criteria of the assessment"
+            ],
+            "correct_index": 3,
+            "explanation": "Scoping defines what is being assessed, why, and against what criteria, so later work is focused and comparable. Buying tools, hiring auditors, or implementing controls before scoping is premature.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-065",
+            "domain": "IT Risk Assessment",
+            "stem": "In risk assessment, what does a control gap analysis compare?",
+            "options": [
+                "The controls that exist against the controls needed to reduce risk to acceptable levels",
+                "The prices charged by two competing vendors",
+                "The skill levels of employees only",
+                "The marketing strategies of the business units"
+            ],
+            "correct_index": 0,
+            "explanation": "A gap analysis identifies where current controls fall short of what is needed to bring risk within appetite. Vendor prices, employee skills, and marketing strategies are unrelated to control coverage.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-066",
+            "domain": "IT Risk Assessment",
+            "stem": "Which technique systematically examines a system from an adversary's perspective to find design weaknesses?",
+            "options": [
+                "Physical inventory counting",
+                "Threat modeling",
+                "Payroll processing",
+                "Manual data entry"
+            ],
+            "correct_index": 1,
+            "explanation": "Threat modeling maps potential attacks against a system's design to reveal weaknesses early. Payroll, data entry, and inventory counting are unrelated operational activities.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-067",
+            "domain": "IT Risk Assessment",
+            "stem": "Why is it important to consider dependencies and interdependencies among risks?",
+            "options": [
+                "Because audits require a random sample of risks",
+                "Because it reduces the number of systems to assess",
+                "Because one risk event can trigger or amplify others across related systems",
+                "Because risks never interact with one another"
+            ],
+            "correct_index": 2,
+            "explanation": "Interdependencies mean a single event can cascade through connected systems, so correlated effects must be modeled. Ignoring these links understates the true exposure.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-068",
+            "domain": "IT Risk Assessment",
+            "stem": "What should be documented to support the conclusions of a risk assessment?",
+            "options": [
+                "Only the final name of the highest risk",
+                "The auditor's personal lunch schedule",
+                "Nothing, in order to save time",
+                "The methodology, data sources, assumptions, and rationale for conclusions"
+            ],
+            "correct_index": 3,
+            "explanation": "Documenting methodology, sources, assumptions, and rationale makes the assessment repeatable and defensible. Recording only a name or nothing at all provides no basis for review or challenge.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-069",
+            "domain": "IT Risk Assessment",
+            "stem": "A risk evaluates as within tolerance on its own. What should still be considered before formally accepting it?",
+            "options": [
+                "Its contribution to aggregated and correlated risk",
+                "The chief executive's personal opinion alone",
+                "The vendor's latest marketing claims",
+                "The total number of controls implemented"
+            ],
+            "correct_index": 0,
+            "explanation": "Even a small individual risk can push total exposure beyond appetite once aggregated or correlated with others. Personal opinion, marketing, and control counts do not substitute for that analysis.",
+            "reference": "ISACA CRISC Exam Content Outline - IT Risk Assessment"
+        },
+        {
+            "id": "crisc-070",
+            "domain": "Risk Response and Reporting",
+            "stem": "After evaluating a risk, a practitioner must decide how the organization will address it. What is this decision called?",
+            "options": [
+                "Risk capacity",
+                "Risk response",
+                "Risk identification",
+                "Risk appetite"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk response is the selection and implementation of a treatment for an evaluated risk. Identification finds the risk, while appetite and capacity are governance limits, not responses.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-071",
+            "domain": "Risk Response and Reporting",
+            "stem": "A company stops offering a service entirely because the associated risk cannot be reduced to an acceptable level. Which response is this?",
+            "options": [
+                "Risk transfer",
+                "Risk acceptance",
+                "Risk avoidance",
+                "Risk mitigation"
+            ],
+            "correct_index": 2,
+            "explanation": "Avoidance eliminates the risk by exiting the activity that generates it. Mitigation reduces but keeps the activity, transfer shares it, and acceptance retains it.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-072",
+            "domain": "Risk Response and Reporting",
+            "stem": "An organization adds monitoring controls and backups to lower the likelihood and impact of a risk. Which response is this?",
+            "options": [
+                "Risk avoidance",
+                "Risk acceptance",
+                "Risk exploitation",
+                "Risk mitigation"
+            ],
+            "correct_index": 3,
+            "explanation": "Mitigation reduces risk through controls while continuing the activity. Avoidance exits it, acceptance retains it unchanged, and exploitation deliberately increases it for gain.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-073",
+            "domain": "Risk Response and Reporting",
+            "stem": "A firm buys cyber insurance to cover potential breach losses. Which response is this?",
+            "options": [
+                "Risk transfer",
+                "Risk avoidance",
+                "Risk mitigation",
+                "Risk acceptance"
+            ],
+            "correct_index": 0,
+            "explanation": "Insurance is a risk-transfer response that shifts the financial consequence to a third party. It does not avoid the event or reduce its likelihood as mitigation does.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-074",
+            "domain": "Risk Response and Reporting",
+            "stem": "Management decides that a small residual risk is tolerable and continues the activity without further change. Which response is this?",
+            "options": [
+                "Risk elimination",
+                "Risk acceptance",
+                "Risk avoidance",
+                "Risk transfer"
+            ],
+            "correct_index": 1,
+            "explanation": "Acceptance is a deliberate decision to retain a risk within appetite, with visibility and ownership. It is not avoidance, transfer, or elimination, since the risk remains present.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-075",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the most important factor when selecting a risk response?",
+            "options": [
+                "Whether the response uses the newest technology available",
+                "Choosing the option with the shortest acronym",
+                "The organization's risk appetite and tolerance and the cost versus benefit of the response",
+                "The response preferred by the IT team without further analysis"
+            ],
+            "correct_index": 2,
+            "explanation": "Response selection weighs the treatment against appetite and the economics of benefit versus cost. Internal preference, novelty, and acronym length are not decision criteria.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-076",
+            "domain": "Risk Response and Reporting",
+            "stem": "A proposed control costs more than the expected loss it would prevent. What should the risk practitioner advise?",
+            "options": [
+                "Always implement it regardless of the cost",
+                "Ignore the cost entirely when deciding",
+                "Transfer the risk and forget the analysis",
+                "Reconsider the control because its cost may exceed the benefit it delivers"
+            ],
+            "correct_index": 3,
+            "explanation": "Proportionality matters, so a control whose cost exceeds the loss it prevents is generally not worthwhile unless required by law. Implementing blindly or ignoring cost wastes resources.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-077",
+            "domain": "Risk Response and Reporting",
+            "stem": "A control stops an error or attack before it can occur. What type of control is this?",
+            "options": [
+                "Preventive",
+                "Detective",
+                "Corrective",
+                "Compensating"
+            ],
+            "correct_index": 0,
+            "explanation": "Preventive controls stop an event before it happens, such as a firewall or input validation. Detective controls find it afterward, corrective controls fix it, and compensating controls substitute for a primary control.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-078",
+            "domain": "Risk Response and Reporting",
+            "stem": "A control identifies an error after it has already occurred. What type of control is this?",
+            "options": [
+                "Deterrent",
+                "Detective",
+                "Preventive",
+                "Corrective"
+            ],
+            "correct_index": 1,
+            "explanation": "Detective controls discover errors or incidents after the fact, such as logs or reconciliations. Preventive controls block them, corrective controls repair them, and deterrent controls discourage them.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-079",
+            "domain": "Risk Response and Reporting",
+            "stem": "A control restores data after a failure or reverses a bad transaction. What type of control is this?",
+            "options": [
+                "Detective",
+                "Directive",
+                "Corrective",
+                "Preventive"
+            ],
+            "correct_index": 2,
+            "explanation": "Corrective controls restore normal operations or reverse effects after an event. Preventive, detective, and directive controls act before or during events rather than repairing the aftermath.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-080",
+            "domain": "Risk Response and Reporting",
+            "stem": "A visible warning banner that discourages misuse of a system is best described as which type of control?",
+            "options": [
+                "Corrective",
+                "Detective",
+                "Preventive",
+                "Deterrent"
+            ],
+            "correct_index": 3,
+            "explanation": "Deterrent controls discourage a person from attempting an action by making consequences known. A banner does not technically block, detect, or repair the action.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-081",
+            "domain": "Risk Response and Reporting",
+            "stem": "The primary control cannot be implemented yet, so management adds an alternative control in the interim. What is this called?",
+            "options": [
+                "A compensating control",
+                "An unnecessary control",
+                "A transferred control",
+                "A residual control"
+            ],
+            "correct_index": 0,
+            "explanation": "A compensating control provides an alternative safeguard while the primary control is unavailable or impractical. It is not redundant, transferred, or the same as residual risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-082",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the difference between control design and control operating effectiveness?",
+            "options": [
+                "Operating effectiveness concerns only the cost of the control",
+                "Design is whether a control can meet its objective, while operating effectiveness is whether it actually worked over time",
+                "Design and operating effectiveness mean exactly the same thing",
+                "Design refers to testing and effectiveness refers to planning"
+            ],
+            "correct_index": 1,
+            "explanation": "A control can be well designed yet fail in practice, so design and operating effectiveness are distinct test objectives. Treating them as identical or confusing them with cost misstates control assurance.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-083",
+            "domain": "Risk Response and Reporting",
+            "stem": "How is the effectiveness of a key control typically verified?",
+            "options": [
+                "By relying solely on the vendor's sales claims",
+                "By reading the vendor's marketing material",
+                "By testing the control and collecting supporting evidence",
+                "By assuming that it works because it was deployed"
+            ],
+            "correct_index": 2,
+            "explanation": "Control effectiveness is established through testing and evidence, not assumption or vendor assurance. Deployment alone does not prove the control operates as intended.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-084",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the main benefit of continuous monitoring over a single annual review?",
+            "options": [
+                "It removes the need for any controls",
+                "It eliminates all residual risk immediately",
+                "It is purely a cosmetic improvement",
+                "It detects control failures and risk changes promptly rather than months later"
+            ],
+            "correct_index": 3,
+            "explanation": "Continuous monitoring shortens the time between a failure and its detection so remediation can start sooner. It does not remove controls, erase risk, or merely look better.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-085",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the role of a key risk indicator in a risk management program?",
+            "options": [
+                "A metric that provides early warning of increasing risk exposure",
+                "A financial audit opinion issued by the auditor",
+                "A specific model of server hardware",
+                "A document used to procure goods"
+            ],
+            "correct_index": 0,
+            "explanation": "A key risk indicator is a measurable signal that tracks changes in risk exposure, ideally before losses occur. Audit opinions, hardware models, and purchase documents are not indicators.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-086",
+            "domain": "Risk Response and Reporting",
+            "stem": "What should accompany each key risk indicator so that it is actionable?",
+            "options": [
+                "An unrelated decorative chart",
+                "A defined threshold or trigger that prompts a response",
+                "A completely random numeric value",
+                "A marketing slogan attached to it"
+            ],
+            "correct_index": 1,
+            "explanation": "A KRI becomes actionable when a threshold defines when and how the organization reacts. Random values, slogans, and decorative charts provide no decision trigger.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-087",
+            "domain": "Risk Response and Reporting",
+            "stem": "How does a key risk indicator differ from a key performance indicator?",
+            "options": [
+                "A key performance indicator is used only by external auditors",
+                "A key risk indicator is always a financial measure",
+                "A key risk indicator signals risk exposure while a key performance indicator measures progress against objectives",
+                "A key risk indicator and a key performance indicator are the same thing"
+            ],
+            "correct_index": 2,
+            "explanation": "KRIs warn about risk exposure, whereas KPIs measure performance toward objectives, and some metrics can serve both roles. Treating them as identical or as auditor or finance only tools is incorrect.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-088",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the PRIMARY objective of risk reporting to stakeholders?",
+            "options": [
+                "To hide unfavorable news from decision makers",
+                "To maximize the length of the report",
+                "To assign blame for past failures",
+                "To provide timely, accurate information that supports informed risk decisions"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk reporting exists to give stakeholders the information they need to make sound decisions. Concealing bad news, padding length, and assigning blame undermine that objective.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-089",
+            "domain": "Risk Response and Reporting",
+            "stem": "When reporting risk to the board, what level of detail is most appropriate?",
+            "options": [
+                "A concise summary of material risks, trends, and the decisions needed",
+                "Every low-level technical log entry produced by the systems",
+                "Only raw vulnerability counts with no context",
+                "No context and no recommendations whatsoever"
+            ],
+            "correct_index": 0,
+            "explanation": "Boards need material risks, trends, and choices presented concisely so they can govern. Raw technical detail or unexplained numbers bury the decisions that require board attention.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-090",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the purpose of a risk dashboard?",
+            "options": [
+                "To process supplier invoices",
+                "To present key risk metrics and trends at a glance for decision makers",
+                "To securely store user passwords",
+                "To replace the risk register permanently"
+            ],
+            "correct_index": 1,
+            "explanation": "A dashboard condenses key metrics and trends so leaders can quickly assess status and act. It does not store credentials, replace the register, or process payments.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-091",
+            "domain": "Risk Response and Reporting",
+            "stem": "After a risk response is implemented, what should be updated to reflect the new position?",
+            "options": [
+                "The company org chart only",
+                "Nothing at all should be updated",
+                "The risk register, including residual risk and control status",
+                "The annual marketing plan"
+            ],
+            "correct_index": 2,
+            "explanation": "The register should capture the new residual risk and control status so reporting stays accurate. Marketing plans, org charts, and inaction leave the record misleading.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-092",
+            "domain": "Risk Response and Reporting",
+            "stem": "What should a risk treatment plan specify?",
+            "options": [
+                "Only the name of the risk being addressed",
+                "The vendor's street address",
+                "The physical location of the data center",
+                "The actions, owners, timelines, and expected residual risk"
+            ],
+            "correct_index": 3,
+            "explanation": "A treatment plan defines what will be done, by whom, by when, and the expected residual risk, making it trackable. A bare name or unrelated address provides no plan.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-093",
+            "domain": "Risk Response and Reporting",
+            "stem": "Who should formally accept a residual risk that exceeds the defined appetite?",
+            "options": [
+                "The appropriate senior authority or governance body under the authority matrix",
+                "A junior analyst working on the project",
+                "An external vendor supplying a component",
+                "The help desk technician on duty"
+            ],
+            "correct_index": 0,
+            "explanation": "Accepting risk above appetite requires authority commensurate with the exposure, normally a senior executive or governance body. Delegating it downward undermines accountability and governance.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-094",
+            "domain": "Risk Response and Reporting",
+            "stem": "Why must each risk response have a clearly assigned owner?",
+            "options": [
+                "To avoid having to report on the risk",
+                "To ensure accountability for executing and monitoring the response",
+                "To transfer legal liability to that person automatically",
+                "To remove the risk from the register"
+            ],
+            "correct_index": 1,
+            "explanation": "An assigned owner is accountable for carrying out and monitoring the response so it does not stall. Ownership does not shift legal liability, delete the risk, or excuse reporting.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-095",
+            "domain": "Risk Response and Reporting",
+            "stem": "When should a risk response be implemented relative to the urgency of the risk?",
+            "options": [
+                "Whenever it is convenient for the team",
+                "It should never be implemented at all",
+                "In line with the risk's priority and any applicable regulatory deadlines",
+                "Only after the following annual audit cycle"
+            ],
+            "correct_index": 2,
+            "explanation": "Response timing should match the risk's severity and any legal deadlines so urgent exposures are addressed promptly. Waiting for convenience or the next audit leaves significant risk unmanaged.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-096",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the benefit of planning control implementation in phases?",
+            "options": [
+                "It delays all benefit indefinitely with no reason",
+                "It removes accountability for the controls",
+                "It guarantees that no incidents will occur",
+                "It manages complexity and cost while addressing the highest risks first"
+            ],
+            "correct_index": 3,
+            "explanation": "Phasing lets the organization tackle the most significant risks early while spreading cost and effort. It does not eliminate accountability or guarantee incident-free operation.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-097",
+            "domain": "Risk Response and Reporting",
+            "stem": "How often should control effectiveness be reassessed after implementation?",
+            "options": [
+                "At a frequency based on the risk and control criticality, with continuous monitoring where feasible",
+                "Once at implementation and then never again",
+                "Once every ten years regardless of the risk",
+                "Only after a major incident has already happened"
+            ],
+            "correct_index": 0,
+            "explanation": "Reassessment frequency should reflect the criticality of the control and the risk it addresses, supported by monitoring. Testing once, rarely, or only after a failure allows undetected degradation.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-098",
+            "domain": "Risk Response and Reporting",
+            "stem": "When must a risk event be reported to a regulator?",
+            "options": [
+                "Whenever a competitor publicly reports an event",
+                "When laws or regulations require notification of specified events such as breaches or control failures",
+                "Never, because regulators have no interest in events",
+                "Only when the company's share price rises significantly"
+            ],
+            "correct_index": 1,
+            "explanation": "Mandatory reporting is triggered by legal or regulatory requirements, often with strict timelines. There is no general rule to report never, on share-price moves, or to mirror a competitor.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-099",
+            "domain": "Risk Response and Reporting",
+            "stem": "A control exception is discovered that raises risk above tolerance. What should happen next?",
+            "options": [
+                "Delete the supporting evidence",
+                "Wait until a customer complains before acting",
+                "Escalate promptly through the defined governance process",
+                "Ignore it until the next annual review"
+            ],
+            "correct_index": 2,
+            "explanation": "Exceptions that push risk beyond tolerance require prompt escalation so the risk can be treated or formally accepted. Ignoring, destroying evidence, or waiting for a complaint lets exposure grow.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-100",
+            "domain": "Risk Response and Reporting",
+            "stem": "A key risk indicator has breached its defined threshold. What is the expected governance action?",
+            "options": [
+                "Take no action and continue as before",
+                "Quietly raise the threshold to avoid escalation",
+                "Hide the metric from the report",
+                "Trigger the pre-defined escalation and response so the risk is addressed"
+            ],
+            "correct_index": 3,
+            "explanation": "A threshold breach should activate the planned escalation and response. Ignoring it, moving the goalposts, or concealing the metric defeats the purpose of a KRI.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-101",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the purpose of incident reporting within risk management?",
+            "options": [
+                "To capture events, root causes, and lessons that inform future risk assessment and response",
+                "To assign all blame to the IT department",
+                "To avoid having to file insurance claims",
+                "To reduce the amount of documentation required"
+            ],
+            "correct_index": 0,
+            "explanation": "Incident reports feed lessons learned back into assessment and response so the same failure is less likely to recur. Blame, claims avoidance, and less documentation are not their purpose.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-102",
+            "domain": "Risk Response and Reporting",
+            "stem": "Why is loss event data valuable for risk management?",
+            "options": [
+                "It is useful only to the accounting department",
+                "It provides empirical evidence that helps calibrate likelihood and impact estimates",
+                "It removes the need for any controls going forward",
+                "It guarantees what future results will be"
+            ],
+            "correct_index": 1,
+            "explanation": "Historical loss data grounds estimates in observed experience, improving the accuracy of likelihood and impact. It does not replace controls or guarantee future outcomes.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-103",
+            "domain": "Risk Response and Reporting",
+            "stem": "What determines the appropriate frequency of risk reporting?",
+            "options": [
+                "The color of the paper used for the report",
+                "A fixed rule of once every ten years",
+                "The risk's velocity and materiality and the information needs of decision makers",
+                "The personal schedule of whoever writes the report"
+            ],
+            "correct_index": 2,
+            "explanation": "Reporting cadence should match how fast risks can materialize and how much they matter to those governing. Personal convenience, formatting, and arbitrary intervals do not serve decision needs.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-104",
+            "domain": "Risk Response and Reporting",
+            "stem": "What makes a risk metric meaningful to management?",
+            "options": [
+                "It is deliberately complex and left unexplained",
+                "Its definition changes unpredictably each month",
+                "It is always reported as a value of zero",
+                "It is tied to objectives, actionable, and clearly defined"
+            ],
+            "correct_index": 3,
+            "explanation": "A meaningful metric connects to objectives, can drive action, and is defined consistently. Complexity without explanation, shifting definitions, and permanently zero values provide no decision value.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-105",
+            "domain": "Risk Response and Reporting",
+            "stem": "Why is aggregation important when reporting enterprise risk?",
+            "options": [
+                "It reveals the combined exposure across business units that separate reports can hide",
+                "It reduces accountability for individual risks",
+                "It replaces the need for mitigation entirely",
+                "It conceals all risks from the board"
+            ],
+            "correct_index": 0,
+            "explanation": "Aggregating risk shows the cumulative enterprise exposure that unit-level views may obscure. It does not erase accountability, remove mitigation, or hide risks.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-106",
+            "domain": "Risk Response and Reporting",
+            "stem": "How should a risk practitioner communicate a technical risk to business stakeholders?",
+            "options": [
+                "By sending only raw packet captures",
+                "In business terms, describing the potential impact on objectives and operations",
+                "Using unexplained technical jargon with no translation",
+                "By refusing to explain the risk at all"
+            ],
+            "correct_index": 1,
+            "explanation": "Business stakeholders act on consequences to objectives, so translating technical exposure into impact is essential. Jargon, refusal, or raw data prevents informed decisions.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-107",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the purpose of a control self-assessment?",
+            "options": [
+                "To replace risk ownership across the enterprise",
+                "To eliminate the need for any documentation",
+                "To let business and process owners evaluate and attest to their own controls",
+                "To outsource all control testing to an external party"
+            ],
+            "correct_index": 2,
+            "explanation": "Control self-assessment engages process owners in evaluating their controls, strengthening ownership and coverage. It complements rather than replaces independent testing or ownership.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-108",
+            "domain": "Risk Response and Reporting",
+            "stem": "After mitigation, how should the residual risk be reported to management?",
+            "options": [
+                "As though the risk had been completely eliminated",
+                "Without any context or comparison to appetite",
+                "Only to the external vendor involved",
+                "Along with the mitigation applied and any remaining exposure against appetite"
+            ],
+            "correct_index": 3,
+            "explanation": "Management needs to see what was done and what exposure remains relative to appetite. Reporting the risk as eliminated, without context, or only to a vendor is misleading.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-109",
+            "domain": "Risk Response and Reporting",
+            "stem": "How should risk responses differ for critical third parties compared with low-risk suppliers?",
+            "options": [
+                "Critical third parties should be held to contractual control requirements and monitored through ongoing reporting and audits",
+                "Critical third parties should be exempt from all control requirements",
+                "Critical third parties should self-report with no verification",
+                "Critical third parties should be removed from all oversight"
+            ],
+            "correct_index": 0,
+            "explanation": "The greater the dependence, the stronger the contractual controls and ongoing monitoring required. Exempting critical vendors, accepting unverified self-reporting, or dropping oversight increases exposure.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-110",
+            "domain": "Risk Response and Reporting",
+            "stem": "How does business continuity planning function as a risk response?",
+            "options": [
+                "It guarantees that downtime never occurs",
+                "It reduces the impact of disruptive events by enabling timely recovery",
+                "It eliminates all threats to the organization",
+                "It transfers risk entirely to insurers"
+            ],
+            "correct_index": 1,
+            "explanation": "Continuity planning lowers the impact of disruption by restoring critical functions within agreed timeframes. It does not remove threats, transfer risk, or guarantee zero downtime.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-111",
+            "domain": "Risk Response and Reporting",
+            "stem": "In which situation is risk transfer through insurance LEAST effective?",
+            "options": [
+                "When a valid policy has been signed",
+                "When the losses are purely financial in nature",
+                "When the loss involves reputation, customer trust, or regulatory penalties that cannot be insured",
+                "When the premium has been paid in full"
+            ],
+            "correct_index": 2,
+            "explanation": "Insurance compensates financial loss but cannot restore reputation, trust, or shield against regulatory penalties. Purely financial losses are the losses insurance handles best.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-112",
+            "domain": "Risk Response and Reporting",
+            "stem": "Why must a decision to accept risk be documented?",
+            "options": [
+                "To deliberately increase the level of the risk",
+                "To avoid any need for future governance",
+                "To satisfy the personal curiosity of staff",
+                "To provide evidence of informed, authorized acceptance and accountability"
+            ],
+            "correct_index": 3,
+            "explanation": "Documentation proves the acceptance was informed and authorized by the right level of management. It does not change the risk level, remove governance, or serve curiosity.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-113",
+            "domain": "Risk Response and Reporting",
+            "stem": "What should management do when reviewing a risk report?",
+            "options": [
+                "Make and record decisions on treatment, acceptance, and resource allocation",
+                "File it away without reading it",
+                "Forward it to a competitor for comparison",
+                "Delete it as soon as it arrives"
+            ],
+            "correct_index": 0,
+            "explanation": "The purpose of a risk report is to provoke and record decisions. Filing without reading, sharing with competitors, or deleting it renders the reporting cycle pointless.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-114",
+            "domain": "Risk Response and Reporting",
+            "stem": "How should low-probability, high-impact risks be handled in risk reporting?",
+            "options": [
+                "They should be excluded from the risk framework",
+                "They should be explicitly considered so governance remains aware of tail risk",
+                "They should be ignored because they are unlikely to occur",
+                "They should always be accepted silently with no record"
+            ],
+            "correct_index": 1,
+            "explanation": "Tail risks can be catastrophic if they occur, so governance should be aware of them even when likelihood is low. Ignoring, silently accepting, or excluding them leaves the board blind to severe scenarios.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-115",
+            "domain": "Risk Response and Reporting",
+            "stem": "What is the purpose of tracking corrective actions after an audit or incident?",
+            "options": [
+                "To assign punitive penalties to staff",
+                "To close findings without any supporting evidence",
+                "To ensure agreed remediation is completed and actually reduces the risk",
+                "To generate paperwork with no practical value"
+            ],
+            "correct_index": 2,
+            "explanation": "Tracking corrective actions verifies remediation is completed and effective so the risk is genuinely reduced. Paperwork, punishment, and evidence-free closure defeat the purpose.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-116",
+            "domain": "Risk Response and Reporting",
+            "stem": "A critical control repeatedly fails while the business still depends on it. What should the risk practitioner recommend FIRST?",
+            "options": [
+                "Ignore the failures because the control exists",
+                "Disable the control to prevent further failures",
+                "Accept the risk without any review or authority",
+                "Implement a compensating control while the root cause is corrected"
+            ],
+            "correct_index": 3,
+            "explanation": "A compensating control limits exposure while the failing control's root cause is fixed. Ignoring, disabling, or unauthorized acceptance would increase risk during a known control weakness.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-117",
+            "domain": "Risk Response and Reporting",
+            "stem": "How does risk information support risk-adjusted decision making?",
+            "options": [
+                "It lets leaders weigh expected return against residual risk and appetite",
+                "It fully replaces financial analysis in every case",
+                "It removes all uncertainty from decisions",
+                "It forbids making any trade-offs"
+            ],
+            "correct_index": 0,
+            "explanation": "Risk information lets decision makers balance potential return against residual risk and appetite. It complements rather than replaces financial analysis and cannot eliminate uncertainty.",
+            "reference": "ISACA CRISC Exam Content Outline - Risk Response and Reporting"
+        },
+        {
+            "id": "crisc-118",
+            "domain": "Technology and Security",
+            "stem": "When reviewing a proposed system architecture, which risk concern is MOST important?",
+            "options": [
+                "The interior decoration of the data center",
+                "Whether the design meets security, resilience, and business requirements",
+                "Whether the technology is currently popular",
+                "The size of the vendor's marketing budget"
+            ],
+            "correct_index": 1,
+            "explanation": "Architecture risk review focuses on whether the design satisfies security, resilience, and business needs. Popularity, marketing spend, and decor do not address architectural risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-119",
+            "domain": "Technology and Security",
+            "stem": "Which access principle grants users only the permissions needed to perform their assigned duties?",
+            "options": [
+                "Mandatory vacation",
+                "Job rotation",
+                "Least privilege",
+                "Separation of duties"
+            ],
+            "correct_index": 2,
+            "explanation": "Least privilege limits access to the minimum required for the role, reducing misuse and blast radius. Separation of duties, vacation, and rotation are complementary fraud controls, not the least-access principle.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-120",
+            "domain": "Technology and Security",
+            "stem": "What is the main goal of identity and access management?",
+            "options": [
+                "To process employee payroll accurately",
+                "To design and build network cabling",
+                "To write policy documents only",
+                "To ensure the right people have the right access to the right resources and that it can be audited"
+            ],
+            "correct_index": 3,
+            "explanation": "IAM manages identities and entitlements so access is appropriate and reviewable. Payroll, cabling, and documentation are separate functions, though policy may guide IAM.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-121",
+            "domain": "Technology and Security",
+            "stem": "Why is privileged access management especially important for risk?",
+            "options": [
+                "Administrative accounts can bypass controls and cause the greatest damage if compromised",
+                "Administrative accounts are rarely used and carry little risk",
+                "Administrative accounts cannot access sensitive systems",
+                "Administrative credentials are normally public information"
+            ],
+            "correct_index": 0,
+            "explanation": "Privileged accounts hold the keys to the environment, so their compromise or misuse has outsized impact. Assuming they are low-risk, powerless, or public is dangerously wrong.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-122",
+            "domain": "Technology and Security",
+            "stem": "Combining something a user knows with something the user possesses is an example of what?",
+            "options": [
+                "Data masking",
+                "Multi-factor authentication",
+                "Single sign-on",
+                "Least privilege"
+            ],
+            "correct_index": 1,
+            "explanation": "Multi-factor authentication combines different factor types, such as a password plus a hardware token. Single sign-on, least privilege, and data masking address different concerns.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-123",
+            "domain": "Technology and Security",
+            "stem": "Why is network segmentation valuable for managing risk?",
+            "options": [
+                "It removes any need for firewalls",
+                "It automatically encrypts all stored data",
+                "It limits lateral movement and helps contain the impact of a compromise",
+                "It increases the size of broadcast domains deliberately"
+            ],
+            "correct_index": 2,
+            "explanation": "Segmentation divides the network so an intruder cannot easily move sideways, containing damage. It does not enlarge broadcast domains, replace firewalls, or encrypt data at rest.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-124",
+            "domain": "Technology and Security",
+            "stem": "What is the primary function of a firewall in risk terms?",
+            "options": [
+                "To store nightly backup copies of databases",
+                "To assign IP addresses to endpoints",
+                "To print administrative reports",
+                "To enforce network access rules and reduce exposure between zones"
+            ],
+            "correct_index": 3,
+            "explanation": "A firewall controls traffic flows between zones according to policy, reducing exposure. Backups, address assignment, and printing are functions of other systems.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-125",
+            "domain": "Technology and Security",
+            "stem": "How do encryption at rest and encryption in transit differ?",
+            "options": [
+                "At rest protects stored data, while in transit protects data moving across networks",
+                "They are exactly the same control applied twice",
+                "In transit protects files sitting on disk",
+                "At rest protects signals traveling on cables"
+            ],
+            "correct_index": 0,
+            "explanation": "Encryption at rest protects data while stored, and encryption in transit protects it as it crosses networks. Reversing them or treating them as identical misstates where the protection applies.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-126",
+            "domain": "Technology and Security",
+            "stem": "Why is cryptographic key management a critical control?",
+            "options": [
+                "Because it removes the need for access control",
+                "Because poorly managed keys allow encrypted data to be exposed",
+                "Because encryption keys are meant to be public",
+                "Because keys never need to be rotated"
+            ],
+            "correct_index": 1,
+            "explanation": "The strength of encryption depends on keys remaining secret, available, and rotated, so weak key management breaks the protection. Keys are not public, do need rotation, and do not replace access control.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-127",
+            "domain": "Technology and Security",
+            "stem": "When should security requirements first be introduced in the system development life cycle?",
+            "options": [
+                "Only during the annual audit cycle",
+                "Only after a security incident occurs",
+                "From the earliest requirements and design phases",
+                "Only after the system has gone live"
+            ],
+            "correct_index": 2,
+            "explanation": "Building security in from requirements and design is cheaper and more effective than retrofitting later. Adding it after go-live, at audit, or after an incident is costly and incomplete.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-128",
+            "domain": "Technology and Security",
+            "stem": "What is the purpose of secure coding practices?",
+            "options": [
+                "To make the code longer and harder to read",
+                "To remove the need for any testing",
+                "To deliberately reduce system functionality",
+                "To reduce vulnerabilities such as injection flaws and insecure defaults in software"
+            ],
+            "correct_index": 3,
+            "explanation": "Secure coding prevents common vulnerability classes at the source. It does not exist to inflate code, remove testing, or reduce functionality.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-129",
+            "domain": "Technology and Security",
+            "stem": "An organization processes the personal data of European Union residents. Which regulation governs this processing?",
+            "options": [
+                "The General Data Protection Regulation",
+                "The Sarbanes-Oxley Act",
+                "The Basel III Accord",
+                "The ISO 9001 standard"
+            ],
+            "correct_index": 0,
+            "explanation": "The GDPR governs the processing of personal data of EU residents. Sarbanes-Oxley concerns financial reporting, Basel III concerns banking capital, and ISO 9001 is a quality management standard.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-130",
+            "domain": "Technology and Security",
+            "stem": "Why is a data retention policy important for managing risk?",
+            "options": [
+                "It ensures data is never deleted under any circumstance",
+                "It limits legal, privacy, and storage risk by defining how long data is kept",
+                "It increases the volume of data the organization stores",
+                "It removes all privacy obligations from the organization"
+            ],
+            "correct_index": 1,
+            "explanation": "Retention rules reduce the legal and privacy exposure of holding data too long while preserving what must be kept. They do not remove obligations or mandate keeping everything forever.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-131",
+            "domain": "Technology and Security",
+            "stem": "What is the purpose of data loss prevention controls?",
+            "options": [
+                "To create regular backups of databases",
+                "To assign user passwords automatically",
+                "To detect and block unauthorized transmission of sensitive data",
+                "To speed up the internal network"
+            ],
+            "correct_index": 2,
+            "explanation": "Data loss prevention monitors and stops sensitive data from leaving authorized boundaries. Network speed, backups, and password assignment are unrelated functions.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-132",
+            "domain": "Technology and Security",
+            "stem": "What does a recovery time objective define?",
+            "options": [
+                "The acceptable amount of data loss measured in time",
+                "The amount of the insurance payout after an outage",
+                "The deadline for completing the annual audit",
+                "The target time within which a process must be restored after disruption"
+            ],
+            "correct_index": 3,
+            "explanation": "The recovery time objective is the target elapsed time to restore a process after disruption. The acceptable data loss is the recovery point objective, and insurance and audit deadlines are unrelated.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-133",
+            "domain": "Technology and Security",
+            "stem": "What does a recovery point objective define?",
+            "options": [
+                "The maximum acceptable amount of data loss measured in time",
+                "The time required to restore service after an outage",
+                "The duration of a scheduled maintenance window",
+                "The cost incurred for each hour of downtime"
+            ],
+            "correct_index": 0,
+            "explanation": "The recovery point objective expresses how much data the organization can afford to lose, measured in time, and drives backup frequency. Restore time is the RTO, and cost or maintenance windows are separate measures.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-134",
+            "domain": "Technology and Security",
+            "stem": "Why should disaster recovery plans be tested regularly?",
+            "options": [
+                "To reduce the number of backups that are taken",
+                "To verify that recovery is achievable within the defined RTO and RPO",
+                "To satisfy the personal curiosity of the team",
+                "To deliberately delay the recovery process"
+            ],
+            "correct_index": 1,
+            "explanation": "Testing proves that recovery can actually meet the stated time and data-loss objectives and reveals gaps. Curiosity, delay, and fewer backups are not the reasons to test.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-135",
+            "domain": "Technology and Security",
+            "stem": "How does business continuity differ from disaster recovery?",
+            "options": [
+                "Disaster recovery covers only the safety of people",
+                "Business continuity covers only the recovery of hardware",
+                "Business continuity keeps critical business functions running, while disaster recovery restores IT systems and data",
+                "Business continuity and disaster recovery mean exactly the same thing"
+            ],
+            "correct_index": 2,
+            "explanation": "Business continuity focuses on sustaining critical business functions during disruption, whereas disaster recovery focuses on restoring IT infrastructure and data. They are related but distinct disciplines.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-136",
+            "domain": "Technology and Security",
+            "stem": "Under the cloud shared responsibility model, what generally remains the customer's responsibility?",
+            "options": [
+                "The physical security of the provider's data centers",
+                "The security of the provider's underlying hypervisor",
+                "Nothing at all, because the provider covers everything",
+                "Security of their data, identities, and configuration in the cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "The customer remains responsible for its data, identities, access, and configuration, while the provider secures the underlying infrastructure. Assuming the provider covers everything is a common and dangerous error.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-137",
+            "domain": "Technology and Security",
+            "stem": "Which risk is introduced by rapid cloud adoption without appropriate governance?",
+            "options": [
+                "Unmanaged data residency, misconfiguration, and loss of visibility",
+                "Guaranteed regulatory compliance in every jurisdiction",
+                "A reduced overall attack surface",
+                "The complete elimination of insider risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Ungoverned cloud use leads to unknown data locations, insecure configurations, and shadow IT that hides from oversight. It does not guarantee compliance, shrink the attack surface, or remove insider risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-138",
+            "domain": "Technology and Security",
+            "stem": "What is a key risk concern with Internet of Things devices?",
+            "options": [
+                "They are incapable of storing or transmitting data",
+                "Weak default security and broad connectivity can expand the attack surface",
+                "They are impossible to connect to any network",
+                "They are always patched automatically by the manufacturer"
+            ],
+            "correct_index": 1,
+            "explanation": "Many IoT devices ship with weak defaults and always-on connectivity, increasing exposure. Assuming they are unconnectable, always patched, or unable to handle data is incorrect.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-139",
+            "domain": "Technology and Security",
+            "stem": "Which risk is MOST associated with adopting artificial intelligence without appropriate oversight?",
+            "options": [
+                "The elimination of any need for data",
+                "The automatic removal of all controls",
+                "Biased or unexplainable outputs that lead to poor or unfair decisions",
+                "Guaranteed accuracy of every decision made"
+            ],
+            "correct_index": 2,
+            "explanation": "AI models can embed bias and produce difficult-to-explain decisions, creating legal and reputational risk without governance. It does not guarantee accuracy or remove the need for data and controls.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-140",
+            "domain": "Technology and Security",
+            "stem": "What is a governance concern with blockchain-based solutions?",
+            "options": [
+                "Transactions cannot be recorded at all on a blockchain",
+                "Cryptographic keys are never needed for a blockchain",
+                "No form of consensus is required to operate one",
+                "Immutability can conflict with privacy, correction, and deletion requirements"
+            ],
+            "correct_index": 3,
+            "explanation": "Because records on a blockchain are designed to be immutable, they can clash with rights to correct or delete personal data. The other statements misstate how blockchains work.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-141",
+            "domain": "Technology and Security",
+            "stem": "Why is timely patch management important for risk?",
+            "options": [
+                "It closes known vulnerabilities that attackers can otherwise exploit",
+                "It deliberately introduces new vulnerabilities into systems",
+                "It slows down systems as an intended outcome",
+                "It removes the need for any access control"
+            ],
+            "correct_index": 0,
+            "explanation": "Patching removes publicly known weaknesses before they are exploited. It does not introduce vulnerabilities by design, slow systems on purpose, or replace access control.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-142",
+            "domain": "Technology and Security",
+            "stem": "What is the primary purpose of a security incident response plan?",
+            "options": [
+                "To delay notification to regulators indefinitely",
+                "To define how incidents are detected, contained, eradicated, and recovered from",
+                "To guarantee that incidents never occur",
+                "To determine which employee to blame"
+            ],
+            "correct_index": 1,
+            "explanation": "An incident response plan gives a rehearsed sequence for handling incidents from detection through recovery. It cannot prevent every incident, assign blame, or justify delaying required notifications.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-143",
+            "domain": "Technology and Security",
+            "stem": "Which control most reduces the impact of ransomware?",
+            "options": [
+                "Disabling all logging to save storage",
+                "Ignoring phishing awareness for staff",
+                "Tested offline or immutable backups and a rehearsed recovery plan",
+                "Paying the ransom as the first response"
+            ],
+            "correct_index": 2,
+            "explanation": "Reliable, isolated backups let the organization restore without paying and reduce downtime. Paying, disabling logs, and skipping awareness all worsen the outcome.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-144",
+            "domain": "Technology and Security",
+            "stem": "Why is endpoint protection important for risk management?",
+            "options": [
+                "Endpoints cannot be attacked by any means",
+                "Endpoints never store or process sensitive data",
+                "Endpoints are always kept offline from the network",
+                "Endpoints are common entry points and need detection and response controls"
+            ],
+            "correct_index": 3,
+            "explanation": "Endpoints are frequently targeted and can host sensitive data and access, so they require protective and detective controls. The other statements mischaracterize endpoint risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-145",
+            "domain": "Technology and Security",
+            "stem": "What is the risk benefit of centralized logging and monitoring?",
+            "options": [
+                "It enables timely detection and investigation of suspicious activity",
+                "It stores user passwords in a readable form",
+                "It replaces the need for encryption entirely",
+                "It prevents all attacks from succeeding"
+            ],
+            "correct_index": 0,
+            "explanation": "Centralized logs and monitoring make it possible to spot and investigate suspicious events quickly. They do not, and must not, store readable passwords, replace encryption, or stop every attack.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-146",
+            "domain": "Technology and Security",
+            "stem": "Why is change management a key technology risk control?",
+            "options": [
+                "It avoids the need to document any changes",
+                "It ensures changes are authorized, tested, and reversible to prevent outages and unauthorized modification",
+                "It slows down delivery of value on purpose",
+                "It removes accountability for changes made"
+            ],
+            "correct_index": 1,
+            "explanation": "Change management controls the authorization, testing, and rollback of changes, reducing outage and integrity risk. Deliberate delay, lost accountability, and missing documentation increase risk.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-147",
+            "domain": "Technology and Security",
+            "stem": "What is the purpose of configuration baselines?",
+            "options": [
+                "To conceal unauthorized changes from monitoring",
+                "To select which vendor to purchase from",
+                "To define secure standard settings and detect drift from that standard",
+                "To intentionally increase configuration variability"
+            ],
+            "correct_index": 2,
+            "explanation": "A baseline captures the approved secure configuration so deviations can be detected and corrected. Increasing variability, hiding changes, and vendor selection are different concerns.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-148",
+            "domain": "Technology and Security",
+            "stem": "How does physical security contribute to information security?",
+            "options": [
+                "It encrypts data while it travels across the network",
+                "It replaces all logical access controls",
+                "It manages user passwords on behalf of the help desk",
+                "It prevents unauthorized physical access to facilities and assets that host data"
+            ],
+            "correct_index": 3,
+            "explanation": "Physical controls stop intruders and unauthorized people from reaching systems and media directly. They complement rather than replace logical controls and do not encrypt traffic or manage passwords.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-149",
+            "domain": "Technology and Security",
+            "stem": "What is a major risk of bring-your-own-device programs?",
+            "options": [
+                "Corporate data may reside on unmanaged, unpatched, or lost personal devices",
+                "Personal devices are always fully managed and patched",
+                "Data can never leave the corporate network on personal devices",
+                "No security policy is needed for personal devices at all"
+            ],
+            "correct_index": 0,
+            "explanation": "BYOD extends corporate data to devices the organization may not control or patch, raising loss and leakage risk. Assuming full management, no data egress, or no need for policy ignores the exposure.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        },
+        {
+            "id": "crisc-150",
+            "domain": "Technology and Security",
+            "stem": "What is an insider threat in risk terms?",
+            "options": [
+                "A power outage in the data center",
+                "Harm caused by a person with authorized access acting maliciously or negligently",
+                "An external attacker who has no access whatsoever",
+                "A software defect that occurs on its own"
+            ],
+            "correct_index": 1,
+            "explanation": "An insider threat arises from people who already have legitimate access, whether they act with intent or by mistake. External attackers, software defects, and power outages are different risk sources.",
+            "reference": "ISACA CRISC Exam Content Outline - Technology and Security"
+        }
+    ]
+}

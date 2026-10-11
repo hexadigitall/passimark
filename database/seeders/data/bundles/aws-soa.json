@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-soa",
+    "title": "AWS Certified SysOps Administrator - Associate (SOA-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-soa.json",
+    "variant_label": "SOA-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 180,
+        "scoring": "720/1000 scaled (includes lab scenarios)",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified SysOps Administrator - Associate SOA-C02 exam guide (six official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "AWS SysOps Administrator practice bank",
+    "items": [
+        {
+            "id": "aws-soa-001",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A SysOps administrator sees CPU utilization for an Amazon EC2 instance in CloudWatch but no memory or disk-space metrics, and the team needs all of them in one dashboard. What must the administrator do to publish the missing metrics?",
+            "options": [
+                "Install and configure the unified CloudWatch agent on the instance to publish memory and disk metrics",
+                "Switch the instance to detailed monitoring so the hypervisor reports guest memory",
+                "Create a CloudWatch Logs subscription filter from the instance system log",
+                "Attach an IAM role to the instance and enable EC2 status checks"
+            ],
+            "correct_index": 0,
+            "explanation": "Only the CloudWatch agent runs inside the guest OS and can collect memory, disk, and per-process metrics that the hypervisor does not expose. Detailed monitoring and status checks only raise the resolution of CPU and instance checks, and log subscription filters act on log data rather than metrics.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-002",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "An operations team wants to be paged automatically when an EC2 instance CPU utilization stays above 90 percent for five consecutive minutes. Which configuration should the SysOps administrator put in place?",
+            "options": [
+                "A CloudTrail trail that filters for high-CPU API calls",
+                "A CloudWatch alarm on CPU utilization that publishes to an Amazon SNS topic subscribed by the paging service",
+                "An AWS Config rule that marks the instance noncompliant when CPU is high",
+                "An EventBridge scheduled rule that lists instance metrics each minute"
+            ],
+            "correct_index": 1,
+            "explanation": "A CloudWatch metric alarm evaluates the CPU metric over consecutive periods and invokes an action such as an SNS notification when the threshold is breached. Config rules evaluate resource configuration, EventBridge schedules do not threshold metrics, and CloudTrail records API calls rather than performance.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-003",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "An auditor asks which principal deleted a production S3 bucket, when it happened, and from which source IP address. Which AWS service should the SysOps administrator query to answer the auditor?",
+            "options": [
+                "AWS Trusted Advisor",
+                "VPC Flow Logs",
+                "AWS CloudTrail event history",
+                "Amazon CloudWatch metrics"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudTrail records every AWS API call with the principal, timestamp, and source IP, which is exactly what an audit trail needs. CloudWatch metrics hold performance numbers, Trusted Advisor gives best-practice guidance, and VPC Flow Logs capture network flow records rather than management API identity.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-004",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A security policy requires that every S3 bucket in an account be checked for public read access and that the team keeps a record of when a bucket became noncompliant. Which service should the SysOps administrator enable?",
+            "options": [
+                "CloudWatch Logs Insights queries against S3 server access logs",
+                "Amazon Inspector with EC2 scanning enabled",
+                "AWS Shield Advanced for the account",
+                "AWS Config with a managed rule that evaluates S3 public access and records configuration changes"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Config continuously records resource configuration and evaluates rules, so it both detects an S3 bucket that allows public read access and preserves the compliance timeline. Log Insights reads logs rather than configuration, Inspector scans compute workloads, and Shield Advanced is DDoS protection.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-005",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "Whenever an EC2 instance transitions to the stopped state, a company wants an AWS Lambda function to run automatically. Which service should the SysOps administrator use to detect the state change and invoke the function?",
+            "options": [
+                "An Amazon EventBridge rule that matches the EC2 instance state-change notification and targets the Lambda function",
+                "An S3 event notification sent to the Lambda function",
+                "A CloudWatch Logs metric filter wired to the Lambda function",
+                "A Systems Manager Patch Manager baseline associated with the instance"
+            ],
+            "correct_index": 0,
+            "explanation": "EventBridge delivers EC2 instance state-change events and can invoke a Lambda target when the state becomes stopped. S3 event notifications fire only on object operations, metric filters act on log data, and Patch Manager handles patching rather than event routing.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-006",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A SysOps administrator must run a shell command across hundreds of EC2 instances without opening SSH and needs per-instance command history for later review. Which Systems Manager capability should be used?",
+            "options": [
+                "Inventory, which collects installed application metadata",
+                "Run Command, which sends the document to the managed instances and records per-instance output",
+                "Session Manager, which opens one interactive shell at a time",
+                "Parameter Store, which stores the command as a configuration value"
+            ],
+            "correct_index": 1,
+            "explanation": "Run Command executes a document against a fleet of managed instances and stores the command and its output per instance. Session Manager is interactive per instance, Parameter Store only holds values, and Inventory collects software metadata.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-007",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "An application writes structured events to a CloudWatch log group, and the team wants an alarm whenever the word ERROR appears more than ten times in a five-minute window. What should the SysOps administrator create?",
+            "options": [
+                "An AWS Config rule that scans the log group on a schedule",
+                "A Systems Manager association that greps the instance log file",
+                "A metric filter on the log group that increments a custom metric, paired with a CloudWatch alarm on that metric",
+                "A CloudTrail trail that filters log events for the word ERROR"
+            ],
+            "correct_index": 2,
+            "explanation": "A metric filter turns matching log events into a numeric metric, and an alarm evaluates that metric against a threshold. CloudTrail tracks API activity, Config rules evaluate resource configuration, and an association runs documents rather than counting log occurrences.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-008",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A compliance policy requires application logs to be retained for seven years, but keeping them in CloudWatch Logs for that long is expensive. Which approach is the most cost-effective?",
+            "options": [
+                "Set the CloudWatch log group retention to seven years and leave the data in place",
+                "Create a second log group in another Region and stream logs to both",
+                "Increase the CloudWatch alarm evaluation period so logs age more slowly",
+                "Set a short retention period on the log group and export the logs to Amazon S3 with a lifecycle policy that transitions them to a colder storage class"
+            ],
+            "correct_index": 3,
+            "explanation": "Exporting to S3 lets the team keep logs cheaply and apply a lifecycle policy to move them to lower-cost storage, while CloudWatch keeps only recent data. Keeping seven years in CloudWatch is the expensive option, duplicate streaming doubles cost, and alarm settings do not change retention.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-009",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A compliance team requires that any newly created S3 bucket with public access be remediated automatically without human intervention. Which combination should the SysOps administrator configure?",
+            "options": [
+                "An AWS Config managed rule for S3 public access with automatic remediation through an SSM Automation document",
+                "A CloudTrail trail that emails the security team on bucket creation",
+                "An Amazon GuardDuty finding that is reviewed weekly by an analyst",
+                "A CloudWatch dashboard that graphs bucket permissions"
+            ],
+            "correct_index": 0,
+            "explanation": "Config rules detect the noncompliant bucket and can trigger automatic remediation using a Systems Manager Automation runbook that removes public access. Notification and dashboards still require humans, and GuardDuty is threat detection, not configuration compliance.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-010",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A company with many AWS accounts in an organization needs a single central record of all API activity that member accounts cannot disable. What should the SysOps administrator enable?",
+            "options": [
+                "AWS Config recorders in the management account only",
+                "An organization trail in AWS CloudTrail that delivers logs to a central S3 bucket",
+                "A separate CloudTrail trail created in each member account",
+                "VPC Flow Logs for every VPC in the organization"
+            ],
+            "correct_index": 1,
+            "explanation": "An organization trail is created once and applies to every account in the organization, and member accounts cannot turn it off. Per-account trails can be altered within each account, VPC Flow Logs capture network traffic, and Config records resource configuration rather than API calls.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-011",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A SysOps administrator must confirm whether traffic from a specific source IP address is being accepted or rejected by a security group. Which log source should be enabled?",
+            "options": [
+                "AWS Config with a rule on the security group",
+                "Route 53 Resolver query logging",
+                "VPC Flow Logs on the network interfaces or subnets in the VPC",
+                "AWS CloudTrail with data events on the S3 bucket"
+            ],
+            "correct_index": 2,
+            "explanation": "VPC Flow Logs record accepted and rejected traffic per network interface, which is exactly the accept/reject detail needed. CloudTrail shows API calls, Config shows configuration state, and Route 53 resolver logging shows DNS queries.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-012",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "An engineer needs to search several months of CloudWatch log data for all requests that returned a 500 status code and summarize counts by hour. Which tool performs this query most directly?",
+            "options": [
+                "CloudTrail event history filtered by string",
+                "AWS Config advanced queries against resource properties",
+                "AWS Trusted Advisor checks",
+                "CloudWatch Logs Insights with a query against the log group"
+            ],
+            "correct_index": 3,
+            "explanation": "Logs Insights queries log events directly and can filter, parse, and aggregate results by time. CloudTrail holds API activity, Config advanced queries run against resource configuration, and Trusted Advisor reports best-practice checks.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-013",
+            "domain": "Monitoring, Logging, and Remediation",
+            "stem": "A web team wants to monitor a login page end to end, including the scripted browser steps it takes, and be alerted when the flow breaks. Which CloudWatch feature should the SysOps administrator configure?",
+            "options": [
+                "A CloudWatch Synthetics canary that runs a scripted browser workflow on a schedule",
+                "A basic CloudWatch alarm on the web server instance CPU",
+                "VPC Flow Logs on the load balancer subnet",
+                "AWS Config with a rule on the load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "Synthetics canaries run scripted browser journeys on a schedule and raise alarms when a step fails, which tests the actual user experience. Instance CPU, flow logs, and configuration rules do not exercise the login workflow.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Monitoring, Logging, and Remediation"
+        },
+        {
+            "id": "aws-soa-014",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A database must remain available if an entire Availability Zone fails, with automatic failover and no data loss. Which configuration should the SysOps administrator choose for Amazon RDS?",
+            "options": [
+                "An instance with transparent data encryption enabled",
+                "A Multi-AZ deployment that maintains a synchronous standby in a second Availability Zone",
+                "A single-AZ instance protected by automated snapshots",
+                "A read replica in the same Availability Zone as the primary"
+            ],
+            "correct_index": 1,
+            "explanation": "Multi-AZ replication is synchronous to a standby in another AZ and the endpoint fails over automatically. A single-AZ instance and a same-AZ read replica are both lost with the zone, and encryption does not provide availability.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-015",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A company needs automated, point-in-time backups of its EC2 instance volumes that can also be restored in another AWS Region. What is the most operationally efficient approach?",
+            "options": [
+                "Enable EC2 detailed monitoring and rely on instance recovery",
+                "Enable termination protection on the instances",
+                "Create an AWS Backup plan that takes scheduled snapshots and copies them to a vault in another Region",
+                "Take a manual snapshot of each volume every night from a script"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Backup centralizes scheduled snapshot creation and cross-Region copy into a backup vault. Manual snapshots are error-prone and not automated, detailed monitoring only changes metric resolution, and termination protection prevents deletion rather than providing backups.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-016",
+            "domain": "Reliability and Business Continuity",
+            "stem": "An application stores objects in Amazon S3, and the team must be able to recover an object that an operator overwrote or deleted by mistake. What should be enabled on the bucket?",
+            "options": [
+                "S3 Transfer Acceleration to speed up uploads",
+                "S3 Intelligent-Tiering to lower storage cost",
+                "S3 Requester Pays so callers bear the transfer cost",
+                "S3 Versioning so prior object versions are retained and can be restored"
+            ],
+            "correct_index": 3,
+            "explanation": "Versioning keeps every version of an object and adds delete markers, so an overwritten or deleted object can be recovered. Transfer Acceleration, Intelligent-Tiering, and Requester Pays change performance or billing, not recoverability.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-017",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A company runs a primary web endpoint and a standby endpoint in another Region, and wants DNS to send traffic to the standby only when the primary fails. Which Route 53 configuration should be used?",
+            "options": [
+                "A failover routing policy with a health check on the primary record",
+                "A weighted routing policy that gives both records equal weight",
+                "A simple record set pointing to both endpoints",
+                "A geolocation routing policy based on the user country"
+            ],
+            "correct_index": 0,
+            "explanation": "Failover routing uses a health check to serve the primary record while it is healthy and switches to the secondary record when it is not. Weighted routing splits traffic by percentage, simple records cannot hold two values with failover behaviour, and geolocation routes by user location.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-018",
+            "domain": "Reliability and Business Continuity",
+            "stem": "An application load triples each morning and returns to normal at night, and the operations team wants capacity to follow demand automatically. Which configuration should the SysOps administrator use?",
+            "options": [
+                "A Spot Fleet with no scaling policy attached",
+                "An EC2 Auto Scaling group with a target-tracking scaling policy on average CPU utilization",
+                "A fixed fleet of instances sized for the morning peak",
+                "A single very large instance to absorb the peak"
+            ],
+            "correct_index": 1,
+            "explanation": "Target-tracking policies add and remove capacity to hold a metric such as average CPU near a target, which follows daily demand. A fixed fleet wastes capacity off peak, one large instance is a single point of failure, and a Spot Fleet without scaling does not match capacity to load.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-019",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A company requires a disaster recovery strategy that keeps a small always-on core running in a second Region so recovery takes minutes rather than hours. Which strategy fits this requirement?",
+            "options": [
+                "A single-Region deployment with additional Availability Zones",
+                "An active-active multi-Region deployment running full capacity everywhere",
+                "A pilot light deployment that keeps the core services running in the second Region",
+                "A backup and restore strategy that spins up resources only after a disaster"
+            ],
+            "correct_index": 2,
+            "explanation": "A pilot light keeps a minimal core running in the recovery Region and scales it out on failover, giving minute-level recovery at low steady cost. Backup and restore is the slowest option, multiple AZs do not protect against a Region failure, and active-active is the most expensive.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-020",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A media company wants S3 object reads served from a second Region with low latency and also wants a durable copy of the data for disaster recovery. Which S3 feature should be enabled?",
+            "options": [
+                "Same-Region Replication to a second bucket in the same Region",
+                "A lifecycle transition of objects to S3 Glacier Deep Archive",
+                "S3 Block Public Access on the source bucket",
+                "Cross-Region Replication to a bucket in the second Region"
+            ],
+            "correct_index": 3,
+            "explanation": "Cross-Region Replication asynchronously copies objects to a bucket in another Region, supporting both low-latency reads and disaster recovery. Same-Region Replication stays in one Region, a lifecycle transition changes storage class rather than location, and Block Public Access only affects public permissions.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-021",
+            "domain": "Reliability and Business Continuity",
+            "stem": "Several EC2 instances spread across multiple Availability Zones must read and write the same POSIX file system at the same time. Which storage service should the SysOps administrator use?",
+            "options": [
+                "Amazon EFS, which provides a shared file system that mounts across Availability Zones",
+                "Amazon EBS with Multi-Attach in a single Availability Zone",
+                "Instance store volumes attached to each instance",
+                "A file gateway mounted directly from Amazon S3"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon EFS is a shared, elastic NFS file system that many instances in different AZs can mount concurrently. EBS Multi-Attach is limited to a single AZ and one file system semantics per volume, instance store is ephemeral local storage, and mounting S3 does not give a true shared POSIX file system.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-022",
+            "domain": "Reliability and Business Continuity",
+            "stem": "A global application uses DynamoDB and must keep tables synchronized across several Regions with read and write access in each Region. Which feature should be enabled?",
+            "options": [
+                "A read replica attached to the table",
+                "DynamoDB global tables, which replicate between Regions with multi-Region writes",
+                "DynamoDB Accelerator (DAX) in front of the table",
+                "On-demand backups copied to another Region"
+            ],
+            "correct_index": 1,
+            "explanation": "Global tables provide active-active replication so every Region can serve reads and writes. DAX is an in-memory cache, backups are not live replication, and DynamoDB does not use read replicas the way relational engines do.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-023",
+            "domain": "Reliability and Business Continuity",
+            "stem": "Instances in an Auto Scaling group behind a load balancer occasionally become unresponsive to requests while the instance-level status still reports healthy. How can the group replace these instances automatically?",
+            "options": [
+                "Increase the group cooldown period",
+                "Rely on the default EC2 status checks only",
+                "Enable Elastic Load Balancing health checks on the Auto Scaling group so a failing load balancer health check triggers replacement",
+                "Enable EC2 detailed monitoring on the group"
+            ],
+            "correct_index": 2,
+            "explanation": "ELB health checks mark an instance unhealthy when it fails application-level checks, and the Auto Scaling group then replaces it. EC2 status checks and status-check-based health only detect hypervisor or instance failures, and cooldown affects scaling timing rather than health.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Reliability and Business Continuity"
+        },
+        {
+            "id": "aws-soa-024",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A team must provision an identical three-tier environment repeatedly in multiple Regions and keep the infrastructure defined as version-controlled code. Which service should the SysOps administrator use?",
+            "options": [
+                "Manual creation of each resource in the AWS Management Console",
+                "A single AMI shared to every Region",
+                "AWS Trusted Advisor recommendations",
+                "AWS CloudFormation with templates stored in a code repository"
+            ],
+            "correct_index": 3,
+            "explanation": "CloudFormation templates are declarative, version-controlled documents that create the same stack repeatedly in any Region. Manual console work is not repeatable, an AMI captures only a disk image, and Trusted Advisor gives advice rather than provisioning.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-025",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "Before updating a production CloudFormation stack, a SysOps administrator must preview exactly which resources will be added, modified, or replaced. Which feature provides this preview?",
+            "options": [
+                "A change set created against the stack before executing the update",
+                "Drift detection run against the stack",
+                "A nested stack that groups related resources",
+                "A StackSet that deploys to multiple accounts"
+            ],
+            "correct_index": 0,
+            "explanation": "A change set compares the current stack template with the proposed template and lists the resource changes before you execute them. Drift detection reports out-of-band changes, nested stacks organize resources, and StackSets deploy across accounts.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-026",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A team deploys a web application with Elastic Beanstalk and wants zero-downtime releases with the ability to switch back to the previous version instantly. Which approach should be used?",
+            "options": [
+                "Rebuild the environment from the base AMI for each release",
+                "Create a new environment for the new version and swap the environment URLs to cut over and to roll back",
+                "Use the all-at-once deployment policy for every release",
+                "Deploy directly to the running instances over SSH"
+            ],
+            "correct_index": 1,
+            "explanation": "Launching a parallel environment and swapping the CNAME URLs gives a blue/green cutover and an instant rollback by swapping back. All-at-once causes downtime, manual SSH changes bypass version control, and rebuilding from a base AMI discards the deployment artifact.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-027",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A company must apply operating system patches to an Auto Scaling group of EC2 instances on a monthly schedule and report patch compliance. Which approach should the SysOps administrator use?",
+            "options": [
+                "Rebuilding the golden AMI once a month and terminating instances",
+                "An AWS Config rule that scans instance configuration",
+                "A Systems Manager maintenance window with a Patch Manager baseline association that reports compliance",
+                "Logging in to each instance and running the package manager manually"
+            ],
+            "correct_index": 2,
+            "explanation": "Patch Manager applies a patch baseline during a maintenance window and records per-instance compliance. Manual patching does not scale, image rebuilds do not patch running instances, and Config rules evaluate configuration rather than install patches.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-028",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A recurring operational task restarts a service on an EC2 instance and then creates an AMI of the instance. Which Systems Manager capability can encode these steps and run them on demand or on a schedule?",
+            "options": [
+                "Systems Manager Parameter Store storing the steps as text",
+                "Systems Manager Session Manager opening an interactive shell",
+                "Systems Manager Inventory collecting installed software",
+                "Systems Manager Automation runbooks triggered manually or by a schedule"
+            ],
+            "correct_index": 3,
+            "explanation": "Automation runbooks are predefined or custom documents that execute a sequence of actions such as restarting a service and creating an AMI. Parameter Store only stores values, Session Manager is interactive, and Inventory only collects metadata.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-029",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "An application must read configuration values, including a database password, at runtime without embedding them in the AMI. Which AWS service should store these values and supply them to the application?",
+            "options": [
+                "Systems Manager Parameter Store using a SecureString parameter encrypted with KMS",
+                "A text file baked into the AMI at build time",
+                "A public S3 object that anyone can read",
+                "An environment variable hard-coded in the launch template"
+            ],
+            "correct_index": 0,
+            "explanation": "A SecureString parameter keeps the secret encrypted with KMS and lets the application retrieve it at runtime with an IAM role. Baking the value into the AMI or a launch template exposes it to anyone who reads the image or template, and a public S3 object leaks the secret outright.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-030",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "An administrator suspects that someone changed a security group outside of CloudFormation and that the deployed resources no longer match the template. Which feature detects this difference?",
+            "options": [
+                "An AWS Config recorder with a delivery channel",
+                "CloudFormation drift detection run on the stack",
+                "A change set created against the stack",
+                "A StackSet deployed to the account"
+            ],
+            "correct_index": 1,
+            "explanation": "Drift detection compares the actual resource configuration with the stack template and reports resources that have been modified out of band. A change set previews a future update, StackSets deploy across accounts, and a Config recorder stores configuration history rather than a template comparison.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-031",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A team wants to automate application deployments to existing EC2 instances, control how many instances are taken offline at a time, and roll back a failed deployment. Which service should be used?",
+            "options": [
+                "Elastic Beanstalk environment rebuilds for each release",
+                "AWS Config rules that enforce the application version",
+                "AWS CodeDeploy with a deployment configuration that sets the batch size and automatic rollback",
+                "AWS CloudFormation stack updates for each release"
+            ],
+            "correct_index": 2,
+            "explanation": "CodeDeploy deploys application revisions to instances, supports in-place or blue/green strategies with configurable batches, and can roll back on failure. CloudFormation manages infrastructure, Elastic Beanstalk manages whole environments, and Config rules only evaluate configuration.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-032",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A security team must deploy the same IAM role and AWS Config rules to every account in an AWS Organization from one template. Which CloudFormation feature should be used?",
+            "options": [
+                "A single stack deployed manually in each account",
+                "A change set applied to the management account",
+                "A nested stack that imports the accounts",
+                "CloudFormation StackSets with service-managed permissions across the organization"
+            ],
+            "correct_index": 3,
+            "explanation": "StackSets create, update, and delete stacks across many accounts and Regions from a single template, and service-managed permissions integrate with Organizations. Manual per-account stacks do not scale, a change set previews one stack update, and nested stacks only organize resources within a stack.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-033",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "An operations team builds a hardened golden AMI each month and must ensure that new Auto Scaling instances always launch from the newest approved image. What should the team maintain?",
+            "options": [
+                "A launch template that references the latest approved AMI, with the Auto Scaling group configured to use the newest template version",
+                "A launch configuration that is permanently pinned to the first AMI",
+                "A CloudFormation stack that never updates the AMI reference",
+                "An instance profile that selects the AMI at boot"
+            ],
+            "correct_index": 0,
+            "explanation": "Launch templates are versioned and the Auto Scaling group can use the latest version, so a refreshed AMI propagates to new instances. Launch configurations are legacy and pinned, stacks must be updated to change the AMI, and an instance profile carries permissions rather than image selection.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-034",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "A SysOps administrator wants to automate the creation, testing, and distribution of a hardened AMI to multiple Regions and accounts on a schedule. Which service is purpose-built for this?",
+            "options": [
+                "AWS Config with a rule that checks the AMI",
+                "EC2 Image Builder with a pipeline and distribution settings",
+                "A cron job on a single EC2 instance that runs the build scripts",
+                "AWS CodeBuild running the image build by itself"
+            ],
+            "correct_index": 1,
+            "explanation": "EC2 Image Builder defines build and test components in a pipeline and can distribute the resulting AMI to target Regions and accounts. A cron job is unmanaged, CodeBuild is a generic build service without image lifecycle, and Config only evaluates configuration.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-035",
+            "domain": "Deployment, Provisioning, and Automation",
+            "stem": "When an Auto Scaling group terminates an instance, a team must copy application logs to Amazon S3 before the instance shuts down. Which Auto Scaling feature allows this?",
+            "options": [
+                "A scheduled scaling action that runs at shutdown time",
+                "A target-tracking policy that delays termination",
+                "A terminating lifecycle hook that holds the instance in the wait state until the copy completes",
+                "A launch lifecycle hook that runs before the instance starts"
+            ],
+            "correct_index": 2,
+            "explanation": "A terminating lifecycle hook pauses the instance in the terminating wait state so a script can run cleanup such as copying logs before the instance is released. Launch hooks run on start, and scheduled scaling and target-tracking policies change capacity rather than pausing termination.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Deployment, Provisioning, and Automation"
+        },
+        {
+            "id": "aws-soa-036",
+            "domain": "Security and Compliance",
+            "stem": "An application running on EC2 must access Amazon S3 without storing long-term AWS credentials on the instance. What should the SysOps administrator configure?",
+            "options": [
+                "An IAM user access key written into a file on the instance",
+                "A bucket ACL that grants public read access",
+                "A security group rule that allows outbound HTTPS to S3",
+                "An IAM role attached to the instance through an instance profile so the application gets temporary credentials"
+            ],
+            "correct_index": 3,
+            "explanation": "An instance profile delivers an IAM role's temporary, automatically rotated credentials to the instance. A stored access key is a long-term credential that can leak, public bucket ACLs expose data, and a security group rule affects network reachability rather than authorization.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-037",
+            "domain": "Security and Compliance",
+            "stem": "A security team must prevent an S3 bucket from ever being made public, even if an administrator later attaches a public bucket policy. Which setting should the SysOps administrator apply?",
+            "options": [
+                "Enable S3 Block Public Access at the bucket or account level",
+                "Enable S3 Versioning on the bucket",
+                "Add a lifecycle rule that expires objects after 30 days",
+                "Enable server access logging on the bucket"
+            ],
+            "correct_index": 0,
+            "explanation": "S3 Block Public Access overrides existing and future public policies and ACLs, keeping the bucket private. Versioning, lifecycle rules, and server access logging do not restrict public exposure.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-038",
+            "domain": "Security and Compliance",
+            "stem": "A compliance rule requires that all requests to an S3 bucket use HTTPS and that unencrypted requests be rejected. Which mechanism should the SysOps administrator use?",
+            "options": [
+                "A security group rule that blocks port 80 to the bucket",
+                "A bucket policy that denies requests when the aws:SecureTransport condition is false",
+                "Default encryption with SSE-S3 on the bucket",
+                "An IAM password policy that requires long passwords"
+            ],
+            "correct_index": 1,
+            "explanation": "A bucket policy with a condition on aws:SecureTransport denies any request made over plain HTTP, enforcing TLS. Default encryption protects data at rest but not the transport, and password policies and security groups do not gate S3 API transport for a bucket.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-039",
+            "domain": "Security and Compliance",
+            "stem": "A team needs stateless, subnet-level traffic filtering that can explicitly deny traffic from a specific CIDR range. Which AWS resource provides this capability?",
+            "options": [
+                "A route table associated with the subnet",
+                "An internet gateway in the VPC",
+                "A network ACL applied to the subnet",
+                "A security group attached to the instances"
+            ],
+            "correct_index": 2,
+            "explanation": "Network ACLs are stateless and evaluate ordered allow and deny rules at the subnet boundary. Security groups are stateful and allow-only, route tables direct traffic rather than filter it, and an internet gateway provides connectivity.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-040",
+            "domain": "Security and Compliance",
+            "stem": "A SysOps administrator wants managed threat detection that identifies suspicious API activity and cryptocurrency mining in AWS accounts without deploying agents. Which service should be enabled?",
+            "options": [
+                "Amazon Inspector",
+                "AWS Shield Advanced",
+                "AWS WAF",
+                "Amazon GuardDuty"
+            ],
+            "correct_index": 3,
+            "explanation": "GuardDuty continuously analyzes CloudTrail, VPC Flow Logs, and DNS logs to detect threats such as credential misuse and cryptomining. Inspector scans workloads for vulnerabilities, Shield Advanced mitigates DDoS, and WAF filters web requests.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-041",
+            "domain": "Security and Compliance",
+            "stem": "A company wants automated vulnerability assessment of EC2 instances and their operating system packages against known CVEs. Which service should the SysOps administrator use?",
+            "options": [
+                "Amazon Inspector",
+                "Amazon GuardDuty",
+                "AWS Trusted Advisor",
+                "AWS Config"
+            ],
+            "correct_index": 0,
+            "explanation": "Inspector scans EC2 instances and packages for software vulnerabilities and unintended network exposure. GuardDuty detects threats, Trusted Advisor gives best-practice guidance, and Config evaluates resource configuration.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-042",
+            "domain": "Security and Compliance",
+            "stem": "An IAM user has an identity policy that allows the S3 GetObject action on a bucket, but a bucket policy explicitly denies the same action for that user. What is the effect of the two policies?",
+            "options": [
+                "The request is retried with a different permission set",
+                "Access is denied because an explicit deny in any policy always wins",
+                "Access is allowed because identity policies take precedence over resource policies",
+                "Access is allowed because GetObject is a read-only action"
+            ],
+            "correct_index": 1,
+            "explanation": "IAM evaluates all applicable policies and an explicit deny anywhere overrides any allow. Identity versus resource policy precedence only matters among allows, read-only actions are still denied, and denied requests are not silently retried.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-043",
+            "domain": "Security and Compliance",
+            "stem": "An auditor requests the AWS SOC 2 report and the shared responsibility matrix. Where should the SysOps administrator obtain these documents?",
+            "options": [
+                "AWS Config, which records resource configuration",
+                "The AWS Billing and Cost Management console",
+                "AWS Artifact, which provides on-demand access to AWS compliance reports and agreements",
+                "AWS Trusted Advisor, which lists cost and security checks"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Artifact is the self-service portal for AWS compliance reports, certifications, and agreements. Trusted Advisor, Config, and the billing console do not host audit reports.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-044",
+            "domain": "Security and Compliance",
+            "stem": "A company must control exactly which principals may use a KMS key and must be able to disable that key immediately if it is compromised. Which key type should the SysOps administrator create?",
+            "options": [
+                "An AWS managed key owned by the service",
+                "An S3 managed key used only for SSE-S3",
+                "A CloudHSM cluster key that cannot be disabled",
+                "A customer managed key with a key policy that names the allowed principals"
+            ],
+            "correct_index": 3,
+            "explanation": "A customer managed key lets the account define the key policy and disable or schedule deletion of the key at any time. AWS managed and S3 managed keys are controlled by AWS and cannot be disabled this way.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-045",
+            "domain": "Security and Compliance",
+            "stem": "A company wants to prevent member accounts from disabling CloudTrail or leaving the organization. Which governance control should the SysOps administrator apply?",
+            "options": [
+                "A service control policy attached to the organizational unit in AWS Organizations",
+                "An IAM group with a deny policy created in each account",
+                "A bucket policy on the CloudTrail bucket",
+                "A security group that restricts the management APIs"
+            ],
+            "correct_index": 0,
+            "explanation": "Service control policies set the maximum permissions for principals in member accounts, so they can block actions such as cloudtrail:StopLogging and organizations:LeaveOrganization. IAM groups cannot override account root, bucket policies affect S3 only, and security groups filter network traffic rather than API calls.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-soa-046",
+            "domain": "Networking and Content Delivery",
+            "stem": "EC2 instances in a public subnet cannot reach the internet even though the subnet has an associated route table. Which component must the route table target for outbound internet traffic?",
+            "options": [
+                "A virtual private gateway for the VPC",
+                "An internet gateway attached to the VPC",
+                "A NAT gateway in the same subnet",
+                "An egress-only internet gateway"
+            ],
+            "correct_index": 1,
+            "explanation": "A public subnet routes 0.0.0.0/0 to an internet gateway that is attached to the VPC. A NAT gateway serves private subnets, an egress-only gateway handles outbound IPv6 only, and a virtual private gateway connects an on-premises network.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-047",
+            "domain": "Networking and Content Delivery",
+            "stem": "EC2 instances in a private subnet must download patches from the internet but must not be reachable from the internet. Which component should be deployed in a public subnet and referenced by the private route table?",
+            "options": [
+                "A gateway VPC endpoint for S3",
+                "A transit gateway that connects VPCs",
+                "A NAT gateway, which translates outbound traffic to its elastic IP address",
+                "An internet gateway, which allows inbound connections"
+            ],
+            "correct_index": 2,
+            "explanation": "A NAT gateway gives private subnets outbound-only internet access using its public IP. An internet gateway allows inbound traffic, a gateway endpoint only serves supported services, and a transit gateway connects networks rather than providing internet egress.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-048",
+            "domain": "Networking and Content Delivery",
+            "stem": "A private subnet reaches Amazon S3 over the internet through a NAT gateway, and the team wants to stop the data-processing charges and keep S3 traffic on the AWS network. What should the SysOps administrator create?",
+            "options": [
+                "An interface VPC endpoint for S3 with a private IP per subnet",
+                "A VPC peering connection to an S3 VPC",
+                "An egress-only internet gateway on the subnet",
+                "A gateway VPC endpoint for S3 with the endpoint prefix added to the subnet route table"
+            ],
+            "correct_index": 3,
+            "explanation": "Gateway endpoints for S3 and DynamoDB route traffic privately with no NAT data-processing charges and are referenced in the route table. Interface endpoints are for other services and cost per hour, peering connects VPCs, and an egress-only gateway is for IPv6.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-049",
+            "domain": "Networking and Content Delivery",
+            "stem": "A company needs a load balancer that terminates HTTPS and routes requests to different target groups based on the URL path. Which load balancer type should be used?",
+            "options": [
+                "An Application Load Balancer",
+                "A Network Load Balancer",
+                "A Classic Load Balancer",
+                "A Gateway Load Balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "Application Load Balancers operate at Layer 7 and support path-based, host-based, and header-based routing with TLS termination. Network Load Balancers work at Layer 4, Classic Load Balancers lack content routing, and Gateway Load Balancers insert third-party appliances.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-050",
+            "domain": "Networking and Content Delivery",
+            "stem": "An application requires a load balancer that preserves the client source IP for TCP traffic and provides a static IP address per Availability Zone. Which type should be used?",
+            "options": [
+                "An Amazon API Gateway HTTP API",
+                "A Network Load Balancer",
+                "An Application Load Balancer",
+                "A Gateway Load Balancer"
+            ],
+            "correct_index": 1,
+            "explanation": "Network Load Balancers operate at Layer 4, preserve the source IP, and offer static IP addresses per AZ. Application Load Balancers terminate HTTP and do not provide static IPs, Gateway Load Balancers insert appliances, and API Gateway manages APIs rather than raw TCP.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-051",
+            "domain": "Networking and Content Delivery",
+            "stem": "A team must point a zone apex record such as example.com at an AWS resource like a CloudFront distribution without paying for queries. Which Route 53 record type should be used?",
+            "options": [
+                "An A record containing a fixed public IP address",
+                "A TXT record with the distribution identifier",
+                "An alias record that maps the apex to the AWS resource",
+                "A CNAME record pointing to the distribution domain name"
+            ],
+            "correct_index": 2,
+            "explanation": "Alias records can be created at the zone apex, resolve to AWS resources automatically, and are not charged for queries. CNAME records are not allowed at the apex, fixed IP A records break when the resource IP changes, and TXT records carry text rather than routing.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-052",
+            "domain": "Networking and Content Delivery",
+            "stem": "A global application is deployed in multiple Regions and must send each user to the Region that provides the lowest network latency. Which Route 53 routing policy should be used?",
+            "options": [
+                "Weighted routing",
+                "Failover routing",
+                "Multivalue answer routing",
+                "Latency-based routing"
+            ],
+            "correct_index": 3,
+            "explanation": "Latency-based routing directs users to the Region with the lowest measured latency. Weighted routing splits by percentage, failover routing switches on health, and multivalue answer routing returns multiple healthy records for client-side selection.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-053",
+            "domain": "Networking and Content Delivery",
+            "stem": "A company serves static assets from Amazon S3 and wants them cached at edge locations worldwide to reduce latency and origin load. Which service should the SysOps administrator place in front of the bucket?",
+            "options": [
+                "Amazon CloudFront with the S3 bucket configured as the origin",
+                "A NAT gateway in front of the bucket",
+                "An internet gateway in front of the bucket",
+                "AWS Transit Gateway with the bucket as an attachment"
+            ],
+            "correct_index": 0,
+            "explanation": "CloudFront caches content at global edge locations and pulls from the S3 origin, cutting latency and origin requests. NAT and internet gateways provide VPC connectivity, and Transit Gateway connects networks, none of which cache content at the edge.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-054",
+            "domain": "Networking and Content Delivery",
+            "stem": "A media company serves private content through CloudFront and must stop users from bypassing CloudFront and accessing the S3 objects directly. What should the SysOps administrator configure?",
+            "options": [
+                "Signed cookies that expire after one hour",
+                "An origin access identity or origin access control with a bucket policy that allows only the distribution",
+                "A security group attached to the S3 bucket",
+                "A public bucket policy so objects load quickly"
+            ],
+            "correct_index": 1,
+            "explanation": "An origin access identity or origin access control lets CloudFront authenticate to S3, and the bucket policy grants access only to that distribution, blocking direct requests. Security groups do not apply to S3, a public policy removes the restriction, and signed cookies restrict which users can view content but not direct bucket access.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-055",
+            "domain": "Networking and Content Delivery",
+            "stem": "A company with dozens of VPCs wants a hub-and-spoke topology that connects them all and also links to an on-premises network without building full-mesh peering. Which service should be used?",
+            "options": [
+                "An internet gateway shared by every VPC",
+                "A NAT gateway in each VPC",
+                "AWS Transit Gateway acting as a central hub for the VPCs and the on-premises connection",
+                "VPC peering connections in a full mesh"
+            ],
+            "correct_index": 2,
+            "explanation": "Transit Gateway is a regional hub that connects many VPCs and on-premises networks with a single attachment each, avoiding a full mesh. Full-mesh peering grows unmanageably, an internet gateway provides public connectivity, and a NAT gateway only gives outbound access.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-056",
+            "domain": "Networking and Content Delivery",
+            "stem": "A company must connect its on-premises data center to a VPC over an encrypted tunnel across the internet. Which components should the SysOps administrator configure?",
+            "options": [
+                "A NAT gateway in the VPC and a static route on premises",
+                "A gateway VPC endpoint to the data center",
+                "An internet gateway with a public IP on each server",
+                "A virtual private gateway on the VPC and a customer gateway on premises joined by an AWS Site-to-Site VPN connection"
+            ],
+            "correct_index": 3,
+            "explanation": "A Site-to-Site VPN connects a virtual private gateway on the AWS side to a customer gateway on the premises side with encrypted IPsec tunnels. NAT gateways provide outbound internet, VPC endpoints are for AWS services, and public IPs do not create a private encrypted link.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-057",
+            "domain": "Networking and Content Delivery",
+            "stem": "EC2 instances with IPv6 addresses in a private subnet must reach the internet outbound but must not be reachable inbound over IPv6. Which gateway should the SysOps administrator use?",
+            "options": [
+                "An egress-only internet gateway referenced by the subnet route table",
+                "A standard internet gateway with an IPv6 route",
+                "A NAT gateway configured for IPv6",
+                "A gateway VPC endpoint for IPv6"
+            ],
+            "correct_index": 0,
+            "explanation": "An egress-only internet gateway allows outbound IPv6 while blocking unsolicited inbound IPv6. A standard internet gateway permits inbound access, NAT gateways do not support IPv6, and gateway endpoints serve specific AWS services rather than general internet access.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Networking and Content Delivery"
+        },
+        {
+            "id": "aws-soa-058",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A company runs a steady-state workload on EC2 with predictable usage for the next three years and wants the largest possible discount. Which purchasing option should the SysOps administrator choose?",
+            "options": [
+                "Dedicated Hosts billed per host",
+                "A three-year all-upfront Compute Savings Plan or Standard Reserved Instance",
+                "On-Demand Instances billed by the second",
+                "Spot Instances that can be interrupted at any time"
+            ],
+            "correct_index": 1,
+            "explanation": "A three-year all-upfront commitment gives the deepest discount for a steady, predictable workload. On-Demand has no discount, Spot can be interrupted and suits fault-tolerant work, and Dedicated Hosts are for licensing and compliance rather than the lowest cost.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-059",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A batch-processing job runs on stateless instances and can tolerate interruptions, and the team wants the lowest possible compute cost. Which purchasing option should be used?",
+            "options": [
+                "Reserved Instances with a one-year term",
+                "Dedicated Instances on single-tenant hardware",
+                "Spot Instances, which use spare capacity at a steep discount",
+                "On-Demand Instances billed by the second"
+            ],
+            "correct_index": 2,
+            "explanation": "Spot Instances cost the least when the workload can be interrupted and restarted. On-Demand is the most expensive flexible option, Reserved Instances require a commitment for steady use, and Dedicated Instances are more expensive for isolation needs.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-060",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A SysOps administrator must identify EC2 instances that are over-provisioned and could move to a smaller instance type. Which service provides these recommendations?",
+            "options": [
+                "AWS Cost Explorer cost reports",
+                "AWS Trusted Advisor service limit checks",
+                "Amazon Inspector vulnerability findings",
+                "AWS Compute Optimizer"
+            ],
+            "correct_index": 3,
+            "explanation": "Compute Optimizer analyzes utilization and recommends rightsizing for EC2 and other resources. Cost Explorer shows spend over time, Trusted Advisor limit checks cover quotas, and Inspector reports vulnerabilities rather than sizing.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-061",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A database volume must sustain 40,000 IOPS with consistent sub-millisecond latency and be independent of volume size. Which EBS volume type should the SysOps administrator choose?",
+            "options": [
+                "io2 provisioned IOPS SSD",
+                "gp3 general purpose SSD",
+                "st1 throughput optimized HDD",
+                "sc1 cold HDD"
+            ],
+            "correct_index": 0,
+            "explanation": "io2 provisioned IOPS SSD delivers sustained high IOPS with low latency independent of capacity and is intended for demanding databases. gp3 caps at 16,000 IOPS, and st1 and sc1 are throughput-oriented HDD volumes that cannot meet this latency.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-062",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A read-heavy application repeatedly queries the same rows in a relational database, and the team wants to lower database load and latency by keeping frequent reads in memory. Which service should be used?",
+            "options": [
+                "Additional RDS read replicas for every query",
+                "Amazon ElastiCache with Redis or Memcached in front of the database",
+                "A larger EBS volume attached to the database instance",
+                "Amazon S3 with the query results stored as objects"
+            ],
+            "correct_index": 1,
+            "explanation": "ElastiCache is an in-memory cache that serves repeated reads without hitting the database, cutting load and latency. A larger volume or read replicas increase capacity without caching hot rows, and S3 is object storage rather than a query cache.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-063",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A company stores logs that are accessed frequently for the first 30 days and then rarely, and the access pattern is unpredictable. Which S3 storage class automatically moves objects to lower-cost tiers?",
+            "options": [
+                "S3 Glacier Deep Archive from the first day",
+                "S3 One Zone-IA for all objects",
+                "S3 Intelligent-Tiering, which monitors access and moves objects between tiers automatically",
+                "S3 Standard for all objects"
+            ],
+            "correct_index": 2,
+            "explanation": "Intelligent-Tiering observes access patterns and shifts objects to cheaper tiers without retrieval penalties, which suits unpredictable access. Standard stays expensive, Deep Archive is not suitable for frequent early access, and One Zone-IA is less durable and not automatic.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-064",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A workload has a predictable traffic spike every weekday at 8 AM, and the team wants capacity ready before the spike without over-provisioning all day. Which scaling approach is most appropriate?",
+            "options": [
+                "A target-tracking policy driven only by memory utilization",
+                "Manual scaling performed by an operator each morning",
+                "Disabling scaling and sizing the group for the peak",
+                "A scheduled scaling action that increases desired capacity shortly before the spike and decreases it afterward"
+            ],
+            "correct_index": 3,
+            "explanation": "Scheduled scaling raises capacity at a known time before the spike begins and lowers it afterward. Target tracking reacts to load but may lag the sudden spike, manual scaling is unreliable, and a permanently peak-sized group wastes money.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        },
+        {
+            "id": "aws-soa-065",
+            "domain": "Cost and Performance Optimization",
+            "stem": "A company wants better price-performance for a Linux workload that can be recompiled and is compatible with Arm architecture. Which EC2 instance choice should the SysOps administrator make?",
+            "options": [
+                "Graviton-based instances, which offer better price-performance for Arm-compatible workloads",
+                "The largest available x86 memory-optimized instances",
+                "Burstable T instances for the steady high load",
+                "Dedicated Hosts to improve processor speed"
+            ],
+            "correct_index": 0,
+            "explanation": "Graviton processors deliver better price-performance for workloads that support Arm. Oversized x86 memory-optimized instances cost more than needed, burstable instances are for intermittent load, and Dedicated Hosts do not increase per-core performance.",
+            "reference": "AWS Certified SysOps Administrator - Associate SOA-C02 Exam Guide - Cost and Performance Optimization"
+        }
+    ]
+}
