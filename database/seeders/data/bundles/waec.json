@@ -1,0 +1,718 @@
+{
+    "cert_key": "waec",
+    "title": "WAEC WASSCE Mathematics (Objective Paper)",
+    "issuer": "West African Examinations Council (WAEC)",
+    "region": "AFRICA",
+    "outline_file": "outlines/waec.json",
+    "variant_label": "WAEC Maths Objective Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 90,
+        "scoring": "50 of the 100 marks of Paper 1 (objective, no penalty)",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the WAEC WASSCE Mathematics syllabus (Paper 1 objective section). Not a capture of past exam questions.",
+    "source_label": "WAEC Mathematics practice bank",
+    "items": [
+        {
+            "id": "waec-001",
+            "domain": "Core Concepts",
+            "stem": "Find the simple interest on a principal of 45000 naira invested for 3 years at 8% per annum.",
+            "options": [
+                "10800 naira",
+                "3600 naira",
+                "1080 naira",
+                "13500 naira"
+            ],
+            "correct_index": 0,
+            "explanation": "Simple interest is I = PRT/100 = (45000 x 8 x 3)/100 = 10800 naira. The other values come from using the wrong time or rate.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Number and Numeration"
+        },
+        {
+            "id": "waec-002",
+            "domain": "Core Concepts",
+            "stem": "Express the number 0.000305 in standard form.",
+            "options": [
+                "3.05 x 10^4",
+                "3.05 x 10^-4",
+                "3.05 x 10^-3",
+                "30.5 x 10^-5"
+            ],
+            "correct_index": 1,
+            "explanation": "Moving the decimal point four places to the right gives 3.05, so the index is -4 and 0.000305 = 3.05 x 10^-4.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Number and Numeration"
+        },
+        {
+            "id": "waec-003",
+            "domain": "Core Concepts",
+            "stem": "Convert the binary number 1101 to a number in base ten.",
+            "options": [
+                "26",
+                "9",
+                "13",
+                "11"
+            ],
+            "correct_index": 2,
+            "explanation": "The binary 1101 is 1x8 + 1x4 + 0x2 + 1x1 = 8 + 4 + 1 = 13 in base ten.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Number Bases"
+        },
+        {
+            "id": "waec-004",
+            "domain": "Core Concepts",
+            "stem": "Find the least common multiple of 12, 18 and 24.",
+            "options": [
+                "36",
+                "144",
+                "216",
+                "72"
+            ],
+            "correct_index": 3,
+            "explanation": "Writing each in prime factors gives 12 = 2^2 x 3, 18 = 2 x 3^2 and 24 = 2^3 x 3, so the LCM is 2^3 x 3^2 = 72.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Number and Numeration"
+        },
+        {
+            "id": "waec-005",
+            "domain": "Core Concepts",
+            "stem": "Simplify the expression 3(2x - 5) - 2(x - 4).",
+            "options": [
+                "4x - 7",
+                "4x + 7",
+                "4x - 23",
+                "8x - 7"
+            ],
+            "correct_index": 0,
+            "explanation": "Expanding gives 6x - 15 - 2x + 8, and collecting like terms gives 4x - 7.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Algebraic Processes"
+        },
+        {
+            "id": "waec-006",
+            "domain": "Core Concepts",
+            "stem": "Factorise the expression x^2 - 9 completely.",
+            "options": [
+                "(x - 3)^2",
+                "(x - 3)(x + 3)",
+                "(x - 3)(x - 3)",
+                "(x - 9)(x + 1)"
+            ],
+            "correct_index": 1,
+            "explanation": "This is a difference of two squares, so x^2 - 9 = x^2 - 3^2 = (x - 3)(x + 3).",
+            "reference": "WAEC WASSCE Mathematics syllabus - Algebraic Processes"
+        },
+        {
+            "id": "waec-007",
+            "domain": "Core Concepts",
+            "stem": "Make x the subject of the formula y = (3x - 5)/2.",
+            "options": [
+                "x = (y + 5)/3",
+                "x = 3(2y + 5)",
+                "x = (2y + 5)/3",
+                "x = (2y - 5)/3"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiply both sides by 2 to get 2y = 3x - 5, then add 5 and divide by 3 to obtain x = (2y + 5)/3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Change of Subject of Formula"
+        },
+        {
+            "id": "waec-008",
+            "domain": "Core Concepts",
+            "stem": "Solve the simultaneous equations x + y = 7 and x - y = 3.",
+            "options": [
+                "x = 2, y = 5",
+                "x = 4, y = 3",
+                "x = 6, y = 1",
+                "x = 5, y = 2"
+            ],
+            "correct_index": 3,
+            "explanation": "Adding the two equations gives 2x = 10, so x = 5; substituting back gives y = 7 - 5 = 2.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Simultaneous Equations"
+        },
+        {
+            "id": "waec-009",
+            "domain": "Core Concepts",
+            "stem": "If A = {1, 2, 3, 4, 5} and B = {3, 4, 5, 6, 7}, find the set A intersection B.",
+            "options": [
+                "{3, 4, 5}",
+                "{1, 2, 6, 7}",
+                "{1, 2, 3, 4, 5, 6, 7}",
+                "{ }"
+            ],
+            "correct_index": 0,
+            "explanation": "The intersection contains the elements common to both sets, namely 3, 4 and 5.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sets"
+        },
+        {
+            "id": "waec-010",
+            "domain": "Core Concepts",
+            "stem": "In a class of 40 students, 25 study Mathematics and 20 study Physics, while 10 study both subjects. How many students study neither subject?",
+            "options": [
+                "0",
+                "5",
+                "15",
+                "10"
+            ],
+            "correct_index": 1,
+            "explanation": "The number studying at least one subject is 25 + 20 - 10 = 35, so the number studying neither is 40 - 35 = 5.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sets"
+        },
+        {
+            "id": "waec-011",
+            "domain": "Core Concepts",
+            "stem": "How many subsets does a set with 5 elements have?",
+            "options": [
+                "10",
+                "64",
+                "32",
+                "25"
+            ],
+            "correct_index": 2,
+            "explanation": "A set with n elements has 2^n subsets, and 2^5 = 32.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sets"
+        },
+        {
+            "id": "waec-012",
+            "domain": "Core Concepts",
+            "stem": "A sum of 7200 naira is divided between two people in the ratio 3 to 5. How much does the person receiving the larger share get?",
+            "options": [
+                "2700 naira",
+                "3600 naira",
+                "4800 naira",
+                "4500 naira"
+            ],
+            "correct_index": 3,
+            "explanation": "The total number of parts is 3 + 5 = 8, so the larger share is (5/8) x 7200 = 4500 naira.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Ratio and Proportion"
+        },
+        {
+            "id": "waec-013",
+            "domain": "Core Concepts",
+            "stem": "If 8 identical pens cost 2400 naira, what is the cost of 5 of the same pens?",
+            "options": [
+                "1500 naira",
+                "1200 naira",
+                "1800 naira",
+                "3000 naira"
+            ],
+            "correct_index": 0,
+            "explanation": "One pen costs 2400/8 = 300 naira, so 5 pens cost 5 x 300 = 1500 naira.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Ratio and Proportion"
+        },
+        {
+            "id": "waec-014",
+            "domain": "Core Concepts",
+            "stem": "Six workers complete a job in 10 days. How many days will 15 workers take to complete the same job, working at the same rate?",
+            "options": [
+                "15",
+                "4",
+                "25",
+                "9"
+            ],
+            "correct_index": 1,
+            "explanation": "The job needs 6 x 10 = 60 worker-days, so 15 workers need 60/15 = 4 days.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Inverse Proportion"
+        },
+        {
+            "id": "waec-015",
+            "domain": "Core Concepts",
+            "stem": "A trader bought an article for 5000 naira and sold it for 6000 naira. What is the percentage profit?",
+            "options": [
+                "16.7%",
+                "25%",
+                "20%",
+                "10%"
+            ],
+            "correct_index": 2,
+            "explanation": "Profit is 6000 - 5000 = 1000 naira, so percentage profit is (1000/5000) x 100 = 20%.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Percentages"
+        },
+        {
+            "id": "waec-016",
+            "domain": "Core Concepts",
+            "stem": "A mother is three times as old as her daughter. In twelve years she will be twice as old as her daughter. Find the daughter's present age.",
+            "options": [
+                "8 years",
+                "10 years",
+                "6 years",
+                "12 years"
+            ],
+            "correct_index": 3,
+            "explanation": "Let the daughter be d years; then 3d + 12 = 2(d + 12), which gives 3d + 12 = 2d + 24, so d = 12.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Word Problems"
+        },
+        {
+            "id": "waec-017",
+            "domain": "Core Concepts",
+            "stem": "Simplify the expression 2/3 + (1/4) x (2/5).",
+            "options": [
+                "23/30",
+                "13/30",
+                "11/15",
+                "7/30"
+            ],
+            "correct_index": 0,
+            "explanation": "First (1/4) x (2/5) = 2/20 = 1/10, then 2/3 + 1/10 = 20/30 + 3/30 = 23/30.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Fractions"
+        },
+        {
+            "id": "waec-018",
+            "domain": "Core Concepts",
+            "stem": "Simplify the expression (2x^3 y^2)(3x^2 y).",
+            "options": [
+                "6x^5 y^2",
+                "6x^5 y^3",
+                "6x^6 y^2",
+                "5x^5 y^3"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiply the coefficients to get 6, add the powers of x to get x^5, and add the powers of y to get y^3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Indices"
+        },
+        {
+            "id": "waec-019",
+            "domain": "Problem Solving",
+            "stem": "Solve the quadratic equation x^2 - 5x + 6 = 0.",
+            "options": [
+                "x = 1 or x = 6",
+                "x = -1 or x = -6",
+                "x = 2 or x = 3",
+                "x = -2 or x = -3"
+            ],
+            "correct_index": 2,
+            "explanation": "Factorising gives (x - 2)(x - 3) = 0, so x = 2 or x = 3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Quadratic Equations"
+        },
+        {
+            "id": "waec-020",
+            "domain": "Problem Solving",
+            "stem": "Form the quadratic equation whose roots are 3 and -5.",
+            "options": [
+                "x^2 - 2x - 15 = 0",
+                "x^2 + 2x + 15 = 0",
+                "x^2 - 8x - 15 = 0",
+                "x^2 + 2x - 15 = 0"
+            ],
+            "correct_index": 3,
+            "explanation": "The sum of the roots is -2 and the product is -15, so the equation is x^2 - (sum)x + product = x^2 + 2x - 15 = 0.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Quadratic Equations"
+        },
+        {
+            "id": "waec-021",
+            "domain": "Problem Solving",
+            "stem": "Find the discriminant of the quadratic equation 2x^2 - 4x + 1 = 0.",
+            "options": [
+                "8",
+                "-8",
+                "24",
+                "0"
+            ],
+            "correct_index": 0,
+            "explanation": "The discriminant is b^2 - 4ac = (-4)^2 - 4(2)(1) = 16 - 8 = 8.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Quadratic Equations"
+        },
+        {
+            "id": "waec-022",
+            "domain": "Problem Solving",
+            "stem": "The angles of a triangle are in the ratio 2 to 3 to 4. Find the size of the largest angle.",
+            "options": [
+                "100 degrees",
+                "80 degrees",
+                "90 degrees",
+                "60 degrees"
+            ],
+            "correct_index": 1,
+            "explanation": "The parts total 9 and the angles sum to 180 degrees, so the largest angle is (4/9) x 180 = 80 degrees.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Geometry"
+        },
+        {
+            "id": "waec-023",
+            "domain": "Problem Solving",
+            "stem": "A chord of a circle is 6 cm from the centre of a circle of radius 10 cm. Calculate the length of the chord.",
+            "options": [
+                "12 cm",
+                "20 cm",
+                "16 cm",
+                "8 cm"
+            ],
+            "correct_index": 2,
+            "explanation": "Half the chord is sqrt(10^2 - 6^2) = sqrt(64) = 8 cm, so the full chord is 2 x 8 = 16 cm.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Circle Geometry"
+        },
+        {
+            "id": "waec-024",
+            "domain": "Problem Solving",
+            "stem": "Find the area of a trapezium whose parallel sides are 12 cm and 8 cm and whose height is 5 cm.",
+            "options": [
+                "100 cm^2",
+                "40 cm^2",
+                "60 cm^2",
+                "50 cm^2"
+            ],
+            "correct_index": 3,
+            "explanation": "Area = (1/2)(sum of parallel sides)(height) = (1/2)(12 + 8)(5) = 50 cm^2.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Mensuration"
+        },
+        {
+            "id": "waec-025",
+            "domain": "Problem Solving",
+            "stem": "Calculate the volume of a cylinder of radius 7 cm and height 10 cm, taking pi as 22/7.",
+            "options": [
+                "1540 cm^3",
+                "440 cm^3",
+                "770 cm^3",
+                "2200 cm^3"
+            ],
+            "correct_index": 0,
+            "explanation": "Volume = pi r^2 h = (22/7)(7^2)(10) = (22/7)(49)(10) = 1540 cm^3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Mensuration"
+        },
+        {
+            "id": "waec-026",
+            "domain": "Problem Solving",
+            "stem": "Find the volume of a sphere of radius 3 cm, leaving the answer in terms of pi.",
+            "options": [
+                "9 pi cm^3",
+                "36 pi cm^3",
+                "12 pi cm^3",
+                "108 pi cm^3"
+            ],
+            "correct_index": 1,
+            "explanation": "Volume = (4/3) pi r^3 = (4/3) pi (27) = 36 pi cm^3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Mensuration"
+        },
+        {
+            "id": "waec-027",
+            "domain": "Problem Solving",
+            "stem": "A ladder 13 m long leans against a vertical wall with its foot 5 m from the wall. How far up the wall does the ladder reach?",
+            "options": [
+                "18 m",
+                "9 m",
+                "12 m",
+                "8 m"
+            ],
+            "correct_index": 2,
+            "explanation": "By Pythagoras theorem the height is sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12 m.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Pythagoras Theorem"
+        },
+        {
+            "id": "waec-028",
+            "domain": "Problem Solving",
+            "stem": "A student scored 60, 72, 55, 80 and 63 marks in five tests. Calculate the mean score.",
+            "options": [
+                "62",
+                "70",
+                "64",
+                "66"
+            ],
+            "correct_index": 3,
+            "explanation": "The total is 60 + 72 + 55 + 80 + 63 = 330, so the mean is 330/5 = 66.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Statistics"
+        },
+        {
+            "id": "waec-029",
+            "domain": "Problem Solving",
+            "stem": "Find the median of the numbers 7, 3, 9, 4, 8 and 6.",
+            "options": [
+                "6.5",
+                "6",
+                "7",
+                "5.5"
+            ],
+            "correct_index": 0,
+            "explanation": "Arranged in order the numbers are 3, 4, 6, 7, 8, 9, so the median is the mean of the middle pair, (6 + 7)/2 = 6.5.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Statistics"
+        },
+        {
+            "id": "waec-030",
+            "domain": "Problem Solving",
+            "stem": "The numbers of goals scored by a team in ten matches are 1, 0, 2, 1, 3, 1, 2, 0, 1 and 4. Find the modal number of goals.",
+            "options": [
+                "3",
+                "1",
+                "0",
+                "2"
+            ],
+            "correct_index": 1,
+            "explanation": "The value 1 occurs four times, more often than any other value, so the mode is 1.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Statistics"
+        },
+        {
+            "id": "waec-031",
+            "domain": "Problem Solving",
+            "stem": "A pie chart shows a family's monthly expenditure of 36000 naira. If food is represented by a sector of 120 degrees, how much is spent on food?",
+            "options": [
+                "18000 naira",
+                "9000 naira",
+                "12000 naira",
+                "6000 naira"
+            ],
+            "correct_index": 2,
+            "explanation": "The food sector is 120/360 = 1/3 of the circle, so the amount is (1/3) x 36000 = 12000 naira.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Statistics"
+        },
+        {
+            "id": "waec-032",
+            "domain": "Problem Solving",
+            "stem": "A fair die is thrown once. What is the probability of obtaining a number greater than 4?",
+            "options": [
+                "1/2",
+                "1/6",
+                "2/3",
+                "1/3"
+            ],
+            "correct_index": 3,
+            "explanation": "The numbers greater than 4 are 5 and 6, so the probability is 2/6 = 1/3.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Probability"
+        },
+        {
+            "id": "waec-033",
+            "domain": "Problem Solving",
+            "stem": "Find the next term of the sequence 2, 6, 12, 20, 30.",
+            "options": [
+                "42",
+                "40",
+                "44",
+                "36"
+            ],
+            "correct_index": 0,
+            "explanation": "The differences are 4, 6, 8 and 10, so the next difference is 12 and the next term is 30 + 12 = 42.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sequences and Series"
+        },
+        {
+            "id": "waec-034",
+            "domain": "Problem Solving",
+            "stem": "Find the sixth term of the arithmetic progression 5, 9, 13.",
+            "options": [
+                "24",
+                "25",
+                "29",
+                "21"
+            ],
+            "correct_index": 1,
+            "explanation": "Here a = 5 and d = 4, so the sixth term is a + 5d = 5 + 5(4) = 25.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sequences and Series"
+        },
+        {
+            "id": "waec-035",
+            "domain": "Problem Solving",
+            "stem": "A car travels 240 km in 3 hours. At the same average speed, how far will it travel in 5 hours?",
+            "options": [
+                "360 km",
+                "320 km",
+                "400 km",
+                "480 km"
+            ],
+            "correct_index": 2,
+            "explanation": "The average speed is 240/3 = 80 km per hour, so in 5 hours the car covers 80 x 5 = 400 km.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Speed and Rates"
+        },
+        {
+            "id": "waec-036",
+            "domain": "Problem Solving",
+            "stem": "Calculate the compound interest on 20000 naira for 2 years at 10% per annum.",
+            "options": [
+                "4000 naira",
+                "2000 naira",
+                "4400 naira",
+                "4200 naira"
+            ],
+            "correct_index": 3,
+            "explanation": "Amount = 20000 x (1.1)^2 = 24200 naira, so compound interest = 24200 - 20000 = 4200 naira.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Compound Interest"
+        },
+        {
+            "id": "waec-037",
+            "domain": "Communication",
+            "stem": "If 5 is added to twice a number the result is 17. Which equation represents this statement?",
+            "options": [
+                "2x + 5 = 17",
+                "2x - 5 = 17",
+                "5x + 2 = 17",
+                "x/2 + 5 = 17"
+            ],
+            "correct_index": 0,
+            "explanation": "Twice a number is 2x, and adding 5 gives 2x + 5, which the statement sets equal to 17.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Equations"
+        },
+        {
+            "id": "waec-038",
+            "domain": "Communication",
+            "stem": "Which expression represents the statement, three less than the product of a number and four?",
+            "options": [
+                "3x - 4",
+                "4x - 3",
+                "3 - 4x",
+                "4(x - 3)"
+            ],
+            "correct_index": 1,
+            "explanation": "The product of a number and four is 4x, and three less than this is 4x - 3.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Algebraic Expressions"
+        },
+        {
+            "id": "waec-039",
+            "domain": "Communication",
+            "stem": "The sum of a number and 8 is at least 15. Which inequality represents this statement?",
+            "options": [
+                "x - 8 >= 15",
+                "8x >= 15",
+                "x + 8 >= 15",
+                "x + 8 <= 15"
+            ],
+            "correct_index": 2,
+            "explanation": "At least means greater than or equal to, so the sum x + 8 is written as x + 8 >= 15.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Inequalities"
+        },
+        {
+            "id": "waec-040",
+            "domain": "Communication",
+            "stem": "The cost C naira of printing n copies of a booklet is given by C = 150 + 20n. What does the number 150 represent in this formula?",
+            "options": [
+                "the cost of printing one copy",
+                "the number of copies printed",
+                "the cost of printing all the copies",
+                "the fixed cost that does not depend on the number of copies"
+            ],
+            "correct_index": 3,
+            "explanation": "When n = 0, C = 150, so 150 is the fixed charge; the 20n part is the cost that varies with the number of copies.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Linear Relations"
+        },
+        {
+            "id": "waec-041",
+            "domain": "Communication",
+            "stem": "A graph of distance against time is a straight line passing through the origin. What does the gradient of the line represent?",
+            "options": [
+                "the speed of the object",
+                "the total distance travelled",
+                "the acceleration of the object",
+                "the time taken"
+            ],
+            "correct_index": 0,
+            "explanation": "Gradient is the change in distance divided by the change in time, which is speed; a straight line through the origin means constant speed.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Graphs"
+        },
+        {
+            "id": "waec-042",
+            "domain": "Communication",
+            "stem": "A sketch shows a rectangle of length L and width W. Which expression represents the perimeter of the rectangle?",
+            "options": [
+                "2L + W",
+                "2(L + W)",
+                "L x W",
+                "L + W"
+            ],
+            "correct_index": 1,
+            "explanation": "The perimeter adds all four sides, which is L + W + L + W, that is 2(L + W).",
+            "reference": "New General Mathematics for Senior Secondary Schools - Mensuration"
+        },
+        {
+            "id": "waec-043",
+            "domain": "Communication",
+            "stem": "The first term of a sequence is 3 and each term after the first is obtained by adding 4 to the previous term. Which formula gives the nth term?",
+            "options": [
+                "3n + 4",
+                "4n + 1",
+                "4n - 1",
+                "4n + 3"
+            ],
+            "correct_index": 2,
+            "explanation": "With first term 3 and common difference 4, the nth term is 3 + (n - 1)4 = 4n - 1.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sequences and Series"
+        },
+        {
+            "id": "waec-044",
+            "domain": "Communication",
+            "stem": "A man is 4 times as old as his son. If the son is p years old, which expression gives the man's age in 5 years time?",
+            "options": [
+                "4p - 5",
+                "4(p + 5)",
+                "p + 5",
+                "4p + 5"
+            ],
+            "correct_index": 3,
+            "explanation": "The man is now 4p years old, so in 5 years he will be 4p + 5 years old.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Algebraic Expressions"
+        },
+        {
+            "id": "waec-045",
+            "domain": "Communication",
+            "stem": "Consider the graph of y = ax^2 + bx + c in which a is a positive number. In which direction does the curve open?",
+            "options": [
+                "upward",
+                "downward",
+                "to the right",
+                "to the left"
+            ],
+            "correct_index": 0,
+            "explanation": "For a quadratic curve the sign of a decides the opening; when a is positive the parabola opens upward and when negative it opens downward.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Quadratic Graphs"
+        },
+        {
+            "id": "waec-046",
+            "domain": "Communication",
+            "stem": "The statement that y varies directly as the square of x can be written as which equation?",
+            "options": [
+                "y = x^2 + k",
+                "y = k x^2",
+                "y = k / x^2",
+                "y = kx"
+            ],
+            "correct_index": 1,
+            "explanation": "Direct variation with the square of x means y is a constant k times x squared, that is y = k x^2.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Variation"
+        },
+        {
+            "id": "waec-047",
+            "domain": "Communication",
+            "stem": "A sum of 4500 naira is shared between Ada and Bola so that Ada receives twice as much as Bola. If Bola receives b naira, which equation represents the sharing?",
+            "options": [
+                "b + 2 = 4500",
+                "b - 2 = 4500",
+                "3b = 4500",
+                "2b = 4500"
+            ],
+            "correct_index": 2,
+            "explanation": "Ada receives 2b, so the total is b + 2b = 3b, and 3b = 4500 gives the sharing.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Simple Equations"
+        },
+        {
+            "id": "waec-048",
+            "domain": "Communication",
+            "stem": "A taxi charges a fixed amount of 200 naira plus 50 naira for each kilometre travelled. Which equation gives the fare F for a journey of d kilometres?",
+            "options": [
+                "F = 50 + 200d",
+                "F = 250d",
+                "F = 200d - 50",
+                "F = 200 + 50d"
+            ],
+            "correct_index": 3,
+            "explanation": "The fixed charge is 200 naira and the distance charge is 50 naira per kilometre, so F = 200 + 50d.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Linear Relations"
+        },
+        {
+            "id": "waec-049",
+            "domain": "Communication",
+            "stem": "A pattern is formed by arranging dots so that the first figure has 4 dots and each following figure has 3 more dots than the one before it. How many dots are in the sixth figure?",
+            "options": [
+                "19",
+                "22",
+                "16",
+                "21"
+            ],
+            "correct_index": 0,
+            "explanation": "This is an arithmetic sequence with a = 4 and d = 3, so the sixth term is 4 + 5(3) = 19.",
+            "reference": "WAEC WASSCE Mathematics syllabus - Sequences and Series"
+        },
+        {
+            "id": "waec-050",
+            "domain": "Communication",
+            "stem": "Which mathematical expression correctly represents the sentence, the square of the sum of x and y?",
+            "options": [
+                "xy^2",
+                "(x + y)^2",
+                "x^2 + y^2",
+                "x^2 + y"
+            ],
+            "correct_index": 1,
+            "explanation": "The sum of x and y is (x + y), and the square of that sum is (x + y)^2, which differs from x^2 + y^2.",
+            "reference": "New General Mathematics for Senior Secondary Schools - Algebraic Expressions"
+        }
+    ]
+}

@@ -1,0 +1,1277 @@
+{
+    "cert_key": "jee-main",
+    "title": "JEE Main (Paper 1 - B.E./B.Tech)",
+    "issuer": "National Testing Agency (NTA)",
+    "outline_file": "outlines/jee-main.json",
+    "variant_label": "JEE Main Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 180,
+        "scoring": "300 (4 for MCQ, -1 negative; NAT no negative)",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the NTA JEE Main Paper 1 syllabus (Physics, Chemistry, Mathematics); numerical-answer items are restated as 4-option multiple choice for this practice pipeline. Not a capture of past exam questions.",
+    "source_label": "JEE Main practice bank",
+    "items": [
+        {
+            "id": "jee-main-001",
+            "domain": "Physics",
+            "stem": "The dimensional formula for the coefficient of viscosity of a fluid is:",
+            "options": [
+                "[M L^-1 T^-1]",
+                "[M L T^-1]",
+                "[M L^-1 T^-2]",
+                "[M L^-2 T^-1]"
+            ],
+            "correct_index": 0,
+            "explanation": "Viscous force F = eta A (dv/dx), so eta = F / (A dv/dx). Dimensions: [M L T^-2] / ([L^2][T^-1]) = [M L^-1 T^-1]. The other choices misplace the length or time power.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-002",
+            "domain": "Physics",
+            "stem": "A car starts from rest and accelerates uniformly at 2 m/s^2 for 5 s. The distance covered in this time is:",
+            "options": [
+                "100 m",
+                "25 m",
+                "50 m",
+                "10 m"
+            ],
+            "correct_index": 1,
+            "explanation": "s = ut + (1/2)at^2 with u = 0 gives s = 0.5 times 2 times 25 = 25 m. Using at^2 without the factor 1/2 gives the distractor 50 m.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-003",
+            "domain": "Physics",
+            "stem": "A ball is projected with speed 20 m/s at 30 degrees above the horizontal. Its maximum height is (g = 10 m/s^2):",
+            "options": [
+                "15 m",
+                "20 m",
+                "5 m",
+                "10 m"
+            ],
+            "correct_index": 2,
+            "explanation": "H = u^2 sin^2(theta) / (2g) = (400 times 0.25)/(2 times 10) = 100/20 = 5 m. Forgetting to square sin(theta) would overstate the height.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-004",
+            "domain": "Physics",
+            "stem": "A 5 kg block on a rough horizontal floor (mu = 0.2) is pulled by a horizontal force of 20 N. Its acceleration is (g = 10 m/s^2):",
+            "options": [
+                "4 m/s^2",
+                "1 m/s^2",
+                "3 m/s^2",
+                "2 m/s^2"
+            ],
+            "correct_index": 3,
+            "explanation": "Friction f = mu m g = 0.2 times 5 times 10 = 10 N. Net force = 20 - 10 = 10 N, so a = F/m = 10/5 = 2 m/s^2. Ignoring friction would wrongly give 4 m/s^2.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-005",
+            "domain": "Physics",
+            "stem": "A 2 kg body moving at 4 m/s is brought to rest by friction over a distance of 8 m. The magnitude of the frictional force is:",
+            "options": [
+                "2 N",
+                "4 N",
+                "1 N",
+                "8 N"
+            ],
+            "correct_index": 0,
+            "explanation": "The work-energy theorem gives f times s = (1/2)m v^2 = 0.5 times 2 times 16 = 16 J. Hence f = 16/8 = 2 N. Missing the factor 1/2 or the distance gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-006",
+            "domain": "Physics",
+            "stem": "A stone tied to a string of length 0.4 m is whirled in a vertical circle. The minimum speed at the top of the circle is (g = 10 m/s^2):",
+            "options": [
+                "6 m/s",
+                "2 m/s",
+                "4 m/s",
+                "1 m/s"
+            ],
+            "correct_index": 1,
+            "explanation": "At the top, gravity alone supplies the centripetal force: m g = m v^2/r, so v = sqrt(g r) = sqrt(10 times 0.4) = 2 m/s. Using 2gr would give a larger wrong value.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-007",
+            "domain": "Physics",
+            "stem": "The moment of inertia of a uniform solid sphere of mass 2 kg and radius 0.5 m about its diameter is:",
+            "options": [
+                "0.4 kg m^2",
+                "0.25 kg m^2",
+                "0.2 kg m^2",
+                "0.1 kg m^2"
+            ],
+            "correct_index": 2,
+            "explanation": "For a solid sphere I = (2/5) m r^2 = 0.4 times 2 times 0.25 = 0.2 kg m^2. Using (1/2) m r^2 for a disc gives the distractor 0.25 kg m^2.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-008",
+            "domain": "Physics",
+            "stem": "The escape velocity from the Earth is 11.2 km/s. For a planet having twice the mass and twice the radius of the Earth, the escape velocity is:",
+            "options": [
+                "22.4 km/s",
+                "5.6 km/s",
+                "15.8 km/s",
+                "11.2 km/s"
+            ],
+            "correct_index": 3,
+            "explanation": "v_esc = sqrt(2 G M / R). Doubling both M and R multiplies the value by sqrt(2/2) = 1, leaving 11.2 km/s. Scaling only the mass would wrongly double it.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-009",
+            "domain": "Physics",
+            "stem": "A particle in simple harmonic motion has amplitude 4 cm and angular frequency 10 rad/s. Its maximum acceleration is:",
+            "options": [
+                "4 m/s^2",
+                "0.4 m/s^2",
+                "40 m/s^2",
+                "2 m/s^2"
+            ],
+            "correct_index": 0,
+            "explanation": "a_max = A omega^2 = 0.04 times 100 = 4 m/s^2. Using A omega instead (which is the maximum speed) is a common slip.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-010",
+            "domain": "Physics",
+            "stem": "The speed of a transverse wave on a string under 100 N tension with linear density 0.25 kg/m is:",
+            "options": [
+                "5 m/s",
+                "20 m/s",
+                "10 m/s",
+                "40 m/s"
+            ],
+            "correct_index": 1,
+            "explanation": "v = sqrt(T/mu) = sqrt(100/0.25) = sqrt(400) = 20 m/s. Forgetting the square root leaves the uncorrected value 400.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-011",
+            "domain": "Physics",
+            "stem": "An ideal gas absorbs 200 J of heat in an isothermal process. The work done by the gas is:",
+            "options": [
+                "100 J",
+                "400 J",
+                "200 J",
+                "0 J"
+            ],
+            "correct_index": 2,
+            "explanation": "For an isothermal process of an ideal gas the internal energy does not change, so the first law Q = W gives W = 200 J. A zero result would apply to an adiabatic process.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-012",
+            "domain": "Physics",
+            "stem": "A Carnot engine works between a source at 500 K and a sink at 300 K. Its efficiency is:",
+            "options": [
+                "60%",
+                "20%",
+                "80%",
+                "40%"
+            ],
+            "correct_index": 3,
+            "explanation": "eta = 1 - T_cold/T_hot = 1 - 300/500 = 1 - 0.6 = 0.4, i.e. 40%. Reversing the ratio or omitting the subtraction gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-013",
+            "domain": "Physics",
+            "stem": "For an ideal gas, the root-mean-square speed of its molecules is directly proportional to:",
+            "options": [
+                "sqrt(T)",
+                "T",
+                "T^2",
+                "1/T"
+            ],
+            "correct_index": 0,
+            "explanation": "v_rms = sqrt(3 R T / M), so it varies as the square root of the absolute temperature. It is neither linear in T nor inversely proportional to T.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-014",
+            "domain": "Physics",
+            "stem": "Two point charges of +2 microcoulomb each are placed 0.1 m apart in air. The force between them is (k = 9 x 10^9 N m^2 C^-2):",
+            "options": [
+                "7.2 N",
+                "3.6 N",
+                "0.36 N",
+                "36 N"
+            ],
+            "correct_index": 1,
+            "explanation": "F = k q1 q2 / r^2 = 9e9 times (2e-6)^2 / (0.1)^2 = 9e9 times 4e-12 / 0.01 = 3.6 N. A wrong power of r inflates or deflates the result.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-015",
+            "domain": "Physics",
+            "stem": "The electric potential at a distance of 0.1 m from a point charge of 1 nC is (k = 9 x 10^9):",
+            "options": [
+                "900 V",
+                "0.9 V",
+                "90 V",
+                "9 V"
+            ],
+            "correct_index": 2,
+            "explanation": "V = k q / r = 9e9 times 1e-9 / 0.1 = 9/0.1 = 90 V. Dividing by r^2 instead of r gives the distractor 900 V.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-016",
+            "domain": "Physics",
+            "stem": "Three capacitors of 6 microfarad each are connected in series. The equivalent capacitance is:",
+            "options": [
+                "18 microfarad",
+                "3 microfarad",
+                "6 microfarad",
+                "2 microfarad"
+            ],
+            "correct_index": 3,
+            "explanation": "In series 1/C = 1/C1 + 1/C2 + 1/C3 = 3/6 = 1/2, so C = 2 microfarad. Adding them as in parallel gives the wrong 18 microfarad.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-017",
+            "domain": "Physics",
+            "stem": "A wire of resistance 12 ohm is bent into an equilateral triangle. The resistance across any two vertices is:",
+            "options": [
+                "8/3 ohm",
+                "4 ohm",
+                "6 ohm",
+                "2 ohm"
+            ],
+            "correct_index": 0,
+            "explanation": "Each side has 4 ohm. Across two vertices one 4 ohm side is in parallel with the other two in series (8 ohm): R = (4 times 8)/(4 + 8) = 32/12 = 8/3 ohm. Taking 4 ohm ignores the parallel arm.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-018",
+            "domain": "Physics",
+            "stem": "A 100 W bulb is designed to operate at 220 V. Its resistance is:",
+            "options": [
+                "48400 ohm",
+                "484 ohm",
+                "220 ohm",
+                "100 ohm"
+            ],
+            "correct_index": 1,
+            "explanation": "P = V^2/R, so R = V^2/P = (220)^2/100 = 48400/100 = 484 ohm. The distractor 48400 forgets to divide by P.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-019",
+            "domain": "Physics",
+            "stem": "A straight wire carrying 10 A is placed perpendicular to a uniform magnetic field of 0.5 T along a length of 0.2 m. The force on the wire is:",
+            "options": [
+                "0.1 N",
+                "0.5 N",
+                "1 N",
+                "10 N"
+            ],
+            "correct_index": 2,
+            "explanation": "F = B I L sin(theta) = 0.5 times 10 times 0.2 times 1 = 1 N. Omitting any one factor produces the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-020",
+            "domain": "Physics",
+            "stem": "An electron moves with speed 2 x 10^6 m/s perpendicular to a magnetic field of 0.1 T. The force on it is (e = 1.6 x 10^-19 C):",
+            "options": [
+                "3.2 x 10^-13 N",
+                "1.6 x 10^-14 N",
+                "3.2 x 10^-15 N",
+                "3.2 x 10^-14 N"
+            ],
+            "correct_index": 3,
+            "explanation": "F = q v B = 1.6e-19 times 2e6 times 0.1 = 3.2e-14 N. Slips in the power of ten create the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-021",
+            "domain": "Physics",
+            "stem": "A coil of 100 turns and area 0.01 m^2 lies in a magnetic field changing at 2 T/s. The induced emf is:",
+            "options": [
+                "2 V",
+                "0.02 V",
+                "200 V",
+                "20 V"
+            ],
+            "correct_index": 0,
+            "explanation": "By Faraday's law emf = N d(phi)/dt = N A dB/dt = 100 times 0.01 times 2 = 2 V. Dropping the number of turns gives 0.02 V.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-022",
+            "domain": "Physics",
+            "stem": "An AC source of rms voltage 220 V is connected across a pure resistor of 110 ohm. The rms current is:",
+            "options": [
+                "4 A",
+                "2 A",
+                "0.5 A",
+                "1 A"
+            ],
+            "correct_index": 1,
+            "explanation": "For a resistor I_rms = V_rms/R = 220/110 = 2 A. Inverting the ratio gives the distractor 0.5 A.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-023",
+            "domain": "Physics",
+            "stem": "An object is placed 20 cm in front of a concave mirror of focal length 10 cm. The image is formed:",
+            "options": [
+                "10 cm in front of the mirror",
+                "40 cm in front of the mirror",
+                "20 cm in front of the mirror",
+                "20 cm behind the mirror"
+            ],
+            "correct_index": 2,
+            "explanation": "Using 1/v + 1/u = 1/f with u = -20 cm and f = -10 cm: 1/v = 1/f - 1/u = -1/10 + 1/20 = -1/20, so v = -20 cm. The negative sign means a real image 20 cm in front.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-024",
+            "domain": "Physics",
+            "stem": "In Young's double-slit experiment, light of wavelength 600 nm falls on slits 0.3 mm apart and the screen is 1 m away. The fringe width is:",
+            "options": [
+                "0.2 mm",
+                "20 mm",
+                "1 mm",
+                "2 mm"
+            ],
+            "correct_index": 3,
+            "explanation": "beta = lambda D / d = (600e-9 times 1)/(0.3e-3) = 2e-3 m = 2 mm. A decimal slip in the slit separation gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-025",
+            "domain": "Physics",
+            "stem": "The energy of a photon of wavelength 660 nm is (h = 6.6 x 10^-34 J s, c = 3 x 10^8 m/s):",
+            "options": [
+                "3 x 10^-19 J",
+                "3 x 10^-20 J",
+                "6.6 x 10^-19 J",
+                "1.5 x 10^-19 J"
+            ],
+            "correct_index": 0,
+            "explanation": "E = h c / lambda = (6.6e-34 times 3e8)/(660e-9) = 1.98e-25/6.6e-7 = 3e-19 J. Using the wrong power of the wavelength gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-026",
+            "domain": "Physics",
+            "stem": "A metal of work function 2.0 eV is illuminated by light of photon energy 2.5 eV. The stopping potential is:",
+            "options": [
+                "4.5 V",
+                "0.5 V",
+                "2.5 V",
+                "2.0 V"
+            ],
+            "correct_index": 1,
+            "explanation": "e V0 = h nu - phi = 2.5 - 2.0 = 0.5 eV, so V0 = 0.5 V. Adding instead of subtracting gives the distractor 4.5 V.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-027",
+            "domain": "Physics",
+            "stem": "In the Bohr model of the hydrogen atom, the radius of the nth orbit is proportional to n^2. The ratio of the radius of the 2nd orbit to that of the 1st orbit is:",
+            "options": [
+                "1/4",
+                "1/2",
+                "4",
+                "2"
+            ],
+            "correct_index": 2,
+            "explanation": "Since r_n is proportional to n^2, r2/r1 = 2^2/1^2 = 4. Confusing the dependence with n rather than n^2 gives the distractor 2.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-028",
+            "domain": "Physics",
+            "stem": "The binding energy per nucleon is maximum for which of the following nuclides?",
+            "options": [
+                "He-4",
+                "U-238",
+                "H-2",
+                "Fe-56"
+            ],
+            "correct_index": 3,
+            "explanation": "Binding energy per nucleon peaks near mass number 56 (iron) at about 8.8 MeV, making iron the most stable nucleus. It is much smaller for light and heavy nuclei.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-029",
+            "domain": "Physics",
+            "stem": "When a p-n junction diode is forward biased, the width of its depletion layer:",
+            "options": [
+                "decreases",
+                "increases",
+                "remains unchanged",
+                "becomes zero permanently"
+            ],
+            "correct_index": 0,
+            "explanation": "Forward bias opposes the built-in field, pushing majority carriers toward the junction and narrowing the depletion layer. Reverse bias would widen it.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-030",
+            "domain": "Physics",
+            "stem": "A transistor in common-emitter mode has current gain beta = 100 with a base current of 20 microampere. The collector current is:",
+            "options": [
+                "200 mA",
+                "2 mA",
+                "0.2 mA",
+                "20 mA"
+            ],
+            "correct_index": 1,
+            "explanation": "I_C = beta I_B = 100 times 20 microampere = 2000 microampere = 2 mA. Misplacing the decimal gives the distractor 0.2 mA.",
+            "reference": "NTA JEE Main Syllabus - Physics"
+        },
+        {
+            "id": "jee-main-031",
+            "domain": "Chemistry",
+            "stem": "The number of molecules present in 4.4 g of carbon dioxide is (N_A = 6.022 x 10^23):",
+            "options": [
+                "3.011 x 10^22",
+                "1.204 x 10^23",
+                "6.022 x 10^22",
+                "6.022 x 10^23"
+            ],
+            "correct_index": 2,
+            "explanation": "Moles = 4.4/44 = 0.1 mol, so molecules = 0.1 times 6.022e23 = 6.022e22. Forgetting the factor 0.1 gives the distractor 6.022e23.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-032",
+            "domain": "Chemistry",
+            "stem": "How many grams of oxygen (O2) are required to completely burn 12 g of carbon to carbon dioxide (C + O2 gives CO2)?",
+            "options": [
+                "16 g",
+                "12 g",
+                "44 g",
+                "32 g"
+            ],
+            "correct_index": 3,
+            "explanation": "12 g of carbon is 1 mol, which needs 1 mol of O2 = 32 g. Using atomic oxygen (16 g) instead of the molecule gives the distractor 16 g.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-033",
+            "domain": "Chemistry",
+            "stem": "For the isothermal reversible expansion of an ideal gas, the change in internal energy delta U is:",
+            "options": [
+                "0",
+                "positive",
+                "negative",
+                "equal to the work done on the gas"
+            ],
+            "correct_index": 0,
+            "explanation": "The internal energy of an ideal gas depends only on temperature, so at constant T, delta U = 0 and the absorbed heat equals the work done. Only real gases show a non-zero delta U.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-034",
+            "domain": "Chemistry",
+            "stem": "For the reaction N2(g) + 3H2(g) gives 2NH3(g), the change in the number of moles of gas, delta n, is:",
+            "options": [
+                "+4",
+                "-2",
+                "+2",
+                "-1"
+            ],
+            "correct_index": 1,
+            "explanation": "delta n = moles of gaseous products - moles of gaseous reactants = 2 - (1 + 3) = -2. Reversing the subtraction gives +2.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-035",
+            "domain": "Chemistry",
+            "stem": "The pH of a 0.001 M aqueous solution of HCl is:",
+            "options": [
+                "2",
+                "1",
+                "3",
+                "11"
+            ],
+            "correct_index": 2,
+            "explanation": "HCl is fully ionised, so [H+] = 1e-3 M and pH = -log(1e-3) = 3. Reporting the pOH (11) is the common distractor.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-036",
+            "domain": "Chemistry",
+            "stem": "A buffer solution of acetic acid and sodium acetate has a pH equal to pKa. The ratio [salt]/[acid] in it is:",
+            "options": [
+                "10",
+                "0.1",
+                "2",
+                "1"
+            ],
+            "correct_index": 3,
+            "explanation": "The Henderson-Hasselbalch equation gives pH = pKa + log([salt]/[acid]). If pH = pKa then log([salt]/[acid]) = 0, so the ratio is 1.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-037",
+            "domain": "Chemistry",
+            "stem": "If the solubility of AgCl in water is s mol/L, its solubility product Ksp is:",
+            "options": [
+                "s^2",
+                "s",
+                "2s",
+                "4s^3"
+            ],
+            "correct_index": 0,
+            "explanation": "AgCl dissociates into Ag+ and Cl-, each at concentration s, so Ksp = [Ag+][Cl-] = s times s = s^2. The form 4s^3 belongs to a 1:2 salt such as Ag2CrO4.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-038",
+            "domain": "Chemistry",
+            "stem": "The number of Faradays of charge needed to deposit 1 mole of aluminium from Al3+ ions is:",
+            "options": [
+                "6",
+                "3",
+                "1",
+                "2"
+            ],
+            "correct_index": 1,
+            "explanation": "Al3+ + 3e- gives Al, so 3 mol of electrons, i.e. 3 Faradays, are needed per mole of aluminium. Assuming a 1+ ion confuses aluminium with silver.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-039",
+            "domain": "Chemistry",
+            "stem": "For a galvanic cell with E-cell = 1.1 V and n = 2, the standard free-energy change delta G is (F = 96500 C/mol):",
+            "options": [
+                "-106.2 kJ",
+                "-424.6 kJ",
+                "-212.3 kJ",
+                "+212.3 kJ"
+            ],
+            "correct_index": 2,
+            "explanation": "delta G = -n F E = -2 times 96500 times 1.1 = -212300 J = -212.3 kJ. A positive sign contradicts the spontaneity of a galvanic cell.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-040",
+            "domain": "Chemistry",
+            "stem": "A first-order reaction has a rate constant of 0.693 min^-1. Its half-life is:",
+            "options": [
+                "0.693 min",
+                "10 min",
+                "2 min",
+                "1 min"
+            ],
+            "correct_index": 3,
+            "explanation": "For a first-order reaction t1/2 = 0.693/k = 0.693/0.693 = 1 min. The half-life of a first-order reaction is independent of the initial concentration.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-041",
+            "domain": "Chemistry",
+            "stem": "The units of the rate constant for a zero-order reaction are:",
+            "options": [
+                "mol L^-1 s^-1",
+                "s^-1",
+                "L mol^-1 s^-1",
+                "L^2 mol^-2 s^-1"
+            ],
+            "correct_index": 0,
+            "explanation": "For a zero-order reaction rate = k, so k carries the units of rate, mol L^-1 s^-1. The unit s^-1 belongs to a first-order reaction.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-042",
+            "domain": "Chemistry",
+            "stem": "According to Raoult's law, the relative lowering of the vapour pressure of a solution equals the:",
+            "options": [
+                "molality of the solute",
+                "mole fraction of the solute",
+                "mole fraction of the solvent",
+                "molarity of the solute"
+            ],
+            "correct_index": 1,
+            "explanation": "Raoult's law gives (p0 - p)/p0 = x_solute, the mole fraction of the non-volatile solute, which is a colligative property. Molarity and molality are not mole fractions.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-043",
+            "domain": "Chemistry",
+            "stem": "The van't Hoff factor i for an aqueous solution of K2SO4 that dissociates completely is:",
+            "options": [
+                "1",
+                "4",
+                "3",
+                "2"
+            ],
+            "correct_index": 2,
+            "explanation": "K2SO4 gives 2K+ + SO4^2-, which is 3 ions per formula unit, so i = 3. A 1:1 salt such as KCl would give i = 2.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-044",
+            "domain": "Chemistry",
+            "stem": "The number of atoms per unit cell in a body-centred cubic lattice is:",
+            "options": [
+                "1",
+                "4",
+                "8",
+                "2"
+            ],
+            "correct_index": 3,
+            "explanation": "A BCC cell has 8 corner atoms each shared by 8 cells (8 times 1/8 = 1) plus 1 body-centre atom, giving 2 atoms per cell. The value 4 applies to an FCC cell.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-045",
+            "domain": "Chemistry",
+            "stem": "The coordination number of atoms in a face-centred cubic unit cell is:",
+            "options": [
+                "12",
+                "8",
+                "6",
+                "4"
+            ],
+            "correct_index": 0,
+            "explanation": "Each atom in an FCC lattice touches 12 nearest neighbours (4 in its plane and 4 each in the layers above and below), so the coordination number is 12. It is 8 for BCC.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-046",
+            "domain": "Chemistry",
+            "stem": "For the reaction N2(g) + 3H2(g) is in equilibrium with 2NH3(g), the relation Kp = Kc(RT)^delta n uses delta n equal to:",
+            "options": [
+                "0",
+                "-2",
+                "+2",
+                "-1"
+            ],
+            "correct_index": 1,
+            "explanation": "delta n = (gaseous products) - (gaseous reactants) = 2 - 4 = -2. A positive delta n would apply if the products outnumbered the reactants.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-047",
+            "domain": "Chemistry",
+            "stem": "The IUPAC name of the compound CH3CH(CH3)CH2CH3 is:",
+            "options": [
+                "2-methylpropane",
+                "pentane",
+                "2-methylbutane",
+                "3-methylbutane"
+            ],
+            "correct_index": 2,
+            "explanation": "The longest chain has 4 carbons (butane) with a methyl branch on C-2 when numbered from the nearer end, giving 2-methylbutane. Numbering from the other end to give 3-methylbutane violates the lowest-locant rule.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-048",
+            "domain": "Chemistry",
+            "stem": "Which of the following carbocations is the most stable?",
+            "options": [
+                "(CH3)2CH+",
+                "CH3CH2+",
+                "CH3+",
+                "(CH3)3C+"
+            ],
+            "correct_index": 3,
+            "explanation": "Stability rises with the number of electron-releasing alkyl groups through hyperconjugation and induction: tert-butyl (3 groups) is most stable, then isopropyl, ethyl, and methyl (least stable).",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-049",
+            "domain": "Chemistry",
+            "stem": "Which of the following compounds is the most acidic?",
+            "options": [
+                "p-nitrophenol",
+                "phenol",
+                "p-cresol",
+                "ethanol"
+            ],
+            "correct_index": 0,
+            "explanation": "The electron-withdrawing nitro group at the para position stabilises the phenoxide ion, so p-nitrophenol is more acidic than phenol. The methyl group of p-cresol is electron-donating and ethanol is the weakest of the four.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-050",
+            "domain": "Chemistry",
+            "stem": "Which of the following compounds is aromatic?",
+            "options": [
+                "cyclohexane",
+                "benzene",
+                "cyclobutadiene",
+                "cyclooctatetraene"
+            ],
+            "correct_index": 1,
+            "explanation": "Benzene is cyclic, planar, fully conjugated, and has 4n + 2 = 6 pi-electrons, satisfying Huckel's rule. Cyclobutadiene has 4 pi-electrons, cyclooctatetraene is non-planar, and cyclohexane has no pi system.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-051",
+            "domain": "Chemistry",
+            "stem": "Addition of HBr to propene follows Markovnikov's rule. The major product is:",
+            "options": [
+                "1,2-dibromopropane",
+                "propane",
+                "2-bromopropane",
+                "1-bromopropane"
+            ],
+            "correct_index": 2,
+            "explanation": "The hydrogen adds to the carbon bearing more hydrogens so that the more stable secondary carbocation forms, giving 2-bromopropane. The 1-bromopropane product would need anti-Markovnikov conditions with peroxides.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-052",
+            "domain": "Chemistry",
+            "stem": "Which of the following compounds gives a positive Fehling's test?",
+            "options": [
+                "acetone",
+                "acetophenone",
+                "benzophenone",
+                "acetaldehyde"
+            ],
+            "correct_index": 3,
+            "explanation": "Fehling's test is given by aldehydes, which reduce Cu(II) to red Cu2O; acetaldehyde does so. Ketones such as acetone, acetophenone and benzophenone do not give this test.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-053",
+            "domain": "Chemistry",
+            "stem": "Which of the following compounds does NOT undergo aldol condensation?",
+            "options": [
+                "benzaldehyde",
+                "acetaldehyde",
+                "propanal",
+                "acetone"
+            ],
+            "correct_index": 0,
+            "explanation": "Aldol condensation needs at least one alpha-hydrogen. Benzaldehyde has no alpha-hydrogen on its carbonyl carbon, so it cannot enolise and instead undergoes the Cannizzaro reaction; the others all have alpha-hydrogens.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-054",
+            "domain": "Chemistry",
+            "stem": "Which of the following is the strongest acid?",
+            "options": [
+                "CH3COOH",
+                "FCH2COOH",
+                "ClCH2COOH",
+                "BrCH2COOH"
+            ],
+            "correct_index": 1,
+            "explanation": "Fluorine has the strongest electron-withdrawing inductive effect, which stabilises the conjugate base most, so fluoroacetic acid is strongest. Acetic acid, with no such group, is the weakest.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-055",
+            "domain": "Chemistry",
+            "stem": "Which of the following is the strongest base in aqueous solution?",
+            "options": [
+                "NH3",
+                "C6H5NH2",
+                "(CH3)2NH",
+                "CH3NH2"
+            ],
+            "correct_index": 2,
+            "explanation": "Alkyl groups increase electron density on nitrogen, while the phenyl group of aniline delocalises the lone pair and weakens basicity. Among these dimethylamine is the strongest base and aniline the weakest.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-056",
+            "domain": "Chemistry",
+            "stem": "The chemical linkage that joins two amino acid units in a protein is a:",
+            "options": [
+                "glycosidic bond",
+                "phosphodiester bond",
+                "hydrogen bond",
+                "peptide bond"
+            ],
+            "correct_index": 3,
+            "explanation": "Amino acids condense through an amide (peptide) bond between the carboxyl group of one and the amino group of the next. Glycosidic bonds join sugars and phosphodiester bonds join nucleotides.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-057",
+            "domain": "Chemistry",
+            "stem": "Which of the following elements has the highest first ionisation enthalpy?",
+            "options": [
+                "He",
+                "Ne",
+                "Ar",
+                "Kr"
+            ],
+            "correct_index": 0,
+            "explanation": "Within the noble gases the ionisation enthalpy decreases down the group because the outer electron is held in a higher shell farther from the nucleus, so helium, with the smallest atom, has the highest value.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-058",
+            "domain": "Chemistry",
+            "stem": "The shape of the ammonia (NH3) molecule is:",
+            "options": [
+                "linear",
+                "trigonal pyramidal",
+                "trigonal planar",
+                "tetrahedral"
+            ],
+            "correct_index": 1,
+            "explanation": "NH3 is sp3 hybridised with three bond pairs and one lone pair, so the lone pair compresses the bond angle to about 107 degrees and the shape is trigonal pyramidal. A trigonal planar shape would require no lone pair, as in BF3.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-059",
+            "domain": "Chemistry",
+            "stem": "The oxidation state of cobalt in the complex [Co(NH3)6]Cl3 is:",
+            "options": [
+                "+6",
+                "0",
+                "+3",
+                "+2"
+            ],
+            "correct_index": 2,
+            "explanation": "NH3 is neutral and the three chloride ions contribute a total charge of -3, so for the complex to be neutral cobalt must be +3. A +2 value would apply to [Co(NH3)6]Cl2.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-060",
+            "domain": "Chemistry",
+            "stem": "Which of the following is a characteristic property of transition metals?",
+            "options": [
+                "They show only a single fixed oxidation state",
+                "They have very low melting points",
+                "They cannot form complex ions",
+                "They show variable oxidation states"
+            ],
+            "correct_index": 3,
+            "explanation": "Because the energies of the (n-1)d and ns orbitals are close, transition metals lose varying numbers of electrons and show variable oxidation states. They also have high melting points and a strong tendency to form complexes.",
+            "reference": "NTA JEE Main Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-main-061",
+            "domain": "Mathematics",
+            "stem": "If set A has 3 elements and set B has 4 elements, the number of relations from A to B is:",
+            "options": [
+                "2^12",
+                "2^7",
+                "12",
+                "3^4"
+            ],
+            "correct_index": 0,
+            "explanation": "A relation from A to B is any subset of A x B. Since n(A x B) = 3 times 4 = 12, the number of subsets is 2^12. Adding the sizes (7) or using 3^4 is incorrect.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-062",
+            "domain": "Mathematics",
+            "stem": "The modulus of the complex number z = 3 + 4i is:",
+            "options": [
+                "sqrt(7)",
+                "5",
+                "7",
+                "25"
+            ],
+            "correct_index": 1,
+            "explanation": "The modulus is sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. Forgetting the square root gives the distractor 25.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-063",
+            "domain": "Mathematics",
+            "stem": "If z = 1 + i, then z squared equals:",
+            "options": [
+                "-2i",
+                "1 + 2i",
+                "2i",
+                "2"
+            ],
+            "correct_index": 2,
+            "explanation": "z^2 = (1 + i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i. Dropping i^2 = -1 gives the wrong 1 + 2i.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-064",
+            "domain": "Mathematics",
+            "stem": "The sum of the roots of the quadratic equation x^2 - 5x + 6 = 0 is:",
+            "options": [
+                "-5",
+                "6",
+                "1",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "For a x^2 + b x + c = 0 the sum of roots is -b/a = -(-5)/1 = 5. The product of roots would be c/a = 6.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-065",
+            "domain": "Mathematics",
+            "stem": "If alpha and beta are the roots of x^2 - 3x + 2 = 0, then alpha^2 + beta^2 equals:",
+            "options": [
+                "5",
+                "9",
+                "13",
+                "1"
+            ],
+            "correct_index": 0,
+            "explanation": "alpha + beta = 3 and alpha beta = 2, so alpha^2 + beta^2 = (alpha + beta)^2 - 2 alpha beta = 9 - 4 = 5. Using (alpha + beta)^2 alone gives the distractor 9.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-066",
+            "domain": "Mathematics",
+            "stem": "The 10th term of the arithmetic progression 2, 5, 8, ... is:",
+            "options": [
+                "26",
+                "29",
+                "27",
+                "32"
+            ],
+            "correct_index": 1,
+            "explanation": "Here a = 2 and d = 3, so a10 = a + 9d = 2 + 27 = 29. Using 10d instead of 9d gives the distractor 32.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-067",
+            "domain": "Mathematics",
+            "stem": "The sum of the infinite geometric series with first term 4 and common ratio 1/2 is:",
+            "options": [
+                "4",
+                "2",
+                "8",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "S = a/(1 - r) = 4/(1 - 1/2) = 4/(1/2) = 8. The series converges because the ratio has magnitude less than 1.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-068",
+            "domain": "Mathematics",
+            "stem": "The coefficient of the middle term in the expansion of (1 + x)^4 is:",
+            "options": [
+                "4",
+                "8",
+                "12",
+                "6"
+            ],
+            "correct_index": 3,
+            "explanation": "The expansion (1 + x)^4 has 5 terms, so the middle (3rd) term has coefficient C(4,2) = 6. Reading off C(4,1) = 4 gives the distractor.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-069",
+            "domain": "Mathematics",
+            "stem": "If A is a 2 x 3 matrix and B is a 3 x 2 matrix, the order of the product AB is:",
+            "options": [
+                "2 x 2",
+                "3 x 3",
+                "2 x 3",
+                "3 x 2"
+            ],
+            "correct_index": 0,
+            "explanation": "For AB the number of columns of A must equal the number of rows of B, and the product takes the rows of A and columns of B, so the order is 2 x 2. The product BA would be 3 x 3.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-070",
+            "domain": "Mathematics",
+            "stem": "The value of the determinant of the matrix with first row 2, 3 and second row 1, 4 is:",
+            "options": [
+                "3",
+                "5",
+                "11",
+                "8"
+            ],
+            "correct_index": 1,
+            "explanation": "For a 2 x 2 determinant, a d - b c = (2)(4) - (3)(1) = 8 - 3 = 5. Adding the diagonal products instead gives the distractor 11.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-071",
+            "domain": "Mathematics",
+            "stem": "The number of distinct ways to arrange the letters of the word LEVEL is:",
+            "options": [
+                "60",
+                "20",
+                "30",
+                "120"
+            ],
+            "correct_index": 2,
+            "explanation": "LEVEL has 5 letters with L repeated twice and E repeated twice, so the count is 5!/(2! 2!) = 120/4 = 30. Ignoring the repeats gives 120.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-072",
+            "domain": "Mathematics",
+            "stem": "A fair die is thrown once. The probability of getting a prime number is:",
+            "options": [
+                "1/3",
+                "2/3",
+                "1/6",
+                "1/2"
+            ],
+            "correct_index": 3,
+            "explanation": "The primes on a die are 2, 3 and 5, giving 3 favourable outcomes out of 6, so the probability is 3/6 = 1/2.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-073",
+            "domain": "Mathematics",
+            "stem": "Two fair coins are tossed together. The probability of getting at least one head is:",
+            "options": [
+                "3/4",
+                "1/2",
+                "1/4",
+                "2/3"
+            ],
+            "correct_index": 0,
+            "explanation": "The sample space is HH, HT, TH, TT; at least one head covers 3 outcomes, so the probability is 3/4. The complement (no head) has probability 1/4.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-074",
+            "domain": "Mathematics",
+            "stem": "The value of the limit as x tends to 0 of (sin 3x)/x is:",
+            "options": [
+                "0",
+                "3",
+                "1",
+                "1/3"
+            ],
+            "correct_index": 1,
+            "explanation": "Write (sin 3x)/x = 3 times (sin 3x)/(3x). As x tends to 0 the standard limit (sin theta)/theta tends to 1, so the limit is 3. Dropping the factor 3 gives 1.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-075",
+            "domain": "Mathematics",
+            "stem": "The function f(x) = |x| at x = 0 is:",
+            "options": [
+                "both continuous and differentiable",
+                "neither continuous nor differentiable",
+                "continuous but not differentiable",
+                "differentiable but not continuous"
+            ],
+            "correct_index": 2,
+            "explanation": "The function is continuous at 0 because the left and right limits both equal 0, but the left derivative (-1) and right derivative (+1) differ, so it is not differentiable there.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-076",
+            "domain": "Mathematics",
+            "stem": "If y = x^3, then the value of dy/dx at x = 2 is:",
+            "options": [
+                "6",
+                "8",
+                "24",
+                "12"
+            ],
+            "correct_index": 3,
+            "explanation": "Differentiating gives dy/dx = 3x^2, so at x = 2 it is 3 times 4 = 12. Using 3x or the value of x^3 itself gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-077",
+            "domain": "Mathematics",
+            "stem": "The maximum value of the function f(x) = 3 - x^2 for real x is:",
+            "options": [
+                "3",
+                "0",
+                "9",
+                "-3"
+            ],
+            "correct_index": 0,
+            "explanation": "Since x^2 is at least 0, the expression 3 - x^2 is largest when x = 0, giving the maximum value 3. The function has no minimum because it decreases without bound.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-078",
+            "domain": "Mathematics",
+            "stem": "The slope of the tangent to the curve y = x^2 at the point x = 3 is:",
+            "options": [
+                "12",
+                "6",
+                "9",
+                "3"
+            ],
+            "correct_index": 1,
+            "explanation": "The slope equals dy/dx = 2x, so at x = 3 the slope is 6. Using the y-value 9 (the ordinate) instead of the slope is a common error.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-079",
+            "domain": "Mathematics",
+            "stem": "The value of the definite integral of x with respect to x from 0 to 1 is:",
+            "options": [
+                "0",
+                "2",
+                "1/2",
+                "1"
+            ],
+            "correct_index": 2,
+            "explanation": "The integral of x is x^2/2, evaluated from 0 to 1 gives 1/2 - 0 = 1/2. Forgetting the factor 1/2 gives the distractor 1.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-080",
+            "domain": "Mathematics",
+            "stem": "The indefinite integral of 1/x with respect to x is:",
+            "options": [
+                "x^2/2 + C",
+                "-1/x^2 + C",
+                "x ln x + C",
+                "ln|x| + C"
+            ],
+            "correct_index": 3,
+            "explanation": "The derivative of ln|x| is 1/x, so the integral of 1/x is ln|x| + C. Applying the power rule, which fails at the exponent -1, produces the wrong expressions.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-081",
+            "domain": "Mathematics",
+            "stem": "The value of the definite integral of cos x with respect to x from 0 to pi/2 is:",
+            "options": [
+                "1",
+                "0",
+                "-1",
+                "pi/2"
+            ],
+            "correct_index": 0,
+            "explanation": "The integral of cos x is sin x, and evaluating from 0 to pi/2 gives sin(pi/2) - sin 0 = 1 - 0 = 1.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-082",
+            "domain": "Mathematics",
+            "stem": "The order of the differential equation d^2y/dx^2 + y = 0 is:",
+            "options": [
+                "3",
+                "2",
+                "1",
+                "0"
+            ],
+            "correct_index": 1,
+            "explanation": "The order is the highest derivative present, which is the second derivative d^2y/dx^2, so the order is 2. The degree of this equation would be 1.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-083",
+            "domain": "Mathematics",
+            "stem": "The slope of the straight line 3x + 4y = 12 is:",
+            "options": [
+                "4/3",
+                "-4/3",
+                "-3/4",
+                "3/4"
+            ],
+            "correct_index": 2,
+            "explanation": "Rewriting as y = (-3/4)x + 3 shows the slope is -3/4. Dropping the sign or inverting the ratio gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-084",
+            "domain": "Mathematics",
+            "stem": "The distance of the point (3, 4) from the origin is:",
+            "options": [
+                "7",
+                "25",
+                "1",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "The distance is sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. Forgetting the square root gives the distractor 25.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-085",
+            "domain": "Mathematics",
+            "stem": "The radius of the circle x^2 + y^2 - 4x - 6y + 9 = 0 is:",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "13"
+            ],
+            "correct_index": 0,
+            "explanation": "Comparing with x^2 + y^2 + 2gx + 2fy + c = 0 gives g = -2, f = -3 and c = 9, so r = sqrt(g^2 + f^2 - c) = sqrt(4 + 9 - 9) = sqrt(4) = 2.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-086",
+            "domain": "Mathematics",
+            "stem": "The eccentricity of the parabola y^2 = 4x is:",
+            "options": [
+                "2",
+                "1",
+                "0",
+                "1/2"
+            ],
+            "correct_index": 1,
+            "explanation": "For every parabola the eccentricity is exactly 1, because the distance to the focus equals the distance to the directrix. Values below 1 describe ellipses and values above 1 describe hyperbolas.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-087",
+            "domain": "Mathematics",
+            "stem": "The length of the latus rectum of the ellipse x^2/25 + y^2/9 = 1 is:",
+            "options": [
+                "9/5",
+                "6",
+                "18/5",
+                "10/9"
+            ],
+            "correct_index": 2,
+            "explanation": "Here a^2 = 25 and b^2 = 9 with a greater than b, so the latus rectum is 2 b^2 / a = 18/5. Using 2 a^2 / b would apply only if the major axis were vertical.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-088",
+            "domain": "Mathematics",
+            "stem": "The magnitude of the vector 2i - 3j + 6k is:",
+            "options": [
+                "11",
+                "sqrt(11)",
+                "49",
+                "7"
+            ],
+            "correct_index": 3,
+            "explanation": "The magnitude is sqrt(2^2 + (-3)^2 + 6^2) = sqrt(4 + 9 + 36) = sqrt(49) = 7. Adding without squaring or leaving the sum under the root gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-089",
+            "domain": "Mathematics",
+            "stem": "The distance between the points (1, 2, 3) and (1, 2, 7) is:",
+            "options": [
+                "4",
+                "16",
+                "2",
+                "sqrt(4)"
+            ],
+            "correct_index": 0,
+            "explanation": "The distance is sqrt((1-1)^2 + (2-2)^2 + (7-3)^2) = sqrt(16) = 4. The two points differ only in the z-coordinate, by 4.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-main-090",
+            "domain": "Mathematics",
+            "stem": "The value of sin 30 degrees plus cos 60 degrees is:",
+            "options": [
+                "0",
+                "1",
+                "1/2",
+                "sqrt(3)/2"
+            ],
+            "correct_index": 1,
+            "explanation": "sin 30 degrees = 1/2 and cos 60 degrees = 1/2, so their sum is 1. Choosing the wrong standard angle values gives the distractors.",
+            "reference": "NTA JEE Main Syllabus - Mathematics"
+        }
+    ]
+}

@@ -1,0 +1,1207 @@
+{
+    "cert_key": "nclex-rn",
+    "title": "NCLEX-RN",
+    "issuer": "National Council of State Boards of Nursing (NCSBN)",
+    "outline_file": "outlines/nclex-rn.json",
+    "variant_label": "NCLEX-RN Real-Spec Practice",
+    "exam": {
+        "questions": 85,
+        "duration_minutes": 300,
+        "scoring": "Variable-length CAT (minimum 85 items, up to 150), pass/fail against the test-plan",
+        "adaptive": true
+    },
+    "content_provenance": "Original practice items authored from the NCSBN NCLEX-RN Test Plan (2024) category weights at the minimum exam length; non-multiple-choice item types are restated as 4-option items for this practice pipeline. Not a capture of past exam questions.",
+    "source_label": "NCLEX-RN practice bank",
+    "items": [
+        {
+            "id": "nclex-rn-001",
+            "domain": "Management of Care",
+            "stem": "A registered nurse is assigning care to a licensed practical nurse (LPN). Which task is most appropriate for the nurse to delegate to the LPN?",
+            "options": [
+                "Administering a scheduled oral analgesic to a stable client",
+                "Performing the initial assessment of a newly admitted client",
+                "Developing the discharge plan for a client with heart failure",
+                "Teaching a client how to self-administer insulin injections"
+            ],
+            "correct_index": 0,
+            "explanation": "LPN scope includes administering stable, scheduled medications. Initial assessment, client teaching, and care planning are registered nurse responsibilities and cannot be delegated.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-002",
+            "domain": "Management of Care",
+            "stem": "A nurse is delegating tasks to unlicensed assistive personnel (UAP). Which activity is appropriate for the nurse to delegate?",
+            "options": [
+                "Assessing a client's incisional pain",
+                "Ambulating a stable postoperative client",
+                "Evaluating a client's response to a blood transfusion",
+                "Teaching a client how to use a metered-dose inhaler"
+            ],
+            "correct_index": 1,
+            "explanation": "UAP may assist stable clients with ambulation. Assessment, evaluation, and teaching require the clinical judgment of a licensed nurse and cannot be delegated.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-003",
+            "domain": "Management of Care",
+            "stem": "A nurse is caring for four clients. Which client should the nurse assess first?",
+            "options": [
+                "A client waiting for a scheduled pain medication",
+                "A client awaiting a routine chest x-ray",
+                "A client with new-onset chest pain and shortness of breath",
+                "A client requesting discharge instructions"
+            ],
+            "correct_index": 2,
+            "explanation": "New chest pain with shortness of breath suggests an airway, breathing, or circulation threat and takes priority using the ABC framework. Routine requests and stable needs come later.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-004",
+            "domain": "Management of Care",
+            "stem": "A nurse is planning care for several clients. Which client should the nurse see first?",
+            "options": [
+                "A client who reports constipation",
+                "A client requesting information about a low-sodium diet",
+                "A client who is anxious about an upcoming surgery",
+                "A client with an oxygen saturation of 88 percent on room air"
+            ],
+            "correct_index": 3,
+            "explanation": "An oxygen saturation of 88 percent indicates impaired oxygenation and is a physiological priority under Maslow's hierarchy. Anxiety, constipation, and diet teaching are less urgent.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-005",
+            "domain": "Management of Care",
+            "stem": "A charge nurse is assigning clients for the oncoming shift. Which client is most appropriate to assign to a newly licensed nurse?",
+            "options": [
+                "A client who is one day postoperative with a simple closed fracture and stable vital signs",
+                "A client with new-onset confusion and a sodium level of 120 mEq/L",
+                "A client receiving a first dose of intravenous chemotherapy",
+                "A client with an acute myocardial infarction receiving thrombolytics"
+            ],
+            "correct_index": 0,
+            "explanation": "Assignments should match client acuity with nurse experience. A stable, predictable postoperative client is appropriate for a new nurse, while the unstable or complex clients require more experienced staff.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-006",
+            "domain": "Management of Care",
+            "stem": "A charge nurse is making shift assignments. Which client is most appropriate to assign to the licensed practical nurse (LPN)?",
+            "options": [
+                "A client actively receiving a blood transfusion for acute blood loss",
+                "A stable client with pneumonia who needs a scheduled oral antibiotic and vital signs",
+                "A client who became unresponsive after a fall",
+                "A client being admitted with chest pain of unknown origin"
+            ],
+            "correct_index": 1,
+            "explanation": "A stable client with predictable needs fits LPN scope of practice. Transfusion monitoring, unstable clients, and new admissions with undiagnosed chest pain require registered nurse assessment and judgment.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-007",
+            "domain": "Management of Care",
+            "stem": "A nurse is witnessing a client's signature on an informed consent form. Which action should the nurse take?",
+            "options": [
+                "Obtain the client's signature before the surgeon explains the procedure",
+                "Sign the consent form on behalf of the client",
+                "Verify that the client understands the procedure and is signing voluntarily",
+                "Explain the risks and benefits of the procedure to the client"
+            ],
+            "correct_index": 2,
+            "explanation": "The nurse witnesses the signature and confirms the client is informed and acting voluntarily. Explaining risks and benefits is the provider's responsibility, and the nurse never signs for the client.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-008",
+            "domain": "Management of Care",
+            "stem": "A client admitted to the hospital has a living will. Which action should the nurse take?",
+            "options": [
+                "Wait until the client is unresponsive before looking for the directive",
+                "Ask the provider to rewrite the document",
+                "Disregard the document because it does not apply until death",
+                "Document the advance directive in the record and ensure a copy is available to the care team"
+            ],
+            "correct_index": 3,
+            "explanation": "Advance directives guide care before death, so they are documented and made available on admission. The nurse does not alter the document or delay honoring the client's wishes.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-009",
+            "domain": "Management of Care",
+            "stem": "A nurse suspects that a colleague is diverting controlled substances. Which action should the nurse take first?",
+            "options": [
+                "Report the suspicion to the nurse manager according to facility policy",
+                "Confront the colleague in front of other staff members",
+                "Ignore the concern to avoid workplace conflict",
+                "Document the concern only in the client's medical record"
+            ],
+            "correct_index": 0,
+            "explanation": "Impaired practice and diversion threaten client safety, so the nurse reports through the chain of command per policy. Confrontation, silence, and charting in a client's record are inappropriate.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-010",
+            "domain": "Management of Care",
+            "stem": "A nurse discovers that a client's intravenous infusion is running faster than prescribed. Which action should the nurse take first?",
+            "options": [
+                "Recalculate the rate and replace the tubing",
+                "Stop or slow the infusion and assess the client",
+                "Document the finding and continue to monitor",
+                "Continue the infusion and notify the provider on rounds"
+            ],
+            "correct_index": 1,
+            "explanation": "Stopping or slowing the infusion prevents further fluid overload and allows immediate client assessment. Documentation and notification follow, but client safety comes first.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-011",
+            "domain": "Management of Care",
+            "stem": "A client who had a stroke is now having difficulty swallowing. Which referral should the nurse request?",
+            "options": [
+                "Respiratory therapist",
+                "Registered dietitian",
+                "Speech-language pathologist",
+                "Physical therapist"
+            ],
+            "correct_index": 2,
+            "explanation": "A speech-language pathologist evaluates and treats swallowing disorders (dysphagia) and recommends safe diet textures. Physical therapy addresses mobility, respiratory therapy addresses breathing, and the dietitian addresses nutrition plans.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-012",
+            "domain": "Management of Care",
+            "stem": "Four clients call the nurse at the same time. Which client should the nurse respond to first?",
+            "options": [
+                "A client who asks for an extra blanket",
+                "A client who asks for the evening newspaper",
+                "A client scheduled for discharge teaching",
+                "A client who reports sudden slurred speech and facial drooping"
+            ],
+            "correct_index": 3,
+            "explanation": "Sudden slurred speech and facial drooping suggest an acute stroke, a time-critical neurological emergency, and must be assessed first. Comfort and convenience requests can wait.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-013",
+            "domain": "Management of Care",
+            "stem": "A nurse receives a telephone call from a person claiming to be a family member who asks about a client's condition. Which action should the nurse take?",
+            "options": [
+                "Follow facility policy and verify the client's approved contacts before releasing any information",
+                "Provide the information because the caller says he is family",
+                "Ask the caller to telephone again later",
+                "Read the client's medical record over the telephone"
+            ],
+            "correct_index": 0,
+            "explanation": "Confidentiality requires verifying who is authorized to receive information per policy before disclosing anything. Sharing based on the caller's claim, postponing, or reading the chart aloud all risk a privacy breach.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-014",
+            "domain": "Management of Care",
+            "stem": "A nurse is reviewing morning laboratory results. Which client should the nurse assess first?",
+            "options": [
+                "A client with a blood glucose level of 140 mg/dL",
+                "A client with a potassium level of 6.8 mEq/L",
+                "A client with a hemoglobin level of 11 g/dL",
+                "A client with a sodium level of 138 mEq/L"
+            ],
+            "correct_index": 1,
+            "explanation": "A potassium of 6.8 mEq/L is a life-threatening hyperkalemia that can cause cardiac dysrhythmias. The other values are within or near expected ranges and are not emergent.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-015",
+            "domain": "Management of Care",
+            "stem": "A nurse observes unlicensed assistive personnel (UAP) performing which action that requires the nurse to intervene?",
+            "options": [
+                "Assisting a client with a bed bath",
+                "Obtaining a routine blood pressure",
+                "Administering an oral pain medication to a client",
+                "Recording a client's intake and output"
+            ],
+            "correct_index": 2,
+            "explanation": "Medication administration is a licensed nursing task that cannot be delegated to UAP. Measuring intake and output, bathing, and routine vital signs are within UAP scope.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-016",
+            "domain": "Management of Care",
+            "stem": "A client refuses a prescribed oral medication. Which action should the nurse take?",
+            "options": [
+                "Administer the medication hidden in the client's food",
+                "Restrain the client and administer the medication",
+                "Document the refusal and omit notifying the provider",
+                "Determine the client's reason for refusal, respect the decision, and notify the provider"
+            ],
+            "correct_index": 3,
+            "explanation": "A competent client has the right to refuse treatment; the nurse explores the reason, honors the choice, and informs the provider. Concealing medication, restraining, or failing to notify violates client rights.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Management of Care"
+        },
+        {
+            "id": "nclex-rn-017",
+            "domain": "Safety and Infection Control",
+            "stem": "A nurse is preparing to provide client care. Which action reflects the use of standard precautions?",
+            "options": [
+                "Performing hand hygiene before and after every client contact",
+                "Wearing a mask continuously while in the hallway",
+                "Wearing a gown and gloves for every client interaction regardless of the task",
+                "Placing every client in a private room"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard precautions apply to all clients and begin with hand hygiene. Masks, gowns, gloves, and private rooms are added based on the task and the specific transmission route.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-018",
+            "domain": "Safety and Infection Control",
+            "stem": "A client has active pulmonary tuberculosis. Which type of precautions should the nurse implement?",
+            "options": [
+                "Standard precautions only",
+                "Airborne precautions with a negative-pressure room and an N95 respirator",
+                "Contact precautions with gown and gloves",
+                "Droplet precautions with a surgical mask"
+            ],
+            "correct_index": 1,
+            "explanation": "Tuberculosis spreads by airborne droplet nuclei, so it requires a negative-pressure room and an N95 respirator. Contact and droplet precautions do not protect against airborne transmission.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-019",
+            "domain": "Safety and Infection Control",
+            "stem": "A client is diagnosed with Clostridioides difficile infection. Which action should the nurse take?",
+            "options": [
+                "Wear gloves only when emptying the bedpan",
+                "Place the client in a positive-pressure room",
+                "Use soap and water for hand hygiene because alcohol is not effective against C. difficile spores",
+                "Use an alcohol-based hand rub after every client contact"
+            ],
+            "correct_index": 2,
+            "explanation": "C. difficile spores resist alcohol, so mechanical washing with soap and water is required. Contact precautions with gown and gloves are used, and a private room, not positive pressure, is indicated.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-020",
+            "domain": "Safety and Infection Control",
+            "stem": "A client is diagnosed with influenza. Which precaution should the nurse implement?",
+            "options": [
+                "Airborne precautions with an N95 respirator",
+                "Contact precautions only",
+                "No precautions are needed",
+                "Droplet precautions with a surgical mask and a private room"
+            ],
+            "correct_index": 3,
+            "explanation": "Influenza spreads by large respiratory droplets, so droplet precautions with a surgical mask and a private room are used. Airborne precautions are reserved for infections such as tuberculosis and measles.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-021",
+            "domain": "Safety and Infection Control",
+            "stem": "A nurse sustains a needlestick injury from a contaminated needle. What should the nurse do first?",
+            "options": [
+                "Wash the site thoroughly with soap and water and report the exposure immediately",
+                "Wait to see whether symptoms develop",
+                "Apply a sterile pressure dressing and continue working",
+                "Recap the needle and place it in the regular trash"
+            ],
+            "correct_index": 0,
+            "explanation": "Immediate washing of the exposure site and prompt reporting allow postexposure evaluation and prophylaxis. Waiting for symptoms or recapping and discarding the needle are unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-022",
+            "domain": "Safety and Infection Control",
+            "stem": "A nurse discovers a fire in a client's room. According to the RACE protocol, what should the nurse do first?",
+            "options": [
+                "Extinguish the fire",
+                "Rescue clients who are in immediate danger",
+                "Activate the fire alarm",
+                "Confine the fire by closing doors"
+            ],
+            "correct_index": 1,
+            "explanation": "RACE stands for Rescue, Alarm, Confine, and Extinguish in that order, so rescuing anyone in immediate danger comes first. Alarm, confinement, and extinguishing follow once people are safe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-023",
+            "domain": "Safety and Infection Control",
+            "stem": "Which action is most important when caring for a client who is at high risk for falls?",
+            "options": [
+                "Instruct the client never to get out of bed",
+                "Raise all four side rails on the bed",
+                "Keep the bed in the lowest position with the brakes locked and the call light within reach",
+                "Apply wrist restraints to every client at risk for falls"
+            ],
+            "correct_index": 2,
+            "explanation": "A low bed, locked brakes, and an accessible call light reduce fall risk without restricting the client. Raising all four side rails is a form of restraint and routine restraints require a specific order.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-024",
+            "domain": "Safety and Infection Control",
+            "stem": "A nurse is caring for a client who is placed in restraints. Which nursing action is required?",
+            "options": [
+                "Remove the restraints only at discharge",
+                "Leave the client unattended while restrained",
+                "Tie the restraints to the movable side rails of the bed",
+                "Assess the client and circulation at regular intervals and document according to policy"
+            ],
+            "correct_index": 3,
+            "explanation": "Restrained clients require frequent assessment of circulation, skin, and needs with ongoing documentation. Restraints are never tied to movable side rails, and the client is never left unattended.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-025",
+            "domain": "Safety and Infection Control",
+            "stem": "Which action should the nurse take to help prevent a medication error?",
+            "options": [
+                "Verify the rights of medication administration and compare the medication with the order",
+                "Prepare medications for several clients at one time",
+                "Leave medications at the bedside for the client to take later",
+                "Ask unlicensed assistive personnel to administer medications when busy"
+            ],
+            "correct_index": 0,
+            "explanation": "Following the rights of medication administration and checking the order improves safety. Preparing for multiple clients at once, leaving medications unattended, and delegating administration all increase error risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-026",
+            "domain": "Safety and Infection Control",
+            "stem": "A nurse is teaching a client how to use a walker. Which instruction is correct?",
+            "options": [
+                "Lean backward while walking",
+                "Move the walker forward first, then step into it",
+                "Lift the walker off the floor with every step",
+                "Hold the walker with only the fingertips"
+            ],
+            "correct_index": 1,
+            "explanation": "For safe walker use, the client advances the walker first and then steps forward into it while keeping the back straight. Lifting the walker each step, fingertip grip, and leaning backward are unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Safety and Infection Control"
+        },
+        {
+            "id": "nclex-rn-027",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A nurse is assessing a 6-month-old infant at a well-child visit. Which finding indicates expected development at this age?",
+            "options": [
+                "Using a pincer grasp to pick up small objects",
+                "Speaking in two-word sentences",
+                "Sitting with support and rolling over",
+                "Walking independently"
+            ],
+            "correct_index": 2,
+            "explanation": "A 6-month-old typically sits with support and rolls over. Independent walking is expected around 12 months, a pincer grasp near 9 months, and two-word sentences near 2 years.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-028",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "According to Erikson, which developmental task should a nurse expect a young adult to be working on?",
+            "options": [
+                "Trust versus mistrust",
+                "Industry versus inferiority",
+                "Generativity versus stagnation",
+                "Intimacy versus isolation"
+            ],
+            "correct_index": 3,
+            "explanation": "The young adult stage centers on forming intimate relationships, which is intimacy versus isolation. Trust is infancy, industry is school age, and generativity is middle adulthood.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-029",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A nurse is reviewing immunizations with the parent of a 2-month-old infant. Which vaccine is scheduled at this age?",
+            "options": [
+                "Inactivated poliovirus vaccine as part of the routine series",
+                "Varicella vaccine",
+                "Measles, mumps, and rubella vaccine",
+                "Human papillomavirus vaccine"
+            ],
+            "correct_index": 0,
+            "explanation": "The 2-month schedule includes DTaP, inactivated poliovirus, Hib, pneumococcal conjugate, hepatitis B, and rotavirus. Varicella and MMR are given around 12 months and HPV at 11 to 12 years.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-030",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A nurse is teaching a client who is 28 weeks pregnant about warning signs. Which instruction is correct?",
+            "options": [
+                "Stop counting fetal movements",
+                "Report a sudden gush of fluid or vaginal bleeding immediately",
+                "Ignore mild ankle swelling without reporting it",
+                "Take ibuprofen for cramping"
+            ],
+            "correct_index": 1,
+            "explanation": "Rupture of membranes or bleeding before term may signal preterm labor or another emergency and must be reported at once. Mild ankle swelling is common, and NSAIDs and reduced fetal monitoring are inappropriate.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-031",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "At which age should a nurse advise an average-risk client to begin routine colorectal cancer screening?",
+            "options": [
+                "Age 70",
+                "Age 65",
+                "Age 45",
+                "Age 20"
+            ],
+            "correct_index": 2,
+            "explanation": "Average-risk colorectal cancer screening now begins at age 45 with colonoscopy or other approved methods. Beginning at 20, 65, or 70 misses the recommended start age for average risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-032",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A nurse is assessing a newborn immediately after birth. Which finding is expected?",
+            "options": [
+                "A respiratory rate of 90 breaths per minute",
+                "An absent Moro reflex",
+                "Central cyanosis of the trunk",
+                "A heart rate of 140 beats per minute"
+            ],
+            "correct_index": 3,
+            "explanation": "A newborn heart rate of 120 to 160 beats per minute is normal. A respiratory rate above 60, an absent Moro reflex, and central cyanosis are abnormal and require further evaluation.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-033",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A nurse is teaching a client about lifestyle changes to reduce cardiovascular risk. Which instruction is correct?",
+            "options": [
+                "Engage in at least 150 minutes of moderate aerobic activity each week",
+                "Increase the intake of saturated fats",
+                "Smoke only one cigarette per day",
+                "Avoid all physical activity after age 60"
+            ],
+            "correct_index": 0,
+            "explanation": "Guidelines recommend at least 150 minutes of moderate aerobic activity weekly to lower cardiovascular risk. Saturated fat and smoking increase risk, and activity remains beneficial at any age.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-034",
+            "domain": "Health Promotion and Maintenance",
+            "stem": "A client in the second trimester asks about nutrition. Which statement indicates correct understanding?",
+            "options": [
+                "I should double my usual dose of vitamin A.",
+                "I should increase my intake of folic acid and iron-rich foods.",
+                "I should avoid all dairy products during pregnancy.",
+                "I should limit my fluid intake to one liter per day."
+            ],
+            "correct_index": 1,
+            "explanation": "Folic acid and iron needs increase in pregnancy, so the client should include these in the diet as prescribed. Avoiding dairy, restricting fluids, and taking excess vitamin A can harm the pregnancy.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Health Promotion and Maintenance"
+        },
+        {
+            "id": "nclex-rn-035",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client begins to cry while discussing the loss of a spouse. Which response by the nurse is most therapeutic?",
+            "options": [
+                "Let us talk about something more pleasant instead.",
+                "You should be strong for your family.",
+                "Stay with the client and acknowledge the client's feelings",
+                "There is nothing to cry about."
+            ],
+            "correct_index": 2,
+            "explanation": "Staying present and acknowledging feelings shows acceptance and supports grieving. Minimizing the loss, changing the subject, and telling the client to be strong all block communication.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-036",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client states, I do not see any reason to keep living. What should the nurse do first?",
+            "options": [
+                "Change the subject to keep the client calm",
+                "Promise to keep the statement a secret",
+                "Leave the client alone to rest",
+                "Ask directly whether the client is thinking about suicide and whether there is a plan"
+            ],
+            "correct_index": 3,
+            "explanation": "Directly asking about suicidal thoughts and a plan is the priority when a client expresses hopelessness, because it guides safety interventions. Changing the subject, promising secrecy, and leaving the client alone increase risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-037",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client is pacing in the hallway and reports feeling extremely anxious. Which action should the nurse take first?",
+            "options": [
+                "Stay with the client and use a calm, simple approach to reduce stimuli",
+                "Ask the client to complete a detailed intake form",
+                "Leave the client alone in a quiet room",
+                "Confront the client about the pacing behavior"
+            ],
+            "correct_index": 0,
+            "explanation": "For severe anxiety, the nurse stays with the client, reduces stimulation, and uses short, simple statements to promote safety and calm. Demanding paperwork, isolating the client, or confronting the behavior escalates anxiety.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-038",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client who is terminally ill tells the nurse, This is all a mistake, I feel fine. Which stage of grief is the client demonstrating?",
+            "options": [
+                "Acceptance",
+                "Denial",
+                "Bargaining",
+                "Anger"
+            ],
+            "correct_index": 1,
+            "explanation": "Refusing to believe the diagnosis is characteristic of the denial stage described by Kubler-Ross. Bargaining involves negotiating, anger involves resentment, and acceptance is a calm acknowledgment.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-039",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client with major depression has not eaten for two days. Which nursing action is best?",
+            "options": [
+                "Leave the meal tray in the room for the entire day",
+                "Restrict all snacks between meals",
+                "Sit with the client during meals and offer small, frequent high-calorie foods",
+                "Insist that the client eat an entire meal at one sitting"
+            ],
+            "correct_index": 2,
+            "explanation": "Small, frequent, high-calorie foods with the nurse present promote intake for a depressed client who lacks appetite. Forcing a full meal, leaving trays out all day, and restricting snacks do not support nutrition.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-040",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client is admitted for alcohol withdrawal. Which finding should the nurse report to the provider immediately?",
+            "options": [
+                "A blood pressure of 118/76 mm Hg",
+                "The client reports feeling calm",
+                "The client requests a snack",
+                "A heart rate of 130 beats per minute with coarse tremors"
+            ],
+            "correct_index": 3,
+            "explanation": "Tachycardia with coarse tremors suggests autonomic hyperactivity and worsening alcohol withdrawal, which can progress to seizures or delirium tremens. Stable vital signs and calm behavior are reassuring.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-041",
+            "domain": "Psychosocial Integrity",
+            "stem": "A nurse suspects that a client is a victim of intimate partner violence. Which action is most important?",
+            "options": [
+                "Provide care in a private, safe setting and assess the client privately",
+                "Ask the partner to remain in the room during the assessment",
+                "Tell the client to leave the relationship immediately",
+                "Document the suspicion and take no further action"
+            ],
+            "correct_index": 0,
+            "explanation": "Screening for violence requires privacy so the client can speak safely; the nurse then offers support and resources. Assessing with the partner present endangers the client, and directing the client to leave ignores safety planning.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-042",
+            "domain": "Psychosocial Integrity",
+            "stem": "A client in crisis after a natural disaster states, I cannot cope with this. Which response by the nurse is best?",
+            "options": [
+                "Let us not think about that right now.",
+                "I will help you identify people and resources that can support you.",
+                "Other people have it much worse than you do.",
+                "You need to be strong for everyone else."
+            ],
+            "correct_index": 1,
+            "explanation": "In crisis, the nurse helps the client mobilize support and resources to restore coping. Comparing the client to others, demanding strength, and avoiding the topic all dismiss the client's distress.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Psychosocial Integrity"
+        },
+        {
+            "id": "nclex-rn-043",
+            "domain": "Basic Care and Comfort",
+            "stem": "A client reports pain rated 8 out of 10 an hour after receiving an intravenous opioid. Which action should the nurse take first?",
+            "options": [
+                "Document the pain and wait for the next scheduled dose",
+                "Tell the client that another dose cannot be given this soon",
+                "Assess the pain and the client's sedation and respiratory status",
+                "Administer the next dose of opioid immediately"
+            ],
+            "correct_index": 2,
+            "explanation": "The nurse first reassesses pain along with sedation and respiratory status, because opioids can cause respiratory depression. Giving more medication, waiting without assessment, or refusing to reassess are unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-044",
+            "domain": "Basic Care and Comfort",
+            "stem": "A nurse is assisting a client to move up in bed. Which action best protects the nurse from injury?",
+            "options": [
+                "Reach across the bed and pull the client quickly",
+                "Twist the torso while pulling the client",
+                "Pull the client using only the arms",
+                "Raise the bed to working height and use a friction-reducing device with assistance"
+            ],
+            "correct_index": 3,
+            "explanation": "Working at the correct height with a friction-reducing device and help reduces strain on the nurse's back. Reaching, twisting, and pulling with the arms alone increase the risk of musculoskeletal injury.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-045",
+            "domain": "Basic Care and Comfort",
+            "stem": "A client needs to use a bedpan. Which action promotes normal elimination?",
+            "options": [
+                "Provide privacy and position the client in a semi-sitting position",
+                "Have the client lie flat for 30 minutes afterward",
+                "Rush the client to finish quickly",
+                "Restrict fluids before offering the bedpan"
+            ],
+            "correct_index": 0,
+            "explanation": "Privacy and a semi-sitting position use gravity and relaxation to support normal defecation. Lying flat, hurrying the client, and restricting fluids interfere with elimination.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-046",
+            "domain": "Basic Care and Comfort",
+            "stem": "A client with dysphagia is at risk for aspiration. Which action should the nurse take?",
+            "options": [
+                "Keep the head of the bed flat while the client eats",
+                "Position the client upright and thicken liquids as needed",
+                "Place food on the weak side of the mouth",
+                "Encourage thin liquids through a straw"
+            ],
+            "correct_index": 1,
+            "explanation": "An upright position and thickened liquids reduce aspiration risk for a client with dysphagia. Placing food on the weak side, drinking thin liquids with a straw, and lying flat all increase choking risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-047",
+            "domain": "Basic Care and Comfort",
+            "stem": "A nurse is assessing a client's healing surgical wound. Which finding should the nurse document as expected?",
+            "options": [
+                "New warmth and redness around the wound edges",
+                "A foul odor coming from the incision",
+                "A clean, well-approximated incision with slight serous drainage",
+                "An incision that has separated with purulent drainage"
+            ],
+            "correct_index": 2,
+            "explanation": "Expected healing shows a clean, approximated incision with minimal serous drainage. Separation with purulent drainage, warmth, redness, and foul odor indicate infection or dehiscence and must be reported.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-048",
+            "domain": "Basic Care and Comfort",
+            "stem": "Which nursing action best promotes sleep for a hospitalized client?",
+            "options": [
+                "Encourage long naps throughout the daytime hours",
+                "Offer caffeinated beverages in the evening",
+                "Keep the television on for background noise",
+                "Cluster care activities and keep the environment quiet and dim at night"
+            ],
+            "correct_index": 3,
+            "explanation": "Clustering care limits interruptions and a quiet, dim environment supports the sleep cycle. Daytime naps, evening caffeine, and background television all disrupt nighttime sleep.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-049",
+            "domain": "Basic Care and Comfort",
+            "stem": "A nurse is giving a bed bath to a dependent client. Which action is correct?",
+            "options": [
+                "Wash from the cleanest to the dirtiest areas and keep the client covered to stay warm",
+                "Leave the client fully exposed for the entire bath",
+                "Use the same part of the washcloth for the face and the perineum",
+                "Skip the skin assessment to save time"
+            ],
+            "correct_index": 0,
+            "explanation": "Bathing proceeds from clean to dirty areas, and keeping the client covered preserves warmth and dignity. Full exposure, reusing a washcloth across body regions, and skipping skin assessment are incorrect.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-050",
+            "domain": "Basic Care and Comfort",
+            "stem": "A client with a below-the-knee amputation has received a new prosthesis. Which instruction is correct?",
+            "options": [
+                "Apply a thick layer of lotion inside the prosthetic socket",
+                "Inspect the residual limb daily and check the fit of the prosthesis",
+                "Wear the prosthesis only at night while sleeping",
+                "Ignore any redness on the residual limb"
+            ],
+            "correct_index": 1,
+            "explanation": "Daily inspection of the residual limb and proper prosthesis fit help prevent skin breakdown. Wearing it only at night, ignoring redness, and lotion in the socket all promote injury and poor fit.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Basic Care and Comfort"
+        },
+        {
+            "id": "nclex-rn-051",
+            "domain": "Pharmacological Therapies",
+            "stem": "A client prescribed digoxin has a serum level of 2.4 ng/mL. Which finding should the nurse report immediately?",
+            "options": [
+                "A blood pressure of 120/80 mm Hg",
+                "Warm, dry skin",
+                "Nausea, vomiting, and a heart rate of 52 beats per minute",
+                "A heart rate of 88 beats per minute"
+            ],
+            "correct_index": 2,
+            "explanation": "A digoxin level above the therapeutic range with nausea, vomiting, and bradycardia indicates digoxin toxicity, which can cause dysrhythmias. Stable vital signs and normal skin are not alarming.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-052",
+            "domain": "Pharmacological Therapies",
+            "stem": "A client receiving warfarin has an INR of 5.5. Which action should the nurse take first?",
+            "options": [
+                "Administer the next dose as scheduled",
+                "Encourage the client to increase vitamin K intake",
+                "Apply a warm compress to the intravenous site",
+                "Hold the dose and notify the provider because of the elevated bleeding risk"
+            ],
+            "correct_index": 3,
+            "explanation": "An INR of 5.5 is well above the therapeutic range for most indications and signals a high bleeding risk, so the nurse holds the dose and notifies the provider. Vitamin K is a provider-ordered antidote, not a diet change.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-053",
+            "domain": "Pharmacological Therapies",
+            "stem": "A nurse is monitoring a client receiving furosemide. Which laboratory value should the nurse report?",
+            "options": [
+                "A potassium level of 3.0 mEq/L",
+                "A sodium level of 140 mEq/L",
+                "A hemoglobin level of 13 g/dL",
+                "A creatinine level of 0.9 mg/dL"
+            ],
+            "correct_index": 0,
+            "explanation": "Furosemide is a loop diuretic that causes potassium loss, and a potassium of 3.0 mEq/L is dangerously low and can trigger dysrhythmias. The other values are within normal limits.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-054",
+            "domain": "Pharmacological Therapies",
+            "stem": "A client with diabetes is prescribed regular insulin. When should the nurse expect this insulin to reach its peak effect?",
+            "options": [
+                "Eight to twelve hours after administration",
+                "Two to four hours after administration",
+                "Ten minutes after administration",
+                "Eighteen to twenty-four hours after administration"
+            ],
+            "correct_index": 1,
+            "explanation": "Regular insulin is short acting and peaks in about two to four hours, when hypoglycemia is most likely. Lispro peaks in about one hour, while NPH peaks in four to twelve hours and glargine is peakless.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-055",
+            "domain": "Pharmacological Therapies",
+            "stem": "A nurse notes that a client's intravenous site is swollen, cool, and painful. Which action should the nurse take first?",
+            "options": [
+                "Apply a warm compress and continue the infusion",
+                "Document the finding and continue to monitor",
+                "Stop the infusion and discontinue the intravenous line",
+                "Increase the infusion rate to clear the line"
+            ],
+            "correct_index": 2,
+            "explanation": "Swelling, coolness, and pain indicate infiltration, so the infusion is stopped and the line is removed. Continuing or speeding the infusion worsens tissue damage, and monitoring alone delays necessary action.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-056",
+            "domain": "Pharmacological Therapies",
+            "stem": "Twenty minutes into a blood transfusion, the client develops chills, fever, and flank pain. What should the nurse do first?",
+            "options": [
+                "Slow the transfusion and reassess in fifteen minutes",
+                "Administer the prescribed antipyretic and continue the transfusion",
+                "Increase the flow rate to finish the unit quickly",
+                "Stop the transfusion and maintain intravenous access with normal saline"
+            ],
+            "correct_index": 3,
+            "explanation": "Chills, fever, and flank pain suggest an acute hemolytic transfusion reaction, so the transfusion is stopped immediately and the line is kept patent with normal saline. Slowing, medicating, or increasing the rate delays critical treatment.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-057",
+            "domain": "Pharmacological Therapies",
+            "stem": "A provider prescribes 1,000 mg of a medication that is available as 250 mg per tablet. How many tablets should the nurse administer per dose?",
+            "options": [
+                "Four tablets",
+                "Two tablets",
+                "Three tablets",
+                "One tablet"
+            ],
+            "correct_index": 0,
+            "explanation": "The dose is 1,000 mg divided by 250 mg per tablet, which equals 4 tablets. Two, three, and one tablet would deliver 500 mg, 750 mg, and 250 mg respectively.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-058",
+            "domain": "Pharmacological Therapies",
+            "stem": "A nurse is teaching a client about a newly prescribed antibiotic. Which statement indicates that the client needs further teaching?",
+            "options": [
+                "I will finish the entire course exactly as prescribed.",
+                "I will stop the antibiotic as soon as I feel better.",
+                "I will take the medication at the prescribed times.",
+                "I will report any rash or difficulty breathing right away."
+            ],
+            "correct_index": 1,
+            "explanation": "Stopping an antibiotic early can allow the infection to recur and promote resistance, so the client needs clarification. Taking doses on schedule, reporting adverse effects, and finishing the course are correct.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-059",
+            "domain": "Pharmacological Therapies",
+            "stem": "A client receiving morphine has a respiratory rate of 8 breaths per minute. Which medication should the nurse anticipate administering?",
+            "options": [
+                "Acetylcysteine",
+                "Protamine sulfate",
+                "Naloxone",
+                "Flumazenil"
+            ],
+            "correct_index": 2,
+            "explanation": "Naloxone is the opioid antagonist used to reverse opioid-induced respiratory depression. Flumazenil reverses benzodiazepines, acetylcysteine treats acetaminophen toxicity, and protamine sulfate reverses heparin.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-060",
+            "domain": "Pharmacological Therapies",
+            "stem": "A nurse is preparing to administer heparin subcutaneously. Which action is correct?",
+            "options": [
+                "Massage the site vigorously after the injection",
+                "Aspirate before injecting the medication",
+                "Inject into the deltoid muscle",
+                "Inject into the abdomen and do not aspirate or massage the site"
+            ],
+            "correct_index": 3,
+            "explanation": "Subcutaneous heparin is given in the abdomen without aspiration or massage to reduce bruising and hematoma formation. Massaging, aspirating, or using an intramuscular site increases bleeding risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-061",
+            "domain": "Pharmacological Therapies",
+            "stem": "Before administering digoxin, which assessment is most important for the nurse to perform?",
+            "options": [
+                "Count the apical pulse for one full minute",
+                "Check the blood glucose level",
+                "Test the deep tendon reflexes",
+                "Measure the urine specific gravity"
+            ],
+            "correct_index": 0,
+            "explanation": "Digoxin slows the heart rate, so the nurse counts the apical pulse for a full minute and withholds the dose if the rate is below 60 in adults. Glucose, reflexes, and urine specific gravity are unrelated to safe digoxin administration.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-062",
+            "domain": "Pharmacological Therapies",
+            "stem": "A client is prescribed levothyroxine. Which instruction should the nurse include in the teaching?",
+            "options": [
+                "Stop the medication as soon as you feel better.",
+                "Take the medication in the morning on an empty stomach.",
+                "Take the medication together with an antacid.",
+                "Take the medication at bedtime with a large meal."
+            ],
+            "correct_index": 1,
+            "explanation": "Levothyroxine is taken in the morning on an empty stomach for consistent absorption; antacids and food reduce absorption. Therapy is lifelong and is not stopped when symptoms improve.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-063",
+            "domain": "Pharmacological Therapies",
+            "stem": "A nurse is preparing to administer intravenous potassium chloride. Which action is correct?",
+            "options": [
+                "Give the potassium by the intramuscular route",
+                "Increase the rate to finish the infusion quickly",
+                "Dilute the potassium and infuse it using a pump at the prescribed rate",
+                "Administer the potassium as a rapid intravenous push"
+            ],
+            "correct_index": 2,
+            "explanation": "Intravenous potassium must be diluted and infused at a controlled rate to prevent fatal cardiac dysrhythmias. Rapid push, intramuscular administration, and rate increases are dangerous and are never done.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Pharmacological Therapies"
+        },
+        {
+            "id": "nclex-rn-064",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A nurse is reviewing laboratory results. Which value should the nurse report to the provider immediately?",
+            "options": [
+                "A platelet count of 250,000/mm3",
+                "A hemoglobin level of 14 g/dL",
+                "An ammonia level of 20 mcg/dL",
+                "A potassium level of 6.5 mEq/L"
+            ],
+            "correct_index": 3,
+            "explanation": "A potassium of 6.5 mEq/L is a critical hyperkalemia that can cause lethal dysrhythmias and requires immediate reporting. The platelet count, hemoglobin, and ammonia values are within normal ranges.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-065",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A postoperative client has a blood pressure of 84/50 mm Hg and a heart rate of 128 beats per minute. Which action should the nurse take first?",
+            "options": [
+                "Assess the client for bleeding and notify the provider",
+                "Recheck the vital signs in one hour",
+                "Administer the scheduled pain medication",
+                "Document the findings as expected after surgery"
+            ],
+            "correct_index": 0,
+            "explanation": "Hypotension with tachycardia after surgery suggests hypovolemia or hemorrhage, so the nurse assesses for bleeding and notifies the provider at once. Delaying reassessment or charting these as normal is unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-066",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A client is scheduled for a colonoscopy. Which instruction is most important for the nurse to reinforce?",
+            "options": [
+                "Avoid all fluids on the day before the test",
+                "Follow the prescribed bowel preparation and remain on nothing by mouth as instructed",
+                "Eat a large breakfast on the morning of the test",
+                "Take iron supplements the day before the test"
+            ],
+            "correct_index": 1,
+            "explanation": "A colonoscopy requires a clear bowel from the prescribed preparation and nothing-by-mouth status for accurate visualization and safety. Eating, taking iron, and avoiding fluids interfere with the test.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-067",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A client is one day postoperative and reports calf pain and swelling. Which action should the nurse take?",
+            "options": [
+                "Apply heat and encourage the client to walk",
+                "Elevate the leg and ignore the pain",
+                "Assess the leg and report the finding without massaging the calf",
+                "Massage the calf firmly to relieve the pain"
+            ],
+            "correct_index": 2,
+            "explanation": "Calf pain and swelling may indicate a deep vein thrombosis, so the nurse assesses and reports without massaging, which could dislodge a clot and cause an embolism. Heat, ambulation, and ignoring the finding are unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-068",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A nurse is monitoring a client after a head injury. Which finding should be reported immediately?",
+            "options": [
+                "A blood pressure of 122/78 mm Hg",
+                "A pupil size of 3 mm that reacts to light",
+                "A Glasgow Coma Scale score of 15",
+                "A change in the client's level of consciousness"
+            ],
+            "correct_index": 3,
+            "explanation": "A change in level of consciousness is the earliest and most sensitive sign of worsening intracranial pressure after head injury. Stable vital signs, reactive pupils, and a full Glasgow score are reassuring.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-069",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A client has a serum sodium level of 118 mEq/L. Which finding should the nurse expect?",
+            "options": [
+                "Confusion and seizures",
+                "Increased thirst only",
+                "Hyperactive bowel sounds only",
+                "No symptoms at all"
+            ],
+            "correct_index": 0,
+            "explanation": "Severe hyponatremia causes cerebral edema with confusion, lethargy, and seizures as water shifts into brain cells. Thirst and isolated bowel changes do not reflect the neurological danger of this level.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-070",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A nurse is caring for a client immediately after surgery. Which action is the priority?",
+            "options": [
+                "Remove the intravenous access",
+                "Assess the airway and respiratory status",
+                "Offer the client a full meal",
+                "Ambulate the client immediately"
+            ],
+            "correct_index": 1,
+            "explanation": "Airway and breathing are assessed first in the immediate postoperative period using the ABC priority. A full meal, immediate ambulation, and removing intravenous access are not initial priorities.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-071",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A client is receiving a continuous heparin infusion. Which laboratory test should the nurse monitor?",
+            "options": [
+                "Blood glucose level",
+                "Serum amylase level",
+                "Activated partial thromboplastin time",
+                "International normalized ratio"
+            ],
+            "correct_index": 2,
+            "explanation": "Unfractionated heparin therapy is monitored with the activated partial thromboplastin time. The INR monitors warfarin, and glucose and amylase are unrelated to heparin's anticoagulant effect.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-072",
+            "domain": "Reduction of Risk Potential",
+            "stem": "A client with a cast on the lower leg reports severe pain and numbness in the toes. Which action should the nurse take first?",
+            "options": [
+                "Apply a warm compress over the cast",
+                "Elevate the leg above the heart and reassess in one hour",
+                "Document the finding and continue monitoring",
+                "Assess the extremity for circulation and sensation and notify the provider"
+            ],
+            "correct_index": 3,
+            "explanation": "Severe pain and numbness distal to a cast suggest impaired circulation or compartment syndrome, so the nurse assesses neurovascular status and notifies the provider immediately. Heat, elevation alone, and monitoring delay treatment.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-073",
+            "domain": "Reduction of Risk Potential",
+            "stem": "Which client should the nurse identify as being at greatest risk for a fall?",
+            "options": [
+                "A client taking a diuretic who has orthostatic hypotension",
+                "A client with a cast who uses a walker correctly",
+                "A client with a stable chronic illness",
+                "A client who is awaiting discharge teaching"
+            ],
+            "correct_index": 0,
+            "explanation": "Orthostatic hypotension from a diuretic causes dizziness on standing, which sharply increases fall risk. A client using a walker correctly, a stable chronic illness, and awaiting teaching do not carry that same immediate risk.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Reduction of Risk Potential"
+        },
+        {
+            "id": "nclex-rn-074",
+            "domain": "Physiological Adaptation",
+            "stem": "A client is in ventricular fibrillation. What should the nurse do first?",
+            "options": [
+                "Start an intravenous line and wait for the provider",
+                "Begin cardiopulmonary resuscitation and defibrillate as soon as possible",
+                "Administer oral digoxin",
+                "Obtain a twelve-lead electrocardiogram before acting"
+            ],
+            "correct_index": 1,
+            "explanation": "Ventricular fibrillation is a lethal rhythm without a pulse that requires immediate high-quality cardiopulmonary resuscitation and defibrillation. Oral medication, waiting for an electrocardiogram, and waiting for a provider waste critical time.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-075",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with asthma has audible wheezing and is using accessory muscles to breathe. Which action should the nurse take first?",
+            "options": [
+                "Withhold oxygen to prevent respiratory depression",
+                "Give the client a sedative to reduce anxiety",
+                "Administer the prescribed bronchodilator and position the client upright",
+                "Encourage the client to lie flat in bed"
+            ],
+            "correct_index": 2,
+            "explanation": "During an asthma exacerbation the nurse gives a bronchodilator and positions the client upright to improve ventilation. Lying flat worsens breathing, withholding oxygen is harmful, and sedatives can depress respirations.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-076",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with severe vomiting has a pH of 7.50 and a bicarbonate level of 32 mEq/L. Which acid-base imbalance should the nurse suspect?",
+            "options": [
+                "Metabolic acidosis",
+                "Respiratory acidosis",
+                "Respiratory alkalosis",
+                "Metabolic alkalosis"
+            ],
+            "correct_index": 3,
+            "explanation": "Vomiting removes gastric acid and raises bicarbonate, producing an elevated pH with a high bicarbonate, which is metabolic alkalosis. The other imbalances are defined by different pH and carbon dioxide patterns.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-077",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with an infection develops a temperature of 39.5 C, a heart rate of 120 beats per minute, and a blood pressure of 88/54 mm Hg. Which action should the nurse take first?",
+            "options": [
+                "Notify the provider immediately and initiate prescribed sepsis protocols",
+                "Administer a PRN antipyretic and reassess in one hour",
+                "Document the findings and continue to monitor",
+                "Place the client in a cool water bath"
+            ],
+            "correct_index": 0,
+            "explanation": "Fever, tachycardia, and hypotension indicate possible sepsis with early shock, requiring prompt notification and initiation of sepsis protocols such as fluids, cultures, and antibiotics. Delaying and cooling measures do not address the emergency.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-078",
+            "domain": "Physiological Adaptation",
+            "stem": "A client reports crushing chest pain that radiates to the left arm. Which action should the nurse take first?",
+            "options": [
+                "Wait for the next scheduled assessment round",
+                "Assess the pain and vital signs and prepare the prescribed oxygen, nitroglycerin, and aspirin",
+                "Have the client walk to the nurses' station",
+                "Administer a prescribed laxative"
+            ],
+            "correct_index": 1,
+            "explanation": "Crushing chest pain radiating to the arm suggests myocardial infarction, so the nurse assesses while preparing oxygen, nitroglycerin, and aspirin. Walking, giving a laxative, and waiting all dangerously delay treatment.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-079",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with type 1 diabetes has a blood glucose level of 48 mg/dL and is diaphoretic and confused. Which action should the nurse take first?",
+            "options": [
+                "Encourage the client to exercise",
+                "Give a high-protein snack and wait to reassess",
+                "Administer a fast-acting source of glucose",
+                "Administer the scheduled dose of insulin"
+            ],
+            "correct_index": 2,
+            "explanation": "Blood glucose of 48 mg/dL with diaphoresis and confusion is hypoglycemia, treated first with a fast-acting carbohydrate. Insulin, exercise, and waiting after a protein snack would lower or fail to raise glucose quickly.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-080",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with acute kidney injury has produced no urine for eight hours. Which finding most strongly supports the need for immediate intervention?",
+            "options": [
+                "A blood pressure of 118/72 mm Hg",
+                "A hemoglobin level of 12 g/dL",
+                "A sodium level of 140 mEq/L",
+                "A potassium level of 6.2 mEq/L with oliguria"
+            ],
+            "correct_index": 3,
+            "explanation": "Oliguria with hyperkalemia in acute kidney injury can rapidly progress to lethal cardiac dysrhythmias and demands immediate intervention. The other values are within or near expected ranges.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-081",
+            "domain": "Physiological Adaptation",
+            "stem": "A client is in hypovolemic shock after a motor vehicle crash. Which set of findings should the nurse expect?",
+            "options": [
+                "Tachycardia, hypotension, and cool clammy skin",
+                "Bradycardia and warm, flushed skin",
+                "Hypertension with bounding pulses",
+                "Decreased respiratory rate and hypertension"
+            ],
+            "correct_index": 0,
+            "explanation": "Hypovolemic shock from blood loss produces tachycardia, hypotension, and cool clammy skin as the body compensates and perfusion falls. Bradycardia, warm flushed skin, bounding pulses, and hypertension point to other conditions.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-082",
+            "domain": "Physiological Adaptation",
+            "stem": "A client is suspected of having a stroke. Which finding is most consistent with this diagnosis?",
+            "options": [
+                "A slow, steady weight gain",
+                "Sudden weakness on one side of the body with facial drooping",
+                "Gradual onset of pain in both legs",
+                "A rash across the chest"
+            ],
+            "correct_index": 1,
+            "explanation": "Sudden unilateral weakness and facial drooping are classic signs of stroke caused by interrupted cerebral blood flow. Bilateral leg pain, a chest rash, and gradual weight gain are unrelated to an acute stroke.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-083",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with chronic obstructive pulmonary disease has an oxygen saturation of 86 percent. Which action should the nurse take?",
+            "options": [
+                "Increase the flow to 10 liters by nasal cannula",
+                "Encourage the client to sleep to conserve energy",
+                "Apply the prescribed low-flow oxygen and monitor the respiratory status closely",
+                "Withhold oxygen entirely from the client"
+            ],
+            "correct_index": 2,
+            "explanation": "The nurse applies the prescribed low-flow oxygen and monitors closely, because clients with chronic obstructive pulmonary disease may rely on hypoxic drive. Withholding oxygen is harmful, and 10 liters is excessive and unsafe.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-084",
+            "domain": "Physiological Adaptation",
+            "stem": "A client is admitted with extensive burns. Which finding requires immediate intervention?",
+            "options": [
+                "A urine output of 50 mL per hour",
+                "A blood pressure of 120/80 mm Hg",
+                "A pain level of 4 out of 10",
+                "A urine output of 15 mL per hour with a heart rate of 130 beats per minute"
+            ],
+            "correct_index": 3,
+            "explanation": "Low urine output with tachycardia in a burn client signals inadequate fluid resuscitation and hypovolemia, which needs immediate action. Adequate urine output, a normal blood pressure, and moderate pain are expected or less urgent.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        },
+        {
+            "id": "nclex-rn-085",
+            "domain": "Physiological Adaptation",
+            "stem": "A client with heart failure reports difficulty breathing when lying flat and has crackles in both lungs. Which action should the nurse take first?",
+            "options": [
+                "Position the client upright and administer the prescribed oxygen and diuretic",
+                "Lay the client flat to improve lung expansion",
+                "Restrict the client's potassium intake",
+                "Encourage the client to drink a large amount of fluid"
+            ],
+            "correct_index": 0,
+            "explanation": "Orthopnea with bilateral crackles indicates pulmonary edema from fluid overload, so the nurse positions the client upright and gives oxygen and a diuretic. Laying the client flat, restricting potassium, and increasing fluids worsen the condition.",
+            "reference": "NCSBN NCLEX-RN Test Plan (2024) - Physiological Adaptation"
+        }
+    ]
+}

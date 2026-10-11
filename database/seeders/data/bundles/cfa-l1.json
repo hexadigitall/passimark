@@ -1,0 +1,2537 @@
+{
+    "cert_key": "cfa-l1",
+    "title": "CFA Level I",
+    "issuer": "CFA Institute",
+    "outline_file": "outlines/cfa-l1.json",
+    "variant_label": "CFA Level I Real-Spec Practice",
+    "exam": {
+        "questions": 180,
+        "duration_minutes": 270,
+        "scoring": "Two 2h15 sessions of 90 independent items; pass threshold set by the MPS",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CFA Level I curriculum topic weights (two 90-question sessions). Not a capture of past exam questions.",
+    "source_label": "CFA Level I practice bank",
+    "items": [
+        {
+            "id": "cfa-l1-001",
+            "domain": "Quant & Economics",
+            "stem": "An investor deposits 1,000 today in an account that pays 6 percent compounded annually. Which amount is closest to the balance after three years?",
+            "options": [
+                "1,191.02",
+                "1,180.00",
+                "1,262.48",
+                "1,120.00"
+            ],
+            "correct_index": 0,
+            "explanation": "Future value equals 1,000 times 1.06 cubed. Since 1.06 cubed is 1.191016, the balance is 1,191.02. The value 1,120.00 ignores compounding and 1,262.48 uses six years instead of three.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-002",
+            "domain": "Quant & Economics",
+            "stem": "An investor expects to receive 5,000 in four years and discounts cash flows at 8 percent compounded annually. Which amount is closest to the present value today?",
+            "options": [
+                "4,032.00",
+                "3,675.15",
+                "3,400.00",
+                "3,850.00"
+            ],
+            "correct_index": 1,
+            "explanation": "Present value equals 5,000 divided by 1.08 raised to the fourth power. Since 1.08 to the fourth is 1.360489, the result is 3,675.15. Dividing by four equal instalments would give 3,400.00, the common but incorrect distractor.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-003",
+            "domain": "Quant & Economics",
+            "stem": "A credit card advertises a nominal annual rate of 12 percent compounded monthly. Which value is closest to the effective annual rate?",
+            "options": [
+                "12.55 percent",
+                "12.75 percent",
+                "12.68 percent",
+                "12.00 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "The periodic rate is 1 percent per month, so the effective annual rate is 1.01 to the twelfth power minus one, which equals 12.68 percent. The nominal 12.00 ignores intra-year compounding.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-004",
+            "domain": "Quant & Economics",
+            "stem": "A financial analyst has already computed the future value of an ordinary annuity and now needs the future value of the equivalent annuity due. Which adjustment converts one to the other?",
+            "options": [
+                "Divide the ordinary annuity value by one plus the periodic rate",
+                "Multiply the ordinary annuity value by the number of periods",
+                "Add one period of interest to the ordinary annuity value",
+                "Multiply the ordinary annuity value by one plus the periodic rate"
+            ],
+            "correct_index": 3,
+            "explanation": "An annuity due pays each cash flow one period earlier, so every payment earns one extra period of interest. Multiplying the ordinary annuity future value by one plus the periodic rate performs that shift.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-005",
+            "domain": "Quant & Economics",
+            "stem": "A preferred share pays a constant annual dividend of 50 and the required return is 5 percent. Which amount is closest to the present value of the perpetuity?",
+            "options": [
+                "1,000",
+                "1,050",
+                "950",
+                "1,052"
+            ],
+            "correct_index": 0,
+            "explanation": "A level perpetuity is valued as payment divided by the discount rate, so 50 divided by 0.05 equals 1,000. Adding the first payment to the principal would overstate the value.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-006",
+            "domain": "Quant & Economics",
+            "stem": "A stock is expected to pay a dividend of 2 next year, dividends grow at 4 percent forever, and the required return is 10 percent. Which amount is closest to the value today?",
+            "options": [
+                "28.57",
+                "33.33",
+                "20.00",
+                "50.00"
+            ],
+            "correct_index": 1,
+            "explanation": "The Gordon growth model gives value as next dividend divided by the spread between required return and growth, so 2 divided by 0.06 equals 33.33. Using only the required return would give 20.00.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-007",
+            "domain": "Quant & Economics",
+            "stem": "A portfolio manager wants a return measure that is not affected by the timing or size of the client's own deposits and withdrawals. Which measure should be used?",
+            "options": [
+                "Internal rate of return of the account cash flows",
+                "Bank discount yield",
+                "Time-weighted rate of return",
+                "Money-weighted rate of return"
+            ],
+            "correct_index": 2,
+            "explanation": "The time-weighted return removes the influence of external cash flows by linking sub-period returns, which is why it is used to judge the manager. The money-weighted return is the account IRR and is distorted by client cash-flow timing.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Time Value of Money"
+        },
+        {
+            "id": "cfa-l1-008",
+            "domain": "Quant & Economics",
+            "stem": "A project costs 1,000 today and returns 600 in each of the next two years. At a 10 percent discount rate, which amount is closest to the net present value?",
+            "options": [
+                "200.00",
+                "negative 41.32",
+                "90.91",
+                "41.32"
+            ],
+            "correct_index": 3,
+            "explanation": "The present values are 545.45 and 495.87, which sum to 1,041.32. Subtracting the 1,000 outlay gives an NPV of about 41.32. Simply adding undiscounted inflows would give an inflated 200.00.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Budgeting"
+        },
+        {
+            "id": "cfa-l1-009",
+            "domain": "Quant & Economics",
+            "stem": "An investment of 1,000 returns a single cash flow of 1,100 after one year. Which value is closest to the internal rate of return?",
+            "options": [
+                "10.0 percent",
+                "9.1 percent",
+                "11.0 percent",
+                "1.0 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The IRR sets NPV to zero, so 1,100 divided by one plus the rate equals 1,000, giving a rate of 10 percent. The 9.1 value incorrectly divides the 100 gain by the ending value rather than the outlay.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Budgeting"
+        },
+        {
+            "id": "cfa-l1-010",
+            "domain": "Quant & Economics",
+            "stem": "A firm evaluates a conventional independent project using both net present value and internal rate of return. Under which condition should the project be accepted?",
+            "options": [
+                "The internal rate of return is lower than the required return",
+                "The internal rate of return exceeds the required return and the net present value is positive",
+                "The internal rate of return is positive regardless of the required return",
+                "The net present value is positive only when the payback is under one year"
+            ],
+            "correct_index": 1,
+            "explanation": "For an independent conventional project the NPV and IRR rules agree, so accept when NPV is positive and IRR exceeds the required return. A positive IRR alone is not sufficient because it may fall below the cost of capital.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Budgeting"
+        },
+        {
+            "id": "cfa-l1-011",
+            "domain": "Quant & Economics",
+            "stem": "A project has cash flows that change sign more than once over its life. Which problem is most likely when using the internal rate of return?",
+            "options": [
+                "The payback period becomes negative",
+                "The required return becomes undefined",
+                "The project can have more than one internal rate of return",
+                "The net present value can never be computed"
+            ],
+            "correct_index": 2,
+            "explanation": "When cash flows change sign more than once, the NPV equation can have multiple roots, so more than one IRR satisfies the definition. This is the classic reason to rely on NPV for such projects.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Budgeting"
+        },
+        {
+            "id": "cfa-l1-012",
+            "domain": "Quant & Economics",
+            "stem": "Two mutually exclusive projects have the same life, and the NPV and IRR rankings conflict. What is the most likely cause of the conflict?",
+            "options": [
+                "A negative discount rate applied to one project",
+                "The use of audited rather than unaudited cash flows",
+                "The absence of any terminal cash flow",
+                "A difference in the scale or size of the initial investment"
+            ],
+            "correct_index": 3,
+            "explanation": "NPV and IRR can rank mutually exclusive projects differently when the projects differ in scale or in the timing of cash flows. For mutually exclusive projects the NPV rule should be followed.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Budgeting"
+        },
+        {
+            "id": "cfa-l1-013",
+            "domain": "Quant & Economics",
+            "stem": "A data set contains the five observations 2, 4, 4, 5 and 20. Which value is the median?",
+            "options": [
+                "4",
+                "5",
+                "7",
+                "5.5"
+            ],
+            "correct_index": 0,
+            "explanation": "With the observations ordered, the middle value is 4. The mean is 7 because the value 20 is an outlier, which is exactly why the median can be the better measure of central tendency here.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-014",
+            "domain": "Quant & Economics",
+            "stem": "An investment returns 10 percent in one year and negative 10 percent in the next. Which value is closest to the geometric mean return over the two years?",
+            "options": [
+                "negative 1.00 percent",
+                "negative 0.50 percent",
+                "0.00 percent",
+                "positive 0.50 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The geometric mean is the square root of 1.10 times 0.90, which is the square root of 0.99, or 0.994987, giving negative 0.50 percent. The arithmetic mean of zero overstates the compounded outcome.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-015",
+            "domain": "Quant & Economics",
+            "stem": "A statistician computes the standard deviation of the same data treating it first as a population and then as a sample. Which statement is correct?",
+            "options": [
+                "The two values are always identical",
+                "The sample value is smaller because it uses fewer observations",
+                "The sample standard deviation is larger because it divides by n minus one",
+                "The population standard deviation is larger because it divides by n"
+            ],
+            "correct_index": 2,
+            "explanation": "The sample standard deviation divides the sum of squared deviations by n minus one to remove bias, so it is larger than the population value that divides by n. This is Bessel's correction.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-016",
+            "domain": "Quant & Economics",
+            "stem": "Asset X has an expected return of 10 percent and a standard deviation of 5 percent, while Asset Y has an expected return of 8 percent and a standard deviation of 3 percent. Which asset has less risk per unit of return as measured by the coefficient of variation?",
+            "options": [
+                "Asset X, because its coefficient of variation of 0.50 is lower",
+                "Asset X, because it has the higher return",
+                "The two are equal because standard deviation is the only risk measure",
+                "Asset Y, because its coefficient of variation of 0.375 is lower"
+            ],
+            "correct_index": 3,
+            "explanation": "The coefficient of variation is standard deviation divided by expected return. Asset Y gives 0.03 divided by 0.08, or 0.375, while Asset X gives 0.5, so Y carries less risk per unit of return.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-017",
+            "domain": "Quant & Economics",
+            "stem": "A portfolio earned 12 percent with a standard deviation of 15 percent and the risk-free rate is 3 percent. Which value is closest to the Sharpe ratio?",
+            "options": [
+                "0.60",
+                "0.80",
+                "0.20",
+                "5.00"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sharpe ratio is excess return divided by standard deviation, so 12 minus 3 equals 9 percent, divided by 15 percent, giving 0.60. Dividing the raw return by risk would incorrectly give 0.80.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-018",
+            "domain": "Quant & Economics",
+            "stem": "A return distribution is positively skewed. Which relationship between the mean and the median is most likely?",
+            "options": [
+                "The mean is always negative",
+                "The mean is greater than the median",
+                "The mean is less than the median",
+                "The mean equals the median"
+            ],
+            "correct_index": 1,
+            "explanation": "Positive skew means a long right tail of large gains pulls the mean above the median. The reverse holds for negative skew, where the mean falls below the median.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Statistical Concepts"
+        },
+        {
+            "id": "cfa-l1-019",
+            "domain": "Quant & Economics",
+            "stem": "Two events are mutually exclusive, with probabilities of 0.30 and 0.40. Which value is the probability that either event occurs?",
+            "options": [
+                "0.58",
+                "0.10",
+                "0.70",
+                "0.12"
+            ],
+            "correct_index": 2,
+            "explanation": "For mutually exclusive events the joint probability is zero, so the addition rule reduces to 0.30 plus 0.40, which is 0.70. Multiplying them would incorrectly assume independence.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-020",
+            "domain": "Quant & Economics",
+            "stem": "Two events are independent, with probabilities of 0.50 and 0.40. Which value is the probability that both occur?",
+            "options": [
+                "0.90",
+                "0.10",
+                "0.60",
+                "0.20"
+            ],
+            "correct_index": 3,
+            "explanation": "For independent events the joint probability is the product, so 0.50 times 0.40 equals 0.20. Adding the probabilities would be wrong for a joint event.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-021",
+            "domain": "Quant & Economics",
+            "stem": "A random variable takes the value 100 with probability 0.50 and the value 200 with probability 0.50. Which value is the expected value?",
+            "options": [
+                "150",
+                "100",
+                "200",
+                "300"
+            ],
+            "correct_index": 0,
+            "explanation": "The expected value is the probability-weighted sum, so 0.50 times 100 plus 0.50 times 200 equals 150. The expected value need not equal an outcome the variable can actually take.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-022",
+            "domain": "Quant & Economics",
+            "stem": "Two assets have a covariance of 0.012, with standard deviations of 0.20 and 0.15. Which value is closest to their correlation?",
+            "options": [
+                "0.13",
+                "0.40",
+                "0.30",
+                "0.018"
+            ],
+            "correct_index": 1,
+            "explanation": "Correlation equals covariance divided by the product of the standard deviations, so 0.012 divided by 0.03 equals 0.40. Correlation is unit-free and bounded between negative one and positive one.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-023",
+            "domain": "Quant & Economics",
+            "stem": "A factory has two production lines. Line one runs 60 percent of the time and produces a defect 30 percent of the time, while line two runs 40 percent of the time and produces a defect 50 percent of the time. Which value is the overall defect rate?",
+            "options": [
+                "0.30",
+                "0.80",
+                "0.38",
+                "0.40"
+            ],
+            "correct_index": 2,
+            "explanation": "By the total probability rule the defect rate is 0.60 times 0.30 plus 0.40 times 0.50, which is 0.18 plus 0.20, equal to 0.38. Averaging the two rates without weights would be wrong.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-024",
+            "domain": "Quant & Economics",
+            "stem": "A disease affects 1 percent of a population. A test correctly detects it 99 percent of the time and falsely flags 5 percent of healthy people. A random person tests positive. Which value is closest to the probability the person has the disease?",
+            "options": [
+                "99.0 percent",
+                "1.0 percent",
+                "5.0 percent",
+                "16.7 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "True positives are 0.01 times 0.99, which is 0.0099, and false positives are 0.99 times 0.05, which is 0.0495. Dividing 0.0099 by the total 0.0594 gives 16.7 percent, illustrating how a rare base rate lowers the posterior.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-025",
+            "domain": "Quant & Economics",
+            "stem": "An urn is chosen at random and one ball is drawn. Urn A has 3 red and 2 blue balls, and Urn B has 1 red and 4 blue balls. The ball drawn is red. Which value is closest to the probability that Urn A was chosen?",
+            "options": [
+                "0.75",
+                "0.60",
+                "0.50",
+                "0.30"
+            ],
+            "correct_index": 0,
+            "explanation": "The joint probability of A and red is 0.50 times 0.60, or 0.30, and of B and red is 0.50 times 0.20, or 0.10. Dividing 0.30 by the total 0.40 gives a posterior of 0.75.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-026",
+            "domain": "Quant & Economics",
+            "stem": "An analyst updates a prior probability using Bayes' formula after observing new evidence. Which statement is correct?",
+            "options": [
+                "The posterior can never exceed the prior",
+                "The posterior is proportional to the prior multiplied by the likelihood of the evidence",
+                "The posterior ignores the prior once evidence is available",
+                "The posterior always equals the likelihood"
+            ],
+            "correct_index": 1,
+            "explanation": "Bayes' formula combines the prior with the conditional likelihood of the observed evidence to form the posterior. The prior is never discarded, and the posterior can rise or fall relative to it.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Probability Concepts"
+        },
+        {
+            "id": "cfa-l1-027",
+            "domain": "Quant & Economics",
+            "stem": "A researcher rejects a null hypothesis that is actually true. Which type of error has occurred?",
+            "options": [
+                "A power failure",
+                "A sampling bias",
+                "A Type I error",
+                "A Type II error"
+            ],
+            "correct_index": 2,
+            "explanation": "A Type I error is rejecting a true null hypothesis, and its probability is the significance level. A Type II error is failing to reject a false null hypothesis.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Hypothesis Testing"
+        },
+        {
+            "id": "cfa-l1-028",
+            "domain": "Quant & Economics",
+            "stem": "In hypothesis testing, which quantity equals one minus the probability of a Type II error?",
+            "options": [
+                "The significance level",
+                "The p-value",
+                "The confidence level",
+                "The power of the test"
+            ],
+            "correct_index": 3,
+            "explanation": "The power of a test is the probability of correctly rejecting a false null hypothesis, which equals one minus the Type II error probability. The significance level is the Type I error probability.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Hypothesis Testing"
+        },
+        {
+            "id": "cfa-l1-029",
+            "domain": "Quant & Economics",
+            "stem": "A test produces a p-value of 0.03. Which interpretation is most accurate?",
+            "options": [
+                "There is a 3 percent probability of observing a result at least this extreme if the null hypothesis is true",
+                "There is a 3 percent probability that the null hypothesis is true",
+                "There is a 97 percent probability that the alternative hypothesis is true",
+                "The null hypothesis is definitely false"
+            ],
+            "correct_index": 0,
+            "explanation": "The p-value is the probability of obtaining a test statistic at least as extreme as observed, assuming the null is true. It is not the probability that the null or the alternative is true.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Hypothesis Testing"
+        },
+        {
+            "id": "cfa-l1-030",
+            "domain": "Quant & Economics",
+            "stem": "For the same significance level, how does a two-tailed test's critical value compare with a one-tailed test's critical value?",
+            "options": [
+                "The two-tailed test uses no critical value",
+                "The two-tailed critical value has the larger absolute magnitude",
+                "The one-tailed critical value has the larger absolute magnitude",
+                "The two critical values are always identical"
+            ],
+            "correct_index": 1,
+            "explanation": "A two-tailed test splits the significance level across both tails, so the rejection region in each tail is smaller and the critical value is further from zero. The one-tailed test concentrates the entire level in a single tail.",
+            "reference": "CFA Institute Level I Curriculum - Quantitative Methods - Hypothesis Testing"
+        },
+        {
+            "id": "cfa-l1-031",
+            "domain": "Quant & Economics",
+            "stem": "Which statement best describes the law of demand for a normal good?",
+            "options": [
+                "Quantity demanded is unrelated to price",
+                "Demand rises only when supply falls",
+                "As price rises, quantity demanded falls, other things being equal",
+                "As price rises, quantity demanded rises"
+            ],
+            "correct_index": 2,
+            "explanation": "The law of demand holds that price and quantity demanded move in opposite directions when other influences are held constant, producing a downward-sloping demand curve.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Topics in Demand and Supply Analysis"
+        },
+        {
+            "id": "cfa-l1-032",
+            "domain": "Quant & Economics",
+            "stem": "When the price of a good rises by 5 percent the quantity demanded falls by 10 percent. Which value is closest to the price elasticity of demand and how is it classified?",
+            "options": [
+                "0.5 and inelastic",
+                "2.0 and inelastic",
+                "0.5 and elastic",
+                "2.0 and elastic"
+            ],
+            "correct_index": 3,
+            "explanation": "Elasticity is the percent change in quantity divided by the percent change in price, so 10 divided by 5 gives a magnitude of 2.0. A magnitude above one means demand is elastic.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Topics in Demand and Supply Analysis"
+        },
+        {
+            "id": "cfa-l1-033",
+            "domain": "Quant & Economics",
+            "stem": "A seller faces elastic demand and raises price. What happens to total revenue?",
+            "options": [
+                "Total revenue falls because the quantity drop outweighs the price increase",
+                "Total revenue rises because the price increase dominates",
+                "Total revenue is unchanged because demand is elastic",
+                "Total revenue becomes zero"
+            ],
+            "correct_index": 0,
+            "explanation": "When demand is elastic, a price increase causes a proportionally larger fall in quantity, so total revenue declines. Total revenue rises with price only when demand is inelastic.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Topics in Demand and Supply Analysis"
+        },
+        {
+            "id": "cfa-l1-034",
+            "domain": "Quant & Economics",
+            "stem": "In long-run equilibrium, what economic profit do firms in a perfectly competitive market earn?",
+            "options": [
+                "Profit equal to the market risk premium",
+                "Zero economic profit",
+                "Positive economic profit protected by barriers",
+                "Negative economic profit indefinitely"
+            ],
+            "correct_index": 1,
+            "explanation": "Free entry and exit drive price to the minimum of average total cost in the long run, so firms earn zero economic profit even though they may earn a normal accounting return.",
+            "reference": "CFA Institute Level I Curriculum - Economics - The Firm and Market Structures"
+        },
+        {
+            "id": "cfa-l1-035",
+            "domain": "Quant & Economics",
+            "stem": "A profit-maximizing monopolist chooses its output level where which condition holds?",
+            "options": [
+                "Average revenue equals average cost",
+                "Marginal revenue is at its maximum",
+                "Marginal revenue equals marginal cost",
+                "Price equals marginal cost"
+            ],
+            "correct_index": 2,
+            "explanation": "Any profit-maximizing firm, including a monopolist, produces where marginal revenue equals marginal cost. The monopolist then sets price from the demand curve above marginal cost.",
+            "reference": "CFA Institute Level I Curriculum - Economics - The Firm and Market Structures"
+        },
+        {
+            "id": "cfa-l1-036",
+            "domain": "Quant & Economics",
+            "stem": "Many sellers offer products that are close substitutes but differentiated by branding and quality. Which market structure does this describe?",
+            "options": [
+                "Pure monopoly",
+                "Perfect competition",
+                "Monopsony",
+                "Monopolistic competition"
+            ],
+            "correct_index": 3,
+            "explanation": "Monopolistic competition combines many firms with differentiated products and low barriers to entry, so each firm faces a downward-sloping but highly elastic demand curve. A monopsony is a single buyer.",
+            "reference": "CFA Institute Level I Curriculum - Economics - The Firm and Market Structures"
+        },
+        {
+            "id": "cfa-l1-037",
+            "domain": "Quant & Economics",
+            "stem": "Using the expenditure approach, which components sum to gross domestic product?",
+            "options": [
+                "Consumption, investment, government spending and net exports",
+                "Consumption, saving, taxes and imports",
+                "Wages, rents, interest and profit only",
+                "Government spending, tax revenue and transfer payments"
+            ],
+            "correct_index": 0,
+            "explanation": "The expenditure approach adds consumption, gross private investment, government purchases and net exports, which is exports minus imports. The income approach, by contrast, sums wages, rents, interest and profit.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Aggregate Output, Prices and Economic Growth"
+        },
+        {
+            "id": "cfa-l1-038",
+            "domain": "Quant & Economics",
+            "stem": "Which statement best distinguishes gross domestic product from gross national product?",
+            "options": [
+                "The two measures are always identical",
+                "GDP measures output produced within a country's borders, while GNP measures output by a country's residents",
+                "GDP measures output by residents, while GNP measures output within the borders",
+                "GDP includes only exports and GNP includes only imports"
+            ],
+            "correct_index": 1,
+            "explanation": "GDP is based on location of production within the national boundary, while GNP is based on the nationality of the factors of production. The difference is net income from abroad.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Aggregate Output, Prices and Economic Growth"
+        },
+        {
+            "id": "cfa-l1-039",
+            "domain": "Quant & Economics",
+            "stem": "A government statistical agency reports that nominal GDP rose 5 percent while the GDP deflator rose 3 percent. Which value is closest to the change in real GDP?",
+            "options": [
+                "About 3 percent",
+                "About 5 percent",
+                "About 2 percent",
+                "About 8 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Real GDP growth is approximately nominal growth minus inflation, so 5 percent minus 3 percent is about 2 percent. Real GDP strips out the effect of higher prices.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Aggregate Output, Prices and Economic Growth"
+        },
+        {
+            "id": "cfa-l1-040",
+            "domain": "Quant & Economics",
+            "stem": "Which sequence correctly orders the phases of the business cycle?",
+            "options": [
+                "Trough, peak, expansion, contraction",
+                "Peak, expansion, trough, contraction",
+                "Contraction, expansion, peak, trough",
+                "Expansion, peak, contraction, trough"
+            ],
+            "correct_index": 3,
+            "explanation": "The cycle moves from expansion to a peak, then into contraction, then a trough, after which expansion resumes. Peaks and troughs mark turning points of the cycle.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Monetary and Fiscal Policy"
+        },
+        {
+            "id": "cfa-l1-041",
+            "domain": "Quant & Economics",
+            "stem": "A central bank wants to pursue an expansionary monetary policy. Which action is most consistent with that goal?",
+            "options": [
+                "Purchasing government securities to add reserves and lower short-term rates",
+                "Selling government securities to drain reserves",
+                "Raising the reserve requirement sharply",
+                "Increasing the policy interest rate target"
+            ],
+            "correct_index": 0,
+            "explanation": "Buying securities injects reserves into the banking system, which lowers short-term interest rates and supports spending. Selling securities, raising reserve requirements and raising the policy rate are contractionary.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Monetary and Fiscal Policy"
+        },
+        {
+            "id": "cfa-l1-042",
+            "domain": "Quant & Economics",
+            "stem": "A government raises spending and cuts taxes to stimulate a weak economy. Which policy is this?",
+            "options": [
+                "Contractionary monetary policy",
+                "Expansionary fiscal policy",
+                "Contractionary fiscal policy",
+                "Expansionary monetary policy"
+            ],
+            "correct_index": 1,
+            "explanation": "Fiscal policy uses government spending and taxation. Higher spending and lower taxes increase aggregate demand, so this is expansionary fiscal policy, distinct from central bank actions.",
+            "reference": "CFA Institute Level I Curriculum - Economics - Monetary and Fiscal Policy"
+        },
+        {
+            "id": "cfa-l1-043",
+            "domain": "Quant & Economics",
+            "stem": "A firm reports current assets of 500 and current liabilities of 250. Which value is the current ratio?",
+            "options": [
+                "250",
+                "1.5",
+                "2.0",
+                "0.5"
+            ],
+            "correct_index": 2,
+            "explanation": "The current ratio is current assets divided by current liabilities, so 500 divided by 250 equals 2.0. A value above one indicates more short-term assets than short-term obligations.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-044",
+            "domain": "Quant & Economics",
+            "stem": "Which balance sheet item is excluded when computing the quick ratio from the current ratio calculation?",
+            "options": [
+                "Cash",
+                "Accounts receivable",
+                "Marketable securities",
+                "Inventory"
+            ],
+            "correct_index": 3,
+            "explanation": "The quick ratio removes inventory from current assets because inventory may be hard to convert to cash quickly. Cash, receivables and marketable securities remain in the numerator.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-045",
+            "domain": "Quant & Economics",
+            "stem": "A company reports revenue of 1,000 and cost of goods sold of 600. Which value is the gross profit margin?",
+            "options": [
+                "40 percent",
+                "60 percent",
+                "66.7 percent",
+                "50 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "Gross profit is revenue minus cost of goods sold, which is 400, divided by revenue of 1,000 to give 40 percent. The 60 percent figure is the cost of goods sold as a share of revenue.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-046",
+            "domain": "Quant & Economics",
+            "stem": "In the DuPont decomposition, which three ratios multiply together to give return on equity?",
+            "options": [
+                "Dividend payout, retention and growth rate",
+                "Net profit margin, asset turnover and the equity multiplier",
+                "Current ratio, quick ratio and cash ratio",
+                "Gross margin, operating margin and tax rate"
+            ],
+            "correct_index": 1,
+            "explanation": "The three-part DuPont identity expresses return on equity as net profit margin times total asset turnover times the equity multiplier, separating profitability, efficiency and leverage.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-047",
+            "domain": "Quant & Economics",
+            "stem": "A retailer has cost of goods sold of 600 and average inventory of 120. Which value is the inventory turnover?",
+            "options": [
+                "6.0",
+                "2.0",
+                "5.0",
+                "0.2"
+            ],
+            "correct_index": 2,
+            "explanation": "Inventory turnover is cost of goods sold divided by average inventory, so 600 divided by 120 equals 5.0. This means the inventory is sold and replaced five times per year.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-048",
+            "domain": "Quant & Economics",
+            "stem": "Prices are rising and inventory quantities are stable. Compared with LIFO, what is the effect of using FIFO on reported inventory and cost of goods sold?",
+            "options": [
+                "Lower ending inventory and higher cost of goods sold",
+                "Higher ending inventory and higher cost of goods sold",
+                "No difference in either figure",
+                "Higher ending inventory and lower cost of goods sold"
+            ],
+            "correct_index": 3,
+            "explanation": "In a rising price environment FIFO leaves the most recent, higher costs on the balance sheet and expenses the older, cheaper costs, so ending inventory is higher and cost of goods sold is lower than under LIFO.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Inventories"
+        },
+        {
+            "id": "cfa-l1-049",
+            "domain": "Quant & Economics",
+            "stem": "A company switches from straight-line to an accelerated depreciation method for a new asset. Which effect appears in the first year?",
+            "options": [
+                "Higher depreciation expense and lower net income",
+                "Lower depreciation expense and higher net income",
+                "No change in depreciation expense",
+                "Higher net income and lower accumulated depreciation"
+            ],
+            "correct_index": 0,
+            "explanation": "Accelerated methods front-load depreciation, so first-year expense is higher than under straight-line, reducing net income. Total depreciation over the asset's life is unchanged.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Long-Lived Assets"
+        },
+        {
+            "id": "cfa-l1-050",
+            "domain": "Quant & Economics",
+            "stem": "When preparing the operating section of the cash flow statement using the indirect method, how is depreciation expense treated?",
+            "options": [
+                "It is ignored entirely",
+                "It is added back to net income because it is a non-cash expense",
+                "It is subtracted from net income as a use of cash",
+                "It is reported only in the investing section"
+            ],
+            "correct_index": 1,
+            "explanation": "Depreciation reduced net income without using cash, so the indirect method adds it back to reconcile net income to operating cash flow. The actual asset purchase appears in the investing section.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Understanding Cash Flow Statements"
+        },
+        {
+            "id": "cfa-l1-051",
+            "domain": "Quant & Economics",
+            "stem": "A firm has net income of 100, depreciation of 20, capital expenditures of 40 and an increase in working capital of 10. Ignoring interest and taxes, which value is closest to free cash flow to the firm?",
+            "options": [
+                "150",
+                "90",
+                "70",
+                "60"
+            ],
+            "correct_index": 2,
+            "explanation": "Starting from net income of 100, add back depreciation of 20 to get 120, then subtract capital expenditures of 40 and the working capital increase of 10 to leave 70. Omitting the working capital change would give 80.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Understanding Cash Flow Statements"
+        },
+        {
+            "id": "cfa-l1-052",
+            "domain": "Quant & Economics",
+            "stem": "A company capitalizes a cost that could instead be expensed immediately. What is the effect on current-period profitability compared with expensing?",
+            "options": [
+                "Current net income is lower because the full cost hits the income statement",
+                "Current net income is unchanged",
+                "Current net income is higher because the cost is never recorded",
+                "Current net income is higher because the cost is spread over future periods"
+            ],
+            "correct_index": 3,
+            "explanation": "Capitalizing creates an asset and allocates the cost through depreciation over time, so current expense is lower and current income higher. Expensing would recognise the entire cost immediately.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Long-Lived Assets"
+        },
+        {
+            "id": "cfa-l1-053",
+            "domain": "Quant & Economics",
+            "stem": "A company has basic earnings per share above its diluted earnings per share. Which security is most likely responsible?",
+            "options": [
+                "In-the-money employee stock options treated under the treasury stock method",
+                "Ordinary common shares held by the founder",
+                "A fully paid cash dividend declared on common shares",
+                "Treasury shares repurchased in a prior year"
+            ],
+            "correct_index": 0,
+            "explanation": "Diluted EPS adds potentially dilutive securities. In-the-money options add shares through the treasury stock method, which lowers EPS below the basic figure. Common shares and dividends do not dilute.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Understanding Income Statements"
+        },
+        {
+            "id": "cfa-l1-054",
+            "domain": "Quant & Economics",
+            "stem": "A company has earnings before interest and taxes of 300 and interest expense of 60. Which value is the interest coverage ratio?",
+            "options": [
+                "6.0",
+                "5.0",
+                "0.2",
+                "4.0"
+            ],
+            "correct_index": 1,
+            "explanation": "Interest coverage is EBIT divided by interest expense, so 300 divided by 60 equals 5.0. A higher value means earnings cover interest obligations more comfortably.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Financial Analysis Techniques"
+        },
+        {
+            "id": "cfa-l1-055",
+            "domain": "Quant & Economics",
+            "stem": "Under accrual accounting, when should revenue from a sale on credit be recognised?",
+            "options": [
+                "When the order is placed by the customer",
+                "When the invoice is printed by the accounting system",
+                "When the good is delivered and the performance obligation is satisfied",
+                "Only when the customer pays in cash"
+            ],
+            "correct_index": 2,
+            "explanation": "Accrual accounting recognises revenue when the performance obligation is satisfied, which is typically at delivery, independent of the timing of cash collection. Cash receipt matters only for cash-basis reporting.",
+            "reference": "CFA Institute Level I Curriculum - Financial Statement Analysis - Understanding Income Statements"
+        },
+        {
+            "id": "cfa-l1-056",
+            "domain": "Quant & Economics",
+            "stem": "A firm has 40 percent debt at a pre-tax cost of 6 percent and 60 percent equity at a cost of 12 percent, with a tax rate of 25 percent. Which value is closest to the weighted average cost of capital?",
+            "options": [
+                "10.0 percent",
+                "7.8 percent",
+                "12.0 percent",
+                "9.0 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The after-tax cost of debt is 6 percent times 0.75, or 4.5 percent, weighted at 40 percent gives 1.8 percent. Equity at 12 percent weighted 60 percent gives 7.2 percent, so WACC is 9.0 percent.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Cost of Capital"
+        },
+        {
+            "id": "cfa-l1-057",
+            "domain": "Quant & Economics",
+            "stem": "The risk-free rate is 3 percent, the market risk premium is 5 percent and a stock has a beta of 1.2. Which value is closest to the required return on equity using the capital asset pricing model?",
+            "options": [
+                "9.0 percent",
+                "8.0 percent",
+                "6.0 percent",
+                "11.0 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The CAPM required return is 3 percent plus 1.2 times 5 percent, which is 3 plus 6, giving 9 percent. Forgetting to multiply the beta by the premium would give 8 percent.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Cost of Capital"
+        },
+        {
+            "id": "cfa-l1-058",
+            "domain": "Quant & Economics",
+            "stem": "A company can borrow at a pre-tax rate of 7 percent and faces a marginal tax rate of 30 percent. Which value is the after-tax cost of debt?",
+            "options": [
+                "5.6 percent",
+                "4.9 percent",
+                "7.0 percent",
+                "2.1 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "Because interest is tax-deductible, the after-tax cost of debt is 7 percent times one minus 0.30, which is 4.9 percent. Using the full pre-tax rate overstates the cost used in WACC.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Cost of Capital"
+        },
+        {
+            "id": "cfa-l1-059",
+            "domain": "Quant & Economics",
+            "stem": "In the Modigliani-Miller framework without taxes, what is the effect of capital structure on firm value?",
+            "options": [
+                "Firm value falls as debt increases",
+                "Firm value depends only on the dividend policy",
+                "Firm value is independent of the mix of debt and equity",
+                "Firm value rises as debt increases"
+            ],
+            "correct_index": 2,
+            "explanation": "Without taxes or other frictions, Modigliani-Miller proposition one holds that firm value is determined by operating cash flows, not by how they are financed. Adding taxes introduces a debt tax shield benefit.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Structure"
+        },
+        {
+            "id": "cfa-l1-060",
+            "domain": "Quant & Economics",
+            "stem": "In the Modigliani-Miller framework with corporate taxes, which factor causes firm value to increase with leverage?",
+            "options": [
+                "The elimination of all financial risk",
+                "A lower required return on equity",
+                "The reduction of operating costs",
+                "The tax shield created by the deductibility of interest"
+            ],
+            "correct_index": 3,
+            "explanation": "With taxes, the interest tax shield adds value equal to the tax rate times the amount of debt, so value rises with leverage. In the real world this benefit is offset by costs of financial distress.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Capital Structure"
+        },
+        {
+            "id": "cfa-l1-061",
+            "domain": "Quant & Economics",
+            "stem": "A company earns earnings per share of 5 and pays a dividend of 2 per share. Which value is the dividend payout ratio?",
+            "options": [
+                "40 percent",
+                "60 percent",
+                "250 percent",
+                "20 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The payout ratio is dividends per share divided by earnings per share, so 2 divided by 5 equals 40 percent. The remaining 60 percent is the retention ratio.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Dividends and Share Repurchases"
+        },
+        {
+            "id": "cfa-l1-062",
+            "domain": "Quant & Economics",
+            "stem": "Under the dividend irrelevance theory in perfect markets, what determines shareholder wealth?",
+            "options": [
+                "The dividend payout ratio alone",
+                "Total cash flows from operations, not the pattern of dividends",
+                "The frequency of dividend payments",
+                "Whether dividends are paid in cash or stock"
+            ],
+            "correct_index": 1,
+            "explanation": "When markets are perfect and free of taxes or transaction costs, shareholders can create their own income, so dividend policy does not affect value. Real-world frictions such as taxes and signalling can change this.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Dividends and Share Repurchases"
+        },
+        {
+            "id": "cfa-l1-063",
+            "domain": "Quant & Economics",
+            "stem": "A financial manager estimates the weighted average cost of capital for budgeting decisions. Which weights are most appropriate?",
+            "options": [
+                "The weights of the most recent single financing transaction",
+                "Equal weights for debt and equity regardless of structure",
+                "Target capital structure weights based on market values",
+                "Historical book values from the last balance sheet only"
+            ],
+            "correct_index": 2,
+            "explanation": "WACC should use target capital structure weights at market values because they reflect the firm's intended long-run financing mix and current opportunity costs. Book values are historical and may misstate the mix.",
+            "reference": "CFA Institute Level I Curriculum - Corporate Issuers - Cost of Capital"
+        },
+        {
+            "id": "cfa-l1-064",
+            "domain": "Investment Valuation",
+            "stem": "A stock will pay a dividend of 2 next year, the required return is 10 percent and dividends grow at 5 percent forever. Which value is closest to the intrinsic value today using the Gordon growth model?",
+            "options": [
+                "20.00",
+                "42.00",
+                "38.10",
+                "40.00"
+            ],
+            "correct_index": 3,
+            "explanation": "The Gordon model values the stock as next dividend divided by required return minus growth, so 2 divided by 0.05 equals 40.00. Using this year's dividend instead of next year's would give 38.10.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-065",
+            "domain": "Investment Valuation",
+            "stem": "An analyst expects a company to grow rapidly for five years and then settle into stable growth. Which dividend discount approach is most appropriate?",
+            "options": [
+                "A two-stage model with a high-growth phase and a stable terminal phase",
+                "A single-stage constant growth model only",
+                "A zero-growth perpetuity model only",
+                "A model that ignores the terminal value"
+            ],
+            "correct_index": 0,
+            "explanation": "When growth is expected to change over time, a multi-stage model captures the distinct phases. The Gordon single-stage model assumes one constant growth rate forever, which does not fit this pattern.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-066",
+            "domain": "Investment Valuation",
+            "stem": "Which situation makes the dividend discount model least appropriate for valuing a company's equity?",
+            "options": [
+                "The company is a mature regulated utility",
+                "The company pays no dividend and is unlikely to initiate one soon",
+                "The company pays a stable and growing dividend",
+                "The dividend grows at a constant sustainable rate"
+            ],
+            "correct_index": 1,
+            "explanation": "The dividend discount model requires an expected dividend stream. A non-paying firm with no near-term dividend cannot be valued this way, so a free cash flow approach is preferred.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-067",
+            "domain": "Investment Valuation",
+            "stem": "A company has a return on equity of 15 percent and retains 40 percent of earnings. Which value is closest to its sustainable growth rate?",
+            "options": [
+                "40.0 percent",
+                "9.0 percent",
+                "6.0 percent",
+                "15.0 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Sustainable growth equals return on equity times the retention ratio, so 0.15 times 0.40 equals 6 percent. Using the payout ratio of 60 percent instead of retention would incorrectly give 9 percent.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-068",
+            "domain": "Investment Valuation",
+            "stem": "A preferred share pays a fixed annual dividend of 5 and the required return is 8 percent. Which value is closest to the share's value?",
+            "options": [
+                "40.00",
+                "80.00",
+                "57.50",
+                "62.50"
+            ],
+            "correct_index": 3,
+            "explanation": "Because the preferred dividend is a level perpetuity, value equals 5 divided by 0.08, which is 62.50. Preferred shares receive no growth in the dividend, so the growth term is zero.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-069",
+            "domain": "Investment Valuation",
+            "stem": "Which condition must hold for the Gordon constant growth model to produce a sensible value?",
+            "options": [
+                "The required return must exceed the expected growth rate",
+                "The growth rate must exceed the required return",
+                "The dividend must be zero",
+                "The payout ratio must equal one"
+            ],
+            "correct_index": 0,
+            "explanation": "The denominator of the Gordon model is required return minus growth, so the required return must be greater than growth or the value becomes negative or infinite. Stable growth cannot outpace the required return forever.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-070",
+            "domain": "Investment Valuation",
+            "stem": "A firm pays a constant dividend of 3 with no growth, and the required return is 6 percent. Which value is closest to the share value?",
+            "options": [
+                "66.67",
+                "50.00",
+                "18.00",
+                "30.00"
+            ],
+            "correct_index": 1,
+            "explanation": "With no growth the dividend is a level perpetuity, so value equals 3 divided by 0.06, which is 50.00. This is the Gordon model with a growth rate of zero.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-071",
+            "domain": "Investment Valuation",
+            "stem": "A stock trades at 40, is expected to pay a dividend of 2 next year and has a long-run growth rate of 5 percent. Which value is closest to the implied required return?",
+            "options": [
+                "7.5 percent",
+                "12 percent",
+                "10 percent",
+                "5 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Rearranging the Gordon model, the implied return is the dividend yield plus growth, so 2 divided by 40 equals 5 percent, plus 5 percent growth, giving 10 percent.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Dividend Discount Models"
+        },
+        {
+            "id": "cfa-l1-072",
+            "domain": "Investment Valuation",
+            "stem": "A stock has a trailing price to earnings ratio of 20. Which value is closest to its earnings yield?",
+            "options": [
+                "20.0 percent",
+                "2.0 percent",
+                "10.0 percent",
+                "5.0 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Earnings yield is the reciprocal of the price to earnings ratio, so 1 divided by 20 equals 5 percent. The earnings yield is useful for comparing a stock with bond yields.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-073",
+            "domain": "Investment Valuation",
+            "stem": "Which group of companies is best suited to valuation using the price to book ratio?",
+            "options": [
+                "Banks and other financial firms whose assets are largely financial",
+                "Technology firms with almost no tangible assets",
+                "Start-up firms with negative earnings",
+                "Firms in which book value is dominated by research spending"
+            ],
+            "correct_index": 0,
+            "explanation": "For financial firms, book value is a meaningful measure because assets and liabilities are carried close to market value. For firms with large intangible or R and D assets, book value can badly misrepresent value.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-074",
+            "domain": "Investment Valuation",
+            "stem": "Why is the enterprise value to EBITDA multiple often preferred when comparing companies with different capital structures?",
+            "options": [
+                "It is unaffected by differences in tax rates",
+                "Enterprise value and EBITDA are both before the effects of financing",
+                "It ignores operating performance entirely",
+                "It uses only book values rather than market values"
+            ],
+            "correct_index": 1,
+            "explanation": "Enterprise value includes debt and EBITDA is before interest and taxes, so the ratio is capital-structure neutral and allows a cleaner comparison across firms. It remains sensitive to differences in tax rates.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-075",
+            "domain": "Investment Valuation",
+            "stem": "A stock trades at a price to earnings ratio of 24 and is expected to grow earnings at 12 percent. Which value is closest to the PEG ratio, and what does a low value suggest?",
+            "options": [
+                "2.0, and a higher value suggests the stock is cheap",
+                "12.0, and the ratio is not meaningful",
+                "2.0, and a lower value suggests more growth per unit of price paid",
+                "0.5, and a lower value suggests less growth per unit of price paid"
+            ],
+            "correct_index": 2,
+            "explanation": "The PEG ratio divides the price to earnings ratio by the growth rate, so 24 divided by 12 equals 2.0. A lower PEG generally indicates more earnings growth per unit of price, though it is only a rough screen.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-076",
+            "domain": "Investment Valuation",
+            "stem": "A company has negative earnings but positive sales. Which multiple is most useful for a rough relative valuation?",
+            "options": [
+                "Price to earnings",
+                "PEG ratio",
+                "Earnings yield",
+                "Price to sales"
+            ],
+            "correct_index": 3,
+            "explanation": "When earnings are negative the price to earnings ratio and earnings yield are not meaningful, but sales are usually positive. Price to sales provides a usable comparison, though it ignores profitability differences.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-077",
+            "domain": "Investment Valuation",
+            "stem": "Which statement correctly distinguishes a leading price to earnings ratio from a trailing one?",
+            "options": [
+                "The leading ratio uses forecast earnings, while the trailing ratio uses the most recent reported earnings",
+                "The leading ratio uses reported earnings, while the trailing ratio uses forecast earnings",
+                "Both ratios always use identical earnings",
+                "The leading ratio ignores price entirely"
+            ],
+            "correct_index": 0,
+            "explanation": "The leading or forward ratio divides price by next year's forecast earnings, while the trailing ratio uses the last twelve months of reported earnings. Forward ratios depend on analyst forecasts and are less certain.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-078",
+            "domain": "Investment Valuation",
+            "stem": "Which statement correctly contrasts intrinsic valuation with relative valuation?",
+            "options": [
+                "Relative valuation ignores market prices entirely",
+                "Intrinsic valuation discounts expected cash flows, while relative valuation compares a firm with peer multiples",
+                "Intrinsic valuation uses peer multiples, while relative valuation discounts expected cash flows",
+                "Intrinsic valuation ignores the required return"
+            ],
+            "correct_index": 1,
+            "explanation": "Intrinsic valuation estimates value from a firm's own expected cash flows discounted at an appropriate rate. Relative valuation estimates value from how comparable assets are priced by the market.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-079",
+            "domain": "Investment Valuation",
+            "stem": "For a company that pays no dividends but generates strong free cash flow, which approach is most appropriate to value equity?",
+            "options": [
+                "Book value based only on historical cost",
+                "Par value of the shares outstanding",
+                "Free cash flow to equity discounted at the cost of equity",
+                "Dividend discount model using reported earnings"
+            ],
+            "correct_index": 2,
+            "explanation": "Free cash flow to equity captures cash available to shareholders even when none is paid as dividends, and it is discounted at the cost of equity. A dividend discount model would fail for a non-paying firm.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Free Cash Flow Valuation"
+        },
+        {
+            "id": "cfa-l1-080",
+            "domain": "Investment Valuation",
+            "stem": "Which discount rate should be used to value a firm using free cash flow to the firm?",
+            "options": [
+                "The cost of equity only",
+                "The risk-free rate",
+                "The after-tax cost of debt only",
+                "The weighted average cost of capital"
+            ],
+            "correct_index": 3,
+            "explanation": "Free cash flow to the firm belongs to all capital providers, so it is discounted at the weighted average cost of capital. Free cash flow to equity, by contrast, is discounted at the cost of equity.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Free Cash Flow Valuation"
+        },
+        {
+            "id": "cfa-l1-081",
+            "domain": "Investment Valuation",
+            "stem": "Which components make up the required return on an equity investment?",
+            "options": [
+                "The risk-free rate plus a risk premium",
+                "The risk-free rate alone",
+                "The dividend yield alone",
+                "The growth rate minus the risk-free rate"
+            ],
+            "correct_index": 0,
+            "explanation": "Investors demand the risk-free rate for deferring consumption plus a risk premium for bearing uncertainty. The risk-free rate alone would be adequate only for a default-free asset with no risk.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-082",
+            "domain": "Investment Valuation",
+            "stem": "A company has never paid a dividend and reinvests all earnings in growth projects. Which valuation input is most directly useful?",
+            "options": [
+                "The coupon rate on previously issued bonds",
+                "Free cash flow to equity, because it measures cash available to shareholders",
+                "The historical dividend stream",
+                "The stated par value of the common shares"
+            ],
+            "correct_index": 1,
+            "explanation": "For a non-paying firm, cash available to shareholders is reflected in free cash flow to equity rather than dividends. Analysts value such firms with free cash flow models discounted at the cost of equity.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Free Cash Flow Valuation"
+        },
+        {
+            "id": "cfa-l1-083",
+            "domain": "Investment Valuation",
+            "stem": "In which situation is asset-based valuation most likely to be appropriate?",
+            "options": [
+                "A technology firm with large off-balance-sheet intangibles",
+                "A firm with rapidly changing operating cash flows",
+                "A firm holding mostly tangible, marketable assets such as real estate",
+                "A consulting firm whose value is mostly human capital"
+            ],
+            "correct_index": 2,
+            "explanation": "Asset-based valuation works best when a firm's assets are tangible and their market values can be reliably estimated, such as property. It undervalues firms whose worth lies in intangibles or people.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-084",
+            "domain": "Investment Valuation",
+            "stem": "Which formula correctly computes a firm's enterprise value?",
+            "options": [
+                "Market value of equity plus total debt plus cash",
+                "Market value of equity minus total debt minus cash",
+                "Total debt minus market value of equity",
+                "Market value of equity plus total debt minus cash and cash equivalents"
+            ],
+            "correct_index": 3,
+            "explanation": "Enterprise value is the market value of equity plus debt and other claims, minus cash, because cash reduces the net cost of acquiring the business. Adding cash would overstate the takeover value.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-085",
+            "domain": "Investment Valuation",
+            "stem": "Which limitation makes book value a poor proxy for the market value of equity in many firms?",
+            "options": [
+                "It reflects historical cost and omits internally generated intangible assets",
+                "It changes daily with share price movements",
+                "It always exceeds market capitalization",
+                "It is based entirely on future cash flow forecasts"
+            ],
+            "correct_index": 0,
+            "explanation": "Book value uses historical cost and generally excludes internally generated intangibles such as brand and research, so it can differ greatly from market value. Market capitalization, by contrast, reflects investor expectations.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-086",
+            "domain": "Investment Valuation",
+            "stem": "Which value represents the amount a firm could raise by selling its assets individually today?",
+            "options": [
+                "Par value",
+                "Liquidation value",
+                "Going-concern value",
+                "Book value"
+            ],
+            "correct_index": 1,
+            "explanation": "Liquidation value assumes the assets are sold separately rather than as an operating business. It usually falls below going-concern value because it ignores the value created by combining the assets.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-087",
+            "domain": "Investment Valuation",
+            "stem": "An investor buys a share for 50, receives a dividend of 2 and sells it one year later for 55. Which value is the holding period return?",
+            "options": [
+                "4 percent",
+                "7 percent",
+                "14 percent",
+                "10 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Holding period return is the price change of 5 plus the dividend of 2, divided by the initial price of 50, giving 7 divided by 50, or 14 percent. Ignoring the dividend would give only 10 percent.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-088",
+            "domain": "Investment Valuation",
+            "stem": "An analyst estimates the equity risk premium by subtracting the risk-free rate from the expected return on a broad market index. Which method is being used?",
+            "options": [
+                "The historical approach only",
+                "The dividend growth approach applied to a single stock",
+                "The book-to-market approach",
+                "The forward-looking or implied approach"
+            ],
+            "correct_index": 3,
+            "explanation": "Using the expected market return over the risk-free rate is a forward-looking estimate of the equity risk premium. The historical approach instead averages past realised excess returns.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Equity Valuation Concepts"
+        },
+        {
+            "id": "cfa-l1-089",
+            "domain": "Investment Valuation",
+            "stem": "A stock has a payout ratio of 40 percent, a required return of 10 percent and sustainable growth of 5 percent. Which value is closest to its justified leading price to earnings ratio?",
+            "options": [
+                "8.0",
+                "4.0",
+                "10.0",
+                "12.0"
+            ],
+            "correct_index": 0,
+            "explanation": "The justified leading P/E is payout divided by required return minus growth, so 0.40 divided by 0.05 equals 8.0. Using the retention ratio of 0.60 would incorrectly give 12.0.",
+            "reference": "CFA Institute Level I Curriculum - Equity Valuation - Price and Enterprise Value Multiples"
+        },
+        {
+            "id": "cfa-l1-090",
+            "domain": "Investment Valuation",
+            "stem": "A bond pays an 8 percent coupon semiannually, has two years to maturity and a par value of 1,000. If the yield to maturity is 6 percent, which value is closest to the price?",
+            "options": [
+                "962.00",
+                "1,037.17",
+                "1,000.00",
+                "1,074.00"
+            ],
+            "correct_index": 1,
+            "explanation": "Each coupon is 40 and the per-period yield is 3 percent over four periods. The coupon annuity present value is about 148.68 and the principal present value is about 888.49, summing to roughly 1,037.17.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-091",
+            "domain": "Investment Valuation",
+            "stem": "For an option-free bond, what is the relationship between price and yield to maturity?",
+            "options": [
+                "They are unrelated",
+                "They move in a linear relationship with unit slope",
+                "They move in opposite directions in a convex relationship",
+                "They move in the same direction"
+            ],
+            "correct_index": 2,
+            "explanation": "Bond prices fall when yields rise and rise when yields fall, and the relationship is convex rather than linear. This inverse and curved relationship is the foundation of duration and convexity.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-092",
+            "domain": "Investment Valuation",
+            "stem": "An option-free bond has a coupon rate of 7 percent and a yield to maturity of 5 percent. How does the bond trade?",
+            "options": [
+                "At a discount to par value",
+                "At par value",
+                "At a price that cannot be determined",
+                "At a premium to par value"
+            ],
+            "correct_index": 3,
+            "explanation": "When the coupon exceeds the yield, the bond pays more than the market requires and trades at a premium. A coupon below the yield would produce a discount, and equal values would produce par.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-093",
+            "domain": "Investment Valuation",
+            "stem": "A bond trades at 950 with an annual coupon of 60. Which value is closest to the current yield, and how does it relate to the yield to maturity?",
+            "options": [
+                "6.3 percent, and the yield to maturity is higher because of the pull to par",
+                "6.3 percent, and the yield to maturity is lower because of the pull to par",
+                "6.0 percent, and the two are always equal",
+                "5.7 percent, and the yield to maturity is equal to it"
+            ],
+            "correct_index": 0,
+            "explanation": "Current yield is the annual coupon divided by price, so 60 divided by 950 equals 6.3 percent. Because the bond is bought below par, the yield to maturity adds the capital gain and is therefore higher.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-094",
+            "domain": "Investment Valuation",
+            "stem": "Which statement correctly describes the relationship between a bond's flat price, accrued interest and full price?",
+            "options": [
+                "The flat price and the full price are always identical",
+                "The full price equals the flat price plus accrued interest",
+                "The flat price equals the full price plus accrued interest",
+                "Accrued interest is subtracted from the flat price to get the full price"
+            ],
+            "correct_index": 1,
+            "explanation": "The full or dirty price is what the buyer actually pays and includes the flat or clean price plus accrued interest owed to the seller. Quotes usually show the clean price for comparability.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-095",
+            "domain": "Investment Valuation",
+            "stem": "Why is the spot rate curve more fundamental than a single yield to maturity for valuing a bond?",
+            "options": [
+                "Spot rates ignore the timing of cash flows",
+                "A single yield assumes all cash flows occur at maturity",
+                "Each cash flow can be discounted at its own maturity-matched spot rate",
+                "Spot rates are always higher than yields"
+            ],
+            "correct_index": 2,
+            "explanation": "The spot or zero-coupon curve provides a distinct discount rate for each cash flow date, so each payment is discounted correctly. A single yield to maturity is a complex average that can obscure the term structure.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-096",
+            "domain": "Investment Valuation",
+            "stem": "Arbitrage-free bond valuation is most closely associated with which method?",
+            "options": [
+                "Using only the bond's coupon rate",
+                "Applying the same yield to all bonds regardless of maturity",
+                "Averaging the yields of all outstanding bonds",
+                "Discounting each cash flow with the corresponding spot rate"
+            ],
+            "correct_index": 3,
+            "explanation": "Arbitrage-free valuation discounts every cash flow at the appropriate spot rate so that no riskless profit is available from stripping or reconstituting the bond. Mismatching the discount rates would create arbitrage.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-097",
+            "domain": "Investment Valuation",
+            "stem": "Under what condition does an option-free bond sell exactly at par value?",
+            "options": [
+                "When the coupon rate equals the yield to maturity",
+                "When the coupon rate is below the yield to maturity",
+                "When the bond has the longest possible maturity",
+                "When the issuer has the highest credit rating"
+            ],
+            "correct_index": 0,
+            "explanation": "When the coupon rate equals the yield to maturity, the present value of the coupons and principal equals par. Coupon above yield gives a premium, and coupon below yield gives a discount.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-098",
+            "domain": "Investment Valuation",
+            "stem": "A three-year zero-coupon bond has a par value of 1,000 and the annual spot rate is 5 percent. Which value is closest to the price?",
+            "options": [
+                "1,157.63",
+                "863.84",
+                "1,000.00",
+                "950.00"
+            ],
+            "correct_index": 1,
+            "explanation": "The price is 1,000 divided by 1.05 raised to the third power. Since 1.05 cubed is 1.157625, the price is about 863.84. Multiplying by 1.05 cubed instead of dividing would give 1,157.63.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Introduction to Fixed-Income Valuation"
+        },
+        {
+            "id": "cfa-l1-099",
+            "domain": "Investment Valuation",
+            "stem": "How is modified duration related to Macaulay duration?",
+            "options": [
+                "Modified duration equals Macaulay duration plus the yield per period",
+                "The two measures are always equal",
+                "Modified duration equals Macaulay duration divided by one plus the yield per period",
+                "Modified duration equals Macaulay duration multiplied by one plus the yield per period"
+            ],
+            "correct_index": 2,
+            "explanation": "Modified duration adjusts Macaulay duration for the yield, dividing by one plus the periodic yield, so it directly estimates price sensitivity to a yield change. Macaulay duration is a weighted average time to cash flows.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-100",
+            "domain": "Investment Valuation",
+            "stem": "Which duration measure is most appropriate for a bond with an embedded call option?",
+            "options": [
+                "Macaulay duration, because it uses promised cash flows",
+                "Modified duration, because it uses promised cash flows",
+                "The bond's time to maturity",
+                "Effective duration, because it allows for changes in cash flows when yields change"
+            ],
+            "correct_index": 3,
+            "explanation": "Effective duration is estimated from actual price changes and allows the cash flows to change when yields move, which matters for options. Macaulay and modified duration assume fixed promised cash flows.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-101",
+            "domain": "Investment Valuation",
+            "stem": "A bond has a modified duration of 5. For a 1 percent increase in yield, which value is closest to the approximate percentage price change?",
+            "options": [
+                "Negative 5 percent",
+                "Positive 5 percent",
+                "Negative 0.5 percent",
+                "Negative 50 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "Approximate percentage price change is negative modified duration times the yield change, so negative 5 times 0.01 equals negative 0.05, or negative 5 percent. Price moves inversely to yield.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-102",
+            "domain": "Investment Valuation",
+            "stem": "A bond has a dollar duration of 500. Which value is closest to the price change for a one basis point move in yield?",
+            "options": [
+                "50.00",
+                "0.05",
+                "5.00",
+                "0.50"
+            ],
+            "correct_index": 1,
+            "explanation": "Dollar duration is the price change per unit change in yield, so one basis point of 0.0001 gives 500 times 0.0001, which is 0.05. This one-basis-point value is also called DV01.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-103",
+            "domain": "Investment Valuation",
+            "stem": "Which term captures the curvature of the price-yield relationship and improves the estimate of price change for larger yield moves?",
+            "options": [
+                "Current yield",
+                "Accrued interest",
+                "Convexity",
+                "Duration"
+            ],
+            "correct_index": 2,
+            "explanation": "Convexity measures the curvature of the price-yield curve and is added to the duration estimate, so it matters more for larger yield changes. Duration alone assumes a linear relationship.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-104",
+            "domain": "Investment Valuation",
+            "stem": "For a zero-coupon bond, how does Macaulay duration compare with time to maturity?",
+            "options": [
+                "Macaulay duration is less than the time to maturity",
+                "Macaulay duration is greater than the time to maturity",
+                "Macaulay duration is always zero",
+                "Macaulay duration equals the time to maturity"
+            ],
+            "correct_index": 3,
+            "explanation": "A zero-coupon bond has a single cash flow at maturity, so its weighted average time to cash flows equals the maturity. For coupon bonds, duration is less than maturity because coupons arrive earlier.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-105",
+            "domain": "Investment Valuation",
+            "stem": "All else being equal, how does a higher coupon rate affect a bond's duration?",
+            "options": [
+                "Duration decreases because more cash flow arrives earlier",
+                "Duration increases because more cash flow arrives earlier",
+                "Duration is unaffected by the coupon rate",
+                "Duration equals the coupon rate"
+            ],
+            "correct_index": 0,
+            "explanation": "A higher coupon places more cash flow earlier in the bond's life, lowering the weighted average time to cash flows and therefore duration. Longer maturity and lower yields both raise duration.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-106",
+            "domain": "Investment Valuation",
+            "stem": "A pension fund wants its assets to be insulated from small parallel shifts in interest rates relative to its liabilities. Which strategy is most appropriate?",
+            "options": [
+                "Match the credit ratings of assets and liabilities",
+                "Match the duration of assets and liabilities",
+                "Match only the coupon rates of assets and liabilities",
+                "Hold only short-term Treasury bills"
+            ],
+            "correct_index": 1,
+            "explanation": "Immunisation matches the duration of assets to the duration of liabilities so that the balance is protected against small parallel yield shifts. Coupon or rating matching does not control interest-rate sensitivity.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-107",
+            "domain": "Investment Valuation",
+            "stem": "A bond exhibits positive convexity. What does this imply about price gains and losses for equal yield changes up and down?",
+            "options": [
+                "Price gains and losses are always equal",
+                "Convexity does not affect the price response",
+                "The price gain from a yield fall exceeds the price loss from an equal yield rise",
+                "The price loss from a yield rise exceeds the price gain from an equal yield fall"
+            ],
+            "correct_index": 2,
+            "explanation": "Positive convexity makes the price-yield curve bow toward the origin, so gains from falling yields exceed losses from equal rising yields. This asymmetry benefits the bondholder.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Understanding Fixed-Income Risk and Return"
+        },
+        {
+            "id": "cfa-l1-108",
+            "domain": "Investment Valuation",
+            "stem": "A corporate bond yields 6 percent while a Treasury of the same maturity yields 4 percent. Which value is the credit spread?",
+            "options": [
+                "4 percent",
+                "6 percent",
+                "10 percent",
+                "2 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The credit spread is the corporate bond yield minus the benchmark Treasury yield, so 6 minus 4 equals 2 percent. It compensates investors for credit, liquidity and other risks.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-109",
+            "domain": "Investment Valuation",
+            "stem": "The credit spread on a riskier issuer's bond widens. What is the most likely effect on the bond's price?",
+            "options": [
+                "The price falls because the required yield rises",
+                "The price rises because the required yield falls",
+                "The price is unchanged because the coupon is fixed",
+                "The price converges to par immediately"
+            ],
+            "correct_index": 0,
+            "explanation": "A wider spread raises the yield investors demand, and higher yields push bond prices down. A narrowing spread would raise the price instead.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-110",
+            "domain": "Investment Valuation",
+            "stem": "Which statement correctly relates a bond's credit rating to its default risk?",
+            "options": [
+                "Only AAA ratings carry any default risk",
+                "A lower rating generally indicates a higher probability of default",
+                "A lower rating generally indicates a lower probability of default",
+                "Ratings are unrelated to default probability"
+            ],
+            "correct_index": 1,
+            "explanation": "Credit ratings order issuers by relative default probability, so lower-rated speculative-grade bonds historically default more often than higher-rated investment-grade bonds. Ratings are opinions that can change over time.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-111",
+            "domain": "Investment Valuation",
+            "stem": "A bond has a 4 percent probability of default and a recovery rate of 40 percent. Which value is closest to the expected loss rate?",
+            "options": [
+                "1.6 percent",
+                "40.0 percent",
+                "2.4 percent",
+                "4.0 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Loss given default is one minus the recovery rate, so it is 60 percent. Expected loss is the default probability times loss given default, so 0.04 times 0.60 equals 2.4 percent.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-112",
+            "domain": "Investment Valuation",
+            "stem": "Which risk measure indicates how sensitive a bond's price is to a change in its credit spread?",
+            "options": [
+                "Macaulay duration",
+                "Current yield",
+                "Convexity",
+                "Spread duration"
+            ],
+            "correct_index": 3,
+            "explanation": "Spread duration estimates the percentage price change for a change in the credit spread, holding the benchmark curve constant. Interest-rate duration measures sensitivity to the benchmark curve instead.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-113",
+            "domain": "Investment Valuation",
+            "stem": "An issuer's credit rating is downgraded from investment grade to speculative grade. Which term describes this event?",
+            "options": [
+                "Credit migration",
+                "Immunisation",
+                "Securitisation",
+                "Convexity adjustment"
+            ],
+            "correct_index": 0,
+            "explanation": "Credit migration is a change in an issuer's credit rating, whether upward or downward. A downgrade across the investment-grade boundary can force some investors to sell because of mandate constraints.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-114",
+            "domain": "Investment Valuation",
+            "stem": "An issuer defaults, and both a senior secured bond and a subordinated unsecured bond are outstanding. Which claim is most likely to recover more?",
+            "options": [
+                "Neither recovers anything once default occurs",
+                "The senior secured bond, because it ranks ahead and is backed by collateral",
+                "The subordinated unsecured bond, because it ranks first",
+                "Both recover equally because they share the same issuer"
+            ],
+            "correct_index": 1,
+            "explanation": "In a default, claims are paid in order of seniority, and secured debt has a claim on specific collateral, so it typically recovers more. Subordinated unsecured debt ranks last among the listed claims.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-115",
+            "domain": "Investment Valuation",
+            "stem": "Which two components make up the return an investor earns on a bond investment over a holding period?",
+            "options": [
+                "Rental income and property appreciation",
+                "Option premium and strike price",
+                "Coupon income and price change",
+                "Dividend income and share count change"
+            ],
+            "correct_index": 2,
+            "explanation": "Bond return over a holding period comes from the coupon or interest income received plus any change in price, including the pull to par. Reinvestment of coupons also affects the total return.",
+            "reference": "CFA Institute Level I Curriculum - Fixed Income - Fundamentals of Credit Analysis"
+        },
+        {
+            "id": "cfa-l1-116",
+            "domain": "Investment Valuation",
+            "stem": "A non-dividend-paying stock trades at 100 and the annual risk-free rate is 5 percent. Which value is closest to the one-year no-arbitrage forward price?",
+            "options": [
+                "95.24",
+                "100.00",
+                "110.00",
+                "105.00"
+            ],
+            "correct_index": 3,
+            "explanation": "The no-arbitrage forward price is the spot price compounded at the risk-free rate, so 100 times 1.05 equals 105.00. Dividing by 1.05 would give the present value, not the forward price.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-117",
+            "domain": "Investment Valuation",
+            "stem": "Which feature distinguishes a futures contract from a forward contract?",
+            "options": [
+                "Futures are marked to market daily, while forwards settle only at maturity",
+                "Forwards are exchange-traded, while futures are private agreements",
+                "Futures require delivery while forwards never do",
+                "Forwards have no credit risk while futures carry full counterparty risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Futures are exchange-traded and settled daily through a clearinghouse, which reduces counterparty risk. Forwards are private contracts that settle at maturity and carry counterparty credit risk.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-118",
+            "domain": "Investment Valuation",
+            "stem": "A call option has a strike price of 50 and the underlying stock trades at 55. Which value is the option's intrinsic value?",
+            "options": [
+                "50",
+                "5",
+                "0",
+                "55"
+            ],
+            "correct_index": 1,
+            "explanation": "For a call, intrinsic value is the maximum of the stock price minus the strike and zero, so 55 minus 50 equals 5. The option is in the money and also carries time value.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-119",
+            "domain": "Investment Valuation",
+            "stem": "At expiration, which expression gives the payoff to the holder of a long put option?",
+            "options": [
+                "The strike price plus the stock price",
+                "The stock price alone",
+                "The maximum of the strike price minus the stock price and zero",
+                "The maximum of the stock price minus the strike price and zero"
+            ],
+            "correct_index": 2,
+            "explanation": "A put gains value when the underlying falls below the strike, so its payoff at expiry is the maximum of strike minus stock price and zero. A call instead pays the maximum of stock price minus strike and zero.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-120",
+            "domain": "Investment Valuation",
+            "stem": "Which equation expresses put-call parity for European options on a non-dividend-paying stock?",
+            "options": [
+                "Call price plus the stock price equals put price plus the strike",
+                "Call price minus the put price equals the strike price",
+                "Call price equals the put price at all times",
+                "Call price plus present value of the strike equals put price plus the stock price"
+            ],
+            "correct_index": 3,
+            "explanation": "Put-call parity states that a call plus the present value of the strike equals a put plus the stock price. Rearranging it lets an analyst find one option value from the other three inputs.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-121",
+            "domain": "Investment Valuation",
+            "stem": "An investor enters a long forward position at a forward price of 100. At settlement the underlying is 108. Which value is the payoff?",
+            "options": [
+                "8",
+                "Negative 8",
+                "100",
+                "108"
+            ],
+            "correct_index": 0,
+            "explanation": "The long forward payoff is the settlement price minus the forward price, so 108 minus 100 equals 8. A short forward would have the opposite, negative 8, payoff.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-122",
+            "domain": "Investment Valuation",
+            "stem": "Which two components make up the premium of an option?",
+            "options": [
+                "Forward price and spot price",
+                "Intrinsic value and time value",
+                "Strike price and maturity",
+                "Coupon and principal"
+            ],
+            "correct_index": 1,
+            "explanation": "An option premium equals intrinsic value plus time value. Intrinsic value is the payoff if exercised now, and time value reflects the chance the option becomes more valuable before expiry.",
+            "reference": "CFA Institute Level I Curriculum - Derivatives - Basics of Derivative Pricing and Valuation"
+        },
+        {
+            "id": "cfa-l1-123",
+            "domain": "Investment Valuation",
+            "stem": "A hedge fund charges a 2 percent management fee on assets and 20 percent of profits. What is the 20 percent charge called?",
+            "options": [
+                "The bid-ask spread",
+                "The origination fee",
+                "The incentive or performance fee",
+                "The expense ratio"
+            ],
+            "correct_index": 2,
+            "explanation": "Hedge funds commonly charge a management fee on assets plus an incentive fee on profits. The incentive fee aligns manager pay with performance but can create a bias toward risk-taking.",
+            "reference": "CFA Institute Level I Curriculum - Alternative Investments - Introduction to Alternative Investments"
+        },
+        {
+            "id": "cfa-l1-124",
+            "domain": "Investment Valuation",
+            "stem": "A private equity fund shows negative returns in its early years before turning positive. Which phenomenon does this illustrate?",
+            "options": [
+                "The efficient frontier",
+                "The term structure of interest rates",
+                "The diversification effect",
+                "The J-curve effect"
+            ],
+            "correct_index": 3,
+            "explanation": "Early private equity performance is dragged down by fees and by investments not yet generating value, producing a J-shaped return pattern over the fund's life. Later years often improve as portfolio companies mature.",
+            "reference": "CFA Institute Level I Curriculum - Alternative Investments - Introduction to Alternative Investments"
+        },
+        {
+            "id": "cfa-l1-125",
+            "domain": "Investment Valuation",
+            "stem": "A property produces net operating income of 100,000 and the market capitalisation rate is 8 percent. Which value is closest to the property value using the income approach?",
+            "options": [
+                "1,250,000",
+                "800,000",
+                "1,080,000",
+                "12,500,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The income approach divides net operating income by the capitalisation rate, so 100,000 divided by 0.08 equals 1,250,000. Multiplying by the cap rate would be the wrong operation.",
+            "reference": "CFA Institute Level I Curriculum - Alternative Investments - Introduction to Alternative Investments"
+        },
+        {
+            "id": "cfa-l1-126",
+            "domain": "Investment Valuation",
+            "stem": "A commodity futures curve slopes upward, with later contracts priced above nearby contracts. Which term describes this shape?",
+            "options": [
+                "Inversion",
+                "Contango",
+                "Backwardation",
+                "Convergence"
+            ],
+            "correct_index": 1,
+            "explanation": "An upward-sloping futures curve is called contango, and rolling contracts forward can create a negative roll yield for a long position. Backwardation is the opposite downward-sloping shape.",
+            "reference": "CFA Institute Level I Curriculum - Alternative Investments - Introduction to Alternative Investments"
+        },
+        {
+            "id": "cfa-l1-127",
+            "domain": "Portfolio & Ethics",
+            "stem": "A portfolio holds 60 percent in an asset with an expected return of 10 percent and 40 percent in an asset with an expected return of 6 percent. Which value is the portfolio expected return?",
+            "options": [
+                "16.0 percent",
+                "6.0 percent",
+                "8.4 percent",
+                "8.0 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "Portfolio expected return is the weighted average of the asset returns, so 0.60 times 10 plus 0.40 times 6 equals 6 plus 2.4, or 8.4 percent. A simple average would incorrectly give 8.0 percent.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-128",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which inputs are needed to compute the variance of a two-asset portfolio?",
+            "options": [
+                "Only the individual expected returns",
+                "Only the asset weights and the risk-free rate",
+                "The asset weights and the market return only",
+                "The asset weights, the individual variances and the covariance between the assets"
+            ],
+            "correct_index": 3,
+            "explanation": "Two-asset portfolio variance uses the squared weights, the individual variances and the covariance term that captures how the assets move together. Ignoring covariance would overstate diversification benefits.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-129",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which range of values can a correlation coefficient between two assets' returns take?",
+            "options": [
+                "From negative one to positive one",
+                "From zero to positive one",
+                "From negative infinity to positive infinity",
+                "From zero to infinity"
+            ],
+            "correct_index": 0,
+            "explanation": "Correlation is standardised covariance and falls between negative one and positive one inclusive. A value of positive one means perfect positive movement and negative one means perfect opposite movement.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-130",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which type of risk can be substantially reduced by holding many assets in a portfolio?",
+            "options": [
+                "Interest-rate risk",
+                "Unsystematic or firm-specific risk",
+                "Systematic or market risk",
+                "Purchasing power risk"
+            ],
+            "correct_index": 1,
+            "explanation": "Diversification cancels firm-specific or unsystematic risk because individual surprises offset across many holdings. Systematic market risk affects all assets and cannot be eliminated through diversification.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-131",
+            "domain": "Portfolio & Ethics",
+            "stem": "Two assets are perfectly positively correlated. What is the standard deviation of a portfolio that combines them?",
+            "options": [
+                "It is below the weighted average due to diversification",
+                "It is greater than the sum of the standard deviations",
+                "It equals the weighted average of the two standard deviations with no risk reduction",
+                "It is always zero"
+            ],
+            "correct_index": 2,
+            "explanation": "With a correlation of positive one there is no diversification benefit, so the portfolio standard deviation is exactly the weighted average. Risk reduction appears only when correlation is below one.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-132",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which statement best describes a risk-averse investor?",
+            "options": [
+                "The investor accepts any risk without a return premium",
+                "The investor always chooses the highest-risk portfolio",
+                "The investor ignores expected return entirely",
+                "The investor requires a higher expected return to accept additional risk"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk aversion means the investor must be compensated with more expected return for taking on more risk. A risk-neutral investor would ignore risk, and a risk seeker prefers more risk for its own sake.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-133",
+            "domain": "Portfolio & Ethics",
+            "stem": "An investor buys an asset for 200, receives 10 of income and sells it for 220 after one year. Which value is the holding period return?",
+            "options": [
+                "15 percent",
+                "10 percent",
+                "5 percent",
+                "20 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The holding period return is the price gain of 20 plus income of 10, divided by the initial 200, giving 30 divided by 200, or 15 percent. Ignoring the income would give only 10 percent.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-134",
+            "domain": "Portfolio & Ethics",
+            "stem": "A manager controls the timing of client contributions to an account. Which performance measure best reflects the manager's own decisions rather than the client's cash-flow timing?",
+            "options": [
+                "The nominal holding period return",
+                "The time-weighted rate of return",
+                "The money-weighted rate of return",
+                "The account's internal rate of return"
+            ],
+            "correct_index": 1,
+            "explanation": "The time-weighted return geometrically links sub-period returns and neutralises the effect of external cash flows, so it reflects manager skill. The money-weighted return is influenced by when money is added or withdrawn.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-135",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which portfolio on a risk-return graph has the lowest possible variance among all combinations of risky assets?",
+            "options": [
+                "The tangency portfolio",
+                "The equally weighted portfolio",
+                "The minimum-variance portfolio",
+                "The maximum-return portfolio"
+            ],
+            "correct_index": 2,
+            "explanation": "The minimum-variance portfolio sits at the leftmost point of the opportunity set where variance is smallest. The tangency portfolio maximises the Sharpe ratio, not minimises variance.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-136",
+            "domain": "Portfolio & Ethics",
+            "stem": "A return series has a variance of 0.0225. Which value is the standard deviation?",
+            "options": [
+                "2.25 percent",
+                "0.15 percent",
+                "4.5 percent",
+                "15 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard deviation is the square root of variance, and the square root of 0.0225 is 0.15, or 15 percent. Variance is expressed in squared units, so the square root restores the return units.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-137",
+            "domain": "Portfolio & Ethics",
+            "stem": "An investor adds an asset whose returns have a correlation below one with the existing portfolio. What is the most likely effect?",
+            "options": [
+                "Portfolio risk falls for the same expected return",
+                "Portfolio risk rises because a new asset is added",
+                "Expected return becomes irrelevant",
+                "The portfolio becomes risk-free"
+            ],
+            "correct_index": 0,
+            "explanation": "Adding an asset with imperfect correlation reduces portfolio variance through diversification, improving the risk-return trade-off. The benefit grows as correlation falls toward negative one.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-138",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which risk remains even in a fully diversified portfolio of risky assets?",
+            "options": [
+                "Default risk of a single issuer",
+                "Systematic or market risk",
+                "Unsystematic or firm-specific risk",
+                "Accounting risk"
+            ],
+            "correct_index": 1,
+            "explanation": "Systematic or market risk affects all assets and cannot be diversified away, so it is the risk that carries a reward in equilibrium. Firm-specific risk can be eliminated by holding many assets.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-139",
+            "domain": "Portfolio & Ethics",
+            "stem": "As an investor adds more randomly chosen assets to a portfolio, toward what value does the portfolio variance tend?",
+            "options": [
+                "The average variance of the assets",
+                "The variance of the highest-risk asset",
+                "The average covariance among the assets",
+                "Zero"
+            ],
+            "correct_index": 2,
+            "explanation": "In a large well-diversified portfolio the individual variance terms become negligible and total risk approaches the average covariance. That residual reflects systematic risk and cannot be diversified away.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-140",
+            "domain": "Portfolio & Ethics",
+            "stem": "An investor diversifies across many countries. Which additional risk is introduced by investing in foreign markets?",
+            "options": [
+                "A complete loss of diversification benefit",
+                "The elimination of all market risk",
+                "A guaranteed reduction in expected return",
+                "Currency or exchange-rate risk"
+            ],
+            "correct_index": 3,
+            "explanation": "Foreign investments expose the investor to exchange-rate movements that can add or subtract from returns measured in the home currency. Global diversification can still reduce risk but does not eliminate market risk.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-141",
+            "domain": "Portfolio & Ethics",
+            "stem": "The risk-free rate is 3 percent, the market risk premium is 6 percent and a stock has a beta of 1.5. Which value is the stock's required return under the capital asset pricing model?",
+            "options": [
+                "12 percent",
+                "9 percent",
+                "15 percent",
+                "6 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The CAPM return is 3 percent plus 1.5 times 6 percent, which is 3 plus 9, giving 12 percent. Omitting the beta multiplier would incorrectly give 9 percent.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-142",
+            "domain": "Portfolio & Ethics",
+            "stem": "In the capital asset pricing model, what does a beta of 1.0 indicate about a stock?",
+            "options": [
+                "It is twice as volatile as the market",
+                "Its systematic risk equals that of the market portfolio",
+                "It has no systematic risk at all",
+                "Its total risk is zero"
+            ],
+            "correct_index": 1,
+            "explanation": "A beta of 1.0 means the asset moves in line with the market and carries average systematic risk. A beta of zero would mean no systematic risk, and a beta of two would mean twice the market sensitivity.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-143",
+            "domain": "Portfolio & Ethics",
+            "stem": "On the security market line, what does the slope represent?",
+            "options": [
+                "The beta of the market",
+                "The total standard deviation of the market",
+                "The market risk premium",
+                "The risk-free rate"
+            ],
+            "correct_index": 2,
+            "explanation": "The security market line plots required return against beta, and its slope is the market risk premium, the reward per unit of systematic risk. Its intercept is the risk-free rate.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-144",
+            "domain": "Portfolio & Ethics",
+            "stem": "A stock plots above the security market line. Which interpretation is most consistent with the capital asset pricing model?",
+            "options": [
+                "The stock offers less expected return than required and is overvalued",
+                "The stock has no systematic risk",
+                "The stock's beta is negative",
+                "The stock offers more expected return than required and is undervalued"
+            ],
+            "correct_index": 3,
+            "explanation": "A point above the security market line gives a higher expected return than the model requires for its beta, suggesting the stock is undervalued. A point below the line suggests overvaluation.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-145",
+            "domain": "Portfolio & Ethics",
+            "stem": "A portfolio invests 70 percent in a stock with a beta of 1.4 and 30 percent in a stock with a beta of 0.6. Which value is the portfolio beta?",
+            "options": [
+                "1.16",
+                "1.00",
+                "1.40",
+                "1.32"
+            ],
+            "correct_index": 0,
+            "explanation": "Portfolio beta is the weighted average of the asset betas, so 0.70 times 1.4 plus 0.30 times 0.6 equals 0.98 plus 0.18, or 1.16. Averaging without weights would incorrectly give 1.00.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-146",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which assumption underlies the capital asset pricing model?",
+            "options": [
+                "All assets have identical betas",
+                "Investors hold the same efficient risky portfolio and lend or borrow at the risk-free rate",
+                "Investors pay no attention to expected returns",
+                "Short selling is impossible in every market"
+            ],
+            "correct_index": 1,
+            "explanation": "CAPM assumes homogeneous expectations, a single period, and frictionless borrowing and lending at the risk-free rate so all investors hold the market portfolio. These idealised assumptions are among the model's criticisms.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-147",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which set of portfolios makes up the efficient frontier?",
+            "options": [
+                "All possible portfolios regardless of risk",
+                "Only portfolios containing a single asset",
+                "The portfolios offering the highest expected return for each level of risk",
+                "The portfolios with the lowest expected return for each level of risk"
+            ],
+            "correct_index": 2,
+            "explanation": "The efficient frontier consists of the portfolios that maximise expected return for a given level of risk. Portfolios below the frontier are inefficient because another combination offers more return for the same risk.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-148",
+            "domain": "Portfolio & Ethics",
+            "stem": "Where does the global minimum-variance portfolio lie on the efficient frontier?",
+            "options": [
+                "At the rightmost point, marking the highest-return portfolio",
+                "At the highest point on the vertical axis",
+                "It is not on the frontier at all",
+                "At the leftmost point, marking the lowest-risk portfolio"
+            ],
+            "correct_index": 3,
+            "explanation": "The minimum-variance portfolio is the leftmost point of the opportunity set and the efficient frontier begins there. Portfolios to the left would require negative risk, which is impossible.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-149",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which line represents the risk and return combinations available by combining the risk-free asset with the market portfolio?",
+            "options": [
+                "The capital market line",
+                "The security market line",
+                "The efficient frontier of risky assets only",
+                "The characteristic line"
+            ],
+            "correct_index": 0,
+            "explanation": "The capital market line plots combinations of the risk-free asset and the market portfolio using total risk on the horizontal axis. The security market line instead uses beta and prices individual securities.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-150",
+            "domain": "Portfolio & Ethics",
+            "stem": "An investor combines the risk-free asset with the market portfolio. What shape does the resulting set of achievable portfolios trace?",
+            "options": [
+                "A horizontal line at the risk-free rate",
+                "A straight line from the risk-free rate through the market portfolio",
+                "A downward-sloping curve",
+                "A closed circle"
+            ],
+            "correct_index": 1,
+            "explanation": "Mixing a risk-free asset with a risky portfolio produces a straight line in risk-return space, because portfolio return and risk both change linearly with the weight. The line is the capital market line when the risky portfolio is the market.",
+            "reference": "CFA Institute Level I Curriculum - Portfolio Management - Portfolio Risk and Return"
+        },
+        {
+            "id": "cfa-l1-151",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which statement correctly distinguishes the CFA Institute Code of Ethics from the Standards of Professional Conduct?",
+            "options": [
+                "The Standards apply only to candidates and not to members",
+                "The Code and the Standards cover unrelated subject areas",
+                "The Code states broad principles, while the Standards are specific enforceable rules",
+                "The Code is legally binding, while the Standards are only advisory"
+            ],
+            "correct_index": 2,
+            "explanation": "The Code of Ethics sets out high-level principles of conduct, and the Standards of Professional Conduct translate those principles into specific enforceable requirements. Both apply to members and candidates.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Code of Ethics and Standards"
+        },
+        {
+            "id": "cfa-l1-152",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which subject area is covered by the Professionalism standard?",
+            "options": [
+                "Only the duty to keep client information confidential",
+                "Only the fair treatment of clients",
+                "Only the presentation of investment performance",
+                "Knowledge of the law, independence and objectivity, misrepresentation and misconduct"
+            ],
+            "correct_index": 3,
+            "explanation": "Professionalism groups knowledge of the law, independence and objectivity, misrepresentation, and misconduct. Duties to clients and performance presentation are covered under other standards.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-153",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which two standards fall under the Integrity of Capital Markets category?",
+            "options": [
+                "Material nonpublic information and market manipulation",
+                "Loyalty and additional compensation arrangements",
+                "Fair dealing and suitability",
+                "Performance presentation and confidentiality"
+            ],
+            "correct_index": 0,
+            "explanation": "Integrity of capital markets addresses the use of material nonpublic information and market manipulation. Loyalty and additional compensation fall under duties to employers.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-154",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which set of obligations is grouped under the Duties to Clients standard?",
+            "options": [
+                "Market manipulation and material nonpublic information",
+                "Loyalty, prudence and care, fair dealing, suitability, performance presentation and confidentiality",
+                "Knowledge of the law and independence and objectivity",
+                "Additional compensation and responsibilities of supervisors"
+            ],
+            "correct_index": 1,
+            "explanation": "Duties to Clients covers loyalty and care, fair dealing, suitability, performance presentation and confidentiality. Supervisory responsibilities sit under duties to employers.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-155",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which obligations are included in the Duties to Employers standard?",
+            "options": [
+                "Independence and objectivity",
+                "Market manipulation and confidentiality",
+                "Loyalty, additional compensation arrangements and responsibilities of supervisors",
+                "Fair dealing and suitability"
+            ],
+            "correct_index": 2,
+            "explanation": "Duties to Employers requires loyalty to the employer, disclosure of additional compensation arrangements, and proper supervision of subordinates. Suitability and fair dealing belong to duties to clients.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-156",
+            "domain": "Portfolio & Ethics",
+            "stem": "An analyst describes a guaranteed return product while knowing the return is not guaranteed. Which standard has most likely been violated?",
+            "options": [
+                "Suitability",
+                "Referral fees",
+                "Priority of transactions",
+                "Misrepresentation"
+            ],
+            "correct_index": 3,
+            "explanation": "Misrepresentation prohibits knowingly making false or misleading statements about services, products or performance. Claiming a guarantee that does not exist is a direct misrepresentation.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-157",
+            "domain": "Portfolio & Ethics",
+            "stem": "An analyst is pressured by an investment banking colleague to write a favourable research report. Which standard is most directly implicated?",
+            "options": [
+                "Independence and objectivity",
+                "Fair dealing",
+                "Performance presentation",
+                "Market manipulation"
+            ],
+            "correct_index": 0,
+            "explanation": "Independence and objectivity requires analysts to avoid allowing external pressure to compromise the integrity of their research. Investment banking pressure on research is a classic example.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-158",
+            "domain": "Portfolio & Ethics",
+            "stem": "A member is convicted of a crime involving fraud. Which standard addresses this conduct?",
+            "options": [
+                "Loyalty",
+                "Misconduct",
+                "Suitability",
+                "Confidentiality"
+            ],
+            "correct_index": 1,
+            "explanation": "The Misconduct standard addresses dishonest, fraudulent or deceitful conduct and actions that harm the profession's reputation. Criminal fraud falls squarely within it.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-159",
+            "domain": "Portfolio & Ethics",
+            "stem": "Before recommending an investment, a manager must determine whether it fits the client's objectives and constraints. Which standard does this describe?",
+            "options": [
+                "Market manipulation",
+                "Additional compensation",
+                "Suitability",
+                "Fair dealing"
+            ],
+            "correct_index": 2,
+            "explanation": "Suitability requires an adviser to understand the client's objectives, constraints and risk tolerance and to make recommendations consistent with them. Fair dealing concerns equitable treatment across clients.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-160",
+            "domain": "Portfolio & Ethics",
+            "stem": "A manager allocates a hot new issue to favoured clients before other clients who placed orders earlier. Which standard has most likely been violated?",
+            "options": [
+                "Independence and objectivity",
+                "Market manipulation",
+                "Referral fees",
+                "Fair dealing"
+            ],
+            "correct_index": 3,
+            "explanation": "Fair dealing requires that all clients be treated equitably when taking investment action, so favours based on relationship rather than a documented allocation policy breach the standard.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-161",
+            "domain": "Portfolio & Ethics",
+            "stem": "A firm shows only its best-performing accounts in marketing material while omitting the others. Which standard has most likely been violated?",
+            "options": [
+                "Performance presentation",
+                "Confidentiality",
+                "Additional compensation",
+                "Priority of transactions"
+            ],
+            "correct_index": 0,
+            "explanation": "Performance presentation requires that performance information be fair, accurate and complete. Presenting a cherry-picked subset misleads prospective clients about the firm's results.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-162",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which obligation does the Confidentiality standard place on a member?",
+            "options": [
+                "Publish client holdings in marketing material",
+                "Keep client information confidential unless disclosure is required by law or the client permits it",
+                "Disclose all client information to anyone who requests it",
+                "Share client data with competitors for benchmarking"
+            ],
+            "correct_index": 1,
+            "explanation": "Confidentiality requires members to keep information about clients and former clients confidential, except where disclosure is legally required or the client authorises it. It does not permit casual disclosure.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-163",
+            "domain": "Portfolio & Ethics",
+            "stem": "An employee plans to leave a firm and solicits the firm's clients using confidential client records before resigning. Which standard has most likely been violated?",
+            "options": [
+                "Market manipulation",
+                "Performance presentation",
+                "Loyalty to the employer",
+                "Fair dealing"
+            ],
+            "correct_index": 2,
+            "explanation": "The Loyalty standard requires members to act in the employer's best interest and not to take confidential client information when preparing to leave. Soliciting with misappropriated records breaches that duty.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-164",
+            "domain": "Portfolio & Ethics",
+            "stem": "A portfolio manager is offered a bonus by a client for achieving a target return. Which action is required by the Additional Compensation standard?",
+            "options": [
+                "Accept the bonus without informing anyone",
+                "Reject the bonus because clients may never offer incentives",
+                "Report the client to the regulator",
+                "Obtain written permission from the employer before accepting the bonus"
+            ],
+            "correct_index": 3,
+            "explanation": "Additional compensation that could create a conflict with the employer's interest requires written consent from all parties before acceptance. The standard does not ban such payments outright.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-165",
+            "domain": "Portfolio & Ethics",
+            "stem": "A supervisor learns that a subordinate is repeatedly violating securities rules but takes no action. Which standard is most directly implicated?",
+            "options": [
+                "Responsibilities of supervisors",
+                "Suitability",
+                "Referral fees",
+                "Independence and objectivity"
+            ],
+            "correct_index": 0,
+            "explanation": "The Responsibilities of Supervisors standard requires members to make reasonable efforts to detect and prevent violations by those under their authority. Ignoring known violations breaches that duty.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-166",
+            "domain": "Portfolio & Ethics",
+            "stem": "A member pays another professional a fee for referring a client but does not disclose the arrangement to the client. Which standard applies?",
+            "options": [
+                "Misconduct",
+                "Referral fees",
+                "Priority of transactions",
+                "Market manipulation"
+            ],
+            "correct_index": 1,
+            "explanation": "The Referral Fees standard requires disclosure to clients and the employer of any compensation paid or received for referrals so the client can judge any conflict of interest. Non-disclosure breaches the standard.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-167",
+            "domain": "Portfolio & Ethics",
+            "stem": "A trader places orders intended to create the false impression of active trading in a security. Which standard has most likely been violated?",
+            "options": [
+                "Performance presentation",
+                "Loyalty",
+                "Market manipulation",
+                "Confidentiality"
+            ],
+            "correct_index": 2,
+            "explanation": "The Market Manipulation standard prohibits practices that distort prices or artificially inflate trading volume to mislead market participants. Wash trades and similar devices violate it.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-168",
+            "domain": "Portfolio & Ethics",
+            "stem": "A firm claims it complies with GIPS in its marketing but does not follow the required composite construction rules. Which standard has most likely been violated?",
+            "options": [
+                "Fair dealing",
+                "Suitability",
+                "Referral fees",
+                "Misrepresentation"
+            ],
+            "correct_index": 3,
+            "explanation": "Claiming GIPS compliance without following its requirements misrepresents the firm's compliance to prospective clients. A firm may state compliance only when it fully satisfies GIPS provisions.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-169",
+            "domain": "Portfolio & Ethics",
+            "stem": "A manager directs a portion of client commissions to a broker in exchange for research used in managing those clients. What are these arrangements commonly called?",
+            "options": [
+                "Soft dollar arrangements",
+                "Referral fees",
+                "Incentive fees",
+                "Front-running trades"
+            ],
+            "correct_index": 0,
+            "explanation": "Soft dollar arrangements use client brokerage commissions to obtain research and services, and the standard requires that the benefit accrue to the client whose commissions paid for it. They must be disclosed and properly directed.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-170",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which standard governs how members should conduct personal trading relative to client accounts?",
+            "options": [
+                "Additional compensation",
+                "Priority of transactions",
+                "Suitability",
+                "Market manipulation"
+            ],
+            "correct_index": 1,
+            "explanation": "Priority of transactions requires that client and employer interests precede the member's personal transactions. Personal trading ahead of clients, sometimes called front running, breaches the standard.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-171",
+            "domain": "Portfolio & Ethics",
+            "stem": "An analyst receives nonpublic information from a company insider and trades on it before the news is public. Which standard has most likely been violated?",
+            "options": [
+                "Performance presentation",
+                "Confidentiality",
+                "Material nonpublic information",
+                "Fair dealing"
+            ],
+            "correct_index": 2,
+            "explanation": "The Material Nonpublic Information standard prohibits trading or causing others to trade on information that is both material and not public. Acting on insider information before disclosure breaches it.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-172",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which action best supports independence and objectivity when a member attends a company-sponsored research trip?",
+            "options": [
+                "Accept the trip only if all expenses are paid by the company",
+                "Publish only research favourable to the hosting company",
+                "Share the itinerary with competitors",
+                "Ensure the arrangement does not compromise objective analysis of the company"
+            ],
+            "correct_index": 3,
+            "explanation": "Members must judge whether travel or gifts from a company could influence their objectivity and decline arrangements that would create a conflict. The guiding test is whether the member can remain objective.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-173",
+            "domain": "Portfolio & Ethics",
+            "stem": "A client gives an analyst an expensive personal gift after a successful year. Which consideration is most relevant under the Standards?",
+            "options": [
+                "Whether the gift could impair the analyst's independence and objectivity",
+                "Only whether the gift is taxable",
+                "Whether the analyst's firm has a marketing budget",
+                "Whether the client is also an employer"
+            ],
+            "correct_index": 0,
+            "explanation": "Independence and objectivity may be compromised if a gift is large enough to influence judgement, and members should consider whether their firm or clients permit accepting it. Modest tokens are treated differently from gifts that could create obligations.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-174",
+            "domain": "Portfolio & Ethics",
+            "stem": "A member votes client proxies. Which standard provides guidance on this responsibility?",
+            "options": [
+                "Misconduct",
+                "Loyalty, prudence and care",
+                "Market manipulation",
+                "Referral fees"
+            ],
+            "correct_index": 1,
+            "explanation": "Loyalty, prudence and care treats proxy voting as an asset of the client that should be exercised in the client's best interest. A member should vote proxies thoughtfully or disclose the policy for abstaining.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-175",
+            "domain": "Portfolio & Ethics",
+            "stem": "A member discovers the employer is violating securities regulations and reporting the matter to the regulator is permitted by local law. What does the Standards guidance suggest?",
+            "options": [
+                "The member must always resign on the first suspicion",
+                "The member should help conceal the violation until audit",
+                "The member should attempt to stop the violation and may report it, with resignation a last resort",
+                "The member should ignore the violation to protect the employer"
+            ],
+            "correct_index": 2,
+            "explanation": "Loyalty to the employer is subordinate to the law. Members should first try to address the issue internally, and if that fails they may report to the proper authority, resigning only when necessary.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-176",
+            "domain": "Portfolio & Ethics",
+            "stem": "A firm wants to advertise its strong investment record. Which practice best complies with the performance presentation standard?",
+            "options": [
+                "Show only the composite with the best record",
+                "Use gross returns without stating that they exclude fees",
+                "Change the composite definition each year to improve results",
+                "Present returns that are fair, accurate and complete, including any required disclosures"
+            ],
+            "correct_index": 3,
+            "explanation": "Performance information must be fair, accurate and complete, with relevant disclosures about fees and compositing. Cherry-picking or changing definitions to flatter results misleads investors.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-177",
+            "domain": "Portfolio & Ethics",
+            "stem": "A member refers a client to a colleague at another firm in exchange for a share of the resulting fees from that firm. Under the Standards, what must the member do?",
+            "options": [
+                "Disclose the arrangement to the employer and the client before the referral",
+                "Keep the arrangement private to protect confidentiality",
+                "Decline all such arrangements as prohibited",
+                "Report the colleague to the regulator"
+            ],
+            "correct_index": 0,
+            "explanation": "Compensation for referrals must be disclosed in writing to the employer and the client so they can evaluate the potential conflict. Nothing in the standards bans referral fees outright.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Guidance for Standards I to VII"
+        },
+        {
+            "id": "cfa-l1-178",
+            "domain": "Portfolio & Ethics",
+            "stem": "Which statement best describes the nature of the Global Investment Performance Standards?",
+            "options": [
+                "They guarantee a minimum investment return",
+                "They are a voluntary ethical framework for calculating and presenting investment performance",
+                "They are mandatory securities laws in every country",
+                "They apply only to hedge funds and never to other firms"
+            ],
+            "correct_index": 1,
+            "explanation": "GIPS is a voluntary, globally recognised set of standards for calculating and presenting investment performance. A firm claims compliance only when it fully meets the standards, which require independent verification for that claim to be strongest.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Global Investment Performance Standards"
+        },
+        {
+            "id": "cfa-l1-179",
+            "domain": "Portfolio & Ethics",
+            "stem": "Under GIPS, what is a composite?",
+            "options": [
+                "The total market value of all assets a firm manages across every strategy",
+                "A list of all employees authorised to trade",
+                "A group of portfolios managed according to the same investment mandate, objective or strategy",
+                "A single client account with the largest assets"
+            ],
+            "correct_index": 2,
+            "explanation": "A composite aggregates portfolios that share the same investment mandate, objective or strategy so that performance is presented for like portfolios. Including dissimilar portfolios in one composite would misrepresent results.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Global Investment Performance Standards"
+        },
+        {
+            "id": "cfa-l1-180",
+            "domain": "Portfolio & Ethics",
+            "stem": "Under GIPS, what is the purpose of verification by an independent third party?",
+            "options": [
+                "It guarantees that future returns will meet a target",
+                "It replaces the need for a compliant composite definition",
+                "It is required before a firm may calculate any performance",
+                "It provides additional assurance that a firm's performance presentation and policies comply with GIPS"
+            ],
+            "correct_index": 3,
+            "explanation": "Verification is an independent review that adds confidence that a firm has followed GIPS policies, but it is not required and it does not guarantee results. A firm can claim compliance without verification, though verification strengthens confidence.",
+            "reference": "CFA Institute Level I Curriculum - Ethical and Professional Standards - Global Investment Performance Standards"
+        }
+    ]
+}

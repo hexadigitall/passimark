@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-sap",
+    "title": "AWS Certified Solutions Architect - Professional (SAP-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-sap.json",
+    "variant_label": "SAP-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 180,
+        "scoring": "750/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS SAP-C02 exam guide (the five official domains and their weightings). Not a capture of past exam questions.",
+    "source_label": "AWS Solutions Architect Professional practice bank",
+    "items": [
+        {
+            "id": "aws-sap-001",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A global enterprise wants to guarantee that no developer can launch resources in AWS Regions outside its approved set, regardless of the IAM permissions their role grants. The company needs a preventive control that applies to every account under a single organizational unit. Which solution should a solutions architect recommend?",
+            "options": [
+                "Create a service control policy that denies actions unless aws:RequestedRegion matches the approved Regions, and attach it to the organizational unit",
+                "Attach an IAM permissions boundary to every developer role listing the approved Regions",
+                "Deploy an AWS Config rule in each account that flags non-compliant resource creation",
+                "Enable a CloudTrail trail in each account and review the logs for out-of-Region activity"
+            ],
+            "correct_index": 0,
+            "explanation": "A service control policy at the organizational unit level sets the maximum permissions for every principal in those accounts and is evaluated before IAM, so a Region condition denies out-of-Region calls organization-wide. IAM permission boundaries apply only to the principals they are attached to and do not stop account administrators creating other roles, an AWS Config rule detects violations after the fact rather than preventing them, and CloudTrail only records activity without blocking anything.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-002",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company runs more than eighty VPCs across several accounts and needs them to communicate with each other and with an on-premises data center through a single managed hub. Connectivity must scale without a full mesh and must route between the on-premises network and every VPC. Which service should the solutions architect use?",
+            "options": [
+                "Private hosted zones shared through every VPC peering connection",
+                "AWS Transit Gateway with VPC attachments and a Direct Connect gateway",
+                "A full mesh of VPC peering connections between every pair of VPCs",
+                "A software VPN appliance running on a large EC2 instance in each VPC"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Transit Gateway is a regional hub that attaches many VPCs and on-premises connections and routes between them, avoiding a full mesh. VPC peering is non-transitive, so eighty VPCs would need thousands of peering links and still could not reach on-premises through a peer, a per-VPC VPN appliance is unmanaged and creates overlapping routing, and shared private hosted zones provide name resolution only, not connectivity.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-003",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A regulated company is creating a new multi-account AWS environment with a landing zone. It wants automated account provisioning with pre-configured guardrails, centralized logging, and a dashboard that reports account baseline compliance. Which offering provides all of these from a managed baseline?",
+            "options": [
+                "AWS Organizations alone with a manual tagging convention",
+                "AWS Service Catalog portfolios replicated by hand to every account",
+                "AWS Control Tower with Account Factory and guardrails",
+                "A set of hand-built CloudFormation StackSets run manually in each organizational unit"
+            ],
+            "correct_index": 2,
+            "explanation": "Control Tower provides an opinionated landing zone, Account Factory for automated provisioning, preventive and detective guardrails, and a compliance dashboard. Manually run StackSets and hand-replicated portfolios lack the managed baseline and automated account provisioning, while Organizations alone gives account grouping and billing but no landing-zone guardrails or baseline reporting.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-004",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company central security account must assume a role in each workload account to read a compliance S3 bucket. The workload accounts are owned by different teams, and the security team cannot store long-term keys. Which approach enforces least privilege and avoids sharing secrets?",
+            "options": [
+                "Generate an IAM user access key in each workload account and distribute the keys to the security team",
+                "Share the workload accounts root user credentials with a shared password vault",
+                "Configure the bucket to allow public read access so any principal can retrieve objects",
+                "Create an IAM role in each workload account that trusts the security account principal and grant the security team permission to assume it"
+            ],
+            "correct_index": 3,
+            "explanation": "Cross-account role assumption uses short-lived STS credentials and a trust policy naming the security account, so no long-term secret is distributed and permissions stay scoped. Long-lived access keys in shared distribution violate least privilege and are hard to rotate, sharing root credentials is unsafe and unauditable, and public read exposes compliance data to the Internet.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-005",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company wants every CloudTrail event from all accounts in its organization to flow into one dedicated logging account and to be tamper-resistant. Which combination meets the requirement with the least operational effort?",
+            "options": [
+                "Create an organization trail in the management account that delivers to an S3 bucket in the logging account with a bucket policy scoped to the organization",
+                "Configure an individual trail in each account and email the log files to the logging team each day",
+                "Enable CloudTrail in the management account only and assume it captures member account events",
+                "Store CloudTrail logs in each account own bucket and rely on account owners to retain them"
+            ],
+            "correct_index": 0,
+            "explanation": "An organization trail automatically applies to all accounts and delivers to a central bucket, and a bucket policy scoped by aws:PrincipalOrgID lets only the organization write there, which resists tampering by member accounts. Per-account trails with email are manual and incomplete, a management-account trail records only that account, and per-account local buckets let an owner delete or modify the evidence.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-006",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company has many AWS accounts and wants to simplify billing and receive volume discounts across all of them. Each account must keep its own AWS Identity and Access Management boundaries. Which action achieves this?",
+            "options": [
+                "Enable a billing transfer in each account IAM policy without joining an organization",
+                "Create an AWS organization and add the accounts as members to consolidate billing while keeping separate accounts",
+                "Merge every workload into one account and use IAM users to separate the teams",
+                "Create a separate payer account for billing and keep workloads in unrelated standalone accounts"
+            ],
+            "correct_index": 1,
+            "explanation": "Adding accounts to an AWS organization consolidates their usage for volume pricing and a single bill while each account retains its own IAM boundary and resource isolation. Merging into one account destroys the security boundary between teams, standalone accounts linked only for billing cannot share committed-use discounts the same way, and billing is not controlled by an IAM policy.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-007",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "Several application accounts must share a common set of subnets in a central VPC so their resources communicate with low latency while a network team retains control of the subnet layout. Which feature should the solutions architect use?",
+            "options": [
+                "A Transit Gateway attachment that shares the subnet route tables",
+                "AWS PrivateLink endpoints published by each application account for the others",
+                "AWS Resource Access Manager to share the VPC subnets with the participant accounts",
+                "VPC peering between each application account VPC and the central VPC"
+            ],
+            "correct_index": 2,
+            "explanation": "VPC sharing through AWS Resource Access Manager lets participant accounts launch resources directly into subnets owned by the central account, giving a shared network with low-latency east-west traffic while the owner controls subnets. Peering keeps separate subnets and does not share them, Transit Gateway connects VPCs but not their subnets, and PrivateLink exposes specific services rather than shared subnets.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-008",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company needs resources in many VPCs to resolve names in a single private hosted zone that the network team manages centrally, without copying records. Which design delivers centralized private DNS resolution?",
+            "options": [
+                "Create a separate private hosted zone in every VPC and synchronize records with a script",
+                "Use public hosted zones and rely on split-horizon DNS behavior",
+                "Resolve the names through the on-premises DNS servers only",
+                "Create the private hosted zone in the network account and associate it with the VPCs, using Route 53 Resolver rules for forwarding"
+            ],
+            "correct_index": 3,
+            "explanation": "A private hosted zone in a central account can be associated with multiple VPCs so all of them resolve the same records, and Route 53 Resolver outbound and inbound endpoints plus rules handle hybrid forwarding. Duplicated zones with scripts drift, public zones expose records and are not the private resolution mechanism, and relying only on on-premises DNS leaves AWS-only lookups unresolved.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-009",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company has a single AWS Direct Connect connection at one location and wants to reach VPCs in three Regions, including VPCs created later in accounts it does not yet know. Which component lets one private virtual interface reach many VPCs across Regions?",
+            "options": [
+                "AWS Direct Connect gateway linked to virtual private gateways or Transit Gateways in each Region",
+                "A separate dedicated Direct Connect connection for every VPC in each Region",
+                "A public virtual interface that routes to each VPC public endpoints",
+                "An AWS Site-to-Site VPN over the Internet in place of Direct Connect"
+            ],
+            "correct_index": 0,
+            "explanation": "A Direct Connect gateway is a global object that can be associated with virtual private gateways or Transit Gateways in multiple Regions over a single connection and virtual interface. Provisioning a connection per VPC is costly and slow, a public virtual interface reaches public services rather than private VPC addressing, and a VPN over the Internet is not the dedicated Direct Connect path.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-010",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company wants employees to sign in once and access many AWS accounts with permissions defined by their group, without creating IAM users in each account. Which service should the solutions architect implement?",
+            "options": [
+                "AWS Certificate Manager issuing client certificates to employees",
+                "AWS IAM Identity Center with permission sets assigned to groups and accounts",
+                "Federated IAM users created manually in every account",
+                "A shared IAM role in each account with the same credentials for all staff"
+            ],
+            "correct_index": 1,
+            "explanation": "IAM Identity Center provides single sign-on to multiple accounts and assigns permissions through permission sets and group assignments. Manually created IAM users multiply administrative work and lack central identity, a shared role gives no per-user accountability, and ACM issues TLS certificates and does not manage workforce access.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-011",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A security team attaches a service control policy to an organizational unit. A developer IAM policy in a member account allows the S3 CreateBucket action, but the service control policy does not mention S3. What happens when the developer tries to create a bucket?",
+            "options": [
+                "The action fails because service control policies remove all permissions by default",
+                "The action is allowed only after the service control policy is detached",
+                "The action is allowed because the service control policy does not deny it and the IAM policy permits it",
+                "The action is denied because the service control policy does not explicitly allow it"
+            ],
+            "correct_index": 2,
+            "explanation": "Service control policies filter permissions but do not grant them, and an action is allowed when the policy does not restrict it and the principal IAM policy permits it. Service control policies are not allow-lists that deny unmentioned actions, so options claiming implicit denial or total removal are wrong, and detaching the policy is unnecessary.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-012",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company must enforce the same AWS WAF rules, security groups, and Shield protections across accounts in its organization, including new accounts added automatically. Which service centralizes this?",
+            "options": [
+                "A CloudFormation template that each account owner deploys on request",
+                "AWS Config rules that report non-compliant accounts to management",
+                "Amazon GuardDuty findings forwarded by email to each account",
+                "AWS Firewall Manager with an organization-wide policy"
+            ],
+            "correct_index": 3,
+            "explanation": "Firewall Manager applies and continuously enforces WAF, security group, and Shield policies across an organization, including newly added accounts. Per-account templates depend on owners and drift, AWS Config is detective rather than preventive central management, and GuardDuty detects threats but does not configure protection policies.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-013",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company is designing its organizational units so production accounts inherit stricter guardrails than sandbox accounts. Which design principle should guide the organizational unit structure?",
+            "options": [
+                "Group accounts by policy needs such as environment or function so service control policies attached to the unit apply the right controls",
+                "Place every account in a single flat organizational unit to keep policies simple",
+                "Group accounts by the surname of the account owner to ease administration",
+                "Group accounts by AWS Region so each Region has its own policy"
+            ],
+            "correct_index": 0,
+            "explanation": "Organizational units exist to apply differentiated policies, so grouping by environment or function lets stricter service control policies cover production and looser ones cover sandboxes. A flat unit cannot differentiate guardrails, and owner-name and Region groupings do not align with policy needs and complicate inheritance.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-014",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A hybrid environment requires that on-premises servers resolve AWS private hosted zone names and that AWS resources resolve on-premises names. Which two-way DNS design should be recommended?",
+            "options": [
+                "AWS Managed Microsoft AD with a two-way trust and no resolver endpoints",
+                "Route 53 Resolver inbound endpoints for on-premises queries and outbound endpoints with forwarding rules for on-premises names",
+                "A single outbound endpoint with static routes added to the VPC route table",
+                "Public hosted zones that both AWS and on-premises servers query directly"
+            ],
+            "correct_index": 1,
+            "explanation": "Inbound Resolver endpoints let on-premises resolvers query Route 53, and outbound endpoints with rules forward AWS queries to on-premises resolvers, giving two-way hybrid resolution. Route table changes do not forward DNS, public zones do not hold private records, and a directory trust alone does not provide general DNS forwarding for all names.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-015",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A network team builds a central Transit Gateway and wants to let several application accounts attach their VPCs without giving them ownership of the Transit Gateway. Which approach allows sharing?",
+            "options": [
+                "Give every application account full administrator access to the network account",
+                "Distribute the Transit Gateway private key to each application team",
+                "Share the Transit Gateway with Resource Access Manager and let accounts create their own attachments",
+                "Create a Transit Gateway in each application account and peer them together"
+            ],
+            "correct_index": 2,
+            "explanation": "Resource Access Manager shares the Transit Gateway so participant accounts can create and manage their own VPC attachments while the owner retains control of the gateway. Duplicating gateways loses the single hub, granting administrator access violates least privilege, and a Transit Gateway has no private key to distribute.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-016",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A financial company must ensure all Amazon EC2 instances are tagged with a cost-center value before they are created, and wants a preventive organization-wide control. Which solution should be used?",
+            "options": [
+                "A tag policy that only reports missing tags to the finance team",
+                "A Lambda function that runs hourly to stop untagged instances",
+                "An S3 bucket policy that denies access to untagged resources",
+                "A service control policy that denies ec2:RunInstances when the request lacks a cost-center tag"
+            ],
+            "correct_index": 3,
+            "explanation": "A service control policy can conditionally deny ec2:RunInstances when the cost-center request tag is missing, which prevents creation up front. A tag policy standardizes tag keys and values but does not block creation, an hourly Lambda reacts after the resource exists, and an S3 bucket policy governs S3 access and cannot control EC2 creation.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-017",
+            "domain": "Design Solutions for Organizational Complexity",
+            "stem": "A company wants all outbound Internet traffic from dozens of VPCs to pass through a single inspected egress path in a shared services VPC. VPCs must not each deploy their own NAT gateways. Which design meets this goal?",
+            "options": [
+                "Route egress through a central NAT gateway in the shared services VPC reached over a Transit Gateway, with inspection applied in the path",
+                "Deploy a NAT gateway in every VPC and remove the shared services account",
+                "Give each VPC an Internet gateway and place an Elastic IP on every instance",
+                "Use only VPC peering so traffic bypasses the central account"
+            ],
+            "correct_index": 0,
+            "explanation": "Centralizing egress through one NAT gateway in a shared services VPC reached over Transit Gateway reduces redundant gateways and creates one inspection point. NAT gateways in every VPC defeat centralization and raise cost, giving every instance a public IP exposes instances directly, and peering bypasses the inspected central path.",
+            "reference": "AWS SAP-C02 Exam Guide - Design Solutions for Organizational Complexity"
+        },
+        {
+            "id": "aws-sap-018",
+            "domain": "Design for New Solutions",
+            "stem": "A team is building containerized microservices with highly variable, bursty demand and wants to avoid managing servers or clusters. The workload runs on Linux containers and needs rapid scaling. Which compute option is most appropriate?",
+            "options": [
+                "Amazon EMR clusters running the containers",
+                "AWS Fargate tasks launched by Amazon ECS",
+                "A large Auto Scaling group of Amazon EC2 instances running the containers",
+                "AWS Lambda functions packaged as container images but limited to fifteen-minute runs"
+            ],
+            "correct_index": 1,
+            "explanation": "Fargate runs containers without managing servers or clusters and scales tasks without a node fleet, which suits bursty Linux workloads. Managing an EC2 Auto Scaling group reintroduces node operations, Lambda caps execution duration and is not ideal for long-running services, and EMR is a big-data service rather than a general container platform.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-019",
+            "domain": "Design for New Solutions",
+            "stem": "A serverless API must handle a predictable daily traffic spike that currently causes cold-start latency, while keeping costs low between spikes. Which configuration should the solutions architect recommend for the functions?",
+            "options": [
+                "Move the function into a VPC with a NAT gateway",
+                "Set the function timeout to the maximum of fifteen minutes",
+                "Configure provisioned concurrency on the Lambda alias for the spike window",
+                "Increase the function memory to the maximum value to reduce cold starts"
+            ],
+            "correct_index": 2,
+            "explanation": "Provisioned concurrency keeps execution environments initialized so requests avoid cold starts during known spikes, and it can be scheduled for the spike window only to control cost. Maximum memory raises per-invocation cost without removing initialization, placing a function in a VPC does not reduce cold starts and can add latency and NAT cost, and a longer timeout does not affect startup latency.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-020",
+            "domain": "Design for New Solutions",
+            "stem": "A production relational database must survive the loss of an entire Availability Zone with minimal disruption, and the company wants automatic failover without changing the connection string. Which Amazon RDS configuration meets this?",
+            "options": [
+                "A single-AZ instance with a daily snapshot copy to another Region",
+                "A read replica in the same Availability Zone used as the failover target",
+                "An EC2 instance running a self-managed database with an Elastic IP",
+                "A Multi-AZ deployment with a standby replica and a DNS endpoint that fails over automatically"
+            ],
+            "correct_index": 3,
+            "explanation": "RDS Multi-AZ maintains a synchronous standby in another Availability Zone and fails over automatically by repointing the instance endpoint. A single-AZ instance cannot survive an Availability Zone loss in real time, a same-AZ read replica shares the failure domain and is not automatic failover, and a self-managed database requires manual recovery and public addressing.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-021",
+            "domain": "Design for New Solutions",
+            "stem": "A company needs a relational database with an active-passive cross-Region disaster recovery strategy and a recovery point objective near one second. Which solution best fits?",
+            "options": [
+                "Amazon Aurora Global Database with a secondary Region cluster",
+                "Amazon RDS for MySQL with nightly cross-Region snapshot copies",
+                "A read replica in a single Region and manual promotion",
+                "A self-managed MySQL cluster synchronized with rsync"
+            ],
+            "correct_index": 0,
+            "explanation": "Aurora Global Database replicates with about one-second latency and allows promoting a secondary Region within minutes, meeting the near-one-second recovery point objective. Nightly snapshots give a recovery point objective of up to a day, a same-Region read replica does not protect against a Regional failure, and rsync file synchronization is not a database replication strategy.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-022",
+            "domain": "Design for New Solutions",
+            "stem": "A globally distributed application needs a key-value store that remains writable in multiple Regions simultaneously and reconciles concurrent writes. Which service feature should be used?",
+            "options": [
+                "Amazon Redshift clusters synchronized across Regions",
+                "Amazon DynamoDB global tables in an active-active configuration",
+                "A single-Region DynamoDB table with cross-Region read replicas configured manually",
+                "Amazon RDS for PostgreSQL with logical replication to each Region"
+            ],
+            "correct_index": 1,
+            "explanation": "DynamoDB global tables provide fully managed multi-Region, active-active replication with last-writer-wins conflict resolution. Manual cross-Region read replicas are not an active-active multimaster feature, RDS logical replication is operationally heavy and not globally active-active by default, and Redshift is a data warehouse rather than a low-latency key-value store.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-023",
+            "domain": "Design for New Solutions",
+            "stem": "A company stores millions of objects with unpredictable and changing access patterns and wants to minimize storage cost automatically without retrieval penalties. Which S3 configuration should be recommended?",
+            "options": [
+                "S3 One Zone-IA for every object",
+                "A lifecycle rule that deletes objects after thirty days",
+                "S3 Intelligent-Tiering on the bucket",
+                "S3 Standard for all objects indefinitely"
+            ],
+            "correct_index": 2,
+            "explanation": "S3 Intelligent-Tiering monitors access and moves objects between tiers automatically with no retrieval fees, which fits unpredictable patterns. S3 Standard never optimizes cost, One Zone-IA stores data in a single Availability Zone and has a minimum duration, and deleting objects after thirty days risks data loss and is not cost optimization of retained data.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-024",
+            "domain": "Design for New Solutions",
+            "stem": "An order system must deliver each event to several independent consumer services, and each consumer must receive every event even if it is briefly unavailable. Which design decouples the producer from many consumers?",
+            "options": [
+                "Publish to a single Amazon SQS queue that all consumers poll",
+                "Write events to a file in Amazon S3 that each consumer polls",
+                "Send events directly to each consumer with retries in the producer code",
+                "Publish to an Amazon SNS topic with an Amazon SQS queue subscribed for each consumer"
+            ],
+            "correct_index": 3,
+            "explanation": "The SNS fanout pattern with one SQS queue per consumer gives every consumer its own durable copy so a slow consumer does not block others. A single shared queue lets one consumer steal another messages, S3 polling is not event delivery and adds latency, and direct calls with producer-side retries tightly couple services and fail when a consumer is down.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-025",
+            "domain": "Design for New Solutions",
+            "stem": "A streaming analytics pipeline must process events in the exact order they were produced for each customer while scaling horizontally. Which design preserves per-customer ordering?",
+            "options": [
+                "Use Amazon Kinesis Data Streams and set the customer identifier as the partition key",
+                "Use a single shard for the entire stream to guarantee a global order",
+                "Use Amazon SQS standard queues with many consumers",
+                "Use Amazon SNS topics and let consumers sort events after receiving them"
+            ],
+            "correct_index": 0,
+            "explanation": "Kinesis preserves order within a shard, so using the customer identifier as the partition key keeps each customer events ordered while multiple shards scale the stream. A single shard limits throughput and scales only vertically, SQS standard queues do not guarantee order, and SNS does not retain messages for later sorting.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-026",
+            "domain": "Design for New Solutions",
+            "stem": "A payment service needs exactly-once processing and must silently discard duplicate messages produced by retries. Which queue type should be used?",
+            "options": [
+                "An Amazon MQ broker using automatic acknowledgment",
+                "An Amazon SQS FIFO queue with content-based deduplication",
+                "An Amazon SQS standard queue with a high visibility timeout",
+                "An Amazon SNS topic with HTTP subscriptions"
+            ],
+            "correct_index": 1,
+            "explanation": "SQS FIFO queues provide deduplication and single delivery per message group, so repeated sends of the same content are dropped. Standard queues are at-least-once and can duplicate, SNS does not provide deduplication of consumed messages, and Amazon MQ automatic acknowledgment does not deduplicate producer retries.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-027",
+            "domain": "Design for New Solutions",
+            "stem": "A company serves private videos from an S3 bucket through CloudFront and must prevent users from bypassing CloudFront to fetch objects directly from S3. Which configuration restricts access?",
+            "options": [
+                "Restrict access with a set of IP addresses on the bucket",
+                "Encrypt the objects with an SSE-KMS key and share the key publicly",
+                "Use an Origin Access Control so CloudFront signs requests and the bucket policy allows only that distribution",
+                "Make the bucket public and rely on CloudFront caching to hide the origin"
+            ],
+            "correct_index": 2,
+            "explanation": "Origin Access Control lets CloudFront sign requests to S3, and a bucket policy that allows only the distribution denies direct access. A public bucket exposes objects, IP restrictions are brittle because CloudFront edge addresses change, and sharing a KMS key does not restrict the S3 data plane or stop direct downloads.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-028",
+            "domain": "Design for New Solutions",
+            "stem": "A public API on API Gateway experiences bursts that could overwhelm the backend, and the company wants to protect the backend and apply fair limits per client. Which feature should be configured?",
+            "options": [
+                "A larger backend instance and no gateway throttling",
+                "CloudFront only, with no API Gateway throttling",
+                "An S3 bucket policy limiting request rate",
+                "Usage plans with API keys and per-method throttling limits"
+            ],
+            "correct_index": 3,
+            "explanation": "API Gateway usage plans with API keys and throttling enforce per-client request rates and protect the backend. Simply scaling the backend does not prevent overload or enforce fairness, CloudFront caching does not throttle API calls or identify clients, and an S3 bucket policy cannot rate-limit API Gateway.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-029",
+            "domain": "Design for New Solutions",
+            "stem": "A web application stores session state in the application server local memory, which breaks when instances scale behind a load balancer. Which change fixes the session persistence problem?",
+            "options": [
+                "Move the session state to an Amazon ElastiCache for Redis cluster",
+                "Enable sticky sessions on the load balancer and never scale down",
+                "Store sessions in an instance store volume on one server",
+                "Increase the instance size so it can hold all sessions"
+            ],
+            "correct_index": 0,
+            "explanation": "An ElastiCache for Redis cluster externalizes session state so any instance can serve any user and scaling keeps sessions. Sticky sessions reduce availability and still lose sessions when an instance fails, instance store is ephemeral and tied to one host, and a larger instance raises cost without solving shared state.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-030",
+            "domain": "Design for New Solutions",
+            "stem": "A company wants a stateless web tier to fail over between two Regions automatically if the primary Region is unhealthy. Which combination delivers Regional failover with health-based routing?",
+            "options": [
+                "Static DNS records pointing to one Region with a long TTL",
+                "Route 53 failover routing with health checks pointing to a secondary Region endpoint",
+                "A single Region deployment with a larger Auto Scaling group",
+                "An Elastic Load Balancer in one Region only"
+            ],
+            "correct_index": 1,
+            "explanation": "Route 53 failover routing with health checks directs traffic to the secondary Region when the primary fails its health check. A single-Region Auto Scaling group cannot survive a Regional outage, one load balancer is bound to its Region, and static DNS with a long TTL cannot detect failure or redirect promptly.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-031",
+            "domain": "Design for New Solutions",
+            "stem": "A workload has a repeating weekly demand pattern, and the operations team wants the capacity to be ready before traffic rises while still responding to unexpected spikes. Which Auto Scaling approach fits best?",
+            "options": [
+                "Use only simple scaling with a five-minute cooldown",
+                "Disable scaling and keep a fixed fleet sized for peak",
+                "Use predictive scaling for the weekly pattern and target tracking for unexpected spikes",
+                "Use only a scheduled action that scales up once a week"
+            ],
+            "correct_index": 2,
+            "explanation": "Predictive scaling learns recurring patterns and pre-provisions capacity, while target tracking reacts to unexpected load, so combining them covers both cases. A single weekly scheduled action misses spikes, simple scaling reacts late and can oscillate, and a fixed peak-sized fleet wastes money during troughs.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-032",
+            "domain": "Design for New Solutions",
+            "stem": "A machine learning team needs a shared, high-throughput POSIX file system that many Linux instances can mount at the same time and that grows automatically. Which storage should be recommended?",
+            "options": [
+                "A single Amazon EBS volume attached to all instances at once",
+                "Amazon S3 mounted with a third-party gateway on every instance",
+                "An instance store volume replicated by the application",
+                "Amazon EFS with multiple mount targets across Availability Zones"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon EFS is a shared, elastic NFS file system that many Linux instances mount concurrently and that scales with usage. A standard EBS volume attaches to one instance per Availability Zone, S3 is object storage without native POSIX semantics, and instance store is local and ephemeral.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-033",
+            "domain": "Design for New Solutions",
+            "stem": "A Lambda function connects to an Amazon RDS database, and bursts of invocation are exhausting database connections. Which solution should the solutions architect recommend?",
+            "options": [
+                "Use Amazon RDS Proxy to pool and reuse database connections",
+                "Increase the database maximum connections and hope for the best",
+                "Open a new connection inside every function invocation and close it after",
+                "Move the database credentials into environment variables to speed connections"
+            ],
+            "correct_index": 0,
+            "explanation": "RDS Proxy maintains a managed connection pool that Lambda functions share, preventing connection exhaustion. Raising the connection limit can overload the database, opening a connection per invocation is exactly what causes exhaustion, and storing credentials in environment variables improves secret handling but not connection pressure.",
+            "reference": "AWS SAP-C02 Exam Guide - Design for New Solutions"
+        },
+        {
+            "id": "aws-sap-034",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company runs steady-state Amazon EC2 and AWS Lambda workloads and wants to reduce compute cost with a commitment while preserving flexibility across instance families and Regions. Which purchasing option is most flexible?",
+            "options": [
+                "Spot Instances for the steady-state production tier",
+                "AWS Compute Savings Plans covering the committed hourly spend",
+                "Standard Reserved Instances locked to one instance family in one Region",
+                "On-Demand Instances only, with no commitment"
+            ],
+            "correct_index": 1,
+            "explanation": "Compute Savings Plans apply across instance families, sizes, Regions, and Lambda usage, giving discounts with flexibility. Standard Reserved Instances lock to a specific family and Region, On-Demand gives no discount, and Spot Instances can be interrupted and are unsuitable for steady production tiers.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-035",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company stores billions of log objects. Only the most recent thirty days are queried frequently, older data is rarely read but must be retained for seven years at the lowest cost. Which approach optimizes cost?",
+            "options": [
+                "Delete objects after thirty days to save storage",
+                "Copy all objects to Amazon EBS volumes for faster access",
+                "An S3 lifecycle policy that transitions objects to S3 Glacier Deep Archive after the active period",
+                "Keep every object in S3 Standard for the full seven years"
+            ],
+            "correct_index": 2,
+            "explanation": "A lifecycle policy moving rarely accessed objects to Glacier Deep Archive minimizes storage cost while satisfying the seven-year retention. Keeping everything in S3 Standard pays the highest rate, deleting after thirty days violates retention, and EBS is far more expensive per gigabyte and not designed for cold archives.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-036",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company suspects many EC2 instances are over-provisioned. Which service recommends rightsizing based on observed utilization and is free to use?",
+            "options": [
+                "AWS Trusted Advisor business support checks only",
+                "Amazon CloudWatch dashboards reviewed manually",
+                "AWS Cost Explorer tag report",
+                "AWS Compute Optimizer"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Compute Optimizer analyzes utilization metrics and recommends rightsizing for EC2, Auto Scaling groups, and other resources. Trusted Advisor has some checks but does not provide per-instance rightsizing recommendations, manual dashboard review is not automated guidance, and Cost Explorer reports spend but not instance sizing.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-037",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A production Amazon RDS instance runs continuously at a stable size and the company wants the largest discount for it. Which choice most reduces cost for this steady database?",
+            "options": [
+                "Purchase Reserved Instances for the RDS instance class and Region",
+                "Convert the database to a smaller burstable instance to cut cost",
+                "Take a snapshot every hour and restore from it on demand",
+                "Move the database to S3 to avoid instance charges"
+            ],
+            "correct_index": 0,
+            "explanation": "Reserved Instances give a significant discount for steady-state RDS usage in a specific class and Region. Downsizing may not meet performance needs and is a resize decision rather than a pricing one, frequent snapshots add storage cost without reducing instance cost, and moving a relational database to S3 changes the workload and is not equivalent.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-038",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A cost review finds many unattached EBS volumes and idle load balancers left from past projects. Which practice directly removes this waste?",
+            "options": [
+                "Buy more Reserved Instances to absorb the extra usage",
+                "Identify and delete unused resources with a tagging and lifecycle review process",
+                "Increase the size of the remaining volumes so they are less likely to fill",
+                "Move the idle load balancers to another Region instead of deleting them"
+            ],
+            "correct_index": 1,
+            "explanation": "Regularly reviewing tags and deleting unattached volumes and idle load balancers removes ongoing waste. Enlarging volumes increases cost, moving idle resources keeps paying for them, and buying reservations for unused capacity locks in spend rather than eliminating it.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-039",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "An application latency occasionally spikes and the team cannot correlate requests across microservices. Which combination provides distributed tracing and request-level insight?",
+            "options": [
+                "AWS CloudTrail management events for every API call",
+                "Amazon Macie scanning the application logs",
+                "AWS X-Ray with tracing enabled on the services and the SDK instrumented",
+                "Amazon CloudWatch Logs alone with no trace identifiers"
+            ],
+            "correct_index": 2,
+            "explanation": "X-Ray instruments requests across services to build a service map and trace segments, which reveals where latency occurs. Plain CloudWatch logs lack correlation across services, CloudTrail records AWS API calls rather than application request paths, and Macie is a data-classification service for S3.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-040",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A read-heavy web application is overloading its relational database and most queries return the same popular records. Which change reduces database load with the least application rewrite?",
+            "options": [
+                "Shard the database across many instances",
+                "Move the database to a larger instance and do nothing else",
+                "Convert all reads to a nightly batch job",
+                "Add an Amazon ElastiCache layer in front of the database for popular reads"
+            ],
+            "correct_index": 3,
+            "explanation": "A cache absorbs repeated reads for popular records, cutting database load with minimal code changes. Sharding is a large architectural change, scaling up helps only until the next ceiling, and batching reads to nightly is not viable for an interactive web application.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-041",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company wants to prove that its multi-tier application survives an Availability Zone failure. Which practice provides the most confidence in resilience?",
+            "options": [
+                "Run controlled failure injection and game days that simulate an Availability Zone outage",
+                "Review the architecture diagram with the team once a quarter",
+                "Assume the Multi-AZ configuration guarantees recovery and skip testing",
+                "Document a manual recovery runbook and never exercise it"
+            ],
+            "correct_index": 0,
+            "explanation": "Deliberate failure injection and game days validate that failover actually works and surface hidden dependencies. Diagrams and assumptions do not test behavior, and an unexercised runbook may be stale and fail under real pressure.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-042",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company deploys infrastructure by hand and experiences configuration drift between environments. Which operational change improves reliability and repeatability?",
+            "options": [
+                "Snapshot production and copy it to development once a year",
+                "Define infrastructure as code in CloudFormation or Terraform and deploy through a pipeline",
+                "Continue manual changes but keep a detailed wiki of the steps",
+                "Give each engineer their own AWS account and manual process"
+            ],
+            "correct_index": 1,
+            "explanation": "Infrastructure as code makes environments reproducible, reviewable, and free of drift by deploying through version control and pipelines. A wiki documents manual steps but does not remove drift, per-engineer manual accounts increase inconsistency, and yearly snapshots cannot keep environments in sync.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-043",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "Users worldwide report slow page loads from a web application hosted in one Region. Static assets and API responses repeat across users. Which change improves global latency most directly?",
+            "options": [
+                "Increase the database read capacity in the same Region",
+                "Add more application servers behind the existing load balancer",
+                "Distribute content with Amazon CloudFront and cache static and cacheable responses at edge locations",
+                "Move the application to a larger instance in the same Region"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudFront serves cached content from edge locations close to users, reducing round-trip latency for global audiences. A larger instance, more read capacity, and more servers all remain in one Region and do not shorten the distance to users.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-044",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A company pays high data-processing charges because private subnets route traffic to AWS services through a NAT gateway. Which change reduces this cost while keeping traffic private?",
+            "options": [
+                "Send the traffic over the public Internet instead of the NAT gateway",
+                "Move the workloads into public subnets to avoid the NAT gateway",
+                "Compress the traffic before it leaves the subnet",
+                "Create gateway VPC endpoints for S3 and DynamoDB and route that traffic directly"
+            ],
+            "correct_index": 3,
+            "explanation": "Gateway VPC endpoints route S3 and DynamoDB traffic privately without NAT gateway processing charges. Sending traffic over the Internet is not private and may not be cheaper, public subnets expose resources, and compression does not remove NAT data-processing charges.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-045",
+            "domain": "Continuous Improvement for Existing Solutions",
+            "stem": "A security review finds that production EC2 instances have unpatched operating systems and no continuous vulnerability assessment. Which AWS service continuously scans instances for software vulnerabilities and unintended network exposure?",
+            "options": [
+                "Amazon Inspector",
+                "AWS CloudTrail",
+                "AWS Config",
+                "Amazon GuardDuty"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon Inspector continuously scans EC2 instances, container images, and Lambda functions for software vulnerabilities and unintended network exposure. CloudTrail records API activity, AWS Config evaluates configuration compliance, and GuardDuty detects threats such as compromised credentials but does not perform vulnerability scanning.",
+            "reference": "AWS SAP-C02 Exam Guide - Continuous Improvement for Existing Solutions"
+        },
+        {
+            "id": "aws-sap-046",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company must migrate hundreds of on-premises physical and virtual servers to AWS with minimal application changes and minimal downtime. Which service is purpose-built for this rehost?",
+            "options": [
+                "AWS DataSync",
+                "AWS Application Migration Service",
+                "AWS Database Migration Service",
+                "AWS Snowball Edge"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Application Migration Service continuously replicates source servers and launches them on AWS with minimal downtime and no application changes, which is the rehost pattern. Database Migration Service moves databases rather than whole servers, Snowball transfers data offline, and DataSync moves file data rather than running servers.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-047",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company has fifty terabytes of data in a remote data center with limited and slow network bandwidth, and the migration must finish within a few weeks. Which transfer method is most practical?",
+            "options": [
+                "AWS Transfer Family with SFTP over the Internet",
+                "A nightly rsync job over a VPN for the next year",
+                "AWS Snowball Edge devices shipped to the data center for offline transfer",
+                "AWS DataSync over the existing Internet connection"
+            ],
+            "correct_index": 2,
+            "explanation": "Snowball Edge physically moves large volumes of data when network bandwidth is too limited to finish in time. DataSync, Transfer Family, and rsync all depend on the same constrained network and would take far longer than the migration window.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-048",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company will migrate an Oracle database to Amazon Aurora PostgreSQL and must convert schemas, stored procedures, and data. Which combination should be used?",
+            "options": [
+                "AWS Database Migration Service alone to both convert and migrate everything",
+                "A manual export to CSV files loaded with the AWS CLI",
+                "AWS Application Migration Service to lift the Oracle server as an EC2 instance",
+                "AWS Schema Conversion Tool to convert the schema and AWS Database Migration Service to move and replicate the data"
+            ],
+            "correct_index": 3,
+            "explanation": "The Schema Conversion Tool converts heterogeneous schemas and code, and Database Migration Service performs the data migration and ongoing replication. Database Migration Service moves data but does not convert proprietary schema objects, CSV exports lose procedures and are error-prone, and rehosting the Oracle server is not a database migration to Aurora.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-049",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company must cut over from an on-premises database to Amazon Aurora with only a short maintenance window and almost no data loss. Which migration approach minimizes downtime?",
+            "options": [
+                "Use AWS Database Migration Service with ongoing replication and cut over once the target is caught up",
+                "Take a full logical dump and restore it during the maintenance window",
+                "Copy the database files to S3 and import them in the window",
+                "Stop the application for a full week while the data is copied"
+            ],
+            "correct_index": 0,
+            "explanation": "Database Migration Service performs a full load and then continuous change data capture, so the target stays current and the cutover is only as long as the final catch-up. One-time dumps require the whole copy inside the window, S3 file copies are not a live replication path, and a week-long outage is unacceptable.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-050",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company wants to move its legacy application to AWS while replacing only its self-managed message broker with a managed service and leaving the application code otherwise intact. Which migration strategy does this describe?",
+            "options": [
+                "Repurchase, moving to a completely different SaaS product",
+                "Replatform, making a few targeted changes to gain managed benefits",
+                "Refactor, completely re-architecting the application before migration",
+                "Retire, decommissioning the application without replacement"
+            ],
+            "correct_index": 1,
+            "explanation": "Replatform keeps the core application but swaps selected components for managed services, which matches replacing only the broker. Refactor rewrites the architecture, retire removes the application, and repurchase replaces it with a different product.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-051",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company wants to rehost applications but is concerned about keeping operating-system and application licenses compliant after the move. Which aspect of AWS Application Migration Service helps?",
+            "options": [
+                "It replaces every operating system with Amazon Linux during migration",
+                "It removes the need for any licensing because AWS instances are license-free",
+                "It replicates the source server so existing licensing arrangements can continue on the migrated instance",
+                "It automatically converts all commercial licenses to open-source equivalents"
+            ],
+            "correct_index": 2,
+            "explanation": "Because Application Migration Service replicates the server as-is, existing licensing can continue on the matching AWS instance. It does not convert or substitute licenses, it does not replace the operating system, and AWS instances still require valid licenses for commercial software.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-052",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company must copy millions of files from an on-premises NFS server to Amazon EFS and keep them synchronized for a period. Which service is designed for this file data movement?",
+            "options": [
+                "AWS Snowcone shipped to the data center",
+                "AWS Database Migration Service",
+                "Amazon Kinesis Data Firehose",
+                "AWS DataSync with a scheduled task"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS DataSync moves and synchronizes file data over the network between on-premises storage and AWS file services such as EFS and S3. Snowcone is used when the network is unsuitable, Database Migration Service moves databases, and Firehose streams data into destinations but does not sync file systems.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-053",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "An enterprise wants to migrate a mainframe batch workload to AWS and reduce reliance on the mainframe over time. Which service accelerates moving mainframe applications and data to AWS?",
+            "options": [
+                "AWS Mainframe Modernization",
+                "AWS Application Migration Service for Linux servers",
+                "Amazon EMR for Hadoop workloads",
+                "AWS Glue for ETL pipelines"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Mainframe Modernization provides tools and runtime environments to rehost or replatform mainframe workloads. Application Migration Service targets standard servers, EMR is a big-data processing service, and Glue is a managed ETL service, none of which address mainframe workloads.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-054",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company running VMware vSphere on-premises wants to extend its existing data centers into AWS with the same operational tooling during a gradual migration. Which service supports this hybrid model?",
+            "options": [
+                "Amazon WorkSpaces for all server workloads",
+                "VMware Cloud on AWS",
+                "Amazon EC2 bare-metal instances used as standalone hypervisors",
+                "AWS Outposts rack only, without vSphere"
+            ],
+            "correct_index": 1,
+            "explanation": "VMware Cloud on AWS runs the VMware software-defined data center on AWS and connects to on-premises vSphere environments using the same tools. Bare-metal instances are not a managed VMware environment, Outposts extends AWS to your site but is not the VMware-managed service, and WorkSpaces is a desktop service rather than a server platform.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-055",
+            "domain": "Accelerate Workload Migration and Modernization",
+            "stem": "A company wants to modernize a monolithic application incrementally by routing some features to new microservices while the rest of the monolith keeps running. Which pattern supports this approach?",
+            "options": [
+                "Lift and shift, moving the monolith unchanged to EC2 and stopping there",
+                "Retire the monolith immediately and rebuild from scratch in one sprint",
+                "Strangler Fig, placing new services in front of the monolith and migrating features gradually",
+                "Big-bang rewrite, replacing the monolith in a single release"
+            ],
+            "correct_index": 2,
+            "explanation": "The Strangler Fig pattern introduces new services gradually behind a routing layer and shifts functionality over time, lowering risk. A big-bang rewrite concentrates risk, a pure lift and shift does not modernize, and an immediate rebuild in one sprint is unrealistic and risky.",
+            "reference": "AWS SAP-C02 Exam Guide - Accelerate Workload Migration and Modernization"
+        },
+        {
+            "id": "aws-sap-056",
+            "domain": "Security",
+            "stem": "An application in one account must encrypt data with a customer managed KMS key in a central security account and allow automated access without changing the key policy. Which mechanism grants cross-account decryption to specific principals with the least privilege?",
+            "options": [
+                "Making the KMS key policy use the wildcard principal for all accounts",
+                "Copies of the key exported to each application account as plaintext",
+                "Embedding the key material in the application environment variables",
+                "A KMS grant issued to the application role that allows the required encrypt and decrypt operations"
+            ],
+            "correct_index": 3,
+            "explanation": "KMS grants delegate specific operations to particular principals without editing the key policy, which supports temporary, least-privilege cross-account use. A wildcard principal grants access too broadly, KMS symmetric key material cannot be exported as plaintext, and embedding key material is an insecure anti-pattern.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-057",
+            "domain": "Security",
+            "stem": "A company wants centralized workforce access where permissions for each team are defined once and assigned to many accounts, and it wants the permission definitions version-controlled. Which IAM Identity Center feature defines these permission bundles?",
+            "options": [
+                "Permission sets that are assigned to groups for each account",
+                "IAM users created separately in each account",
+                "IAM roles named after each individual employee",
+                "AWS Config rules that enforce a permission baseline"
+            ],
+            "correct_index": 0,
+            "explanation": "Permission sets in IAM Identity Center are reusable definitions of policies that can be assigned to groups across accounts and managed as code. Per-account IAM users do not centralize identity, per-employee roles multiply maintenance, and Config rules assess compliance but do not grant identity permissions.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-058",
+            "domain": "Security",
+            "stem": "An application uses an Amazon RDS database password stored in a configuration file. The company wants automatic rotation and retrieval through API calls at run time. Which service should be used?",
+            "options": [
+                "A hard-coded password in the container image",
+                "AWS Secrets Manager with automatic rotation of the database secret",
+                "An encrypted Amazon S3 object that the application downloads at startup",
+                "A parameter in AWS Systems Manager Parameter Store without rotation"
+            ],
+            "correct_index": 1,
+            "explanation": "Secrets Manager stores, retrieves, and automatically rotates database credentials through API calls so no secret is embedded in code. An S3 object does not rotate and requires managing access separately, a plain Parameter Store value lacks built-in rotation, and hard-coding secrets in an image is insecure and static.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-059",
+            "domain": "Security",
+            "stem": "A security team wants an automated response when Amazon GuardDuty reports that an EC2 instance is communicating with a known malicious host. Which design enables automatic remediation?",
+            "options": [
+                "Store the finding in Amazon S3 and review it during the next audit",
+                "Disable GuardDuty after the first finding to reduce noise",
+                "Send the GuardDuty finding to Amazon EventBridge with a rule that invokes a Lambda function to isolate the instance",
+                "Email the finding to the security distribution list for manual handling"
+            ],
+            "correct_index": 2,
+            "explanation": "GuardDuty findings are events that EventBridge can match to invoke a Lambda function that applies a quarantine security group or stops the instance. Email and periodic review are manual and slow, and disabling GuardDuty removes detection entirely.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-060",
+            "domain": "Security",
+            "stem": "A company wants continuous vulnerability assessment for its container images stored in Amazon ECR and its EC2 fleet. Which service provides this scanning?",
+            "options": [
+                "Amazon Macie",
+                "AWS Shield Advanced",
+                "AWS CloudHSM",
+                "Amazon Inspector"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon Inspector scans ECR images, EC2 instances, and Lambda functions for vulnerabilities and unintended network exposure. Macie discovers sensitive data in S3, Shield Advanced protects against DDoS, and CloudHSM provides dedicated hardware key storage, none of which scan for vulnerabilities.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-061",
+            "domain": "Security",
+            "stem": "A company must discover and classify personally identifiable information stored in Amazon S3 buckets across many accounts. Which service should the solutions architect use?",
+            "options": [
+                "Amazon Macie",
+                "Amazon Inspector",
+                "AWS CloudTrail",
+                "Amazon GuardDuty"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon Macie uses machine learning to discover and classify sensitive data such as personally identifiable information in S3. Inspector scans compute for vulnerabilities, CloudTrail logs API activity, and GuardDuty detects threats, none of which classify S3 data.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-062",
+            "domain": "Security",
+            "stem": "A company collects security findings from GuardDuty, Inspector, and third-party tools and wants one normalized view with the ability to route findings by account. Which service aggregates them?",
+            "options": [
+                "Amazon Detective",
+                "AWS Security Hub",
+                "AWS Config",
+                "AWS Trusted Advisor"
+            ],
+            "correct_index": 1,
+            "explanation": "Security Hub aggregates and normalizes findings from AWS services and partner tools into a single dashboard with organization-wide views. AWS Config evaluates resource configuration, Trusted Advisor gives best-practice checks, and Detective supports investigation but does not aggregate and normalize findings.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-063",
+            "domain": "Security",
+            "stem": "A company must retain a record of all AWS API activity across accounts and capture accepted and rejected traffic at the network interface for a forensic investigation. Which two data sources should be enabled?",
+            "options": [
+                "Amazon GuardDuty for API activity and AWS Trusted Advisor for network traffic",
+                "AWS Artifact for API activity and Amazon Inspector for network traffic",
+                "AWS CloudTrail for API activity and VPC Flow Logs for network traffic",
+                "AWS Config for API activity and Amazon Macie for network traffic"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudTrail records API calls and VPC Flow Logs capture IP traffic metadata at the elastic network interface. Config, GuardDuty, and Artifact serve different purposes, and Macie, Trusted Advisor, and Inspector do not produce VPC traffic logs.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-064",
+            "domain": "Security",
+            "stem": "A company terminates TLS for its public website at an Application Load Balancer and wants managed certificate issuance and automatic renewal for the domain. Which service should be used?",
+            "options": [
+                "A self-signed certificate generated on each web server",
+                "An SSH key pair generated in EC2",
+                "AWS CloudHSM storing the web server private key",
+                "AWS Certificate Manager with a certificate attached to the load balancer"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Certificate Manager issues public certificates for integrated services and renews them automatically. Self-signed certificates trigger browser warnings and require manual renewal, SSH keys are for host access rather than TLS, and CloudHSM stores keys but does not issue or renew certificates.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-sap-065",
+            "domain": "Security",
+            "stem": "A security team wants to identify which IAM roles and resource policies grant external access to its resources so it can remove unintended sharing. Which service should be used?",
+            "options": [
+                "IAM Access Analyzer",
+                "AWS CloudTrail Insights",
+                "Amazon Inspector",
+                "AWS Firewall Manager"
+            ],
+            "correct_index": 0,
+            "explanation": "IAM Access Analyzer analyzes resource policies and role trust policies to identify resources shared with external principals. CloudTrail Insights detects unusual API activity, Inspector scans for vulnerabilities, and Firewall Manager centrally manages protection policies, none of which find external access grants.",
+            "reference": "AWS SAP-C02 Exam Guide - Security"
+        }
+    ]
+}

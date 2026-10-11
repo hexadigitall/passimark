@@ -266,6 +266,74 @@ class AuthoredBundleSeederTest extends TestCase
                 'Process' => 90,
                 'Business Environment' => 14,
             ]],
+            'aws-sap' => ['aws-sap', 65, [
+                'Design Solutions for Organizational Complexity' => 17,
+                'Design for New Solutions' => 16,
+                'Continuous Improvement for Existing Solutions' => 12,
+                'Accelerate Workload Migration and Modernization' => 10,
+                'Security' => 10,
+            ]],
+            'jamb' => ['jamb', 140, [
+                'English: Comprehension' => 23,
+                'English: Lexis and Structure' => 22,
+                'English: Oral Forms' => 15,
+                'Mathematics: Algebra & Calculus' => 23,
+                'Mathematics: Geometry & Trig' => 17,
+                'General Science' => 40,
+            ]],
+            'waec' => ['waec', 50, [
+                'Core Concepts' => 18,
+                'Problem Solving' => 18,
+                'Communication' => 14,
+            ]],
+            'sat' => ['sat', 98, [
+                'Reading & Writing: Information and Ideas' => 14,
+                'Reading & Writing: Craft and Structure' => 15,
+                'Reading & Writing: Expression of Ideas' => 11,
+                'Reading & Writing: Standard English Conventions' => 14,
+                'Math: Algebra' => 15,
+                'Math: Advanced Math' => 15,
+                'Math: Problem Solving & Data' => 7,
+                'Math: Geometry & Trigonometry' => 7,
+            ]],
+            'ielts-a' => ['ielts-a', 80, [
+                'Core Concepts' => 28,
+                'Problem Solving' => 28,
+                'Communication' => 24,
+            ]],
+            'gre' => ['gre', 54, [
+                'Core Concepts' => 19,
+                'Problem Solving' => 19,
+                'Communication' => 16,
+            ]],
+            'nclex-rn' => ['nclex-rn', 85, [
+                'Management of Care' => 16,
+                'Safety and Infection Control' => 10,
+                'Health Promotion and Maintenance' => 8,
+                'Psychosocial Integrity' => 8,
+                'Basic Care and Comfort' => 8,
+                'Pharmacological Therapies' => 13,
+                'Reduction of Risk Potential' => 10,
+                'Physiological Adaptation' => 12,
+            ]],
+            'acca-f1-f4' => ['acca-f1-f4', 100, [
+                'Business & Technology BT/F1' => 50,
+                'Management Accounting MA/F2' => 50,
+            ]],
+            'cfa-l1' => ['cfa-l1', 180, [
+                'Quant & Economics' => 63,
+                'Investment Valuation' => 63,
+                'Portfolio & Ethics' => 54,
+            ]],
+            'ican-skills' => ['ican-skills', 100, [
+                'Financial Reporting & Audit' => 55,
+                'Taxation & Business' => 45,
+            ]],
+            'jee-main' => ['jee-main', 90, [
+                'Physics' => 30,
+                'Chemistry' => 30,
+                'Mathematics' => 30,
+            ]],
         ];
     }
 
