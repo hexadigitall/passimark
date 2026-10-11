@@ -1,0 +1,114 @@
+{
+  "cert_key": "cisa",
+  "title": "Certified Information Systems Auditor",
+  "issuer": "ISACA",
+  "outline_file": "outlines/cisa.json",
+  "variant_label": "Authored CISA practice",
+  "content_provenance": "Original practice items authored from the ISACA published exam content outline (verified 2026-09-30). Not a capture of past exam questions.",
+  "source_label": "CISA practice bank",
+  "items": [
+    {
+      "id": "cisa-d1-001",
+      "domain": "Information System Auditing Process",
+      "objective": "1.A.3",
+      "stem": "An IS auditor is scoping the audit of a recently deployed enterprise resource planning system. Which action is most appropriate FIRST in designing the audit programme?",
+      "options": [
+        "Identify the key business risks and the IT controls intended to mitigate them",
+        "Begin substantive testing of transaction-level controls in every module",
+        "Prevent business continuity incidents during the audit fieldwork window",
+        "Draft the final audit report before fieldwork so deadlines are met"
+      ],
+      "correct_index": 0,
+      "explanation": "Audit standards require an audit programme to be built from risk-based planning: the auditor determines the material risks and the controls meant to address them before deciding what to test. Substantive testing in every module is unfocused and would follow, not replace, programme design.",
+      "reference": "ISACA IT Audit Framework (ITAF), 4th edition - risk-based audit planning"
+    },
+    {
+      "id": "cisa-d1-002",
+      "domain": "Information System Auditing Process",
+      "objective": "1.A.4",
+      "stem": "During a design assessment of the change management process, the IS auditor finds that emergency changes can be promoted without prior approval, but every promotion is logged with the requester's identity. Which statement best characterises the compensating control in place?",
+      "options": [
+        "It is preventive, because the log deters unauthorized promoters from acting",
+        "It is detective, because the log lets unauthorized promotions be discovered afterward",
+        "It is corrective, because an entry in the log automatically reverts a bad change",
+        "It is a governance control, because promotion rights are reassigned after each use"
+      ],
+      "correct_index": 1,
+      "explanation": "A log that records who promoted an emergency change does not stop the promotion; it records it for later review, so it is a detective, compensating control. It does not prevent or correct the change, and logging discouraging misuse is not the same as a true deterrent such as posted consequences and accountability.",
+      "reference": "ISACA IT Audit Framework (ITAF), 4th edition - types of controls"
+    },
+    {
+      "id": "cisa-d1-003",
+      "domain": "Information System Auditing Process",
+      "objective": "1.B.3",
+      "stem": "The IS auditor needs evidence that backup jobs completed for the past 90 days. Which is the MOST reliable source of evidence?",
+      "options": [
+        "A signed confirmation from the backup administrator that the jobs ran",
+        "A printed copy of the backup policy document dated three months ago",
+        "User recollections of files that were recoverable after an earlier drill",
+        "Logs read directly from the backup application showing job status and timestamps"
+      ],
+      "correct_index": 3,
+      "explanation": "Machine-generated logs read from the system under audit are the most reliable evidence because they are independent of human recollection and were created while the control operated. A signed confirmation, a policy document and recollections each rest on memory or intent rather than direct observation.",
+      "reference": "ISACA IT Audit Framework (ITAF), 4th edition - audit evidence collection"
+    },
+    {
+      "id": "cisa-d2-001",
+      "domain": "Governance & Management of IT",
+      "objective": "2.A.2",
+      "stem": "Under a governance framework aligned with COBIT 2019, where does accountability for achieving IT-related enterprise goals ultimately sit?",
+      "options": [
+        "With the external IT auditor",
+        "With the board, through its governance structure",
+        "With the application vendor, because it supplies the tools",
+        "Equally across every IT project manager"
+      ],
+      "correct_index": 1,
+      "explanation": "COBIT 2019 separates governance from management and places accountability for goal achievement at the board level, because aligning IT goals with enterprise goals is a governance decision. The auditor provides assurance, the vendor provides products, and project managers are accountable for delivery, not for enterprise goal ownership.",
+      "reference": "ISACA COBIT 2019 - governance and management objectives"
+    },
+    {
+      "id": "cisa-d2-002",
+      "domain": "Governance & Management of IT",
+      "objective": "2.B.3",
+      "stem": "Which practice is an IS auditor MOST likely to expect from a mature IT performance monitoring process?",
+      "options": [
+        "Reviewing vendor invoices monthly to confirm hardware budget accuracy",
+        "Publishing the organizational chart once a year to clarify reporting lines",
+        "Setting objectives, measuring them, and reviewing deviations with owners at fixed intervals",
+        "Archiving project documentation after each release to reduce storage cost"
+      ],
+      "correct_index": 2,
+      "explanation": "Performance monitoring is a closed loop: define objectives, measure outcomes, then review the variance with the owners responsible so management can steer. Invoice review, org charts and archiving are operational or structural activities, not a performance review cycle.",
+      "reference": "ISACA COBIT 2019 - MEA01 Monitored, Evaluated and Assessed Performance and Conformance"
+    },
+    {
+      "id": "cisa-d4-001",
+      "domain": "Information Systems Operations and Business Resilience",
+      "stem": "In business continuity planning, which measure defines the maximum period after a disruption during which the impact of a suspended critical process remains acceptable?",
+      "options": [
+        "Recovery point objective (RPO)",
+        "Recovery time objective (RTO)",
+        "Maximum tolerable period of disruption (MTPOD / MTD)",
+        "Service level objective (SLO)"
+      ],
+      "correct_index": 2,
+      "explanation": "The maximum tolerable period of disruption (MTPOD, often called maximum tolerable downtime, MTD) is the threshold beyond which the impact of a suspended process becomes unacceptable. RTO is the target time set for resuming service, RPO is the acceptable data loss, and an SLO is a capacity or availability target.",
+      "reference": "ISO 22301:2019 - business impact analysis terminology"
+    },
+    {
+      "id": "cisa-d4-002",
+      "domain": "Information Systems Operations and Business Resilience",
+      "stem": "After a disruption, an organization resumes service using backups taken the previous night and loses 16 hours of transactions. Which statement correctly describes the recovery metric reached?",
+      "options": [
+        "The recovery time objective (RTO) was met at 16 hours",
+        "The maximum tolerable period of disruption was 16 hours",
+        "The service level objective was breached because of the backup window",
+        "The data recovered from the previous backup set the loss window at 16 hours"
+      ],
+      "correct_index": 3,
+      "explanation": "Restoring from the previous night's backup means the point in time to which data was recovered is the last backup, so the data-loss window is the 16 hours of transactions recorded since. RTO concerns elapsed time to resume service, MTPOD is the impact threshold, and a restoration from backup is not itself a breach of an SLO.",
+      "reference": "ISACA CISA Exam Content Outline - business resilience; ISO 22301:2019 - recovery point objective"
+    }
+  ]
+}
