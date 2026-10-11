@@ -1,0 +1,717 @@
+{
+    "cert_key": "gcp-pca",
+    "title": "Google Professional Cloud Architect (PCA)",
+    "issuer": "Google Cloud",
+    "outline_file": "outlines/gcp-pca.json",
+    "variant_label": "GCP PCA Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Google Professional Cloud Architect exam guide (six official sections and weightings). Not a capture of past exam questions.",
+    "source_label": "Google Cloud PCA practice bank",
+    "items": [
+        {
+            "id": "gcp-pca-001",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A retail company wants to begin moving workloads to Google Cloud while keeping several latency-sensitive systems in its own datacenter for at least two more years, and it needs a single operational model and consistent policy across both environments. Which architecture should you recommend?",
+            "options": [
+                "A hybrid architecture using Anthos to run and manage workloads consistently across Google Cloud and the on-premises datacenter",
+                "A multi-cloud architecture that spreads every workload across three public providers",
+                "A fully serverless architecture that eliminates all on-premises systems immediately",
+                "A single virtual machine in one Google Cloud region that hosts every workload"
+            ],
+            "correct_index": 0,
+            "explanation": "A hybrid architecture managed with Anthos keeps latency-sensitive systems on premises while giving one consistent control plane and policy across both environments. Spreading every workload across three providers adds complexity rather than addressing the datacenter requirement, an immediate serverless rewrite is not feasible within the constraint, and a single VM cannot host a mixed estate reliably.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-002",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A development team wants to break a monolithic application into independently deployable services so each team can release without coordinating with the others. Which architectural style should you recommend?",
+            "options": [
+                "A single shared codebase with scheduled synchronized releases",
+                "A microservices architecture with each service owning its own data and deployment lifecycle",
+                "A two-tier client-server architecture with one central database",
+                "A batch-processing architecture that runs the whole application nightly"
+            ],
+            "correct_index": 1,
+            "explanation": "A microservices architecture organizes the application as independently deployable services with bounded contexts and their own data, which lets each team release on its own schedule. Synchronized releases preserve coupling, a central client-server database keeps teams dependent on shared schema changes, and batch processing does not provide independently deployable services.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-003",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "An enterprise is required by its board to avoid dependency on a single cloud provider and wants to run a containerized analytics platform that can move between providers without a rewrite. Which approach should you recommend?",
+            "options": [
+                "Rewrite the platform for each provider using provider-specific managed services",
+                "Run the platform only on physical servers in a single datacenter",
+                "Build on portable containers and Kubernetes so the platform can run on any conformant cluster",
+                "Split each service across two providers with a shared relational database"
+            ],
+            "correct_index": 2,
+            "explanation": "Portable containers and Kubernetes reduce provider lock-in because a conformant cluster can run the same workloads on more than one provider. Rewriting for provider-specific services deepens lock-in, a single datacenter removes cloud elasticity, and a shared relational database across providers introduces latency and tight coupling.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-004",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A company must migrate 200 on-premises virtual machines to Google Cloud within three months with the least effort and can modernize individual applications later. Which migration approach should you recommend?",
+            "options": [
+                "Retire every application and rebuild it as a serverless function",
+                "Repurchase all applications as SaaS before any migration begins",
+                "Refactor each application into microservices before migrating any machine",
+                "Lift and shift using Migrate to Virtual Machines to move the machines with minimal changes"
+            ],
+            "correct_index": 3,
+            "explanation": "A lift-and-shift migration with Migrate to Virtual Machines moves existing machines quickly with minimal change, matching the tight timeline, and modernization can follow later. Retiring, repurchasing, or refactoring everything first would take far longer than three months and add project risk.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-005",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "Before designing a solution, an architect must turn a vague request for a better customer portal into concrete design inputs. Which activity should the architect perform first?",
+            "options": [
+                "Document functional and nonfunctional requirements with the stakeholders",
+                "Deploy a pilot to production without a design",
+                "Order network hardware for the datacenter",
+                "Select the cheapest virtual machine family available"
+            ],
+            "correct_index": 0,
+            "explanation": "Gathering and documenting functional and nonfunctional requirements gives the design a testable foundation before technology choices are made. Selecting compute or hardware first, or deploying without a design, skips the requirements step and risks building the wrong solution.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-006",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A team must run a short-lived image-processing job that is triggered a few times per hour, scales with demand, and should be billed only while it runs. Which compute option should you recommend?",
+            "options": [
+                "A Google Kubernetes Engine node pool kept at a fixed size",
+                "Cloud Run functions triggered by the upload event",
+                "A single large Compute Engine machine with a scheduled job",
+                "A dedicated Compute Engine instance that runs continuously"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Run functions run in response to events, scale automatically with demand, and bill only for execution time, which matches intermittent short jobs. Always-on Compute Engine instances and fixed node pools charge for idle capacity, and a scheduled job does not react to each upload.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-007",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "An application serves users only in Germany, and company policy requires that all customer data remain within the country. Which design choice should you recommend?",
+            "options": [
+                "Use a network load balancer located in another country",
+                "Deploy to a multi-region configuration that replicates data to three continents",
+                "Deploy resources to a single Google Cloud region in Germany and keep data there",
+                "Store all customer data in a global external HTTP load balancer"
+            ],
+            "correct_index": 2,
+            "explanation": "Placing resources and data in a region inside Germany keeps customer data within the required boundary. Multi-region replication across continents violates the residency rule, and load balancers route traffic rather than store or confine data.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-008",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A company wants a consistent Kubernetes platform across its own datacenter and Google Cloud, with centralized policy and configuration, so that workloads can be moved without retooling. Which solution should you recommend?",
+            "options": [
+                "Cloud Run only in the public cloud for every workload",
+                "Separate standalone Kubernetes clusters managed by different tools",
+                "A single Compute Engine instance running Docker without orchestration",
+                "Anthos to manage Kubernetes clusters across on-premises and Google Cloud from a single control plane"
+            ],
+            "correct_index": 3,
+            "explanation": "Anthos provides a single control plane to manage Kubernetes clusters across on-premises and Google Cloud with centralized policy, which supports workload portability. Independent clusters managed by different tools lack consistent policy, and a single unmanaged instance provides neither portability nor policy.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-009",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "An order system must publish events that several independent downstream services consume, and each consumer must process every event without the publisher knowing who consumes it. Which architecture should you recommend?",
+            "options": [
+                "A publish-subscribe architecture built on Pub/Sub topics and subscriptions",
+                "A single monolith that handles all downstream processing internally",
+                "A shared relational database that each service polls on a timer",
+                "A synchronous chain in which the order service calls every consumer in turn"
+            ],
+            "correct_index": 0,
+            "explanation": "Pub/Sub decouples publishers from subscribers so multiple independent consumers each receive every event without the publisher tracking them. Polling a shared database creates coupling, synchronous chaining couples availability, and a monolith defeats independent consumption.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-010",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "A media company serves static video thumbnails to users worldwide and wants low latency and reduced origin load while keeping a single origin bucket. Which design should you recommend?",
+            "options": [
+                "Serve the thumbnails from a single bucket with no caching layer",
+                "Put the thumbnails behind Cloud CDN with a global external HTTP load balancer",
+                "Replicate the thumbnails into every user's virtual machine",
+                "Serve the thumbnails from a region the users cannot reach directly"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud CDN caches content at edge locations close to users while a global external load balancer routes requests, cutting latency and origin load. Serving directly from one bucket forces long round trips, and replicating to user machines or hiding the region does not provide edge caching.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-011",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "After splitting an application into microservices, clients must reach the services through one stable endpoint that handles authentication, routing, and rate limiting. Which component should you recommend?",
+            "options": [
+                "Expose every microservice on its own public IP address",
+                "Let clients call each microservice directly with hard-coded addresses",
+                "Place an API gateway in front of the microservices to centralize routing and security",
+                "Merge all microservices back into one deployment"
+            ],
+            "correct_index": 2,
+            "explanation": "An API gateway presents one stable, secured endpoint that handles routing, authentication, and rate limiting for the services behind it. Exposing services individually or hard-coding addresses increases attack surface and coupling, and merging services reverses the decomposition.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-012",
+            "domain": "Designing and planning a cloud solution architecture",
+            "stem": "Business owners require that a critical application recover within one hour after a regional outage, with no more than five minutes of data loss. Which design input should the architect record first?",
+            "options": [
+                "The preferred programming language of the application team",
+                "The brand color of the user interface",
+                "The model of the office printers",
+                "The recovery time objective of one hour and recovery point objective of five minutes"
+            ],
+            "correct_index": 3,
+            "explanation": "The recovery time objective and recovery point objective are the core business continuity requirements that drive the recovery design. Language, interface styling, and office hardware are unrelated to outage recovery targets.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing and planning a cloud solution architecture"
+        },
+        {
+            "id": "gcp-pca-013",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A company is deploying a three-tier application in a single Google Cloud region and wants each tier isolated while allowing controlled traffic between them. Which networking foundation should you recommend?",
+            "options": [
+                "A VPC network with separate subnets per tier and firewall rules that permit only required flows",
+                "Public IP addresses on every virtual machine with no network segmentation",
+                "One project per tier with no shared network connectivity",
+                "A single subnet shared by every tier with no firewall rules"
+            ],
+            "correct_index": 0,
+            "explanation": "A VPC network with per-tier subnets and least-privilege firewall rules isolates tiers while allowing only the flows each tier needs. A flat subnet without rules removes isolation, public addresses increase exposure, and fully disconnected projects prevent required communication.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-014",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A company stores archived financial records that must be retained for seven years and are almost never read, but may be retrieved within a day when audited. Which Cloud Storage option should you recommend?",
+            "options": [
+                "Standard storage class for all objects",
+                "Archive storage class with a retrieval process that can take hours",
+                "Nearline storage class for objects read monthly",
+                "Local SSD attached to a virtual machine"
+            ],
+            "correct_index": 1,
+            "explanation": "The Archive storage class is designed for data accessed less than once a year with low storage cost, and its retrieval latency still fits a same-day audit need. Standard and Nearline cost more for rarely read data, and Local SSD is ephemeral storage not meant for retention.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-015",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A team ships container images and wants to run them with automatic scaling and no Kubernetes node management, while paying only when requests are being handled. Which compute service should you recommend?",
+            "options": [
+                "Google Kubernetes Engine with a fixed node pool",
+                "A single virtual machine running Docker without orchestration",
+                "Cloud Run, which runs containers on a fully managed serverless platform",
+                "Compute Engine with manually managed instances"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud Run runs containers on a fully managed serverless platform that scales automatically and bills only for request handling. Manually managed instances and fixed node pools require node operations and charge for idle capacity, and an unmanaged single VM does not scale.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-016",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "An application needs a relational database for a regional workload with predictable traffic, standard SQL, and managed backups, and it does not require global scale. Which service should you recommend?",
+            "options": [
+                "Bigtable with a custom schema",
+                "A self-managed database on a Compute Engine instance",
+                "Cloud Spanner with a multi-region configuration",
+                "Cloud SQL for PostgreSQL with automated backups"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud SQL provides a managed regional relational database with standard SQL and automated backups at lower cost when global scale is unnecessary. Spanner adds multi-region cost and complexity, Bigtable is a wide-column store rather than relational, and self-managed databases add operational burden.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-017",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A large organization wants a central networking team to own subnets and firewall rules while application teams keep their own projects and deploy into the shared network. Which feature should you recommend?",
+            "options": [
+                "Shared VPC with a host project and service projects",
+                "Public IP addresses for every workload",
+                "Peering every project network to every other project network",
+                "A separate standalone VPC network for each application team"
+            ],
+            "correct_index": 0,
+            "explanation": "Shared VPC lets a host project own subnets and firewall policy while service projects deploy into that shared network, centralizing network control and retaining team separation. Standalone networks and full mesh peering fragment policy, and public addressing removes isolation.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-018",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A company needs a private, high-bandwidth connection between its datacenter and Google Cloud with a defined service level agreement rather than transferring data over the public internet. Which service should you recommend?",
+            "options": [
+                "Cloud VPN over the public internet",
+                "Cloud Interconnect with a dedicated connection",
+                "Public IP addresses on all resources",
+                "Cloud CDN for the datacenter"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Interconnect provides a dedicated private connection into Google Cloud with high bandwidth and a service level agreement. Cloud VPN travels over the public internet, public addresses expose resources, and Cloud CDN caches web content rather than connecting a datacenter.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-019",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "An analytics team must run SQL queries over petabytes of data that arrives continuously, with no servers to manage and fast aggregation across the full dataset. Which service should you recommend?",
+            "options": [
+                "Cloud Storage with a custom query application",
+                "A single Compute Engine instance running a relational database",
+                "BigQuery, a serverless analytics data warehouse with SQL and streaming ingest",
+                "Cloud SQL for MySQL as the analytics engine"
+            ],
+            "correct_index": 2,
+            "explanation": "BigQuery is a serverless analytics warehouse that runs SQL over petabyte-scale data with streaming ingestion and no infrastructure management. Cloud SQL is a transactional database that does not scale to that analytic workload, and the other options require building query engines manually.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-020",
+            "domain": "Managing and provisioning a solution infrastructure",
+            "stem": "A company must transform streaming events and batch files using the same processing logic and run the pipeline without managing cluster infrastructure. Which service should you recommend?",
+            "options": [
+                "Cloud Storage alone to process the data in place",
+                "Cloud SQL triggers to transform the data",
+                "A hand-written application on a fixed Compute Engine cluster",
+                "Cloud Dataflow with Apache Beam for unified stream and batch processing"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Dataflow runs Apache Beam pipelines with unified logic for streaming and batch data and is fully managed. A fixed cluster adds operations, Cloud Storage stores but does not transform data, and Cloud SQL is a transactional database rather than a stream processor.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing and provisioning a solution infrastructure"
+        },
+        {
+            "id": "gcp-pca-021",
+            "domain": "Designing for security and compliance",
+            "stem": "A support team needs to view, but never modify, the configuration of production Compute Engine instances. Which access approach should you recommend?",
+            "options": [
+                "Grant a predefined or custom role that includes only read-only view permissions",
+                "Share the project owner account credentials with the team",
+                "Grant the basic Editor role on the whole project",
+                "Grant the basic Owner role on the project"
+            ],
+            "correct_index": 0,
+            "explanation": "A role limited to read-only view permissions grants the support team visibility without modification rights, following least privilege. Editor and Owner allow changes, and sharing credentials removes accountability and breaks least privilege.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-022",
+            "domain": "Designing for security and compliance",
+            "stem": "A regulated company must control and rotate the encryption keys that protect its data at rest in several Google Cloud services and wants to manage those keys centrally. Which capability should you recommend?",
+            "options": [
+                "Google-managed encryption keys only",
+                "Cloud KMS customer-managed encryption keys with Cloud HSM or software keys",
+                "No encryption for data at rest",
+                "Storing raw keys inside application source code"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud KMS customer-managed encryption keys let the company own and schedule rotation of the keys protecting data at rest across services. Google-managed keys remove customer control, disabling encryption is unacceptable for regulated data, and embedding keys in source code is insecure.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-023",
+            "domain": "Designing for security and compliance",
+            "stem": "A security team must prevent data in BigQuery and Cloud Storage from being copied to resources outside a defined set of projects, even by users with valid credentials. Which feature should you recommend?",
+            "options": [
+                "Public buckets so the data is easier to audit",
+                "A network firewall rule that blocks port 443",
+                "VPC Service Controls with a service perimeter around the projects",
+                "A larger IAM role for the data owners"
+            ],
+            "correct_index": 2,
+            "explanation": "VPC Service Controls uses a service perimeter to restrict data movement for supported services even when users hold valid credentials, guarding against data exfiltration. Broader IAM roles increase risk, public buckets expose data, and a port firewall rule does not govern API level data access.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-024",
+            "domain": "Designing for security and compliance",
+            "stem": "Employees already sign in to an external identity provider, and the company wants them to access Google Cloud with those existing accounts instead of creating new Google credentials. Which approach should you recommend?",
+            "options": [
+                "Share a single shared administrative account",
+                "Disable single sign-on for the organization",
+                "Create separate Google accounts for every employee",
+                "Configure identity federation between the identity provider and Google Cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "Federating the existing identity provider with Google Cloud lets employees use their current accounts and centralizes authentication. Separate accounts duplicate identity, a shared account destroys accountability, and disabling single sign-on increases risk.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-025",
+            "domain": "Designing for security and compliance",
+            "stem": "A security baseline must prevent anyone in the organization from creating Cloud Storage buckets with public access and from using unsupported regions. Which mechanism should you recommend?",
+            "options": [
+                "Organization policy constraints such as public access prevention and resource location restrictions",
+                "A documentation page that asks teams to avoid public buckets",
+                "A monthly email reminder about security",
+                "A single firewall rule applied to one virtual machine"
+            ],
+            "correct_index": 0,
+            "explanation": "Organization policy constraints enforce guardrails such as public access prevention and allowed locations across all projects in the organization. Documentation, reminders, and a single VM firewall rule do not enforce organization-wide configuration.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-026",
+            "domain": "Designing for security and compliance",
+            "stem": "A company insists on supplying its own encryption keys for specific Cloud Storage objects and managing key rotation entirely outside Google Cloud. Which option should you recommend?",
+            "options": [
+                "Google-managed encryption keys",
+                "Customer-supplied encryption keys for Cloud Storage",
+                "Disabling encryption on the buckets",
+                "Storing keys in a plain text file next to the data"
+            ],
+            "correct_index": 1,
+            "explanation": "Customer-supplied encryption keys let the company provide and manage the keys outside Google Cloud for Cloud Storage objects. Google-managed keys remove that control, disabling encryption is unacceptable, and storing keys next to the data defeats their purpose.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-027",
+            "domain": "Designing for security and compliance",
+            "stem": "Applications must read database passwords and API tokens at runtime without hard-coding them in source or container images. Which service should you recommend?",
+            "options": [
+                "A public Cloud Storage bucket containing the passwords",
+                "Printing secrets into application logs",
+                "Secret Manager to store and control access to secrets",
+                "Environment variables committed to the repository"
+            ],
+            "correct_index": 2,
+            "explanation": "Secret Manager stores secrets centrally with IAM-controlled access and versioning, so applications retrieve them at runtime instead of embedding them. Committed variables, public buckets, and logging secrets expose credentials.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-028",
+            "domain": "Designing for security and compliance",
+            "stem": "A government agency must run workloads in Google Cloud and requires that data stay within a specific jurisdiction with controls aligned to a strict compliance regime. Which offering should you recommend?",
+            "options": [
+                "A multi-region deployment spanning several continents",
+                "A single virtual machine in any available region",
+                "Public buckets for simpler sharing",
+                "Assured Workloads to apply compliance controls and data residency restrictions"
+            ],
+            "correct_index": 3,
+            "explanation": "Assured Workloads applies compliance controls and enforces data residency within a chosen jurisdiction for regulated workloads. Multi-continent deployments violate residency, an arbitrary region ignores the requirement, and public buckets undermine compliance.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-029",
+            "domain": "Designing for security and compliance",
+            "stem": "Pods running on Google Kubernetes Engine must access Google Cloud APIs without storing long-lived service account keys in the cluster. Which approach should you recommend?",
+            "options": [
+                "Workload Identity to bind Kubernetes service accounts to Google service accounts",
+                "A shared key stored in a ConfigMap",
+                "Anonymous access to the APIs",
+                "Download service account keys into each pod"
+            ],
+            "correct_index": 0,
+            "explanation": "Workload Identity binds Kubernetes service accounts to Google service accounts so pods obtain short-lived credentials without static keys. Downloaded keys and shared ConfigMap keys are long-lived secrets, and anonymous access is not permitted for these APIs.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Designing for security and compliance"
+        },
+        {
+            "id": "gcp-pca-030",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A company runs a large and steady Compute Engine footprint 24 hours a day and wants to reduce cost without changing its architecture. Which purchasing option should you recommend?",
+            "options": [
+                "Paying on demand for all instances indefinitely",
+                "Committed use discounts for the steady baseline usage",
+                "Spot virtual machines for every instance",
+                "Autoscaling that always keeps the highest observed count"
+            ],
+            "correct_index": 1,
+            "explanation": "Committed use discounts lower the price for predictable, steady usage without architectural change. Spot VMs can be preempted and are unsuitable for the whole baseline, overprovisioned autoscaling raises cost, and on-demand pricing for everything is the most expensive option.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-031",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A service team must define a reliability target and measure how well the service meets it. Which combination should you recommend?",
+            "options": [
+                "A monthly cost report",
+                "A count of code commits",
+                "A service level objective expressed as a target for a service level indicator such as request success rate",
+                "A single dashboard with no target"
+            ],
+            "correct_index": 2,
+            "explanation": "A service level indicator is the measured signal, such as request success rate, and a service level objective sets the target for it, giving an objective reliability goal. A dashboard without a target measures nothing against a goal, and cost reports and commit counts are unrelated to reliability.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-032",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A read-heavy web application repeatedly runs the same database queries, and the team wants to reduce database load and response time. Which optimization should you recommend?",
+            "options": [
+                "Increase the database instance size indefinitely",
+                "Remove indexes to speed up writes",
+                "Serve every request directly from the database with no cache",
+                "Add a caching layer such as Memorystore in front of the database for repeated reads"
+            ],
+            "correct_index": 3,
+            "explanation": "A managed cache such as Memorystore serves repeated reads from memory, cutting database load and latency. Endlessly enlarging the database is costly, removing indexes slows reads, and serving every request directly ignores the benefit of caching.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-033",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "Finance wants to analyze Google Cloud spending by project and label over time and build custom reports. Which approach should you recommend?",
+            "options": [
+                "Export billing data to BigQuery and analyze it with SQL",
+                "Read each invoice as a printed PDF",
+                "Ignore labels and review the total only",
+                "Disable billing export to simplify accounting"
+            ],
+            "correct_index": 0,
+            "explanation": "Exporting billing data to BigQuery enables SQL analysis of spend by project and label and supports custom reporting. Printed invoices and total-only reviews lack granularity, and disabling export removes the data needed for analysis.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-034",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A cloud team notices that many Compute Engine instances use far less CPU and memory than they were sized for. Which action should you recommend?",
+            "options": [
+                "Increase every instance size to the maximum available",
+                "Use rightsizing recommendations to resize instances to match observed usage",
+                "Keep the current sizes to avoid any change",
+                "Replace all instances with larger machine types"
+            ],
+            "correct_index": 1,
+            "explanation": "Rightsizing recommendations identify instances that are overprovisioned so they can be resized to match actual usage and reduce cost. Increasing or keeping oversized instances wastes money, and larger machine types worsen the problem.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-035",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A company needs to protect critical data in Cloud Storage against accidental deletion and regional failure, with the ability to restore quickly. Which combination should you recommend?",
+            "options": [
+                "Deleting old objects to save space without backups",
+                "Storing a copy only on one engineer's laptop",
+                "Object versioning and bucket replication to another region",
+                "A single bucket with no protection"
+            ],
+            "correct_index": 2,
+            "explanation": "Object versioning protects against accidental deletion by keeping prior versions, and cross-region replication protects against regional failure for faster restore. A single unprotected bucket, deleting without backups, and a laptop copy do not meet the requirement.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-036",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "Operators need to search application logs, view latency and error metrics, and trace requests across microservices from one place. Which set of services should you recommend?",
+            "options": [
+                "Only a single log file on each virtual machine",
+                "Only a monthly cost report",
+                "Only a spreadsheet of manual notes",
+                "Cloud Logging, Cloud Monitoring, and Cloud Trace together"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Logging collects and searches logs, Cloud Monitoring records metrics, and Cloud Trace follows requests across services, giving unified observability. Local log files, cost reports, and manual notes do not provide correlated logs, metrics, and traces.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-037",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "Users in Asia experience slow access to an application hosted only in Europe, and the team wants to cut latency without rewriting the application. Which change should you recommend?",
+            "options": [
+                "Deploy the application closer to the users or use a global load balancer with edge caching",
+                "Tell users to upgrade their local internet only",
+                "Move the application to a single smaller region",
+                "Remove all caching to simplify the request path"
+            ],
+            "correct_index": 0,
+            "explanation": "Deploying closer to users, or using a global external load balancer with Cloud CDN edge caching, reduces the distance and time for requests. Asking users to change their connectivity does not fix server placement, moving to a smaller single region does not help, and removing caching increases latency.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-038",
+            "domain": "Analyzing and optimizing technical and business processes",
+            "stem": "A team spends hours each week manually creating test projects and configuring them identically. Which change should you recommend to reduce that effort and error?",
+            "options": [
+                "Create resources without any standard configuration",
+                "Automate project creation and configuration with infrastructure as code and templates",
+                "Ask the team to work longer hours",
+                "Document the manual steps and continue doing them"
+            ],
+            "correct_index": 1,
+            "explanation": "Automating project creation and configuration with infrastructure as code reduces manual effort and enforces consistent, repeatable setups. Working longer or documenting manual steps leaves the toil and error risk, and skipping standards causes drift.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Analyzing and optimizing technical and business processes"
+        },
+        {
+            "id": "gcp-pca-039",
+            "domain": "Managing implementation",
+            "stem": "A team wants to build container images, run tests, and deploy to Google Kubernetes Engine automatically after each commit. Which service should you recommend?",
+            "options": [
+                "A nightly export of source code to a shared drive",
+                "Emailing code changes to an operations engineer",
+                "Cloud Build with a pipeline triggered by source changes",
+                "Manual image builds on a developer laptop"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud Build runs build, test, and deploy steps in a managed pipeline triggered by source changes, providing automated continuous delivery. Manual builds, shared-drive exports, and emailed changes are not automated and are error prone.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing implementation"
+        },
+        {
+            "id": "gcp-pca-040",
+            "domain": "Managing implementation",
+            "stem": "A team wants to release a new version to a small percentage of users first, watch error rates, and then gradually increase traffic. Which deployment strategy should you recommend?",
+            "options": [
+                "An all-at-once deployment to every user",
+                "A deployment that never changes the running version",
+                "A rollback only after all users are affected",
+                "A canary deployment that shifts a small share of traffic first and then increases it"
+            ],
+            "correct_index": 3,
+            "explanation": "A canary deployment sends a small share of traffic to the new version, allowing the team to observe error rates before a wider rollout. All-at-once releases increase blast radius, never changing the version ships nothing, and reacting only after all users are affected is too late.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing implementation"
+        },
+        {
+            "id": "gcp-pca-041",
+            "domain": "Managing implementation",
+            "stem": "A company wants every environment to be created from version-controlled and reviewable definitions so infrastructure changes follow the same process as code. Which practice should you recommend?",
+            "options": [
+                "Infrastructure as code with Terraform and peer-reviewed changes",
+                "Clicking resources into place in the console each time",
+                "Keeping infrastructure definitions only in one engineer's memory",
+                "Granting everyone the Owner role to speed up changes"
+            ],
+            "correct_index": 0,
+            "explanation": "Infrastructure as code stores environment definitions in version control so changes can be reviewed and reproduced like application code. Manual console changes are not reproducible, undocumented knowledge is fragile, and broad Owner access weakens control.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing implementation"
+        },
+        {
+            "id": "gcp-pca-042",
+            "domain": "Managing implementation",
+            "stem": "A team wants to catch broken deployments before production by automatically exercising the application after each build. Which practice should you recommend?",
+            "options": [
+                "Remove the test stage to make builds faster",
+                "Run automated unit and integration tests as part of the build pipeline",
+                "Skip tests and rely on users to report failures",
+                "Test only in production after release"
+            ],
+            "correct_index": 1,
+            "explanation": "Automated unit and integration tests in the build pipeline catch defects before production and provide fast feedback. Relying on users, testing only in production, or removing tests shifts defect discovery to the worst possible time.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing implementation"
+        },
+        {
+            "id": "gcp-pca-043",
+            "domain": "Managing implementation",
+            "stem": "A team runs a stateless service on Google Kubernetes Engine and must update the container image without downtime. Which approach should you recommend?",
+            "options": [
+                "Editing the image in place on running pods",
+                "Deploying the new image with no health checks",
+                "A rolling update with a readiness probe so new pods serve traffic before old pods stop",
+                "Killing all pods at once and waiting for the outage to end"
+            ],
+            "correct_index": 2,
+            "explanation": "A rolling update replaces pods gradually and a readiness probe ensures new pods are ready before old ones retire, avoiding downtime. Stopping all pods causes an outage, in-place image edits on running pods are not supported, and skipping health checks risks serving broken pods.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Managing implementation"
+        },
+        {
+            "id": "gcp-pca-044",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "A product owner asks the team to define how reliability will be measured and what target users should expect. Which artifact should the team produce?",
+            "options": [
+                "A list of every server's serial number",
+                "A single password shared by the team",
+                "A marketing brochure about the product",
+                "A service level indicator with a service level objective target and a matching error budget"
+            ],
+            "correct_index": 3,
+            "explanation": "A service level indicator defines the measured signal, a service level objective sets the target, and the error budget is the allowed shortfall, together giving a clear reliability contract. Serial numbers, a shared password, and a brochure do not measure reliability.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-045",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "An operations team wants to be notified only when the service is genuinely at risk of missing its reliability target, to avoid alert fatigue. Which approach should you recommend?",
+            "options": [
+                "Alert on burn rate against the error budget rather than on every single error",
+                "Alert on every log line written by the application",
+                "Send a message for every successful request",
+                "Disable alerting entirely"
+            ],
+            "correct_index": 0,
+            "explanation": "Alerting on error-budget burn rate identifies when the service is consuming its reliability allowance too quickly, reducing noise. Alerting on every log line or successful request creates fatigue, and disabling alerts hides real incidents.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-046",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "When a production incident occurs, a team struggles because roles and escalation paths are unclear. Which practice should you recommend to improve response?",
+            "options": [
+                "Avoid documenting incidents to save time",
+                "Define an incident response process with clear roles, severity levels, and escalation paths",
+                "Rely on whoever notices first to handle everything",
+                "Wait for the next business day before responding"
+            ],
+            "correct_index": 1,
+            "explanation": "A defined incident response process with roles, severities, and escalation paths lets teams respond quickly and consistently. Ad hoc handling, delayed response, and skipping documentation slow recovery and prevent learning.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-047",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "A critical application must keep serving traffic if an entire Google Cloud region becomes unavailable, with automated failover. Which design should you recommend?",
+            "options": [
+                "A backup taken once a year",
+                "A manual rebuild performed after the outage",
+                "A multi-region active-active deployment behind a global external load balancer with health checks",
+                "A single-region deployment with no failover"
+            ],
+            "correct_index": 2,
+            "explanation": "An active-active multi-region deployment behind a global external load balancer with health checks reroutes traffic automatically when a region fails. Single-region designs have no failover, yearly backups are stale, and manual rebuilds take too long.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-048",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "A database team must be able to restore production data to a point in time after a human error deletes records. Which capability should you recommend?",
+            "options": [
+                "No backups because the data is important",
+                "A single snapshot taken at project creation",
+                "Storing data only in application memory",
+                "Automated backups with point-in-time recovery enabled"
+            ],
+            "correct_index": 3,
+            "explanation": "Automated backups with point-in-time recovery allow restoring the database to a moment before the deletion. Having no backups, a single old snapshot, or storing data only in memory cannot recover the lost records.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-049",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "A stateless web service must absorb sudden traffic spikes and stop routing to unhealthy instances automatically. Which combination should you recommend?",
+            "options": [
+                "A managed instance group with autoscaling and health checks behind a load balancer",
+                "A single large instance with no health checks",
+                "A fixed set of instances that never changes",
+                "A load balancer with no backend health checks"
+            ],
+            "correct_index": 0,
+            "explanation": "A managed instance group with autoscaling and health checks behind a load balancer adds capacity during spikes and removes unhealthy instances from rotation. A single instance or fixed set cannot scale, and a load balancer without health checks keeps sending traffic to failed backends.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        },
+        {
+            "id": "gcp-pca-050",
+            "domain": "Ensuring solution and operations reliability",
+            "stem": "After resolving a major outage, a team wants to prevent recurrence and improve reliability. Which practice should you recommend?",
+            "options": [
+                "Close the incident without any follow-up",
+                "Conduct a blameless postmortem that identifies root causes and tracks corrective actions",
+                "Find someone to blame and move on",
+                "Suppress the incident details from the wider team"
+            ],
+            "correct_index": 1,
+            "explanation": "A blameless postmortem focuses on systemic root causes and tracks corrective actions to prevent recurrence. Assigning blame, hiding details, or closing without follow-up discards lessons and allows the same failure to happen again.",
+            "reference": "Google Professional Cloud Architect Exam Guide - Ensuring solution and operations reliability"
+        }
+    ]
+}

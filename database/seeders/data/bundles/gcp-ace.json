@@ -1,0 +1,717 @@
+{
+    "cert_key": "gcp-ace",
+    "title": "Google Associate Cloud Engineer (ACE)",
+    "issuer": "Google Cloud",
+    "outline_file": "outlines/gcp-ace.json",
+    "variant_label": "GCP ACE Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Google Associate Cloud Engineer exam guide (five official sections and weightings). Not a capture of past exam questions.",
+    "source_label": "Google Cloud ACE practice bank",
+    "items": [
+        {
+            "id": "gcp-ace-001",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "A team needs an isolated container that owns resources, controls API enablement, and provides billing attribution. Which Google Cloud construct should the team create first?",
+            "options": [
+                "A Google Cloud project",
+                "A VPC network",
+                "A Cloud Storage bucket",
+                "A Compute Engine instance"
+            ],
+            "correct_index": 0,
+            "explanation": "A project is the base container that owns resources, enables APIs, and attaches to a billing account. A VM, a VPC network, and a bucket are resources created inside a project, not the container itself.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-002",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "An organization wants all resource usage in a project billed to a single payment method shared across several teams. What should it associate with the project?",
+            "options": [
+                "A service account",
+                "A billing account",
+                "An organization policy",
+                "A VPC network"
+            ],
+            "correct_index": 1,
+            "explanation": "A billing account holds the payment instrument and pays for a project's usage, and a project links to exactly one billing account at a time. Service accounts are identities, organization policies constrain resources, and a VPC network is networking.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-003",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "A deployment fails because a project has reached the maximum number of CPUs it may allocate in a region. What is this ceiling called?",
+            "options": [
+                "A label",
+                "A committed use contract",
+                "A quota",
+                "A budget"
+            ],
+            "correct_index": 2,
+            "explanation": "Quotas cap resource consumption per project and can be raised by request. A budget only alerts on spending, a label is metadata, and a committed use contract is a discount purchase, none of which block CPU allocation.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-004",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "An engineer must run the same Google Cloud command repeatedly from a CI pipeline without a browser session. Which interface is most appropriate?",
+            "options": [
+                "Cloud Shell opened in a browser tab",
+                "The Cloud Mobile App",
+                "The Cloud Console web UI",
+                "The gcloud CLI"
+            ],
+            "correct_index": 3,
+            "explanation": "The gcloud CLI is scriptable and runs headless in automation. The Cloud Console and Cloud Shell are interactive, and the mobile app is intended for monitoring rather than pipeline automation.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-005",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "Two Google Cloud projects may share the same display name, so what value uniquely identifies a project to the APIs and command line tools?",
+            "options": [
+                "The project ID",
+                "A resource label",
+                "A network tag",
+                "The project display name"
+            ],
+            "correct_index": 0,
+            "explanation": "The project ID is the globally unique, immutable identifier used in APIs and commands. The display name is not unique, and labels and network tags are metadata that do not identify the project.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-006",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "Which IAM role grants permission to view all resources in a project but not to change any of them?",
+            "options": [
+                "roles/editor",
+                "roles/viewer",
+                "roles/browser",
+                "roles/owner"
+            ],
+            "correct_index": 1,
+            "explanation": "The basic Viewer role grants read-only access to project resources. Owner also manages access and billing, Editor can modify resources, and Browser only lists projects without reading their contents.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-007",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "A company wants to apply one IAM policy and enforce constraints across many projects at once. Which resource hierarchy node should it use?",
+            "options": [
+                "A Cloud Storage bucket",
+                "An individual project",
+                "A folder",
+                "A VPC network"
+            ],
+            "correct_index": 2,
+            "explanation": "Folders sit between the organization and projects so policies and IAM bindings are inherited by every project beneath them. A project is a leaf, while a VPC network and a bucket are resources inside a project.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-008",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "Before an engineer can call the Compute Engine API in a newly created project, what must first happen to that API in the project?",
+            "options": [
+                "It must be billed as a separate subscription",
+                "It must be assigned a service account",
+                "It must be exported to BigQuery",
+                "It must be enabled for the project"
+            ],
+            "correct_index": 3,
+            "explanation": "Each project must enable the APIs it uses before calls succeed. Billing is handled at the project level, a service account is a caller identity rather than a setup step, and exporting an API is not possible.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-009",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "An engineer wants every subsequent gcloud command to target a specific project without retyping the project each time. Which action should the engineer take?",
+            "options": [
+                "Set the default project in the active gcloud configuration",
+                "Create a new service account",
+                "Enable the Cloud Billing API",
+                "Create a new firewall rule"
+            ],
+            "correct_index": 0,
+            "explanation": "The active gcloud configuration stores a default project that later commands use. A service account changes identity, and the billing API and firewall rules do not control which project a command targets.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-010",
+            "domain": "Setting up a cloud solution environment",
+            "stem": "A finance team wants automatic alerts when a project's spending approaches a defined threshold. Which feature should be configured?",
+            "options": [
+                "A VPC firewall rule",
+                "A Cloud Billing budget with alert thresholds",
+                "A resource quota increase",
+                "An organization policy constraint"
+            ],
+            "correct_index": 1,
+            "explanation": "Budgets in Cloud Billing send alerts when actual or forecast spend crosses thresholds. Quotas limit consumption, organization policies restrict configuration, and firewall rules filter traffic, none of which notify about cost.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Setting up a cloud solution environment"
+        },
+        {
+            "id": "gcp-ace-011",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A team needs full control of the guest operating system on virtual machines and wants to choose machine types and persistent disks freely. Which Google Cloud service should it use?",
+            "options": [
+                "App Engine",
+                "Cloud Functions",
+                "Compute Engine",
+                "Cloud Run"
+            ],
+            "correct_index": 2,
+            "explanation": "Compute Engine provides IaaS virtual machines where the customer controls the guest OS. Cloud Run and App Engine are managed platforms, and Cloud Functions runs event-driven code, so none of them expose the guest OS.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-012",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A company wants to run a stateless container that scales to zero and is reachable over HTTPS without operating a cluster. Which service fits best?",
+            "options": [
+                "Compute Engine",
+                "Cloud SQL",
+                "Google Kubernetes Engine",
+                "Cloud Run"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Run runs containers on a fully managed serverless platform that scales to zero and serves HTTP(S). GKE requires operating a cluster, Compute Engine requires managing VMs, and Cloud SQL is a database.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-013",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A team wants to deploy a standard-runtime web application and let Google manage the servers, scaling, and load balancing. Which service should it choose?",
+            "options": [
+                "App Engine standard environment",
+                "Bare Metal Solution",
+                "Cloud Filestore",
+                "Compute Engine managed instance groups"
+            ],
+            "correct_index": 0,
+            "explanation": "App Engine standard runs code on a fully managed platform with automatic scaling and load balancing. Managed instance groups require managing VM images, Bare Metal Solution provides dedicated hardware, and Filestore is file storage.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-014",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "An application must run a short function each time a file is finalized in a Cloud Storage bucket. Which service is designed for this trigger model?",
+            "options": [
+                "Cloud Spanner",
+                "Cloud Functions",
+                "Cloud Run",
+                "Cloud SQL"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Functions runs event-driven code in response to triggers such as object finalization in Cloud Storage. Cloud Run serves containers, and Cloud SQL and Cloud Spanner are databases that do not run upload-triggered code.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-015",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A company stores backups that are accessed only a few times a year and must be retained for several years at the lowest cost. Which Cloud Storage class should it choose?",
+            "options": [
+                "Nearline",
+                "Coldline",
+                "Archive",
+                "Standard"
+            ],
+            "correct_index": 2,
+            "explanation": "Archive is the lowest-cost class for data accessed less than once per year, with the longest minimum storage duration. Standard, Nearline, and Coldline each cost more and target more frequent access patterns.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-016",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A team needs a managed regional MySQL database with automated backups and replication and does not want to patch the engine itself. Which service should it use?",
+            "options": [
+                "Cloud Spanner",
+                "Cloud Bigtable",
+                "Cloud Storage",
+                "Cloud SQL"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud SQL is a managed relational service for MySQL, PostgreSQL, and SQL Server that handles patching, backups, and replication. Spanner is globally distributed, Bigtable is NoSQL, and Cloud Storage stores objects.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-017",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A global application requires a strongly consistent, horizontally scalable relational database with no downtime during maintenance. Which service should it use?",
+            "options": [
+                "Cloud Spanner",
+                "BigQuery",
+                "Firestore",
+                "Cloud SQL"
+            ],
+            "correct_index": 0,
+            "explanation": "Cloud Spanner is a globally distributed, horizontally scalable relational database with strong consistency. Cloud SQL is regional and scales vertically, BigQuery is an analytics warehouse, and Firestore is a NoSQL document database.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-018",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "An analyst wants to run SQL queries over terabytes of data for reporting without provisioning or managing servers. Which service should be used?",
+            "options": [
+                "Cloud SQL",
+                "BigQuery",
+                "Cloud Spanner",
+                "Cloud Bigtable"
+            ],
+            "correct_index": 1,
+            "explanation": "BigQuery is a serverless data warehouse for running SQL analytics over very large datasets. Cloud SQL and Spanner are transactional databases, and Bigtable is a NoSQL store for high-throughput key access.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-019",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "An engineer needs to define a regional private IP range inside a Virtual Private Cloud so Compute Engine instances can receive addresses. Which VPC object should be created?",
+            "options": [
+                "A static route",
+                "A Cloud Router",
+                "A subnet",
+                "A firewall rule"
+            ],
+            "correct_index": 2,
+            "explanation": "A subnet defines a regional IP range within a VPC where instances get private addresses. Firewall rules filter traffic, routes direct traffic, and Cloud Router exchanges routes, but none of them define the address range.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-020",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A team must allow inbound SSH traffic only from a specific source range to instances carrying the web tag. Which VPC feature should it configure?",
+            "options": [
+                "A subnet",
+                "A Cloud NAT gateway",
+                "A VPN tunnel",
+                "A firewall rule"
+            ],
+            "correct_index": 3,
+            "explanation": "VPC firewall rules allow or deny traffic by protocol, port, source range, and target tags. A subnet assigns addresses, Cloud NAT provides outbound translation, and a VPN tunnel connects networks, none of which match traffic by source range and tag.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-021",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A team needs a global managed load balancer that terminates HTTPS and routes requests to backends in multiple regions. Which offering should it choose?",
+            "options": [
+                "A global external Application Load Balancer",
+                "An internal TCP/UDP load balancer",
+                "Cloud NAT",
+                "A regional network load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "The global external Application Load Balancer terminates HTTP(S) and distributes traffic across regions using a single anycast address. Regional and internal load balancers are not global HTTP(S) front ends, and Cloud NAT handles outbound traffic.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-022",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A company can predict steady Compute Engine usage for the next year and wants the largest available discount. Which purchase option should it choose?",
+            "options": [
+                "On-demand pricing",
+                "Committed use discounts",
+                "Spot (preemptible) VMs",
+                "Sustained use discounts"
+            ],
+            "correct_index": 1,
+            "explanation": "Committed use discounts give the deepest discount for a one- or three-year commitment to predictable usage. On-demand is full price, Spot VMs can be preempted and suit interruptible work, and sustained use discounts apply automatically but are smaller.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-023",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A workload needs sub-10-millisecond latency for very high volumes of time-series writes and reads keyed by row. Which storage service should be used?",
+            "options": [
+                "BigQuery",
+                "Cloud Storage",
+                "Cloud Bigtable",
+                "Cloud SQL"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud Bigtable is a wide-column NoSQL service built for high-throughput, low-latency reads and writes at scale. Cloud SQL is relational and smaller in scale, BigQuery is analytical, and Cloud Storage is object storage.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-024",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "A website serves static images worldwide and wants to cache them close to viewers while reducing load on the origin. Which service should be enabled?",
+            "options": [
+                "Cloud Interconnect",
+                "Cloud NAT",
+                "Cloud VPN",
+                "Cloud CDN"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud CDN caches HTTP(S) content at Google edge locations near users, lowering latency and origin load. Interconnect and VPN are private connectivity options, and Cloud NAT provides outbound address translation.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-025",
+            "domain": "Planning and configuring a cloud solution",
+            "stem": "Two teams each own a separate VPC and need private IP connectivity between them without exposing traffic to the public internet. Which feature should they use?",
+            "options": [
+                "VPC network peering",
+                "Cloud CDN",
+                "Cloud NAT",
+                "External HTTP(S) load balancing"
+            ],
+            "correct_index": 0,
+            "explanation": "VPC network peering connects two VPC networks privately using internal IP addresses. Cloud CDN caches content, Cloud NAT translates outbound traffic, and an external load balancer exposes services to the internet.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Planning and configuring a cloud solution"
+        },
+        {
+            "id": "gcp-ace-026",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "An engineer needs to create a Compute Engine virtual machine from the command line using the Cloud SDK. Which command should be used?",
+            "options": [
+                "gcloud storage buckets create",
+                "gcloud compute instances create",
+                "gcloud compute disks create",
+                "gcloud container clusters create"
+            ],
+            "correct_index": 1,
+            "explanation": "gcloud compute instances create provisions a VM. The disks command creates only a disk, the container clusters command creates a GKE cluster, and the storage buckets command makes a bucket, none of which create a VM.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-027",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team wants to define Google Cloud infrastructure declaratively in YAML templates and manage resources as a repeatable deployment. Which service should it use?",
+            "options": [
+                "Cloud Scheduler",
+                "Cloud Endpoints",
+                "Deployment Manager",
+                "Cloud Monitoring"
+            ],
+            "correct_index": 2,
+            "explanation": "Deployment Manager is Google Cloud's infrastructure-as-code service that deploys resources from YAML or Jinja/Python templates. Monitoring observes resources, Scheduler triggers jobs, and Endpoints manages APIs, none of which deploy infrastructure templates.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-028",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "An engineer wants to create a managed Kubernetes cluster with a specific number of worker nodes from the CLI. Which command should be used?",
+            "options": [
+                "gcloud compute instances create",
+                "kubectl create deployment",
+                "gcloud app deploy",
+                "gcloud container clusters create"
+            ],
+            "correct_index": 3,
+            "explanation": "gcloud container clusters create provisions a GKE cluster and its node pools. Creating instances makes VMs, kubectl deploys workloads into an existing cluster, and gcloud app deploy targets App Engine.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-029",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A developer already has a running GKE cluster and wants to deploy a container image as a workload. Which tool should be used?",
+            "options": [
+                "kubectl",
+                "gsutil",
+                "gcloud app deploy",
+                "bq"
+            ],
+            "correct_index": 0,
+            "explanation": "kubectl applies manifests and manages workloads on a Kubernetes cluster. gsutil manages Cloud Storage, gcloud app deploy targets App Engine, and bq is the BigQuery command line tool.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-030",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team needs a private managed registry to store and scan container images before they are deployed to GKE. Which service should it use?",
+            "options": [
+                "Secret Manager",
+                "Artifact Registry",
+                "Cloud Storage",
+                "Cloud SQL"
+            ],
+            "correct_index": 1,
+            "explanation": "Artifact Registry stores and manages container images and other artifacts with access control and vulnerability scanning. Cloud Storage is general object storage, Cloud SQL is a database, and Secret Manager stores secrets.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-031",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team wants to build a container image automatically from source on every commit and push the result to a registry. Which service should it use?",
+            "options": [
+                "Cloud Tasks",
+                "Cloud Scheduler",
+                "Cloud Build",
+                "Deployment Manager"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud Build runs build steps, including container image builds, triggered by source changes. Deployment Manager deploys resources, while Cloud Tasks and Cloud Scheduler manage task and job scheduling rather than image builds.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-032",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "An engineer needs to copy an entire local directory tree of files into a Cloud Storage bucket. Which command should be used?",
+            "options": [
+                "gcloud compute scp",
+                "gcloud sql import",
+                "gcloud container images list",
+                "gcloud storage cp --recursive"
+            ],
+            "correct_index": 3,
+            "explanation": "gcloud storage cp with the recursive flag uploads a directory tree to a bucket. The other commands copy files to a VM, import data into a database, or list container images.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-033",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "An engineer needs to create a managed MySQL instance for an application using the Cloud SDK. Which command should be used?",
+            "options": [
+                "gcloud sql instances create",
+                "gcloud compute instances create",
+                "gcloud spanner instances create",
+                "gcloud bigtable instances create"
+            ],
+            "correct_index": 0,
+            "explanation": "gcloud sql instances create provisions a Cloud SQL instance and lets the engineer specify the database engine. The other commands create a VM, a Spanner instance, or a Bigtable instance respectively.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-034",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "An engineer needs to load a CSV file into a BigQuery table from the command line. Which command should be used?",
+            "options": [
+                "kubectl apply",
+                "bq load",
+                "gsutil cp",
+                "gcloud sql import"
+            ],
+            "correct_index": 1,
+            "explanation": "The bq load command loads data files into a BigQuery table. gsutil cp copies objects to Cloud Storage, gcloud sql import loads data into Cloud SQL, and kubectl apply manages Kubernetes resources.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-035",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A developer wants to deploy an event-driven function that is triggered by an HTTP request. Which command should be used?",
+            "options": [
+                "gcloud app deploy",
+                "gcloud builds submit",
+                "gcloud functions deploy",
+                "gcloud run deploy"
+            ],
+            "correct_index": 2,
+            "explanation": "gcloud functions deploy creates a Cloud Functions deployment with an HTTP or event trigger. gcloud run deploy deploys containers, gcloud app deploy targets App Engine, and gcloud builds submit runs a build.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-036",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team needs a group of identical Compute Engine VMs that automatically adjusts its size based on demand. Which construct should it create?",
+            "options": [
+                "A single large virtual machine",
+                "A Cloud Storage bucket",
+                "A BigQuery dataset",
+                "A managed instance group with an autoscaler"
+            ],
+            "correct_index": 3,
+            "explanation": "A managed instance group plus an autoscaler maintains identical VMs and adds or removes them based on utilization. A single VM cannot scale out, and buckets and datasets are storage constructs rather than compute.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-037",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team wants to deploy a third-party software stack from Google Cloud Marketplace into its project. What does Marketplace primarily provide?",
+            "options": [
+                "Prepackaged solutions deployed through tools such as Deployment Manager or Terraform",
+                "A private container registry",
+                "A managed relational database engine",
+                "An authoritative DNS zone manager"
+            ],
+            "correct_index": 0,
+            "explanation": "Cloud Marketplace offers prepackaged software that deploys into a project, commonly through Deployment Manager or Terraform. It is not a registry, a database engine, or a DNS service.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-038",
+            "domain": "Deploying and implementing a cloud solution",
+            "stem": "A team needs a managed service to run Apache Spark and Hadoop jobs for a data processing pipeline. Which service should it use?",
+            "options": [
+                "Cloud SQL",
+                "Cloud Dataproc",
+                "Cloud Dataflow",
+                "Cloud Bigtable"
+            ],
+            "correct_index": 1,
+            "explanation": "Dataproc is a managed Spark and Hadoop service. Dataflow runs Apache Beam pipelines, Bigtable is a NoSQL datastore, and Cloud SQL is relational, none of which host Spark or Hadoop clusters.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Deploying and implementing a cloud solution"
+        },
+        {
+            "id": "gcp-ace-039",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "A team wants to chart CPU utilization and set a threshold that alerts when a virtual machine exceeds it. Which service should it use?",
+            "options": [
+                "Cloud Storage",
+                "Cloud IAM",
+                "Cloud Monitoring",
+                "Cloud Logging"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud Monitoring collects metrics such as CPU utilization and evaluates alerting policies against thresholds. Cloud Logging stores log entries, Cloud Storage stores objects, and IAM controls access.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-040",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "An engineer needs to search, query, and retain application and system log entries produced by Google Cloud services. Which service should be used?",
+            "options": [
+                "Cloud Monitoring",
+                "Cloud CDN",
+                "Cloud DNS",
+                "Cloud Logging"
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Logging ingests, stores, and lets engineers query log entries from services and applications. Monitoring tracks metrics and alerts, CDN caches content, and DNS resolves names, none of which store log entries.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-041",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "A company must retain audit logs for seven years in Cloud Storage and also share some entries with a security tool. Which mechanism should it configure?",
+            "options": [
+                "A log sink with an export destination",
+                "A firewall rule",
+                "A budget alert",
+                "A VPC peering connection"
+            ],
+            "correct_index": 0,
+            "explanation": "Log sinks route selected log entries to destinations such as Cloud Storage or Pub/Sub for long-term retention and third-party tools. Firewall rules, budget alerts, and peering connections do not route logs.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-042",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "A team wants to be alerted when an application's error rate spikes in production. Which feature should it configure in Cloud Monitoring?",
+            "options": [
+                "A GKE node pool",
+                "An alerting policy",
+                "A log exclusion",
+                "A quota limit"
+            ],
+            "correct_index": 1,
+            "explanation": "Alerting policies evaluate metric conditions and notify when the condition is met. Log exclusions filter logging, quotas cap usage, and node pools are GKE infrastructure, none of which notify on an error-rate metric.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-043",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "A team needs a point-in-time copy of a Compute Engine persistent disk that can later be used to create a new disk. What should it create?",
+            "options": [
+                "A firewall rule",
+                "A service account",
+                "A persistent disk snapshot",
+                "A Cloud Storage bucket"
+            ],
+            "correct_index": 2,
+            "explanation": "A snapshot captures the contents of a persistent disk for backup and can be used to create new disks. Buckets, firewall rules, and service accounts serve storage, networking, and identity roles and cannot restore a disk.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-044",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "A team wants to detect when a public web endpoint becomes unreachable as measured from multiple regions. Which Cloud Monitoring feature should it use?",
+            "options": [
+                "A log sink",
+                "A budget alert",
+                "A VPC firewall rule",
+                "An uptime check"
+            ],
+            "correct_index": 3,
+            "explanation": "Uptime checks probe endpoints from several locations to detect availability problems. Log sinks export logs, budget alerts track cost, and firewall rules filter traffic, none of which measure endpoint reachability.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-045",
+            "domain": "Ensuring successful operation of a cloud solution",
+            "stem": "An operations team needs to be notified by email each time a Cloud Monitoring alert fires. What must be attached to the alerting policy?",
+            "options": [
+                "A notification channel",
+                "A service account key",
+                "A VPC network",
+                "A Cloud Storage bucket"
+            ],
+            "correct_index": 0,
+            "explanation": "A notification channel defines where alerts are delivered, such as email or SMS. Service account keys are credentials, and VPC networks and buckets are unrelated to alert delivery.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Ensuring successful operation of a cloud solution"
+        },
+        {
+            "id": "gcp-ace-046",
+            "domain": "Configuring access and security",
+            "stem": "A company wants to grant a group of auditors read-only access to billing data and nothing else. What should it assign to the group?",
+            "options": [
+                "An organization policy constraint",
+                "A predefined IAM role scoped to the billing account",
+                "The basic Owner role on the project",
+                "A service account key"
+            ],
+            "correct_index": 1,
+            "explanation": "A predefined IAM role granted at the billing account scope provides only the intended permissions. Owner grants broad control, a service account key is a credential rather than a permission grant, and an organization policy constrains configuration instead of granting access.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Configuring access and security"
+        },
+        {
+            "id": "gcp-ace-047",
+            "domain": "Configuring access and security",
+            "stem": "An application running on Compute Engine needs to call a Google Cloud API without embedding user credentials in code. What should be attached to the virtual machine?",
+            "options": [
+                "A firewall rule",
+                "A VPC network",
+                "A service account",
+                "An SSH key"
+            ],
+            "correct_index": 2,
+            "explanation": "A service account is a non-human identity whose credentials the VM obtains automatically to call APIs. SSH keys authenticate interactive logins, firewall rules filter traffic, and VPC networks provide connectivity.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Configuring access and security"
+        },
+        {
+            "id": "gcp-ace-048",
+            "domain": "Configuring access and security",
+            "stem": "An organization wants to prevent any project from assigning external IP addresses to virtual machines. What should it configure?",
+            "options": [
+                "A basic IAM role",
+                "A Cloud Storage lifecycle rule",
+                "A VPC firewall rule",
+                "An organization policy constraint"
+            ],
+            "correct_index": 3,
+            "explanation": "Organization policies apply constraints such as restricting external IPs across every project under a node. IAM roles grant permissions, lifecycle rules manage objects, and firewall rules filter traffic but do not block external IP assignment.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Configuring access and security"
+        },
+        {
+            "id": "gcp-ace-049",
+            "domain": "Configuring access and security",
+            "stem": "A security team wants to grant a role to an engineer only during business hours and not at other times. Which IAM capability should it use?",
+            "options": [
+                "IAM Conditions",
+                "Basic roles",
+                "Service account impersonation",
+                "VPC Service Controls"
+            ],
+            "correct_index": 0,
+            "explanation": "IAM Conditions allow bindings that depend on attributes such as time and resource. Basic roles have no conditions, impersonation changes the acting identity, and VPC Service Controls define security perimeters rather than time-based access.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Configuring access and security"
+        },
+        {
+            "id": "gcp-ace-050",
+            "domain": "Configuring access and security",
+            "stem": "A developer must be granted permission to manage objects in one specific Cloud Storage bucket only. Which IAM practice should be followed?",
+            "options": [
+                "Share the project's service account key publicly",
+                "Grant a predefined role at the bucket scope, following least privilege",
+                "Grant the Editor basic role on the whole project",
+                "Grant Owner at the organization node"
+            ],
+            "correct_index": 1,
+            "explanation": "Granting a predefined role at the resource scope follows least privilege by limiting access to that bucket. Broad basic roles grant far more than needed, organization-level Owner is excessive, and sharing keys publicly is a security breach.",
+            "reference": "Google Associate Cloud Engineer Exam Guide - Configuring access and security"
+        }
+    ]
+}

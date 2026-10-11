@@ -1,0 +1,717 @@
+{
+    "cert_key": "dp-203",
+    "title": "Microsoft Azure Data Engineer Associate (DP-203)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/dp-203.json",
+    "variant_label": "DP-203 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 100,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft DP-203 skills measured (data storage, data processing, data security, monitoring and optimization). Not a capture of past exam questions.",
+    "source_label": "Azure Data Engineer practice bank",
+    "items": [
+        {
+            "id": "dp-203-001",
+            "domain": "Design and implement data storage",
+            "stem": "A data engineering team stores telemetry in Azure Data Lake Storage Gen2 and wants analytics queries to read only recent data instead of scanning the entire dataset. What should the team implement?",
+            "options": [
+                "Partition the data into folders by ingestion date so queries can prune unneeded paths",
+                "Store every file in a single root folder to simplify the folder structure",
+                "Convert all files to CSV so each row can be filtered independently",
+                "Enable soft delete to exclude old data from queries automatically"
+            ],
+            "correct_index": 0,
+            "explanation": "Date-based folder partitioning lets the query engine skip entire folder paths outside the requested range, which is partition pruning. A single folder forces full scans, CSV gains no pruning benefit, and soft delete only protects against deletion.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-002",
+            "domain": "Design and implement data storage",
+            "stem": "An analytics workload reads large fact tables from the data lake and a query needs only five of the forty stored columns. Which file format should be used to reduce storage size and read only the needed columns?",
+            "options": [
+                "JSON",
+                "Parquet",
+                "CSV",
+                "XML"
+            ],
+            "correct_index": 1,
+            "explanation": "Parquet is a columnar format that compresses well and lets readers fetch only the columns referenced by a query. JSON, CSV, and XML are row-oriented, so reading five columns still requires reading all data in each row.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-003",
+            "domain": "Design and implement data storage",
+            "stem": "A team needs ACID transactions, schema enforcement, and time travel directly on files stored in the data lake. Which technology should the team adopt?",
+            "options": [
+                "Raw Parquet files without a table layer",
+                "Delimited text files with an external schema file",
+                "Delta Lake tables",
+                "Uncompressed Avro files"
+            ],
+            "correct_index": 2,
+            "explanation": "Delta Lake adds a transaction log on top of Parquet files, providing ACID transactions, enforced schema, and time travel. Plain Parquet, delimited text, and Avro do not provide transactional guarantees or version history.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-004",
+            "domain": "Design and implement data storage",
+            "stem": "In a lakehouse architecture, which component stores cleansed, query-ready data that business intelligence tools consume?",
+            "options": [
+                "The raw landing zone",
+                "The ingestion pipeline",
+                "The source transactional system",
+                "The curated serving layer"
+            ],
+            "correct_index": 3,
+            "explanation": "The curated serving layer holds conformed, query-ready data modeled for reporting. The landing zone holds raw data, the ingestion pipeline moves data, and the source system produces operational records.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-005",
+            "domain": "Design and implement data storage",
+            "stem": "What advantage does enabling a hierarchical namespace on Azure Data Lake Storage Gen2 provide over flat Blob Storage?",
+            "options": [
+                "Efficient directory-level operations and file and folder access control lists",
+                "A built-in Spark compute engine",
+                "Serverless SQL querying of stored files",
+                "Automatic geo-replication of every container"
+            ],
+            "correct_index": 0,
+            "explanation": "A hierarchical namespace organizes objects into real directories, enabling efficient rename and delete operations plus POSIX-style access control lists. Geo-replication, compute, and SQL querying are separate features or services.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-006",
+            "domain": "Design and implement data storage",
+            "stem": "A Spark job writes thousands of tiny files into the data lake, which slows downstream reads. Which action best addresses this problem?",
+            "options": [
+                "Rename each file to include a timestamp",
+                "Compact the small files into a smaller number of larger files",
+                "Convert the files from Parquet to CSV",
+                "Increase the file retention period in the storage account"
+            ],
+            "correct_index": 1,
+            "explanation": "Compacting small files into larger ones reduces per-file overhead and improves read throughput. Retention, renaming, and switching to CSV do not reduce the number of files or improve scan efficiency.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-007",
+            "domain": "Design and implement data storage",
+            "stem": "A team is choosing a hash distribution column for a large fact table in a dedicated SQL pool to minimize data movement during joins. Which column is the best candidate?",
+            "options": [
+                "A low-cardinality boolean flag",
+                "A column that is never used in joins",
+                "A high-cardinality column that is frequently used in joins",
+                "The surrogate key of a very small dimension table"
+            ],
+            "correct_index": 2,
+            "explanation": "Hash distribution on a high-cardinality join column co-locates matching rows on the same distribution, reducing shuffle. Low-cardinality or non-join columns cause skew or extra data movement.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-008",
+            "domain": "Design and implement data storage",
+            "stem": "Which Azure Synapse query engine reads files directly from the data lake without requiring provisioned storage or pre-loaded tables?",
+            "options": [
+                "Azure SQL Database",
+                "Azure Cosmos DB",
+                "Synapse dedicated SQL pool",
+                "Synapse serverless SQL pool"
+            ],
+            "correct_index": 3,
+            "explanation": "The serverless SQL pool queries files in the lake on demand and bills per terabyte processed, so no data is pre-loaded. A dedicated pool requires provisioned storage, and Azure SQL Database and Cosmos DB are separate database services.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-009",
+            "domain": "Design and implement data storage",
+            "stem": "A team must choose between a dedicated SQL pool and a serverless SQL pool in Azure Synapse. Which scenario is best suited to a serverless SQL pool?",
+            "options": [
+                "Exploring and querying files in the data lake without provisioning fixed capacity",
+                "Executing low-latency transactional OLTP workloads",
+                "Running a high-concurrency data warehouse with predictable performance",
+                "Storing petabyte-scale relational tables with global distribution"
+            ],
+            "correct_index": 0,
+            "explanation": "Serverless SQL pools are ideal for ad-hoc exploration of lake files because they provision no fixed capacity. Predictable high-concurrency warehousing suits a dedicated pool, and OLTP is not a Synapse scenario.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data storage"
+        },
+        {
+            "id": "dp-203-010",
+            "domain": "Design and develop data processing",
+            "stem": "A company must copy data from an on-premises SQL Server to Azure Blob Storage on a schedule. Which Azure Data Factory component is required to reach the on-premises source?",
+            "options": [
+                "Azure integration runtime",
+                "Self-hosted integration runtime",
+                "Azure-SSIS integration runtime",
+                "Mapping data flow"
+            ],
+            "correct_index": 1,
+            "explanation": "A self-hosted integration runtime is installed inside the on-premises network and performs the copy so the private SQL Server can be reached. The Azure runtime cannot see on-premises resources, and a data flow is a transformation, not connectivity.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-011",
+            "domain": "Design and develop data processing",
+            "stem": "Which Azure Data Factory trigger runs a pipeline on fixed, non-overlapping time windows and can backfill historical periods?",
+            "options": [
+                "Event-based trigger",
+                "Schedule trigger",
+                "Tumbling window trigger",
+                "Manual trigger"
+            ],
+            "correct_index": 2,
+            "explanation": "A tumbling window trigger fires once per fixed, non-overlapping window and retains state so past windows can be backfilled. A schedule trigger can overlap and does not track window state, and event and manual triggers are not time-window based.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-012",
+            "domain": "Design and develop data processing",
+            "stem": "A pipeline must load only the rows that changed since the last successful run. Which technique implements this incremental load?",
+            "options": [
+                "Copy the full source table every run and overwrite the destination",
+                "Truncate the destination and reload all rows each time",
+                "Read only the first page of the source table",
+                "Compare a high-watermark column against the last processed value"
+            ],
+            "correct_index": 3,
+            "explanation": "A watermark or high-watermark column stores the maximum processed value, and each run copies only rows greater than it. Full copies, truncate-and-reload, and reading a single page do not implement change detection.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-013",
+            "domain": "Design and develop data processing",
+            "stem": "Which Azure Data Factory activity reads a dataset and returns its result to the pipeline so later activities can use the values?",
+            "options": [
+                "Lookup activity",
+                "Delete activity",
+                "Get Metadata activity",
+                "Copy activity"
+            ],
+            "correct_index": 0,
+            "explanation": "The Lookup activity returns the first row or all rows of a query to the pipeline for use in control flow. Copy moves data, Delete removes files, and Get Metadata returns file or folder properties rather than query results.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-014",
+            "domain": "Design and develop data processing",
+            "stem": "A pipeline must invoke a copy activity once for every row returned by a lookup. Which control-flow activity should be used?",
+            "options": [
+                "Until activity",
+                "ForEach activity",
+                "Switch activity",
+                "If Condition activity"
+            ],
+            "correct_index": 1,
+            "explanation": "The ForEach activity iterates over an array such as the output of a lookup and runs inner activities for each element. If Condition, Until, and Switch control branching or looping but do not iterate a returned list.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-015",
+            "domain": "Design and develop data processing",
+            "stem": "A mapping data flow in Azure Data Factory performs transformations on a Spark cluster. Which integration runtime executes that Spark workload?",
+            "options": [
+                "Azure-SSIS integration runtime",
+                "On-premises data gateway",
+                "Azure integration runtime",
+                "Self-hosted integration runtime"
+            ],
+            "correct_index": 2,
+            "explanation": "Mapping data flows run on the Azure integration runtime, which provisions and manages the Spark execution cluster. Self-hosted and SSIS runtimes handle connectivity and SSIS packages, and a gateway is not a data flow engine.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-016",
+            "domain": "Design and develop data processing",
+            "stem": "A pipeline must run a Python notebook stored in Azure Databricks as one step of a larger workflow. Which Azure Data Factory activity should be used?",
+            "options": [
+                "Stored procedure activity",
+                "Copy activity",
+                "Web activity",
+                "Databricks Notebook activity"
+            ],
+            "correct_index": 3,
+            "explanation": "The Databricks Notebook activity submits a notebook to a Databricks workspace and waits for completion. Web activity calls REST endpoints, Stored procedure activity runs database procedures, and Copy activity only moves data.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-017",
+            "domain": "Design and develop data processing",
+            "stem": "A team wants one pipeline to process data for many dates by supplying the date at run time instead of editing the pipeline. Which Azure Data Factory feature enables this?",
+            "options": [
+                "Pipeline parameters and dynamic expressions",
+                "Hard-coded folder names in each dataset",
+                "Separate pipelines for every date",
+                "Management locks on the factory"
+            ],
+            "correct_index": 0,
+            "explanation": "Pipeline parameters let callers pass values such as a date, and dynamic expressions build dataset paths from those parameters. Hard-coding, duplicated pipelines, and management locks do not provide run-time flexibility.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-018",
+            "domain": "Design and develop data processing",
+            "stem": "A pipeline must start automatically as soon as a new file lands in Azure Blob Storage. Which Azure Data Factory trigger type should be configured?",
+            "options": [
+                "Schedule trigger",
+                "Event-based trigger",
+                "Manual trigger",
+                "Tumbling window trigger"
+            ],
+            "correct_index": 1,
+            "explanation": "An event-based trigger subscribes to Blob Storage events and starts the pipeline when a file is created. Tumbling and schedule triggers run on time windows, and a manual trigger runs only when explicitly invoked.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-019",
+            "domain": "Design and develop data processing",
+            "stem": "A Spark job must reduce its output to fewer partitions without shuffling all the data across the cluster. Which operation should be used?",
+            "options": [
+                "repartition",
+                "groupBy",
+                "coalesce",
+                "sortWithinPartitions"
+            ],
+            "correct_index": 2,
+            "explanation": "coalesce merges partitions while minimizing the shuffle, which is appropriate when decreasing the partition count. repartition triggers a full shuffle, groupBy aggregates, and sortWithinPartitions orders data within each existing partition.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-020",
+            "domain": "Design and develop data processing",
+            "stem": "A Spark join between a very large fact DataFrame and a small dimension table is slow because of shuffling. Which technique improves the join performance?",
+            "options": [
+                "Convert the fact table to a Python list",
+                "Increase the number of output files",
+                "Disable caching for both tables",
+                "Broadcast the small table to every executor"
+            ],
+            "correct_index": 3,
+            "explanation": "A broadcast join sends the small table to every executor so the large table never needs to be shuffled. Converting to a list, adding files, and disabling caching do not remove the shuffle.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-021",
+            "domain": "Design and develop data processing",
+            "stem": "A Databricks job must update or insert changed rows into a Delta table by matching on a business key. Which command should be used?",
+            "options": [
+                "MERGE INTO",
+                "TRUNCATE TABLE",
+                "CREATE OR REPLACE TABLE",
+                "INSERT OVERWRITE"
+            ],
+            "correct_index": 0,
+            "explanation": "MERGE INTO performs upserts by comparing source rows to a target table on a key and applying update, insert, or delete actions. The other commands replace or empty data rather than matching keys.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-022",
+            "domain": "Design and develop data processing",
+            "stem": "A Structured Streaming job must incrementally ingest only the new files that appear in a data lake folder. Which source should be used?",
+            "options": [
+                "A static Parquet file source",
+                "Auto Loader (cloudFiles)",
+                "A JDBC batch source",
+                "A CSV read with an explicit schema"
+            ],
+            "correct_index": 1,
+            "explanation": "Auto Loader, or cloudFiles, tracks which files have already been processed and streams only new arrivals efficiently. A static read reprocesses everything, and JDBC and CSV reads do not provide incremental file discovery.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-023",
+            "domain": "Design and develop data processing",
+            "stem": "A stream must compute an average sensor reading over fixed, non-overlapping five-minute intervals. Which Azure Stream Analytics window should be used?",
+            "options": [
+                "Sliding window",
+                "Session window",
+                "Tumbling window",
+                "Hopping window"
+            ],
+            "correct_index": 2,
+            "explanation": "A tumbling window is fixed in length and does not overlap, which matches fixed five-minute intervals. Hopping windows overlap, sliding windows emit when events occur, and session windows close after a period of inactivity.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-024",
+            "domain": "Design and develop data processing",
+            "stem": "A Stream Analytics query must emit a result only when an event arrives and include prior events from the preceding period. Which windowing function matches this behavior?",
+            "options": [
+                "Session window",
+                "Tumbling window",
+                "Hopping window",
+                "Sliding window"
+            ],
+            "correct_index": 3,
+            "explanation": "A sliding window produces output when events occur and includes events within the specified period before each event. Tumbling and hopping windows produce output on fixed intervals, and session windows group events separated by inactivity.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-025",
+            "domain": "Design and develop data processing",
+            "stem": "A Stream Analytics job must group events that arrive close together and start a new group after a period without events. Which window should be used?",
+            "options": [
+                "Session window",
+                "Tumbling window",
+                "Hopping window",
+                "Sliding window"
+            ],
+            "correct_index": 0,
+            "explanation": "A session window groups events that are close in time and closes when no event arrives for the gap duration. Tumbling and hopping windows use fixed intervals, and sliding windows emit on event arrival rather than by inactivity gaps.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-026",
+            "domain": "Design and develop data processing",
+            "stem": "An Event Hubs namespace is unable to keep up with the incoming event rate. Which setting should be increased to raise the ingress capacity?",
+            "options": [
+                "The partition key length",
+                "The number of throughput units or processing units",
+                "The message retention period",
+                "The number of consumer groups"
+            ],
+            "correct_index": 1,
+            "explanation": "Throughput or processing units define the ingress and egress capacity of an Event Hubs namespace, so increasing them raises throughput. Retention, consumer groups, and key length do not add ingest capacity.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-027",
+            "domain": "Design and develop data processing",
+            "stem": "An application must guarantee that events sharing the same business key are processed in order. What determines this ordering guarantee in Event Hubs?",
+            "options": [
+                "The size of each event payload",
+                "The number of consumer groups",
+                "The partition key assigned to the event",
+                "The retention period of the hub"
+            ],
+            "correct_index": 2,
+            "explanation": "Events with the same partition key are routed to the same partition, and a partition is consumed in order, which preserves per-key ordering. Consumer groups, retention, and payload size do not guarantee ordering.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-028",
+            "domain": "Design and develop data processing",
+            "stem": "Which Azure service provides secure, bidirectional communication with per-device identity for millions of IoT devices?",
+            "options": [
+                "Azure Logic Apps",
+                "Azure Functions",
+                "Azure Event Grid",
+                "Azure IoT Hub"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure IoT Hub manages device identities, device-to-cloud telemetry, and cloud-to-device commands at scale. Event Grid routes events, Logic Apps builds workflows, and Functions runs code, but none manage device identity.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-029",
+            "domain": "Design and develop data processing",
+            "stem": "A team wants Event Hubs data to be automatically persisted to Azure Data Lake Storage for later batch analysis. Which feature should be enabled?",
+            "options": [
+                "Event Hubs Capture",
+                "A consumer group",
+                "The auto-inflate setting",
+                "A shared access policy"
+            ],
+            "correct_index": 0,
+            "explanation": "Event Hubs Capture writes the event stream to a storage account or Data Lake in Avro format automatically. Consumer groups are read positions, auto-inflate scales throughput, and shared access policies authorize access.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-030",
+            "domain": "Design and develop data processing",
+            "stem": "A workload must reprocess a large historical dataset once each night with high throughput. Which processing style is most appropriate?",
+            "options": [
+                "Interactive processing",
+                "Batch processing",
+                "Real-time micro-batch processing",
+                "Streaming processing"
+            ],
+            "correct_index": 1,
+            "explanation": "Batch processing is designed for large, finite datasets on a schedule and maximizes throughput. Streaming and micro-batch styles target continuous low-latency data, and interactive processing serves ad-hoc queries.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-031",
+            "domain": "Design and develop data processing",
+            "stem": "Which T-SQL statement loads large files from the data lake into a dedicated SQL pool using massively parallel processing?",
+            "options": [
+                "CREATE INDEX",
+                "SELECT INTO",
+                "COPY INTO",
+                "CREATE VIEW"
+            ],
+            "correct_index": 2,
+            "explanation": "COPY INTO loads data from external storage into a dedicated SQL pool in parallel across distributions. SELECT INTO copies within the database, and CREATE VIEW and CREATE INDEX do not ingest external files.",
+            "reference": "Microsoft DP-203 skills measured - Design and develop data processing"
+        },
+        {
+            "id": "dp-203-032",
+            "domain": "Design and implement data security",
+            "stem": "A support team must view customer records but must not see complete credit card numbers. Which SQL feature should be applied?",
+            "options": [
+                "Always Encrypted",
+                "Row-level security",
+                "Transparent Data Encryption",
+                "Dynamic data masking"
+            ],
+            "correct_index": 3,
+            "explanation": "Dynamic data masking obscures sensitive column values for users without the UNMASK permission while leaving stored data intact. Transparent Data Encryption encrypts files at rest, Always Encrypted hides data from the server, and row-level security filters rows.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-033",
+            "domain": "Design and implement data security",
+            "stem": "A multi-tenant application stores all tenants in one table, and each tenant must see only its own rows. Which feature should be implemented?",
+            "options": [
+                "Row-level security",
+                "Transparent Data Encryption",
+                "Column-level encryption",
+                "Dynamic data masking"
+            ],
+            "correct_index": 0,
+            "explanation": "Row-level security applies a predicate that filters which rows a user can see based on their identity. Column encryption and dynamic masking operate on column values, and TDE encrypts data at rest.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-034",
+            "domain": "Design and implement data security",
+            "stem": "A team must prevent a group from reading a sensitive salary column while still allowing access to the other columns in the table. Which approach should be used?",
+            "options": [
+                "Enable row-level security on the table",
+                "Grant SELECT on all columns except the salary column",
+                "Apply dynamic data masking to the whole table",
+                "Encrypt the entire database with TDE"
+            ],
+            "correct_index": 1,
+            "explanation": "Column-level security grants or denies permissions on individual columns, so SELECT can be granted on the permitted columns and denied on salary. Masks change displayed values, TDE encrypts at rest, and row-level security filters rows.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-035",
+            "domain": "Design and implement data security",
+            "stem": "An organization must ensure that even database administrators cannot read the plaintext of a sensitive column. Which feature should be used?",
+            "options": [
+                "Dynamic data masking",
+                "Transparent Data Encryption",
+                "Always Encrypted",
+                "Row-level security"
+            ],
+            "correct_index": 2,
+            "explanation": "Always Encrypted keeps cryptographic keys on the client so the database engine and administrators never see plaintext. Dynamic masking and row-level security are enforced by the server, and TDE decrypts data for the server to use.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-036",
+            "domain": "Design and implement data security",
+            "stem": "Which feature encrypts a database's data and log files at rest without requiring changes to applications?",
+            "options": [
+                "Dynamic data masking",
+                "Cell-level encryption",
+                "Always Encrypted",
+                "Transparent Data Encryption"
+            ],
+            "correct_index": 3,
+            "explanation": "Transparent Data Encryption encrypts the database files at rest transparently to applications. Always Encrypted and cell-level encryption require application or schema changes, and dynamic data masking does not encrypt data.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-037",
+            "domain": "Design and implement data security",
+            "stem": "An Azure Data Factory pipeline must access Azure Key Vault without storing a secret in the pipeline definition. Which mechanism should be used?",
+            "options": [
+                "A managed identity assigned to the data factory",
+                "A SQL login embedded in the linked service",
+                "A hard-coded access key in the dataset",
+                "A shared access signature stored in the pipeline"
+            ],
+            "correct_index": 0,
+            "explanation": "A managed identity gives the data factory its own Azure AD identity so it can be granted access to Key Vault without storing credentials. Embedded credentials, signatures, and hard-coded keys expose secrets in the definition.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-038",
+            "domain": "Design and implement data security",
+            "stem": "Which access control model does Azure Data Lake Storage Gen2 support for fine-grained permissions on individual files and folders?",
+            "options": [
+                "Only account-level shared access signatures",
+                "POSIX-style access control lists",
+                "Network security groups",
+                "Azure Policy definitions"
+            ],
+            "correct_index": 1,
+            "explanation": "Data Lake Storage Gen2 supports POSIX-style access control lists that grant permissions at the file and folder level. Shared access signatures are coarse, and network security groups and Azure Policy do not manage file permissions.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-039",
+            "domain": "Design and implement data security",
+            "stem": "A pipeline must retrieve a secret at run time from Azure Key Vault instead of embedding it. Which Data Factory feature references the secret securely?",
+            "options": [
+                "A global parameter containing the secret value",
+                "A trigger payload containing the credential",
+                "A linked service configured with an Azure Key Vault reference",
+                "A pipeline parameter written in plain text"
+            ],
+            "correct_index": 2,
+            "explanation": "A linked service can store a Key Vault reference so the secret is resolved at run time and never appears in the definition. Plain-text parameters, global parameters, and trigger payloads expose the secret.",
+            "reference": "Microsoft DP-203 skills measured - Design and implement data security"
+        },
+        {
+            "id": "dp-203-040",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A team wants to be notified automatically when an Azure Data Factory pipeline run fails. Which service should be configured?",
+            "options": [
+                "Azure Policy",
+                "Microsoft Cost Management",
+                "Azure Advisor",
+                "Azure Monitor alerts"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Monitor alerts evaluate pipeline metrics and logs against conditions and notify or trigger actions on failure. Advisor recommends improvements, Policy enforces rules, and Cost Management tracks spend.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-041",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "Which Azure Data Factory feature provides a consolidated view of pipeline run history, durations, and failure diagnostics?",
+            "options": [
+                "The monitoring hub",
+                "The authoring canvas",
+                "The parameter editor",
+                "The linked services list"
+            ],
+            "correct_index": 0,
+            "explanation": "The monitoring hub shows pipeline and activity runs, their durations, and error details for troubleshooting. The authoring canvas edits pipelines, and the parameter and linked services views are configuration surfaces.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-042",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A team must analyze Azure Data Factory activity logs over time using Kusto queries. Where should the diagnostic logs be sent?",
+            "options": [
+                "An Azure Blob Storage container",
+                "A Log Analytics workspace",
+                "An Azure Key Vault",
+                "An Azure SQL Database"
+            ],
+            "correct_index": 1,
+            "explanation": "Sending diagnostic logs to a Log Analytics workspace makes them queryable with Kusto Query Language. Blob Storage stores logs but cannot query them, and Key Vault and SQL Database serve unrelated purposes.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-043",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A large fact table in a dedicated SQL pool is queried with aggregations and scans slowly. Which index type should be used to maximize compression and query speed?",
+            "options": [
+                "A heap",
+                "A hash index",
+                "A clustered columnstore index",
+                "A nonclustered rowstore index"
+            ],
+            "correct_index": 2,
+            "explanation": "A clustered columnstore index stores data by column with high compression and is optimized for the large scans and aggregations typical of fact tables. Rowstore indexes, heaps, and hash indexes are less efficient for this pattern.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-044",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A team repeatedly runs the same aggregation query against a dedicated SQL pool and wants faster responses. Which feature should be enabled?",
+            "options": [
+                "Transparent Data Encryption",
+                "Dynamic data masking",
+                "Table partitioning",
+                "Result set caching"
+            ],
+            "correct_index": 3,
+            "explanation": "Result set caching stores the output of a query and returns it directly when the same query runs again and the data is unchanged. Encryption, masking, and partitioning do not cache query results.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-045",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A Spark job is slow because a few partitions hold far more data than the others, so one task runs much longer than the rest. What is this problem, and how is it addressed?",
+            "options": [
+                "Skew, addressed by salting the skewed key or repartitioning",
+                "Latency, addressed by increasing the driver memory",
+                "Backpressure, addressed by lowering the batch size",
+                "Contention, addressed by disabling caching"
+            ],
+            "correct_index": 0,
+            "explanation": "Uneven partition sizes cause data skew and one straggling task; salting the hot key or repartitioning balances the work. Latency, backpressure, and contention describe different conditions and the listed fixes do not rebalance partitions.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-046",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A Spark query reads a very large partitioned Delta table but needs only a single month of data. Which optimization reduces the data read?",
+            "options": [
+                "Increasing the driver core count",
+                "Partition pruning on the date filter",
+                "Converting the table to CSV",
+                "Disabling the transaction log"
+            ],
+            "correct_index": 1,
+            "explanation": "Partition pruning uses the filter to read only the matching partition directories instead of the whole table. Changing format, removing the log, and adding driver cores do not reduce the scanned data.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-047",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A team wants frequently accessed Delta table data cached in memory across a Spark cluster to speed up repeated reads. Which feature should be enabled?",
+            "options": [
+                "Schema evolution",
+                "Cluster autoscaling",
+                "Delta caching",
+                "Shuffle partitioning"
+            ],
+            "correct_index": 2,
+            "explanation": "Delta caching stores remote Parquet data on the cluster's local disks for fast repeated reads. Autoscaling changes cluster size, shuffle partitioning affects exchange, and schema evolution manages column changes.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-048",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "Storage costs are rising because rarely accessed telemetry is kept in the hot access tier. Which action reduces cost while preserving the data?",
+            "options": [
+                "Delete the data after thirty days",
+                "Replicate the data to a second region",
+                "Convert the data to a proprietary format",
+                "Move the data to a cooler access tier with a lifecycle management policy"
+            ],
+            "correct_index": 3,
+            "explanation": "A lifecycle management policy can transition infrequently accessed data to cool or archive tiers, lowering storage cost while retaining it. Deleting, replicating, or reformatting does not reduce cost without losing data or adding expense.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-049",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A copy activity in Azure Data Factory is slow because the source limits how much data can be read. Which setting should be increased to improve throughput?",
+            "options": [
+                "The degree of copy parallelism or data integration units",
+                "The pipeline timeout value",
+                "The number of pipeline parameters",
+                "The trigger recurrence interval"
+            ],
+            "correct_index": 0,
+            "explanation": "Increasing the degree of copy parallelism or data integration units gives the copy activity more concurrent readers and compute. Timeouts, parameters, and recurrence change behavior but not raw throughput.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        },
+        {
+            "id": "dp-203-050",
+            "domain": "Monitor and optimize data storage and data processing",
+            "stem": "A Spark job's shuffle stage is slow because the default number of shuffle partitions creates large, uneven tasks. Which configuration most directly controls the number of partitions after a shuffle?",
+            "options": [
+                "spark.executor.memory",
+                "spark.sql.shuffle.partitions",
+                "spark.driver.cores",
+                "spark.network.timeout"
+            ],
+            "correct_index": 1,
+            "explanation": "spark.sql.shuffle.partitions sets how many partitions are produced by a shuffle, so tuning it balances task sizes. Executor memory, driver cores, and network timeout affect resources or resilience but not the shuffle partition count.",
+            "reference": "Microsoft DP-203 skills measured - Monitor and optimize data storage and data processing"
+        }
+    ]
+}

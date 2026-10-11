@@ -1,0 +1,717 @@
+{
+    "cert_key": "dp-900",
+    "title": "Microsoft Azure Data Fundamentals (DP-900)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/dp-900.json",
+    "variant_label": "DP-900 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 45,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft DP-900 skills measured (core data concepts; relational, non-relational, and analytics data on Azure). Not a capture of past exam questions.",
+    "source_label": "Azure Data Fundamentals practice bank",
+    "items": [
+        {
+            "id": "dp-900-001",
+            "domain": "Core Data Concepts",
+            "stem": "A shipping company records parcel tracking messages as a stream of JSON documents that each contain key-value pairs such as tracking number and status. Which category of data does this represent?",
+            "options": [
+                "Semi-structured data",
+                "Unstructured data",
+                "Dimensionally modeled data",
+                "Structured data"
+            ],
+            "correct_index": 0,
+            "explanation": "JSON uses field names and key-value pairs but does not require the fixed table schema of structured data, so it is classified as semi-structured. Images and audio are unstructured, and dimensional modeling is a warehouse design technique.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-002",
+            "domain": "Core Data Concepts",
+            "stem": "A hospital stores MRI scan images as raw binary files with no predefined structure or schema. How should this data be classified?",
+            "options": [
+                "Structured data",
+                "Unstructured data",
+                "Transactional data",
+                "Semi-structured data"
+            ],
+            "correct_index": 1,
+            "explanation": "Images, video, and audio have no inherent structure or predefined schema and are therefore unstructured data. Structured data fits rows and columns, and semi-structured data carries tags as JSON does.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-003",
+            "domain": "Core Data Concepts",
+            "stem": "Which dataset is an example of structured data with well-defined rows and columns?",
+            "options": [
+                "A folder of raw email messages",
+                "A stream of free-form application log lines",
+                "A customer table with fixed columns for ID, name, and order date",
+                "A collection of JSON product documents"
+            ],
+            "correct_index": 2,
+            "explanation": "A table with a fixed set of columns and known data types is structured data. JSON messages are semi-structured, while emails and raw logs are largely unstructured.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-004",
+            "domain": "Core Data Concepts",
+            "stem": "What does the term database schema describe in a relational database?",
+            "options": [
+                "A cluster of servers that host the database",
+                "An index used to speed up query performance",
+                "The physical disks that store the database",
+                "The logical definition of tables, columns, data types, and relationships"
+            ],
+            "correct_index": 3,
+            "explanation": "A schema describes the logical structure of the database, including tables, columns, keys, and relationships. It is not hardware, an index, or a backup.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-005",
+            "domain": "Core Data Concepts",
+            "stem": "A point-of-sale system records each sale as a short transaction that must be written immediately. Which type of processing workload does this represent?",
+            "options": [
+                "Online transaction processing (OLTP)",
+                "Stream analytics",
+                "Online analytical processing (OLAP)",
+                "Data warehousing"
+            ],
+            "correct_index": 0,
+            "explanation": "Recording individual business transactions such as a sale is OLTP. OLAP and warehousing support aggregations at query time, and stream analytics evaluates records in motion.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-006",
+            "domain": "Core Data Concepts",
+            "stem": "Which task is a characteristic use case of an online analytical processing (OLAP) workload?",
+            "options": [
+                "Updating an inventory count after every sale",
+                "Analyzing two years of regional sales data to identify trends",
+                "Logging a user login event",
+                "Recording a new customer order"
+            ],
+            "correct_index": 1,
+            "explanation": "OLAP workloads aggregate and analyze large volumes of historical data to support decisions such as trend analysis. The other options describe single-entity updates, which are transactional OLTP operations.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-007",
+            "domain": "Core Data Concepts",
+            "stem": "A telemetry system evaluates each sensor reading the moment it arrives and raises an alert immediately if a value exceeds a threshold. Which form of data processing is this?",
+            "options": [
+                "Scheduled unloading",
+                "Batch processing",
+                "Stream processing",
+                "Data normalization"
+            ],
+            "correct_index": 2,
+            "explanation": "Processing each reading as it arrives and acting on it immediately is stream processing. Batch processing waits to run on a schedule, and the other options are not processing-time models.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-008",
+            "domain": "Core Data Concepts",
+            "stem": "An organization processes all of the day's transactions in a single job that runs every night at midnight. Which type of workload does this describe?",
+            "options": [
+                "Online analytical processing",
+                "Stream processing",
+                "Real-time processing",
+                "Batch processing"
+            ],
+            "correct_index": 3,
+            "explanation": "Running a job on a schedule that processes a set of accumulated records is batch processing. Stream and real-time processing handle records as they arrive rather than waiting for a nightly window.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-009",
+            "domain": "Core Data Concepts",
+            "stem": "Which data professional role designs and builds the pipelines that ingest, transform, and move data between systems?",
+            "options": [
+                "Data engineer",
+                "Database administrator",
+                "Data analyst",
+                "Data scientist"
+            ],
+            "correct_index": 0,
+            "explanation": "A data engineer designs and builds the pipelines that ingest, transform, and move data between systems. Analysts visualize, scientists build models, and administrators manage database servers.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-010",
+            "domain": "Core Data Concepts",
+            "stem": "Which data professional role explores and interprets business data to create reports and visualizations that support decision-making?",
+            "options": [
+                "Data engineer",
+                "Data analyst",
+                "Data scientist",
+                "Database administrator"
+            ],
+            "correct_index": 1,
+            "explanation": "A data analyst develops reports and visualizations so business users can interpret data. Engineers build pipelines, scientists model predictions, and administrators maintain database servers.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-011",
+            "domain": "Core Data Concepts",
+            "stem": "Which data professional role applies statistics and machine learning techniques to build predictive models?",
+            "options": [
+                "Data engineer",
+                "Database administrator",
+                "Data scientist",
+                "Data analyst"
+            ],
+            "correct_index": 2,
+            "explanation": "A data scientist applies statistics and machine learning to build predictive models. Analysts report on data, engineers build pipelines, and administrators operate database infrastructure.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-012",
+            "domain": "Core Data Concepts",
+            "stem": "Which data professional role is primarily responsible for installing, patching, backing up, and securing database servers?",
+            "options": [
+                "Data engineer",
+                "Data scientist",
+                "Data analyst",
+                "Database administrator"
+            ],
+            "correct_index": 3,
+            "explanation": "A database administrator operates database infrastructure, including patching, backups, and security. The other roles focus on pipelines, reporting, and modeling rather than server administration.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-013",
+            "domain": "Core Data Concepts",
+            "stem": "An application must store and query schema-free JSON documents. Which storage approach is the most appropriate for this data?",
+            "options": [
+                "Store the documents in a NoSQL database that accepts schema-free documents",
+                "Flatten every document into one wide text file",
+                "Encode the documents as image files",
+                "Keep the documents only in offline backups"
+            ],
+            "correct_index": 0,
+            "explanation": "Schema-free JSON documents map naturally to a NoSQL document store such as Azure Cosmos DB. Flattening files or encoding as images discards structure and is not an appropriate storage strategy.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-014",
+            "domain": "Core Data Concepts",
+            "stem": "Which requirement most strongly indicates that data should be stored in a relational database?",
+            "options": [
+                "The data is a high volume of JSON events",
+                "The data has a fixed schema and relationships between entities",
+                "The data consists only of images and videos",
+                "The data requires no keys or constraints"
+            ],
+            "correct_index": 1,
+            "explanation": "Fixed schemas, keys, and entity relationships are the signals for a relational database. JSON events, images, and key-less data point toward non-relational storage.",
+            "reference": "Microsoft DP-900 skills measured - Core Data Concepts"
+        },
+        {
+            "id": "dp-900-015",
+            "domain": "Relational Data on Azure",
+            "stem": "Which Azure service is a fully managed relational database built on SQL Server that automates patching, backups, and high availability?",
+            "options": [
+                "Azure Database for PostgreSQL",
+                "SQL Server on Azure VMs",
+                "Azure SQL Database",
+                "Azure Database for MySQL"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure SQL Database is a PaaS relational service built on SQL Server that automates patching, backups, and high availability. SQL Server on VMs is IaaS, and MySQL and PostgreSQL use other engines.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-016",
+            "domain": "Relational Data on Azure",
+            "stem": "Which Azure SQL offering provides instance-level features such as SQL Server Agent and near-full SQL Server compatibility while running inside a virtual network?",
+            "options": [
+                "Azure Database for MariaDB",
+                "SQL Server on Azure VMs",
+                "Azure SQL Database",
+                "Azure SQL Managed Instance"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure SQL Managed Instance provides instance-level capabilities such as SQL Server Agent and near-full SQL Server surface-area compatibility while running inside a virtual network. VMs are IaaS and single databases do not offer instance scope.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-017",
+            "domain": "Relational Data on Azure",
+            "stem": "A company must run SQL Server in Azure with full control over the operating system and accepts responsibility for patching it itself. Which option should it choose?",
+            "options": [
+                "SQL Server on Azure VMs",
+                "Azure SQL Managed Instance",
+                "Azure SQL Database",
+                "Azure Database for MySQL"
+            ],
+            "correct_index": 0,
+            "explanation": "SQL Server on Azure VMs is IaaS, giving full control over the OS and SQL Server but leaving patching to the customer. Managed instances and Azure SQL Database automate platform maintenance.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-018",
+            "domain": "Relational Data on Azure",
+            "stem": "Which Azure relational database service is built on the open-source PostgreSQL engine and is offered as a managed platform service?",
+            "options": [
+                "Azure Cosmos DB",
+                "Azure Database for PostgreSQL",
+                "Azure Database for MySQL",
+                "Azure SQL Database"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Database for PostgreSQL is the managed relational service built on the PostgreSQL engine. MySQL and SQL Database are different engines, and Cosmos DB is a NoSQL database.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-019",
+            "domain": "Relational Data on Azure",
+            "stem": "Which Azure service provides a managed relational database built on the open-source MySQL engine?",
+            "options": [
+                "Azure Table Storage",
+                "Azure SQL Managed Instance",
+                "Azure Database for MySQL",
+                "Azure Database for PostgreSQL"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Database for MySQL provides a managed MySQL relational service with built-in high availability. The other options are SQL Server, PostgreSQL, and key-value non-relational offerings.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-020",
+            "domain": "Relational Data on Azure",
+            "stem": "What does normalization accomplish in relational database design?",
+            "options": [
+                "It copies data to multiple regions for availability",
+                "It creates an index on every column",
+                "It encrypts data at rest",
+                "It organizes data into related tables to reduce redundancy and improve integrity"
+            ],
+            "correct_index": 3,
+            "explanation": "Normalization structures data into related tables to remove redundant duplication and protect data integrity. Encryption, replication, and indexing serve other purposes.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-021",
+            "domain": "Relational Data on Azure",
+            "stem": "Which constraint guarantees that every row in a relational table can be uniquely identified and contains no duplicates?",
+            "options": [
+                "PRIMARY KEY",
+                "DEFAULT constraint",
+                "FOREIGN KEY",
+                "CHECK constraint"
+            ],
+            "correct_index": 0,
+            "explanation": "A primary key uniquely identifies each row and cannot contain duplicates or NULL values. A foreign key references another table's primary key, while check and default constraints validate or fill column values.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-022",
+            "domain": "Relational Data on Azure",
+            "stem": "Which constraint creates a relationship by referencing the primary key of another table?",
+            "options": [
+                "PRIMARY KEY",
+                "FOREIGN KEY",
+                "UNIQUE constraint",
+                "NOT NULL constraint"
+            ],
+            "correct_index": 1,
+            "explanation": "A foreign key creates a relationship by referencing the primary key of another table. A primary key identifies the row itself, and the other constraints do not create cross-table relationships.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-023",
+            "domain": "Relational Data on Azure",
+            "stem": "In a relational database table, what does each row represent?",
+            "options": [
+                "A relationship between databases",
+                "A column definition",
+                "A single record or entity instance",
+                "A database backup"
+            ],
+            "correct_index": 2,
+            "explanation": "Each row, also called a record or tuple, represents one instance of an entity such as a single customer. Columns define attributes, and rows alone do not define relationships.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-024",
+            "domain": "Relational Data on Azure",
+            "stem": "Which SQL statement is used to retrieve data from one or more relational tables?",
+            "options": [
+                "DELETE",
+                "UPDATE",
+                "INSERT",
+                "SELECT"
+            ],
+            "correct_index": 3,
+            "explanation": "SELECT is the SQL statement used to retrieve and read data, optionally filtering and joining rows. INSERT, UPDATE, and DELETE modify data rather than query it.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-025",
+            "domain": "Relational Data on Azure",
+            "stem": "In the ACID properties of a transaction, which property guarantees that a transaction either completes fully or rolls back completely?",
+            "options": [
+                "Atomicity",
+                "Consistency",
+                "Isolation",
+                "Durability"
+            ],
+            "correct_index": 0,
+            "explanation": "Atomicity guarantees a transaction is all-or-nothing: every operation succeeds or the whole transaction rolls back. Consistency, isolation, and durability describe other transaction guarantees.",
+            "reference": "Microsoft DP-900 skills measured - Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-026",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which Azure service is a globally distributed, multi-model NoSQL database with tunable consistency and single-digit-millisecond latency worldwide?",
+            "options": [
+                "Azure SQL Database",
+                "Azure Cosmos DB",
+                "Azure Database for PostgreSQL",
+                "Azure Files"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Cosmos DB is a globally distributed, multi-model NoSQL database with tunable consistency and low latency. The other options are relational databases or a file share service.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-027",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which set of APIs can be used to access data stored in Azure Cosmos DB?",
+            "options": [
+                "T-SQL and PL/SQL only",
+                "Only the Table API",
+                "Core (SQL), MongoDB, Cassandra, Gremlin, and Table",
+                "Only the Gremlin API"
+            ],
+            "correct_index": 2,
+            "explanation": "Cosmos DB exposes multiple data models through its Core (SQL), MongoDB, Cassandra, Gremlin, and Table APIs. It is not limited to a single API, and T-SQL is a relational interface.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-028",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which Azure service is designed to store large volumes of unstructured binary data such as images, videos, and application files?",
+            "options": [
+                "Azure Cosmos DB",
+                "Azure Table Storage",
+                "Azure SQL Database",
+                "Azure Blob Storage"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Blob Storage is Azure's object storage for unstructured data such as images, videos, and application files. Table Storage holds key-value entities and the databases store structured records.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-029",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which Azure Blob Storage access tier is optimized for data that is accessed frequently and needs the lowest access latency?",
+            "options": [
+                "The Hot tier",
+                "The Archive tier",
+                "The Cool tier",
+                "The Cold tier"
+            ],
+            "correct_index": 0,
+            "explanation": "The Hot tier is for frequently accessed data, trading higher storage cost for low access latency and cost. Cool, Cold, and Archive tiers target progressively less frequent access.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-030",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which Azure service provides managed cloud file shares that can be accessed over the Server Message Block (SMB) and NFS protocols?",
+            "options": [
+                "Azure Blob Storage",
+                "Azure Files",
+                "Azure Table Storage",
+                "Azure Cosmos DB for Table"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Files provides managed cloud file shares accessible through the SMB and NFS protocols. Blob Storage stores objects, and the Table offerings are key-value stores.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-031",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which Azure service stores data as entities with named properties in a schemaless key-attribute store that lives inside an Azure storage account?",
+            "options": [
+                "Azure Synapse dedicated SQL pool",
+                "Azure Files",
+                "Azure Table Storage",
+                "Azure SQL Database"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Table Storage is a schemaless key-attribute store where data is grouped into entities with named properties. The relational and analytics services require defined structures, while Files serves shares.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-032",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "An application needs a schema-free JSON data model with global distribution, low latency, and multiple consistency choices. Which Azure service should it use?",
+            "options": [
+                "SQL Server on Azure VMs",
+                "Azure Blob Storage",
+                "Azure Database for PostgreSQL",
+                "Azure Cosmos DB"
+            ],
+            "correct_index": 3,
+            "explanation": "Cosmos DB combines a flexible, schema-free JSON model with global distribution and tunable consistency. Relational databases impose schemas, and Blob Storage does not query JSON documents.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-033",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "Which statement describes a key characteristic of non-relational (NoSQL) data models?",
+            "options": [
+                "They allow flexible schemas and scale out horizontally",
+                "They require relationships enforced by foreign keys",
+                "They guarantee ACID integrity for every query",
+                "They enforce fixed schemas at all times"
+            ],
+            "correct_index": 0,
+            "explanation": "Non-relational stores typically allow flexible schemas and distribute data across nodes for horizontal scaling. Fixed schemas, foreign keys, and strict ACID relationships are relational hallmarks.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-034",
+            "domain": "Non-Relational Data on Azure",
+            "stem": "In which scenario should a team choose a non-relational data store over a relational database?",
+            "options": [
+                "The data fits a fixed schema and requires rich joins",
+                "The data has a flexible structure and needs massive horizontal scale",
+                "Every query must join many related tables",
+                "ACID transactions are the top priority"
+            ],
+            "correct_index": 1,
+            "explanation": "Non-relational storage suits workloads with flexible data shapes, global scale, and high write throughput. Fixed-schema, join-heavy, and ACID-critical workloads favor relational databases.",
+            "reference": "Microsoft DP-900 skills measured - Non-Relational Data on Azure"
+        },
+        {
+            "id": "dp-900-035",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service combines dedicated and serverless SQL pools with Apache Spark pools in a single integrated analytics workspace?",
+            "options": [
+                "Azure Data Factory",
+                "Azure Databricks",
+                "Azure Synapse Analytics",
+                "Azure HDInsight"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Synapse Analytics combines dedicated and serverless SQL pools, Apache Spark pools, and pipelines in one analytics workspace. Data Factory and Databricks each cover only part of that surface.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-036",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "What is the primary purpose of a data warehouse in an analytics workload?",
+            "options": [
+                "Storing images for a website",
+                "Managing user authentication",
+                "Recording point-of-sale transactions",
+                "Aggregating and analyzing large volumes of historical data"
+            ],
+            "correct_index": 3,
+            "explanation": "A data warehouse consolidates and stores historical data from multiple sources, optimized for aggregation and analysis. Transaction capture is OLTP, and the other options are not analytical workloads.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-037",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service is the cloud data integration tool used to build data movement and transformation pipelines that connect many data sources?",
+            "options": [
+                "Azure Data Factory",
+                "Azure Stream Analytics",
+                "Azure Cosmos DB",
+                "Azure Event Hubs"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Data Factory is the integration service for building data movement and transformation pipelines with many built-in connectors. Event Hubs ingests events, Stream Analytics queries streams, and Cosmos DB is a database.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-038",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "In an ELT process, which step is performed first when moving data into a target store?",
+            "options": [
+                "Load",
+                "Extract",
+                "Visualize",
+                "Transform"
+            ],
+            "correct_index": 1,
+            "explanation": "ELT begins with Extract, then Loads raw data into the target store, and finally Transforms it in place. The letters in E-L-T represent the order of the process.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-039",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service is designed to ingest millions of streaming events per second from devices and applications for further processing?",
+            "options": [
+                "Azure Blob Storage",
+                "Azure Stream Analytics",
+                "Azure Event Hubs",
+                "Azure Data Factory"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Event Hubs is a big-data streaming and event ingestion service that accepts millions of events per second. Stream Analytics queries streams, Data Factory orchestrates pipelines, and Blob Storage stores objects.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-040",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service applies SQL-like queries to live streaming data to detect patterns and produce real-time results?",
+            "options": [
+                "Azure Data Lake Storage Gen2",
+                "Azure Synapse dedicated SQL pool",
+                "SQL Server on Azure VMs",
+                "Azure Stream Analytics"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Stream Analytics applies SQL-like queries to live streams to detect patterns and output results in real time. Data Lake Storage holds raw files, and the SQL options are not stream query engines.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-041",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure analytics platform is built on Apache Spark and offers collaborative notebooks for data engineering and machine learning?",
+            "options": [
+                "Azure Databricks",
+                "Azure Data Factory",
+                "Azure SQL Database",
+                "Azure HDInsight"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Databricks is an Apache Spark-based analytics platform with collaborative notebooks for batch, streaming, and machine learning workloads. HDInsight offers clusters without the Databricks workspace, and the other options are not Spark platforms.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-042",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "What is a data lake primarily optimized to do in an analytics solution?",
+            "options": [
+                "Serve frequent web page requests",
+                "Store massive volumes of raw data in any format for later processing",
+                "Enforce a strict fixed schema on every file at ingestion",
+                "Replace the need for a network connection"
+            ],
+            "correct_index": 1,
+            "explanation": "A data lake is optimized to hold raw, unprocessed data of any format and size so analysts and engineers can shape it later. It does not enforce fixed schemas at ingest and is not a web serving tier.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-043",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service provides the foundation of a data lake by building on Azure Blob Storage with a hierarchical namespace and POSIX-like access control?",
+            "options": [
+                "Azure Synapse dedicated SQL pool",
+                "Azure Event Hubs",
+                "Azure Data Lake Storage Gen2",
+                "Azure Files"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Data Lake Storage Gen2 combines blob scalability with a hierarchical namespace and file-system-style access control for analytics workloads. It is not a file share service, a SQL engine, or an event broker.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-044",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Power BI component do analysts use to connect to data sources and build data models and reports on a Windows desktop?",
+            "options": [
+                "Power BI Report Server",
+                "Power BI service",
+                "Power BI Report Builder",
+                "Power BI Desktop"
+            ],
+            "correct_index": 3,
+            "explanation": "Power BI Desktop is the authoring tool where analysts connect to data, build a model, and create reports that can be published. The Power BI service hosts and shares published reports.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-045",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "What is the purpose of Data Analysis Expressions (DAX) in Power BI?",
+            "options": [
+                "It is the expression language used to create custom calculations such as measures",
+                "It is a query language for Azure Blob Storage",
+                "It is a networking protocol for data transfer",
+                "It is a scripting language for virtual machines"
+            ],
+            "correct_index": 0,
+            "explanation": "DAX is the formula language in Power BI used to create calculated columns, measures, and tables. It is not a VM scripting language, a storage query language, or a network protocol.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-046",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "A data analyst needs to build interactive visualizations backed by a Synapse Analytics dedicated SQL pool. Which tool should be used?",
+            "options": [
+                "Azure Cosmos DB",
+                "Power BI",
+                "Azure Data Factory",
+                "Azure Table Storage"
+            ],
+            "correct_index": 1,
+            "explanation": "Power BI connects to sources such as a Synapse SQL pool and renders interactive reports and dashboards. Data Factory moves data, and the other options are storage rather than visualization tools.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-047",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which statement correctly describes batch processing in an analytics workload?",
+            "options": [
+                "It sends an alert for every incoming message",
+                "It processes each record the instant it arrives",
+                "It runs scheduled jobs over a set of accumulated data",
+                "It queries a live event stream continuously"
+            ],
+            "correct_index": 2,
+            "explanation": "Batch processing collects data over a period and then runs a job to process the entire set, often on a schedule. Acting on records immediately or continuously describes stream processing.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-048",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which statement correctly describes stream processing in an analytics workload?",
+            "options": [
+                "It copies files once a month",
+                "It only aggregates data at the end of the year",
+                "It waits for a nightly scheduled run",
+                "It processes records as they arrive in near real time"
+            ],
+            "correct_index": 3,
+            "explanation": "Stream processing evaluates records continuously as they arrive, enabling near-real-time responses. Waiting for scheduled runs or periodic copies describes batch processing.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-049",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "How does a data warehouse typically differ from a transactional relational database?",
+            "options": [
+                "A warehouse stores consolidated historical data from multiple sources for analysis",
+                "A warehouse maintains the ACID log of every transaction",
+                "A warehouse serves images to a website",
+                "A warehouse records each individual order as it happens"
+            ],
+            "correct_index": 0,
+            "explanation": "Data warehouses integrate and consolidate data from multiple sources into a subject-oriented model for analysis. Transactional databases record individual operations such as orders.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        },
+        {
+            "id": "dp-900-050",
+            "domain": "Analytics Workloads on Azure",
+            "stem": "Which Azure service provides managed open-source analytics clusters such as Apache Hadoop, Spark, Hive, and Kafka?",
+            "options": [
+                "Power BI Desktop",
+                "Azure HDInsight",
+                "Azure Blob Storage",
+                "Azure SQL Database"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure HDInsight is the managed open-source analytics service that runs Apache clusters such as Hadoop, Spark, Hive, and Kafka. The other options are storage, relational, and visualization services.",
+            "reference": "Microsoft DP-900 skills measured - Analytics Workloads on Azure"
+        }
+    ]
+}

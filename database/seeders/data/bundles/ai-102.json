@@ -1,0 +1,717 @@
+{
+    "cert_key": "ai-102",
+    "title": "Microsoft Azure AI Engineer Associate (AI-102)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/ai-102.json",
+    "variant_label": "AI-102 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 100,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AI-102 skills measured (plan/manage Azure AI; decision support, computer vision, NLP, knowledge mining, generative AI solutions). Not a capture of past exam questions.",
+    "source_label": "Azure AI Engineer practice bank",
+    "items": [
+        {
+            "id": "ai-102-001",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A development team wants to call several prebuilt Azure AI capabilities such as vision, language, and speech by using one key and one endpoint. Which Azure resource should the team create?",
+            "options": [
+                "A multi-service Azure AI services resource",
+                "A separate Cognitive Services key for each capability",
+                "An Azure Machine Learning workspace",
+                "An Azure Bot Service channel"
+            ],
+            "correct_index": 0,
+            "explanation": "A multi-service Azure AI services resource exposes many prebuilt capabilities through a single key and endpoint, which simplifies management. Separate keys multiply administration, Machine Learning is for custom models, and Bot Service hosts conversational bots.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-002",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "An organization requires a human reviewer to approve every adverse hiring decision produced by an AI assistant before the outcome is delivered. Which Microsoft responsible AI principle does this requirement most directly support?",
+            "options": [
+                "Fairness",
+                "Accountability",
+                "Inclusiveness",
+                "Privacy and security"
+            ],
+            "correct_index": 1,
+            "explanation": "Accountability means people remain responsible for AI systems and includes human oversight of consequential decisions. Fairness concerns bias, inclusiveness concerns accessibility, and privacy concerns data protection.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-003",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A security team must store and rotate the access keys used by an Azure AI service while keeping an audit trail of who accessed them. Which Azure service should the team use?",
+            "options": [
+                "Microsoft Entra ID",
+                "Azure Monitor",
+                "Azure Key Vault",
+                "Azure Policy"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Key Vault securely stores secrets and keys, supports rotation, and logs access for auditing. Policy enforces resource rules, Entra ID manages identities, and Monitor collects telemetry.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-004",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A company needs to grant a data science group permission to read an Azure AI service key while preventing other groups from doing so. Which mechanism should the company use?",
+            "options": [
+                "Azure resource locks",
+                "Azure Advisor",
+                "Service level agreements",
+                "Microsoft Entra ID role-based access control"
+            ],
+            "correct_index": 3,
+            "explanation": "Role-based access control assigns permissions to identities so only approved groups can read secrets. Resource locks prevent deletion or edits, Advisor gives recommendations, and service level agreements describe uptime commitments.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-005",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A manufacturer must run an Azure AI Vision capability on a local edge device that has no reliable internet connection. Which deployment option should the team choose?",
+            "options": [
+                "An Azure AI services container configured for disconnected use",
+                "An Azure Functions consumption plan",
+                "An Azure Kubernetes Service hosted API",
+                "An Azure Logic Apps workflow"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure AI services containers package the capability to run locally and can operate disconnected from Azure. Functions and Logic Apps require cloud connectivity, and a hosted AKS API still needs network access.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-006",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "An operations team needs to query request logs and metrics from an Azure AI service over the previous month to investigate failures. Which Azure capability should the team use?",
+            "options": [
+                "Azure Advisor",
+                "Azure Monitor and Log Analytics",
+                "Microsoft Cost Management",
+                "Azure Service Health"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Monitor with Log Analytics collects and queries diagnostic logs and metrics for troubleshooting. Cost Management tracks spend, Service Health reports platform incidents, and Advisor offers best-practice advice.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-007",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A company wants to be notified automatically when the average latency of an Azure AI service rises above an agreed threshold. What should the team configure?",
+            "options": [
+                "A tag on the resource group",
+                "A budget in Microsoft Cost Management",
+                "A metric alert rule in Azure Monitor",
+                "A resource lock on the service"
+            ],
+            "correct_index": 2,
+            "explanation": "A metric alert rule in Azure Monitor fires when a metric such as latency crosses a threshold. Locks, tags, and budgets do not monitor service performance.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-008",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "An administrator must ensure that an Azure AI service can be reached only from a specific virtual network and not from the public internet. Which feature should the administrator configure?",
+            "options": [
+                "A content filter policy",
+                "A diagnostic setting",
+                "A managed identity",
+                "Network access restrictions such as a private endpoint"
+            ],
+            "correct_index": 3,
+            "explanation": "Network restrictions such as private endpoints and selected virtual networks keep the service off the public internet. Content filters moderate content, diagnostic settings export telemetry, and managed identities authenticate to other services.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-009",
+            "domain": "Plan and manage an Azure AI solution",
+            "stem": "A team is documenting a planned AI solution for stakeholders and must describe what the model can and cannot do and how its outputs are produced. Which responsible AI principle is the team applying?",
+            "options": [
+                "Transparency",
+                "Fairness",
+                "Reliability and safety",
+                "Accountability"
+            ],
+            "correct_index": 0,
+            "explanation": "Transparency means communicating how a system works and its limitations so stakeholders understand it. Fairness addresses bias, reliability covers safe operation, and accountability covers human responsibility.",
+            "reference": "Microsoft AI-102 skills measured - Plan and manage an Azure AI solution"
+        },
+        {
+            "id": "ai-102-010",
+            "domain": "Implement decision support solutions",
+            "stem": "A utility company wants to detect sudden unusual spikes in sensor readings from thousands of turbines without labeling historical failures. Which Azure AI service should the team use?",
+            "options": [
+                "Azure AI Translator",
+                "Azure AI Anomaly Detector",
+                "Azure AI Content Safety",
+                "Azure AI Personalizer"
+            ],
+            "correct_index": 1,
+            "explanation": "Anomaly Detector finds unusual points in time-series data without labeled examples. Content Safety moderates content, Personalizer ranks choices, and Translator converts language.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-011",
+            "domain": "Implement decision support solutions",
+            "stem": "A team needs to scan a large stored batch of historical metrics for anomalies rather than detect them as they arrive in real time. What should the team use?",
+            "options": [
+                "Personalizer rank calls",
+                "Content Safety severity scores",
+                "The Anomaly Detector batch detection operation",
+                "The Anomaly Detector streaming operation only"
+            ],
+            "correct_index": 2,
+            "explanation": "Anomaly Detector provides a batch operation for evaluating a whole series of data at once, in addition to streaming detection. The other options address different services and use cases.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-012",
+            "domain": "Implement decision support solutions",
+            "stem": "A social platform must automatically flag user posts that contain profanity, hate, or adult material before they appear. Which Azure AI service should the team use?",
+            "options": [
+                "Azure AI Anomaly Detector",
+                "Azure AI Language question answering",
+                "Azure AI Speech",
+                "Azure AI Content Safety"
+            ],
+            "correct_index": 3,
+            "explanation": "Content Safety classifies text and images for harmful content so posts can be blocked or reviewed. The other services handle anomalies, question answering, and speech rather than moderation.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-013",
+            "domain": "Implement decision support solutions",
+            "stem": "A company must block its own product code names from being posted on a moderated forum in addition to standard categories. Which Content Safety feature should the team configure?",
+            "options": [
+                "A custom term list",
+                "A managed identity",
+                "A private endpoint",
+                "A semantic ranker"
+            ],
+            "correct_index": 0,
+            "explanation": "Content Safety custom term lists add organization-specific terms that must be blocked. Managed identities and private endpoints concern access, and the semantic ranker belongs to Azure AI Search.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-014",
+            "domain": "Implement decision support solutions",
+            "stem": "An online retailer wants the home page to learn each visitor's preferences and reorder the products shown to maximize engagement. Which Azure AI service should the team use?",
+            "options": [
+                "Azure AI Translator",
+                "Azure AI Personalizer",
+                "Azure AI Anomaly Detector",
+                "Azure AI Document Intelligence"
+            ],
+            "correct_index": 1,
+            "explanation": "Personalizer uses reinforcement learning to rank options for each user and improves from reward feedback. The other services detect anomalies, extract document data, and translate text.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-015",
+            "domain": "Implement decision support solutions",
+            "stem": "In a Personalizer solution, what signal tells the service how well the action it chose performed so the model can improve?",
+            "options": [
+                "An anomaly score",
+                "A confidence threshold",
+                "A reward score",
+                "A content severity level"
+            ],
+            "correct_index": 2,
+            "explanation": "Personalizer learns from the reward you send after it ranks actions, using it to update the model. Severity levels, anomaly scores, and confidence thresholds belong to other services.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-016",
+            "domain": "Implement decision support solutions",
+            "stem": "A team is starting a Personalizer loop and wants it to begin improving quickly. What should the team ensure it provides on each call?",
+            "options": [
+                "Only a single fixed action",
+                "A precomputed reward table",
+                "A trained classification model",
+                "A set of actions and the context features of the user"
+            ],
+            "correct_index": 3,
+            "explanation": "Personalizer needs the candidate actions and contextual features to rank options and later correlate rewards. A single action offers no choice, and precomputed rewards or custom models are not how the learning loop works.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-017",
+            "domain": "Implement decision support solutions",
+            "stem": "A moderation workflow must route mildly offensive user content for human review while blocking the most severe content automatically. Which Content Safety output best distinguishes these cases?",
+            "options": [
+                "A severity score",
+                "A language identifier",
+                "An entity category",
+                "A sentiment label"
+            ],
+            "correct_index": 0,
+            "explanation": "Content Safety returns severity levels that let you set separate thresholds for review and automatic blocking. Language, entity, and sentiment outputs come from other services and do not rate harm.",
+            "reference": "Microsoft AI-102 skills measured - Implement decision support solutions"
+        },
+        {
+            "id": "ai-102-018",
+            "domain": "Implement computer vision solutions",
+            "stem": "A news organization wants to generate a short natural-language description of each uploaded photograph automatically. Which Azure AI Vision capability should the team use?",
+            "options": [
+                "Face detection",
+                "Image captioning from image analysis",
+                "Optical character recognition",
+                "Custom Vision object detection"
+            ],
+            "correct_index": 1,
+            "explanation": "Image analysis captioning produces a human-readable description of an image. OCR reads text in images, object detection locates custom classes, and face detection locates faces.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-019",
+            "domain": "Implement computer vision solutions",
+            "stem": "A company needs to extract printed text from scanned receipts and keep its reading order and line positions. Which Azure AI capability should the team use?",
+            "options": [
+                "The face identification feature",
+                "The spatial analysis feature",
+                "The Read optical character recognition model",
+                "The image tagging feature"
+            ],
+            "correct_index": 2,
+            "explanation": "The Read model extracts printed and handwritten text and returns lines, words, and bounding positions. Tagging returns labels, face identification recognizes people, and spatial analysis tracks movement.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-020",
+            "domain": "Implement computer vision solutions",
+            "stem": "A bakery wants to build a model that labels each photo of its products as bread, cake, or pastry. Which Azure AI service should the team use?",
+            "options": [
+                "Custom Vision object detection",
+                "Face API",
+                "Azure AI Document Intelligence",
+                "Custom Vision image classification"
+            ],
+            "correct_index": 3,
+            "explanation": "Image classification assigns a class label to an entire image. Object detection returns bounding boxes, Face API analyzes faces, and Document Intelligence extracts structured document fields.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-021",
+            "domain": "Implement computer vision solutions",
+            "stem": "A warehouse needs to locate the exact position of each pallet within photographs and return bounding boxes. Which Azure AI service should the team use?",
+            "options": [
+                "Custom Vision object detection",
+                "Custom Vision image classification",
+                "Image analysis captioning",
+                "Face API detection"
+            ],
+            "correct_index": 0,
+            "explanation": "Object detection returns a bounding box and label for each object instance. Classification labels the whole image, captioning describes it, and Face API targets human faces.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-022",
+            "domain": "Implement computer vision solutions",
+            "stem": "A building security system must determine whether a photographed person wears eye glasses and estimate their approximate age and emotion. Which Azure AI capability should the team use?",
+            "options": [
+                "Image captioning",
+                "Face detection with attribute analysis",
+                "Optical character recognition",
+                "Object detection"
+            ],
+            "correct_index": 1,
+            "explanation": "The Face service detects faces and returns selected attributes such as glasses and emotion. OCR reads text, object detection finds custom objects, and captioning produces descriptions.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-023",
+            "domain": "Implement computer vision solutions",
+            "stem": "A bank wants to confirm that the person in front of a kiosk camera is a real live person and not a photograph held up to the lens. Which Azure AI capability should the team use?",
+            "options": [
+                "Optical character recognition",
+                "Custom Vision classification",
+                "Face liveness detection",
+                "Face identification against a stored person group"
+            ],
+            "correct_index": 2,
+            "explanation": "Face liveness detection checks that a live person is present and defeats spoofing with photos or masks. Identification matches a known person, OCR reads text, and Custom Vision classifies custom images.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-024",
+            "domain": "Implement computer vision solutions",
+            "stem": "A store wants to analyze how many people are present and how long they dwell in each area while blurring faces for privacy. Which Azure AI Vision feature should the team use?",
+            "options": [
+                "Image captioning",
+                "Optical character recognition",
+                "Custom Vision object detection",
+                "Spatial analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Spatial analysis counts people and measures movement in defined zones and can blur faces for privacy. The other features describe, read, or classify images rather than track movement.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-025",
+            "domain": "Implement computer vision solutions",
+            "stem": "A team must read handwritten notes from uploaded forms and also detect the language of the text found. Which capability should the team rely on first to locate and extract the text?",
+            "options": [
+                "The Read model of Azure AI Vision",
+                "Image tagging",
+                "Face detection",
+                "Adult content classification"
+            ],
+            "correct_index": 0,
+            "explanation": "The Read model extracts printed and handwritten text, which can then be passed to language detection. Tagging, face detection, and content classification do not extract text.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-026",
+            "domain": "Implement computer vision solutions",
+            "stem": "An organization must run a trained Custom Vision image classification model locally on devices without calling the cloud. What should the team do?",
+            "options": [
+                "Assign a managed identity to the model",
+                "Export the model as a Docker container",
+                "Retrain the model in Azure every hour",
+                "Enable a private endpoint on the service"
+            ],
+            "correct_index": 1,
+            "explanation": "Custom Vision models can be exported as Docker containers that run on local devices offline. Retraining, private endpoints, and managed identities do not enable offline inference.",
+            "reference": "Microsoft AI-102 skills measured - Implement computer vision solutions"
+        },
+        {
+            "id": "ai-102-027",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A hotel chain wants to automatically determine whether online reviews are positive, negative, or neutral. Which Azure AI Language feature should the team use?",
+            "options": [
+                "Named entity recognition",
+                "Question answering",
+                "Sentiment analysis",
+                "Key phrase extraction"
+            ],
+            "correct_index": 2,
+            "explanation": "Sentiment analysis returns positive, negative, neutral, or mixed labels with confidence scores. Key phrase extraction lists topics, entity recognition finds entities, and question answering retrieves answers.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-028",
+            "domain": "Implement natural language processing solutions",
+            "stem": "An analyst wants a quick list of the main talking points discussed in a large set of customer feedback comments. Which Azure AI Language feature should the team use?",
+            "options": [
+                "Sentiment analysis",
+                "Language detection",
+                "Question answering",
+                "Key phrase extraction"
+            ],
+            "correct_index": 3,
+            "explanation": "Key phrase extraction returns the important terms and concepts in text. Sentiment scores tone, language detection identifies the language, and question answering responds to questions.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-029",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A compliance team must find and redact people names, phone numbers, and addresses in free-text reports. Which Azure AI Language feature should the team use?",
+            "options": [
+                "Personally identifiable information detection",
+                "Sentiment analysis",
+                "Key phrase extraction",
+                "Language detection"
+            ],
+            "correct_index": 0,
+            "explanation": "PII detection identifies and can redact sensitive entities such as names and phone numbers. The other features score sentiment, list phrases, or identify language.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-030",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A support website needs a bot that answers user questions by matching them to a curated set of question-and-answer pairs. Which Azure AI service should the team use?",
+            "options": [
+                "Azure AI Anomaly Detector",
+                "Azure AI Language question answering",
+                "Azure AI Content Safety",
+                "Azure AI Translator"
+            ],
+            "correct_index": 1,
+            "explanation": "Question answering builds a knowledge base of question-answer pairs and returns the best answer for a user question. The other services moderate, translate, or detect anomalies.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-031",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A developer must build a model that maps a spoken or typed request such as booking a flight to an intent and extracts the destination city. Which Azure AI service should the team use?",
+            "options": [
+                "Document Intelligence",
+                "Anomaly Detector",
+                "Conversational language understanding",
+                "Content Safety"
+            ],
+            "correct_index": 2,
+            "explanation": "Conversational language understanding classifies utterances into intents and extracts entities such as a destination. The other services handle moderation, documents, and anomalies.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-032",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A team is training a conversational language understanding model and must supply example phrases for each intent along with their labeled entities. What are these examples called?",
+            "options": [
+                "Skillsets",
+                "Embeddings",
+                "Policies",
+                "Utterances"
+            ],
+            "correct_index": 3,
+            "explanation": "Utterances are the example phrases used to train intents and entities in conversational language understanding. Skillsets belong to search enrichment, embeddings are vectors, and policies are governance rules.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-033",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A global retailer must translate product descriptions from English into French and German while preserving the original formatting. Which Azure AI service should the team use?",
+            "options": [
+                "Azure AI Translator",
+                "Azure AI Language sentiment analysis",
+                "Azure AI Speech",
+                "Azure AI Document Intelligence"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure AI Translator converts text between languages and can preserve formatting. Sentiment analysis scores tone, Speech handles audio, and Document Intelligence extracts document fields.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-034",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A call center must convert recorded customer calls into searchable text transcripts. Which Azure AI capability should the team use?",
+            "options": [
+                "Speaker recognition only",
+                "Speech to text",
+                "Text to speech",
+                "Speech translation only"
+            ],
+            "correct_index": 1,
+            "explanation": "Speech to text transcribes audio into written text. Text to speech does the reverse, speech translation also changes language, and speaker recognition identifies who is speaking.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-035",
+            "domain": "Implement natural language processing solutions",
+            "stem": "An international conference needs live audio in English rendered as real-time text in Japanese for attendees. Which Azure AI capability should the team use?",
+            "options": [
+                "Text to speech only",
+                "Language detection",
+                "Speech translation",
+                "Speech to text with no translation"
+            ],
+            "correct_index": 2,
+            "explanation": "Speech translation transcribes speech and translates it into a target language in one operation. Plain speech to text does not translate, text to speech generates audio, and language detection only identifies a language.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-036",
+            "domain": "Implement natural language processing solutions",
+            "stem": "A team wants an application to read written text aloud using a natural-sounding synthesized voice. Which Azure AI capability should the team use?",
+            "options": [
+                "Speech to text",
+                "Speech translation",
+                "Speaker recognition",
+                "Text to speech"
+            ],
+            "correct_index": 3,
+            "explanation": "Text to speech synthesizes audio from written text with selectable voices. Speech to text does the reverse, speech translation changes language, and speaker recognition verifies identity.",
+            "reference": "Microsoft AI-102 skills measured - Implement natural language processing solutions"
+        },
+        {
+            "id": "ai-102-037",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "A company wants to make thousands of stored documents searchable by keyword and filterable by metadata. Which Azure service should the team use?",
+            "options": [
+                "Azure AI Search",
+                "Azure AI Translator",
+                "Azure AI Content Safety",
+                "Azure AI Personalizer"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure AI Search builds a searchable index over content and supports filters and queries. The other services translate, moderate, or rank options rather than index documents.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-038",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "During knowledge mining, a team wants to enrich each document with extracted entities and key phrases before it is indexed. Which Azure AI Search component should the team use?",
+            "options": [
+                "A scoring profile",
+                "A skillset",
+                "An indexer schedule",
+                "A suggester"
+            ],
+            "correct_index": 1,
+            "explanation": "A skillset applies cognitive skills such as entity recognition and key phrase extraction to enrich content before indexing. Indexers pull data, suggesters enable autocomplete, and scoring profiles adjust ranking.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-039",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "A team needs Azure AI Search to pull documents from Azure Blob Storage and keep the index current as files change. Which component should the team configure?",
+            "options": [
+                "A synonym map",
+                "A semantic configuration",
+                "An indexer",
+                "A skillset"
+            ],
+            "correct_index": 2,
+            "explanation": "An indexer connects to a data source and crawls content into the index on a schedule. Skillsets enrich content, synonym maps expand queries, and semantic configuration improves ranking.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-040",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "An accounts payable team wants to extract vendor names, invoice dates, and totals from PDF invoices without training a model. Which Azure AI Document Intelligence model should the team use?",
+            "options": [
+                "A custom classification model",
+                "A composed model",
+                "The prebuilt identity document model",
+                "The prebuilt invoice model"
+            ],
+            "correct_index": 3,
+            "explanation": "The prebuilt invoice model recognizes common invoice fields without training. Custom and composed models require training, and the identity document model targets IDs rather than invoices.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-041",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "A company receives supplier forms in a unique layout that the prebuilt models do not recognize and wants the service to learn the fields from labeled samples. Which approach should the team use?",
+            "options": [
+                "Train a custom Document Intelligence model",
+                "Use the prebuilt receipt model",
+                "Use the general document model without training",
+                "Use optical character recognition only"
+            ],
+            "correct_index": 0,
+            "explanation": "A custom model is trained on labeled samples to recognize fields in a specific layout. Prebuilt models target common document types, and plain OCR returns text without field mapping.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-042",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "An organization has trained several Document Intelligence models for different form types and wants to route an incoming document to the correct one automatically. Which feature should the team use?",
+            "options": [
+                "A skillset",
+                "A composed model",
+                "A single custom model",
+                "Optical character recognition"
+            ],
+            "correct_index": 1,
+            "explanation": "A composed model bundles multiple custom models and selects the best match for an incoming document. A single model handles only one form type, OCR returns text, and skillsets belong to Azure AI Search.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-043",
+            "domain": "Implement knowledge mining and document intelligence solutions",
+            "stem": "A search team wants results to rank the most semantically relevant passages higher even when they do not match keywords exactly. Which Azure AI Search feature should the team enable?",
+            "options": [
+                "A scoring profile",
+                "A suggester",
+                "Semantic ranking",
+                "A synonym map"
+            ],
+            "correct_index": 2,
+            "explanation": "Semantic ranking uses language models to re-rank results by meaning and surface relevant passages. Synonym maps and scoring profiles adjust lexical matching, and suggesters support autocomplete.",
+            "reference": "Microsoft AI-102 skills measured - Implement knowledge mining and document intelligence solutions"
+        },
+        {
+            "id": "ai-102-044",
+            "domain": "Implement generative AI solutions",
+            "stem": "A team wants to call a large language model through the Azure OpenAI Service and must first publish the model so applications can use it. What should the team create?",
+            "options": [
+                "An Azure AI Search index",
+                "A Document Intelligence model",
+                "A Custom Vision project",
+                "A model deployment"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure OpenAI requires deploying a base model to a deployment name that applications call. Search indexes, document models, and vision projects serve unrelated workloads.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-045",
+            "domain": "Implement generative AI solutions",
+            "stem": "A developer wants a chatbot to answer in a consistent tone and follow safety rules for every request. Which prompt component should define this behavior?",
+            "options": [
+                "The system message",
+                "A user message",
+                "A temperature value",
+                "A max tokens value"
+            ],
+            "correct_index": 0,
+            "explanation": "The system message sets the model role, tone, and constraints for the conversation. User messages are the questions, while temperature and max tokens adjust randomness and length rather than behavior rules.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-046",
+            "domain": "Implement generative AI solutions",
+            "stem": "A company wants a generative assistant to answer only from its own internal documents instead of general knowledge. Which pattern should the team implement?",
+            "options": [
+                "Increasing the maximum token count",
+                "Retrieval-augmented generation using Azure AI Search",
+                "Fine-tuning on public web data",
+                "Raising the temperature setting"
+            ],
+            "correct_index": 1,
+            "explanation": "Retrieval-augmented generation grounds answers in retrieved internal content with Azure AI Search. Fine-tuning on public data does not ground answers, and temperature or token settings do not supply company knowledge.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-047",
+            "domain": "Implement generative AI solutions",
+            "stem": "A team building a retrieval-augmented generation solution must convert documents and queries into a numeric form so similar meanings can be matched. What should the team generate?",
+            "options": [
+                "Named entities",
+                "Utterances",
+                "Vector embeddings",
+                "Content severity scores"
+            ],
+            "correct_index": 2,
+            "explanation": "Vector embeddings represent text meaning as numbers so semantically similar content can be matched. Severity scores rate harm, entities label people and places, and utterances train intent models.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-048",
+            "domain": "Implement generative AI solutions",
+            "stem": "A company must prevent an Azure OpenAI deployment from returning violent or hateful content to users. Which feature should the team configure?",
+            "options": [
+                "A managed identity",
+                "A private endpoint",
+                "A rate limit",
+                "A content filter policy"
+            ],
+            "correct_index": 3,
+            "explanation": "Content filter policies in Azure OpenAI block or flag harmful categories in prompts and completions. Managed identities and private endpoints control access, and rate limits govern throughput.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-049",
+            "domain": "Implement generative AI solutions",
+            "stem": "A team finds that an Azure OpenAI model gives the same factual answer but they want more varied creative output for marketing text. Which parameter should the team adjust?",
+            "options": [
+                "Temperature",
+                "Max tokens",
+                "Frequency penalty only",
+                "Stop sequences"
+            ],
+            "correct_index": 0,
+            "explanation": "Temperature controls randomness, so a higher value produces more varied output. Max tokens limits length, frequency penalty discourages repetition, and stop sequences end generation.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        },
+        {
+            "id": "ai-102-050",
+            "domain": "Implement generative AI solutions",
+            "stem": "A team must keep an Azure OpenAI request within a model context window when the prompt and expected completion are both long. Which limit should the team consider?",
+            "options": [
+                "The number of index shards",
+                "The maximum token count for the model",
+                "The content filter severity level",
+                "The learning rate of the model"
+            ],
+            "correct_index": 1,
+            "explanation": "Each model has a maximum token count covering both prompt and completion, so long inputs and outputs must fit within it. Severity levels, learning rates, and index shards relate to other concerns.",
+            "reference": "Microsoft AI-102 skills measured - Implement generative AI solutions"
+        }
+    ]
+}

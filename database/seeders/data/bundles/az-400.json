@@ -1,0 +1,717 @@
+{
+    "cert_key": "az-400",
+    "title": "Microsoft DevOps Engineer Expert (AZ-400)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/az-400.json",
+    "variant_label": "AZ-400 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 100,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AZ-400 skills measured (DevOps processes, source control, build/release pipelines, security/compliance, monitoring). Not a capture of past exam questions.",
+    "source_label": "Azure DevOps Engineer practice bank",
+    "items": [
+        {
+            "id": "az-400-001",
+            "domain": "Design and implement processes and communications",
+            "stem": "A development team wants to deliver working software in short, time-boxed iterations with a prioritized product backlog, sprint planning, and a daily standup. Which agile framework should the team adopt?",
+            "options": [
+                "Scrum",
+                "Waterfall",
+                "Kanban",
+                "ITIL service management"
+            ],
+            "correct_index": 0,
+            "explanation": "Scrum organizes work into time-boxed sprints with a product backlog, sprint planning, and a daily scrum. Waterfall is a sequential plan-driven method, Kanban visualizes flow without fixed iterations, and ITIL is a service management framework.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-002",
+            "domain": "Design and implement processes and communications",
+            "stem": "An operations team wants to visualize its workflow and explicitly limit the amount of work in progress instead of committing to fixed-length iterations. Which agile approach best fits this need?",
+            "options": [
+                "Extreme programming planning game",
+                "Kanban",
+                "Scrum",
+                "Waterfall"
+            ],
+            "correct_index": 1,
+            "explanation": "Kanban optimizes flow by visualizing work and enforcing work-in-progress limits on a continuous board. Scrum uses fixed sprints, Waterfall is sequential, and the XP planning game is a release planning activity rather than a flow-limiting method.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-003",
+            "domain": "Design and implement processes and communications",
+            "stem": "A regulated team must show which source commit produced a deployed build and which work item requested that change. Which Azure DevOps capability provides this traceability?",
+            "options": [
+                "Using a shared network drive for source code",
+                "Exporting work items to a spreadsheet",
+                "Linking work items to commits, pull requests, and builds",
+                "Storing build logs in Azure Blob Storage"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure DevOps links work items to commits, branches, pull requests, and builds so the chain from requirement to deployment can be audited. Log storage, shared drives, and spreadsheets do not establish that traceable relationship.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-004",
+            "domain": "Design and implement processes and communications",
+            "stem": "A team using GitHub wants a lightweight workflow in which every change is made on a short-lived branch and merged into main through a pull request before deployment. Which workflow is this?",
+            "options": [
+                "Gitflow",
+                "Centralized workflow",
+                "Forking workflow",
+                "GitHub flow"
+            ],
+            "correct_index": 3,
+            "explanation": "GitHub flow keeps main always deployable and integrates short-lived feature branches through reviewed pull requests. Gitflow adds long-lived develop and release branches, while centralized and forking workflows describe repository topologies rather than this release cadence.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-005",
+            "domain": "Design and implement processes and communications",
+            "stem": "Which branching workflow keeps a permanent develop branch alongside main and adds release and hotfix branches to support scheduled, versioned releases?",
+            "options": [
+                "Gitflow",
+                "GitHub flow",
+                "Trunk-based development",
+                "Feature branching without review"
+            ],
+            "correct_index": 0,
+            "explanation": "Gitflow maintains main and develop plus release and hotfix branches for planned versioned releases. GitHub flow uses only short-lived branches off main, and trunk-based development commits to a single shared trunk frequently.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-006",
+            "domain": "Design and implement processes and communications",
+            "stem": "A team wants to keep project documentation, onboarding notes, and meeting minutes versioned in the same repository as its code. Which Azure DevOps feature should the team use?",
+            "options": [
+                "Azure Test Plans",
+                "Azure Repos Wiki",
+                "Azure Boards",
+                "Azure Pipelines"
+            ],
+            "correct_index": 1,
+            "explanation": "The Azure Repos wiki stores versioned Markdown documentation beside the code and supports branching and review. Boards tracks work, Pipelines builds and releases, and Test Plans manages manual testing.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-007",
+            "domain": "Design and implement processes and communications",
+            "stem": "A product owner wants to plan several sprints, forecast team capacity, and track epics, features, and user stories across the project. Which Azure DevOps service should the product owner use?",
+            "options": [
+                "Azure Pipelines",
+                "Azure Artifacts",
+                "Azure Boards",
+                "Azure Repos"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Boards provides backlogs, sprint planning, capacity forecasting, and the epics, features, stories, and tasks hierarchy. Repos stores code, Pipelines automates delivery, and Artifacts hosts packages.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-008",
+            "domain": "Design and implement processes and communications",
+            "stem": "Stakeholders want a customizable, at-a-glance view of build health, key work item queries, and test results that the whole team can open from a browser. Which Azure DevOps feature delivers this?",
+            "options": [
+                "Release gates",
+                "Branch policies",
+                "Service hooks",
+                "Dashboards"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure DevOps dashboards assemble configurable widgets for builds, work tracking, and test results in one shareable view. Release gates, branch policies, and service hooks automate or enforce behavior rather than present status.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-009",
+            "domain": "Design and implement processes and communications",
+            "stem": "A developer wants the linked work item to move automatically when the pull request that references it is merged. Which mechanism connects the work item to the commit and pull request?",
+            "options": [
+                "Referencing the work item ID in the commit message and pull request",
+                "Renaming the branch to the work item title",
+                "Adding the work item to a personal favorites list",
+                "Creating a separate repository per work item"
+            ],
+            "correct_index": 0,
+            "explanation": "Referencing a work item ID with the hash syntax in commits and pull requests creates links that can drive state transitions such as Resolved. Branch names, favorites, and per-item repositories do not create that automated linkage.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement processes and communications"
+        },
+        {
+            "id": "az-400-010",
+            "domain": "Design and implement a source control strategy",
+            "stem": "A team wants to minimize merge conflicts by integrating changes into one shared main branch at least daily and using short-lived feature branches with feature flags. Which branching strategy is this?",
+            "options": [
+                "Environment branching",
+                "Trunk-based development",
+                "Gitflow",
+                "Release branching"
+            ],
+            "correct_index": 1,
+            "explanation": "Trunk-based development integrates small changes into a single trunk frequently, often daily, relying on feature flags to hide incomplete work. Gitflow uses long-lived develop and release branches, and environment branching is an anti-pattern that diverges code by stage.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-011",
+            "domain": "Design and implement a source control strategy",
+            "stem": "An organization wants all microservices and their shared libraries stored in one repository so a single commit can update an API and all of its consumers together. Which repository strategy is this?",
+            "options": [
+                "Forking workflow",
+                "Submodule-only strategy",
+                "Monorepo",
+                "Polyrepo"
+            ],
+            "correct_index": 2,
+            "explanation": "A monorepo keeps related projects and shared libraries together so atomic cross-cutting changes are possible in one commit. A polyrepo splits projects across repositories, and submodules are a mechanism rather than a repository strategy.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-012",
+            "domain": "Design and implement a source control strategy",
+            "stem": "A team must prevent direct pushes to the main branch and require a successful build plus at least one approval before a pull request can complete. What should the team configure in Azure Repos?",
+            "options": [
+                "Work item queries",
+                "Pipeline caching",
+                "Service connections",
+                "Branch policies"
+            ],
+            "correct_index": 3,
+            "explanation": "Branch policies on main enforce required reviewers, successful build validation, and linked work items before a pull request can merge. Queries, caching, and service connections serve unrelated purposes.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-013",
+            "domain": "Design and implement a source control strategy",
+            "stem": "Which Git feature lets reviewers comment on specific lines, request changes, and block completion until required approvals are granted?",
+            "options": [
+                "Pull request",
+                "Git tag",
+                "Cherry-pick",
+                "Stash"
+            ],
+            "correct_index": 0,
+            "explanation": "A pull request provides a review surface for line comments, requested changes, and approval gating before merge. Tags mark commits, cherry-pick copies commits, and stash shelves uncommitted work.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-014",
+            "domain": "Design and implement a source control strategy",
+            "stem": "A team wants to exclude compiled output and user-specific editor settings so they are never committed. Which file should the team add to the repository?",
+            "options": [
+                "README.md",
+                ".gitignore",
+                "package-lock.json",
+                ".gitattributes"
+            ],
+            "correct_index": 1,
+            "explanation": "A .gitignore file lists paths Git should not track, such as build output and local editor files. .gitattributes controls text and line-ending handling, package-lock.json records dependency versions, and README documents the project.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-015",
+            "domain": "Design and implement a source control strategy",
+            "stem": "A studio stores large binary art assets that bloat the repository history. Which Git feature should the team use to store those assets outside the normal object store?",
+            "options": [
+                "Git rebase",
+                "Git submodules",
+                "Git Large File Storage",
+                "Git squash merge"
+            ],
+            "correct_index": 2,
+            "explanation": "Git Large File Storage replaces large binaries with pointers and stores the content separately, keeping clones fast. Squash and rebase rewrite commits, and submodules embed other repositories rather than handle large files.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-016",
+            "domain": "Design and implement a source control strategy",
+            "stem": "An external contributor without write access wants to propose changes to a GitHub repository. Which model should the contributor use?",
+            "options": [
+                "Push directly to the main branch",
+                "Email a patch to the maintainers only",
+                "Request admin rights on the repository",
+                "Fork the repository and open a pull request"
+            ],
+            "correct_index": 3,
+            "explanation": "A contributor without write access forks the repository, commits to the fork, and opens a pull request for review. Direct pushes require write access, and emailing patches or requesting admin rights bypass the standard review path.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-017",
+            "domain": "Design and implement a source control strategy",
+            "stem": "A team protects main with required reviews and build validation but still wants a fast, auditable path for a one-line documentation fix. Which action should the team take?",
+            "options": [
+                "Open a pull request and let the required policy checks run",
+                "Disable branch policies permanently",
+                "Force push directly to main",
+                "Delete and recreate the main branch"
+            ],
+            "correct_index": 0,
+            "explanation": "Even small changes should go through a pull request so required reviewers and validation run and remain auditable. Disabling policies, force pushing, or recreating main defeats the protection and loses history.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement a source control strategy"
+        },
+        {
+            "id": "az-400-018",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team wants its build definition versioned in the same repository as the application code and reviewed through pull requests. Which Azure Pipelines approach should it use?",
+            "options": [
+                "A manual checklist in a wiki",
+                "A YAML pipeline stored in the repository",
+                "A classic build editor pipeline created in the portal",
+                "A scheduled task on a build server"
+            ],
+            "correct_index": 1,
+            "explanation": "YAML pipelines are code, so they are versioned with the application and changed through pull requests. Classic pipelines live in the service rather than the repo, and scheduled tasks or wiki checklists are not pipeline definitions.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-019",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Which pipeline construct groups jobs into logical phases such as Build, Test, and Deploy so they can run sequentially or in parallel?",
+            "options": [
+                "Task group",
+                "Variable",
+                "Stage",
+                "Step"
+            ],
+            "correct_index": 2,
+            "explanation": "A stage is a logical boundary that contains jobs and can be sequenced or run in parallel. Steps are individual actions inside a job, task groups are reusable sets of tasks, and variables hold values.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-020",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Within an Azure Pipelines stage, which unit runs on a single agent and contains an ordered sequence of steps?",
+            "options": [
+                "Stage",
+                "Artifact",
+                "Environment",
+                "Job"
+            ],
+            "correct_index": 3,
+            "explanation": "A job is the unit of work that is dispatched to one agent and runs its steps in order. A stage contains jobs, an artifact is a produced output, and an environment is a deployment target with checks.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-021",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "What is a single unit of work in a pipeline job, such as running a script or publishing a build artifact?",
+            "options": [
+                "Step",
+                "Stage",
+                "Agent pool",
+                "Trigger"
+            ],
+            "correct_index": 0,
+            "explanation": "A step is one action inside a job, such as a script or a task. A stage contains jobs, an agent pool supplies machines, and a trigger decides when the pipeline runs.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-022",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team needs builds to run on a machine with licensed desktop software and line-of-sight to on-premises resources. What should the team configure?",
+            "options": [
+                "A cloud build service without agents",
+                "A self-hosted agent",
+                "A Microsoft-hosted agent",
+                "A hosted macOS image"
+            ],
+            "correct_index": 1,
+            "explanation": "Self-hosted agents run on machines the team controls, so licensed software and private network access are available. Microsoft-hosted agents are managed and ephemeral without that software or network reach.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-023",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A small team wants each pipeline run to start on a clean, Microsoft-managed virtual machine with common tools preinstalled and no maintenance work. Which option should it choose?",
+            "options": [
+                "A dedicated physical build server",
+                "A developer workstation",
+                "A Microsoft-hosted agent",
+                "A self-hosted agent"
+            ],
+            "correct_index": 2,
+            "explanation": "Microsoft-hosted agents provide a fresh managed VM per run with widely used tools preinstalled. Self-hosted and physical servers require the team to patch and maintain them, and using a workstation is not supported at scale.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-024",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team wants the build to start automatically every time code is pushed to the main branch. What should the team configure?",
+            "options": [
+                "A manual release approval",
+                "A scheduled nightly trigger only",
+                "A pull request comment bot",
+                "A continuous integration trigger on the branch"
+            ],
+            "correct_index": 3,
+            "explanation": "A continuous integration trigger runs the pipeline when matching branches receive a push. Manual approvals, nightly schedules, and comment bots do not start a build on every push.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-025",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team wants validation to run only when a pull request targets the main branch, not on every push. Which trigger should the team configure?",
+            "options": [
+                "A pull request trigger scoped to main",
+                "A continuous integration trigger on all branches",
+                "A scheduled trigger",
+                "A pipeline completion trigger"
+            ],
+            "correct_index": 0,
+            "explanation": "A pull request trigger, or branch policy build validation, runs the pipeline when a pull request targets the specified branch. CI triggers fire on pushes, and scheduled or completion triggers are time or pipeline driven.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-026",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A compliance rule requires an integration test suite to run every night even when no code changes are pushed. Which trigger type should the team use?",
+            "options": [
+                "A manual run only",
+                "A scheduled trigger",
+                "A pull request trigger",
+                "A continuous integration trigger"
+            ],
+            "correct_index": 1,
+            "explanation": "A scheduled trigger runs the pipeline on a defined timetable regardless of pushes. PR and CI triggers depend on repository events, and manual runs require a person to start them.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-027",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "What is the versioned output a build produces, such as a compiled package that a later deployment consumes?",
+            "options": [
+                "A service connection",
+                "An agent pool",
+                "A pipeline artifact",
+                "A variable group"
+            ],
+            "correct_index": 2,
+            "explanation": "A pipeline artifact is the versioned output of a build that downstream stages or pipelines consume. Variable groups store values, service connections authorize external access, and agent pools supply machines.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-028",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team wants to build once and then deploy that same output to development, test, and production stages within one pipeline. Which capability should it use?",
+            "options": [
+                "Three separate pipelines that rebuild the source",
+                "A single stage with manual steps",
+                "A release pipeline that recompiles for each stage",
+                "A multi-stage YAML pipeline using published artifacts"
+            ],
+            "correct_index": 3,
+            "explanation": "A multi-stage pipeline publishes an artifact once and promotes the same immutable output through stages. Rebuilding per stage or recompiling produces different binaries, and one manual stage defeats environment separation.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-029",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team deploys a new version alongside the current one and switches traffic after verification so it can roll back instantly. Which deployment strategy is this?",
+            "options": [
+                "Blue-green deployment",
+                "Canary deployment",
+                "Rolling deployment",
+                "Recreate deployment"
+            ],
+            "correct_index": 0,
+            "explanation": "Blue-green runs two identical environments and cuts traffic over after the new one is verified, allowing an immediate switch back. Canary exposes a subset of users, rolling updates batches in place, and recreate incurs downtime.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-030",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team routes a small percentage of live traffic to a new version, watches telemetry, and gradually increases exposure as confidence grows. Which deployment strategy is this?",
+            "options": [
+                "Shadow deployment only",
+                "Canary deployment",
+                "Blue-green deployment",
+                "Recreate deployment"
+            ],
+            "correct_index": 1,
+            "explanation": "A canary release sends a small share of traffic to the new version and expands it as error and latency metrics stay healthy. Blue-green switches all traffic at once, recreate causes downtime, and a shadow deployment only mirrors traffic without serving it.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-031",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team updates application instances in batches so that only a subset is being changed at any moment while the rest keep serving traffic. Which deployment strategy is this?",
+            "options": [
+                "Canary deployment",
+                "Big bang deployment",
+                "Rolling deployment",
+                "Blue-green deployment"
+            ],
+            "correct_index": 2,
+            "explanation": "A rolling deployment replaces instances in batches, keeping the service available throughout. Blue-green swaps whole environments, canary shifts a traffic percentage, and big bang updates everything at once with downtime.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-032",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Which domain-specific language compiles to Azure Resource Manager templates and provides a concise syntax for declaring Azure resources?",
+            "options": [
+                "Terraform HCL",
+                "YAML pipeline",
+                "PowerShell DSC",
+                "Bicep"
+            ],
+            "correct_index": 3,
+            "explanation": "Bicep is a declarative Azure DSL that transpiles to ARM JSON and removes much of the template verbosity. Terraform HCL is a different multi-cloud tool, and YAML pipelines and DSC describe delivery and configuration rather than resource deployment.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-033",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Which declarative, JSON-based file describes the set of Azure resources to deploy into a resource group?",
+            "options": [
+                "An Azure Resource Manager template",
+                "An Azure Pipelines YAML file",
+                "A Key Vault access policy",
+                "A .gitignore file"
+            ],
+            "correct_index": 0,
+            "explanation": "An ARM template is a declarative JSON document that defines the resources and their configuration for a deployment. Pipeline YAML describes automation, access policies govern a vault, and .gitignore excludes files from Git.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-034",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "An organization wants a cloud-agnostic infrastructure-as-code tool that records deployed state and supports many providers through a plugin model. Which tool should it choose?",
+            "options": [
+                "Azure CLI scripts with no state",
+                "Terraform",
+                "Bicep",
+                "ARM templates"
+            ],
+            "correct_index": 1,
+            "explanation": "Terraform is a provider-agnostic IaC tool that tracks resource state and supports Azure and other clouds. Bicep and ARM templates target Azure only, and imperative CLI scripts without state cannot detect drift reliably.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-035",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Before a production deployment, a team wants a manual sign-off plus an automated check that the pipeline can reach the target resource. Which Azure Pipelines feature should the team configure?",
+            "options": [
+                "A pipeline artifact",
+                "An agent pool",
+                "An environment with approvals and checks",
+                "A variable group"
+            ],
+            "correct_index": 2,
+            "explanation": "Environments support approval gates and resource checks such as business hours or service connection access before a deployment job runs. Variable groups, artifacts, and agent pools do not enforce deployment gates.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-036",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A team wants to share a set of related variables across several pipelines and optionally back them with Azure Key Vault secrets. What should the team create?",
+            "options": [
+                "A single pipeline variable",
+                "A pipeline artifact",
+                "A task group",
+                "A variable group in the Library"
+            ],
+            "correct_index": 3,
+            "explanation": "A variable group in the Library shares values across pipelines and can be linked to Key Vault for secrets. Single pipeline variables are not shared, and artifacts and task groups serve different purposes.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-037",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A pipeline must use a database password without embedding it in the YAML file. What is the recommended approach?",
+            "options": [
+                "Store the secret in Azure Key Vault and reference it from the pipeline",
+                "Commit the password in an encrypted-looking comment",
+                "Put the password in the repository README",
+                "Store the password in a public variable printed in logs"
+            ],
+            "correct_index": 0,
+            "explanation": "Secrets belong in Azure Key Vault and are retrieved at run time through a service connection or variable group, never committed to the repo or printed. Embedding, documenting, or logging the password exposes it.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-038",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "A build spends several minutes downloading the same dependencies on every run. Which Azure Pipelines feature can reuse those dependencies between runs?",
+            "options": [
+                "Branch policies",
+                "Pipeline caching",
+                "Pipeline artifacts",
+                "Deployment jobs"
+            ],
+            "correct_index": 1,
+            "explanation": "The cache task stores dependencies keyed on a hash so later runs restore them instead of downloading again. Artifacts move build outputs between stages, deployment jobs target environments, and branch policies gate merges.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-039",
+            "domain": "Design and implement build and release pipelines",
+            "stem": "Which type of pipeline job is designed for deployment to an environment and can apply strategies such as run once, rolling, or canary?",
+            "options": [
+                "A server job",
+                "A matrix job",
+                "A deployment job",
+                "An agentless job"
+            ],
+            "correct_index": 2,
+            "explanation": "A deployment job targets an environment and supports run once, rolling, and canary strategies with hooks for lifecycle steps. Agentless and server jobs run orchestration tasks, and a matrix job fans out parallel test configurations.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement build and release pipelines"
+        },
+        {
+            "id": "az-400-040",
+            "domain": "Design and implement security and compliance",
+            "stem": "Which Azure service centrally stores and controls access to secrets, encryption keys, and certificates used by an application?",
+            "options": [
+                "Azure Blob Storage",
+                "Azure Container Registry",
+                "Azure Monitor",
+                "Azure Key Vault"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Key Vault securely stores secrets, keys, and certificates and governs access through policies and RBAC. Blob Storage holds objects, a container registry hosts images, and Monitor collects telemetry.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-041",
+            "domain": "Design and implement security and compliance",
+            "stem": "A team wants to detect credentials such as passwords and connection strings that were accidentally committed to a repository. Which capability should the team enable?",
+            "options": [
+                "Secret scanning in the pipeline and repository",
+                "Pipeline caching",
+                "Branch protection without scans",
+                "Code coverage reporting"
+            ],
+            "correct_index": 0,
+            "explanation": "Secret scanning, including the credential scanner task and GitHub secret scanning, inspects commits for exposed credentials. Caching, branch protection alone, and coverage reporting do not detect committed secrets.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-042",
+            "domain": "Design and implement security and compliance",
+            "stem": "A team wants automated pull requests that upgrade vulnerable and outdated open-source dependencies in a GitHub repository. Which feature should it enable?",
+            "options": [
+                "Repository rulesets",
+                "Dependabot",
+                "CodeQL",
+                "GitHub Actions cache"
+            ],
+            "correct_index": 1,
+            "explanation": "Dependabot raises pull requests to update vulnerable or outdated dependencies and can apply security advisories. CodeQL analyzes code for vulnerabilities, caching speeds builds, and rulesets govern branch behavior.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-043",
+            "domain": "Design and implement security and compliance",
+            "stem": "A security team wants static analysis of source code to find vulnerabilities such as injection flaws before code is merged. Which capability should it use?",
+            "options": [
+                "A CI variable group",
+                "Azure Artifacts feeds",
+                "Code scanning with CodeQL",
+                "Dependabot version updates"
+            ],
+            "correct_index": 2,
+            "explanation": "CodeQL performs semantic static analysis and surfaces security findings as code scanning alerts on pull requests. Dependabot manages dependencies, and variable groups and artifact feeds are unrelated to source analysis.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-044",
+            "domain": "Design and implement security and compliance",
+            "stem": "A regulated organization must prove that a production release was reviewed and that security checks passed before deployment. Which configuration provides this evidence?",
+            "options": [
+                "A pipeline that deploys on every commit without gates",
+                "A shared spreadsheet of approvals",
+                "A README note that reviews happened",
+                "Environment approvals and checks with pipeline audit logs"
+            ],
+            "correct_index": 3,
+            "explanation": "Approvals and checks on an environment create recorded, auditable evidence that sign-off and automated gates passed before deployment. Ungated pipelines, spreadsheets, and README notes provide no enforceable or tamper-resistant record.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-045",
+            "domain": "Design and implement security and compliance",
+            "stem": "A pipeline must deploy to Azure without storing long-lived credentials. Which approach follows Microsoft guidance?",
+            "options": [
+                "A service connection using workload identity federation",
+                "A service principal secret pasted into the YAML",
+                "An Azure user password in a variable group",
+                "A personal access token committed to the repository"
+            ],
+            "correct_index": 0,
+            "explanation": "Workload identity federation lets a service connection obtain short-lived tokens without stored secrets. Pasted secrets, stored passwords, and committed tokens are long-lived credentials that can be leaked or reused.",
+            "reference": "Microsoft AZ-400 skills measured - Design and implement security and compliance"
+        },
+        {
+            "id": "az-400-046",
+            "domain": "Monitor and optimize pipelines",
+            "stem": "Which Azure service provides application performance monitoring with request rates, failure rates, and distributed traces for a deployed application?",
+            "options": [
+                "Azure Policy",
+                "Application Insights",
+                "Azure Advisor",
+                "Microsoft Cost Management"
+            ],
+            "correct_index": 1,
+            "explanation": "Application Insights collects telemetry such as requests, failures, dependencies, and distributed traces for live applications. Advisor recommends improvements, Cost Management tracks spend, and Policy enforces configuration rules.",
+            "reference": "Microsoft AZ-400 skills measured - Monitor and optimize pipelines"
+        },
+        {
+            "id": "az-400-047",
+            "domain": "Monitor and optimize pipelines",
+            "stem": "A team wants to see pipeline pass rates, duration trends, and which stages or tests fail most often over time. Which Azure DevOps feature should the team use?",
+            "options": [
+                "Service hooks only",
+                "Azure Artifacts feeds",
+                "Pipeline analytics",
+                "Branch policies"
+            ],
+            "correct_index": 2,
+            "explanation": "Pipeline analytics reports pass rate, duration, and failure trends across pipeline runs and tests. Branch policies gate merges, service hooks forward events, and artifact feeds host packages.",
+            "reference": "Microsoft AZ-400 skills measured - Monitor and optimize pipelines"
+        },
+        {
+            "id": "az-400-048",
+            "domain": "Monitor and optimize pipelines",
+            "stem": "Which metric indicates the percentage of application code that is exercised by the automated test suite?",
+            "options": [
+                "Build pass rate",
+                "Deployment duration",
+                "Change failure rate",
+                "Code coverage"
+            ],
+            "correct_index": 3,
+            "explanation": "Code coverage measures how much of the codebase automated tests execute. Pass rate, deployment duration, and change failure rate describe pipeline outcomes rather than how much code the tests touch.",
+            "reference": "Microsoft AZ-400 skills measured - Monitor and optimize pipelines"
+        },
+        {
+            "id": "az-400-049",
+            "domain": "Monitor and optimize pipelines",
+            "stem": "A team wants to be notified automatically when a release fails or when application error rates exceed a threshold. What should the team configure?",
+            "options": [
+                "Alerts on pipeline and Application Insights metrics",
+                "A nightly manual review meeting",
+                "A wiki page listing failures",
+                "A branch policy requiring two approvers"
+            ],
+            "correct_index": 0,
+            "explanation": "Alerts trigger notifications when pipeline events or Application Insights metrics breach a condition. Meetings and wiki pages rely on people noticing, and branch policies control merges rather than raise alerts.",
+            "reference": "Microsoft AZ-400 skills measured - Monitor and optimize pipelines"
+        },
+        {
+            "id": "az-400-050",
+            "domain": "Monitor and optimize pipelines",
+            "stem": "After each deployment a team wants to verify that a web endpoint is reachable and responding correctly from multiple regions. Which capability should the team use?",
+            "options": [
+                "A variable group",
+                "Availability tests in Application Insights",
+                "Pipeline caching",
+                "A branch policy"
+            ],
+            "correct_index": 1,
+            "explanation": "Application Insights availability tests ping an endpoint from multiple locations and alert on failures. Caching, branch policies, and variable groups do not monitor a live endpoint.",
+            "reference": "Microsoft AZ-400 skills measured - Monitor and optimize pipelines"
+        }
+    ]
+}

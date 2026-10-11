@@ -1,0 +1,1067 @@
+{
+    "cert_key": "aws-dop",
+    "title": "AWS Certified DevOps Engineer - Professional (DOP-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-dop.json",
+    "variant_label": "DOP-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 75,
+        "duration_minutes": 180,
+        "scoring": "750/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified DevOps Engineer - Professional DOP-C02 exam guide (six official domains and weightings). Not a capture of past questions.",
+    "source_label": "AWS DevOps Professional practice bank",
+    "items": [
+        {
+            "id": "aws-dop-001",
+            "domain": "SDLC Automation",
+            "stem": "A development team wants every push to its CodeCommit repository to start a pipeline build immediately instead of waiting for periodic polling. Which configuration delivers near-real-time pipeline starts?",
+            "options": [
+                "A CodePipeline source action that uses CodeCommit with event-based change detection so commits start the pipeline at once",
+                "A CloudWatch rule that polls the repository every minute",
+                "A CodeBuild project that scans the repository on a cron schedule",
+                "A manual pipeline start performed from the console after each commit"
+            ],
+            "correct_index": 0,
+            "explanation": "CodePipeline supports event-based change detection for CodeCommit, which starts the pipeline as soon as a commit arrives. Polling rules and scheduled builds add latency, and manual starts defeat automation.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-002",
+            "domain": "SDLC Automation",
+            "stem": "A company must deploy a new version of a web application to an Auto Scaling group of EC2 instances with no downtime and the option to shift traffic gradually to the new version while keeping the old fleet available for rollback. Which CodeDeploy deployment type meets this need?",
+            "options": [
+                "An in-place deployment that replaces instances one at a time",
+                "A blue/green deployment that provisions a replacement fleet behind the load balancer",
+                "A manual deployment performed by terminating instances",
+                "A deployment that stops all instances before installing the new version"
+            ],
+            "correct_index": 1,
+            "explanation": "Blue/green provisions a replacement fleet and shifts load-balancer traffic only after the new instances pass health checks, so there is no downtime and the old fleet remains for rollback. In-place replacement serves both versions during the change, manual termination is uncontrolled, and stopping all instances causes an outage.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-003",
+            "domain": "SDLC Automation",
+            "stem": "A team deploys a Lambda function and needs to release a new version to a small percentage of callers before shifting all traffic, while automatically reverting if the error rate rises. Which mechanism should be used?",
+            "options": [
+                "Deploy the function to a second Region and route all traffic there",
+                "Overwrite the published function so every caller receives the new code at once",
+                "Publish a new version and use an alias with weighted routing that CodeDeploy shifts over time",
+                "Create a second function and let each client choose randomly between them"
+            ],
+            "correct_index": 2,
+            "explanation": "Lambda aliases support weighted traffic shifting, and CodeDeploy can manage a canary or linear shift that monitors alarms and rolls back on failure. Overwriting the function exposes everyone immediately, and client-side or Region-level routing does not provide controlled rollout or automatic rollback.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-004",
+            "domain": "SDLC Automation",
+            "stem": "A pipeline must stop and require a recorded human decision before a build is released to production. Which CodePipeline action should be added between the staging and production stages?",
+            "options": [
+                "A Lambda action that sleeps for an hour",
+                "A build action that always succeeds",
+                "An IAM policy that denies the production role",
+                "A manual approval action"
+            ],
+            "correct_index": 3,
+            "explanation": "A manual approval action halts the pipeline until an authorized user approves, giving a controlled and auditable gate before production. A sleep action records no decision, an always-succeeding build gates nothing, and an IAM denial would stop deployments entirely rather than approve them.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-005",
+            "domain": "SDLC Automation",
+            "stem": "A build must compile code, run unit tests, and produce an artifact that downstream stages promote unchanged to every environment. Which CodeBuild and CodePipeline configuration supports this immutable promotion?",
+            "options": [
+                "Have the buildspec output artifacts that CodePipeline passes to later stages",
+                "Commit the compiled binary into the repository after every build",
+                "Store the binary on one EC2 instance that all stages read from",
+                "Rebuild from source in every stage so each environment compiles its own copy"
+            ],
+            "correct_index": 0,
+            "explanation": "CodeBuild can emit artifacts that CodePipeline carries forward, so one tested binary is promoted to every environment, which supports immutable deployments. Rebuilding per stage can produce a different binary, committing build output bloats the repository, and a single instance is neither durable nor reproducible.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-006",
+            "domain": "SDLC Automation",
+            "stem": "A team wants failed unit tests during a CodeBuild run to stop the pipeline immediately rather than allow a broken build to proceed. Which behavior should the buildspec rely on?",
+            "options": [
+                "Ignore the test command exit code so the build continues",
+                "Ensure the test command returns a non-zero exit code so the build phase fails",
+                "Add a manual approval step after the build",
+                "Enable dependency caching for the test packages"
+            ],
+            "correct_index": 1,
+            "explanation": "CodeBuild marks a build failed when a phase command exits non-zero, which stops the pipeline. Ignoring the exit code hides failures, a manual approval does not evaluate test results, and caching only speeds up repeats.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-007",
+            "domain": "SDLC Automation",
+            "stem": "A company needs a private, versioned repository for internal libraries that its build projects reference, and it wants to avoid hand-managed file shares. Which service should be used?",
+            "options": [
+                "A CodeCommit repository holding the compiled packages",
+                "An S3 bucket with public read access",
+                "AWS CodeArtifact with a repository and an upstream connection",
+                "An EC2 instance serving files over plain FTP"
+            ],
+            "correct_index": 2,
+            "explanation": "CodeArtifact is a managed artifact repository that stores and versions packages and can proxy public repositories. A public bucket exposes internal libraries, a plain FTP server is unmanaged and insecure, and CodeCommit is intended for source code rather than dependency packages.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-008",
+            "domain": "SDLC Automation",
+            "stem": "A pipeline needs database credentials during a build but must never store them in the repository or the buildspec. Which approach follows best practice?",
+            "options": [
+                "Commit an encrypted file to the repository and publish the key in the readme",
+                "Place the credentials in an environment variable committed to source control",
+                "Hard-code the credentials inside the buildspec file",
+                "Retrieve the credentials from AWS Secrets Manager at run time using the build role"
+            ],
+            "correct_index": 3,
+            "explanation": "Retrieving secrets from Secrets Manager at run time grants the build role least-privilege access and keeps secrets out of source control. Hard-coded or committed credentials stay exposed, and publishing a decryption key defeats the encryption.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-009",
+            "domain": "SDLC Automation",
+            "stem": "One pipeline deploys the same application to development, staging, and production accounts. Which design lets the production stage deploy securely without long-lived credentials?",
+            "options": [
+                "Assume a role in the target account using a cross-account trust configured for that stage",
+                "Give every developer the production account root credentials",
+                "Disable authentication for the production deployment stage",
+                "Copy long-lived IAM user keys for the production account into the pipeline"
+            ],
+            "correct_index": 0,
+            "explanation": "Cross-account roles let each stage assume short-lived credentials in the target account, which avoids static keys and supports least privilege. Copying long-lived keys is insecure and hard to rotate, sharing root credentials violates least privilege, and disabling authentication removes control.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-010",
+            "domain": "SDLC Automation",
+            "stem": "A team running Elastic Beanstalk wants a deployment that launches a complete new set of instances and swaps them into service only after they pass health checks, without reducing capacity during the update. Which deployment policy should it choose?",
+            "options": [
+                "All at once",
+                "Immutable",
+                "Rolling",
+                "Rolling with additional batch"
+            ],
+            "correct_index": 1,
+            "explanation": "Immutable deployment launches a full new set of instances in a temporary Auto Scaling group and swaps them in only when healthy. All at once causes downtime, rolling reduces capacity during the update, and rolling with additional batch still modifies the existing instance set in place.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-011",
+            "domain": "SDLC Automation",
+            "stem": "A company wants to release a new web version by switching DNS so users move to a separate new environment and can be moved back quickly if problems appear. Which blue/green approach should be used?",
+            "options": [
+                "Increasing the instance size in the existing environment",
+                "Moving an Elastic IP address between two environments",
+                "Two identical environments switched with Route 53 weighted or failover records",
+                "Updating one environment in place during business hours"
+            ],
+            "correct_index": 2,
+            "explanation": "Blue/green with DNS switches weighted or failover records to move traffic between two identical environments and allows a quick rollback. In-place updates serve both versions from one environment, a larger instance does not separate versions, and moving an Elastic IP is not a DNS-based traffic switch.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-012",
+            "domain": "SDLC Automation",
+            "stem": "A team wants CodeDeploy to revert automatically when a CloudWatch alarm fires shortly after a production deployment. Which configuration should be added to the deployment group?",
+            "options": [
+                "Instruct operators to watch a dashboard and roll back by hand",
+                "Add a second manual approval before the rollout",
+                "Increase the deployment timeout to several hours",
+                "Enable automatic rollback and associate the CloudWatch alarm with the deployment"
+            ],
+            "correct_index": 3,
+            "explanation": "CodeDeploy can monitor CloudWatch alarms during a deployment and automatically roll back to the last known good revision when one fires. Manual watching is slow, another approval only delays the release, and a longer timeout does not detect or correct a bad deployment.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-013",
+            "domain": "SDLC Automation",
+            "stem": "A company wants integration tests to run against a freshly configured environment and then have that environment removed automatically as part of the pipeline. Which approach should be used?",
+            "options": [
+                "Have a pipeline stage provision a temporary environment, run the tests, and tear it down",
+                "Keep one static shared test environment that everyone uses indefinitely",
+                "Skip integration testing whenever the change set is small",
+                "Test only in production after users report defects"
+            ],
+            "correct_index": 0,
+            "explanation": "Ephemeral test environments created and destroyed by the pipeline give clean, isolated integration testing and then free resources. Testing only in production exposes users, a permanent shared environment drifts and collides, and skipping tests raises release risk.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-014",
+            "domain": "SDLC Automation",
+            "stem": "A team discovers that the artifact running in production differs from the one that passed testing because a later pipeline stage recompiled the code. Which practice prevents this discrepancy?",
+            "options": [
+                "Deploy from a developer workstation to shorten the cycle",
+                "Promote the exact artifact built once through every stage",
+                "Rebuild from source in each stage to save storage",
+                "Allow each stage to modify the artifact for its environment"
+            ],
+            "correct_index": 1,
+            "explanation": "Building once and promoting the identical artifact guarantees that production runs exactly what was tested. Rebuilding can introduce differences, mutating the artifact invalidates the test result, and deploying from a workstation bypasses the controlled pipeline.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-015",
+            "domain": "SDLC Automation",
+            "stem": "A team manages a serverless application with the AWS Serverless Application Model and wants safe deployment of new Lambda versions with gradual traffic shifting and automatic rollback. Which SAM feature should be used?",
+            "options": [
+                "Publishing the function under a new name for each deployment",
+                "An API Gateway stage variable pinned to one fixed version",
+                "Deployment preferences that use CodeDeploy to shift traffic and roll back on alarms",
+                "Overwriting the production function in place on every release"
+            ],
+            "correct_index": 2,
+            "explanation": "SAM integrates with CodeDeploy so serverless deployments can use canary or linear traffic shifting and automatic rollback on alarms. In-place overwrites give no gradual shift, renaming functions breaks integrations, and a fixed stage variable does not shift traffic over time.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-016",
+            "domain": "SDLC Automation",
+            "stem": "A regulated team wants pull requests against a protected branch to require approval from at least two named reviewers before they can be merged. Which CodeCommit feature enforces this?",
+            "options": [
+                "A note in the team wiki requesting two approvals",
+                "A CloudWatch alarm that fires when a pull request is merged",
+                "A Lambda function that emails the reviewers after a merge",
+                "An approval rule template attached to the repository"
+            ],
+            "correct_index": 3,
+            "explanation": "CodeCommit approval rule templates require a set number of approvals from specified users before a pull request can merge. Documentation and email rely on goodwill, and a post-merge alarm is too late to prevent an unapproved change.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-017",
+            "domain": "SDLC Automation",
+            "stem": "A team running a canary deployment wants the release to revert automatically when the new version degrades the user experience. Which signals should drive the deployment alarms?",
+            "options": [
+                "Service CloudWatch metrics such as error rate and latency",
+                "The number of commits merged before the release",
+                "The total size of the deployment artifact",
+                "Only the CPU utilization of the build server"
+            ],
+            "correct_index": 0,
+            "explanation": "Deployment alarms should track service-level signals such as error rate and latency so a canary that degrades triggers rollback. Build-server CPU, commit counts, and artifact size do not reflect user-facing health.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - SDLC Automation"
+        },
+        {
+            "id": "aws-dop-018",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A company must deploy a baseline of IAM roles and AWS Config rules into every account of its organization, including accounts created later. Which CloudFormation feature should it use?",
+            "options": [
+                "A single stack deployed once in the management account",
+                "CloudFormation StackSets with service-managed permissions and automatic deployment",
+                "A shell script that a person runs in each account",
+                "A nested stack in one account that imports the other accounts"
+            ],
+            "correct_index": 1,
+            "explanation": "StackSets create, update, and delete stacks across many accounts and Regions, and service-managed permissions with automatic deployment cover new accounts. A single stack affects one account, manual scripts are not automatic, and nested stacks stay within one account and Region.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-019",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A team suspects that manual changes have altered production resources that CloudFormation created. Which CloudFormation capability detects the difference between the template and the actual resources?",
+            "options": [
+                "Stack policies",
+                "Change sets",
+                "Drift detection",
+                "Rollback triggers"
+            ],
+            "correct_index": 2,
+            "explanation": "Drift detection compares the actual resource configuration with the template and reports differences, revealing out-of-band changes. Change sets preview a planned update, rollback triggers react to alarms during an update, and stack policies protect resources during updates.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-020",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "Before updating a production stack, a team wants to review exactly which resources CloudFormation will add, modify, or replace. Which feature provides this preview?",
+            "options": [
+                "A stack policy that denies all updates",
+                "A snapshot taken after the update is applied",
+                "A drift detection run on the stack",
+                "A change set created before the update"
+            ],
+            "correct_index": 3,
+            "explanation": "A change set summarizes the operations an update will perform, including resource replacement, before the change is executed. A stack policy can protect resources but does not preview changes, snapshots are taken after the fact, and drift detection reports current differences rather than a planned update.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-021",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A team wants to reuse a standard networking template inside several application templates without copying the resource definitions into each one. Which CloudFormation construct should be used?",
+            "options": [
+                "A nested stack referenced from the parent template",
+                "Copying the networking resources into every template",
+                "A change set shared between templates",
+                "An output value typed into each template by hand"
+            ],
+            "correct_index": 0,
+            "explanation": "Nested stacks let a parent template reference a child template so common resources are defined once and reused. Copying duplicates maintenance, change sets apply to one stack, and manually typed outputs invite drift and errors.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-022",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A team needs CloudFormation to create a resource type that it does not support natively, using custom provisioning logic written in a Lambda function. Which mechanism should be used?",
+            "options": [
+                "A parameter with an allowed value list",
+                "A custom resource backed by the Lambda function",
+                "An output that returns a fixed string",
+                "A mapping declared in the template"
+            ],
+            "correct_index": 1,
+            "explanation": "Custom resources invoke a Lambda function to create, update, and delete resources that CloudFormation does not support natively. Outputs, mappings, and parameters only pass values and cannot provision custom resources.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-023",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A developer wants to define AWS infrastructure with familiar programming constructs and have the tool generate CloudFormation templates. Which tool should be used?",
+            "options": [
+                "A spreadsheet listing resource names",
+                "Manual resource creation in the AWS Management Console",
+                "The AWS Cloud Development Kit",
+                "The CloudFormation visual designer alone"
+            ],
+            "correct_index": 2,
+            "explanation": "The AWS Cloud Development Kit lets developers define infrastructure with programming constructs and synthesizes CloudFormation templates for deployment. The visual designer has no programming model, and spreadsheets or console work are not repeatable infrastructure as code.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-024",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A company wants to build hardened Amazon Machine Images on a schedule through a documented workflow that applies patches and then tests the result. Which service should be used?",
+            "options": [
+                "Manually created instances captured as AMIs each month",
+                "AWS Elastic Beanstalk building images during deployment",
+                "AWS Batch running a shell script on one instance",
+                "EC2 Image Builder with a pipeline that builds and tests images"
+            ],
+            "correct_index": 3,
+            "explanation": "EC2 Image Builder defines image recipes and pipelines that build, test, and distribute AMIs automatically. Manual captures are error-prone and undocumented, AWS Batch is a compute service, and Elastic Beanstalk deploys applications rather than producing golden AMIs.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-025",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A company wants to apply and continuously re-enforce a baseline configuration such as an agent install and registry settings across a fleet of managed instances. Which AWS Systems Manager capability should be used?",
+            "options": [
+                "State Manager associations that apply the configuration on a schedule",
+                "A one-time manual login to each instance",
+                "A CodeCommit repository of configuration notes",
+                "An Auto Scaling group launch template alone"
+            ],
+            "correct_index": 0,
+            "explanation": "State Manager associations define and reapply a desired state across a managed fleet so configuration stays consistent. Manual logins do not scale, notes enforce nothing, and a launch template only affects newly launched instances and not drift on running ones.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-026",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A company must patch a fleet of Windows and Linux instances on a defined schedule with controlled reboots and compliance reporting. Which Systems Manager capability should be used?",
+            "options": [
+                "A CloudFormation stack that restarts instances weekly",
+                "Patch Manager with a patch baseline and a maintenance window",
+                "Amazon Inspector installing patches automatically",
+                "Turning on automatic updates inside each application"
+            ],
+            "correct_index": 1,
+            "explanation": "Patch Manager uses a patch baseline to select approved patches and a maintenance window to apply them with controlled reboots and reporting. Inspector scans for vulnerabilities but does not install patches, application-level updates miss the operating system, and restarting instances does not patch them.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-027",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "An application reads configuration values such as feature flags and database host names at startup and needs them stored centrally with versioning and optional encryption. Which service should be used?",
+            "options": [
+                "An S3 bucket without encryption or versioning",
+                "Environment variables compiled into the application",
+                "AWS Systems Manager Parameter Store",
+                "A text file copied onto each instance at launch"
+            ],
+            "correct_index": 2,
+            "explanation": "Parameter Store centralizes configuration with versioning and supports encrypted SecureString values that applications read at run time. Copied files and compiled-in values require redeployment to change, and an unencrypted, unversioned bucket lacks the required controls.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-028",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A company with existing Chef cookbooks wants to keep managing server configuration with Chef while using a managed service on AWS. Which service should be used?",
+            "options": [
+                "AWS Elastic Beanstalk with custom scripts",
+                "A single large EC2 instance running Chef manually",
+                "AWS CodeBuild used as a configuration server",
+                "AWS OpsWorks for Chef Automate"
+            ],
+            "correct_index": 3,
+            "explanation": "OpsWorks for Chef Automate is a managed Chef server that runs existing cookbooks. Elastic Beanstalk deploys applications rather than running a Chef server, a self-managed instance is not highly available or managed, and CodeBuild is a build service, not a configuration management server.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-029",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A team wants to eliminate configuration drift by replacing running instances with new ones built from a tested image on every change instead of modifying servers in place. Which practice does this describe?",
+            "options": [
+                "Immutable infrastructure using golden AMIs",
+                "In-place patching of long-lived servers",
+                "Manual configuration changes recorded in a wiki",
+                "Mutable servers updated by a nightly script"
+            ],
+            "correct_index": 0,
+            "explanation": "Immutable infrastructure replaces instances with freshly built, tested images on each change, which removes drift and makes rollback reliable. In-place patching, manual changes, and nightly scripts leave accumulated divergence on long-lived servers.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-030",
+            "domain": "Configuration Management and Infrastructure as Code",
+            "stem": "A team configures an Elastic Beanstalk environment and needs to install a monitoring agent and set an environment variable on every instance in a repeatable way. Where should these customizations be defined?",
+            "options": [
+                "In an email sent to the operations team",
+                "In .ebextensions configuration files committed with the application",
+                "By logging into each instance after it launches",
+                "In a screenshot of the console settings"
+            ],
+            "correct_index": 1,
+            "explanation": "Elastic Beanstalk applies .ebextensions configuration files during environment creation and updates, so customizations are repeatable and versioned. Manual logins, screenshots, and emails are not automated and do not persist through scaling or rebuilds.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Configuration Management and Infrastructure as Code"
+        },
+        {
+            "id": "aws-dop-031",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A production database must remain available if a single Availability Zone fails and must fail over without application changes to the connection endpoint. Which Amazon RDS configuration should be used?",
+            "options": [
+                "A larger instance class in the same Availability Zone",
+                "A single-AZ instance with nightly snapshots",
+                "A Multi-AZ deployment with a synchronous standby in another Availability Zone",
+                "A read replica in the same Availability Zone"
+            ],
+            "correct_index": 2,
+            "explanation": "RDS Multi-AZ keeps a synchronous standby in a different Availability Zone and fails over automatically by repointing the instance endpoint. Single-AZ snapshots require a manual restore, a same-AZ replica shares the failure domain, and a larger instance does not add redundancy.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-032",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A web tier behind an Elastic Load Balancer must automatically replace instances that fail application health checks and maintain capacity under demand. Which configuration provides this self-healing behavior?",
+            "options": [
+                "A fixed set of instances with no Auto Scaling group",
+                "An Auto Scaling group that checks only EC2 status",
+                "Instances that operators restart after receiving email alerts",
+                "An Auto Scaling group with ELB health checks enabled and a minimum capacity"
+            ],
+            "correct_index": 3,
+            "explanation": "An Auto Scaling group using ELB health checks replaces instances that fail application-level checks and maintains minimum capacity while scaling. A fixed fleet cannot self-heal, EC2-only checks miss application failures, and manual restarts are slow and error-prone.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-033",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A company wants traffic to move automatically to a standby Region when the primary Region becomes unavailable to users. Which Route 53 configuration should be used?",
+            "options": [
+                "Failover routing with health checks on both Regions",
+                "A single record with a very long time to live",
+                "Weighted records with equal weights and no health checks",
+                "A record that points only to the primary Region"
+            ],
+            "correct_index": 0,
+            "explanation": "Failover routing with health checks directs users to the secondary endpoint when the primary fails its check. A single record or a primary-only record cannot redirect, and equal weights without health checks keep sending traffic to the failed Region.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-034",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A company needs a disaster recovery strategy with the lowest cost that can tolerate a recovery time of many hours while keeping backups in a separate Region. Which strategy fits?",
+            "options": [
+                "Warm standby with a scaled-down running copy",
+                "Backup and restore to a separate Region",
+                "Pilot light with a continuously replicated database",
+                "Multi-site active-active in two Regions"
+            ],
+            "correct_index": 1,
+            "explanation": "Backup and restore keeps only periodic backups, giving the lowest cost but the longest recovery time, which matches the stated tolerance. Multi-site, warm standby, and pilot light keep running infrastructure, so they recover faster but cost more.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-035",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A microservice calls a dependency that is intermittently slow, causing request threads to pile up and failures to cascade. Which pattern should be applied so calls fail fast and recovery is detected automatically?",
+            "options": [
+                "Unlimited growth of the thread pool",
+                "Removal of all timeouts so calls can finish",
+                "A circuit breaker that opens after a failure threshold and probes for recovery",
+                "Immediate retries in an infinite loop"
+            ],
+            "correct_index": 2,
+            "explanation": "A circuit breaker trips after repeated failures, fails fast instead of piling up threads, and periodically probes for recovery. Infinite immediate retries worsen the overload, an unbounded thread pool hides the problem and exhausts memory, and removing timeouts lets slow calls block even longer.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-036",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "An application is throttled by a downstream API during traffic spikes and must retry without amplifying the load on the dependency. Which retry strategy should be used?",
+            "options": [
+                "A single fixed retry after one second regardless of load",
+                "No retries at all",
+                "Immediate retries as fast as the client can issue them",
+                "Exponential backoff with jitter between attempts"
+            ],
+            "correct_index": 3,
+            "explanation": "Exponential backoff with jitter spaces retries out and randomizes them so many clients do not retry at the same instant, which avoids a retry storm. Immediate retries amplify throttling, a fixed delay can synchronize clients, and disabling retries leaves transient errors unrecovered.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-037",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A system must not lose messages that an application cannot process, and operators need to inspect and replay them later. Which design provides this?",
+            "options": [
+                "Configure a dead-letter queue for messages that exceed the receive count",
+                "Increase the visibility timeout indefinitely",
+                "Disable the queue and process messages inline",
+                "Delete the message immediately when any error occurs"
+            ],
+            "correct_index": 0,
+            "explanation": "A dead-letter queue captures messages that repeatedly fail processing so they can be examined and redelivered without loss. Deleting failed messages loses data, an endless visibility timeout hides poisoning messages, and processing inline removes the durability of the queue.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-038",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A company needs a relational database that can survive the loss of an entire Region and allow a secondary Region to be promoted quickly. Which service feature should be used?",
+            "options": [
+                "A larger primary instance class",
+                "Amazon Aurora Global Database with a secondary Region cluster",
+                "A read replica in the same Region",
+                "Nightly snapshots copied to an S3 bucket"
+            ],
+            "correct_index": 1,
+            "explanation": "Aurora Global Database maintains replicas in another Region and can promote a secondary Region quickly, providing cross-Region disaster recovery. A same-Region replica does not survive a Regional failure, snapshot copies require slow restores, and a larger instance adds no Regional redundancy.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-039",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "An Auto Scaling group must drain connections and finish in-flight work before terminating an instance during scale-in. Which feature should be configured?",
+            "options": [
+                "A larger minimum capacity that prevents scale-in",
+                "A load balancer configured with sticky sessions",
+                "An Auto Scaling life cycle hook that delays termination so the instance can drain",
+                "A shorter health check grace period"
+            ],
+            "correct_index": 2,
+            "explanation": "A terminating life cycle hook pauses instance termination so the application can drain and complete work before the instance goes away. Shortening the grace period terminates faster, blocking scale-in wastes capacity, and sticky sessions do not coordinate graceful shutdown.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-040",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A web application stores session state in individual instance memory, so scaling and instance replacement log users out. Which change makes the tier resilient?",
+            "options": [
+                "Increase the instance size to hold more sessions",
+                "Keep sessions only in browser cookies with no server state",
+                "Enable sticky sessions and never replace instances",
+                "Externalize session state to a shared data store such as ElastiCache"
+            ],
+            "correct_index": 3,
+            "explanation": "Moving session state to a shared store lets any instance serve any user and allows instances to be replaced freely. Sticky sessions still lose state when an instance fails, a larger instance does not share state, and dropping server-side state is not always feasible.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-041",
+            "domain": "Resilient Cloud Solutions",
+            "stem": "A company wants to prove that its failover automation actually works before a real outage occurs. Which activity builds the most confidence?",
+            "options": [
+                "Running controlled game days that inject failures and observe recovery",
+                "Assuming Multi-AZ guarantees recovery and skipping drills",
+                "Writing a runbook that is never exercised",
+                "Reviewing the design document once a year"
+            ],
+            "correct_index": 0,
+            "explanation": "Game days exercise the failover path under controlled conditions and expose gaps in automation and runbooks. Design reviews and assumptions do not test behavior, and an unexercised runbook may be stale when it is needed.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Resilient Cloud Solutions"
+        },
+        {
+            "id": "aws-dop-042",
+            "domain": "Monitoring and Logging",
+            "stem": "An application must publish business metrics such as orders per minute to CloudWatch so the team can graph and alarm on them. Which action should the application take?",
+            "options": [
+                "Rely on the default EC2 metrics to reflect orders",
+                "Call the CloudWatch PutMetricData API with a custom namespace",
+                "Write the metric value into a CloudTrail trail",
+                "Store the metric in an S3 object and read it manually"
+            ],
+            "correct_index": 1,
+            "explanation": "Applications publish custom metrics with PutMetricData under their own namespace so CloudWatch can graph and alarm on them. CloudTrail records API activity, S3 objects do not feed metric alarms, and default EC2 metrics do not capture business events.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-043",
+            "domain": "Monitoring and Logging",
+            "stem": "A team wants a CloudWatch alarm to fire when the word ERROR appears in application log events. Which feature should be used?",
+            "options": [
+                "A CloudTrail trail that scans log text",
+                "An S3 lifecycle rule applied to the log bucket",
+                "A metric filter on the log group that counts the pattern, with an alarm on the resulting metric",
+                "A manual daily review of the log files"
+            ],
+            "correct_index": 2,
+            "explanation": "Metric filters turn log patterns into CloudWatch metrics, which can then drive an alarm. Manual reviews are not timely, CloudTrail records API calls rather than scanning log text, and lifecycle rules only manage object retention.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-044",
+            "domain": "Monitoring and Logging",
+            "stem": "A company wants logs from many accounts and services aggregated into a central account for analysis and retention. Which design centralizes log collection?",
+            "options": [
+                "Reading each account logs from the console when needed",
+                "Deleting logs locally after one week",
+                "Emailing log files to the operations group",
+                "CloudWatch Logs subscription filters that stream to a central destination such as Kinesis Data Firehose and S3"
+            ],
+            "correct_index": 3,
+            "explanation": "Subscription filters stream log events in near real time to a central destination and storage, giving one place to analyze and retain logs. Console reading does not scale, deleting logs loses history, and email is not a durable centralized store.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-045",
+            "domain": "Monitoring and Logging",
+            "stem": "An operator must find the slowest requests in a large CloudWatch log group without exporting the logs elsewhere. Which tool should be used?",
+            "options": [
+                "CloudWatch Logs Insights queries against the log group",
+                "Downloading every log file to a laptop",
+                "A CloudTrail lookup of management events",
+                "An AWS Config rule on the log group"
+            ],
+            "correct_index": 0,
+            "explanation": "Logs Insights runs interactive queries over log data in place to filter and aggregate fields such as request duration. Downloading logs to a laptop is slow and insecure, CloudTrail records API events, and Config rules evaluate resource configuration.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-046",
+            "domain": "Monitoring and Logging",
+            "stem": "A distributed application needs end-to-end tracing to find which service adds latency to a request. Which service should be enabled?",
+            "options": [
+                "AWS Config recording resource changes",
+                "AWS X-Ray with the SDK or daemon instrumenting the services",
+                "AWS CloudTrail with data events on S3",
+                "Amazon Inspector scanning the instances"
+            ],
+            "correct_index": 1,
+            "explanation": "X-Ray instruments requests across services to produce a trace and service map that shows where time is spent. CloudTrail records API calls, Inspector scans for vulnerabilities, and Config records configuration changes, none of which trace request paths.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-047",
+            "domain": "Monitoring and Logging",
+            "stem": "A security team needs a tamper-evident record of AWS API calls and must be able to prove that delivered log files were not altered afterward. Which CloudTrail feature should be enabled?",
+            "options": [
+                "An S3 lifecycle policy that expires the logs",
+                "A VPC flow log on each subnet",
+                "Log file validation that produces a digest file",
+                "A CloudWatch dashboard of API call counts"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudTrail log file validation creates a digest that can verify delivered log files were not modified, supporting tamper evidence. A dashboard only visualizes counts, a lifecycle policy deletes logs, and flow logs capture network traffic rather than API activity.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-048",
+            "domain": "Monitoring and Logging",
+            "stem": "A company wants to control the cost of CloudWatch Logs by automatically removing old log events that are no longer needed. Which setting should be applied to each log group?",
+            "options": [
+                "A metric filter that counts log events",
+                "A subscription filter that sends events to Lambda",
+                "A larger log group size limit",
+                "A retention period on the log group"
+            ],
+            "correct_index": 3,
+            "explanation": "Setting a retention period on a log group expires old events automatically so storage cost stays bounded. Metric and subscription filters process events but do not remove them, and increasing size limits raises rather than lowers exposure.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-049",
+            "domain": "Monitoring and Logging",
+            "stem": "A team wants to be alerted only when both CPU is high and the request queue is deep, which reduces noise from single-condition alarms. Which CloudWatch feature should be used?",
+            "options": [
+                "A composite alarm that combines the two underlying alarms",
+                "Two independent alarms that each page separately",
+                "A single alarm on CPU utilization only",
+                "A dashboard with no alarms configured"
+            ],
+            "correct_index": 0,
+            "explanation": "A composite alarm fires only when its referenced alarms are in the required states, which reduces noise from single conditions. Separate alarms page on either condition, a single CPU alarm ignores the queue, and a dashboard does not notify anyone.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-050",
+            "domain": "Monitoring and Logging",
+            "stem": "A company wants CloudWatch to detect unusual metric behavior without manually setting a static threshold for every time of day. Which feature should be used?",
+            "options": [
+                "A composite alarm with no member alarms",
+                "Anomaly detection bands on the metric",
+                "A static threshold set to the all-time maximum",
+                "A metric filter on the log group"
+            ],
+            "correct_index": 1,
+            "explanation": "Anomaly detection learns the normal pattern of a metric and alarms when values fall outside the expected band, adapting to daily cycles. A maximum threshold is static and misses new patterns, metric filters work on logs, and a composite alarm needs member alarms.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-051",
+            "domain": "Monitoring and Logging",
+            "stem": "CloudWatch by default cannot report memory and disk usage for EC2 instances. Which action makes those operating-system metrics available?",
+            "options": [
+                "Enable VPC flow logs for the instances",
+                "Attach an IAM role to the instances",
+                "Install and configure the CloudWatch agent on the instances",
+                "Enable detailed monitoring in the EC2 console"
+            ],
+            "correct_index": 2,
+            "explanation": "The CloudWatch agent collects operating-system metrics such as memory and disk that are not available from the hypervisor. Detailed monitoring only raises the resolution of default metrics, flow logs capture network data, and an IAM role grants permissions but collects nothing by itself.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-052",
+            "domain": "Monitoring and Logging",
+            "stem": "A Lambda function must emit custom metrics efficiently without making a separate CloudWatch API call for every data point. Which approach should be used?",
+            "options": [
+                "Call PutMetricData once per request inside a tight loop",
+                "Store the metrics in the function local file system",
+                "Print the metrics to standard output without structure",
+                "Write metrics as structured JSON to CloudWatch Logs using the embedded metric format"
+            ],
+            "correct_index": 3,
+            "explanation": "The embedded metric format lets a function emit metrics through its logs asynchronously, avoiding a per-metric API call. Looping PutMetricData is slow and costly, the local file system is ephemeral, and unstructured output cannot be turned into metrics.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Monitoring and Logging"
+        },
+        {
+            "id": "aws-dop-053",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants an automated notification or action whenever a specific CloudWatch alarm changes state. Which service should route the event?",
+            "options": [
+                "An Amazon EventBridge rule that matches the alarm state-change event",
+                "A CloudTrail trail that filters the alarm",
+                "An S3 event notification on the alarm",
+                "A Route 53 health check"
+            ],
+            "correct_index": 0,
+            "explanation": "EventBridge can match CloudWatch alarm state-change events and route them to targets such as Lambda, SNS, or Systems Manager. CloudTrail records the API call but does not route events, S3 notifications apply to bucket objects, and health checks monitor endpoints.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-054",
+            "domain": "Incident and Event Response",
+            "stem": "A security team wants an AWS Config rule to correct a non-compliant resource automatically without any human action. Which feature should be configured on the rule?",
+            "options": [
+                "A CloudTrail trail created for the resource",
+                "An automatic remediation action that runs an Systems Manager Automation document",
+                "A manual remediation note attached to the rule",
+                "An SNS topic that delivers weekly compliance reports"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Config supports automatic remediation that runs a Systems Manager Automation document when a resource is non-compliant, correcting it without human intervention. Notes, reports, and trails do not change the resource.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-055",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants an EC2 instance quarantined automatically when GuardDuty reports that it is communicating with a known malicious host. Which flow should be implemented?",
+            "options": [
+                "Store the finding in S3 and review it next quarter",
+                "Disable GuardDuty to reduce the volume of alerts",
+                "Route the GuardDuty finding through EventBridge to a Lambda function that applies a quarantine security group",
+                "Email the finding to the security team for manual handling"
+            ],
+            "correct_index": 2,
+            "explanation": "GuardDuty findings are delivered as events that EventBridge can match to invoke a Lambda function which isolates the instance, achieving automatic containment. Email and periodic review are slow, and disabling detection removes protection.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-056",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants a repeatable, auditable runbook that performs a multi-step remediation such as stopping an instance and detaching a role. Which Systems Manager capability should be used?",
+            "options": [
+                "A wiki page that lists the manual steps",
+                "A CloudWatch dashboard showing the affected resources",
+                "An S3 bucket of scripts that a person runs by hand",
+                "An Automation document that runs the remediation steps"
+            ],
+            "correct_index": 3,
+            "explanation": "Systems Manager Automation documents define and execute multi-step remediation as a repeatable, auditable workflow. A wiki and manual scripts are not automated or auditable, and a dashboard only displays data.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-057",
+            "domain": "Incident and Event Response",
+            "stem": "An application tier must add capacity automatically when the average CPU utilization stays above a threshold. Which mechanism should be used?",
+            "options": [
+                "A target tracking scaling policy on the Auto Scaling group",
+                "A CloudWatch alarm that only sends email to the team",
+                "A manual decision to launch more instances",
+                "An S3 lifecycle rule applied to the data bucket"
+            ],
+            "correct_index": 0,
+            "explanation": "A target tracking policy adjusts capacity to hold a metric such as average CPU near a target, reacting automatically to load. An email alarm does not act, manual launches are slow, and lifecycle rules apply to storage objects.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-058",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants an S3 bucket that is accidentally made public to be remediated automatically. Which combination should be used?",
+            "options": [
+                "A weekly manual audit of all bucket policies",
+                "An AWS Config rule for public read access with automatic remediation that removes the public policy",
+                "A billing alarm that fires when data transfer increases",
+                "A CloudTrail trail enabled for the bucket"
+            ],
+            "correct_index": 1,
+            "explanation": "A Config rule can detect public access and trigger automatic remediation that removes the exposing policy, restoring compliance quickly. Billing alarms and trails only report, and weekly audits leave the bucket exposed for days.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-059",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants to respond to AWS service health events, such as a scheduled maintenance notification, with an automated workflow. Which service delivers these events to a target?",
+            "options": [
+                "An S3 inventory report",
+                "A VPC flow log",
+                "Amazon EventBridge with rules that match AWS Health events",
+                "Amazon Macie findings"
+            ],
+            "correct_index": 2,
+            "explanation": "EventBridge can match AWS Health events and route them to automation so scheduled maintenance or outages trigger a response. Macie classifies data, inventory lists objects, and flow logs capture network traffic.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-060",
+            "domain": "Incident and Event Response",
+            "stem": "A deployment must revert automatically if a CloudWatch alarm fires during the rollout. Which combination achieves automated rollback?",
+            "options": [
+                "A pipeline stage where an operator notices the alarm and rolls back by hand",
+                "A dashboard that the team watches during releases",
+                "A larger deployment timeout",
+                "A CodeDeploy deployment group associated with the alarm and automatic rollback enabled"
+            ],
+            "correct_index": 3,
+            "explanation": "Associating the alarm with the deployment group and enabling automatic rollback makes CodeDeploy revert to the last good revision when the alarm fires. Waiting for an operator is slow, a dashboard does not act, and a longer timeout does not correct a bad release.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-061",
+            "domain": "Incident and Event Response",
+            "stem": "A central operations account must receive events from workload accounts so it can run shared remediation. Which EventBridge capability supports this?",
+            "options": [
+                "Cross-account event buses with rules in the central account receiving events from member accounts",
+                "Copying the same Lambda function into every account",
+                "A single trail enabled in one account only",
+                "A shared IAM user used by every account"
+            ],
+            "correct_index": 0,
+            "explanation": "EventBridge supports cross-account event delivery through event buses so a central account can run shared remediation. Copying functions duplicates maintenance, a single trail records one account, and a shared IAM user violates least privilege.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-062",
+            "domain": "Incident and Event Response",
+            "stem": "A company wants operators to track and resolve security incidents as tickets with diagnostic context attached, created automatically from findings. Which Systems Manager capability should be used?",
+            "options": [
+                "An S3 bucket of incident screenshots",
+                "OpsCenter, which creates OpsItems that aggregate context and track resolution",
+                "A spreadsheet of incidents kept by the team",
+                "A CloudWatch dashboard showing incident counts"
+            ],
+            "correct_index": 1,
+            "explanation": "OpsCenter creates OpsItems that aggregate diagnostic context and let operators track incidents to resolution, and items can be created automatically from events. Spreadsheets, dashboards, and screenshots do not provide structured incident tracking.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Incident and Event Response"
+        },
+        {
+            "id": "aws-dop-063",
+            "domain": "Security and Compliance",
+            "stem": "An application in one account must encrypt and decrypt data with a customer managed key in a central security account. Which mechanism grants the application least-privilege access without editing the key policy for every caller?",
+            "options": [
+                "Making the key policy allow the account root of every account",
+                "Embedding the key material in the application configuration",
+                "A KMS grant issued to the application role for the required encrypt and decrypt operations",
+                "Exporting the key material to the application account as plaintext"
+            ],
+            "correct_index": 2,
+            "explanation": "KMS grants delegate specific operations to named principals and can be created and revoked without changing the key policy, supporting least privilege. Symmetric key material cannot be exported as plaintext, a wildcard principal is too broad, and embedding key material is insecure.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-064",
+            "domain": "Security and Compliance",
+            "stem": "A company stores a database password in AWS Secrets Manager and wants it rotated on a schedule without changing the application code. Which configuration should be used?",
+            "options": [
+                "Store the password in a comment inside the application source",
+                "Place the password in an S3 object with public read access",
+                "Keep the password static and rotate it manually once a year",
+                "Enable automatic rotation with a Lambda rotation function and a rotation schedule"
+            ],
+            "correct_index": 3,
+            "explanation": "Secrets Manager can rotate a secret automatically with a Lambda rotation function on a schedule, and the application retrieves the current value from the service. Hard-coded or public secrets are exposed, and manual annual rotation is slow and error-prone.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-065",
+            "domain": "Security and Compliance",
+            "stem": "A CodeBuild project needs permissions to deploy resources, and the security team requires least privilege. How should permissions be granted?",
+            "options": [
+                "Attach a scoped IAM role to the project that allows only the required actions",
+                "Store long-lived IAM user access keys in the buildspec",
+                "Give the project administrator access for simplicity",
+                "Use the account root credentials inside the build"
+            ],
+            "correct_index": 0,
+            "explanation": "A scoped service role grants CodeBuild only the actions it needs, which follows least privilege. Long-lived keys in the buildspec are exposed, administrator access is excessive, and root credentials must never be used.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-066",
+            "domain": "Security and Compliance",
+            "stem": "A company wants to cap the maximum permissions an application role can ever have, regardless of the identity policies later attached to it. Which mechanism should be used?",
+            "options": [
+                "A resource tag placed on the role",
+                "An IAM permissions boundary attached to the role",
+                "An S3 bucket policy scoped to the role",
+                "A CloudWatch alarm on the role API calls"
+            ],
+            "correct_index": 1,
+            "explanation": "A permissions boundary sets the maximum permissions for an entity so that even broader identity policies cannot exceed the boundary. A bucket policy governs one resource, an alarm only monitors, and a tag carries metadata.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-067",
+            "domain": "Security and Compliance",
+            "stem": "A company must prevent member account administrators from disabling CloudTrail in their own accounts. Which control should be applied at the organization level?",
+            "options": [
+                "A CloudWatch alarm on CloudTrail API calls",
+                "A statement in the security policy document",
+                "A service control policy that denies the CloudTrail stop and delete actions",
+                "An IAM policy in each account that allows only CloudTrail actions"
+            ],
+            "correct_index": 2,
+            "explanation": "A service control policy at the organization level caps permissions for all principals, including account administrators, so it can deny turning off CloudTrail. An allow-only IAM policy can be changed by the administrator, an alarm only notices, and documentation does not enforce.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-068",
+            "domain": "Security and Compliance",
+            "stem": "A company wants continuous detection of threats such as compromised credentials and cryptocurrency mining across all of its AWS accounts. Which service should be enabled with organization-wide administration?",
+            "options": [
+                "AWS CloudTrail operating alone",
+                "Amazon Macie",
+                "AWS Config",
+                "Amazon GuardDuty"
+            ],
+            "correct_index": 3,
+            "explanation": "GuardDuty continuously analyzes account, network, and DNS activity to detect threats and supports delegated administration across an organization. CloudTrail records activity but does not analyze it, Macie classifies S3 data, and Config evaluates resource configuration.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-069",
+            "domain": "Security and Compliance",
+            "stem": "A company wants container image vulnerabilities identified during the build pipeline so that unsafe images never reach production. Which service should be integrated with the pipeline?",
+            "options": [
+                "Amazon Inspector scanning the images, with the pipeline failing on findings above a threshold",
+                "AWS Trusted Advisor best-practice checks",
+                "Amazon GuardDuty",
+                "AWS CloudTrail"
+            ],
+            "correct_index": 0,
+            "explanation": "Inspector scans container images for vulnerabilities, and the pipeline can fail a stage when findings exceed a threshold. Trusted Advisor gives best-practice checks, while GuardDuty and CloudTrail detect or record activity rather than scan images.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-070",
+            "domain": "Security and Compliance",
+            "stem": "A company must continuously assess its resources against an industry framework and package the controls for deployment to many accounts. Which AWS Config feature should be used?",
+            "options": [
+                "An S3 inventory report",
+                "A conformance pack that bundles Config rules for deployment",
+                "A single Config rule created by hand in one account",
+                "A CloudTrail trail forwarded to S3"
+            ],
+            "correct_index": 1,
+            "explanation": "Conformance packs package a collection of Config rules and remediation actions that can be deployed together across accounts to assess a framework. A single hand-made rule does not scale, trails record activity, and inventory lists objects.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-071",
+            "domain": "Security and Compliance",
+            "stem": "A company collects findings from multiple AWS security services and wants one normalized view across its organization. Which service should be used?",
+            "options": [
+                "AWS Artifact",
+                "Amazon Inspector",
+                "AWS Security Hub with organization-wide aggregation",
+                "Amazon CloudWatch Logs alone"
+            ],
+            "correct_index": 2,
+            "explanation": "Security Hub aggregates and normalizes findings from AWS services and partner tools into a single view and supports organization aggregation. CloudWatch Logs stores raw logs, Artifact provides compliance reports, and Inspector scans specific resource types.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-072",
+            "domain": "Security and Compliance",
+            "stem": "A company must ensure that an S3 bucket used for logs can never be made public, even by mistake. Which control should be applied?",
+            "options": [
+                "Rely on the bucket name being difficult to guess",
+                "Grant read access to all authenticated AWS users",
+                "Remove server-side encryption from the bucket",
+                "Enable S3 Block Public Access on the bucket and at the account level"
+            ],
+            "correct_index": 3,
+            "explanation": "S3 Block Public Access prevents public policies and ACLs from exposing the bucket and can be enforced at the account level. An obscure name is not a control, authenticated-user read still exposes data, and removing encryption weakens protection.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-073",
+            "domain": "Security and Compliance",
+            "stem": "A company wants the artifacts stored by CodePipeline to be encrypted with a key that the company controls. Which configuration should be used?",
+            "options": [
+                "Configure the pipeline artifact store to use a customer managed KMS key",
+                "Store the artifacts in an unencrypted S3 bucket",
+                "Email the artifacts to the team instead of storing them",
+                "Encrypt the artifacts with an SSH key pair"
+            ],
+            "correct_index": 0,
+            "explanation": "CodePipeline artifact stores use S3 and can be encrypted with a customer managed KMS key so the company controls access and rotation. An unencrypted bucket exposes artifacts, email is not a store, and an SSH key is not a data-encryption mechanism.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-074",
+            "domain": "Security and Compliance",
+            "stem": "A security team wants to identify resources shared with external principals and uncover unintended public access grants. Which service should be used?",
+            "options": [
+                "AWS Shield Advanced",
+                "IAM Access Analyzer",
+                "AWS CloudTrail Insights",
+                "Amazon GuardDuty"
+            ],
+            "correct_index": 1,
+            "explanation": "IAM Access Analyzer analyzes resource policies and role trust policies to flag resources reachable by external principals. CloudTrail Insights detects unusual API patterns, GuardDuty detects threats, and Shield protects against DDoS.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-dop-075",
+            "domain": "Security and Compliance",
+            "stem": "A company terminates TLS for a public site on an Application Load Balancer and wants managed certificates that renew automatically for the domain. Which service should be used?",
+            "options": [
+                "An SSH key pair generated in EC2",
+                "AWS CloudHSM alone storing the private key",
+                "AWS Certificate Manager with a certificate attached to the load balancer",
+                "A self-signed certificate copied to every instance"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Certificate Manager issues public TLS certificates for integrated services and renews them automatically, removing manual certificate maintenance. Self-signed certificates cause trust warnings and expire manually, SSH keys are for host access, and CloudHSM stores keys but does not issue or renew certificates.",
+            "reference": "AWS Certified DevOps Engineer - Professional DOP-C02 Exam Guide - Security and Compliance"
+        }
+    ]
+}

@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-scs",
+    "title": "AWS Certified Security - Specialty (SCS-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-scs.json",
+    "variant_label": "SCS-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 170,
+        "scoring": "750/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified Security - Specialty SCS-C02 exam guide (six official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "AWS Security Specialty practice bank",
+    "items": [
+        {
+            "id": "aws-scs-001",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "A security team wants Amazon GuardDuty to automatically isolate an Amazon EC2 instance when it detects communication with a known command-and-control host, and the team wants no manual action at all. Which combination provides the automated response?",
+            "options": [
+                "Create an Amazon EventBridge rule that matches the GuardDuty finding and invokes a Lambda function to replace the instance security group with a quarantine group",
+                "Configure a CloudWatch alarm that sends an email to the security distribution list for manual triage",
+                "Enable an AWS Config managed rule that reports the instance as non-compliant during the next evaluation window",
+                "Turn on GuardDuty and rely on the service to terminate offending instances on its own"
+            ],
+            "correct_index": 0,
+            "explanation": "GuardDuty publishes findings as events that EventBridge can pattern-match, and the matched rule invokes a Lambda function that applies a quarantine security group to cut off network access, which is a fully automated containment. Email and Config are detective and manual, and GuardDuty only detects and never terminates resources itself.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-002",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "A company with many accounts in AWS Organizations wants a single security account to centrally manage GuardDuty findings for every account and to onboard accounts that are created later. What should a security engineer configure?",
+            "options": [
+                "Store GuardDuty findings in one S3 bucket and have each account write its findings there by hand",
+                "Designate a delegated administrator for GuardDuty and add member accounts through the Organizations integration",
+                "Enable GuardDuty independently in each account and forward the console screenshots by email",
+                "Create a standalone GuardDuty detector in the security account only and assume it covers member accounts"
+            ],
+            "correct_index": 1,
+            "explanation": "The GuardDuty delegated administrator, integrated with Organizations, manages detectors and findings for all member accounts from one account and auto-enrolls new accounts. Independent detectors are not centrally managed, a detector covers only its own account and Region, and manually writing findings is not how GuardDuty aggregates.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-003",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "GuardDuty reports that an IAM user access key is being used from an anonymous proxy to enumerate IAM permissions. The security team has no ability to contact the key owner. Which action should the responder take first to stop the abuse while preserving evidence?",
+            "options": [
+                "Rotate the account root user password and take no action on the access key",
+                "Wait for GuardDuty to close the finding and continue monitoring the key",
+                "Deactivate or delete the exposed access key and review CloudTrail to inventory what the key did before disabling it",
+                "Delete the IAM user entirely before checking what the key accessed"
+            ],
+            "correct_index": 2,
+            "explanation": "Disabling the compromised key immediately stops the abuse, and reviewing CloudTrail first records the actions taken with the key for the investigation. Deleting the user can destroy investigative data and does not by itself invalidate the key path, changing the root password is unrelated to the member key, and ignoring an active finding allows continued abuse.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-004",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "An Amazon EC2 instance is suspected of being compromised and the incident response team must capture the most volatile evidence first. Which action should the responder take before remediating the instance?",
+            "options": [
+                "Terminate the instance immediately so the attacker loses access",
+                "Reboot the instance to clear any malicious processes in memory",
+                "Detach the volumes and attach them to a production instance for inspection",
+                "Capture the instance memory and create EBS snapshots of its volumes while isolating it from the network, without terminating it"
+            ],
+            "correct_index": 3,
+            "explanation": "Best practice is to preserve volatile data such as memory and disk images while separating the instance from the network, because terminating or rebooting destroys memory that may hold attacker artifacts. Attaching evidence volumes to a production host risks contaminating both the evidence and the production system.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-005",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "A security team collects findings from GuardDuty, Amazon Inspector, and several partner tools and wants one normalized view with the ability to send findings to a ticketing system based on account and severity. Which service should be used?",
+            "options": [
+                "AWS Security Hub with integration to EventBridge so findings can be routed to the ticketing system",
+                "Amazon Detective, which normalizes partner findings into tickets automatically",
+                "AWS Config, which converts findings into help-desk tickets",
+                "AWS Trusted Advisor, which aggregates findings from all security services"
+            ],
+            "correct_index": 0,
+            "explanation": "Security Hub ingests and normalizes findings from AWS services and partners into one format and exposes them as events that EventBridge can route to ticketing. Detective supports investigation but is not the aggregation layer, Config evaluates resource configuration, and Trusted Advisor provides best-practice checks rather than finding normalization.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-006",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "Investigators need to analyze the behavior of a suspicious IAM role over the past ninety days and visualize relationships between API calls, IP addresses, and AWS resources without building a data pipeline. Which service should be used?",
+            "options": [
+                "Amazon Inspector, which correlates role activity with vulnerability findings",
+                "Amazon Detective, which automatically ingests log data and builds behavior graphs for investigation",
+                "AWS Config, which stores a configuration timeline but not API call relationships",
+                "AWS Trusted Advisor, which shows the role usage in a dashboard"
+            ],
+            "correct_index": 1,
+            "explanation": "Detective continuously ingests CloudTrail, VPC Flow Logs, and GuardDuty findings and builds a behavior graph that lets investigators visualize and drill into role, resource, and IP relationships. Config tracks configuration changes, Inspector scans for vulnerabilities, and Trusted Advisor reports best-practice checks, none of which build an investigative graph.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-007",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "A company wants GuardDuty to detect malware on its EC2 instances and container workloads by scanning attached Amazon EBS volumes when suspicious behavior is found. Which GuardDuty capability should be enabled?",
+            "options": [
+                "Amazon Macie, which scans EBS volumes for malicious files",
+                "Amazon Detective, which quarantines malware it detects on volumes",
+                "GuardDuty Malware Protection for EC2, which takes snapshots and scans them for malware",
+                "Amazon Inspector, which provides the GuardDuty malware scanning engine"
+            ],
+            "correct_index": 2,
+            "explanation": "GuardDuty Malware Protection uses agentless snapshots of EBS volumes to scan for malware when a finding indicates possible compromise. Inspector is a separate vulnerability-scanning service, Macie classifies sensitive data in S3, and Detective is an investigation service that does not perform malware scanning.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-008",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "An incident response team wants a repeatable, auditable containment procedure that snapshots a compromised instance, applies a quarantine security group, applies forensic tags, and notifies the on-call channel, all triggered from a GuardDuty finding. Which approach should be used?",
+            "options": [
+                "Document the steps in a wiki and ask the on-call engineer to run them by hand",
+                "Hard-code AWS credentials in a Lambda function and run the steps in sequence",
+                "Configure an AWS Config rule with a manual remediation action",
+                "Use an EventBridge rule to invoke an AWS Systems Manager Automation runbook that performs the containment steps"
+            ],
+            "correct_index": 3,
+            "explanation": "Systems Manager Automation runbooks codify the containment steps in a versioned, auditable document that EventBridge can invoke directly from a finding. A wiki relies on manual execution, hard-coded credentials are insecure, and Config manual remediation still requires a person to act.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-009",
+            "domain": "Threat Detection and Incident Response",
+            "stem": "After collecting volatile data from a compromised Amazon EC2 instance, the incident response team must preserve the disk for later legal review while preventing anyone in the workload account from altering it. Which action should the team take?",
+            "options": [
+                "Create EBS snapshots and copy them to a restricted forensic account that only the response team can access",
+                "Leave the instance running so the disk stays available, and rely on account owners not to change it",
+                "Attach a copy of the volume to another production instance for safekeeping",
+                "Terminate the instance and request AWS to recover the disk later"
+            ],
+            "correct_index": 0,
+            "explanation": "Snapshotting and copying the image into a separate, access-restricted forensic account preserves the evidence and removes the workload account from the chain of custody. Leaving the instance running or attaching the volume to a production host allows tampering or contamination, and terminating the instance discards the resource.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Threat Detection and Incident Response"
+        },
+        {
+            "id": "aws-scs-010",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company must ensure that CloudTrail log files for all accounts cannot be altered or deleted by member accounts and must be able to prove the files were not modified after delivery. Which two design elements are required?",
+            "options": [
+                "S3 server access logging enabled on the log bucket in place of a trail",
+                "An organization trail delivering to a central bucket with a bucket policy scoped to the organization, plus log file integrity validation",
+                "An individual trail in each account writing to that account own bucket with no validation",
+                "A management-account trail only, with logs emailed to the security team each day"
+            ],
+            "correct_index": 1,
+            "explanation": "An organization trail sends every account events to one central bucket, and a bucket policy scoped by aws:PrincipalOrgID restricts writes and edits, while log file integrity validation provides digest files that prove no file was altered. Per-account buckets let owners tamper, a management-account trail covers one account, and server access logging is not an API audit trail.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-011",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company must record which IAM principals read specific objects in a sensitive Amazon S3 bucket, but CloudTrail management events are not sufficient for this requirement. What should be enabled?",
+            "options": [
+                "AWS Config resource recording for the bucket",
+                "Amazon GuardDuty S3 protection only, without CloudTrail",
+                "CloudTrail data events for the S3 bucket so object-level read and write calls are logged",
+                "VPC Flow Logs on the subnet that hosts the bucket"
+            ],
+            "correct_index": 2,
+            "explanation": "Object-level activity such as GetObject is a CloudTrail data event, which must be enabled explicitly for the bucket. VPC Flow Logs record network metadata rather than object API calls, Config records configuration state, and GuardDuty detects threats but does not provide the detailed per-request audit record.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-012",
+            "domain": "Security Logging and Monitoring",
+            "stem": "Two instances in different subnets cannot communicate and the security team wants to know whether the traffic is being rejected at the network layer and which port is blocked. Which log should be analyzed?",
+            "options": [
+                "CloudTrail, which records the network path between the instances",
+                "AWS Config, which stores the security group rule history",
+                "Amazon GuardDuty, which reports blocked network connections",
+                "VPC Flow Logs, which capture accepted and rejected IP traffic metadata at the network interface"
+            ],
+            "correct_index": 3,
+            "explanation": "VPC Flow Logs record source, destination, port, protocol, and an ACCEPT or REJECT outcome for traffic at the elastic network interface, which directly answers whether and where traffic was rejected. CloudTrail records API calls, Config records configuration state, and GuardDuty detects threats rather than reporting connection blocks.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-013",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A security team must be alerted within minutes whenever the AWS account root user signs in to the management console. Which combination should be used?",
+            "options": [
+                "A CloudTrail trail that delivers to CloudWatch Logs, a metric filter for the root console sign-in event, and a CloudWatch alarm with an SNS notification",
+                "A GuardDuty detector alone, with no CloudWatch alarm configured",
+                "An AWS Config rule that reports the root user as compliant",
+                "A manual weekly review of the CloudTrail console"
+            ],
+            "correct_index": 0,
+            "explanation": "CloudTrail can deliver events to CloudWatch Logs, where a metric filter matches the root account console sign-in event and a CloudWatch alarm triggers an SNS notification for near-real-time alerting. GuardDuty may generate a finding but does not guarantee the root-specific alert, Config reports compliance state, and a weekly review is too slow.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-014",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company wants continuous evaluation of whether its Amazon S3 buckets have server-side encryption enabled, together with automatic remediation of non-compliant buckets. Which should be used?",
+            "options": [
+                "GuardDuty, which will remediate the bucket once it detects the finding",
+                "An AWS Config managed rule with automatic remediation configured to enable default encryption",
+                "Amazon Macie, which will enable encryption when it finds sensitive data",
+                "CloudTrail log file validation, which detects unencrypted buckets"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Config rules continuously evaluate resource configuration, and automatic remediation can invoke an action to correct the bucket. Macie classifies data and does not remediate encryption, CloudTrail validation detects log tampering rather than bucket configuration, and GuardDuty detects threats but does not change configuration.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-015",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A security analyst must run ad hoc SQL queries against several years of CloudTrail logs stored as objects in Amazon S3 to find specific API calls. Which combination is the most cost-effective?",
+            "options": [
+                "Load the logs into Amazon Redshift and run queries there each time",
+                "Use only CloudWatch Logs Insights, which retains and queries S3 objects directly",
+                "Query the logs in place with Amazon Athena using a partitioned table that matches the CloudTrail folder structure",
+                "Import all of the logs into an Amazon RDS instance and query it with SQL"
+            ],
+            "correct_index": 2,
+            "explanation": "Athena queries data directly in S3 and charges per amount of data scanned, so partitioning the table by the CloudTrail date path keeps scans and cost low. RDS and Redshift require loading and running an always-on cluster, and Logs Insights queries CloudWatch Logs, not S3 objects.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-016",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company must consolidate logs from many accounts into a dedicated logging account and guarantee that no administrator can delete them before their retention expires. Which design should be used?",
+            "options": [
+                "Store logs in each workload account and ask owners to keep them for the retention period",
+                "Email the log files to the security team each day as attachments",
+                "Stream the logs to a central account with no retention controls",
+                "Deliver logs to a central S3 bucket in the logging account that has S3 Object Lock in compliance mode and is written only by the organization trail"
+            ],
+            "correct_index": 3,
+            "explanation": "A central bucket with S3 Object Lock in compliance mode prevents deletion by any user, including the root user, until the retention date, and the organization trail feeds it. Per-account storage lets owners delete logs, email is not durable or tamper-resistant, and a stream without retention controls cannot guarantee immutability.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-017",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company wants to detect unusual spikes in API call volume and error rates in its accounts without writing custom analysis code. Which CloudTrail feature should be enabled?",
+            "options": [
+                "CloudTrail Insights, which baselines normal activity and flags anomalous write and error rates",
+                "CloudTrail log file validation, which compares current logs with previous digests",
+                "CloudTrail data events for every S3 and Lambda resource in the account",
+                "An organization trail with the default management events only"
+            ],
+            "correct_index": 0,
+            "explanation": "CloudTrail Insights learns a baseline of normal API activity and surfaces anomalous volumes and error rates as insight events. Log file validation only proves integrity, data events record object and function activity rather than anomalies, and a standard organization trail records activity without anomaly detection.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-018",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A threat-hunting analyst needs a complete record of every DNS query made by resources in a VPC, including queries that failed to resolve, so suspicious lookups can be investigated later. What should be enabled?",
+            "options": [
+                "AWS Config, which records DNS query history per instance",
+                "Route 53 Resolver query logging that captures the queries and sends them to CloudWatch Logs, S3, or Firehose",
+                "VPC Flow Logs, which already record the full DNS query names",
+                "CloudTrail, which logs every DNS resolution performed inside a VPC"
+            ],
+            "correct_index": 1,
+            "explanation": "Route 53 Resolver query logging records DNS queries made from resources in a VPC, including the queried name and the response, and delivers them to CloudWatch Logs, S3, or Firehose. Flow Logs carry no query names, CloudTrail does not log resolver queries, and Config records resource state rather than DNS history.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-019",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company wants to stream Amazon CloudWatch Logs from many accounts into one central account for near-real-time search and long-term storage, without building custom agents. Which design should be recommended?",
+            "options": [
+                "Point every account at the same CloudWatch Logs log group by sharing a group name",
+                "Query each account CloudWatch Logs separately on demand from the central account",
+                "Create a cross-account CloudWatch Logs subscription filter that sends the log groups to a Kinesis Data Firehose delivery stream in the central account, which writes to S3 and a search target",
+                "Have each account run a cron job that uploads its log files to a shared bucket each night"
+            ],
+            "correct_index": 2,
+            "explanation": "A subscription filter can forward a log group to a destination in another account, and Firehose can fan the stream into S3 for retention and into a search service for near-real-time analysis. Name sharing does not merge log groups, nightly uploads are slow and manual, and per-account queries defeat centralization.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-020",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company is concerned that an attacker who gains account access could disable its security monitoring. Which control best detects an attempt to stop CloudTrail logging?",
+            "options": [
+                "An S3 lifecycle rule on the log bucket that archives old objects",
+                "An IAM password policy that increases the minimum length",
+                "A GuardDuty detector enabled in a single Region with no alerting",
+                "A CloudWatch Logs metric filter that matches the CloudTrail StopLogging and DeleteTrail events and a CloudWatch alarm that notifies the security team"
+            ],
+            "correct_index": 3,
+            "explanation": "CloudTrail records its own StopLogging and DeleteTrail API calls, so a metric filter on those events plus a CloudWatch alarm gives immediate notification that monitoring is being disabled. An S3 lifecycle rule, a password policy, and a silent guard detector do not signal that logging was turned off.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-021",
+            "domain": "Security Logging and Monitoring",
+            "stem": "A company must retain security logs for seven years at the lowest cost while keeping the most recent ninety days immediately queryable in its log analytics tool. Which approach should be used?",
+            "options": [
+                "Keep recent logs in CloudWatch Logs and export older logs to Amazon S3 with a lifecycle policy that transitions them to S3 Glacier Deep Archive",
+                "Keep every log in CloudWatch Logs for the full seven years to preserve queryability",
+                "Delete logs older than ninety days to control storage cost",
+                "Copy all logs to Amazon EBS volumes for long-term storage"
+            ],
+            "correct_index": 0,
+            "explanation": "Retaining recent data in the analytics tier and exporting older data to S3 with a lifecycle transition to Glacier Deep Archive meets the retention requirement at the lowest storage cost. Keeping seven years in CloudWatch Logs is expensive, deleting at ninety days violates retention, and EBS is costly and not built for archival.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Security Logging and Monitoring"
+        },
+        {
+            "id": "aws-scs-022",
+            "domain": "Infrastructure Security",
+            "stem": "A company must block a specific known malicious IP address from reaching any instance in a subnet, and the block must apply to all instances regardless of their individual rules. Where should the rule be placed?",
+            "options": [
+                "An AWS Shield Advanced protection scoped to the subnet",
+                "A deny rule in the network ACL associated with the subnet",
+                "A deny rule in the inbound security group attached to each instance",
+                "An AWS WAF IP set rule attached to the instances"
+            ],
+            "correct_index": 1,
+            "explanation": "Network ACLs support explicit deny rules at the subnet boundary, so one rule blocks the address for every instance in the subnet. Security groups are allow-only and cannot deny, WAF protects web traffic at a distribution or load balancer rather than protecting arbitrary instance traffic, and Shield Advanced mitigates DDoS rather than blocking a single source IP.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-023",
+            "domain": "Infrastructure Security",
+            "stem": "A public web application behind an Application Load Balancer is being probed with SQL injection attempts, and the company wants to block the malicious requests before they reach the application. Which service should be used?",
+            "options": [
+                "A network ACL deny rule that matches the injection strings",
+                "A security group that filters on the request body",
+                "AWS WAF with the SQL injection rule group associated with the load balancer",
+                "AWS Shield Advanced, which strips SQL injection payloads"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS WAF inspects HTTP requests against rule groups such as the SQL injection rules and blocks matching requests at the load balancer or distribution before they reach the application. Shield mitigates volumetric DDoS, network ACLs and security groups operate on IP and port metadata rather than inspecting payloads.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-024",
+            "domain": "Infrastructure Security",
+            "stem": "A company hosting a public web application has suffered large-scale distributed denial-of-service attacks and wants enhanced protections plus access to the AWS DDoS Response Team during an event. Which service provides this?",
+            "options": [
+                "AWS WAF configured with only the core rule set",
+                "Amazon GuardDuty with its DDoS detection enabled",
+                "Amazon Macie protection on the web bucket",
+                "AWS Shield Advanced on the resource, including the DDoS Response Team and cost protection"
+            ],
+            "correct_index": 3,
+            "explanation": "Shield Advanced provides additional DDoS mitigations, 24x7 access to the DDoS Response Team, and cost protection for scaling during an attack. WAF filters web requests but is not the DDoS service, GuardDuty detects some attack activity without mitigation, and Macie classifies data in S3.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-025",
+            "domain": "Infrastructure Security",
+            "stem": "A company wants to inspect and filter all outbound traffic from its VPCs, including blocking traffic to specific domains, through a centralized managed firewall. Which service should be used?",
+            "options": [
+                "AWS Network Firewall deployed in a central inspection VPC with domain and stateful rule groups",
+                "Security group egress rules on each instance",
+                "Network ACL rules that match domain names",
+                "AWS WAF attached to a NAT gateway"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Network Firewall is a managed stateful firewall that inspects traffic with domain lists and rule groups, and deploying it in a central inspection VPC gives one choke point. Security groups and network ACLs work on IP and port metadata rather than domain names, and WAF attaches to web endpoints not NAT gateways.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-026",
+            "domain": "Infrastructure Security",
+            "stem": "A company must ensure that traffic from its private subnets to Amazon S3 never traverses the public internet and wants to avoid NAT gateway data-processing charges. What should be configured?",
+            "options": [
+                "A public virtual interface on a Direct Connect connection",
+                "A gateway VPC endpoint for Amazon S3 and a route table entry directing S3 prefix traffic to the endpoint",
+                "An internet gateway with a route from the private subnets",
+                "A NAT gateway in each private subnet for S3 traffic"
+            ],
+            "correct_index": 1,
+            "explanation": "A gateway VPC endpoint keeps S3 traffic on the AWS network and requires no NAT gateway, which removes data-processing charges, and a route entry sends the S3 prefix to the endpoint. An internet gateway exposes the subnet, a NAT gateway incurs the charges to avoid, and a public virtual interface is not the standard private S3 path.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-027",
+            "domain": "Infrastructure Security",
+            "stem": "An application tier should accept traffic only from the web tier instances, which scale up and down and therefore change IP addresses constantly. What is the most secure way to configure the application tier security group?",
+            "options": [
+                "Allow 0.0.0.0/0 on the application port and rely on authentication",
+                "Manually update the rule with each web instance IP address",
+                "Reference the web tier security group as the source of the inbound rule",
+                "Allow the CIDR range of the entire VPC as the inbound source"
+            ],
+            "correct_index": 2,
+            "explanation": "Referencing the web tier security group as the source lets any member of that group connect, so the rule follows the instances as they scale without IP updates. Allowing the VPC CIDR is broader than needed, open access exposes the tier, and manual IP updates do not scale and are error prone.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-028",
+            "domain": "Infrastructure Security",
+            "stem": "A company wants to enforce a common set of AWS WAF rules and security group policies across every account in its organization, including accounts created later. Which service should be used?",
+            "options": [
+                "An AWS Config rule in each account that reports non-compliant security groups",
+                "Amazon GuardDuty, which applies WAF rules when it detects attacks",
+                "A CloudFormation template that each account owner deploys on request",
+                "AWS Firewall Manager with organization-wide policies that enforce the rules and groups in every account"
+            ],
+            "correct_index": 3,
+            "explanation": "Firewall Manager applies WAF, security group, and Shield policies across the organization and automatically covers newly added accounts. Config is detective and does not configure WAF, GuardDuty detects threats but does not apply protection rules, and per-account templates depend on owners and drift.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-029",
+            "domain": "Infrastructure Security",
+            "stem": "A company must eliminate inbound SSH access to its private instances while still allowing administrators to run commands on them. Which approach meets this requirement?",
+            "options": [
+                "Use AWS Systems Manager Session Manager so administrators open an audited shell without inbound ports or a bastion host",
+                "Deploy a bastion host that allows SSH only from the office CIDR range",
+                "Open port 22 to the office public IP range on the instance security group",
+                "Add an SSH jump box inside the private subnet"
+            ],
+            "correct_index": 0,
+            "explanation": "Session Manager connects shells and sessions through the Systems Manager agent and service, so no inbound port or bastion is needed and sessions are logged. A bastion host and open port 22 still require inbound SSH, and an in-subnet jump box does not remove the need for inbound access.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-030",
+            "domain": "Infrastructure Security",
+            "stem": "A company wants its VPC resources to reach a partner service hosted in another AWS account privately, without exposing traffic to the internet or allowing the partner account to initiate connections into the company VPC. Which capability should be used?",
+            "options": [
+                "A public service endpoint protected only by an IP allowlist",
+                "AWS PrivateLink by creating a VPC endpoint to the partner endpoint service, which permits one-directional access",
+                "A VPC peering connection with the partner account that allows bidirectional routing",
+                "An AWS Transit Gateway shared with the partner account"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS PrivateLink exposes a specific service through an endpoint in the consumer VPC and is unidirectional, so the company can reach the partner service while the partner cannot initiate connections back. Peering and a shared Transit Gateway are bidirectional and expose more of the network, and a public endpoint is internet exposed.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-031",
+            "domain": "Infrastructure Security",
+            "stem": "After a team adds a network ACL rule to allow inbound HTTPS to a public subnet, clients connect but their responses never arrive. The security group for the instances allows all outbound traffic. What is the most likely cause?",
+            "options": [
+                "The instances need a public IP address for responses to return",
+                "The route table must add a route to the client network",
+                "The network ACL is stateless, so the outbound rule must also allow the ephemeral port range used for return traffic",
+                "The security group must be replaced with a network ACL rule"
+            ],
+            "correct_index": 2,
+            "explanation": "Network ACLs are stateless, so each direction of traffic needs its own rule and the response traffic to the client ephemeral ports must be allowed outbound. Security groups are stateful and allow the return path automatically, a public IP is not the cause given connectivity, and a missing route would prevent the request from leaving rather than only the response.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-032",
+            "domain": "Infrastructure Security",
+            "stem": "A company serves content through Amazon CloudFront and wants to apply AWS WAF rules at the edge and prevent users from bypassing CloudFront to reach the origin directly. Which combination should be used?",
+            "options": [
+                "Attach AWS WAF only to the origin load balancer and leave the distribution unprotected",
+                "Place the origin behind a security group that allows 0.0.0.0/0 on the content port",
+                "Enable AWS Shield Advanced on the origin and rely on it to hide the origin",
+                "Attach AWS WAF to the CloudFront distribution and configure a secret custom origin header that only CloudFront sends, with the origin accepting only CloudFront"
+            ],
+            "correct_index": 3,
+            "explanation": "Associating WAF with the distribution filters requests at the edge, and a secret origin header plus origin logic that requires it prevents direct access that bypasses CloudFront. Protecting only the origin leaves the edge unfiltered, allowing 0.0.0.0/0 enables bypass, and Shield mitigates DDoS without cloaking the origin.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-033",
+            "domain": "Infrastructure Security",
+            "stem": "A company needs an encrypted private connection from its on-premises network to its VPC and wants to use the internet as the transport for a fast, low-cost setup. Which option should be used?",
+            "options": [
+                "An AWS Site-to-Site VPN using an IPsec tunnel over the internet",
+                "An AWS Direct Connect connection, which requires physical cross-connect provisioning",
+                "An internet gateway with a route to the on-premises network",
+                "A NAT gateway with a route to the on-premises network"
+            ],
+            "correct_index": 0,
+            "explanation": "A Site-to-Site VPN creates IPsec tunnels over the internet between an on-premises device and a virtual private gateway or Transit Gateway, giving an encrypted private connection that can be set up quickly. Direct Connect is dedicated but takes longer to provision, and an internet or NAT gateway does not provide a private encrypted tunnel to the data center.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-034",
+            "domain": "Infrastructure Security",
+            "stem": "A security assessment found that instances can retrieve IAM role credentials through the instance metadata service, creating a server-side request forgery credential-theft risk. Which configuration should be applied?",
+            "options": [
+                "Rotate the instance key pair every thirty days",
+                "Enforce IMDSv2 with token usage required so requests must use a session token that SSRF cannot easily obtain",
+                "Detach the IAM role and embed long-term credentials in the application",
+                "Restrict the security group to allow only port 80"
+            ],
+            "correct_index": 1,
+            "explanation": "IMDSv2 requires a token obtained with a PUT request before metadata can be read, which mitigates common SSRF attacks that issue simple GET requests. Embedding long-term credentials increases exposure, a security group change does not protect the metadata endpoint, and rotating SSH key pairs does not affect metadata access.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Infrastructure Security"
+        },
+        {
+            "id": "aws-scs-035",
+            "domain": "Identity and Access Management",
+            "stem": "A company wants to prevent any principal in a member account, including account administrators, from disabling CloudTrail logging. Which control should be applied?",
+            "options": [
+                "A permissions boundary on each administrator role",
+                "An AWS Config rule that records whether trails are logging",
+                "A service control policy that denies the CloudTrail StopLogging and DeleteTrail actions, attached to the account organizational unit",
+                "An IAM policy attached to each role that allows CloudTrail read actions"
+            ],
+            "correct_index": 2,
+            "explanation": "A service control policy sets the maximum permissions for every principal in the attached accounts and is evaluated regardless of IAM policies, so it can deny the actions that disable logging even for administrators. IAM policies apply only to the principals they attach to, permissions boundaries apply per-principal rather than account-wide, and Config only detects the state after the fact.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-036",
+            "domain": "Identity and Access Management",
+            "stem": "A company wants to let a development team create their own IAM users and roles, but must guarantee that no identity they create can ever have more permissions than a defined maximum. Which feature should be used?",
+            "options": [
+                "A service control policy that denies all IAM actions in the account",
+                "An IAM password policy with a minimum length",
+                "A resource-based policy on each new role",
+                "A permissions boundary that the team must attach to every identity they create, plus an IAM policy allowing only identity creation with the boundary"
+            ],
+            "correct_index": 3,
+            "explanation": "A permissions boundary caps the effective permissions of an identity, and granting the team permission to create identities only when the boundary is applied enforces the maximum. Denying all IAM actions blocks the task, a password policy governs login credentials not permissions, and a resource policy governs access to a resource rather than the maximum permissions of a principal.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-037",
+            "domain": "Identity and Access Management",
+            "stem": "A company wants its existing on-premises Active Directory users to sign in to AWS with their corporate credentials and reach several accounts without creating IAM users in each account. Which approach should be used?",
+            "options": [
+                "AWS IAM Identity Center configured with federation to Active Directory and permission sets assigned to groups for each account",
+                "Create an IAM user with the same username in every account and synchronize the passwords",
+                "Share a single IAM role and its access keys with all staff",
+                "Issue each user long-term IAM access keys stored in the corporate password vault"
+            ],
+            "correct_index": 0,
+            "explanation": "IAM Identity Center federates with the directory for single sign-on and grants multi-account access through permission sets assigned to groups. Duplicating IAM users per account and sharing long-term keys defeat central identity and least privilege, and a shared role provides no per-user accountability.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-038",
+            "domain": "Identity and Access Management",
+            "stem": "A mobile application needs to authenticate its own end users and then issue each user temporary AWS credentials scoped to that user so they can call specific AWS services. Which service should be used?",
+            "options": [
+                "A shared IAM access key embedded in the mobile binary",
+                "Amazon Cognito user pools for authentication and identity pools with IAM roles that map users to scoped temporary credentials",
+                "IAM Identity Center with permission sets assigned to each app user",
+                "An IAM user created in the account for every application user"
+            ],
+            "correct_index": 1,
+            "explanation": "Cognito user pools authenticate application users and identity pools exchange the authenticated identity for temporary, role-scoped AWS credentials through STS. IAM Identity Center is for workforce access, per-user IAM users do not scale for consumer apps, and embedding a shared key in a binary leaks credentials to every user.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-039",
+            "domain": "Identity and Access Management",
+            "stem": "A user has an IAM identity policy that allows the S3 GetObject action on a bucket, but the bucket policy explicitly denies that same user the same action. What is the result when the user requests an object?",
+            "options": [
+                "The request is denied because the bucket policy is the only policy that counts for S3",
+                "The request is allowed because the user owns the object",
+                "The request is denied because an explicit deny in any applicable policy overrides any allow",
+                "The request is allowed because the identity policy grants the action"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS evaluates identity-based and resource-based policies together and an explicit deny always overrides an allow, so the bucket policy deny wins. The identity allow cannot overcome the deny, resource policies do not replace identity policies, and object ownership does not create permissions.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-040",
+            "domain": "Identity and Access Management",
+            "stem": "A company's application must assume a role in each of its customers' AWS accounts to read data, and customers want assurance that a third party cannot trick the application into accessing another customer account. What should be added to the role trust policy?",
+            "options": [
+                "A wildcard principal that allows any account to assume the role",
+                "A long-term access key pair stored in the application",
+                "An IP address restriction that allows the application network ranges only",
+                "A condition requiring an sts:ExternalId value that is unique to each customer"
+            ],
+            "correct_index": 3,
+            "explanation": "An external ID condition, known only to the customer and the application, prevents the confused deputy problem by ensuring the application assumes the role with the expected identifier. A wildcard principal removes the restriction, long-term keys do not address confused deputy, and an IP restriction alone does not stop substitution across customers.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-041",
+            "domain": "Identity and Access Management",
+            "stem": "A company wants to identify which of its resources, such as Amazon S3 buckets and IAM roles, are shared with principals outside its account or organization. Which service should be used?",
+            "options": [
+                "IAM Access Analyzer, which evaluates resource and trust policies to find external access",
+                "Amazon GuardDuty, which reports external access grants as findings",
+                "AWS Config, which records the sharing state of each resource",
+                "AWS Trusted Advisor, which lists all external principals in a report"
+            ],
+            "correct_index": 0,
+            "explanation": "IAM Access Analyzer analyzes resource policies and role trust policies to identify resources accessible from outside the zone of trust and generates findings. GuardDuty detects threats, Config records configuration, and Trusted Advisor gives best-practice checks, none of which analyze policies for external sharing the way Access Analyzer does.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-042",
+            "domain": "Identity and Access Management",
+            "stem": "A company must require privileged IAM users to present a multi-factor authentication token before their permissions take effect, no matter what the policy allows. Which mechanism enforces this?",
+            "options": [
+                "An AWS Config rule that reports users without MFA devices",
+                "An IAM policy with a condition that denies the actions when aws:MultiFactorAuthPresent is false",
+                "An IAM password policy that sets a minimum password length",
+                "A permissions boundary that lists all allowed services"
+            ],
+            "correct_index": 1,
+            "explanation": "A condition on aws:MultiFactorAuthPresent that denies when the value is false forces MFA before the allowed actions can run. A password policy governs password strength, a permissions boundary caps permissions but does not require MFA, and a Config rule detects the state without enforcing it.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-043",
+            "domain": "Identity and Access Management",
+            "stem": "An application running on Amazon EC2 must access Amazon S3 without storing long-term credentials on the instance. Which approach should be used?",
+            "options": [
+                "Store an IAM user secret key in an environment variable baked into the AMI",
+                "Create an IAM user and copy its credentials to the instance at launch",
+                "Attach an IAM role to the instance through an instance profile and let the SDK retrieve temporary credentials",
+                "Embed an IAM user access key in the application configuration file"
+            ],
+            "correct_index": 2,
+            "explanation": "An instance profile delivers temporary, automatically rotated credentials to the instance through the metadata service, so no long-term secret is stored. Embedding keys in configuration, environment variables, or launch scripts leaves durable credentials that are hard to rotate and easy to leak.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-044",
+            "domain": "Identity and Access Management",
+            "stem": "A company wants to harden the root user of each AWS account. Which set of actions follows AWS best practice?",
+            "options": [
+                "Share the root credentials with the operations team so they are never locked out",
+                "Use the root user for all automation because it has the fewest permission issues",
+                "Leave the root user without MFA so that recovery is faster",
+                "Remove the root user access keys, enable MFA on the root user, and avoid using root for day-to-day tasks"
+            ],
+            "correct_index": 3,
+            "explanation": "Best practice is to delete root access keys, enable MFA on the root user, and reserve root for the few tasks that require it, so a leaked credential cannot easily control the account. Sharing root credentials, automating with root, or leaving root without MFA all weaken the strongest identity in the account.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Identity and Access Management"
+        },
+        {
+            "id": "aws-scs-045",
+            "domain": "Data Protection",
+            "stem": "A company must rotate the cryptographic material backing a customer managed AWS KMS key on a schedule while keeping the same key ID and avoiding re-encryption of existing data. Which action should be taken?",
+            "options": [
+                "Enable automatic key rotation on the customer managed key so new backing keys are created while the key ID stays the same",
+                "Create a new KMS key and re-encrypt every existing object with it",
+                "Import new key material into the existing key on a schedule",
+                "Schedule the deletion and recreation of the key each year"
+            ],
+            "correct_index": 0,
+            "explanation": "Automatic key rotation creates new backing keys for a customer managed key on a schedule while retaining the key ID and decrypting data encrypted under older versions. Creating a new key forces re-encryption, imported key material cannot be auto-rotated by KMS, and deleting a key destroys the ability to decrypt existing data.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-046",
+            "domain": "Data Protection",
+            "stem": "A company encrypts data in one Region and needs to decrypt it in a second Region using the same key material so that data can be replicated. Which KMS feature should be used?",
+            "options": [
+                "AWS CloudHSM configured independently in the second Region only",
+                "AWS KMS multi-Region keys, with a primary key in one Region and a replica key in the second Region",
+                "A separate single-Region key in each Region and a custom re-encryption pipeline",
+                "Exporting the symmetric key material and importing it into a key in the second Region"
+            ],
+            "correct_index": 1,
+            "explanation": "Multi-Region keys replicate key material across Regions so a ciphertext created in one Region can be decrypted by the related replica key in another without re-encryption. Separate keys require decrypting and re-encrypting, KMS symmetric key material cannot be exported for import, and an independent CloudHSM cluster does not share the KMS key.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-047",
+            "domain": "Data Protection",
+            "stem": "A company has a regulatory requirement to keep its encryption keys in a dedicated, single-tenant hardware security module that it fully controls, including key generation through a standards-based interface. Which service should be used?",
+            "options": [
+                "S3 server-side encryption with Amazon S3 managed keys",
+                "AWS Secrets Manager, which stores encryption keys as secrets",
+                "AWS CloudHSM, which provides single-tenant hardware security modules in a customer-controlled cluster",
+                "AWS KMS with a customer managed key, which is already single-tenant hardware"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudHSM gives dedicated, single-tenant HSMs that the customer controls and can access using standard interfaces such as PKCS 11 and JCE. Customer managed KMS keys use shared, multi-tenant hardware, SSE-S3 uses AWS managed keys, and Secrets Manager stores secrets rather than providing hardware key custody.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-048",
+            "domain": "Data Protection",
+            "stem": "An application uses database credentials that must be rotated automatically every thirty days and retrieved at run time through an API call instead of being stored in code. Which service should be used?",
+            "options": [
+                "AWS Systems Manager Parameter Store with a plaintext parameter",
+                "An encrypted Amazon S3 object that the application downloads at startup",
+                "A hard-coded credential in the container image",
+                "AWS Secrets Manager with a rotation schedule configured for the database secret"
+            ],
+            "correct_index": 3,
+            "explanation": "Secrets Manager stores and retrieves secrets through API calls and can automatically rotate database credentials on a schedule using a rotation function. Parameter Store stores values but lacks built-in database rotation, an S3 object does not rotate and needs separate access control, and hard-coding secrets in an image is insecure.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-049",
+            "domain": "Data Protection",
+            "stem": "A company must ensure that every object uploaded to an Amazon S3 bucket is encrypted with a customer managed AWS KMS key by default, even when the uploader does not specify encryption. What should be configured?",
+            "options": [
+                "Default bucket encryption set to SSE-KMS with the customer managed key, plus a bucket policy that denies PutObject when encryption is not specified",
+                "S3 server-side encryption with Amazon S3 managed keys only",
+                "Client-side encryption implemented by each application team",
+                "A bucket ACL that requires encryption on upload"
+            ],
+            "correct_index": 0,
+            "explanation": "Default bucket encryption applies the chosen KMS key to objects that arrive without encryption settings, and a bucket policy that denies unencrypted puts ensures the default cannot be bypassed. SSE-S3 does not use a customer managed key, client-side encryption is inconsistent, and bucket ACLs do not enforce encryption.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-050",
+            "domain": "Data Protection",
+            "stem": "A company must reject any request to an Amazon S3 bucket that is not made over HTTPS. Which policy element enforces this?",
+            "options": [
+                "Enabling SSE-KMS on the bucket",
+                "A bucket policy with a Deny effect and a condition that tests aws:SecureTransport for a false value",
+                "A security group rule that allows only port 443",
+                "A network ACL rule that allows only TLS traffic"
+            ],
+            "correct_index": 1,
+            "explanation": "A bucket policy that denies when aws:SecureTransport is false blocks any plaintext HTTP request to the bucket. Security groups and network ACLs cannot inspect whether the application protocol is TLS, and enabling SSE-KMS encrypts stored objects but does not prevent an unencrypted transport request.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-051",
+            "domain": "Data Protection",
+            "stem": "A company must discover and classify personally identifiable information stored across many Amazon S3 buckets and receive findings that identify where sensitive data resides. Which service should be used?",
+            "options": [
+                "AWS Config, which detects PII by evaluating bucket configuration",
+                "Amazon GuardDuty, which reports PII locations as findings",
+                "Amazon Macie, which uses machine learning to identify and classify sensitive data in S3",
+                "Amazon Inspector, which classifies sensitive data in S3 buckets"
+            ],
+            "correct_index": 2,
+            "explanation": "Macie continuously samples and analyzes objects in S3 to discover and classify sensitive data such as personally identifiable information. Inspector scans compute resources for vulnerabilities, Config evaluates resource configuration, and GuardDuty detects threats, none of which classify the contents of S3 objects.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-052",
+            "domain": "Data Protection",
+            "stem": "A regulated company must store records in Amazon S3 in write-once, read-many mode so that no user, including an administrator, can delete an object before a retention date. Which feature should be used?",
+            "options": [
+                "An S3 lifecycle policy that transitions objects to Glacier",
+                "MFA delete enabled on the bucket alone",
+                "A bucket ACL that removes delete permission from all users",
+                "S3 Object Lock in compliance mode with versioning enabled on the bucket"
+            ],
+            "correct_index": 3,
+            "explanation": "Object Lock in compliance mode prevents an object version from being overwritten or deleted by any user, including the root user, until its retention date expires, and it requires versioning. Lifecycle policies move data without enforcing WORM, MFA delete only adds a guard on delete operations, and an ACL can be changed by a privileged user.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-053",
+            "domain": "Data Protection",
+            "stem": "A company terminates TLS at an Application Load Balancer and wants managed issuance and automatic renewal of certificates for a public domain. Which service should be used?",
+            "options": [
+                "AWS Certificate Manager with a public certificate attached to the load balancer listener",
+                "AWS CloudHSM generating a certificate for the load balancer",
+                "A self-signed certificate generated on each backend server",
+                "An SSH key pair imported into the load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Certificate Manager issues public certificates for integrated services such as load balancers and renews them automatically. CloudHSM stores keys rather than issuing certificates, self-signed certificates cannot be validated by browsers and require manual renewal, and SSH key pairs are for host access rather than TLS.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-054",
+            "domain": "Data Protection",
+            "stem": "An application must decrypt data with an AWS KMS key only while a specific batch job runs, and the access must expire automatically afterward. Which mechanism provides temporary, least-privilege access?",
+            "options": [
+                "An IAM user with a permanent policy allowing kms:Decrypt",
+                "A KMS grant issued to the job role that allows the required operations and can be retired or expires",
+                "A KMS key policy that lists a wildcard principal",
+                "Exporting the key material to the batch host"
+            ],
+            "correct_index": 1,
+            "explanation": "A KMS grant delegates specific operations to a principal and can be retired or set to expire, which gives temporary, scoped access without editing the key policy. A wildcard principal grants access too broadly, symmetric key material cannot be exported, and a permanent IAM policy does not expire.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-055",
+            "domain": "Data Protection",
+            "stem": "A company must encrypt an Amazon RDS database at rest and wants control over the key, the ability to rotate it, and an audit trail showing when the key was used. Which option should be used?",
+            "options": [
+                "Oracle transparent data encryption managed entirely inside the database",
+                "Application-level encryption with a key stored on the database host",
+                "RDS encryption with a customer managed AWS KMS key so key usage is logged in CloudTrail",
+                "RDS encryption with the default AWS managed key and no further configuration"
+            ],
+            "correct_index": 2,
+            "explanation": "Encrypting RDS with a customer managed KMS key gives the company control of the key policy and rotation and records each key use as a CloudTrail event. The AWS managed key gives less control and less visibility, database-managed encryption is not centrally audited, and a host-stored key is not hardware protected.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-056",
+            "domain": "Data Protection",
+            "stem": "A company wants highly sensitive data to be decryptable only by a specific role and wants assurance that an IAM policy alone cannot grant access to the AWS KMS key. Which statement about customer managed KMS key access is correct?",
+            "options": [
+                "An IAM policy is sufficient on its own to grant access to any KMS key",
+                "An S3 bucket policy controls access to the KMS key used by the bucket",
+                "Only the account root user can ever be granted access to a KMS key",
+                "The key policy must allow the principal before any IAM policy can grant access to the key"
+            ],
+            "correct_index": 3,
+            "explanation": "For a customer managed key, the key policy is the primary access control and must allow the principal, after which IAM policies can grant the specific operations. IAM alone cannot grant access when the key policy does not permit it, a bucket policy governs objects rather than the key, and access is not limited to root.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Data Protection"
+        },
+        {
+            "id": "aws-scs-057",
+            "domain": "Management and Security Governance",
+            "stem": "A company must apply a consistent security baseline to new accounts created in its organization, including CloudTrail, GuardDuty, and AWS Config, with as little manual work as possible. Which offering should be used?",
+            "options": [
+                "AWS Control Tower with its landing zone, Account Factory, and guardrails",
+                "A checklist that a new account owner follows after each account is created",
+                "An AWS Config aggregator with no guardrails",
+                "AWS Trusted Advisor checks reviewed by the security team"
+            ],
+            "correct_index": 0,
+            "explanation": "Control Tower provisions an opinionated landing zone with baseline logging and security services and uses Account Factory and guardrails to apply them to new accounts automatically. A manual checklist is error prone, a Config aggregator only aggregates compliance data, and Trusted Advisor gives advice without provisioning a baseline.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-058",
+            "domain": "Management and Security Governance",
+            "stem": "A security team needs a single view of configuration compliance across all accounts and Regions in its organization. Which feature should be used?",
+            "options": [
+                "AWS Trusted Advisor with all support checks enabled",
+                "An AWS Config aggregator that collects configuration and compliance data from all accounts and Regions",
+                "CloudTrail with an organization trail only",
+                "Amazon GuardDuty with findings exported to a bucket"
+            ],
+            "correct_index": 1,
+            "explanation": "A Config aggregator collects configuration and compliance data from multiple accounts and Regions into one account for a consolidated view. An organization trail stores API activity rather than compliance state, GuardDuty reports threats, and Trusted Advisor gives best-practice checks rather than configuration compliance across the organization.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-059",
+            "domain": "Management and Security Governance",
+            "stem": "A company wants to identify common security best-practice gaps, such as security groups that allow unrestricted access and public S3 buckets, without writing custom rules. Which service provides these checks?",
+            "options": [
+                "Amazon Detective, which lists public buckets as findings",
+                "AWS Network Firewall, which audits bucket policies",
+                "AWS Trusted Advisor, which includes security checks for common exposure issues",
+                "Amazon Macie, which reports open security groups"
+            ],
+            "correct_index": 2,
+            "explanation": "Trusted Advisor evaluates the account and reports on security checks such as open access ports, public S3 buckets, and IAM use. Macie classifies S3 data, Detective investigates behavior, and Network Firewall filters traffic rather than auditing resource configuration.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-060",
+            "domain": "Management and Security Governance",
+            "stem": "A company needs to give its external auditors self-service access to AWS SOC 2 and ISO 27001 compliance reports and agreements. Which service provides these documents?",
+            "options": [
+                "AWS Audit Manager, which provides the reports through an assessment",
+                "AWS Config, which exports the certifications as conformance packs",
+                "AWS Trusted Advisor, which hosts the compliance reports",
+                "AWS Artifact, which provides on-demand access to compliance reports and agreements"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Artifact is the self-service portal for AWS compliance reports and online agreements. Audit Manager helps gather evidence for an audit, Config evaluates resource configuration, and Trusted Advisor offers best-practice checks, none of which is the document repository for AWS certifications.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-061",
+            "domain": "Management and Security Governance",
+            "stem": "A company must continuously collect evidence for an internal audit mapped to a compliance framework and produce assessment reports for reviewers. Which service should be used?",
+            "options": [
+                "AWS Audit Manager, which maps evidence to a framework and generates assessment reports",
+                "AWS Artifact, which collects evidence from the accounts automatically",
+                "AWS Config, which produces framework assessment reports",
+                "AWS CloudTrail, which maps API activity to control frameworks"
+            ],
+            "correct_index": 0,
+            "explanation": "Audit Manager automates evidence collection against a chosen framework or custom control set and produces assessment reports. Artifact distributes AWS compliance documents, Config evaluates resource configuration, and CloudTrail records API activity, none of which assemble an audit assessment.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-062",
+            "domain": "Management and Security Governance",
+            "stem": "A company wants to enforce a strong password policy and a password rotation schedule for its IAM users. Which control should be configured?",
+            "options": [
+                "A KMS key policy that governs password encryption",
+                "An IAM account password policy that sets minimum length, complexity, reuse, and expiration",
+                "A security group rule that limits login sources",
+                "A service control policy that denies iam:ChangePassword"
+            ],
+            "correct_index": 1,
+            "explanation": "The IAM account password policy defines the minimum length, character requirements, reuse prevention, and expiration applied to all IAM users in the account. Security groups control network access, a service control policy that denies password changes prevents rotation, and a key policy governs key use rather than passwords.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-063",
+            "domain": "Management and Security Governance",
+            "stem": "A company wants a consolidated view of security findings and compliance against a standard such as the AWS Foundational Security Best Practices across all accounts and Regions. Which service should be used?",
+            "options": [
+                "AWS Trusted Advisor with all checks enabled",
+                "AWS Artifact with the standard selected",
+                "AWS Security Hub with the Organizations integration and the chosen standard enabled",
+                "An AWS Config aggregator with the standard enabled"
+            ],
+            "correct_index": 2,
+            "explanation": "Security Hub aggregates findings and runs compliance checks against standards such as the AWS Foundational Security Best Practices, and the Organizations integration extends the view across accounts and Regions. A Config aggregator shows configuration compliance, Trusted Advisor shows best-practice checks, and Artifact distributes compliance documents.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-064",
+            "domain": "Management and Security Governance",
+            "stem": "A company wants to decentralize administration while retaining central control over billing, account creation and closure, and organization-wide guardrails. Which service provides this governance structure?",
+            "options": [
+                "AWS IAM Identity Center, which manages account billing and closure",
+                "AWS Config, which creates and closes member accounts",
+                "AWS Trusted Advisor, which provides the organizational hierarchy",
+                "AWS Organizations, which manages accounts, consolidated billing, and service control policies centrally"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Organizations provides the account hierarchy, consolidated billing, account creation and closure, and the service control policies that guard member accounts. IAM Identity Center handles workforce access, Config evaluates configuration, and Trusted Advisor offers advisory checks, none of which create the organization.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        },
+        {
+            "id": "aws-scs-065",
+            "domain": "Management and Security Governance",
+            "stem": "A company wants to give product teams pre-approved, secured infrastructure products that they can deploy on their own while preventing them from launching non-compliant resources, and it wants to update the products centrally. Which service should be used?",
+            "options": [
+                "AWS Service Catalog with portfolio constraints and centrally managed products",
+                "A shared CloudFormation template stored in a wiki that teams deploy manually",
+                "An AWS Config rule that reports non-compliant deployments",
+                "AWS Trusted Advisor portfolios replicated to each account by hand"
+            ],
+            "correct_index": 0,
+            "explanation": "Service Catalog publishes curated products with launch constraints so teams can self-provision within approved templates, and the catalog owner updates the products centrally. A wiki template relies on discipline, Config detects non-compliance after deployment, and Trusted Advisor does not publish or constrain deployable products.",
+            "reference": "AWS Certified Security - Specialty SCS-C02 Exam Guide - Management and Security Governance"
+        }
+    ]
+}
