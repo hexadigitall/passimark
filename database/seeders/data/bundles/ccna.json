@@ -1,0 +1,1445 @@
+{
+    "cert_key": "ccna",
+    "title": "CCNA 200-301",
+    "issuer": "Cisco",
+    "outline_file": "outlines/ccna.json",
+    "variant_label": "CCNA Real-Spec Practice",
+    "exam": {
+        "questions": 102,
+        "duration_minutes": 120,
+        "scoring": "825/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Cisco CCNA 200-301 exam blueprint domains and the official cert guide topics. Not a capture of past exam questions.",
+    "source_label": "CCNA practice bank",
+    "items": [
+        {
+            "id": "ccna-001",
+            "domain": "Network Fundamentals",
+            "stem": "An engineer must transfer a large file reliably, and acknowledges every received segment before sending more data. Which protocol provides this behavior?",
+            "options": [
+                "TCP",
+                "ICMP",
+                "GRE",
+                "UDP"
+            ],
+            "correct_index": 0,
+            "explanation": "TCP is connection-oriented and reliable; it numbers segments, acknowledges received data, and retransmits lost data. UDP is best-effort, ICMP is control messaging, and GRE is a tunnelling protocol.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-002",
+            "domain": "Network Fundamentals",
+            "stem": "Which port number is the registered default for HTTPS?",
+            "options": [
+                "80",
+                "443",
+                "8080",
+                "53"
+            ],
+            "correct_index": 1,
+            "explanation": "HTTPS uses TCP 443. Port 80 is HTTP, 53 is DNS, and 8080 is a common alternate HTTP port used informally.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-003",
+            "domain": "Network Fundamentals",
+            "stem": "A host cannot reach the Internet but can reach hosts on its local subnet. Which configuration is the most likely cause?",
+            "options": [
+                "Wrong Ethernet cable standard",
+                "Missing DNS D-name for the host",
+                "Incorrect default gateway",
+                "Duplicate subnet mask"
+            ],
+            "correct_index": 2,
+            "explanation": "Local, same-subnet traffic needs no gateway, but off-subnet traffic is sent to the default gateway. An incorrect gateway breaks Internet reachability while local communication keeps working.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-004",
+            "domain": "Network Fundamentals",
+            "stem": "Which IPv4 range is reserved for private use and commonly assigned to home LANs?",
+            "options": [
+                "198.51.100.0/24",
+                "172.16.0.0 of /16",
+                "8.8.8.0/24",
+                "192.168.0.0/16"
+            ],
+            "correct_index": 3,
+            "explanation": "RFC 1918 private ranges include 10/8, 172.16/12, and 192.168/16. Home routers commonly hand out 192.168.0.0/24 addresses.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-005",
+            "domain": "Network Fundamentals",
+            "stem": "Which IPv6 address range identifies a link-local address?",
+            "options": [
+                "FE80::/10",
+                "FF02::/8",
+                "::ffff:0:0/96",
+                "2001:db8::/32"
+            ],
+            "correct_index": 0,
+            "explanation": "Link-local addresses begin with FE80::/10 and are used for local segment communication only. 2001:db8::/32 is documentation, FF02::/8 is multicast, and ::ffff:/96 is IPv4-mapped.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Compare IPv4 and IPv6"
+        },
+        {
+            "id": "ccna-006",
+            "domain": "Network Fundamentals",
+            "stem": "A router must forward a packet between two different IP networks. At which OSI layer does the router operate?",
+            "options": [
+                "Layer 2",
+                "Layer 3",
+                "Layer 4",
+                "Layer 1"
+            ],
+            "correct_index": 1,
+            "explanation": "Routing is a Layer 3 (network layer) function: the router reads the destination IP address and chooses a next hop. Switches handle Layer 2 forwarding, and ports/segments are Layer 4.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Role of network components"
+        },
+        {
+            "id": "ccna-007",
+            "domain": "Network Fundamentals",
+            "stem": "Which protocol resolves an IPv4 address to a LAN MAC address?",
+            "options": [
+                "DHCP",
+                "DNS",
+                "ARP",
+                "ICMPv6"
+            ],
+            "correct_index": 2,
+            "explanation": "ARP maps an IPv4 address to an Ethernet MAC address on the local segment. DNS maps names to IP, ICMPv6 carries Neighbor Discovery for IPv6, and DHCP assigns addresses.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-008",
+            "domain": "Network Fundamentals",
+            "stem": "Which subnet mask is equivalent to a /24 prefix length?",
+            "options": [
+                "255.0.0.0",
+                "255.255.255.128",
+                "255.255.0.0",
+                "255.255.255.0"
+            ],
+            "correct_index": 3,
+            "explanation": "A /24 has 24 network bits, masking 255.255.255.0. 255.255.255.128 is /25, 255.255.0.0 is /16, and 255.0.0.0 is /8.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-009",
+            "domain": "Network Fundamentals",
+            "stem": "How many usable host addresses are available in a /27 subnet?",
+            "options": [
+                "30",
+                "14",
+                "62",
+                "32"
+            ],
+            "correct_index": 0,
+            "explanation": "A /27 has 5 host bits, so 2^5 = 32 addresses; subtract the network and broadcast addresses to leave 30 usable hosts. 14 would be /28, and 62 would be /26.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-010",
+            "domain": "Network Fundamentals",
+            "stem": "Which statement correctly describes the default behavior of Ethernet with two devices connected to the same hub? They must operate:",
+            "options": [
+                "full duplex because the hub isolates collisions",
+                "half duplex because only one station can transmit at a time",
+                "WAN mode using framing",
+                "only on optical fiber cabling"
+            ],
+            "correct_index": 1,
+            "explanation": "A hub is a shared half-duplex medium, so two attached stations share one collision domain and only one may transmit at a time. Switches create separate collision domains per port.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-011",
+            "domain": "Network Fundamentals",
+            "stem": "Which cabling standard is correct when connecting a PC directly to a switch port?",
+            "options": [
+                "Any cable, because switches autosense direction automatically",
+                "Crossover between a PC and a switch",
+                "Straight-through between a PC and a switch",
+                "Rollover between a PC and a switch"
+            ],
+            "correct_index": 2,
+            "explanation": "Devices of unlike type (PC-to-switch) use straight-through cabling. Crossover is used between like devices, and rollover connects to a console port.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-012",
+            "domain": "Network Fundamentals",
+            "stem": "What is the default Ethernet MTU that an IP packet must not exceed on most LAN links?",
+            "options": [
+                "1280 bytes",
+                "9000 bytes",
+                "65535 bytes",
+                "1500 bytes"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard Ethernet payload (MTU) is 1500 bytes; jumbo frames allow 9000 bytes on some networks. 1280 is the IPv6 minimum MTU, and 65535 is the IP maximum packet size, not Ethernet MTU.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-013",
+            "domain": "Network Fundamentals",
+            "stem": "Which network device forwards frames based only on the destination MAC address?",
+            "options": [
+                "Layer 2 switch",
+                "Load balancer",
+                "Firewall",
+                "Router"
+            ],
+            "correct_index": 0,
+            "explanation": "A Layer 2 switch forwards Ethernet frames using destination MAC addresses in its MAC address table. Routers and firewalls operate on IP (Layer 3), and load balancers work at Layers 4-7.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Role of network components"
+        },
+        {
+            "id": "ccna-014",
+            "domain": "Network Fundamentals",
+            "stem": "When a switch receives a unicast frame whose destination MAC is not in its address table, what does it do?",
+            "options": [
+                "Drops the frame",
+                "Floods the frame out all ports except the ingress port",
+                "Sends the frame to the router",
+                "Replies with an ARP request"
+            ],
+            "correct_index": 1,
+            "explanation": "An unknown unicast is flooded to all ports in the VLAN except the port it arrived on, so the destination can reply and the switch then learns its MAC. The switch does not drop, route, or ARP.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-015",
+            "domain": "Network Fundamentals",
+            "stem": "A network engineer uses a tool that times an ICMP echo request. Which two commands rely on ICMP to test path reachability?",
+            "options": [
+                "arp and ipconfig",
+                "tftp and ftp",
+                "ping and traceroute",
+                "show running-config and copy running-config startup-config"
+            ],
+            "correct_index": 2,
+            "explanation": "ping sends ICMP echo requests; traceroute uses ICMP (or UDP) with increasing TTL values to map the path. The other pairs are configuration, address, and file-transfer operations.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-016",
+            "domain": "Network Fundamentals",
+            "stem": "Which statement about IPv6 unicast addressing is correct?",
+            "options": [
+                "Link-local addresses are routable on the Internet",
+                "IPv6 addresses are 32 bits",
+                "The loopback address is 127.0.0.1",
+                "Multicast is used instead of broadcast"
+            ],
+            "correct_index": 3,
+            "explanation": "IPv6 has no broadcast; multicast and link-local scoping replace it. Loopback is ::1, link-local (FE80::/10) is not routed beyond the link, and IPv6 addresses are 128 bits.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Compare IPv4 and IPv6"
+        },
+        {
+            "id": "ccna-017",
+            "domain": "Network Fundamentals",
+            "stem": "Which statement about the DHCP process order is correct?",
+            "options": [
+                "Discover, Offer, Request, Acknowledgment",
+                "Offer, Discover, Acknowledgment, Request",
+                "Request, Discover, Offer, Acknowledgment",
+                "Discover, Request, Offer, Acknowledgment"
+            ],
+            "correct_index": 0,
+            "explanation": "DHCP uses DORA: the client broadcasts a Discover, servers respond with Offer, the client sends Request, and the chosen server sends the final Acknowledgment with the lease.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-018",
+            "domain": "Network Fundamentals",
+            "stem": "Which DNS record type maps a hostname to an IPv6 address?",
+            "options": [
+                "A record",
+                "AAAA record",
+                "CNAME record",
+                "MX record"
+            ],
+            "correct_index": 1,
+            "explanation": "AAAA records map names to IPv6 addresses; A records map to IPv4. CNAME aliases one name to another, and MX records designate mail servers.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-019",
+            "domain": "Network Fundamentals",
+            "stem": "Which cloud service model provides the least management over the underlying infrastructure?",
+            "options": [
+                "IaaS",
+                "PaaS",
+                "SaaS",
+                "DaaS"
+            ],
+            "correct_index": 2,
+            "explanation": "SaaS delivers finished applications the customer only uses. IaaS gives the most infrastructure control, PaaS manages the platform, and DaaS is desktop virtualization.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-020",
+            "domain": "Network Fundamentals",
+            "stem": "Which WAN technology feature best fits a network that must carry voice between two offices with guaranteed quality?",
+            "options": [
+                "An increased MTU on the LAN switch",
+                "Replacing fiber with twisted pair",
+                "Best-effort public Internet",
+                "A private, low-latency link such as MPLS or a dedicated circuit"
+            ],
+            "correct_index": 3,
+            "explanation": "Voice requires consistent latency and low jitter, so a private low-latency WAN (MPLS or dedicated circuit) is appropriate. Best-effort Internet offers no such guarantee.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-021",
+            "domain": "Network Fundamentals",
+            "stem": "A host is assigned the address 10.1.1.10 with the mask 255.255.255.0. Which prefix length is this host using?",
+            "options": [
+                "/24",
+                "/28",
+                "/30",
+                "/16"
+            ],
+            "correct_index": 0,
+            "explanation": "255.255.255.0 is a /24 mask. /16 would be 255.255.0.0, /28 would be 255.255.255.240, and /30 would be 255.255.255.252.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-022",
+            "domain": "Network Access",
+            "stem": "What is the primary purpose of creating VLANs on a switched network?",
+            "options": [
+                "Increase the MAC address table size",
+                "Create separate broadcast domains on the same switch",
+                "Replace the need for routing",
+                "Provide redundant default gateways"
+            ],
+            "correct_index": 1,
+            "explanation": "VLANs partition one switch into separate Layer 2 broadcast domains, restricting broadcast traffic and adding segmentation. They do not replace routing, grow MAC tables, or provide gateways.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Configure and verify VLANs"
+        },
+        {
+            "id": "ccna-023",
+            "domain": "Network Access",
+            "stem": "Which encapsulation standard insert a VLAN tag for traffic between switches and is the industry standard?",
+            "options": [
+                "802.1X",
+                "ISL",
+                "802.1Q",
+                "802.11"
+            ],
+            "correct_index": 2,
+            "explanation": "IEEE 802.1Q is the industry-standard VLAN tagging method. ISL is an obsolete Cisco-proprietary encapsulation, 802.11 is wireless, and 802.1X is port-based authentication.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Configure Interswitch connectivity"
+        },
+        {
+            "id": "ccna-024",
+            "domain": "Network Access",
+            "stem": "Which switch port mode carries traffic for multiple VLANs?",
+            "options": [
+                "Monitor",
+                "Voice",
+                "Access",
+                "Trunk"
+            ],
+            "correct_index": 3,
+            "explanation": "A trunk port carries frames for many VLANs using 802.1Q tags. An access port carries a single untagged VLAN, and monitor ports copy traffic for captures.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Configure Interswitch connectivity"
+        },
+        {
+            "id": "ccna-025",
+            "domain": "Network Access",
+            "stem": "In 802.1Q trunking, which VLAN normally traverses the trunk untagged?",
+            "options": [
+                "VLAN 1 (native VLAN by default)",
+                "VLAN 4094",
+                "The spanning-tree root VLAN",
+                "Every voice VLAN"
+            ],
+            "correct_index": 0,
+            "explanation": "Native VLAN traffic is not tagged on the trunk; VLAN 1 is the default native VLAN on most switches. All other VLANs carry 802.1Q tags.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Configure Interswitch connectivity"
+        },
+        {
+            "id": "ccna-026",
+            "domain": "Network Access",
+            "stem": "In which order do Spanning Tree Protocol port states progress on a newly enabled switch port?",
+            "options": [
+                "Forwarding, Blocking, Listening, Learning",
+                "Blocking, Listening, Learning, Forwarding",
+                "Listening, Forwarding, Blocking, Learning",
+                "Learning, Forwarding, Listening, Blocking"
+            ],
+            "correct_index": 1,
+            "explanation": "A port begins blocked, then moves through listening and learning before forwarding frames. The states exist to prevent temporary loops while the topology is being determined.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-027",
+            "domain": "Network Access",
+            "stem": "What does Spanning Tree Protocol primarily prevent on a switched network?",
+            "options": [
+                "MAC spoofing",
+                "Trunk misconfiguration",
+                "Broadcast storms and Layer 2 loops",
+                "IP address conflicts"
+            ],
+            "correct_index": 2,
+            "explanation": "STP prevents Layer 2 loops caused by redundant paths; loops lead to broadcast storms and MAC-table instability. Loop prevention is its core function, not security or IP features.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-028",
+            "domain": "Network Access",
+            "stem": "How does a switch elect the root bridge in Spanning Tree Protocol?",
+            "options": [
+                "Highest port speed",
+                "First port to forward",
+                "Lowest IP address",
+                "Lowest bridge ID (priority plus MAC)"
+            ],
+            "correct_index": 3,
+            "explanation": "The switch with the lowest root bridge ID - bridge priority combined with the base MAC address - wins the root election. IP addresses and port speed are not part of the election.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-029",
+            "domain": "Network Access",
+            "stem": "Which statement best distinguishes Rapid PVST+ from classic STP?",
+            "options": [
+                "RPVST+ converges faster through a proposal/agreement handshake",
+                "RPVST+ is proprietary to a single vendor",
+                "RPVST+ forwards BPDUs only on the root",
+                "RPVST+ has no root bridge election"
+            ],
+            "correct_index": 0,
+            "explanation": "Rapid PVST+ (Rapid Spanning Tree) uses a proposal/agreement handshake so designated ports enter forwarding immediately, converging in seconds instead of the 30-50 seconds of classic STP.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-030",
+            "domain": "Network Access",
+            "stem": "Which standard is used to negotiate a Link Aggregation Group (EtherChannel) between two switches?",
+            "options": [
+                "LLDP",
+                "LACP",
+                "802.1Q",
+                "SPAN"
+            ],
+            "correct_index": 1,
+            "explanation": "LACP (IEEE 802.1AX/802.3ad) forms an EtherChannel between switches. 802.1Q tags VLANs, SPAN mirrors traffic, and LLDP is neighbor discovery.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-031",
+            "domain": "Network Access",
+            "stem": "What is the benefit of bundling multiple physical links into an EtherChannel?",
+            "options": [
+                "Reduces the number of MAC addresses learned",
+                "Makes STP unnecessary",
+                "Adds up to 8 physical links as one logical link, increasing bandwidth and resilience",
+                "Creates a new broadcast domain"
+            ],
+            "correct_index": 2,
+            "explanation": "EtherChannel treats a bundle of up to 8 physical links as a single logical link, adding throughput and redundancy while STP still protects against loops.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-032",
+            "domain": "Network Access",
+            "stem": "Which neighbor discovery protocol is a Cisco proprietary protocol?",
+            "options": [
+                "SNMP",
+                "NDP",
+                "LLDP",
+                "CDP"
+            ],
+            "correct_index": 3,
+            "explanation": "CDP (Cisco Discovery Protocol) is Cisco proprietary; LLDP (IEEE 802.1AB) is vendor-neutral. SNMP is management and NDP is IPv6 neighbor discovery.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-033",
+            "domain": "Network Access",
+            "stem": "How does a switch construct and use its MAC address table?",
+            "options": [
+                "Learns the source MAC of inbound frames and forwards by destination MAC",
+                "Uses ARP table entries supplied by the router",
+                "Uses DHCP leases to build the table",
+                "Queries DNS for every frame"
+            ],
+            "correct_index": 0,
+            "explanation": "A switch learns MACs from the source addresses of frames entering each port and then forwards frames by looking up their destination MACs. ARP, DHCP and DNS play no role in this.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-034",
+            "domain": "Network Access",
+            "stem": "Which PoE standard supplies roughly 30 W per port to a device?",
+            "options": [
+                "802.3af",
+                "802.3at",
+                "802.3bt-single",
+                "802.11ac"
+            ],
+            "correct_index": 1,
+            "explanation": "802.3at (PoE+) provides up to about 30 W per port; 802.3af (PoE) provides about 15.4 W. 802.3bt supplies up to 100 W and 802.11ac is a wireless standard.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access"
+        },
+        {
+            "id": "ccna-035",
+            "domain": "Network Access",
+            "stem": "In a lightweight wireless architecture, where are roaming and radio management decisions typically made?",
+            "options": [
+                "In the core router",
+                "On the access point only",
+                "On the wireless LAN controller (WLC)",
+                "By a client-side daemon"
+            ],
+            "correct_index": 2,
+            "explanation": "In controller-based (centralized) wireless, the WLC manages APs, radio parameters and roaming. Standalone APs make those decisions locally in autonomous mode.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Wireless architectures"
+        },
+        {
+            "id": "ccna-036",
+            "domain": "Network Access",
+            "stem": "What does the SSID identify on a wireless LAN?",
+            "options": [
+                "The MAC address of the AP radio",
+                "The encryption key",
+                "The channel the AP uses",
+                "The wireless network name clients connect to"
+            ],
+            "correct_index": 3,
+            "explanation": "The SSID is the friendly network name that clients use to discover and associate with a WLAN. It is separate from BSSID, channel, and encryption key settings.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Wireless architectures"
+        },
+        {
+            "id": "ccna-037",
+            "domain": "Network Access",
+            "stem": "Compared with the 2.4 GHz band, what is generally true of the 5 GHz band for Wi-Fi?",
+            "options": [
+                "Higher throughput potential with shorter range and more available channels",
+                "Required for 802.11b clients",
+                "Always uses WPA3",
+                "Better range but lower throughput"
+            ],
+            "correct_index": 0,
+            "explanation": "5 GHz offers wider channels and less congestion (more non-overlapping channels), so throughput is higher, but higher frequency attenuates more quickly, reducing range.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Wireless architectures"
+        },
+        {
+            "id": "ccna-038",
+            "domain": "Network Access",
+            "stem": "Which encryption suite is used by WPA2?",
+            "options": [
+                "TKIP",
+                "AES/CCMP",
+                "DES",
+                "WEP"
+            ],
+            "correct_index": 1,
+            "explanation": "WPA2 uses IEEE 802.11i with AES-CCMP encryption. WEP and TKIP (WPA) are obsolete, and DES is a legacy block cipher unrelated to Wi-Fi.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-039",
+            "domain": "Network Access",
+            "stem": "Which security benefit does VLAN segmentation provide?",
+            "options": [
+                "It removes the need for access control lists",
+                "It increases wireless signal strength",
+                "It limits which devices can communicate by isolating traffic into separate broadcast domains",
+                "It encrypts all traffic between hosts"
+            ],
+            "correct_index": 2,
+            "explanation": "VLANs separate groups into distinct broadcast domains, and control-plane/L3 policies can then restrict cross-VLAN traffic. They do not encrypt or replace ACLs.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Access - Configure and verify VLANs"
+        },
+        {
+            "id": "ccna-040",
+            "domain": "Network Access",
+            "stem": "A client associates to an SSID using WPA2-Personal. What establishes the encryption keys?",
+            "options": [
+                "A RADIUS certificate only",
+                "An 802.1X EAP exchange with a CA",
+                "The client MAC address",
+                "A pre-shared key (PSK) supplied to client and AP"
+            ],
+            "correct_index": 3,
+            "explanation": "WPA2-Personal derives keys from a shared passphrase (PSK) known to both the client and the AP. 802.1X/EAP with a RADIUS server is used by WPA2-Enterprise.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-041",
+            "domain": "IP Connectivity",
+            "stem": "When a router consults its routing table for a destination, which entry is selected?",
+            "options": [
+                "The route with the longest prefix match",
+                "The route with the lowest metric regardless of prefix length",
+                "The first route entered by the administrator",
+                "The route with the highest administrative distance"
+            ],
+            "correct_index": 0,
+            "explanation": "Routers perform longest-prefix-match: the most specific matching prefix wins. Metric and administrative distance break ties only among otherwise equal routes.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Determine how a router makes a forwarding decision"
+        },
+        {
+            "id": "ccna-042",
+            "domain": "IP Connectivity",
+            "stem": "What does administrative distance represent in the routing decision process?",
+            "options": [
+                "The number of hops in the path",
+                "The reliability rating of the routing source - lower is more trusted",
+                "The physical distance between routers",
+                "The metric of the interface speed"
+            ],
+            "correct_index": 1,
+            "explanation": "AD is a trust rating of the routing source (directly connected 0, static 1, EIGRP 90, OSPF 110, RIP 120). Lower AD means the source is more preferred.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-043",
+            "domain": "IP Connectivity",
+            "stem": "Which routing table code represents a statically configured route in Cisco IOS?",
+            "options": [
+                "D",
+                "C",
+                "S",
+                "O"
+            ],
+            "correct_index": 2,
+            "explanation": "In Cisco IOS the route codes are C for connected, S for static, O for OSPF and D for EIGRP. The question asks specifically for static routes.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-044",
+            "domain": "IP Connectivity",
+            "stem": "Which route is used when no more specific route exists for a destination?",
+            "options": [
+                "A loopback route",
+                "The route with the highest IP address",
+                "An eBGP route",
+                "Default route 0.0.0.0/0"
+            ],
+            "correct_index": 3,
+            "explanation": "The default route 0.0.0.0/0 matches any destination not covered by a longer prefix. It is typically used to send traffic to an ISP or WAN gateway.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-045",
+            "domain": "IP Connectivity",
+            "stem": "What is the administrative distance of a directly connected route?",
+            "options": [
+                "0",
+                "1",
+                "110",
+                "255"
+            ],
+            "correct_index": 0,
+            "explanation": "Connected routes have an AD of 0, the most trusted, because the network is literally attached to the interface. Static routes are 1 and OSPF is 110.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-046",
+            "domain": "IP Connectivity",
+            "stem": "Which routing protocol is link-state and computes a shortest path first (SPF) tree?",
+            "options": [
+                "RIP",
+                "OSPF",
+                "EIGRP",
+                "BGP"
+            ],
+            "correct_index": 1,
+            "explanation": "OSPF is a link-state protocol that runs the Dijkstra SPF algorithm over the full topology database. RIP and (internally) EIGRP derive paths differently, and BGP is path-vector.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-047",
+            "domain": "IP Connectivity",
+            "stem": "How does OSPF discover neighboring routers on a segment?",
+            "options": [
+                "DNS lookup of the peer hostname",
+                "TCP three-way handshake",
+                "Exchange of Hello packets",
+                "Broadcasting routing tables to 10.0.0.0/8"
+            ],
+            "correct_index": 2,
+            "explanation": "OSPF neighbors form by exchanging Hello packets (multicast 224.0.0.5 on Ethernet) that carry area, timers and router-ID. Routing tables are exchanged only after adjacency forms.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-048",
+            "domain": "IP Connectivity",
+            "stem": "Which area must exist in any OSPF deployment and interconnects all other areas?",
+            "options": [
+                "Area 1",
+                "The highest-numbered area",
+                "A stub area",
+                "Area 0 (backbone)"
+            ],
+            "correct_index": 3,
+            "explanation": "OSPF requires a backbone, Area 0, and every other area must connect to it (directly or by virtual link). Stub areas are a special case, not the hub.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-049",
+            "domain": "IP Connectivity",
+            "stem": "In OSPF, what is the router ID chosen from by default?",
+            "options": [
+                "The highest loopback IP, then the highest active interface IP",
+                "The lowest MAC address",
+                "The first FastEthernet IP configured",
+                "A random number assigned at boot"
+            ],
+            "correct_index": 0,
+            "explanation": "Cisco routers pick the highest loopback IP as the OSPF router ID, falling back to the highest active non-loopback interface IP, and changing it requires a router-ID reset.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-050",
+            "domain": "IP Connectivity",
+            "stem": "Which value is used as the OSPF metric (cost) and what does it favor?",
+            "options": [
+                "Hop count, favoring few hops",
+                "Cost computed from interface bandwidth, favoring faster links",
+                "TTL left on arrival",
+                "Delay measured by echo probes"
+            ],
+            "correct_index": 1,
+            "explanation": "OSPF cost = reference bandwidth / interface bandwidth, so faster links are preferred. Hop count is RIP's metric, and delay probes are not used by OSPF.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-051",
+            "domain": "IP Connectivity",
+            "stem": "What is the effect of a passive OSPF interface?",
+            "options": [
+                "It sets the cost to zero",
+                "It changes the network to point-to-point",
+                "It stops sending OSPF hellos but still advertises the subnet",
+                "It removes the subnet from the database"
+            ],
+            "correct_index": 2,
+            "explanation": "A passive interface stops forming neighbors (no Hello packets sent or received) yet the connected subnet is still advertised. This is commonly used on user-facing LANs.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-052",
+            "domain": "IP Connectivity",
+            "stem": "A router has two OSPF paths to a destination with equal cost. What happens?",
+            "options": [
+                "The path learned last is preferred",
+                "The path with the lowest IP is used",
+                "One path is placed in a hold-down state",
+                "Traffic load-balances across both paths"
+            ],
+            "correct_index": 3,
+            "explanation": "Equal-cost paths are all installed; the router performs equal-cost multipath load balancing across them for different flows.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-053",
+            "domain": "IP Connectivity",
+            "stem": "What is the purpose of TTL in the IP header?",
+            "options": [
+                "Preventing packets from looping forever, decremented at each hop",
+                "Fragment reassembly ordering",
+                "Encryption of packet payload",
+                "Quality of service marking"
+            ],
+            "correct_index": 0,
+            "explanation": "TTL is decremented at each router; when it reaches zero the packet is discarded, so a routing loop cannot circulate packets indefinitely. It is unrelated to QoS, fragmentation identities or encryption.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity"
+        },
+        {
+            "id": "ccna-054",
+            "domain": "IP Connectivity",
+            "stem": "A router receives a packet for a directly connected subnet. Which forwarding step happens first?",
+            "options": [
+                "Rewrite the destination IP address",
+                "Perform longest-prefix match on the destination IP",
+                "ARP for the destination, then send to its MAC",
+                "Send via the default gateway"
+            ],
+            "correct_index": 1,
+            "explanation": "Forwarding always begins with the longest-prefix-match lookup. For an attached subnet the result is a connected route; ARP follows only after the route is chosen, and IP addresses are never rewritten.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Determine how the router makes a forwarding decision"
+        },
+        {
+            "id": "ccna-055",
+            "domain": "IP Connectivity",
+            "stem": "What is a floating static route?",
+            "options": [
+                "A route learned from an unauthenticated neighbor",
+                "A default route applied to VRF only",
+                "A static route with a higher AD than the primary dynamic route, used as a backup",
+                "A route redistributed into BGP"
+            ],
+            "correct_index": 2,
+            "explanation": "A floating static route carries a deliberately higher AD than the primary route (e.g., 200 vs an OSPF 110), so it is used only when the primary route disappears.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-056",
+            "domain": "IP Connectivity",
+            "stem": "What is the IPv6 default route expressed as a prefix?",
+            "options": [
+                "fe80::/10",
+                "::1/128",
+                "2001::/3",
+                "::/0"
+            ],
+            "correct_index": 3,
+            "explanation": "The IPv6 default route is ::/0, equivalent to IPv4's 0.0.0.0/0. fe80::/10 is link-local, ::1 is loopback, and 2001::/3 is global unicast.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-057",
+            "domain": "IP Connectivity",
+            "stem": "How many usable host addresses are in the subnet 10.1.1.0/28?",
+            "options": [
+                "14",
+                "30",
+                "62",
+                "16"
+            ],
+            "correct_index": 0,
+            "explanation": "A /28 leaves 4 host bits: 2^4 = 16 addresses, minus network (.0) and broadcast (.15) leaves 14 usable. 30 would be /27 and 62 would be /26.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-058",
+            "domain": "IP Connectivity",
+            "stem": "What is meant by VLSM in IPv4 design?",
+            "options": [
+                "Automatically summarizing to /8",
+                "Assigning variable-length subnet masks so host counts match each segment",
+                "Using the same mask everywhere to simplify design",
+                "Using a Class A default mask only"
+            ],
+            "correct_index": 1,
+            "explanation": "VLSM (variable-length subnet masking) lets different segments use different prefix lengths, so address space is matched to actual host counts rather than wasted.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-059",
+            "domain": "IP Connectivity",
+            "stem": "What does the subnet mask identify to the host routing logic?",
+            "options": [
+                "The maximum frame size",
+                "The LAN MAC of the router",
+                "Which part of the IP address is the host portion vs the network portion",
+                "The physical location of the default gateway"
+            ],
+            "correct_index": 2,
+            "explanation": "The mask marks the network bits (1s) and host bits (0s) of an IP address, which is exactly what decides whether a destination is local or must go through the gateway.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Configure and verify IPv4 addressing"
+        },
+        {
+            "id": "ccna-060",
+            "domain": "IP Connectivity",
+            "stem": "Which OSPF network type is used on an Ethernet segment and elects a DR and BDR?",
+            "options": [
+                "Point-to-point",
+                "Point-to-multipoint",
+                "Non-broadcast",
+                "Broadcast"
+            ],
+            "correct_index": 3,
+            "explanation": "Broadcast OSPF network types exist on Ethernet segments and elect a Designated Router (DR) and Backup DR to reduce adjacencies. Point-to-point networks have at most one passive peer and no DR election.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-061",
+            "domain": "IP Connectivity",
+            "stem": "What does a BDR do in OSPF on a broadcast network?",
+            "options": [
+                "Backs up the DR and becomes DR if the DR fails",
+                "Injects a default route into the area",
+                "Redistributes BGP routes",
+                "Filters all Link State Advertisements"
+            ],
+            "correct_index": 0,
+            "explanation": "The Backup Designated Router is appointed to take over the DR role if the DR fails, minimizing the disruption of a DR outage. It does not inject defaults or filter LSAs.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-062",
+            "domain": "IP Connectivity",
+            "stem": "Which command would test path reachability hop by hop and reveal a failing router?",
+            "options": [
+                "show vlan brief",
+                "traceroute",
+                "show ip route",
+                "ipconfig /all"
+            ],
+            "correct_index": 1,
+            "explanation": "traceroute lists each hop and where the path stops, revealing the failing router or the unresponsive network between hops. The other commands show configuration, not live path state.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals"
+        },
+        {
+            "id": "ccna-063",
+            "domain": "IP Connectivity",
+            "stem": "Which routing protocol is the interior gateway protocol that would NOT be used between Internet service providers?",
+            "options": [
+                "EIGRP",
+                "RIP",
+                "BGP",
+                "OSPF"
+            ],
+            "correct_index": 2,
+            "explanation": "BGP is the path-vector protocol used between autonomous systems, including between ISPs; OSPF, EIGRP and RIP are interior gateway protocols designed for use within one organization.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity"
+        },
+        {
+            "id": "ccna-064",
+            "domain": "IP Connectivity",
+            "stem": "What is the effect of the route selection when both a static route (AD 1) and an OSPF route (AD 110) exist for the same prefix?",
+            "options": [
+                "The OSPF route is preferred because it is dynamic",
+                "Traffic is load-balanced across both",
+                "The route with the faster interface wins",
+                "The static route is preferred because its AD is lower"
+            ],
+            "correct_index": 3,
+            "explanation": "Lower administrative distance wins, so the static route (AD 1) is preferred over OSPF (AD 110) for the same prefix regardless of metric.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-065",
+            "domain": "IP Connectivity",
+            "stem": "Which address is used as the destination for OSPF Hello packets on an Ethernet segment?",
+            "options": [
+                "224.0.0.5",
+                "255.255.255.255",
+                "224.0.0.9",
+                "The neighbor interface broadcast address"
+            ],
+            "correct_index": 0,
+            "explanation": "OSPF routers send Hellos and AllSPFRouters updates to multicast 224.0.0.5; the DR/BDR use 224.0.0.6. 224.0.0.9 is RIPv2, and global broadcast is not used by OSPF.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Configure and verify OSPFv2"
+        },
+        {
+            "id": "ccna-066",
+            "domain": "IP Connectivity",
+            "stem": "A router has learned a network via two OSPF neighbors of equal cost. What does the routing table show?",
+            "options": [
+                "No entry until the SPF dwell timer expires",
+                "Both paths installed; traffic shares across them",
+                "Only the path from the lower router ID",
+                "The path from the neighbor with the highest IP"
+            ],
+            "correct_index": 1,
+            "explanation": "Equal-cost OSPF paths are both installed in the RIB and used for load-sharing across flows; the router does not arbitrarily discard one.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Connectivity - Interpret routing table components"
+        },
+        {
+            "id": "ccna-067",
+            "domain": "IP Services",
+            "stem": "Which address translation technique maps many private hosts to a single public IP using unique port numbers?",
+            "options": [
+                "NAT overload off",
+                "VLAN tagging",
+                "PAT (port address translation)",
+                "Static NAT one-to-one"
+            ],
+            "correct_index": 2,
+            "explanation": "PAT, also called NAT overload, uses unique transport ports to multiplex many private hosts behind one public address. Static NAT maps one address to another one-to-one.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Configure and verify NAT"
+        },
+        {
+            "id": "ccna-068",
+            "domain": "IP Services",
+            "stem": "Which DHCP options can a server deliver to a client?",
+            "options": [
+                "Only the IP address",
+                "Only the MAC address table",
+                "OSPF router IDs",
+                "IP address, subnet mask, default gateway, and DNS servers"
+            ],
+            "correct_index": 3,
+            "explanation": "DHCP can deliver an IP lease plus options such as mask, default gateway (option 3) and DNS (option 6). It does not assign MAC tables or OSPF IDs.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Describe DNS and DHCP"
+        },
+        {
+            "id": "ccna-069",
+            "domain": "IP Services",
+            "stem": "Which protocol should network devices use to keep their clocks synchronized for accurate logging and certificate validation?",
+            "options": [
+                "NTP",
+                "RADIUS",
+                "SCP",
+                "MLS"
+            ],
+            "correct_index": 0,
+            "explanation": "NTP synchronizes device clocks, which matters for the integrity of logged event times and for certificate validity periods. RADIUS authenticates users, SCP is secure file copy, and MLS is multi-layer switching.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-070",
+            "domain": "IP Services",
+            "stem": "Which management protocol collects monitoring data by polling and also accepts unsolicited event alerts?",
+            "options": [
+                "SSH",
+                "SNMP",
+                "HTTP",
+                "TFTP"
+            ],
+            "correct_index": 1,
+            "explanation": "SNMP managers poll agents (port 161) and agents send traps/informs (port 162). HTTP, TFTP, and SSH are not network monitoring protocols.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Understand SNMP and Syslog"
+        },
+        {
+            "id": "ccna-071",
+            "domain": "IP Services",
+            "stem": "What does the syslog severity level 4 (warnings) indicate about an event?",
+            "options": [
+                "A fatal hardware failure occurred",
+                "The event is informational trivia",
+                "The event is a warning that warrants attention but service still works",
+                "The router is rebooting"
+            ],
+            "correct_index": 2,
+            "explanation": "Syslog levels run 0 (emergency) through 7 (debug); level 4 is warning - conditions that may need attention without stopping service. Reboot and death are levels 5-0 type events, and informational is level 6.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Understand SNMP and Syslog"
+        },
+        {
+            "id": "ccna-072",
+            "domain": "IP Services",
+            "stem": "Which feature classifies traffic and prioritizes latency-sensitive packets, such as voice, over best-effort data?",
+            "options": [
+                "NAT",
+                "STP",
+                "SNMP traps",
+                "QoS"
+            ],
+            "correct_index": 3,
+            "explanation": "QoS classifies, marks, and queues traffic so real-time flows like voice get priority over bulk data. NAT, STP, and SNMP serve translation, loop prevention, and management.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-073",
+            "domain": "IP Services",
+            "stem": "Which first-hop redundancy protocol provides a virtual default gateway IP that fails over between two routers?",
+            "options": [
+                "HSRP",
+                "OSPF",
+                "STP",
+                "PAT"
+            ],
+            "correct_index": 0,
+            "explanation": "HSRP (and VRRP/GLBP) provides a virtual gateway IP shared by redundant routers so hosts keep a stable default gateway during an outage. OSPF, STP, and PAT serve other functions.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-074",
+            "domain": "IP Services",
+            "stem": "Which transport and port does TFTP use by default?",
+            "options": [
+                "TCP 23",
+                "UDP 69",
+                "TCP 21",
+                "UDP 53"
+            ],
+            "correct_index": 1,
+            "explanation": "TFTP uses UDP port 69 and is commonly used to move IOS images without the overhead of TCP-based FTP (TCP 21). Port 53 is DNS and 23 is Telnet.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-075",
+            "domain": "IP Services",
+            "stem": "Which DNS record type identifies the mail server for a domain, used during email delivery?",
+            "options": [
+                "AAAA",
+                "PTR",
+                "MX",
+                "A"
+            ],
+            "correct_index": 2,
+            "explanation": "MX records point to the domain's mail exchangers. A/AAAA give address records and PTR provides reverse resolution from IP to name.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Describe DNS and DHCP"
+        },
+        {
+            "id": "ccna-076",
+            "domain": "IP Services",
+            "stem": "Which protocol is used by a client to request an IPv4 address dynamically on boot?",
+            "options": [
+                "ARP",
+                "DNS",
+                "OSPF",
+                "DHCP"
+            ],
+            "correct_index": 3,
+            "explanation": "DHCP assigns IPv4 addresses dynamically via the DORA exchange. ARP resolves MACs, DNS resolves names, and OSPF is a routing protocol.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services - Describe DNS and DHCP"
+        },
+        {
+            "id": "ccna-077",
+            "domain": "Security Fundamentals",
+            "stem": "Which acronym represents the security model of Authentication, Authorization and Accounting?",
+            "options": [
+                "AAA",
+                "MAB",
+                "2FA",
+                "PRG"
+            ],
+            "correct_index": 0,
+            "explanation": "AAA stands for authentication (who), authorization (what they may do) and accounting (tracking what was done). It is the framework for device and network access control.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Define key security concepts"
+        },
+        {
+            "id": "ccna-078",
+            "domain": "Security Fundamentals",
+            "stem": "Why should network administrators use SSH to manage routers and switches instead of Telnet?",
+            "options": [
+                "SSH requires less licensing",
+                "SSH encrypts the session; Telnet sends data in plaintext",
+                "SSH is faster over WAN links",
+                "Telnet does not support passwords"
+            ],
+            "correct_index": 1,
+            "explanation": "SSH encrypts management traffic, so credentials and commands are not readable in transit; Telnet transmits everything in clear text on port 23.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure device access control"
+        },
+        {
+            "id": "ccna-079",
+            "domain": "Security Fundamentals",
+            "stem": "Which statement about standard numbered ACLs is correct?",
+            "options": [
+                "They apply only to outbound traffic",
+                "They are examined in no specific order",
+                "They filter based on the source IP address only",
+                "They match source and destination plus protocol and ports"
+            ],
+            "correct_index": 2,
+            "explanation": "A standard ACL matches only the source address; extended ACLs match source/destination, protocol, and ports. Order matters in all ACLs, and they can be inbound or outbound.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-080",
+            "domain": "Security Fundamentals",
+            "stem": "In an extended ACL statement, which fields can be matched?",
+            "options": [
+                "Only the destination IP",
+                "Only the MAC address",
+                "The VLAN number only",
+                "Source, destination, protocol, and port numbers"
+            ],
+            "correct_index": 3,
+            "explanation": "Extended ACLs can match protocol (TCP/UDP/ICMP), source and destination addresses, and TCP/UDP ports, giving far finer control than a standard ACL.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-081",
+            "domain": "Security Fundamentals",
+            "stem": "What does the wildcard mask 0.0.0.255 match in an ACL?",
+            "options": [
+                "Any host in the 0-255 host range of the specified network",
+                "Exactly one host address",
+                "All of the Internet",
+                "Only multicast addresses"
+            ],
+            "correct_index": 0,
+            "explanation": "A wildcard mask is inverted subnet logic: the 255s are ignored bits, so 0.0.0.255 matches the last octet as any value 0-255 within the stated network.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-082",
+            "domain": "Security Fundamentals",
+            "stem": "Which switch port-security violation action shuts down the interface and places it in err-disabled state by default?",
+            "options": [
+                "Log-only",
+                "Shutdown",
+                "Restrict",
+                "Protect"
+            ],
+            "correct_index": 1,
+            "explanation": "The default port-security violation mode is shutdown: the port is disabled (err-disabled) and must be re-enabled manually or by recovery settings. Restrict and protect drop traffic while keeping the port up.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure Layer 2 security features"
+        },
+        {
+            "id": "ccna-083",
+            "domain": "Security Fundamentals",
+            "stem": "Which security feature binds a learned MAC address to a switch port so it is the only allowed address (unless changed)?",
+            "options": [
+                "Dynamic ARP inspection",
+                "802.1Q native limit",
+                "Sticky secure MAC addresses",
+                "Private VLANs"
+            ],
+            "correct_index": 2,
+            "explanation": "Port security with sticky learning records the first MAC seen on a port as authorized, converting dynamically learned addresses into secure entries for that port.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure Layer 2 security features"
+        },
+        {
+            "id": "ccna-084",
+            "domain": "Security Fundamentals",
+            "stem": "What is the purpose of DHCP snooping?",
+            "options": [
+                "Encrypts DHCP messages",
+                "Assigns static IP reservations",
+                "Forwards DHCP between VLANs without a relay",
+                "Trusts only authorized DHCP servers and blocks rogue servers on untrusted ports"
+            ],
+            "correct_index": 3,
+            "explanation": "DHCP snooping builds a topology of trusted ports facing the real DHCP server and drops DHCP offers arriving from untrusted ports, mitigating rogue-server attacks.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure Layer 2 security features"
+        },
+        {
+            "id": "ccna-085",
+            "domain": "Security Fundamentals",
+            "stem": "Which command line is most secure for enabling remote management over the network with a hashed password?",
+            "options": [
+                "enable secret, backed by SSH on encrypted VTY lines",
+                "enable password, with Telnet VTY lines",
+                "no password, authentication using a shared banner",
+                "service password-encryption only"
+            ],
+            "correct_index": 0,
+            "explanation": "enable secret stores a hashed privilege password and SSH encrypts management sessions. Plaintext enable password, no password, or merely obscured (service password-encryption) configurations are weaker.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure device access control"
+        },
+        {
+            "id": "ccna-086",
+            "domain": "Security Fundamentals",
+            "stem": "Which wireless security mode is used for a corporate network authenticating users individually against RADIUS?",
+            "options": [
+                "802.11 open authentication only",
+                "WPA2/WPA3 Enterprise",
+                "WPA2-Personal",
+                "WEP open system"
+            ],
+            "correct_index": 1,
+            "explanation": "Enterprise mode uses 802.1X/EAP with a RADIUS server so each user authenticates individually. Personal uses a shared PSK and is fitted to home or small-office networks.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-087",
+            "domain": "Security Fundamentals",
+            "stem": "Which ACL behavior best limits management plane access so only the admin subnet can SSH to the device?",
+            "options": [
+                "An SSH banner",
+                "A QoS mark on management traffic",
+                "A VTY access-class restricting source addresses",
+                "A port-security policy on uplinks"
+            ],
+            "correct_index": 2,
+            "explanation": "Applying a VTY access-class with an ACL that permits only the admin subnet blocks SSH/Telnet sessions from everywhere else. Port security, banners, and QoS do not restrict who can reach VTY lines.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure device access control"
+        },
+        {
+            "id": "ccna-088",
+            "domain": "Security Fundamentals",
+            "stem": "What attack does configuring port security with a maximum MAC limit directly mitigate?",
+            "options": [
+                "Session hijacking over HTTPS",
+                "DNS cache poisoning",
+                "ARP MITM using gratuitous replies",
+                "MAC flooding that overflows the address table"
+            ],
+            "correct_index": 3,
+            "explanation": "Limiting allowed MACs per port prevents an attacker from flooding thousands of source MACs to fill the switch's CAM table. Other listed attacks are not stopped by port-security MAC limits alone.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure Layer 2 security features"
+        },
+        {
+            "id": "ccna-089",
+            "domain": "Security Fundamentals",
+            "stem": "Which statement about ACL processing is correct?",
+            "options": [
+                "Statements are evaluated top-down until a match; an implicit deny-all ends the list if nothing matches",
+                "The most specific address is always applied first regardless of order",
+                "ACLs apply inside the routing table",
+                "ACLs refresh their rules every 30 seconds"
+            ],
+            "correct_index": 0,
+            "explanation": "Cisco ACLs are consulted in order, first match wins, and every ACL ends with an implicit deny, which is why an explicit permit must cover wanted traffic. There is no specificity reordering or timer refresh.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals"
+        },
+        {
+            "id": "ccna-090",
+            "domain": "Security Fundamentals",
+            "stem": "What is the recommended minimum for protecting privileged EXEC access to a Cisco device?",
+            "options": [
+                "Relying only on a login banner",
+                "A hashed password with enable secret and restricted access methods",
+                "Using the default 'cisco' password since it is familiar",
+                "Saving the password in the startup config in clear text"
+            ],
+            "correct_index": 1,
+            "explanation": "Privileged mode should be guarded by a hashed enable secret and locked-down access (SSH, ACLs). Default credentials, plaintext storage, and banners offer no real protection.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure device access control"
+        },
+        {
+            "id": "ccna-091",
+            "domain": "Security Fundamentals",
+            "stem": "Which control helps prevent VLAN hopping attacks?",
+            "options": [
+                "Use port security exclusively",
+                "Set the native VLAN to a used production VLAN",
+                "Disable trunk negotiation and set unused ports to a dedicated unused VLAN as access ports",
+                "Enable CDP on all ports"
+            ],
+            "correct_index": 2,
+            "explanation": "Preventing VLAN hopping means turning off DTP negotiation on access ports and parking unused ports in a dedicated VLAN; keeping native VLAN separate also limits double-tagging exposure. CDP and port security do not address trunk hopping.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Security Fundamentals - Configure Layer 2 security features"
+        },
+        {
+            "id": "ccna-092",
+            "domain": "Automation and Programmability",
+            "stem": "Which statement best describes controller-based networking versus traditional networking?",
+            "options": [
+                "Controllers remove the need for standards-based protocols",
+                "Traditional networking has no forwarding plane",
+                "Controllers only manage cloud APIs",
+                "A controller centralizes network intelligence; traditional devices decide independently from distributed protocols"
+            ],
+            "correct_index": 3,
+            "explanation": "SDN/controller-based designs centralize control logic in a controller, while traditional (distributed) networks use protocols like OSPF on each device locally. Controllers do not eliminate standards or forwarding planes.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-093",
+            "domain": "Automation and Programmability",
+            "stem": "In SDN, which plane holds the network-wide topology and makes centralized decisions?",
+            "options": [
+                "Control plane",
+                "Data plane",
+                "Management plane",
+                "Physical plane"
+            ],
+            "correct_index": 0,
+            "explanation": "The SDN control plane is the logically centralized brain that builds the topology and programs forwarding; the data plane forwards packets as told, and the management plane covers administrative access.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-094",
+            "domain": "Automation and Programmability",
+            "stem": "Which HTTP method does a REST client use to create a resource on the server?",
+            "options": [
+                "PATCH",
+                "POST",
+                "DELETE",
+                "GET"
+            ],
+            "correct_index": 1,
+            "explanation": "RESTful APIs use POST to create, GET to read, PUT/PATCH to update, and DELETE to remove resources. GET and DELETE are self-explanatory, and PATCH is partial update.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability - Explain REST API impact"
+        },
+        {
+            "id": "ccna-095",
+            "domain": "Automation and Programmability",
+            "stem": "Which data format is commonly used by REST APIs and represents data as key-value pairs?",
+            "options": [
+                "BPDU",
+                "VTP",
+                "JSON",
+                "CDP"
+            ],
+            "correct_index": 2,
+            "explanation": "JSON encodes name/value pairs and nested structures and is the dominant REST API representation. BPDU and VTP are switch messaging/staging mechanisms, not data formats.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-096",
+            "domain": "Automation and Programmability",
+            "stem": "Which configuration management tool is agentless, connecting only over SSH and using playbooks written in YAML?",
+            "options": [
+                "Puppet",
+                "Chef",
+                "Salt agents with a daemon",
+                "Ansible"
+            ],
+            "correct_index": 3,
+            "explanation": "Ansible is agentless: it pushes modules over SSH and its playbooks are YAML. Puppet and Chef require agents running on managed nodes, and even Salt normally uses a minion daemon.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-097",
+            "domain": "Automation and Programmability",
+            "stem": "What is the primary role of a YANG data model and NETCONF in device automation?",
+            "options": [
+                "Standardize the structure and transport of configuration data between manager and device",
+                "Replace routing protocols in the data plane",
+                "Encrypt Wi-Fi traffic",
+                "Track device MAC addresses"
+            ],
+            "correct_index": 0,
+            "explanation": "YANG defines structured data models, and NETCONF carries configuration using those models over SSH, making programmatic device management consistent. They are not data-plane, wireless, or CAM features.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-098",
+            "domain": "Automation and Programmability",
+            "stem": "What does the northbound interface of an SDN controller offer?",
+            "options": [
+                "The physical cabling between leaves and spines",
+                "APIs for applications to express intent to the controller",
+                "Policies pushed to individual switches",
+                "A console port for CLI management"
+            ],
+            "correct_index": 1,
+            "explanation": "Northbound interfaces (NBI) expose application-facing APIs to state intent; southbound interfaces (SBI) program the network devices. The CLI is a management-plane console, not the NBI.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-099",
+            "domain": "Automation and Programmability",
+            "stem": "Which Cisco product is the intent-based networking controller used to manage the enterprise campus?",
+            "options": [
+                "Prime TACACS",
+                "FMC",
+                "DNA Center",
+                "MERAKI dashboard only"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco DNA Center is the campus intent-based networking controller, translating intent into device configuration. Meraki is a cloud-managed platform rather than DNA Center, and the others are TACACS/monitoring systems.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-100",
+            "domain": "Automation and Programmability",
+            "stem": "Which statement about the data plane relative to the control plane is correct?",
+            "options": [
+                "The data plane computes the routing table",
+                "The data plane negotiates BGP neighbors",
+                "The data plane manages logging",
+                "The data plane forwards frames and packets using tables built by the control plane"
+            ],
+            "correct_index": 3,
+            "explanation": "The data-plane forwards traffic using forwarding tables constructed by control-plane protocols. Routing computation and neighbor establishment are control-plane activities, logging is management-plane.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Automation and Programmability"
+        },
+        {
+            "id": "ccna-101",
+            "domain": "IP Services",
+            "stem": "Which QoS marking field is used to prioritise voice traffic in modern Ethernet networks?",
+            "options": [
+                "DSCP in the IP header / 802.1p PCP in the frame",
+                "TTL in the IP header",
+                "The checksum bits",
+                "The VLAN ID itself"
+            ],
+            "correct_index": 0,
+            "explanation": "QoS marking happens at Layers 2 and 3: 802.1p PCP bits in the 802.1Q header and DSCP in the IP ToS octet. TTL, checksum and VLAN ID are not priority markers.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - IP Services"
+        },
+        {
+            "id": "ccna-102",
+            "domain": "Network Fundamentals",
+            "stem": "Two links to the same Internet service connect via a router. Which device type provides Layer 3 demultiplexing and connects a LAN to a service provider so IP hosts can communicate externally?",
+            "options": [
+                "Bridge",
+                "Router",
+                "Repeater",
+                "Hub"
+            ],
+            "correct_index": 1,
+            "explanation": "A router performs Layer 3 forwarding and is the standard device connecting a LAN to an ISP. Repeaters, hubs, and bridges only regenerate or switch Layer 1/2 signals without IP routing.",
+            "reference": "Cisco CCNA 200-301 Exam Topics - Network Fundamentals - Role of network components"
+        }
+    ]
+}
