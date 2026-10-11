@@ -1,0 +1,717 @@
+{
+    "cert_key": "az-204",
+    "title": "Microsoft Azure Developer Associate (AZ-204)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/az-204.json",
+    "variant_label": "AZ-204 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 100,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AZ-204 skills measured (five official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "Azure Developer practice bank",
+    "items": [
+        {
+            "id": "az-204-001",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a web app hosted in Azure App Service and you need to release new versions with zero downtime and the ability to roll back instantly. Which App Service feature should you use?",
+            "options": [
+                "Deployment slots",
+                "Autoscale rules on the App Service plan",
+                "Virtual network integration",
+                "Custom domain names"
+            ],
+            "correct_index": 0,
+            "explanation": "Deployment slots let you deploy to a staging slot, warm it up, and then swap it into production with no downtime, and a swap can be reversed immediately. Autoscale changes instance count, VNet integration controls network access, and custom domains only change addressing.",
+            "reference": "Microsoft Learn: Set up staging environments in Azure App Service"
+        },
+        {
+            "id": "az-204-002",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an App Service web app whose traffic varies through the day. You must automatically add and remove instances based on CPU usage. What should you configure?",
+            "options": [
+                "IP restrictions on the site",
+                "Autoscale rules on the App Service plan",
+                "A deployment slot on the web app",
+                "The Always On setting"
+            ],
+            "correct_index": 1,
+            "explanation": "Autoscale rules adjust the number of instances in the App Service plan using metrics such as CPU percentage. Deployment slots stage releases, Always On keeps the app warm, and IP restrictions filter callers; none of them change instance count.",
+            "reference": "Microsoft Learn: Get started with autoscale in Azure"
+        },
+        {
+            "id": "az-204-003",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an Azure Functions app that must scale to zero when idle and pay only for execution time, and it does not require virtual network connectivity. Which hosting plan should you choose?",
+            "options": [
+                "Dedicated App Service plan",
+                "App Service Environment plan",
+                "Consumption plan",
+                "Premium plan"
+            ],
+            "correct_index": 2,
+            "explanation": "The Consumption plan scales to zero and bills per execution, which suits intermittent workloads without VNet needs. Premium keeps instances warm and supports VNets, while Dedicated and App Service Environment reserve always-on capacity and cost more when idle.",
+            "reference": "Microsoft Learn: Azure Functions hosting options"
+        },
+        {
+            "id": "az-204-004",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an Azure Function that must run whenever a new message is added to an Azure Storage queue. What should you use?",
+            "options": [
+                "An HTTP trigger",
+                "A timer trigger",
+                "An output binding to the queue",
+                "A Queue Storage trigger binding"
+            ],
+            "correct_index": 3,
+            "explanation": "A Queue Storage trigger binding invokes the function when a message arrives on the queue. HTTP and timer triggers fire on requests or schedules, and an output binding only writes to the queue without invoking on new messages.",
+            "reference": "Microsoft Learn: Azure Functions triggers and bindings concepts"
+        },
+        {
+            "id": "az-204-005",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a workflow that calls several services in sequence, waits for human approval, and must survive process restarts. Which Azure Functions feature should you use?",
+            "options": [
+                "Durable Functions orchestration",
+                "A chain of timer-triggered functions",
+                "A single long-running HTTP function",
+                "A Logic App recurrence trigger"
+            ],
+            "correct_index": 0,
+            "explanation": "Durable Functions persist orchestration state, so a workflow can wait for an external approval and resume after a restart. Timer chains and one long HTTP call lose state or time out, and a recurrence trigger only schedules runs without orchestration.",
+            "reference": "Microsoft Learn: Durable Functions overview"
+        },
+        {
+            "id": "az-204-006",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a container image that App Service must pull from a private registry. Which service should you use to store and manage the image and authenticate the pull?",
+            "options": [
+                "A public Docker Hub repository",
+                "Azure Container Registry",
+                "Azure Blob Storage",
+                "Azure Files"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Container Registry stores container images and integrates with App Service authentication through managed identity or registry credentials. Blob Storage and Azure Files store data rather than images, and a public Docker Hub repository is not a private Azure registry.",
+            "reference": "Microsoft Learn: Introduction to Azure Container Registry"
+        },
+        {
+            "id": "az-204-007",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a Linux containerized web application and need a managed platform that scales automatically and removes the need to manage hosts. Which Azure service should you use?",
+            "options": [
+                "Azure Kubernetes Service",
+                "Azure Virtual Machine Scale Sets",
+                "Azure App Service Web App for Containers",
+                "Azure Container Instances"
+            ],
+            "correct_index": 2,
+            "explanation": "Web App for Containers runs an image on a managed App Service plan with built-in scaling and patching. Container Instances is a single-container primitive with limited scaling, while Kubernetes Service and Virtual Machine Scale Sets require you to manage orchestration and hosts.",
+            "reference": "Microsoft Learn: Deploy a containerized app to Azure App Service"
+        },
+        {
+            "id": "az-204-008",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an integration that must react to a new file in OneDrive, call an API, and send an approval email without writing custom code. Which Azure service should you use?",
+            "options": [
+                "Azure Functions",
+                "Azure API Management",
+                "Azure Service Bus",
+                "Azure Logic Apps"
+            ],
+            "correct_index": 3,
+            "explanation": "Logic Apps provide built-in connectors and a visual designer for codeless, event-driven integration. Functions requires code, API Management fronts APIs, and Service Bus only brokers messages.",
+            "reference": "Microsoft Learn: What is Azure Logic Apps"
+        },
+        {
+            "id": "az-204-009",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a web app and want every push to a GitHub repository to build and deploy automatically. What should you configure?",
+            "options": [
+                "A GitHub Actions deployment workflow",
+                "An FTP publish profile upload",
+                "A manual zip deployment from the portal",
+                "A deployment slot swap scheduled daily"
+            ],
+            "correct_index": 0,
+            "explanation": "App Service supports continuous deployment through GitHub Actions, which builds and deploys on each push. FTP and manual zip deployments require human action, and a scheduled slot swap still needs a deployment into the slot first.",
+            "reference": "Microsoft Learn: Continuous deployment to Azure App Service"
+        },
+        {
+            "id": "az-204-010",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an Azure Functions app and need a staging environment that reuses the same function app configuration as production. What should you create?",
+            "options": [
+                "A new Azure Container Registry",
+                "A deployment slot on the function app",
+                "A second function app in a new resource group",
+                "A separate Consumption plan"
+            ],
+            "correct_index": 1,
+            "explanation": "Deployment slots on a function app let you stage a version and swap it into production while reusing app-level settings. A second app or plan duplicates configuration, and a container registry stores images rather than environments.",
+            "reference": "Microsoft Learn: Azure Functions deployment slots"
+        },
+        {
+            "id": "az-204-011",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing a CI pipeline and need container images rebuilt automatically whenever source code is committed to a Git repository, without maintaining build agents. Which feature should you use?",
+            "options": [
+                "App Service deployment slots",
+                "Azure Logic Apps",
+                "ACR Tasks",
+                "Azure Container Instances"
+            ],
+            "correct_index": 2,
+            "explanation": "ACR Tasks can rebuild an image on a source commit and run multi-step builds inside the registry without your own build agents. Container Instances runs containers, deployment slots stage apps, and Logic Apps orchestrates workflows rather than image builds.",
+            "reference": "Microsoft Learn: Automate container image builds with ACR Tasks"
+        },
+        {
+            "id": "az-204-012",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an ASP.NET app that reads a database connection at runtime. You must store the value so it is encrypted at rest and never committed to source control. What should you use?",
+            "options": [
+                "A web.config file committed to the repository",
+                "A hardcoded constant in the code",
+                "A local .env file copied during deployment",
+                "An App Service connection string setting"
+            ],
+            "correct_index": 3,
+            "explanation": "App Service connection strings are stored encrypted, injected as environment variables, and kept out of source control. Files in the repository and hardcoded values travel with the code and are not protected.",
+            "reference": "Microsoft Learn: Configure an App Service app"
+        },
+        {
+            "id": "az-204-013",
+            "domain": "Develop Azure compute solutions",
+            "stem": "You are developing an Azure Function that must read a document from Blob Storage each time it runs. Which binding type should you add to the function?",
+            "options": [
+                "A Blob Storage input binding",
+                "A Blob Storage output binding",
+                "A Queue Storage output binding",
+                "An HTTP output binding"
+            ],
+            "correct_index": 0,
+            "explanation": "An input binding supplies data from Blob Storage to the function as a parameter. Output bindings write data instead, and HTTP or Queue bindings do not read blob content into the function.",
+            "reference": "Microsoft Learn: Azure Blob storage input binding for Azure Functions"
+        },
+        {
+            "id": "az-204-014",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an app that writes large documents that are read frequently for 30 days and then almost never. Which approach minimizes cost while keeping the data retrievable?",
+            "options": [
+                "Store every blob as a Premium page blob",
+                "Use lifecycle management to move blobs to the cool tier after 30 days",
+                "Keep all blobs in the hot tier forever",
+                "Move blobs to the archive tier immediately on write"
+            ],
+            "correct_index": 1,
+            "explanation": "Lifecycle management can transition blobs from hot to cool once access drops, cutting storage cost while they remain immediately readable. Archive has multi-hour rehydration latency, and hot or premium tiers are costlier for cold data.",
+            "reference": "Microsoft Learn: Optimize costs by automatically managing the data lifecycle"
+        },
+        {
+            "id": "az-204-015",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an app that must read a blob stored in the archive tier. What must happen before the data is readable?",
+            "options": [
+                "The storage account must be upgraded to a premium tier",
+                "The blob lease must be broken",
+                "The blob must be rehydrated to the hot or cool tier",
+                "The blob must be copied to an Azure Files share"
+            ],
+            "correct_index": 2,
+            "explanation": "Archive blobs are offline and must be rehydrated to hot or cool, which can take hours, before reads succeed. Changing tiers or breaking a lease does not make archive data immediately available.",
+            "reference": "Microsoft Learn: Azure Blob storage access tiers"
+        },
+        {
+            "id": "az-204-016",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing a client that must upload a file directly to a private blob for a limited time without sharing the storage account key. What should you generate?",
+            "options": [
+                "The storage account access key",
+                "The full storage connection string",
+                "A public blob URL",
+                "A shared access signature token"
+            ],
+            "correct_index": 3,
+            "explanation": "A shared access signature grants scoped, time-limited access to a blob without exposing the account key. Sharing the key or connection string grants full account access, and a public URL removes protection entirely.",
+            "reference": "Microsoft Learn: Grant limited access to Azure Storage resources using SAS"
+        },
+        {
+            "id": "az-204-017",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing a globally distributed Cosmos DB application that must guarantee clients never read data older than what they have already read. Which consistency level should you choose?",
+            "options": [
+                "Session consistency",
+                "Eventual consistency",
+                "Strong consistency",
+                "Consistent prefix consistency"
+            ],
+            "correct_index": 0,
+            "explanation": "Session consistency guarantees monotonic reads within a client session, which matches the requirement at lower latency and cost than strong consistency. Eventual and consistent prefix do not guarantee read-your-writes for a client session.",
+            "reference": "Microsoft Learn: Consistency levels in Azure Cosmos DB"
+        },
+        {
+            "id": "az-204-018",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing a Cosmos DB container that stores millions of user documents queried by user ID. Which partition key best distributes load evenly?",
+            "options": [
+                "The document creation timestamp",
+                "A high-cardinality key such as user ID",
+                "A low-cardinality key such as status",
+                "A constant value for all documents"
+            ],
+            "correct_index": 1,
+            "explanation": "A high-cardinality partition key such as user ID spreads documents across many logical partitions for even throughput. Low-cardinality or constant keys create hot partitions, and a timestamp concentrates recent writes.",
+            "reference": "Microsoft Learn: Partitioning and horizontal scaling in Azure Cosmos DB"
+        },
+        {
+            "id": "az-204-019",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an app that must react to every insert and update in a Cosmos DB container and process them in order. Which feature should you use?",
+            "options": [
+                "A user-defined function",
+                "A time-to-live policy",
+                "The change feed",
+                "A stored procedure"
+            ],
+            "correct_index": 2,
+            "explanation": "The change feed provides a persistent, ordered log of inserts and updates that consumers can read. Stored procedures and user-defined functions run inside the database, and a time-to-live policy only expires items.",
+            "reference": "Microsoft Learn: Change feed in Azure Cosmos DB"
+        },
+        {
+            "id": "az-204-020",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an Azure Function triggered by a Storage queue. A message keeps failing after the maximum number of retries. Where does the runtime place the message?",
+            "options": [
+                "Back on the original queue with higher priority",
+                "In Blob Storage as a log entry",
+                "It is deleted without a trace",
+                "In a poison queue named after the source queue with a -poison suffix"
+            ],
+            "correct_index": 3,
+            "explanation": "The Storage queue trigger moves a message it cannot process after the maximum number of attempts to a poison queue whose name is the source queue plus a -poison suffix. This preserves the message for investigation instead of losing it.",
+            "reference": "Microsoft Learn: Azure Functions Storage queue trigger poison messages"
+        },
+        {
+            "id": "az-204-021",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an application that needs a shared file system mounted by several Azure virtual machines using the SMB protocol. Which Azure storage service should you use?",
+            "options": [
+                "Azure Files",
+                "Azure Blob Storage",
+                "Azure Queue Storage",
+                "Azure Table Storage"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Files exposes SMB and NFS file shares that multiple virtual machines can mount concurrently. Blob Storage is object storage, while Queue and Table storage serve messaging and key-value data rather than file shares.",
+            "reference": "Microsoft Learn: What is Azure Files"
+        },
+        {
+            "id": "az-204-022",
+            "domain": "Develop for Azure storage",
+            "stem": "You are developing an app that continuously appends log lines to a single blob. Which blob type should you use?",
+            "options": [
+                "Container blob",
+                "Append blob",
+                "Block blob",
+                "Page blob"
+            ],
+            "correct_index": 1,
+            "explanation": "Append blobs are optimized for append operations and are ideal for logs. Block blobs suit large uploads, page blobs back virtual hard disks, and container blob is not a blob type.",
+            "reference": "Microsoft Learn: Understanding block blobs, append blobs, and page blobs"
+        },
+        {
+            "id": "az-204-023",
+            "domain": "Implement Azure security",
+            "stem": "You are developing an app running on App Service that must access a Key Vault secret without storing any credential. What should you use?",
+            "options": [
+                "A storage account key in app settings",
+                "A shared access signature",
+                "A system-assigned managed identity",
+                "A service principal client secret in code"
+            ],
+            "correct_index": 2,
+            "explanation": "A managed identity lets App Service authenticate to Key Vault through Microsoft Entra ID with no secret to store or rotate. Client secrets, account keys, and SAS tokens must all be protected in code or configuration.",
+            "reference": "Microsoft Learn: Managed identities for Azure resources"
+        },
+        {
+            "id": "az-204-024",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a web API that must accept access tokens issued by Microsoft Entra ID. Which mechanism should you use to validate the caller?",
+            "options": [
+                "Compare the caller IP address to an allow list",
+                "Check a shared API key in the request header",
+                "Inspect the User-Agent string",
+                "Validate the token with the Microsoft identity platform middleware"
+            ],
+            "correct_index": 3,
+            "explanation": "The Microsoft identity platform middleware validates the token signature, issuer, audience, and lifetime so only legitimate Entra tokens are accepted. IP, API key, and User-Agent checks are weak and do not verify caller identity.",
+            "reference": "Microsoft Learn: Microsoft identity platform and OAuth 2.0"
+        },
+        {
+            "id": "az-204-025",
+            "domain": "Implement Azure security",
+            "stem": "You are developing an application that must store and rotate database passwords centrally with access auditing. Which Azure service should you use?",
+            "options": [
+                "Azure Key Vault",
+                "Azure App Configuration",
+                "Azure Storage account",
+                "Azure Cosmos DB"
+            ],
+            "correct_index": 0,
+            "explanation": "Key Vault stores secrets, supports rotation, audits access, and controls who can read values through Microsoft Entra ID. App Configuration holds non-secret settings, while storage and Cosmos DB hold application data.",
+            "reference": "Microsoft Learn: About Azure Key Vault"
+        },
+        {
+            "id": "az-204-026",
+            "domain": "Implement Azure security",
+            "stem": "You are developing an app that reads configuration from Azure App Configuration and must reference a Key Vault secret from the same store. What should you configure?",
+            "options": [
+                "A SAS token in the key-value",
+                "A Key Vault reference in App Configuration",
+                "A duplicated plain-text copy of the secret",
+                "A connection string in app settings"
+            ],
+            "correct_index": 1,
+            "explanation": "An App Configuration key-value can hold a Key Vault reference so the app resolves the secret at runtime while the secret stays in Key Vault. Duplicating the secret or embedding it in a setting defeats central management.",
+            "reference": "Microsoft Learn: Use Key Vault references in App Configuration"
+        },
+        {
+            "id": "az-204-027",
+            "domain": "Implement Azure security",
+            "stem": "You are developing an app that reads blobs and you want to avoid storing storage account keys. Which authentication approach should you use?",
+            "options": [
+                "Enable anonymous read access on the container",
+                "Make the container public",
+                "Grant the app managed identity the Storage Blob Data Reader role",
+                "Share the account key in a settings file"
+            ],
+            "correct_index": 2,
+            "explanation": "Assigning the managed identity a data-plane role such as Storage Blob Data Reader lets the app authenticate to Blob Storage without keys. Keys in files, anonymous access, and public containers all weaken security.",
+            "reference": "Microsoft Learn: Authorize access to blobs with Microsoft Entra ID"
+        },
+        {
+            "id": "az-204-028",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a protected web API and want to require a specific delegated permission for a client app. What should you expose and configure?",
+            "options": [
+                "Only a client secret for the API",
+                "A storage account key",
+                "An IP restriction list",
+                "A delegated scope in the API app registration"
+            ],
+            "correct_index": 3,
+            "explanation": "Exposing a delegated scope lets client apps request that permission, and the API validates the granted scope in the token. Client secrets and keys do not express user-delegated authorization.",
+            "reference": "Microsoft Learn: Configure an application to expose a web API"
+        },
+        {
+            "id": "az-204-029",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a solution deployed to an Azure virtual machine that needs to call an Azure service, and you want no credential in configuration. Which feature should you use?",
+            "options": [
+                "A managed identity on the virtual machine",
+                "A service principal with a client secret file",
+                "A connection string containing the key",
+                "An access key stored in an environment variable"
+            ],
+            "correct_index": 0,
+            "explanation": "A managed identity on the virtual machine gives the workload an identity in Microsoft Entra ID with no secret to store or rotate. Service principal secrets and keys in configuration all create credential-management risk.",
+            "reference": "Microsoft Learn: Managed identities for Azure resources"
+        },
+        {
+            "id": "az-204-030",
+            "domain": "Implement Azure security",
+            "stem": "You are developing an app and want to turn a feature on or off for a subset of users without redeploying. What should you use?",
+            "options": [
+                "A Cosmos DB container",
+                "Feature flags in Azure App Configuration",
+                "A new App Service deployment slot",
+                "A Key Vault secret"
+            ],
+            "correct_index": 1,
+            "explanation": "Feature flags in App Configuration change behavior at runtime and can target filters such as a percentage of users. Slots, secrets, and databases do not provide runtime feature toggling.",
+            "reference": "Microsoft Learn: Feature flags in Azure App Configuration"
+        },
+        {
+            "id": "az-204-031",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a web API that must call a downstream API on behalf of the signed-in user. Which flow should the API use?",
+            "options": [
+                "The authorization code flow with PKCE directly",
+                "The implicit flow",
+                "The on-behalf-of flow",
+                "The client credentials flow"
+            ],
+            "correct_index": 2,
+            "explanation": "The on-behalf-of flow exchanges the user's token at the middle-tier API for a token to a downstream API while preserving user context. Client credentials acts as the app itself, and implicit flow is deprecated for this scenario.",
+            "reference": "Microsoft Learn: Microsoft identity platform on-behalf-of flow"
+        },
+        {
+            "id": "az-204-032",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a solution that grants an app read access to only the secret values in Key Vault, using Azure RBAC. Which role should you assign?",
+            "options": [
+                "Key Vault Administrator",
+                "Key Vault Reader",
+                "Contributor",
+                "Key Vault Secrets User"
+            ],
+            "correct_index": 3,
+            "explanation": "Key Vault Secrets User grants read access to secret contents only. Key Vault Reader reads metadata but not secret values, and Administrator and Contributor grant broad management rights.",
+            "reference": "Microsoft Learn: Provide access to Key Vault secrets with Azure RBAC"
+        },
+        {
+            "id": "az-204-033",
+            "domain": "Implement Azure security",
+            "stem": "You are developing a desktop app that signs users in interactively and acquires tokens for Microsoft Graph. Which library should you use?",
+            "options": [
+                "The Microsoft Authentication Library (MSAL)",
+                "The Microsoft Graph SDK with a client secret only",
+                "Active Directory Authentication Library (ADAL)",
+                "A custom OAuth 2.0 implementation"
+            ],
+            "correct_index": 0,
+            "explanation": "MSAL handles interactive sign-in and token acquisition and caching for the Microsoft identity platform. ADAL is deprecated, and hand-rolled OAuth or key-only Graph clients bypass recommended identity patterns.",
+            "reference": "Microsoft Learn: Overview of the Microsoft Authentication Library"
+        },
+        {
+            "id": "az-204-034",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing an app and need to trace requests, exceptions, and dependencies without building your own telemetry pipeline. Which service should you use?",
+            "options": [
+                "Azure Advisor",
+                "Azure Application Insights",
+                "Azure Service Health",
+                "A raw Log Analytics workspace with no agent"
+            ],
+            "correct_index": 1,
+            "explanation": "Application Insights automatically collects requests, exceptions, dependencies, and traces with distributed correlation. Service Health reports platform incidents, Advisor gives recommendations, and a bare workspace lacks the application performance monitoring features.",
+            "reference": "Microsoft Learn: What is Azure Application Insights"
+        },
+        {
+            "id": "az-204-035",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a custom business event that you want to view in Application Insights. Which API should you use to send it from code?",
+            "options": [
+                "A message on a Storage queue",
+                "A diagnostic setting on a Blob Storage account",
+                "TrackEvent through the Application Insights SDK",
+                "An HTTP GET to the Log Analytics API"
+            ],
+            "correct_index": 2,
+            "explanation": "The Application Insights SDK's TrackEvent records a custom event with properties and metrics. The other options do not emit application telemetry with request correlation.",
+            "reference": "Microsoft Learn: Application Insights API for custom events and metrics"
+        },
+        {
+            "id": "az-204-036",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a web app whose sessions must be shared across multiple instances and survive an instance recycle. Which service should you use?",
+            "options": [
+                "In-memory session state",
+                "A local temporary file on each instance",
+                "A separate Cosmos DB container per instance",
+                "Azure Cache for Redis"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Cache for Redis provides a distributed external session store shared by all instances and independent of any single app process. In-memory state and local files are per-instance and are lost when an instance recycles.",
+            "reference": "Microsoft Learn: Use Azure Cache for Redis as a session store"
+        },
+        {
+            "id": "az-204-037",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a read-heavy app and want to reduce database load using Azure Cache for Redis. Which pattern should you implement?",
+            "options": [
+                "Cache-aside, loading data into the cache on a miss",
+                "Write-behind with no cache expiry",
+                "Reading from the database every time with no caching",
+                "Storing the only copy of the data in the cache"
+            ],
+            "correct_index": 0,
+            "explanation": "Cache-aside checks the cache first and populates it on a miss, which cuts database reads while keeping the database authoritative. Never caching defeats the purpose, and keeping the sole copy in cache risks data loss.",
+            "reference": "Microsoft Learn: Cache-aside pattern"
+        },
+        {
+            "id": "az-204-038",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a globally accessed site that serves static images from a storage account and want to cache content at edge locations to reduce latency. Which service should you use?",
+            "options": [
+                "Azure Service Bus",
+                "Azure Content Delivery Network",
+                "Azure ExpressRoute",
+                "Azure Traffic Manager alone"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Content Delivery Network caches static content at edge points of presence close to users, reducing latency and origin load. Traffic Manager routes requests but does not cache, and ExpressRoute and Service Bus serve other purposes.",
+            "reference": "Microsoft Learn: What is Azure Content Delivery Network"
+        },
+        {
+            "id": "az-204-039",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a solution whose worker roles must scale with the number of messages waiting in a Service Bus queue. What should you configure?",
+            "options": [
+                "A deployment slot swap",
+                "Content Delivery Network caching",
+                "Autoscale rules driven by the queue-length metric",
+                "A fixed instance count for the workers"
+            ],
+            "correct_index": 2,
+            "explanation": "Metric-based autoscale can scale worker instances from the queue-length metric so capacity follows the backlog. A fixed instance count cannot adapt, and deployment slots or CDN caching do not change compute scale.",
+            "reference": "Microsoft Learn: Autoscale using Azure Monitor metrics"
+        },
+        {
+            "id": "az-204-040",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing dashboards over application telemetry and need a read-only, time-filtered query language to aggregate requests. Which tool should you use?",
+            "options": [
+                "A SQL query against the storage account",
+                "A PowerShell script that loops over app caches",
+                "An Excel macro over exported CSV files",
+                "Kusto Query Language in Log Analytics"
+            ],
+            "correct_index": 3,
+            "explanation": "Application Insights and Log Analytics use Kusto Query Language to filter and aggregate telemetry over time for dashboards and alerts. The other tools cannot query the telemetry store directly and are not used for live monitoring.",
+            "reference": "Microsoft Learn: Log queries in Azure Monitor"
+        },
+        {
+            "id": "az-204-041",
+            "domain": "Monitor, troubleshoot, and optimize Azure solutions",
+            "stem": "You are developing a multi-service app and need requests to be correlated end to end across the services. What should you enable in Application Insights?",
+            "options": [
+                "Distributed tracing with correlation identifiers",
+                "A separate Application Insights resource per request",
+                "Only client-side error logging",
+                "A daily export of logs to a file share"
+            ],
+            "correct_index": 0,
+            "explanation": "Distributed tracing propagates a correlation identifier across services so Application Insights displays one end-to-end transaction. Per-request resources, client-only logging, and file exports all break correlation.",
+            "reference": "Microsoft Learn: Distributed tracing in Application Insights"
+        },
+        {
+            "id": "az-204-042",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing several backend APIs and need a single gateway that applies rate limits, subscription keys, and policies to all of them. Which service should you use?",
+            "options": [
+                "Azure Load Balancer",
+                "Azure API Management",
+                "Azure Front Door alone",
+                "Azure Service Bus"
+            ],
+            "correct_index": 1,
+            "explanation": "API Management is an API gateway that centralizes authentication, rate limiting, policies, and keys for backend APIs. Front Door is a global entry point, Service Bus is messaging, and a load balancer distributes traffic without API-layer policies.",
+            "reference": "Microsoft Learn: About Azure API Management"
+        },
+        {
+            "id": "az-204-043",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a serverless reaction so that a function runs for each new image placed in a storage account. Which service should you use to route the events?",
+            "options": [
+                "A Service Bus topic",
+                "Azure Queue Storage",
+                "Azure Event Grid",
+                "Azure Event Hubs"
+            ],
+            "correct_index": 2,
+            "explanation": "Event Grid is built for reactive, event-driven routing of resource events such as blob creation to subscribers. Event Hubs handles high-volume streaming, while Service Bus and Queue Storage are message brokers rather than resource-event routers.",
+            "reference": "Microsoft Learn: What is Azure Event Grid"
+        },
+        {
+            "id": "az-204-044",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a telemetry pipeline that ingests millions of events per second from many devices for later streaming analytics. Which service should you use?",
+            "options": [
+                "Azure Event Grid",
+                "Azure Logic Apps",
+                "Azure Blob Storage",
+                "Azure Event Hubs"
+            ],
+            "correct_index": 3,
+            "explanation": "Event Hubs is a big-data streaming platform designed for very high throughput with partitioned consumer groups. Event Grid routes discrete events at lower volume, and Logic Apps and Blob storage are not ingestion streams.",
+            "reference": "Microsoft Learn: What is Azure Event Hubs"
+        },
+        {
+            "id": "az-204-045",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a solution where one message must be delivered to several independent subscribers, each receiving its own copy. Which Service Bus feature should you use?",
+            "options": [
+                "A Service Bus topic with subscriptions",
+                "A Service Bus queue",
+                "An Event Grid system topic",
+                "A storage queue"
+            ],
+            "correct_index": 0,
+            "explanation": "A Service Bus topic delivers a copy of each message to every subscription, providing fan-out. A Service Bus queue delivers each message to only one receiver, and Event Grid and storage queues are not pub/sub brokers.",
+            "reference": "Microsoft Learn: Service Bus queues, topics, and subscriptions"
+        },
+        {
+            "id": "az-204-046",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a Service Bus consumer and a message exceeds the maximum delivery count without being processed. Where is the message moved?",
+            "options": [
+                "Back to the front of the queue permanently",
+                "To the dead-letter queue",
+                "To the Event Grid topic",
+                "To the sender's subscription"
+            ],
+            "correct_index": 1,
+            "explanation": "Service Bus moves an unprocessable message to the dead-letter queue after the maximum delivery count so poison messages are isolated for review. It is not discarded or looped back indefinitely.",
+            "reference": "Microsoft Learn: Service Bus dead-letter queues"
+        },
+        {
+            "id": "az-204-047",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing an app that must read a user's calendar and send mail using Microsoft 365 data. Which API should you call?",
+            "options": [
+                "The Azure Storage REST API",
+                "The App Configuration API",
+                "Microsoft Graph",
+                "The Azure Resource Manager API"
+            ],
+            "correct_index": 2,
+            "explanation": "Microsoft Graph is the unified API for Microsoft 365 data such as users, mail, and calendars. Azure Resource Manager manages Azure resources, and the storage and App Configuration APIs do not expose Microsoft 365 data.",
+            "reference": "Microsoft Learn: Microsoft Graph overview"
+        },
+        {
+            "id": "az-204-048",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a Service Bus consumer that must process related messages in order using a shared session identifier. What should you enable?",
+            "options": [
+                "Duplicate detection",
+                "Auto-forwarding",
+                "Message deferral only",
+                "Sessions on the queue or subscription"
+            ],
+            "correct_index": 3,
+            "explanation": "Sessions group related messages by session identifier and allow ordered, single-consumer processing per session. Duplicate detection removes duplicates, auto-forwarding chains entities, and deferral alone does not order messages.",
+            "reference": "Microsoft Learn: Service Bus message sessions"
+        },
+        {
+            "id": "az-204-049",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a streaming solution that must persist Event Hubs data to storage automatically for downstream batch processing. What should you enable?",
+            "options": [
+                "Event Hubs Capture",
+                "A Logic Apps recurrence trigger",
+                "An API Management policy",
+                "A Service Bus topic"
+            ],
+            "correct_index": 0,
+            "explanation": "Event Hubs Capture automatically writes the event stream to Blob Storage or Azure Data Lake in Avro format for batch processing. The other options do not persist streaming data to storage.",
+            "reference": "Microsoft Learn: Capture events through Azure Event Hubs"
+        },
+        {
+            "id": "az-204-050",
+            "domain": "Connect to and consume Azure services and third-party services",
+            "stem": "You are developing a web API that hands off long-running work to a background worker and must not block the caller. Which approach should you use?",
+            "options": [
+                "Call the worker directly and wait for completion",
+                "Write a message to a queue that a worker processes",
+                "Process the work synchronously within the request",
+                "Store the work in a CDN cache"
+            ],
+            "correct_index": 1,
+            "explanation": "Placing a message on a queue decouples the API from the worker so the API returns quickly and the worker processes asynchronously. Synchronous processing and direct blocking calls couple the request to the work.",
+            "reference": "Microsoft Learn: Introduction to Azure Queue Storage"
+        }
+    ]
+}

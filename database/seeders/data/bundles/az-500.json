@@ -1,0 +1,717 @@
+{
+    "cert_key": "az-500",
+    "title": "Microsoft Azure Security Engineer Associate (AZ-500)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/az-500.json",
+    "variant_label": "AZ-500 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 100,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AZ-500 skills measured (identity and access, platform protection, data/application security, security operations). Not a capture of past exam questions.",
+    "source_label": "Azure Security Engineer practice bank",
+    "items": [
+        {
+            "id": "az-500-001",
+            "domain": "Manage identity and access",
+            "stem": "A security team must require multifactor authentication for sign-ins that originate from outside the corporate network while allowing single-factor sign-in from trusted office ranges. Which Microsoft Entra capability should they configure?",
+            "options": [
+                "A Conditional Access policy that applies the multifactor authentication grant control",
+                "Microsoft Entra ID Protection risk detections",
+                "Microsoft Entra password protection",
+                "Self-service password reset with authentication methods"
+            ],
+            "correct_index": 0,
+            "explanation": "Conditional Access evaluates signals such as user, location, and device and can enforce a multifactor authentication grant control for untrusted locations. ID Protection supplies risk signals but does not itself enforce access, password protection blocks weak passwords, and self-service password reset only recovers accounts.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-002",
+            "domain": "Manage identity and access",
+            "stem": "An administrator needs privileged role assignments that are activated only on demand, can require approval, and automatically expire after a fixed period. Which Microsoft Entra feature provides this behavior?",
+            "options": [
+                "Microsoft Entra Connect sync",
+                "Privileged Identity Management",
+                "Access reviews",
+                "Administrative units"
+            ],
+            "correct_index": 1,
+            "explanation": "Privileged Identity Management makes roles eligible rather than permanently active, supports approval and time-bound activation, and records activation history. Access reviews recertify existing access, administrative units partition management scope, and Entra Connect syncs identities from on-premises Active Directory.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-003",
+            "domain": "Manage identity and access",
+            "stem": "A virtual machine must read secrets from Azure Key Vault without any credential stored in code or configuration, and the identity should be tied to the lifecycle of the virtual machine. Which Microsoft Entra feature should be enabled?",
+            "options": [
+                "A local service account in the guest operating system",
+                "A storage shared access signature",
+                "A system-assigned managed identity",
+                "An app registration client secret"
+            ],
+            "correct_index": 2,
+            "explanation": "A system-assigned managed identity is created in Microsoft Entra ID and tied to the resource, so the virtual machine authenticates to Key Vault without stored secrets. A client secret must be stored and rotated, and guest or storage credentials are unrelated to Key Vault authentication.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-004",
+            "domain": "Manage identity and access",
+            "stem": "A team must be able to restart virtual machines in a resource group but must not be able to delete resources or grant access to others. Which approach grants the required least privilege?",
+            "options": [
+                "Assign the Owner role at subscription scope",
+                "Assign the Contributor role at subscription scope",
+                "Grant the Global Administrator role in Microsoft Entra ID",
+                "Create a custom Azure RBAC role scoped to the resource group"
+            ],
+            "correct_index": 3,
+            "explanation": "A custom role lists only the actions the team needs, such as restart, and is scoped to the resource group. Owner and Contributor allow broader changes including deletion, and Global Administrator is a directory role, not an Azure resource permission.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-005",
+            "domain": "Manage identity and access",
+            "stem": "A line-of-business application must read directory user data without a signed-in user and only when an administrator has approved the access. What should be created and consented to?",
+            "options": [
+                "An app registration with an application permission and admin consent",
+                "A managed identity with delegated user permissions",
+                "A shared user account with a permanent password",
+                "A Conditional Access policy granting directory reads"
+            ],
+            "correct_index": 0,
+            "explanation": "An app registration defines the application, and an application permission is used for app-only access, granted tenant-wide by an administrator. Delegated permissions require a signed-in user, a shared account is insecure, and Conditional Access controls access rather than granting API permissions.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-006",
+            "domain": "Manage identity and access",
+            "stem": "Employees use personally owned Windows devices, and the security team wants those devices registered in the directory so that Conditional Access can include or exclude them. Which device identity option fits personally owned devices?",
+            "options": [
+                "On-premises Active Directory domain joined",
+                "Microsoft Entra registered",
+                "Microsoft Entra hybrid joined",
+                "Microsoft Entra joined"
+            ],
+            "correct_index": 1,
+            "explanation": "Microsoft Entra registered is intended for personal or bring-your-own devices and gives the device an identity without organizational ownership. Entra joined and hybrid joined target organization-owned devices, and on-premises domain join does not by itself create an Entra device object.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-007",
+            "domain": "Manage identity and access",
+            "stem": "The security team must enforce a phishing-resistant authentication method based on public key cryptography for privileged administrators. Which method should be required?",
+            "options": [
+                "A voice call",
+                "Knowledge-based security questions",
+                "A FIDO2 security key",
+                "An SMS one-time passcode"
+            ],
+            "correct_index": 2,
+            "explanation": "FIDO2 security keys use public key cryptography bound to the origin, which resists phishing and replay. SMS, voice calls, and security questions are all phishable and do not provide the same assurance.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-008",
+            "domain": "Manage identity and access",
+            "stem": "The security team wants to block sign-ins that Microsoft Entra ID flags as high risk because of leaked credentials or atypical travel patterns. Which feature produces and acts on these risk detections?",
+            "options": [
+                "Privileged Identity Management",
+                "Access reviews",
+                "Microsoft Entra password protection",
+                "Microsoft Entra ID Protection"
+            ],
+            "correct_index": 3,
+            "explanation": "Microsoft Entra ID Protection detects user and sign-in risk such as leaked credentials and atypical travel, and that risk can be used in Conditional Access. PIM governs privileged activation, access reviews recertify assignments, and password protection enforces banned-password lists.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-009",
+            "domain": "Manage identity and access",
+            "stem": "Partner staff must sign in to a shared application by using their own organization's credentials while the resource directory controls their access. Which Microsoft Entra feature should be used?",
+            "options": [
+                "B2B collaboration with guest users",
+                "Microsoft Entra B2C local accounts",
+                "A shared administrator account",
+                "Microsoft Entra Domain Services"
+            ],
+            "correct_index": 0,
+            "explanation": "B2B collaboration invites external users as guests who authenticate with their home credentials while the resource tenant applies policy. B2C is for consumer identities, a shared administrator account loses accountability, and Domain Services provides managed domain services rather than partner federation.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-010",
+            "domain": "Manage identity and access",
+            "stem": "A compliance rule requires that group memberships and privileged role assignments be recertified on a schedule by named reviewers. Which Microsoft Entra feature automates this recertification?",
+            "options": [
+                "Single sign-on",
+                "Access reviews",
+                "Conditional Access",
+                "Microsoft Entra ID Protection"
+            ],
+            "correct_index": 1,
+            "explanation": "Access reviews periodically ask reviewers to confirm or remove group memberships and role assignments and can act automatically when a reviewer does not respond. Conditional Access and ID Protection evaluate sign-in conditions and risk, and single sign-on only federates authentication.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-011",
+            "domain": "Manage identity and access",
+            "stem": "A Conditional Access policy must allow sign-ins only from a defined set of office public IP ranges and treat all other origins as untrusted. Which policy configuration supplies those office ranges?",
+            "options": [
+                "Continuous access evaluation",
+                "Terms of use",
+                "Named locations",
+                "Authentication strength"
+            ],
+            "correct_index": 2,
+            "explanation": "Named locations define trusted IP ranges and countries that Conditional Access conditions can reference. Authentication strength sets which methods satisfy a grant, continuous access evaluation revokes tokens in near real time, and terms of use present legal text rather than network origins.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-012",
+            "domain": "Manage identity and access",
+            "stem": "A security analyst must review every resource in a subscription but must not be able to change or delete anything. Which Azure RBAC role should be assigned?",
+            "options": [
+                "Contributor",
+                "Owner",
+                "User Access Administrator",
+                "Reader"
+            ],
+            "correct_index": 3,
+            "explanation": "Reader grants view access to all resources without the ability to modify them. Contributor can create and delete resources, Owner can also grant access, and User Access Administrator manages role assignments.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-013",
+            "domain": "Manage identity and access",
+            "stem": "A new employee with no phone and no password must complete first-time Microsoft Entra registration on a shared workstation. Which method is designed for this bootstrapping scenario?",
+            "options": [
+                "A Temporary Access Pass",
+                "A FIDO2 security key",
+                "Authenticator app push notifications",
+                "Certificate-based authentication"
+            ],
+            "correct_index": 0,
+            "explanation": "A Temporary Access Pass is a time-limited code issued by an administrator that lets a user register other methods without an existing credential. FIDO2, Authenticator push, and certificate authentication all assume the user already has a usable method or device.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-014",
+            "domain": "Manage identity and access",
+            "stem": "A continuous integration workflow that runs in GitHub must obtain tokens for Azure resources without storing a client secret in the pipeline. Which identity approach should be used?",
+            "options": [
+                "A storage shared access signature",
+                "Workload identity federation on an app registration",
+                "A system-assigned managed identity on the build runner",
+                "A client secret committed to the repository"
+            ],
+            "correct_index": 1,
+            "explanation": "Workload identity federation configures a trust between the external identity provider and an app registration so no secret is stored. A managed identity requires the workload to run in Azure, committing a secret is insecure, and a shared access signature does not authenticate the pipeline to Microsoft Entra ID.",
+            "reference": "Microsoft AZ-500 skills measured - Manage identity and access"
+        },
+        {
+            "id": "az-500-015",
+            "domain": "Secure networking",
+            "stem": "An administrator creates a network security group, attaches it to a subnet, and adds no custom rules. Which statement describes the default inbound behavior for traffic arriving from the internet?",
+            "options": [
+                "Only RDP and SSH from the internet are allowed",
+                "All outbound traffic is denied by default",
+                "Internet inbound traffic is denied while virtual network and Azure load balancer health traffic is allowed",
+                "All inbound internet traffic is allowed"
+            ],
+            "correct_index": 2,
+            "explanation": "The default network security group rules deny inbound traffic from the internet, allow intra-virtual-network traffic and Azure load balancer probes, and allow outbound traffic to the internet. Administrators must add explicit allow rules to permit other traffic.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-016",
+            "domain": "Secure networking",
+            "stem": "Several web servers spread across multiple subnets must be grouped so that one network security group rule governs their traffic without listing individual IP addresses. Which feature should be used as the rule source or destination?",
+            "options": [
+                "Service tags",
+                "Azure Firewall application rules",
+                "Network virtual appliances",
+                "Application security groups"
+            ],
+            "correct_index": 3,
+            "explanation": "Application security groups let virtual machine network interfaces be grouped logically and referenced in network security group rules. Service tags represent Microsoft service address ranges, Firewall application rules filter fully qualified domain names, and network virtual appliances are third-party devices.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-017",
+            "domain": "Secure networking",
+            "stem": "Outbound web requests from a virtual network must be filtered by fully qualified domain name rather than by IP address. Which Azure service provides stateful fully qualified domain name filtering?",
+            "options": [
+                "Azure Firewall",
+                "Network security groups",
+                "Azure Bastion",
+                "Azure DDoS Protection"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Firewall is a stateful managed firewall that supports application rules matching fully qualified domain names. Network security groups filter by IP, port, and protocol only, Bastion provides management access, and DDoS Protection mitigates volumetric attacks.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-018",
+            "domain": "Secure networking",
+            "stem": "A team must administer virtual machines by using RDP and SSH without exposing public IP addresses or opening inbound management ports to the internet. Which Azure service should be deployed?",
+            "options": [
+                "A site-to-site VPN gateway",
+                "Azure Bastion",
+                "Azure Firewall",
+                "A public load balancer"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Bastion provides browser-based RDP and SSH through the Azure portal over TLS, so the virtual machines need no public IP and no inbound management rules. Firewall filters traffic, a load balancer distributes connections, and a VPN gateway connects networks.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-019",
+            "domain": "Secure networking",
+            "stem": "A public web application must receive enhanced distributed denial of service mitigation plus cost protection guarantees that exceed the platform default. Which offering should be enabled?",
+            "options": [
+                "Web Application Firewall in prevention mode",
+                "Network security group flow logs",
+                "Azure DDoS Protection",
+                "Azure Firewall Premium"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure DDoS Protection provides enhanced mitigation tuned to the workload along with cost protection and telemetry beyond the always-on platform baseline. Firewall and Web Application Firewall handle layer 7 filtering, and flow logs only record traffic.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-020",
+            "domain": "Secure networking",
+            "stem": "An application must reach an Azure SQL Database through the Microsoft backbone with a private IP address inside the virtual network, and the database must not be reachable from the public internet. Which mechanism should be used?",
+            "options": [
+                "A virtual network service endpoint",
+                "Azure Firewall destination network address translation rules",
+                "A public IP address protected by a network security group",
+                "A private endpoint created through Azure Private Link"
+            ],
+            "correct_index": 3,
+            "explanation": "A private endpoint assigns a private IP in the virtual network to the platform as a service resource through Azure Private Link and can disable public access. Service endpoints keep the public endpoint, and the other options leave the database reachable over the internet.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-021",
+            "domain": "Secure networking",
+            "stem": "A storage account must be limited to a specific subnet, while traffic still uses the public service endpoint and the subnet keeps a route to the Azure backbone. Which control fits this requirement?",
+            "options": [
+                "A virtual network service endpoint combined with storage firewall rules",
+                "A private endpoint",
+                "A network security group rule blocking the internet",
+                "A route table with forced tunneling"
+            ],
+            "correct_index": 0,
+            "explanation": "A service endpoint gives the subnet a direct path to the service over the Azure backbone, and the storage firewall can then restrict access to that subnet. A private endpoint would use a private IP, and the other options do not scope the storage account to the subnet.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-022",
+            "domain": "Secure networking",
+            "stem": "An internet-facing web application behind Azure Application Gateway must be protected from common attacks such as SQL injection and cross-site scripting. Which capability should be enabled?",
+            "options": [
+                "Just-in-time virtual machine access",
+                "Web Application Firewall on Application Gateway",
+                "Network security group rules",
+                "Azure Bastion"
+            ],
+            "correct_index": 1,
+            "explanation": "The Web Application Firewall on Application Gateway inspects HTTP traffic against managed rule sets such as the OWASP core rules to block injection and scripting attacks. Network security groups work at layers 3 and 4, Bastion serves administration, and just-in-time access protects management ports.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-023",
+            "domain": "Secure networking",
+            "stem": "Network security group traffic must be recorded and sent to a Log Analytics workspace so that flows can be visualized and analyzed. Which feature should be enabled?",
+            "options": [
+                "Service endpoint policies",
+                "Azure Bastion diagnostic settings",
+                "NSG flow logs with Traffic Analytics",
+                "Azure Firewall DNS proxy"
+            ],
+            "correct_index": 2,
+            "explanation": "NSG flow logs record allowed and denied flows, and Traffic Analytics sends that data to a Log Analytics workspace for visualization. The DNS proxy, service endpoint policies, and Bastion diagnostics do not capture NSG flow records.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-024",
+            "domain": "Secure networking",
+            "stem": "The firewall must decrypt outbound Transport Layer Security traffic for inspection and detect intrusions in the decrypted stream. Which Azure Firewall tier supports TLS inspection and intrusion detection?",
+            "options": [
+                "Standard",
+                "Basic",
+                "Gateway",
+                "Premium"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Firewall Premium adds TLS inspection and signature-based intrusion detection and prevention. The Standard and Basic tiers lack these features, and Gateway is not an Azure Firewall SKU.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-025",
+            "domain": "Secure networking",
+            "stem": "A network security group rule must allow traffic to the Azure Storage service without listing every possible public IP address. Which feature should the rule use to represent the destination?",
+            "options": [
+                "A service tag",
+                "An application security group",
+                "A custom IP prefix",
+                "A user-defined route"
+            ],
+            "correct_index": 0,
+            "explanation": "A service tag represents a Microsoft-managed set of IP ranges for a service such as Storage, so rules stay current automatically. Application security groups group virtual machine interfaces, custom IP prefixes are customer-owned ranges, and user-defined routes control next hops.",
+            "reference": "Microsoft AZ-500 skills measured - Secure networking"
+        },
+        {
+            "id": "az-500-026",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "A Windows virtual machine must have its operating system and data disks encrypted with keys the organization controls in Azure Key Vault. Which feature should be enabled?",
+            "options": [
+                "BitLocker with recovery passwords stored in a file share",
+                "Azure Disk Encryption using an Azure Key Vault",
+                "Storage service encryption with platform-managed keys",
+                "Encryption at host only"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Disk Encryption uses BitLocker in the guest operating system and stores key encryption keys in Azure Key Vault. Platform-managed service encryption does not let the customer control the key, encryption at host does not meet the key control goal by itself, and storing recovery passwords in a file share is insecure.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-027",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "A key vault must retain deleted keys and secrets so they can be recovered, and immediate permanent deletion must be prevented even by an administrator. Which settings should be enabled?",
+            "options": [
+                "Diagnostic settings and logging",
+                "Access policies and network rules",
+                "Soft delete and purge protection",
+                "Public network access and firewalls"
+            ],
+            "correct_index": 2,
+            "explanation": "Soft delete retains deleted objects for a recovery window, and purge protection prevents anyone from permanently removing them during that window. Firewalls, logging, and access policies do not protect against deletion.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-028",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "An organization wants to manage access to Key Vault keys, secrets, and certificates with the same Azure role-based access control that is used for other Azure resources. Which configuration should be chosen?",
+            "options": [
+                "Use vault access policies only",
+                "Enable public network access",
+                "Use a storage shared access signature",
+                "Use Azure RBAC for the Key Vault data plane"
+            ],
+            "correct_index": 3,
+            "explanation": "Selecting the Azure RBAC permission model lets Key Vault data-plane access be governed by role assignments and scopes like other resources. Vault access policies are a separate model, public network access affects reachability, and a shared access signature does not authorize Key Vault.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-029",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "A security review requires that anonymous access to blob containers be blocked and that only encrypted HTTPS connections be accepted. Which storage account settings achieve this?",
+            "options": [
+                "Set allow public blob access to disabled and require secure transfer to enabled",
+                "Enable large file shares and set the minimum TLS version to 1.0",
+                "Enable anonymous read access on every container",
+                "Enable only the file service and disable the blob service"
+            ],
+            "correct_index": 0,
+            "explanation": "Disabling public blob access prevents anonymous container access, and requiring secure transfer rejects non-HTTPS connections. Large file shares and TLS 1.0 do not address anonymity, and enabling anonymous read access does the opposite.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-030",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "A partner needs temporary delegated access to one blob only and must not receive the storage account keys. Which mechanism should be used?",
+            "options": [
+                "A private endpoint",
+                "A user delegation shared access signature",
+                "The storage account access keys",
+                "A virtual network service endpoint"
+            ],
+            "correct_index": 1,
+            "explanation": "A user delegation shared access signature is scoped to specific permissions, resources, and an expiry and is signed without exposing the account key. Account keys grant full control, and endpoints affect network reachability rather than authorization.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-031",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "An organization requires that blob data be encrypted with a customer-managed key stored in Azure Key Vault. Which storage configuration should be used?",
+            "options": [
+                "Client-side encryption with a certificate on each computer",
+                "BitLocker on client workstations",
+                "Customer-managed keys in Key Vault for the storage account",
+                "Microsoft-managed keys only"
+            ],
+            "correct_index": 2,
+            "explanation": "Configuring customer-managed keys makes Azure Storage use a key the organization owns and rotates in Key Vault. Microsoft-managed keys are not customer controlled, and client-side or workstation encryption does not protect data at rest in the storage service.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-032",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "Azure SQL Database must detect unusual and potentially harmful attempts to access or exploit the database, including injection and anomalous access patterns. Which feature should be enabled?",
+            "options": [
+                "Transparent Data Encryption alone",
+                "Auditing to a storage account alone",
+                "A server firewall rule for the client IP",
+                "Microsoft Defender for SQL"
+            ],
+            "correct_index": 3,
+            "explanation": "Microsoft Defender for SQL analyzes activity and raises alerts for suspicious behavior such as injection and anomalous access. Transparent Data Encryption protects data at rest, auditing records activity without detection, and a firewall rule only limits who can connect.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-033",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "Azure SQL Database must have its data, backups, and transaction logs encrypted at rest by default. Which feature provides this protection?",
+            "options": [
+                "Transparent Data Encryption",
+                "Dynamic data masking",
+                "Always Encrypted",
+                "Row-level security"
+            ],
+            "correct_index": 0,
+            "explanation": "Transparent Data Encryption encrypts database files, backups, and logs at rest and is enabled by default in Azure SQL Database. Dynamic data masking hides data in query results, Always Encrypted protects specific columns in use, and row-level security filters rows.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-034",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "Sensitive columns must remain encrypted in a way that even database administrators cannot read the plaintext values. Which SQL capability should be implemented?",
+            "options": [
+                "SQL auditing",
+                "Always Encrypted",
+                "Transparent Data Encryption",
+                "Dynamic data masking"
+            ],
+            "correct_index": 1,
+            "explanation": "Always Encrypted keeps column keys outside the database so the client driver encrypts and decrypts values, and administrators see only ciphertext. Transparent Data Encryption protects data at rest but leaves it readable to administrators, masking only changes output, and auditing records access.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-035",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "Management ports on virtual machines should be closed by default and opened only for a limited time when a user requests access. Which Microsoft Defender for Cloud capability provides this?",
+            "options": [
+                "File integrity monitoring",
+                "Azure Bastion",
+                "Just-in-time virtual machine access",
+                "Adaptive network hardening recommendations alone"
+            ],
+            "correct_index": 2,
+            "explanation": "Just-in-time virtual machine access in Microsoft Defender for Cloud denies management ports by default and opens them temporarily after an approved request. Adaptive network hardening only suggests rules, file integrity monitoring watches files, and Bastion is a managed jump service.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-036",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "Container images in Azure Container Registry must be scanned for known vulnerabilities and the registry must reject anonymous pulls. Which combination should be used?",
+            "options": [
+                "Azure Firewall with fully qualified domain name rules",
+                "A private endpoint on the registry",
+                "Network security groups on the registry",
+                "Microsoft Defender for container registries with anonymous pull disabled"
+            ],
+            "correct_index": 3,
+            "explanation": "Microsoft Defender for container registries scans images for vulnerabilities, and disabling anonymous pull requires authentication. Firewall rules and network controls restrict reachability but do not scan images, and a private endpoint alone does not disable anonymous access.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-037",
+            "domain": "Secure compute, storage, and databases",
+            "stem": "New virtual machines must use secure boot and a virtual trusted platform module and have their boot integrity measured. Which feature provides this?",
+            "options": [
+                "Trusted launch",
+                "Azure Disk Encryption",
+                "Just-in-time virtual machine access",
+                "Endpoint protection"
+            ],
+            "correct_index": 0,
+            "explanation": "Trusted launch combines secure boot, a virtual trusted platform module, and boot integrity monitoring to protect against boot kits and rootkits. Disk encryption protects volumes at rest, just-in-time access controls ports, and endpoint protection runs antimalware in the guest.",
+            "reference": "Microsoft AZ-500 skills measured - Secure compute, storage, and databases"
+        },
+        {
+            "id": "az-500-038",
+            "domain": "Manage security operations",
+            "stem": "A security team wants one metric that summarizes the organization's security posture and prioritizes actions that improve it. Which Microsoft Defender for Cloud feature provides this?",
+            "options": [
+                "Adaptive application controls",
+                "Secure score",
+                "The regulatory compliance dashboard",
+                "Workflow automation"
+            ],
+            "correct_index": 1,
+            "explanation": "Secure score aggregates the state of assessed controls into a score with prioritized recommendations. The compliance dashboard maps results to standards, workflow automation triggers actions, and adaptive application controls allowlist applications.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-039",
+            "domain": "Manage security operations",
+            "stem": "An organization must prevent anyone from creating a storage account that allows public blob access, and non-compliant requests must be blocked during deployment. Which Azure Policy effect should be used?",
+            "options": [
+                "Append",
+                "DeployIfNotExists",
+                "Deny",
+                "Audit"
+            ],
+            "correct_index": 2,
+            "explanation": "The Deny effect blocks the create or update request that violates the policy. Audit only records non-compliance, Append adds fields, and DeployIfNotExists deploys related resources after the fact.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-040",
+            "domain": "Manage security operations",
+            "stem": "A policy must automatically add diagnostic settings to new resources so their logs are sent to a central workspace. Which policy effect fits this requirement?",
+            "options": [
+                "Audit",
+                "Deny",
+                "Disabled",
+                "DeployIfNotExists"
+            ],
+            "correct_index": 3,
+            "explanation": "DeployIfNotExists runs a template when a resource is created or updated and the condition is met, which is how diagnostic settings are added automatically. Audit reports only, Deny blocks, and Disabled does nothing.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-041",
+            "domain": "Manage security operations",
+            "stem": "Microsoft Sentinel must ingest Microsoft Entra ID sign-in and audit logs together with logs from other sources for correlation. What should be configured first?",
+            "options": [
+                "Data connectors",
+                "Analytics rules",
+                "Workbooks",
+                "Watchlists"
+            ],
+            "correct_index": 0,
+            "explanation": "Data connectors ingest logs from sources into the Sentinel workspace, and everything else operates on that ingested data. Analytics rules detect, workbooks visualize, and watchlists enrich.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-042",
+            "domain": "Manage security operations",
+            "stem": "In Microsoft Sentinel, which component turns scheduled queries against ingested data into security incidents?",
+            "options": [
+                "Watchlists",
+                "Analytics rules",
+                "Data connectors",
+                "Workbooks"
+            ],
+            "correct_index": 1,
+            "explanation": "Analytics rules run regularly and create alerts and incidents when their logic matches. Data connectors bring data in, workbooks present dashboards, and watchlists supply reference data.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-043",
+            "domain": "Manage security operations",
+            "stem": "When a Microsoft Sentinel incident is created, the response must automatically post to Microsoft Teams and block the involved user. Which Sentinel component implements this?",
+            "options": [
+                "A workbook",
+                "A watchlist",
+                "A playbook built on Azure Logic Apps",
+                "An analytics rule"
+            ],
+            "correct_index": 2,
+            "explanation": "Playbooks are Logic Apps that run automated response actions and can be triggered by an incident or an automation rule. Analytics rules detect, workbooks visualize, and watchlists enrich data.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-044",
+            "domain": "Manage security operations",
+            "stem": "The security team must be notified by email and SMS whenever a high-severity alert fires in Azure Monitor. What defines the notification recipients and actions?",
+            "options": [
+                "A metric alert rule alone",
+                "A diagnostic setting",
+                "A Log Analytics workspace",
+                "An action group"
+            ],
+            "correct_index": 3,
+            "explanation": "An action group holds the notification preferences and actions such as email, SMS, and webhooks that an alert rule invokes. The alert rule defines the condition, a diagnostic setting routes platform logs, and a workspace stores and queries logs.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-045",
+            "domain": "Manage security operations",
+            "stem": "An analyst must query sign-in logs stored in a Log Analytics workspace to find failed sign-ins by user and time. Which query language should be used?",
+            "options": [
+                "Kusto Query Language",
+                "Transact-SQL",
+                "PowerShell",
+                "YAML"
+            ],
+            "correct_index": 0,
+            "explanation": "Log Analytics and Microsoft Sentinel use Kusto Query Language to query log tables. Transact-SQL targets relational databases, PowerShell is a shell, and YAML is a data serialization format.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-046",
+            "domain": "Manage security operations",
+            "stem": "An organization must continuously assess its Azure environment against a standard such as PCI DSS and see pass and fail results per control. Which Microsoft Defender for Cloud feature provides this?",
+            "options": [
+                "Just-in-time access",
+                "The regulatory compliance dashboard",
+                "Secure score",
+                "Workflow automation"
+            ],
+            "correct_index": 1,
+            "explanation": "The regulatory compliance dashboard maps assessments to standards and shows control-level results. Secure score summarizes posture generally, workflow automation triggers actions, and just-in-time access controls management ports.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-047",
+            "domain": "Manage security operations",
+            "stem": "The security team wants Microsoft Defender for Cloud to open a ticket in an external ticketing system whenever a high-severity alert is generated. Which capability should be used?",
+            "options": [
+                "Just-in-time access",
+                "Adaptive application controls",
+                "Workflow automation based on Azure Logic Apps",
+                "Security policies"
+            ],
+            "correct_index": 2,
+            "explanation": "Workflow automation in Defender for Cloud triggers Logic Apps on alerts or recommendations, which can create external tickets. Security policies define assessments, and the other features harden access or applications.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-048",
+            "domain": "Manage security operations",
+            "stem": "An organization wants suspicious activity on its Azure SQL servers and storage accounts to be detected. What must be enabled in Microsoft Defender for Cloud?",
+            "options": [
+                "Secure score only",
+                "The regulatory compliance dashboard only",
+                "A Log Analytics workspace only",
+                "The Defender plans for those resource types"
+            ],
+            "correct_index": 3,
+            "explanation": "Enabling the Defender plans for databases and storage turns on the threat detection specific to those resources. Secure score and compliance summarize posture, and a workspace only stores logs.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-049",
+            "domain": "Manage security operations",
+            "stem": "During an incident, an analyst wants to visualize the relationships between a compromised user, contacted IP addresses, and affected resources in Microsoft Sentinel. Which feature should be used?",
+            "options": [
+                "The investigation graph",
+                "A workbook",
+                "A data connector",
+                "An analytics rule"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sentinel investigation graph renders entities and their relationships so an analyst can explore an incident interactively. Workbooks are dashboards, data connectors ingest, and analytics rules detect.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        },
+        {
+            "id": "az-500-050",
+            "domain": "Manage security operations",
+            "stem": "Azure activity logs and resource logs must be routed to a central destination for long-term retention and querying. Which Azure Monitor feature sends these platform logs to a workspace or event hub?",
+            "options": [
+                "Application Insights sampling",
+                "Diagnostic settings",
+                "Metric alerts",
+                "Action groups"
+            ],
+            "correct_index": 1,
+            "explanation": "Diagnostic settings define which platform logs and metrics are exported to destinations such as a Log Analytics workspace, storage account, or event hub. Metric alerts evaluate signals, action groups notify, and sampling reduces telemetry volume.",
+            "reference": "Microsoft AZ-500 skills measured - Manage security operations"
+        }
+    ]
+}

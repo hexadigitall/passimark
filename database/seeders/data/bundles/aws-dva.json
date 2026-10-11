@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-dva",
+    "title": "AWS Certified Developer - Associate (DVA-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-dva.json",
+    "variant_label": "DVA-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 130,
+        "scoring": "720/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified Developer - Associate DVA-C02 exam guide (four official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "AWS Developer practice bank",
+    "items": [
+        {
+            "id": "aws-dva-001",
+            "domain": "Development with AWS Services",
+            "stem": "A developer needs to limit a Lambda function so that at most ten instances run at once while other functions in the account remain unaffected. Which setting should be used?",
+            "options": [
+                "Reserved concurrency set to 10 on the function",
+                "Provisioned concurrency set to 10 on the function",
+                "A batch size of 10 on the event source mapping",
+                "A Lambda layer shared with ten functions"
+            ],
+            "correct_index": 0,
+            "explanation": "Reserved concurrency caps how many concurrent executions a single function can have and also guarantees that capacity for it. Provisioned concurrency pre-warms instances but does not cap the maximum, batch size only controls stream and queue polling, and layers share code.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-002",
+            "domain": "Development with AWS Services",
+            "stem": "A developer wants API Gateway to pass the HTTP method, request path, headers, and query string straight to a Lambda function without mapping each field individually. Which integration should be configured?",
+            "options": [
+                "AWS service integration with an action override",
+                "Lambda proxy integration",
+                "Lambda custom integration with a mapping template",
+                "Mock integration"
+            ],
+            "correct_index": 1,
+            "explanation": "A Lambda proxy integration hands the whole request to the function in a structured event and expects a structured response, so no mapping templates are needed. Custom integrations require mapping templates, mock integrations return static responses, and AWS service integrations target other AWS APIs.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-003",
+            "domain": "Development with AWS Services",
+            "stem": "An application must query a DynamoDB table by an attribute that is not part of its primary key and needs fast lookups without scanning the whole table. What should the developer create?",
+            "options": [
+                "A local secondary index on the table partition key",
+                "A DynamoDB stream enabled on the table",
+                "A global secondary index using that attribute as its partition key",
+                "An ElastiCache cluster storing the query results"
+            ],
+            "correct_index": 2,
+            "explanation": "A global secondary index defines its own partition and sort key, so it can be queried efficiently on an attribute outside the base table key. A local secondary index must share the table partition key, streams capture changes, and a cache does not provide keyed lookups on its own.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-004",
+            "domain": "Development with AWS Services",
+            "stem": "A developer must run code every time an item in a DynamoDB table changes and needs the changes processed in order for each partition. Which approach meets the requirement?",
+            "options": [
+                "Configure S3 event notifications to call the function",
+                "Create a CloudWatch Logs subscription filter",
+                "Poll the table every second with a scheduled Lambda function",
+                "Enable a DynamoDB stream and add it as a Lambda event source"
+            ],
+            "correct_index": 3,
+            "explanation": "A DynamoDB stream records item-level changes and, when used as a Lambda event source, invokes the function with ordering preserved within each shard. Polling is slower and misses ordering, and S3 and CloudWatch Logs are not table change feeds.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-005",
+            "domain": "Development with AWS Services",
+            "stem": "A read-heavy application repeatedly reads the same DynamoDB items and needs microsecond read latency with no change to the application beyond pointing its client at the cache. Which service should be used?",
+            "options": [
+                "DynamoDB Accelerator (DAX)",
+                "An ElastiCache for Memcached cluster",
+                "An Amazon RDS read replica",
+                "DynamoDB global tables"
+            ],
+            "correct_index": 0,
+            "explanation": "DAX is an in-memory cache that is API-compatible with DynamoDB, so the application uses the DAX client and gains microsecond reads for repeated items. Memcached requires application changes, read replicas apply to relational databases, and global tables only replicate across Regions.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-006",
+            "domain": "Development with AWS Services",
+            "stem": "A developer wants a Lambda function to process images immediately after they are uploaded to an S3 bucket. Which S3 feature should be configured?",
+            "options": [
+                "S3 Transfer Acceleration",
+                "S3 event notifications to the Lambda function",
+                "S3 Cross-Region Replication",
+                "S3 lifecycle transition rules"
+            ],
+            "correct_index": 1,
+            "explanation": "S3 can publish event notifications for object-created events to targets such as Lambda, giving near-real-time processing. Transfer Acceleration speeds uploads, replication copies objects to other buckets, and lifecycle rules transition or expire objects.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-007",
+            "domain": "Development with AWS Services",
+            "stem": "A mobile app must let a user upload a private object directly to S3 for a limited time without embedding AWS credentials in the app. What should the developer generate?",
+            "options": [
+                "A public bucket policy that allows anonymous PutObject",
+                "An IAM user access key embedded in the app",
+                "A presigned URL generated with an expiration",
+                "An S3 Access Point with public access"
+            ],
+            "correct_index": 2,
+            "explanation": "A presigned URL carries temporary, scoped credentials and an expiration, so the app uploads directly without shipping long-term keys. Embedding access keys exposes them, and a public bucket policy or public access point removes the time limit and the access control.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-008",
+            "domain": "Development with AWS Services",
+            "stem": "Producers must not lose messages while consumers are temporarily offline, and the messages must be handled in their exact order with exactly-once processing. Which queue should be used?",
+            "options": [
+                "An SNS topic with many subscribers",
+                "A Kinesis Data Stream",
+                "An SQS standard queue",
+                "An SQS FIFO queue with a deduplication ID"
+            ],
+            "correct_index": 3,
+            "explanation": "An SQS FIFO queue preserves strict ordering and provides exactly-once processing through deduplication, and messages persist until a consumer deletes them. A standard queue is best-effort ordering with possible duplicates, SNS is publish-subscribe, and Kinesis is a streaming log with its own consumers.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-009",
+            "domain": "Development with AWS Services",
+            "stem": "A single event must trigger three independent services at the same time. Which pattern should the developer implement?",
+            "options": [
+                "Publish the event to an SNS topic with a subscription for each service",
+                "Use DynamoDB streams with three Lambda functions",
+                "Send the event to a single SQS queue and have each service poll it",
+                "Write the event to S3 and have each service poll a manifest"
+            ],
+            "correct_index": 0,
+            "explanation": "SNS fan-out duplicates each message to every subscription, so all three services are notified at once. A single queue gives only one consumer each message, polling S3 is indirect and slow, and DynamoDB streams are tied to table changes rather than an arbitrary event.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-010",
+            "domain": "Development with AWS Services",
+            "stem": "A developer needs to route events from many AWS services and third-party SaaS providers to targets based on the event content, with schema discovery support. Which service should be used?",
+            "options": [
+                "CloudWatch Logs",
+                "EventBridge with a default event bus",
+                "An SNS topic",
+                "An SQS queue"
+            ],
+            "correct_index": 1,
+            "explanation": "EventBridge ingests events from AWS services, SaaS partners, and custom sources, then matches them against rules using the event content before delivering to targets. SNS and SQS do not offer content-based rules over native service events, and CloudWatch Logs stores log data.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-011",
+            "domain": "Development with AWS Services",
+            "stem": "A workflow must call several Lambda functions in sequence, retry failed steps with backoff, and branch based on the previous step output. Which service should orchestrate it?",
+            "options": [
+                "An SNS topic with several subscriptions",
+                "A single monolithic Lambda function",
+                "An AWS Step Functions state machine",
+                "An SQS queue with a Lambda consumer"
+            ],
+            "correct_index": 2,
+            "explanation": "Step Functions expresses multi-step workflows as a state machine with built-in sequencing, retries, backoff, and choice branching. SQS and SNS coordinate messaging but not step order, and a monolithic function loses the visibility and retry control of separate steps.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-012",
+            "domain": "Development with AWS Services",
+            "stem": "Several applications must read the same real-time clickstream data independently, and each must track its own position in the stream. Which service should be used?",
+            "options": [
+                "A single Lambda function shared by all applications",
+                "An SQS standard queue",
+                "An SNS topic",
+                "Kinesis Data Streams with an independent consumer per application"
+            ],
+            "correct_index": 3,
+            "explanation": "Kinesis Data Streams retains records for a configurable period and allows multiple consumers, each reading with its own iterator position. An SQS queue distributes each message to one consumer, an SNS topic pushes to subscribers, and one shared function provides no per-consumer position.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-013",
+            "domain": "Development with AWS Services",
+            "stem": "A developer shares common libraries and a runtime dependency across many Lambda functions and wants to keep each deployment package small. What should be used?",
+            "options": [
+                "Lambda layers attached to the functions",
+                "Environment variables holding the library paths",
+                "An EFS mount for every function",
+                "A larger memory setting for each function"
+            ],
+            "correct_index": 0,
+            "explanation": "A Lambda layer packages libraries separately from function code and can be attached to many functions, keeping deployment packages small and the code shared. Memory does not affect packaging, environment variables only configure values, and EFS is for shared file storage rather than code dependencies.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-014",
+            "domain": "Development with AWS Services",
+            "stem": "A developer must apply per-client request limits to an API Gateway REST API so one client cannot consume all capacity. Which feature should be used?",
+            "options": [
+                "A custom domain name",
+                "Usage plans with throttle and burst limits",
+                "API caching",
+                "Lambda reserved concurrency"
+            ],
+            "correct_index": 1,
+            "explanation": "Usage plans associate API keys with per-client throttle and burst limits so no single caller can overwhelm the API. Custom domains affect naming, caching reduces backend load without limiting a caller, and reserved concurrency throttles the function itself, not each client.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-015",
+            "domain": "Development with AWS Services",
+            "stem": "Two processes may update the same DynamoDB item, and a developer must prevent one from overwriting a change made by the other. Which technique should be used?",
+            "options": [
+                "Use a strongly consistent read before every write",
+                "Enable DynamoDB Streams on the table",
+                "Use a conditional write with a version attribute so the update fails if the version changed",
+                "Increase the table write capacity"
+            ],
+            "correct_index": 2,
+            "explanation": "Optimistic locking uses a version attribute in a condition expression, so a write fails when another process already changed the item and the caller can retry. A consistent read does not lock anything, streams only record changes, and more capacity does not resolve conflicting writes.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-016",
+            "domain": "Development with AWS Services",
+            "stem": "A Lambda function processes messages from an SQS queue, and the developer wants failed messages retried and then set aside for later analysis. Which configuration should be applied?",
+            "options": [
+                "An S3 lifecycle rule on the bucket",
+                "A CloudWatch Logs retention setting",
+                "A Lambda reserved concurrency value",
+                "A redrive policy on the queue that sends messages to a dead-letter queue after the maximum receives"
+            ],
+            "correct_index": 3,
+            "explanation": "A redrive policy moves a message to a dead-letter queue after it has been received the maximum number of times without being deleted, isolating poison messages. Reserved concurrency controls scaling, lifecycle rules manage objects, and log retention affects stored logs only.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-017",
+            "domain": "Development with AWS Services",
+            "stem": "An application uploads large objects over a slow connection and must be able to resume an interrupted upload without starting over. Which S3 capability should be used?",
+            "options": [
+                "S3 multipart upload",
+                "S3 Transfer Acceleration",
+                "S3 Select",
+                "Requester Pays"
+            ],
+            "correct_index": 0,
+            "explanation": "Multipart upload splits an object into parts that can be uploaded independently and reassembled, so a failed part can be retried without resending the whole object. Transfer Acceleration speeds transfer, S3 Select queries object contents, and Requester Pays changes who is billed.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-018",
+            "domain": "Development with AWS Services",
+            "stem": "A read-only API receives repeated identical requests, and the developer wants to reduce backend calls and latency. Which API Gateway feature helps most?",
+            "options": [
+                "Switch to a WebSocket API",
+                "Enable API caching for the stage",
+                "Enable cross-origin resource sharing",
+                "Increase the integration timeout"
+            ],
+            "correct_index": 1,
+            "explanation": "API Gateway caching stores responses for a configured time to live, so repeated requests are served from the cache instead of the backend. CORS controls browser access, a longer timeout does not reduce load, and WebSocket is for bidirectional connections, not caching.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-019",
+            "domain": "Development with AWS Services",
+            "stem": "A developer wants the result of an asynchronous Lambda invocation routed to another service depending on success or failure, without writing routing code inside the function. Which feature enables this?",
+            "options": [
+                "SQS visibility timeout",
+                "DynamoDB Streams",
+                "Lambda destinations for on-success and on-failure",
+                "API Gateway integration responses"
+            ],
+            "correct_index": 2,
+            "explanation": "Lambda destinations send invocation records to targets such as SQS, SNS, or EventBridge based on whether the asynchronous call succeeded or failed. Integration responses apply to synchronous API calls, visibility timeout governs message redelivery, and streams capture table changes.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-020",
+            "domain": "Development with AWS Services",
+            "stem": "A developer loads streaming data into Amazon S3 with automatic batching and optional transformation and does not want to manage consumers. Which service should be used?",
+            "options": [
+                "Kinesis Data Streams",
+                "An SQS queue",
+                "An SNS topic",
+                "A Kinesis Data Firehose delivery stream"
+            ],
+            "correct_index": 3,
+            "explanation": "Kinesis Data Firehose buffers incoming records and delivers them to destinations such as S3, optionally running a Lambda transform, with no consumers to operate. Data Streams requires consumer applications, SQS holds messages for polling, and SNS pushes notifications but does not batch to S3.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-021",
+            "domain": "Development with AWS Services",
+            "stem": "A developer must remove expired session items from a DynamoDB table automatically at no extra write cost. Which feature should be enabled?",
+            "options": [
+                "DynamoDB Time to Live on an expiry timestamp attribute",
+                "DynamoDB Streams with a delete function",
+                "A CloudWatch alarm on table size",
+                "A nightly Lambda function that scans and deletes expired items"
+            ],
+            "correct_index": 0,
+            "explanation": "DynamoDB Time to Live deletes items after a timestamp attribute passes, and those deletes are not charged as write capacity. A scanning function costs reads and writes, streams only observe changes, and a table-size alarm does not delete anything.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Development with AWS Services"
+        },
+        {
+            "id": "aws-dva-022",
+            "domain": "Security",
+            "stem": "A user is granted an action by an Allow statement in one IAM policy but blocked by an explicit Deny in another attached policy. What is the resulting permission?",
+            "options": [
+                "Allow wins because it is more specific",
+                "Deny wins and access is blocked",
+                "Access depends on the order the policies are attached",
+                "The user receives read-only access to the resource"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS evaluates policies by default deny, so any explicit Deny overrides every Allow statement. Policy attachment order is irrelevant, specificity does not change the outcome, and no read-only access is implied when access is denied.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-023",
+            "domain": "Security",
+            "stem": "An application running on an EC2 instance must call S3 without storing long-term credentials on the instance. Which approach follows best practice?",
+            "options": [
+                "Store an access key in an environment variable",
+                "Embed the credentials in the application source",
+                "Attach an IAM role to the instance and use its instance metadata credentials",
+                "Create an IAM user and hard-code its keys"
+            ],
+            "correct_index": 2,
+            "explanation": "An instance profile delivers automatically rotated temporary credentials from the instance metadata service, so no long-term secrets live on the host. Environment variables, embedded source, and hard-coded keys all persist secrets that can leak.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-024",
+            "domain": "Security",
+            "stem": "A developer must let users sign in with a username and password to get OIDC tokens, then exchange those tokens for temporary AWS credentials for direct S3 access. Which combination should be used?",
+            "options": [
+                "Only a Cognito user pool",
+                "Only a Cognito identity pool",
+                "IAM users created for every end user",
+                "A Cognito user pool for sign-in and an identity pool for AWS credentials"
+            ],
+            "correct_index": 3,
+            "explanation": "A user pool authenticates users and issues tokens, and an identity pool exchanges those tokens for scoped temporary AWS credentials. A user pool alone issues no AWS credentials, an identity pool alone has no directory, and per-user IAM users do not scale.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-025",
+            "domain": "Security",
+            "stem": "An application encrypts files before storing them and wants KMS to protect a randomly generated data key returned as both plaintext and ciphertext. Which API call should the application use?",
+            "options": [
+                "GenerateDataKey",
+                "CreateGrant",
+                "DescribeKey",
+                "Encrypt"
+            ],
+            "correct_index": 0,
+            "explanation": "GenerateDataKey returns a fresh data key in plaintext for local encryption and an encrypted copy to store with the data, which is envelope encryption. Encrypt does not generate keys, CreateGrant delegates permissions, and DescribeKey returns metadata.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-026",
+            "domain": "Security",
+            "stem": "A web application reads database credentials that must be rotated automatically every thirty days without redeploying the application. Which service should store them?",
+            "options": [
+                "AWS Systems Manager Parameter Store as a standard string",
+                "AWS Secrets Manager with automatic rotation configured",
+                "An environment variable in the deployment",
+                "An object in an S3 bucket"
+            ],
+            "correct_index": 1,
+            "explanation": "Secrets Manager stores secrets and can rotate them on a schedule using a Lambda rotation function while the application fetches the current value at runtime. Parameter Store SecureString has no built-in rotation, and environment variables and S3 objects are not rotated at all.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-027",
+            "domain": "Security",
+            "stem": "A developer stores an encrypted SecureString parameter in Systems Manager Parameter Store and the application must retrieve the decrypted value at runtime. Which API call should be used?",
+            "options": [
+                "GetParameters without decryption",
+                "DescribeParameters",
+                "GetParameter with WithDecryption set to true",
+                "GetParameterHistory"
+            ],
+            "correct_index": 2,
+            "explanation": "GetParameter with WithDecryption set to true returns the decrypted SecureString value and requires KMS permissions. GetParameters without decryption and DescribeParameters return ciphertext or metadata, and GetParameterHistory lists older versions.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-028",
+            "domain": "Security",
+            "stem": "A security team requires that all objects in an S3 bucket are encrypted at rest and that requests are rejected unless they use TLS. Which combination should be configured?",
+            "options": [
+                "A VPC endpoint without a bucket policy",
+                "Server-side encryption with S3-managed keys only",
+                "Only an ACL that denies public read access",
+                "Default bucket encryption plus a bucket policy that denies requests when aws:SecureTransport is false"
+            ],
+            "correct_index": 3,
+            "explanation": "Default encryption enforces encryption at rest for new objects, and a bucket policy denying requests where aws:SecureTransport is false enforces TLS in transit. Encryption alone does not force TLS, an ACL addresses access not transport, and a bare endpoint enforces nothing.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-029",
+            "domain": "Security",
+            "stem": "A developer must allow an application to write only to a specific prefix inside an S3 bucket. Which IAM feature should be used?",
+            "options": [
+                "A resource and condition in the IAM policy that scope the bucket and prefix",
+                "An S3 access point with public access",
+                "A policy granting all S3 actions",
+                "A bucket ACL that grants write access"
+            ],
+            "correct_index": 0,
+            "explanation": "Scoping the policy resource to the bucket and using an s3:prefix condition restricts writes to that prefix, which is least privilege. A broad policy over-grants, bucket ACLs do not scope prefixes, and a public access point removes the restriction.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-030",
+            "domain": "Security",
+            "stem": "A developer protects API Gateway REST endpoints and wants Cognito user pool tokens validated automatically on each request. Which authorizer should be used?",
+            "options": [
+                "Basic authentication on the API",
+                "A Cognito user pool authorizer on the API",
+                "An IAM authorizer that relies on API keys",
+                "A Lambda authorizer that skips token validation"
+            ],
+            "correct_index": 1,
+            "explanation": "A Cognito user pool authorizer validates the user pool token on incoming requests and passes identity claims to the backend. API keys are not authentication, a validating-free Lambda authorizer is insecure, and basic authentication is not tied to Cognito tokens.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-031",
+            "domain": "Security",
+            "stem": "A developer grants a Lambda function role permission to use a KMS key through IAM, yet decryption fails with AccessDenied. What is the most likely cause?",
+            "options": [
+                "The key alias is missing",
+                "The key is in a different account by default",
+                "The KMS key policy does not allow the role to use the key",
+                "Lambda does not support KMS decryption"
+            ],
+            "correct_index": 2,
+            "explanation": "For AWS managed access to a customer managed key, both the IAM policy and the key policy must permit the action unless the key policy delegates control to IAM. Same-account keys work when the key policy allows it, Lambda supports KMS, and aliases are convenience names.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-032",
+            "domain": "Security",
+            "stem": "A service running in account A must access resources in account B. Which mechanism should be used?",
+            "options": [
+                "Share the account B root credentials with account A",
+                "Create identical IAM users in both accounts",
+                "Generate a presigned URL for the resource",
+                "Create a role in account B that trusts account A and call STS AssumeRole"
+            ],
+            "correct_index": 3,
+            "explanation": "Cross-account access uses a role in the target account whose trust policy allows the source account, and the caller assumes it with STS to receive temporary credentials. Sharing root credentials is unsafe, duplicate users do not grant cross-account trust, and presigned URLs fit single objects only.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-033",
+            "domain": "Security",
+            "stem": "Which statement about storing sensitive values in Lambda environment variables is correct?",
+            "options": [
+                "They are visible to anyone who can read the function configuration, so secrets belong in Secrets Manager or Parameter Store",
+                "They are only visible in CloudWatch Logs",
+                "They are stored encrypted inside Lambda layers",
+                "They are encrypted with KMS by default and are safe for secrets"
+            ],
+            "correct_index": 0,
+            "explanation": "Environment variables can be read by anyone with permission to view the function configuration, so long-lived secrets should be fetched from Secrets Manager or Parameter Store at runtime. Optional KMS encryption protects the stored value but does not hide it from authorized readers, and layers do not hold environment variables.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-034",
+            "domain": "Security",
+            "stem": "A presigned URL for a private S3 object is used after its expiration time has passed. What happens?",
+            "options": [
+                "The URL is automatically refreshed",
+                "The request is denied because the signed token has expired",
+                "The object is served with reduced permissions",
+                "S3 redirects the user to a sign-in page"
+            ],
+            "correct_index": 1,
+            "explanation": "A presigned URL embeds a signature and expiration, and once expired S3 rejects the request. There is no automatic refresh, permissions are not silently reduced, and S3 does not redirect to a sign-in page for an expired signature.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-035",
+            "domain": "Security",
+            "stem": "A developer must give a Lambda function only the permissions it needs to write to one DynamoDB table. Which practice should be followed?",
+            "options": [
+                "Use the account root credentials from the function",
+                "Share one broad role across every function",
+                "Grant a least-privilege role that scopes actions and resource ARNs to that table",
+                "Attach AdministratorAccess to the function role"
+            ],
+            "correct_index": 2,
+            "explanation": "Least privilege grants only the needed actions on the specific table ARN. AdministratorAccess, root credentials, and a shared broad role all grant far more than required and widen the blast radius of a compromise.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-036",
+            "domain": "Security",
+            "stem": "A developer needs a ready-made sign-in and sign-up web interface for a Cognito user pool. Which feature provides it?",
+            "options": [
+                "API Gateway",
+                "IAM Identity Center",
+                "A Lambda authorizer",
+                "The Cognito hosted UI"
+            ],
+            "correct_index": 3,
+            "explanation": "The Cognito hosted UI is a managed, customizable sign-in and sign-up page for a user pool. API Gateway is an API front door, IAM Identity Center manages workforce access, and a Lambda authorizer validates tokens rather than presenting a login page.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-037",
+            "domain": "Security",
+            "stem": "An application stores encrypted data in DynamoDB and must ensure that only callers presenting the intended context can decrypt it, even if they obtain the ciphertext. Which KMS practice helps achieve this?",
+            "options": [
+                "Use an encryption context and require it in the key policy",
+                "Rely only on DynamoDB access control",
+                "Disable automatic key rotation",
+                "Use the same key for every application"
+            ],
+            "correct_index": 0,
+            "explanation": "An encryption context is additional authenticated data bound to the ciphertext, so a decrypt call must present the same context. Sharing one key, relying on table access control, or disabling rotation does not bind the ciphertext to a specific context.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-038",
+            "domain": "Security",
+            "stem": "An IAM user has an identity policy allowing s3 GetObject on a bucket, but the bucket policy contains an explicit Deny for that same user. Can the user read the object?",
+            "options": [
+                "Yes, if the user owns the bucket",
+                "No, because an explicit Deny overrides the Allow",
+                "Only when the user signs in with multi-factor authentication",
+                "Yes, because the IAM Allow takes precedence"
+            ],
+            "correct_index": 1,
+            "explanation": "An explicit Deny in any applicable policy, including a bucket policy, overrides an Allow elsewhere and the request is denied. Ownership and MFA do not override an explicit Deny, and IAM Allow never outranks a Deny.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Security"
+        },
+        {
+            "id": "aws-dva-039",
+            "domain": "Deployment",
+            "stem": "A developer wants to define serverless functions, APIs, and tables in a single template using shorthand syntax and to test the application locally. Which framework should be used?",
+            "options": [
+                "AWS CloudFormation with raw resources only",
+                "AWS Elastic Beanstalk",
+                "The AWS Serverless Application Model (SAM)",
+                "AWS CodeDeploy"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS SAM extends CloudFormation with concise serverless resource types and a local test and debug toolchain. Raw CloudFormation lacks the shorthand, Elastic Beanstalk targets server-based applications, and CodeDeploy is a deployment engine rather than a template framework.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-040",
+            "domain": "Deployment",
+            "stem": "A developer wants to run and test a serverless API locally before deploying it. Which SAM CLI command should be used?",
+            "options": [
+                "sam deploy",
+                "sam build",
+                "sam validate",
+                "sam local start-api"
+            ],
+            "correct_index": 3,
+            "explanation": "sam local start-api runs the API locally so the developer can exercise it before deployment. sam deploy releases to AWS, sam build prepares artifacts, and sam validate checks the template syntax.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-041",
+            "domain": "Deployment",
+            "stem": "A developer must preview how a CloudFormation template change will affect existing resources before applying it. Which feature should be used?",
+            "options": [
+                "A change set",
+                "Stack termination protection",
+                "Drift detection",
+                "A nested stack"
+            ],
+            "correct_index": 0,
+            "explanation": "A change set shows whether resources will be added, modified, or replaced so the developer can review before executing. Termination protection prevents deletion, drift detection finds differences from the template, and nested stacks organize templates.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-042",
+            "domain": "Deployment",
+            "stem": "A CloudFormation stack update fails while creating a resource and no rollback trigger has been customized. What happens by default?",
+            "options": [
+                "The stack stays in a failed state until manually fixed",
+                "CloudFormation rolls back to the last known good state",
+                "The previous resources are all deleted immediately",
+                "The update is retried indefinitely"
+            ],
+            "correct_index": 1,
+            "explanation": "By default CloudFormation rolls back the stack to the last successfully provisioned state when an update fails. It does not leave the stack failed indefinitely, delete all prior resources, or retry forever unless rollback is disabled.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-043",
+            "domain": "Deployment",
+            "stem": "A developer wants to automatically build and deploy code each time a change is pushed to a CodeCommit repository. Which service should orchestrate the pipeline?",
+            "options": [
+                "AWS Elastic Beanstalk",
+                "AWS CodeBuild used alone",
+                "AWS CodePipeline with a source action for the repository",
+                "CloudFormation StackSets"
+            ],
+            "correct_index": 2,
+            "explanation": "CodePipeline models the stages of a release, using a repository source action to trigger build and deploy stages on each change. CodeBuild only builds, StackSets deploy templates across accounts, and Elastic Beanstalk runs applications but does not orchestrate a source-triggered pipeline.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-044",
+            "domain": "Deployment",
+            "stem": "Where does AWS CodeBuild obtain the build commands, runtime configuration, and artifact definitions for a project?",
+            "options": [
+                "An EC2 user data script",
+                "The CodeCommit console",
+                "A CloudWatch Logs group",
+                "A buildspec.yml file in the source"
+            ],
+            "correct_index": 3,
+            "explanation": "CodeBuild reads a buildspec.yml from the source to determine the runtime, build phases, and artifacts. The CodeCommit console shows repositories, CloudWatch Logs stores output, and user data scripts belong to EC2 instance bootstrapping.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-045",
+            "domain": "Deployment",
+            "stem": "A developer must gradually shift a small percentage of traffic to a new Lambda version and watch for errors before shifting the rest. Which CodeDeploy configuration supports this?",
+            "options": [
+                "A canary or linear deployment configuration",
+                "Blue/green for EC2 instances only",
+                "A configuration with rollback disabled",
+                "All-at-once"
+            ],
+            "correct_index": 0,
+            "explanation": "CodeDeploy applies canary and linear configurations to Lambda traffic shifting so a portion moves first and the rest follows after a check. All-at-once shifts everything immediately, blue/green for EC2 does not shift Lambda traffic, and disabling rollback removes safety.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-046",
+            "domain": "Deployment",
+            "stem": "A developer wants to deploy a web application without managing the underlying servers, load balancer, or scaling, while retaining some control over the platform. Which service fits best?",
+            "options": [
+                "AWS Lambda",
+                "AWS Elastic Beanstalk",
+                "Amazon ECS on Fargate",
+                "AWS SAM"
+            ],
+            "correct_index": 1,
+            "explanation": "Elastic Beanstalk provisions and manages the servers, load balancer, and scaling for a web application while leaving platform configuration to the developer. Lambda is event-driven with no server concept, Fargate runs containers that must be defined, and SAM targets serverless resources.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-047",
+            "domain": "Deployment",
+            "stem": "Which Elastic Beanstalk deployment policy launches a full new set of instances and keeps the existing fleet until the new one is healthy, at the cost of double capacity?",
+            "options": [
+                "Rolling",
+                "Rolling with an additional batch",
+                "Immutable, which launches a full new set of instances",
+                "All at once"
+            ],
+            "correct_index": 2,
+            "explanation": "An immutable deployment creates a new set of instances and only replaces the old fleet once the new one passes health checks, requiring temporary double capacity. All-at-once and rolling deployments update the existing instances and risk downtime or reduced capacity.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-048",
+            "domain": "Deployment",
+            "stem": "A developer must deploy a new Lambda version and send only five percent of traffic to it while the previous version serves the rest. Which approach should be used?",
+            "options": [
+                "Update the LATEST version only",
+                "Create a second function and call it directly",
+                "Change the function handler name",
+                "Point an alias at the new version with a five percent weight"
+            ],
+            "correct_index": 3,
+            "explanation": "A Lambda alias can split traffic between a new weighted version and the previous version, enabling gradual rollout. Updating LATEST changes the deployed code, a separate function shares no alias routing, and renaming the handler breaks the function.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-049",
+            "domain": "Deployment",
+            "stem": "A developer needs the same CloudFormation template to deploy to dev and prod with different instance types. Which template feature should be used?",
+            "options": [
+                "CloudFormation parameters supplied at deploy time",
+                "Conditions only",
+                "Outputs only",
+                "Hard-coded values that differ per environment"
+            ],
+            "correct_index": 0,
+            "explanation": "Parameters let a single template accept different values, such as instance type, for each deployment. Hard-coding values forces duplicate templates, conditions control resource creation but need inputs, and outputs only export values.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-050",
+            "domain": "Deployment",
+            "stem": "Which file tells CodeDeploy which files to copy and which lifecycle hooks to run during an EC2 or on-premises deployment?",
+            "options": [
+                "serverless.yml",
+                "appspec.yml",
+                "buildspec.yml",
+                "template.yaml"
+            ],
+            "correct_index": 1,
+            "explanation": "The appspec.yml file describes the deployment by listing files, permissions, and lifecycle event hooks that CodeDeploy runs. buildspec.yml belongs to CodeBuild, template.yaml belongs to CloudFormation or SAM, and serverless.yml belongs to the Serverless Framework.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-051",
+            "domain": "Deployment",
+            "stem": "A team wants zero-downtime releases with the ability to shift traffic between environments and roll back quickly. Which deployment strategy should be chosen?",
+            "options": [
+                "All-at-once in-place deployment",
+                "A big-bang cutover after hours",
+                "A blue/green deployment with traffic shifting",
+                "A manual file copy to each server"
+            ],
+            "correct_index": 2,
+            "explanation": "Blue/green runs the new environment alongside the old and shifts traffic when it is healthy, so rollback is a quick shift back. All-at-once replaces instances and risks downtime, an after-hours cutover is still disruptive, and manual copies offer no controlled shift or rollback.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-052",
+            "domain": "Deployment",
+            "stem": "A developer wants a SAM template to grant a Lambda function scoped access to a DynamoDB table without authoring the IAM policy by hand. Which feature should be used?",
+            "options": [
+                "A wildcard IAM policy",
+                "A bucket ACL",
+                "An EC2 instance profile",
+                "SAM policy templates that generate the needed permissions"
+            ],
+            "correct_index": 3,
+            "explanation": "SAM policy templates expand into least-privilege IAM statements for common resource access patterns such as DynamoDB. A wildcard policy over-grants, a bucket ACL does not apply to DynamoDB, and instance profiles are for EC2, not Lambda.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-053",
+            "domain": "Deployment",
+            "stem": "A CloudFormation template is becoming too large and hard to maintain. What should the developer do to modularize and reuse its resources?",
+            "options": [
+                "Split it into nested stacks referenced by a parent stack",
+                "Move the resources into a shell script",
+                "Delete unused outputs to shrink it",
+                "Convert it to a single larger template"
+            ],
+            "correct_index": 0,
+            "explanation": "Nested stacks let a parent template reference child templates, keeping components modular and reusable while preserving a single deployment. A larger template compounds the problem, a shell script abandons declarative management, and deleting outputs does not improve structure.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-054",
+            "domain": "Deployment",
+            "stem": "A developer needs a deployment history for an Elastic Beanstalk application and must redeploy a previous version quickly. Which feature supports this?",
+            "options": [
+                "A Lambda alias",
+                "Elastic Beanstalk application versions with a saved history",
+                "CloudFormation drift detection",
+                "An S3 lifecycle rule"
+            ],
+            "correct_index": 1,
+            "explanation": "Elastic Beanstalk stores each deployment as an application version, so a previous version can be redeployed to roll back. Lifecycle rules manage S3 objects, Lambda aliases route function traffic, and drift detection reports configuration differences.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Deployment"
+        },
+        {
+            "id": "aws-dva-055",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A developer must trace a single request as it passes through API Gateway, Lambda, and DynamoDB to find the slow component. Which service should be enabled?",
+            "options": [
+                "AWS Config",
+                "AWS Trusted Advisor",
+                "AWS X-Ray",
+                "AWS CloudTrail"
+            ],
+            "correct_index": 2,
+            "explanation": "X-Ray collects traces across services and shows a timeline of segments so the latency of each component is visible. CloudTrail logs API activity for auditing, Config tracks resource configuration, and Trusted Advisor gives best-practice checks.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-056",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "X-Ray shows a Lambda segment but not the downstream AWS calls because the code was not instrumented. Which approach fixes this for a Node.js function?",
+            "options": [
+                "Add more CloudWatch alarms",
+                "Enable S3 server access logging",
+                "Increase the function timeout",
+                "Enable active tracing and use the X-Ray SDK to instrument the AWS SDK calls"
+            ],
+            "correct_index": 3,
+            "explanation": "Active tracing adds the X-Ray daemon permissions and the SDK wraps AWS client calls into subsegments, revealing downstream timing. Timeout, alarms, and S3 logging do not create X-Ray subsegments.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-057",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A developer needs to search and analyze large volumes of Lambda logs using a query language. Which tool should be used?",
+            "options": [
+                "CloudWatch Logs Insights",
+                "S3 Select",
+                "AWS Config",
+                "CloudTrail Lake"
+            ],
+            "correct_index": 0,
+            "explanation": "CloudWatch Logs Insights runs interactive queries over log groups to filter and aggregate events. CloudTrail Lake queries API activity, S3 Select queries object contents, and Config evaluates resource compliance.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-058",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A developer wants to emit custom application metrics as structured log events instead of calling the PutMetricData API directly. Which approach should be used?",
+            "options": [
+                "A CloudTrail trail",
+                "The CloudWatch Embedded Metric Format in log events",
+                "An SNS topic",
+                "A scheduled Lambda function"
+            ],
+            "correct_index": 1,
+            "explanation": "The CloudWatch Embedded Metric Format lets an application write structured JSON log lines that CloudWatch extracts as metrics without a separate API call. A scheduled function adds latency, CloudTrail audits API calls, and SNS does not create metrics.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-059",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A Lambda function is invoked at least once and sometimes processes the same message twice, causing duplicate charges. Which design change should the developer make?",
+            "options": [
+                "Enable X-Ray tracing",
+                "Use a smaller batch size",
+                "Make the operation idempotent by recording a unique request ID",
+                "Increase the function timeout"
+            ],
+            "correct_index": 2,
+            "explanation": "Idempotency makes a repeat of the same logical request safe, for example by storing a unique ID and ignoring duplicates, which neutralizes at-least-once delivery. Timeout, tracing, and batch size do not prevent duplicate side effects.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-060",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A downstream service is being throttled under load, and the developer wants the client to retry without worsening the overload. Which retry approach should be used?",
+            "options": [
+                "No retries at all",
+                "Infinite retries at the maximum rate",
+                "Immediate fixed-rate retries",
+                "Exponential backoff with jitter"
+            ],
+            "correct_index": 3,
+            "explanation": "Exponential backoff increases the delay between attempts and jitter spreads retries out, reducing the chance of synchronized retry storms. Fixed-rate and maximum-rate retries intensify the overload, and no retries lose transient successes.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-061",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A developer sees occasional high latency on the first invocation of a Lambda function and wants warm instances ready in advance. Which option reduces cold starts?",
+            "options": [
+                "Provisioned concurrency",
+                "A larger batch size",
+                "More environment variables",
+                "Reserved concurrency"
+            ],
+            "correct_index": 0,
+            "explanation": "Provisioned concurrency initializes a pool of execution environments ahead of time so invocations skip cold-start initialization. Reserved concurrency caps and guarantees capacity but does not pre-warm, and batch size and environment variables do not affect startup.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-062",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A compute-heavy Lambda function runs too slowly, and the developer knows that CPU is allocated in proportion to configured memory. What should be changed?",
+            "options": [
+                "Add provisioned concurrency",
+                "Increase the configured memory",
+                "Increase the timeout",
+                "Reduce the deployment package size"
+            ],
+            "correct_index": 1,
+            "explanation": "Lambda allocates CPU power in proportion to memory, so raising the memory setting also increases CPU and can shorten execution time. A longer timeout only allows more time, a smaller package mainly speeds initialization, and provisioned concurrency addresses cold starts.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-063",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "An asynchronous Lambda invocation fails after the built-in retries, and the developer must capture the failed event for later analysis. Which feature should be configured?",
+            "options": [
+                "A reserved concurrency value",
+                "An S3 lifecycle rule",
+                "A dead-letter queue or on-failure destination for the function",
+                "A longer function timeout"
+            ],
+            "correct_index": 2,
+            "explanation": "A dead-letter queue or an on-failure destination stores the invocation record after asynchronous retries are exhausted. Timeout and reserved concurrency affect execution, and lifecycle rules manage objects, not failed invocations.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-064",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A developer must be notified when a Lambda function's error rate exceeds a threshold. What should be configured?",
+            "options": [
+                "A DynamoDB stream",
+                "An X-Ray trace",
+                "A CodeDeploy lifecycle hook",
+                "A CloudWatch alarm on the Errors metric with an SNS action"
+            ],
+            "correct_index": 3,
+            "explanation": "A CloudWatch alarm watches the Lambda Errors metric and triggers an SNS notification when the threshold is breached. X-Ray traces help diagnose individual requests, lifecycle hooks run during deployment, and streams capture table changes.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        },
+        {
+            "id": "aws-dva-065",
+            "domain": "Troubleshooting and Optimization",
+            "stem": "A consumer polling an SQS queue with short polling receives many empty responses and makes excessive requests. Which change reduces cost and latency?",
+            "options": [
+                "Enable long polling with a wait time",
+                "Reduce the visibility timeout",
+                "Add more queues",
+                "Switch to a FIFO queue"
+            ],
+            "correct_index": 0,
+            "explanation": "Long polling holds the receive request open for up to twenty seconds, so the consumer gets messages as soon as they arrive and makes fewer empty requests. Visibility timeout controls redelivery, more queues add overhead, and FIFO changes ordering, not polling behavior.",
+            "reference": "AWS Certified Developer - Associate DVA-C02 Exam Guide - Troubleshooting and Optimization"
+        }
+    ]
+}

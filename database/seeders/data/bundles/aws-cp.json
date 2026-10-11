@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-cp",
+    "title": "AWS Certified Cloud Practitioner (CLF-C02)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-cp.json",
+    "variant_label": "CLF-C02 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 90,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified Cloud Practitioner CLF-C02 exam guide (four official domains and weightings). Not a capture of past exam questions.",
+    "source_label": "AWS Cloud Practitioner practice bank",
+    "items": [
+        {
+            "id": "aws-cp-001",
+            "domain": "Cloud Concepts",
+            "stem": "A manufacturing company replaces large upfront purchases of servers with paying only for the compute and storage it actually uses each month. Which value proposition of the AWS Cloud does this scenario illustrate?",
+            "options": [
+                "Trading fixed capital expense for variable expense",
+                "Increasing speed and agility",
+                "Benefiting from massive economies of scale",
+                "Eliminating the need to guess capacity"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Cloud shifts IT spend from large upfront capital purchases to variable usage-based billing, so a company pays for what it consumes instead of owning idle capacity.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-002",
+            "domain": "Cloud Concepts",
+            "stem": "A cloud architect notes that the price of compute and storage keeps declining because AWS purchases and operates infrastructure in enormous volumes. Which AWS Cloud benefit does this observation describe?",
+            "options": [
+                "Stopping spending on data center maintenance",
+                "Massive economies of scale",
+                "Trading capital expense for variable expense",
+                "Going global in minutes"
+            ],
+            "correct_index": 1,
+            "explanation": "Aggregated demand across millions of AWS customers lets AWS buy infrastructure at volume and pass the resulting cost savings back as lower pay-as-you-go prices.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-003",
+            "domain": "Cloud Concepts",
+            "stem": "A database team previously bought servers sized for peak holiday traffic and paid for unused capacity all year, but now provisions resources only as demand arrives. Which AWS Cloud benefit is this?",
+            "options": [
+                "Automating security best practices",
+                "Enabling full resource traceability",
+                "Stopping the need to guess capacity",
+                "Benefiting from economies of scale"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud capacity is elastic and on demand, so teams no longer gamble on peak sizing and can stop over-provisioning to protect against unexpected spikes.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-004",
+            "domain": "Cloud Concepts",
+            "stem": "A developer turns a new feature from committed code into a running, deployed service within minutes instead of waiting weeks for hardware procurement. Which AWS Cloud value proposition does this describe?",
+            "options": [
+                "Trading capital expense for variable expense",
+                "Achieving massive economies of scale",
+                "Going global in minutes",
+                "Increasing speed and agility"
+            ],
+            "correct_index": 3,
+            "explanation": "Self-service, on-demand provisioning shortens the distance between an idea and production, letting organizations develop, test, and launch faster.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-005",
+            "domain": "Cloud Concepts",
+            "stem": "A company shuts down its on-premises server room and no longer pays for rack space, power, cooling, or hardware replacement. Which AWS Cloud benefit does this best illustrate?",
+            "options": [
+                "Stopping spend on running and maintaining data centers",
+                "Increasing developer speed and agility",
+                "Benefiting from massive economies of scale",
+                "Guessing capacity instead of planning it"
+            ],
+            "correct_index": 0,
+            "explanation": "Moving to the cloud removes the fixed cost and operational burden of physical infrastructure so that team effort can concentrate on the business application.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-006",
+            "domain": "Cloud Concepts",
+            "stem": "An e-commerce startup launches identical workloads in several continents within hours of creating the resources, avoiding any need to build local data centers. Which AWS Cloud benefit is this?",
+            "options": [
+                "Stopping the need to guess capacity",
+                "Going global in minutes",
+                "Trading capital expense for variable expense",
+                "Increasing speed and agility"
+            ],
+            "correct_index": 1,
+            "explanation": "The same global infrastructure is reachable from any AWS Region, so deployments can be duplicated worldwide in minutes rather than months.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-007",
+            "domain": "Cloud Concepts",
+            "stem": "An architect must evaluate a new workload using the AWS Well-Architected Framework. Which list correctly names all six pillars?",
+            "options": [
+                "Availability, Durability, Performance, Cost, Resilience, Automation",
+                "Hardware, Software, Networking, Storage, Security, Compliance",
+                "Operational excellence, Security, Reliability, Performance efficiency, Cost optimization, Sustainability",
+                "Security, Compliance, Performance, Cost, Scalability, Support"
+            ],
+            "correct_index": 2,
+            "explanation": "The six Well-Architected pillars are operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-008",
+            "domain": "Cloud Concepts",
+            "stem": "During a design review a team debates whether Agility is a formal pillar used to evaluate workloads in the AWS Well-Architected Framework. Which statement is correct?",
+            "options": [
+                "Agility is a pillar but applies only to serverless workloads",
+                "Agility replaced the Cost optimization pillar",
+                "Agility is the most heavily weighted pillar for databases",
+                "Agility is not one of the six Well-Architected pillars"
+            ],
+            "correct_index": 3,
+            "explanation": "The framework uses six named pillars and Agility is not among them, even though agility is a general benefit of cloud computing.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-009",
+            "domain": "Cloud Concepts",
+            "stem": "A solutions architect adds redundancy across multiple Availability Zones and automatic failover so a workload continues operating when individual components fail. Which Well-Architected pillar does this primarily support?",
+            "options": [
+                "Reliability",
+                "Security",
+                "Cost optimization",
+                "Operational excellence"
+            ],
+            "correct_index": 0,
+            "explanation": "Reliability is the pillar focused on recovering from failures and meeting demand, with mechanisms such as multi-AZ redundancy and automated failover.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-010",
+            "domain": "Cloud Concepts",
+            "stem": "A security team configures each employee with only the permissions required for their specific job function. Which Well-Architected security design principle is the team applying?",
+            "options": [
+                "Protecting data at rest and in transit",
+                "Applying the principle of least privilege",
+                "Centralizing identity management",
+                "Managing secrets in a dedicated service"
+            ],
+            "correct_index": 1,
+            "explanation": "Least privilege means granting only the access a user needs, which limits the blast radius of a compromised account.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-011",
+            "domain": "Cloud Concepts",
+            "stem": "A developer reworks an application to run as serverless functions that scale automatically with demand instead of managing servers. Which Well-Architected design principle is this an example of?",
+            "options": [
+                "Guessing capacity in advance",
+                "Automating disaster recovery drills",
+                "Using serverless architectures",
+                "Enabling traceability"
+            ],
+            "correct_index": 2,
+            "explanation": "Serverless removes the need to provision or manage servers and scales with demand, aligning with the performance efficiency pillar of the framework.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-012",
+            "domain": "Cloud Concepts",
+            "stem": "A company moves a legacy application from a data center to AWS by recreating the same virtual machines as EC2 instances without changing the architecture. Which of the six common migration strategies is this?",
+            "options": [
+                "Replatforming",
+                "Rearchitecting",
+                "Repurchasing",
+                "Rehosting"
+            ],
+            "correct_index": 3,
+            "explanation": "Rehosting, often called lift-and-shift, moves an application to the cloud with no architectural change and is the fastest way to migrate.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-013",
+            "domain": "Cloud Concepts",
+            "stem": "An organization moves an application to AWS and makes small optimizations, such as moving the database to a managed relational service, while keeping the core architecture intact. Which migration strategy does this describe?",
+            "options": [
+                "Replatforming",
+                "Rehosting",
+                "Rearchitecting",
+                "Retaining"
+            ],
+            "correct_index": 0,
+            "explanation": "Replatforming, or lift-and-tinker, applies light, beneficial changes during migration without redesigning the application itself.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-014",
+            "domain": "Cloud Concepts",
+            "stem": "A team rewrites a monolithic application into a cloud-native design using microservices and containers. Which migration strategy are they following?",
+            "options": [
+                "Retaining",
+                "Rearchitecting",
+                "Replatforming",
+                "Repurchasing"
+            ],
+            "correct_index": 1,
+            "explanation": "Rearchitecting modifies or rewrites the application to a cloud-native architecture such as microservices, typically to gain scalability and flexibility.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-015",
+            "domain": "Cloud Concepts",
+            "stem": "A company abandons a custom-built internal CRM and instead buys a commercial software-as-a-service product that meets its needs. Which migration strategy is this?",
+            "options": [
+                "Rehosting",
+                "Retiring",
+                "Repurchasing",
+                "Replatforming"
+            ],
+            "correct_index": 2,
+            "explanation": "Repurchasing replaces an existing application with a different commercial or SaaS offering, often to drop the cost of custom maintenance.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-016",
+            "domain": "Cloud Concepts",
+            "stem": "A regulator requires a legacy trade-reporting application to remain exactly where it is for the next two years. Under which AWS migration strategy should the application be classified?",
+            "options": [
+                "Rehosting",
+                "Rearchitecting",
+                "Repurchasing",
+                "Retaining"
+            ],
+            "correct_index": 3,
+            "explanation": "Retaining means keeping certain applications on premises and excluding them from the migration, often for compliance or business reasons.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Concepts"
+        },
+        {
+            "id": "aws-cp-017",
+            "domain": "Security and Compliance",
+            "stem": "Under the AWS shared responsibility model, which task is the customer required to perform for an EC2 instance?",
+            "options": [
+                "Patching and updating the guest operating system on the instance",
+                "Protecting the physical servers in AWS data centers",
+                "Maintaining power and cooling at the facility",
+                "Applying security updates to the AWS hypervisor"
+            ],
+            "correct_index": 0,
+            "explanation": "Customers are responsible for security in the cloud, including patching the guest OS of EC2 instances, while AWS secures the lower layers such as hardware and the hypervisor.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-018",
+            "domain": "Security and Compliance",
+            "stem": "Under the shared responsibility model, which item is AWS responsible for securing?",
+            "options": [
+                "Credentials of individual IAM users",
+                "Physical security of data center facilities",
+                "Configuration of customer security groups",
+                "Encryption of customer application data"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS protects the physical layer, networking, and hardware of the cloud, while the customer manages everything it configures inside the services.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-019",
+            "domain": "Security and Compliance",
+            "stem": "A customer runs event-driven code on AWS Lambda. Under the shared responsibility model, which responsibility remains with the customer?",
+            "options": [
+                "Patching the Lambda service itself",
+                "Providing the physical compute hardware",
+                "Writing the function code and configuring its IAM permissions",
+                "Securing the host operating system beneath the runtime"
+            ],
+            "correct_index": 2,
+            "explanation": "With Lambda, AWS manages the servers and runtime while the customer remains responsible for the code, its dependencies, and the IAM permissions it is granted.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-020",
+            "domain": "Security and Compliance",
+            "stem": "A solutions architect must allow an EC2 instance to write to an S3 bucket without embedding long-term access keys in the instance. Which mechanism should be used?",
+            "options": [
+                "Creating an IAM group for the instance",
+                "Adding the instance IP to a security group",
+                "Opening a network ACL port for the bucket",
+                "Attaching an IAM role to the instance"
+            ],
+            "correct_index": 3,
+            "explanation": "An IAM role grants temporary credentials to an EC2 instance, letting applications call AWS services without storing permanent access keys.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-021",
+            "domain": "Security and Compliance",
+            "stem": "An IAM user is covered by two policies where one allows an action and another explicitly denies the same action. What happens when the user attempts the action?",
+            "options": [
+                "The action is denied because an explicit deny overrides an allow",
+                "The action is allowed because an allow was granted",
+                "The deny is ignored because permits win ties",
+                "The action is allowed only outside business hours"
+            ],
+            "correct_index": 0,
+            "explanation": "IAM policy evaluation gives an explicit deny the highest priority, so a deny always overrides any allow on the same action.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-022",
+            "domain": "Security and Compliance",
+            "stem": "A company has 30 engineers who all need the identical set of permissions. What is the most efficient way to manage their IAM permissions?",
+            "options": [
+                "Attach the permissions to the console password",
+                "Place the engineers in one IAM group and attach the policies to the group",
+                "Create a separate subordinate policy for each engineer",
+                "Put all engineers into a single shared IAM user"
+            ],
+            "correct_index": 1,
+            "explanation": "IAM groups gather users that share access needs, so policies attached to the group apply to every member and change in one place.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-023",
+            "domain": "Security and Compliance",
+            "stem": "A security administrator wants an additional authentication factor so that a stolen password alone cannot grant console access. What should be enabled?",
+            "options": [
+                "GuardDuty finding suppression",
+                "An AWS account alias",
+                "AWS Multi-Factor Authentication",
+                "Dedicated host tenancy"
+            ],
+            "correct_index": 2,
+            "explanation": "MFA requires a second factor such as a one-time code from a device, so a compromised password is not enough to sign in.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-024",
+            "domain": "Security and Compliance",
+            "stem": "An instance-level firewall must allow established inbound sessions automatically without the administrator writing reverse rules. Which AWS feature behaves this way?",
+            "options": [
+                "Network access control lists",
+                "Route tables",
+                "VPC endpoints",
+                "Security groups"
+            ],
+            "correct_index": 3,
+            "explanation": "Security groups are stateful, so return traffic for an allowed connection is permitted automatically, and they act as instance-level virtual firewalls.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-025",
+            "domain": "Security and Compliance",
+            "stem": "A subnet-level firewall must evaluate both inbound and outbound rules and block return traffic unless a matching rule permits it. Which AWS feature is described?",
+            "options": [
+                "Network access control lists",
+                "Security groups",
+                "AWS WAF rules",
+                "VPC flow logs"
+            ],
+            "correct_index": 0,
+            "explanation": "NACLs are stateless subnet-level firewalls that require explicit inbound and outbound rules, including allowed responses to established connections.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-026",
+            "domain": "Security and Compliance",
+            "stem": "A security engineer needs continuous, automated threat detection that inspects account activity for suspicious behavior and produces findings. Which AWS service should be used?",
+            "options": [
+                "Amazon CloudWatch",
+                "Amazon GuardDuty",
+                "AWS Trusted Advisor",
+                "AWS Config"
+            ],
+            "correct_index": 1,
+            "explanation": "Amazon GuardDuty continuously analyzes data sources such as DNS and VPC flow logs to identify threats and return actionable findings.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-027",
+            "domain": "Security and Compliance",
+            "stem": "A security team must automatically scan EC2 workloads for software vulnerabilities and unintended network exposure as they are deployed. Which AWS service performs this?",
+            "options": [
+                "Amazon CloudFront",
+                "AWS DataSync",
+                "Amazon Inspector",
+                "AWS Artifact"
+            ],
+            "correct_index": 2,
+            "explanation": "Amazon Inspector assesses the network reachability and software vulnerabilities of workloads to help meet compliance requirements.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-028",
+            "domain": "Security and Compliance",
+            "stem": "A company wants a managed service that protects its web applications from application-layer attacks such as SQL injection and cross-site scripting. Which service is designed for this?",
+            "options": [
+                "AWS Shield",
+                "AWS Certificate Manager",
+                "Amazon Route 53",
+                "AWS WAF"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS WAF is a web application firewall that filters and monitors HTTP traffic using rules against common web exploits.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-029",
+            "domain": "Security and Compliance",
+            "stem": "A corporation facing large distributed denial-of-service attacks needs 24/7 DDoS assistance and enhanced mitigations for its hosted applications. Which service provides this?",
+            "options": [
+                "AWS Shield Advanced",
+                "AWS WAF",
+                "Amazon GuardDuty",
+                "AWS Artifact"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Shield Advanced adds enhanced DDoS protections, visibility, and 24/7 access to the DDoS Response Team for protected applications.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-030",
+            "domain": "Security and Compliance",
+            "stem": "A compliance officer must download reports that demonstrate AWS compliance with standards such as ISO 27001 and SOC 2. Which AWS portal provides these reports?",
+            "options": [
+                "Amazon Macie",
+                "AWS Artifact",
+                "AWS Config",
+                "AWS Audit Manager"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Artifact is the self-serve portal for downloading AWS security and compliance reports such as ISO and SOC certifications.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-031",
+            "domain": "Security and Compliance",
+            "stem": "An internal audit team must automate the collection of evidence across AWS services to prepare for an audit. Which service helps with this?",
+            "options": [
+                "Amazon CloudWatch",
+                "AWS Application Discovery Service",
+                "AWS Audit Manager",
+                "AWS Trusted Advisor"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Audit Manager continuously collects evidence and can generate reports that map it to controls for audits and compliance reviews.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-032",
+            "domain": "Security and Compliance",
+            "stem": "A company stores sensitive customer data on an encrypted EBS volume. Which label best describes protecting the data while it is in this state?",
+            "options": [
+                "Encryption in transit",
+                "Encryption at runtime",
+                "Encryption at the perimeter",
+                "Encryption at rest"
+            ],
+            "correct_index": 3,
+            "explanation": "Data is at rest when it is stored, and services such as EBS, S3, and RDS offer encryption keys for that stored data.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-033",
+            "domain": "Security and Compliance",
+            "stem": "A web application uses TLS so data exchanged between the browser and the server cannot be read while it travels over the network. Which encryption state is this?",
+            "options": [
+                "Encryption in transit",
+                "Encryption at rest",
+                "Client-side encryption of stored data",
+                "Replication encryption"
+            ],
+            "correct_index": 0,
+            "explanation": "Data being moved across networks is in transit, and TLS encrypts that traffic to prevent interception and tampering in flight.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-034",
+            "domain": "Security and Compliance",
+            "stem": "A compliance team must evaluate resources against internal rules and retain a full history of configuration changes. Which AWS service records and evaluates resource configuration?",
+            "options": [
+                "AWS CloudFormation",
+                "AWS Config",
+                "Amazon GuardDuty",
+                "AWS WAF"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Config continuously records configuration changes, compares resources against rules, and reports compliance over time.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-035",
+            "domain": "Security and Compliance",
+            "stem": "An information security officer needs one dashboard that aggregates security findings and compliance status from multiple services and accounts. Which service provides this?",
+            "options": [
+                "AWS Artifact",
+                "Amazon Cognito",
+                "AWS Security Hub",
+                "Amazon Inspector"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Security Hub collects and prioritizes security findings across supported services and accounts, giving a consolidated view of posture.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-036",
+            "domain": "Security and Compliance",
+            "stem": "A cloud administrator wants automated checks with recommendations for issues such as overly open security groups, alongside fault tolerance and cost checks. Which tool provides these checks?",
+            "options": [
+                "Amazon GuardDuty",
+                "AWS Budgets",
+                "AWS Network Firewall",
+                "AWS Trusted Advisor"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS Trusted Advisor inspects the account and delivers recommendations across cost, performance, security, fault tolerance, and service limits.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Security and Compliance"
+        },
+        {
+            "id": "aws-cp-037",
+            "domain": "Cloud Technology and Services",
+            "stem": "A team needs resizable virtual servers over which it controls the guest operating system and installed software. Which AWS compute service is the best fit?",
+            "options": [
+                "Amazon EC2",
+                "AWS Lambda",
+                "Amazon EKS",
+                "AWS Elastic Beanstalk"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon EC2 provides resizable virtual machines where the customer manages the guest OS, software, and supporting configuration layers.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-038",
+            "domain": "Cloud Technology and Services",
+            "stem": "A developer wants to run code in response to events without provisioning or managing servers, paying only for requests and execution time. Which service should be used?",
+            "options": [
+                "Amazon Route 53",
+                "AWS Lambda",
+                "Amazon EC2",
+                "Amazon Redshift"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Lambda runs code in a serverless model, scaling automatically and billing only for the requests and compute time consumed.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-039",
+            "domain": "Cloud Technology and Services",
+            "stem": "A platform team must run containerized applications on a managed cluster using the EC2 launch type. Which AWS service provides this orchestration?",
+            "options": [
+                "AWS App Runner",
+                "Amazon SQS",
+                "Amazon ECS",
+                "Amazon Auto Scaling"
+            ],
+            "correct_index": 2,
+            "explanation": "Amazon ECS is a managed container orchestration service that runs Docker containers as tasks using EC2 or Fargate launch types.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-040",
+            "domain": "Cloud Technology and Services",
+            "stem": "An organization must run Kubernetes workloads but does not want to operate the Kubernetes control plane itself. Which AWS service is appropriate?",
+            "options": [
+                "Amazon ECS",
+                "AWS Elastic Beanstalk",
+                "AWS Batch",
+                "Amazon EKS"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon EKS is the managed Kubernetes service on AWS, handling the control plane while customers run worker nodes across their chosen infrastructure.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-041",
+            "domain": "Cloud Technology and Services",
+            "stem": "A data-heavy workload has strict latency and data residency requirements, and an architect must choose where the resources will be hosted. Which element of AWS global infrastructure is selected for this decision?",
+            "options": [
+                "An AWS Region",
+                "An edge location",
+                "A point of presence",
+                "A Direct Connect site"
+            ],
+            "correct_index": 0,
+            "explanation": "A Region is a separate geographic area of compute and storage, and choosing one governs latency proximity and where data physically resides for compliance.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-042",
+            "domain": "Cloud Technology and Services",
+            "stem": "Which AWS global infrastructure element provides multiple, isolated locations within a Region so a workload can survive the loss of an entire facility?",
+            "options": [
+                "Regional accelerators",
+                "Availability Zones",
+                "Edge locations",
+                "AWS Points of Presence"
+            ],
+            "correct_index": 1,
+            "explanation": "Each Region has multiple Availability Zones, which are isolated data centers with independent power, cooling, and networking.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-043",
+            "domain": "Cloud Technology and Services",
+            "stem": "A global mobile app wants cached content served from locations physically close to its users to minimize latency. Which element of AWS global infrastructure is designed for this task?",
+            "options": [
+                "AWS Regions",
+                "Direct Connect gateways",
+                "Edge locations",
+                "Availability Zones"
+            ],
+            "correct_index": 2,
+            "explanation": "Edge locations sit closer to end users and support CloudFront caching, reducing latency for content delivery without hosting general workloads.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-044",
+            "domain": "Cloud Technology and Services",
+            "stem": "Which AWS service provides highly durable object storage with near-unlimited capacity, accessed over the internet, and suited to static assets and backups?",
+            "options": [
+                "Amazon EBS",
+                "Amazon EFS",
+                "Amazon RDS",
+                "Amazon S3"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon S3 is object storage that scales to any data volume, is reached through a web API, and is a common home for static assets and backups.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-045",
+            "domain": "Cloud Technology and Services",
+            "stem": "An architect wants S3 to move objects automatically between storage classes as they age so hot data stays fast and cold data costs less. Which S3 feature performs this movement?",
+            "options": [
+                "Lifecycle configuration",
+                "Bucket versioning",
+                "Cross-region replication",
+                "Block Public Access"
+            ],
+            "correct_index": 0,
+            "explanation": "S3 lifecycle policies automate transitions between storage classes, such as moving old objects to Glacier for lower storage cost.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-046",
+            "domain": "Cloud Technology and Services",
+            "stem": "A database requires low-latency, durable block storage that attaches to one EC2 instance inside the same Availability Zone. Which AWS storage service is this?",
+            "options": [
+                "S3 Glacier Deep Archive",
+                "Amazon EBS",
+                "Amazon EFS",
+                "Amazon S3"
+            ],
+            "correct_index": 1,
+            "explanation": "Amazon EBS delivers block-level storage volumes attached to a single EC2 instance in the same AZ, offering consistent low-latency performance.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-047",
+            "domain": "Cloud Technology and Services",
+            "stem": "Multiple EC2 instances spread across several Availability Zones must share a POSIX-compliant file system that grows automatically. Which AWS service supports this?",
+            "options": [
+                "Amazon S3 Glacier",
+                "AWS Storage Gateway",
+                "Amazon EFS",
+                "Amazon EBS"
+            ],
+            "correct_index": 2,
+            "explanation": "Amazon EFS is a managed network file system that multiple EC2 instances can mount at once and that scales capacity automatically.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-048",
+            "domain": "Cloud Technology and Services",
+            "stem": "A team wants a managed relational database supporting MySQL and PostgreSQL with automated backups and patching, without managing the database server. Which service should be used?",
+            "options": [
+                "Amazon Redshift",
+                "Amazon DynamoDB",
+                "Amazon Neptune",
+                "Amazon RDS"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon RDS manages relational database engines such as MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB, handling backups, patching, and scaling.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-049",
+            "domain": "Cloud Technology and Services",
+            "stem": "Which cloud-native relational database engine is compatible with MySQL and PostgreSQL and is part of the RDS family?",
+            "options": [
+                "Amazon Aurora",
+                "Amazon Redshift",
+                "Amazon ElastiCache",
+                "Amazon DocumentDB"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon Aurora is a MySQL- and PostgreSQL-compatible engine built for the cloud, with high availability and performance, managed under RDS.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-050",
+            "domain": "Cloud Technology and Services",
+            "stem": "A gaming company needs a NoSQL database serving requests in single-digit milliseconds at any scale, with serverless automatic scaling. Which service is designed for this?",
+            "options": [
+                "Amazon QLDB",
+                "Amazon DynamoDB",
+                "Amazon RDS for MySQL",
+                "Amazon Redshift"
+            ],
+            "correct_index": 1,
+            "explanation": "Amazon DynamoDB is a fully managed key-value NoSQL database with single-digit millisecond latency and automatic, serverless scaling.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-051",
+            "domain": "Cloud Technology and Services",
+            "stem": "A data team must run analytical queries across petabytes of structured data in a columnar data warehouse. Which AWS service fits this requirement?",
+            "options": [
+                "Amazon DynamoDB",
+                "Amazon ElastiCache",
+                "Amazon Redshift",
+                "Amazon RDS"
+            ],
+            "correct_index": 2,
+            "explanation": "Amazon Redshift is the petabyte-scale columnar data warehouse service optimized for analytic queries over structured data.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-052",
+            "domain": "Cloud Technology and Services",
+            "stem": "An administrator needs a logically isolated section of AWS in which subnets, route tables, and gateways are defined for launching resources. Which service provides this virtual network?",
+            "options": [
+                "AWS Direct Connect",
+                "Amazon Route 53",
+                "AWS Global Accelerator",
+                "Amazon VPC"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon Virtual Private Cloud gives a logically isolated private network with full control over subnets, routing, and gateway configuration.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-053",
+            "domain": "Cloud Technology and Services",
+            "stem": "Which AWS service provides domain name resolution and supports routing policies such as latency-based and weighted routing, plus health checks?",
+            "options": [
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "Elastic Load Balancing",
+                "AWS Transit Gateway"
+            ],
+            "correct_index": 0,
+            "explanation": "Amazon Route 53 is a DNS service that resolves domain names and offers routing policies and health checks to direct traffic.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-054",
+            "domain": "Cloud Technology and Services",
+            "stem": "A company must deliver static content globally with low latency by serving it from a worldwide network of edge locations with caching. Which service is this?",
+            "options": [
+                "AWS Global Accelerator",
+                "Amazon CloudFront",
+                "Amazon Route 53",
+                "Application Load Balancer"
+            ],
+            "correct_index": 1,
+            "explanation": "Amazon CloudFront is the content delivery network that caches content at edge locations and serves viewers from the nearest node.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-055",
+            "domain": "Cloud Technology and Services",
+            "stem": "A fleet of EC2 instances must have incoming traffic spread automatically across healthy targets. Which AWS service performs this distribution?",
+            "options": [
+                "AWS Auto Scaling",
+                "Amazon Route 53",
+                "Elastic Load Balancing",
+                "Amazon CloudFront"
+            ],
+            "correct_index": 2,
+            "explanation": "Elastic Load Balancing distributes incoming application traffic across targets such as EC2 instances and performs health checks.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-056",
+            "domain": "Cloud Technology and Services",
+            "stem": "An operations team must collect metrics such as EC2 CPU utilization and trigger alarms when thresholds are breached. Which AWS service should be used?",
+            "options": [
+                "AWS CloudTrail",
+                "AWS Config",
+                "Amazon Inspector",
+                "Amazon CloudWatch"
+            ],
+            "correct_index": 3,
+            "explanation": "Amazon CloudWatch collects metrics and logs from resources and applications, creates dashboards, and fires alarms on set thresholds.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-057",
+            "domain": "Cloud Technology and Services",
+            "stem": "A security team must review an audit log of API activity in an account, including who performed management actions and when. Which AWS service records this history?",
+            "options": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS Config",
+                "AWS X-Ray"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS CloudTrail records API calls made in an account, capturing who, what, when, and from where they were made for auditing.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-058",
+            "domain": "Cloud Technology and Services",
+            "stem": "An auditor needs continuous recording and evaluation of changes to resource configuration across the account. Which AWS service should be used?",
+            "options": [
+                "AWS Artifact",
+                "AWS Config",
+                "AWS CloudTrail",
+                "Amazon CloudWatch"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Config records configuration changes, evaluates resources against rules, and produces an audit trail of how each resource changed over time.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Cloud Technology and Services"
+        },
+        {
+            "id": "aws-cp-059",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A startup accepts a pay-as-you-go model in which it is billed only for the compute it consumes and can scale down when demand drops, with no long-term commitment. Which pricing model is this?",
+            "options": [
+                "Spot",
+                "Dedicated Host",
+                "On-Demand",
+                "Reserved"
+            ],
+            "correct_index": 2,
+            "explanation": "On-Demand pricing charges per unit of usage with no upfront commitment, giving flexibility for unpredictable workloads.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-060",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A company has steady, predictable workloads and wants a large discount by committing to a consistent amount of usage over a one- or three-year term. Which option fits this need?",
+            "options": [
+                "On-Demand Instances",
+                "Spot Instances",
+                "Dedicated Hosts",
+                "Savings Plans or Reserved Instances"
+            ],
+            "correct_index": 3,
+            "explanation": "Savings Plans and Reserved Instances trade a commitment for discounted pricing on steady-state compute usage over one to three years.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-061",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A batch analytics job is interruptible and can tolerate being stopped, but the team wants the lowest possible compute price. Which EC2 purchasing option is designed for this case?",
+            "options": [
+                "Spot Instances",
+                "Reserved Instances",
+                "On-Demand Instances",
+                "Savings Plans"
+            ],
+            "correct_index": 0,
+            "explanation": "Spot Instances offer spare capacity at significant discounts and can be reclaimed by AWS, suiting flexible, fault-tolerant workloads.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-062",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A finance analyst wants to visualize and analyze historical AWS cost and usage data, such as spend by service over the past six months. Which AWS tool provides this view?",
+            "options": [
+                "AWS Config",
+                "AWS Cost Explorer",
+                "AWS Budgets",
+                "AWS Artifact"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS Cost Explorer gives charts and queries over historical cost and usage data so teams can spot trends and optimize spend.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-063",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A team must be notified by email before the month's spend exceeds its target so corrective action can be taken early. Which AWS service should be configured?",
+            "options": [
+                "AWS Cost and Usage Report",
+                "AWS Trusted Advisor",
+                "AWS Budgets",
+                "AWS CloudTrail"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS Budgets lets users set cost and usage thresholds and receive alerts when actual or forecast spend approaches or exceeds them.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-064",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A parent account wants a single bill for all linked member accounts so it can share volume discounts and credits across the companies it manages. Which facility provides this?",
+            "options": [
+                "Service control policies",
+                "Cost allocation tags",
+                "Savings Plans",
+                "Consolidated billing"
+            ],
+            "correct_index": 3,
+            "explanation": "Consolidated billing in AWS Organizations combines member account usage into one bill and pools usage to share volume discounts and credits.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        },
+        {
+            "id": "aws-cp-065",
+            "domain": "Billing, Pricing, and Support",
+            "stem": "A large enterprise needs proactive architectural guidance, fast response times for production incidents, and a designated technical account manager. Which AWS Support plan provides the highest level of these benefits?",
+            "options": [
+                "AWS Enterprise Support",
+                "AWS Basic Support",
+                "AWS Developer Support",
+                "AWS Business Support"
+            ],
+            "correct_index": 0,
+            "explanation": "Enterprise Support is the highest tier, adding a technical account manager, proactive guidance, and the fastest response times.",
+            "reference": "AWS Certified Cloud Practitioner CLF-C02 Exam Guide - Billing, Pricing, and Support"
+        }
+    ]
+}

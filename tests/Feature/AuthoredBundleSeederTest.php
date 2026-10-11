@@ -334,6 +334,51 @@ class AuthoredBundleSeederTest extends TestCase
                 'Chemistry' => 30,
                 'Mathematics' => 30,
             ]],
+            'az-900' => ['az-900', 50, [
+                'Cloud Concepts' => 13,
+                'Azure Architecture and Services' => 13,
+                'Azure Management and Governance' => 13,
+                'Azure Core Services' => 11,
+            ]],
+            'ai-900' => ['ai-900', 50, [
+                'AI Workloads and Considerations' => 7,
+                'Machine Learning on Azure' => 5,
+                'Computer Vision on Azure' => 6,
+                'Natural Language Processing on Azure' => 6,
+                'Generative AI on Azure' => 6,
+                'Responsible AI' => 20,
+            ]],
+            'aws-cp' => ['aws-cp', 65, [
+                'Cloud Concepts' => 16,
+                'Security and Compliance' => 20,
+                'Cloud Technology and Services' => 22,
+                'Billing, Pricing, and Support' => 7,
+            ]],
+            'az-204' => ['az-204', 50, [
+                'Develop Azure compute solutions' => 13,
+                'Develop for Azure storage' => 9,
+                'Implement Azure security' => 11,
+                'Monitor, troubleshoot, and optimize Azure solutions' => 8,
+                'Connect to and consume Azure services and third-party services' => 9,
+            ]],
+            'az-305' => ['az-305', 50, [
+                'Design identity, governance, and monitoring solutions' => 14,
+                'Design data storage solutions' => 13,
+                'Design business continuity solutions' => 9,
+                'Design infrastructure solutions' => 14,
+            ]],
+            'az-500' => ['az-500', 50, [
+                'Manage identity and access' => 14,
+                'Secure networking' => 11,
+                'Secure compute, storage, and databases' => 12,
+                'Manage security operations' => 13,
+            ]],
+            'aws-dva' => ['aws-dva', 65, [
+                'Development with AWS Services' => 21,
+                'Security' => 17,
+                'Deployment' => 16,
+                'Troubleshooting and Optimization' => 11,
+            ]],
         ];
     }
 

@@ -1,0 +1,717 @@
+{
+    "cert_key": "az-900",
+    "title": "Microsoft Azure Fundamentals (AZ-900)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/az-900.json",
+    "variant_label": "AZ-900 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 45,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AZ-900 skills measured (cloud concepts, Azure architecture and services, Azure management and governance). Not a capture of past exam questions.",
+    "source_label": "Azure Fundamentals practice bank",
+    "items": [
+        {
+            "id": "az-900-001",
+            "domain": "Cloud Concepts",
+            "stem": "A company wants to rent virtual machines and still manage the guest operating system and applications itself. Which cloud service model should the company choose?",
+            "options": [
+                "Infrastructure as a service (IaaS)",
+                "Platform as a service (PaaS)",
+                "Software as a service (SaaS)",
+                "Serverless computing"
+            ],
+            "correct_index": 0,
+            "explanation": "IaaS provides virtualized compute, storage, and networking while the customer manages the operating system, runtime, and applications. PaaS manages the OS and runtime, SaaS delivers a finished application, and serverless abstracts the servers entirely.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-002",
+            "domain": "Cloud Concepts",
+            "stem": "Which Microsoft offering is an example of the software as a service (SaaS) cloud model?",
+            "options": [
+                "Azure App Service",
+                "Microsoft 365",
+                "Azure SQL Managed Instance",
+                "Azure Virtual Machines"
+            ],
+            "correct_index": 1,
+            "explanation": "Microsoft 365 is a finished application delivered by Microsoft and used over the internet, which is the SaaS model. Virtual Machines is IaaS, and App Service and SQL Managed Instance are PaaS offerings.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-003",
+            "domain": "Cloud Concepts",
+            "stem": "In which cloud service model does the provider manage the operating system and runtime while the customer deploys only applications and data?",
+            "options": [
+                "On-premises hosting",
+                "Infrastructure as a service (IaaS)",
+                "Platform as a service (PaaS)",
+                "Software as a service (SaaS)"
+            ],
+            "correct_index": 2,
+            "explanation": "PaaS supplies the managed platform, including OS and runtime, so the customer focuses on applications and data. IaaS leaves the OS to the customer, SaaS also manages the application, and on-premises hosting is not a cloud service model.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-004",
+            "domain": "Cloud Concepts",
+            "stem": "Which pricing approach is the consumption-based model in which a customer pays only for the resources that are actually used?",
+            "options": [
+                "Capital expenditure pricing",
+                "Fixed subscription pricing",
+                "Reserved capacity pricing",
+                "Pay-as-you-go pricing"
+            ],
+            "correct_index": 3,
+            "explanation": "Pay-as-you-go is consumption-based pricing with no upfront cost for what is not used. Reserved capacity gives a discount for a commitment, capital expenditure is an upfront purchase, and fixed subscription pricing is not usage-based.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-005",
+            "domain": "Cloud Concepts",
+            "stem": "Moving workloads to the cloud commonly shifts spending from which type of expenditure to which other type?",
+            "options": [
+                "From capital expenditure to operational expenditure",
+                "From capital expenditure to sunk expenditure",
+                "From operational expenditure to licensing expenditure",
+                "From operational expenditure to capital expenditure"
+            ],
+            "correct_index": 0,
+            "explanation": "Cloud services are billed as an ongoing operating expense, replacing the large upfront hardware purchases that are capital expenditures. The other options name categories that do not describe this shift.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-006",
+            "domain": "Cloud Concepts",
+            "stem": "Which cloud deployment model delivers services over the public internet and shares provider infrastructure among many organizations?",
+            "options": [
+                "Community cloud",
+                "Public cloud",
+                "Private cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 1,
+            "explanation": "A public cloud is owned by a provider and shared by many customers over the internet. A private cloud is dedicated to one organization, hybrid connects private with public, and a community cloud is shared by a limited group with common concerns.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-007",
+            "domain": "Cloud Concepts",
+            "stem": "A bank operates a cloud environment used exclusively by its own organization and not shared with other tenants. Which deployment model is this?",
+            "options": [
+                "Public cloud",
+                "Hybrid cloud",
+                "Private cloud",
+                "Community cloud"
+            ],
+            "correct_index": 2,
+            "explanation": "A private cloud is provisioned for exclusive use by a single organization. Public and community clouds serve multiple organizations, and hybrid combines private infrastructure with public cloud.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-008",
+            "domain": "Cloud Concepts",
+            "stem": "Which deployment model combines an on-premises datacenter with public cloud services so workloads and data can move between them?",
+            "options": [
+                "Multicloud",
+                "Public cloud",
+                "Private cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "A hybrid cloud connects on-premises infrastructure with public cloud so workloads and data can move between them. Public and private are single environments, and multicloud uses several public providers rather than linking on-premises to cloud.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-009",
+            "domain": "Cloud Concepts",
+            "stem": "What does high availability describe for a cloud workload?",
+            "options": [
+                "The ability to remain accessible with minimal downtime, often by using redundancy",
+                "The ability to automatically add capacity during demand spikes",
+                "The ability to move infrequently used data to cold storage",
+                "The ability to run without any redundancy"
+            ],
+            "correct_index": 0,
+            "explanation": "High availability keeps a service reachable with little downtime, typically by deploying redundant instances across fault domains. Automatic capacity growth is elasticity, and cold storage relates to data retention rather than availability.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-010",
+            "domain": "Cloud Concepts",
+            "stem": "A team adds more CPU and memory to an existing virtual machine to handle a heavier workload. Which scaling approach is this?",
+            "options": [
+                "Horizontal scaling",
+                "Vertical scaling",
+                "Elastic scaling",
+                "Global scaling"
+            ],
+            "correct_index": 1,
+            "explanation": "Vertical scaling, or scaling up, increases the resources of an existing instance. Horizontal scaling adds more instances, elasticity adjusts instance count automatically, and global scaling is not a standard term for this action.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-011",
+            "domain": "Cloud Concepts",
+            "stem": "A web application increases the number of front-end instances as traffic grows. Which scaling approach does this describe?",
+            "options": [
+                "Manual cold scaling",
+                "Vertical scaling",
+                "Horizontal scaling",
+                "Downtime scaling"
+            ],
+            "correct_index": 2,
+            "explanation": "Horizontal scaling, or scaling out, adds more instances behind a load balancer. Vertical scaling enlarges a single instance, and the other options are not scaling methods.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-012",
+            "domain": "Cloud Concepts",
+            "stem": "Which compute option runs event-driven code without requiring the customer to provision or manage servers?",
+            "options": [
+                "Azure Dedicated Host",
+                "Azure Virtual Machines",
+                "Azure Kubernetes Service",
+                "Azure Functions"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Functions is a serverless compute service that runs code in response to events and bills per execution. Virtual Machines and Dedicated Host expose servers to manage, and AKS requires operating a cluster.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-013",
+            "domain": "Cloud Concepts",
+            "stem": "Which term describes a system automatically adding and removing resources to match current demand?",
+            "options": [
+                "Elasticity",
+                "Durability",
+                "Governance",
+                "Consistency"
+            ],
+            "correct_index": 0,
+            "explanation": "Elasticity automatically matches resources to demand, expanding and contracting as needed. Durability concerns data persistence, governance concerns control, and consistency concerns agreement between data copies.",
+            "reference": "Microsoft AZ-900 skills measured - Cloud Concepts"
+        },
+        {
+            "id": "az-900-014",
+            "domain": "Azure Architecture and Services",
+            "stem": "What does the term Azure region describe in the Azure global infrastructure?",
+            "options": [
+                "A single physical datacenter",
+                "A geographic area containing one or more datacenters connected with low-latency networking",
+                "A billing boundary for subscriptions",
+                "A logical container for resources with the same lifecycle"
+            ],
+            "correct_index": 1,
+            "explanation": "An Azure region is a set of datacenters in a geographic area joined by a dedicated low-latency network. A single datacenter is smaller, a billing boundary is a subscription, and a lifecycle container is a resource group.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-015",
+            "domain": "Azure Architecture and Services",
+            "stem": "What is the purpose of Azure availability zones?",
+            "options": [
+                "To replicate data to a second geographic region",
+                "To organize resources for billing",
+                "To provide physically separate datacenter locations within a region so an outage in one does not take down the others",
+                "To give each customer a dedicated physical server"
+            ],
+            "correct_index": 2,
+            "explanation": "Availability zones are physically separate locations inside a region with independent power, cooling, and networking, so workloads spread across zones survive a single-zone failure. Billing is handled by subscriptions, and cross-region replication is geo-redundancy.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-016",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure construct groups resources that share the same lifecycle, permissions, and management boundary?",
+            "options": [
+                "Management group",
+                "Region",
+                "Availability zone",
+                "Resource group"
+            ],
+            "correct_index": 3,
+            "explanation": "A resource group is a logical container holding related resources that are deployed, managed, and deleted together. Availability zones and regions are physical locations, and management groups organize subscriptions.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-017",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure hierarchy level is used to apply governance such as policy and RBAC across many subscriptions at once?",
+            "options": [
+                "Management group",
+                "Resource lock",
+                "Resource group",
+                "Subscription"
+            ],
+            "correct_index": 0,
+            "explanation": "Management groups let you organize subscriptions and apply policy and role assignments across them. Resource groups and subscriptions sit lower in the hierarchy, and a resource lock protects a single resource rather than a group of subscriptions.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-018",
+            "domain": "Azure Architecture and Services",
+            "stem": "What does an Azure subscription primarily provide to an organization?",
+            "options": [
+                "A physical location for resources",
+                "A billing and access management boundary for Azure services",
+                "A network isolation boundary",
+                "A container for a single virtual machine"
+            ],
+            "correct_index": 1,
+            "explanation": "A subscription is the billing and access boundary under which resources are created and invoiced. Regions are physical, virtual networks provide network isolation, and resource groups hold resources rather than one virtual machine.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-019",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure service provides infrastructure as a service virtual machines that the customer manages at the operating system level?",
+            "options": [
+                "Azure Logic Apps",
+                "Azure App Service",
+                "Azure Virtual Machines",
+                "Azure Functions"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Virtual Machines is an IaaS offering where the customer manages the guest operating system and everything above it. App Service and Functions are higher-level services, and Logic Apps is a workflow service.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-020",
+            "domain": "Azure Architecture and Services",
+            "stem": "A company wants to host a web application without managing the underlying servers or operating system. Which Azure service should it use?",
+            "options": [
+                "Azure Kubernetes Service",
+                "Azure Dedicated Host",
+                "Azure Virtual Machines",
+                "Azure App Service"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure App Service is a platform as a service for hosting web apps in which the platform manages servers and operating system updates. Virtual Machines and Dedicated Host expose the OS, and AKS requires cluster operations.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-021",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure service provides a managed environment for running and orchestrating containerized applications using Kubernetes?",
+            "options": [
+                "Azure Kubernetes Service",
+                "Azure App Service",
+                "Azure Batch",
+                "Azure Container Instances"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Kubernetes Service is a managed Kubernetes offering for orchestrating containers. Container Instances runs single containers without orchestration, and App Service and Batch target different workloads.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-022",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure service executes small pieces of code in response to triggers such as HTTP requests or timers and scales automatically?",
+            "options": [
+                "Azure Blob Storage",
+                "Azure Functions",
+                "Azure Virtual Machines",
+                "Azure SQL Database"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Functions is a serverless, event-driven compute service that scales on demand and bills per execution. Blob Storage stores objects, Virtual Machines require management, and SQL Database is a data service.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-023",
+            "domain": "Azure Architecture and Services",
+            "stem": "What is the primary purpose of an Azure virtual network?",
+            "options": [
+                "To host serverless functions",
+                "To provide a billing boundary",
+                "To provide isolated, secure communication between Azure resources, the internet, and on-premises networks",
+                "To store large binary objects"
+            ],
+            "correct_index": 2,
+            "explanation": "An Azure virtual network isolates and connects resources while controlling traffic to the internet, other networks, and on-premises. Blob Storage stores objects, Functions runs code, and subscriptions are the billing boundary.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-024",
+            "domain": "Azure Architecture and Services",
+            "stem": "A company needs a private, dedicated network connection between its datacenter and Azure that does not travel over the public internet. Which service should it use?",
+            "options": [
+                "Azure DNS",
+                "Azure Load Balancer",
+                "Azure VPN Gateway",
+                "Azure ExpressRoute"
+            ],
+            "correct_index": 3,
+            "explanation": "ExpressRoute provides a private, dedicated circuit between on-premises and Azure that bypasses the public internet. VPN Gateway uses encrypted tunnels over the internet, while DNS and Load Balancer serve other purposes.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-025",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Azure storage access tier is designed for data that is rarely accessed and stored for at least 180 days at the lowest storage cost?",
+            "options": [
+                "Archive tier",
+                "Premium tier",
+                "Hot tier",
+                "Cool tier"
+            ],
+            "correct_index": 0,
+            "explanation": "The archive tier offers the lowest storage cost for rarely accessed data with a 180-day minimum retention. Hot and cool tiers serve more frequent access, and the premium tier targets high-performance workloads.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-026",
+            "domain": "Azure Architecture and Services",
+            "stem": "Which Microsoft cloud identity service provides single sign-on and multifactor authentication for users and applications?",
+            "options": [
+                "Azure Policy",
+                "Microsoft Entra ID",
+                "Azure Key Vault",
+                "Microsoft Defender for Cloud"
+            ],
+            "correct_index": 1,
+            "explanation": "Microsoft Entra ID, formerly Azure Active Directory, is the cloud identity provider supporting single sign-on, multifactor authentication, and conditional access. Key Vault stores secrets, Defender assesses security posture, and Policy enforces compliance rules.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Architecture and Services"
+        },
+        {
+            "id": "az-900-027",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure tool helps an organization analyze, monitor, and optimize its cloud spending?",
+            "options": [
+                "Azure Policy",
+                "Azure Advisor",
+                "Microsoft Cost Management",
+                "Azure Monitor"
+            ],
+            "correct_index": 2,
+            "explanation": "Microsoft Cost Management provides cost analysis, budgets, and recommendations to control Azure spend. Advisor gives best-practice guidance, Monitor tracks resource telemetry, and Policy enforces configuration rules.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-028",
+            "domain": "Azure Management and Governance",
+            "stem": "A team wants to estimate the monthly cost of a planned Azure solution before deploying it. Which tool should it use?",
+            "options": [
+                "Microsoft Cost Management",
+                "Azure Advisor",
+                "Total Cost of Ownership calculator",
+                "Azure Pricing Calculator"
+            ],
+            "correct_index": 3,
+            "explanation": "The Azure Pricing Calculator estimates the cost of specific services and configurations before deployment. The TCO calculator compares on-premises with Azure, Cost Management tracks existing spend, and Advisor recommends improvements.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-029",
+            "domain": "Azure Management and Governance",
+            "stem": "Which tool compares the cost of running workloads in an on-premises datacenter against running them in Azure?",
+            "options": [
+                "Total Cost of Ownership calculator",
+                "Microsoft Cost Management",
+                "Azure Service Health",
+                "Azure Pricing Calculator"
+            ],
+            "correct_index": 0,
+            "explanation": "The Total Cost of Ownership calculator estimates savings by comparing on-premises infrastructure with Azure. The Pricing Calculator prices new Azure services, Cost Management tracks current usage, and Service Health reports incidents.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-030",
+            "domain": "Azure Management and Governance",
+            "stem": "What is the primary purpose of applying tags to Azure resources?",
+            "options": [
+                "To encrypt the resource",
+                "To add metadata used for organization, billing, and management",
+                "To restrict network access",
+                "To back up the resource"
+            ],
+            "correct_index": 1,
+            "explanation": "Tags are name and value metadata used for organizing, reporting, and billing across resources. They do not encrypt data, secure the network, or back up a resource.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-031",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service enforces organizational rules and can deny the creation of noncompliant resources?",
+            "options": [
+                "Azure Advisor",
+                "Azure Role-Based Access Control",
+                "Azure Policy",
+                "Azure Monitor"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Policy evaluates resources against rules and can prevent or remediate noncompliant deployments. RBAC controls who can act, Monitor collects telemetry, and Advisor recommends best practices.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-032",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure mechanism controls which users are permitted to perform which actions on resources?",
+            "options": [
+                "Resource locks",
+                "Tags",
+                "Azure Policy",
+                "Role-Based Access Control"
+            ],
+            "correct_index": 3,
+            "explanation": "Role-Based Access Control grants permissions through role assignments scoped to management groups, subscriptions, resource groups, or resources. Policy enforces configuration rules, locks prevent changes, and tags organize resources.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-033",
+            "domain": "Azure Management and Governance",
+            "stem": "A company wants to prevent anyone from accidentally deleting a critical Azure resource. Which feature should it use?",
+            "options": [
+                "A resource lock",
+                "Role-Based Access Control",
+                "Tags",
+                "Azure Policy"
+            ],
+            "correct_index": 0,
+            "explanation": "A CanNotDelete resource lock blocks deletion even for owners until the lock is removed. Policy enforces configuration, RBAC controls permissions, and tags add metadata, but none of those block deletion by themselves.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-034",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service lets a team define a repeatable set of governance artifacts, such as role assignments and policies, and apply them to new environments?",
+            "options": [
+                "Microsoft Cost Management",
+                "Azure Blueprints",
+                "Azure Monitor",
+                "Azure Advisor"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Blueprints packages role assignments, policies, and templates into a repeatable definition for consistent environments. The other services provide monitoring, recommendations, and cost analysis.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-035",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service provides personalized recommendations to improve reliability, security, performance, cost, and operational excellence?",
+            "options": [
+                "Azure Policy",
+                "Azure Monitor",
+                "Azure Advisor",
+                "Azure Service Health"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Advisor analyzes configuration and usage and recommends improvements across its five pillars. Monitor collects telemetry, Service Health reports incidents, and Policy enforces rules.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-036",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service collects and analyzes metrics, logs, and traces to give visibility into the health and performance of resources?",
+            "options": [
+                "Azure Policy",
+                "Microsoft Cost Management",
+                "Azure Advisor",
+                "Azure Monitor"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Monitor is the platform for collecting, analyzing, and acting on telemetry from resources and applications. Advisor recommends, Policy enforces, and Cost Management focuses on spend.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-037",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service informs an organization about incidents, planned maintenance, and health advisories that may affect its resources?",
+            "options": [
+                "Azure Service Health",
+                "Azure Advisor",
+                "Microsoft Cost Management",
+                "Azure Monitor"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Service Health provides personalized alerts and guidance about service issues and maintenance that affect your resources. Monitor observes resource telemetry, Advisor recommends, and Cost Management manages spend.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-038",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure service extends management and governance to servers and Kubernetes clusters running on-premises or in other clouds?",
+            "options": [
+                "Azure Monitor",
+                "Azure Arc",
+                "Azure Policy",
+                "Azure Blueprints"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Arc brings on-premises and multicloud resources into Azure for unified management and governance. Policy, Blueprints, and Monitor are Azure-native governance and monitoring services.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-039",
+            "domain": "Azure Management and Governance",
+            "stem": "Which Azure component is the management layer and API through which all Azure resources are deployed, managed, and organized?",
+            "options": [
+                "Microsoft Entra Domain Services",
+                "Azure Load Balancer",
+                "Azure Resource Manager",
+                "Azure Advisor"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Resource Manager is the deployment and management layer and API for Azure, and resource groups, templates, and role assignments all operate through it. The other options are separate services.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Management and Governance"
+        },
+        {
+            "id": "az-900-040",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure offering is a fully managed relational database built on the Microsoft SQL Server engine?",
+            "options": [
+                "Azure Database for MySQL",
+                "Azure Blob Storage",
+                "Azure Cosmos DB",
+                "Azure SQL Database"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure SQL Database is a managed relational database built on the SQL Server engine. Cosmos DB is a globally distributed NoSQL database, MySQL uses a different engine, and Blob Storage stores unstructured objects.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-041",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service is a globally distributed, multi-model NoSQL database that offers low-latency access worldwide?",
+            "options": [
+                "Azure Cosmos DB",
+                "Azure Database for PostgreSQL",
+                "Azure Files",
+                "Azure SQL Database"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Cosmos DB is a globally distributed, multi-model NoSQL database with tunable consistency across regions. SQL Database and PostgreSQL are relational, and Azure Files provides managed file shares.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-042",
+            "domain": "Azure Core Services",
+            "stem": "A company wants a managed, open-source MySQL database in Azure without patching servers itself. Which service should it choose?",
+            "options": [
+                "Azure Synapse Analytics",
+                "Azure Database for MySQL",
+                "Azure SQL Database",
+                "Azure Cosmos DB"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Database for MySQL is a managed MySQL service that handles patching, backups, and high availability. SQL Database uses SQL Server, Cosmos DB is NoSQL, and Synapse is an analytics service.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-043",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service is a managed PostgreSQL database offered as a platform service?",
+            "options": [
+                "Azure Cosmos DB",
+                "Azure Table Storage",
+                "Azure Database for PostgreSQL",
+                "Azure SQL Managed Instance"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure Database for PostgreSQL is the managed PostgreSQL offering. SQL Managed Instance is SQL Server-compatible, Cosmos DB is NoSQL, and Table Storage is a key-value NoSQL store.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-044",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service provides prebuilt artificial intelligence capabilities such as vision, speech, and language that developers call through APIs?",
+            "options": [
+                "Azure Databricks",
+                "Azure Synapse Analytics",
+                "Azure Machine Learning",
+                "Azure AI services"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure AI services offers prebuilt models for vision, speech, and language through APIs. Machine Learning is for building custom models, and Databricks and Synapse are analytics platforms.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-045",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service is used to build, train, and deploy custom machine learning models?",
+            "options": [
+                "Azure Machine Learning",
+                "Azure Cognitive Search",
+                "Azure Bot Service",
+                "Azure AI services"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Machine Learning is a platform for the full machine learning lifecycle, including building, training, and deploying models. AI services provides prebuilt models, Cognitive Search indexes content, and Bot Service builds conversational bots.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-046",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service acts as a central message hub for secure, bi-directional communication with millions of IoT devices?",
+            "options": [
+                "Azure Logic Apps",
+                "Azure IoT Hub",
+                "Azure Event Grid",
+                "Azure Functions"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure IoT Hub manages device connectivity, telemetry, and commands at scale. Event Grid routes events, Functions runs code, and Logic Apps builds workflows.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-047",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service is a fully managed application platform for connecting, monitoring, and managing IoT devices with minimal coding?",
+            "options": [
+                "Azure Sphere",
+                "Azure Digital Twins",
+                "Azure IoT Central",
+                "Azure IoT Hub"
+            ],
+            "correct_index": 2,
+            "explanation": "Azure IoT Central is a managed IoT application platform built on IoT Hub that reduces the coding needed to manage devices. IoT Hub is the underlying connectivity service, Sphere secures devices, and Digital Twins models environments.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-048",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service provides source control, build and release pipelines, and work item tracking for software teams?",
+            "options": [
+                "Azure Monitor",
+                "Azure App Service",
+                "Azure Functions",
+                "Azure DevOps"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure DevOps provides repositories, pipelines, boards, and artifacts for planning and delivering software. Monitor observes health, App Service hosts web apps, and Functions runs code.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-049",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service helps an organization discover, assess, and migrate on-premises servers, databases, and applications to Azure?",
+            "options": [
+                "Azure Migrate",
+                "Azure Backup",
+                "Azure Site Recovery",
+                "Azure Data Box"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Migrate provides discovery, assessment, and migration tooling for on-premises workloads moving to Azure. Backup and Site Recovery handle protection and disaster recovery, and Data Box moves bulk data physically.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        },
+        {
+            "id": "az-900-050",
+            "domain": "Azure Core Services",
+            "stem": "Which Azure service is used to transfer very large amounts of data to Azure by shipping a physical storage device?",
+            "options": [
+                "Azure Blob Storage",
+                "Azure Data Box",
+                "Azure File Sync",
+                "Azure ExpressRoute"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Data Box is a rugged physical appliance used to ship large datasets to Azure when network transfer is impractical. File Sync replicates file shares, ExpressRoute is a private network circuit, and Blob Storage is the destination service.",
+            "reference": "Microsoft AZ-900 skills measured - Azure Core Services"
+        }
+    ]
+}

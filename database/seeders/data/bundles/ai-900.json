@@ -1,0 +1,717 @@
+{
+    "cert_key": "ai-900",
+    "title": "Microsoft Azure AI Fundamentals (AI-900)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/ai-900.json",
+    "variant_label": "AI-900 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 45,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AI-900 skills measured (AI workloads, machine learning, computer vision, NLP, generative AI). Not a capture of past exam questions.",
+    "source_label": "Azure AI Fundamentals practice bank",
+    "items": [
+        {
+            "id": "ai-900-001",
+            "domain": "AI Workloads and Considerations",
+            "stem": "A business wants to predict which customers are most likely to cancel their subscriptions next quarter. Which type of AI workload should it apply?",
+            "options": [
+                "Machine learning",
+                "Natural language processing",
+                "Speech recognition",
+                "Computer vision"
+            ],
+            "correct_index": 0,
+            "explanation": "Predicting an outcome such as churn from historical data is a machine learning task. Computer vision interprets images, natural language processing handles text, and speech recognition converts spoken audio to text.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-002",
+            "domain": "AI Workloads and Considerations",
+            "stem": "Which statement best describes artificial intelligence as a discipline?",
+            "options": [
+                "It is a license model for software subscriptions.",
+                "It is the simulation of human intelligence processes by computer systems.",
+                "It is a database engine that stores records for reporting.",
+                "It is a network protocol for transferring files."
+            ],
+            "correct_index": 1,
+            "explanation": "Artificial intelligence is the field of building systems that perform tasks associated with human intelligence, such as learning, reasoning, perceiving, and understanding language. The other options describe unrelated computing concepts.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-003",
+            "domain": "AI Workloads and Considerations",
+            "stem": "A utility company wants to flag meter readings that are very unusual compared with normal usage patterns. Which machine learning task fits this goal?",
+            "options": [
+                "Regression",
+                "Clustering",
+                "Anomaly detection",
+                "Image classification"
+            ],
+            "correct_index": 2,
+            "explanation": "Anomaly detection identifies rare items or events that differ significantly from the norm, such as a tampered or faulty meter reading. Regression predicts a number, clustering groups similar items, and image classification labels pictures.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-004",
+            "domain": "AI Workloads and Considerations",
+            "stem": "Which AI workload is specifically concerned with interpreting the content of images and video?",
+            "options": [
+                "Natural language processing",
+                "Generative AI",
+                "Machine learning regression",
+                "Computer vision"
+            ],
+            "correct_index": 3,
+            "explanation": "Computer vision is the workload area that extracts meaning from images and video, for example by classifying or detecting objects. NLP deals with text and speech, generative AI creates new content, and regression predicts numeric values.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-005",
+            "domain": "AI Workloads and Considerations",
+            "stem": "An organization wants to mine a large archive of documents and surface the key insights hidden inside it. Which AI workload does this describe?",
+            "options": [
+                "Knowledge mining",
+                "Speech synthesis",
+                "Object detection",
+                "Regression"
+            ],
+            "correct_index": 0,
+            "explanation": "Knowledge mining uses AI to search and extract insights from large volumes of unstructured documents. Speech synthesis generates voice, object detection finds items in images, and regression predicts numbers.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-006",
+            "domain": "AI Workloads and Considerations",
+            "stem": "Which consideration is especially important when an AI system is used to make decisions that affect people's access to services?",
+            "options": [
+                "Choosing the newest model regardless of cost",
+                "Ensuring the system does not produce unfair or biased outcomes",
+                "Maximizing the number of training parameters",
+                "Storing all data on a single server"
+            ],
+            "correct_index": 1,
+            "explanation": "When AI decisions affect people, fairness matters because biased models can unfairly deny or grant access. Model size, storage topology, and novelty are not the primary ethical concern.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-007",
+            "domain": "AI Workloads and Considerations",
+            "stem": "Which scenario is the clearest example of an AI workload rather than a conventional rule-based program?",
+            "options": [
+                "A spreadsheet that sums a column of numbers",
+                "A program that adds sales tax using a fixed percentage",
+                "A system that learns from examples to recognize handwritten digits",
+                "A script that renames files on a schedule"
+            ],
+            "correct_index": 2,
+            "explanation": "Learning from examples to recognize patterns is the defining trait of AI. The other tasks follow fixed rules and produce the same output for the same input without any learning.",
+            "reference": "Microsoft AI-900 skills measured - AI Workloads and Considerations"
+        },
+        {
+            "id": "ai-900-008",
+            "domain": "Machine Learning on Azure",
+            "stem": "A data scientist wants to predict the selling price of a house from its size and location. Which type of machine learning is this?",
+            "options": [
+                "Clustering",
+                "Anomaly detection",
+                "Classification",
+                "Regression"
+            ],
+            "correct_index": 3,
+            "explanation": "Regression predicts a continuous numeric value such as a price. Classification predicts a category, clustering groups unlabeled items, and anomaly detection finds outliers.",
+            "reference": "Microsoft AI-900 skills measured - Machine Learning on Azure"
+        },
+        {
+            "id": "ai-900-009",
+            "domain": "Machine Learning on Azure",
+            "stem": "Which machine learning task assigns items to groups based on their similarities when no labels are provided?",
+            "options": [
+                "Clustering",
+                "Forecasting",
+                "Regression",
+                "Classification"
+            ],
+            "correct_index": 0,
+            "explanation": "Clustering is an unsupervised task that groups similar items together without predefined labels. Classification and regression are supervised, and forecasting is a form of regression.",
+            "reference": "Microsoft AI-900 skills measured - Machine Learning on Azure"
+        },
+        {
+            "id": "ai-900-010",
+            "domain": "Machine Learning on Azure",
+            "stem": "In supervised machine learning, what is the term for the known outcome that is supplied with each training example?",
+            "options": [
+                "Feature",
+                "Label",
+                "Weight",
+                "Hyperparameter"
+            ],
+            "correct_index": 1,
+            "explanation": "The label is the known answer attached to a training example, while features are the input attributes. Weights and hyperparameters are settings learned or chosen by the training process.",
+            "reference": "Microsoft AI-900 skills measured - Machine Learning on Azure"
+        },
+        {
+            "id": "ai-900-011",
+            "domain": "Machine Learning on Azure",
+            "stem": "Which Azure service provides a visual, drag-and-drop designer for building machine learning pipelines without writing code?",
+            "options": [
+                "Azure Cosmos DB",
+                "Azure AI Vision",
+                "Azure Machine Learning designer",
+                "Azure AI Language"
+            ],
+            "correct_index": 2,
+            "explanation": "The Azure Machine Learning designer is a drag-and-drop canvas for constructing pipelines visually. The other services focus on vision, language, and data storage rather than model building.",
+            "reference": "Microsoft AI-900 skills measured - Machine Learning on Azure"
+        },
+        {
+            "id": "ai-900-012",
+            "domain": "Machine Learning on Azure",
+            "stem": "A model performs very well on the data it was trained on but poorly on new data. What is this problem called?",
+            "options": [
+                "Regularization",
+                "Normalization",
+                "Underfitting",
+                "Overfitting"
+            ],
+            "correct_index": 3,
+            "explanation": "Overfitting occurs when a model memorizes the training data and fails to generalize to new data. Underfitting is poor performance on both, while regularization and normalization are techniques, not the problem.",
+            "reference": "Microsoft AI-900 skills measured - Machine Learning on Azure"
+        },
+        {
+            "id": "ai-900-013",
+            "domain": "Computer Vision on Azure",
+            "stem": "A system must label each photo as either a cat or a dog. Which computer vision task does this describe?",
+            "options": [
+                "Image classification",
+                "Object detection",
+                "Optical character recognition",
+                "Face detection"
+            ],
+            "correct_index": 0,
+            "explanation": "Image classification assigns a single category label to an entire image. Object detection also locates where objects are, OCR reads text, and face detection locates faces.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-014",
+            "domain": "Computer Vision on Azure",
+            "stem": "An application must locate and outline every vehicle in a traffic photo, including its position. Which computer vision task is required?",
+            "options": [
+                "Image classification",
+                "Object detection",
+                "Optical character recognition",
+                "Image captioning"
+            ],
+            "correct_index": 1,
+            "explanation": "Object detection identifies objects and returns bounding boxes around each one, so it reports both what and where. Image classification only labels the whole image.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-015",
+            "domain": "Computer Vision on Azure",
+            "stem": "Which computer vision capability converts printed or handwritten text in a scanned document into machine-readable characters?",
+            "options": [
+                "Facial recognition",
+                "Object detection",
+                "Optical character recognition",
+                "Image tagging"
+            ],
+            "correct_index": 2,
+            "explanation": "Optical character recognition reads text from images and returns it as characters. Facial recognition identifies people, object detection finds items, and image tagging returns descriptive labels.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-016",
+            "domain": "Computer Vision on Azure",
+            "stem": "Which Azure service provides prebuilt models for image classification, object detection, and optical character recognition?",
+            "options": [
+                "Azure AI Language",
+                "Azure OpenAI Service",
+                "Azure AI Search",
+                "Azure AI Vision"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure AI Vision hosts image analysis capabilities including classification, detection, and OCR. Azure AI Language handles text, Azure OpenAI generates content, and Azure AI Search indexes and queries data.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-017",
+            "domain": "Computer Vision on Azure",
+            "stem": "Which computer vision feature determines whether a face in an image matches a known person?",
+            "options": [
+                "Face recognition",
+                "Optical character recognition",
+                "Object detection",
+                "Face detection"
+            ],
+            "correct_index": 0,
+            "explanation": "Face recognition goes beyond locating a face to identify who it is by comparing facial features with a known set. Face detection only finds that a face is present and where it is.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-018",
+            "domain": "Computer Vision on Azure",
+            "stem": "A retail company wants to count how many people pass a camera each hour without identifying them. Which approach is most appropriate?",
+            "options": [
+                "Facial recognition to name each person",
+                "Object detection to count people",
+                "Optical character recognition to read name badges",
+                "Speech recognition to transcribe conversations"
+            ],
+            "correct_index": 1,
+            "explanation": "Object detection can locate and count people in the frame without identifying them, which meets the requirement while avoiding personal identification. The other options either identify individuals or do not count people.",
+            "reference": "Microsoft AI-900 skills measured - Computer Vision on Azure"
+        },
+        {
+            "id": "ai-900-019",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "Which natural language processing capability determines whether a piece of text expresses a positive, negative, or neutral opinion?",
+            "options": [
+                "Language detection",
+                "Key phrase extraction",
+                "Sentiment analysis",
+                "Entity recognition"
+            ],
+            "correct_index": 2,
+            "explanation": "Sentiment analysis returns a score indicating positive, negative, or neutral tone. Key phrase extraction finds main topics, entity recognition finds named things, and language detection identifies the language.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-020",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "Which natural language processing task extracts the most important talking points from a block of text?",
+            "options": [
+                "Translation",
+                "Speech synthesis",
+                "Sentiment analysis",
+                "Key phrase extraction"
+            ],
+            "correct_index": 3,
+            "explanation": "Key phrase extraction identifies the main concepts in text. Sentiment analysis scores opinion, translation converts languages, and speech synthesis produces audio.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-021",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "A company wants to automatically convert customer support tickets written in English into Spanish. Which natural language processing capability should it use?",
+            "options": [
+                "Text translation",
+                "Entity recognition",
+                "Sentiment analysis",
+                "Speech recognition"
+            ],
+            "correct_index": 0,
+            "explanation": "Text translation converts text from one language to another. Entity recognition finds named items, sentiment scores opinion, and speech recognition handles audio.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-022",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "Which natural language processing capability identifies and categorizes named things such as people, places, and organizations in text?",
+            "options": [
+                "Summarization",
+                "Named entity recognition",
+                "Key phrase extraction",
+                "Language detection"
+            ],
+            "correct_index": 1,
+            "explanation": "Named entity recognition locates and classifies entities like people, organizations, and locations. Key phrase extraction returns topics without classifying them, and language detection identifies the language of the text.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-023",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "A user speaks a question and expects the application to return a written transcript. Which workload performs this conversion?",
+            "options": [
+                "Sentiment analysis",
+                "Speech synthesis",
+                "Speech recognition",
+                "Text translation"
+            ],
+            "correct_index": 2,
+            "explanation": "Speech recognition converts spoken audio into text. Speech synthesis does the opposite, turning text into speech, while translation and sentiment analysis operate on text.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-024",
+            "domain": "Natural Language Processing on Azure",
+            "stem": "Which Azure service provides prebuilt text analytics features such as sentiment analysis, key phrase extraction, and entity recognition?",
+            "options": [
+                "Azure OpenAI Service",
+                "Azure Machine Learning",
+                "Azure AI Vision",
+                "Azure AI Language"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure AI Language bundles text analytics features including sentiment, key phrases, and entities. Azure AI Vision handles images, and Azure OpenAI generates content.",
+            "reference": "Microsoft AI-900 skills measured - Natural Language Processing on Azure"
+        },
+        {
+            "id": "ai-900-025",
+            "domain": "Generative AI on Azure",
+            "stem": "Which Azure service gives developers access to large language models for building generative AI applications?",
+            "options": [
+                "Azure OpenAI Service",
+                "Azure AI Vision",
+                "Azure AI Search",
+                "Azure SQL Database"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure OpenAI Service provides hosted access to large language models that generate text and other content. The other services handle vision, search indexing, and relational data storage.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-026",
+            "domain": "Generative AI on Azure",
+            "stem": "In a generative AI application, what is a prompt?",
+            "options": [
+                "The subscription key used to authenticate",
+                "The input text that instructs the model what to generate",
+                "The physical server that hosts the model",
+                "The billing meter for token usage"
+            ],
+            "correct_index": 1,
+            "explanation": "A prompt is the natural language instruction or question supplied to a generative model to guide its output. Keys, servers, and billing meters are infrastructure concerns.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-027",
+            "domain": "Generative AI on Azure",
+            "stem": "Which benefit best describes the purpose of a copilot built on generative AI?",
+            "options": [
+                "It encrypts all network traffic",
+                "It replaces the user interface entirely",
+                "It assists users by generating suggestions and content within their workflow",
+                "It stores backups of user files"
+            ],
+            "correct_index": 2,
+            "explanation": "A copilot uses generative AI to help users in context by drafting, summarizing, and suggesting content. It assists rather than replaces the interface and does not perform storage or network encryption.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-028",
+            "domain": "Generative AI on Azure",
+            "stem": "A developer wants the model to answer only questions about a company's own documents. Which technique is most relevant?",
+            "options": [
+                "Disabling authentication",
+                "Shortening the prompt",
+                "Increasing the model temperature",
+                "Grounding the model with a data source"
+            ],
+            "correct_index": 3,
+            "explanation": "Grounding, or retrieval augmentation, supplies the model with relevant company data so its answers are based on those documents. Raising temperature increases randomness, and shortening prompts or disabling authentication does not add the needed knowledge.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-029",
+            "domain": "Generative AI on Azure",
+            "stem": "Which statement best describes how large language models generate text?",
+            "options": [
+                "They predict likely sequences of words based on patterns learned from training data.",
+                "They follow hand-written if-then rules for every sentence.",
+                "They translate text using a bilingual dictionary only.",
+                "They copy exact sentences from a fixed database."
+            ],
+            "correct_index": 0,
+            "explanation": "Large language models generate text by predicting the most probable next tokens given the prompt, based on patterns learned during training. They do not retrieve fixed sentences or rely on hand-written rules.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-030",
+            "domain": "Generative AI on Azure",
+            "stem": "Which system setting can make a generative AI model produce more varied and creative responses?",
+            "options": [
+                "Using a smaller context window",
+                "Setting the temperature higher",
+                "Lowering the token limit to zero",
+                "Removing the system message"
+            ],
+            "correct_index": 1,
+            "explanation": "A higher temperature makes the model sample less likely tokens, producing more varied output. Token limits and context windows affect length and memory rather than creativity.",
+            "reference": "Microsoft AI-900 skills measured - Generative AI on Azure"
+        },
+        {
+            "id": "ai-900-031",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle requires that AI systems treat all groups of people equitably and avoid discriminatory outcomes?",
+            "options": [
+                "Accountability",
+                "Reliability",
+                "Fairness",
+                "Transparency"
+            ],
+            "correct_index": 2,
+            "explanation": "Fairness is the principle that AI systems should not discriminate and should treat all people equitably. Transparency concerns explainability, accountability concerns who is answerable, and reliability concerns safe operation.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-032",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle is about being able to explain how an AI system reached its decisions?",
+            "options": [
+                "Privacy",
+                "Fairness",
+                "Inclusiveness",
+                "Transparency"
+            ],
+            "correct_index": 3,
+            "explanation": "Transparency means people can understand how a system works and how it reached an outcome. Inclusiveness is about empowering everyone, privacy is about data protection, and fairness is about equitable treatment.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-033",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle states that people should be answerable for how AI systems operate and affect others?",
+            "options": [
+                "Accountability",
+                "Transparency",
+                "Reliability",
+                "Security"
+            ],
+            "correct_index": 0,
+            "explanation": "Accountability means that people, not machines, remain responsible for AI systems and their effects. Transparency addresses understanding, reliability addresses safe operation, and security addresses protection from attack.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-034",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle focuses on designing AI so that everyone, including people with disabilities, can benefit?",
+            "options": [
+                "Fairness",
+                "Inclusiveness",
+                "Accountability",
+                "Transparency"
+            ],
+            "correct_index": 1,
+            "explanation": "Inclusiveness is the principle of empowering and engaging everyone, including people with disabilities, through AI. Fairness is about equitable treatment and the others concern explainability and responsibility.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-035",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle requires that AI systems operate reliably, safely, and consistently under expected and unexpected conditions?",
+            "options": [
+                "Inclusiveness",
+                "Accountability",
+                "Reliability and safety",
+                "Fairness"
+            ],
+            "correct_index": 2,
+            "explanation": "Reliability and safety means AI systems perform as intended and respond safely to unexpected conditions. The other principles address equity, accessibility, and human responsibility.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-036",
+            "domain": "Responsible AI",
+            "stem": "Which responsible AI principle requires that personal data used by AI is protected and handled lawfully?",
+            "options": [
+                "Transparency",
+                "Fairness",
+                "Inclusiveness",
+                "Privacy and security"
+            ],
+            "correct_index": 3,
+            "explanation": "Privacy and security concerns protecting personal data and securing systems against threats. Transparency concerns explainability, while fairness and inclusiveness concern equity and accessibility.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-037",
+            "domain": "Responsible AI",
+            "stem": "A loan approval model is found to reject applicants from one postal code far more often than others with similar finances. Which responsible AI principle is most directly violated?",
+            "options": [
+                "Fairness",
+                "Reliability and safety",
+                "Transparency",
+                "Accountability"
+            ],
+            "correct_index": 0,
+            "explanation": "Unfair treatment of a group based on a protected or proxy attribute such as postal code violates fairness. The other principles do not directly address discriminatory outcomes.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-038",
+            "domain": "Responsible AI",
+            "stem": "A company deploys an AI system but cannot tell users when they are interacting with it. Which responsible AI principle does this undermine?",
+            "options": [
+                "Fairness",
+                "Transparency",
+                "Privacy",
+                "Reliability"
+            ],
+            "correct_index": 1,
+            "explanation": "Transparency includes being open about when AI is in use so people can decide how to engage. Privacy concerns data handling, reliability concerns safe operation, and fairness concerns equitable outcomes.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-039",
+            "domain": "Responsible AI",
+            "stem": "An autonomous vehicle AI must avoid harm when it encounters a situation it was not trained on. Which principle is most relevant?",
+            "options": [
+                "Fairness",
+                "Transparency",
+                "Reliability and safety",
+                "Inclusiveness"
+            ],
+            "correct_index": 2,
+            "explanation": "Reliability and safety demands that AI systems behave safely and consistently, including in unforeseen situations. The other principles do not focus on physical safety under unexpected conditions.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-040",
+            "domain": "Responsible AI",
+            "stem": "A team wants to give a human the authority to override or stop an AI system at any time. Which responsible AI principle does this support directly?",
+            "options": [
+                "Transparency",
+                "Fairness",
+                "Inclusiveness",
+                "Accountability"
+            ],
+            "correct_index": 3,
+            "explanation": "Accountability keeps humans responsible for AI systems, which includes the authority to intervene or stop them. Transparency concerns understanding and does not by itself grant control.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-041",
+            "domain": "Responsible AI",
+            "stem": "Before releasing a model, a team reviews its performance across different demographic groups to detect bias. Which responsible AI principle are they applying?",
+            "options": [
+                "Fairness",
+                "Privacy",
+                "Accountability",
+                "Reliability"
+            ],
+            "correct_index": 0,
+            "explanation": "Testing outcomes across demographic groups to detect disparate impact is the practice of fairness. Privacy, accountability, and reliability address different concerns.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-042",
+            "domain": "Responsible AI",
+            "stem": "A generative AI assistant should refuse to produce instructions for making weapons. Which responsible AI consideration is being enforced?",
+            "options": [
+                "Improving the user interface",
+                "Preventing harmful use through safety controls",
+                "Increasing the model temperature",
+                "Reducing the context window"
+            ],
+            "correct_index": 1,
+            "explanation": "Content safety controls are part of reliability and safety, ensuring AI is not used to cause harm. Temperature, context window, and interface design do not determine whether harmful content is produced.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-043",
+            "domain": "Responsible AI",
+            "stem": "Which practice best supports the responsible AI principle of transparency in a deployed model?",
+            "options": [
+                "Removing all logging",
+                "Deleting audit trails after each run",
+                "Publishing model cards and documenting limitations",
+                "Hiding the training data from everyone"
+            ],
+            "correct_index": 2,
+            "explanation": "Model cards and documented limitations help people understand a system, which supports transparency. Hiding data, removing logs, and deleting audit trails reduce openness and accountability.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-044",
+            "domain": "Responsible AI",
+            "stem": "A healthcare AI is trained only on data from one age group and performs poorly for others. Which two responsible AI principles are most at risk?",
+            "options": [
+                "Privacy and security",
+                "Transparency and cost",
+                "Speed and scalability",
+                "Fairness and inclusiveness"
+            ],
+            "correct_index": 3,
+            "explanation": "Training on a narrow population risks unfair outcomes for others and excludes groups from the benefit, implicating fairness and inclusiveness. Privacy, cost, and speed are not the central issues here.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-045",
+            "domain": "Responsible AI",
+            "stem": "Which action best supports the responsible AI principle of accountability for a deployed system?",
+            "options": [
+                "Assigning clear human ownership and governance for the system",
+                "Allowing anonymous deployment with no owner",
+                "Disabling all monitoring",
+                "Publishing no contact for issues"
+            ],
+            "correct_index": 0,
+            "explanation": "Accountability requires identifiable human owners and governance so someone is answerable for the system. Anonymous ownership, no monitoring, and no escalation path all weaken accountability.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-046",
+            "domain": "Responsible AI",
+            "stem": "A team encrypts training data and restricts access to authorized staff. Which responsible AI principle are they addressing?",
+            "options": [
+                "Inclusiveness",
+                "Privacy and security",
+                "Fairness",
+                "Transparency"
+            ],
+            "correct_index": 1,
+            "explanation": "Encrypting data and limiting access protect personal information, which is the privacy and security principle. The other principles concern equity, explainability, and accessibility.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-047",
+            "domain": "Responsible AI",
+            "stem": "Which statement best describes why responsible AI guidance applies across all AI workloads?",
+            "options": [
+                "Because responsible AI applies only to cloud services",
+                "Because ethics matter only for regulated industries",
+                "Because the same ethical concerns arise whether the workload handles images, text, or predictions",
+                "Because only generative AI has ethical concerns"
+            ],
+            "correct_index": 2,
+            "explanation": "Fairness, safety, privacy, inclusiveness, transparency, and accountability apply to any AI system regardless of workload or hosting model, which is why the guidance spans the whole exam.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-048",
+            "domain": "Responsible AI",
+            "stem": "A company wants users to know that a chatbot's answers may be inaccurate and should be verified. Which responsible AI principle does this communication support?",
+            "options": [
+                "Privacy",
+                "Fairness",
+                "Reliability",
+                "Transparency"
+            ],
+            "correct_index": 3,
+            "explanation": "Warning users about limitations and the need to verify output supports transparency by making the system's behavior and shortcomings clear. The other principles address different concerns.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-049",
+            "domain": "Responsible AI",
+            "stem": "Which of the following is a responsible AI concern that applies specifically to generative AI content?",
+            "options": [
+                "The model may produce fabricated or harmful information",
+                "The model cannot process text",
+                "The model always returns identical output",
+                "The model requires no data to train"
+            ],
+            "correct_index": 0,
+            "explanation": "Generative models can create plausible but false or harmful content, which is a key responsible AI concern. The other statements are generally untrue of large language models.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        },
+        {
+            "id": "ai-900-050",
+            "domain": "Responsible AI",
+            "stem": "An organization establishes a review board that evaluates AI projects against fairness, safety, and privacy before launch. Which principle does this governance most directly serve?",
+            "options": [
+                "Transparency only",
+                "Accountability",
+                "Inclusiveness",
+                "Reliability only"
+            ],
+            "correct_index": 1,
+            "explanation": "A review board with oversight and decision authority embeds accountability by making people and processes answerable for AI outcomes before deployment. The other options name single principles that the board only partly covers.",
+            "reference": "Microsoft AI-900 skills measured - Responsible AI"
+        }
+    ]
+}
