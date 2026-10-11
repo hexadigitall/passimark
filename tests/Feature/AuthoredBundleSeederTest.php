@@ -119,7 +119,10 @@ class AuthoredBundleSeederTest extends TestCase
             );
         }
 
-        $this->assertSame(7, PassimarkQuestion::count(), 'the file has 7 authored items; the DB should have exactly that');
+        $this->assertSame(7, PassimarkQuestion::whereIn(
+            'session_id',
+            PassimarkSession::where('certification_track_id', $track->id)->select('id')
+        )->count(), 'the cisa file has 7 authored items; the DB should have exactly that');
     }
 
     public function test_answer_keys_are_spread_and_match_the_flagged_option(): void
@@ -153,7 +156,13 @@ class AuthoredBundleSeederTest extends TestCase
     {
         $this->seed(AuthoredBundleSeeder::class);
 
-        foreach (PassimarkQuestion::all() as $q) {
+        $track = $this->track();
+        $questions = PassimarkQuestion::whereIn(
+            'session_id',
+            PassimarkSession::where('certification_track_id', $track->id)->select('id')
+        )->get();
+
+        foreach ($questions as $q) {
             $this->assertStringContainsString('CISA practice bank', $q->reference);
             $this->assertMatchesRegularExpression(
                 '/ITAF|COBIT|ISO 22301|ISACA/i',
@@ -163,7 +172,10 @@ class AuthoredBundleSeederTest extends TestCase
             $this->assertNotEmpty($q->explanation);
         }
 
-        $this->assertSame(3, PassimarkTag::where('type', 'domain')->count());
+        $cisaTags = PassimarkTag::where('type', 'domain')->whereHas('questions', function ($q) use ($track) {
+            $q->whereIn('session_id', PassimarkSession::where('certification_track_id', $track->id)->select('id'));
+        })->count();
+        $this->assertSame(3, $cisaTags);
     }
 
     public function test_reseeding_is_idempotent(): void
@@ -192,6 +204,69 @@ class AuthoredBundleSeederTest extends TestCase
             'session_id',
             PassimarkSession::where('certification_track_id', $cissp->id)->select('id')
         )->count());
+    }
+
+    /**
+     * The pilot real-exam-length banks must themselves hold together: valid, warning-free,
+     * sized to the real exam, and split across the official domains at the intended counts.
+     */
+    #[DataProvider('realLengthBundles')]
+    public function test_real_length_bundle_data_meets_exam_spec(string $certKey, int $total, array $domains): void
+    {
+        $bundle = new AuthoredBundle($certKey);
+
+        [$errors, $warnings] = $bundle->validate();
+        $this->assertSame([], $errors, "{$certKey} failed validation");
+        $this->assertSame([], $warnings, "{$certKey} raised warnings (e.g. an option-0-dominant file)");
+
+        $this->assertCount($total, $bundle->items(), "{$certKey} is not the real exam length");
+
+        $counts = [];
+        foreach ($bundle->items() as $item) {
+            $counts[$item['domain']] = ($counts[$item['domain']] ?? 0) + 1;
+        }
+        foreach ($domains as $domain => $expected) {
+            $this->assertSame($expected, $counts[$domain] ?? 0, "{$certKey} domain split for {$domain}");
+        }
+        $this->assertSameSize($domains, $bundle->domainGroups(), "{$certKey} does not map one session per domain");
+    }
+
+    public static function realLengthBundles(): array
+    {
+        return [
+            'ccna' => ['ccna', 102, [
+                'Network Fundamentals' => 22,
+                'Network Access' => 19,
+                'IP Connectivity' => 26,
+                'IP Services' => 11,
+                'Security Fundamentals' => 15,
+                'Automation and Programmability' => 9,
+            ]],
+            'sec' => ['sec', 90, [
+                'General Security Concepts' => 11,
+                'Threats, Vulnerabilities, and Mitigations' => 20,
+                'Security Architecture' => 16,
+                'Security Operations' => 25,
+                'Security Program Management and Oversight' => 18,
+            ]],
+            'aws-saa' => ['aws-saa', 65, [
+                'Design Secure Architectures' => 19,
+                'Design Resilient Architectures' => 18,
+                'Design High-Performing Architectures' => 16,
+                'Design Cost-Optimized Architectures' => 12,
+            ]],
+            'az-104' => ['az-104', 50, [
+                'Manage Azure identities and governance' => 13,
+                'Implement and manage storage' => 15,
+                'Deploy and manage Azure compute resources' => 12,
+                'Configure and manage virtual networking' => 10,
+            ]],
+            'pmp' => ['pmp', 180, [
+                'People' => 76,
+                'Process' => 90,
+                'Business Environment' => 14,
+            ]],
+        ];
     }
 
     #[DataProvider('invalidBundles')]

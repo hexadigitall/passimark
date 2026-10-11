@@ -1,0 +1,927 @@
+{
+    "cert_key": "aws-saa",
+    "title": "AWS Certified Solutions Architect - Associate (SAA-C03)",
+    "issuer": "Amazon Web Services",
+    "outline_file": "outlines/aws-saa.json",
+    "variant_label": "SAA-C03 Real-Spec Practice",
+    "exam": {
+        "questions": 65,
+        "duration_minutes": 130,
+        "scoring": "720/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the AWS Certified Solutions Architect - Associate SAA-C03 exam guide (the four official domains and their weightings). Not a capture of past exam questions.",
+    "source_label": "AWS Solutions Architect practice bank",
+    "items": [
+        {
+            "id": "aws-saa-001",
+            "domain": "Design Secure Architectures",
+            "stem": "A startup stores customer invoices in an S3 bucket, and the security team wants each application component to access only the specific prefixes and actions it needs and nothing more. Which AWS capability should the solutions architect use to implement this requirement?",
+            "options": [
+                "IAM policies that scope actions and resources to the exact bucket and prefix",
+                "A single IAM user whose access key is shared by every application",
+                "S3 bucket ACLs that grant Full Control to the entire AWS account",
+                "An S3 bucket policy that allows s3:* for the account root user"
+            ],
+            "correct_index": 0,
+            "explanation": "Least privilege is enforced with IAM policies whose Action and Resource elements name only the operations and the specific bucket or prefix that a component needs. Sharing a key or granting s3:* and Full Control widens the blast radius if any credential leaks.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-002",
+            "domain": "Design Secure Architectures",
+            "stem": "A regulated company must encrypt objects in an S3 bucket with keys that its own security team creates, rotates, and audits, and that can be disabled independently of the bucket. Which encryption option meets these requirements?",
+            "options": [
+                "Client-side encryption with the data key written into the application log",
+                "Server-side encryption with AWS KMS using a customer managed key",
+                "Server-side encryption with Amazon S3 managed keys (SSE-S3)",
+                "Server-side encryption with customer-provided keys (SSE-C) supplied on every request"
+            ],
+            "correct_index": 1,
+            "explanation": "SSE-KMS with a customer managed key gives the team control of the key policy, rotation, and the ability to disable the key, and every use is recorded in CloudTrail. SSE-S3 keys are AWS-owned, SSE-C keys are not managed or auditable by KMS, and logging a key destroys confidentiality.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-003",
+            "domain": "Design Secure Architectures",
+            "stem": "An application running on EC2 instances in a private subnet must call AWS KMS, and the security policy requires that this traffic never leaves the Amazon network or traverse the public internet. Which configuration should the architect implement?",
+            "options": [
+                "A NAT gateway in the private subnet pointing at the public KMS endpoints",
+                "A site-to-site VPN from the VPC back to the corporate data center",
+                "A VPC interface endpoint for AWS KMS accessed through AWS PrivateLink",
+                "An internet gateway with a route in the private subnet route table"
+            ],
+            "correct_index": 2,
+            "explanation": "An interface VPC endpoint (powered by AWS PrivateLink) keeps KMS traffic on the AWS network without an internet gateway, NAT, or exposure to the public internet. An internet gateway or NAT gateway routes over public addresses, and a VPN adds a private path only to the corporate network, not to KMS.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-004",
+            "domain": "Design Secure Architectures",
+            "stem": "A company runs an Amazon RDS for MySQL database and must rotate the database password automatically on a defined schedule without redeploying the application. Which AWS service should the architect recommend?",
+            "options": [
+                "AWS Systems Manager Parameter Store SecureString parameters",
+                "Amazon CloudWatch Logs with metric filters",
+                "AWS Config rules that check password age",
+                "AWS Secrets Manager with managed rotation"
+            ],
+            "correct_index": 3,
+            "explanation": "Secrets Manager natively performs scheduled rotation for supported databases such as RDS and updates the stored secret so applications always read the current value. Parameter Store holds secure values but does not rotate them, CloudWatch Logs only observes output, and Config only reports compliance, it does not change the password.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-005",
+            "domain": "Design Secure Architectures",
+            "stem": "A security review finds that several teams have accidentally made S3 buckets publicly readable. The company wants a single account-level safeguard that blocks future public access regardless of individual bucket policies. Which action should the architect take?",
+            "options": [
+                "Enable S3 Block Public Access at the account level so every bucket inherits the safeguard",
+                "Add a bucket policy that denies only s3:GetObject to anonymous users",
+                "Turn on S3 Versioning for every bucket in the account",
+                "Require all uploads to use presigned URLs"
+            ],
+            "correct_index": 0,
+            "explanation": "Account-level Block Public Access overrides per-bucket ACLs and policies, so no team can expose a bucket even by mistake. A single GetObject deny is narrower than account protection and easy to bypass, Versioning protects data integrity but not exposure, and presigned URLs do not stop a bucket from being made public.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-006",
+            "domain": "Design Secure Architectures",
+            "stem": "A public web application is being targeted by SQL injection and cross-site scripting attempts. The architect must inspect and block these requests before they reach the application servers. Which service should be used?",
+            "options": [
+                "Amazon Inspector scanning the application instances",
+                "AWS WAF with managed rule groups attached to the CloudFront distribution",
+                "AWS Shield Standard applied to the load balancer",
+                "Amazon GuardDuty with findings forwarded to Security Hub"
+            ],
+            "correct_index": 1,
+            "explanation": "AWS WAF inspects HTTP requests against rules such as the SQL injection and XSS managed rule groups and blocks matching traffic at the edge. Shield defends against volumetric network DDoS, GuardDuty detects threats from logs, and Inspector assesses software vulnerabilities, so none of them filter application-layer payloads.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-007",
+            "domain": "Design Secure Architectures",
+            "stem": "A company must remove all inbound SSH access and stop distributing SSH key pairs to administrators while still letting them run commands interactively on EC2 instances. Which approach meets these requirements with the least operational effort?",
+            "options": [
+                "Distribute one shared SSH key from AWS Secrets Manager",
+                "Use EC2 Instance Connect to push temporary keys over port 22",
+                "Use AWS Systems Manager Session Manager with IAM-based access control",
+                "Open port 22 to the corporate CIDR range and keep distributing keys"
+            ],
+            "correct_index": 2,
+            "explanation": "Session Manager provides shell access through the SSM agent with no inbound ports, no bastion, and no SSH keys, and access is governed by IAM policies and logged in CloudTrail. Opening port 22, sharing a key, or pushing temporary keys still leaves SSH reachable and key material in circulation.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-008",
+            "domain": "Design Secure Architectures",
+            "stem": "An application running on EC2 instances needs to read and write objects in an S3 bucket, and the architect must ensure that no long-lived credentials are ever stored on the instances. Which solution should be used?",
+            "options": [
+                "Create one IAM user and store its access keys in a file on each instance",
+                "Embed the access keys directly in the application source code",
+                "Share a single administrator access key across all of the instances",
+                "Attach an IAM role to the instance profile so the SDK retrieves temporary credentials"
+            ],
+            "correct_index": 3,
+            "explanation": "An IAM role attached to the instance profile delivers automatically rotated temporary credentials through the instance metadata service, so nothing long-lived is stored on disk. Access keys in files, source code, or shared across instances are static secrets that are easily leaked and hard to rotate.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-009",
+            "domain": "Design Secure Architectures",
+            "stem": "A company needs baseline protection against common volumetric and reflection distributed denial of service attacks for its internet-facing applications at no extra cost and with no configuration required. Which AWS protection applies automatically?",
+            "options": [
+                "AWS Shield Standard",
+                "AWS WAF rate-based rules",
+                "AWS Shield Advanced",
+                "AWS Firewall Manager"
+            ],
+            "correct_index": 0,
+            "explanation": "AWS Shield Standard is enabled automatically for all AWS customers at no additional charge and mitigates common network and transport layer DDoS attacks. WAF rules and Shield Advanced require deliberate configuration, Shield Advanced is a paid tier, and Firewall Manager is a management layer, not the automatic baseline protection.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-010",
+            "domain": "Design Secure Architectures",
+            "stem": "A compliance officer must be able to prove who used an encryption key to decrypt a production EBS volume, and per-request key usage must appear in an audit log. Which encryption choice satisfies this requirement?",
+            "options": [
+                "Use an instance store volume instead of an EBS volume",
+                "Encrypt the volume with an AWS KMS customer managed key so usage is recorded in CloudTrail",
+                "Encrypt the volume with a default AWS managed key and rely on EBS access logs",
+                "Encrypt the data at the application layer and store the key on the same volume"
+            ],
+            "correct_index": 1,
+            "explanation": "A KMS customer managed key produces CloudTrail entries for every cryptographic operation, giving a who-used-what audit trail. AWS managed keys do not give the same key-level audit control, storing a key beside its data offers no separation, and instance store volumes are ephemeral and not the requested EBS protection.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-011",
+            "domain": "Design Secure Architectures",
+            "stem": "An architect must control which inbound TCP ports are allowed to reach individual EC2 instances and must be able to reference other security groups as allowed sources. Which construct should be used?",
+            "options": [
+                "Route table entries for the VPC",
+                "VPC flow logs with metric filters",
+                "Security groups attached to the instances",
+                "Network ACLs applied at the subnet level"
+            ],
+            "correct_index": 2,
+            "explanation": "Security groups are stateful, attach at the instance or ENI level, allow rules to reference other security groups, and apply only allow rules. Network ACLs are subnet-level and stateless, route tables direct traffic rather than filter it, and flow logs record traffic without enforcing policy.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-012",
+            "domain": "Design Secure Architectures",
+            "stem": "A new AWS account has just been created, and the security lead wants to harden the account root user according to AWS best practice. Which action should the architect take?",
+            "options": [
+                "Share the root credentials with the operations team for daily administration",
+                "Disable multi-factor authentication so break-glass access stays simple",
+                "Create access keys for the root user and embed them in automation",
+                "Enable multi-factor authentication on the root user and reserve it for tasks that require root"
+            ],
+            "correct_index": 3,
+            "explanation": "AWS best practice is to protect the root user with MFA and use it only for the few tasks that require root, such as changing the account email or closing the account. Sharing it, disabling MFA, or creating root access keys all convert the highest-privilege identity into a routine and easily abused credential.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-013",
+            "domain": "Design Secure Architectures",
+            "stem": "A company connects its VPC to an on-premises network over a VPN. Hosts in the VPC must resolve names for on-premises servers, and on-premises hosts must resolve names for resources in the VPC. Which service should the architect configure?",
+            "options": [
+                "Amazon Route 53 Resolver inbound and outbound endpoints",
+                "A public Route 53 hosted zone for the on-premises domain",
+                "AWS Transit Gateway with a public route table",
+                "An internet-facing Application Load Balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "Route 53 Resolver outbound endpoints forward VPC queries to on-premises DNS, and inbound endpoints let on-premises resolvers reach VPC private zones, giving bidirectional resolution. A public zone exposes names publicly, Transit Gateway routes packets but does not resolve names, and a load balancer has nothing to do with DNS resolution.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-014",
+            "domain": "Design Secure Architectures",
+            "stem": "An application must store third-party API keys and rotate them automatically on a schedule, and the keys must never appear in source code or in plaintext configuration. Which service should the architect choose?",
+            "options": [
+                "An S3 object that holds the keys in a private bucket",
+                "AWS Secrets Manager with rotation configured for the secret",
+                "AWS Systems Manager Parameter Store strings that are not encrypted",
+                "An Amazon DynamoDB table that stores the keys in plaintext"
+            ],
+            "correct_index": 1,
+            "explanation": "Secrets Manager stores secrets encrypted at rest with KMS and can rotate them on a schedule without new deployments. Plain Parameter Store strings, plaintext DynamoDB items, and private S3 objects store the value but provide neither built-in rotation nor the same access auditing.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-015",
+            "domain": "Design Secure Architectures",
+            "stem": "A security architect wants every AWS API call in a production account to be denied unless a central policy explicitly permits it, and wants the guardrail to hold even when a resource policy allows the action. Which design principle should be applied?",
+            "options": [
+                "Grant broad permissions and monitor usage afterward to catch abuse",
+                "Rely on resource-based policies alone to control access to every service",
+                "Use service control policies and explicit deny statements so access is denied by default",
+                "Rely on the implicit deny in IAM and never write explicit deny statements"
+            ],
+            "correct_index": 2,
+            "explanation": "An explicit deny in a service control policy or identity policy cannot be overridden by any other policy, so deny-by-default with central guardrails is the strongest control. Implicit deny leaves every newly granted allow effective, broad permissions trust monitoring to catch harm later, and resource policies alone cannot cover every API path.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-016",
+            "domain": "Design Secure Architectures",
+            "stem": "A company wants to detect unusual volumes of write API calls and unusual API error rates across its AWS accounts and be alerted without writing custom analysis code. Which AWS capability should the architect enable?",
+            "options": [
+                "Amazon CloudWatch Logs with a hand-written metric filter",
+                "VPC flow logs analyzed later with Amazon Athena",
+                "AWS Config conformance packs",
+                "AWS CloudTrail Insights on a multi-region trail"
+            ],
+            "correct_index": 3,
+            "explanation": "CloudTrail Insights continuously analyzes management events and surfaces unusual write activity and error-rate changes automatically, with no custom code. A custom metric filter is exactly the manual work being avoided, flow logs cover network traffic only, and Config conformance packs evaluate resource configuration, not anomalous API behavior.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-017",
+            "domain": "Design Secure Architectures",
+            "stem": "An architect needs stateless subnet-level filtering that can explicitly allow and deny traffic by CIDR range in both the inbound and outbound directions. Which AWS construct satisfies this requirement?",
+            "options": [
+                "Network ACLs associated with the subnets",
+                "Security groups attached to the elastic network interfaces",
+                "An internet gateway attached to the VPC",
+                "A NAT gateway running in a public subnet"
+            ],
+            "correct_index": 0,
+            "explanation": "Network ACLs operate at the subnet boundary, are stateless, and support both allow and deny rules with numbered precedence. Security groups are stateful and allow-only, an internet gateway provides connectivity rather than filtering, and a NAT gateway translates addresses for outbound traffic.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-018",
+            "domain": "Design Secure Architectures",
+            "stem": "A company wants every new EBS volume and snapshot created in a Region to be encrypted automatically, even when the user launching the resource does not specify encryption. Which setting should the architect enable?",
+            "options": [
+                "KMS grants issued individually to each user who launches instances",
+                "The EBS encryption-by-default setting for the Region",
+                "An IAM policy that denies the ec2:CreateVolume action",
+                "Manual encryption of each volume after it is created"
+            ],
+            "correct_index": 1,
+            "explanation": "Enabling EBS encryption by default makes every new volume and snapshot that copies it encrypted with a KMS key without any action by the launcher. Denying CreateVolume blocks storage entirely, encrypting after creation leaves a window of unencrypted data, and issuing grants per user is error-prone and does not default new resources.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-019",
+            "domain": "Design Secure Architectures",
+            "stem": "An application in a private subnet must reach a SaaS partner's service securely without using the public internet and without exposing traffic to a shared network with unrelated parties. Which AWS feature should the architect use?",
+            "options": [
+                "A site-to-site VPN to the partner's data center",
+                "AWS Direct Connect to the partner's Region",
+                "AWS PrivateLink with an interface VPC endpoint to the partner service",
+                "A VPC peering connection with the partner's VPC"
+            ],
+            "correct_index": 2,
+            "explanation": "AWS PrivateLink exposes a service as a private endpoint inside the consumer VPC so traffic never crosses the public internet and the partner's VPC is not directly attached. VPC peering requires full network-level trust and non-overlapping ranges, while a VPN or Direct Connect reaches the partner's own network rather than a hosted AWS service endpoint.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Secure Architectures"
+        },
+        {
+            "id": "aws-saa-020",
+            "domain": "Design Resilient Architectures",
+            "stem": "A production Amazon RDS for PostgreSQL database must automatically fail over to a standby in another Availability Zone if the primary becomes unavailable, with minimal administrative effort. Which configuration should the architect choose?",
+            "options": [
+                "A Single-AZ deployment with automated snapshots",
+                "A read replica placed in the same Availability Zone",
+                "A larger instance class in a single Availability Zone",
+                "A Multi-AZ deployment with a synchronous standby replica"
+            ],
+            "correct_index": 3,
+            "explanation": "Multi-AZ maintains a synchronous standby in a second Availability Zone and automatically promotes it on failure, so failover needs no manual steps. Snapshots require a restore and read replica in the same zone shares the failure domain, and a bigger single instance does not remove the Availability Zone as a single point of failure.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-021",
+            "domain": "Design Resilient Architectures",
+            "stem": "A media company must keep copies of its S3 objects available in a second AWS Region so that a regional outage does not interrupt delivery. Which S3 feature should the architect enable?",
+            "options": [
+                "Cross-Region Replication with versioning enabled on the source and destination buckets",
+                "S3 lifecycle rules that transition objects to S3 Glacier",
+                "Server-side encryption with an S3 managed key",
+                "S3 Storage Lens dashboards"
+            ],
+            "correct_index": 0,
+            "explanation": "Cross-Region Replication asynchronously copies objects to a bucket in another Region, so data remains available if the source Region fails, and it requires versioning on both buckets. Lifecycle transitions change storage class within one Region, encryption protects data but does not copy it, and Storage Lens only provides visibility.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-022",
+            "domain": "Design Resilient Architectures",
+            "stem": "A business requires its database to be writable again within a few minutes of an Availability Zone failure and cannot accept a manual restore from backup. Which RDS design meets this recovery time objective?",
+            "options": [
+                "A cold standby database that must be started manually",
+                "A Multi-AZ deployment with automatic failover to a standby",
+                "A Single-AZ deployment with nightly snapshots",
+                "A weekly logical dump written to Amazon S3"
+            ],
+            "correct_index": 1,
+            "explanation": "Multi-AZ automatic failover promotes the standby in another Availability Zone in typically a minute or two, meeting a short recovery time objective. Nightly snapshots and weekly dumps require a restore, and a cold standby started by hand adds substantial manual delay.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-023",
+            "domain": "Design Resilient Architectures",
+            "stem": "An application tier behind a load balancer stores user session state on the local disk of each instance, which breaks whenever an instance is replaced. The architect wants any instance to be able to serve any user. Which change should be made?",
+            "options": [
+                "Store the sessions in a file on an EBS volume attached to one instance",
+                "Reduce the number of instances to avoid replacement",
+                "Move session state to a shared store such as ElastiCache or DynamoDB",
+                "Enable sticky sessions so each user always reaches the same instance"
+            ],
+            "correct_index": 2,
+            "explanation": "Externalizing session state into a shared, highly available store makes the application tier stateless so any instance can serve any user and instance replacement is harmless. Sticky sessions merely hide the problem, a single EBS volume is itself a failure point, and cutting capacity reduces resilience rather than improving it.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-024",
+            "domain": "Design Resilient Architectures",
+            "stem": "A fleet of EC2 instances must maintain a fixed capacity and automatically replace any instance that fails a health check without human intervention. Which service should the architect use?",
+            "options": [
+                "An Application Load Balancer attached to a single target",
+                "Amazon Route 53 latency routing records",
+                "Manual snapshots restored on demand",
+                "An Auto Scaling group configured with the desired capacity and health checks"
+            ],
+            "correct_index": 3,
+            "explanation": "An Auto Scaling group keeps the desired count, replaces unhealthy instances automatically, and can spread them across Availability Zones. A load balancer distributes traffic but does not replace instances, Route 53 changes DNS answers, and restoring snapshots manually is the intervention being eliminated.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-025",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company needs a disaster recovery strategy that keeps a scaled-down yet fully functional copy of its environment running in a second Region so it can be promoted quickly with minimal data loss during a failover. Which strategy matches these requirements?",
+            "options": [
+                "A warm standby environment in the second Region",
+                "A backup and restore strategy using only snapshots",
+                "A pilot light with no running application servers",
+                "A multi-site active-active deployment"
+            ],
+            "correct_index": 0,
+            "explanation": "Warm standby runs a scaled-down but complete copy of the stack in the second Region, so recovery is faster than backup and restore and data loss is small. Pilot light keeps only core services running and needs more build-out, backup and restore is the slowest option, and active-active exceeds the stated requirement and cost.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-026",
+            "domain": "Design Resilient Architectures",
+            "stem": "A global application is served from a primary Region and must automatically send users to a secondary Region when the primary endpoint becomes unhealthy. Which configuration should the architect implement?",
+            "options": [
+                "VPC peering between the two Regions",
+                "Route 53 failover routing with health checks on both endpoints",
+                "Route 53 simple routing records that point at both Regions",
+                "An internal Application Load Balancer in each Region"
+            ],
+            "correct_index": 1,
+            "explanation": "Failover routing with Route 53 health checks serves the primary record while it is healthy and shifts to the secondary record when the health check fails. Simple routing does not understand health, an internal load balancer is not reachable from the internet, and VPC peering provides connectivity but no DNS-level failover.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-027",
+            "domain": "Design Resilient Architectures",
+            "stem": "A web application runs on EC2 instances in a single Availability Zone and experiences downtime whenever that zone has an issue. The architect must make the web tier resilient to the loss of one zone. What should be done?",
+            "options": [
+                "Add more instances to the same single Availability Zone",
+                "Replace the load balancer with a Network Load Balancer in the same zone",
+                "Distribute the instances across multiple Availability Zones behind an Application Load Balancer and an Auto Scaling group",
+                "Increase the instance size within the existing Availability Zone"
+            ],
+            "correct_index": 2,
+            "explanation": "Spreading instances across multiple Availability Zones behind a load balancer and Auto Scaling group removes the single-zone dependency so the tier survives a zone outage. Bigger or more instances in one zone, or a load balancer in the same zone, all remain confined to the failing failure domain.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-028",
+            "domain": "Design Resilient Architectures",
+            "stem": "A team needs durable point-in-time backups of its EBS volumes that survive the loss of the volume and can be restored to a new volume in the same Region. Which method should the architect use?",
+            "options": [
+                "Enable an instance store volume for backups",
+                "Copy the volume contents onto the root device of the instance",
+                "Rely on the assumption that EBS volumes are already backed up automatically",
+                "Create EBS snapshots, which are stored durably in Amazon S3"
+            ],
+            "correct_index": 3,
+            "explanation": "EBS snapshots are incremental, stored durably in Amazon S3 behind the scenes, and can create new volumes independently of the source volume. Instance store and the root device share the instance lifecycle, and EBS volumes are not automatically backed up, so explicit snapshots are required.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-029",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company must ensure its object data survives the complete failure of an AWS Region and remains readable from another Region with low recovery time. Which design should the architect implement?",
+            "options": [
+                "Cross-Region Replication to a bucket in a second Region",
+                "S3 lifecycle transition to S3 Standard-Infrequent Access",
+                "S3 Versioning alone in the source bucket",
+                "Server-side encryption with an S3 managed key"
+            ],
+            "correct_index": 0,
+            "explanation": "Cross-Region Replication maintains a live copy of objects in a bucket in a second Region, so a regional outage does not lose data and the replica can serve reads quickly. Lifecycle transition stays within one Region, versioning alone does not leave the Region, and encryption protects content without replicating it.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-030",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company has a limited budget and can tolerate a recovery point objective of up to 24 hours and a recovery time objective of up to 24 hours for a non-critical system. Which disaster recovery approach is the most cost-effective fit?",
+            "options": [
+                "A pilot light with continuously replicated data",
+                "Backup and restore using scheduled snapshots copied to another Region",
+                "Warm standby with a scaled-down running environment",
+                "Multi-site active-active across two Regions"
+            ],
+            "correct_index": 1,
+            "explanation": "Backup and restore is the least expensive approach because no standing infrastructure runs in the recovery Region, and it comfortably meets a 24-hour objective for both metrics. Warm standby, pilot light, and active-active all run and pay for more capacity than such loose objectives require.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-031",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company runs Amazon Aurora and needs automatic failover plus the ability to distribute read traffic across multiple replicas in different Availability Zones. Which configuration should the architect use?",
+            "options": [
+                "An Aurora instance with a read replica in the same Availability Zone",
+                "A standalone RDS instance with a manual failover script",
+                "An Aurora cluster with a writer instance and reader instances across Availability Zones",
+                "A single Aurora instance with no replicas"
+            ],
+            "correct_index": 2,
+            "explanation": "An Aurora cluster maintains a writer plus up to fifteen reader instances that can span Availability Zones, providing automatic failover and read scaling with a shared cluster endpoint. A single instance has no redundancy, a same-zone replica shares the failure domain, and a standalone instance with a script is manual and slow.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-032",
+            "domain": "Design Resilient Architectures",
+            "stem": "Private subnets in three Availability Zones each route internet-bound traffic through one NAT gateway that resides in a single zone. The architect must eliminate this single point of failure. What should be done?",
+            "options": [
+                "Replace the NAT gateway with an internet gateway in each private subnet",
+                "Deploy a second NAT gateway in the same Availability Zone",
+                "Route every private subnet through a single larger NAT gateway",
+                "Deploy one NAT gateway per Availability Zone and route each subnet to the gateway in its own zone"
+            ],
+            "correct_index": 3,
+            "explanation": "Placing a NAT gateway in each Availability Zone and pointing each subnet at its local gateway removes the cross-zone single point of failure and keeps traffic local. An internet gateway is not a substitute in private subnets, a second gateway in the same zone shares the same failure domain, and one larger gateway is still a single point of failure.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-033",
+            "domain": "Design Resilient Architectures",
+            "stem": "A database must be recoverable to within five minutes of data loss after a failure. Which change most directly improves the recovery point objective?",
+            "options": [
+                "Enable continuous replication or transaction log shipping to a standby",
+                "Take nightly snapshots and store them in the same Region",
+                "Take weekly backups to Amazon S3 Glacier",
+                "Disable automated backups to reduce overhead"
+            ],
+            "correct_index": 0,
+            "explanation": "A five-minute recovery point objective requires near-continuous replication of changes, and transaction log shipping or synchronous replication captures data within that window. Nightly and weekly backups lose up to a day or a week of changes, and disabling backups makes the objective impossible.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-034",
+            "domain": "Design Resilient Architectures",
+            "stem": "A tightly coupled application loses messages whenever a downstream service is temporarily unavailable. The architect must decouple the tiers so a failure in one does not cause data loss in the other. Which service should be introduced?",
+            "options": [
+                "A shared EBS volume mounted by both tiers",
+                "An Amazon SQS queue between the producer and consumer tiers",
+                "A larger EC2 instance for the consumer tier",
+                "A second load balancer in front of the consumer tier"
+            ],
+            "correct_index": 1,
+            "explanation": "An SQS queue buffers messages durably so the producer keeps working when the consumer is down and the consumer drains the backlog on recovery, decoupling the tiers. A larger instance or a second load balancer does not survive a consumer outage, and a shared volume creates coupling and a contention point rather than removing it.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-035",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company hosts an application in a primary site and a recovery site, and wants DNS to direct users to the recovery site automatically only when the primary site's health check fails. Which routing policy should be configured?",
+            "options": [
+                "Route 53 simple routing to a single record",
+                "Route 53 geolocation routing for all users",
+                "Route 53 failover routing with an associated health check",
+                "Route 53 weighted routing with equal weights"
+            ],
+            "correct_index": 2,
+            "explanation": "Failover routing serves the primary record while its health check passes and switches to the secondary record when it fails, which is exactly the requested behavior. Weighted routing splits traffic by fixed proportions regardless of health, simple routing has no health awareness, and geolocation routing is based on user location, not availability.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-036",
+            "domain": "Design Resilient Architectures",
+            "stem": "An application must keep serving traffic and automatically recover capacity when an entire Availability Zone becomes unavailable. Which combination should the architect deploy?",
+            "options": [
+                "A single EC2 instance in one Availability Zone with an Elastic IP address",
+                "A Network Load Balancer placed in a single Availability Zone",
+                "Several EC2 instances behind a single instance in one Availability Zone",
+                "An Application Load Balancer and an Auto Scaling group that span multiple Availability Zones"
+            ],
+            "correct_index": 3,
+            "explanation": "A multi-AZ Application Load Balancer stops routing to an impaired zone and an Auto Scaling group replaces lost capacity in the healthy zones, so the application keeps running. All of the other options concentrate the workload in a single Availability Zone and therefore fail with that zone.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-037",
+            "domain": "Design Resilient Architectures",
+            "stem": "A company stores critical documents in S3 and must protect against accidental deletion or overwrite while also moving older versions to cheaper storage automatically. Which combination should the architect enable?",
+            "options": [
+                "S3 Versioning with lifecycle rules that transition noncurrent versions",
+                "S3 Transfer Acceleration with a public bucket policy",
+                "Server-side encryption with a bucket ACL that grants full control",
+                "S3 Storage Lens with versioning left disabled"
+            ],
+            "correct_index": 0,
+            "explanation": "Versioning keeps prior object versions recoverable after overwrite or deletion, and lifecycle rules can transition those noncurrent versions to lower-cost classes. Transfer Acceleration only speeds transfers, a public ACL weakens security, and Storage Lens reports usage without protecting or tiering data.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Resilient Architectures"
+        },
+        {
+            "id": "aws-saa-038",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A website serves static assets from an S3 bucket to users around the world, and users report high latency because requests travel to a distant Region. Which solution should the architect implement to reduce latency?",
+            "options": [
+                "Enable S3 Transfer Acceleration on the bucket",
+                "Put Amazon CloudFront in front of the S3 bucket with an origin access control",
+                "Serve the bucket directly from a single Region",
+                "Move the bucket to a Region near the largest user base"
+            ],
+            "correct_index": 1,
+            "explanation": "CloudFront caches objects at edge locations close to users, cutting latency for a global audience while origin access control keeps the bucket private. Serving directly or moving the bucket still makes distant users fetch from one Region, and Transfer Acceleration speeds uploads, not global downloads.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-039",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A web application experiences unpredictable traffic that varies from a few requests per minute to thousands per second. The architect must scale compute automatically while distributing load. Which combination should be used?",
+            "options": [
+                "A fixed number of instances sized for peak load",
+                "Manual scaling triggered by an operator each morning",
+                "An Auto Scaling group behind an Application Load Balancer with target tracking policies",
+                "A single large EC2 instance with a static Elastic IP address"
+            ],
+            "correct_index": 2,
+            "explanation": "An Auto Scaling group with target tracking adds and removes capacity as demand changes, and the Application Load Balancer distributes requests across the healthy fleet. A single instance cannot scale or survive failure, fixed peak-sized capacity wastes money, and manual scaling cannot keep up with unpredictable load.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-040",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A reporting workload is overwhelming a production Amazon RDS database with read queries. The architect must offload those reads without affecting write performance. Which solution should be used?",
+            "options": [
+                "Enable Multi-AZ on the database to absorb the reads",
+                "Increase the size of the primary instance only",
+                "Point all read queries at the Multi-AZ standby instance",
+                "Create RDS read replicas and direct read queries to them"
+            ],
+            "correct_index": 3,
+            "explanation": "Read replicas are separate instances that asynchronously copy the primary and serve read-only traffic, removing read load from the writer. Multi-AZ improves availability but its standby is not readable, resizing the primary only raises its ceiling, and the standby cannot accept application reads.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-041",
+            "domain": "Design High-Performing Architectures",
+            "stem": "An application repeatedly reads the same reference data from a database, causing latency and heavy load. The architect wants sub-millisecond reads for this data with minimal changes to the database. Which service should be added?",
+            "options": [
+                "Amazon ElastiCache in front of the database",
+                "An Amazon SQS queue between the application and the database",
+                "An Amazon SNS topic to publish the reference data",
+                "Amazon CloudFront with a cache policy in front of the database"
+            ],
+            "correct_index": 0,
+            "explanation": "ElastiCache is an in-memory cache that serves frequently read data in sub-millisecond time and reduces database load without touching the schema. SQS and SNS are messaging services that do not cache reads, and CloudFront caches HTTP content at the edge, not arbitrary database query results.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-042",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A company must run short event-driven functions that respond to S3 uploads without managing any servers and without paying for idle time. Which compute service should the architect choose?",
+            "options": [
+                "Amazon ECS running on EC2 instances",
+                "AWS Lambda",
+                "Amazon EC2 with a Reserved Instance",
+                "Amazon EMR"
+            ],
+            "correct_index": 1,
+            "explanation": "Lambda runs code in response to events such as S3 uploads, manages all servers, and bills per invocation so idle time is free. EC2 billed with a Reserved Instance charges for the reserved term even when idle, EMR is for big data processing clusters, and ECS on EC2 still requires managing EC2 capacity.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-043",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A workload needs SSD-backed EBS storage with a baseline of 3,000 IOPS and the ability to adjust IOPS and throughput independently without changing the volume size. Which volume type should the architect choose?",
+            "options": [
+                "Cold HDD sc1",
+                "Instance store volumes",
+                "General Purpose SSD gp3",
+                "Throughput Optimized HDD st1"
+            ],
+            "correct_index": 2,
+            "explanation": "gp3 provides a 3,000 IOPS baseline on SSD and lets you provision IOPS and throughput separately from capacity. st1 and sc1 are HDD-backed and suited to throughput or archival rather than IOPS, and instance store is ephemeral and tied to the instance lifecycle.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-044",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A new application needs a fully managed key-value store that delivers consistent single-digit millisecond latency at virtually any scale with no server management. Which service should the architect choose?",
+            "options": [
+                "Amazon Aurora MySQL",
+                "Amazon S3",
+                "Amazon Redshift",
+                "Amazon DynamoDB"
+            ],
+            "correct_index": 3,
+            "explanation": "DynamoDB is a fully managed key-value and document store engineered for single-digit millisecond latency at any scale. Aurora is a relational engine with different access patterns, S3 is object storage, and Redshift is a data warehouse optimized for analytical queries rather than low-latency key lookups.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-045",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A company must expose backend functions as a managed REST API that scales automatically, throttles requests, and handles authentication without provisioning servers. Which service should the architect use?",
+            "options": [
+                "Amazon API Gateway",
+                "An Application Load Balancer with path routing",
+                "A NAT gateway with port forwarding",
+                "An internet gateway attached to the VPC"
+            ],
+            "correct_index": 0,
+            "explanation": "API Gateway is a fully managed service that publishes REST APIs, scales automatically, applies throttling and usage plans, and integrates with authorizers for authentication. A load balancer routes to targets but lacks API management, and NAT and internet gateways only provide network connectivity.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-046",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A distributed workforce uploads large files from many continents to a single S3 bucket and downloads them globally, and the architect must optimize both upload and download performance. Which combination should be used?",
+            "options": [
+                "AWS Direct Connect for every user location",
+                "S3 Transfer Acceleration for uploads and Amazon CloudFront for downloads",
+                "Sequential object key naming for both directions",
+                "A single larger S3 object for each transfer"
+            ],
+            "correct_index": 1,
+            "explanation": "Transfer Acceleration uses CloudFront edge locations to speed long-distance uploads into S3, while CloudFront caches downloads close to users. Sequential key naming is an outdated anti-pattern, one huge object does not help throughput, and Direct Connect is not practical for every individual user location.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-047",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A transactional database on EC2 requires tens of thousands of provisioned IOPS with consistent sub-millisecond latency and high durability. Which EBS volume type should the architect select?",
+            "options": [
+                "Throughput Optimized HDD st1",
+                "Cold HDD sc1",
+                "Provisioned IOPS SSD io2",
+                "General Purpose SSD gp2"
+            ],
+            "correct_index": 2,
+            "explanation": "io2 is the provisioned IOPS SSD class designed for the highest, most consistent transactional performance with high durability. gp2 caps out at lower IOPS, and st1 and sc1 are throughput-oriented HDD types that cannot deliver tens of thousands of consistent IOPS at sub-millisecond latency.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-048",
+            "domain": "Design High-Performing Architectures",
+            "stem": "An API built on Amazon API Gateway repeatedly queries the same backend endpoint, driving up cost and latency. The architect wants to serve repeated responses faster without changing the backend. Which feature should be enabled?",
+            "options": [
+                "A larger backend instance class",
+                "An Elastic IP address on the backend",
+                "Disabling compression on the API",
+                "API Gateway caching on the stage"
+            ],
+            "correct_index": 3,
+            "explanation": "Enabling caching at the API Gateway stage stores responses so repeated identical requests are served from cache, reducing backend calls and latency. Resizing the backend does not remove the repeated calls, an Elastic IP changes addressing rather than load, and disabling compression increases payload size and slows responses.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-049",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A DynamoDB table sees unpredictable traffic spikes and the team does not want to forecast or manage capacity. Which capacity mode should the architect choose?",
+            "options": [
+                "On-demand capacity mode",
+                "Provisioned capacity with a fixed read capacity",
+                "Provisioned capacity with auto scaling turned off",
+                "Provisioned capacity that an operator adjusts manually"
+            ],
+            "correct_index": 0,
+            "explanation": "On-demand mode automatically accommodates unpredictable traffic and charges per request, so no capacity planning is needed. Provisioned modes require setting and managing read and write capacity, and a fixed or manually adjusted value either throttles during spikes or wastes spend during quiet periods.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-050",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A high performance computing workload on EC2 requires the highest available network throughput with lower CPU overhead for packet processing. Which capability should the architect verify is enabled?",
+            "options": [
+                "An Elastic IP address assigned to the instance",
+                "Elastic Network Adapter (ENA) with enhanced networking",
+                "A single elastic network interface per instance",
+                "Disabled TCP segmentation offload on the adapter"
+            ],
+            "correct_index": 1,
+            "explanation": "ENA provides enhanced networking with higher bandwidth and lower CPU utilization for packet processing on supported instance types. A single ENI does not raise throughput, disabling segmentation offload increases CPU work, and an Elastic IP only affects addressing, not network performance.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-051",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A web application must compress text responses automatically at AWS edge locations so that content reaches users faster and consumes less bandwidth. Which configuration should the architect use?",
+            "options": [
+                "Compress files manually and serve them from S3 with caching disabled",
+                "Store uncompressed objects and rely on the client to request gzip",
+                "Enable automatic compression on the CloudFront distribution",
+                "Enable compression on the Application Load Balancer only"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudFront can automatically compress supported content types at the edge based on the Accept-Encoding request header, reducing bytes on the wire for the whole audience. A load balancer does not perform edge compression, manual compression with caching off loses both benefits, and ignoring the header serves uncompressed data.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-052",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A read-heavy application using DynamoDB needs microsecond response times for repeated reads and should not require changes to the application's existing DynamoDB API calls. Which solution should the architect add?",
+            "options": [
+                "An Amazon SQS delay queue",
+                "An Amazon SNS topic",
+                "Amazon Kinesis Data Streams",
+                "Amazon DynamoDB Accelerator (DAX)"
+            ],
+            "correct_index": 3,
+            "explanation": "DAX is a managed in-memory cache that is API compatible with DynamoDB, so existing calls get microsecond reads from the cluster without code changes. SQS, SNS, and Kinesis are messaging and streaming services that do not accelerate DynamoDB reads and would require application changes.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-053",
+            "domain": "Design High-Performing Architectures",
+            "stem": "A real-time leaderboard application requires sub-millisecond read and write latency for complex data structures such as sorted sets. Which service should the architect use?",
+            "options": [
+                "Amazon ElastiCache for Redis",
+                "Amazon ElastiCache for Memcached backed by disk storage",
+                "Amazon RDS with a cold standby",
+                "Amazon S3 with the Standard-Infrequent Access class"
+            ],
+            "correct_index": 0,
+            "explanation": "ElastiCache for Redis is an in-memory store that supports rich structures including sorted sets and delivers sub-millisecond latency. Memcached has a simpler key-value model without sorted sets, RDS is disk-based, and S3 is object storage, none of which meet the structure and latency needs.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design High-Performing Architectures"
+        },
+        {
+            "id": "aws-saa-054",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company suspects that many EC2 instances are over-provisioned. The architect must identify instances whose CPU and memory utilization are consistently low over time before resizing them. Which approach should be used?",
+            "options": [
+                "Purchase Reserved Instances for the current sizes without any review",
+                "Analyze Amazon CloudWatch metrics and right-size the instances accordingly",
+                "Launch the largest available instance type for every workload",
+                "Never change instance types after the initial launch"
+            ],
+            "correct_index": 1,
+            "explanation": "Right-sizing starts from observed CloudWatch utilization data, so consistently underused instances can be moved to smaller types that still meet demand. Always choosing the largest type or refusing to resize wastes money, and committing to Reserved Instances before reviewing usage locks in the inefficiency.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-055",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A production workload runs on a fixed number of EC2 instances continuously for the next three years. Which pricing model is the most cost-effective?",
+            "options": [
+                "Spot Instances for the production database tier",
+                "Dedicated Hosts for every instance",
+                "A three-year Reserved Instance or Savings Plan for the steady-state capacity",
+                "On-Demand Instances for the entire term"
+            ],
+            "correct_index": 2,
+            "explanation": "When usage is steady and predictable, a long-term commitment with Reserved Instances or Savings Plans yields the largest discount. On-Demand pays the highest rate, Spot can be reclaimed and is unsuitable for a production database, and Dedicated Hosts cost more than needed for typical workloads.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-056",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A bucket holds objects with unknown and changing access patterns, and the company wants to optimize storage cost automatically without retrieval fees for infrequent access. Which storage class should the architect choose?",
+            "options": [
+                "S3 Standard for all objects",
+                "S3 One Zone-IA for all objects",
+                "S3 Glacier Instant Retrieval for all objects",
+                "S3 Intelligent-Tiering"
+            ],
+            "correct_index": 3,
+            "explanation": "S3 Intelligent-Tiering monitors access patterns and moves objects between tiers automatically with no retrieval fees for the infrequent tiers. S3 Standard overpays for cold data, One Zone-IA sacrifices durability by using one Availability Zone, and Glacier Instant Retrieval has minimum storage durations that suit archives, not mixed access.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-057",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company must retain compliance records for seven years. The records are almost never accessed, and retrieval within twelve hours is acceptable. Which storage class is the most cost-effective?",
+            "options": [
+                "S3 Glacier Flexible Retrieval or Glacier Deep Archive",
+                "S3 Intelligent-Tiering in the frequent access tier",
+                "Amazon EBS volumes retained offline",
+                "S3 Standard for the entire retention period"
+            ],
+            "correct_index": 0,
+            "explanation": "Glacier Flexible Retrieval and Deep Archive are purpose-built for long-term, rarely accessed data and offer the lowest storage cost when multi-hour retrieval is acceptable. Intelligent-Tiering and S3 Standard cost far more for data that is essentially never read, and retaining offline EBS volumes is more expensive and operationally awkward.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-058",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A fault-tolerant batch processing job runs for several hours and can be interrupted and restarted without harm. The company wants the lowest possible compute cost. Which purchasing option should the architect use?",
+            "options": [
+                "Dedicated Instances",
+                "Spot Instances",
+                "On-Demand Instances",
+                "Reserved Instances purchased for the full term"
+            ],
+            "correct_index": 1,
+            "explanation": "Spot Instances offer the deepest discounts and are ideal for interruptible, restartable batch work since the job tolerates reclamation. On-Demand is the priciest on-demand rate, Reserved Instances lock in capacity for steady long-term use, and Dedicated Instances cost more for isolation that the workload does not need.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-059",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company serves the same large media files to users worldwide and is concerned about data transfer costs. Which change reduces data transfer cost while also improving delivery?",
+            "options": [
+                "Transfer the files between Regions on every request",
+                "Enable public read access directly on the origin bucket",
+                "Serve the files through Amazon CloudFront instead of directly from the origin",
+                "Serve the files from multiple NAT gateways"
+            ],
+            "correct_index": 2,
+            "explanation": "CloudFront caches content at the edge, and origin-to-edge transfer plus CloudFront egress is typically cheaper than serving every user directly from the origin Region, while latency improves. NAT gateways add cost, cross-Region transfer per request increases cost, and making the bucket public weakens security without addressing transfer cost.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-060",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A workload runs only when new files arrive, often with long idle periods between events. The company wants to pay only when the code actually runs. Which compute option is the most cost-effective?",
+            "options": [
+                "An EC2 instance running twenty-four hours a day",
+                "A Reserved Instance sized for peak load",
+                "A continuously running container on an EC2 host",
+                "AWS Lambda with pay-per-invocation pricing"
+            ],
+            "correct_index": 3,
+            "explanation": "Lambda bills only for invocation and execution time, so long idle periods cost nothing, which fits event-driven work. A continuously running instance, a peak-sized Reserved Instance, or an always-on container all charge for idle capacity the workload does not use.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-061",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A development and test database is used only during business hours and is idle overnight and on weekends. The company wants to minimize cost while keeping the schema and data. Which approach is the most cost-effective?",
+            "options": [
+                "Use Aurora Serverless v2 that scales down when idle or stop the RDS instance outside business hours",
+                "Keep a large Multi-AZ production-sized instance running continuously",
+                "Deploy a cross-Region read replica for the test database",
+                "Run the test database on a dedicated Multi-AZ cluster around the clock"
+            ],
+            "correct_index": 0,
+            "explanation": "Pausing compute when the database is idle removes most of the cost while preserving schema and data, and Aurora Serverless v2 scales capacity down automatically. A continuously running production-sized Multi-AZ instance, a cross-Region replica, or a dedicated cluster all pay for capacity that sits idle most of the week.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-062",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company wants to break down its AWS bill by project and environment so each team can be charged accurately. Which capability should the architect implement?",
+            "options": [
+                "Review the monthly bill manually without any tags",
+                "Activate cost allocation tags on resources and use them in Cost Explorer reports",
+                "Name security groups after each project and environment",
+                "Tag only the VPCs and ignore every other resource"
+            ],
+            "correct_index": 1,
+            "explanation": "Cost allocation tags applied consistently to resources let Cost Explorer and billing reports group spend by project and environment. Naming security groups is not a billing dimension, tagging only VPCs leaves most spend unattributed, and manual review cannot produce accurate per-team allocation.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-063",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company wants to reduce compute cost across a mix of EC2, Lambda, and Fargate usage in exchange for a one-year or three-year commitment to a consistent amount of spend. Which option should the architect recommend?",
+            "options": [
+                "Reserved Instances limited to a single instance family",
+                "Spot Instances for every production service",
+                "Compute Savings Plans",
+                "On-Demand capacity for all of the services"
+            ],
+            "correct_index": 2,
+            "explanation": "Compute Savings Plans apply to EC2, Lambda, and Fargate usage in exchange for a spend commitment, which matches the mixed estate. On-Demand carries no discount, a family-limited Reserved Instance covers only part of the usage, and Spot cannot be relied on for all production services because capacity can be reclaimed.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-064",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "A company wants a built-in tool that inspects its account and highlights idle load balancers and other underutilized resources so it can reduce waste. Which AWS service should the architect use?",
+            "options": [
+                "AWS CloudTrail event history",
+                "Amazon GuardDuty findings",
+                "An AWS Config recorder",
+                "AWS Trusted Advisor cost optimization checks"
+            ],
+            "correct_index": 3,
+            "explanation": "Trusted Advisor continuously evaluates an account and reports cost optimization opportunities such as idle load balancers and underutilized resources. CloudTrail records API history, GuardDuty detects security threats, and a Config recorder captures resource configuration changes, none of which flag wasted spend.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        },
+        {
+            "id": "aws-saa-065",
+            "domain": "Design Cost-Optimized Architectures",
+            "stem": "Applications in private subnets send large volumes of traffic to Amazon S3 through a NAT gateway, and the resulting data processing charges are significant. Which change reduces cost while keeping the traffic private?",
+            "options": [
+                "Create a gateway VPC endpoint for S3 and update the subnet route tables",
+                "Deploy an additional NAT gateway in each Availability Zone",
+                "Remove all endpoints and route the traffic through an internet gateway",
+                "Move the applications into public subnets"
+            ],
+            "correct_index": 0,
+            "explanation": "A gateway VPC endpoint routes S3 traffic privately and does not incur NAT gateway data processing charges, so it lowers cost while keeping traffic off the internet. Additional NAT gateways raise cost, an internet gateway requires public addressing, and public subnets weaken isolation.",
+            "reference": "AWS Certified Solutions Architect - Associate SAA-C03 Exam Guide - Design Cost-Optimized Architectures"
+        }
+    ]
+}

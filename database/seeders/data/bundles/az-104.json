@@ -1,0 +1,717 @@
+{
+    "cert_key": "az-104",
+    "title": "Microsoft Azure Administrator (AZ-104)",
+    "issuer": "Microsoft",
+    "outline_file": "outlines/az-104.json",
+    "variant_label": "AZ-104 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 120,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Microsoft AZ-104 exam skills measured (the four official domains and their weightings). Not a capture of past exam questions.",
+    "source_label": "Azure Administrator practice bank",
+    "items": [
+        {
+            "id": "az-104-001",
+            "domain": "Manage Azure identities and governance",
+            "stem": "A company wants to require multifactor authentication for all users when they sign in from outside the corporate network, while allowing single-factor sign-in on-premises. Which Microsoft Entra feature should you configure?",
+            "options": [
+                "A Microsoft Entra Conditional Access policy",
+                "Security defaults enabled for the tenant",
+                "A Microsoft Entra entitlement management access package",
+                "Per-user MFA enabled for every account"
+            ],
+            "correct_index": 0,
+            "explanation": "Conditional Access evaluates signals such as location so MFA is applied only when the conditions match, satisfying the off-network requirement without forcing MFA everywhere. Security defaults enforce MFA uniformly and cannot exclude a location, per-user MFA is all-or-nothing, and access packages manage entitlements rather than sign-in requirements.",
+            "reference": "Microsoft Learn: What is Conditional Access in Microsoft Entra ID"
+        },
+        {
+            "id": "az-104-002",
+            "domain": "Manage Azure identities and governance",
+            "stem": "You need to grant a new help-desk team the ability to reset passwords and manage users but nothing else in the tenant. Which Microsoft Entra built-in role should you assign?",
+            "options": [
+                "Global administrator",
+                "Helpdesk administrator",
+                "Billing administrator",
+                "Security reader"
+            ],
+            "correct_index": 1,
+            "explanation": "The Helpdesk administrator role can reset passwords and manage user authentication methods without the broad control of Global administrator, following least privilege. Security reader is read-only, and Billing administrator manages only billing objects.",
+            "reference": "Microsoft Learn: Microsoft Entra built-in roles"
+        },
+        {
+            "id": "az-104-003",
+            "domain": "Manage Azure identities and governance",
+            "stem": "A subscription must allow a team to create and manage resources but must prevent them from granting access to other users. Which Azure RBAC role best fits, following least privilege?",
+            "options": [
+                "Owner",
+                "User Access Administrator",
+                "Contributor",
+                "Reader"
+            ],
+            "correct_index": 2,
+            "explanation": "Contributor can create and manage all resources but cannot manage access (RBAC assignments), which is exactly the constraint. Owner and User Access Administrator can both manage access, and Reader cannot manage resources at all.",
+            "reference": "Microsoft Learn: Azure built-in roles"
+        },
+        {
+            "id": "az-104-004",
+            "domain": "Manage Azure identities and governance",
+            "stem": "A resource was created accidentally and is missing the CostCenter tag. You must enforce that every new resource includes a CostCenter tag. What should you use?",
+            "options": [
+                "A CanNotDelete resource lock on each new resource group",
+                "A management group per department",
+                "An Azure Policy with the modify effect only",
+                "An Azure Policy definition with the deny effect that requires the CostCenter tag"
+            ],
+            "correct_index": 3,
+            "explanation": "An Azure Policy assignment with a deny effect blocks creation of resources that lack the required tag, which enforces the standard. Resource locks prevent deletion or modification but cannot require tags, management groups are a scope rather than a rule, and modify alone cannot guarantee the tag is present at creation.",
+            "reference": "Microsoft Learn: Use Azure Policy to enforce tag compliance"
+        },
+        {
+            "id": "az-104-005",
+            "domain": "Manage Azure identities and governance",
+            "stem": "An administrator must be able to delete a virtual machine but must be prevented from deleting a storage account that holds audit records. What should you configure?",
+            "options": [
+                "A CanNotDelete resource lock on the storage account",
+                "A ReadOnly resource lock on the resource group",
+                "The Contributor role on the storage account",
+                "A deny assignment on the storage account"
+            ],
+            "correct_index": 0,
+            "explanation": "A CanNotDelete lock prevents deletion of the locked resource while leaving other operations available. A ReadOnly lock would also block writes across the group, the Contributor role still permits deletion, and deny assignments are created by Azure managed applications rather than directly by administrators.",
+            "reference": "Microsoft Learn: Lock resources to prevent unexpected changes"
+        },
+        {
+            "id": "az-104-006",
+            "domain": "Manage Azure identities and governance",
+            "stem": "A security review requires that eligible administrators activate privileged roles only after approval and for a limited time. Which Microsoft Entra feature meets this requirement?",
+            "options": [
+                "Conditional Access",
+                "Privileged Identity Management (PIM)",
+                "Access reviews",
+                "Administrative units"
+            ],
+            "correct_index": 1,
+            "explanation": "PIM provides just-in-time role activation with approval requirements and time-bound assignments. Conditional Access controls sign-in conditions, access reviews recertify existing access, and administrative units scope delegated administration rather than controlling activation.",
+            "reference": "Microsoft Learn: What is Privileged Identity Management?"
+        },
+        {
+            "id": "az-104-007",
+            "domain": "Manage Azure identities and governance",
+            "stem": "Finance reports that developers are provisioning expensive VM sizes in a development subscription. You must notify the team when spending in that subscription exceeds a threshold. What should you create?",
+            "options": [
+                "A resource lock on the subscription",
+                "A management group policy",
+                "A budget with an action group alert in Microsoft Cost Management",
+                "An Azure Advisor recommendation"
+            ],
+            "correct_index": 2,
+            "explanation": "Budgets in Cost Management raise alerts through action groups when actual or forecast spend crosses a threshold, enabling notification. Locks and policies do not track spend, and Advisor recommendations are advisory and do not send threshold-based budget alerts.",
+            "reference": "Microsoft Learn: Create and manage Azure budgets"
+        },
+        {
+            "id": "az-104-008",
+            "domain": "Manage Azure identities and governance",
+            "stem": "You manage many subscriptions and need a single scope at which to apply policies and RBAC across all of them, and to organise the subscriptions hierarchically. What should you create?",
+            "options": [
+                "An additional resource group in each subscription",
+                "A tenant-level Azure Policy only",
+                "A separate management group for each subscription",
+                "A management group hierarchy with the subscriptions as members"
+            ],
+            "correct_index": 3,
+            "explanation": "Management groups provide a governance scope above subscriptions so policies and role assignments inherit down a hierarchy. Resource groups sit inside a subscription, a tenant-level policy alone does not organise subscriptions, and per-subscription management groups do not create a shared parent scope.",
+            "reference": "Microsoft Learn: Organize your resources with Azure management groups"
+        },
+        {
+            "id": "az-104-009",
+            "domain": "Manage Azure identities and governance",
+            "stem": "An external partner needs to collaborate on documents stored in Microsoft 365 and must appear in the directory for easier management. Which approach should you recommend?",
+            "options": [
+                "Invite the partner as a Microsoft Entra B2B guest user",
+                "Create an internal user account and share the password",
+                "Assign the partner the Global administrator role",
+                "Add the partner to a management group"
+            ],
+            "correct_index": 0,
+            "explanation": "Microsoft Entra B2B adds external users as guest accounts that appear in the directory and can be granted scoped access with their own credentials. Creating shadow accounts and sharing passwords is insecure, Global administrator is excessive, and management groups govern subscriptions rather than external collaboration.",
+            "reference": "Microsoft Learn: Microsoft Entra B2B collaboration overview"
+        },
+        {
+            "id": "az-104-010",
+            "domain": "Manage Azure identities and governance",
+            "stem": "You need to review periodically whether contractors still require their group memberships and application access, and have reviewers confirm or remove it. Which feature should you use?",
+            "options": [
+                "Privileged Identity Management role activation",
+                "Microsoft Entra access reviews",
+                "Conditional Access named locations",
+                "Azure Policy guest configuration"
+            ],
+            "correct_index": 1,
+            "explanation": "Access reviews let reviewers periodically recertify group memberships and application access and remove stale entitlements. PIM handles privileged role activation, named locations are Conditional Access conditions, and guest configuration audits machine settings rather than entitlements.",
+            "reference": "Microsoft Learn: What are Microsoft Entra access reviews?"
+        },
+        {
+            "id": "az-104-011",
+            "domain": "Manage Azure identities and governance",
+            "stem": "A company wants to assign a set of resources (a web app, a database, and a group of identities) to new hires automatically based on their department. Which Microsoft Entra ID Governance feature should you use?",
+            "options": [
+                "Dynamic group membership based on user attributes only",
+                "A Conditional Access policy",
+                "An access package in entitlement management",
+                "A resource lock on each resource"
+            ],
+            "correct_index": 2,
+            "explanation": "Entitlement management access packages bundle resources with policies so users are assigned access as a package. Dynamic groups manage only group membership by attribute, Conditional Access controls sign-in conditions, and resource locks govern changes rather than access assignment.",
+            "reference": "Microsoft Learn: What is entitlement management?"
+        },
+        {
+            "id": "az-104-012",
+            "domain": "Manage Azure identities and governance",
+            "stem": "You must find every resource in a subscription that does not have the environment tag, and later report on changes. Which Azure tool provides an interactive query language for this?",
+            "options": [
+                "Network Watcher",
+                "Azure Monitor metrics",
+                "The Azure activity log",
+                "Azure Resource Graph"
+            ],
+            "correct_index": 3,
+            "explanation": "Azure Resource Graph uses KQL to query resources at scale, making it ideal for tag compliance reporting across subscriptions. The activity log records operations rather than resource inventory, metrics are numeric telemetry, and Network Watcher is diagnostics for networking.",
+            "reference": "Microsoft Learn: Overview of Azure Resource Graph"
+        },
+        {
+            "id": "az-104-013",
+            "domain": "Manage Azure identities and governance",
+            "stem": "You must ensure that a user can manage only the users in the marketing department and cannot manage users in other departments. What should you configure?",
+            "options": [
+                "An administrative unit containing the marketing users, with the user made an administrator of that unit",
+                "The Global administrator role for the user",
+                "A management group scoped to marketing",
+                "An Azure Policy that filters resources by department"
+            ],
+            "correct_index": 0,
+            "explanation": "Administrative units constrain delegated administration to a subset of directory objects such as users in one department. Global administrator is tenant-wide, management groups scope Azure subscriptions, and Azure Policy does not scope directory administration.",
+            "reference": "Microsoft Learn: Administrative units in Microsoft Entra ID"
+        },
+        {
+            "id": "az-104-014",
+            "domain": "Implement and manage storage",
+            "stem": "A storage account must remain readable in a secondary Azure region during a regional outage. Which redundancy option should you choose?",
+            "options": [
+                "Locally redundant storage (LRS)",
+                "Read-access geo-redundant storage (RA-GRS)",
+                "Zone-redundant storage (ZRS)",
+                "Premium block blob storage"
+            ],
+            "correct_index": 1,
+            "explanation": "RA-GRS replicates data to a paired secondary region and provides read access there during a primary outage. LRS keeps copies in one datacenter, ZRS spreads across zones within a single region, and premium is a performance tier rather than a redundancy option.",
+            "reference": "Microsoft Learn: Azure Storage redundancy"
+        },
+        {
+            "id": "az-104-015",
+            "domain": "Implement and manage storage",
+            "stem": "Data is accessed only a few times a year, must be retained for seven years at the lowest storage cost, and can tolerate several hours of retrieval latency. Which blob access tier fits best?",
+            "options": [
+                "Hot",
+                "Cool",
+                "Archive",
+                "Premium"
+            ],
+            "correct_index": 2,
+            "explanation": "Archive is the lowest-cost tier for rarely accessed data that must be retained for years, but it is offline and must be rehydrated (which can take hours) before it can be read. Hot and Cool keep data online at higher storage cost, and Premium is for high-performance workloads.",
+            "reference": "Microsoft Learn: Access tiers for Azure Blob Storage"
+        },
+        {
+            "id": "az-104-016",
+            "domain": "Implement and manage storage",
+            "stem": "An application must give a partner temporary, read-only access to a single blob without sharing the storage account keys and without requiring the partner to have an Azure account. What should you create?",
+            "options": [
+                "Rotate the storage account shared keys",
+                "A storage account firewall rule for the partner's IP address",
+                "A stored access policy on the container granting full permissions",
+                "A service SAS token scoped to that blob with read permission and a short expiry"
+            ],
+            "correct_index": 3,
+            "explanation": "A service SAS grants scoped, time-limited permissions to a specific resource without exposing account keys or requiring an identity. Rotating keys affects all users, a firewall rule limits networks rather than permissions, and granting full permissions violates least privilege.",
+            "reference": "Microsoft Learn: Grant limited access to Azure Storage resources using shared access signatures (SAS)"
+        },
+        {
+            "id": "az-104-017",
+            "domain": "Implement and manage storage",
+            "stem": "You need to automatically move blobs to cooler tiers as they age and delete them after two years to reduce cost. What should you configure?",
+            "options": [
+                "A lifecycle management rule on the storage account",
+                "A blob index tag applied to each blob",
+                "An immutability policy on the container",
+                "A change feed consumer that logs modifications"
+            ],
+            "correct_index": 0,
+            "explanation": "Lifecycle management rules transition or delete blobs automatically based on age or last-access conditions. Index tags are metadata used for queries, an immutability policy prevents modification, and the change feed records changes but does not move or delete data.",
+            "reference": "Microsoft Learn: Optimize costs by automating Azure Blob Storage access tiers"
+        },
+        {
+            "id": "az-104-018",
+            "domain": "Implement and manage storage",
+            "stem": "A legacy line-of-business application requires an SMB file share that is mounted by several on-premises servers. Which Azure storage service should you use?",
+            "options": [
+                "Blob storage with a container",
+                "Azure Files",
+                "Azure Queue storage",
+                "Azure Table storage"
+            ],
+            "correct_index": 1,
+            "explanation": "Azure Files provides SMB and NFS file shares that can be mounted by multiple clients, including on-premises servers. Blob storage uses HTTP(S) object APIs, Queue is for messaging, and Table is a NoSQL key-attribute store.",
+            "reference": "Microsoft Learn: Introduction to Azure Files"
+        },
+        {
+            "id": "az-104-019",
+            "domain": "Implement and manage storage",
+            "stem": "You need a storage account that supports blobs, files, tables, and queues and is recommended for most scenarios. Which account kind should you create?",
+            "options": [
+                "Premium block blob",
+                "Premium file share",
+                "General-purpose v2",
+                "Legacy general-purpose v1"
+            ],
+            "correct_index": 2,
+            "explanation": "General-purpose v2 supports all storage services (blob, files, tables, queues) and the latest features, making it the default recommendation. Premium kinds support only their specific service, and general-purpose v1 lacks newer capabilities such as blob access tiers.",
+            "reference": "Microsoft Learn: Azure Storage account overview"
+        },
+        {
+            "id": "az-104-020",
+            "domain": "Implement and manage storage",
+            "stem": "An administrator must be able to recover a blob that was accidentally deleted or overwritten for up to 30 days. Which storage feature should be enabled?",
+            "options": [
+                "Blob versioning only",
+                "An immutability policy on the container",
+                "Azure Backup for blobs",
+                "Blob soft delete with a 30-day retention period"
+            ],
+            "correct_index": 3,
+            "explanation": "Blob soft delete retains deleted or overwritten blob data for a configured retention period so it can be restored. Versioning alone preserves overwritten versions but not deletes unless also combined with soft delete, immutability prevents changes, and Backup requires a vault and policy that are unnecessary for simple recovery.",
+            "reference": "Microsoft Learn: Soft delete for Azure Blob Storage"
+        },
+        {
+            "id": "az-104-021",
+            "domain": "Implement and manage storage",
+            "stem": "You must protect an Azure Files share so that an on-premises file server can be restored after ransomware encrypts it. Which solution should you implement?",
+            "options": [
+                "Configure Azure Backup for the file share with a backup policy",
+                "Enable only blob soft delete",
+                "Change the account to zone-redundant storage",
+                "Create a shared access signature for the share"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Backup for Azure Files provides scheduled snapshots and retention in a Recovery Services vault, enabling restore from a point in time before the attack. Soft delete applies to blobs, redundancy protects against hardware failure rather than ransomware, and a SAS controls access rather than recovery.",
+            "reference": "Microsoft Learn: Back up Azure Files by using Azure Backup"
+        },
+        {
+            "id": "az-104-022",
+            "domain": "Implement and manage storage",
+            "stem": "A storage account must be reachable only from a specific virtual network and not over the public internet. Which configuration should you apply?",
+            "options": [
+                "Keep public network access enabled and allow all networks",
+                "Create a private endpoint in the virtual network and disable public network access",
+                "Issue a shared access signature with a long expiry",
+                "Enable geo-redundant replication"
+            ],
+            "correct_index": 1,
+            "explanation": "A private endpoint assigns a private IP from the virtual network and, with public access disabled, confines traffic to that network. A SAS controls authorization not network reachability, allowing all public networks exposes the account, and replication concerns durability rather than network isolation.",
+            "reference": "Microsoft Learn: Use private endpoints for Azure Storage"
+        },
+        {
+            "id": "az-104-023",
+            "domain": "Implement and manage storage",
+            "stem": "A compliance policy requires that storage encryption keys be controlled and rotated by the organisation rather than Microsoft. What should you configure?",
+            "options": [
+                "Infrastructure encryption",
+                "Secure transfer required (HTTPS only)",
+                "Customer-managed keys stored in Azure Key Vault",
+                "A shared access signature"
+            ],
+            "correct_index": 2,
+            "explanation": "Customer-managed keys let the organisation own and rotate the key encryption key held in Key Vault or a managed HSM. Infrastructure encryption adds a second layer under Microsoft-managed keys, HTTPS enforcement secures transport, and a SAS controls resource access rather than key ownership.",
+            "reference": "Microsoft Learn: Customer-managed keys for Azure Storage encryption"
+        },
+        {
+            "id": "az-104-024",
+            "domain": "Implement and manage storage",
+            "stem": "You must copy several terabytes of data from an on-premises file server to an Azure blob container over the internet with resumable, high-performance transfers. Which tool should you use?",
+            "options": [
+                "Azure Storage Explorer drag-and-drop",
+                "An Azure Import/Export job",
+                "Robocopy from an on-premises server",
+                "AzCopy"
+            ],
+            "correct_index": 3,
+            "explanation": "AzCopy is a command-line tool designed for high-performance, resumable, scriptable transfers to and from Azure Storage. Storage Explorer is a GUI better suited to ad hoc work, Import/Export is for shipping physical disks, and Robocopy targets SMB file shares rather than blob endpoints.",
+            "reference": "Microsoft Learn: Transfer data with AzCopy"
+        },
+        {
+            "id": "az-104-025",
+            "domain": "Implement and manage storage",
+            "stem": "A workload in a single region requires that blob data survive the failure of an entire Azure availability zone while remaining online. Which redundancy option should you choose?",
+            "options": [
+                "Zone-redundant storage (ZRS)",
+                "Locally redundant storage (LRS)",
+                "Geo-redundant storage (GRS)",
+                "Read-access geo-redundant storage (RA-GRS)"
+            ],
+            "correct_index": 0,
+            "explanation": "ZRS synchronously replicates data across three availability zones in one region, surviving a zone failure with no failover. LRS keeps three copies within a single zone, while GRS and RA-GRS replicate to a different region for regional disasters rather than zone failures.",
+            "reference": "Microsoft Learn: Azure Storage redundancy"
+        },
+        {
+            "id": "az-104-026",
+            "domain": "Implement and manage storage",
+            "stem": "A regulator requires that financial records stored in blob storage cannot be modified or deleted for seven years, even by an administrator. Which feature should you enable?",
+            "options": [
+                "Blob soft delete",
+                "An immutable (WORM) policy on the container",
+                "A CanNotDelete resource lock on the storage account",
+                "Blob versioning"
+            ],
+            "correct_index": 1,
+            "explanation": "An immutability policy enforces write-once, read-many protection for a retention interval and can be locked so that even administrators cannot delete the data. Soft delete is a recovery window, a resource lock can be removed by an owner, and versioning preserves changes rather than preventing them.",
+            "reference": "Microsoft Learn: Store business-critical blob data with immutable storage"
+        },
+        {
+            "id": "az-104-027",
+            "domain": "Implement and manage storage",
+            "stem": "You want to restrict access to a storage account so that only a specific subnet can reach it, and you want traffic to stay on the Azure backbone without allocating a private IP. Which feature should you configure?",
+            "options": [
+                "A private endpoint",
+                "A public IP address on the storage account",
+                "A virtual network service endpoint for Microsoft.Storage",
+                "An application security group"
+            ],
+            "correct_index": 2,
+            "explanation": "Virtual network service endpoints extend the virtual network identity to the storage account over the Azure backbone and can be scoped to specific subnets without allocating a private IP. A private endpoint assigns a private IP, application security groups group NICs, and public IPs expose the resource.",
+            "reference": "Microsoft Learn: Azure virtual network service endpoints"
+        },
+        {
+            "id": "az-104-028",
+            "domain": "Implement and manage storage",
+            "stem": "A security team requires that no application authenticate to a storage account using the account access keys, and that only Microsoft Entra ID identities be used. What should you configure?",
+            "options": [
+                "Rotate the account access keys every 90 days",
+                "Enable secure transfer required on the account",
+                "Enable infrastructure encryption on the account",
+                "Set Allow storage account key access to Disabled"
+            ],
+            "correct_index": 3,
+            "explanation": "Disabling shared key access forces all requests to be authorized with Microsoft Entra ID identities and RBAC roles. Key rotation still relies on keys, secure transfer only enforces HTTPS, and infrastructure encryption protects data at rest rather than changing the authorization method.",
+            "reference": "Microsoft Learn: Prevent Shared Key authorization for an Azure Storage account"
+        },
+        {
+            "id": "az-104-029",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A two-tier application must tolerate the failure of a single Azure datacenter within a region for both tiers. Which VM deployment option should you use?",
+            "options": [
+                "Deploy the VMs across availability zones",
+                "Deploy both tiers in a single availability set in one datacenter",
+                "Place all VMs on a shared VHD",
+                "Use a proximity placement group"
+            ],
+            "correct_index": 0,
+            "explanation": "Availability zones are physically separate datacenters within a region, so spreading VMs across zones survives a datacenter failure. An availability set protects only against host and rack failures within one datacenter, a shared VHD is a legacy storage model, and a proximity placement group reduces latency rather than providing resilience.",
+            "reference": "Microsoft Learn: Availability options for Azure Virtual Machines"
+        },
+        {
+            "id": "az-104-030",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A web tier must scale automatically from 2 to 20 instances based on CPU usage and remain highly available. Which Azure service should you use?",
+            "options": [
+                "A single large virtual machine with multiple data disks",
+                "A virtual machine scale set with an autoscale rule",
+                "An availability set of manually created VMs",
+                "An App Service plan with scaling disabled"
+            ],
+            "correct_index": 1,
+            "explanation": "VM scale sets create and manage identical VMs and support autoscale rules that add or remove instances based on metrics such as CPU. A single VM cannot scale out, an availability set is a static set of VMs, and an App Service plan hosts PaaS apps rather than IaaS VMs.",
+            "reference": "Microsoft Learn: Overview of virtual machine scale sets"
+        },
+        {
+            "id": "az-104-031",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "You need a disk for a production database VM that provides the high IOPS and consistent low latency the database requires, and you will manage it independently of the VM. Which disk type should you choose?",
+            "options": [
+                "Standard HDD",
+                "Standard SSD",
+                "Premium SSD",
+                "An unmanaged page blob"
+            ],
+            "correct_index": 2,
+            "explanation": "Premium SSD managed disks use SSD storage and deliver the high IOPS and consistent low latency needed for production databases. Standard HDD and Standard SSD are for lower-tier workloads, and unmanaged disks are the legacy model without the management benefits of managed disks.",
+            "reference": "Microsoft Learn: Azure managed disk types"
+        },
+        {
+            "id": "az-104-032",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A team wants to deploy and orchestrate many containerized microservices with automated scaling and self-healing, without managing the Kubernetes control plane. Which service should you recommend?",
+            "options": [
+                "Azure Container Instances",
+                "Azure Container Registry",
+                "Azure App Service Web App for Containers",
+                "Azure Kubernetes Service (AKS)"
+            ],
+            "correct_index": 3,
+            "explanation": "AKS offers a managed Kubernetes control plane for orchestrating many microservices with scaling and self-healing. Container Instances run single containers without orchestration, Container Registry stores images, and App Service runs web apps rather than providing full orchestration.",
+            "reference": "Microsoft Learn: Azure Kubernetes Service (AKS) overview"
+        },
+        {
+            "id": "az-104-033",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "Several App Service web apps must share the same compute resources and scaling configuration and be billed together. What should you create?",
+            "options": [
+                "An App Service plan and add the apps to it",
+                "A separate App Service plan for each app",
+                "An Azure Container Instance for each app",
+                "A virtual machine scale set for each app"
+            ],
+            "correct_index": 0,
+            "explanation": "An App Service plan defines the compute, scaling, and pricing tier for the web apps hosted in it, so apps sharing a plan share resources and cost. Separate plans duplicate cost, and Container Instances or VM scale sets are alternative host models rather than App Service grouping.",
+            "reference": "Microsoft Learn: Azure App Service plans overview"
+        },
+        {
+            "id": "az-104-034",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A web app must be tested in a staging environment that uses the same configuration as production, then swapped into production with no downtime. Which App Service feature enables this?",
+            "options": [
+                "Scale out to multiple instances",
+                "Deployment slots",
+                "An IP restriction rule",
+                "Continuous deployment from a Git repository"
+            ],
+            "correct_index": 1,
+            "explanation": "Deployment slots are live apps with their own hostnames that can be warmed up and swapped with production for zero-downtime releases. Scaling changes capacity, IP restrictions control access, and continuous deployment pushes code without the staged swap.",
+            "reference": "Microsoft Learn: Set up staging environments in Azure App Service"
+        },
+        {
+            "id": "az-104-035",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "You must deploy a consistent set of virtual machines and their dependent resources repeatedly across environments using infrastructure as code. Which approach should you use?",
+            "options": [
+                "Create the resources manually in the portal each time",
+                "Export the resources to a CSV file and re-import it",
+                "An ARM template (or Bicep file) deployed with Azure CLI or PowerShell",
+                "An Azure Automation runbook with manual steps"
+            ],
+            "correct_index": 2,
+            "explanation": "ARM templates and Bicep files declaratively define resources and dependencies so the same deployment is repeatable and idempotent. Manual portal work is error-prone, CSV is not a deployment format, and manual runbook steps do not guarantee consistency.",
+            "reference": "Microsoft Learn: ARM template deployment overview"
+        },
+        {
+            "id": "az-104-036",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "After each virtual machine is created, a configuration script must run automatically to install monitoring agents. What should you attach to the VM?",
+            "options": [
+                "A data disk",
+                "A network security group",
+                "A managed identity",
+                "The Custom Script Extension"
+            ],
+            "correct_index": 3,
+            "explanation": "The Custom Script Extension downloads and runs scripts on a VM after deployment, automating post-deployment configuration. Data disks add storage, network security groups filter traffic, and managed identities provide credential-free authentication rather than script execution.",
+            "reference": "Microsoft Learn: Custom Script Extension for Windows"
+        },
+        {
+            "id": "az-104-037",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A batch job runs in a container for a few minutes and does not need orchestration or a permanent server. Which service is the most cost-effective fit?",
+            "options": [
+                "Azure Container Instances",
+                "Azure Kubernetes Service",
+                "A virtual machine scale set",
+                "Azure App Service"
+            ],
+            "correct_index": 0,
+            "explanation": "Azure Container Instances runs containers on demand without managing servers or an orchestrator, and bills by the second, which suits short tasks. AKS and VM scale sets target long-running orchestrated workloads, and App Service is for web apps.",
+            "reference": "Microsoft Learn: What is Azure Container Instances?"
+        },
+        {
+            "id": "az-104-038",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "An administrator needs to ensure that when a new version of an application image is available, a scale set updates its instances without taking the whole set offline. Which setting should be configured?",
+            "options": [
+                "Automatic instance repair",
+                "An upgrade policy set to rolling",
+                "Overprovisioning disabled",
+                "A proximity placement group"
+            ],
+            "correct_index": 1,
+            "explanation": "A rolling upgrade policy updates scale set instances in batches so the workload stays available, with configurable batch size and pause. Automatic instance repair restarts unhealthy instances, overprovisioning speeds scaling, and proximity placement groups affect latency.",
+            "reference": "Microsoft Learn: Configure rolling upgrades for virtual machine scale sets"
+        },
+        {
+            "id": "az-104-039",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "A non-critical workload can be interrupted and should use spare Azure capacity at the lowest possible price. Which purchasing option should you choose?",
+            "options": [
+                "Pay-as-you-go pricing",
+                "Reserved instances",
+                "Spot virtual machines",
+                "Dedicated hosts"
+            ],
+            "correct_index": 2,
+            "explanation": "Spot VMs use spare Azure capacity at steep discounts and can be evicted when capacity is needed, which suits interruptible work. Reserved instances require a long-term commitment, pay-as-you-go is full price, and dedicated hosts are for hardware isolation.",
+            "reference": "Microsoft Learn: Azure Spot Virtual Machines"
+        },
+        {
+            "id": "az-104-040",
+            "domain": "Deploy and manage Azure compute resources",
+            "stem": "An application running on a virtual machine must access an Azure Key Vault secret without storing credentials in code. What should you configure?",
+            "options": [
+                "A service principal secret in a configuration file",
+                "A shared access signature",
+                "A connection string that contains the storage key",
+                "A system-assigned managed identity on the VM with access granted in Key Vault"
+            ],
+            "correct_index": 3,
+            "explanation": "A system-assigned managed identity gives the VM an identity in Microsoft Entra ID so it can authenticate to Key Vault without embedded credentials. Storing secrets in configuration files or connection strings exposes credentials, and a SAS applies to storage rather than Key Vault.",
+            "reference": "Microsoft Learn: Use managed identities for Azure resources"
+        },
+        {
+            "id": "az-104-041",
+            "domain": "Configure and manage virtual networking",
+            "stem": "You must block inbound Remote Desktop (TCP 3389) traffic from the internet to a subnet of VMs while allowing other traffic. What should you configure?",
+            "options": [
+                "An inbound network security group rule that denies TCP 3389 with a higher priority than the allow rules",
+                "An outbound network security group rule that denies TCP 3389",
+                "A route table with a custom route for 3389",
+                "An application security group with no rules"
+            ],
+            "correct_index": 0,
+            "explanation": "NSG rules are processed by priority with lower numbers first, so an inbound deny rule for TCP 3389 placed before any allow rule blocks the traffic. Outbound rules affect traffic leaving the VM, route tables control routing, and an ASG only groups NICs for use within rules.",
+            "reference": "Microsoft Learn: Network security groups"
+        },
+        {
+            "id": "az-104-042",
+            "domain": "Configure and manage virtual networking",
+            "stem": "Two virtual networks in different Azure regions must communicate privately over the Azure backbone. What should you configure?",
+            "options": [
+                "A site-to-site VPN connection between the virtual networks",
+                "Global virtual network peering",
+                "A public IP address on each virtual network",
+                "A NAT gateway in each virtual network"
+            ],
+            "correct_index": 1,
+            "explanation": "Global virtual network peering connects VNets across regions over the Microsoft backbone with low latency and no gateways. A site-to-site VPN uses the public internet, virtual networks do not have public IP addresses, and NAT gateways provide outbound internet access rather than VNet-to-VNet connectivity.",
+            "reference": "Microsoft Learn: Virtual network peering"
+        },
+        {
+            "id": "az-104-043",
+            "domain": "Configure and manage virtual networking",
+            "stem": "An application must be published with TLS termination and path-based routing to multiple backend pools. Which service should you use?",
+            "options": [
+                "Azure Load Balancer (Layer 4)",
+                "Azure Traffic Manager",
+                "Azure Application Gateway",
+                "Azure Firewall"
+            ],
+            "correct_index": 2,
+            "explanation": "Application Gateway is a Layer 7 load balancer that supports TLS termination and path-based routing to backend pools. Azure Load Balancer operates at Layer 4, Traffic Manager is DNS-based global routing, and Azure Firewall is a network security service rather than a load balancer.",
+            "reference": "Microsoft Learn: What is Azure Application Gateway?"
+        },
+        {
+            "id": "az-104-044",
+            "domain": "Configure and manage virtual networking",
+            "stem": "VMs in a virtual network must resolve the hostname of an Azure SQL private endpoint to its private IP address. What should you configure?",
+            "options": [
+                "A public DNS zone for the SQL server name",
+                "A hosts file entry on each virtual machine",
+                "The default Azure-provided DNS with no additional zones",
+                "An Azure Private DNS zone linked to the virtual network"
+            ],
+            "correct_index": 3,
+            "explanation": "A private DNS zone linked to the virtual network resolves private endpoint names to private IP addresses for clients in that network. A public zone resolves to public addresses, hosts files do not scale or stay in sync, and the default Azure DNS does not know the private endpoint records.",
+            "reference": "Microsoft Learn: Use Azure Private DNS zones"
+        },
+        {
+            "id": "az-104-045",
+            "domain": "Configure and manage virtual networking",
+            "stem": "An on-premises datacenter must connect to an Azure virtual network with an encrypted connection over the internet. What should you deploy?",
+            "options": [
+                "A VPN gateway with a site-to-site connection",
+                "An ExpressRoute circuit",
+                "Virtual network peering",
+                "A public load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "A VPN gateway with a site-to-site connection builds an IPsec/IKE tunnel over the internet between on-premises and Azure. ExpressRoute uses a private dedicated circuit rather than the internet, peering connects virtual networks, and a load balancer distributes traffic rather than connecting sites.",
+            "reference": "Microsoft Learn: Connect an on-premises network to Azure with VPN Gateway"
+        },
+        {
+            "id": "az-104-046",
+            "domain": "Configure and manage virtual networking",
+            "stem": "VMs in a subnet need outbound internet access, but you must not expose them to inbound connections from the internet and want a scalable managed service. What should you configure?",
+            "options": [
+                "Assign a public IP address to each virtual machine",
+                "A NAT gateway associated with the subnet",
+                "An inbound network security group rule that allows all traffic",
+                "A site-to-site VPN gateway"
+            ],
+            "correct_index": 1,
+            "explanation": "A NAT gateway provides managed, scalable source network address translation so subnet VMs can reach the internet without inbound exposure. Public IPs on VMs expose them to inbound traffic, an inbound allow-all rule increases exposure, and a VPN connects networks rather than providing internet egress.",
+            "reference": "Microsoft Learn: What is Azure NAT Gateway?"
+        },
+        {
+            "id": "az-104-047",
+            "domain": "Configure and manage virtual networking",
+            "stem": "A company hosts the same web app in multiple regions and wants to direct users to the endpoint with the lowest network latency. Which service should you use?",
+            "options": [
+                "Azure Load Balancer",
+                "Azure Application Gateway",
+                "Azure Traffic Manager with the performance routing method",
+                "A NAT gateway"
+            ],
+            "correct_index": 2,
+            "explanation": "Traffic Manager is a DNS-based global traffic distributor, and the performance method routes users to the endpoint with the lowest latency. Azure Load Balancer and Application Gateway are regional, and a NAT gateway provides outbound translation rather than global routing.",
+            "reference": "Microsoft Learn: Traffic Manager routing methods"
+        },
+        {
+            "id": "az-104-048",
+            "domain": "Configure and manage virtual networking",
+            "stem": "You must apply the same security rules to a group of NICs that host the web tier and reference them as a single entity in NSG rules. What should you use?",
+            "options": [
+                "A route table",
+                "A private endpoint",
+                "A subnet delegation",
+                "An application security group"
+            ],
+            "correct_index": 3,
+            "explanation": "Application security groups group virtual machines by workload so NSG rules can reference the group as the source or destination. Route tables control routing, private endpoints provide private connectivity, and subnet delegation is for injecting PaaS services into a subnet.",
+            "reference": "Microsoft Learn: Application security groups"
+        },
+        {
+            "id": "az-104-049",
+            "domain": "Configure and manage virtual networking",
+            "stem": "An administrator needs a public IP address for a load balancer that must support availability zones and be secure by default. Which public IP SKU should you choose?",
+            "options": [
+                "A Standard SKU public IP address",
+                "A Basic SKU public IP address",
+                "A private IP address",
+                "A public IP prefix using the Basic SKU"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard SKU public IP addresses support availability zones and are closed to inbound traffic by default (secure by default). Basic SKUs are being retired and are open by default, private IPs are not routable on the internet, and a prefix must use the Standard SKU to be zone-redundant.",
+            "reference": "Microsoft Learn: Public IP addresses in Azure"
+        },
+        {
+            "id": "az-104-050",
+            "domain": "Configure and manage virtual networking",
+            "stem": "Traffic from a subnet must be forced through a network virtual appliance for inspection before leaving the virtual network. What should you configure?",
+            "options": [
+                "An NSG deny rule on the subnet",
+                "A user-defined route with the next hop set to the virtual appliance",
+                "A service endpoint for Microsoft.Storage",
+                "A private DNS zone"
+            ],
+            "correct_index": 1,
+            "explanation": "A user-defined route (UDR) with a next hop of virtual appliance sends subnet traffic through the NVA for inspection. NSGs filter by port and protocol but do not redirect traffic, and service endpoints and private DNS do not control routing.",
+            "reference": "Microsoft Learn: Virtual network traffic routing"
+        }
+    ]
+}

@@ -1,0 +1,1277 @@
+{
+    "cert_key": "sec",
+    "title": "CompTIA Security+ SY0-701",
+    "issuer": "CompTIA",
+    "outline_file": "outlines/sy0-701.json",
+    "variant_label": "SY0-701 Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 90,
+        "scoring": "750/900 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CompTIA Security+ SY0-701 exam objectives (the five official domains and their weightings). Not a capture of past exam questions.",
+    "source_label": "Security+ practice bank",
+    "items": [
+        {
+            "id": "sec-001",
+            "domain": "General Security Concepts",
+            "stem": "A hospital encrypts patient records at rest so that stolen disks cannot be read without the key. Which element of the CIA triad does this directly protect?",
+            "options": [
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Non-repudiation"
+            ],
+            "correct_index": 0,
+            "explanation": "Encryption at rest protects confidentiality by making data unreadable without the key. Integrity is assured by hashes and signatures, availability by redundancy and failover, and non-repudiation by digital signatures and audit records.",
+            "reference": "CompTIA Security+ SY0-701 Exam Objectives - Domain 1: General Security Concepts"
+        },
+        {
+            "id": "sec-002",
+            "domain": "General Security Concepts",
+            "stem": "A governance committee writes and approves an acceptable use policy and performs an annual risk assessment. These activities are best classified as which category of security control?",
+            "options": [
+                "Physical",
+                "Managerial",
+                "Technical",
+                "Operational"
+            ],
+            "correct_index": 1,
+            "explanation": "Managerial (administrative) controls are policy, procedure, and risk-governance activities performed by people. Technical controls are implemented in systems such as firewalls and ACLs, operational controls are day-to-day human processes, and physical controls protect facilities.",
+            "reference": "NIST SP 800-53 Rev.5 - Security and Privacy Controls, control categories"
+        },
+        {
+            "id": "sec-003",
+            "domain": "General Security Concepts",
+            "stem": "A legacy application cannot enforce multi-factor authentication for administrative logins, so the team places it behind a jump host that requires MFA and records all sessions. Because the primary control cannot be met, this alternative safeguard is best described as which control type?",
+            "options": [
+                "Deterrent",
+                "Detective",
+                "Compensating",
+                "Directive"
+            ],
+            "correct_index": 2,
+            "explanation": "A compensating control provides an alternate safeguard when the primary control cannot be applied. Directive controls guide behavior through policy, deterrent controls discourage attacks, and detective controls discover events; none replace the missing native control the way a compensating control does.",
+            "reference": "NIST SP 800-53 Rev.5 - Control AC-17, remote access and compensating controls"
+        },
+        {
+            "id": "sec-004",
+            "domain": "General Security Concepts",
+            "stem": "A defense contractor requires data objects to carry sensitivity labels and allows only the operating system, not end users, to decide access based on labels and clearances. Which access control model is in use?",
+            "options": [
+                "Discretionary access control (DAC)",
+                "Role-based access control (RBAC)",
+                "Rule-based access control",
+                "Mandatory access control (MAC)"
+            ],
+            "correct_index": 3,
+            "explanation": "MAC relies on system-enforced labels and clearances that users cannot change. DAC lets owners assign permissions, RBAC grants rights by job role, and rule-based access control applies global rules such as time-of-day filters.",
+            "reference": "CompTIA Security+ SY0-701 Exam Objectives - Domain 1: General Security Concepts, access control models"
+        },
+        {
+            "id": "sec-005",
+            "domain": "General Security Concepts",
+            "stem": "A cloud platform grants storage access only when the user's department, the data classification, the request time, and the source network are combined in a policy condition. Which access control model is in use?",
+            "options": [
+                "Attribute-based access control (ABAC)",
+                "Mandatory access control (MAC)",
+                "Role-based access control (RBAC)",
+                "Discretionary access control (DAC)"
+            ],
+            "correct_index": 0,
+            "explanation": "ABAC evaluates multiple subject, object, action, and environment attributes in policy conditions. RBAC keys on role alone, MAC uses fixed labels and clearances, and DAC uses owner-assigned permissions.",
+            "reference": "NIST SP 800-162 - Guide to Attribute Based Access Control (ABAC)"
+        },
+        {
+            "id": "sec-006",
+            "domain": "General Security Concepts",
+            "stem": "Users log in with a password and then must enter a one-time code displayed on a hardware token they carry. Which authentication factor does the token provide?",
+            "options": [
+                "Somewhere you are",
+                "Something you have",
+                "Something you know",
+                "Something you are"
+            ],
+            "correct_index": 1,
+            "explanation": "A hardware token is a possession factor (something you have). The password is knowledge, a fingerprint is inherence (something you are), and a location constraint is somewhere you are.",
+            "reference": "NIST SP 800-63B - Digital Identity Guidelines, authenticator types"
+        },
+        {
+            "id": "sec-007",
+            "domain": "General Security Concepts",
+            "stem": "Which of the following is a valid multi-factor authentication scheme?",
+            "options": [
+                "A password plus a personal security question",
+                "A PIN plus a memorized passphrase",
+                "A password plus a one-time code from an authenticator app",
+                "Two different passwords set at different times"
+            ],
+            "correct_index": 2,
+            "explanation": "MFA combines different factor categories; a password (knowledge) plus an app code (possession) does this. Two passwords, a password plus a security question, and a PIN plus a passphrase are all single-category knowledge combinations.",
+            "reference": "NIST SP 800-63B - Digital Identity Guidelines"
+        },
+        {
+            "id": "sec-008",
+            "domain": "General Security Concepts",
+            "stem": "A security team stores the SHA-256 digest of each downloaded installer and re-computes it after transfer to confirm the file is unchanged. Which security goal does this satisfy?",
+            "options": [
+                "Confidentiality",
+                "Availability",
+                "Anonymity",
+                "Integrity"
+            ],
+            "correct_index": 3,
+            "explanation": "Hashing lets a recipient detect any change to the file, which protects integrity. It does not hide contents (confidentiality), guarantee uptime (availability), or conceal identity; hashing is also not encryption.",
+            "reference": "NIST FIPS 180-4 - Secure Hash Standard (SHS)"
+        },
+        {
+            "id": "sec-009",
+            "domain": "General Security Concepts",
+            "stem": "A vendor signs a software release with its private key, and a customer verifies the signature with the vendor's public key. What does this verification provide?",
+            "options": [
+                "Integrity and non-repudiation",
+                "Confidentiality and availability",
+                "Anonymity and integrity",
+                "Availability and non-repudiation"
+            ],
+            "correct_index": 0,
+            "explanation": "A digital signature proves the data was not altered (integrity) and that the holder of the private key produced it (non-repudiation). Signing does not encrypt the payload for confidentiality, and it has no bearing on availability or anonymity.",
+            "reference": "NIST FIPS 186-5 - Digital Signature Standard (DSS)"
+        },
+        {
+            "id": "sec-010",
+            "domain": "General Security Concepts",
+            "stem": "Two parties need a fast symmetric cipher for bulk data but use asymmetric cryptography only to exchange the shared key. Which statement explains why this hybrid design is common?",
+            "options": [
+                "Hashing is used to exchange the shared key",
+                "Symmetric encryption is fast for bulk data while asymmetric cryptography solves the key-distribution problem",
+                "Asymmetric cryptography cannot protect data at rest",
+                "Symmetric keys are always longer than asymmetric keys"
+            ],
+            "correct_index": 1,
+            "explanation": "Hybrid schemes use asymmetric crypto such as RSA or ECDH to exchange a symmetric session key, then use fast symmetric ciphers such as AES for bulk data. Asymmetric crypto can protect data, key length is not the reason for the split, and hashing does not exchange keys.",
+            "reference": "NIST SP 800-57 Part 1 Rev.5 - Recommendation for Key Management"
+        },
+        {
+            "id": "sec-011",
+            "domain": "General Security Concepts",
+            "stem": "After adopting the CIS Benchmarks for its servers, an administrator compares each host's current settings against the documented secure state and lists the deviations. What is this activity called?",
+            "options": [
+                "Risk transference",
+                "Data classification",
+                "Gap analysis",
+                "Penetration testing"
+            ],
+            "correct_index": 2,
+            "explanation": "Gap analysis compares actual configuration against a baseline or standard to surface deviations. Penetration testing actively exploits weaknesses, risk transference shifts risk to another party, and data classification labels information sensitivity.",
+            "reference": "CIS Benchmarks - Center for Internet Security"
+        },
+        {
+            "id": "sec-012",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker sends a finance director a tailored email that references a real ongoing project and attaches a malicious invoice. Which term best describes this attack?",
+            "options": [
+                "Phishing",
+                "Vishing",
+                "Smishing",
+                "Spear phishing"
+            ],
+            "correct_index": 3,
+            "explanation": "Spear phishing is targeted and personalized to a specific individual or small group. Generic phishing is untargeted, vishing uses voice calls, and smishing uses SMS or text messages.",
+            "reference": "CompTIA Security+ SY0-701 Exam Objectives - Domain 2: Threats, Vulnerabilities, and Mitigations"
+        },
+        {
+            "id": "sec-013",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "A user receives a phone call from someone claiming to be the IT help desk who asks them to read back a verification code. Which social-engineering technique is this?",
+            "options": [
+                "Vishing",
+                "Phishing",
+                "Whaling",
+                "Shoulder surfing"
+            ],
+            "correct_index": 0,
+            "explanation": "Vishing is voice phishing conducted over the telephone. Phishing is email-based, whaling targets senior executives, and shoulder surfing is observing a screen or keypad in person.",
+            "reference": "SANS Institute - Common Core vocabulary, social engineering"
+        },
+        {
+            "id": "sec-014",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Attackers craft an email that impersonates the CEO and asks the CFO to approve an urgent wire transfer. Which term applies?",
+            "options": [
+                "Watering hole",
+                "Whaling",
+                "Tailgating",
+                "Pretexting"
+            ],
+            "correct_index": 1,
+            "explanation": "Whaling is spear phishing aimed at senior executives. Tailgating is a physical entry technique, pretexting invents a scenario to extract information, and a watering hole compromises a site the victim group is known to visit.",
+            "reference": "SANS Institute - Common Core vocabulary, social engineering"
+        },
+        {
+            "id": "sec-015",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker calls the service desk posing as a new employee who forgot their password, inventing a believable backstory to get it reset. Which technique is this?",
+            "options": [
+                "Tailgating",
+                "Shoulder surfing",
+                "Pretexting",
+                "Phishing"
+            ],
+            "correct_index": 2,
+            "explanation": "Pretexting uses a fabricated identity and scenario to manipulate the target. Phishing is usually electronic, tailgating is physically following someone through a door, and shoulder surfing is direct observation of a screen.",
+            "reference": "SANS Institute - Common Core vocabulary, social engineering"
+        },
+        {
+            "id": "sec-016",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An unauthorized person walks through a badge-controlled door just before it closes, following an employee who badged in. Which attack is this?",
+            "options": [
+                "Phishing",
+                "Vishing",
+                "Dumpster diving",
+                "Tailgating"
+            ],
+            "correct_index": 3,
+            "explanation": "Tailgating, also called piggybacking, is physically following an authorized person through a controlled entrance. The other options are electronic or involve recovering data from discarded media.",
+            "reference": "CompTIA Security+ SY0-701 Exam Objectives - Domain 2: Threats, Vulnerabilities, and Mitigations"
+        },
+        {
+            "id": "sec-017",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Rather than emailing a target, attackers compromise a website frequently visited by employees and inject malware served only to those visitors. Which attack is this?",
+            "options": [
+                "Watering hole",
+                "Spear phishing",
+                "Smishing",
+                "Credential stuffing"
+            ],
+            "correct_index": 0,
+            "explanation": "A watering hole attack infects a site the target population is known to visit. The other options deliver via email, via SMS, or by replaying stolen credentials.",
+            "reference": "MITRE ATT&CK - Resource Development, drive-by compromise"
+        },
+        {
+            "id": "sec-018",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Malware encrypts a file server and displays a demand for cryptocurrency to release the decryption key. Which malware type is this?",
+            "options": [
+                "Keylogger",
+                "Ransomware",
+                "Rootkit",
+                "Logic bomb"
+            ],
+            "correct_index": 1,
+            "explanation": "Ransomware encrypts or locks data and demands payment. A rootkit hides malicious presence, a logic bomb triggers on a condition, and a keylogger captures keystrokes.",
+            "reference": "NIST SP 800-61 Rev.2 - Computer Security Incident Handling Guide"
+        },
+        {
+            "id": "sec-019",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Malware modifies the operating system so that its files, processes, and registry entries are hidden from standard administrative tools. Which malware type is this?",
+            "options": [
+                "Worm",
+                "Spyware",
+                "Rootkit",
+                "Trojan"
+            ],
+            "correct_index": 2,
+            "explanation": "Rootkits conceal their presence by subverting the OS at a privileged level. A trojan disguises itself as legitimate software, a worm self-propagates, and spyware covertly collects information.",
+            "reference": "SANS Institute - Common Core vocabulary, malware"
+        },
+        {
+            "id": "sec-020",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An intrusion runs entirely in memory by abusing legitimate tools such as PowerShell and WMI, leaving no executable file on disk. Which term describes this?",
+            "options": [
+                "Boot sector virus",
+                "Macro virus",
+                "Logic bomb",
+                "Fileless malware"
+            ],
+            "correct_index": 3,
+            "explanation": "Fileless malware lives in memory and uses trusted system tools, so disk-scanning detections often miss it. Boot sector and macro viruses write to disk, and a logic bomb executes when a condition is met.",
+            "reference": "MITRE ATT&CK - Defense Evasion, fileless threats"
+        },
+        {
+            "id": "sec-021",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Self-replicating code spreads across a network by exploiting a vulnerable service, without user action and without needing a host file. Which malware type is this?",
+            "options": [
+                "Worm",
+                "Virus",
+                "Trojan",
+                "Rootkit"
+            ],
+            "correct_index": 0,
+            "explanation": "Worms self-propagate across networks without user interaction. A virus needs a host file and often user action, a trojan masquerades as useful software, and a rootkit hides the attacker's presence.",
+            "reference": "SANS Institute - Common Core vocabulary, malware"
+        },
+        {
+            "id": "sec-022",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "A departing developer embeds code that deletes a database if their account is later removed from the directory. What is this called?",
+            "options": [
+                "Spyware",
+                "Logic bomb",
+                "Ransomware",
+                "Rootkit"
+            ],
+            "correct_index": 1,
+            "explanation": "A logic bomb executes when a predefined condition is met. Ransomware demands payment, rootkits hide activity, and spyware gathers data covertly.",
+            "reference": "SANS Institute - Common Core vocabulary, malware"
+        },
+        {
+            "id": "sec-023",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker tries a single common password such as a seasonal word against many accounts, staying under the lockout threshold. Which password attack is this?",
+            "options": [
+                "Brute force",
+                "Rainbow table attack",
+                "Password spraying",
+                "Credential stuffing"
+            ],
+            "correct_index": 2,
+            "explanation": "Spraying uses a few common passwords across many accounts to avoid lockouts. Credential stuffing replays breached credentials, brute force tries many passwords per account, and rainbow tables reverse precomputed hashes.",
+            "reference": "NIST SP 800-63B - Digital Identity Guidelines, online guessing and throttling"
+        },
+        {
+            "id": "sec-024",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker takes username and password pairs leaked in one breach and tries them against a different service, succeeding where users reused passwords. Which attack is this?",
+            "options": [
+                "Password spraying",
+                "Brute force",
+                "Dictionary attack",
+                "Credential stuffing"
+            ],
+            "correct_index": 3,
+            "explanation": "Credential stuffing replays known breached pairs across other sites. Spraying tries common passwords across many accounts, brute force enumerates many values for one account, and a dictionary attack works from a wordlist.",
+            "reference": "OWASP - Credential Stuffing"
+        },
+        {
+            "id": "sec-025",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker uses large precomputed tables of hash values to recover stored passwords quickly. Which control is the primary defense against this technique?",
+            "options": [
+                "Add a unique random salt to each password before hashing",
+                "Increase the minimum password length only",
+                "Encrypt the password file with AES",
+                "Store passwords using MD5"
+            ],
+            "correct_index": 0,
+            "explanation": "Salting makes identical passwords hash differently and defeats precomputed rainbow tables. Length alone does not stop tables, encrypting the file is a different control, and MD5 is a fast, unsuitable hash for passwords.",
+            "reference": "NIST SP 800-63B - Digital Identity Guidelines, salt and hashing"
+        },
+        {
+            "id": "sec-026",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "Attackers send small DNS queries with a spoofed source address so that the victim receives a flood of much larger responses. Which attack is this?",
+            "options": [
+                "Cross-site scripting",
+                "DNS amplification DDoS",
+                "SYN flood",
+                "Smurf attack"
+            ],
+            "correct_index": 1,
+            "explanation": "Amplification reflects much larger responses to a spoofed victim, and open DNS resolvers are a common amplifier. A SYN flood exhausts connection tables, Smurf is ICMP-based, and cross-site scripting is a web injection.",
+            "reference": "NIST SP 800-189 - Resilient Interdomain Traffic Exchange, reflection and amplification"
+        },
+        {
+            "id": "sec-027",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An attacker sends many TCP SYN packets with spoofed source addresses so half-open connections exhaust a server's connection table. Which attack is this?",
+            "options": [
+                "Credential stuffing",
+                "ARP poisoning",
+                "SYN flood",
+                "Ping of death"
+            ],
+            "correct_index": 2,
+            "explanation": "A SYN flood leaves many half-open TCP connections that consume server resources. Ping of death uses malformed ICMP, credential stuffing replays logins, and ARP poisoning redirects traffic on a local network.",
+            "reference": "NIST SP 800-189 - Resilient Interdomain Traffic Exchange, TCP SYN floods"
+        },
+        {
+            "id": "sec-028",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "A web form is vulnerable because user input is concatenated directly into a database query, letting an attacker change the query's logic. Which vulnerability is this?",
+            "options": [
+                "Cross-site scripting",
+                "Cross-site request forgery",
+                "Directory traversal",
+                "SQL injection"
+            ],
+            "correct_index": 3,
+            "explanation": "SQL injection occurs when untrusted input alters the SQL statement. Cross-site scripting runs script in a victim's browser, cross-site request forgery abuses an authenticated session, and directory traversal reads files outside the web root.",
+            "reference": "OWASP Top 10 - A03:2021 Injection"
+        },
+        {
+            "id": "sec-029",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An application reflects unsanitized user input back into pages, allowing an attacker to run script in other users' browsers. Which attack is this?",
+            "options": [
+                "Cross-site scripting",
+                "SQL injection",
+                "Cross-site request forgery",
+                "Buffer overflow"
+            ],
+            "correct_index": 0,
+            "explanation": "Cross-site scripting executes attacker script in the victim's browser session. SQL injection targets the database, cross-site request forgery makes a logged-in browser send unwanted requests, and a buffer overflow corrupts memory.",
+            "reference": "OWASP Top 10 - A03:2021 Injection, cross-site scripting"
+        },
+        {
+            "id": "sec-030",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "An oversized input to a vulnerable C program overwrites adjacent memory and can redirect execution flow. Which vulnerability is this?",
+            "options": [
+                "Cross-site scripting",
+                "Buffer overflow",
+                "Race condition",
+                "SQL injection"
+            ],
+            "correct_index": 1,
+            "explanation": "A buffer overflow writes beyond allocated memory and can hijack control flow. Race conditions are timing flaws, SQL injection targets queries, and cross-site scripting is a browser-side injection.",
+            "reference": "NIST SP 800-53 Rev.5 - Control SI-16, memory protection"
+        },
+        {
+            "id": "sec-031",
+            "domain": "Threats, Vulnerabilities, and Mitigations",
+            "stem": "A current employee with legitimate access copies sensitive source code to personal storage shortly before resigning. Which threat actor classification fits best?",
+            "options": [
+                "Hacktivist",
+                "Script kiddie",
+                "Insider threat",
+                "Nation-state actor"
+            ],
+            "correct_index": 2,
+            "explanation": "An insider threat abuses authorized access for harm. Nation-state actors serve a government, hacktivists pursue an ideology, and script kiddies use others' tools with limited skill.",
+            "reference": "CISA - Insider Threat Mitigation Guide"
+        },
+        {
+            "id": "sec-032",
+            "domain": "Security Architecture",
+            "stem": "A design requires every request to be authenticated and authorized based on identity and device posture, and never trusts a request merely because it originates inside the corporate network. Which principle is this?",
+            "options": [
+                "Defense in depth",
+                "Least privilege",
+                "Separation of duties",
+                "Zero trust"
+            ],
+            "correct_index": 3,
+            "explanation": "Zero trust assumes no implicit trust from network location and verifies every request. Defense in depth layers controls, least privilege limits rights, and separation of duties splits critical tasks among people.",
+            "reference": "NIST SP 800-207 - Zero Trust Architecture"
+        },
+        {
+            "id": "sec-033",
+            "domain": "Security Architecture",
+            "stem": "An architect combines firewalls, endpoint protection, patching, user training, and physical locks so that no single control failure exposes the system. Which principle does this illustrate?",
+            "options": [
+                "Defense in depth",
+                "Zero trust",
+                "Least privilege",
+                "Fail secure"
+            ],
+            "correct_index": 0,
+            "explanation": "Defense in depth layers multiple independent controls so no single failure is fatal. Zero trust verifies every request, least privilege minimizes rights, and fail secure defaults to a safe state on failure.",
+            "reference": "NIST SP 800-53 Rev.5 - Security and Privacy Controls, defense in depth"
+        },
+        {
+            "id": "sec-034",
+            "domain": "Security Architecture",
+            "stem": "A web server must be reachable from the Internet but must not initiate connections into the internal database network. Where should it be placed?",
+            "options": [
+                "On the same host as the database",
+                "In a screened subnet (DMZ) with firewall rules limiting inbound and outbound traffic",
+                "Directly on the internal corporate LAN",
+                "Inside the database subnet"
+            ],
+            "correct_index": 1,
+            "explanation": "A screened subnet (DMZ) isolates Internet-facing hosts and firewall rules restrict traffic in both directions. Placing the server on the internal or database network exposes those segments directly to the Internet.",
+            "reference": "NIST SP 800-41 Rev.1 - Guidelines on Firewalls and Firewall Policy"
+        },
+        {
+            "id": "sec-035",
+            "domain": "Security Architecture",
+            "stem": "A data center applies firewall policy to each workload so that even within the same subnet, east-west traffic is allowed only between approved services. What is this called?",
+            "options": [
+                "VLAN trunking",
+                "Port mirroring",
+                "Microsegmentation",
+                "Network address translation"
+            ],
+            "correct_index": 2,
+            "explanation": "Microsegmentation enforces fine-grained policy per workload to limit lateral movement. NAT translates addresses, trunking carries multiple VLANs, and port mirroring copies traffic for monitoring.",
+            "reference": "NIST SP 800-207 - Zero Trust Architecture, micro-segmentation"
+        },
+        {
+            "id": "sec-036",
+            "domain": "Security Architecture",
+            "stem": "An office wants to keep the guest wireless network logically separate from the corporate wired network while sharing the same switches. Which technology is most appropriate?",
+            "options": [
+                "A load balancer",
+                "A single flat subnet",
+                "Port mirroring",
+                "Virtual LANs (VLANs)"
+            ],
+            "correct_index": 3,
+            "explanation": "VLANs segment traffic logically on shared hardware. A load balancer distributes traffic, a flat subnet removes separation, and port mirroring only copies traffic to a monitoring port.",
+            "reference": "NIST SP 800-125 - Guide to Security for Full Virtualization Technologies"
+        },
+        {
+            "id": "sec-037",
+            "domain": "Security Architecture",
+            "stem": "Two organizations want employees to log in once at their home identity provider and then access a partner's application without separate credentials. Which standard is designed for this browser-based federation?",
+            "options": [
+                "SAML 2.0",
+                "OAuth 2.0",
+                "RADIUS",
+                "TACACS+"
+            ],
+            "correct_index": 0,
+            "explanation": "SAML 2.0 exchanges signed assertions between an identity provider and a service provider for web single sign-on. OAuth 2.0 handles delegated authorization rather than authentication, and RADIUS and TACACS+ are access protocols for network devices.",
+            "reference": "OASIS Security Assertion Markup Language (SAML) 2.0"
+        },
+        {
+            "id": "sec-038",
+            "domain": "Security Architecture",
+            "stem": "A mobile app is granted limited, revocable access to a user's cloud storage without ever receiving the user's password. Which framework enables this delegated authorization?",
+            "options": [
+                "LDAP",
+                "OAuth 2.0",
+                "SAML 2.0",
+                "Kerberos"
+            ],
+            "correct_index": 1,
+            "explanation": "OAuth 2.0 issues access tokens for delegated authorization to resources. SAML is for identity federation and SSO, Kerberos is a ticket-based authentication protocol, and LDAP is a directory access protocol.",
+            "reference": "RFC 6749 - The OAuth 2.0 Authorization Framework"
+        },
+        {
+            "id": "sec-039",
+            "domain": "Security Architecture",
+            "stem": "An internal network uses a trusted third party to issue time-limited tickets so users can reach services without resending their passwords. Which protocol is this?",
+            "options": [
+                "TACACS+",
+                "OAuth 2.0",
+                "Kerberos",
+                "RADIUS"
+            ],
+            "correct_index": 2,
+            "explanation": "Kerberos uses a Key Distribution Center to issue tickets and depends on synchronized clocks. RADIUS and TACACS+ are AAA protocols for network access, and OAuth 2.0 provides delegated authorization.",
+            "reference": "RFC 4120 - The Kerberos Network Authentication Service (V5)"
+        },
+        {
+            "id": "sec-040",
+            "domain": "Security Architecture",
+            "stem": "In an IaaS deployment, the provider secures the physical data center and hypervisor while the customer patches the guest OS and configures the host firewall. Which model does this describe?",
+            "options": [
+                "Zero trust architecture",
+                "Defense in depth",
+                "Single sign-on",
+                "Shared responsibility model"
+            ],
+            "correct_index": 3,
+            "explanation": "The shared responsibility model divides security duties between the cloud provider and the customer. The split shifts with the service model, but the customer always retains responsibility for their data and access.",
+            "reference": "NIST SP 800-145 - The NIST Definition of Cloud Computing"
+        },
+        {
+            "id": "sec-041",
+            "domain": "Security Architecture",
+            "stem": "A team runs many containers on shared worker nodes and wants to stop a compromised container from affecting the others. Which control is most directly applicable?",
+            "options": [
+                "Isolate containers with namespaces, control groups, and a network policy",
+                "Run every container as root for simplicity",
+                "Disable logging to reduce overhead",
+                "Rely only on a host antivirus agent"
+            ],
+            "correct_index": 0,
+            "explanation": "Container isolation relies on kernel namespaces, control groups, and network policy. Running as root and disabling logging weaken security, and a host antivirus alone does not isolate containers from one another.",
+            "reference": "NIST SP 800-190 - Application Container Security Guide"
+        },
+        {
+            "id": "sec-042",
+            "domain": "Security Architecture",
+            "stem": "A service must keep running if one server fails, so two nodes share a virtual IP address and exchange heartbeats to monitor each other. What does this provide?",
+            "options": [
+                "Data loss prevention",
+                "High availability through failover",
+                "Load balancing across regions",
+                "Cold-site recovery"
+            ],
+            "correct_index": 1,
+            "explanation": "A cluster with a heartbeat and a shared virtual IP fails over automatically, providing high availability. Load balancing distributes requests, a cold site is a bare recovery facility, and DLP prevents data exfiltration.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-043",
+            "domain": "Security Architecture",
+            "stem": "A backup job copies only the data that changed since the last backup of any kind, so a restore needs the last full backup plus every increment. Which backup type is this?",
+            "options": [
+                "Full",
+                "Snapshot",
+                "Incremental",
+                "Differential"
+            ],
+            "correct_index": 2,
+            "explanation": "Incremental backups capture changes since the last backup of any type and require the full plus each increment to restore. Differential backups capture changes since the last full, and a full backup captures everything.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-044",
+            "domain": "Security Architecture",
+            "stem": "A company keeps a recovery facility with hardware, power, and connectivity already in place, but current data must still be restored from backup before use. Which recovery site type is this?",
+            "options": [
+                "Hot site",
+                "Cold site",
+                "Mobile site",
+                "Warm site"
+            ],
+            "correct_index": 3,
+            "explanation": "A warm site has infrastructure ready but not live data, giving moderate cost and recovery time. A hot site is fully equipped and near-immediate, and a cold site is an empty facility with no equipment.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-045",
+            "domain": "Security Architecture",
+            "stem": "A door controller is designed so that if power or the network fails, it defaults to a state that does not expose the protected area. Which design principle is this?",
+            "options": [
+                "Fail secure",
+                "Fail open",
+                "Least privilege",
+                "Separation of duties"
+            ],
+            "correct_index": 0,
+            "explanation": "Fail-secure systems default to a safe, locked or deny state on failure. Fail-open defaults to access, which may be chosen for life-safety egress paths; least privilege and separation of duties are access principles, not failure modes.",
+            "reference": "NIST SP 800-53 Rev.5 - Physical and Environmental Protection (PE) control family"
+        },
+        {
+            "id": "sec-046",
+            "domain": "Security Architecture",
+            "stem": "An industrial control system must be isolated from all untrusted networks and reachable only through controlled, monitored media. Which approach is this?",
+            "options": [
+                "Microsegmentation",
+                "Air gap",
+                "Screened subnet",
+                "Virtual private network"
+            ],
+            "correct_index": 1,
+            "explanation": "An air gap physically isolates the system from other networks. A screened subnet still connects to the Internet, a VPN provides remote connectivity, and microsegmentation operates within connected networks.",
+            "reference": "NIST SP 800-82 Rev.3 - Guide to Operational Technology (OT) Security"
+        },
+        {
+            "id": "sec-047",
+            "domain": "Security Architecture",
+            "stem": "A switch requires devices to authenticate before being placed on the corporate VLAN; devices that fail are dropped into a quarantine network. Which technology enables this?",
+            "options": [
+                "A demilitarized zone",
+                "Data loss prevention",
+                "Network access control with 802.1X",
+                "Network address translation"
+            ],
+            "correct_index": 2,
+            "explanation": "NAC with 802.1X port-based authentication decides network access and can quarantine non-compliant devices. NAT translates addresses, a DMZ isolates Internet-facing hosts, and DLP prevents data theft.",
+            "reference": "IEEE 802.1X - Port-Based Network Access Control"
+        },
+        {
+            "id": "sec-048",
+            "domain": "Security Operations",
+            "stem": "A security team aggregates logs from firewalls, endpoints, and applications and then correlates events to raise alerts. Which technology provides this?",
+            "options": [
+                "Data loss prevention (DLP)",
+                "Virtual private network (VPN)",
+                "Web application firewall (WAF)",
+                "Security information and event management (SIEM)"
+            ],
+            "correct_index": 3,
+            "explanation": "A SIEM collects and correlates logs from many sources to detect patterns and generate alerts. DLP prevents data loss, a VPN secures remote access, and a WAF filters web application traffic.",
+            "reference": "NIST SP 800-92 - Guide to Computer Security Log Management"
+        },
+        {
+            "id": "sec-049",
+            "domain": "Security Operations",
+            "stem": "Malware is spreading across a subnet, so the team isolates affected hosts from the network while preserving evidence. Which incident response phase is this?",
+            "options": [
+                "Containment",
+                "Preparation",
+                "Eradication",
+                "Recovery"
+            ],
+            "correct_index": 0,
+            "explanation": "Containment limits the scope and impact of an incident. Preparation happens before incidents, eradication removes the cause, and recovery restores normal operations.",
+            "reference": "NIST SP 800-61 Rev.2 - Computer Security Incident Handling Guide"
+        },
+        {
+            "id": "sec-050",
+            "domain": "Security Operations",
+            "stem": "After containing an intrusion, the team deletes the malicious files, closes the exploited vulnerability, and rebuilds the affected systems. Which phase is this?",
+            "options": [
+                "Detection and analysis",
+                "Eradication",
+                "Containment",
+                "Recovery"
+            ],
+            "correct_index": 1,
+            "explanation": "Eradication removes the root cause and artifacts of an incident. Containment limits spread, recovery restores services, and detection and analysis identifies and scopes the event.",
+            "reference": "NIST SP 800-61 Rev.2 - Computer Security Incident Handling Guide"
+        },
+        {
+            "id": "sec-051",
+            "domain": "Security Operations",
+            "stem": "Two weeks after resolving a breach, the team meets to identify what worked, what failed, and how to improve the response playbook. Which phase is this?",
+            "options": [
+                "Eradication",
+                "Preparation",
+                "Lessons learned (post-incident activity)",
+                "Containment"
+            ],
+            "correct_index": 2,
+            "explanation": "Post-incident activity captures lessons learned to improve future response. Containment, eradication, and preparation all occur during the incident lifecycle rather than after resolution.",
+            "reference": "NIST SP 800-61 Rev.2 - Computer Security Incident Handling Guide"
+        },
+        {
+            "id": "sec-052",
+            "domain": "Security Operations",
+            "stem": "A platform automatically enriches alerts with threat intelligence, opens tickets, and blocks malicious IP addresses by following a response playbook. Which capability is this?",
+            "options": [
+                "Security information and event management (SIEM)",
+                "Data loss prevention (DLP)",
+                "Endpoint detection and response (EDR)",
+                "Security orchestration, automation, and response (SOAR)"
+            ],
+            "correct_index": 3,
+            "explanation": "SOAR orchestrates tools and automates response workflows called playbooks. SIEM collects and correlates logs, DLP prevents data loss, and EDR focuses on endpoint detection and response.",
+            "reference": "SANS Institute - Incident Handler's Handbook, playbooks and automation"
+        },
+        {
+            "id": "sec-053",
+            "domain": "Security Operations",
+            "stem": "Software records process, file, and network behavior on workstations and can isolate a host and roll back changes remotely. What is this called?",
+            "options": [
+                "Endpoint detection and response (EDR)",
+                "Intrusion prevention system (IPS)",
+                "Web application firewall (WAF)",
+                "Data loss prevention (DLP)"
+            ],
+            "correct_index": 0,
+            "explanation": "EDR monitors endpoint telemetry and supports containment such as host isolation. An IPS inspects network traffic, a WAF protects web applications, and DLP controls data movement.",
+            "reference": "NIST SP 800-83 Rev.1 - Guide to Malware Incident Prevention and Handling"
+        },
+        {
+            "id": "sec-054",
+            "domain": "Security Operations",
+            "stem": "A device monitors a copy of network traffic and raises alerts, but it does not block packets. Which device is this?",
+            "options": [
+                "Forward proxy",
+                "Intrusion detection system (IDS)",
+                "Intrusion prevention system (IPS)",
+                "Web application firewall (WAF)"
+            ],
+            "correct_index": 1,
+            "explanation": "An IDS is passive and only alerts, while an IPS is inline and can block. A WAF protects web applications, and a forward proxy brokers client requests.",
+            "reference": "NIST SP 800-94 - Guide to Intrusion Detection and Prevention Systems (IDPS)"
+        },
+        {
+            "id": "sec-055",
+            "domain": "Security Operations",
+            "stem": "An organization must filter HTTP requests to block injection attempts against its public web application. Which control is most appropriate?",
+            "options": [
+                "Host intrusion prevention system",
+                "DNS sinkhole",
+                "Web application firewall (WAF)",
+                "Network firewall"
+            ],
+            "correct_index": 2,
+            "explanation": "A WAF inspects HTTP and HTTPS traffic and blocks application-layer attacks such as injection. A network firewall works at layers 3 and 4, an HIPS protects a specific host, and a DNS sinkhole blocks name resolution.",
+            "reference": "OWASP Top 10 - A03:2021 Injection, WAF mitigation"
+        },
+        {
+            "id": "sec-056",
+            "domain": "Security Operations",
+            "stem": "A domain owner publishes a DNS record that lists the hosts allowed to send mail on behalf of the domain. Which email authentication mechanism is this?",
+            "options": [
+                "DomainKeys Identified Mail (DKIM)",
+                "Domain-based Message Authentication (DMARC)",
+                "Pretty Good Privacy (PGP)",
+                "Sender Policy Framework (SPF)"
+            ],
+            "correct_index": 3,
+            "explanation": "SPF is a DNS record that lists authorized sending hosts. DKIM adds a cryptographic signature, DMARC ties SPF and DKIM results to a policy, and PGP is message encryption.",
+            "reference": "RFC 7208 - Sender Policy Framework (SPF)"
+        },
+        {
+            "id": "sec-057",
+            "domain": "Security Operations",
+            "stem": "An outbound mail server adds a cryptographic signature to each message so receivers can verify the sending domain and detect tampering. Which mechanism is this?",
+            "options": [
+                "DomainKeys Identified Mail (DKIM)",
+                "Sender Policy Framework (SPF)",
+                "Domain-based Message Authentication (DMARC)",
+                "S/MIME"
+            ],
+            "correct_index": 0,
+            "explanation": "DKIM signs messages with a private key that receivers verify using a public key published in DNS. SPF checks sending hosts, DMARC defines policy from SPF and DKIM results, and S/MIME encrypts or signs message content end to end.",
+            "reference": "RFC 6376 - DomainKeys Identified Mail (DKIM) Signatures"
+        },
+        {
+            "id": "sec-058",
+            "domain": "Security Operations",
+            "stem": "A domain owner sets a policy telling receivers what to do with messages that fail SPF or DKIM and requests aggregate reports about those messages. Which mechanism is this?",
+            "options": [
+                "Transport Layer Security (TLS)",
+                "Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+                "Sender Policy Framework (SPF)",
+                "DomainKeys Identified Mail (DKIM)"
+            ],
+            "correct_index": 1,
+            "explanation": "DMARC aligns SPF and DKIM with the From domain and sets a policy (none, quarantine, or reject) plus reporting. SPF and DKIM are the underlying checks, and TLS protects transport in transit.",
+            "reference": "RFC 7489 - Domain-based Message Authentication, Reporting, and Conformance (DMARC)"
+        },
+        {
+            "id": "sec-059",
+            "domain": "Security Operations",
+            "stem": "A wireless administrator needs the strongest current protection for a home office network, including resistance to offline dictionary attacks against the handshake. Which standard should be selected?",
+            "options": [
+                "WPA with TKIP",
+                "Open authentication",
+                "WPA3",
+                "WEP"
+            ],
+            "correct_index": 2,
+            "explanation": "WPA3 uses Simultaneous Authentication of Equals to resist offline guessing and provides forward secrecy. WEP and WPA with TKIP are broken or weak, and open authentication provides no encryption.",
+            "reference": "Wi-Fi Alliance - WPA3 Specification"
+        },
+        {
+            "id": "sec-060",
+            "domain": "Security Operations",
+            "stem": "An enterprise wireless network authenticates users against a RADIUS server using per-user credentials instead of a shared passphrase. Which framework is used?",
+            "options": [
+                "Wired Equivalent Privacy (WEP)",
+                "WPA2 with a shared pre-shared key only",
+                "A captive portal with no authentication",
+                "802.1X with EAP"
+            ],
+            "correct_index": 3,
+            "explanation": "802.1X with EAP provides port-based, per-user authentication to a RADIUS server. WEP is broken, a pre-shared key is shared rather than per-user, and an unauthenticated portal grants access without validation.",
+            "reference": "IEEE 802.1X - Port-Based Network Access Control"
+        },
+        {
+            "id": "sec-061",
+            "domain": "Security Operations",
+            "stem": "A company must enforce screen locks, remote wipe, and app installation restrictions on employee smartphones. Which solution is most appropriate?",
+            "options": [
+                "Mobile device management (MDM)",
+                "Data loss prevention (DLP)",
+                "Virtual private network (VPN)",
+                "Security information and event management (SIEM)"
+            ],
+            "correct_index": 0,
+            "explanation": "MDM centrally enforces mobile policies such as screen locks, encryption, and remote wipe. DLP controls data flows, a VPN secures connectivity, and a SIEM correlates logs.",
+            "reference": "NIST SP 800-124 Rev.2 - Guidelines for Managing the Security of Mobile Devices in the Enterprise"
+        },
+        {
+            "id": "sec-062",
+            "domain": "Security Operations",
+            "stem": "A tool inspects outbound email and file transfers and blocks messages that contain account numbers or personal identifiers. Which control is this?",
+            "options": [
+                "Web application firewall (WAF)",
+                "Data loss prevention (DLP)",
+                "Intrusion prevention system (IPS)",
+                "Endpoint detection and response (EDR)"
+            ],
+            "correct_index": 1,
+            "explanation": "DLP inspects content and applies rules to stop sensitive data from leaving the organization. An IPS blocks network attacks, EDR monitors endpoints, and a WAF protects web applications.",
+            "reference": "NIST SP 800-53 Rev.5 - System and Information Integrity (SI) control family"
+        },
+        {
+            "id": "sec-063",
+            "domain": "Security Operations",
+            "stem": "Unknown files are executed in an isolated environment that records their behavior before the files are allowed near production systems. What is this technique?",
+            "options": [
+                "Tokenization",
+                "Sharding",
+                "Sandboxing",
+                "Hashing"
+            ],
+            "correct_index": 2,
+            "explanation": "A sandbox detonates suspicious content in isolation to observe behavior safely. Hashing computes a digest, tokenization replaces sensitive values with substitutes, and sharding splits databases.",
+            "reference": "NIST SP 800-83 Rev.1 - Guide to Malware Incident Prevention and Handling, sandbox analysis"
+        },
+        {
+            "id": "sec-064",
+            "domain": "Security Operations",
+            "stem": "A decoy server with no production data is deployed to attract attackers and record their techniques. What is this called?",
+            "options": [
+                "Bastion host",
+                "Jump server",
+                "DNS sinkhole",
+                "Honeypot"
+            ],
+            "correct_index": 3,
+            "explanation": "A honeypot lures attackers for detection and intelligence gathering. A bastion or jump host is a hardened access point, and a sinkhole redirects malicious DNS traffic.",
+            "reference": "NIST SP 800-53 Rev.5 - Controls SC-26 (Decoys) and SC-35 (Honeyclients)"
+        },
+        {
+            "id": "sec-065",
+            "domain": "Security Operations",
+            "stem": "A team runs an automated, credentialed tool that inventories missing patches and misconfigurations without attempting to exploit them. What is this activity?",
+            "options": [
+                "Vulnerability scanning",
+                "Penetration testing",
+                "Red teaming",
+                "Threat hunting"
+            ],
+            "correct_index": 0,
+            "explanation": "Vulnerability scanning identifies known weaknesses without exploiting them. Penetration testing attempts exploitation, red teaming emulates adversaries at a broad scope, and threat hunting proactively searches for hidden compromise.",
+            "reference": "NIST SP 800-115 - Technical Guide to Information Security Testing and Assessment"
+        },
+        {
+            "id": "sec-066",
+            "domain": "Security Operations",
+            "stem": "An administrator deploys vendor security updates on a scheduled cycle after testing them with a pilot group. Which process is this?",
+            "options": [
+                "Data retention",
+                "Patch management",
+                "Asset disposal",
+                "Configuration baselining"
+            ],
+            "correct_index": 1,
+            "explanation": "Patch management identifies, tests, and deploys updates to remediate vulnerabilities. Asset disposal securely retires hardware, baselining sets a known configuration, and retention governs how long data is kept.",
+            "reference": "NIST SP 800-40 Rev.4 - Guide to Enterprise Patch Management Planning"
+        },
+        {
+            "id": "sec-067",
+            "domain": "Security Operations",
+            "stem": "During forensic collection, responders capture RAM and running processes before powering a machine down. Which principle guides this order?",
+            "options": [
+                "Data minimization",
+                "Least privilege",
+                "Order of volatility",
+                "Chain of custody"
+            ],
+            "correct_index": 2,
+            "explanation": "The order of volatility collects the most perishable evidence, such as memory and network state, first. Chain of custody documents handling, data minimization limits collection, and least privilege limits access.",
+            "reference": "NIST SP 800-86 - Guide to Integrating Forensic Techniques into Incident Response"
+        },
+        {
+            "id": "sec-068",
+            "domain": "Security Operations",
+            "stem": "Every transfer of a disk image is logged with names, dates, and signatures so that its integrity can be defended in court. Which concept is this?",
+            "options": [
+                "Order of volatility",
+                "Legal hold",
+                "Data retention",
+                "Chain of custody"
+            ],
+            "correct_index": 3,
+            "explanation": "Chain of custody is the documented, unbroken record of evidence handling. Order of volatility concerns collection sequence, legal hold preserves data for litigation, and retention defines how long data is kept.",
+            "reference": "NIST SP 800-86 - Guide to Integrating Forensic Techniques into Incident Response"
+        },
+        {
+            "id": "sec-069",
+            "domain": "Security Operations",
+            "stem": "A policy keeps authentication and firewall logs for one year on write-once storage that administrators cannot alter after collection. Which concerns does this address?",
+            "options": [
+                "Log retention with immutable storage",
+                "Log aggregation",
+                "Log enrichment",
+                "Log rotation"
+            ],
+            "correct_index": 0,
+            "explanation": "A defined retention period on immutable storage preserves log integrity and supports investigations. Aggregation centralizes logs, enrichment adds context, and rotation manages file size.",
+            "reference": "NIST SP 800-92 - Guide to Computer Security Log Management"
+        },
+        {
+            "id": "sec-070",
+            "domain": "Security Operations",
+            "stem": "A threat report lists malicious IP addresses, domains, and file hashes that defenders can load into blocking tools. What are these values collectively called?",
+            "options": [
+                "Attack surface",
+                "Indicators of compromise (IOCs)",
+                "Indicators of attack (IOAs)",
+                "Zero-day exploits"
+            ],
+            "correct_index": 1,
+            "explanation": "IOCs are observable artifacts such as hashes, IP addresses, and domains from past compromise. IOAs describe adversary intent at runtime, zero-days are unpatched exploits, and attack surface is the set of exposed entry points.",
+            "reference": "NIST SP 800-150 - Guide to Cyber Threat Information Sharing"
+        },
+        {
+            "id": "sec-071",
+            "domain": "Security Operations",
+            "stem": "A company must ensure that only compliant, known devices connect to the wired network and must automatically remediate those missing updates. Which control is this?",
+            "options": [
+                "Virtual private network (VPN)",
+                "Load balancing",
+                "Network access control (NAC)",
+                "Network address translation (NAT)"
+            ],
+            "correct_index": 2,
+            "explanation": "NAC enforces device compliance and identity before granting network access and can place non-compliant devices in remediation. NAT translates addresses, a VPN secures remote links, and load balancing distributes requests.",
+            "reference": "SANS Institute - Common Core vocabulary, network access control"
+        },
+        {
+            "id": "sec-072",
+            "domain": "Security Operations",
+            "stem": "Security staff redirect DNS requests for known-malicious domains to an internal server so malware cannot reach its command-and-control infrastructure. What is this technique?",
+            "options": [
+                "Honeypot",
+                "Data loss prevention",
+                "Reverse proxy",
+                "DNS sinkhole"
+            ],
+            "correct_index": 3,
+            "explanation": "A sinkhole answers malicious DNS queries with a controlled address to block command and control. A honeypot is a decoy, DLP prevents data theft, and a reverse proxy fronts servers.",
+            "reference": "NIST SP 800-83 Rev.1 - Guide to Malware Incident Prevention and Handling"
+        },
+        {
+            "id": "sec-073",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A company buys a cyber-insurance policy to cover potential breach costs. Which risk response is this?",
+            "options": [
+                "Transfer",
+                "Avoid",
+                "Accept",
+                "Mitigate"
+            ],
+            "correct_index": 0,
+            "explanation": "Transfer shifts the financial impact to a third party such as an insurer. Avoidance eliminates the activity, acceptance retains the risk, and mitigation reduces its likelihood or impact.",
+            "reference": "NIST SP 800-30 Rev.1 - Guide for Conducting Risk Assessments"
+        },
+        {
+            "id": "sec-074",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A firm discontinues a legacy service entirely because the risk cannot be reduced to an acceptable level. Which risk response is this?",
+            "options": [
+                "Mitigation",
+                "Avoidance",
+                "Transfer",
+                "Acceptance"
+            ],
+            "correct_index": 1,
+            "explanation": "Avoidance removes the risk by discontinuing the activity. Transfer shifts it to another party, acceptance retains it, and mitigation reduces it.",
+            "reference": "NIST SP 800-30 Rev.1 - Guide for Conducting Risk Assessments"
+        },
+        {
+            "id": "sec-075",
+            "domain": "Security Program Management and Oversight",
+            "stem": "After controls are applied, the risk that remains is documented and approved by management. What is this remaining risk called?",
+            "options": [
+                "Risk appetite",
+                "Risk transference",
+                "Residual risk",
+                "Inherent risk"
+            ],
+            "correct_index": 2,
+            "explanation": "Residual risk is what remains after controls. Inherent risk is the level before controls, risk appetite is the amount leadership is willing to accept, and transference shifts risk to another party.",
+            "reference": "NIST SP 800-30 Rev.1 - Guide for Conducting Risk Assessments"
+        },
+        {
+            "id": "sec-076",
+            "domain": "Security Program Management and Oversight",
+            "stem": "Executive leadership states the level of risk the organization is willing to accept while pursuing its objectives. What is this called?",
+            "options": [
+                "Residual risk",
+                "Inherent risk",
+                "Risk register",
+                "Risk appetite (tolerance)"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk appetite or tolerance is the acceptable level of risk set by leadership. Residual and inherent risk are measured levels, and a risk register is the log of identified risks.",
+            "reference": "NIST SP 800-39 - Managing Information Security Risk"
+        },
+        {
+            "id": "sec-077",
+            "domain": "Security Program Management and Oversight",
+            "stem": "An analyst calculates that a threat occurs twice a year with a loss of $10,000 each time. What is the annualized loss expectancy (ALE)?",
+            "options": [
+                "$20,000",
+                "$10,000",
+                "$5,000",
+                "$120,000"
+            ],
+            "correct_index": 0,
+            "explanation": "ALE equals single loss expectancy multiplied by the annualized rate of occurrence: $10,000 times 2 equals $20,000. The other values misapply the formula.",
+            "reference": "NIST SP 800-30 Rev.1 - Guide for Conducting Risk Assessments, quantitative analysis"
+        },
+        {
+            "id": "sec-078",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A business impact analysis states that an ordering system must be back online within four hours of an outage. Which metric is this?",
+            "options": [
+                "Mean time to repair (MTTR)",
+                "Recovery time objective (RTO)",
+                "Recovery point objective (RPO)",
+                "Mean time between failures (MTBF)"
+            ],
+            "correct_index": 1,
+            "explanation": "RTO is the maximum tolerable downtime. RPO is the maximum tolerable data loss measured in time, MTBF is the average operating time between failures, and MTTR is average repair time.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-079",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A database must lose no more than 15 minutes of transactions if it fails, so backups run every 15 minutes. Which metric is being met?",
+            "options": [
+                "Mean time to repair (MTTR)",
+                "Service level agreement (SLA)",
+                "Recovery point objective (RPO)",
+                "Recovery time objective (RTO)"
+            ],
+            "correct_index": 2,
+            "explanation": "RPO defines the maximum acceptable data loss in time and drives backup frequency. RTO defines downtime, MTTR is repair duration, and an SLA is a contractual service commitment.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-080",
+            "domain": "Security Program Management and Oversight",
+            "stem": "Vendors publish the average time a hardware component operates before failing, which planners use to schedule replacements. Which metric is this?",
+            "options": [
+                "Mean time to repair (MTTR)",
+                "Recovery point objective (RPO)",
+                "Recovery time objective (RTO)",
+                "Mean time between failures (MTBF)"
+            ],
+            "correct_index": 3,
+            "explanation": "MTBF is the predicted average operating time between failures. MTTR is repair duration, and RPO and RTO are recovery targets.",
+            "reference": "NIST SP 800-34 Rev.1 - Contingency Planning Guide for Federal Information Systems"
+        },
+        {
+            "id": "sec-081",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A company that processes EU residents' personal data must honor data-subject rights such as access and erasure and report certain breaches within 72 hours. Which regulation applies?",
+            "options": [
+                "EU General Data Protection Regulation (GDPR)",
+                "PCI DSS",
+                "HIPAA",
+                "SOX"
+            ],
+            "correct_index": 0,
+            "explanation": "GDPR governs EU personal data and grants data-subject rights with breach-notification duties. PCI DSS covers payment cards, HIPAA covers US health information, and SOX governs financial reporting controls.",
+            "reference": "EU General Data Protection Regulation (Regulation 2016/679)"
+        },
+        {
+            "id": "sec-082",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A retailer that stores cardholder data must meet requirements for encryption, access control, and regular network scans. Which standard applies?",
+            "options": [
+                "NIST Cybersecurity Framework",
+                "Payment Card Industry Data Security Standard (PCI DSS)",
+                "HIPAA",
+                "GDPR"
+            ],
+            "correct_index": 1,
+            "explanation": "PCI DSS applies to any entity that stores, processes, or transmits cardholder data. HIPAA covers health data, GDPR covers EU personal data broadly, and the NIST CSF is a voluntary framework.",
+            "reference": "PCI Security Standards Council - PCI DSS v4.0"
+        },
+        {
+            "id": "sec-083",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A US healthcare provider must protect electronic protected health information using administrative, physical, and technical safeguards. Which regulation applies?",
+            "options": [
+                "GDPR",
+                "FISMA",
+                "HIPAA Security Rule",
+                "PCI DSS"
+            ],
+            "correct_index": 2,
+            "explanation": "The HIPAA Security Rule governs safeguards for electronic protected health information at US covered entities. PCI DSS covers payment cards, GDPR is EU privacy law, and FISMA covers US federal information systems.",
+            "reference": "HIPAA Security Rule - 45 CFR Part 164 Subpart C"
+        },
+        {
+            "id": "sec-084",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A company adopts a voluntary framework organized around the functions Govern, Identify, Protect, Detect, Respond, and Recover to manage cyber risk. Which framework is this?",
+            "options": [
+                "ISO/IEC 27001",
+                "PCI DSS",
+                "CIS Controls",
+                "NIST Cybersecurity Framework (CSF)"
+            ],
+            "correct_index": 3,
+            "explanation": "NIST CSF 2.0 uses the functions Govern, Identify, Protect, Detect, Respond, and Recover. ISO 27001 is an ISMS certification standard, PCI DSS is a payment standard, and the CIS Controls are a prioritized safeguard list.",
+            "reference": "NIST Cybersecurity Framework (CSF) 2.0"
+        },
+        {
+            "id": "sec-085",
+            "domain": "Security Program Management and Oversight",
+            "stem": "An organization seeks certification for a documented information security management system that follows a plan-do-check-act cycle. Which standard applies?",
+            "options": [
+                "ISO/IEC 27001",
+                "NIST Cybersecurity Framework",
+                "PCI DSS",
+                "SOC 2"
+            ],
+            "correct_index": 0,
+            "explanation": "ISO/IEC 27001 specifies requirements for an information security management system that can be certified. The NIST CSF is voluntary guidance, PCI DSS is a payment-card standard, and SOC 2 is an attestation report.",
+            "reference": "ISO/IEC 27001:2022 - Information security management systems"
+        },
+        {
+            "id": "sec-086",
+            "domain": "Security Program Management and Oversight",
+            "stem": "New hires must sign a document that describes acceptable and prohibited use of company computers and networks. What is this document called?",
+            "options": [
+                "Business continuity plan (BCP)",
+                "Acceptable use policy (AUP)",
+                "Service level agreement (SLA)",
+                "Memorandum of understanding (MOU)"
+            ],
+            "correct_index": 1,
+            "explanation": "An AUP defines acceptable use of organizational assets and the consequences of misuse. An SLA defines service commitments, an MOU records an agreement between parties, and a BCP addresses continuity of operations.",
+            "reference": "NIST SP 800-53 Rev.5 - Control PL-4, rules of behavior"
+        },
+        {
+            "id": "sec-087",
+            "domain": "Security Program Management and Oversight",
+            "stem": "Files are labeled Public, Internal, Confidential, or Restricted according to sensitivity, which then drives handling rules. What is this practice called?",
+            "options": [
+                "Tokenization",
+                "Data retention",
+                "Data classification",
+                "Data minimization"
+            ],
+            "correct_index": 2,
+            "explanation": "Data classification assigns sensitivity labels that determine handling, access, and protection. Minimization reduces collected data, tokenization replaces values with substitutes, and retention governs how long data is kept.",
+            "reference": "NIST SP 800-60 Vol.1 Rev.1 - Guide for Mapping Types of Information and Information Systems to Security Categories"
+        },
+        {
+            "id": "sec-088",
+            "domain": "Security Program Management and Oversight",
+            "stem": "Before sharing design documents with an outside vendor, a company requires a contract that prohibits the vendor from disclosing that information. What is this agreement called?",
+            "options": [
+                "Service level agreement (SLA)",
+                "Memorandum of understanding (MOU)",
+                "Business partners agreement (BPA)",
+                "Non-disclosure agreement (NDA)"
+            ],
+            "correct_index": 3,
+            "explanation": "An NDA contractually prohibits disclosure of confidential information. An SLA defines service levels, an MOU is a statement of intent between parties, and a BPA covers a business partnership arrangement.",
+            "reference": "NIST SP 800-53 Rev.5 - Control PS-6, access agreements"
+        },
+        {
+            "id": "sec-089",
+            "domain": "Security Program Management and Oversight",
+            "stem": "A program teaches staff to recognize phishing, report incidents, and follow password policy, reinforced by periodic simulated phishing campaigns. What is this program called?",
+            "options": [
+                "Security awareness training",
+                "Penetration testing",
+                "Tabletop exercise",
+                "Threat hunting"
+            ],
+            "correct_index": 0,
+            "explanation": "Awareness training educates users and is reinforced with phishing simulations and metrics. Penetration testing attacks systems, tabletop exercises rehearse response roles, and threat hunting searches for hidden threats.",
+            "reference": "NIST SP 800-50 - Building an Information Technology Security Awareness and Training Program"
+        },
+        {
+            "id": "sec-090",
+            "domain": "Security Program Management and Oversight",
+            "stem": "Before a penetration test begins, the client and tester agree in writing on scope, timing, and the techniques that are permitted. What is this document called?",
+            "options": [
+                "Risk register",
+                "Rules of engagement",
+                "Service level agreement",
+                "Acceptable use policy"
+            ],
+            "correct_index": 1,
+            "explanation": "Rules of engagement define the scope, timing, and allowed techniques for a test. An SLA defines service levels, an AUP defines acceptable use, and a risk register logs identified risks.",
+            "reference": "NIST SP 800-115 - Technical Guide to Information Security Testing and Assessment"
+        }
+    ]
+}
