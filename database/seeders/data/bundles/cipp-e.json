@@ -1,0 +1,1277 @@
+{
+    "cert_key": "cipp-e",
+    "title": "IAPP Certified Information Privacy Professional/Europe (CIPP/E)",
+    "issuer": "IAPP",
+    "outline_file": "outlines/cipp-e.json",
+    "variant_label": "CIPP/E Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 150,
+        "scoring": "Scaled score against passing standard",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the IAPP CIPP/E exam blueprint (four domains and weights) covering GDPR and European data protection law. Not a capture of past exam questions.",
+    "source_label": "IAPP CIPP/E practice bank",
+    "items": [
+        {
+            "id": "cipp-e-001",
+            "domain": "Introduction to European Data Protection",
+            "stem": "Which instrument, adopted in 1980 by the Organisation for Economic Co-operation and Development, set out fair information practice principles that influenced later European data protection law?",
+            "options": [
+                "The OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data",
+                "The Council of Europe Convention 108",
+                "The EU Data Protection Directive 95/46/EC",
+                "The United Nations Universal Declaration of Human Rights"
+            ],
+            "correct_index": 0,
+            "explanation": "The OECD Guidelines of 1980 were the first international statement of fair information practice principles and shaped later European instruments. Convention 108 came later as a binding treaty, Directive 95/46/EC implemented the EU approach, and the Universal Declaration predates all of these and is a general human rights instrument.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-002",
+            "domain": "Introduction to European Data Protection",
+            "stem": "Which statement best describes the significance of Council of Europe Convention 108 in the development of European data protection law?",
+            "options": [
+                "It replaced the GDPR with a set of minimum national rules",
+                "It was the first legally binding international treaty on the protection of individuals with regard to automatic processing of personal data",
+                "It created the European Data Protection Board and the one-stop-shop mechanism",
+                "It is a non-binding recommendation that has no signatory states"
+            ],
+            "correct_index": 1,
+            "explanation": "Convention 108, opened in 1981, is widely recognised as the first legally binding international treaty on data protection. The European Data Protection Board and the one-stop-shop are GDPR creations, the convention is binding rather than advisory, and it preceded rather than replaced the GDPR.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-003",
+            "domain": "Introduction to European Data Protection",
+            "stem": "European data protection law is often traced to reactions against which historical development, which shaped its emphasis on protecting individuals from surveillance by the state and by organisations?",
+            "options": [
+                "The invention of the movable-type printing press",
+                "The industrial use of steam power",
+                "Data processing abuses during and after the Second World War",
+                "The global financial crisis of 2008"
+            ],
+            "correct_index": 2,
+            "explanation": "The European privacy tradition grew from the abuses of personal data during and after the Second World War and the subsequent recognition of privacy as a fundamental right. Printing, steam power and the 2008 financial crisis did not generate the core data protection framework.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-004",
+            "domain": "Introduction to European Data Protection",
+            "stem": "The Charter of Fundamental Rights of the European Union treats privacy and data protection in which way?",
+            "options": [
+                "As directive principles that are not legally enforceable",
+                "As economic rights that are subordinate to the internal market",
+                "As a single right located in Article 8",
+                "As two distinct fundamental rights in Article 7 and Article 8"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 7 protects respect for private and family life while Article 8 separately protects personal data, so the Charter recognises two distinct fundamental rights. The rights are legally enforceable and not subordinate to market interests.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-005",
+            "domain": "Introduction to European Data Protection",
+            "stem": "Which court is responsible for interpreting Article 8 of the European Convention on Human Rights, which guarantees respect for private and family life?",
+            "options": [
+                "The European Court of Human Rights",
+                "The Court of Justice of the European Union",
+                "The European Data Protection Supervisor",
+                "The European Data Protection Board"
+            ],
+            "correct_index": 0,
+            "explanation": "The European Court of Human Rights, sitting in Strasbourg, interprets the European Convention on Human Rights. The Court of Justice of the EU interprets EU law, while the European Data Protection Supervisor and the European Data Protection Board are supervisory bodies rather than courts.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-006",
+            "domain": "Introduction to European Data Protection",
+            "stem": "In 2018 the Council of Europe adopted a protocol amending Convention 108, commonly called Convention 108+. What was a primary aim of that modernisation?",
+            "options": [
+                "To remove the requirement for independent supervisory authorities",
+                "To align the treaty with modern data protection standards by adding new rights and stronger safeguards for international transfers",
+                "To abolish the convention and give the GDPR exclusive effect in member states",
+                "To limit the convention's scope to records held on paper"
+            ],
+            "correct_index": 1,
+            "explanation": "Convention 108+ updates the treaty to address modern processing, adding rights and reinforcing the rules on transfers. It does not abolish the convention, restrict it to paper records or remove supervisory authorities.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Introduction to European Data Protection"
+        },
+        {
+            "id": "cipp-e-007",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A marketing company based only in Canada has no offices in the European Union but targets advertisements at consumers in France and Germany. Under the GDPR, why can the company be subject to the Regulation?",
+            "options": [
+                "Because the GDPR applies only after a supervisory authority grants jurisdiction",
+                "Because the company must first register with the European Data Protection Board",
+                "Because it offers goods or services to data subjects in the Union and is therefore caught by the targeting rule",
+                "Because Article 3(1) applies to any establishment anywhere in the world"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 3(2)(a) extends the GDPR to controllers not established in the Union that offer goods or services to data subjects in the Union. Article 3(1) concerns establishments inside the Union, jurisdiction exists by law rather than by a grant, and registration is not the trigger.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-008",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A software vendor established in the United States offers a service to customers in the European Union and, as part of that service, tracks the online behaviour of EU users across websites. Which provision most directly establishes jurisdiction over the vendor?",
+            "options": [
+                "Article 3(1), because it has an establishment in the Union",
+                "Article 44, because the data leave the Union",
+                "Article 6(1)(f), because it has a legitimate interest in tracking",
+                "Article 3(2)(b), because it monitors the behaviour of data subjects in the Union"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 3(2)(b) applies where a non-EU controller monitors the behaviour of data subjects in the Union, which is exactly the tracking described. Establishment and transfer rules do not apply to a US-only vendor, and legitimate interests are a lawful basis rather than a jurisdictional hook.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-009",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "Which of the following is treated as personal data under the GDPR because it can be used to single out and identify an individual?",
+            "options": [
+                "An IP address combined with a device identifier",
+                "An anonymous aggregate count of website visitors",
+                "A statistical summary that cannot be linked to any person",
+                "A trade secret formula kept offline"
+            ],
+            "correct_index": 0,
+            "explanation": "Online identifiers such as an IP address linked to a device identifier can single out an individual and are personal data. Aggregate counts, non-linkable summaries and offline trade secrets do not relate to an identified or identifiable person.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-010",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A payroll bureau stores, edits and prints employee records on behalf of an employer. Which GDPR concept describes what the payroll bureau is doing?",
+            "options": [
+                "Profiling, because the records relate to people",
+                "Processing, which includes any operation performed on personal data",
+                "Anonymisation, because the records are printed",
+                "A transfer, because the records move between two organisations"
+            ],
+            "correct_index": 1,
+            "explanation": "Processing is defined broadly in Article 4(2) and covers storage, adaptation and printing of personal data. Printing is not anonymisation, an intra-EU movement is not necessarily a restricted transfer, and profiling means automated evaluation rather than ordinary record handling.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-011",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "Under the GDPR, which organisation determines the purposes and means of the processing of personal data?",
+            "options": [
+                "The supervisory authority",
+                "The processor",
+                "The controller",
+                "The data subject"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 4(7) defines the controller as the body that determines the purposes and means of processing. A processor acts on the controller's instructions, a data subject is the individual concerned, and a supervisory authority regulates rather than controls the processing.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-012",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A cloud provider hosts and stores personal data purely on the documented instructions of its customer and does not decide why the data are processed. How is the cloud provider best classified?",
+            "options": [
+                "As a joint controller, because it chooses its own security tools",
+                "As a controller, because it stores the data",
+                "As a data subject, because the data are hosted on its servers",
+                "As a processor, because it processes data on behalf of a controller"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 4(8) defines a processor as a body that processes personal data on behalf of the controller. Storing data at the controller's direction does not make the host a controller, the host is not the individual concerned, and choosing security tools does not amount to determining the purposes and means.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-013",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A retailer replaces names in a customer database with random codes but keeps a separate protected mapping table that can reverse the codes. How should this technique be described under the GDPR?",
+            "options": [
+                "Pseudonymisation, because the data can still be attributed to a person using additional information",
+                "Encryption of the whole record set, which makes it anonymous",
+                "Aggregation, because the codes summarise the customers",
+                "Anonymisation, because the names are no longer visible"
+            ],
+            "correct_index": 0,
+            "explanation": "Pseudonymisation under Article 4(5) keeps data attributable to a person when combined with separately held additional information, so it remains personal data. Anonymisation must be irreversible, and replacing names with reversible codes is not aggregation.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-014",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A hospital uses patient data to send appointment reminders but never tells patients how their data are used. Which GDPR principle is most directly breached?",
+            "options": [
+                "The storage limitation principle only",
+                "The lawfulness, fairness and transparency principle",
+                "The accuracy principle only",
+                "The purpose limitation principle only"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 5(1)(a) requires processing to be lawful, fair and transparent, and failing to inform patients of how data are used is a transparency failure. Purpose, storage and accuracy are separate principles not primarily engaged by the omission alone.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-015",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A fitness app collected user data only to provide activity tracking but now sells the same data to advertisers without a new lawful basis. Which principle does this most directly violate?",
+            "options": [
+                "The data minimisation principle",
+                "The accuracy principle",
+                "The purpose limitation principle",
+                "The integrity and confidentiality principle"
+            ],
+            "correct_index": 2,
+            "explanation": "Using data for a new, incompatible purpose without a proper basis breaches purpose limitation under Article 5(1)(b). The data may be accurate and secure, and the issue is the changed purpose rather than collecting more data than needed.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-016",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "An online form requires applicants for a newsletter to provide their home address, date of birth and salary even though the newsletter needs only an email address. Which principle does this most directly breach?",
+            "options": [
+                "The storage limitation principle",
+                "The purpose limitation principle",
+                "The accuracy principle",
+                "The data minimisation principle"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 5(1)(c) requires data to be adequate, relevant and limited to what is necessary, so collecting unrelated fields for a newsletter breaches data minimisation. Storage duration, purpose compatibility and accuracy are not the primary problem here.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-017",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A bank keeps outdated credit scores that it knows are wrong and continues to use them to reject loan applications. Which GDPR principle is most directly engaged?",
+            "options": [
+                "The accuracy principle",
+                "The storage limitation principle",
+                "The integrity and confidentiality principle",
+                "The accountability principle"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 5(1)(d) requires personal data to be accurate and, where necessary, kept up to date, and knowingly using wrong scores breaches that principle. Security, accountability and retention periods are different obligations not centrally at issue.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-018",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A company keeps customer transaction records indefinitely with no review, long after the purpose for collecting them has ended. Which principle is most directly breached?",
+            "options": [
+                "The data minimisation principle",
+                "The storage limitation principle",
+                "The accuracy principle",
+                "The fairness principle"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 5(1)(e) requires data to be kept no longer than necessary, so indefinite retention without review breaches storage limitation. Accuracy concerns correctness, fairness concerns how data are used, and minimisation concerns the amount collected.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-019",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A controller fails to protect personal data with appropriate technical measures, allowing a database to be read by unauthorised staff. Which principle is most directly breached?",
+            "options": [
+                "The accuracy principle",
+                "The purpose limitation principle",
+                "The integrity and confidentiality principle",
+                "The storage limitation principle"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 5(1)(f) requires appropriate security, including protection against unauthorised access, which is the integrity and confidentiality principle. Accuracy, purpose limitation and storage limitation address different aspects of processing.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-020",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A gym asks new members to sign one form that bundles consent to processing for membership, for marketing and for sharing data with partners into a single agreement. Which requirement for valid consent is most directly at risk?",
+            "options": [
+                "Consent must always be signed in writing",
+                "Consent must be collected from the data subject's employer",
+                "Consent must be renewed every month",
+                "Consent must be specific and separately given for distinct purposes"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 7 requires consent to be specific and freely given, and bundling unrelated purposes undermines specificity and freedom. Written form is not always required, employers are not consent collectors here, and there is no monthly renewal rule.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-021",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "An employer wants a lawful basis to process payroll data so it can pay staff who have signed employment contracts. Which lawful basis is most appropriate?",
+            "options": [
+                "Performance of a contract to which the data subject is party",
+                "Vital interests, because salaries are important",
+                "Public task, because employment is regulated",
+                "Consent, because staff signed a contract"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 6(1)(b) covers processing necessary to perform a contract with the data subject, which fits paying employees. Consent is distinct from signing a contract, vital interests concern life-or-death situations, and public task is for official functions.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-022",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A company must retain and report certain tax records to a revenue authority under national law. Which lawful basis best covers that processing?",
+            "options": [
+                "Legitimate interests of the company",
+                "Compliance with a legal obligation to which the controller is subject",
+                "Vital interests of the data subject",
+                "Consent of the data subject"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 6(1)(c) applies where processing is necessary to comply with a legal obligation under Union or member state law, such as tax reporting. Consent is unnecessary, legitimate interests cannot override a legal duty, and vital interests do not apply.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-023",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "Paramedics process a patient's medical data during an emergency in which the patient is unconscious and cannot give consent. Which lawful basis is most relevant?",
+            "options": [
+                "Legitimate interests",
+                "Legal obligation",
+                "Vital interests of the data subject",
+                "Performance of a contract"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 6(1)(d) covers processing necessary to protect the vital interests of the data subject or another person, which fits emergency medical treatment. There is no contract or legal-obligation basis specific to the emergency, and legitimate interests cannot be used where a more specific basis applies.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-024",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A public authority processes personal data to carry out a task that is laid down in national law and serves the public interest. Which lawful basis applies?",
+            "options": [
+                "Vital interests",
+                "Consent",
+                "Contract",
+                "Performance of a task carried out in the public interest"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 6(1)(e) covers processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority. Consent, contract and vital interests do not capture a statutory public function.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-025",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A retailer wants to use purchase history for fraud prevention and justifies it by weighing the benefit against the impact on customers. Which lawful basis is designed for this kind of balancing test?",
+            "options": [
+                "Legitimate interests pursued by the controller or a third party",
+                "Public task",
+                "Vital interests",
+                "Explicit consent only"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 6(1)(f) allows processing based on legitimate interests after a balancing test against the rights and freedoms of data subjects. Explicit consent, public task and vital interests either require a different trigger or are limited to specific situations.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-026",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A controller relies on legitimate interests and concludes, after an assessment, that those interests are overridden by the rights and freedoms of the data subjects. What is the correct outcome?",
+            "options": [
+                "The controller must obtain authorisation from the European Data Protection Board",
+                "The controller cannot rely on that basis and must find another lawful basis or stop",
+                "The controller may proceed as long as it records the decision in a privacy notice",
+                "The controller may still proceed because legitimate interests are always available"
+            ],
+            "correct_index": 1,
+            "explanation": "If the balancing test under Article 6(1)(f) fails, the legitimate-interests basis cannot be used and another lawful basis must be found or the processing stopped. The European Data Protection Board does not grant case-by-case authorisations, and documenting the decision does not cure the failure.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-027",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A user who previously agreed to receive marketing emails later asks the company to stop. Under the GDPR, what must the controller do?",
+            "options": [
+                "Continue sending emails because the original consent was valid",
+                "Transfer the consent to another company that may use it",
+                "Allow withdrawal of consent as easily as it was given and stop the marketing",
+                "Require the user to pay an administration fee to withdraw"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 7(3) gives the data subject the right to withdraw consent at any time and requires withdrawal to be as easy as giving consent. Fees, continued sending and transferring consent all undermine that right.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-028",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "An employer processes data about employees' trade union membership for general HR administration. Under the GDPR, why is this processing restricted?",
+            "options": [
+                "It is prohibited because employees cannot be data subjects",
+                "It is allowed without any condition because the employer owns the data",
+                "It is allowed only if the data are transferred outside the Union",
+                "It concerns a special category of personal data and is prohibited unless a specific condition applies"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 9 prohibits processing of special category data, including trade union membership, unless one of the listed conditions is met. Employees are data subjects, and the restriction has nothing to do with ownership or transfers.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-029",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A company wishes to process data revealing racial or ethnic origin for a diversity programme and intends to rely on the data subjects' explicit consent. Which statement is correct?",
+            "options": [
+                "Explicit consent is one of the conditions that can lift the general prohibition on special category data",
+                "Special category data can never be processed under any circumstances",
+                "Explicit consent is unnecessary because diversity is a legitimate interest",
+                "The data subjects' consent must be given by a public authority"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 9(2)(a) lists explicit consent as one of the conditions that can permit processing of special category data. The prohibition is not absolute, legitimate interests are not a valid condition here, and consent must come from the data subjects.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-030",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A hospital processes patient health data to provide medical diagnosis and treatment under the responsibility of a professional subject to an obligation of professional secrecy. Which condition allows this?",
+            "options": [
+                "The transfer derogation for contracts under Article 49",
+                "The condition for medical diagnosis, health care and treatment under Article 9(2)(h)",
+                "Consent for scientific research under Article 6(1)(a)",
+                "The legitimate interests of the hospital under Article 6(1)(f)"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 9(2)(h) permits processing of health data where necessary for medical diagnosis and the provision of health care under a professional secrecy obligation. Consent, legitimate interests and transfer derogations address different situations.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-031",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A data subject writes to a retailer asking for a copy of the personal data the retailer holds about them. Which right is the data subject exercising?",
+            "options": [
+                "The right to erasure",
+                "The right to data portability only",
+                "The right of access",
+                "The right to object"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 15 gives the data subject the right to obtain confirmation and a copy of the personal data being processed, known as the right of access. Erasure, portability and objection are separate rights with different conditions.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-032",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A customer shows that a bank holds an inaccurate address on file and asks the bank to correct it. Which right is being exercised?",
+            "options": [
+                "The right to restriction",
+                "The right to erasure",
+                "The right to lodge a complaint",
+                "The right to rectification"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 16 gives the right to obtain rectification of inaccurate personal data without undue delay. Restriction pauses processing, erasure removes data, and lodging a complaint is a remedy against a supervisory authority.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-033",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A subscriber asks a social media platform to delete photographs that the subscriber uploaded years ago and no longer wants processed. Which right is the subscriber exercising?",
+            "options": [
+                "The right to erasure, also called the right to be forgotten",
+                "The right to rectification",
+                "The right not to be subject to automated decisions",
+                "The right to data portability"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 17 provides the right to erasure, often called the right to be forgotten, where personal data are no longer necessary or consent is withdrawn. Portability, rectification and automated-decision rules do not cover a request to delete data.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-034",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "While a controller checks the accuracy of a disputed record, the data subject asks that the controller stop actively using the data but keep it. Which right is being exercised?",
+            "options": [
+                "The right to object to direct marketing",
+                "The right to restriction of processing",
+                "The right to erasure",
+                "The right to data portability"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 18 allows restriction of processing, for example while the accuracy of data is contested, which keeps the data stored but limits its use. Erasure would delete the data, and portability and marketing objection do not address a pending accuracy dispute.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-035",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A user of a music streaming service wants to move account data to a competing provider in a structured, commonly used and machine-readable format. Which right applies?",
+            "options": [
+                "The right to restriction",
+                "The right of access only",
+                "The right to data portability",
+                "The right to erasure"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 20 provides the right to data portability, allowing data provided by the data subject to be received and transmitted to another controller. The right of access gives a copy but not a portable transfer, while erasure and restriction do different things.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-036",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A homeowner who receives unsolicited marketing letters asks the controller to stop processing her data for direct marketing. Which right is she exercising?",
+            "options": [
+                "The right to rectification",
+                "The right to access",
+                "The right to withdraw from a contract",
+                "The right to object, which is absolute in the case of direct marketing"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 21 gives data subjects the right to object to processing, and where the processing is for direct marketing the objection is absolute and the controller must stop. Rectification and access concern correctness and copies, and there is no contract to withdraw from.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-037",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A lender uses an automated system, with no human involvement, to reject loan applicants based on profiling. Under Article 22, what must the controller generally provide?",
+            "options": [
+                "Safeguards including the right to obtain human intervention and to contest the decision",
+                "Nothing, because automated decisions are outside the GDPR",
+                "Automatic approval of every application that is contested",
+                "A public register of all rejected applicants"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 22 restricts solely automated decisions with significant effects and requires safeguards such as human intervention and the ability to contest the decision. Such processing is within the GDPR, and neither automatic approval nor a public register is required.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-038",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A controller collects personal data directly from a data subject and must tell the person certain information at the time of collection. Which articles govern that information duty?",
+            "options": [
+                "Articles 77 to 79, on remedies",
+                "Articles 12 to 14, on transparent information and communication",
+                "Articles 33 and 34, on breach notification",
+                "Articles 44 to 49, on international transfers"
+            ],
+            "correct_index": 1,
+            "explanation": "Articles 12 to 14 set out the duty to provide transparent information to data subjects, including what must be given when data are collected directly. Breach notification, transfers and remedies are separate parts of the Regulation.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-039",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "Which of the following activities would generally require an organisation to designate a data protection officer under Article 37?",
+            "options": [
+                "Storing a paper diary belonging to one employee",
+                "Publishing an annual financial statement",
+                "Large-scale regular and systematic monitoring of individuals",
+                "Sending a single transactional email to one customer"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 37 requires a DPO where processing is carried out by a public authority, involves large-scale regular and systematic monitoring, or concerns large-scale special category data. A single email, one diary and a financial statement do not meet those thresholds.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-040",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "An organisation has appointed a data protection officer. Which statement best reflects the DPO's required position under the GDPR?",
+            "options": [
+                "The DPO may be dismissed or penalised for performing the role diligently",
+                "The DPO must personally decide the lawful basis for every processing operation",
+                "The DPO must report to the marketing director who sets processing purposes",
+                "The DPO must act independently, report to the highest management level and not be instructed on tasks"
+            ],
+            "correct_index": 3,
+            "explanation": "Articles 38 and 39 require the DPO to be involved properly, report to the highest management level and act independently without instructions. The DPO advises on lawful bases but the controller decides, and the DPO must not be penalised for doing the job.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-041",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A hospital plans to deploy a new system that will systematically monitor patients' health on a large scale. Which GDPR mechanism must the controller carry out first?",
+            "options": [
+                "A data protection impact assessment",
+                "A transfer impact assessment",
+                "A binding corporate rules approval",
+                "A standard contractual clause review"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 35 requires a data protection impact assessment before processing likely to result in a high risk, including large-scale systematic monitoring of special category data. Transfer assessments, BCRs and SCC reviews concern international transfers rather than novel high-risk processing.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-042",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "After completing a data protection impact assessment, a controller concludes that a processing operation would result in a high risk that cannot be mitigated. What should the controller do next?",
+            "options": [
+                "Proceed anyway and document the risk",
+                "Consult the supervisory authority before starting the processing",
+                "Transfer the data outside the Union to avoid the risk",
+                "Ask the data subjects to sign a waiver"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 36 requires prior consultation with the supervisory authority where a DPIA shows a high residual risk that cannot be reduced. Proceeding, exporting the data or seeking waivers does not remove the obligation to consult.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-043",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A controller is choosing measures to protect personal data against unauthorised access and accidental loss. Which GDPR article requires appropriate technical and organisational security measures?",
+            "options": [
+                "Article 15 on the right of access",
+                "Article 44 on general principles for transfers",
+                "Article 32 on security of processing",
+                "Article 30 on records of processing"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 32 requires controllers and processors to implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk. Article 30 concerns records, Article 15 access and Article 44 transfers.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-044",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A data subject emails a controller to exercise a right under the GDPR, and the controller has no reason to doubt the person's identity or need further information. Within what period must the controller normally respond?",
+            "options": [
+                "Within seven days",
+                "Within six months",
+                "At the end of the next financial year",
+                "Without undue delay and in any event within one month"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 12(3) requires the controller to provide information on action taken without undue delay and in any event within one month, extendable by two further months for complex requests. Seven days, six months and year-end are not the default periods.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-045",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A group of companies jointly determines the purposes and means of processing customer data and shares responsibility for it. How does the GDPR describe this arrangement?",
+            "options": [
+                "As joint controllers who must arrange their respective responsibilities",
+                "As sole controllership held by the first company to collect the data",
+                "As a transfer to a third country",
+                "As a controller-processor relationship"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 26 applies where two or more controllers jointly determine the purposes and means of processing and requires them to arrange their respective responsibilities transparently. A processor acts on instructions, sole controllership does not fit a joint decision, and no transfer is involved.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-046",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A controller designs a mobile app so that, by default, it collects only the minimum data necessary and processes it only for the stated purpose. Which GDPR principle is this most consistent with?",
+            "options": [
+                "Indefinite retention for analytics",
+                "Data minimisation as part of lawful processing",
+                "Free flow of data across borders",
+                "Automatic consent renewal"
+            ],
+            "correct_index": 1,
+            "explanation": "Collecting only what is necessary and limiting use to the stated purpose reflects the data minimisation principle in Article 5(1)(c). Border data flows, consent renewal and indefinite retention describe practices that conflict with the principles.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-047",
+            "domain": "European Data Protection Law and Regulation",
+            "stem": "A biometric system scans employees' fingerprints to control building access. Under the GDPR, fingerprint data used to uniquely identify a person is what kind of data?",
+            "options": [
+                "Financial data subject to banking secrecy",
+                "Ordinary personal data with no special rules",
+                "Biometric data treated as a special category when processed to uniquely identify a person",
+                "Anonymous data because fingerprints are random"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 4(14) defines biometric data, and Article 9 treats data processed to uniquely identify a person as a special category. Fingerprints are not anonymous, and banking secrecy does not apply to physical access control.",
+            "reference": "IAPP CIPP/E Exam Blueprint - European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-048",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller wants to demonstrate that it complies with the GDPR and is able to show what it has done. Which principle requires the controller to be responsible for and to demonstrate compliance?",
+            "options": [
+                "The storage limitation principle",
+                "The data minimisation principle",
+                "The accuracy principle",
+                "The accountability principle"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 5(2) makes the controller responsible for, and able to demonstrate, compliance, which is the accountability principle. Storage limitation, minimisation and accuracy are substantive principles that accountability supports.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-049",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A developer builds a new customer app and, from the design stage, builds in privacy settings that default to the most protective option. Which GDPR requirement is being applied?",
+            "options": [
+                "Data protection by design and by default",
+                "The right to data portability",
+                "The transfer derogation for contracts",
+                "The record-keeping exemption for small firms"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 25 requires data protection by design and by default, so privacy is built into the design and defaults are protective. Portability concerns transfer of data, and there is no general record-keeping exemption for small firms.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-050",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller with more than 250 employees processes personal data as a regular activity. What must it generally maintain under Article 30?",
+            "options": [
+                "A copy of every contract ever signed",
+                "A record of processing activities",
+                "A register of data subjects' consent emails",
+                "A public list of all employees"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 30 requires controllers to maintain a record of processing activities covering purposes, categories, recipients and retention. It does not require publishing employee lists or keeping copies of every contract, and consent registers are only one possible supporting record.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-051",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller engages a payment processor to handle transactions. What must the controller put in place with the processor under Article 28?",
+            "options": [
+                "Nothing, because processors are outside the GDPR",
+                "A non-disclosure agreement that removes the processor's liability",
+                "A written contract setting out the subject matter, duration, nature and purpose of processing and the processor's obligations",
+                "Only a verbal agreement confirmed by email"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 28 requires a binding written contract with the processor that specifies the processing and imposes duties such as acting on instructions and assisting the controller. A verbal agreement is insufficient, processors are covered by the GDPR, and liability cannot simply be removed.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-052",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A company suffers a ransomware attack that exposes customer data and is likely to result in a risk to people's rights. Under Article 33, when must it notify the supervisory authority?",
+            "options": [
+                "Within 30 calendar days of discovering the breach",
+                "Only after the police investigation is complete",
+                "Never, if the data are encrypted at rest",
+                "Within 72 hours of becoming aware of the breach, where feasible"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 33 requires notification to the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of a breach. The other options misstate the deadline or wrongly remove the duty.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-053",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A breach is likely to result in a high risk to the rights and freedoms of data subjects. In addition to notifying the supervisory authority, what must the controller do under Article 34?",
+            "options": [
+                "Communicate the breach to the affected data subjects without undue delay",
+                "Notify only the company's shareholders",
+                "Take out an advertisement in a national newspaper for one year",
+                "Do nothing further once the supervisory authority is told"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 34 requires communication of a high-risk breach to the affected data subjects without undue delay so they can take protective steps. Notifying shareholders, long newspaper campaigns and stopping at the regulator do not satisfy the duty.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-054",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A processor becomes aware of a personal data breach while processing on behalf of a controller. What must the processor do under Article 33(2)?",
+            "options": [
+                "Delete the evidence to limit liability",
+                "Notify the controller without undue delay",
+                "Notify the data subjects directly and ignore the controller",
+                "Wait until the next annual audit to report it"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 33(2) requires a processor to notify the controller without undue delay after becoming aware of a breach. The controller then decides on notifications to the authority and data subjects, so ignoring the controller or destroying evidence is wrong.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-055",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller must keep a record of personal data breaches. Which information does Article 33(5) require to be documented?",
+            "options": [
+                "Only the financial cost of the breach",
+                "Only the identity of the person who caused the breach",
+                "The facts of the breach, its effects and the remedial action taken",
+                "The names and home addresses of the affected data subjects in a public file"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 33(5) requires documentation of the facts relating to the breach, its effects and the remedial action taken, so the controller can demonstrate compliance. Publishing victim addresses is inappropriate, and the cost alone or a single culprit is not sufficient.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-056",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A website wants to place advertising cookies on a visitor's device. Under the ePrivacy Directive, what is generally required first?",
+            "options": [
+                "Only a banner that says cookies are used, with no way to refuse",
+                "Nothing, because cookies are always lawful",
+                "Approval from the supervisory authority before each cookie is set",
+                "The visitor's prior informed consent, except for strictly necessary cookies"
+            ],
+            "correct_index": 3,
+            "explanation": "The ePrivacy Directive requires prior informed consent for storing or accessing information on a user's device, with an exception for strictly necessary cookies. A notice without a refusal option is not valid consent, cookies are not always lawful, and each cookie does not need regulator approval.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-057",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "An online shop uses a cookie to remember the contents of a shopping basket while the user browses. Which statement best describes the cookie requirement?",
+            "options": [
+                "A strictly necessary cookie may be set without consent, but the user must still be informed",
+                "Every cookie requires prior consent, including basket cookies",
+                "Basket cookies may be sold to advertisers without consent",
+                "Cookies are governed only by the GDPR and not by the ePrivacy Directive"
+            ],
+            "correct_index": 0,
+            "explanation": "Strictly necessary cookies, such as those that remember a basket, are exempt from the consent requirement, though users should still be informed. Not every cookie needs consent, selling basket data for advertising would need a lawful basis, and ePrivacy governs device access.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-058",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "How do the ePrivacy Directive and the GDPR relate when personal data are processed through cookies?",
+            "options": [
+                "Only the GDPR applies, so consent is never needed for cookies",
+                "The ePrivacy Directive governs storing or accessing information on a user's device, and the GDPR applies to the resulting personal data processing",
+                "The GDPR repeals the ePrivacy Directive entirely",
+                "The ePrivacy Directive applies only to paper records"
+            ],
+            "correct_index": 1,
+            "explanation": "The ePrivacy Directive is the specific rule for placing or reading information on a device, while the GDPR governs the personal data processing that follows. The two operate together; the GDPR does not repeal ePrivacy, and consent rules still apply.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-059",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A company wants to send marketing emails to people who have never had any prior relationship with it. Under the ePrivacy rules, what is generally required?",
+            "options": [
+                "No permission, because email is an electronic message",
+                "Permission from the recipient's employer",
+                "The recipient's prior consent, known as an opt-in",
+                "Only a working unsubscribe link in the email"
+            ],
+            "correct_index": 2,
+            "explanation": "Electronic direct marketing to individuals generally requires prior consent under the ePrivacy Directive. An unsubscribe link supports opt-out but does not replace prior consent, and the sender does not need the recipient's employer's permission.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-060",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A retailer has previously sold a product to a customer and now wants to email similar products to that customer. Which ePrivacy concept can permit this without fresh consent?",
+            "options": [
+                "The legitimate interest of the retailer, which always overrides consent",
+                "The vital interests of the customer",
+                "The public task of the retailer",
+                "The soft opt-in for existing customers, with a clear and free opt-out at collection and in every message"
+            ],
+            "correct_index": 3,
+            "explanation": "The soft opt-in allows electronic marketing of similar products to existing customers who were given a free opt-out at collection and in every message. Legitimate interests do not always override consent in marketing, and vital interests and public task do not apply.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-061",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "An online service is offered directly to children and relies on consent as its lawful basis in an information society service. Under Article 8, what is generally required?",
+            "options": [
+                "Consent must be given or authorised by the holder of parental responsibility for children below the applicable age",
+                "Children may always consent on their own from any age",
+                "Children's data may be processed without any basis",
+                "Consent is irrelevant for online services"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 8 requires parental consent for information society services offered directly to a child below the age set between 13 and 16 by member states. Children cannot always consent alone, a lawful basis is still required, and consent is not irrelevant online.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-062",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "An employer wants to monitor employees' work email continuously and argues that employees can simply consent to it. Why is employee consent usually not a reliable basis?",
+            "options": [
+                "Because only trade unions can consent on behalf of employees",
+                "Because of the imbalance of power between employer and employee, consent is rarely freely given",
+                "Because employees are not data subjects",
+                "Because monitoring is always prohibited by the GDPR"
+            ],
+            "correct_index": 1,
+            "explanation": "Recital 43 and Article 7 make clear that consent is rarely freely given where there is a clear imbalance of power, such as employment. Employees are data subjects, monitoring is not always prohibited, and trade unions do not consent on their behalf.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-063",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A recruiter keeps the CVs of unsuccessful applicants indefinitely in case a role opens. What is the most appropriate compliance concern under the GDPR?",
+            "options": [
+                "The transfer rules, because CVs relate to people abroad",
+                "The accuracy principle only, because CVs can be updated",
+                "The storage limitation principle, since a defined retention period should apply",
+                "The right to data portability, because CVs are structured data"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 5(1)(e) requires retention no longer than necessary, so indefinite storage of rejected applicants' CVs breaches storage limitation. Portability, transfers and accuracy are not the central issue in this scenario.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-064",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "An employee reports suspected wrongdoing through a confidential whistleblowing hotline. Which statement best describes the GDPR position?",
+            "options": [
+                "Whistleblowing data can never be processed under the GDPR",
+                "Whistleblowing data are exempt from all GDPR principles",
+                "The reporter must always be identified publicly",
+                "The processing can be justified on an appropriate lawful basis, often linked to national whistleblowing laws, with attention to confidentiality and proportionality"
+            ],
+            "correct_index": 3,
+            "explanation": "Whistleblowing processing is permitted where a lawful basis, often linked to national implementing laws, supports it, with care for confidentiality and proportionality. It is not prohibited, not exempt from all principles, and reporters' identities are not made public.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-065",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A company wants to demonstrate compliance to customers and regulators by having an independent body approve its data protection practices. Which GDPR mechanism allows this?",
+            "options": [
+                "Certification under Article 42",
+                "A binding corporate rules transfer under Article 47",
+                "A standard contractual clause under Article 46",
+                "A transfer impact assessment"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 42 establishes certification mechanisms under which an accredited body can certify that processing operations comply with the GDPR. Transfer rules and transfer impact assessments concern international transfers rather than general compliance approval.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-066",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "An industry association wants to draft sector-specific data protection rules that its members can voluntarily adopt, subject to approval. Which GDPR mechanism is this?",
+            "options": [
+                "A prior consultation under Article 36",
+                "A code of conduct under Article 40",
+                "An adequacy decision under Article 45",
+                "A derogation for public interest under Article 49"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 40 encourages codes of conduct that specify how the GDPR applies in particular sectors, subject to approval. Adequacy, transfer derogations and prior consultation serve different purposes.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-067",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A supervisory authority finds serious and repeated infringements. Under Article 83, which of the following is available to it as a corrective measure?",
+            "options": [
+                "Permanent seizure of the company by the authority",
+                "Automatic transfer of the company's customers to a competitor",
+                "Administrative fines of up to the higher of a set amount or a percentage of annual worldwide turnover",
+                "Criminal imprisonment ordered directly by the supervisory authority"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 83 allows administrative fines up to a capped amount or a percentage of total worldwide annual turnover, whichever is higher. Supervisory authorities do not impose imprisonment, seize companies or transfer customers to competitors.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-068",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller with establishments in several EU member states has its main establishment in Ireland and processes data across the Union. Which supervisory authority generally acts as the lead authority?",
+            "options": [
+                "Every authority must open its own separate file with no coordinator",
+                "The European Data Protection Board decides every individual complaint",
+                "The authority of the data subject's country always leads",
+                "The supervisory authority of the member state where the main establishment is located"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 56 establishes the one-stop-shop, under which the supervisory authority of the main establishment acts as lead for cross-border processing. The European Data Protection Board coordinates but does not decide every complaint, and the data subject's authority is not automatically lead.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-069",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A data subject submits a rights request, and a controller has genuine doubts about the requester's identity. What is the appropriate response under the GDPR?",
+            "options": [
+                "The controller may request additional information necessary to confirm identity before acting",
+                "The controller may refuse all requests from that person forever",
+                "The controller must publish the person's data to verify identity publicly",
+                "The controller must always comply without any identity check"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 12(6) allows a controller to request additional information where it has reasonable doubts about the identity of the person making a request. It cannot refuse forever, must not disclose data publicly to verify identity, and genuine doubts justify a proportionate check.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-070",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller must provide a privacy notice to data subjects. Which items does Article 13 require when data are collected directly from the data subject?",
+            "options": [
+                "The names of every other customer the company has",
+                "The identity of the controller, the purposes and lawful basis of processing, and the data subject's rights",
+                "Only the company's share price and registered office",
+                "The home addresses of the company's directors only"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 13 requires information including controller identity, purposes, lawful basis, recipients, retention and data subject rights. Share price, directors' addresses and other customers' names are not required transparency content.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-071",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A controller has completed a data protection impact assessment for a processing operation that remains high risk after mitigation. Which step does Article 36 require next?",
+            "options": [
+                "Obtain consent from the supervisory authority's staff",
+                "Publish the assessment and proceed without further action",
+                "Seek prior consultation with the supervisory authority",
+                "Transfer the data to a third country and continue"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 36 requires the controller to consult the supervisory authority where the DPIA indicates a high residual risk. Transferring data, obtaining staff consent and simply publishing the assessment do not satisfy the prior consultation duty.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-072",
+            "domain": "Compliance with European Data Protection Law and Regulation",
+            "stem": "A company is selecting a new cloud vendor that will process personal data on its behalf. Which due diligence step best reflects GDPR compliance?",
+            "options": [
+                "Selecting the vendor with the lowest price and no further checks",
+                "Relying only on the vendor's verbal promise of security",
+                "Transferring all controller obligations to the vendor permanently",
+                "Assessing the vendor's ability to provide sufficient guarantees and putting an Article 28 contract in place"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 28 requires controllers to use processors that provide sufficient guarantees and to bind them with a written contract. Price alone, verbal promises and permanently passing off controller obligations do not meet the requirement, since a controller cannot contract away its responsibilities.",
+            "reference": "IAPP CIPP/E Exam Blueprint - Compliance with European Data Protection Law and Regulation"
+        },
+        {
+            "id": "cipp-e-073",
+            "domain": "International Data Transfers",
+            "stem": "A controller wants to send personal data to a service provider in a third country. What is the overarching rule under Article 44 of the GDPR?",
+            "options": [
+                "Personal data may be transferred only if the controller and processor comply with the conditions in Chapter V",
+                "Personal data may always be transferred as long as the data subject is in Europe",
+                "Transfers are prohibited in all circumstances",
+                "Transfers require no basis if the recipient is a company"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 44 sets the general principle that any transfer of personal data to a third country must satisfy the conditions laid down in Chapter V. Transfers are neither universally permitted nor absolutely prohibited, and company status alone is not a basis.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-074",
+            "domain": "International Data Transfers",
+            "stem": "The European Commission formally decides that a third country provides an adequate level of data protection. What is the effect of that decision under Article 45?",
+            "options": [
+                "The decision shifts all responsibility to the data subject",
+                "Personal data can flow to that country without the need for further safeguards",
+                "Each individual transfer still needs separate authorisation from the Commission",
+                "The decision applies only to paper records"
+            ],
+            "correct_index": 1,
+            "explanation": "An adequacy decision under Article 45 allows transfers to the country concerned as if it were inside the EU, without additional authorisation or safeguards. The decision is not limited to paper records and does not shift responsibility to the data subject.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-075",
+            "domain": "International Data Transfers",
+            "stem": "Which of the following best describes an adequacy decision under the GDPR?",
+            "options": [
+                "A self-certification by the importing company",
+                "A recommendation issued by a national court",
+                "A binding finding by the European Commission that a third country, territory or sector ensures an adequate level of protection",
+                "A private contract between two companies"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 45 empowers the European Commission to adopt legally binding adequacy decisions about third countries, territories or sectors. Private contracts are Article 46 tools, self-certification is a framework feature, and national courts do not issue adequacy findings.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-076",
+            "domain": "International Data Transfers",
+            "stem": "Two companies transfer data to a third country where no adequacy decision applies and sign the European Commission's Standard Contractual Clauses. What role do the SCCs play?",
+            "options": [
+                "They create an adequacy finding for the third country",
+                "They remove the need to identify a lawful basis for processing",
+                "They are valid only within the European Union",
+                "They provide appropriate safeguards under Article 46 for the transfer"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard Contractual Clauses are an Article 46 transfer tool providing appropriate safeguards when there is no adequacy decision. They do not create adequacy, do not replace the need for a lawful basis, and are specifically designed for transfers out of the Union.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-077",
+            "domain": "International Data Transfers",
+            "stem": "A multinational group wants a single, group-wide set of rules approved for its intra-group transfers of personal data to third countries. Which mechanism is designed for this?",
+            "options": [
+                "Binding corporate rules under Article 47",
+                "An adequacy decision under Article 45",
+                "A standard contractual clause signed by one subsidiary",
+                "A transfer derogation for vital interests"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 47 provides for binding corporate rules, approved by a competent authority, which permit intra-group transfers within a corporate group. Adequacy is country-level, a single SCC does not cover a group-wide programme, and vital interests is a narrow derogation.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-078",
+            "domain": "International Data Transfers",
+            "stem": "In the Schrems I judgment of 2015, the Court of Justice of the European Union annulled which transfer mechanism?",
+            "options": [
+                "The EU-US Data Privacy Framework",
+                "The Safe Harbor framework with the United States",
+                "The Standard Contractual Clauses",
+                "Binding corporate rules"
+            ],
+            "correct_index": 1,
+            "explanation": "Schrems I invalidated the Safe Harbor decision because it did not provide adequate protection against US surveillance. SCCs and binding corporate rules were not annulled, and the Data Privacy Framework came later.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-079",
+            "domain": "International Data Transfers",
+            "stem": "In the Schrems II judgment of 2020, the Court of Justice of the European Union invalidated which arrangement?",
+            "options": [
+                "The Convention 108 treaty",
+                "The ePrivacy Directive",
+                "The EU-US Privacy Shield",
+                "The General Data Protection Regulation"
+            ],
+            "correct_index": 2,
+            "explanation": "Schrems II invalidated the Privacy Shield adequacy decision, finding US surveillance law did not ensure essentially equivalent protection. The GDPR, Convention 108 and the ePrivacy Directive were not affected by that judgment.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-080",
+            "domain": "International Data Transfers",
+            "stem": "Following Schrems II, a controller relying on Standard Contractual Clauses for a transfer must take what additional step?",
+            "options": [
+                "Do nothing, because SCCs are automatically sufficient",
+                "Notify each individual data subject for every transfer",
+                "Replace all SCCs with a verbal agreement",
+                "Assess whether the destination country's law ensures essentially equivalent protection and add supplementary measures if needed"
+            ],
+            "correct_index": 3,
+            "explanation": "After Schrems II, exporters must verify that the law and practice of the destination ensure essentially equivalent protection and adopt supplementary measures where they do not. SCCs are not automatically sufficient, individual notification is not required for each transfer, and a verbal agreement would be invalid.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-081",
+            "domain": "International Data Transfers",
+            "stem": "A controller uses SCCs to transfer data to a cloud provider in a third country whose surveillance laws may allow government access. Which action best reflects the transfer impact assessment approach?",
+            "options": [
+                "Evaluate the third country's laws and practices and, where necessary, apply supplementary technical, organisational or contractual measures",
+                "Assume that SCCs alone always neutralise any surveillance risk",
+                "Transfer the data anyway because assessments are optional",
+                "Ask the cloud provider to deny that any government access exists"
+            ],
+            "correct_index": 0,
+            "explanation": "A transfer impact assessment examines the destination's laws and practices and identifies supplementary measures where protection falls short. Assuming SCCs are always sufficient, skipping the assessment or relying on a denial would not meet the Schrems II standard.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-082",
+            "domain": "International Data Transfers",
+            "stem": "The European Commission adopted an adequacy decision for the EU-US Data Privacy Framework in 2023. What is the practical result for organisations self-certifying under that framework?",
+            "options": [
+                "The framework covers only transfers of anonymous data",
+                "Transfers to certified US organisations can rely on the adequacy decision without additional safeguards",
+                "All US transfers are permanently prohibited",
+                "SCCs are no longer usable anywhere in the world"
+            ],
+            "correct_index": 1,
+            "explanation": "The 2023 adequacy decision allows transfers to US organisations that self-certify under the Data Privacy Framework to proceed on the basis of adequacy. It does not prohibit all US transfers, does not invalidate SCCs globally, and covers personal rather than only anonymous data.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-083",
+            "domain": "International Data Transfers",
+            "stem": "Which of the following is one of the appropriate safeguards listed in Article 46 for transfers to a third country without an adequacy decision?",
+            "options": [
+                "An internal policy chosen freely by the exporter",
+                "A press release announcing the transfer",
+                "Standard data protection clauses adopted by the European Commission",
+                "A verbal promise from the importer"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 46(2)(c) recognises standard data protection clauses adopted by the European Commission as an appropriate safeguard. Verbal promises, an exporter's unilateral internal policy and press releases are not recognised transfer safeguards.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-084",
+            "domain": "International Data Transfers",
+            "stem": "A controller makes a one-off, occasional transfer of data to a third country based on the data subject's explicit consent. Which provision of the GDPR is being used?",
+            "options": [
+                "Article 45, adequacy decisions",
+                "Article 42, certification",
+                "Article 30, records of processing",
+                "Article 49, the derogations for specific situations"
+            ],
+            "correct_index": 3,
+            "explanation": "Article 49 provides derogations for specific situations, including explicit consent for occasional transfers. Adequacy, certification and records of processing are different mechanisms and do not describe a consent-based derogation.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-085",
+            "domain": "International Data Transfers",
+            "stem": "A controller needs to transfer data to a third country to perform a contract with the data subject, and no adequacy decision or SCCs are in place. Which derogation under Article 49 may apply?",
+            "options": [
+                "The transfer is necessary for the performance of a contract between the data subject and the controller",
+                "The transfer is convenient for the controller's marketing",
+                "The transfer is needed to reduce the controller's tax bill",
+                "The transfer is made to a competitor for benchmarking"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 49 includes a derogation where the transfer is necessary for the performance of a contract between the data subject and the controller. Marketing convenience, tax reduction and competitor benchmarking are not recognised derogations.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-086",
+            "domain": "International Data Transfers",
+            "stem": "A small charity wants to transfer data to a third country to protect a data subject's vital interests when the person is physically or legally incapable of giving consent. Which basis applies?",
+            "options": [
+                "The right to data portability under Article 20",
+                "The derogation for vital interests under Article 49",
+                "An adequacy decision under Article 45",
+                "Binding corporate rules under Article 47"
+            ],
+            "correct_index": 1,
+            "explanation": "Article 49 allows a transfer necessary to protect the vital interests of a data subject who is physically or legally incapable of giving consent. Adequacy and BCRs are different mechanisms, and portability is a data subject right rather than a transfer basis.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-087",
+            "domain": "International Data Transfers",
+            "stem": "A controller relies on an Article 46 transfer tool but the data will be passed on from the importer to another company in a further third country. What does the GDPR require for this onward transfer?",
+            "options": [
+                "The importer may transfer the data anywhere without conditions",
+                "The data subject must re-consent to every internal email",
+                "The original exporter must ensure the onward transfer is also covered by a valid Chapter V mechanism",
+                "Onward transfers are always exempt from the GDPR"
+            ],
+            "correct_index": 2,
+            "explanation": "Article 44 requires that the level of protection not be undermined, so onward transfers must also be covered by a valid Chapter V mechanism such as an Article 46 tool. Onward transfers are not exempt, and there is no rule requiring consent for every internal message.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-088",
+            "domain": "International Data Transfers",
+            "stem": "Which statement best describes binding corporate rules under Article 47?",
+            "options": [
+                "They are contracts signed only between two unrelated companies",
+                "They replace the GDPR within the group",
+                "They are a type of adequacy decision issued for a whole country",
+                "They are legally binding internal rules approved by a competent authority that allow intra-group transfers to third countries"
+            ],
+            "correct_index": 3,
+            "explanation": "Binding corporate rules are internal, legally binding rules approved by a competent authority that permit transfers within a corporate group. They are not contracts between unrelated companies, do not replace the GDPR, and are not country-level adequacy decisions.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-089",
+            "domain": "International Data Transfers",
+            "stem": "A controller transfers data to a third country under the public interest derogation. What is a key limitation of the Article 49 derogations?",
+            "options": [
+                "They are intended for occasional, non-repetitive transfers and are interpreted restrictively",
+                "They can be used for routine, large-scale transfers without conditions",
+                "They override all other chapters of the GDPR",
+                "They remove the need for any data subject rights"
+            ],
+            "correct_index": 0,
+            "explanation": "Article 49 derogations apply to specific situations and are meant for occasional, non-repetitive transfers, so they are construed narrowly. They do not authorise routine large-scale transfers, override the Regulation, or remove data subject rights.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        },
+        {
+            "id": "cipp-e-090",
+            "domain": "International Data Transfers",
+            "stem": "A European company transfers employee data to its own subsidiary in a third country and wants a durable solution rather than relying on a one-off consent derogation. Which combination best supports this?",
+            "options": [
+                "No mechanism, because intra-group transfers are exempt",
+                "An appropriate safeguard such as Standard Contractual Clauses or binding corporate rules, plus a transfer impact assessment",
+                "A one-off explicit consent from each employee only",
+                "A verbal undertaking by the subsidiary's manager"
+            ],
+            "correct_index": 1,
+            "explanation": "A durable transfer solution combines an Article 46 safeguard such as SCCs or binding corporate rules with a transfer impact assessment. A one-off consent is only a narrow derogation, a verbal undertaking is not a valid safeguard, and intra-group transfers are not exempt.",
+            "reference": "IAPP CIPP/E Exam Blueprint - International Data Transfers"
+        }
+    ]
+}

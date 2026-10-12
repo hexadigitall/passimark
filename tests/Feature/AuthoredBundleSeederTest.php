@@ -485,6 +485,43 @@ class AuthoredBundleSeederTest extends TestCase
                 'Incident and Event Response' => 10,
                 'Security and Compliance' => 13,
             ]],
+            'cc' => ['cc', 100, [
+                'Security Principles' => 26,
+                'Business Continuity, Disaster Recovery, and Incident Response Concepts' => 10,
+                'Access Controls Concepts' => 22,
+                'Network Security' => 24,
+                'Security Operations' => 18,
+            ]],
+            'cdpse' => ['cdpse', 120, [
+                'Privacy Governance' => 41,
+                'Privacy Architecture' => 43,
+                'Data Lifecycle' => 36,
+            ]],
+            'cgeit' => ['cgeit', 120, [
+                'Governance of Enterprise IT' => 48,
+                'IT Resources' => 30,
+                'Benefits Realization' => 12,
+                'Risk Optimization' => 30,
+            ]],
+            'casp' => ['casp', 90, [
+                'Security Architecture' => 26,
+                'Security Operations' => 27,
+                'Security Engineering and Cryptography' => 23,
+                'Governance, Risk, and Compliance' => 14,
+            ]],
+            'cipp-e' => ['cipp-e', 90, [
+                'Introduction to European Data Protection' => 6,
+                'European Data Protection Law and Regulation' => 41,
+                'Compliance with European Data Protection Law and Regulation' => 25,
+                'International Data Transfers' => 18,
+            ]],
+            'pentest' => ['pentest', 85, [
+                'Planning and Scoping' => 12,
+                'Information Gathering and Vulnerability Scanning' => 19,
+                'Attacks and Exploits' => 25,
+                'Reporting and Communication' => 15,
+                'Tools and Code Analysis' => 14,
+            ]],
         ];
     }
 

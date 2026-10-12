@@ -1,0 +1,1277 @@
+{
+    "cert_key": "casp",
+    "title": "CompTIA Advanced Security Practitioner (CASP+ CAS-004)",
+    "issuer": "CompTIA",
+    "outline_file": "outlines/casp.json",
+    "variant_label": "CASP+ Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 165,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CompTIA CAS-004 exam objectives (four domains and weights). Not a capture of past exam questions.",
+    "source_label": "CompTIA CASP+ practice bank",
+    "items": [
+        {
+            "id": "casp-001",
+            "domain": "Security Architecture",
+            "stem": "A multinational enterprise is redesigning its remote access so that no request is trusted solely because it originates from the corporate network, and every session is authenticated and authorized against identity and device posture. Which architectural model is being implemented?",
+            "options": [
+                "Zero trust",
+                "Defense in depth",
+                "Perimeter-based security",
+                "Role-based access control"
+            ],
+            "correct_index": 0,
+            "explanation": "Zero trust removes implicit trust based on network location and evaluates every request using identity, device health, and context. Defense in depth layers controls, perimeter security trusts the internal network, and RBAC is an authorization method rather than an architecture.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-002",
+            "domain": "Security Architecture",
+            "stem": "An enterprise places firewalls, endpoint detection, application hardening, and user training at different layers so that the failure of any single control does not expose critical assets. Which design principle does this illustrate?",
+            "options": [
+                "Fail open",
+                "Defense in depth",
+                "Zero trust",
+                "Single sign-on"
+            ],
+            "correct_index": 1,
+            "explanation": "Defense in depth uses multiple independent, overlapping controls at different layers so there is no single point of failure. Zero trust concerns verification of requests, SSO is an authentication convenience, and fail open is an unsafe failure mode.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-003",
+            "domain": "Security Architecture",
+            "stem": "A financial firm enforces policy between individual workloads on the same subnet so that a compromised web tier cannot freely reach the database tier. Which technique is in use?",
+            "options": [
+                "Port mirroring",
+                "Network address translation",
+                "Microsegmentation",
+                "VLAN trunking"
+            ],
+            "correct_index": 2,
+            "explanation": "Microsegmentation applies fine-grained, per-workload policy that restricts east-west traffic and limits lateral movement. Trunking carries VLANs, port mirroring copies traffic for monitoring, and NAT translates addresses.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-004",
+            "domain": "Security Architecture",
+            "stem": "A power utility operates a supervisory control and data acquisition network that must remain physically disconnected from all business and Internet networks, with transfers only through controlled removable media. Which design is this?",
+            "options": [
+                "Screened subnet",
+                "Virtual private network",
+                "Microsegmentation",
+                "Air gap"
+            ],
+            "correct_index": 3,
+            "explanation": "An air gap provides physical isolation so no network path connects the OT environment to untrusted networks. A screened subnet still connects to the Internet, a VPN provides remote connectivity, and microsegmentation works within connected networks.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-005",
+            "domain": "Security Architecture",
+            "stem": "A company must expose a public web application to the Internet while preventing that server from initiating connections into the internal database segment. Where should the server be placed?",
+            "options": [
+                "In a screened subnet with firewall rules limiting both inbound and outbound traffic",
+                "On the internal corporate LAN",
+                "In the database subnet",
+                "On the same host as the database"
+            ],
+            "correct_index": 0,
+            "explanation": "A screened subnet (DMZ) isolates Internet-facing hosts, and bidirectional firewall rules stop the server from reaching internal segments. Placing it on the internal or database network would expose those segments to compromise.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-006",
+            "domain": "Security Architecture",
+            "stem": "In a public cloud deployment, the provider secures the physical facility and hypervisor while the customer is responsible for patching guest operating systems and configuring network controls. Which concept does this describe?",
+            "options": [
+                "Single sign-on",
+                "Shared responsibility model",
+                "Zero trust architecture",
+                "Defense in depth"
+            ],
+            "correct_index": 1,
+            "explanation": "The shared responsibility model divides duties between cloud provider and customer, and the boundary shifts with the service model. The customer always retains responsibility for their data, identities, and configuration.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-007",
+            "domain": "Security Architecture",
+            "stem": "An architect wants cryptographic verification that a server booted only signed firmware and operating system components, with measurements stored in a hardware root of trust. Which technology provides this?",
+            "options": [
+                "File integrity monitoring",
+                "Host-based intrusion prevention",
+                "Trusted Platform Module measured boot",
+                "Full disk encryption"
+            ],
+            "correct_index": 2,
+            "explanation": "A TPM records boot measurements in platform configuration registers and can seal keys to a known-good state. Disk encryption protects data at rest, file integrity monitoring detects later changes, and an HIPS blocks runtime activity.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-008",
+            "domain": "Security Architecture",
+            "stem": "A virtualization team is selecting a hypervisor that runs directly on the host hardware to reduce the attack surface and improve performance for production workloads. Which hypervisor type should be chosen?",
+            "options": [
+                "Type 2 hosted hypervisor",
+                "Application container runtime",
+                "Emulated instruction translation",
+                "Type 1 bare-metal hypervisor"
+            ],
+            "correct_index": 3,
+            "explanation": "A Type 1 hypervisor runs directly on hardware with a smaller trusted computing base. Type 2 runs atop a general-purpose OS, containers share the host kernel, and emulation translates instructions with far greater overhead.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-009",
+            "domain": "Security Architecture",
+            "stem": "A platform team must prevent a compromised container from reading another container's memory or consuming all node resources. Which combination most directly provides this isolation?",
+            "options": [
+                "Kernel namespaces and control groups with network policy",
+                "Running all containers as root",
+                "Disabling audit logging",
+                "Sharing a single writable volume"
+            ],
+            "correct_index": 0,
+            "explanation": "Namespaces isolate process, network, and mount views, cgroups bound resource use, and network policy restricts container traffic. Root execution, disabled logging, and shared writable volumes all weaken isolation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-010",
+            "domain": "Security Architecture",
+            "stem": "A network architect wants segmentation enforced logically in software across a multi-tenant virtual environment rather than by physical switch configuration. Which approach fits best?",
+            "options": [
+                "Physical cable segregation per tenant",
+                "Software-defined networking with policy overlays",
+                "Static access control lists on each switch port",
+                "A single flat routed subnet"
+            ],
+            "correct_index": 1,
+            "explanation": "Software-defined networking centralizes policy and enforces segmentation through overlays independent of physical topology. Port ACLs are device-bound, a flat subnet removes separation, and physical segregation does not scale in virtual environments.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-011",
+            "domain": "Security Architecture",
+            "stem": "Under a zero trust reference architecture, which component decides whether a request should be granted based on policy and signals from multiple sources?",
+            "options": [
+                "Data plane gateway",
+                "Certificate authority",
+                "Policy decision point",
+                "Policy enforcement point"
+            ],
+            "correct_index": 2,
+            "explanation": "The policy decision point evaluates policy and telemetry, while the policy enforcement point applies that decision to the traffic. A certificate authority issues certificates and a data plane forwards traffic.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-012",
+            "domain": "Security Architecture",
+            "stem": "A security engineer configures a door controller so that a loss of power or network leaves the protected space locked rather than accessible. Which design principle is applied?",
+            "options": [
+                "Fail open",
+                "Least privilege",
+                "Separation of duties",
+                "Fail secure"
+            ],
+            "correct_index": 3,
+            "explanation": "Fail secure defaults to a safe, denying state on failure. Fail open defaults to access and is sometimes required for life-safety egress, while least privilege and separation of duties concern authorization.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-013",
+            "domain": "Security Architecture",
+            "stem": "A design team reduces the number of listening ports, removes unused services, and disables unnecessary application programming interfaces to shrink what an attacker can reach. What is this practice called?",
+            "options": [
+                "Attack surface reduction",
+                "Threat modeling",
+                "Risk transference",
+                "Incident containment"
+            ],
+            "correct_index": 0,
+            "explanation": "Attack surface reduction removes or disables exposed entry points to lower the chance of exploitation. Threat modeling identifies risks, risk transference shifts impact to a third party, and containment is an incident response action.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-014",
+            "domain": "Security Architecture",
+            "stem": "An architecture team systematically enumerates spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats during design. Which methodology is this?",
+            "options": [
+                "Penetration testing",
+                "STRIDE threat modeling",
+                "Quantitative risk analysis",
+                "Business impact analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "STRIDE is a structured threat modeling methodology covering the six named threat categories. Risk analysis and business impact analysis quantify impact, and penetration testing validates controls after implementation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-015",
+            "domain": "Security Architecture",
+            "stem": "In an industrial control environment, the safety instrumented system must always operate independently and at a lower level than the control and supervisory systems. Which model organizes these levels?",
+            "options": [
+                "TCP/IP model",
+                "ITIL service lifecycle",
+                "Purdue enterprise reference architecture",
+                "OSI seven-layer model"
+            ],
+            "correct_index": 2,
+            "explanation": "The Purdue model defines hierarchical levels that separate safety, control, supervisory, and enterprise systems to limit propagation. The OSI and TCP/IP models describe networking, and ITIL is a service management framework.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-016",
+            "domain": "Security Architecture",
+            "stem": "An OT security team must allow telemetry to leave a classified plant network while guaranteeing that no data or signal can flow back into it. Which device enforces this one-way flow?",
+            "options": [
+                "Reverse proxy",
+                "Load balancer",
+                "Virtual private network concentrator",
+                "Data diode"
+            ],
+            "correct_index": 3,
+            "explanation": "A data diode is a hardware-enforced unidirectional gateway allowing outbound traffic only. A reverse proxy and load balancer are bidirectional, and a VPN concentrator would open a return path.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-017",
+            "domain": "Security Architecture",
+            "stem": "A company adopts a cloud service that discovers shadow IT, enforces data policies, and inspects traffic between its users and cloud applications. Which technology is this?",
+            "options": [
+                "Cloud access security broker",
+                "Web application firewall",
+                "Intrusion prevention system",
+                "Full packet capture appliance"
+            ],
+            "correct_index": 0,
+            "explanation": "A CASB sits between users and cloud services to enforce policy, discover unsanctioned applications, and protect data. A WAF protects a web server, an IPS blocks network attacks, and full packet capture records traffic for analysis.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-018",
+            "domain": "Security Architecture",
+            "stem": "A distributed workforce needs cloud-delivered networking and security functions such as secure web gateway, zero trust network access, and firewall as a service from a single platform. Which architecture provides this?",
+            "options": [
+                "Software-defined wide area network only",
+                "Secure access service edge",
+                "Traditional hub-and-spoke VPN",
+                "Flat perimeter firewall"
+            ],
+            "correct_index": 1,
+            "explanation": "Secure access service edge (SASE) converges networking and security functions in the cloud close to the user. A hub-and-spoke VPN backhauls traffic, a flat perimeter firewall does not follow the user, and SD-WAN alone omits security services.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-019",
+            "domain": "Security Architecture",
+            "stem": "A security architect wants to prevent a virtual machine from escaping its guest boundary and attacking the hypervisor or other guests through a shared resource. Which control most directly addresses this?",
+            "options": [
+                "Granting guests direct device passthrough by default",
+                "Disabling hypervisor logging",
+                "Keeping the hypervisor patched and disabling unnecessary guest integrations",
+                "Enabling nested virtualization everywhere"
+            ],
+            "correct_index": 2,
+            "explanation": "Patching the hypervisor and minimizing guest integration features reduce VM escape risk. Nested virtualization and default passthrough expand the attack surface, and disabling logging reduces visibility.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-020",
+            "domain": "Security Architecture",
+            "stem": "A serverless deployment executes functions managed entirely by the cloud provider, and the team wants to limit the blast radius if a function's credentials are stolen. Which practice is most effective?",
+            "options": [
+                "Embedding long-lived access keys in the function code",
+                "Reusing one administrator role for all functions",
+                "Disabling function-level logging",
+                "Assigning each function a narrowly scoped execution role with least privilege"
+            ],
+            "correct_index": 3,
+            "explanation": "A least-privilege execution role limits what a compromised function can do. Embedded long-lived keys and a shared administrator role magnify impact, and disabling logging removes detection.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-021",
+            "domain": "Security Architecture",
+            "stem": "An operations team defines infrastructure entirely in declarative code and replaces servers rather than patching them in place after each release. Which practice does this describe?",
+            "options": [
+                "Immutable infrastructure with infrastructure as code",
+                "Manual configuration drift",
+                "Runtime patching only",
+                "Snowflake server administration"
+            ],
+            "correct_index": 0,
+            "explanation": "Immutable infrastructure rebuilds servers from code instead of modifying them, which makes configuration repeatable and reduces drift. Manual configuration and snowflake servers invite drift, and runtime patching alone does not ensure consistency.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-022",
+            "domain": "Security Architecture",
+            "stem": "A critical service runs on two nodes that share a virtual address and exchange heartbeats so the surviving node takes over automatically when the other fails. What does this design provide?",
+            "options": [
+                "Load distribution across regions",
+                "High availability through automatic failover",
+                "Cold-site recovery",
+                "Data loss prevention"
+            ],
+            "correct_index": 1,
+            "explanation": "A heartbeat cluster with a shared virtual address fails over automatically to keep the service available. A cold site is an unequipped recovery facility, and DLP and regional load balancing serve different purposes.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-023",
+            "domain": "Security Architecture",
+            "stem": "A design uses two different firewall vendors and two authentication mechanisms for the same path so that a flaw common to one product cannot defeat both. Which security concept is this?",
+            "options": [
+                "Fail open",
+                "Risk acceptance",
+                "Redundancy with diversity",
+                "Single sign-on"
+            ],
+            "correct_index": 2,
+            "explanation": "Vendor and mechanism diversity reduces the chance that one shared flaw defeats every layer. Single sign-on concentrates risk, fail open weakens protection, and risk acceptance does not add controls.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-024",
+            "domain": "Security Architecture",
+            "stem": "A hospital must ensure that clinical systems remain usable during a regional outage while limiting user rights to only the tasks each role needs. Which two principles guide this design?",
+            "options": [
+                "Confidentiality and non-repudiation",
+                "Anonymity and integrity",
+                "Separation of duties and fail open",
+                "Availability and least privilege"
+            ],
+            "correct_index": 3,
+            "explanation": "Availability keeps clinical systems usable during outages, and least privilege grants each role only the access required. The other pairings name goals that do not match the requirements.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-025",
+            "domain": "Security Architecture",
+            "stem": "An enterprise wants guest wireless traffic, a contractor bring-your-own-device segment, and production servers to share physical switches while remaining logically isolated. Which technology is most appropriate?",
+            "options": [
+                "Virtual local area networks",
+                "A single flat subnet",
+                "Network address translation",
+                "Port mirroring"
+            ],
+            "correct_index": 0,
+            "explanation": "VLANs create logical segmentation on shared physical hardware. A flat subnet removes separation, NAT only translates addresses, and port mirroring copies traffic for monitoring.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-026",
+            "domain": "Security Architecture",
+            "stem": "A remote access design requires endpoints to prove device health and user identity before a per-application tunnel is granted, without placing the user on the whole corporate network. Which capability matches this requirement?",
+            "options": [
+                "A captive guest portal",
+                "Zero trust network access",
+                "Traditional full-tunnel VPN",
+                "A static demilitarized zone"
+            ],
+            "correct_index": 1,
+            "explanation": "Zero trust network access grants per-application, identity and posture aware connectivity instead of full network access. A full-tunnel VPN places the device on the network, a DMZ is a static segment, and a guest portal provides no device assurance.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Architecture"
+        },
+        {
+            "id": "casp-027",
+            "domain": "Security Operations",
+            "stem": "During the first minutes of a suspected intrusion, responders preserve volatile data such as memory and active network connections before powering hosts down. Which forensic principle guides this order?",
+            "options": [
+                "Data minimization",
+                "Legal hold",
+                "Order of volatility",
+                "Chain of custody"
+            ],
+            "correct_index": 2,
+            "explanation": "The order of volatility collects the most perishable evidence first. Chain of custody documents handling, data minimization limits collection, and legal hold preserves data for litigation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-028",
+            "domain": "Security Operations",
+            "stem": "Every transfer of a disk image is recorded with the names, dates, and signatures of the people who handled it so its integrity can be defended in legal proceedings. Which concept is this?",
+            "options": [
+                "Order of volatility",
+                "Data retention",
+                "Hash verification",
+                "Chain of custody"
+            ],
+            "correct_index": 3,
+            "explanation": "Chain of custody is the unbroken documented record of evidence handling. Order of volatility concerns collection sequence, retention governs storage duration, and hashing proves integrity but is not the handling record itself.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-029",
+            "domain": "Security Operations",
+            "stem": "An investigator connects a suspect drive through a hardware device that blocks all write commands so the original media is never altered during acquisition. Which tool is being used?",
+            "options": [
+                "Write blocker",
+                "Data diode",
+                "Protocol analyzer",
+                "Load balancer"
+            ],
+            "correct_index": 0,
+            "explanation": "A write blocker prevents writes to the evidence drive during imaging. A data diode enforces one-way network flow, a protocol analyzer captures packets, and a load balancer distributes requests.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-030",
+            "domain": "Security Operations",
+            "stem": "A forensic analyst computes a cryptographic digest of a disk image before and after analysis and confirms the values match to show nothing changed. Which property does this demonstrate?",
+            "options": [
+                "Non-repudiation",
+                "Evidence integrity",
+                "Confidentiality",
+                "Availability"
+            ],
+            "correct_index": 1,
+            "explanation": "A matching hash before and after analysis demonstrates the evidence was not altered, proving integrity. Confidentiality hides content, availability concerns uptime, and non-repudiation binds an action to a signer.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-031",
+            "domain": "Security Operations",
+            "stem": "An organization correlates logs from firewalls, endpoints, and identity systems in one platform to detect patterns and generate alerts. Which technology provides this capability?",
+            "options": [
+                "Virtual private network",
+                "Web application firewall",
+                "Security information and event management",
+                "Data loss prevention"
+            ],
+            "correct_index": 2,
+            "explanation": "A SIEM aggregates and correlates logs across many sources to surface patterns. DLP controls data movement, a VPN secures connectivity, and a WAF filters web traffic.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-032",
+            "domain": "Security Operations",
+            "stem": "A response platform automatically enriches alerts with threat intelligence, opens tickets, and blocks malicious addresses by following a predefined workflow. Which capability is this?",
+            "options": [
+                "Full packet capture",
+                "File integrity monitoring",
+                "Network access control",
+                "Security orchestration, automation, and response"
+            ],
+            "correct_index": 3,
+            "explanation": "SOAR orchestrates tools and executes automated response playbooks. Full packet capture records traffic, file integrity monitoring detects file changes, and network access control governs device admission.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-033",
+            "domain": "Security Operations",
+            "stem": "A security team isolates an infected workstation from the network and disables its account while preserving its state for investigation. Which incident response phase is this?",
+            "options": [
+                "Containment",
+                "Eradication",
+                "Recovery",
+                "Preparation"
+            ],
+            "correct_index": 0,
+            "explanation": "Containment limits the scope and impact and preserves evidence. Eradication removes the cause, recovery restores operations, and preparation occurs before an incident.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-034",
+            "domain": "Security Operations",
+            "stem": "After containing an intrusion, responders remove the malicious files, close the exploited vulnerability, and rebuild affected systems from a known-good image. Which phase is this?",
+            "options": [
+                "Post-incident activity",
+                "Eradication",
+                "Containment",
+                "Detection and analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Eradication eliminates the root cause and malicious artifacts. Containment limits spread, detection and analysis scopes the event, and post-incident activity captures lessons learned.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-035",
+            "domain": "Security Operations",
+            "stem": "Two weeks after resolving an incident, the team reviews what worked, what failed, and how to improve the response playbook. Which phase is this?",
+            "options": [
+                "Preparation",
+                "Containment",
+                "Post-incident activity with lessons learned",
+                "Eradication"
+            ],
+            "correct_index": 2,
+            "explanation": "Post-incident activity reviews the response and feeds improvements back into plans and playbooks. The other phases occur during the active incident lifecycle.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-036",
+            "domain": "Security Operations",
+            "stem": "An analyst uses a database of observed attacker behaviors and sequences, rather than static file hashes, to detect intrusions that have no known signature. What is being used?",
+            "options": [
+                "Indicators of compromise",
+                "Vulnerability signatures",
+                "Configuration baselines",
+                "Indicators of attack"
+            ],
+            "correct_index": 3,
+            "explanation": "Indicators of attack describe attacker intent and behavior sequences, which can reveal novel activity. Indicators of compromise are static artifacts from past events, vulnerability signatures detect known flaws, and baselines define expected state.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-037",
+            "domain": "Security Operations",
+            "stem": "A team proactively searches its environment for evidence of compromise that existing detections have missed, forming hypotheses and querying telemetry. Which activity is this?",
+            "options": [
+                "Threat hunting",
+                "Vulnerability scanning",
+                "Penetration testing",
+                "Patch management"
+            ],
+            "correct_index": 0,
+            "explanation": "Threat hunting is a proactive, hypothesis-driven search for hidden adversaries. Vulnerability scanning finds known weaknesses, penetration testing exploits authorized targets, and patch management remediates flaws.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-038",
+            "domain": "Security Operations",
+            "stem": "A security tool creates behavioral baselines of users and entities and flags unusual activity such as impossible travel or abnormal data access. Which technology is this?",
+            "options": [
+                "Configuration management",
+                "User and entity behavior analytics",
+                "Static application security testing",
+                "Full packet capture"
+            ],
+            "correct_index": 1,
+            "explanation": "UEBA baselines normal behavior and flags anomalies in users and entities. SAST inspects source code, full packet capture records traffic, and configuration management enforces settings.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-039",
+            "domain": "Security Operations",
+            "stem": "A vulnerability management team reruns a scan with valid domain credentials to get an accurate inventory of missing patches rather than relying on service banners. What distinguishes this scan?",
+            "options": [
+                "Passive network sniffing",
+                "War driving",
+                "Credentialed scanning",
+                "Unauthenticated external scanning"
+            ],
+            "correct_index": 2,
+            "explanation": "Credentialed scanning logs into hosts to inventory installed software and patches, yielding far fewer false results than unauthenticated scans. The other options do not authenticate to the target.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-040",
+            "domain": "Security Operations",
+            "stem": "A platform scores vulnerabilities using base, temporal, and environmental metrics so that exploitability and business context both influence priority. Which framework provides these metrics?",
+            "options": [
+                "Common Vulnerabilities and Exposures",
+                "Open Web Application Security Project Top Ten",
+                "Center for Internet Security Benchmarks",
+                "Common Vulnerability Scoring System"
+            ],
+            "correct_index": 3,
+            "explanation": "The CVSS framework combines base, temporal, and environmental metrics into a severity score. CVE is an identifier list, the OWASP Top Ten is a risk awareness list, and CIS Benchmarks are hardening baselines.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-041",
+            "domain": "Security Operations",
+            "stem": "A scanner reports a missing patch on a server that was already remediated, wasting analyst time. What is this outcome called?",
+            "options": [
+                "False positive",
+                "False negative",
+                "True positive",
+                "True negative"
+            ],
+            "correct_index": 0,
+            "explanation": "A false positive incorrectly reports a problem that does not exist. A false negative misses a real problem, a true positive correctly flags one, and a true negative correctly reports none.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-042",
+            "domain": "Security Operations",
+            "stem": "An organization runs a planned adversary emulation exercise, then the defensive team reviews detections and tunes alerts alongside the attackers. Which collaborative activity is this?",
+            "options": [
+                "Vulnerability assessment",
+                "Purple teaming",
+                "Red teaming only",
+                "Blue teaming only"
+            ],
+            "correct_index": 1,
+            "explanation": "Purple teaming couples offensive and defensive staff so detections improve during the exercise. Red teaming is offense only, blue teaming is defense only, and a vulnerability assessment identifies weaknesses without emulating adversaries.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-043",
+            "domain": "Security Operations",
+            "stem": "A sandbox executes a suspicious attachment in an isolated environment and records file, registry, and network activity. Which analysis approach is this?",
+            "options": [
+                "Code review",
+                "Cryptographic hashing",
+                "Dynamic malware analysis",
+                "Static malware analysis"
+            ],
+            "correct_index": 2,
+            "explanation": "Dynamic analysis observes behavior during execution in a controlled sandbox. Static analysis inspects code without running it, code review examines source, and hashing merely fingerprints a file.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-044",
+            "domain": "Security Operations",
+            "stem": "A security team shares threat indicators with partners in a standardized machine-readable format transported over a defined exchange protocol. Which standards enable this?",
+            "options": [
+                "SAML and OAuth",
+                "SNMP and Syslog",
+                "IPsec and TLS",
+                "STIX and TAXII"
+            ],
+            "correct_index": 3,
+            "explanation": "STIX structures threat intelligence and TAXII transports it between parties. SAML and OAuth concern identity, SNMP and Syslog are monitoring transport, and IPsec and TLS secure channels generally.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-045",
+            "domain": "Security Operations",
+            "stem": "A decoy network segment with no production data is deployed to lure attackers, observe their techniques, and raise early alerts. What is this called?",
+            "options": [
+                "Honeynet",
+                "Screened subnet",
+                "Content delivery network",
+                "Virtual private cloud"
+            ],
+            "correct_index": 0,
+            "explanation": "A honeynet is a network of decoy systems that attracts and studies attackers. A screened subnet hosts production services, a CDN distributes content, and a VPC is a network boundary.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-046",
+            "domain": "Security Operations",
+            "stem": "A company keeps authentication and firewall logs for one year on write-once storage that administrators cannot modify after collection. Which two concerns does this satisfy?",
+            "options": [
+                "Log sampling and truncation",
+                "Log retention and immutability",
+                "Log enrichment and rotation",
+                "Log aggregation and compression"
+            ],
+            "correct_index": 1,
+            "explanation": "Defined retention preserves logs for investigations, and write-once storage preserves their integrity. Enrichment adds context, rotation manages size, and sampling or truncation would weaken the record.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-047",
+            "domain": "Security Operations",
+            "stem": "A security operations center wants to automatically verify whether a suspected malicious file is known to be bad and add reputation data to an alert before a human reviews it. Which capability is being applied?",
+            "options": [
+                "Full packet capture",
+                "Static access control lists",
+                "Automation and enrichment within a playbook",
+                "Manual escalation only"
+            ],
+            "correct_index": 2,
+            "explanation": "Automated enrichment gathers reputation and context so analysts act on better information faster. Manual escalation alone is slower, and packet capture and ACLs do not enrich alerts.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-048",
+            "domain": "Security Operations",
+            "stem": "A DevOps pipeline scans infrastructure manifests and container images for misconfigurations and known vulnerabilities before deployment. Which practice is this?",
+            "options": [
+                "Post-deployment penetration testing",
+                "Annual point-in-time audit",
+                "Manual change advisory review only",
+                "Security integration into the continuous integration pipeline"
+            ],
+            "correct_index": 3,
+            "explanation": "Embedding scanning in the CI pipeline catches misconfigurations and vulnerable components before release. Post-deployment testing, annual audits, and manual review alone provide slower or weaker feedback.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-049",
+            "domain": "Security Operations",
+            "stem": "A command-and-control channel uses a rare DNS record type and small periodic queries to blend with normal traffic. Which detection method is most likely to reveal it?",
+            "options": [
+                "Anomaly based network traffic analysis and DNS log review",
+                "Signature scanning of endpoint files",
+                "Reviewing printed output",
+                "Physical inspection of cabling"
+            ],
+            "correct_index": 0,
+            "explanation": "DNS tunneling and beaconing are best found by baselining and analyzing DNS and network traffic patterns. File signature scanning, printed output, and cabling inspection would not reveal the channel.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-050",
+            "domain": "Security Operations",
+            "stem": "An analyst must determine the underlying reason for a recurring outage so the organization can prevent it rather than repeatedly restoring service. Which activity addresses this?",
+            "options": [
+                "Capacity planning",
+                "Root cause analysis",
+                "Mean time to repair reporting",
+                "Service desk triage"
+            ],
+            "correct_index": 1,
+            "explanation": "Root cause analysis identifies the underlying reason for an incident so it can be eliminated. MTTR measures repair speed, triage classifies tickets, and capacity planning forecasts resources.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-051",
+            "domain": "Security Operations",
+            "stem": "A critical control system suffers a suspected compromise, and the team chooses to disconnect it from the network and rebuild it from a trusted baseline rather than clean it in place. Which approach justifies this decision?",
+            "options": [
+                "The system cannot be rebuilt",
+                "Containment is unnecessary",
+                "Reimaging to a known-good state eliminates persistent threats",
+                "Cleaning in place is always faster and safer"
+            ],
+            "correct_index": 2,
+            "explanation": "Reimaging from a trusted baseline removes persistent implants that in-place cleaning may miss. Cleaning in place can leave artifacts, and rebuilding is a standard recovery option when a trustworthy baseline exists.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-052",
+            "domain": "Security Operations",
+            "stem": "A monitoring strategy requires that network telemetry be captured continuously and retained long enough to reconstruct an event that is discovered weeks later. Which capability is needed?",
+            "options": [
+                "Real-time alerting only",
+                "Periodic screenshots",
+                "Endpoint antivirus logs only",
+                "Network traffic capture with sufficient retention"
+            ],
+            "correct_index": 3,
+            "explanation": "Retaining captured network traffic lets investigators reconstruct past events, including activity hidden from real-time alerts. Real-time alerting alone, screenshots, and antivirus logs cannot rebuild the full session.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-053",
+            "domain": "Security Operations",
+            "stem": "A team tests its incident response plan by gathering stakeholders to walk through a ransomware scenario and make decisions without touching production systems. Which exercise is this?",
+            "options": [
+                "Tabletop exercise",
+                "Full-scale live failover",
+                "Penetration test",
+                "Vulnerability scan"
+            ],
+            "correct_index": 0,
+            "explanation": "A tabletop exercise rehearses roles and decisions through discussion without affecting production. Live failover is disruptive, and penetration tests and scans assess technical weaknesses rather than response coordination.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Operations"
+        },
+        {
+            "id": "casp-054",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "An organization operates a private certification authority that issues an offline root certificate and separate online intermediate certificates for different purposes. Why is this hierarchy used?",
+            "options": [
+                "The root must be online to sign every user certificate",
+                "The offline root protects the trust anchor while intermediates can be rotated if compromised",
+                "A single root issues all end-entity certificates for simplicity",
+                "Intermediates replace the need for revocation"
+            ],
+            "correct_index": 1,
+            "explanation": "Keeping the root offline protects the trust anchor, while intermediate authorities can be constrained and replaced if compromised. A single online root increases risk, and revocation is still required.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-055",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A client must determine whether a certificate has been revoked without downloading a large list, so it queries the issuer in real time. Which protocol is being used?",
+            "options": [
+                "Simple Certificate Enrollment Protocol",
+                "Server Name Indication",
+                "Online Certificate Status Protocol",
+                "Certificate revocation list"
+            ],
+            "correct_index": 2,
+            "explanation": "OCSP queries the issuer for the current status of a single certificate in real time. A CRL is a downloaded list, SCEP automates enrollment, and SNI indicates a hostname during TLS negotiation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-056",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A mobile application accepts only certificates signed by a specific pinned public key, even if another trusted authority issues a valid certificate for the domain. What technique is this?",
+            "options": [
+                "Certificate revocation checking",
+                "Perfect forward secrecy",
+                "Key escrow",
+                "Certificate pinning"
+            ],
+            "correct_index": 3,
+            "explanation": "Pinning restricts trust to a specific key or certificate rather than any trusted authority, deterring man-in-the-middle interception. Revocation checking, forward secrecy, and key escrow address different concerns.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-057",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A security team must protect symmetric keys used to encrypt customer data so the keys never leave a tamper-resistant hardware device unencrypted. Which device meets this requirement?",
+            "options": [
+                "Hardware security module",
+                "Web application firewall",
+                "Load balancer",
+                "Reverse proxy"
+            ],
+            "correct_index": 0,
+            "explanation": "An HSM generates, stores, and uses keys inside tamper-resistant hardware. A WAF, load balancer, and reverse proxy operate on traffic and do not provide hardware key protection.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-058",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A designer selects AES with Galois Counter Mode to encrypt records so that confidentiality is combined with a tamper-evident authentication tag. Which property does this provide?",
+            "options": [
+                "Key derivation",
+                "Authenticated encryption",
+                "Hashing only",
+                "Digital signature"
+            ],
+            "correct_index": 1,
+            "explanation": "AES-GCM provides authenticated encryption, protecting both confidentiality and integrity. Hashing alone does not encrypt, a digital signature provides origin and integrity but not confidentiality, and key derivation produces keys.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-059",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A protocol must encrypt bulk network traffic between two data centers and authenticate both endpoints, operating at the network layer. Which protocol is designed for this?",
+            "options": [
+                "Secure Shell",
+                "Simple Network Management Protocol version 3",
+                "IPsec",
+                "Secure Sockets Layer"
+            ],
+            "correct_index": 2,
+            "explanation": "IPsec protects IP traffic and authenticates peers at the network layer, commonly in tunnel mode. SSL is superseded and works above the transport layer, SSH secures remote sessions, and SNMPv3 manages devices.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-060",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A web service must negotiate modern ciphers with forward secrecy and remove obsolete algorithms, so the team requires the newest widely deployed protocol version. Which version should be selected?",
+            "options": [
+                "SSL 3.0",
+                "TLS 1.0",
+                "SSL 2.0",
+                "TLS 1.3"
+            ],
+            "correct_index": 3,
+            "explanation": "TLS 1.3 removes obsolete algorithms and mandates forward secrecy by design. SSL 2.0, SSL 3.0, and TLS 1.0 are deprecated and contain known weaknesses.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-061",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A company encrypts data with a data key that is itself encrypted by a master key held in a cloud key management service. What is this pattern called?",
+            "options": [
+                "Envelope encryption",
+                "Tokenization",
+                "Salting",
+                "Steganography"
+            ],
+            "correct_index": 0,
+            "explanation": "Envelope encryption wraps a data key with a master key, so large data is protected without exposing the master. Tokenization substitutes values, salting strengthens password hashes, and steganography hides data.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-062",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A security engineer must add a keyed integrity check to a message so the receiver can verify it was not altered by anyone lacking the shared secret. Which primitive fits best?",
+            "options": [
+                "ROT13 substitution",
+                "Hash-based message authentication code",
+                "Plain SHA-256 digest",
+                "Base64 encoding"
+            ],
+            "correct_index": 1,
+            "explanation": "An HMAC uses a shared key with a hash so only a party holding the key can produce or verify the tag. A plain digest has no key, and encoding or substitution provide no integrity.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-063",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A password store must ensure that two users with the same password do not produce the same stored hash. Which addition accomplishes this?",
+            "options": [
+                "Encrypting the password with a fixed key",
+                "Storing the password in plaintext",
+                "A unique random salt per password before hashing",
+                "A shorter output hash"
+            ],
+            "correct_index": 2,
+            "explanation": "A per-password random salt makes identical passwords hash differently and defeats precomputed tables. Shorter hashes, fixed-key encryption, and plaintext storage all fail to provide this property.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-064",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A security architect needs an asymmetric algorithm that gives equivalent strength to RSA with much smaller keys and is suited to constrained devices. Which algorithm family should be chosen?",
+            "options": [
+                "Triple DES",
+                "MD5",
+                "RC4",
+                "Elliptic curve cryptography"
+            ],
+            "correct_index": 3,
+            "explanation": "Elliptic curve cryptography delivers strong security with small keys and low overhead. Triple DES and RC4 are symmetric stream or block ciphers, and MD5 is a broken hash.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-065",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A signing service must guarantee that a message could only have been produced by the holder of a private key and that the content is unchanged. Which technology provides both?",
+            "options": [
+                "Digital signatures",
+                "Symmetric encryption",
+                "Steganography",
+                "Keyed hashing with a shared secret"
+            ],
+            "correct_index": 0,
+            "explanation": "Digital signatures provide integrity and non-repudiation because only the private key holder can produce them and anyone with the public key can verify. Symmetric encryption, steganography, and shared-secret hashing do not provide non-repudiation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-066",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A TLS deployment must ensure recorded past sessions cannot be decrypted even if the server's long-term private key is later compromised. Which property is required?",
+            "options": [
+                "Certificate pinning",
+                "Perfect forward secrecy",
+                "Key escrow",
+                "Static key exchange"
+            ],
+            "correct_index": 1,
+            "explanation": "Perfect forward secrecy uses ephemeral key exchange so session keys are not derivable from the long-term private key. Key escrow retains recovery keys, static exchange reuses the long-term key, and pinning restricts trust.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-067",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A developer must prevent untrusted input from altering SQL statement structure in a web application. Which practice most directly addresses this?",
+            "options": [
+                "Client-side input length limits only",
+                "Hiding the database error messages",
+                "Parameterized queries with bound parameters",
+                "Building queries by string concatenation"
+            ],
+            "correct_index": 2,
+            "explanation": "Parameterized queries keep data separate from code so input cannot change the statement. Concatenation invites injection, client-side limits are bypassable, and hiding errors only masks the result.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-068",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A team wants to find flaws in its own application source code before it ships. Which analysis technique analyzes the code without executing the program?",
+            "options": [
+                "Dynamic application security testing",
+                "Runtime application self-protection",
+                "Fuzz testing",
+                "Static application security testing"
+            ],
+            "correct_index": 3,
+            "explanation": "SAST inspects source or bytecode without running the application. DAST and fuzzing test a running instance, and runtime self-protection monitors execution.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-069",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A hospital wants to blunt a memory-scraping attack on a point-of-sale terminal by replacing card numbers with non-sensitive surrogates that map back only in a secure vault. Which technique is this?",
+            "options": [
+                "Tokenization",
+                "Full disk encryption",
+                "Hashing",
+                "Data masking in reports only"
+            ],
+            "correct_index": 0,
+            "explanation": "Tokenization replaces sensitive values with surrogate tokens, so a breach of the terminal exposes nothing usable. Encryption can still be decrypted if keys are stolen, hashing is one-way, and report masking leaves the stored value intact.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-070",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A bring-your-own-device program must keep corporate data in an encrypted container that the organization can wipe without affecting the employee's personal data. Which mobile capability provides this?",
+            "options": [
+                "Sideloading unapproved applications",
+                "Application containerization with selective wipe",
+                "Full device wipe only",
+                "Disabling device encryption"
+            ],
+            "correct_index": 1,
+            "explanation": "Containerization separates corporate data into an encrypted, separately managed partition that can be wiped alone. A full wipe would destroy personal data, and disabling encryption or sideloading weakens security.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-071",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A mobile security policy must detect devices that have been modified to remove platform restrictions, because such devices undermine application sandboxing. Which condition is being detected?",
+            "options": [
+                "Roaming outside the home network",
+                "Aeroplane mode use",
+                "Rooting or jailbreaking",
+                "Battery optimization"
+            ],
+            "correct_index": 2,
+            "explanation": "Rooting on Android or jailbreaking on iOS removes platform protections and weakens application sandboxing. The other conditions are ordinary usage states that do not by themselves defeat device security.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-072",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A security team needs to verify that third-party libraries bundled in an application are free of known vulnerabilities and are properly licensed. Which practice addresses this?",
+            "options": [
+                "Static application security testing",
+                "Dynamic application security testing",
+                "Interactive application security testing",
+                "Software composition analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Software composition analysis inventories dependencies for known vulnerabilities and license issues. SAST and DAST analyze the team's own code, and IAST instruments a running application.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-073",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "An application must protect users from script injected by other users into stored content that is later displayed to visitors. Which mitigation is most effective?",
+            "options": [
+                "Context-aware output encoding and input validation",
+                "Storing content in a database",
+                "Using HTTPS only",
+                "Compressing responses"
+            ],
+            "correct_index": 0,
+            "explanation": "Context-aware output encoding neutralizes injected markup so it renders as data, and input validation reduces the attack surface. Storage, transport encryption, and compression do not stop script execution.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-074",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A platform must ensure that an application binary has not been modified since the vendor released it. Which technique provides this assurance to the loader?",
+            "options": [
+                "Compressing the binary",
+                "Code signing with a verified certificate",
+                "Obfuscating the binary",
+                "Encrypting the binary with a fixed key"
+            ],
+            "correct_index": 1,
+            "explanation": "Code signing attaches a verifiable signature so the loader can detect modification and confirm the publisher. Obfuscation, fixed-key encryption, and compression do not prove authorship or detect tampering.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-075",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A team needs a reproducible, high-quality source of randomness to generate cryptographic keys. Which source is appropriate?",
+            "options": [
+                "A counter incremented per call",
+                "A fixed seed constant",
+                "A cryptographically secure pseudo-random number generator seeded from a hardware entropy source",
+                "The current system time alone"
+            ],
+            "correct_index": 2,
+            "explanation": "A CSPRNG seeded from a hardware entropy source provides unpredictable values suitable for keys. Time alone, a simple counter, and a fixed seed are all predictable and unsafe for key generation.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-076",
+            "domain": "Security Engineering and Cryptography",
+            "stem": "A messaging application must provide end-to-end confidentiality and sender authenticity for email content between organizations using certificates. Which standard applies?",
+            "options": [
+                "Sender Policy Framework",
+                "DomainKeys Identified Mail",
+                "Simple Mail Transfer Protocol",
+                "S/MIME"
+            ],
+            "correct_index": 3,
+            "explanation": "S/MIME encrypts and signs message content end to end using certificates. SPF and DKIM validate sending infrastructure rather than encrypting content, and SMTP is the transport protocol.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Security Engineering and Cryptography"
+        },
+        {
+            "id": "casp-077",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A security manager documents a high-level statement of management intent, supporting standards, step-by-step procedures, and optional recommendations. Which document type is the high-level statement?",
+            "options": [
+                "Policy",
+                "Standard",
+                "Procedure",
+                "Guideline"
+            ],
+            "correct_index": 0,
+            "explanation": "A policy states management intent and mandatory direction. Standards specify required controls, procedures give step-by-step instructions, and guidelines are optional recommendations.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-078",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A leadership team states the amount of risk the organization is willing to accept while pursuing its objectives. What is this called?",
+            "options": [
+                "Risk register",
+                "Risk appetite",
+                "Residual risk",
+                "Inherent risk"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk appetite is the level of risk leadership accepts. Residual risk remains after controls, inherent risk is the level before controls, and a risk register logs identified risks.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-079",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A risk analyst estimates that a threat occurs four times a year with a single loss of twenty-five thousand dollars, and computes the annualized loss expectancy. What is the expected loss per year?",
+            "options": [
+                "Six thousand two hundred fifty dollars",
+                "Four hundred thousand dollars",
+                "One hundred thousand dollars",
+                "Twenty-five thousand dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "Annualized loss expectancy equals single loss expectancy times annualized rate of occurrence, so twenty-five thousand times four equals one hundred thousand dollars. The other values misapply the formula.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-080",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A firm buys cyber insurance to shift the financial impact of a potential breach to a third party. Which risk response is this?",
+            "options": [
+                "Avoid",
+                "Accept",
+                "Mitigate",
+                "Transfer"
+            ],
+            "correct_index": 3,
+            "explanation": "Transfer moves financial impact to another party such as an insurer. Avoidance eliminates the activity, acceptance retains the risk, and mitigation reduces likelihood or impact.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-081",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A company must demonstrate to customers that its controls over security, availability, and confidentiality were independently examined against trust criteria. Which report provides this assurance?",
+            "options": [
+                "SOC 2 Type II report",
+                "Internal audit memo",
+                "Balanced scorecard",
+                "Risk register extract"
+            ],
+            "correct_index": 0,
+            "explanation": "A SOC 2 Type II report is an independent attestation over the trust services criteria for a period of time. An internal memo is not independent, a scorecard tracks performance, and a risk register logs risks.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-082",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "An organization must comply with a regulation that grants individuals the right to access and erase their personal data and requires breach notification within seventy-two hours. Which regulation applies?",
+            "options": [
+                "Sarbanes-Oxley Act",
+                "EU General Data Protection Regulation",
+                "Payment Card Industry Data Security Standard",
+                "Health Insurance Portability and Accountability Act"
+            ],
+            "correct_index": 1,
+            "explanation": "GDPR grants data-subject rights and sets breach notification duties for EU personal data. PCI DSS covers card data, HIPAA covers US health information, and SOX governs financial reporting.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-083",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A retailer that stores cardholder data must meet requirements for encryption, access control, and regular network testing. Which standard applies?",
+            "options": [
+                "Health Insurance Portability and Accountability Act",
+                "Federal Information Security Modernization Act",
+                "Payment Card Industry Data Security Standard",
+                "General Data Protection Regulation"
+            ],
+            "correct_index": 2,
+            "explanation": "PCI DSS applies to entities that store, process, or transmit cardholder data. GDPR governs EU personal data, HIPAA covers health information, and FISMA applies to US federal systems.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-084",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A business impact analysis states that a payment system must be restored within six hours of an outage. Which metric is this?",
+            "options": [
+                "Recovery point objective",
+                "Mean time between failures",
+                "Mean time to repair",
+                "Recovery time objective"
+            ],
+            "correct_index": 3,
+            "explanation": "The recovery time objective defines the maximum tolerable downtime. The recovery point objective defines tolerable data loss, MTBF measures operating time between failures, and MTTR measures repair duration.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-085",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A database may lose no more than ten minutes of transactions if it fails, so backups are taken every ten minutes. Which metric drives this frequency?",
+            "options": [
+                "Recovery point objective",
+                "Recovery time objective",
+                "Mean time to repair",
+                "Service level agreement"
+            ],
+            "correct_index": 0,
+            "explanation": "The recovery point objective defines the maximum acceptable data loss in time and drives backup frequency. RTO defines downtime, MTTR is repair duration, and an SLA is a contractual commitment.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-086",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "Before sharing confidential design documents, a company requires the recipient to contractually promise not to disclose the information. What is this agreement called?",
+            "options": [
+                "Business partners agreement",
+                "Non-disclosure agreement",
+                "Service level agreement",
+                "Memorandum of understanding"
+            ],
+            "correct_index": 1,
+            "explanation": "A non-disclosure agreement contractually prohibits disclosure of confidential information. An SLA defines service levels, an MOU records an agreement in principle, and a BPA covers a partnership arrangement.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-087",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A company classifies information as public, internal, confidential, or restricted, and these labels then determine handling and access rules. What is this practice called?",
+            "options": [
+                "Tokenization",
+                "Data retention",
+                "Data classification",
+                "Data minimization"
+            ],
+            "correct_index": 2,
+            "explanation": "Data classification assigns sensitivity labels that drive handling and access. Minimization limits collection, tokenization substitutes values, and retention governs how long data is kept.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-088",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "Legal counsel instructs the information technology team to preserve all records related to a matter that may become litigation and to suspend normal deletion. What is this instruction called?",
+            "options": [
+                "Data retention schedule",
+                "Right to erasure",
+                "Data minimization",
+                "Legal hold"
+            ],
+            "correct_index": 3,
+            "explanation": "A legal hold suspends normal disposal to preserve potentially relevant records for litigation. A retention schedule sets normal disposal, the right to erasure is a privacy right, and minimization limits collection.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-089",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "A security leader tracks the percentage of critical vulnerabilities remediated within the service level target to judge program effectiveness. What is this measure called?",
+            "options": [
+                "Key performance indicator",
+                "Key risk indicator",
+                "Tabletop exercise",
+                "Control self-assessment"
+            ],
+            "correct_index": 0,
+            "explanation": "A key performance indicator measures how well an activity meets its objectives. A key risk indicator signals rising risk, a tabletop rehearses response, and a self-assessment evaluates controls.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        },
+        {
+            "id": "casp-090",
+            "domain": "Governance, Risk, and Compliance",
+            "stem": "An organization requires every production change to be reviewed, approved, tested, and recorded so that unauthorized modifications are prevented. Which process is this?",
+            "options": [
+                "Capacity management",
+                "Change management",
+                "Incident management",
+                "Problem management"
+            ],
+            "correct_index": 1,
+            "explanation": "Change management reviews, approves, tests, and records changes to control risk. Incident management restores service, problem management addresses root causes, and capacity management plans resources.",
+            "reference": "CompTIA CASP+ CAS-004 Exam Objectives - Governance, Risk, and Compliance"
+        }
+    ]
+}

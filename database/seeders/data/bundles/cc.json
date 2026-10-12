@@ -1,0 +1,1417 @@
+{
+    "cert_key": "cc",
+    "title": "ISC2 Certified in Cybersecurity (CC)",
+    "issuer": "ISC2",
+    "outline_file": "outlines/cc.json",
+    "variant_label": "ISC2 CC Real-Spec Practice",
+    "exam": {
+        "questions": 100,
+        "duration_minutes": 120,
+        "scoring": "700/1000 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the ISC2 Certified in Cybersecurity (CC) exam outline (five domains and weights). Not a capture of past exam questions.",
+    "source_label": "ISC2 CC practice bank",
+    "items": [
+        {
+            "id": "cc-001",
+            "domain": "Security Principles",
+            "stem": "A hospital encrypts patient records stored on its servers so that a stolen disk cannot be read without the decryption key. Which element of the CIA triad does this control directly protect?",
+            "options": [
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Non-repudiation"
+            ],
+            "correct_index": 0,
+            "explanation": "Encryption protects confidentiality by making data unreadable without the key. Integrity is provided by hashing and signatures, availability by redundancy, and non-repudiation by digital signatures and audit trails.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-002",
+            "domain": "Security Principles",
+            "stem": "A bank recalculates the SHA-256 hash of each nightly transaction file and compares it to the value recorded when the file was created. Which security goal is being verified?",
+            "options": [
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Anonymity"
+            ],
+            "correct_index": 1,
+            "explanation": "Comparing cryptographic hashes detects any modification to the file, which verifies integrity. It does not conceal the data, guarantee uptime, or hide identities.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-003",
+            "domain": "Security Principles",
+            "stem": "An online retailer adds redundant servers and a load balancer so that the storefront keeps working when one server fails. Which element of the CIA triad is improved?",
+            "options": [
+                "Confidentiality",
+                "Integrity",
+                "Availability",
+                "Non-repudiation"
+            ],
+            "correct_index": 2,
+            "explanation": "Redundancy and load balancing keep services reachable during failures, which protects availability. Confidentiality concerns secrecy, integrity concerns accuracy, and non-repudiation concerns proving an action occurred.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-004",
+            "domain": "Security Principles",
+            "stem": "A contract requires that a sender cannot later deny having approved a payment instruction and that the receiver can verify who sent it. Which security property provides this?",
+            "options": [
+                "Confidentiality",
+                "Availability",
+                "Integrity",
+                "Non-repudiation"
+            ],
+            "correct_index": 3,
+            "explanation": "Non-repudiation uses digital signatures so a party cannot deny an action. Confidentiality hides data, availability keeps services up, and integrity only shows that data was unchanged.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-005",
+            "domain": "Security Principles",
+            "stem": "A security team installs a firewall that blocks malicious traffic before it reaches protected servers. Which functional type of control is this?",
+            "options": [
+                "Preventive",
+                "Detective",
+                "Corrective",
+                "Deterrent"
+            ],
+            "correct_index": 0,
+            "explanation": "A firewall blocks activity before it happens, so it is preventive. Detective controls discover events, corrective controls repair after an event, and deterrent controls discourage attempts.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-006",
+            "domain": "Security Principles",
+            "stem": "An intrusion detection system records suspicious activity and raises an alert but does not stop the traffic. Which functional type of control is this?",
+            "options": [
+                "Preventive",
+                "Detective",
+                "Corrective",
+                "Deterrent"
+            ],
+            "correct_index": 1,
+            "explanation": "Detecting and reporting an event without blocking it is detective. Preventive controls stop activity, corrective controls restore systems, and deterrent controls discourage attackers.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-007",
+            "domain": "Security Principles",
+            "stem": "After a failed disk is replaced, a technician restores data from the most recent backup so that the server works again. Which functional type of control is this?",
+            "options": [
+                "Detective",
+                "Deterrent",
+                "Corrective",
+                "Preventive"
+            ],
+            "correct_index": 2,
+            "explanation": "Restoring service after an incident is a corrective control. Preventive controls stop events, detective controls find them, and deterrent controls discourage them.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-008",
+            "domain": "Security Principles",
+            "stem": "An organization writes an acceptable use policy that defines how employees may use company computers and networks. Which category of control is this?",
+            "options": [
+                "Technical",
+                "Physical",
+                "Operational",
+                "Administrative"
+            ],
+            "correct_index": 3,
+            "explanation": "Policies written and enforced by people are administrative, also called managerial, controls. Technical controls are implemented in systems, physical controls protect facilities, and operational controls are day-to-day human processes.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-009",
+            "domain": "Security Principles",
+            "stem": "A data center uses badge readers and locked cabinets to protect servers from unauthorized physical contact. Which category of control is this?",
+            "options": [
+                "Physical",
+                "Administrative",
+                "Technical",
+                "Operational"
+            ],
+            "correct_index": 0,
+            "explanation": "Locks, badges, and cabinets protect the physical environment, so they are physical controls. Administrative controls are policy, technical controls are system based, and operational controls are daily human procedures.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-010",
+            "domain": "Security Principles",
+            "stem": "An application enforces access rules in its code and rejects any request that fails those rules. Which category of control is this?",
+            "options": [
+                "Directive",
+                "Technical",
+                "Physical",
+                "Administrative"
+            ],
+            "correct_index": 1,
+            "explanation": "Controls implemented in software or hardware, such as access rules enforced by an application, are technical controls. Physical controls protect facilities, administrative controls are policies, and directive is a control function rather than a category.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-011",
+            "domain": "Security Principles",
+            "stem": "A board of directors sets the organization's security direction and holds management accountable for protecting information assets. What is this activity called?",
+            "options": [
+                "Vulnerability scanning",
+                "Incident response",
+                "Security governance",
+                "Penetration testing"
+            ],
+            "correct_index": 2,
+            "explanation": "Governance is the set of leadership activities that set direction, assign accountability, and oversee risk. Testing, scanning, and incident response are operational security activities.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-012",
+            "domain": "Security Principles",
+            "stem": "A risk analyst scores a risk by combining how likely a threat is to occur with how severe the resulting loss would be. What is being calculated?",
+            "options": [
+                "Control gap",
+                "Compliance score",
+                "Residual risk",
+                "Risk level"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk level combines likelihood and impact. Residual risk is what remains after controls, a control gap is a missing safeguard, and a compliance score measures conformity to a standard.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-013",
+            "domain": "Security Principles",
+            "stem": "A company buys a cyber-insurance policy to cover the financial cost of a potential data breach. Which risk treatment is this?",
+            "options": [
+                "Transfer",
+                "Accept",
+                "Avoid",
+                "Mitigate"
+            ],
+            "correct_index": 0,
+            "explanation": "Buying insurance transfers the financial impact to a third party. Avoidance eliminates the activity, mitigation reduces likelihood or impact, and acceptance knowingly retains the risk.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-014",
+            "domain": "Security Principles",
+            "stem": "A firm decides to keep using a low-risk legacy system without adding more controls and formally documents the decision. Which risk treatment is this?",
+            "options": [
+                "Avoid",
+                "Accept",
+                "Transfer",
+                "Mitigate"
+            ],
+            "correct_index": 1,
+            "explanation": "Knowingly retaining a risk within tolerance is acceptance. Transfer shifts it to another party, mitigation reduces it, and avoidance removes the activity entirely.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-015",
+            "domain": "Security Principles",
+            "stem": "After controls are implemented, the risk that still remains is reported to management and tracked over time. What is this remaining risk called?",
+            "options": [
+                "Risk register",
+                "Inherent risk",
+                "Residual risk",
+                "Risk appetite"
+            ],
+            "correct_index": 2,
+            "explanation": "Residual risk is what is left after controls are applied. Inherent risk is the level before controls, risk appetite is the acceptable level, and a risk register is the log of identified risks.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-016",
+            "domain": "Security Principles",
+            "stem": "Leadership states that the organization is willing to tolerate only limited disruption from a known vulnerability. What does this statement define?",
+            "options": [
+                "Control objective",
+                "Residual risk",
+                "Risk register",
+                "Risk appetite"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk appetite, also called tolerance, is the amount of risk leadership is willing to accept. Residual risk is a measured level, a risk register is a list, and a control objective describes what a control should achieve.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-017",
+            "domain": "Security Principles",
+            "stem": "An organization publishes a mandatory document stating that employees must use strong passwords and must not share accounts. What type of document is this?",
+            "options": [
+                "Policy",
+                "Guideline",
+                "Procedure",
+                "Standard"
+            ],
+            "correct_index": 0,
+            "explanation": "A policy is a high-level, mandatory statement of management intent. Standards are specific mandatory requirements, procedures are step-by-step instructions, and guidelines are recommendations.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-018",
+            "domain": "Security Principles",
+            "stem": "A document specifies that all servers must run the current approved operating system version and lists the exact settings required. What type of document is this?",
+            "options": [
+                "Procedure",
+                "Standard",
+                "Policy",
+                "Guideline"
+            ],
+            "correct_index": 1,
+            "explanation": "A standard defines specific mandatory requirements such as approved versions and settings. A policy is high-level intent, a guideline is advisory, and a procedure gives step-by-step actions.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-019",
+            "domain": "Security Principles",
+            "stem": "A help desk document lists the exact sequence of steps that an agent must follow to reset a user password safely. What type of document is this?",
+            "options": [
+                "Guideline",
+                "Policy",
+                "Procedure",
+                "Standard"
+            ],
+            "correct_index": 2,
+            "explanation": "A procedure is a detailed, ordered set of steps to perform a task. A policy states intent, a standard sets requirements, and a guideline offers advice.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-020",
+            "domain": "Security Principles",
+            "stem": "Before launching a new service, a company investigates the vendor's security practices and documents that it exercised reasonable care. Which concept does this demonstrate?",
+            "options": [
+                "Due care",
+                "Due process",
+                "Separation of duties",
+                "Due diligence"
+            ],
+            "correct_index": 3,
+            "explanation": "Due diligence is the investigation and ongoing verification of controls before and during a relationship. Due care is the ongoing practice of acting responsibly, due process is a legal principle, and separation of duties splits tasks.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-021",
+            "domain": "Security Principles",
+            "stem": "An organization continuously maintains its systems and applies good practices so that it can show it acted responsibly toward its stakeholders. Which concept does this describe?",
+            "options": [
+                "Due care",
+                "Least privilege",
+                "Non-repudiation",
+                "Due diligence"
+            ],
+            "correct_index": 0,
+            "explanation": "Due care is the ongoing responsibility to protect assets and act reasonably. Due diligence is the investigation that precedes decisions, least privilege limits access, and non-repudiation proves actions.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-022",
+            "domain": "Security Principles",
+            "stem": "An ISC2-certified professional is asked to hide a serious vulnerability from a client in order to protect a contract. What does the ISC2 Code of Ethics require in this situation?",
+            "options": [
+                "Resign quietly and tell no one about the flaw",
+                "Protect society and act honorably by not concealing harmful facts",
+                "Follow the client instruction because the client pays the fee",
+                "Disclose the vulnerability only if a court orders it"
+            ],
+            "correct_index": 1,
+            "explanation": "The ISC2 Code of Ethics requires members to act honorably, honestly, justly, responsibly, and legally and to protect society. Concealing a harmful vulnerability for commercial reasons violates those canons.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-023",
+            "domain": "Security Principles",
+            "stem": "An executive is accountable for the organization's information security program and reports directly to the board. Which role is this?",
+            "options": [
+                "Data custodian",
+                "Data owner",
+                "Chief Information Security Officer",
+                "System administrator"
+            ],
+            "correct_index": 2,
+            "explanation": "The Chief Information Security Officer leads and is accountable for the security program. A data owner classifies data, a system administrator operates systems, and a data custodian applies the owner's handling rules.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-024",
+            "domain": "Security Principles",
+            "stem": "A manager decides who may access a particular data set and what classification that data carries. Which role is this manager performing?",
+            "options": [
+                "Security auditor",
+                "System administrator",
+                "Data custodian",
+                "Data owner"
+            ],
+            "correct_index": 3,
+            "explanation": "The data owner is accountable for classification and access decisions. A custodian implements those decisions, an auditor provides independent assurance, and a system administrator runs the systems.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-025",
+            "domain": "Security Principles",
+            "stem": "Files are labeled Public, Internal, Confidential, or Restricted, and each label drives how the files must be handled. What is this practice called?",
+            "options": [
+                "Data classification",
+                "Tokenization",
+                "Data retention",
+                "Data minimization"
+            ],
+            "correct_index": 0,
+            "explanation": "Data classification assigns sensitivity labels that determine handling and protection. Minimization limits collection, tokenization replaces values, and retention controls how long data is kept.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-026",
+            "domain": "Security Principles",
+            "stem": "A company keeps only the customer data it needs for a stated purpose and deletes the rest. Which privacy principle does this reflect?",
+            "options": [
+                "Data retention",
+                "Data minimization",
+                "Data integrity",
+                "Data classification"
+            ],
+            "correct_index": 1,
+            "explanation": "Data minimization means collecting and keeping only what is needed for a defined purpose. Classification labels data, retention sets storage duration, and integrity concerns accuracy.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Principles"
+        },
+        {
+            "id": "cc-027",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A business impact analysis identifies which processes are most critical and how long the organization can tolerate their loss. What is the primary purpose of this analysis?",
+            "options": [
+                "To calculate employee salaries for the budget",
+                "To choose a firewall vendor for procurement",
+                "To prioritize recovery objectives for critical business functions",
+                "To list every server in the data center"
+            ],
+            "correct_index": 2,
+            "explanation": "A business impact analysis identifies critical functions and the impact of their loss so that recovery priorities and objectives can be set. It is not an asset inventory, a payroll task, or a procurement decision.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-028",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "An online store decides that its ordering system must be restored within four hours after any outage. Which metric does this define?",
+            "options": [
+                "Mean time between failures",
+                "Annualized loss expectancy",
+                "Recovery point objective",
+                "Recovery time objective"
+            ],
+            "correct_index": 3,
+            "explanation": "The recovery time objective is the maximum acceptable time to restore a service. The recovery point objective concerns acceptable data loss, mean time between failures is average time between outages, and annualized loss expectancy is a financial estimate.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-029",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A hospital can accept losing no more than fifteen minutes of patient updates if a system fails, so it backs up every fifteen minutes. Which metric is being met?",
+            "options": [
+                "Recovery point objective",
+                "Service level objective",
+                "Mean time to repair",
+                "Recovery time objective"
+            ],
+            "correct_index": 0,
+            "explanation": "The recovery point objective defines the maximum acceptable data loss in time and drives backup frequency. The recovery time objective concerns downtime, a service level objective is a service target, and mean time to repair is repair duration.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-030",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A business continuity plan states that a critical process must not be unavailable longer than twenty-four hours before the impact becomes unacceptable. Which term describes this threshold?",
+            "options": [
+                "Recovery time objective",
+                "Maximum tolerable downtime",
+                "Annualized loss expectancy",
+                "Recovery point objective"
+            ],
+            "correct_index": 1,
+            "explanation": "Maximum tolerable downtime, also called the maximum tolerable period of disruption, is the point beyond which impact becomes unacceptable. The recovery point objective is data loss, the recovery time objective is the recovery target, and annualized loss expectancy is a financial estimate.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-031",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A company maintains a standby data center with servers, power, and network links ready, but current data must still be restored from backup. Which type of recovery site is this?",
+            "options": [
+                "Mobile site",
+                "Hot site",
+                "Warm site",
+                "Cold site"
+            ],
+            "correct_index": 2,
+            "explanation": "A warm site has infrastructure in place but needs data restored before use. A hot site is fully operational and current, a cold site is an empty facility, and a mobile site is a transportable trailer.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-032",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A backup strategy copies only the data changed since the last full backup, so each restore needs the full backup plus the latest set of changes. Which backup type is this?",
+            "options": [
+                "Snapshot",
+                "Full",
+                "Incremental",
+                "Differential"
+            ],
+            "correct_index": 3,
+            "explanation": "A differential backup captures everything changed since the last full backup, so restoring needs the full plus the latest differential. An incremental backup captures changes since the last backup of any type.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-033",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "Before any incident occurs, a team writes response playbooks, assigns roles, and runs practice exercises. Which incident response phase is this?",
+            "options": [
+                "Preparation",
+                "Detection and analysis",
+                "Containment",
+                "Post-incident activity"
+            ],
+            "correct_index": 0,
+            "explanation": "Preparation builds the plans, tools, and skills needed before an incident. Detection and analysis identifies events, containment limits spread, and post-incident activity captures lessons learned.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-034",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "Analysts review alerts, validate that an event is a real incident, and determine how far it has spread. Which incident response phase are they in?",
+            "options": [
+                "Preparation",
+                "Detection and analysis",
+                "Eradication",
+                "Recovery"
+            ],
+            "correct_index": 1,
+            "explanation": "Detection and analysis confirms and scopes an incident. Preparation readies the team, eradication removes the cause, and recovery restores normal operations.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-035",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "A team disconnects an infected host from the network to stop malware from spreading while it preserves the evidence. Which incident response phase is this?",
+            "options": [
+                "Preparation",
+                "Eradication",
+                "Containment",
+                "Recovery"
+            ],
+            "correct_index": 2,
+            "explanation": "Containment limits the scope and impact of an incident. Eradication removes the threat, recovery restores service, and preparation happens before incidents.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-036",
+            "domain": "Business Continuity, Disaster Recovery, and Incident Response Concepts",
+            "stem": "After an incident is resolved, the team meets to record what worked and to update the response plan. Which phase of incident response is this?",
+            "options": [
+                "Detection and analysis",
+                "Containment",
+                "Eradication",
+                "Post-incident activity"
+            ],
+            "correct_index": 3,
+            "explanation": "Post-incident activity, often called lessons learned, reviews the response to improve future readiness. Containment and eradication occur during the incident, and detection identifies it.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Business Continuity, Disaster Recovery, and Incident Response Concepts"
+        },
+        {
+            "id": "cc-037",
+            "domain": "Access Controls Concepts",
+            "stem": "A user types a unique username into an application before entering a password. Which part of access control is the username providing?",
+            "options": [
+                "Identification",
+                "Authentication",
+                "Authorization",
+                "Accounting"
+            ],
+            "correct_index": 0,
+            "explanation": "A username identifies who the user claims to be. Authentication verifies that claim, authorization decides what is allowed, and accounting records activity.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-038",
+            "domain": "Access Controls Concepts",
+            "stem": "A system checks the password a user supplied against the stored credential in order to confirm that the user is genuine. Which access control activity is this?",
+            "options": [
+                "Identification",
+                "Authentication",
+                "Authorization",
+                "Federation"
+            ],
+            "correct_index": 1,
+            "explanation": "Authentication verifies an identity claim. Identification states the claim, authorization grants permissions, and federation links identity across domains.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-039",
+            "domain": "Access Controls Concepts",
+            "stem": "A user logs in with a password and then enters a one-time code from a hardware token. Which type of factor does the token provide?",
+            "options": [
+                "Somewhere you are",
+                "Something you know",
+                "Something you have",
+                "Something you are"
+            ],
+            "correct_index": 2,
+            "explanation": "A hardware token is a possession factor, something you have. A password is knowledge, a fingerprint is inherence, and a location constraint is somewhere you are.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-040",
+            "domain": "Access Controls Concepts",
+            "stem": "A system requires both a fingerprint scan and a password before granting access to a workstation. What is this combination called?",
+            "options": [
+                "Role-based access control",
+                "Federation",
+                "Single sign-on",
+                "Multi-factor authentication"
+            ],
+            "correct_index": 3,
+            "explanation": "Combining factors from different categories, such as something you are plus something you know, is multi-factor authentication. Single sign-on is a convenience feature, and the others are authorization or federation models.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-041",
+            "domain": "Access Controls Concepts",
+            "stem": "After a user authenticates, the system checks the user's role and permits only the actions that the role allows. What is this step called?",
+            "options": [
+                "Authorization",
+                "Auditing",
+                "Identification",
+                "Authentication"
+            ],
+            "correct_index": 0,
+            "explanation": "Authorization determines what an authenticated user may do. Identification and authentication establish who the user is, and auditing records the actions taken.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-042",
+            "domain": "Access Controls Concepts",
+            "stem": "A company grants each employee only the access needed to perform their job and no more. Which access principle is this?",
+            "options": [
+                "Non-repudiation",
+                "Least privilege",
+                "Separation of duties",
+                "Defense in depth"
+            ],
+            "correct_index": 1,
+            "explanation": "Least privilege grants the minimum access required for a task. Separation of duties splits critical tasks, defense in depth layers controls, and non-repudiation proves actions.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-043",
+            "domain": "Access Controls Concepts",
+            "stem": "A system assigns permissions to job functions, and users inherit those permissions through the position they hold. Which access control model is used?",
+            "options": [
+                "Discretionary access control",
+                "Mandatory access control",
+                "Role-based access control",
+                "Rule-based access control"
+            ],
+            "correct_index": 2,
+            "explanation": "Role-based access control grants permissions to roles that users occupy. Discretionary control lets owners assign access, mandatory control uses labels and clearances, and rule-based control applies global rules.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-044",
+            "domain": "Access Controls Concepts",
+            "stem": "A government system allows access only when the data label and the user clearance match, and users cannot change those labels. Which access control model is this?",
+            "options": [
+                "Role-based access control",
+                "Attribute-based access control",
+                "Discretionary access control",
+                "Mandatory access control"
+            ],
+            "correct_index": 3,
+            "explanation": "Mandatory access control relies on system-enforced labels and clearances that users cannot alter. Discretionary control lets owners set permissions, while role-based and attribute-based controls use roles and attributes.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-045",
+            "domain": "Access Controls Concepts",
+            "stem": "A document's owner decides which colleagues may read it and grants those permissions directly. Which access control model is this?",
+            "options": [
+                "Discretionary access control",
+                "Attribute-based access control",
+                "Mandatory access control",
+                "Role-based access control"
+            ],
+            "correct_index": 0,
+            "explanation": "Discretionary access control lets the resource owner assign access. Mandatory control uses fixed labels, role-based control uses job roles, and attribute-based control uses many attributes.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-046",
+            "domain": "Access Controls Concepts",
+            "stem": "A cloud service grants access only when department, data sensitivity, time of day, and device type all satisfy a policy. Which access control model is this?",
+            "options": [
+                "Discretionary access control",
+                "Attribute-based access control",
+                "Role-based access control",
+                "Mandatory access control"
+            ],
+            "correct_index": 1,
+            "explanation": "Attribute-based access control evaluates many subject, object, and environment attributes in a policy. Role-based control uses roles alone, mandatory control uses labels, and discretionary control uses owner decisions.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-047",
+            "domain": "Access Controls Concepts",
+            "stem": "A file server stores a list that names each user and the permissions that user holds on a folder. What is this list called?",
+            "options": [
+                "Trust anchor",
+                "Capability token",
+                "Access control list",
+                "Group policy object"
+            ],
+            "correct_index": 2,
+            "explanation": "An access control list names subjects and their permitted actions on an object. A group policy object configures systems, a trust anchor is a cryptographic root, and a capability token grants specific rights.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-048",
+            "domain": "Access Controls Concepts",
+            "stem": "A data center requires employees to pass through two interlocking doors that admit one person at a time. Which physical control is this?",
+            "options": [
+                "Turnstile alarm",
+                "Tape vault",
+                "Bollard",
+                "Mantrap"
+            ],
+            "correct_index": 3,
+            "explanation": "A mantrap is a small space with two interlocking doors that admits one person at a time and prevents tailgating. Bollards block vehicles, a turnstile alarm reports a condition, and a tape vault stores media.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-049",
+            "domain": "Access Controls Concepts",
+            "stem": "A camera system records who enters a secure room and retains the footage for later review. Which type of control is the camera?",
+            "options": [
+                "Detective",
+                "Corrective",
+                "Directive",
+                "Preventive"
+            ],
+            "correct_index": 0,
+            "explanation": "Cameras record events for later review, which is detective. Preventive controls stop actions, corrective controls restore, and directive controls guide behavior.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-050",
+            "domain": "Access Controls Concepts",
+            "stem": "Employees sign in once and then reach many internal applications without entering separate credentials each time. What is this capability called?",
+            "options": [
+                "Federation",
+                "Single sign-on",
+                "Multi-factor authentication",
+                "Privileged access management"
+            ],
+            "correct_index": 1,
+            "explanation": "Single sign-on lets a user authenticate once and reach multiple applications. Federation links identities across organizations, multi-factor authentication strengthens authentication, and privileged access management governs powerful accounts.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-051",
+            "domain": "Access Controls Concepts",
+            "stem": "An enterprise relies on a ticket-granting system so that users can reach services without resending their password each time. Which protocol provides this?",
+            "options": [
+                "SMTP",
+                "SNMP",
+                "Kerberos",
+                "LDAP"
+            ],
+            "correct_index": 2,
+            "explanation": "Kerberos issues time-limited tickets from a key distribution center. LDAP accesses directories, SMTP sends mail, and SNMP manages network devices.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-052",
+            "domain": "Access Controls Concepts",
+            "stem": "Two organizations let employees use their home login to reach a partner's web application through signed assertions. Which standard enables this?",
+            "options": [
+                "RADIUS",
+                "TACACS",
+                "OAuth",
+                "SAML"
+            ],
+            "correct_index": 3,
+            "explanation": "SAML exchanges signed assertions between an identity provider and a service provider for web single sign-on. OAuth handles delegated authorization, and RADIUS and TACACS are network access protocols.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-053",
+            "domain": "Access Controls Concepts",
+            "stem": "A mobile app is allowed limited access to a user's cloud files without ever seeing the user's password. Which framework enables this delegated access?",
+            "options": [
+                "OAuth",
+                "LDAP",
+                "SAML",
+                "Kerberos"
+            ],
+            "correct_index": 0,
+            "explanation": "OAuth issues access tokens for delegated authorization to resources. SAML is for single sign-on assertions, Kerberos uses tickets for authentication, and LDAP is a directory protocol.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-054",
+            "domain": "Access Controls Concepts",
+            "stem": "A web application ends a user's session automatically after fifteen minutes of inactivity. Which control is this?",
+            "options": [
+                "Load balancing",
+                "Session timeout",
+                "Input validation",
+                "Encryption at rest"
+            ],
+            "correct_index": 1,
+            "explanation": "A session timeout closes an idle session to reduce the risk of misuse of an unattended session. Input validation checks data, encryption at rest protects stored data, and load balancing distributes traffic.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-055",
+            "domain": "Access Controls Concepts",
+            "stem": "An administrator account with broad rights must be checked out from a vault and its actions recorded. Which practice is this?",
+            "options": [
+                "Data classification",
+                "Single sign-on",
+                "Privileged access management",
+                "Federation"
+            ],
+            "correct_index": 2,
+            "explanation": "Privileged access management vaults, checks out, and records the use of powerful accounts. Single sign-on is a convenience, federation links identities, and classification labels data.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-056",
+            "domain": "Access Controls Concepts",
+            "stem": "A new employee automatically receives the access defined by their department, and that access is removed on the last day of employment. Which process does this describe?",
+            "options": [
+                "Penetration testing",
+                "Data retention",
+                "Change management",
+                "User provisioning and deprovisioning"
+            ],
+            "correct_index": 3,
+            "explanation": "Provisioning grants access when a user joins and deprovisioning removes it when the user leaves. Testing attacks systems, retention governs data storage, and change management controls modifications.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-057",
+            "domain": "Access Controls Concepts",
+            "stem": "A system locks an account for fifteen minutes after five failed login attempts. Which goal does this control primarily achieve?",
+            "options": [
+                "Slow brute-force guessing",
+                "Encrypt stored passwords",
+                "Provide non-repudiation",
+                "Enforce password complexity"
+            ],
+            "correct_index": 0,
+            "explanation": "Account lockout slows repeated guessing by limiting the number of attempts. Password complexity strengthens passwords, encryption protects stored values, and non-repudiation proves actions.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-058",
+            "domain": "Access Controls Concepts",
+            "stem": "A firm requires that the person who approves a payment cannot be the person who created it. Which principle is this?",
+            "options": [
+                "Least privilege",
+                "Separation of duties",
+                "Defense in depth",
+                "Zero trust"
+            ],
+            "correct_index": 1,
+            "explanation": "Separation of duties divides a sensitive task between people so that no single person controls it end to end. Least privilege limits rights, defense in depth layers controls, and zero trust verifies every request.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Access Controls Concepts"
+        },
+        {
+            "id": "cc-059",
+            "domain": "Network Security",
+            "stem": "A firewall rule permits inbound traffic only to TCP port 443 so that users can reach a secure website. Which service does port 443 carry?",
+            "options": [
+                "SMTP",
+                "HTTP",
+                "HTTPS",
+                "FTP"
+            ],
+            "correct_index": 2,
+            "explanation": "Port 443 carries TLS-protected HTTPS web traffic. Port 80 is plain HTTP, port 21 is FTP, and port 25 is SMTP mail.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-060",
+            "domain": "Network Security",
+            "stem": "An administrator connects to a remote server over an encrypted terminal session on TCP port 22. Which protocol is in use?",
+            "options": [
+                "RDP",
+                "Telnet",
+                "FTP",
+                "SSH"
+            ],
+            "correct_index": 3,
+            "explanation": "SSH provides encrypted remote terminal access on port 22. Telnet is unencrypted, FTP transfers files, and RDP is a remote desktop protocol on a different port.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-061",
+            "domain": "Network Security",
+            "stem": "A protocol sends short, connectionless messages quickly and does not guarantee delivery order. Which transport protocol is this?",
+            "options": [
+                "UDP",
+                "ICMP",
+                "ARP",
+                "TCP"
+            ],
+            "correct_index": 0,
+            "explanation": "UDP is connectionless and does not guarantee delivery, which suits streaming and DNS. TCP is connection oriented, ICMP carries control messages, and ARP resolves addresses on a local network.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-062",
+            "domain": "Network Security",
+            "stem": "A client and server first exchange a synchronization, then a synchronization acknowledgment, then an acknowledgment before data flows. Which protocol uses this handshake?",
+            "options": [
+                "ICMP",
+                "TCP",
+                "ARP",
+                "UDP"
+            ],
+            "correct_index": 1,
+            "explanation": "TCP uses a three-way handshake to open a reliable connection. UDP has no handshake, ICMP is for control messages, and ARP maps addresses on a local segment.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-063",
+            "domain": "Network Security",
+            "stem": "A router forwards packets between networks and selects the best path to a destination. At which OSI layer does a router primarily operate?",
+            "options": [
+                "Application layer",
+                "Data link layer",
+                "Network layer",
+                "Transport layer"
+            ],
+            "correct_index": 2,
+            "explanation": "Routers work at the network layer using logical addresses such as IP. The data link layer handles local frames, the transport layer handles end-to-end sessions, and the application layer is where user protocols run.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-064",
+            "domain": "Network Security",
+            "stem": "A switch forwards frames to devices by using their hardware addresses within a single local network. At which OSI layer does a switch primarily operate?",
+            "options": [
+                "Physical layer",
+                "Network layer",
+                "Transport layer",
+                "Data link layer"
+            ],
+            "correct_index": 3,
+            "explanation": "Switches forward frames using hardware addresses at the data link layer. Routers use logical addresses at the network layer, the transport layer handles sessions, and the physical layer moves bits.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-065",
+            "domain": "Network Security",
+            "stem": "An administrator wants a device that inspects each packet, remembers active connections, and allows return traffic that matches them. Which type of firewall is this?",
+            "options": [
+                "Stateful firewall",
+                "Circuit proxy",
+                "Web application firewall",
+                "Stateless packet filter"
+            ],
+            "correct_index": 0,
+            "explanation": "A stateful firewall tracks connection state and allows matching return traffic. A stateless filter judges each packet alone, a circuit proxy brokers sessions, and a web application firewall protects web applications.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-066",
+            "domain": "Network Security",
+            "stem": "A device inspects HTTP requests and blocks attempts to exploit flaws in a public web application. Which device is this?",
+            "options": [
+                "Load balancer",
+                "Web application firewall",
+                "Stateful firewall",
+                "Router"
+            ],
+            "correct_index": 1,
+            "explanation": "A web application firewall inspects application-layer traffic and blocks web attacks. A stateful firewall works on flows, a router forwards packets, and a load balancer distributes requests.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-067",
+            "domain": "Network Security",
+            "stem": "A sensor copies network traffic and raises alerts about suspicious patterns but is not placed in line with the traffic. Which device is this?",
+            "options": [
+                "Network access control",
+                "Intrusion prevention system",
+                "Intrusion detection system",
+                "Forward proxy"
+            ],
+            "correct_index": 2,
+            "explanation": "An intrusion detection system is passive and only alerts. An intrusion prevention system is inline and can block, a proxy brokers requests, and network access control decides admission.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-068",
+            "domain": "Network Security",
+            "stem": "An organization places public web servers in a separate subnet that the internet can reach while internal systems stay unreachable from the internet. What is this subnet called?",
+            "options": [
+                "A virtual private network",
+                "A quarantine network",
+                "A virtual local area network",
+                "A demilitarized zone"
+            ],
+            "correct_index": 3,
+            "explanation": "A demilitarized zone exposes public services while shielding the internal network with firewall rules. A virtual local area network is a logical segment, a virtual private network is a secure tunnel, and a quarantine network isolates unhealthy devices.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-069",
+            "domain": "Network Security",
+            "stem": "A switch is configured so that guest devices and corporate devices share the hardware but cannot see each other's traffic. Which technology is this?",
+            "options": [
+                "Virtual local area networks",
+                "Port mirroring",
+                "Routing protocols",
+                "Network address translation"
+            ],
+            "correct_index": 0,
+            "explanation": "Virtual local area networks logically separate traffic on shared switches. Network address translation maps addresses, port mirroring copies traffic, and routing protocols exchange routes.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-070",
+            "domain": "Network Security",
+            "stem": "Many internal addresses reach the internet through one public address that hides the internal addressing scheme. Which technology performs this?",
+            "options": [
+                "VLAN trunking",
+                "Network address translation",
+                "Subnetting",
+                "Tunneling"
+            ],
+            "correct_index": 1,
+            "explanation": "Network address translation maps many private addresses to one or more public addresses. Subnetting divides networks, tunneling encapsulates traffic, and trunking carries multiple VLANs.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-071",
+            "domain": "Network Security",
+            "stem": "A remote worker reaches the office network over an encrypted tunnel that crosses the public internet. What technology provides this secure link?",
+            "options": [
+                "Demilitarized zone",
+                "Port mirroring",
+                "Virtual private network",
+                "Virtual local area network"
+            ],
+            "correct_index": 2,
+            "explanation": "A virtual private network encrypts traffic in a tunnel between remote users and the internal network. A virtual local area network is a local segment, a demilitarized zone exposes services, and port mirroring copies traffic.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-072",
+            "domain": "Network Security",
+            "stem": "A visitor buys a laptop and sets up a wireless access point with the same network name as the company network in order to capture logins. Which attack is this?",
+            "options": [
+                "War driving",
+                "Bluesnarfing",
+                "Smurf attack",
+                "Evil twin"
+            ],
+            "correct_index": 3,
+            "explanation": "An evil twin is a rogue access point that imitates a legitimate one to intercept users. War driving is the search for wireless networks, and the other options are unrelated attacks.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-073",
+            "domain": "Network Security",
+            "stem": "An attacker floods a service with traffic from many compromised computers so that real users cannot connect. Which attack is this?",
+            "options": [
+                "Distributed denial of service",
+                "SQL injection",
+                "Session hijacking",
+                "Phishing"
+            ],
+            "correct_index": 0,
+            "explanation": "A distributed denial-of-service attack uses many sources to overwhelm a service. Phishing steals credentials, SQL injection attacks databases, and session hijacking steals a session.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-074",
+            "domain": "Network Security",
+            "stem": "An attacker secretly relays and can alter messages between two parties who believe they are talking directly. Which attack is this?",
+            "options": [
+                "Password spraying",
+                "Man-in-the-middle",
+                "Cross-site scripting",
+                "Port scanning"
+            ],
+            "correct_index": 1,
+            "explanation": "A man-in-the-middle attack inserts the attacker between two parties to read or change traffic. The other options are web, reconnaissance, or credential attacks.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-075",
+            "domain": "Network Security",
+            "stem": "A company encrypts traffic in transit between a client and a web server so that intermediaries cannot read it. Which protocol provides this?",
+            "options": [
+                "HTTP",
+                "FTP",
+                "TLS",
+                "SNMP"
+            ],
+            "correct_index": 2,
+            "explanation": "Transport Layer Security encrypts data in transit and underpins HTTPS. HTTP is clear text, FTP is for file transfer, and SNMP manages network devices.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-076",
+            "domain": "Network Security",
+            "stem": "Under the cloud shared responsibility model, which task remains the customer's responsibility in every service model?",
+            "options": [
+                "Maintaining the provider's hypervisor",
+                "Cooling the server racks",
+                "Securing the physical data center",
+                "Protecting the customer's own data and access"
+            ],
+            "correct_index": 3,
+            "explanation": "The customer always retains responsibility for their data and who can access it. The provider secures the physical facility, hardware, and platform layers under its control.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-077",
+            "domain": "Network Security",
+            "stem": "A customer uses a cloud service where the provider manages the operating system and runtime while the customer deploys only code. Which service model is this?",
+            "options": [
+                "Platform as a service",
+                "Software as a service",
+                "Network as a service",
+                "Infrastructure as a service"
+            ],
+            "correct_index": 0,
+            "explanation": "In platform as a service the provider manages the platform and the customer deploys applications. Infrastructure as a service leaves the operating system to the customer, and software as a service delivers a finished application.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-078",
+            "domain": "Network Security",
+            "stem": "A company rents virtual machines and must patch the guest operating system and secure its own workloads. Which cloud service model is this?",
+            "options": [
+                "Platform as a service",
+                "Infrastructure as a service",
+                "Function as a service",
+                "Software as a service"
+            ],
+            "correct_index": 1,
+            "explanation": "Infrastructure as a service provides virtualized compute, and the customer secures the guest operating system and workloads. Platform as a service manages the runtime, and software as a service delivers an application.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-079",
+            "domain": "Network Security",
+            "stem": "A security model verifies every request based on identity and device health and never trusts a request just because it came from inside the network. Which model is this?",
+            "options": [
+                "Separation of duties",
+                "Defense in depth",
+                "Zero trust",
+                "Least privilege"
+            ],
+            "correct_index": 2,
+            "explanation": "Zero trust removes implicit trust based on network location and verifies every request. Defense in depth layers controls, least privilege limits rights, and separation of duties divides tasks.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-080",
+            "domain": "Network Security",
+            "stem": "A wireless network must resist offline guessing of the passphrase and provide the strongest available protection for a small office. Which standard should be chosen?",
+            "options": [
+                "WEP",
+                "WPA with TKIP",
+                "WPA2 with a short shared key",
+                "WPA3"
+            ],
+            "correct_index": 3,
+            "explanation": "WPA3 uses stronger authentication that resists offline guessing. WEP and WPA with TKIP are broken or weak, and a short shared key undermines any standard.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-081",
+            "domain": "Network Security",
+            "stem": "An attacker uses a spoofed source address so that a service sends a large response to an unrelated victim. Which attack is this?",
+            "options": [
+                "Reflection and amplification",
+                "Port scanning",
+                "Tailgating",
+                "Phishing"
+            ],
+            "correct_index": 0,
+            "explanation": "Reflection and amplification abuse a spoofed source address so that a small request triggers a large response to the victim. Port scanning probes for open ports, tailgating is physical, and phishing targets people.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-082",
+            "domain": "Network Security",
+            "stem": "A technician hardens a new network device by changing default credentials, disabling unused services, and applying the latest firmware. Why is this important?",
+            "options": [
+                "Unused services improve network performance",
+                "Default settings are widely known and easily exploited",
+                "Default settings slow down the device",
+                "Firmware updates reduce electricity use"
+            ],
+            "correct_index": 1,
+            "explanation": "Default credentials and unnecessary services are widely known and commonly exploited, so hardening them reduces the attack surface. The other reasons are not security benefits.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Network Security"
+        },
+        {
+            "id": "cc-083",
+            "domain": "Security Operations",
+            "stem": "A team builds a documented and approved secure configuration and applies it to every new server before it enters production. What is this called?",
+            "options": [
+                "Data classification",
+                "Incident response",
+                "Baselining",
+                "Load balancing"
+            ],
+            "correct_index": 2,
+            "explanation": "A security baseline is an approved configuration applied consistently to systems. Load balancing distributes traffic, classification labels data, and incident response handles events.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-084",
+            "domain": "Security Operations",
+            "stem": "An administrator identifies, tests, and deploys vendor security updates on a regular schedule. Which process is this?",
+            "options": [
+                "Penetration testing",
+                "Data retention",
+                "Vulnerability scanning",
+                "Patch management"
+            ],
+            "correct_index": 3,
+            "explanation": "Patch management acquires, tests, and applies updates that fix known flaws. Scanning finds weaknesses, penetration testing exploits them, and retention governs data storage.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-085",
+            "domain": "Security Operations",
+            "stem": "A tool compares systems against a database of known flaws and reports the missing updates that it finds. Which activity is this?",
+            "options": [
+                "Vulnerability scanning",
+                "Penetration testing",
+                "Threat hunting",
+                "Red teaming"
+            ],
+            "correct_index": 0,
+            "explanation": "Vulnerability scanning identifies known weaknesses without exploiting them. Penetration testing attempts exploitation, threat hunting searches for hidden compromise, and red teaming emulates an adversary.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-086",
+            "domain": "Security Operations",
+            "stem": "A security team sends logs from many systems to one platform that correlates events and raises alerts. Which type of platform is this?",
+            "options": [
+                "Data loss prevention",
+                "Security information and event management",
+                "Web application firewall",
+                "Virtual private network"
+            ],
+            "correct_index": 1,
+            "explanation": "A security information and event management platform collects and correlates logs to detect patterns. Data loss prevention stops data theft, a web application firewall protects web apps, and a virtual private network secures links.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-087",
+            "domain": "Security Operations",
+            "stem": "A file infects a legitimate program and spreads when users share and run that infected program. Which type of malware is this?",
+            "options": [
+                "Spyware",
+                "Worm",
+                "Virus",
+                "Trojan"
+            ],
+            "correct_index": 2,
+            "explanation": "A virus attaches to a host file and spreads when that file is run. A worm spreads by itself, a trojan disguises itself as useful software, and spyware collects information secretly.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-088",
+            "domain": "Security Operations",
+            "stem": "Malware encrypts a company's files and demands payment in exchange for releasing the decryption key. Which type of malware is this?",
+            "options": [
+                "Keylogger",
+                "Logic bomb",
+                "Rootkit",
+                "Ransomware"
+            ],
+            "correct_index": 3,
+            "explanation": "Ransomware encrypts data and demands payment. A rootkit hides activity, a keylogger records keystrokes, and a logic bomb triggers on a condition.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-089",
+            "domain": "Security Operations",
+            "stem": "Software that looks like a useful utility installs hidden malicious code when a user runs it. Which type of malware is this?",
+            "options": [
+                "Trojan",
+                "Ransomware",
+                "Worm",
+                "Virus"
+            ],
+            "correct_index": 0,
+            "explanation": "A trojan disguises itself as legitimate software to trick the user. A worm self-spreads, a virus needs a host file, and ransomware demands payment.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-090",
+            "domain": "Security Operations",
+            "stem": "Self-replicating code spreads across a network by itself, without user action and without a host file. Which type of malware is this?",
+            "options": [
+                "Rootkit",
+                "Worm",
+                "Virus",
+                "Trojan"
+            ],
+            "correct_index": 1,
+            "explanation": "A worm self-propagates across networks without user action. A virus needs a host file, a trojan relies on user trust, and a rootkit hides an intruder.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-091",
+            "domain": "Security Operations",
+            "stem": "Malware hides its files and processes from the operating system so that administrators cannot see it. Which type of malware is this?",
+            "options": [
+                "Worm",
+                "Spyware",
+                "Rootkit",
+                "Adware"
+            ],
+            "correct_index": 2,
+            "explanation": "A rootkit conceals its presence by subverting the operating system. Spyware collects data, adware shows unwanted ads, and a worm spreads itself.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-092",
+            "domain": "Security Operations",
+            "stem": "An employee receives an email that pretends to be from a bank and asks the employee to confirm a password on a fake page. Which attack is this?",
+            "options": [
+                "Tailgating",
+                "Shoulder surfing",
+                "Dumpster diving",
+                "Phishing"
+            ],
+            "correct_index": 3,
+            "explanation": "Phishing uses a fraudulent message to trick a person into revealing credentials. Tailgating is physical entry, shoulder surfing is watching a screen, and dumpster diving recovers discarded data.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-093",
+            "domain": "Security Operations",
+            "stem": "An attacker calls the help desk, invents a story about being a new manager, and asks for a password reset. Which social engineering technique is this?",
+            "options": [
+                "Pretexting",
+                "Phishing",
+                "Watering hole",
+                "Smishing"
+            ],
+            "correct_index": 0,
+            "explanation": "Pretexting uses a fabricated identity and story to manipulate a target. Phishing is usually email, a watering hole compromises a site, and smishing uses text messages.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-094",
+            "domain": "Security Operations",
+            "stem": "A policy requires that financial records be kept for seven years and then securely destroyed. What does this policy define?",
+            "options": [
+                "Data classification",
+                "Data retention",
+                "Data minimization",
+                "Data masking"
+            ],
+            "correct_index": 1,
+            "explanation": "A retention policy sets how long records are kept and how they are disposed of. Classification labels data, minimization limits collection, and masking hides values.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-095",
+            "domain": "Security Operations",
+            "stem": "Before disposing of old hard drives, a technician shreds them so that the data on them cannot be recovered. Which data handling step is this?",
+            "options": [
+                "Data masking",
+                "Data retention",
+                "Secure disposal",
+                "Data classification"
+            ],
+            "correct_index": 2,
+            "explanation": "Secure disposal destroys media so that data cannot be recovered. Retention governs storage duration, classification labels data, and masking hides values.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-096",
+            "domain": "Security Operations",
+            "stem": "A tool inspects outgoing email and blocks messages that contain account numbers or personal data. Which control is this?",
+            "options": [
+                "Intrusion prevention system",
+                "Load balancing",
+                "Port mirroring",
+                "Data loss prevention"
+            ],
+            "correct_index": 3,
+            "explanation": "Data loss prevention inspects content and stops sensitive data from leaving the organization. An intrusion prevention system blocks network attacks, load balancing distributes traffic, and port mirroring copies traffic.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-097",
+            "domain": "Security Operations",
+            "stem": "A team restores backup data to a test system on a schedule to confirm that the backups can actually be recovered. Why is this important?",
+            "options": [
+                "A backup that has never been restored may fail when it is needed",
+                "Backups use less storage when they are tested",
+                "Testing changes the data classification level",
+                "Testing removes the need for patching"
+            ],
+            "correct_index": 0,
+            "explanation": "A backup is only trustworthy once a restore has been proven, so regular restore tests catch failures before a real recovery is needed. The other reasons are not valid security benefits.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-098",
+            "domain": "Security Operations",
+            "stem": "An administrator records and controls changes to system settings so that only approved changes reach production. Which process is this?",
+            "options": [
+                "Threat hunting",
+                "Configuration management",
+                "Data classification",
+                "Password spraying"
+            ],
+            "correct_index": 1,
+            "explanation": "Configuration management tracks and controls changes so that systems stay in an approved state. Classification labels data, password spraying is an attack, and threat hunting searches for compromise.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-099",
+            "domain": "Security Operations",
+            "stem": "Endpoint software watches for malicious behavior, can isolate a host, and can roll back changes remotely. Which technology is this?",
+            "options": [
+                "Web application firewall",
+                "Network access control",
+                "Endpoint detection and response",
+                "Data loss prevention"
+            ],
+            "correct_index": 2,
+            "explanation": "Endpoint detection and response monitors endpoints and supports containment such as host isolation. Data loss prevention stops data theft, a web application firewall protects web apps, and network access control manages admission.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        },
+        {
+            "id": "cc-100",
+            "domain": "Security Operations",
+            "stem": "An organization backs up critical data, stores a copy off site, and encrypts it. Which threat does the offsite copy primarily address?",
+            "options": [
+                "Slow network performance",
+                "Weak password policies",
+                "Unpatched operating systems",
+                "Loss of the primary site through fire or disaster"
+            ],
+            "correct_index": 3,
+            "explanation": "Keeping an offsite copy protects data when the primary site is destroyed by a disaster. The other options are unrelated to the location of the backup.",
+            "reference": "ISC2 Certified in Cybersecurity Exam Outline - Security Operations"
+        }
+    ]
+}
