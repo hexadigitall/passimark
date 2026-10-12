@@ -1,0 +1,1277 @@
+{
+    "cert_key": "ccnp-encor",
+    "title": "Cisco CCNP Enterprise Core (ENCOR 350-401)",
+    "issuer": "Cisco",
+    "outline_file": "outlines/ccnp-encor.json",
+    "variant_label": "ENCOR 350-401 Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Cisco 350-401 ENCOR exam topics (six domains and weights). Not a capture of past exam questions.",
+    "source_label": "Cisco ENCOR practice bank",
+    "items": [
+        {
+            "id": "ccnp-encor-001",
+            "domain": "Architecture",
+            "stem": "An enterprise campus is being redesigned so that access switches connect directly to a pair of switches that also provide Layer 3 routing for every VLAN. Which architecture is described?",
+            "options": [
+                "Two-tier collapsed core design",
+                "Three-tier design with a dedicated distribution layer",
+                "Spine-leaf data center fabric",
+                "Hub-and-spoke WAN topology"
+            ],
+            "correct_index": 0,
+            "explanation": "A two-tier or collapsed core design merges the core and distribution functions into one layer, so access switches uplink directly to the core and routing is performed there. A three-tier design keeps a separate distribution layer, while spine-leaf and hub-and-spoke are data center and WAN topologies.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-002",
+            "domain": "Architecture",
+            "stem": "A data center must provide consistent low-latency any-to-any paths between servers and must scale by adding switches rather than redesigning tiers. Which topology meets this requirement?",
+            "options": [
+                "Three-tier campus design",
+                "Spine-leaf fabric",
+                "Ring topology with spanning tree",
+                "Partial mesh with routed WAN links"
+            ],
+            "correct_index": 1,
+            "explanation": "A spine-leaf fabric gives every leaf an equal-cost path to every other leaf through the spines, keeping latency predictable and allowing scale-out by adding leaves or spines. Three-tier designs add latency through aggregation, and ring or partial mesh designs are not built for uniform east-west server traffic.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-003",
+            "domain": "Architecture",
+            "stem": "A network carries many VLANs across several switches and must map groups of VLANs to independent spanning-tree instances so a single blocked link affects only some VLANs. Which technology should be used?",
+            "options": [
+                "PVST plus one instance per VLAN",
+                "Rapid PVST plus one instance per VLAN",
+                "MST with VLANs mapped into instances",
+                "RSTP with a single global instance"
+            ],
+            "correct_index": 2,
+            "explanation": "MST (IEEE 802.1s) maps many VLANs into a smaller number of spanning-tree instances, which allows deliberate load sharing and reduces control-plane load. PVST and Rapid PVST run an instance for every VLAN, and a single RSTP instance cannot provide per-group forwarding paths.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-004",
+            "domain": "Architecture",
+            "stem": "An engineer wants to stop a newly connected switch from becoming the spanning-tree root on a specific port while still allowing it to participate in the topology. Which feature should be enabled on that port?",
+            "options": [
+                "BPDU guard",
+                "PortFast",
+                "Loop guard",
+                "Root guard"
+            ],
+            "correct_index": 3,
+            "explanation": "Root guard keeps a port in a root-inconsistent state if a superior BPDU arrives, so the attached switch can forward but cannot become root. BPDU guard disables the port outright, PortFast bypasses learning states on access ports, and loop guard prevents a blocked port from forwarding when BPDUs stop.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-005",
+            "domain": "Architecture",
+            "stem": "Access ports that enable PortFast should disable immediately if a BPDU is received, because a BPDU indicates an unauthorized switch is attached. Which feature provides this protection?",
+            "options": [
+                "BPDU guard",
+                "Root guard",
+                "Storm control",
+                "Unidirectional Link Detection"
+            ],
+            "correct_index": 0,
+            "explanation": "BPDU guard err-disables a PortFast edge port the moment a BPDU arrives, preventing a rogue switch from joining the topology. Root guard preserves the root role rather than disabling the port, storm control limits traffic rates, and UDLD detects one-way links.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-006",
+            "domain": "Architecture",
+            "stem": "A company with many branch offices wants to use several WAN transports at once and centrally define application-aware policies that steer traffic. Which architecture should be deployed?",
+            "options": [
+                "Traditional hub-and-spoke with static routes",
+                "Cisco SD-WAN overlay",
+                "Data center spine-leaf fabric",
+                "EtherChannel between branches"
+            ],
+            "correct_index": 1,
+            "explanation": "Cisco SD-WAN builds an overlay across multiple transports and applies centralized application-aware policies that select paths per flow. Static hub-and-spoke does not adapt to transport quality, spine-leaf is a data center design, and EtherChannel is a local link aggregation technique.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-007",
+            "domain": "Architecture",
+            "stem": "A campus intends to decouple user and device identity from physical location and to segment traffic using a fabric with a dedicated control plane node. Which solution should be used?",
+            "options": [
+                "Cisco SD-WAN",
+                "StackWise Virtual",
+                "Cisco SD-Access",
+                "Cisco ACI"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco SD-Access is the campus fabric solution that separates identity from location and uses LISP, VXLAN, and IS-IS with a control plane node. SD-WAN targets the WAN, StackWise Virtual is switch stacking, and ACI is the data center policy fabric.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-008",
+            "domain": "Architecture",
+            "stem": "In a Cisco SD-Access deployment, what provides the logical overlay that transports user traffic between fabric edge nodes?",
+            "options": [
+                "The IS-IS underlay routing protocol",
+                "The spanning-tree root bridge",
+                "The wireless controller data tunnel",
+                "VXLAN data plane with a LISP control plane"
+            ],
+            "correct_index": 3,
+            "explanation": "SD-Access separates a routed IS-IS underlay from a VXLAN overlay whose mappings are advertised by LISP and enforced by the fabric control plane node. The spanning-tree root and the WLC tunnel are not the campus fabric overlay.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-009",
+            "domain": "Architecture",
+            "stem": "An engineer must mark voice traffic at the network edge so downstream devices can give it higher priority without inspecting the application again. Which QoS function is being applied?",
+            "options": [
+                "Classification and marking",
+                "Policing",
+                "Shaping",
+                "Congestion avoidance"
+            ],
+            "correct_index": 0,
+            "explanation": "Classification identifies the flow and marking writes a priority value such as DSCP or CoS so later devices trust the label instead of reclassifying. Policing and shaping manage rates, and congestion avoidance manages queue depth.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-010",
+            "domain": "Architecture",
+            "stem": "What is the purpose of defining a QoS trust boundary on an access switch in a campus network?",
+            "options": [
+                "It encrypts traffic coming from untrusted hosts",
+                "It defines where markings from connected devices are trusted or re-marked",
+                "It blocks multicast traffic at the access layer",
+                "It elects the spanning-tree root bridge"
+            ],
+            "correct_index": 1,
+            "explanation": "The trust boundary is the point beyond which existing QoS markings are accepted; traffic entering before that point can be re-marked to prevent user devices from claiming high priority. Trust boundaries do not encrypt, block multicast, or affect spanning tree.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-011",
+            "domain": "Architecture",
+            "stem": "Multicast receivers are spread across several subnets, and the routers must build a distribution tree that knows which interfaces have interested receivers. Which protocol runs between the multicast routers for this purpose?",
+            "options": [
+                "IGMP snooping",
+                "VRRP",
+                "PIM",
+                "MSDP"
+            ],
+            "correct_index": 2,
+            "explanation": "PIM builds the multicast distribution tree between routers by tracking receiver interest and forwarding state. IGMP operates between hosts and their local router, VRRP is first-hop redundancy, and MSDP shares source information between domains.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-012",
+            "domain": "Architecture",
+            "stem": "A Layer 2 switch floods multicast frames to every port even though only a few hosts have joined the group. Which feature limits those frames to ports with interested receivers?",
+            "options": [
+                "PIM sparse mode",
+                "MSDP peering",
+                "Multicast boundary access lists",
+                "IGMP snooping"
+            ],
+            "correct_index": 3,
+            "explanation": "IGMP snooping lets a switch listen to host membership reports and forward multicast only to ports that requested the group. PIM is a routed multicast protocol, MSDP shares sources between domains, and boundary access lists filter which groups are allowed, not which ports receive them.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-013",
+            "domain": "Architecture",
+            "stem": "An engineer wants to control which switch becomes the spanning-tree root for a particular VLAN. Which mechanism should be adjusted?",
+            "options": [
+                "The bridge priority of the candidate switch",
+                "The port cost of every access port",
+                "The native VLAN on the trunk",
+                "The MTU on the uplink ports"
+            ],
+            "correct_index": 0,
+            "explanation": "Root election is won by the lowest bridge ID, and the bridge priority is the tunable part of that ID, so lowering it on the candidate makes it root. Port cost and path cost influence which ports block, but the native VLAN and MTU have no role in root election.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-014",
+            "domain": "Architecture",
+            "stem": "In a three-tier campus design, at which layer are routing, policy, and aggregation of access-layer VLANs typically performed?",
+            "options": [
+                "Core layer",
+                "Distribution layer",
+                "Data center leaf layer",
+                "Access layer"
+            ],
+            "correct_index": 1,
+            "explanation": "The distribution layer aggregates access switches and performs inter-VLAN routing, summarization, and policy. The access layer provides endpoint connectivity, the core layer provides fast transport between distribution blocks without policy, and the leaf is a data center term.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Architecture"
+        },
+        {
+            "id": "ccnp-encor-015",
+            "domain": "Virtualization",
+            "stem": "Which type of hypervisor runs directly on the physical hardware without an underlying host operating system?",
+            "options": [
+                "Virtual switch",
+                "Type 2 hypervisor",
+                "Type 1 bare-metal hypervisor",
+                "Container runtime"
+            ],
+            "correct_index": 2,
+            "explanation": "A Type 1 hypervisor is installed on the bare metal and manages virtual machines directly, as with ESXi or KVM. A Type 2 hypervisor runs as an application on a host OS, a container runtime shares the host kernel, and a virtual switch forwards traffic.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-016",
+            "domain": "Virtualization",
+            "stem": "An engineer must run two overlapping IP address spaces on one physical router while keeping their routing and forwarding tables completely separate. Which technology should be used?",
+            "options": [
+                "NAT overload",
+                "VLAN trunking",
+                "Policy-based routing",
+                "VRF"
+            ],
+            "correct_index": 3,
+            "explanation": "A virtual routing and forwarding instance creates an independent routing table, so overlapping prefixes can coexist on the same device. VLAN trunking is Layer 2, policy-based routing overrides a single table rather than separating tables, and NAT overload shares a public address.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-017",
+            "domain": "Virtualization",
+            "stem": "Which tunnel technology can carry multicast and non-IP protocols between two routers but does not provide confidentiality on its own?",
+            "options": [
+                "GRE",
+                "IPsec transport mode",
+                "SSL VPN",
+                "DMVPN phase one"
+            ],
+            "correct_index": 0,
+            "explanation": "GRE is a lightweight, unencrypted encapsulation that can carry multicast, broadcast, and non-IP payloads, making it a common base for overlays. IPsec modes add encryption, SSL VPN is a remote-access technology, and DMVPN is an overlay that typically combines GRE with IPsec.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-018",
+            "domain": "Virtualization",
+            "stem": "Which IPsec protocol provides confidentiality of the payload by encrypting the data in addition to authenticating the packets?",
+            "options": [
+                "Diffie-Hellman group two",
+                "Encapsulating Security Payload",
+                "Authentication Header",
+                "IKE phase one"
+            ],
+            "correct_index": 1,
+            "explanation": "ESP encrypts and optionally authenticates the payload, providing confidentiality that AH does not. AH only authenticates, IKE negotiates the security associations, and a Diffie-Hellman group is a key-exchange method rather than a data-protection protocol.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-019",
+            "domain": "Virtualization",
+            "stem": "A hub-and-spoke WAN must allow spokes to build direct tunnels to each other on demand instead of always routing through the hub. Which technology supports this dynamic spoke-to-spoke behavior?",
+            "options": [
+                "Point-to-point serial links",
+                "Static point-to-point GRE tunnels",
+                "DMVPN with NHRP",
+                "IPsec transport mode only"
+            ],
+            "correct_index": 2,
+            "explanation": "DMVPN uses multipoint GRE with NHRP so spokes register with the hub and can resolve each other to build direct tunnels dynamically. Static GRE tunnels are fixed, IPsec transport mode alone provides no overlay, and serial links cannot form a dynamic mesh.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-020",
+            "domain": "Virtualization",
+            "stem": "In a virtualized server environment, what is the function of a virtual switch such as a vSphere vSwitch or the Cisco Nexus 1000V?",
+            "options": [
+                "It supplies power to the host chassis",
+                "It replaces the physical network interface cards in the host",
+                "It performs hypervisor memory deduplication",
+                "It forwards traffic between virtual machines and physical uplinks"
+            ],
+            "correct_index": 3,
+            "explanation": "A virtual switch provides Layer 2 forwarding inside the hypervisor, connecting VM vNICs to VLANs and physical uplinks. It does not replace the physical NICs, manage memory, or provide power.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-021",
+            "domain": "Virtualization",
+            "stem": "Two VRFs on the same router need to exchange a limited set of routes so a few hosts can communicate. What is required to move traffic between them?",
+            "options": [
+                "Route leaking between the VRFs",
+                "A spanning-tree instance per VRF",
+                "A trunk carrying untagged frames",
+                "A single PIM domain"
+            ],
+            "correct_index": 0,
+            "explanation": "VRFs are isolated by default, so importing selected prefixes from one VRF into another through route leaking is what enables controlled communication. Spanning tree and PIM are unrelated to VRF isolation, and an untagged trunk does not cross routing tables.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-022",
+            "domain": "Virtualization",
+            "stem": "Which virtualization overlay uses a 24-bit segment identifier to support far more logical networks than the 12-bit VLAN tag allows?",
+            "options": [
+                "Keyless GRE",
+                "VXLAN",
+                "Inter-Switch Link",
+                "QinQ double tagging"
+            ],
+            "correct_index": 1,
+            "explanation": "VXLAN uses a 24-bit VXLAN network identifier, giving about sixteen million segments compared with roughly four thousand VLANs. ISL is an obsolete Cisco trunking protocol, QinQ stacks two 12-bit tags, and keyless GRE provides no segment identifier.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-023",
+            "domain": "Virtualization",
+            "stem": "On a standard vSphere virtual switch, how does an administrator separate traffic from different virtual machine groups that share the same physical uplink?",
+            "options": [
+                "By assigning a distinct VRF to each virtual machine",
+                "By pinning each virtual machine to a separate CPU",
+                "By tagging the port groups with VLAN IDs",
+                "By disabling the hypervisor"
+            ],
+            "correct_index": 2,
+            "explanation": "Port groups on a virtual switch can carry 802.1Q VLAN IDs so traffic from different VM groups is separated over a shared physical uplink. VRFs and CPU pinning are unrelated to Layer 2 separation, and the hypervisor cannot be disabled.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Virtualization"
+        },
+        {
+            "id": "ccnp-encor-024",
+            "domain": "Infrastructure",
+            "stem": "Two routers on the same Ethernet segment have mismatched OSPF hello intervals. What is the resulting adjacency behavior?",
+            "options": [
+                "They reach FULL but do not exchange routes",
+                "They reach TWO-WAY and elect a designated router",
+                "They reach EXSTART and stall",
+                "They do not form an adjacency and remain down"
+            ],
+            "correct_index": 3,
+            "explanation": "OSPF requires matching hello and dead intervals before neighbors can progress, so an interval mismatch prevents adjacency formation altogether. FULL and EXSTART require matching parameters, and TWO-WAY election never occurs without a formed neighbor relationship.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-025",
+            "domain": "Infrastructure",
+            "stem": "Which OSPF LSA type is generated by an area border router to describe networks reachable in another area?",
+            "options": [
+                "Type 3 summary LSA",
+                "Type 5 external LSA",
+                "Type 1 router LSA",
+                "Type 2 network LSA"
+            ],
+            "correct_index": 0,
+            "explanation": "A type 3 summary LSA is originated by an ABR to advertise inter-area prefixes. Type 1 describes router links within an area, type 2 describes multi-access networks, and type 5 describes external routes redistributed into OSPF.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-026",
+            "domain": "Infrastructure",
+            "stem": "Which OSPF area type blocks type 5 external LSAs and replaces external reachability with a default route injected by the ABR?",
+            "options": [
+                "Backbone area zero",
+                "Stub area",
+                "Normal area",
+                "Not-so-stubby area"
+            ],
+            "correct_index": 1,
+            "explanation": "A stub area blocks type 5 external LSAs and relies on an ABR-generated default route for external destinations. The backbone is not stub, a normal area carries externals, and a not-so-stubby area allows limited external LSAs through a type 7 translation.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-027",
+            "domain": "Infrastructure",
+            "stem": "An OSPF area is not physically attached to the backbone but still must connect to area zero. Which OSPF feature provides this connectivity?",
+            "options": [
+                "A redistribution point",
+                "A default-information originate statement",
+                "A virtual link",
+                "An OSPF stub network"
+            ],
+            "correct_index": 2,
+            "explanation": "A virtual link is a tunnel through a transit area that logically connects a discontinuous area to the backbone. Redistribution and default origination do not satisfy the area zero attachment rule, and a stub network affects LSAs rather than connectivity.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-028",
+            "domain": "Infrastructure",
+            "stem": "An engineer wants OSPF to exchange routing information only with routers that present the correct key material. Which feature enforces this?",
+            "options": [
+                "Prefix suppression",
+                "SPF throttling",
+                "Passive interfaces",
+                "OSPF authentication"
+            ],
+            "correct_index": 3,
+            "explanation": "OSPF authentication, in plaintext, MD5, or SHA form, verifies a shared key in every OSPF packet so only trusted routers become adjacent. Passive interfaces simply suppress hellos, prefix suppression hides connected prefixes, and SPF throttling controls route computation timing.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-029",
+            "domain": "Infrastructure",
+            "stem": "In EIGRP, which condition on the reported distance allows a route to qualify as a feasible successor?",
+            "options": [
+                "The reported distance must be lower than the feasible distance",
+                "The reported distance must equal the feasible distance",
+                "The hop count must be lower than fifteen",
+                "The composite metric must be under one hundred thousand"
+            ],
+            "correct_index": 0,
+            "explanation": "The feasibility condition requires the neighbor reported distance to be strictly less than the local feasible distance, which proves a loop-free backup path. Equality or greater than would not guarantee loop freedom, and hop count and fixed metric thresholds are not part of the condition.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-030",
+            "domain": "Infrastructure",
+            "stem": "An EIGRP router loses its successor route and already has a feasible successor in its topology table. What does the router do?",
+            "options": [
+                "It sends a query to all neighbors for a new route",
+                "It immediately installs the feasible successor without querying neighbors",
+                "It sets the route to active and waits for the stuck-in-active timer",
+                "It drops all traffic for that prefix indefinitely"
+            ],
+            "correct_index": 1,
+            "explanation": "When a feasible successor exists, EIGRP performs a local computation and installs it at once, avoiding queries and staying passive. Queries and the active state occur only when no feasible successor is available.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-031",
+            "domain": "Infrastructure",
+            "stem": "Which EIGRP mode allows a single process to configure IPv4 and IPv6 address families per instance with a hierarchical named configuration?",
+            "options": [
+                "EIGRP stub routing",
+                "EIGRP wide metrics",
+                "Named EIGRP mode",
+                "EIGRP variance"
+            ],
+            "correct_index": 2,
+            "explanation": "Named EIGRP mode configures a process with address-family subcommands for IPv4 and IPv6 in one instance. Stub routing restricts query scope, wide metrics change the metric calculation, and variance enables unequal-cost load balancing.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-032",
+            "domain": "Infrastructure",
+            "stem": "An EIGRP network has two paths to a destination with different metrics and the engineer wants to use both. Which setting enables unequal-cost load balancing?",
+            "options": [
+                "maximum-paths",
+                "metric weights",
+                "distribute-list",
+                "variance"
+            ],
+            "correct_index": 3,
+            "explanation": "The variance multiplier allows feasible successors whose metric is within the variance of the best metric to be installed, enabling unequal-cost load balancing. Maximum-paths caps the number of equal-cost paths, metric weights change the metric, and a distribute list filters routes.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-033",
+            "domain": "Infrastructure",
+            "stem": "A branch router with a single path to the rest of the network should be prevented from becoming a transit point for other routers. Which feature should be enabled?",
+            "options": [
+                "EIGRP stub routing",
+                "EIGRP authentication",
+                "EIGRP offset lists",
+                "EIGRP summarization"
+            ],
+            "correct_index": 0,
+            "explanation": "EIGRP stub routing advertises the router as a stub, so neighbors do not query it as a transit path. Authentication secures adjacencies, offset lists adjust metrics, and summarization reduces the size of advertisements.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-034",
+            "domain": "Infrastructure",
+            "stem": "Which BGP neighbor state indicates that the TCP session is up and the OPEN message has been exchanged, but the session is not yet fully established?",
+            "options": [
+                "Active",
+                "OpenConfirm",
+                "Established",
+                "Idle"
+            ],
+            "correct_index": 1,
+            "explanation": "In OpenConfirm the peers have exchanged OPEN messages and are waiting for the keepalive that completes the session. Idle is the initial state, Active means trying to establish TCP, and Established means the session can exchange UPDATEs.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-035",
+            "domain": "Infrastructure",
+            "stem": "Which BGP attribute is Cisco proprietary and is evaluated first during best-path selection, with higher values preferred?",
+            "options": [
+                "AS path",
+                "Multi-Exit Discriminator",
+                "Weight",
+                "Local preference"
+            ],
+            "correct_index": 2,
+            "explanation": "Weight is a Cisco-defined, locally significant attribute checked first when choosing the best path, and higher is better. MED and local preference are standardized attributes evaluated later, and AS path length is preferred when shorter.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-036",
+            "domain": "Infrastructure",
+            "stem": "An engineer wants every router in the autonomous system to prefer a particular exit point for outbound traffic. Which BGP attribute should be set higher?",
+            "options": [
+                "Next hop",
+                "Multi-Exit Discriminator",
+                "Origin",
+                "Local preference"
+            ],
+            "correct_index": 3,
+            "explanation": "Local preference is shared throughout an autonomous system and influences outbound exit selection, with higher values preferred. MED influences inbound traffic between neighbors, origin reflects how the route entered BGP, and next hop is a reachability address rather than a preference value.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-037",
+            "domain": "Infrastructure",
+            "stem": "Two external BGP speakers are not directly connected and an intermediate router sits between them. Which command allows the session to form across that router?",
+            "options": [
+                "neighbor ebgp-multihop",
+                "neighbor next-hop-self",
+                "neighbor route-reflector-client",
+                "neighbor send-community"
+            ],
+            "correct_index": 0,
+            "explanation": "The ebgp-multihop command raises the TTL on eBGP packets so a session can span intermediate routers. Next-hop-self rewrites the next-hop attribute, route-reflector-client changes iBGP route propagation, and send-community controls community propagation.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-038",
+            "domain": "Infrastructure",
+            "stem": "A large iBGP network wants to avoid a full mesh of peers while still propagating routes learned from one client to other clients. Which feature provides this?",
+            "options": [
+                "Route dampening",
+                "Route reflectors",
+                "Community tagging",
+                "AS path prepending"
+            ],
+            "correct_index": 1,
+            "explanation": "A route reflector selects one or more clients and reflects routes between them, removing the need for a full mesh. Communities tag routes for policy, prepending lengthens the AS path, and dampening suppresses unstable routes.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-039",
+            "domain": "Infrastructure",
+            "stem": "Which practice reduces the size of routing tables and hides topology changes from the rest of a hierarchical network?",
+            "options": [
+                "Disabling the default route",
+                "Redistribution at every boundary",
+                "Route summarization",
+                "Increasing hello timers"
+            ],
+            "correct_index": 2,
+            "explanation": "Summarization aggregates contiguous prefixes into one advertisement, which shrinks routing tables and localizes the impact of changes. Redistribution typically increases table size, hello timers affect adjacency, and removing the default route changes fallback behavior rather than summarization.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-040",
+            "domain": "Infrastructure",
+            "stem": "Which protocol propagates VLAN configuration between connected Cisco switches so that their VLAN databases stay consistent?",
+            "options": [
+                "Spanning Tree Protocol",
+                "Dynamic Trunking Protocol",
+                "VLAN one tagging",
+                "VLAN Trunking Protocol"
+            ],
+            "correct_index": 3,
+            "explanation": "VTP advertises VLAN additions, changes, and deletions from a server to clients in the same management domain. DTP negotiates trunk state, VLAN one tagging is framing behavior, and STP prevents loops.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-041",
+            "domain": "Infrastructure",
+            "stem": "An engineer wants an access port to never negotiate a trunk with an attached device. Which action should be taken?",
+            "options": [
+                "Disable negotiation with switchport nonegotiate",
+                "Enable PortFast on the port",
+                "Set the port to dynamic auto",
+                "Configure the port as a static trunk"
+            ],
+            "correct_index": 0,
+            "explanation": "The nonegotiate setting stops DTP frames so the port cannot negotiate a trunk. PortFast only speeds forwarding, dynamic auto still negotiates, and a static trunk does the opposite of the requirement.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-042",
+            "domain": "Infrastructure",
+            "stem": "Two switches have an EtherChannel with mismatched bundle modes and different speeds on the member links. What is the likely result?",
+            "options": [
+                "The ports automatically become routed interfaces",
+                "The bundle does not form and the links may be blocked, creating loop risk",
+                "Traffic load-balances across the members anyway",
+                "The speed is auto-negotiated to the highest common value"
+            ],
+            "correct_index": 1,
+            "explanation": "EtherChannel members must share consistent mode and speed or the bundle fails to form, leaving individual links that spanning tree may block while the rest forward. Ports do not silently auto-correct the configuration or become routed.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-043",
+            "domain": "Infrastructure",
+            "stem": "A multilayer switch must route between VLANs using internal virtual interfaces. Which configuration is required?",
+            "options": [
+                "PortFast on the uplink ports",
+                "A loopback interface per VLAN",
+                "An SVI for each VLAN with an IP address",
+                "A trunk to an external router only"
+            ],
+            "correct_index": 2,
+            "explanation": "A switched virtual interface is created per VLAN and given an IP address so the switch can route between them. Loopbacks do not route user VLANs, an external router is an alternative rather than a requirement, and PortFast does not affect routing.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-044",
+            "domain": "Infrastructure",
+            "stem": "A lightweight access point must discover and join a wireless LAN controller. Which protocol carries the control and data tunnels between them?",
+            "options": [
+                "GRE only",
+                "Lightweight Access Point Protocol only",
+                "IPsec",
+                "CAPWAP"
+            ],
+            "correct_index": 3,
+            "explanation": "CAPWAP, defined in RFC 5415, provides the control and data tunnels between a lightweight AP and a WLC. LWAPP is the obsolete predecessor, IPsec is a security protocol, and GRE alone is not the AP-to-controller tunneling mechanism.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-045",
+            "domain": "Infrastructure",
+            "stem": "A wireless client moves between two access points managed by the same controller and keeps its IP address and session. What is this behavior called?",
+            "options": [
+                "Layer 2 roaming within a mobility domain",
+                "Regrouping",
+                "Band steering",
+                "Fast BSS transition only"
+            ],
+            "correct_index": 0,
+            "explanation": "Layer 2 roaming inside a single mobility domain lets the client re-associate to a new AP while the controller preserves the session and IP address. Regrouping and band steering are unrelated, and fast BSS transition is an optimization used within roaming rather than the general term.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-046",
+            "domain": "Infrastructure",
+            "stem": "In the 2.4 GHz band in North America, which set of channels are non-overlapping and commonly recommended for adjacent access points?",
+            "options": [
+                "Channels 1, 4, and 8",
+                "Channels 1, 6, and 11",
+                "Channels 1, 5, and 9",
+                "Channels 2, 7, and 12"
+            ],
+            "correct_index": 1,
+            "explanation": "Channels 1, 6, and 11 are the only three non-overlapping 20 MHz channels in the North American 2.4 GHz band. The other sets overlap and cause co-channel interference.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-047",
+            "domain": "Infrastructure",
+            "stem": "A small organization wants cloud-based wireless management that requires no on-premises controller appliance. Which deployment model fits this need?",
+            "options": [
+                "Mobility Express only",
+                "Autonomous access points",
+                "Cisco Meraki cloud-managed wireless",
+                "An embedded controller on each switch"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco Meraki provides cloud-managed wireless where the dashboard handles configuration and monitoring without a local controller appliance. Autonomous APs are managed individually, embedded controllers live on a switch or AP, and Mobility Express is a local virtual controller, not cloud.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-048",
+            "domain": "Infrastructure",
+            "stem": "An internal web server must be reachable from the Internet at a fixed public address that never changes. Which NAT type should be configured?",
+            "options": [
+                "NAT64",
+                "Dynamic NAT with a pool",
+                "Port address translation",
+                "Static NAT"
+            ],
+            "correct_index": 3,
+            "explanation": "Static NAT creates a permanent one-to-one mapping from a public address to the inside server, which is required for inbound reachability. Dynamic NAT and PAT use temporary translations, and NAT64 translates between IPv6 and IPv4.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-049",
+            "domain": "Infrastructure",
+            "stem": "A small office has one public IPv4 address and many internal hosts that need Internet access at the same time. Which translation method should be used?",
+            "options": [
+                "NAT overload using port address translation",
+                "Static NAT",
+                "Dynamic NAT with a pool of one",
+                "Proxy ARP"
+            ],
+            "correct_index": 0,
+            "explanation": "NAT overload, also called port address translation, multiplexes many inside hosts over one public address by tracking unique source ports. Static and single-pool dynamic NAT cannot distinguish simultaneous sessions, and proxy ARP is unrelated.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-050",
+            "domain": "Infrastructure",
+            "stem": "Two routers must share a virtual IP address and MAC address to provide a redundant default gateway, with one router active and one on standby. Which protocol provides this?",
+            "options": [
+                "Open Shortest Path First",
+                "Hot Standby Router Protocol",
+                "Virtual Router Redundancy Protocol only",
+                "Gateway Load Balancing Protocol only"
+            ],
+            "correct_index": 1,
+            "explanation": "HSRP provides a virtual gateway with an active router and a standby router taking over on failure. VRRP and GLBP are alternative first-hop redundancy protocols, and OSPF is a routing protocol rather than a gateway redundancy mechanism.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Infrastructure"
+        },
+        {
+            "id": "ccnp-encor-051",
+            "domain": "Network Assurance",
+            "stem": "An engineer needs to characterize which applications and conversations consume the most bandwidth without capturing every packet. Which technology provides this flow-level visibility?",
+            "options": [
+                "SNMP traps",
+                "Syslog",
+                "NetFlow",
+                "SPAN mirroring"
+            ],
+            "correct_index": 2,
+            "explanation": "NetFlow summarizes traffic into flow records describing source, destination, ports, and byte and packet counts, giving bandwidth attribution without full packet capture. SPAN mirrors every packet, SNMP traps are event notifications, and syslog carries log messages.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-052",
+            "domain": "Network Assurance",
+            "stem": "In a NetFlow deployment, which component receives exported flow records and stores them for later analysis?",
+            "options": [
+                "The flow monitor",
+                "The flow cache",
+                "The flow exporter",
+                "The flow collector"
+            ],
+            "correct_index": 3,
+            "explanation": "The collector receives and stores exported flow records for reporting. The exporter packages and sends records, the monitor applies a cache and export policy on the device, and the cache is the in-memory table of active flows.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-053",
+            "domain": "Network Assurance",
+            "stem": "Which SNMP operation does a manager use to retrieve a specific managed value from an agent by its object identifier?",
+            "options": [
+                "Get",
+                "Set",
+                "Trap",
+                "Inform"
+            ],
+            "correct_index": 0,
+            "explanation": "The Get request reads the value of one or more variables identified by an object identifier. A Set writes a value, and a Trap or Inform is an unsolicited notification sent from the agent to the manager.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-054",
+            "domain": "Network Assurance",
+            "stem": "Which SNMP version adds authentication and encryption of management messages between manager and agent?",
+            "options": [
+                "SNMP over TLS only",
+                "SNMPv3",
+                "SNMPv1",
+                "SNMPv2c"
+            ],
+            "correct_index": 1,
+            "explanation": "SNMPv3 provides user-based authentication and optional privacy through encryption. SNMPv1 and v2c rely on insecure community strings, and SNMP over TLS is a separate transport option rather than the version that defines the security model.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-055",
+            "domain": "Network Assurance",
+            "stem": "An engineer wants to send device log messages to a central server for retention. Which protocol and default destination port should be configured?",
+            "options": [
+                "SNMP to UDP 162",
+                "NTP to UDP 123",
+                "Syslog to UDP 514",
+                "NetFlow to UDP 2055"
+            ],
+            "correct_index": 2,
+            "explanation": "Syslog messages are sent to a log server on UDP 514 by default. NetFlow uses 2055, SNMP traps use 162, and NTP uses 123, and none of those carry syslog log content.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-056",
+            "domain": "Network Assurance",
+            "stem": "Which syslog severity level represents the most severe condition that requires immediate action?",
+            "options": [
+                "Error, level three",
+                "Critical, level two",
+                "Alert, level one",
+                "Emergency, level zero"
+            ],
+            "correct_index": 3,
+            "explanation": "Severity level zero is Emergency, the most severe, indicating the system is unusable. Alert is level one, Critical is level two, and Error is level three, so each is less severe than Emergency.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-057",
+            "domain": "Network Assurance",
+            "stem": "An engineer needs to measure round-trip latency and jitter between two sites and trigger a routing change when thresholds are exceeded. Which feature provides this?",
+            "options": [
+                "IP SLA with object tracking",
+                "Syslog",
+                "NetFlow",
+                "SNMP polling"
+            ],
+            "correct_index": 0,
+            "explanation": "IP SLA generates synthetic probes to measure latency, jitter, and loss, and object tracking can act on the results to withdraw or install routes. NetFlow describes live traffic, SNMP polling reads counters, and syslog records events.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-058",
+            "domain": "Network Assurance",
+            "stem": "Which platform provides assurance, device inventory, and intent-based automation for a Cisco enterprise network?",
+            "options": [
+                "Cisco Umbrella",
+                "Cisco DNA Center",
+                "Cisco Prime Infrastructure only",
+                "Cisco Identity Services Engine"
+            ],
+            "correct_index": 1,
+            "explanation": "Cisco DNA Center delivers intent-based automation, assurance, and device inventory for the enterprise. Prime Infrastructure is a legacy management product, ISE provides policy and identity services, and Umbrella is a cloud security service.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-059",
+            "domain": "Network Assurance",
+            "stem": "Which data collection model streams near-real-time operational data from network devices to a collector instead of relying on periodic polling?",
+            "options": [
+                "Syslog batch uploads",
+                "TFTP configuration backups",
+                "Model-driven telemetry",
+                "SNMP GET bursts"
+            ],
+            "correct_index": 2,
+            "explanation": "Model-driven telemetry pushes structured operational data on a defined cadence or change event, giving finer granularity than polling. SNMP GET is pull-based, syslog is unstructured logs, and TFTP backups copy configurations rather than telemetry.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Network Assurance"
+        },
+        {
+            "id": "ccnp-encor-060",
+            "domain": "Security",
+            "stem": "Which protocol is commonly used by Cisco devices to provide authentication, authorization, and accounting for administrative logins to network equipment?",
+            "options": [
+                "SNMPv3",
+                "IPsec",
+                "RADIUS used only for VPN users",
+                "TACACS plus"
+            ],
+            "correct_index": 3,
+            "explanation": "TACACS plus is the standard for device administration AAA and separates the authentication, authorization, and accounting functions. RADIUS is more often used for network access, while SNMPv3 and IPsec serve different purposes.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-061",
+            "domain": "Security",
+            "stem": "Which statement correctly compares TACACS plus with RADIUS for device administration?",
+            "options": [
+                "TACACS plus encrypts the entire packet body and separates the three AAA functions",
+                "RADIUS uses TCP port 49 for all traffic",
+                "TACACS plus cannot perform authorization decisions",
+                "RADIUS is Cisco proprietary while TACACS plus is open"
+            ],
+            "correct_index": 0,
+            "explanation": "TACACS plus encrypts the whole packet body and treats authentication, authorization, and accounting as distinct operations. RADIUS encrypts only the password and combines authentication and authorization, and it uses UDP, so the other statements are false.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-062",
+            "domain": "Security",
+            "stem": "An engineer must permit web traffic from a specific subnet to a server while blocking everything else, and the filter should be placed as close to the source as practical. Which ACL type should be used?",
+            "options": [
+                "Standard ACL",
+                "Extended ACL",
+                "MAC ACL",
+                "VLAN access map"
+            ],
+            "correct_index": 1,
+            "explanation": "An extended ACL can match protocol, source, destination, and ports, so it can be placed close to the source without blocking unintended traffic. A standard ACL filters only source addresses and should sit near the destination, while MAC ACLs and VLAN maps operate differently.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-063",
+            "domain": "Security",
+            "stem": "A newly applied ACL unexpectedly blocks all traffic even though the intended statement appears correct. What is the most likely cause?",
+            "options": [
+                "The wildcard mask is always inverted from the intent",
+                "The ACL expires after thirty seconds",
+                "The ACL has no explicit permit and ends with an implicit deny",
+                "ACLs filter only inbound traffic"
+            ],
+            "correct_index": 2,
+            "explanation": "Every ACL ends with an implicit deny any, so traffic not matched by an explicit permit is dropped. ACLs can be applied inbound or outbound, wildcard masks behave consistently, and ACLs do not expire on a timer.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-064",
+            "domain": "Security",
+            "stem": "A switch port must allow only the first two learned MAC addresses and disable the port when a third address appears. Which feature should be configured?",
+            "options": [
+                "Dynamic ARP inspection",
+                "802.1X",
+                "DHCP snooping",
+                "Port security"
+            ],
+            "correct_index": 3,
+            "explanation": "Port security limits the number of MAC addresses learned on a port and can err-disable it on violation. 802.1X authenticates users, DHCP snooping guards DHCP, and dynamic ARP inspection validates ARP replies.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-065",
+            "domain": "Security",
+            "stem": "Which port-security option converts dynamically learned MAC addresses into secure addresses without the administrator entering them manually?",
+            "options": [
+                "Sticky learning",
+                "A static MAC entry",
+                "A maximum of one MAC",
+                "The protect violation mode"
+            ],
+            "correct_index": 0,
+            "explanation": "Sticky learning saves dynamically learned addresses as secure entries in the running configuration. A static entry is entered manually, the maximum option limits counts, and protect mode only drops violating traffic.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-066",
+            "domain": "Security",
+            "stem": "Which feature builds a binding table of legitimate DHCP assignments and drops DHCP server replies that arrive on untrusted ports?",
+            "options": [
+                "Port security",
+                "DHCP snooping",
+                "IP source guard alone",
+                "Dynamic ARP inspection without snooping"
+            ],
+            "correct_index": 1,
+            "explanation": "DHCP snooping designates trusted and untrusted ports, records valid bindings, and blocks rogue server replies from untrusted ports. IP source guard depends on that binding table, dynamic ARP inspection validates ARP, and port security limits MACs.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-067",
+            "domain": "Security",
+            "stem": "Which feature validates ARP packets against the DHCP snooping binding table to prevent ARP spoofing on a campus access layer?",
+            "options": [
+                "Storm control",
+                "Port security",
+                "Dynamic ARP inspection",
+                "802.1X"
+            ],
+            "correct_index": 2,
+            "explanation": "Dynamic ARP inspection intercepts ARP packets on untrusted ports and discards those whose IP-to-MAC binding does not match the snooping table. Port security limits MAC counts, 802.1X authenticates, and storm control limits broadcast rates.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-068",
+            "domain": "Security",
+            "stem": "A company wants to authenticate wired users and devices before granting them network access on a switch port. Which standard provides port-based network access control?",
+            "options": [
+                "802.1s",
+                "802.1Q",
+                "802.1w",
+                "802.1X"
+            ],
+            "correct_index": 3,
+            "explanation": "IEEE 802.1X is port-based network access control that authenticates a supplicant through an authenticator to an authentication server. 802.1Q is VLAN tagging, 802.1w is rapid spanning tree, and 802.1s is multiple spanning tree.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-069",
+            "domain": "Security",
+            "stem": "A router CPU is being overwhelmed by traffic addressed directly to the device. Which feature rate-limits traffic sent to the route processor while forwarding transit traffic normally?",
+            "options": [
+                "Control Plane Policing",
+                "Egress shaping on data interfaces",
+                "Storm control on access ports",
+                "Policy-based routing"
+            ],
+            "correct_index": 0,
+            "explanation": "Control Plane Policing applies a policy to the control plane so excessive traffic destined to the route processor is rate-limited, protecting the CPU. Data-plane shaping, storm control, and policy-based routing do not specifically protect the control plane.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-070",
+            "domain": "Security",
+            "stem": "What is the primary purpose of Control Plane Policing on a Cisco device?",
+            "options": [
+                "To prevent spanning-tree loops in the access layer",
+                "To protect the route processor from excessive control-plane traffic",
+                "To encrypt routing protocol updates",
+                "To prioritize user data flows over management traffic"
+            ],
+            "correct_index": 1,
+            "explanation": "Control Plane Policing classifies and rate-limits traffic that is punted to the route processor, shielding the CPU from floods and attacks. It does not encrypt, prioritize user data, or affect spanning tree.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-071",
+            "domain": "Security",
+            "stem": "Which wireless security standard introduces Simultaneous Authentication of Equals to strengthen passphrase-based key exchange and resist offline dictionary attacks?",
+            "options": [
+                "WPA",
+                "WPA2 Personal",
+                "WPA3",
+                "WEP"
+            ],
+            "correct_index": 2,
+            "explanation": "WPA3 replaces the WPA2 four-way handshake vulnerability with SAE, a resistant password-authenticated key exchange. WPA and WPA2 Personal use older methods, and WEP is a deprecated, easily broken cipher.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-072",
+            "domain": "Security",
+            "stem": "A corporate WLAN must authenticate each user individually against a RADIUS server using unique credentials. Which WLAN security configuration is required?",
+            "options": [
+                "Open authentication with a captive portal only",
+                "WEP with a shared key",
+                "WPA2 or WPA3 Personal",
+                "WPA2 or WPA3 Enterprise with 802.1X"
+            ],
+            "correct_index": 3,
+            "explanation": "Enterprise mode combines 802.1X with a RADIUS server so each user presents individual credentials, commonly through EAP. Personal mode uses one shared passphrase, a captive portal does not verify unique identity, and WEP is obsolete.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-073",
+            "domain": "Security",
+            "stem": "A guest WLAN should require visitors to accept terms on a web page before they are granted network access. Which authentication method is being used?",
+            "options": [
+                "Web authentication with a guest portal",
+                "802.1X with EAP-TLS",
+                "Pre-shared key",
+                "MAC authentication bypass"
+            ],
+            "correct_index": 0,
+            "explanation": "Web authentication redirects a guest to a portal page for acceptance or credentials before allowing access. 802.1X with EAP-TLS requires client certificates, a pre-shared key is a shared secret, and MAC authentication bypass uses device addresses rather than a portal.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-074",
+            "domain": "Security",
+            "stem": "Which IPsec mode encapsulates the entire original IP packet inside a new IP header for a site-to-site tunnel?",
+            "options": [
+                "SPAN mode",
+                "Tunnel mode",
+                "Transport mode",
+                "GRE mode"
+            ],
+            "correct_index": 1,
+            "explanation": "Tunnel mode wraps the whole original IP packet in a new IP header, which is why it is used for gateway-to-gateway site-to-site VPNs. Transport mode protects only the payload, GRE is a separate encapsulation, and SPAN is a local traffic mirroring feature.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-075",
+            "domain": "Security",
+            "stem": "Which technology lets a remote worker establish an encrypted connection to the corporate network using client software, commonly over TLS?",
+            "options": [
+                "VLAN trunking",
+                "Site-to-site IPsec",
+                "Remote-access VPN with SSL or an IPsec client",
+                "GRE without encryption"
+            ],
+            "correct_index": 2,
+            "explanation": "Remote-access VPNs provide individual endpoints an encrypted connection to the corporate network, often through a TLS or SSL client or an IPsec client. Site-to-site IPsec connects gateways, unencrypted GRE provides no privacy, and VLAN trunking is Layer 2.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-076",
+            "domain": "Security",
+            "stem": "Which protocol negotiates the security associations and keys that IPsec uses to protect traffic?",
+            "options": [
+                "Generic Routing Encapsulation",
+                "Encapsulating Security Payload",
+                "Authentication Header",
+                "Internet Key Exchange"
+            ],
+            "correct_index": 3,
+            "explanation": "Internet Key Exchange, built on ISAKMP, negotiates the security associations and derives keys. ESP and AH are the data-protection protocols that consume those associations, and GRE is a tunneling protocol without key negotiation.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-077",
+            "domain": "Security",
+            "stem": "Which configuration restricts remote management so that only hosts in the management subnet can open an SSH session to a router?",
+            "options": [
+                "A VTY access-class that references an ACL",
+                "A QoS policy attached to the VTY lines",
+                "A port-security rule on the uplink",
+                "An NTP access group"
+            ],
+            "correct_index": 0,
+            "explanation": "Applying an access-class to the VTY lines with an ACL that permits only the management subnet limits who can log in remotely. QoS policies and NTP access groups do not control login sources, and VTY lines are not switch ports subject to port security.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Security"
+        },
+        {
+            "id": "ccnp-encor-078",
+            "domain": "Automation",
+            "stem": "Which HTTP method does a REST API client use to retrieve a representation of an existing resource from the server?",
+            "options": [
+                "DELETE",
+                "GET",
+                "POST",
+                "PUT"
+            ],
+            "correct_index": 1,
+            "explanation": "GET is the safe, read-only method used to retrieve a resource. POST creates, PUT replaces, and DELETE removes resources, so none of the others perform a simple read.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-079",
+            "domain": "Automation",
+            "stem": "A REST API returns HTTP status code 401 after a request. What does this response indicate?",
+            "options": [
+                "The requested URL was not found",
+                "The resource was created successfully",
+                "The request failed authentication or lacked valid credentials",
+                "The server encountered an internal failure"
+            ],
+            "correct_index": 2,
+            "explanation": "Status 401 means unauthorized, so the request lacked valid authentication. A successful creation returns 201, an internal server error returns 500, and a missing URL returns 404.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-080",
+            "domain": "Automation",
+            "stem": "Which data serialization format uses braces for objects and brackets for arrays and is widely used for REST API payloads?",
+            "options": [
+                "Comma-separated values",
+                "YAML",
+                "XML",
+                "JSON"
+            ],
+            "correct_index": 3,
+            "explanation": "JSON represents objects with braces and arrays with brackets and is the dominant REST API payload format. YAML uses indentation, XML uses tags, and comma-separated values is a flat tabular format.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-081",
+            "domain": "Automation",
+            "stem": "Which data format uses tags and attributes to represent hierarchical data and is frequently used with NETCONF?",
+            "options": [
+                "XML",
+                "JSON",
+                "YAML",
+                "Comma-separated values"
+            ],
+            "correct_index": 0,
+            "explanation": "XML encodes hierarchy with element tags and attributes and is the native encoding for NETCONF. JSON and YAML use different structures, and comma-separated values cannot express nested hierarchy well.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-082",
+            "domain": "Automation",
+            "stem": "Which language defines the structure and constraints of configuration and state data used by NETCONF and RESTCONF?",
+            "options": [
+                "Bash",
+                "YANG",
+                "JSON Schema alone",
+                "Python"
+            ],
+            "correct_index": 1,
+            "explanation": "YANG is the data modeling language that describes the tree, types, and constraints of device configuration and state. JSON Schema is a general validation format, and Python and Bash are programming languages, not device data models.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-083",
+            "domain": "Automation",
+            "stem": "Over which transport protocol does NETCONF operate by default to provide a secure, reliable session?",
+            "options": [
+                "Telnet",
+                "HTTP",
+                "SSH",
+                "SNMP"
+            ],
+            "correct_index": 2,
+            "explanation": "NETCONF uses SSH as its default transport, providing encryption and reliability. RESTCONF uses HTTP, SNMP is a separate management protocol, and Telnet is unencrypted and unsuitable.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-084",
+            "domain": "Automation",
+            "stem": "Which protocol uses HTTP-based REST methods to access YANG-modeled configuration and state data on a network device?",
+            "options": [
+                "TACACS plus",
+                "NETCONF",
+                "SNMP",
+                "RESTCONF"
+            ],
+            "correct_index": 3,
+            "explanation": "RESTCONF exposes YANG-modeled data through HTTP methods such as GET, POST, PUT, PATCH, and DELETE. NETCONF uses an RPC model over SSH, SNMP uses MIBs, and TACACS plus is an AAA protocol.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-085",
+            "domain": "Automation",
+            "stem": "Which configuration management tool is agentless and runs YAML playbooks over SSH against managed devices?",
+            "options": [
+                "Ansible",
+                "Chef",
+                "Puppet",
+                "Salt with minions"
+            ],
+            "correct_index": 0,
+            "explanation": "Ansible is agentless, pushing modules over SSH and describing tasks in YAML playbooks. Chef and Puppet normally require agents, and Salt typically uses minion agents even though it supports agentless modes.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-086",
+            "domain": "Automation",
+            "stem": "Which configuration management tool normally requires an agent installed on each managed node and applies configuration from a declarative manifest?",
+            "options": [
+                "RESTCONF",
+                "Puppet",
+                "Ansible",
+                "NETCONF"
+            ],
+            "correct_index": 1,
+            "explanation": "Puppet uses an agent that periodically checks in and applies a declarative manifest describing desired state. Ansible is agentless, and NETCONF and RESTCONF are device management protocols rather than configuration management platforms.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-087",
+            "domain": "Automation",
+            "stem": "Which tool defines desired configuration in recipes and cookbooks and relies on an agent that polls a central server?",
+            "options": [
+                "Embedded Event Manager",
+                "Ansible",
+                "Chef",
+                "NETCONF"
+            ],
+            "correct_index": 2,
+            "explanation": "Chef uses recipes grouped into cookbooks and a chef-client agent that polls the Chef server. Ansible uses playbooks over SSH, and NETCONF and Embedded Event Manager are device-level features, not configuration management platforms.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-088",
+            "domain": "Automation",
+            "stem": "An engineer wants a router to run a script automatically whenever a specific interface goes down. Which IOS feature provides this event-driven automation?",
+            "options": [
+                "NetFlow",
+                "IP SLA",
+                "SNMP polling",
+                "Embedded Event Manager"
+            ],
+            "correct_index": 3,
+            "explanation": "Embedded Event Manager monitors events such as interface state changes and triggers configured actions in response. IP SLA measures performance, SNMP polling reads counters, and NetFlow records traffic.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-089",
+            "domain": "Automation",
+            "stem": "In Embedded Event Manager, what is the trigger that causes an applet or script to execute?",
+            "options": [
+                "The event",
+                "The action",
+                "The policy",
+                "The correlation"
+            ],
+            "correct_index": 0,
+            "explanation": "The event statement defines the trigger, such as a syslog pattern or interface change. The action statement defines what runs, the policy groups events and actions, and correlation combines multiple events to reduce false triggers.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        },
+        {
+            "id": "ccnp-encor-090",
+            "domain": "Automation",
+            "stem": "Which practice ensures that configuration defined by a management tool is reapplied automatically if a device is changed manually or drifts?",
+            "options": [
+                "SNMP trap logging",
+                "Declarative idempotent configuration management",
+                "One-time CLI provisioning",
+                "Manual configuration backups"
+            ],
+            "correct_index": 1,
+            "explanation": "Declarative, idempotent tools continuously compare actual state to the desired state and reapply only what is missing, correcting drift. One-time provisioning and manual backups do not converge the device, and trap logging only reports events.",
+            "reference": "Cisco 350-401 ENCOR Exam Topics - Automation"
+        }
+    ]
+}

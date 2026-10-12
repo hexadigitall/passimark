@@ -1,0 +1,717 @@
+{
+    "cert_key": "gcp-pde",
+    "title": "Google Professional Data Engineer (PDE)",
+    "issuer": "Google Cloud",
+    "outline_file": "outlines/gcp-pde.json",
+    "variant_label": "GCP PDE Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Google Professional Data Engineer exam guide (five official sections and weightings). Not a capture of past exam questions.",
+    "source_label": "Google Cloud PDE practice bank",
+    "items": [
+        {
+            "id": "gcp-pde-001",
+            "domain": "Designing data processing systems",
+            "stem": "A company plans to migrate a batch ETL workload from on-premises to Google Cloud and needs to minimize operational overhead while supporting scalable parallel processing for large datasets.",
+            "options": [
+                "Use Cloud Dataflow to implement pipeline processing with autoscaling and managed execution.",
+                "Use Compute Engine instances with custom scripts to manually parallelize the workload.",
+                "Use App Engine Standard to run batch jobs with fixed instance limits.",
+                "Use Cloud Functions triggered by timers to process files in a single-threaded manner."
+            ],
+            "correct_index": 0,
+            "explanation": "Cloud Dataflow is a fully managed Apache Beam service that provides autoscaling, dynamic work rebalancing, and parallel processing for batch and streaming workloads without requiring infrastructure management.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-002",
+            "domain": "Designing data processing systems",
+            "stem": "An organization needs to design a data pipeline that can handle both real-time event streams and scheduled batch jobs with minimal code duplication across the two processing modes.",
+            "options": [
+                "Implement separate custom applications for batch and streaming to optimize each independently.",
+                "Use Apache Beam as a unified model to express both batch and streaming logic in the same pipeline code.",
+                "Use Cloud Storage triggers for batch and Pub/Sub for streaming with unrelated codebases.",
+                "Use different programming languages for batch and streaming to avoid shared dependencies."
+            ],
+            "correct_index": 1,
+            "explanation": "Apache Beam provides a single programming model that can run as batch or streaming on Cloud Dataflow, enabling code reuse and consistent semantics across both processing modes.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-003",
+            "domain": "Designing data processing systems",
+            "stem": "A data engineering team must design a migration strategy for a complex on-premises data warehouse to Google Cloud while preserving lineage and supporting phased cutover to minimize business disruption.",
+            "options": [
+                "Perform a big-bang migration over a weekend with no intermediate validation steps.",
+                "Export all data at once and import directly without documenting transformation logic.",
+                "Plan a staged migration using extract-and-load patterns with validation checkpoints before each phase.",
+                "Migrate only summary tables and discard all historical transaction-level data."
+            ],
+            "correct_index": 2,
+            "explanation": "A phased migration approach with validated checkpoints allows teams to verify data integrity, maintain lineage tracking, and reduce risk during cutover to the cloud environment.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-004",
+            "domain": "Designing data processing systems",
+            "stem": "When selecting storage for a data lake that will serve both analytics queries and machine learning feature engineering, what design consideration best supports cost-effective access patterns?",
+            "options": [
+                "Always keep data in memory to eliminate storage access latency.",
+                "Use local disks only and replicate across all regions for durability.",
+                "Store all data in a single high-performance block storage volume regardless of access frequency.",
+                "Use Cloud Storage with lifecycle policies to transition infrequently accessed objects to nearline or coldline classes."
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Storage lifecycle policies automatically move data between storage classes based on age and access patterns, reducing storage costs while preserving accessibility for analytics and ML workloads.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-005",
+            "domain": "Designing data processing systems",
+            "stem": "A company needs to design a globally scalable data processing architecture that can serve low-latency queries to users across multiple regions while maintaining data consistency for analytical workloads.",
+            "options": [
+                "Replicate raw data to regional Cloud Storage buckets and process regionally with Dataflow for localized analytics.",
+                "Store data only on user devices to avoid cross-region data movement.",
+                "Use a single global database with synchronous writes from every region regardless of latency.",
+                "Centralize all processing in one region and force all users to connect to that single location."
+            ],
+            "correct_index": 0,
+            "explanation": "Distributing raw data to regional buckets and running regional processing reduces latency and cross-region egress costs while enabling parallel analytics workloads aligned with data locality.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-006",
+            "domain": "Designing data processing systems",
+            "stem": "A data architect is designing a pipeline that ingests high-volume streaming data from IoT devices and must ensure messages are not lost even if consumers experience temporary failures.",
+            "options": [
+                "Use HTTP GET requests to push messages directly to processing endpoints without buffering.",
+                "Implement at-least-once delivery using Pub/Sub with acknowledgment deadlines and message retention configured appropriately.",
+                "Use UDP to maximize throughput without any delivery guarantees.",
+                "Process messages in-memory only without persisting them to any intermediary storage."
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Pub/Sub provides durable message storage, at-least-once delivery semantics, and configurable acknowledgment deadlines to prevent message loss during consumer failures.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-007",
+            "domain": "Designing data processing systems",
+            "stem": "When designing a data processing system for variable workloads, which approach best balances performance and cost efficiency without manual intervention during traffic spikes?",
+            "options": [
+                "Manually scale resources after observing performance degradation in production monitoring.",
+                "Provision compute resources at maximum peak capacity and keep them running continuously.",
+                "Use fully managed services like Dataflow with autoscaling to automatically adjust worker count based on backlog and processing rate.",
+                "Schedule jobs only during business hours and ignore off-peak processing requirements."
+            ],
+            "correct_index": 2,
+            "explanation": "Autoscaling in managed services dynamically adjusts resources in response to workload changes, maintaining throughput during spikes while minimizing costs during idle periods.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-008",
+            "domain": "Designing data processing systems",
+            "stem": "A team needs to design a solution that processes large-scale structured data for ad hoc querying and reporting while supporting complex analytical functions and high concurrency from business users.",
+            "options": [
+                "Use Bigtable for wide-column storage optimized for high-frequency point lookups only.",
+                "Store data as JSON files in a single Cloud Storage bucket and parse on every query.",
+                "Store all data in Cloud SQL with read replicas for analytical queries.",
+                "Use BigQuery as a serverless data warehouse with columnar storage and automatic scaling for concurrent queries."
+            ],
+            "correct_index": 3,
+            "explanation": "BigQuery provides serverless, scalable analytics with columnar storage, separation of compute and storage, and support for high concurrency without managing infrastructure.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-009",
+            "domain": "Designing data processing systems",
+            "stem": "An organization is designing a data processing architecture that must comply with data residency requirements while enabling cross-team analytics across approved geographic boundaries.",
+            "options": [
+                "Design region-aware pipelines that process and store data in specified regions and control cross-region data movement through access policies.",
+                "Store all sensitive data in a public bucket and rely on authentication alone.",
+                "Ignore regional constraints and process everything in a single uncontrolled environment.",
+                "Copy all data to every global region without restrictions to maximize access speed."
+            ],
+            "correct_index": 0,
+            "explanation": "Region-aware design with controlled data movement ensures compliance with residency requirements while still enabling authorized analytics workflows across permitted boundaries.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-010",
+            "domain": "Designing data processing systems",
+            "stem": "A company needs to design a fault-tolerant data pipeline that can recover gracefully from transient failures without reprocessing the entire dataset from the beginning.",
+            "options": [
+                "Process all data in a single monolithic job with no checkpointing or state management.",
+                "Implement idempotent transformations with checkpointing in Dataflow to enable exactly-once processing semantics where supported.",
+                "Disable retries entirely to prevent duplicate processing regardless of failures.",
+                "Rely solely on manual intervention to restart failed jobs from scratch."
+            ],
+            "correct_index": 1,
+            "explanation": "Idempotent operations combined with checkpointing allow Dataflow to resume from the last successful checkpoint, avoiding full reprocessing and supporting reliable pipeline recovery.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-011",
+            "domain": "Designing data processing systems",
+            "stem": "When designing a hybrid data processing solution that connects on-premises systems to Google Cloud, what approach best ensures secure and reliable data transfer for large volumes?",
+            "options": [
+                "Expose on-premises databases directly to the public internet without firewall restrictions.",
+                "Transfer data over unencrypted public internet using basic FTP protocols.",
+                "Use Transfer Appliance for large offline transfers or Storage Transfer Service with secure connectivity for online transfers.",
+                "Email compressed data files to cloud administrators for manual upload."
+            ],
+            "correct_index": 2,
+            "explanation": "Transfer Appliance handles petabyte-scale offline migrations securely, while Storage Transfer Service automates online transfers with authentication, scheduling, and encryption for reliable data movement.",
+            "reference": "Google Professional Data Engineer Exam Guide - Designing data processing systems"
+        },
+        {
+            "id": "gcp-pde-012",
+            "domain": "Ingesting and processing the data",
+            "stem": "A streaming application needs to ingest events from multiple publishers with low latency while ensuring ordering within each logical partition of related events.",
+            "options": [
+                "Randomly distribute messages across all subscribers to maximize throughput regardless of ordering requirements.",
+                "Buffer events for hours before processing to batch them together.",
+                "Publish all events to a single global queue without any partitioning strategy.",
+                "Use Cloud Pub/Sub with message keys to preserve ordering within each key-based partition and enable parallel consumption across keys."
+            ],
+            "correct_index": 3,
+            "explanation": "Pub/Sub message ordering by key ensures messages with the same key are delivered in order, while different keys can be processed in parallel to balance latency and throughput.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-013",
+            "domain": "Ingesting and processing the data",
+            "stem": "An organization is ingesting log files from thousands of distributed sources and needs to transform and enrich them in near real-time before loading into an analytics system.",
+            "options": [
+                "Ingest logs into Pub/Sub, then process with Dataflow to apply transformations and enrichments before writing to the target sink.",
+                "Store logs locally on each source and manually download them at the end of each day.",
+                "Use Cloud Storage alone without any streaming processing component.",
+                "Write custom scripts that poll each source individually with no centralized ingestion layer."
+            ],
+            "correct_index": 0,
+            "explanation": "Pub/Sub provides scalable ingestion of distributed events, and Dataflow can process, transform, and enrich streaming data in near real-time before loading into analytics targets.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-014",
+            "domain": "Ingesting and processing the data",
+            "stem": "A data engineering team needs to process large volumes of semi-structured data from Cloud Storage using a managed Hadoop ecosystem without maintaining cluster infrastructure.",
+            "options": [
+                "Deploy a permanent Hadoop cluster on Compute Engine and manage all nodes manually.",
+                "Use Dataproc in a cluster mode or workflow template to run Spark/Hadoop jobs with ephemeral clusters for cost efficiency.",
+                "Run Hadoop jobs directly on Cloud Storage without any cluster orchestration.",
+                "Use App Engine to simulate Hadoop processing for small datasets only."
+            ],
+            "correct_index": 1,
+            "explanation": "Dataproc provides managed Hadoop and Spark clusters that can be created on-demand and terminated after jobs complete, reducing operational overhead and costs.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-015",
+            "domain": "Ingesting and processing the data",
+            "stem": "When building a streaming pipeline with Cloud Dataflow, which windowing strategy is most appropriate for computing tumbling aggregates over fixed time intervals regardless of event arrival time?",
+            "options": [
+                "Global windowing with no time-based boundaries.",
+                "Sliding windows that overlap continuously without fixed intervals.",
+                "Tumbling fixed-time windows that partition the data stream into non-overlapping intervals.",
+                "Session windows based solely on gaps in processing time."
+            ],
+            "correct_index": 2,
+            "explanation": "Tumbling windows divide the unbounded stream into fixed-size, non-overlapping time intervals, making them ideal for periodic aggregates like hourly or daily counts.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-016",
+            "domain": "Ingesting and processing the data",
+            "stem": "A team needs to ingest data from various SaaS applications and on-premises sources into Google Cloud with minimal coding while supporting data transformations and orchestration.",
+            "options": [
+                "Manually export CSV files from each source and upload them through the console daily.",
+                "Use only raw shell scripts to transfer data without any transformation capabilities.",
+                "Write custom API connectors in multiple languages for each source and maintain them independently.",
+                "Use Cloud Data Fusion, a no-code/low-code data integration tool, to build ETL pipelines with prebuilt connectors and transformations."
+            ],
+            "correct_index": 3,
+            "explanation": "Cloud Data Fusion provides a visual interface with prebuilt connectors and transformation operators, enabling data integration with reduced development effort and built-in pipeline management.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-017",
+            "domain": "Ingesting and processing the data",
+            "stem": "An organization needs to process streaming data with late-arriving events and must ensure results are corrected when late data arrives within an acceptable time horizon.",
+            "options": [
+                "Configure allowed lateness and triggers in Dataflow to emit updated results when late events arrive within the watermark bounds.",
+                "Wait indefinitely for all events before producing any results.",
+                "Process events immediately without considering event-time semantics.",
+                "Ignore late-arriving events completely and only process data that arrives on time."
+            ],
+            "correct_index": 0,
+            "explanation": "Dataflow's event-time processing with watermarks and allowed lateness allows pipelines to handle late data and emit corrected results, balancing completeness and latency.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-018",
+            "domain": "Ingesting and processing the data",
+            "stem": "A data engineer must design a batch processing job that reads terabytes of data from Cloud Storage, performs complex transformations, and writes results to BigQuery with optimal performance.",
+            "options": [
+                "Process data row by row using a single-threaded script to avoid memory overhead.",
+                "Use Dataflow with appropriate worker machine types, parallelism, and optimized I/O to distribute processing across workers.",
+                "Download all data to a local workstation, process it, then upload results back to the cloud.",
+                "Process the entire dataset in memory as a single array regardless of size."
+            ],
+            "correct_index": 1,
+            "explanation": "Dataflow distributes work across multiple workers with parallel processing, enabling efficient large-scale batch transformations while reading from Cloud Storage and writing to BigQuery.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-019",
+            "domain": "Ingesting and processing the data",
+            "stem": "When choosing between batch and streaming processing for a use case, which factor most strongly indicates that streaming is preferable to scheduled batch jobs?",
+            "options": [
+                "The data arrives once per month in a single archive file.",
+                "Results are only needed for quarterly compliance reports with no time sensitivity.",
+                "Business decisions require insights within seconds of event occurrence rather than hours or days later.",
+                "The processing logic never changes and can be optimized for fixed-size inputs."
+            ],
+            "correct_index": 2,
+            "explanation": "Low-latency requirements for real-time decision making favor streaming processing over batch, which introduces delays due to accumulation and scheduled execution.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-020",
+            "domain": "Ingesting and processing the data",
+            "stem": "A team is running a Dataproc Spark job and needs to optimize performance when reading large Parquet files from Cloud Storage. What configuration consideration helps avoid excessive metadata requests?",
+            "options": [
+                "List files recursively by making individual API calls for each file object.",
+                "Store all files in a deeply nested directory structure with no directory partitioning.",
+                "Disable all caching and read files one byte at a time.",
+                "Use the Cloud Storage connector with consistent versioning and optimize for Hadoop-compatible file listing patterns."
+            ],
+            "correct_index": 3,
+            "explanation": "Using the optimized Cloud Storage connector and well-partitioned directory structures reduces metadata overhead when Spark reads many files, improving overall job performance.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-021",
+            "domain": "Ingesting and processing the data",
+            "stem": "An organization needs to ensure exactly-once semantics when processing streaming events from Pub/Sub through Dataflow to a BigQuery sink for critical financial data.",
+            "options": [
+                "Configure Dataflow with appropriate triggers, idempotent writes, and use BigQuery's streaming inserts with exactly-once support where applicable.",
+                "Process events multiple times intentionally to guarantee delivery.",
+                "Use at-most-once processing to avoid any duplicates at all costs.",
+                "Rely on BigQuery's default append mode without any deduplication logic in the pipeline."
+            ],
+            "correct_index": 0,
+            "explanation": "Achieving exactly-once requires idempotent processing in Dataflow, proper checkpointing, and using sinks that support exactly-once semantics such as BigQuery's exactly-once streaming inserts.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-022",
+            "domain": "Ingesting and processing the data",
+            "stem": "A pipeline needs to enrich incoming streaming events with reference data that changes infrequently. What approach minimizes lookup latency without reloading static data on every element?",
+            "options": [
+                "Query the reference database synchronously for each incoming event.",
+                "Cache the reference dataset as a side input in Dataflow and refresh it periodically based on pipeline triggers.",
+                "Embed a full copy of reference data as hardcoded values in the pipeline code.",
+                "Reload the entire reference table from storage for every single message processed."
+            ],
+            "correct_index": 1,
+            "explanation": "Side inputs in Dataflow allow you to efficiently distribute static or slowly changing reference data to all workers, avoiding per-element external lookups and reducing latency.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-023",
+            "domain": "Ingesting and processing the data",
+            "stem": "A data engineer is designing ingestion for a system where downstream processing must tolerate temporary spikes without dropping messages. What Pub/Sub configuration best supports backpressure handling?",
+            "options": [
+                "Limit the number of messages published to zero during spikes.",
+                "Set a very small message retention period to force immediate processing.",
+                "Configure unlimited message retention and appropriate acknowledgment deadlines so consumers can pull messages at their own pace.",
+                "Disable message persistence entirely to reduce storage overhead."
+            ],
+            "correct_index": 2,
+            "explanation": "Pub/Sub's decoupling via durable buffering with configurable retention allows publishers to continue producing while consumers process at their own rate, absorbing traffic spikes.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-024",
+            "domain": "Ingesting and processing the data",
+            "stem": "When migrating a legacy batch ETL process to a streaming model, which design principle is most important to maintain data correctness across the transition?",
+            "options": [
+                "Assume all events arrive in perfect order and never late.",
+                "Remove all validation checks to improve processing speed.",
+                "Convert all logic to process events independently without considering stateful aggregations.",
+                "Redesign transformations to be idempotent and account for event-time semantics rather than processing-time ordering."
+            ],
+            "correct_index": 3,
+            "explanation": "Streaming correctness requires handling out-of-order and late-arriving events using event-time semantics and idempotent transformations to produce consistent results comparable to batch processing.",
+            "reference": "Google Professional Data Engineer Exam Guide - Ingesting and processing the data"
+        },
+        {
+            "id": "gcp-pde-025",
+            "domain": "Storing the data",
+            "stem": "A data lake stores petabytes of raw data in Cloud Storage. Which storage class is most cost-effective for data that is accessed less than once per quarter but must remain immediately available?",
+            "options": [
+                "Coldline storage class for infrequently accessed data that still requires immediate retrieval.",
+                "Nearline storage class for data accessed multiple times per day.",
+                "Standard storage class for all data regardless of access patterns.",
+                "Archive storage class for data needing immediate availability."
+            ],
+            "correct_index": 0,
+            "explanation": "Coldline storage offers the lowest cost among immediately retrievable classes for data accessed less than once per year, with millisecond access time suitable for quarterly analytics.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-026",
+            "domain": "Storing the data",
+            "stem": "A company needs to store time-series data from millions of sensors with high write throughput and the ability to quickly retrieve recent data for dashboards, while older data is queried less frequently.",
+            "options": [
+                "Use Cloud SQL with a single large table and no partitioning strategy.",
+                "Use Bigtable, which is optimized for high-volume writes and low-latency reads with row key design that supports time-series access patterns.",
+                "Use Cloud Storage as a flat file store with sequential scanning for every query.",
+                "Use Firestore in document mode for petabyte-scale time-series data."
+            ],
+            "correct_index": 1,
+            "explanation": "Bigtable's wide-column NoSQL design supports high-throughput writes and efficient range scans by row key, making it well-suited for time-series workloads with recent-data access patterns.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-027",
+            "domain": "Storing the data",
+            "stem": "An analytics team stores structured data in BigQuery and needs to optimize query performance and cost for large tables partitioned by date. What practice is most effective?",
+            "options": [
+                "Store all data in a single unpartitioned table regardless of size.",
+                "Query the entire table without filters to ensure all data is scanned.",
+                "Partition tables by a date or timestamp column and use filter clauses to prune partitions during queries.",
+                "Avoid partitioning and always use SELECT * for better performance."
+            ],
+            "correct_index": 2,
+            "explanation": "Partitioning allows BigQuery to scan only relevant partitions when queries include filters on the partitioning column, reducing both data scanned and query costs.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-028",
+            "domain": "Storing the data",
+            "stem": "A team needs to choose between BigQuery and Bigtable for a workload that requires complex SQL joins across multiple large fact and dimension tables for reporting and ad hoc analysis.",
+            "options": [
+                "Choose Bigtable for OLAP workloads requiring multi-table joins.",
+                "Use either interchangeably since both support identical SQL semantics.",
+                "Choose Bigtable because it natively supports ANSI SQL joins across normalized tables.",
+                "Choose BigQuery because it is designed for analytical SQL workloads with support for joins, aggregations, and window functions over large datasets."
+            ],
+            "correct_index": 3,
+            "explanation": "BigQuery is a serverless data warehouse optimized for analytical queries with full SQL support, including complex joins and aggregations, while Bigtable is optimized for high-throughput key-value access.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-029",
+            "domain": "Storing the data",
+            "stem": "When designing a schema for BigQuery to minimize query costs, what clustering strategy is most appropriate for frequently filtered columns with high cardinality?",
+            "options": [
+                "Cluster on columns frequently used in filter, JOIN, or GROUP BY clauses to colocate similar data.",
+                "Do not cluster any columns since clustering always increases storage costs.",
+                "Cluster randomly across all columns without analyzing query patterns.",
+                "Cluster on columns that are never used in WHERE clauses or filters."
+            ],
+            "correct_index": 0,
+            "explanation": "Clustering sorts data based on specified columns, reducing the amount of data scanned when queries filter on those columns, improving performance and lowering costs for large tables.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-030",
+            "domain": "Storing the data",
+            "stem": "An application requires a strongly consistent relational database for transactional workloads with ACID guarantees and needs to scale horizontally across regions while maintaining low write latency.",
+            "options": [
+                "Use Cloud SQL for horizontal global scaling with synchronous multi-region writes by default.",
+                "Use Cloud Spanner, which provides global strong consistency, ACID transactions, and horizontal scalability across regions.",
+                "Use BigQuery as the primary transactional database for OLTP workloads.",
+                "Use Cloud Storage with object versioning as a transactional system."
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Spanner is a globally distributed, strongly consistent relational database that supports ACID transactions and horizontal scaling, making it suitable for mission-critical transactional workloads.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-031",
+            "domain": "Storing the data",
+            "stem": "A team needs to store structured transactional data for a small-to-medium web application with minimal operational overhead and standard SQL support.",
+            "options": [
+                "Use BigQuery as the operational database for row-level updates.",
+                "Use Bigtable for complex relational transactions with foreign keys.",
+                "Use Cloud SQL, a fully managed relational database service that supports MySQL, PostgreSQL, and SQL Server with automated backups and patching.",
+                "Use Cloud Spanner even for low-scale single-region workloads due to cost efficiency."
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud SQL provides managed relational databases with ACID compliance, standard SQL, and low operational overhead, making it ideal for traditional OLTP applications.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-032",
+            "domain": "Storing the data",
+            "stem": "For a BigQuery external table that queries data directly in Cloud Storage, what file format typically provides the best balance of compression and query performance?",
+            "options": [
+                "Raw JSON files with deeply nested unstructured objects.",
+                "Plain text logs with fixed-width unparsed fields.",
+                "Uncompressed CSV files with no columnar structure.",
+                "Columnar formats like Parquet or ORC that support predicate pushdown and efficient compression."
+            ],
+            "correct_index": 3,
+            "explanation": "Parquet and ORC are columnar, compressed formats that enable predicate pushdown and reduce data scanned, improving query performance over external tables compared to row-based formats.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-033",
+            "domain": "Storing the data",
+            "stem": "A data architect needs to design row key patterns for Bigtable to avoid hotspotting when ingesting time-series data from many devices writing simultaneously.",
+            "options": [
+                "Salt the row key by adding a hash prefix or reverse the timestamp to distribute writes across the key space.",
+                "Use sequential integers starting from zero as row keys for all writes.",
+                "Use the device ID followed by the timestamp to cluster all writes for a single device.",
+                "Use a timestamp as the leading part of the row key to concentrate all writes on a small range."
+            ],
+            "correct_index": 0,
+            "explanation": "Salting or using a hash prefix distributes writes across multiple tablets in Bigtable, preventing hotspotting that occurs when many writes target contiguous row ranges.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-034",
+            "domain": "Storing the data",
+            "stem": "When storing sensitive data in Cloud Storage, what is the most secure approach to enforce access control following the principle of least privilege?",
+            "options": [
+                "Make all buckets publicly readable to simplify access for analytics tools.",
+                "Use uniform bucket-level access with IAM policies and avoid granting broad roles like roles/storage.admin to users who only need read access.",
+                "Share bucket URLs with all internal teams without authentication requirements.",
+                "Grant all users the same access level regardless of their job responsibilities."
+            ],
+            "correct_index": 1,
+            "explanation": "IAM policies with uniform bucket-level access allow fine-grained permission control, ensuring users receive only the minimum privileges required to perform their tasks.",
+            "reference": "Google Professional Data Engineer Exam Guide - Storing the data"
+        },
+        {
+            "id": "gcp-pde-035",
+            "domain": "Preparing and using data for analysis",
+            "stem": "A data analyst needs to prepare raw event data in BigQuery by cleaning, deduplicating, and creating derived fields for reporting. What approach best supports reproducibility and collaboration?",
+            "options": [
+                "Perform all transformations in spreadsheet software outside the data warehouse.",
+                "Manually run ad hoc SQL queries in the console and save results locally.",
+                "Create reusable views or scheduled queries with version-controlled SQL definitions in a source repository.",
+                "Write one-off UPDATE statements without documenting the transformation logic."
+            ],
+            "correct_index": 2,
+            "explanation": "Storing transformation logic as version-controlled SQL (views, scheduled queries, or dbt-style models) ensures reproducibility, auditability, and collaboration across the analytics team.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-036",
+            "domain": "Preparing and using data for analysis",
+            "stem": "An organization wants to prepare data for machine learning feature engineering and needs to process large datasets in a distributed environment with Python-based transformations.",
+            "options": [
+                "Manually extract features from each record one at a time using shell scripts.",
+                "Store features only in memory without persisting them for reproducibility.",
+                "Process data on a single local machine using pandas regardless of dataset size.",
+                "Use Dataproc with PySpark to distribute feature engineering transformations across a cluster for scalability."
+            ],
+            "correct_index": 3,
+            "explanation": "PySpark on Dataproc enables distributed processing of large datasets for feature engineering, scaling horizontally while using familiar Python syntax and libraries.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-037",
+            "domain": "Preparing and using data for analysis",
+            "stem": "A team needs to build and deploy machine learning models using structured data in BigQuery and wants a fully managed environment with AutoML capabilities.",
+            "options": [
+                "Use BigQuery ML to train models directly in the data warehouse using SQL queries.",
+                "Build models entirely from scratch using only low-level TensorFlow code without any managed services.",
+                "Use Vertex AI to train, evaluate, and deploy models, with BigQuery as the data source for training datasets.",
+                "Export all data to local workstations and train models offline with no cloud integration."
+            ],
+            "correct_index": 0,
+            "explanation": "BigQuery ML allows data analysts and engineers to create and train ML models using standard SQL directly in BigQuery, eliminating data movement and simplifying the modeling workflow.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-038",
+            "domain": "Preparing and using data for analysis",
+            "stem": "When preparing data for analysis, what data quality practice is most important to ensure trustworthy reporting and downstream model performance?",
+            "options": [
+                "Assume all incoming data is correct and skip validation checks to save processing time.",
+                "Implement data validation checks, null handling, and schema enforcement as part of the ingestion and transformation pipeline.",
+                "Only validate data after reports have been distributed to stakeholders.",
+                "Remove all constraints and allow any data format to enter the system."
+            ],
+            "correct_index": 1,
+            "explanation": "Proactive data quality checks including schema validation, completeness checks, and deduplication help catch issues early and maintain trust in analytical outputs.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-039",
+            "domain": "Preparing and using data for analysis",
+            "stem": "A business intelligence team wants to create interactive dashboards and reports from BigQuery data with row-level access control for different user groups.",
+            "options": [
+                "Create separate copies of the entire dataset for each user group.",
+                "Export static CSV files and distribute them via email to each user group.",
+                "Use Looker to connect to BigQuery and implement row-level security policies based on user attributes and permissions.",
+                "Grant all users full access to the underlying raw tables to simplify reporting."
+            ],
+            "correct_index": 2,
+            "explanation": "Looker integrates with BigQuery and supports robust access control including row-level and field-level security, enabling governed self-service analytics.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-040",
+            "domain": "Preparing and using data for analysis",
+            "stem": "An analyst needs to explore and visualize large datasets in a collaborative notebook environment with access to BigQuery and PySpark.",
+            "options": [
+                "Restrict all analysis to the BigQuery console which has no Python support.",
+                "Process everything in isolated local environments with no shared compute resources.",
+                "Use only text editors to write SQL without any visualization capabilities.",
+                "Use Vertex AI Workbench notebooks to run queries against BigQuery, analyze data with Python, and share results with collaborators."
+            ],
+            "correct_index": 3,
+            "explanation": "Vertex AI Workbench provides managed Jupyter notebooks with integrated access to Google Cloud services like BigQuery and Dataproc, enabling collaborative data exploration and analysis.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-041",
+            "domain": "Preparing and using data for analysis",
+            "stem": "When preparing data for reporting, a team needs to create aggregated tables that are refreshed on a schedule to improve query performance for business users.",
+            "options": [
+                "Create materialized views or scheduled queries in BigQuery to precompute and store aggregated results for faster access.",
+                "Never precompute anything and rely entirely on on-demand query execution.",
+                "Duplicate all transformation logic in every report definition.",
+                "Force users to run complex aggregations on raw tables every time they access reports."
+            ],
+            "correct_index": 0,
+            "explanation": "Materialized views and scheduled queries precompute aggregations, reducing query latency and cost for repeated analytical workloads accessed by many users.",
+            "reference": "Google Professional Data Engineer Exam Guide - Preparing and using data for analysis"
+        },
+        {
+            "id": "gcp-pde-042",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A data engineering team needs to orchestrate complex workflows that include Dataflow jobs, Dataproc jobs, and BigQuery loads with dependencies and retry logic.",
+            "options": [
+                "Manually trigger each job in sequence through the Google Cloud console.",
+                "Use Cloud Composer, a managed Apache Airflow service, to define directed acyclic graphs with scheduling, retries, and dependencies.",
+                "Write shell scripts with hardcoded sleep commands and no failure handling.",
+                "Rely on cron jobs running on a single Compute Engine instance with no monitoring."
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud Composer provides managed Airflow orchestration for complex workflows with dependency management, scheduling, alerting, and automatic retries for data pipeline tasks.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-043",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A production data pipeline is experiencing intermittent failures. What observability practice best helps the team identify root causes and detect issues proactively?",
+            "options": [
+                "Only check logs once per month during scheduled maintenance windows.",
+                "Wait for users to report problems before investigating any issues.",
+                "Instrument pipelines with Cloud Logging, Cloud Monitoring, and create alerting policies on key metrics like throughput, latency, and error rates.",
+                "Disable all logging to reduce storage costs and noise."
+            ],
+            "correct_index": 2,
+            "explanation": "Centralized logging and monitoring with proactive alerting enables early detection of anomalies and accelerates root cause analysis for production data pipelines.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-044",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A team needs to implement CI/CD for data pipelines to ensure changes are tested and deployed consistently across environments.",
+            "options": [
+                "Edit pipeline definitions only in production to avoid environment drift.",
+                "Share production credentials across all developers without access controls.",
+                "Deploy pipeline changes directly to production without any testing or code review.",
+                "Use version control with automated testing and Cloud Build or similar CI/CD tools to validate and deploy pipeline code through staging to production."
+            ],
+            "correct_index": 3,
+            "explanation": "Implementing CI/CD with automated testing, linting, and staged deployments reduces errors, improves reliability, and ensures consistent pipeline behavior across environments.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-045",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "An organization needs to optimize BigQuery costs for a growing analytics workload. What cost management practice is most effective for long-term control?",
+            "options": [
+                "Use slot reservations where appropriate, partition tables, cluster data, and set budgets with alerting policies to monitor consumption.",
+                "Scan entire multi-terabyte tables in every query to maximize resource utilization.",
+                "Disable query result caching to force recomputation on every access.",
+                "Never set any quotas or budgets and allow unlimited spending."
+            ],
+            "correct_index": 0,
+            "explanation": "Combining partitioning, clustering, query optimization, slot management, and budget alerts helps control costs while maintaining performance as data volumes grow.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-046",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A data pipeline processes sensitive information and must meet compliance requirements. What practice best supports auditability and security maintenance?",
+            "options": [
+                "Disable audit logging to avoid capturing sensitive access details.",
+                "Enable Cloud Audit Logs, implement least-privilege IAM, and maintain data lineage documentation for all transformations.",
+                "Grant broad administrative access to all team members for operational convenience.",
+                "Store unencrypted credentials directly in pipeline code in version control."
+            ],
+            "correct_index": 1,
+            "explanation": "Comprehensive audit logging, principle of least privilege, and documented data lineage support compliance requirements and enable security incident investigation.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-047",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A production Dataflow job is experiencing increased latency. What performance tuning approach should be taken first to diagnose and address the bottleneck?",
+            "options": [
+                "Ignore performance metrics and rewrite the entire pipeline from scratch.",
+                "Immediately scale to the maximum number of workers without analyzing the bottleneck.",
+                "Review pipeline monitoring metrics like watermarks, backlog, and worker utilization to identify whether the issue is I/O bound, CPU bound, or due to key skew.",
+                "Restart the job repeatedly until performance improves."
+            ],
+            "correct_index": 2,
+            "explanation": "Data-driven performance tuning starts with analyzing Cloud Monitoring metrics to pinpoint bottlenecks, allowing targeted optimizations rather than arbitrary resource scaling.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-048",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A team needs to automate the creation and teardown of Dataproc clusters for batch processing jobs to minimize costs while ensuring consistent configurations.",
+            "options": [
+                "Manually create clusters through the console each time a job needs to run.",
+                "Never delete clusters to avoid configuration overhead.",
+                "Run a single permanent cluster 24/7 even when no jobs are scheduled.",
+                "Use Dataproc Workflow Templates or ephemeral clusters created at job start and deleted upon completion."
+            ],
+            "correct_index": 3,
+            "explanation": "Ephemeral clusters and workflow templates automate cluster lifecycle management, ensuring consistent configurations while eliminating idle compute costs between jobs.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-049",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "An organization needs to ensure data pipeline reliability by implementing automated recovery mechanisms for common transient failures.",
+            "options": [
+                "Configure appropriate retry policies, dead-letter queues for poison messages, and alerting for persistent failures in pipeline services.",
+                "Suppress all errors and continue processing regardless of failure conditions.",
+                "Manually fix each failure as it occurs without any automation.",
+                "Fail the entire pipeline immediately on any error with no retry attempts."
+            ],
+            "correct_index": 0,
+            "explanation": "Automated retries with exponential backoff handle transient failures, while dead-letter queues isolate problematic records and alerting ensures visibility into persistent issues.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        },
+        {
+            "id": "gcp-pde-050",
+            "domain": "Maintaining and automating data workloads",
+            "stem": "A data engineering team wants to track changes to pipeline configurations and ensure reproducible deployments across environments with proper rollback capabilities.",
+            "options": [
+                "Store pipeline configurations in local text files with no version control.",
+                "Treat infrastructure and pipeline configurations as code using tools like Cloud Build and version control, enabling tracked changes and rollbacks.",
+                "Make configuration changes directly in production without any documentation.",
+                "Use different manual configurations for each environment with no central tracking."
+            ],
+            "correct_index": 1,
+            "explanation": "Infrastructure as Code and configuration versioning enable reproducible deployments, change tracking, and safe rollbacks when issues arise in production environments.",
+            "reference": "Google Professional Data Engineer Exam Guide - Maintaining and automating data workloads"
+        }
+    ]
+}

@@ -1,0 +1,1277 @@
+{
+    "cert_key": "cloud",
+    "title": "CompTIA Cloud+ (CV0-003)",
+    "issuer": "CompTIA",
+    "outline_file": "outlines/cloud.json",
+    "variant_label": "Cloud+ Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CompTIA CV0-003 exam objectives (five domains and weights). Not a capture of past exam questions.",
+    "source_label": "CompTIA Cloud+ practice bank",
+    "items": [
+        {
+            "id": "cloud-001",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A startup wants to consume compute and storage from a provider's shared infrastructure over the internet and pay only for what it uses, with no interest in managing physical hardware. Which cloud deployment model does this describe?",
+            "options": [
+                "Public cloud",
+                "Private cloud",
+                "Community cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 0,
+            "explanation": "A public cloud delivers resources over the internet from a provider's shared infrastructure to many unrelated customers on a usage-based model, which is exactly what the startup wants.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-002",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A hospital must keep patient workloads on infrastructure dedicated to its own organization, either on premises or hosted, because of strict control and privacy requirements. Which cloud deployment model is this?",
+            "options": [
+                "Public cloud",
+                "Private cloud",
+                "Community cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 1,
+            "explanation": "A private cloud is provisioned for the exclusive use of a single organization, giving the hospital full control over the platform and the data it holds.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-003",
+            "domain": "Cloud Architecture and Design",
+            "stem": "Several banks with the same regulatory obligations share a cloud environment that is provisioned for their exclusive use and governed by a common policy. Which deployment model is this?",
+            "options": [
+                "Public cloud",
+                "Private cloud",
+                "Community cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 2,
+            "explanation": "A community cloud is shared by several organizations that have common concerns such as compliance, and it is owned, managed, and operated for that group.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-004",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A retailer keeps its legacy order system in its own data center but bursts seasonal web traffic to a public provider, integrating both environments over a secure link. Which deployment model is this?",
+            "options": [
+                "Public cloud",
+                "Private cloud",
+                "Community cloud",
+                "Hybrid cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "A hybrid cloud combines two or more distinct deployment models, such as private data-center infrastructure plus public cloud capacity, bound together by technology that allows data and applications to move between them.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-005",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A company subscribes to a vendor-hosted email and CRM suite and only administers user accounts and its own data, while the vendor manages the application, runtime, and infrastructure. Which service model is this?",
+            "options": [
+                "Software as a Service",
+                "Desktop as a Service",
+                "Infrastructure as a Service",
+                "Platform as a Service"
+            ],
+            "correct_index": 0,
+            "explanation": "Software as a Service delivers a complete, vendor-operated application to end users, leaving the customer responsible only for its data and user administration.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-006",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A development team pushes application code to a platform that supplies the runtime, middleware, and scaling, while the team never manages the underlying servers or operating system. Which service model is this?",
+            "options": [
+                "Infrastructure as a Service",
+                "Platform as a Service",
+                "Software as a Service",
+                "Function as a Service"
+            ],
+            "correct_index": 1,
+            "explanation": "Platform as a Service provides a managed runtime and middleware on which developers deploy code, removing server and operating-system administration from the team.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-007",
+            "domain": "Cloud Architecture and Design",
+            "stem": "An administrator provisions virtual machines, storage volumes, and networks from a provider and remains responsible for the guest operating systems, patching, and applications. Which service model is this?",
+            "options": [
+                "Software as a Service",
+                "Containers as a Service",
+                "Infrastructure as a Service",
+                "Platform as a Service"
+            ],
+            "correct_index": 2,
+            "explanation": "Infrastructure as a Service supplies fundamental compute, storage, and network resources, while the customer manages everything above the hypervisor, including the guest OS.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-008",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A web tier is overwhelmed, so an engineer adds several more identically sized server instances behind a load balancer rather than enlarging the existing server. Which scaling approach is being used?",
+            "options": [
+                "Diagonal scaling",
+                "Static scaling",
+                "Vertical scaling",
+                "Horizontal scaling"
+            ],
+            "correct_index": 3,
+            "explanation": "Horizontal scaling, also called scaling out, adds more nodes of the same size to distribute load, in contrast to enlarging a single node.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-009",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A database server is running low on memory, so an administrator briefly stops it and moves it to a host with more CPU and RAM instead of adding more nodes. Which scaling approach is this?",
+            "options": [
+                "Vertical scaling",
+                "Horizontal scaling",
+                "Elastic scaling",
+                "Distributed scaling"
+            ],
+            "correct_index": 0,
+            "explanation": "Vertical scaling, or scaling up, increases the resources of an existing node, which usually requires a restart and is limited by the maximum host size.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-010",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A designer places application instances in separate data centers with health checks and automatic failover so the service stays reachable if a single facility fails. Which design goal is this primarily addressing?",
+            "options": [
+                "Portability",
+                "High availability",
+                "Disaster recovery",
+                "Cost optimization"
+            ],
+            "correct_index": 1,
+            "explanation": "High availability keeps a service reachable by eliminating single points of failure through redundancy and automated failover across fault domains.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-011",
+            "domain": "Cloud Architecture and Design",
+            "stem": "A video platform automatically adds capacity during a live event and releases it minutes after the event ends, matching supply to demand in near real time. Which cloud characteristic is this?",
+            "options": [
+                "Multitenancy",
+                "Measured service",
+                "Elasticity",
+                "Resource pooling"
+            ],
+            "correct_index": 2,
+            "explanation": "Elasticity is the ability to automatically scale resources up and down rapidly to match fluctuating demand, so capacity tracks load instead of being fixed.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-012",
+            "domain": "Cloud Architecture and Design",
+            "stem": "An organization runs workloads across two different public providers to avoid dependence on a single vendor and to negotiate better pricing. Which architecture strategy is this?",
+            "options": [
+                "Private cloud",
+                "Hybrid cloud",
+                "Community cloud",
+                "Multi-cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "A multi-cloud strategy uses services from more than one public cloud provider, which reduces vendor lock-in and can improve resilience and commercial leverage.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Cloud Architecture and Design"
+        },
+        {
+            "id": "cloud-013",
+            "domain": "Security",
+            "stem": "A stolen user password alone must not let an attacker reach the cloud console, so the administrator enables a second authentication factor such as a one-time code. Which control is being implemented?",
+            "options": [
+                "Multi-factor authentication",
+                "Single sign-on",
+                "Role-based access control",
+                "Just-in-time access"
+            ],
+            "correct_index": 0,
+            "explanation": "Multi-factor authentication requires something beyond the password, so a compromised password by itself cannot complete a sign-in.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-014",
+            "domain": "Security",
+            "stem": "An administrator assigns each team member a role containing only the permissions needed for that person's job and nothing more. Which security principle is being applied?",
+            "options": [
+                "Separation of duties",
+                "Least privilege",
+                "Defense in depth",
+                "Zero trust"
+            ],
+            "correct_index": 1,
+            "explanation": "Least privilege grants the minimum access necessary to perform a role, limiting the damage a compromised or careless account can cause.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-015",
+            "domain": "Security",
+            "stem": "A storage administrator enables server-side encryption on object storage so that data written to disk cannot be read if the physical media is stolen. Which protection is this?",
+            "options": [
+                "Hashing",
+                "Encryption in transit",
+                "Encryption at rest",
+                "Tokenization"
+            ],
+            "correct_index": 2,
+            "explanation": "Encryption at rest protects stored data, so even if the underlying media is removed the data remains unreadable without the key.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-016",
+            "domain": "Security",
+            "stem": "A web team installs TLS certificates so traffic between clients and the load balancer is encrypted and cannot be read on the wire. Which protection is being applied?",
+            "options": [
+                "Encryption at rest",
+                "Data masking",
+                "Key escrow",
+                "Encryption in transit"
+            ],
+            "correct_index": 3,
+            "explanation": "Encryption in transit, such as TLS, protects data moving across a network so an eavesdropper cannot read or alter it in flight.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-017",
+            "domain": "Security",
+            "stem": "An organization must centrally create, rotate, and audit the cryptographic keys used to encrypt cloud storage and databases. Which service category addresses this need?",
+            "options": [
+                "Key management service",
+                "Web application firewall",
+                "Identity provider",
+                "Hardware security module"
+            ],
+            "correct_index": 0,
+            "explanation": "A key management service provides centralized creation, rotation, access control, and audit logging for encryption keys across cloud services.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-018",
+            "domain": "Security",
+            "stem": "An application needs database credentials at runtime, but the team refuses to store them in source code or plaintext configuration files. Which practice should be used?",
+            "options": [
+                "Storing credentials in a public repository",
+                "Retrieving secrets from a managed secrets vault",
+                "Emailing credentials to developers",
+                "Embedding credentials in the container image"
+            ],
+            "correct_index": 1,
+            "explanation": "A managed secrets vault stores sensitive credentials securely and issues them to the application at runtime, keeping them out of code and configuration files.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-019",
+            "domain": "Security",
+            "stem": "An architect separates a database subnet from the web subnets so that internet-facing servers cannot initiate connections directly to the database. Which security concept is this?",
+            "options": [
+                "Single sign-on",
+                "Data loss prevention",
+                "Network segmentation",
+                "Flat networking"
+            ],
+            "correct_index": 2,
+            "explanation": "Network segmentation divides an environment into isolated zones with controlled paths between them, shrinking the reach of a compromised host.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-020",
+            "domain": "Security",
+            "stem": "A cloud administrator needs a stateful instance-level firewall that automatically allows return traffic for permitted outbound sessions. Which control should be used?",
+            "options": [
+                "Web application firewall",
+                "Host-based intrusion detection system",
+                "Network ACL",
+                "Security group"
+            ],
+            "correct_index": 3,
+            "explanation": "A security group is a stateful virtual firewall attached to an instance, so return traffic for an allowed connection is permitted without a separate rule.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-021",
+            "domain": "Security",
+            "stem": "An online store must block common web exploits such as SQL injection and cross-site scripting against its public application. Which control is designed for this purpose?",
+            "options": [
+                "Web application firewall",
+                "Key management service",
+                "DDoS mitigation",
+                "Network ACL"
+            ],
+            "correct_index": 0,
+            "explanation": "A web application firewall inspects HTTP traffic and applies rules to filter injection and scripting attacks aimed at application-layer weaknesses.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-022",
+            "domain": "Security",
+            "stem": "A service provider must absorb a volumetric attack that floods its public endpoints with junk traffic so legitimate users are not denied service. Which control is appropriate?",
+            "options": [
+                "Data loss prevention",
+                "DDoS mitigation service",
+                "Host-based firewall",
+                "Web application firewall"
+            ],
+            "correct_index": 1,
+            "explanation": "A DDoS mitigation service scrubs or absorbs high-volume attack traffic before it reaches protected endpoints, preserving availability for legitimate users.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-023",
+            "domain": "Security",
+            "stem": "Remote employees must reach private cloud subnets over an encrypted tunnel that travels across the public internet. Which technology provides this access?",
+            "options": [
+                "API gateway",
+                "Content delivery network",
+                "Virtual private network",
+                "Load balancer"
+            ],
+            "correct_index": 2,
+            "explanation": "A virtual private network encrypts traffic in a tunnel over an untrusted network, letting remote users reach private resources securely.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-024",
+            "domain": "Security",
+            "stem": "An enterprise wants employees to sign in to cloud applications with their existing corporate directory accounts instead of separate cloud credentials. Which capability should be implemented?",
+            "options": [
+                "Local database authentication",
+                "Shared service accounts",
+                "Password rotation only",
+                "Federation with single sign-on"
+            ],
+            "correct_index": 3,
+            "explanation": "Federated identity with single sign-on trusts the corporate directory to authenticate users, so one set of credentials grants access to multiple applications.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-025",
+            "domain": "Security",
+            "stem": "A company must keep European customer data physically within the European Union to satisfy a privacy regulation. Which requirement is driving its architecture?",
+            "options": [
+                "Data sovereignty",
+                "High availability",
+                "Performance efficiency",
+                "Cost optimization"
+            ],
+            "correct_index": 0,
+            "explanation": "Data sovereignty requires that data be stored and processed within the legal jurisdiction that governs it, which dictates the chosen geographic region.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-026",
+            "domain": "Security",
+            "stem": "A cloud administrator must determine which regulation most directly governs the handling of protected health information in the United States. Which one applies?",
+            "options": [
+                "PCI DSS",
+                "HIPAA",
+                "SOX",
+                "GDPR"
+            ],
+            "correct_index": 1,
+            "explanation": "HIPAA sets the security and privacy requirements for protected health information in the United States, unlike payment, financial-reporting, or EU privacy rules.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-027",
+            "domain": "Security",
+            "stem": "An organization must detect and prevent sensitive data such as credit card numbers from leaving its environment through email or uploads. Which control applies?",
+            "options": [
+                "File integrity monitoring",
+                "Security information and event management",
+                "Data loss prevention",
+                "Intrusion prevention system"
+            ],
+            "correct_index": 2,
+            "explanation": "Data loss prevention inspects outbound channels for sensitive patterns and blocks or alerts on attempts to exfiltrate protected data.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-028",
+            "domain": "Security",
+            "stem": "A security team must regularly identify missing patches and misconfigurations on cloud virtual machines before attackers can exploit them. Which activity is this?",
+            "options": [
+                "Load testing",
+                "Capacity planning",
+                "Penetration testing",
+                "Vulnerability management"
+            ],
+            "correct_index": 3,
+            "explanation": "Vulnerability management repeatedly scans systems for known weaknesses and missing patches, then tracks remediation, distinct from an authorized attack simulation.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-029",
+            "domain": "Security",
+            "stem": "An application outage was traced to an expired TLS certificate on the public endpoint. Which operational control prevents this class of failure?",
+            "options": [
+                "Certificate lifecycle management with renewal alerts",
+                "Rotating database passwords",
+                "Enabling geo-redundancy",
+                "Increasing instance size"
+            ],
+            "correct_index": 0,
+            "explanation": "Certificate lifecycle management tracks issuance and expiry and raises renewal alerts, preventing outages caused by lapsed certificates.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-030",
+            "domain": "Security",
+            "stem": "A cloud security policy requires that the most privileged account be protected with a hardware-backed second factor and never be used for routine work. Which account is being protected?",
+            "options": [
+                "A service account",
+                "The root or super-admin account",
+                "A guest account",
+                "A standard user account"
+            ],
+            "correct_index": 1,
+            "explanation": "The root or super-admin account has unrestricted power over the tenant, so it must be locked down with strong multi-factor authentication and reserved for emergencies.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Security"
+        },
+        {
+            "id": "cloud-031",
+            "domain": "Deployment",
+            "stem": "A company moves an application to the cloud by copying its virtual machines without modifying the operating system or the application architecture. Which migration approach is this?",
+            "options": [
+                "Refactor",
+                "Retire",
+                "Rehost",
+                "Replatform"
+            ],
+            "correct_index": 2,
+            "explanation": "Rehosting, often called lift and shift, moves workloads unchanged to the cloud and is the fastest but least optimized migration path.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-032",
+            "domain": "Deployment",
+            "stem": "A team migrates an application to the cloud and swaps its self-managed database for a managed database service while leaving the application code unchanged. Which migration approach is this?",
+            "options": [
+                "Refactor",
+                "Repurchase",
+                "Rehost",
+                "Replatform"
+            ],
+            "correct_index": 3,
+            "explanation": "Replatforming applies targeted changes, such as adopting a managed service, to gain cloud benefits without a full rewrite of the workload.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-033",
+            "domain": "Deployment",
+            "stem": "An organization rewrites a monolithic application into microservices during its move so it can take full advantage of cloud-native scaling. Which migration approach is this?",
+            "options": [
+                "Refactor or re-architect",
+                "Retain",
+                "Rehost",
+                "Lift and shift"
+            ],
+            "correct_index": 0,
+            "explanation": "Refactoring, or re-architecting, redesigns the application to exploit cloud capabilities such as microservices and elastic scaling, at the highest migration effort.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-034",
+            "domain": "Deployment",
+            "stem": "A migration engineer converts a running physical server into a virtual machine image so that it can be launched in the cloud. Which conversion type is this?",
+            "options": [
+                "V2V",
+                "P2V",
+                "V2P",
+                "P2P"
+            ],
+            "correct_index": 1,
+            "explanation": "P2V means physical to virtual conversion, capturing a physical server as a virtual image that can run on a hypervisor or cloud platform.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-035",
+            "domain": "Deployment",
+            "stem": "An engineer reruns a Terraform configuration and the tool reports that no changes are needed because the live environment already matches the declared state. Which property of infrastructure as code does this demonstrate?",
+            "options": [
+                "Orchestration",
+                "Imperative scripting",
+                "Idempotency",
+                "Configuration drift"
+            ],
+            "correct_index": 2,
+            "explanation": "Idempotency means repeated runs of the same declaration converge to the same state and make no further changes once that state is reached.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-036",
+            "domain": "Deployment",
+            "stem": "A team defines cloud resources in a declarative template that the provider's engine uses to create and manage the described resources as a stack. Which practice is this?",
+            "options": [
+                "Click-ops deployment",
+                "Ad hoc scripting",
+                "Manual provisioning",
+                "Infrastructure as code"
+            ],
+            "correct_index": 3,
+            "explanation": "Infrastructure as code describes resources in machine-readable templates so provisioning becomes repeatable, reviewable, and version-controlled.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-037",
+            "domain": "Deployment",
+            "stem": "An administrator must install the same packages and apply the same settings across many cloud servers in a repeatable way without installing an agent on each host. Which tool type fits best?",
+            "options": [
+                "Configuration management",
+                "Continuous integration server",
+                "Content delivery network",
+                "Service mesh"
+            ],
+            "correct_index": 0,
+            "explanation": "Agentless configuration management tools such as Ansible push consistent package and setting definitions to hosts over existing remote connections.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-038",
+            "domain": "Deployment",
+            "stem": "A team wants code committed to a repository to be automatically built, tested, and then delivered to the cloud when the tests pass. Which practice is this?",
+            "options": [
+                "Blue-green deployment",
+                "Continuous integration and continuous delivery",
+                "Manual release",
+                "Change advisory board approval"
+            ],
+            "correct_index": 1,
+            "explanation": "Continuous integration and continuous delivery automates building, testing, and promoting changes, shortening the path from commit to deployable release.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-039",
+            "domain": "Deployment",
+            "stem": "Two identical environments are maintained, and traffic is switched from the old to the new one only after the new version passes checks, allowing an instant rollback. Which deployment strategy is this?",
+            "options": [
+                "Rolling deployment",
+                "Canary deployment",
+                "Blue-green deployment",
+                "Recreate deployment"
+            ],
+            "correct_index": 2,
+            "explanation": "Blue-green deployment runs two full environments and cuts traffic over once the new one is verified, so reverting means pointing traffic back to the old environment.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-040",
+            "domain": "Deployment",
+            "stem": "A new application version is released to a small percentage of users first and then expanded gradually while error rates are closely watched. Which deployment strategy is this?",
+            "options": [
+                "Recreate",
+                "Big-bang",
+                "Blue-green",
+                "Canary"
+            ],
+            "correct_index": 3,
+            "explanation": "A canary release exposes the new version to a limited subset of traffic first, limiting the blast radius if a defect appears before wider rollout.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-041",
+            "domain": "Deployment",
+            "stem": "Instances running an old application version are replaced with the new version in batches so that the service stays available throughout the update. Which deployment strategy is this?",
+            "options": [
+                "Rolling",
+                "Canary",
+                "Recreate",
+                "Blue-green"
+            ],
+            "correct_index": 0,
+            "explanation": "A rolling deployment updates instances in groups while the remainder keep serving, maintaining availability but briefly mixing versions.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-042",
+            "domain": "Deployment",
+            "stem": "New virtual machines are launched from a pre-built image that already contains the hardened operating system and required agents. Which technique reduces deployment time and configuration drift?",
+            "options": [
+                "Snapshot restore",
+                "Golden image",
+                "Manual build",
+                "Live migration"
+            ],
+            "correct_index": 1,
+            "explanation": "A golden image is a standardized, pre-configured template that guarantees every instance starts from an identical, tested baseline.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-043",
+            "domain": "Deployment",
+            "stem": "A team needs to declare the desired number of container replicas and let a control plane schedule, restart, and scale them automatically. Which platform provides this capability?",
+            "options": [
+                "Content delivery network",
+                "Container registry",
+                "Container orchestration",
+                "Configuration management"
+            ],
+            "correct_index": 2,
+            "explanation": "Container orchestration, such as Kubernetes, maintains the declared replica count and handles scheduling, self-healing, and scaling across a cluster.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-044",
+            "domain": "Deployment",
+            "stem": "An administrator writes a small program that calls the provider's API to create a batch of storage buckets, replacing repetitive work in the web console. Which deployment technique is this?",
+            "options": [
+                "Physical delivery",
+                "Rehosting",
+                "Manual provisioning",
+                "Scripted automation"
+            ],
+            "correct_index": 3,
+            "explanation": "Scripted automation invokes provider APIs programmatically, so repetitive provisioning tasks run consistently and can be reused or scheduled.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-045",
+            "domain": "Deployment",
+            "stem": "An organization moving licensed database software to the cloud must verify that its existing license terms permit running on the provider's shared hardware. Which deployment consideration is this?",
+            "options": [
+                "Bring-your-own-license compliance",
+                "Network latency",
+                "Autoscaling policy",
+                "Data residency"
+            ],
+            "correct_index": 0,
+            "explanation": "Bring-your-own-license compliance confirms that existing software licenses allow the new cloud host, avoiding legal and financial exposure.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-046",
+            "domain": "Deployment",
+            "stem": "A company must replicate a production database to the cloud with minimal downtime and keep source and target synchronized until the cutover moment. Which tool category should be used?",
+            "options": [
+                "File sync service",
+                "Database migration service",
+                "Content delivery network",
+                "Load balancer"
+            ],
+            "correct_index": 1,
+            "explanation": "A database migration service performs continuous replication from source to target so downtime at cutover is measured in minutes rather than hours.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-047",
+            "domain": "Deployment",
+            "stem": "A team must move hundreds of terabytes of archived files to cloud object storage faster than its internet link reasonably allows. Which approach is most appropriate?",
+            "options": [
+                "Compress the data onto a single USB drive and store it onsite",
+                "Email the data in batches",
+                "Ship data through a physical bulk transfer service",
+                "Stream the data through a proxy server"
+            ],
+            "correct_index": 2,
+            "explanation": "For very large data sets, a physical bulk transfer service ships encrypted storage appliances so the data arrives far faster than transferring over the available WAN link.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-048",
+            "domain": "Deployment",
+            "stem": "Servers are never patched in place; instead a new image is built for every change and the running instances are replaced. Which deployment model is this?",
+            "options": [
+                "Pet servers",
+                "Snowflake servers",
+                "Mutable infrastructure",
+                "Immutable infrastructure"
+            ],
+            "correct_index": 3,
+            "explanation": "Immutable infrastructure replaces instances rather than modifying them, so every running version matches a known, tested image and drift is avoided.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-049",
+            "domain": "Deployment",
+            "stem": "A team ensures its development, test, and production cloud environments use identical configurations so defects do not appear only in production. Which principle is this?",
+            "options": [
+                "Environment parity",
+                "Cost optimization",
+                "Disaster recovery",
+                "Data sovereignty"
+            ],
+            "correct_index": 0,
+            "explanation": "Environment parity keeps lower environments aligned with production, so behavior observed during testing reliably predicts production behavior.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-050",
+            "domain": "Deployment",
+            "stem": "A pipeline detects that someone changed a resource manually in the console, so the live environment no longer matches the stored template. What is this condition called?",
+            "options": [
+                "Baseline",
+                "Config drift",
+                "Idempotency",
+                "Desired state"
+            ],
+            "correct_index": 1,
+            "explanation": "Configuration drift occurs when manual changes move a live environment away from the state defined in code, undermining repeatable deployments.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Deployment"
+        },
+        {
+            "id": "cloud-051",
+            "domain": "Operations and Support",
+            "stem": "An operations team needs to track CPU, memory, and network utilization over time and be alerted when usage crosses defined thresholds. Which activity is this?",
+            "options": [
+                "Patching",
+                "Capacity planning",
+                "Monitoring",
+                "Backup"
+            ],
+            "correct_index": 2,
+            "explanation": "Monitoring continuously collects resource metrics and raises alerts when values cross thresholds, providing the visibility operations depends on.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-052",
+            "domain": "Operations and Support",
+            "stem": "An administrator must retain application and system logs in a central place so events from many hosts can be correlated and investigated later. Which practice is this?",
+            "options": [
+                "Load balancing",
+                "Autoscaling",
+                "Encryption",
+                "Log aggregation"
+            ],
+            "correct_index": 3,
+            "explanation": "Log aggregation collects logs from distributed sources into a central repository, enabling search and cross-host correlation during investigations.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-053",
+            "domain": "Operations and Support",
+            "stem": "A team records normal resource usage for two weeks so it can define alert thresholds that reflect expected behavior. What is this normal reference called?",
+            "options": [
+                "Baseline",
+                "Spike profile",
+                "Capacity buffer",
+                "Throughput target"
+            ],
+            "correct_index": 0,
+            "explanation": "A baseline captures normal operating ranges over time, giving a reference against which abnormal behavior and alert thresholds can be judged.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-054",
+            "domain": "Operations and Support",
+            "stem": "An analyst notices that many virtual machines average below ten percent CPU and resizes them to smaller instances to reduce cost without harming service. Which practice is this?",
+            "options": [
+                "Vertical scaling up",
+                "Right-sizing",
+                "Over-provisioning",
+                "Throttling"
+            ],
+            "correct_index": 1,
+            "explanation": "Right-sizing matches instance capacity to actual workload demand, which lowers cost by removing unused resources rather than adding more.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-055",
+            "domain": "Operations and Support",
+            "stem": "Before a product launch an engineer forecasts future resource needs and arranges additional capacity to meet the expected growth. Which activity is this?",
+            "options": [
+                "Change management",
+                "Incident response",
+                "Capacity planning",
+                "Patch management"
+            ],
+            "correct_index": 2,
+            "explanation": "Capacity planning forecasts demand and provisions enough resources ahead of time, so growth does not exhaust the environment.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-056",
+            "domain": "Operations and Support",
+            "stem": "A backup job captures only the data that changed since the most recent backup, reducing both the backup window and storage consumption. Which backup type is this?",
+            "options": [
+                "Differential backup",
+                "Snapshot",
+                "Full backup",
+                "Incremental backup"
+            ],
+            "correct_index": 3,
+            "explanation": "An incremental backup copies only changes since the last backup of any type, making each run fast and small but requiring the whole chain to restore.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-057",
+            "domain": "Operations and Support",
+            "stem": "A backup captures all changes made since the last full backup and grows larger each day until the next full backup runs. Which backup type is this?",
+            "options": [
+                "Differential",
+                "Synthetic full",
+                "Full",
+                "Incremental"
+            ],
+            "correct_index": 0,
+            "explanation": "A differential backup copies everything changed since the last full backup, so it grows over time but restores need only the full set plus the latest differential.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-058",
+            "domain": "Operations and Support",
+            "stem": "A business can tolerate losing at most fifteen minutes of transaction data if a failure occurs. Which recovery metric does this define?",
+            "options": [
+                "Recovery time objective",
+                "Recovery point objective",
+                "Mean time to repair",
+                "Service level agreement"
+            ],
+            "correct_index": 1,
+            "explanation": "The recovery point objective defines the maximum acceptable amount of data loss, expressed as the time between the last good copy and the failure.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-059",
+            "domain": "Operations and Support",
+            "stem": "Leadership requires that an application be restored and serving users within one hour of any outage. Which metric does this define?",
+            "options": [
+                "Availability percentage",
+                "Recovery point objective",
+                "Recovery time objective",
+                "Mean time between failures"
+            ],
+            "correct_index": 2,
+            "explanation": "The recovery time objective is the maximum acceptable duration to restore service, so it drives how quickly failover and recovery must complete.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-060",
+            "domain": "Operations and Support",
+            "stem": "A backup strategy keeps three copies of the data on two different media types with one copy stored in a separate location. Which best practice is this?",
+            "options": [
+                "RAID striping",
+                "Archive tiering",
+                "Grandfather-father-son rotation",
+                "The 3-2-1 rule"
+            ],
+            "correct_index": 3,
+            "explanation": "The 3-2-1 rule keeps three copies on two media types with one offsite, protecting against local hardware failure and site-wide disasters.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-061",
+            "domain": "Operations and Support",
+            "stem": "An architecture runs the same application simultaneously in two regions and both serve live traffic, so the loss of one region causes no outage. Which disaster recovery strategy is this?",
+            "options": [
+                "Active-active multi-site",
+                "Backup and restore",
+                "Pilot light",
+                "Warm standby"
+            ],
+            "correct_index": 0,
+            "explanation": "Active-active runs full capacity in two or more sites at once, giving near-zero recovery time because the remaining site already carries production traffic.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-062",
+            "domain": "Operations and Support",
+            "stem": "A minimal core environment is kept running in a second region, and the rest of the stack is scaled up only when a disaster is declared. Which disaster recovery strategy is this?",
+            "options": [
+                "Backup and restore",
+                "Pilot light",
+                "Warm standby",
+                "Active-active"
+            ],
+            "correct_index": 1,
+            "explanation": "A pilot light keeps only essential components running in the recovery site and starts the remainder on failover, balancing lower cost against longer recovery.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-063",
+            "domain": "Operations and Support",
+            "stem": "A scaled-down but fully functional copy of production runs continuously in a second site and is expanded to full capacity during a failover. Which disaster recovery strategy is this?",
+            "options": [
+                "Cold site",
+                "Pilot light",
+                "Warm standby",
+                "Hot site"
+            ],
+            "correct_index": 2,
+            "explanation": "A warm standby keeps a reduced-capacity but complete copy of the environment running, so failover requires scaling rather than building from scratch.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-064",
+            "domain": "Operations and Support",
+            "stem": "A contract states that the provider will maintain 99.95 percent monthly uptime and issue service credits if that target is missed. What is this document?",
+            "options": [
+                "Acceptable use policy",
+                "Runbook",
+                "Change request",
+                "Service level agreement"
+            ],
+            "correct_index": 3,
+            "explanation": "A service level agreement defines the promised service levels, such as uptime, and the remedies the provider owes when those levels are not met.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-065",
+            "domain": "Operations and Support",
+            "stem": "Planned patching is scheduled for a low-traffic period announced in advance, and users are told to expect a brief interruption. What is this period called?",
+            "options": [
+                "Maintenance window",
+                "Change freeze",
+                "Failover window",
+                "Incident window"
+            ],
+            "correct_index": 0,
+            "explanation": "A maintenance window is an agreed period during which disruptive work such as patching may occur with the least impact and with advance notice.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-066",
+            "domain": "Operations and Support",
+            "stem": "An organization applies consistent metadata such as owner, project, and environment to its resources so that bills can be allocated accurately. What is this practice?",
+            "options": [
+                "Geofencing",
+                "Resource tagging",
+                "Versioning",
+                "Encryption"
+            ],
+            "correct_index": 1,
+            "explanation": "Resource tagging attaches key-value metadata to resources, which supports cost allocation, ownership tracking, and automation based on those labels.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-067",
+            "domain": "Operations and Support",
+            "stem": "A steady, predictable workload is moved from on-demand pricing to a longer-term commitment in exchange for a lower rate. Which cost practice is this?",
+            "options": [
+                "Chargeback avoidance",
+                "Spot usage",
+                "Reserved capacity planning",
+                "Over-provisioning"
+            ],
+            "correct_index": 2,
+            "explanation": "Reserved capacity commits to predictable usage over a term in return for a discount, which suits workloads whose demand is stable and known.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-068",
+            "domain": "Operations and Support",
+            "stem": "An operations team defines a set cadence to test and apply operating system and application updates across all of its cloud instances. Which process is this?",
+            "options": [
+                "Capacity management",
+                "Release management",
+                "Asset disposal",
+                "Patch management"
+            ],
+            "correct_index": 3,
+            "explanation": "Patch management schedules the testing and rollout of updates so vulnerabilities are closed without destabilizing production systems.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-069",
+            "domain": "Operations and Support",
+            "stem": "An operator follows a documented, step-by-step procedure to perform a recurring operational task during an incident. What is this document called?",
+            "options": [
+                "Runbook",
+                "Service catalog",
+                "Chargeback report",
+                "Architecture diagram"
+            ],
+            "correct_index": 0,
+            "explanation": "A runbook records the exact steps for a recurring task, so operators respond consistently and knowledge is not lost when staff change.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-070",
+            "domain": "Operations and Support",
+            "stem": "An organization shuts down and securely wipes cloud resources that are no longer needed to cut cost and reduce risk. Which process is this?",
+            "options": [
+                "Provisioning",
+                "Decommissioning",
+                "Scaling",
+                "Migration"
+            ],
+            "correct_index": 1,
+            "explanation": "Decommissioning retires unused resources and securely removes their data, reducing both ongoing cost and the attack surface from forgotten assets.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Operations and Support"
+        },
+        {
+            "id": "cloud-071",
+            "domain": "Troubleshooting",
+            "stem": "Users can reach a service by IP address but not by its hostname, and other services are unaffected. Which component is the most likely cause of the failure?",
+            "options": [
+                "TLS certificate",
+                "Firewall rule",
+                "DNS resolution",
+                "Load balancer"
+            ],
+            "correct_index": 2,
+            "explanation": "Reaching the service by IP while the name fails points to name resolution, so the DNS record or resolver rather than the network path is at fault.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-072",
+            "domain": "Troubleshooting",
+            "stem": "An administrator cannot connect to a newly deployed instance on port 443 from the internet even though the instance is running and its web server is listening. Which investigation is most relevant?",
+            "options": [
+                "Disk input/output operations per second",
+                "Software license activation",
+                "Backup schedule",
+                "Inbound firewall or security group rules"
+            ],
+            "correct_index": 3,
+            "explanation": "A running service that refuses external connections usually has inbound rules or a firewall blocking the port, so those rules should be checked first.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-073",
+            "domain": "Troubleshooting",
+            "stem": "Instances in a new subnet have no internet access even though a NAT gateway exists for the environment. Which configuration should be verified first?",
+            "options": [
+                "The subnet route table",
+                "The instance CPU credits",
+                "The storage encryption key",
+                "The database connection pool"
+            ],
+            "correct_index": 0,
+            "explanation": "A NAT gateway only helps if the subnet's route table sends outbound traffic to it, so a missing or wrong route is the most common cause of no internet access.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-074",
+            "domain": "Troubleshooting",
+            "stem": "Large file transfers between two cloud networks stall while small pings succeed, suggesting that oversized packets are being dropped somewhere along the path. Which setting should be adjusted?",
+            "options": [
+                "Provisioned IOPS",
+                "Maximum transmission unit",
+                "Time to live",
+                "DNS record TTL"
+            ],
+            "correct_index": 1,
+            "explanation": "A maximum transmission unit mismatch causes large packets to be dropped while small ones pass, so lowering the MTU resolves the stalled transfers.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-075",
+            "domain": "Troubleshooting",
+            "stem": "An application responds slowly and monitoring shows sustained CPU utilization near one hundred percent on all application instances during peak load. What is the most likely cause?",
+            "options": [
+                "Certificate expiry",
+                "Insufficient network bandwidth",
+                "CPU saturation",
+                "Disk failure"
+            ],
+            "correct_index": 2,
+            "explanation": "Sustained near-maximum CPU across the fleet indicates the workload is CPU-bound, so adding instances or larger instances would relieve the bottleneck.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-076",
+            "domain": "Troubleshooting",
+            "stem": "A server begins swapping heavily and becomes unresponsive, and monitoring shows memory usage has reached its limit while CPU remains moderate. What is the cause?",
+            "options": [
+                "Network latency",
+                "DNS misconfiguration",
+                "Storage quota",
+                "Memory exhaustion"
+            ],
+            "correct_index": 3,
+            "explanation": "Heavy swapping with memory pinned at the limit and low CPU points to memory exhaustion, where the host moves pages to disk and slows dramatically.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-077",
+            "domain": "Troubleshooting",
+            "stem": "A database query slows dramatically and disk metrics show the volume has reached its maximum input/output operations per second. Which resource is the bottleneck?",
+            "options": [
+                "Storage IOPS",
+                "Network",
+                "CPU",
+                "Memory"
+            ],
+            "correct_index": 0,
+            "explanation": "Once a volume hits its provisioned IOPS ceiling, storage becomes the limiting resource, so increasing IOPS or changing the volume type restores performance.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-078",
+            "domain": "Troubleshooting",
+            "stem": "An application that spans two distant regions is slow only for calls that cross between the regions, while calls within each region are fast. What most likely explains this?",
+            "options": [
+                "An incorrect system time zone",
+                "High network latency between regions",
+                "Insufficient IP addresses",
+                "An expired software license"
+            ],
+            "correct_index": 1,
+            "explanation": "Physical distance adds network latency to cross-region traffic, so placing dependent components closer together or caching reduces the round-trip delays.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-079",
+            "domain": "Troubleshooting",
+            "stem": "A deployment fails with an error stating that a service limit or quota has been reached while creating new instances. What is the appropriate first step?",
+            "options": [
+                "Disable monitoring",
+                "Reboot the cloud provider",
+                "Request a quota increase or remove unused resources",
+                "Change the root account password"
+            ],
+            "correct_index": 2,
+            "explanation": "Quota and service-limit errors are resolved by raising the limit with the provider or deleting unused resources, not by rebooting or changing credentials.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-080",
+            "domain": "Troubleshooting",
+            "stem": "Automation scripts suddenly begin failing with an authorization error immediately after a scheduled credential rotation. What is the most likely cause?",
+            "options": [
+                "Insufficient disk space on the runner",
+                "A brief network timeout",
+                "A version mismatch in the command line tool",
+                "The rotated credentials in use are no longer valid"
+            ],
+            "correct_index": 3,
+            "explanation": "After a credential rotation the old keys stop working, so any automation still referencing the previous secret receives authorization failures until updated.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-081",
+            "domain": "Troubleshooting",
+            "stem": "Clients refuse to connect to an application and the error clearly states that the server certificate has expired. What should be done to restore service?",
+            "options": [
+                "Renew and redeploy the certificate",
+                "Reboot the load balancer",
+                "Increase the instance size",
+                "Clear the browser cache only"
+            ],
+            "correct_index": 0,
+            "explanation": "An expired certificate must be renewed and re-installed on the endpoint; other actions do not address the cause of the connection refusal.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-082",
+            "domain": "Troubleshooting",
+            "stem": "Authentication between distributed services fails intermittently and logs show that timestamps on the nodes differ by several minutes. What is the likely cause?",
+            "options": [
+                "Disk fragmentation",
+                "Clock skew from a time synchronization failure",
+                "A bandwidth cap on the link",
+                "DNS cache poisoning"
+            ],
+            "correct_index": 1,
+            "explanation": "Clock skew breaks time-sensitive tokens and certificates, so restoring reliable time synchronization with a known time source resolves the intermittent failures.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-083",
+            "domain": "Troubleshooting",
+            "stem": "An application stops writing new log entries and the administrator finds that the disk or bucket holding the logs has reached its capacity limit. What is the immediate cause?",
+            "options": [
+                "A DNS query is timing out",
+                "The IAM role is missing",
+                "The storage volume or bucket is full",
+                "The CPU is being throttled"
+            ],
+            "correct_index": 2,
+            "explanation": "When the target storage reaches its capacity or quota, writes fail; freeing space, expanding the volume, or rotating logs restores logging.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-084",
+            "domain": "Troubleshooting",
+            "stem": "After a security change an application can no longer reach its database on the database port even though the database itself is healthy. What most likely caused this?",
+            "options": [
+                "A larger instance type",
+                "A new backup policy",
+                "A system time zone change",
+                "A firewall or security rule blocking the database port"
+            ],
+            "correct_index": 3,
+            "explanation": "A newly restrictive firewall or security rule that blocks the database port severs the connection path, so the rule set should be reviewed and corrected.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-085",
+            "domain": "Troubleshooting",
+            "stem": "An autoscaling group launches new instances during a traffic spike, but they never pass health checks and are terminated and replaced repeatedly. Which area should be investigated first?",
+            "options": [
+                "The health check definition or instance bootstrap configuration",
+                "The monthly billing report",
+                "The DNS zone transfer settings",
+                "The object storage lifecycle policy"
+            ],
+            "correct_index": 0,
+            "explanation": "Instances that start but never become healthy usually fail the health check itself or the startup script, so the check and bootstrap configuration are the first suspects.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-086",
+            "domain": "Troubleshooting",
+            "stem": "An engineer needs to identify which network hop along the path to a remote host is dropping packets. Which command-line tool is most appropriate?",
+            "options": [
+                "dig",
+                "traceroute",
+                "top",
+                "df"
+            ],
+            "correct_index": 1,
+            "explanation": "Traceroute lists the routers between source and destination, so the hop where packets stop or latency jumps reveals where the path is failing.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-087",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must list the active network connections and the local ports currently in use on a Linux host. Which tool should be used?",
+            "options": [
+                "grep",
+                "chmod",
+                "netstat",
+                "tar"
+            ],
+            "correct_index": 2,
+            "explanation": "Netstat displays active connections and listening ports, making it the right tool to confirm which services are bound to which local ports.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-088",
+            "domain": "Troubleshooting",
+            "stem": "An application produces intermittent errors, and the team needs to search aggregated logs from all instances for the failing request pattern. Which approach is best?",
+            "options": [
+                "Reinstall the application on every instance",
+                "Increase the database storage size",
+                "Temporarily disable the firewall",
+                "Query the centralized log platform for the error pattern"
+            ],
+            "correct_index": 3,
+            "explanation": "Searching aggregated logs correlates the failing requests across instances and reveals the pattern, which is far more productive than reinstalling or disabling controls.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-089",
+            "domain": "Troubleshooting",
+            "stem": "A multitenant host shows inconsistent performance for one tenant while other tenants are unaffected, and the affected tenant shares the underlying hardware. What is this condition called?",
+            "options": [
+                "Noisy neighbor",
+                "Packet loss",
+                "Memory leak",
+                "Deadlock"
+            ],
+            "correct_index": 0,
+            "explanation": "The noisy neighbor effect occurs when one tenant's heavy use of shared resources degrades the performance that colocated tenants experience.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "cloud-090",
+            "domain": "Troubleshooting",
+            "stem": "A read replica returns stale data that lags further behind the primary as write volume increases, and monitoring shows a growing delay in applying changes. What is the cause?",
+            "options": [
+                "A load balancer health check failure",
+                "Replication lag",
+                "A cache miss",
+                "DNS round-robin balancing"
+            ],
+            "correct_index": 1,
+            "explanation": "Replication lag is the delay between a change on the primary and its appearance on a replica, often caused by write volume exceeding replication capacity.",
+            "reference": "CompTIA Cloud+ CV0-003 Exam Objectives - Troubleshooting"
+        }
+    ]
+}

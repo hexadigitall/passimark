@@ -1,0 +1,1277 @@
+{
+    "cert_key": "linux",
+    "title": "CompTIA Linux+ (XK0-005)",
+    "issuer": "CompTIA",
+    "outline_file": "outlines/linux.json",
+    "variant_label": "Linux+ Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CompTIA XK0-005 exam objectives (four domains and weights). Not a capture of past exam questions.",
+    "source_label": "CompTIA Linux+ practice bank",
+    "items": [
+        {
+            "id": "linux-001",
+            "domain": "System Management",
+            "stem": "A technician runs ls -l and sees a file with permissions -rw-r--r-- shown as 644. What access does the file owner have?",
+            "options": [
+                "Read and write",
+                "Read, write, and execute",
+                "Read only",
+                "Write only"
+            ],
+            "correct_index": 0,
+            "explanation": "In numeric notation the owner digit 6 is read (4) plus write (2), so the owner can read and write but not execute. Adding execute would make it 7, while 4 alone would be read only.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-002",
+            "domain": "System Management",
+            "stem": "A file currently has mode 664 and must become executable by its owner only, without altering the group or other permissions. Which command does this?",
+            "options": [
+                "chmod o+x file",
+                "chmod u+x file",
+                "chmod a+x file",
+                "chmod g+x file"
+            ],
+            "correct_index": 1,
+            "explanation": "The symbolic mode u+x adds execute for the user (owner) only and leaves the group and other bits unchanged. a+x would add execute for everyone, g+x targets the group, and o+x targets others.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-003",
+            "domain": "System Management",
+            "stem": "An executable must run with the privileges of the account that owns the file rather than the user who launched it. Which permission bit provides this?",
+            "options": [
+                "The sticky bit",
+                "The umask value",
+                "The set user ID bit",
+                "The set group ID bit"
+            ],
+            "correct_index": 2,
+            "explanation": "The set user ID (SUID) bit makes a program run with the file owner's effective user ID. The set group ID bit uses the file's group, the sticky bit restricts deletion in shared directories, and umask sets default creation permissions.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-004",
+            "domain": "System Management",
+            "stem": "A shared directory is world-writable and users must not be able to delete files that belong to other users. Which setting enforces this?",
+            "options": [
+                "The SUID bit on the directory",
+                "The SGID bit on the directory",
+                "The immutable attribute on the directory",
+                "The sticky bit on the directory"
+            ],
+            "correct_index": 3,
+            "explanation": "The sticky bit on a world-writable directory permits only the file owner, the directory owner, or root to delete or rename entries. SUID and SGID affect execution identity, and the immutable attribute prevents modification of a file rather than controlling deletion rights.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-005",
+            "domain": "System Management",
+            "stem": "A user account operates with a umask of 027. What permissions will a newly created regular file receive by default?",
+            "options": [
+                "640",
+                "650",
+                "750",
+                "027"
+            ],
+            "correct_index": 0,
+            "explanation": "A regular file starts from 666, and clearing the umask bits 027 yields 640. The value 750 would apply to a directory, and neither 650 nor the raw 027 is produced by this umask.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-006",
+            "domain": "System Management",
+            "stem": "A file owned by root must be reassigned to user deploy and group webteam in a single command. Which command accomplishes this?",
+            "options": [
+                "usermod deploy:webteam file",
+                "chown deploy:webteam file",
+                "chmod deploy:webteam file",
+                "chgrp deploy:webteam file"
+            ],
+            "correct_index": 1,
+            "explanation": "chown accepts owner:group and changes both ownership fields at once. chmod changes permission bits, chgrp changes only the group, and usermod modifies user account attributes.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-007",
+            "domain": "System Management",
+            "stem": "An administrator needs one logical filesystem to span several physical disks and later grow without downtime. Which storage layer provides this?",
+            "options": [
+                "A RAID 0 volume managed by the controller",
+                "A swap partition equal to installed memory",
+                "Logical Volume Manager",
+                "A single ext4 primary partition"
+            ],
+            "correct_index": 2,
+            "explanation": "LVM pools physical volumes into a volume group and carves logical volumes that can span disks and be extended online. A single partition cannot span disks, swapping is unrelated, and the correct LVM hierarchy is physical volume, volume group, then logical volume.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-008",
+            "domain": "System Management",
+            "stem": "A new disk must be divided into partitions before a filesystem is created. Which tool is designed to create and modify partition tables?",
+            "options": [
+                "mkfs",
+                "mount",
+                "fsck",
+                "fdisk"
+            ],
+            "correct_index": 3,
+            "explanation": "fdisk creates and edits MBR or GPT partition tables. mkfs creates a filesystem inside a partition, mount attaches a filesystem, and fsck checks filesystem consistency.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-009",
+            "domain": "System Management",
+            "stem": "A freshly partitioned disk still cannot store files because it has no filesystem. Which step prepares the partition to hold data?",
+            "options": [
+                "Create a filesystem on the partition with mkfs",
+                "Mount the partition read-only",
+                "Add an entry to /etc/fstab only",
+                "Run fsck against the raw partition"
+            ],
+            "correct_index": 0,
+            "explanation": "A raw partition needs a filesystem created with mkfs before any file can be written. Adding an fstab entry only persists a mount, mounting read-only still requires an existing filesystem, and fsck checks a filesystem rather than creating one.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-010",
+            "domain": "System Management",
+            "stem": "An administrator must ensure a data volume is mounted automatically every time the system boots. Which file records that persistent mount?",
+            "options": [
+                "/proc/mounts",
+                "/etc/fstab",
+                "/etc/mtab",
+                "/etc/mounts"
+            ],
+            "correct_index": 1,
+            "explanation": "/etc/fstab lists filesystems and their mount options used at boot. /etc/mtab and /proc/mounts report currently mounted filesystems, and /etc/mounts is not a standard file.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-011",
+            "domain": "System Management",
+            "stem": "A server reports that a volume is nearly full and the administrator needs the free and used space for each mounted filesystem. Which command shows this?",
+            "options": [
+                "lsblk",
+                "blkid",
+                "df -h",
+                "du -sh"
+            ],
+            "correct_index": 2,
+            "explanation": "df summarizes used and free space per mounted filesystem. du reports the space used by directories, lsblk lists block devices, and blkid prints device UUIDs and filesystem types.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-012",
+            "domain": "System Management",
+            "stem": "An administrator wants to find which subdirectory under /var is consuming the most disk space. Which command estimates directory usage?",
+            "options": [
+                "df",
+                "stat",
+                "free",
+                "du"
+            ],
+            "correct_index": 3,
+            "explanation": "du walks directory trees and reports the space consumed by each directory. df reports filesystem totals, stat describes a single file's metadata, and free reports memory usage.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-013",
+            "domain": "System Management",
+            "stem": "A new local account named alice must be created together with its home directory. Which command performs this?",
+            "options": [
+                "useradd -m alice",
+                "passwd alice",
+                "groupadd alice",
+                "usermod alice"
+            ],
+            "correct_index": 0,
+            "explanation": "useradd -m creates the account and its home directory. passwd only sets a password, groupadd creates a group, and usermod edits an existing account rather than creating one.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-014",
+            "domain": "System Management",
+            "stem": "A user must set the initial password for a newly created account. Which command is used?",
+            "options": [
+                "useradd",
+                "passwd",
+                "chage",
+                "pwconv"
+            ],
+            "correct_index": 1,
+            "explanation": "passwd sets and changes passwords for the invoking user or, for root, for any account. chage manages password aging, pwconv synchronizes password files, and useradd creates accounts.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-015",
+            "domain": "System Management",
+            "stem": "An existing user must join a supplementary group without losing the groups the account already belongs to. Which command is correct?",
+            "options": [
+                "groupmod -a group user",
+                "gpasswd -d user group",
+                "usermod -aG group user",
+                "usermod -G group user"
+            ],
+            "correct_index": 2,
+            "explanation": "usermod -aG appends the group while preserving existing supplementary memberships. usermod -G without -a replaces all supplementary groups, groupmod changes group attributes, and gpasswd -d removes a user from a group.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-016",
+            "domain": "System Management",
+            "stem": "An administrator must start the sshd service now and also ensure it starts automatically on future boots. Which command does both?",
+            "options": [
+                "systemctl start sshd",
+                "systemctl mask sshd",
+                "systemctl status sshd",
+                "systemctl enable --now sshd"
+            ],
+            "correct_index": 3,
+            "explanation": "systemctl enable --now enables the unit for boot and starts it immediately. systemctl start runs it without enabling boot activation, mask prevents it from starting, and status only reports state.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-017",
+            "domain": "System Management",
+            "stem": "A background daemon such as a web server must be described and controlled by systemd. Which unit type is used for a service?",
+            "options": [
+                ".service",
+                ".target",
+                ".socket",
+                ".timer"
+            ],
+            "correct_index": 0,
+            "explanation": "A .service unit describes and controls a daemon. .target groups units, .socket activates a service on demand, and .timer schedules time-based activation.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-018",
+            "domain": "System Management",
+            "stem": "An administrator needs only the log messages produced during the current boot from the systemd journal. Which command shows them?",
+            "options": [
+                "journalctl -p err",
+                "journalctl -b",
+                "journalctl -f",
+                "journalctl --vacuum-time=1d"
+            ],
+            "correct_index": 1,
+            "explanation": "journalctl -b shows entries from the current boot. -f follows new messages, --vacuum-time prunes old entries, and -p err filters by priority rather than boot.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-019",
+            "domain": "System Management",
+            "stem": "A specific service fails to start and the administrator wants only that unit's recent journal messages. Which command filters the journal to one unit?",
+            "options": [
+                "systemctl disable servicename",
+                "dmesg | tail",
+                "journalctl -u servicename",
+                "systemctl restart servicename"
+            ],
+            "correct_index": 2,
+            "explanation": "journalctl -u restricts output to the named unit's messages. restart attempts to run it again, disable prevents boot activation, and dmesg shows kernel ring-buffer messages rather than the unit journal.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-020",
+            "domain": "System Management",
+            "stem": "An administrator needs the IPv4 and IPv6 addresses assigned to each network interface on a modern Linux host. Which command displays them?",
+            "options": [
+                "ifconfig -a",
+                "netstat -rn",
+                "route -n",
+                "ip addr show"
+            ],
+            "correct_index": 3,
+            "explanation": "ip addr show displays addresses and interface state. ifconfig is the legacy tool, netstat -rn shows the routing table, and route -n also lists routes rather than interface addresses.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-021",
+            "domain": "System Management",
+            "stem": "An administrator must inspect the kernel routing table on a host. Which command displays the routes?",
+            "options": [
+                "ip route show",
+                "ip link show",
+                "ip neigh show",
+                "ip addr show"
+            ],
+            "correct_index": 0,
+            "explanation": "ip route show lists routing entries. ip link manages interface state, ip neigh shows the ARP and neighbor cache, and ip addr shows interface addresses.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-022",
+            "domain": "System Management",
+            "stem": "Before DNS is queried, a resolver uses static name-to-address mappings stored in a local file. Which file holds those mappings?",
+            "options": [
+                "/etc/services",
+                "/etc/hosts",
+                "/etc/resolv.conf",
+                "/etc/nsswitch.conf"
+            ],
+            "correct_index": 1,
+            "explanation": "/etc/hosts contains static hostname-to-address mappings consulted by the resolver. /etc/resolv.conf lists DNS servers, /etc/nsswitch.conf sets lookup order, and /etc/services maps port names.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-023",
+            "domain": "System Management",
+            "stem": "A host has lost name resolution for external sites and the administrator needs to verify which DNS servers are configured. Which file lists them?",
+            "options": [
+                "/etc/dhcp/dhclient.conf",
+                "/etc/netplan/50-cloud-init.yaml",
+                "/etc/resolv.conf",
+                "/etc/hosts"
+            ],
+            "correct_index": 2,
+            "explanation": "/etc/resolv.conf lists the nameservers and search domains used by the resolver. /etc/hosts provides static mappings, dhclient.conf configures the DHCP client, and netplan files define network configuration.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-024",
+            "domain": "System Management",
+            "stem": "A workstation uses NetworkManager and the administrator wants to configure a connection from the command line. Which tool is provided for this?",
+            "options": [
+                "netplan",
+                "ifup",
+                "ip addr",
+                "nmcli"
+            ],
+            "correct_index": 3,
+            "explanation": "nmcli is the NetworkManager command-line client for creating and modifying connections. netplan is Ubuntu's YAML configurator, ifup is part of the older ifupdown package, and ip addr only manages addresses.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-025",
+            "domain": "System Management",
+            "stem": "On a Debian-based server an administrator must install a package from the repository and let the tool resolve dependencies. Which command is used?",
+            "options": [
+                "apt install package",
+                "rpm -i package",
+                "yum install package",
+                "pacman -S package"
+            ],
+            "correct_index": 0,
+            "explanation": "apt manages Debian-family packages and resolves dependencies from configured repositories. rpm handles individual Red Hat packages, yum targets Red Hat-family systems, and pacman is used on Arch.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-026",
+            "domain": "System Management",
+            "stem": "On a Red Hat Enterprise Linux server an administrator must install a package with dependency resolution. Which command is used?",
+            "options": [
+                "zypper install package",
+                "dnf install package",
+                "apt install package",
+                "dpkg -i package"
+            ],
+            "correct_index": 1,
+            "explanation": "dnf is the package manager for modern Red Hat-family distributions and resolves dependencies. apt and dpkg are Debian tools, and zypper is used on SUSE systems.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-027",
+            "domain": "System Management",
+            "stem": "An administrator has a locally downloaded Debian package file and must install it without contacting any repository. Which command installs the file?",
+            "options": [
+                "rpm -i package.deb",
+                "tar xf package.deb",
+                "dpkg -i package.deb",
+                "apt install package.deb"
+            ],
+            "correct_index": 2,
+            "explanation": "dpkg -i installs a local Debian package without fetching dependencies. apt installs from repositories, rpm is for Red Hat packages, and tar does not understand the Debian package format.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-028",
+            "domain": "System Management",
+            "stem": "An administrator must decide between a hard link and a symbolic link to a data file. Which statement correctly describes a hard link?",
+            "options": [
+                "It stores the target path and breaks if the target moves",
+                "It can span two different filesystems",
+                "It cannot coexist with the original directory entry",
+                "It points directly to the same inode as the original file"
+            ],
+            "correct_index": 3,
+            "explanation": "A hard link is an additional directory entry for the same inode. A symbolic link stores the target path and breaks when it moves, hard links cannot cross filesystems, and they do coexist as extra entries.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-029",
+            "domain": "System Management",
+            "stem": "An administrator must create a gzip-compressed archive of the /data directory in a single command. Which command does this?",
+            "options": [
+                "tar czf backup.tar.gz /data",
+                "tar xzf backup.tar.gz",
+                "gzip backup.tar.gz",
+                "zip -r backup.tar.gz /data"
+            ],
+            "correct_index": 0,
+            "explanation": "tar czf creates a new archive (c), compresses it with gzip (z), and writes the named file (f). xzf extracts instead, gzip compresses an existing file, and zip produces the non-tar zip format.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - System Management"
+        },
+        {
+            "id": "linux-030",
+            "domain": "Security",
+            "stem": "A developer needs occasional elevated privileges for one specific command without receiving a root shell. Which mechanism grants per-command elevation under a policy?",
+            "options": [
+                "setfacl",
+                "sudo",
+                "su",
+                "chroot"
+            ],
+            "correct_index": 1,
+            "explanation": "sudo grants elevated execution for specific commands according to the /etc/sudoers policy. su switches to another user with a password, chroot changes the apparent root directory, and setfacl manages file ACLs.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-031",
+            "domain": "Security",
+            "stem": "An administrator must edit the sudo policy and wants the editor to validate the file's syntax before saving. Which command should be used?",
+            "options": [
+                "chmod 777 /etc/sudoers",
+                "groupadd sudoers",
+                "visudo",
+                "nano /etc/sudoers"
+            ],
+            "correct_index": 2,
+            "explanation": "visudo locks the file and checks syntax before saving. Editing directly risks a corrupt policy that blocks sudo, loosening permissions weakens security, and groupadd is unrelated to editing the policy.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-032",
+            "domain": "Security",
+            "stem": "A team wants to test an SELinux policy change and record every denial without actually blocking anything. Which SELinux mode is used?",
+            "options": [
+                "Enforcing",
+                "Disabled",
+                "Audit",
+                "Permissive"
+            ],
+            "correct_index": 3,
+            "explanation": "Permissive mode logs policy violations without enforcing them. Enforcing blocks violations, Disabled turns SELinux off entirely, and Audit is not an SELinux mode name.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-033",
+            "domain": "Security",
+            "stem": "A file created in a home directory must receive the correct SELinux label for the web server to serve it. Which command changes the file's SELinux context?",
+            "options": [
+                "chcon",
+                "chmod",
+                "chown",
+                "setenforce"
+            ],
+            "correct_index": 0,
+            "explanation": "chcon changes the SELinux security context of a file. chmod changes permission bits, chown changes ownership, and setenforce toggles the SELinux enforcing mode.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-034",
+            "domain": "Security",
+            "stem": "An administrator must report the current SELinux mode together with the name of the loaded policy. Which command shows both?",
+            "options": [
+                "semanage",
+                "sestatus",
+                "setenforce",
+                "getenforce"
+            ],
+            "correct_index": 1,
+            "explanation": "sestatus prints the mode and the loaded policy name. setenforce changes the mode, getenforce shows only the mode, and semanage manages policy configuration without reporting the summary.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-035",
+            "domain": "Security",
+            "stem": "On an Ubuntu server an administrator must confine a service using per-program profiles rather than label-based policy. Which framework is used?",
+            "options": [
+                "Firejail",
+                "seccomp",
+                "AppArmor",
+                "SELinux"
+            ],
+            "correct_index": 2,
+            "explanation": "AppArmor applies path-based per-program profiles to confine services. SELinux uses labels, Firejail is a sandbox wrapper, and seccomp filters system calls rather than using named profiles.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-036",
+            "domain": "Security",
+            "stem": "A host uses firewalld and must permanently allow inbound HTTPS in the public zone. Which command accomplishes this?",
+            "options": [
+                "iptables -A INPUT -p tcp --dport 443 -j ACCEPT",
+                "ufw allow 443/tcp",
+                "firewall-cmd --list-all",
+                "firewall-cmd --permanent --add-service=https"
+            ],
+            "correct_index": 3,
+            "explanation": "firewall-cmd with --permanent --add-service=https writes a persistent rule for the https service (port 443) in the public zone. iptables and ufw are different firewall front ends, and --list-all only displays configuration.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-037",
+            "domain": "Security",
+            "stem": "A server uses Uncomplicated Firewall and the administrator must turn the firewall on so it also enables at boot. Which command does this?",
+            "options": [
+                "ufw enable",
+                "ufw allow",
+                "systemctl stop ufw",
+                "iptables -F"
+            ],
+            "correct_index": 0,
+            "explanation": "ufw enable activates the firewall and configures it to start at boot. ufw allow adds an allow rule, stopping the service disables it, and iptables -F flushes rules.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-038",
+            "domain": "Security",
+            "stem": "Key-based SSH logins must be enabled for a specific user, and the administrator needs to place the permitted public key. Which file receives it?",
+            "options": [
+                "/etc/ssh/ssh_host_rsa_key",
+                "~/.ssh/authorized_keys",
+                "~/.ssh/id_rsa",
+                "~/.ssh/known_hosts"
+            ],
+            "correct_index": 1,
+            "explanation": "authorized_keys holds the public keys permitted to authenticate as the account. id_rsa is a client private key, known_hosts stores server host keys, and ssh_host_rsa_key is the server's own host private key.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-039",
+            "domain": "Security",
+            "stem": "An administrator must create a new SSH public and private key pair on a workstation. Which command generates the pair?",
+            "options": [
+                "ssh-agent",
+                "ssh-add",
+                "ssh-keygen",
+                "ssh-copy-id"
+            ],
+            "correct_index": 2,
+            "explanation": "ssh-keygen generates a public and private key pair. ssh-copy-id installs an existing public key on a server, while ssh-agent and ssh-add manage an agent for keys that already exist.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-040",
+            "domain": "Security",
+            "stem": "A server running OpenSSH must reject password authentication so that only key-based logins are accepted. Which sshd_config directive is used?",
+            "options": [
+                "PermitRootLogin no",
+                "PubkeyAuthentication no",
+                "AllowUsers nobody",
+                "PasswordAuthentication no"
+            ],
+            "correct_index": 3,
+            "explanation": "PasswordAuthentication no disables password logins and leaves key authentication available. PermitRootLogin no only restricts root, PubkeyAuthentication no would disable keys, and AllowUsers limits which accounts may connect.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-041",
+            "domain": "Security",
+            "stem": "A test web service needs a self-signed X.509 certificate and its matching private key. Which command creates both?",
+            "options": [
+                "openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem",
+                "openssl x509 -in cert.pem -text",
+                "openssl genrsa -out key.pem 2048",
+                "openssl verify cert.pem"
+            ],
+            "correct_index": 0,
+            "explanation": "openssl req with -x509 creates a self-signed certificate and its key. The x509 subcommand only reads a certificate, genrsa creates only a key, and verify checks a certificate chain.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-042",
+            "domain": "Security",
+            "stem": "An administrator must inspect the subject, issuer, and validity dates of a PEM certificate file. Which command displays those fields?",
+            "options": [
+                "openssl rand -base64 32",
+                "openssl x509 -in cert.pem -noout -text",
+                "openssl req -new -key key.pem -out csr.pem",
+                "openssl rsa -in key.pem"
+            ],
+            "correct_index": 1,
+            "explanation": "openssl x509 -text prints the certificate's fields, including subject, issuer, and validity. req creates a signing request, rsa manipulates a key, and rand generates random data.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-043",
+            "domain": "Security",
+            "stem": "During a hardening review an administrator must find world-writable files under /etc. Which command finds files with the other-write bit set?",
+            "options": [
+                "chmod -R 777 /etc",
+                "ls -l /etc",
+                "find /etc -type f -perm -0002",
+                "find /etc -type f -name '*.conf'"
+            ],
+            "correct_index": 2,
+            "explanation": "find with -perm -0002 matches files that have the other-write bit set. Name matching is unrelated, chmod 777 would worsen security rather than report it, and ls -l lists entries without filtering.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-044",
+            "domain": "Security",
+            "stem": "A policy requires every user password to be changed at least every 90 days. Which command sets that maximum age?",
+            "options": [
+                "passwd -l user",
+                "usermod -L user",
+                "chage -d 90 user",
+                "chage -M 90 user"
+            ],
+            "correct_index": 3,
+            "explanation": "chage -M 90 sets the maximum number of days a password may be used. passwd -l and usermod -L lock the account, and chage -d sets the date of the last password change.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-045",
+            "domain": "Security",
+            "stem": "An administrator must prevent an account from using a password to log in while keeping its files and settings intact. Which command achieves this?",
+            "options": [
+                "passwd -l user",
+                "passwd -d user",
+                "userdel user",
+                "chage -E 0 user"
+            ],
+            "correct_index": 0,
+            "explanation": "passwd -l locks the password field so password logins fail while the account and its data remain. passwd -d deletes the password, userdel removes the account, and chage -E 0 expires the whole account.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-046",
+            "domain": "Security",
+            "stem": "A single user named jane must be granted read access to a file without changing the file's owner or mode bits. Which command is used?",
+            "options": [
+                "getfacl file",
+                "setfacl -m u:jane:r file",
+                "chmod o+r file",
+                "chown jane file"
+            ],
+            "correct_index": 1,
+            "explanation": "setfacl -m u:jane:r adds an access control list entry granting jane read. chmod alters mode bits for a broader class, chown changes ownership, and getfacl only reads existing ACLs.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-047",
+            "domain": "Security",
+            "stem": "A compliance requirement demands that security-relevant events such as file access and command execution be recorded. Which service provides this?",
+            "options": [
+                "systemd-journald",
+                "cron",
+                "auditd",
+                "rsyslog"
+            ],
+            "correct_index": 2,
+            "explanation": "auditd records audit rules and security events such as file access. rsyslog and systemd-journald collect general logs, and cron schedules recurring jobs.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-048",
+            "domain": "Security",
+            "stem": "An administrator must run an untrusted program in an isolated directory tree so it cannot reach the rest of the filesystem. Which command is used?",
+            "options": [
+                "chmod 700 /jail",
+                "mount --bind / /jail",
+                "setfacl -R /jail",
+                "chroot /jail /bin/bash"
+            ],
+            "correct_index": 3,
+            "explanation": "chroot changes the apparent root directory for the program to /jail. chmod only alters permissions, mount --bind would expose the host filesystem, and setfacl manages ACLs without isolating the tree.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Security"
+        },
+        {
+            "id": "linux-049",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A new shell script must execute with the bash interpreter when it is run directly. Which first line accomplishes this?",
+            "options": [
+                "#!/bin/bash",
+                "#/bin/bash",
+                "!/bin/bash",
+                "interpreter /bin/bash"
+            ],
+            "correct_index": 0,
+            "explanation": "The shebang #!/bin/bash tells the kernel to run the script with bash. The other forms lack the leading hash and exclamation mark that mark an interpreter directive.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-050",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A bash script must capture the output of the ls command into a variable named FILES. Which syntax is correct?",
+            "options": [
+                "set FILES ls",
+                "FILES=$(ls)",
+                "FILES=$ls",
+                "FILES=ls()"
+            ],
+            "correct_index": 1,
+            "explanation": "Command substitution with $(...) captures command output into the variable. FILES=$ls would expand a variable named ls, FILES=ls() is invalid syntax, and set FILES ls does not assign command output.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-051",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A bash script must branch only when the file /etc/passwd actually exists. Which test construct does this?",
+            "options": [
+                "if ( -e /etc/passwd )",
+                "if test /etc/passwd -e",
+                "if [ -e /etc/passwd ]; then",
+                "if [ /etc/passwd ]; then"
+            ],
+            "correct_index": 2,
+            "explanation": "The -e operator inside [ ] tests for file existence. A bare path is treated as a non-empty string, parentheses are not test syntax, and -e must precede the operand it tests.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-052",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A bash script must loop over its positional arguments while keeping arguments that contain spaces intact. Which loop header is correct?",
+            "options": [
+                "for arg in $*; do",
+                "for arg in $@ unquoted; do",
+                "for arg in ${ARGS}; do",
+                "for arg in \"$@\"; do"
+            ],
+            "correct_index": 3,
+            "explanation": "The quoted \"$@\" expands each positional parameter as a separate word and preserves embedded spaces. Unquoted $* is subject to word splitting, and the other forms do not reference the positional parameters safely.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-053",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A bash script must check whether the previous command succeeded. Which special variable holds the exit status of the last command?",
+            "options": [
+                "$?",
+                "$#",
+                "$0",
+                "$$"
+            ],
+            "correct_index": 0,
+            "explanation": "$? holds the exit status of the most recently executed command. $# counts positional parameters, $0 is the script name, and $$ is the current process ID.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-054",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A script must run a second command only when the first command exits successfully. Which operator provides this behavior?",
+            "options": [
+                "|",
+                "&&",
+                "||",
+                ";"
+            ],
+            "correct_index": 1,
+            "explanation": "&& runs the right-hand command only if the left command succeeds. || runs it only on failure, ; runs it regardless of the result, and | pipes the first command's output into the second.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-055",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A Python script opens a file as f and must read all of its lines into a list. Which expression produces the list?",
+            "options": [
+                "lines = f.readline()",
+                "lines = list(f.name)",
+                "lines = f.readlines()",
+                "lines = f.read()"
+            ],
+            "correct_index": 2,
+            "explanation": "readlines() returns a list containing every line. read() returns the whole file as one string, readline() returns only the next line, and f.name is just the filename string.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-056",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A Python automation script must define a function named deploy that accepts one argument called host. Which statement is correct?",
+            "options": [
+                "function deploy(host):",
+                "def deploy[host]:",
+                "deploy(host) =",
+                "def deploy(host):"
+            ],
+            "correct_index": 3,
+            "explanation": "Python functions are defined with the def keyword and arguments in parentheses. function is used by other languages, square brackets are not argument syntax, and the last form is not a valid definition.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-057",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A container must be started from the nginx image in the background with host port 80 forwarded to port 80. Which command does this?",
+            "options": [
+                "docker run -d -p 80:80 nginx",
+                "docker exec -d nginx",
+                "docker build -t nginx .",
+                "docker ps -a"
+            ],
+            "correct_index": 0,
+            "explanation": "docker run -d starts a detached container and -p publishes the port mapping. exec runs a command in a running container, build creates an image, and ps lists containers.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-058",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A Dockerfile must specify the base image that later build steps will extend. Which instruction is used?",
+            "options": [
+                "CMD",
+                "FROM",
+                "RUN",
+                "COPY"
+            ],
+            "correct_index": 1,
+            "explanation": "FROM selects the base image for the build. RUN executes build-time commands, COPY adds files into the image, and CMD sets the default command run at container start.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-059",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "Database files written by a container must remain on the host after the container is removed. Which mechanism provides this?",
+            "options": [
+                "docker commit",
+                "An image layer",
+                "A volume mounted with -v",
+                "The container writable layer"
+            ],
+            "correct_index": 2,
+            "explanation": "A bind mount or named volume provided with -v stores data on the host outside the container lifecycle. The writable layer is removed with the container, image layers are read-only, and docker commit creates an image rather than host storage.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-060",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "An administrator is choosing between Podman and Docker. Which statement correctly describes Podman?",
+            "options": [
+                "Podman requires the Docker daemon to run containers",
+                "Podman cannot build container images",
+                "Podman runs only Windows containers",
+                "Podman can run containers rootless and does not require a long-running daemon"
+            ],
+            "correct_index": 3,
+            "explanation": "Podman is daemonless and supports rootless operation, which improves isolation. Docker relies on a long-running daemon, Podman can build images, and it runs Linux containers.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-061",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "An automation engineer must define which hosts receive a set of tasks in Ansible. Which YAML artifact holds plays and tasks?",
+            "options": [
+                "A playbook",
+                "An inventory file",
+                "ansible.cfg",
+                "A handler"
+            ],
+            "correct_index": 0,
+            "explanation": "A playbook is the YAML file that maps hosts to ordered tasks. The inventory lists managed hosts, ansible.cfg holds configuration, and a handler is a task triggered by a notification.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-062",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "An Ansible task must ensure a package is present on target hosts in a way that works across distributions. Which module is best suited?",
+            "options": [
+                "command",
+                "package",
+                "service",
+                "copy"
+            ],
+            "correct_index": 1,
+            "explanation": "The package module installs packages generically across distributions. service manages services, copy transfers files, and command runs raw commands without package handling.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-063",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "An administrator must quickly check connectivity to every host in the Ansible inventory using the ping module. Which command is used?",
+            "options": [
+                "ansible-inventory --list",
+                "ansible-galaxy install ping",
+                "ansible all -m ping",
+                "ansible-playbook ping.yml"
+            ],
+            "correct_index": 2,
+            "explanation": "ansible with -m ping runs the module ad hoc against the all group. ansible-playbook runs a playbook, ansible-inventory lists inventory data, and ansible-galaxy manages roles and collections.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-064",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A cron job must run at a specific minute each day and the administrator is writing a standard five-field entry. What is the correct field order?",
+            "options": [
+                "hour minute day-of-week month day-of-month",
+                "second minute hour day month",
+                "day month year hour minute",
+                "minute hour day-of-month month day-of-week"
+            ],
+            "correct_index": 3,
+            "explanation": "The five cron fields are minute, hour, day of month, month, and day of week. The other orders do not match the crontab format and would schedule the job incorrectly.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-065",
+            "domain": "Scripting, Containers, and Automation",
+            "stem": "A user must add a recurring job to their own personal cron schedule. Which command opens that user's crontab for editing?",
+            "options": [
+                "crontab -e",
+                "crontab -l",
+                "crontab -r",
+                "cat /etc/crontab"
+            ],
+            "correct_index": 0,
+            "explanation": "crontab -e opens the current user's crontab for editing. -l lists it, -r removes it, and /etc/crontab is the system file that includes an extra user field.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Scripting, Containers, and Automation"
+        },
+        {
+            "id": "linux-066",
+            "domain": "Troubleshooting",
+            "stem": "A server fails to boot and stops at a GRUB rescue prompt because the bootloader cannot load its configuration. Which action best restores booting?",
+            "options": [
+                "Edit /etc/fstab to add another disk",
+                "Reinstall or reconfigure GRUB from a rescue environment",
+                "Run fsck on the root filesystem immediately",
+                "Replace the kernel modules directory"
+            ],
+            "correct_index": 1,
+            "explanation": "A GRUB rescue prompt means the bootloader cannot read its configuration, so reinstalling or reconfiguring GRUB from a live environment restores it. fsck checks a filesystem, and the other actions address unrelated failures.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-067",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must verify which kernel and initramfs images are available for boot. Which directory holds these files?",
+            "options": [
+                "/var",
+                "/root",
+                "/boot",
+                "/etc"
+            ],
+            "correct_index": 2,
+            "explanation": "/boot contains the kernel, initramfs, and bootloader files. /etc holds system configuration, /var holds variable data such as logs, and /root is the root user's home directory.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-068",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must set a system to start in the traditional non-graphical multi-user mode. Which systemd target is used for this?",
+            "options": [
+                "graphical.target",
+                "rescue.target",
+                "emergency.target",
+                "multi-user.target"
+            ],
+            "correct_index": 3,
+            "explanation": "multi-user.target is the non-graphical, multi-user mode. graphical.target adds a display manager, and rescue and emergency targets are minimal single-user recovery modes.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-069",
+            "domain": "Troubleshooting",
+            "stem": "A filesystem has become inconsistent after a power loss and must be checked and repaired. Which command is used?",
+            "options": [
+                "fsck /dev/sdb1",
+                "mount /dev/sdb1",
+                "mkfs /dev/sdb1",
+                "df -h /dev/sdb1"
+            ],
+            "correct_index": 0,
+            "explanation": "fsck checks and repairs filesystem consistency. mount attaches a filesystem, mkfs creates a new filesystem and destroys existing data, and df reports space usage.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-070",
+            "domain": "Troubleshooting",
+            "stem": "df reports a filesystem at 100 percent full although du shows little data, and a process still holds a deleted file open. What frees the space without a reboot?",
+            "options": [
+                "Remount the filesystem read-only",
+                "Restart the process holding the deleted file",
+                "Run fsck on the filesystem",
+                "Increase the inode count on the volume"
+            ],
+            "correct_index": 1,
+            "explanation": "A deleted file continues to consume space while a process keeps its descriptor open, so restarting that process releases the space. fsck, inode changes, and a read-only remount do not recover the held space.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-071",
+            "domain": "Troubleshooting",
+            "stem": "Writes fail with a no-space-left-on-device error although df reports free blocks. Which condition best explains this?",
+            "options": [
+                "The file permissions are incorrect",
+                "The swap partition is full",
+                "The filesystem has exhausted its inodes",
+                "The disk is physically failing"
+            ],
+            "correct_index": 2,
+            "explanation": "Running out of inodes prevents creating new files even when block space remains, which df -i confirms. Disk failure, permission problems, and swap exhaustion produce different symptoms.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-072",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must confirm that a remote host is reachable at the network layer before investigating a service. Which command sends ICMP echo requests?",
+            "options": [
+                "netstat",
+                "ss",
+                "traceroute",
+                "ping"
+            ],
+            "correct_index": 3,
+            "explanation": "ping sends ICMP echo requests to test basic reachability. netstat and ss describe local sockets, and traceroute maps the path taken to a host rather than simply testing reachability.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-073",
+            "domain": "Troubleshooting",
+            "stem": "A hostname fails to resolve and the administrator wants to query a specific DNS server for its A record. Which command does this?",
+            "options": [
+                "dig @8.8.8.8 example.com A",
+                "ping example.com",
+                "ip addr show",
+                "arp -a"
+            ],
+            "correct_index": 0,
+            "explanation": "dig with @server and a record type queries a specific DNS server directly. ping tests reachability, ip addr shows local addresses, and arp lists the neighbor cache.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-074",
+            "domain": "Troubleshooting",
+            "stem": "A service is unreachable and the administrator must confirm which TCP ports are listening and which processes own them. Which command shows this?",
+            "options": [
+                "free -m",
+                "ss -tlnp",
+                "ip link show",
+                "df -h"
+            ],
+            "correct_index": 1,
+            "explanation": "ss -tlnp lists TCP listeners with the owning process. ip link shows interface state, df shows disk usage, and free shows memory usage.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-075",
+            "domain": "Troubleshooting",
+            "stem": "A server feels sluggish and the administrator wants load average plus an interactive view of CPU and memory use. Which command provides this?",
+            "options": [
+                "ip addr",
+                "mount",
+                "top",
+                "df -h"
+            ],
+            "correct_index": 2,
+            "explanation": "top displays load average, CPU, and memory usage in an interactive view. df reports disk space, ip addr shows addresses, and mount lists mounted filesystems.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-076",
+            "domain": "Troubleshooting",
+            "stem": "An administrator suspects memory pressure and must see total, used, and available RAM. Which command reports this?",
+            "options": [
+                "df -h",
+                "du -sh",
+                "lsblk",
+                "free -h"
+            ],
+            "correct_index": 3,
+            "explanation": "free -h summarizes total, used, and available memory. df reports filesystems, du reports directory sizes, and lsblk lists block devices.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-077",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must sample CPU, memory, and I/O counters repeatedly to watch for a bottleneck. Which command takes an interval argument?",
+            "options": [
+                "vmstat 1",
+                "cat /etc/os-release",
+                "hostname",
+                "id"
+            ],
+            "correct_index": 0,
+            "explanation": "vmstat with an interval samples CPU, memory, and I/O counters continuously. The other commands print static system or identity information.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-078",
+            "domain": "Troubleshooting",
+            "stem": "A new network card is not working and the administrator needs hardware and driver messages from the kernel. Which command shows them?",
+            "options": [
+                "who",
+                "dmesg",
+                "journalctl -u sshd",
+                "last"
+            ],
+            "correct_index": 1,
+            "explanation": "dmesg prints the kernel ring buffer, which holds hardware and driver messages. journalctl -u filters a single unit, last shows login history, and who shows current sessions.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-079",
+            "domain": "Troubleshooting",
+            "stem": "An administrator must watch a log file live and also see the last 50 lines that were already written. Which command does this?",
+            "options": [
+                "cat /var/log/syslog",
+                "wc -l /var/log/syslog",
+                "tail -n 50 -f /var/log/syslog",
+                "head -n 50 /var/log/syslog"
+            ],
+            "correct_index": 2,
+            "explanation": "tail -n 50 -f prints the last 50 lines and then follows new entries. head shows the first lines, cat prints the entire file once, and wc counts lines.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-080",
+            "domain": "Troubleshooting",
+            "stem": "On a Debian-based server an administrator must review authentication successes and failures. Which log file normally holds these events?",
+            "options": [
+                "/var/log/kern.log",
+                "/var/log/dpkg.log",
+                "/var/log/boot.log",
+                "/var/log/auth.log"
+            ],
+            "correct_index": 3,
+            "explanation": "auth.log records authentication events on Debian-family systems. kern.log holds kernel messages, dpkg.log records package operations, and boot.log records boot-time messages.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-081",
+            "domain": "Troubleshooting",
+            "stem": "An application is denied by SELinux and must be permitted without weakening the system's security posture. Which approach is appropriate?",
+            "options": [
+                "Inspect the AVC denials and add or adjust a targeted policy rule",
+                "Run setenforce 0 to stop enforcement",
+                "Set SELinux to disabled in /etc/selinux/config",
+                "Delete the file's SELinux context"
+            ],
+            "correct_index": 0,
+            "explanation": "Reading the AVC denials with ausearch and applying a targeted policy or boolean fixes the cause. setenforce 0 and disabling SELinux reduce protection, and removing a context bypasses labeling.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-082",
+            "domain": "Troubleshooting",
+            "stem": "An SELinux boolean change must survive a reboot. Which command makes the change persistent?",
+            "options": [
+                "chcon -t httpd_sys_content_t file",
+                "setsebool -P httpd_can_network_connect on",
+                "setsebool httpd_can_network_connect on",
+                "setenforce 1"
+            ],
+            "correct_index": 1,
+            "explanation": "setsebool -P writes the boolean into persistent policy so it survives a reboot. Without -P the change is lost, setenforce toggles modes, and chcon changes a file label.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-083",
+            "domain": "Troubleshooting",
+            "stem": "A system boots but stops in emergency mode because /etc/fstab references a disk that is no longer present. Which action resolves the immediate failure?",
+            "options": [
+                "Increase the kernel log level",
+                "Recreate the initramfs",
+                "Correct or comment out the faulty fstab entry",
+                "Reinstall the bootloader"
+            ],
+            "correct_index": 2,
+            "explanation": "A missing or invalid fstab entry makes its mount fail and drops the system to emergency mode, so correcting or removing the entry fixes it. Bootloader, logging, and initramfs changes do not address the failed mount.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-084",
+            "domain": "Troubleshooting",
+            "stem": "An administrator cannot unmount /mnt/data because the target is busy and needs to identify the processes using it. Which command is appropriate?",
+            "options": [
+                "df -h /mnt/data",
+                "ls -l /mnt/data",
+                "fsck /mnt/data",
+                "lsof +D /mnt/data"
+            ],
+            "correct_index": 3,
+            "explanation": "lsof +D recursively lists open files under a directory, revealing the processes holding the mount busy. df reports space, ls lists entries, and fsck checks a filesystem.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-085",
+            "domain": "Troubleshooting",
+            "stem": "A host reaches local subnet addresses but cannot reach the internet, and the administrator suspects a missing gateway. Which command verifies the default route?",
+            "options": [
+                "ip route show",
+                "ip addr show",
+                "hostname -I",
+                "ss -tuln"
+            ],
+            "correct_index": 0,
+            "explanation": "ip route show lists routing entries including the default gateway used for off-subnet traffic. ip addr and hostname -I show addresses, and ss lists listening sockets.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-086",
+            "domain": "Troubleshooting",
+            "stem": "An administrator confirms that interface eth0 is administratively down and must bring it back up. Which command does this?",
+            "options": [
+                "ip neigh flush dev eth0",
+                "ip link set eth0 up",
+                "ip addr add 10.0.0.5/24 dev eth0",
+                "ip route add default via 10.0.0.1"
+            ],
+            "correct_index": 1,
+            "explanation": "ip link set eth0 up changes the interface administrative state to up. The other commands assign an address, add a route, or clear the neighbor cache and do not change interface state.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-087",
+            "domain": "Troubleshooting",
+            "stem": "A server is slow and iostat shows a high await value on a data disk. What does a high await indicate?",
+            "options": [
+                "The network interface is saturated",
+                "The filesystem has run out of inodes",
+                "Requests are waiting a long time for the disk to service them",
+                "The CPU is overheating"
+            ],
+            "correct_index": 2,
+            "explanation": "await is the average time I/O requests spend waiting to be serviced, so a high value points to a slow disk. CPU, network, and inode problems surface in different metrics.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-088",
+            "domain": "Troubleshooting",
+            "stem": "An administrator wants to ask process ID 4242 to terminate gracefully by sending it SIGTERM. Which command does this?",
+            "options": [
+                "kill -9 4242",
+                "pkill 4242",
+                "killall 4242",
+                "kill 4242"
+            ],
+            "correct_index": 3,
+            "explanation": "kill with no signal sends SIGTERM (15), a graceful termination request. kill -9 sends SIGKILL, pkill matches processes by name pattern, and killall matches by process name.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-089",
+            "domain": "Troubleshooting",
+            "stem": "The kernel log reports an out-of-memory event in which a process was killed. What does this indicate?",
+            "options": [
+                "The kernel OOM killer terminated a process because memory was exhausted",
+                "The disk is full and processes cannot write",
+                "An SELinux denial blocked the process",
+                "An administrator manually sent SIGTERM"
+            ],
+            "correct_index": 0,
+            "explanation": "When memory is exhausted the kernel OOM killer selects and kills a process to keep the system running. Disk exhaustion, SELinux denials, and manual signals produce different messages.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        },
+        {
+            "id": "linux-090",
+            "domain": "Troubleshooting",
+            "stem": "After a storage change a system can no longer find its root filesystem at boot. Which boot component most likely needs regenerating?",
+            "options": [
+                "The systemd journal",
+                "The initramfs",
+                "The GRUB background theme",
+                "The /etc/motd file"
+            ],
+            "correct_index": 1,
+            "explanation": "The initramfs contains the modules and scripts used to locate and mount the root filesystem, so it must be regenerated after storage changes. The other items have no role in finding the root device.",
+            "reference": "CompTIA Linux+ XK0-005 Exam Objectives - Troubleshooting"
+        }
+    ]
+}

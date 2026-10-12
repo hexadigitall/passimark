@@ -1,0 +1,1277 @@
+{
+    "cert_key": "ccnp-scor",
+    "title": "Cisco CCNP Security Core (SCOR 350-701)",
+    "issuer": "Cisco",
+    "outline_file": "outlines/ccnp-scor.json",
+    "variant_label": "SCOR 350-701 Real-Spec Practice",
+    "exam": {
+        "questions": 90,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Cisco 350-701 SCOR exam topics (six domains and weights). Not a capture of past exam questions.",
+    "source_label": "Cisco SCOR practice bank",
+    "items": [
+        {
+            "id": "ccnp-scor-001",
+            "domain": "Security Concepts",
+            "stem": "A financial services firm deploys redundant data centers and load balancing so that trading systems remain reachable during a hardware failure. Which element of the CIA triad is the firm primarily improving?",
+            "options": [
+                "Availability",
+                "Confidentiality",
+                "Integrity",
+                "Non-repudiation"
+            ],
+            "correct_index": 0,
+            "explanation": "Availability keeps systems and data reachable when components fail, which redundancy and load balancing provide. Confidentiality protects secrecy, integrity protects against unauthorized change, and non-repudiation proves the origin of an action, so those three are not the goal here.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-002",
+            "domain": "Security Concepts",
+            "stem": "A network engineer compares the SHA-256 digest of a router image against the value published on the vendor support site before installing the image. Which security property does this verification confirm?",
+            "options": [
+                "Non-repudiation",
+                "Integrity",
+                "Confidentiality",
+                "Availability"
+            ],
+            "correct_index": 1,
+            "explanation": "Hashing lets the engineer detect any change to the image, which is integrity. It does not hide the file contents, guarantee uptime, or prove who created the file, so confidentiality, availability, and non-repudiation are incorrect.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-003",
+            "domain": "Security Concepts",
+            "stem": "An attacker encrypts a hospital shared file server and demands payment in cryptocurrency before restoring access. Which category of threat best describes this event?",
+            "options": [
+                "Denial of service",
+                "Insider threat",
+                "Ransomware",
+                "Phishing"
+            ],
+            "correct_index": 2,
+            "explanation": "Ransomware encrypts or locks data and demands payment for the key. Phishing is a delivery technique, a denial of service interrupts availability without encrypting data, and an insider threat abuses authorized access, so none of the others describe encrypted extortion.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-004",
+            "domain": "Security Concepts",
+            "stem": "A well-funded group maintains quiet access to a defense contractor network for months and slowly exfiltrates design documents. Which threat actor classification best fits this activity?",
+            "options": [
+                "Script kiddie",
+                "Hacktivist",
+                "Malicious insider",
+                "Nation-state advanced persistent threat"
+            ],
+            "correct_index": 3,
+            "explanation": "Long dwell time, significant funding, and espionage goals are hallmarks of a nation-state advanced persistent threat. Script kiddies lack resources, hacktivists pursue ideology, and an insider already holds authorized access rather than maintaining a remote foothold.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-005",
+            "domain": "Security Concepts",
+            "stem": "Self-propagating code spreads across a campus network by exploiting an unpatched SMB service without any user opening a file. Which malware type behaves in this way?",
+            "options": [
+                "Worm",
+                "Virus",
+                "Trojan",
+                "Rootkit"
+            ],
+            "correct_index": 0,
+            "explanation": "A worm self-propagates across networks without user action. A virus needs a host file and usually user execution, a trojan disguises itself as legitimate software, and a rootkit hides an attacker's presence rather than spreading on its own.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-006",
+            "domain": "Security Concepts",
+            "stem": "A VPN gateway uses AES to encrypt bulk tunnel traffic while Diffie-Hellman establishes the shared secret key. What is the main reason for combining symmetric and asymmetric cryptography here?",
+            "options": [
+                "Symmetric keys are always longer than asymmetric keys",
+                "Symmetric ciphers are fast for bulk data while key agreement solves the key distribution problem",
+                "Asymmetric ciphers encrypt bulk data faster than symmetric ciphers do",
+                "Hashing is used to exchange the session key securely"
+            ],
+            "correct_index": 1,
+            "explanation": "Hybrid designs use asymmetric key agreement to establish a shared secret and fast symmetric ciphers for bulk data. Asymmetric encryption is much slower than symmetric for large volumes, hashing does not exchange keys, and key length is not the reason for the split.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-007",
+            "domain": "Security Concepts",
+            "stem": "An administrator must confirm that a downloaded firmware image was not altered in transit but does not need to hide its contents. Which cryptographic operation is appropriate?",
+            "options": [
+                "Encode the image with Base64",
+                "Compress the image with ZIP",
+                "Compute a cryptographic hash and compare it to a trusted value",
+                "Encrypt the image with AES"
+            ],
+            "correct_index": 2,
+            "explanation": "A hash detects modification and is the right tool when secrecy is not required. AES encryption hides contents but is unnecessary here, and Base64 or ZIP provide encoding and compression with no integrity or confidentiality guarantee.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-008",
+            "domain": "Security Concepts",
+            "stem": "A vendor signs a firmware release with its private key and a customer validates the signature using the vendor public key. What does a successful validation prove?",
+            "options": [
+                "The file contents are kept confidential in transit",
+                "The file will always remain available",
+                "The file has been compressed for faster transfer",
+                "The file is authentic and unchanged and the vendor cannot deny signing it"
+            ],
+            "correct_index": 3,
+            "explanation": "A digital signature proves the file is unchanged and was produced by the holder of the private key, giving integrity and non-repudiation. Signing does not encrypt the payload for confidentiality, and it has no effect on availability or compression.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-009",
+            "domain": "Security Concepts",
+            "stem": "An enterprise issues device certificates to firewalls so that administrators can validate each device identity during TLS sessions. Which PKI component digitally signs those certificates?",
+            "options": [
+                "Certificate authority",
+                "Registration authority",
+                "Certificate revocation list",
+                "Online certificate status responder"
+            ],
+            "correct_index": 0,
+            "explanation": "The certificate authority signs certificates and anchors trust. A registration authority verifies requests but does not sign, a revocation list publishes revoked serial numbers, and an OCSP responder reports status rather than issuing certificates.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-010",
+            "domain": "Security Concepts",
+            "stem": "An administrator must check in real time whether a presented certificate has been revoked before allowing a management login. Which mechanism provides this real-time status?",
+            "options": [
+                "A subject alternative name",
+                "Online Certificate Status Protocol",
+                "A certificate revocation list published once a day",
+                "A certificate signing request"
+            ],
+            "correct_index": 1,
+            "explanation": "OCSP queries the issuing authority for current revocation status at the moment of use. A daily revocation list can be stale, a certificate signing request only requests issuance, and a subject alternative name lists additional host names.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-011",
+            "domain": "Security Concepts",
+            "stem": "An organization wants to record who logged into each network device, what commands they ran, and when the session ended, in addition to authenticating them. Which security service family provides these functions?",
+            "options": [
+                "Network address translation",
+                "Intrusion prevention",
+                "Authentication, authorization, and accounting",
+                "Public key infrastructure"
+            ],
+            "correct_index": 2,
+            "explanation": "AAA provides authentication, authorization, and accounting, and accounting records the session and command activity. PKI issues certificates, NAT translates addresses, and intrusion prevention inspects traffic for attacks; none of these provide session accounting.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-012",
+            "domain": "Security Concepts",
+            "stem": "A university must authenticate wireless users against its directory while supporting 802.1X port control on access switches and access points. Which AAA protocol is designed specifically to carry 802.1X authentication?",
+            "options": [
+                "TACACS+",
+                "Kerberos",
+                "SNMPv3",
+                "RADIUS"
+            ],
+            "correct_index": 3,
+            "explanation": "RADIUS is the standard AAA protocol used to carry 802.1X EAP exchanges for network access. TACACS+ targets device administration, Kerberos is a ticket-based authentication service, and SNMPv3 is for management rather than user authentication.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-013",
+            "domain": "Security Concepts",
+            "stem": "The security architecture requires every user and device to be authenticated and authorized for each resource regardless of whether the request comes from inside the corporate LAN. Which security model is this?",
+            "options": [
+                "Zero trust",
+                "Perimeter defense",
+                "Implicit trust",
+                "Defense in depth"
+            ],
+            "correct_index": 0,
+            "explanation": "Zero trust grants no implicit trust based on network location and verifies every request. Perimeter defense trusts the internal network, implicit trust assumes internal users are safe, and defense in depth is a layered-control strategy rather than a trust model.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-014",
+            "domain": "Security Concepts",
+            "stem": "A web server runs an unpatched content management system that allows remote code execution. Which term identifies the unpatched software as the weakness itself?",
+            "options": [
+                "Exploit",
+                "Vulnerability",
+                "Threat",
+                "Risk"
+            ],
+            "correct_index": 1,
+            "explanation": "A vulnerability is the weakness that could be exploited. A threat is a potential actor or event, risk combines likelihood and impact, and an exploit is the code or technique that takes advantage of the weakness.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Security Concepts"
+        },
+        {
+            "id": "ccnp-scor-015",
+            "domain": "Network Security",
+            "stem": "A security team needs a firewall that can identify and control applications such as peer-to-peer file sharing and social media rather than filtering only by IP address and port. Which capability provides this?",
+            "options": [
+                "Network address translation",
+                "VLAN trunking",
+                "Next-generation firewall application control",
+                "Stateless access list filtering"
+            ],
+            "correct_index": 2,
+            "explanation": "Next-generation firewalls classify traffic by application regardless of port. Stateless access lists match only headers, NAT translates addresses, and VLAN trunking carries multiple VLANs, so none of them identify applications.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-016",
+            "domain": "Network Security",
+            "stem": "An organization is replacing a classic appliance firewall with a Cisco platform that unifies firewall, next-generation intrusion prevention, and advanced malware protection under one management console. Which product family is designed for this?",
+            "options": [
+                "A Cisco IOS router",
+                "Cisco Web Security Appliance",
+                "Cisco Umbrella",
+                "Cisco Firepower Threat Defense"
+            ],
+            "correct_index": 3,
+            "explanation": "Firepower Threat Defense unifies firewall, next-generation IPS, and advanced malware protection under a single console. A Cisco IOS router is a general routing platform, the Web Security Appliance is a web proxy, and Umbrella is a cloud DNS security service.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-017",
+            "domain": "Network Security",
+            "stem": "A packet-filtering device evaluates each packet only against a fixed list of source, destination, protocol, and port rules and keeps no record of established sessions. Which firewall type is this?",
+            "options": [
+                "Stateless packet filter",
+                "Stateful inspection firewall",
+                "Application proxy firewall",
+                "Next-generation firewall"
+            ],
+            "correct_index": 0,
+            "explanation": "A stateless packet filter matches each packet independently with no session table. A stateful firewall tracks connections, an application proxy terminates and inspects sessions at layer 7, and a next-generation firewall adds application awareness.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-018",
+            "domain": "Network Security",
+            "stem": "A sensor is deployed inline so that it can drop malicious packets in real time instead of only generating alerts. Which device role does this describe?",
+            "options": [
+                "Syslog server",
+                "Intrusion prevention system",
+                "Intrusion detection system",
+                "NetFlow collector"
+            ],
+            "correct_index": 1,
+            "explanation": "An inline IPS can block malicious traffic, unlike a passive IDS that only alerts. A NetFlow collector analyzes flow records and a syslog server stores log messages; neither inspects and drops packets inline.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-019",
+            "domain": "Network Security",
+            "stem": "Two branch offices need a permanent encrypted tunnel between their edge firewalls that is always on and transparent to end hosts. Which VPN type fits this requirement?",
+            "options": [
+                "Client-based SSL VPN",
+                "A forward web proxy",
+                "Site-to-site IPsec VPN",
+                "Remote-access VPN"
+            ],
+            "correct_index": 2,
+            "explanation": "A site-to-site IPsec VPN connects two gateways with an always-on tunnel that is transparent to hosts. Remote-access and client-based SSL VPNs serve individual users, and a forward web proxy is unrelated to encrypted tunneling.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-020",
+            "domain": "Network Security",
+            "stem": "A traveling employee needs on-demand encrypted access to internal applications from a laptop, and the gateway must check the device posture first. Which solution type is this?",
+            "options": [
+                "Site-to-site VPN",
+                "A Layer 2 switchport",
+                "Port mirroring",
+                "Remote-access VPN"
+            ],
+            "correct_index": 3,
+            "explanation": "A remote-access VPN provides per-user, on-demand access and can enforce posture before admitting the device. A site-to-site VPN links fixed gateways, and a switchport or port mirroring are local switching features with no remote encrypted access.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-021",
+            "domain": "Network Security",
+            "stem": "Before an IPsec data tunnel is built, a phase negotiates the encryption and hashing algorithms that protect the management tunnel between peers. Which IPsec phase is this?",
+            "options": [
+                "IKE Phase 1",
+                "IKE Phase 2",
+                "The ESP data phase",
+                "NAT traversal"
+            ],
+            "correct_index": 0,
+            "explanation": "IKE Phase 1 builds the secure management tunnel and negotiates its protection suite. IKE Phase 2 negotiates the data tunnel parameters, ESP protects the actual payload, and NAT traversal handles translated addresses.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-022",
+            "domain": "Network Security",
+            "stem": "An engineer must protect the confidentiality of the IPsec payload and also detect tampering with each packet. Which IPsec protocol provides both encryption and integrity?",
+            "options": [
+                "L2TP",
+                "ESP",
+                "AH",
+                "GRE"
+            ],
+            "correct_index": 1,
+            "explanation": "Encapsulating Security Payload provides confidentiality through encryption and integrity through an authentication trailer. AH provides integrity but no encryption, GRE is an unencrypted tunnel, and L2TP carries no security on its own.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-023",
+            "domain": "Network Security",
+            "stem": "A remote-access VPN client sits behind a home router that performs address translation, so IPsec packets must be wrapped in a UDP header to pass through. Which feature enables this?",
+            "options": [
+                "Perfect forward secrecy",
+                "Dead peer detection",
+                "NAT traversal",
+                "Split tunneling"
+            ],
+            "correct_index": 2,
+            "explanation": "NAT traversal encapsulates IPsec in UDP so it survives address translation. Split tunneling controls which traffic enters the tunnel, perfect forward secrecy protects session keys, and dead peer detection reclaims tunnels from unresponsive peers.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-024",
+            "domain": "Network Security",
+            "stem": "An administrator wants remote users to send only corporate traffic through the VPN while general Internet browsing goes directly to the local provider. Which VPN feature is this?",
+            "options": [
+                "Full tunneling",
+                "Hairpinning",
+                "Perfect forward secrecy",
+                "Split tunneling"
+            ],
+            "correct_index": 3,
+            "explanation": "Split tunneling sends only defined corporate subnets through the tunnel. Full tunneling forces all traffic through the VPN, hairpinning redirects internal traffic through an external interface, and perfect forward secrecy is a key property.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-025",
+            "domain": "Network Security",
+            "stem": "A company needs a hub-and-spoke design in which spoke routers dynamically build direct IPsec tunnels to one another for branch-to-branch traffic without the hub relaying every packet. Which technology provides this?",
+            "options": [
+                "Dynamic Multipoint VPN",
+                "A single static IPsec tunnel",
+                "Cisco IOS Zone-Based Firewall",
+                "MAC Authentication Bypass"
+            ],
+            "correct_index": 0,
+            "explanation": "Dynamic Multipoint VPN builds on-demand spoke-to-spoke IPsec tunnels over a hub. A static IPsec tunnel cannot mesh spokes, Zone-Based Firewall is a policy feature, and MAC Authentication Bypass is a wired access feature.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-026",
+            "domain": "Network Security",
+            "stem": "An engineer places Internet of Things cameras on a dedicated VLAN that can reach only the video management server and denies all other traffic. Which design principle is being applied?",
+            "options": [
+                "Port mirroring",
+                "Network segmentation",
+                "A flat network",
+                "An any-any rule"
+            ],
+            "correct_index": 1,
+            "explanation": "Segmentation limits lateral movement by isolating device groups and restricting traffic. A flat network expands reachability, an any-any rule permits everything, and port mirroring only copies traffic for monitoring.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-027",
+            "domain": "Network Security",
+            "stem": "A public web server must accept inbound HTTPS from the Internet while the internal database network must stay unreachable from the Internet. Where should the web server be placed?",
+            "options": [
+                "Inside the database VLAN",
+                "On the domain controller",
+                "In a screened subnet",
+                "Directly on the internal LAN"
+            ],
+            "correct_index": 2,
+            "explanation": "A screened subnet isolates Internet-facing hosts and lets firewall policy restrict traffic in both directions. Placing the server on the internal LAN, in the database VLAN, or on a domain controller directly exposes those segments to the Internet.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-028",
+            "domain": "Network Security",
+            "stem": "An engineer finishes writing an access list on a firewall and expects traffic that is not explicitly permitted to be blocked. Which behavior implements this?",
+            "options": [
+                "An explicit permit any any rule",
+                "A NAT exemption policy",
+                "A default static route",
+                "An implicit deny at the end of the access list"
+            ],
+            "correct_index": 3,
+            "explanation": "Access lists end with an implicit deny that discards traffic not matching a permit statement. A permit any any rule allows everything, a NAT exemption handles address translation, and a default route only supplies a next hop.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-029",
+            "domain": "Network Security",
+            "stem": "Two firewalls form a failover pair, and the standby unit takes over the active role while preserving existing user connections when the primary fails. Which feature is this?",
+            "options": [
+                "Stateful failover",
+                "Round-robin load balancing",
+                "Remote-access VPN",
+                "Policy-based routing"
+            ],
+            "correct_index": 0,
+            "explanation": "Stateful failover synchronizes connection state so the standby keeps existing sessions alive. Load balancing distributes flows across nodes, remote-access VPN serves users, and policy-based routing steers traffic by rule.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-030",
+            "domain": "Network Security",
+            "stem": "An administrator enables perfect forward secrecy so that compromise of one IPsec session key does not expose previously captured sessions. Which key exchange method supports this property?",
+            "options": [
+                "HMAC packet integrity",
+                "Diffie-Hellman key agreement with a fresh key per session",
+                "A static pre-shared secret key",
+                "AES bulk encryption"
+            ],
+            "correct_index": 1,
+            "explanation": "Perfect forward secrecy requires a new Diffie-Hellman exchange for each session so past keys cannot be derived. A static pre-shared key allows derived keys to be recovered, and AES and HMAC are cipher and integrity primitives rather than key agreement.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-031",
+            "domain": "Network Security",
+            "stem": "Attackers encapsulate command-and-control traffic inside DNS queries to slip past firewall policy. Which technique best helps defenders uncover this activity?",
+            "options": [
+                "Disabling the firewall state table",
+                "Enabling network address translation",
+                "Deep packet inspection and DNS logging to detect anomalous query size and volume",
+                "Blocking all DNS resolution"
+            ],
+            "correct_index": 2,
+            "explanation": "DNS tunneling shows up in oversized or high-volume queries, so inspecting and logging DNS reveals it. Blocking all DNS breaks the network, disabling the state table weakens the firewall, and NAT does not expose tunneled payloads.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-032",
+            "domain": "Network Security",
+            "stem": "An IOS router groups its LAN, WAN, and management interfaces so that distinct security policies are applied to traffic moving between the groups. Which feature is this?",
+            "options": [
+                "A standard access control list",
+                "Static NAT",
+                "VRF lite",
+                "Zone-Based Firewall"
+            ],
+            "correct_index": 3,
+            "explanation": "Zone-Based Firewall groups interfaces into zones and applies policy to traffic between zones. A standard access list filters only by source, static NAT translates addresses, and VRF lite separates routing tables rather than enforcing security policy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Network Security"
+        },
+        {
+            "id": "ccnp-scor-033",
+            "domain": "Cloud Security",
+            "stem": "In an IaaS deployment the provider secures the physical facility and hypervisor while the customer patches the guest operating system and encrypts data. Which model describes this division of duties?",
+            "options": [
+                "Shared responsibility model",
+                "Zero trust architecture",
+                "Defense in depth",
+                "Least privilege"
+            ],
+            "correct_index": 0,
+            "explanation": "The shared responsibility model divides security duties between provider and customer, and the split shifts with the service model. Zero trust, defense in depth, and least privilege are design principles rather than ownership boundaries.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-034",
+            "domain": "Cloud Security",
+            "stem": "A company wants to discover unsanctioned SaaS applications, enforce data loss policy on cloud uploads, and detect risky use from both managed and unmanaged devices. Which cloud security control provides this?",
+            "options": [
+                "Network access control",
+                "Cloud access security broker",
+                "Web application firewall",
+                "IPsec site-to-site VPN"
+            ],
+            "correct_index": 1,
+            "explanation": "A cloud access security broker discovers shadow IT and enforces data and threat policy for cloud services. A web application firewall protects a web app, an IPsec VPN encrypts transport, and NAC admits devices to the network.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-035",
+            "domain": "Cloud Security",
+            "stem": "A cloud access security broker must scan files stored in a sanctioned cloud tenant by using the provider API rather than sitting inline in front of user traffic. Which deployment mode is this?",
+            "options": [
+                "Reverse proxy",
+                "Endpoint agent",
+                "API-based",
+                "Inline forward proxy"
+            ],
+            "correct_index": 2,
+            "explanation": "API-based CASB connects out of band to the cloud service and scans data at rest. Inline forward proxy and reverse proxy modes sit in the data path, and an endpoint agent runs on the device rather than the cloud tenant.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-036",
+            "domain": "Cloud Security",
+            "stem": "An organization wants to converge web filtering, cloud access security broker, firewall-as-a-service, and software-defined WAN into a single cloud-delivered service for branches and mobile users. Which architecture provides this?",
+            "options": [
+                "A traditional hub-and-spoke VPN",
+                "An MPLS circuit",
+                "An on-premises web application firewall",
+                "Secure access service edge"
+            ],
+            "correct_index": 3,
+            "explanation": "Secure access service edge converges networking and security functions into a cloud-delivered service near the user. Hub-and-spoke VPN, MPLS, and on-premises WAFs keep security in the data center and do not combine SD-WAN with cloud security.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-037",
+            "domain": "Cloud Security",
+            "stem": "A company needs to block malicious domains for roaming users by resolving corporate DNS queries in the cloud and enforcing policy without requiring a VPN. Which Cisco service provides this?",
+            "options": [
+                "Cisco Umbrella",
+                "Cisco Identity Services Engine",
+                "Cisco Web Security Appliance",
+                "Cisco Advanced Malware Protection"
+            ],
+            "correct_index": 0,
+            "explanation": "Cisco Umbrella resolves DNS in the cloud and blocks malicious or unwanted domains for users on or off the corporate network. ISE enforces network access, the Web Security Appliance is an on-premises proxy, and AMP protects endpoints.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-038",
+            "domain": "Cloud Security",
+            "stem": "A team must discover and protect workloads across multiple public clouds and on-premises data centers from a single system that shows vulnerabilities, flows, and compliance. Which Cisco solution addresses multi-cloud workload security?",
+            "options": [
+                "Cisco Email Security Appliance",
+                "Cisco Secure Workload",
+                "Cisco AnyConnect",
+                "Cisco Firepower Threat Defense"
+            ],
+            "correct_index": 1,
+            "explanation": "Cisco Secure Workload discovers workloads and enforces microsegmentation and compliance across clouds and data centers. AnyConnect is a VPN client, Firepower Threat Defense is a network firewall, and the Email Security Appliance filters mail.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-039",
+            "domain": "Cloud Security",
+            "stem": "A cloud platform grants access only when the requesting user department, the device compliance state, and the source geography are all evaluated together in one rule. Which access control model is this?",
+            "options": [
+                "Discretionary access control",
+                "Mandatory access control",
+                "Attribute-based access control",
+                "Role-based access control"
+            ],
+            "correct_index": 2,
+            "explanation": "Attribute-based access control evaluates multiple subject, object, and environment attributes in a single policy. Role-based access control keys on role alone, discretionary access control uses owner-assigned permissions, and mandatory access control uses fixed labels.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-040",
+            "domain": "Cloud Security",
+            "stem": "A regulated bank hosts its own virtualization cluster inside its data center while still gaining automation and self-service for its tenants. Which cloud deployment model is this?",
+            "options": [
+                "Public cloud",
+                "Community cloud",
+                "Hybrid cloud",
+                "Private cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "A private cloud delivers cloud-like automation on infrastructure dedicated to one organization. A public cloud is shared, a community cloud serves several like-minded organizations, and a hybrid cloud spans private and public environments.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-041",
+            "domain": "Cloud Security",
+            "stem": "A retailer keeps cardholder data on premises but bursts web front-end workloads into a public provider and manages both through a common layer. Which cloud deployment model is this?",
+            "options": [
+                "Hybrid cloud",
+                "Public cloud",
+                "Private cloud",
+                "Community cloud"
+            ],
+            "correct_index": 0,
+            "explanation": "A hybrid cloud combines private on-premises infrastructure with public cloud resources. Public and private clouds are single environments, and a community cloud is shared by organizations with common requirements rather than mixed with private resources.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-042",
+            "domain": "Cloud Security",
+            "stem": "A policy requires that the customer, not the cloud provider, retain control of the keys used to encrypt objects in a public object store. Which approach satisfies this requirement?",
+            "options": [
+                "Encoding objects with Base64",
+                "Customer-managed encryption keys",
+                "Provider-managed encryption keys",
+                "Storing objects in plaintext"
+            ],
+            "correct_index": 1,
+            "explanation": "Customer-managed keys keep key ownership with the customer. Provider-managed keys leave control with the provider, plaintext offers no protection, and Base64 is only an encoding that provides no security.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-043",
+            "domain": "Cloud Security",
+            "stem": "The security team wants inbound email scanned for spam, phishing, and malware before it reaches the on-premises mail server, with encryption and data loss prevention applied in the cloud. Which deployment is this?",
+            "options": [
+                "An uninspected SMTP relay",
+                "IMAP synchronization",
+                "Cloud-based email security",
+                "On-premises only filtering"
+            ],
+            "correct_index": 2,
+            "explanation": "Cloud-based email security filters mail before delivery and can add encryption and DLP. On-premises filtering occurs after the gateway, an uninspected relay forwards threats, and IMAP synchronization only retrieves mailbox contents.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-044",
+            "domain": "Cloud Security",
+            "stem": "A Kubernetes cluster must restrict which pods can communicate with one another and with the Internet by default. Which mechanism enforces these pod-level rules?",
+            "options": [
+                "A service account token",
+                "A namespace label",
+                "A readiness probe",
+                "Network policy"
+            ],
+            "correct_index": 3,
+            "explanation": "Network policy objects define which pods may send and receive traffic. A service account token authenticates a pod to the API, a namespace label groups resources, and a readiness probe only checks health before routing traffic.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-045",
+            "domain": "Cloud Security",
+            "stem": "A post-incident review finds that an engineer had made a cloud object storage bucket world readable, exposing customer records. Which cloud security concern does this illustrate?",
+            "options": [
+                "Misconfiguration",
+                "A zero-day exploit",
+                "A volumetric denial of service",
+                "A kernel privilege escalation"
+            ],
+            "correct_index": 0,
+            "explanation": "An overly permissive bucket setting is a misconfiguration of the cloud service. A zero-day is an unknown software flaw, a volumetric denial of service floods bandwidth, and kernel privilege escalation is a host exploit; none of these describe a poor configuration choice.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Cloud Security"
+        },
+        {
+            "id": "ccnp-scor-046",
+            "domain": "Content Security",
+            "stem": "Employees outbound web requests must be inspected so that URL categories and malware downloads are blocked before reaching users. Which Cisco appliance performs this function?",
+            "options": [
+                "Cisco Identity Services Engine",
+                "Cisco Web Security Appliance",
+                "Cisco Email Security Appliance",
+                "Cisco Firepower Threat Defense"
+            ],
+            "correct_index": 1,
+            "explanation": "The Web Security Appliance is a forward proxy that filters web requests and blocks malware downloads. The Email Security Appliance filters mail, Firepower Threat Defense is a network firewall, and ISE enforces network access policy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-047",
+            "domain": "Content Security",
+            "stem": "A proxy sits between users and the Internet, accepting client requests and fetching content on their behalf. Which proxy role is this?",
+            "options": [
+                "Transparent bridge",
+                "Load balancer",
+                "Forward proxy",
+                "Reverse proxy"
+            ],
+            "correct_index": 2,
+            "explanation": "A forward proxy acts on behalf of internal clients requesting external content. A reverse proxy represents servers, a transparent bridge forwards frames without a proxy role, and a load balancer distributes requests across servers.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-048",
+            "domain": "Content Security",
+            "stem": "A proxy is placed in front of internal web servers to terminate TLS and hide server identities from Internet clients. Which proxy role is this?",
+            "options": [
+                "Forward proxy",
+                "Network address translation",
+                "Site-to-site VPN",
+                "Reverse proxy"
+            ],
+            "correct_index": 3,
+            "explanation": "A reverse proxy fronts servers and can terminate TLS while shielding their identities. A forward proxy serves clients, NAT translates addresses, and a site-to-site VPN links gateways; none of these present servers to clients.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-049",
+            "domain": "Content Security",
+            "stem": "An organization must block SQL injection and cross-site scripting attempts against its public web application by inspecting HTTP requests for those patterns. Which control is this?",
+            "options": [
+                "Web application firewall",
+                "DNS firewall",
+                "Email gateway",
+                "Network access control"
+            ],
+            "correct_index": 0,
+            "explanation": "A web application firewall inspects HTTP and HTTPS for application-layer attacks such as injection. A DNS firewall filters name resolution, an email gateway filters mail, and network access control admits devices to the network.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-050",
+            "domain": "Content Security",
+            "stem": "An organization must add Sender Policy Framework and DomainKeys Identified Mail verification, malware scanning, and content filters to inbound mail. Which Cisco appliance provides this?",
+            "options": [
+                "Cisco Advanced Malware Protection",
+                "Cisco Email Security Appliance",
+                "Cisco Web Security Appliance",
+                "Cisco Umbrella"
+            ],
+            "correct_index": 1,
+            "explanation": "The Email Security Appliance filters inbound and outbound mail and can validate SPF and DKIM. The Web Security Appliance filters web traffic, Umbrella resolves DNS, and AMP protects endpoints, so none of them inspect mail.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-051",
+            "domain": "Content Security",
+            "stem": "A domain publishes a DNS record that lists the hosts authorized to send mail for it so that receivers can reject forged senders. Which email authentication mechanism is this?",
+            "options": [
+                "Domain-based Message Authentication Reporting and Conformance",
+                "S/MIME",
+                "Sender Policy Framework",
+                "DomainKeys Identified Mail"
+            ],
+            "correct_index": 2,
+            "explanation": "SPF publishes a DNS record of permitted sending hosts. DKIM adds a cryptographic signature, DMARC aligns SPF and DKIM results with a policy, and S/MIME encrypts or signs message content rather than authorizing senders.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-052",
+            "domain": "Content Security",
+            "stem": "A mail gateway adds a cryptographic signature to outgoing messages so that receivers can confirm the domain that sent them and detect tampering. Which mechanism is this?",
+            "options": [
+                "Sender Policy Framework",
+                "Domain-based Message Authentication Reporting and Conformance",
+                "Transport Layer Security",
+                "DomainKeys Identified Mail"
+            ],
+            "correct_index": 3,
+            "explanation": "DKIM signs messages with a private key that receivers verify using a public key in DNS. SPF checks sending hosts, DMARC defines policy from SPF and DKIM results, and TLS protects transport in transit rather than signing content.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-053",
+            "domain": "Content Security",
+            "stem": "A domain owner wants to align SPF and DKIM with the visible From header and instruct receivers to quarantine messages that fail those checks. Which mechanism is this?",
+            "options": [
+                "Domain-based Message Authentication Reporting and Conformance",
+                "Sender Policy Framework",
+                "DomainKeys Identified Mail",
+                "S/MIME"
+            ],
+            "correct_index": 0,
+            "explanation": "DMARC aligns SPF and DKIM with the From domain and publishes a disposition policy such as quarantine or reject. SPF and DKIM are the underlying checks, and S/MIME is a message encryption and signing standard.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-054",
+            "domain": "Content Security",
+            "stem": "Two organizations must digitally sign and encrypt message content end to end using certificates that each side already trusts. Which standard supports this?",
+            "options": [
+                "Post Office Protocol",
+                "S/MIME",
+                "Sender Policy Framework",
+                "DomainKeys Identified Mail"
+            ],
+            "correct_index": 1,
+            "explanation": "S/MIME uses certificates to sign and encrypt message content end to end. SPF and DKIM authenticate the sending domain rather than encrypting content, and Post Office Protocol only retrieves mail from a server.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-055",
+            "domain": "Content Security",
+            "stem": "An attacker forges DNS responses to redirect users to a malicious site. Which security extension provides cryptographic authentication of DNS data to prevent this?",
+            "options": [
+                "DNS over TLS",
+                "A response policy zone",
+                "DNSSEC",
+                "DNS over HTTPS"
+            ],
+            "correct_index": 2,
+            "explanation": "DNSSEC signs DNS records so resolvers can verify authenticity and detect forgery. DNS over HTTPS and DNS over TLS only encrypt the query channel, and a response policy zone rewrites answers according to local policy rather than authenticating them.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-056",
+            "domain": "Content Security",
+            "stem": "A security team wants to override DNS answers for known malicious domains and redirect those lookups to a block page. Which DNS feature supports policy-based rewriting of responses?",
+            "options": [
+                "DNSSEC",
+                "Zone transfers",
+                "Anycast routing",
+                "Response policy zones"
+            ],
+            "correct_index": 3,
+            "explanation": "Response policy zones let a resolver rewrite or block answers for chosen domains. DNSSEC validates authenticity, zone transfers replicate records between servers, and anycast improves availability rather than applying a blocking policy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-057",
+            "domain": "Content Security",
+            "stem": "A web gateway blocks access to categories such as gambling and anonymizer sites according to corporate policy. Which capability is enforcing this?",
+            "options": [
+                "URL filtering",
+                "Antivirus scanning",
+                "Data loss prevention",
+                "Admission control"
+            ],
+            "correct_index": 0,
+            "explanation": "URL filtering classifies sites into categories and enforces acceptable use policy. Antivirus scanning looks for malware, DLP protects sensitive data, and admission control governs which devices may join the network.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-058",
+            "domain": "Content Security",
+            "stem": "The web gateway must inspect HTTPS traffic for malware, which requires it to decrypt, scan, and then re-encrypt each session. Which capability is this?",
+            "options": [
+                "DNSSEC validation",
+                "SSL and TLS inspection",
+                "IPsec encryption",
+                "Network address translation"
+            ],
+            "correct_index": 1,
+            "explanation": "SSL and TLS inspection decrypts HTTPS so the gateway can scan content and then re-encrypts it. IPsec protects tunnel traffic, NAT translates addresses, and DNSSEC validates DNS data; none of them expose encrypted web content for scanning.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Content Security"
+        },
+        {
+            "id": "ccnp-scor-059",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "An administrator needs an endpoint agent that uses cloud reputation, file analysis, and behavioral indicators to detect and block advanced malware on Windows, macOS, and Linux. Which Cisco solution is this?",
+            "options": [
+                "Cisco Web Security Appliance",
+                "Cisco Identity Services Engine",
+                "Cisco Advanced Malware Protection for Endpoints",
+                "Cisco Umbrella"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco AMP for Endpoints is the endpoint agent that combines reputation, file analysis, and behavioral detection. Umbrella resolves DNS, the Web Security Appliance is a web proxy, and ISE enforces network access policy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-060",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "An endpoint product keeps a record of every file it has seen and later alerts that a file once judged benign has become malicious. Which capability enables this retrospective detection?",
+            "options": [
+                "Signature-only scanning",
+                "A one-time hash lookup",
+                "Port scanning",
+                "File trajectory and retrospective security"
+            ],
+            "correct_index": 3,
+            "explanation": "File trajectory records file history so the product can retroactively flag a file when its reputation changes. Signature scanning and a one-time hash lookup are point-in-time checks, and port scanning discovers services rather than tracking files.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-061",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "A security analyst needs to record process, file, and network activity on endpoints, search historical telemetry, and isolate a compromised host remotely. Which solution class provides this?",
+            "options": [
+                "Endpoint detection and response",
+                "Intrusion prevention system",
+                "Web application firewall",
+                "Data loss prevention"
+            ],
+            "correct_index": 0,
+            "explanation": "Endpoint detection and response records endpoint telemetry, supports hunting, and can isolate a host. An IPS inspects network traffic, a WAF protects web applications, and DLP controls data movement; none provide endpoint telemetry and host isolation.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-062",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "A suspicious file must be executed in an isolated environment so analysts can observe its behavior and derive new detections. Which technique is this?",
+            "options": [
+                "Sharding",
+                "Sandbox analysis",
+                "Hashing",
+                "Tokenization"
+            ],
+            "correct_index": 1,
+            "explanation": "A sandbox detonates content in isolation and observes behavior. Hashing computes a digest, tokenization replaces sensitive values with substitutes, and sharding splits data stores; none execute a file to observe it.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-063",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "Roaming endpoints must have their DNS requests forwarded to a cloud service that blocks malicious domains and enforces acceptable use policy even off the corporate network. Which Cisco product does this?",
+            "options": [
+                "Cisco Firepower Threat Defense",
+                "Cisco Email Security Appliance",
+                "Cisco Umbrella",
+                "Cisco Advanced Malware Protection"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco Umbrella resolves DNS in the cloud and blocks malicious domains wherever the endpoint roams. AMP protects endpoints, Firepower Threat Defense is a network firewall, and the Email Security Appliance filters mail.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-064",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "When malware is confirmed on a laptop, an administrator must cut the host off from the network while keeping the management channel open for investigation. Which action is this?",
+            "options": [
+                "Remote wipe",
+                "Email quarantine",
+                "Switchport shutdown",
+                "Host isolation"
+            ],
+            "correct_index": 3,
+            "explanation": "Host isolation blocks normal network traffic while preserving the management channel so analysts can continue to investigate. Remote wipe destroys data, email quarantine holds messages, and a switchport shutdown removes all connectivity.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-065",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "A threat feed provides file hashes and domain names observed in a recent campaign so that endpoints can block them. What are these values called?",
+            "options": [
+                "Indicators of compromise",
+                "The attack surface",
+                "Zero-day exploits",
+                "Indicators of attack"
+            ],
+            "correct_index": 0,
+            "explanation": "Hashes and domains from known compromises are indicators of compromise. The attack surface is the set of exposed entry points, a zero-day is an unpatched exploit, and indicators of attack describe adversary intent at run time.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-066",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "An administrator must block exploitation attempts against a specific server operating system and applications at the host itself. Which control is most appropriate?",
+            "options": [
+                "Network access control",
+                "Host-based intrusion prevention system",
+                "Network intrusion prevention system",
+                "Web application firewall"
+            ],
+            "correct_index": 1,
+            "explanation": "A host-based IPS runs on the server and blocks attacks against its OS and applications. A network IPS sees only traversing traffic, a WAF protects web applications, and NAC admits devices to the network.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-067",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "A policy permits endpoints to run only approved applications and blocks everything else by default. Which technique is this?",
+            "options": [
+                "Sandbox analysis",
+                "File hashing",
+                "Application allow listing",
+                "Application block listing"
+            ],
+            "correct_index": 2,
+            "explanation": "Allow listing permits only approved applications and denies all others. Block listing denies known-bad applications but permits everything else, while sandbox analysis and hashing do not by themselves restrict what may run.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-068",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "A defensive tool detects malicious behavior such as a process dumping credentials from memory rather than matching a known file signature. Which detection method does this describe?",
+            "options": [
+                "Static file signature matching",
+                "File name pattern matching",
+                "DNS sinkholing",
+                "Behavioral detection"
+            ],
+            "correct_index": 3,
+            "explanation": "Behavioral detection watches actions such as credential dumping rather than file traits. Static signature and file name matching rely on known artifacts, and DNS sinkholing blocks name resolution for malicious domains.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-069",
+            "domain": "Endpoint Protection and Detection",
+            "stem": "Threat hunters search months of recorded endpoint process telemetry to find evidence of an intrusion that earlier alerts missed. Which data source makes this retrospective hunting possible?",
+            "options": [
+                "Endpoint detection and response historical telemetry",
+                "Firewall access list counters",
+                "DNS zone files",
+                "NetFlow summaries only"
+            ],
+            "correct_index": 0,
+            "explanation": "EDR stores rich historical process telemetry that supports retrospective hunting. Access list counters and NetFlow summaries lack process detail, and DNS zone files contain name records rather than endpoint activity.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Endpoint Protection and Detection"
+        },
+        {
+            "id": "ccnp-scor-070",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A switch must authenticate a device before placing it on the corporate VLAN by carrying Extensible Authentication Protocol frames over the LAN. Which standard provides this port-based access control?",
+            "options": [
+                "IEEE 802.3af",
+                "IEEE 802.1X",
+                "IEEE 802.11",
+                "IEEE 802.1Q"
+            ],
+            "correct_index": 1,
+            "explanation": "IEEE 802.1X provides port-based network access control using EAP. IEEE 802.11 defines wireless LANs, 802.1Q defines VLAN tagging, and 802.3af defines Power over Ethernet, none of which authenticate a port.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-071",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "In an 802.1X deployment, the switch port that relays credentials between the endpoint and the RADIUS server plays which role?",
+            "options": [
+                "Authentication server",
+                "Certificate authority",
+                "Authenticator",
+                "Supplicant"
+            ],
+            "correct_index": 2,
+            "explanation": "The switch port acts as the authenticator that relays EAP frames. The supplicant is the endpoint software, the authentication server is the RADIUS server that decides access, and a certificate authority issues certificates.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-072",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A wireless design must authenticate users with an Extensible Authentication Protocol method that requires certificates on both the client and the server. Which method is this?",
+            "options": [
+                "PEAP",
+                "LEAP",
+                "PAP",
+                "EAP-TLS"
+            ],
+            "correct_index": 3,
+            "explanation": "EAP-TLS uses certificates to authenticate both the client and the server. PEAP only requires a server certificate and tunnels other credentials, LEAP is a legacy Cisco method, and PAP sends credentials without a certificate-based exchange.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-073",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "An organization wants a centralized policy engine that performs 802.1X, MAC authentication bypass, profiling, guest access, and posture across wired, wireless, and VPN. Which Cisco product is this?",
+            "options": [
+                "Cisco Identity Services Engine",
+                "Cisco Umbrella",
+                "Cisco Firepower Threat Defense",
+                "Cisco Web Security Appliance"
+            ],
+            "correct_index": 0,
+            "explanation": "Cisco Identity Services Engine is the policy platform for 802.1X, MAC authentication bypass, profiling, guest access, and posture. Umbrella resolves DNS, Firepower Threat Defense is a firewall, and the Web Security Appliance is a web proxy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-074",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A printer that cannot run an 802.1X supplicant must still be identified and authorized on the network by using its hardware address. Which Cisco ISE feature handles this?",
+            "options": [
+                "Change of Authorization",
+                "MAC Authentication Bypass",
+                "EAP-TLS",
+                "Posture assessment"
+            ],
+            "correct_index": 1,
+            "explanation": "MAC Authentication Bypass authorizes devices that lack a supplicant by their MAC address. EAP-TLS requires certificate-based supplicants, posture assessment checks device compliance, and Change of Authorization reclassifies an existing session.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-075",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Cisco ISE identifies the hardware and operating system of connected endpoints by inspecting DHCP, HTTP user agent, and NetFlow data so that policy can be tailored. Which feature is this?",
+            "options": [
+                "Posture assessment",
+                "TACACS+ command authorization",
+                "Profiling",
+                "MAC Authentication Bypass"
+            ],
+            "correct_index": 2,
+            "explanation": "Profiling infers endpoint type from observed attributes such as DHCP and user agent strings. MAC Authentication Bypass only authorizes by address, posture assessment checks compliance, and TACACS+ command authorization governs device administration.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-076",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Before granting full access, Cisco ISE checks whether an endpoint has current antivirus and operating system patches and can redirect non-compliant devices to a remediation portal. Which capability is this?",
+            "options": [
+                "Profiling",
+                "MAC Authentication Bypass",
+                "Security group tagging",
+                "Posture assessment and remediation"
+            ],
+            "correct_index": 3,
+            "explanation": "Posture assessment verifies compliance conditions and can route devices to remediation. Profiling identifies device type, MAC Authentication Bypass authorizes supplicant-less devices, and security group tagging is a TrustSec enforcement mechanism.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-077",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Visitors need temporary network access that is approved by an employee sponsor and limited in duration. Which Cisco ISE service provides this?",
+            "options": [
+                "Guest and sponsor portal",
+                "Posture assessment",
+                "pxGrid",
+                "TACACS+ command sets"
+            ],
+            "correct_index": 0,
+            "explanation": "The guest and sponsor portal lets an employee sponsor create time-limited visitor accounts. Posture assessment checks compliance, pxGrid shares context with other tools, and TACACS+ command sets authorize device administration.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-078",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Instead of using IP addresses, a data center applies a security group tag to traffic so that policy follows the group identity across the network. Which Cisco technology is this?",
+            "options": [
+                "SNMP",
+                "Cisco TrustSec",
+                "NetFlow",
+                "Syslog"
+            ],
+            "correct_index": 1,
+            "explanation": "Cisco TrustSec uses security group tags so policy follows group identity rather than addressing. NetFlow reports flow records, syslog carries event messages, and SNMP manages devices; none of them enforce tag-based policy.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-079",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A switch that cannot interpret security group tags natively must still enforce tag-based policy, so a peer propagates the tag mapping to it. Which protocol handles this exchange?",
+            "options": [
+                "RADIUS accounting",
+                "SNMP polling",
+                "Security Group Tag Exchange Protocol",
+                "Extensible Authentication Protocol"
+            ],
+            "correct_index": 2,
+            "explanation": "The Security Group Tag Exchange Protocol shares tag mappings so non-native devices can enforce TrustSec policy. EAP carries authentication, RADIUS accounting records sessions, and SNMP polling collects device statistics.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-080",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "TrustSec policy defines which security group tag pairs may communicate and which are denied by default. What is the enforcement rule set called?",
+            "options": [
+                "A standard numbered access list",
+                "An extended IP access list",
+                "A route map",
+                "Security group access control list"
+            ],
+            "correct_index": 3,
+            "explanation": "A security group access control list enforces which tagged groups may communicate. Standard and extended access lists match addresses and ports rather than tags, and a route map manipulates routing attributes.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-081",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Cisco ISE shares identity, session, and endpoint context with third-party firewalls and SIEM tools in real time. Which integration service provides this?",
+            "options": [
+                "pxGrid",
+                "TACACS+",
+                "SNMP",
+                "IPFIX"
+            ],
+            "correct_index": 0,
+            "explanation": "pxGrid is the ISE platform that publishes identity and session context to partner tools in real time. TACACS+ handles device administration, SNMP manages devices, and IPFIX exports flow records rather than identity context.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-082",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A solution analyzes NetFlow and IPFIX telemetry from switches, routers, and firewalls to detect anomalous internal traffic and encrypted malware command-and-control. Which Cisco product is this?",
+            "options": [
+                "Cisco Umbrella",
+                "Cisco Secure Network Analytics",
+                "Cisco Advanced Malware Protection",
+                "Cisco Web Security Appliance"
+            ],
+            "correct_index": 1,
+            "explanation": "Cisco Secure Network Analytics, formerly Stealthwatch, analyzes flow telemetry to find anomalous and encrypted command-and-control traffic. AMP protects endpoints, the Web Security Appliance is a web proxy, and Umbrella resolves DNS.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-083",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A router exports summarized records describing the source, destination, ports, and byte counts of each flow to an external collector. Which technology is this?",
+            "options": [
+                "SNMP traps",
+                "Packet capture",
+                "NetFlow",
+                "Syslog"
+            ],
+            "correct_index": 2,
+            "explanation": "NetFlow exports per-flow metadata to a collector for analysis. Syslog sends event messages, SNMP traps report device conditions, and packet capture records full payloads rather than summarized flow records.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-084",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "Administrators need per-command authorization and accounting on Cisco network devices from a central server. Which protocol is best suited to this device administration task?",
+            "options": [
+                "RADIUS",
+                "Kerberos",
+                "LDAP",
+                "TACACS+"
+            ],
+            "correct_index": 3,
+            "explanation": "TACACS+ separates authentication, authorization, and accounting and supports per-command authorization for device administration. RADIUS is oriented to network access, Kerberos issues service tickets, and LDAP is a directory protocol.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-085",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A wireless LAN controller must send user authentication requests to a central server and receive authorization attributes that apply to the session. Which AAA protocol is this?",
+            "options": [
+                "RADIUS",
+                "TACACS+",
+                "IPsec",
+                "DNSSEC"
+            ],
+            "correct_index": 0,
+            "explanation": "RADIUS sends network-access authentication requests and returns session authorization attributes. TACACS+ targets device administration, IPsec secures traffic, and DNSSEC authenticates DNS data rather than user sessions.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-086",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A laptop that fails posture must be placed in a quarantine VLAN with access only to remediation servers until it complies. Which concept is this?",
+            "options": [
+                "Network address translation",
+                "Network access enforcement and quarantine",
+                "Microsegmentation",
+                "Port mirroring"
+            ],
+            "correct_index": 1,
+            "explanation": "Network access enforcement places non-compliant devices into a quarantine network with limited reachability. Microsegmentation separates workloads, port mirroring copies traffic for monitoring, and NAT translates addresses.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-087",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A management platform provides fabric automation and assurance, collecting telemetry to baseline and troubleshoot campus network health. Which Cisco solution is this?",
+            "options": [
+                "Cisco Advanced Malware Protection",
+                "Cisco Email Security Appliance",
+                "Cisco DNA Center",
+                "Cisco Umbrella"
+            ],
+            "correct_index": 2,
+            "explanation": "Cisco DNA Center provides campus fabric automation and assurance with telemetry-driven baselining. Umbrella resolves DNS, AMP protects endpoints, and the Email Security Appliance filters mail; none automate and assure the campus fabric.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-088",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "A switch analyzes flow characteristics and packet sequence behavior to identify malware in encrypted traffic without decrypting it. Which Cisco capability is this?",
+            "options": [
+                "Full SSL inspection",
+                "DNSSEC validation",
+                "Network address translation",
+                "Encrypted Traffic Analytics"
+            ],
+            "correct_index": 3,
+            "explanation": "Encrypted Traffic Analytics uses flow and sequence characteristics to spot malware in encrypted sessions without decryption. Full SSL inspection decrypts traffic, DNSSEC validates names, and NAT translates addresses.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-089",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "An organization must assign a dynamic VLAN based on the 802.1X identity and posture result of each endpoint. Where is this authorization decision made and returned to the switch?",
+            "options": [
+                "Cisco ISE using RADIUS attributes",
+                "On the DHCP server",
+                "On the DNS server",
+                "On the endpoint supplicant"
+            ],
+            "correct_index": 0,
+            "explanation": "Cisco ISE makes the authorization decision and returns RADIUS attributes such as the VLAN to the switch. A DHCP server assigns addresses, a DNS server resolves names, and the supplicant only supplies credentials.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        },
+        {
+            "id": "ccnp-scor-090",
+            "domain": "Secure Network Access, Visibility, and Enforcement",
+            "stem": "After a device becomes non-compliant, Cisco ISE must reclassify the session and move it to a restricted VLAN without forcing the user to reconnect. Which RADIUS capability does this use?",
+            "options": [
+                "EAP-Failure",
+                "Change of Authorization",
+                "Access-Challenge",
+                "Accounting-Request"
+            ],
+            "correct_index": 1,
+            "explanation": "Change of Authorization pushes a new policy to the switch and moves the existing session to a different VLAN. Access-Challenge requests more credentials, Accounting-Request records usage, and EAP-Failure rejects an authentication attempt.",
+            "reference": "Cisco 350-701 SCOR Exam Topics - Secure Network Access, Visibility, and Enforcement"
+        }
+    ]
+}

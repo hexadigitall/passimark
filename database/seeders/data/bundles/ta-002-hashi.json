@@ -1,0 +1,815 @@
+{
+    "cert_key": "ta-002-hashi",
+    "title": "HashiCorp Certified: Terraform Associate (003)",
+    "issuer": "HashiCorp",
+    "outline_file": "outlines/ta-002-hashi.json",
+    "variant_label": "Terraform Associate Real-Spec Practice",
+    "exam": {
+        "questions": 57,
+        "duration_minutes": 60,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the HashiCorp Terraform Associate (003) exam objectives (nine objectives with weights). Not a capture of past exam questions.",
+    "source_label": "HashiCorp Terraform Associate practice bank",
+    "items": [
+        {
+            "id": "ta-002-hashi-001",
+            "domain": "Understand infrastructure as code (IaC) concepts",
+            "stem": "A cloud team currently writes imperative shell scripts that create each server step by step, and re-running a script creates duplicate resources. The team wants to describe the desired end state and let a tool converge to it. Which approach should the team adopt?",
+            "options": [
+                "Declarative infrastructure as code that describes the target state",
+                "Longer imperative scripts with more conditional checks",
+                "Manual provisioning through the provider web console",
+                "A spreadsheet that lists the servers that should exist"
+            ],
+            "correct_index": 0,
+            "explanation": "Declarative IaC describes the desired end state and lets the tool create, change, or delete resources to reach it, so repeated runs converge instead of duplicating. Imperative scripts encode step-by-step commands, manual console work is not repeatable, and a spreadsheet cannot apply changes.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand infrastructure as code (IaC) concepts"
+        },
+        {
+            "id": "ta-002-hashi-002",
+            "domain": "Understand infrastructure as code (IaC) concepts",
+            "stem": "An operations group wants infrastructure changes to be reviewed, versioned, and reproducible instead of made by hand in a cloud console. Which practice directly provides those benefits?",
+            "options": [
+                "Exporting a monthly list of resources to a spreadsheet",
+                "Storing infrastructure definitions in a version control system",
+                "Granting every engineer console administrator rights",
+                "Documenting console clicks in a shared wiki page"
+            ],
+            "correct_index": 1,
+            "explanation": "Keeping infrastructure definitions in version control makes changes reviewable, auditable, and reproducible from the same source. Console access, wiki notes, and exported lists do not make infrastructure reproducible or peer reviewed.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand infrastructure as code (IaC) concepts"
+        },
+        {
+            "id": "ta-002-hashi-003",
+            "domain": "Understand infrastructure as code (IaC) concepts",
+            "stem": "A platform team applies the same Terraform configuration three times in a row without changing any files. Which property describes the tool making no further changes after the first successful apply?",
+            "options": [
+                "Convergence testing",
+                "Rolling deployment",
+                "Idempotency",
+                "Immutability"
+            ],
+            "correct_index": 2,
+            "explanation": "Idempotency means applying the same configuration repeatedly produces no additional changes once the target state is reached. Immutability describes replacing rather than mutating resources, and convergence testing and rolling deployment are unrelated concepts.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand infrastructure as code (IaC) concepts"
+        },
+        {
+            "id": "ta-002-hashi-004",
+            "domain": "Understand infrastructure as code (IaC) concepts",
+            "stem": "A team is comparing infrastructure as code tools and wants one where the user declares the resources and their attributes but does not write the ordered API calls that create them. Which style of IaC is this?",
+            "options": [
+                "Imperative",
+                "Procedural",
+                "Manual",
+                "Declarative"
+            ],
+            "correct_index": 3,
+            "explanation": "Declarative IaC has the user state the desired resources and attributes, and the tool determines the API calls and ordering. Imperative and procedural styles require the user to script each step, and manual provisioning involves no code at all.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand infrastructure as code (IaC) concepts"
+        },
+        {
+            "id": "ta-002-hashi-005",
+            "domain": "Understand infrastructure as code (IaC) concepts",
+            "stem": "Environments provisioned by hand tend to differ subtly over time because engineers make ad hoc console changes. Which infrastructure as code benefit most directly addresses this problem?",
+            "options": [
+                "Consistent, repeatable environments from a single definition",
+                "Faster network throughput between regions",
+                "Automatic application load testing",
+                "Cheaper cloud storage tiers"
+            ],
+            "correct_index": 0,
+            "explanation": "IaC removes manual drift by building every environment from the same definition, so environments stay consistent and repeatable. Network throughput, load testing, and storage pricing are not outcomes of codifying infrastructure.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand infrastructure as code (IaC) concepts"
+        },
+        {
+            "id": "ta-002-hashi-006",
+            "domain": "Understand Terraform's purpose (vs other IaC)",
+            "stem": "An organization runs workloads on AWS and Azure and wants one workflow and language to manage resources on both. Which Terraform characteristic directly enables this?",
+            "options": [
+                "A single vendor cloud that hosts all resources",
+                "A provider-agnostic model with plugins for each platform",
+                "A built-in feature that only targets AWS",
+                "A requirement to write separate native templates for every cloud"
+            ],
+            "correct_index": 1,
+            "explanation": "Terraform is provider-agnostic: cloud vendors publish providers as plugins, so one workflow and language manage multiple platforms. Targeting a single cloud, writing per-cloud native templates, or relying on one vendor does not provide a unified multi-cloud workflow.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform's purpose (vs other IaC)"
+        },
+        {
+            "id": "ta-002-hashi-007",
+            "domain": "Understand Terraform's purpose (vs other IaC)",
+            "stem": "A Terraform user wants to know how the tool decides which real resources already exist and what changes are required on the next apply. What gives Terraform this record of managed infrastructure?",
+            "options": [
+                "The .gitignore file in the working directory",
+                "The output values printed after apply",
+                "The state file that maps configuration to real resources",
+                "The .terraform providers plugin cache"
+            ],
+            "correct_index": 2,
+            "explanation": "Terraform keeps a state file that records the mapping between configuration and the real resources it manages, which drives planning and change detection. The plugin cache holds provider binaries, .gitignore excludes files from Git, and outputs are values, not a resource inventory.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform's purpose (vs other IaC)"
+        },
+        {
+            "id": "ta-002-hashi-008",
+            "domain": "Understand Terraform basics",
+            "stem": "A developer clones a Terraform project and runs a command that downloads the required providers and initializes the working directory before planning. Which command performs this setup?",
+            "options": [
+                "terraform plan",
+                "terraform validate",
+                "terraform fmt",
+                "terraform init"
+            ],
+            "correct_index": 3,
+            "explanation": "terraform init initializes the working directory, downloads required providers and modules, and configures the backend. plan previews changes, validate checks syntax, and fmt rewrites formatting only.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-009",
+            "domain": "Understand Terraform basics",
+            "stem": "A configuration must declare that it uses the AWS provider from the HashiCorp registry and constrain it to a compatible version. Where is this requirement declared in modern Terraform?",
+            "options": [
+                "In the terraform block using required_providers",
+                "In a providers.tf comment block",
+                "In the terraform.tfstate file",
+                "In an environment variable named PROVIDER"
+            ],
+            "correct_index": 0,
+            "explanation": "The terraform block's required_providers entry declares each provider's source address and version constraint so init installs the right plugin. Comments do not configure providers, the state file records deployed resources, and environment variables are not how providers are declared.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-010",
+            "domain": "Understand Terraform basics",
+            "stem": "An engineer needs to define a single virtual network in a Terraform configuration. Which block type describes a piece of infrastructure to create and manage?",
+            "options": [
+                "A locals block",
+                "A resource block",
+                "A variable block",
+                "An output block"
+            ],
+            "correct_index": 1,
+            "explanation": "A resource block declares a managed infrastructure object with its type and attributes. Variable, output, and locals blocks pass values, expose results, and name expressions rather than define infrastructure objects.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-011",
+            "domain": "Understand Terraform basics",
+            "stem": "A team wants a provider version constraint that allows patch releases within a minor version but blocks the next major version, such as the 5.x line. Which constraint expresses this?",
+            "options": [
+                "!= 5.0",
+                "= 5.0",
+                "~> 5.0",
+                ">= 5.0"
+            ],
+            "correct_index": 2,
+            "explanation": "The pessimistic constraint ~> 5.0 allows the rightmost component to increase, permitting 5.x but not 6.0. The >= 5.0 constraint permits any newer major version, != excludes exactly that version, and = pins to only that version.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-012",
+            "domain": "Understand Terraform basics",
+            "stem": "After running terraform init, a developer notices a .terraform.lock.hcl file appear in the project. What is its purpose?",
+            "options": [
+                "It stores the current infrastructure state",
+                "It lists variable values for each environment",
+                "It caches module source code copied from the registry",
+                "It records the exact provider versions selected so installs are reproducible"
+            ],
+            "correct_index": 3,
+            "explanation": "The dependency lock file records the exact provider versions and checksums chosen during init so later installs are consistent. Terraform state is stored elsewhere, variables are not values in this file, and modules are cached under .terraform, not the lock file.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-013",
+            "domain": "Understand Terraform basics",
+            "stem": "A deployment needs providers for AWS, Azure, and Google Cloud, each maintained by a different vendor. How does Terraform obtain the code that knows how to talk to these platforms?",
+            "options": [
+                "It downloads provider plugins from their source locations during init",
+                "It compiles the cloud APIs into the Terraform binary",
+                "It requires a separate Terraform binary for each cloud",
+                "It calls a single built-in universal provider for all clouds"
+            ],
+            "correct_index": 0,
+            "explanation": "Terraform providers are plugins that are downloaded from their source addresses during init and installed into the working directory. The core binary does not embed each cloud API, and Terraform does not require one binary per cloud or a universal provider.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-014",
+            "domain": "Understand Terraform basics",
+            "stem": "An engineer runs terraform init in a directory that already contains a lock file and provider cache. What does the command still do to prepare the working directory?",
+            "options": [
+                "It destroys resources that are no longer in configuration",
+                "It initializes the backend and installs modules and providers when needed",
+                "It applies all pending infrastructure changes immediately",
+                "It deletes the state file and starts fresh"
+            ],
+            "correct_index": 1,
+            "explanation": "terraform init prepares the working directory by initializing the backend and installing any required modules and providers. Applying, destroying, and deleting state are separate operations that init never performs.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-015",
+            "domain": "Understand Terraform basics",
+            "stem": "A team must explain why Terraform is considered a provisioning tool rather than a configuration management tool that runs continuously on hosts. Which statement best describes Terraform's role?",
+            "options": [
+                "It stores application secrets for running processes",
+                "It schedules containers on a Kubernetes cluster at runtime",
+                "It provisions and manages infrastructure resources through provider APIs",
+                "It installs and maintains packages on long-running servers"
+            ],
+            "correct_index": 2,
+            "explanation": "Terraform is primarily a provisioning tool that creates and manages infrastructure through provider APIs. Installing and maintaining packages on hosts is configuration management, and secret storage and container scheduling are handled by other tools.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform basics"
+        },
+        {
+            "id": "ta-002-hashi-016",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "Before committing configuration, an engineer wants Terraform to rewrite files with the canonical spacing and alignment used by the HCL style guide. Which command should the engineer run?",
+            "options": [
+                "terraform validate",
+                "terraform plan",
+                "terraform taint",
+                "terraform fmt"
+            ],
+            "correct_index": 3,
+            "explanation": "terraform fmt rewrites configuration files into the canonical HCL format. validate checks for syntax and consistency without editing files, plan previews resource changes, and taint marks a resource for replacement.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-017",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A developer wants to check that a configuration is syntactically valid and internally consistent, including references, without contacting any remote services. Which command does this?",
+            "options": [
+                "terraform validate",
+                "terraform plan",
+                "terraform apply",
+                "terraform init"
+            ],
+            "correct_index": 0,
+            "explanation": "terraform validate checks configuration syntax, attribute names, and references without contacting remote systems. plan and apply query providers and state, and init downloads plugins and configures the backend.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-018",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "Before changing production, an engineer wants a preview of which resources Terraform will create, update, or destroy. Which command produces this preview?",
+            "options": [
+                "terraform fmt",
+                "terraform plan",
+                "terraform apply",
+                "terraform state list"
+            ],
+            "correct_index": 1,
+            "explanation": "terraform plan compares configuration with state and real resources and shows the proposed actions without making changes. apply executes changes, state list prints tracked resources, and fmt only reformats files.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-019",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A continuous integration pipeline runs Terraform non-interactively and must apply a saved plan without pausing for a yes or no confirmation. Which flag should the pipeline use?",
+            "options": [
+                "terraform apply -force",
+                "terraform apply -silent",
+                "terraform apply -auto-approve",
+                "terraform apply -dry-run"
+            ],
+            "correct_index": 2,
+            "explanation": "The -auto-approve flag skips the interactive approval prompt so apply can run unattended. There is no -dry-run, -force, or -silent flag for terraform apply in current Terraform.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-020",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A temporary demonstration environment is finished and all of its managed resources must be removed. Which command should an operator run?",
+            "options": [
+                "terraform plan -destroy=false",
+                "terraform init -reconfigure",
+                "terraform state rm",
+                "terraform destroy"
+            ],
+            "correct_index": 3,
+            "explanation": "terraform destroy removes all resources tracked by the current state and configuration. There is no -destroy=false flag, init only prepares the directory, and state rm removes items from state without deleting the real resources.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-021",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A team manages separate development and production deployments from the same configuration and needs to switch the active environment. Which command lists and changes the active workspace?",
+            "options": [
+                "terraform workspace select",
+                "terraform state select",
+                "terraform env switch",
+                "terraform plan -workspace"
+            ],
+            "correct_index": 0,
+            "explanation": "terraform workspace select switches the active workspace, and workspace list shows the available ones. There is no state select or env switch command in current Terraform, and plan does not take a -workspace flag.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-022",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "An engineer must inventory the resource addresses that Terraform currently tracks for the active configuration. Which command prints those addresses?",
+            "options": [
+                "terraform providers",
+                "terraform state list",
+                "terraform output",
+                "terraform show -json"
+            ],
+            "correct_index": 1,
+            "explanation": "terraform state list prints the resource addresses recorded in state. output prints declared output values, show renders the state or plan in detail, and providers lists the providers in use.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-023",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A resource was created manually in the cloud console and now must be brought under Terraform management without recreating it. Which command associates the existing resource with a resource address in state?",
+            "options": [
+                "terraform apply -adopt",
+                "terraform state mv",
+                "terraform import",
+                "terraform plan -import"
+            ],
+            "correct_index": 2,
+            "explanation": "terraform import binds an existing real resource to a resource address in state so Terraform can manage it. plan does not adopt resources, there is no apply -adopt flag, and state mv relocates an address already in state.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-024",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A virtual machine is behaving incorrectly, and an engineer wants Terraform to destroy and recreate just that resource on the next apply while leaving everything else alone. Which command marks the resource for replacement?",
+            "options": [
+                "terraform destroy -target",
+                "terraform state rm",
+                "terraform plan -replace-all",
+                "terraform taint"
+            ],
+            "correct_index": 3,
+            "explanation": "terraform taint marks a single resource as degraded so the next apply recreates it, and the modern equivalent is the plan -replace option. destroy -target removes the resource without recreating it, state rm forgets it, and there is no -replace-all flag.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-025",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "After an apply, a team wants to read a specific value that the configuration exposes, such as a load balancer address. Which command reads a declared output value?",
+            "options": [
+                "terraform output",
+                "terraform state show",
+                "terraform providers",
+                "terraform fmt"
+            ],
+            "correct_index": 0,
+            "explanation": "terraform output prints the declared output values from state. state show renders a single resource, providers lists provider requirements, and fmt reformats configuration files.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-026",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A team wants terraform init to ignore existing version selections and install the newest provider versions permitted by the configuration. Which flag should the team add?",
+            "options": [
+                "-force-copy",
+                "-upgrade",
+                "-reconfigure",
+                "-migrate-state"
+            ],
+            "correct_index": 1,
+            "explanation": "init -upgrade tells Terraform to upgrade providers to the newest versions allowed by the constraints. -reconfigure ignores a changed backend configuration, -migrate-state moves state to a new backend, and -force-copy forces state copying without a prompt.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-027",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "A team wants to review a plan in one pipeline stage and apply exactly that plan in a later stage without recalculating it. Which approach should the team use?",
+            "options": [
+                "Copy the state file between stages and re-run plan",
+                "Re-run terraform plan in the second stage and apply",
+                "Save the plan with terraform plan -out and apply the saved file",
+                "Run terraform apply twice from the same directory"
+            ],
+            "correct_index": 2,
+            "explanation": "terraform plan -out writes the plan to a file that terraform apply can consume so the second stage applies exactly the reviewed changes. Re-running plan or apply recalculates, and copying state does not preserve the reviewed plan.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-028",
+            "domain": "Use the Terraform CLI (outside of core workflow)",
+            "stem": "During an incident an engineer needs to apply changes to only one resource and its dependencies instead of the whole configuration. Which option should the engineer use?",
+            "options": [
+                "-only with the resource address",
+                "-filter with the resource address",
+                "-resource with the resource address",
+                "-target with the resource address"
+            ],
+            "correct_index": 3,
+            "explanation": "The -target option limits plan or apply to the named resource and its dependencies. There is no -only, -filter, or -resource option in Terraform; -target is documented for exceptional situations rather than routine use.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Use the Terraform CLI (outside of core workflow)"
+        },
+        {
+            "id": "ta-002-hashi-029",
+            "domain": "Interact with Terraform modules",
+            "stem": "A configuration needs to consume a publicly published module from the Terraform Registry. Which argument in a module block specifies where the module comes from?",
+            "options": [
+                "source",
+                "provider",
+                "backend",
+                "depends_on"
+            ],
+            "correct_index": 0,
+            "explanation": "The source argument inside a module block points to the module location, such as a registry address or a version control URL. provider selects a provider, backend configures state storage, and depends_on adds an ordering dependency.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Interact with Terraform modules"
+        },
+        {
+            "id": "ta-002-hashi-030",
+            "domain": "Interact with Terraform modules",
+            "stem": "A team consumes a registry module and wants to pin it to a specific released version so upgrades are intentional. Which argument supports this for a registry source?",
+            "options": [
+                "constraint",
+                "version",
+                "ref",
+                "tag"
+            ],
+            "correct_index": 1,
+            "explanation": "Registry modules are pinned with the version argument in the module block. The ref argument is used for version control sources such as Git, and tag and constraint are not module version arguments.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Interact with Terraform modules"
+        },
+        {
+            "id": "ta-002-hashi-031",
+            "domain": "Interact with Terraform modules",
+            "stem": "A reusable module defines variables such as instance_type and environment. How does a caller pass values into those inputs when using the module?",
+            "options": [
+                "By exporting shell variables before running plan",
+                "By adding the values to the state file manually",
+                "By setting arguments in the module block that match the child variable names",
+                "By editing files inside the module source directory"
+            ],
+            "correct_index": 2,
+            "explanation": "A caller passes module inputs as arguments named after the child module variables inside the module block. Editing installed module files is not durable, and environment variables and manual state edits are not how module inputs are provided.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Interact with Terraform modules"
+        },
+        {
+            "id": "ta-002-hashi-032",
+            "domain": "Interact with Terraform modules",
+            "stem": "A caller needs to read a value, such as a generated database endpoint, that a child module computes. What must the child module do to make that value available to the parent?",
+            "options": [
+                "Write the value into the parent provider block",
+                "Store the value in a local variable visible to all modules",
+                "Add the value to the module's required_providers list",
+                "Declare it in an output block so the parent references module.name.output"
+            ],
+            "correct_index": 3,
+            "explanation": "A child module exposes a value by declaring an output block, which the parent reads as module.name.output. Provider blocks, locals scoped to the child, and required_providers do not expose values to the parent.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Interact with Terraform modules"
+        },
+        {
+            "id": "ta-002-hashi-033",
+            "domain": "Interact with Terraform modules",
+            "stem": "A team stores a shared module in an internal Git repository and wants to reference it from another configuration. Which source form should the team use?",
+            "options": [
+                "A version control URL such as git::https://... in the source argument",
+                "A registry namespace that only HashiCorp publishes",
+                "A local absolute path on one developer's laptop",
+                "A URL to a rendered documentation page"
+            ],
+            "correct_index": 0,
+            "explanation": "Modules can be sourced from version control using a git:: URL in the source argument, optionally with a ref. HashiCorp registry namespaces are for published modules, a laptop path is not portable, and a documentation page is not a module source.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Interact with Terraform modules"
+        },
+        {
+            "id": "ta-002-hashi-034",
+            "domain": "Navigate Terraform workflow",
+            "stem": "A new team asks for the correct order of the core Terraform workflow when writing and deploying configuration. Which sequence is correct?",
+            "options": [
+                "terraform validate, then terraform destroy, then write",
+                "Write, then terraform plan, then terraform apply",
+                "terraform apply, then terraform plan, then write",
+                "terraform destroy, then terraform plan, then write"
+            ],
+            "correct_index": 1,
+            "explanation": "The core workflow is to write configuration, run terraform plan to preview changes, and run terraform apply to make them. Applying before planning, or destroying before writing, inverts the intended order.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Navigate Terraform workflow"
+        },
+        {
+            "id": "ta-002-hashi-035",
+            "domain": "Navigate Terraform workflow",
+            "stem": "A developer opens a freshly cloned Terraform project and immediately runs terraform plan, which fails because providers are not installed. What should the developer run first?",
+            "options": [
+                "terraform destroy",
+                "terraform fmt",
+                "terraform init",
+                "terraform apply"
+            ],
+            "correct_index": 2,
+            "explanation": "terraform init must run first to install providers and modules and configure the backend before plan can evaluate the configuration. apply and destroy also require a successful init, and fmt only reformats files.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Navigate Terraform workflow"
+        },
+        {
+            "id": "ta-002-hashi-036",
+            "domain": "Navigate Terraform workflow",
+            "stem": "After reviewing a plan and confirming the changes are correct, which command makes the described infrastructure changes actually happen?",
+            "options": [
+                "terraform plan",
+                "terraform validate",
+                "terraform state list",
+                "terraform apply"
+            ],
+            "correct_index": 3,
+            "explanation": "terraform apply executes the planned changes against the providers. plan only previews, validate only checks the configuration, and state list only reports tracked resources.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Navigate Terraform workflow"
+        },
+        {
+            "id": "ta-002-hashi-037",
+            "domain": "Navigate Terraform workflow",
+            "stem": "A team is decommissioning a project and wants a preview of the resources that will be removed before confirming the teardown. Which command previews a destroy?",
+            "options": [
+                "terraform plan -destroy",
+                "terraform apply -destroy-preview",
+                "terraform show -destroy",
+                "terraform state list -remove"
+            ],
+            "correct_index": 0,
+            "explanation": "terraform plan -destroy previews the destruction, which is equivalent to terraform destroy run in plan mode. There is no apply -destroy-preview or show -destroy option, and state list has no -remove flag.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Navigate Terraform workflow"
+        },
+        {
+            "id": "ta-002-hashi-038",
+            "domain": "Navigate Terraform workflow",
+            "stem": "During review an engineer wants Terraform to reconcile its record with the real remote resources so the plan reflects current reality before changes are proposed. How is this handled in current Terraform?",
+            "options": [
+                "Terraform never reads remote resources after the first apply",
+                "The plan and apply commands refresh state automatically by default",
+                "Only terraform import can detect drift",
+                "Drift is ignored until a manual state edit"
+            ],
+            "correct_index": 1,
+            "explanation": "By default terraform plan and apply refresh the state against real resources so the plan reflects actual drift. import adopts untracked resources, and Terraform does read remote objects, so drift is not ignored or invisible.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Navigate Terraform workflow"
+        },
+        {
+            "id": "ta-002-hashi-039",
+            "domain": "Implement and maintain state",
+            "stem": "A team wants Terraform state stored in a shared remote location instead of a local file so everyone works from the same record. What should the team configure?",
+            "options": [
+                "A variable block holding the state path",
+                "An output block that exports the state",
+                "A backend block that points to remote state storage",
+                "A provider block for the cloud only"
+            ],
+            "correct_index": 2,
+            "explanation": "A backend block configures where Terraform stores state, such as a remote object store or Terraform Cloud. Provider, variable, and output blocks do not relocate state storage.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-040",
+            "domain": "Implement and maintain state",
+            "stem": "Two teams maintain separate configurations, and one needs to read output values exported by the other configuration's state. Which capability allows this?",
+            "options": [
+                "A local variable copied from the other project",
+                "A provider alias shared between projects",
+                "A count meta-argument spanning both projects",
+                "A terraform_remote_state data source referencing the other state"
+            ],
+            "correct_index": 3,
+            "explanation": "The terraform_remote_state data source reads outputs from another configuration's state. Copying locals is manual and stale, provider aliases select provider configurations, and count only affects resources within one configuration.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-041",
+            "domain": "Implement and maintain state",
+            "stem": "Two engineers run terraform apply against the same remote backend at the same moment, and one receives an error about a state lock. What is the lock protecting against?",
+            "options": [
+                "Concurrent operations that could corrupt or conflict over shared state",
+                "Unauthorized provider downloads from the registry",
+                "Invalid module source addresses",
+                "Formatting differences between HCL files"
+            ],
+            "correct_index": 0,
+            "explanation": "State locking prevents simultaneous operations from writing to and corrupting the same state. It has no role in provider downloads, module addresses, or formatting checks.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-042",
+            "domain": "Implement and maintain state",
+            "stem": "A security reviewer notes that passwords passed to a resource may be recorded in the state file. What does this imply about protecting Terraform state?",
+            "options": [
+                "State is safe because it is always encrypted on disk everywhere",
+                "State should be treated as sensitive and stored in an encrypted, access-controlled backend",
+                "State can be freely committed to a public repository",
+                "State never contains values derived from variables"
+            ],
+            "correct_index": 1,
+            "explanation": "State can contain sensitive values, so it must be stored in a backend with encryption and tight access controls and never committed to source control. State does store variable-derived values and is not universally encrypted by default.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-043",
+            "domain": "Implement and maintain state",
+            "stem": "Someone edits a security group directly in the cloud console, and the next terraform plan proposes to change it back. What is this situation called?",
+            "options": [
+                "Provider mismatch",
+                "Module version skew",
+                "Configuration drift",
+                "State corruption"
+            ],
+            "correct_index": 2,
+            "explanation": "Configuration drift is a real resource diverging from the recorded configuration, which the next plan detects and proposes to correct. State corruption, provider mismatch, and module version skew describe different problems.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-044",
+            "domain": "Implement and maintain state",
+            "stem": "Which Terraform artifact records the mapping between resource addresses in configuration and the identifiers of real remote objects?",
+            "options": [
+                "The lock file",
+                "The .terraform directory",
+                "The provider plugin binary",
+                "The state file"
+            ],
+            "correct_index": 3,
+            "explanation": "The state file maps configuration resource addresses to the unique identifiers of real resources so Terraform can plan and update them. The lock file pins provider versions, .terraform caches plugins and modules, and provider binaries implement the API calls.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-045",
+            "domain": "Implement and maintain state",
+            "stem": "A resource is being moved to a different configuration, and an engineer wants Terraform to stop managing it here without deleting the real object. Which command removes it from state only?",
+            "options": [
+                "terraform state rm",
+                "terraform destroy -target",
+                "terraform apply -replace",
+                "terraform import"
+            ],
+            "correct_index": 0,
+            "explanation": "terraform state rm removes an item from state without touching the real resource. destroy -target and apply -replace delete or recreate the object, and import does the opposite by adding a resource to state.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Implement and maintain state"
+        },
+        {
+            "id": "ta-002-hashi-046",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A configuration is reused across environments with different region values, and the team wants to pass the region without editing files. What should the team define?",
+            "options": [
+                "A provisioner script that rewrites the file",
+                "An input variable that callers set at run time",
+                "A hard-coded string literal in the resource block",
+                "An output value read from the state"
+            ],
+            "correct_index": 1,
+            "explanation": "Input variables let callers supply values such as a region at run time so the same configuration is reusable. Hard-coded literals require editing, outputs expose values rather than accept them, and provisioners run commands after resource creation.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-047",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A team wants an input variable that accepts a collection of key-value pairs, such as a map of instance tags. Which variable type is appropriate?",
+            "options": [
+                "number",
+                "string",
+                "map(string)",
+                "bool"
+            ],
+            "correct_index": 2,
+            "explanation": "map(string) accepts a set of key-to-string pairs, which suits tags and similar collections. bool, number, and string hold single scalar values rather than a collection of key-value pairs.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-048",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "After an apply the team wants to display the created load balancer DNS name to other tooling. Which block exposes a value from a Terraform configuration?",
+            "options": [
+                "A variable block",
+                "A locals block",
+                "A resource block",
+                "An output block"
+            ],
+            "correct_index": 3,
+            "explanation": "An output block exposes a value from the configuration, such as a resource attribute, to the CLI and to remote state consumers. Variable blocks accept input, locals name intermediate expressions, and resource blocks define infrastructure.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-049",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "An engineer has a list of subnet identifiers and needs the number of elements to drive a count expression. Which built-in Terraform function returns the length of a list?",
+            "options": [
+                "length",
+                "size",
+                "count",
+                "len"
+            ],
+            "correct_index": 0,
+            "explanation": "length returns the number of elements in a list, map, or string. size, count, and len are not Terraform functions; count is a meta-argument rather than a function.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-050",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A team wants to create three identical instances from one resource block by using an integer index. Which meta-argument should the team use?",
+            "options": [
+                "provider",
+                "count",
+                "for_each",
+                "depends_on"
+            ],
+            "correct_index": 1,
+            "explanation": "The count meta-argument creates a number of instances addressed by integer index, such as count.index. for_each iterates a map or set of strings, depends_on sets ordering, and provider selects a provider configuration.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-051",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A team wants to create one resource per entry in a map of environment names, and stable addresses matter when entries are added or removed. Which meta-argument should the team use?",
+            "options": [
+                "dynamic",
+                "depends_on",
+                "for_each",
+                "count"
+            ],
+            "correct_index": 2,
+            "explanation": "for_each creates an instance per map or set key, giving stable keyed addresses so reordering does not disturb other instances. count uses integer indices that shift when items change, dynamic generates nested blocks, and depends_on sets ordering.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-052",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A resource must be created only after another resource that Terraform cannot infer from attribute references. Which meta-argument should the engineer add to declare this ordering?",
+            "options": [
+                "count",
+                "provider",
+                "for_each",
+                "depends_on"
+            ],
+            "correct_index": 3,
+            "explanation": "depends_on declares an explicit dependency for ordering when no attribute reference expresses it. count and for_each control how many instances exist, and provider selects a provider configuration.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-053",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A team needs to run a script on a newly created virtual machine to bootstrap software after it exists, accepting that this runs as part of resource creation. Which Terraform feature is intended for this?",
+            "options": [
+                "Provisioners such as remote-exec",
+                "A variable block",
+                "An output block",
+                "A terraform_remote_state data source"
+            ],
+            "correct_index": 0,
+            "explanation": "Provisioners such as remote-exec run scripts as part of resource creation, though HashiCorp recommends them as a last resort. Variables accept input, outputs expose values, and remote state reads another configuration's outputs.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-054",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A resource needs a variable number of repeated nested blocks, such as multiple ingress rules, generated from a list without copy-pasting. Which construct should the engineer use?",
+            "options": [
+                "A provider block",
+                "A dynamic block",
+                "A locals block",
+                "An output block"
+            ],
+            "correct_index": 1,
+            "explanation": "A dynamic block generates repeated nested blocks by iterating a collection, which avoids hand-written repetition. locals, outputs, and providers do not generate nested blocks.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-055",
+            "domain": "Read, generate, and modify configuration",
+            "stem": "A team wants to define a reusable named expression, such as a common name prefix, and reference it throughout the configuration. Which block should the team use?",
+            "options": [
+                "A variable block",
+                "A resource block",
+                "A locals block",
+                "An output block"
+            ],
+            "correct_index": 2,
+            "explanation": "A locals block assigns names to expressions such as a shared prefix, which can then be referenced with local.name. Outputs expose values, variables accept input, and resource blocks define infrastructure objects.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Read, generate, and modify configuration"
+        },
+        {
+            "id": "ta-002-hashi-056",
+            "domain": "Understand Terraform Cloud capabilities",
+            "stem": "An organization wants Terraform runs to execute in a managed remote environment with shared state and a record of each run. Which HashiCorp offering provides this?",
+            "options": [
+                "The local Terraform CLI only",
+                "A standalone state file on a shared drive",
+                "A general-purpose CI server with no remote backend",
+                "HashiCorp Terraform Cloud"
+            ],
+            "correct_index": 3,
+            "explanation": "Terraform Cloud executes runs remotely, stores state centrally, and keeps a history of runs and plans. The local CLI alone, a shared-drive state file, and a generic CI server without a remote backend do not provide those managed capabilities.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform Cloud capabilities"
+        },
+        {
+            "id": "ta-002-hashi-057",
+            "domain": "Understand Terraform Cloud capabilities",
+            "stem": "A team connects its Terraform Cloud workspace to a version control repository so a commit can trigger a plan and apply automatically. What is this integration called?",
+            "options": [
+                "A version control system (VCS) connection driving runs",
+                "A backend migration to a local file",
+                "A provider alias configuration",
+                "A dynamic block in the configuration"
+            ],
+            "correct_index": 0,
+            "explanation": "Terraform Cloud uses a VCS connection to watch a repository and trigger runs on commits and pull requests. Backend migration, provider aliases, and dynamic blocks are unrelated to that integration.",
+            "reference": "HashiCorp Terraform Associate (003) Exam Objectives - Understand Terraform Cloud capabilities"
+        }
+    ]
+}

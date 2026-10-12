@@ -1,0 +1,787 @@
+{
+    "cert_key": "ccnp-enarsi",
+    "title": "Cisco CCNP Enterprise Advanced Routing (ENARSI 300-410)",
+    "issuer": "Cisco",
+    "outline_file": "outlines/ccnp-enarsi.json",
+    "variant_label": "ENARSI 300-410 Real-Spec Practice",
+    "exam": {
+        "questions": 55,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Cisco 300-410 ENARSI exam topics (four domains and weights). Not a capture of past exam questions.",
+    "source_label": "Cisco ENARSI practice bank",
+    "items": [
+        {
+            "id": "ccnp-enarsi-001",
+            "domain": "Layer 3 Technologies",
+            "stem": "An EIGRP router selects a successor with a feasible distance of 1500. A second route to the same destination advertises a reported distance of 1600. How does the router treat the second route?",
+            "options": [
+                "It keeps the route in the topology table but cannot use it as a feasible successor",
+                "It removes the route from the topology table immediately",
+                "It marks the route as the feasible successor because the metric is higher",
+                "It promotes the route to successor after load balancing"
+            ],
+            "correct_index": 0,
+            "explanation": "The EIGRP feasibility condition requires a candidate's reported distance to be lower than the successor's feasible distance. Since 1600 exceeds 1500, the route fails the condition and cannot become a feasible successor, although it stays in the topology table.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-002",
+            "domain": "Layer 3 Technologies",
+            "stem": "A branch router is configured as an EIGRP stub. Which behavior results from this configuration?",
+            "options": [
+                "The branch ignores the hub's summary routes",
+                "The branch announces a limited set of routes and the hub stops querying it, so the branch is not used as transit",
+                "The branch advertises every route it learns and becomes a transit path",
+                "The branch can no longer form any EIGRP adjacencies"
+            ],
+            "correct_index": 1,
+            "explanation": "An EIGRP stub router advertises only connected, summary, and optionally static or redistributed routes, and the upstream router stops sending queries to it. This prevents the branch from being used to reach other sites while keeping adjacency intact.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-003",
+            "domain": "Layer 3 Technologies",
+            "stem": "Which EIGRP feature allows the router to install routes whose metric is up to a defined multiple of the successor's feasible distance?",
+            "options": [
+                "route summarization",
+                "offset-list",
+                "variance",
+                "stub routing"
+            ],
+            "correct_index": 2,
+            "explanation": "The variance multiplier lets EIGRP place feasible routes whose metric is within the specified factor of the successor feasible distance into the routing table, enabling unequal-cost load balancing. Offset-lists adjust metrics and stubs limit advertisements.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-004",
+            "domain": "Layer 3 Technologies",
+            "stem": "EIGRP authentication is enabled on one router, but the adjacency fails to form. Which condition most likely explains the failure?",
+            "options": [
+                "The interface bandwidth is different",
+                "The autonomous system numbers differ",
+                "The K-values are mismatched",
+                "The authentication key or key chain does not match on both peers"
+            ],
+            "correct_index": 3,
+            "explanation": "EIGRP authentication requires matching key strings or key chains on both peers. A mismatch causes authentication to fail and the adjacency never completes, while AS and K-value mismatches would break the session for different reasons.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-005",
+            "domain": "Layer 3 Technologies",
+            "stem": "An engineer must enable EIGRP for both IPv4 and IPv6 using a single process with address-family configuration. Which EIGRP mode supports this?",
+            "options": [
+                "EIGRP named mode with address families",
+                "RIPng dual stack",
+                "Classic EIGRP with the network command only",
+                "OSPFv3 address families"
+            ],
+            "correct_index": 0,
+            "explanation": "EIGRP named mode groups IPv4 and IPv6 configuration under a named virtual instance with address families. Classic EIGRP supports IPv4 only, and OSPFv3 and RIPng are separate protocols.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-006",
+            "domain": "Layer 3 Technologies",
+            "stem": "Two OSPF routers remain stuck in the EXSTART/EXCHANGE state and never reach FULL. Which mismatch commonly causes this symptom?",
+            "options": [
+                "A mismatched hello interval",
+                "An interface MTU mismatch between the neighbors",
+                "An area ID mismatch",
+                "A duplicate router ID"
+            ],
+            "correct_index": 1,
+            "explanation": "An MTU mismatch prevents the routers from exchanging database description packets, so they remain in EXSTART/EXCHANGE. Area, hello interval, and duplicate router-ID problems stop adjacencies earlier in the process.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-007",
+            "domain": "Layer 3 Technologies",
+            "stem": "Which OSPF LSA type does an area border router generate to advertise networks from one area into another?",
+            "options": [
+                "Type 1 router LSA",
+                "Type 2 network LSA",
+                "Type 3 summary LSA",
+                "Type 5 external LSA"
+            ],
+            "correct_index": 2,
+            "explanation": "Type 3 summary LSAs are created by ABRs to advertise inter-area prefixes. Type 1 and 2 stay within an area, and Type 5 describes external routes injected by an ASBR.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-008",
+            "domain": "Layer 3 Technologies",
+            "stem": "Which statement about OSPFv3 is correct?",
+            "options": [
+                "It requires a 32-bit IPv4 interface address on every link",
+                "It supports only broadcast networks with no multicast",
+                "It cannot operate in multiple areas",
+                "It forms adjacencies using link-local addresses and supports per-interface configuration"
+            ],
+            "correct_index": 3,
+            "explanation": "OSPFv3 uses IPv6 link-local addresses to form adjacencies and is configured per interface rather than per network statement. It keeps a 32-bit router ID, supports multicast, and works across areas.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-009",
+            "domain": "Layer 3 Technologies",
+            "stem": "An OSPF area cannot connect physically to the backbone. Which mechanism lets the area reach Area 0 through a transit area?",
+            "options": [
+                "A virtual link",
+                "A stub area",
+                "A not-so-stubby area",
+                "An external LSA"
+            ],
+            "correct_index": 0,
+            "explanation": "A virtual link is a logical tunnel through a transit area that connects a discontiguous area to Area 0. Stub and NSSA areas change LSA flooding but do not connect an area to the backbone.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-010",
+            "domain": "Layer 3 Technologies",
+            "stem": "On a broadcast OSPF segment where all routers share the same priority, which router is elected designated router?",
+            "options": [
+                "The router with the lowest router ID",
+                "The router with the highest router ID",
+                "The router with the lowest interface IP address",
+                "The first router to send a hello packet"
+            ],
+            "correct_index": 1,
+            "explanation": "When interface priorities tie, OSPF breaks the tie by the highest router ID. The DR election does not use the lowest IP or the first hello.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-011",
+            "domain": "Layer 3 Technologies",
+            "stem": "OSPF computes the same cost for a 1 Gbps and a 10 Gbps interface. Which change is required to differentiate them?",
+            "options": [
+                "Set the interface cost to 1 on both links",
+                "Enable OSPF priority",
+                "Increase the auto-cost reference-bandwidth to 10000 Mbps",
+                "Lower the hello interval"
+            ],
+            "correct_index": 2,
+            "explanation": "Cost equals reference bandwidth divided by interface bandwidth. With the default 100 Mbps reference, both 1 Gbps and 10 Gbps links cap at cost 1, so raising the reference bandwidth to 10000 Mbps restores differentiation.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-012",
+            "domain": "Layer 3 Technologies",
+            "stem": "A router learns the same BGP prefix from two neighbors. Which parameter immediately wins path selection when its value is higher?",
+            "options": [
+                "Multi-exit discriminator",
+                "Origin code",
+                "AS path length",
+                "Locally configured weight"
+            ],
+            "correct_index": 3,
+            "explanation": "Weight is evaluated first in the BGP best-path algorithm and the higher value is preferred; it is local to the router and not advertised. MED, origin, and AS path are considered later.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-013",
+            "domain": "Layer 3 Technologies",
+            "stem": "Which BGP attribute influences outbound path selection within a single autonomous system and is propagated only to iBGP peers?",
+            "options": [
+                "Local preference",
+                "Multi-exit discriminator",
+                "AS path",
+                "Weight"
+            ],
+            "correct_index": 0,
+            "explanation": "Local preference is shared among iBGP routers to steer outbound traffic and the higher value is preferred. MED influences inbound selection, AS path is prepended across autonomous systems, and weight is not advertised at all.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-014",
+            "domain": "Layer 3 Technologies",
+            "stem": "In a large iBGP deployment, which device role reduces the need for a full mesh by reflecting routes between its iBGP clients?",
+            "options": [
+                "Autonomous system boundary router",
+                "Route reflector",
+                "Route server",
+                "Next-hop-self speaker"
+            ],
+            "correct_index": 1,
+            "explanation": "A route reflector re-advertises routes received from one iBGP client to its other clients and non-clients, removing the full-mesh requirement. An ASBR connects to other autonomous systems, and next-hop-self changes only the next-hop attribute.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-015",
+            "domain": "Layer 3 Technologies",
+            "stem": "An iBGP speaker advertises an eBGP-learned prefix to an internal peer, but that peer cannot reach the external next hop. Which command on the advertising router corrects this?",
+            "options": [
+                "neighbor 10.0.0.2 soft-reconfiguration inbound",
+                "neighbor 10.0.0.2 route-reflector-client",
+                "neighbor 10.0.0.2 next-hop-self",
+                "neighbor 10.0.0.2 send-community"
+            ],
+            "correct_index": 2,
+            "explanation": "By default an iBGP speaker leaves the eBGP next hop unchanged, and an internal peer may not have a route to it. The next-hop-self command rewrites the next hop to the local address so the internal peer can resolve it.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-016",
+            "domain": "Layer 3 Technologies",
+            "stem": "A network engineer redistributes OSPF routes into EIGRP, but the prefixes are not installed because the metric is unreachable. What is the correct fix?",
+            "options": [
+                "Increase the administrative distance of EIGRP",
+                "Configure EIGRP variance",
+                "Disable split horizon",
+                "Set a seed metric in the redistribute command"
+            ],
+            "correct_index": 3,
+            "explanation": "EIGRP requires a seed metric when redistributing because the source protocol metric is not directly compatible. Supplying bandwidth, delay, reliability, load, and MTU values lets the routes be computed and installed.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-017",
+            "domain": "Layer 3 Technologies",
+            "stem": "Routes are mutually redistributed between OSPF and EIGRP, and a route can loop back into the domain it came from. Which technique prevents this loop?",
+            "options": [
+                "Tagging redistributed routes and denying tagged routes on re-entry",
+                "Enabling split horizon",
+                "Summarization only",
+                "Increasing the hello interval"
+            ],
+            "correct_index": 0,
+            "explanation": "Applying a route tag during redistribution and then filtering routes that already carry that tag stops a prefix from being redistributed back into its original domain. This administrative-tag approach is standard for mutual redistribution.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-018",
+            "domain": "Layer 3 Technologies",
+            "stem": "An engineer must keep two customers with overlapping IP address ranges isolated on one PE router that shares the same physical interfaces. Which technology is used?",
+            "options": [
+                "VLAN access maps",
+                "Virtual routing and forwarding instances",
+                "Network address translation",
+                "GRE tunnels"
+            ],
+            "correct_index": 1,
+            "explanation": "VRF provides separate routing and forwarding tables on the same router, allowing overlapping customer address spaces to coexist. NAT alters addresses, GRE encapsulates, and VLAN access maps filter within one table.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-019",
+            "domain": "Layer 3 Technologies",
+            "stem": "An administrator must forward traffic from one specific subnet to a chosen next hop regardless of the routing table. Which feature accomplishes this?",
+            "options": [
+                "A prefix-list on the interface",
+                "An offset-list",
+                "Policy-based routing with a route map",
+                "A distribute-list"
+            ],
+            "correct_index": 2,
+            "explanation": "Policy-based routing uses a route map to match traffic and set a next hop or interface, overriding destination-based forwarding. Offset-lists, distribute-lists, and prefix-lists influence route selection, not packet-by-packet forwarding.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Layer 3 Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-020",
+            "domain": "VPN Technologies",
+            "stem": "In an MPLS domain, which protocol distributes label bindings between label switch routers so packets can be forwarded with labels?",
+            "options": [
+                "Border Gateway Protocol",
+                "Open Shortest Path First",
+                "Hot Standby Router Protocol",
+                "Label Distribution Protocol"
+            ],
+            "correct_index": 3,
+            "explanation": "LDP exchanges label-to-prefix bindings between adjacent label switch routers and is the most common label distribution method. BGP and OSPF distribute reachability, and HSRP is a first-hop redundancy protocol.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-021",
+            "domain": "VPN Technologies",
+            "stem": "Which MPLS function removes the top label at the second-to-last hop so the egress router forwards an unlabeled packet?",
+            "options": [
+                "Penultimate hop popping",
+                "Label stacking",
+                "Label imposition",
+                "Label swapping"
+            ],
+            "correct_index": 0,
+            "explanation": "Penultimate hop popping lets the penultimate label switch router remove the top label, saving the egress router a lookup. Imposition adds labels at the ingress, and swapping replaces labels in transit.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-022",
+            "domain": "VPN Technologies",
+            "stem": "In an MPLS Layer 3 VPN, which BGP extended community tells the PE router which VRF should import a route?",
+            "options": [
+                "Local preference",
+                "Route target",
+                "Route distinguisher",
+                "Site of origin"
+            ],
+            "correct_index": 1,
+            "explanation": "The route target extended community controls import and export between VRFs, so the receiving PE knows which VPN the route belongs to. The route distinguisher only makes prefixes unique, and local preference steers internal path selection.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-023",
+            "domain": "VPN Technologies",
+            "stem": "What is the purpose of the route distinguisher in an MPLS Layer 3 VPN?",
+            "options": [
+                "It encrypts customer traffic across the provider core",
+                "It assigns QoS markings to VPN traffic",
+                "It makes overlapping customer prefixes unique in the provider BGP table",
+                "It selects the outgoing interface for the VPN"
+            ],
+            "correct_index": 2,
+            "explanation": "Because different customers may use the same prefix, the route distinguisher prepends a unique value so the provider's BGP table can hold both VPNv4 routes without conflict. It is not an encryption, QoS, or forwarding mechanism.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-024",
+            "domain": "VPN Technologies",
+            "stem": "Which protocol lets a DMVPN spoke dynamically learn the public address of another spoke and build a direct tunnel to it?",
+            "options": [
+                "Label Distribution Protocol",
+                "Generic Routing Encapsulation",
+                "Internet Key Exchange",
+                "Next Hop Resolution Protocol"
+            ],
+            "correct_index": 3,
+            "explanation": "NHRP maps a tunnel private address to a public NBMA address so spokes can resolve each other and build direct tunnels. GRE carries the packets, and IKE negotiates IPsec, not address resolution.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-025",
+            "domain": "VPN Technologies",
+            "stem": "Which DMVPN component lets a single hub tunnel interface terminate many spoke and dynamic peer tunnels?",
+            "options": [
+                "Multipoint GRE",
+                "IPsec transport mode",
+                "Virtual routing and forwarding",
+                "NHRP client only"
+            ],
+            "correct_index": 0,
+            "explanation": "Multipoint GRE is a single tunnel interface that can support many peers, which is the foundation of DMVPN hub operation. IPsec protects the tunnels and NHRP resolves peers, but mGRE provides the many-to-many interface.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-026",
+            "domain": "VPN Technologies",
+            "stem": "Which DMVPN phase uses NHRP redirect and shortcut so the hub is not in the data path after spoke-to-spoke resolution while still allowing route summarization?",
+            "options": [
+                "Phase 2",
+                "Phase 3",
+                "Phase 4",
+                "Phase 1"
+            ],
+            "correct_index": 1,
+            "explanation": "DMVPN Phase 3 uses NHRP redirect from the hub and NHRP shortcut on the spokes to build direct paths, and it allows the hub to advertise summary routes. Phase 2 requires specific routes and Phase 1 keeps all traffic through the hub.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-027",
+            "domain": "VPN Technologies",
+            "stem": "Which IKE phase negotiates the ISAKMP security association that protects the later key exchange between IPsec peers?",
+            "options": [
+                "IKE Phase 3",
+                "The data-transfer phase",
+                "IKE Phase 1",
+                "IKE Phase 2"
+            ],
+            "correct_index": 2,
+            "explanation": "IKE Phase 1 builds the ISAKMP/IKE security association and authenticates the peers, protecting subsequent negotiation. IKE Phase 2 builds the IPsec SAs that actually protect user traffic.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-028",
+            "domain": "VPN Technologies",
+            "stem": "Which IPsec mode encapsulates the entire original IP packet, including its header, inside a new IP header?",
+            "options": [
+                "Transport mode",
+                "GRE mode",
+                "Quick mode",
+                "Tunnel mode"
+            ],
+            "correct_index": 3,
+            "explanation": "Tunnel mode protects the whole original packet and adds a new outer IP header, which is required when gateways protect traffic between subnets. Transport mode protects only the payload and is used for host-to-host sessions.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-029",
+            "domain": "VPN Technologies",
+            "stem": "Which statement about GRE tunnels is correct?",
+            "options": [
+                "GRE is a stateless tunneling protocol that can carry multicast and non-IP protocols but provides no encryption",
+                "GRE encrypts all payloads by default",
+                "GRE supports only IPv6 transport",
+                "GRE provides built-in key management for encryption"
+            ],
+            "correct_index": 0,
+            "explanation": "GRE encapsulates many protocol types, including multicast routing traffic, but it offers no confidentiality or authentication by itself. Encryption is typically added by combining GRE with IPsec.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-030",
+            "domain": "VPN Technologies",
+            "stem": "An engineer must carry multicast routing updates across a public network with confidentiality. Which approach is appropriate?",
+            "options": [
+                "MPLS LDP over the Internet",
+                "A GRE tunnel protected by IPsec",
+                "IPsec transport mode alone",
+                "Layer 2 Tunneling Protocol alone"
+            ],
+            "correct_index": 1,
+            "explanation": "GRE can carry multicast routing traffic that IPsec alone cannot, and wrapping the GRE tunnel in IPsec adds confidentiality. IPsec transport mode does not carry multicast routing protocols, and LDP requires provider MPLS support.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - VPN Technologies"
+        },
+        {
+            "id": "ccnp-enarsi-031",
+            "domain": "Infrastructure Security",
+            "stem": "Which statement correctly distinguishes TACACS+ from RADIUS for device administration?",
+            "options": [
+                "TACACS+ can only authenticate 802.1X supplicants",
+                "RADIUS combines authentication and authorization and encrypts the full payload",
+                "TACACS+ encrypts the whole packet body and separates authentication, authorization, and accounting",
+                "RADIUS uses only TCP and encrypts the entire packet"
+            ],
+            "correct_index": 2,
+            "explanation": "TACACS+ separates the AAA functions, encrypts the entire payload, and is common for device administration. RADIUS combines authentication and authorization, encrypts only the password, and is often used for network access.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-032",
+            "domain": "Infrastructure Security",
+            "stem": "Which AAA function determines which specific commands an authenticated administrator may run?",
+            "options": [
+                "Authentication",
+                "Auditing",
+                "Accounting",
+                "Authorization"
+            ],
+            "correct_index": 3,
+            "explanation": "Authorization decides what an authenticated user is permitted to do, such as which CLI commands or privilege level. Authentication verifies identity, and accounting logs activity.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-033",
+            "domain": "Infrastructure Security",
+            "stem": "Which IOS command applies RADIUS group authentication to console logins while keeping a local fallback?",
+            "options": [
+                "aaa authentication login CONSOLE group RADIUS local",
+                "aaa authorization exec default group RADIUS",
+                "radius-server host 10.0.0.1 key secret",
+                "login local"
+            ],
+            "correct_index": 0,
+            "explanation": "The aaa authentication login command binds a login list to a server group and a fallback method; local as the last method provides local fallback. The authorization command performs a different AAA function, and login local bypasses the group.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-034",
+            "domain": "Infrastructure Security",
+            "stem": "After Unicast Reverse Path Forwarding is enabled, a router using asymmetric paths drops legitimate return traffic. Which mode should be configured?",
+            "options": [
+                "Strict mode",
+                "Loose mode",
+                "Feasible mode",
+                "Async mode"
+            ],
+            "correct_index": 1,
+            "explanation": "Loose mode checks only that a route to the source exists in the routing table, so it tolerates asymmetric paths. Strict mode requires the source be reachable through the receiving interface and drops valid asymmetric traffic.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-035",
+            "domain": "Infrastructure Security",
+            "stem": "Which feature protects a router's control plane by classifying and rate-limiting traffic destined to the CPU with a policy-map?",
+            "options": [
+                "An infrastructure ACL",
+                "IP source guard",
+                "Control Plane Policing",
+                "Unicast Reverse Path Forwarding"
+            ],
+            "correct_index": 2,
+            "explanation": "Control Plane Policing applies a QoS policy-map to traffic punted to the control plane, rate-limiting overhead traffic while allowing essential protocols. uRPF and infrastructure ACLs filter traffic but do not provide CPU policing.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-036",
+            "domain": "Infrastructure Security",
+            "stem": "An engineer must filter traffic from a specific host as it enters the network. Where should an extended ACL be applied for the most efficient filtering?",
+            "options": [
+                "As close to the destination as possible, outbound",
+                "On the VTY lines only",
+                "On the loopback interface",
+                "As close to the source as possible, inbound on the ingress interface"
+            ],
+            "correct_index": 3,
+            "explanation": "Placing an extended ACL near the source conserves bandwidth by dropping unwanted traffic before it crosses the network. Applying it near the destination wastes resources carrying packets that will be discarded.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-037",
+            "domain": "Infrastructure Security",
+            "stem": "Which ACL design filters transit traffic addressed to the router's own infrastructure addresses while still permitting legitimate management?",
+            "options": [
+                "An infrastructure ACL applied to edge interfaces",
+                "A reflexive ACL on the LAN",
+                "A dynamic ACL on the loopback",
+                "A standard ACL on the WAN"
+            ],
+            "correct_index": 0,
+            "explanation": "An infrastructure ACL is applied at the network edge to block transit traffic destined to router interfaces and management addresses while explicitly allowing required management protocols. Standard or reflexive ACLs serve different purposes.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-038",
+            "domain": "Infrastructure Security",
+            "stem": "Which configuration restricts SSH management access to the 10.10.10.0/24 subnet on a Cisco router?",
+            "options": [
+                "Use the login block-for command",
+                "Apply an access-class with a standard ACL under line vty 0 4",
+                "Apply the ACL with ip access-group on GigabitEthernet0/0",
+                "Configure port security on the management switch"
+            ],
+            "correct_index": 1,
+            "explanation": "The access-class command on the VTY lines limits which source addresses may open management sessions. An interface access-group filters transit traffic, port security is a Layer 2 control, and login block-for only throttles failed attempts.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-039",
+            "domain": "Infrastructure Security",
+            "stem": "Which feature restricts which interfaces may accept management protocols such as SSH and SNMP?",
+            "options": [
+                "Control Plane Policing",
+                "Unicast Reverse Path Forwarding",
+                "Management Plane Protection",
+                "IPsec transport mode"
+            ],
+            "correct_index": 2,
+            "explanation": "Management Plane Protection lets an administrator designate which interfaces accept management traffic, honoring a per-protocol allow list. CoPP rate-limits control-plane traffic and uRPF validates source addresses.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-040",
+            "domain": "Infrastructure Security",
+            "stem": "An engineer wants an ACL to permit return traffic only for sessions initiated from inside the network. Which ACL feature should be used?",
+            "options": [
+                "A standard ACL with a host entry",
+                "The log keyword",
+                "A wildcard mask of 0.0.0.0",
+                "The established keyword on an extended ACL"
+            ],
+            "correct_index": 3,
+            "explanation": "The established keyword matches TCP segments with the ACK or RST flag set, which lets replies to internally initiated sessions pass. Standard ACLs cannot inspect TCP flags, and logging or host entries do not provide session awareness.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-041",
+            "domain": "Infrastructure Security",
+            "stem": "Which combination best hardens a Cisco router for remote management?",
+            "options": [
+                "SSHv2, a strong enable secret, an exec-timeout, and a VTY access-class",
+                "Telnet with a login banner",
+                "The default cisco username and password",
+                "Disabling logging to hide activity"
+            ],
+            "correct_index": 0,
+            "explanation": "SSHv2 encrypts management sessions, a strong enable secret protects privileged mode, an exec-timeout closes idle sessions, and a VTY access-class restricts source addresses. Telnet, default credentials, and disabling logging all weaken security.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Security"
+        },
+        {
+            "id": "ccnp-enarsi-042",
+            "domain": "Infrastructure Services",
+            "stem": "Clients on a subnet without a local DHCP server cannot obtain addresses. Which command on the client-facing interface forwards their requests to a remote server?",
+            "options": [
+                "ip dhcp excluded-address",
+                "ip helper-address",
+                "ip dhcp relay information",
+                "ip forward-protocol"
+            ],
+            "correct_index": 1,
+            "explanation": "The ip helper-address command relays DHCP broadcasts as unicasts to the specified server. The relay information option adds data, forward-protocol controls which UDP services are relayed, and excluded-address reserves addresses in a pool.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-043",
+            "domain": "Infrastructure Services",
+            "stem": "Which DHCP option lets a relay agent insert the client's port and VLAN information into the request for the server to use?",
+            "options": [
+                "Option 150",
+                "Option 43",
+                "Option 82",
+                "Option 66"
+            ],
+            "correct_index": 2,
+            "explanation": "DHCP Option 82, the relay agent information option, carries circuit and remote identifiers so a server can assign addresses by access location. Options 43, 66, and 150 are vendor, TFTP server, and phone-related options.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-044",
+            "domain": "Infrastructure Services",
+            "stem": "An engineer must let many internal users share a single public address for Internet access. Which NAT configuration is required?",
+            "options": [
+                "NAT64",
+                "Static NAT mapping one public to one private",
+                "Dynamic NAT with a pool but no overload",
+                "PAT using the overload keyword"
+            ],
+            "correct_index": 3,
+            "explanation": "Port address translation, configured with the overload keyword, multiplexes many inside addresses onto one public address using unique ports. Static NAT maps one-to-one, and dynamic NAT without overload exhausts the pool after a few users.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-045",
+            "domain": "Infrastructure Services",
+            "stem": "A web server at 192.168.1.10 must be reachable from the Internet at public address 203.0.113.10. Which NAT type is required?",
+            "options": [
+                "Static NAT",
+                "Dynamic NAT with a pool",
+                "PAT overload",
+                "NAT with a route map"
+            ],
+            "correct_index": 0,
+            "explanation": "Static NAT creates a permanent one-to-one mapping between an inside address and a public address, which is needed for inbound access to a server. Dynamic NAT and PAT assign mappings on demand and are not suitable for externally reachable servers.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-046",
+            "domain": "Infrastructure Services",
+            "stem": "After NAT is configured, translation does not occur for traffic leaving the WAN. Which interface designations are required?",
+            "options": [
+                "Mark only the loopback interface",
+                "Mark the LAN interface as ip nat inside and the WAN interface as ip nat outside",
+                "Mark both interfaces as ip nat inside",
+                "Mark the WAN interface as inside and the LAN as outside"
+            ],
+            "correct_index": 1,
+            "explanation": "NAT translates traffic passing between an inside and an outside interface, so the internal-facing interface must be ip nat inside and the external-facing interface must be ip nat outside. Missing either designation disables translation.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-047",
+            "domain": "Infrastructure Services",
+            "stem": "A router synchronized to an NTP server reports a stratum of 3. What does the stratum value indicate?",
+            "options": [
+                "The number of NTP clients attached",
+                "The encryption strength of the association",
+                "The distance from the authoritative reference clock, where lower is closer",
+                "The router's election priority"
+            ],
+            "correct_index": 2,
+            "explanation": "NTP stratum measures how many hops a device is from the reference clock; stratum 1 is directly attached to the clock and higher numbers are further away. It is not a priority, client count, or encryption value.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-048",
+            "domain": "Infrastructure Services",
+            "stem": "An engineer wants to prevent routers from synchronizing to a rogue NTP source. Which measure should be configured?",
+            "options": [
+                "Change the NTP port number",
+                "Enable SNMP traps for time changes",
+                "Disable clock synchronization",
+                "Enable NTP authentication with trusted keys on clients and server"
+            ],
+            "correct_index": 3,
+            "explanation": "NTP authentication requires the server to prove possession of a shared key before a client accepts its time, blocking rogue servers. Port changes and traps do not authenticate the time source, and disabling synchronization defeats the purpose.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-049",
+            "domain": "Infrastructure Services",
+            "stem": "Which SNMP version provides both authentication and privacy of management messages?",
+            "options": [
+                "SNMPv3",
+                "SNMPv2u",
+                "SNMPv1",
+                "SNMPv2c"
+            ],
+            "correct_index": 0,
+            "explanation": "SNMPv3 adds a user-based security model supporting authentication and encryption, so messages can be both verified and kept confidential. SNMPv1 and SNMPv2c use cleartext community strings with no privacy.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-050",
+            "domain": "Infrastructure Services",
+            "stem": "Which syslog severity level indicates the most severe, system-unusable condition?",
+            "options": [
+                "Level 7 (debugging)",
+                "Level 0 (emergencies)",
+                "Level 1 (alerts)",
+                "Level 4 (warnings)"
+            ],
+            "correct_index": 1,
+            "explanation": "Syslog level 0, emergencies, means the system is unusable, the most severe condition. Level 1 is a condition needing immediate action, level 4 is a warning, and level 7 is debugging output.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-051",
+            "domain": "Infrastructure Services",
+            "stem": "Which command sends syslog messages to a remote collector at 10.0.0.50?",
+            "options": [
+                "snmp-server host 10.0.0.50",
+                "ntp server 10.0.0.50",
+                "logging host 10.0.0.50",
+                "logging buffered 10.0.0.50"
+            ],
+            "correct_index": 2,
+            "explanation": "The logging host command configures a remote syslog server to receive the device's log messages. logging buffered stores messages locally, and the SNMP and NTP commands configure different services.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-052",
+            "domain": "Infrastructure Services",
+            "stem": "An engineer wants a floating static route to be used only when the primary path fails. Which feature provides the needed reachability detection?",
+            "options": [
+                "Network Time Protocol",
+                "Cisco Discovery Protocol",
+                "NetFlow export",
+                "IP SLA with object tracking referenced by the static route"
+            ],
+            "correct_index": 3,
+            "explanation": "An IP SLA probe with object tracking lets the static route be installed only while the tracked object is reachable, so the backup route takes over on failure. NTP, CDP, and NetFlow do not test path reachability for routing.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-053",
+            "domain": "Infrastructure Services",
+            "stem": "Which feature exports per-flow records using configurable cache keys and allows different flow monitors on different interfaces?",
+            "options": [
+                "Flexible NetFlow",
+                "NetFlow version 5 only",
+                "SNMP polling",
+                "Switch Port Analyzer"
+            ],
+            "correct_index": 0,
+            "explanation": "Flexible NetFlow lets administrators define cache keys and fields per monitor, supporting the same or different exports on each interface. Classic NetFlow v5 uses a fixed record format, and SNMP and SPAN serve different purposes.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-054",
+            "domain": "Infrastructure Services",
+            "stem": "Which field in the IP header do routers use to classify and mark packets for per-hop QoS treatment?",
+            "options": [
+                "The fragment offset",
+                "DSCP in the ToS byte",
+                "The TTL field",
+                "The header checksum"
+            ],
+            "correct_index": 1,
+            "explanation": "The Differentiated Services Code Point lives in the IP ToS byte and carries the per-hop behavior marking used by QoS. TTL, checksum, and fragment offset have routing and reassembly functions, not classification.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        },
+        {
+            "id": "ccnp-enarsi-055",
+            "domain": "Infrastructure Services",
+            "stem": "Which QoS mechanism delays excess traffic to conform to a configured rate instead of dropping it immediately?",
+            "options": [
+                "Traffic policing",
+                "Priority queuing",
+                "Traffic shaping",
+                "Weighted random early detection"
+            ],
+            "correct_index": 2,
+            "explanation": "Traffic shaping buffers and delays packets so the offered rate conforms to the configured rate, which smooths bursts. Policing drops or remarks excess traffic, and WRED selectively drops to manage queue depth.",
+            "reference": "Cisco 300-410 ENARSI Exam Topics - Infrastructure Services"
+        }
+    ]
+}
