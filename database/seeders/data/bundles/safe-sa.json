@@ -1,0 +1,647 @@
+{
+    "cert_key": "safe-sa",
+    "title": "SAFe Agilist (SA)",
+    "issuer": "Scaled Agile, Inc.",
+    "outline_file": "outlines/safe-sa.json",
+    "variant_label": "SAFe Agilist Real-Spec Practice",
+    "exam": {
+        "questions": 45,
+        "duration_minutes": 90,
+        "scoring": "80% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public SAFe Agilist exam study guide (Lean-Agile mindset, principles, framework, roles). Not a capture of past exam questions.",
+    "source_label": "SAFe Agilist practice bank",
+    "items": [
+        {
+            "id": "safe-sa-001",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A product team maps every step a customer request passes through, from idea to delivery, to reveal delays, handoffs, and rework. Which Lean concept are they applying?",
+            "options": [
+                "Value stream mapping",
+                "Cost accounting",
+                "Resource leveling",
+                "Functional decomposition"
+            ],
+            "correct_index": 0,
+            "explanation": "Lean thinking uses value stream mapping to visualize the sequence of steps that deliver value and to expose the non-value-adding delays and rework that interrupt flow.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-002",
+            "domain": "Lean-Agile Mindset",
+            "stem": "In the House of Lean, which element sits at the roof and represents the ultimate goal the organization is trying to achieve?",
+            "options": [
+                "Relentless improvement",
+                "Value",
+                "Flow",
+                "Leadership"
+            ],
+            "correct_index": 1,
+            "explanation": "The House of Lean places value at the roof as the ultimate goal, supported by pillars of respect for people and culture, flow, innovation, and relentless improvement, resting on a foundation of leadership.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-003",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A leader invests significant time coaching and developing team members rather than only directing their daily work. Which pillar of the House of Lean does this behavior most directly support?",
+            "options": [
+                "Tool standardization",
+                "Contract negotiation",
+                "Respect for people and culture",
+                "Cost optimization"
+            ],
+            "correct_index": 2,
+            "explanation": "Respect for people and culture is a pillar of the House of Lean; developing and engaging people is what enables flow, innovation, and relentless improvement to take hold.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-004",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A team learns late in a release that a customer need has changed, yet it continues to deliver the original approved plan. Which Agile Manifesto value is the team neglecting?",
+            "options": [
+                "Working software over comprehensive documentation",
+                "Customer collaboration over contract negotiation",
+                "Individuals and interactions over processes and tools",
+                "Responding to change over following a plan"
+            ],
+            "correct_index": 3,
+            "explanation": "The Agile Manifesto values responding to change over following a plan. Clinging to an approved plan after learning of a changed customer need ignores this value even though the other three values remain important.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-005",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A team member believes that abilities can be developed through dedication and feedback and eagerly takes on unfamiliar work in order to grow. Which mindset does this reflect?",
+            "options": [
+                "Growth mindset",
+                "Fixed mindset",
+                "Command-and-control mindset",
+                "Zero-sum mindset"
+            ],
+            "correct_index": 0,
+            "explanation": "A growth mindset, described by Carol Dweck, holds that talent can be developed through effort and feedback, and it underpins the learning culture that SAFe depends on.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-006",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A team relies on testing at the end of the development cycle to find defects instead of building quality into each increment. Which SAFe core value is the team failing to honor?",
+            "options": [
+                "Program execution",
+                "Built-in quality",
+                "Alignment",
+                "Transparency"
+            ],
+            "correct_index": 1,
+            "explanation": "Built-in quality means building quality into the product at each step rather than inspecting it in at the end, so late-cycle defect detection is the opposite of this core value.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-007",
+            "domain": "Lean-Agile Mindset",
+            "stem": "An Agile Release Train routinely inspects its results and experiments with small changes to how it works, aiming to get better with each increment. Which pillar of the House of Lean is the train demonstrating?",
+            "options": [
+                "Innovation",
+                "Respect for people and culture",
+                "Relentless improvement",
+                "Flow"
+            ],
+            "correct_index": 2,
+            "explanation": "Relentless improvement is the House of Lean pillar that calls for continuous reflection and experimentation so the system is deliberately changed for the better over time.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-008",
+            "domain": "Lean-Agile Mindset",
+            "stem": "A team reduces its work in progress, eliminates unnecessary handoffs, and visualizes its workflow to shorten the time from request to delivery. Which Lean concept is the team improving?",
+            "options": [
+                "Cost variance",
+                "Utilization",
+                "Compliance",
+                "Flow"
+            ],
+            "correct_index": 3,
+            "explanation": "Flow is the smooth movement of value through the system; limiting work in progress, removing handoffs, and visualizing work are classic ways to make value flow without interruptions.",
+            "reference": "SAFe Agilist Exam Study Guide - Lean-Agile Mindset"
+        },
+        {
+            "id": "safe-sa-009",
+            "domain": "SAFe Principles",
+            "stem": "Leaders weigh the cost of delay against development expense when sequencing work, because delivering value later reduces its benefit. Which SAFe Lean-Agile principle are they applying?",
+            "options": [
+                "Take an economic view",
+                "Apply systems thinking",
+                "Assume variability and preserve options",
+                "Organize around value"
+            ],
+            "correct_index": 0,
+            "explanation": "Taking an economic view means making decisions in light of total economic impact, including the cost of delay, so that sequencing and trade-offs maximize value rather than minimize local cost.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-010",
+            "domain": "SAFe Principles",
+            "stem": "A manager speeds up one component team, but overall delivery slows because the faster component overwhelms its downstream partners. Which SAFe principle explains this outcome?",
+            "options": [
+                "Unlock the intrinsic motivation of knowledge workers",
+                "Apply systems thinking",
+                "Decentralize decision-making",
+                "Take an economic view"
+            ],
+            "correct_index": 1,
+            "explanation": "Applying systems thinking means optimizing the whole value stream rather than a part; improving one component in isolation can degrade the performance of the larger system it belongs to.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-011",
+            "domain": "SAFe Principles",
+            "stem": "Rather than committing early to one design, a team keeps several viable alternatives open and narrows them as evidence emerges. Which SAFe principle is the team following?",
+            "options": [
+                "Make value flow without interruptions",
+                "Apply cadence and synchronize with cross-domain planning",
+                "Assume variability and preserve options",
+                "Base milestones on objective evaluation of working systems"
+            ],
+            "correct_index": 2,
+            "explanation": "Assuming variability and preserving options, often through set-based design, keeps uncertainty in play until evidence allows the team to converge on the strongest solution.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-012",
+            "domain": "SAFe Principles",
+            "stem": "A team builds a small working slice of the solution and gets customer feedback within an iteration instead of perfecting the whole design first. Which SAFe principle is the team applying?",
+            "options": [
+                "Take an economic view",
+                "Decentralize decision-making",
+                "Organize around value",
+                "Build incrementally with fast, integrated learning cycles"
+            ],
+            "correct_index": 3,
+            "explanation": "This principle favors short, integrated increments that produce rapid feedback, allowing the team to learn and correct course before it invests further in a direction.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-013",
+            "domain": "SAFe Principles",
+            "stem": "Instead of accepting a milestone based on a status report document, leaders assess whether the integrated system actually works before granting approval. Which SAFe principle are they applying?",
+            "options": [
+                "Base milestones on objective evaluation of working systems",
+                "Assume variability and preserve options",
+                "Unlock the intrinsic motivation of knowledge workers",
+                "Apply systems thinking"
+            ],
+            "correct_index": 0,
+            "explanation": "Basing milestones on objective evaluation of working systems ties progress to demonstrated, integrated evidence rather than to documentation or opinion.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-014",
+            "domain": "SAFe Principles",
+            "stem": "A workflow is stalled by large batches and a growing queue of unfinished work, so a team reduces batch size and limits work in progress. Which SAFe principle is the team applying?",
+            "options": [
+                "Base milestones on objective evaluation of working systems",
+                "Make value flow without interruptions",
+                "Take an economic view",
+                "Apply cadence and synchronize with cross-domain planning"
+            ],
+            "correct_index": 1,
+            "explanation": "Making value flow without interruptions targets the bottlenecks, queues, and batch sizes that delay delivery, using techniques such as limiting work in progress to keep value moving.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-015",
+            "domain": "SAFe Principles",
+            "stem": "The train holds all teams to the same two-week iteration length and a common planning event every Program Increment so dependent work lines up. Which SAFe principle does this reflect?",
+            "options": [
+                "Organize around value",
+                "Assume variability and preserve options",
+                "Apply cadence and synchronize with cross-domain planning",
+                "Decentralize decision-making"
+            ],
+            "correct_index": 2,
+            "explanation": "Applying cadence and synchronizing with cross-domain planning gives the train a predictable rhythm and aligns the work of many teams at shared planning boundaries.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-016",
+            "domain": "SAFe Principles",
+            "stem": "A leader replaces individual bonuses for output with autonomy, mastery, and purpose so knowledge workers stay engaged and self-directed. Which SAFe principle are they applying?",
+            "options": [
+                "Take an economic view",
+                "Apply systems thinking",
+                "Base milestones on objective evaluation of working systems",
+                "Unlock the intrinsic motivation of knowledge workers"
+            ],
+            "correct_index": 3,
+            "explanation": "Unlocking the intrinsic motivation of knowledge workers relies on providing autonomy, mastery, and purpose rather than external carrot-and-stick incentives that can reduce engagement.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-017",
+            "domain": "SAFe Principles",
+            "stem": "A train pushes routine technical decisions to the teams closest to the work while reserving only strategic, irreversible decisions for leadership. Which SAFe principle are they applying?",
+            "options": [
+                "Decentralize decision-making",
+                "Apply systems thinking",
+                "Make value flow without interruptions",
+                "Build incrementally with fast, integrated learning cycles"
+            ],
+            "correct_index": 0,
+            "explanation": "Decentralizing decision-making pushes decisions to the lowest level that has the knowledge and context, reserving only strategic, high-impact decisions for central authority.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-018",
+            "domain": "SAFe Principles",
+            "stem": "An organization regroups people from separate functional departments into cross-functional teams that can deliver a complete value stream. Which SAFe principle are they applying?",
+            "options": [
+                "Base milestones on objective evaluation of working systems",
+                "Organize around value",
+                "Assume variability and preserve options",
+                "Unlock the intrinsic motivation of knowledge workers"
+            ],
+            "correct_index": 1,
+            "explanation": "Organizing around value structures the enterprise around the flow of value to the customer rather than around functional silos, so teams can deliver end to end.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Principles"
+        },
+        {
+            "id": "safe-sa-019",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "An organization adopts Essential SAFe and forms an Agile Release Train that plans and integrates work together every Program Increment. Which levels of SAFe does this train represent?",
+            "options": [
+                "Portfolio level",
+                "Full SAFe level only",
+                "Team and Program levels",
+                "Large Solution level"
+            ],
+            "correct_index": 2,
+            "explanation": "Essential SAFe contains the Team and Program levels, where the Agile Release Train plans, integrates, and delivers on a shared cadence.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-020",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "An enterprise adds Lean Portfolio Management to connect strategy and investment funding to its delivery trains. Which SAFe configuration is the enterprise moving toward?",
+            "options": [
+                "Essential SAFe",
+                "Large Solution SAFe",
+                "Team-level only",
+                "Portfolio SAFe"
+            ],
+            "correct_index": 3,
+            "explanation": "Portfolio SAFe adds the Portfolio level on top of Essential SAFe, bringing Lean Portfolio Management, strategy and investment funding, and value-stream organizing.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-021",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "A very large program requires multiple Agile Release Trains to coordinate through a Solution Train and a shared Solution Intent. Which SAFe level adds these elements?",
+            "options": [
+                "Large Solution level",
+                "Team level",
+                "Portfolio level",
+                "Program level"
+            ],
+            "correct_index": 0,
+            "explanation": "The Large Solution level adds the Solution Train, Solution Intent, and capabilities so that multiple Agile Release Trains building one large solution can coordinate.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-022",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "How is a typical Agile Release Train sized and organized according to SAFe guidance?",
+            "options": [
+                "Exactly 9 people in a single team",
+                "50 to 125 people across 5 to 12 teams",
+                "10 to 25 people across 2 teams",
+                "200 to 500 people across many departments"
+            ],
+            "correct_index": 1,
+            "explanation": "An Agile Release Train is typically a long-lived team of 50 to 125 people organized into 5 to 12 cross-functional Agile teams that plan and deliver together.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-023",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "Agile Release Trains hold PI Planning as a regular two-day event. On what cadence is this event usually held?",
+            "options": [
+                "Every single day",
+                "Only when a release is due",
+                "Every 8 to 12 weeks",
+                "Once a year"
+            ],
+            "correct_index": 2,
+            "explanation": "PI Planning is usually a two-day event held every 8 to 12 weeks, aligning all teams on the ART to a shared Program Increment and its objectives.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-024",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "At the end of PI Planning, teams privately rate their confidence in the plan and the train ROAMs its risks. By what name are these practices known?",
+            "options": [
+                "A performance appraisal",
+                "A compliance audit",
+                "A budget reforecast",
+                "The confidence vote and ROAMing risks"
+            ],
+            "correct_index": 3,
+            "explanation": "Teams give a confidential confidence vote on meeting the PI objectives and the train assesses risks as Resolved, Owned, Accepted, or Mitigated; a low vote triggers replanning.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-025",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "Between Program Increments the train sets aside an Innovation and Planning iteration. What is the primary purpose of this iteration?",
+            "options": [
+                "To provide slack for innovation, learning, estimation, and planning",
+                "To deliver committed customer features",
+                "To eliminate all team ceremonies",
+                "To freeze the codebase for audit"
+            ],
+            "correct_index": 0,
+            "explanation": "The Innovation and Planning iteration provides a buffer for innovation, continuing education, estimation, and preparation for the next PI Planning, while also absorbing overruns.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-026",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "Every two weeks the train integrates the work of all its teams and demonstrates the new functionality to stakeholders. Which event is being described?",
+            "options": [
+                "Backlog refinement",
+                "System Demo",
+                "Sprint retrospective",
+                "Daily stand-up"
+            ],
+            "correct_index": 1,
+            "explanation": "The System Demo shows the integrated solution from all teams on the train to stakeholders every iteration, providing objective evidence of progress the train needs.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-027",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "At the end of a Program Increment the train reviews its results and then helps one team improve a specific problem. Which event is being described?",
+            "options": [
+                "Sprint planning",
+                "Release planning approval",
+                "Inspect and Adapt",
+                "Iteration review"
+            ],
+            "correct_index": 2,
+            "explanation": "Inspect and Adapt is the end-of-PI event where the train evaluates its outcomes and uses structured problem-solving to address the most important systemic issue.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-028",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "A team automates exploring hypotheses, integrates code continuously, and deploys to production while deciding when to release to users. Which SAFe construct includes these activities?",
+            "options": [
+                "Team Backlog",
+                "Architectural Runway",
+                "Program Kanban",
+                "Continuous Delivery Pipeline"
+            ],
+            "correct_index": 3,
+            "explanation": "The Continuous Delivery Pipeline spans Continuous Exploration, Continuous Integration, Continuous Deployment, and Release on Demand to move changes to users reliably.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-029",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "A portfolio identifies the sequence of steps that deliver value to a customer and distinguishes the operational steps from the development steps that support them. What is this called?",
+            "options": [
+                "A value stream",
+                "A cost center",
+                "A project schedule",
+                "A resource matrix"
+            ],
+            "correct_index": 0,
+            "explanation": "A value stream is the series of steps an organization uses to deliver value; SAFe distinguishes operational value streams run by the business from development value streams that build supporting systems.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-030",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "On a typical train each iteration has a consistent length so teams can build and integrate on a predictable rhythm. What is the usual iteration length in SAFe?",
+            "options": [
+                "One year",
+                "Two weeks",
+                "Six months",
+                "One day"
+            ],
+            "correct_index": 1,
+            "explanation": "SAFe uses a consistent, most commonly two-week iteration cadence so teams develop, integrate, and demonstrate value on a predictable rhythm that supports synchronization.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-031",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "During a Program Increment, representatives of each team meet regularly to coordinate dependencies and integration needs across the train. Which event supports this?",
+            "options": [
+                "The customer acceptance test",
+                "The hiring committee",
+                "The ART sync or Scrum of Scrums",
+                "The annual budget review"
+            ],
+            "correct_index": 2,
+            "explanation": "The ART sync, often run as a Scrum of Scrums, is where representatives coordinate cross-team dependencies, integration, and the flow of work during the Program Increment.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-032",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "A train invests each iteration in evolving the technical infrastructure needed for upcoming features so future work is not blocked. What is this called?",
+            "options": [
+                "Technical debt recovery plan",
+                "Cost baseline",
+                "Scope statement",
+                "Architectural runway"
+            ],
+            "correct_index": 3,
+            "explanation": "Architectural runway is the existing, extended technical foundation that allows the train to implement upcoming features without redesigning the system each time.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-033",
+            "domain": "SAFe Lean-Agile Framework",
+            "stem": "The train plans and commits to a set of objectives for a fixed timebox of several iterations, ending with a system demo and Inspect and Adapt. What is this timebox called?",
+            "options": [
+                "Program Increment",
+                "Sprint zero",
+                "Release train charter",
+                "Operational value stream"
+            ],
+            "correct_index": 0,
+            "explanation": "A Program Increment is the fixed timebox of typically four or five iterations, plus an Innovation and Planning iteration, during which the train delivers a set of PI objectives.",
+            "reference": "SAFe Agilist Exam Study Guide - SAFe Lean-Agile Framework"
+        },
+        {
+            "id": "safe-sa-034",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who is the servant leader on an Agile Release Train who facilitates PI Planning, removes impediments, and coaches the train's continuous improvement?",
+            "options": [
+                "Business Owner",
+                "Release Train Engineer",
+                "Product Owner",
+                "System Architect"
+            ],
+            "correct_index": 1,
+            "explanation": "The Release Train Engineer is the train's chief servant leader and coach, facilitating ART events, removing impediments, and fostering relentless improvement across the train.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-035",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who owns and prioritizes the Program Backlog, defines and communicates the vision and roadmap, and works directly with customers?",
+            "options": [
+                "Scrum Master",
+                "Epic Owner",
+                "Product Management",
+                "Release Train Engineer"
+            ],
+            "correct_index": 2,
+            "explanation": "Product Management owns the Program Backlog, develops the vision and roadmap, defines and prioritizes features, and engages with customers to understand their needs.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-036",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who owns the Team Backlog, defines and elaborates user stories, and accepts the team's completed work?",
+            "options": [
+                "Product Management",
+                "Business Owner",
+                "System Architect",
+                "Product Owner"
+            ],
+            "correct_index": 3,
+            "explanation": "The Product Owner owns the Team Backlog, translates features into stories, prioritizes the team's work, and accepts completed stories on behalf of the team.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-037",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who defines the architecture and nonfunctional requirements and builds the architectural runway that enables upcoming features?",
+            "options": [
+                "System Architect or Engineering",
+                "Release Train Engineer",
+                "Scrum Master",
+                "Business Owner"
+            ],
+            "correct_index": 0,
+            "explanation": "The System Architect or Engineering role defines the architecture, collaborates on design decisions, and maintains the architectural runway that supports future feature delivery.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-038",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who are the key stakeholders on the train who own the business outcomes, assign business value to PI objectives, and participate in PI Planning?",
+            "options": [
+                "Scrum Masters",
+                "Business Owners",
+                "Agile teams",
+                "Release Train Engineers"
+            ],
+            "correct_index": 1,
+            "explanation": "Business Owners are the key stakeholders responsible for the train's business outcomes; they assign business value to PI objectives and actively participate in PI Planning.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-039",
+            "domain": "Roles and Responsibilities",
+            "stem": "Which group is primarily accountable for leading the Lean-Agile transformation by modelling the mindset and removing systemic barriers?",
+            "options": [
+                "Individual contributors only",
+                "The procurement team",
+                "Lean-Agile leaders across the enterprise",
+                "External auditors"
+            ],
+            "correct_index": 2,
+            "explanation": "Lean-Agile leaders at every level drive the transformation; because the culture follows leadership behavior, leaders must model the new mindset and remove impediments to change.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-040",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who coaches an Agile team on its practices, facilitates team events, and removes team-level impediments?",
+            "options": [
+                "Product Management",
+                "Solution Train Engineer",
+                "Epic Owner",
+                "Scrum Master or Team Coach"
+            ],
+            "correct_index": 3,
+            "explanation": "The Scrum Master or Team Coach helps the team apply agile practices, facilitates its events, and removes impediments at the team level, escalating those beyond the team's control.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-041",
+            "domain": "Roles and Responsibilities",
+            "stem": "On a Solution Train, who owns the Solution Backlog and works with customers and Product Management to define and prioritize capabilities?",
+            "options": [
+                "Solution Management",
+                "Product Owner",
+                "Scrum Master",
+                "Business Owner"
+            ],
+            "correct_index": 0,
+            "explanation": "Solution Management owns the Solution Backlog, defines and prioritizes capabilities, and collaborates with Product Management and customers on the larger solution's vision.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-042",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who is responsible for coordinating an individual portfolio epic through its lifecycle, from approval through implementation and measurement?",
+            "options": [
+                "Team Coach",
+                "Epic Owner",
+                "Release Train Engineer",
+                "System Architect"
+            ],
+            "correct_index": 1,
+            "explanation": "The Epic Owner coordinates a portfolio epic through the Lean Portfolio Management flow, working with stakeholders to define the epic and shepherd it from approval to realization.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-043",
+            "domain": "Roles and Responsibilities",
+            "stem": "Who facilitates the events of a Solution Train, helping multiple Agile Release Trains coordinate to deliver a large solution?",
+            "options": [
+                "Product Owner",
+                "Scrum Master",
+                "Solution Train Engineer",
+                "Release Train Engineer"
+            ],
+            "correct_index": 2,
+            "explanation": "The Solution Train Engineer facilitates and coaches the Solution Train, coordinating the work of multiple Agile Release Trains that jointly build a large solution.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-044",
+            "domain": "Roles and Responsibilities",
+            "stem": "Which description best characterizes the Agile teams that make up an Agile Release Train?",
+            "options": [
+                "Single-specialty teams directed by a functional manager",
+                "Temporary teams assembled for a single iteration",
+                "Teams that require external approval for every task",
+                "Cross-functional and self-organizing, delivering end-to-end value"
+            ],
+            "correct_index": 3,
+            "explanation": "Agile teams on the train are cross-functional and self-organizing, containing the skills needed to define, build, and test value while managing their own work.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        },
+        {
+            "id": "safe-sa-045",
+            "domain": "Roles and Responsibilities",
+            "stem": "During PI Planning, which role is expected to set the mission, clarify business context, and later assign business value to the agreed PI objectives?",
+            "options": [
+                "Business Owners",
+                "System Architects",
+                "Scrum Masters",
+                "Agile team members"
+            ],
+            "correct_index": 0,
+            "explanation": "Business Owners open PI Planning with the business context and mission, remain engaged throughout, and assign business value to the PI objectives so the train can prioritize its outcomes.",
+            "reference": "SAFe Agilist Exam Study Guide - Roles and Responsibilities"
+        }
+    ]
+}

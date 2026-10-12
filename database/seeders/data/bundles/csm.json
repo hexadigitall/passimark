@@ -1,0 +1,717 @@
+{
+    "cert_key": "csm",
+    "title": "Certified ScrumMaster (CSM)",
+    "issuer": "Scrum Alliance",
+    "outline_file": "outlines/csm.json",
+    "variant_label": "CSM Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 60,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Scrum Guide 2020 and CSM learning objectives. Not a capture of past exam questions.",
+    "source_label": "CSM practice bank",
+    "items": [
+        {
+            "id": "csm-001",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A Scrum Team wants to base every decision only on what is directly visible in its artifacts and progress. Which Scrum foundation does this approach rest on?",
+            "options": [
+                "Empiricism, in which knowledge comes from experience and decisions are based on observation",
+                "A predictive plan fixed in detail at the start of the project",
+                "Following a step-by-step process defined by the project manager",
+                "Relying on the opinion of the most senior person in the room"
+            ],
+            "correct_index": 0,
+            "explanation": "Scrum is founded on empiricism, where knowledge comes from experience and decisions are made on what is observed. Predictive planning, imposed process, and seniority-based opinion are not empirical and conflict with Scrum theory.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-002",
+            "domain": "Scrum Theory and Principles",
+            "stem": "During a Daily Scrum the Developers describe progress that does not reflect the real state of the work. Which Scrum pillar is being undermined?",
+            "options": [
+                "Self-management",
+                "Transparency",
+                "Inspection",
+                "Adaptation"
+            ],
+            "correct_index": 1,
+            "explanation": "Transparency means the emergent process and work must be visible and understood by those performing it. Inspection and adaptation cannot work on a false picture, and self-management is a team property rather than the pillar of empirical process control that is being violated here.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-003",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A Scrum Team reviews its artifacts and its progress toward agreed goals frequently so that it can detect undesirable variances. Which Scrum pillar does this describe?",
+            "options": [
+                "Adaptation",
+                "Commitment",
+                "Inspection",
+                "Transparency"
+            ],
+            "correct_index": 2,
+            "explanation": "Inspection is the frequent review of Scrum artifacts and progress toward goals to detect unwanted variance. Transparency is the precondition for it, adaptation is the response, and commitment is a Scrum value rather than the act of reviewing.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-004",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A Scrum Team notices that its chosen approach is producing unwanted results and adjusts its plan accordingly. Which Scrum pillar does this describe?",
+            "options": [
+                "Transparency",
+                "Inspection",
+                "Estimation",
+                "Adaptation"
+            ],
+            "correct_index": 3,
+            "explanation": "Adaptation is adjusting the process or plan when inspection reveals deviation. Transparency and inspection are the earlier pillars that make adaptation possible, and estimation is a planning activity rather than a pillar of empiricism.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-005",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A new team member asks which values the Scrum framework defines for the Scrum Team. Which set is correct?",
+            "options": [
+                "Commitment, focus, openness, respect, and courage",
+                "Planning, controlling, directing, and reporting",
+                "Speed, output, competition, and compliance",
+                "Seniority, hierarchy, process, and documentation"
+            ],
+            "correct_index": 0,
+            "explanation": "Scrum defines five values, commitment, focus, openness, respect, and courage. The other sets describe traditional control-oriented behaviours or traits that Scrum does not define as its values.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-006",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A Scrum Team treats the goals it sets as things it will work hard to achieve and will not abandon casually. Which Scrum value does this reflect?",
+            "options": [
+                "Respect",
+                "Commitment",
+                "Focus",
+                "Openness"
+            ],
+            "correct_index": 1,
+            "explanation": "Commitment is the value of personally committing to achieving the team's goals. Focus concerns attention on the current work, openness concerns being clear about work and challenges, and respect concerns treating others as capable people.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-007",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A Developer raises a difficult technical concern that may slow the Sprint, because it is the right thing to do. Which Scrum value does this reflect?",
+            "options": [
+                "Respect",
+                "Openness",
+                "Courage",
+                "Focus"
+            ],
+            "correct_index": 2,
+            "explanation": "Courage is the value of doing the right thing and working on tough problems. Focus is about attention, respect is about how people treat each other, and openness is about sharing information rather than the willingness to take a hard stand.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-008",
+            "domain": "Scrum Theory and Principles",
+            "stem": "The Developers concentrate on the work of the Sprint and its goal instead of being pulled onto unrelated requests. Which Scrum value does this reflect?",
+            "options": [
+                "Openness",
+                "Commitment",
+                "Courage",
+                "Focus"
+            ],
+            "correct_index": 3,
+            "explanation": "Focus is the value of concentrating on the work of the Sprint and the team's goals. Openness concerns sharing information, commitment concerns achieving goals, and courage concerns tackling difficult problems, not attention management.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-009",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A team member openly shares that a task is harder than expected so that others can help. Which Scrum value does this reflect?",
+            "options": [
+                "Openness",
+                "Respect",
+                "Focus",
+                "Commitment"
+            ],
+            "correct_index": 0,
+            "explanation": "Openness is the value of being open about the work and the challenges it faces. Respect concerns treating others as capable, focus concerns attention, and commitment concerns achieving goals, none of which is the act of surfacing difficulty.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-010",
+            "domain": "Scrum Theory and Principles",
+            "stem": "Team members treat one another as capable and independent people and give each other room to contribute. Which Scrum value does this reflect?",
+            "options": [
+                "Openness",
+                "Respect",
+                "Courage",
+                "Focus"
+            ],
+            "correct_index": 1,
+            "explanation": "Respect is the value of treating others as capable, independent people. Courage concerns tackling hard problems, focus concerns attention on the Sprint, and openness concerns sharing information, so none of these names this behaviour.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-011",
+            "domain": "Scrum Theory and Principles",
+            "stem": "Scrum uses an iterative and incremental approach. What is the primary purpose of this approach?",
+            "options": [
+                "To guarantee that the product will never change",
+                "To allow work to proceed without any inspection",
+                "To optimize predictability and control risk",
+                "To eliminate the need for any planning"
+            ],
+            "correct_index": 2,
+            "explanation": "The iterative and incremental approach optimizes predictability and controls risk by delivering value in small steps. It does not remove planning, does not freeze the product, and cannot work without inspection and adaptation.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-012",
+            "domain": "Scrum Theory and Principles",
+            "stem": "A new Scrum Master wants decisions grounded in what has actually happened rather than in assumptions. Which statement best describes empiricism?",
+            "options": [
+                "Knowledge comes from following a documented process exactly",
+                "Decisions should follow the most detailed plan made at the start",
+                "Progress is measured only by the number of hours worked",
+                "Knowledge comes from experience, and decisions are made on the basis of what is observed"
+            ],
+            "correct_index": 3,
+            "explanation": "Empiricism holds that knowledge comes from experience and decisions are made on observation. Process compliance, detailed upfront plans, and hours worked are not empirical measures of value or progress.",
+            "reference": "Scrum Guide 2020 - Scrum Theory and Principles"
+        },
+        {
+            "id": "csm-013",
+            "domain": "The Scrum Team",
+            "stem": "The Developers decide internally who does what, when, and how. Which property of the Scrum Team does this describe?",
+            "options": [
+                "Self-management",
+                "Cross-functionality",
+                "Servant leadership",
+                "Command and control"
+            ],
+            "correct_index": 0,
+            "explanation": "Self-managing teams decide internally who does what, when, and how. Cross-functionality concerns having all needed skills, servant leadership is how a Scrum Master serves, and command and control is the opposite of self-management.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-014",
+            "domain": "The Scrum Team",
+            "stem": "A Scrum Team holds all the skills needed to create value each Sprint without depending on people outside the team. Which property is this?",
+            "options": [
+                "Delegation",
+                "Cross-functionality",
+                "Self-management",
+                "Specialization"
+            ],
+            "correct_index": 1,
+            "explanation": "Cross-functional teams have all the skills needed to create value every Sprint. Self-management concerns deciding the work, specialization narrows skills rather than broadening them, and delegation is not a defining property of the Scrum Team.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-015",
+            "domain": "The Scrum Team",
+            "stem": "A Scrum Team has grown to fifteen members and coordination is suffering. What does the Scrum Guide generally recommend about team size?",
+            "options": [
+                "Split the work by function with a separate manager for each group",
+                "Allow the team to grow without limit because larger is always more productive",
+                "Keep the Scrum Team typically to ten or fewer people",
+                "Add a sub-team with its own Scrum Master for every five people"
+            ],
+            "correct_index": 2,
+            "explanation": "The Scrum Guide recommends a team of typically ten or fewer people to keep communication manageable. Adding sub-teams or functional managers recreates hierarchy, and unlimited growth increases coordination cost and weakens self-management.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-016",
+            "domain": "The Scrum Team",
+            "stem": "A product is delivering little value and the organization asks who is accountable for maximizing it. Who is accountable?",
+            "options": [
+                "The Scrum Master",
+                "The Developers",
+                "The stakeholders",
+                "The Product Owner"
+            ],
+            "correct_index": 3,
+            "explanation": "The Product Owner is accountable for maximizing the value the product delivers. The Scrum Master is accountable for effectiveness, the Developers create the Increment, and stakeholders provide input rather than holding this accountability.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-017",
+            "domain": "The Scrum Team",
+            "stem": "A stakeholder asks a Developer to add an item directly to the Product Backlog. What is the correct response under Scrum?",
+            "options": [
+                "The Product Owner is the sole person accountable for Product Backlog management",
+                "Any Developer may order the backlog as new ideas appear",
+                "The Scrum Master must approve every backlog item before it is added",
+                "The team votes on backlog ordering during the Daily Scrum"
+            ],
+            "correct_index": 0,
+            "explanation": "The Product Owner is the sole person accountable for Product Backlog management, including its content and ordering. Developers do not own ordering, the Scrum Master does not approve items, and the Daily Scrum is not where ordering is decided.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-018",
+            "domain": "The Scrum Team",
+            "stem": "An organization wants to know who is accountable for establishing Scrum as described in the Scrum Guide and for the Scrum Team's effectiveness. Who is it?",
+            "options": [
+                "A project manager",
+                "The Scrum Master",
+                "The Product Owner",
+                "The Developers"
+            ],
+            "correct_index": 1,
+            "explanation": "The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide and for the Scrum Team's effectiveness. The Product Owner owns value, the Developers create the Increment, and a project manager is not a Scrum accountability.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-019",
+            "domain": "The Scrum Team",
+            "stem": "The Scrum Master helps the team decide for itself how to do its work. Which way of serving the Scrum Team does this describe?",
+            "options": [
+                "Writing the Sprint Backlog on behalf of the Developers",
+                "Making the technical design decisions for the team",
+                "Coaching the team in self-management and cross-functionality",
+                "Assigning specific tasks to the Developers each day"
+            ],
+            "correct_index": 2,
+            "explanation": "The Scrum Master serves the team by coaching it in self-management and cross-functionality. Assigning tasks, writing the Sprint Backlog, or making technical decisions would take ownership away from the Developers and undermine self-management.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-020",
+            "domain": "The Scrum Team",
+            "stem": "In serving the Product Owner, which activity is the Scrum Master accountable for?",
+            "options": [
+                "Ordering the Product Backlog items personally",
+                "Approving every backlog item before it is selected",
+                "Estimating each backlog item on the owner's behalf",
+                "Helping the Product Owner find effective ways to define the Product Goal and manage the Product Backlog"
+            ],
+            "correct_index": 3,
+            "explanation": "The Scrum Master helps the Product Owner find techniques for effective Product Goal definition and Product Backlog management. Ordering, approving, and estimating are Product Owner and Developer work, and taking them over would reduce the owner's effectiveness.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-021",
+            "domain": "The Scrum Team",
+            "stem": "How does the Scrum Master serve the wider organization according to the Scrum Guide?",
+            "options": [
+                "By leading, training, and coaching the organization in its Scrum adoption",
+                "By managing the Developers' performance reviews",
+                "By approving the budget for each Sprint",
+                "By taking over projects that fall behind"
+            ],
+            "correct_index": 0,
+            "explanation": "The Scrum Master serves the organization by leading, training, and coaching its Scrum adoption and by helping remove barriers. Managing reviews, approving budgets, and taking over projects are management duties outside the Scrum Master's accountabilities.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-022",
+            "domain": "The Scrum Team",
+            "stem": "A sponsor asks what the Developers are accountable for during a Sprint. What is the correct answer?",
+            "options": [
+                "Facilitating the Sprint Retrospective for other teams",
+                "Creating any aspect of a usable Increment each Sprint",
+                "Managing and ordering the Product Backlog",
+                "Establishing the organization's release schedule"
+            ],
+            "correct_index": 1,
+            "explanation": "The Developers are accountable for creating any aspect of a usable Increment each Sprint. The Product Owner manages the backlog, the organization owns its release planning, and facilitation is Scrum Master work, so those are not the Developers' accountability.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-023",
+            "domain": "The Scrum Team",
+            "stem": "Who creates the plan for the Sprint that becomes the Sprint Backlog?",
+            "options": [
+                "The Scrum Master",
+                "The stakeholders",
+                "The Developers",
+                "The Product Owner"
+            ],
+            "correct_index": 2,
+            "explanation": "The Developers create the plan for the Sprint, which becomes the Sprint Backlog. The Product Owner proposes items and value, the Scrum Master facilitates, and stakeholders give input, but the plan belongs to the Developers.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-024",
+            "domain": "The Scrum Team",
+            "stem": "A functional manager emails a Developer assigning specific tasks for the day. How should the Scrum Master respond?",
+            "options": [
+                "Forward the tasks to the Developers and track their completion",
+                "Ask the Product Owner to reassign the manager's requests",
+                "Ignore the email because managers are not part of Scrum",
+                "Remind the manager that the Developers are self-managing and decide their own work"
+            ],
+            "correct_index": 3,
+            "explanation": "The Scrum Master should coach the organization so that the Developers remain self-managing and choose their own work. Forwarding tasks, passing them to the Product Owner, or ignoring the email all fail to address the interference with self-management.",
+            "reference": "Scrum Guide 2020 - The Scrum Team"
+        },
+        {
+            "id": "csm-025",
+            "domain": "Scrum Events",
+            "stem": "A new team member asks how to describe the Sprint. Which statement is the best description?",
+            "options": [
+                "It is the container for all other Scrum events and lasts one month or less",
+                "It is a milestone that occurs only once at the end of a project",
+                "It is a status meeting held each morning by the Developers",
+                "It is an optional event used only by large organizations"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sprint is the container for all other Scrum events and has a fixed duration of one month or less. It is not a milestone, not a morning status meeting, and not optional, since all the other events occur within it.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-026",
+            "domain": "Scrum Events",
+            "stem": "Why are Sprints held at a consistent and fixed length?",
+            "options": [
+                "To prevent the Developers from ever changing their plan",
+                "To create regularity and predictability and to limit risk to a short horizon",
+                "To make status reporting easier for the project manager",
+                "To ensure the Product Owner writes every item before work begins"
+            ],
+            "correct_index": 1,
+            "explanation": "Consistent Sprint lengths create regularity and predictability and limit risk to a short horizon. Reporting convenience, forcing complete upfront definition, and preventing plan changes are not the reasons and would contradict empirical planning.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-027",
+            "domain": "Scrum Events",
+            "stem": "During a Sprint the Product Owner proposes a change that would endanger the Sprint Goal. What does the Scrum Guide say?",
+            "options": [
+                "The Scrum Master alone decides whether the change is permitted",
+                "The Developers must accept any change requested by stakeholders",
+                "No changes should be made that endanger the Sprint Goal, which is protected",
+                "Any change is allowed because Scrum always embraces change immediately"
+            ],
+            "correct_index": 2,
+            "explanation": "While scope may be clarified and renegotiated, no change should endanger the Sprint Goal, because the team must remain focused on that single objective. Unrestricted change, a Scrum Master veto, and forced acceptance by stakeholders all conflict with this protection.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-028",
+            "domain": "Scrum Events",
+            "stem": "A facilitator is preparing the agenda and asks what the three topics of Sprint Planning are. Which answer is correct?",
+            "options": [
+                "Who is available, when the Sprint ends, and which tools will be used",
+                "The budget, the schedule baseline, and the scope baseline",
+                "Last Sprint's risks, issues, and change requests",
+                "Why is this Sprint valuable, what can be done, and how will the chosen work get done"
+            ],
+            "correct_index": 3,
+            "explanation": "Sprint Planning addresses three topics, the Why through the Sprint Goal, the What through selected Product Backlog items, and the How through the plan. The other options describe logistics or traditional project controls rather than the Scrum Planning topics.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-029",
+            "domain": "Scrum Events",
+            "stem": "A stakeholder asks what the Sprint Goal is. Which description is correct?",
+            "options": [
+                "A single objective for the Sprint that gives the Developers a shared focus",
+                "A complete list of every task the Developers will finish",
+                "A fixed contract that cannot be refined during the Sprint",
+                "The total number of story points the team will complete"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sprint Goal is a single objective for the Sprint that provides a shared focus and flexibility. It is not a task list, not an immutable contract since scope may be renegotiated, and not a points total, which is a forecast rather than the goal.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-030",
+            "domain": "Scrum Events",
+            "stem": "A team runs a one-month Sprint and asks about the maximum timebox for Sprint Planning. What is it?",
+            "options": [
+                "Three hours",
+                "Eight hours",
+                "Four hours",
+                "Fifteen minutes"
+            ],
+            "correct_index": 1,
+            "explanation": "For a one-month Sprint the maximum timebox for Sprint Planning is eight hours. Four hours is the Sprint Review timebox, three hours is the Sprint Retrospective timebox, and fifteen minutes is the Daily Scrum timebox.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-031",
+            "domain": "Scrum Events",
+            "stem": "A new Scrum Master asks what the purpose of the Daily Scrum is. Which answer is correct?",
+            "options": [
+                "For the Product Owner to report status to executives",
+                "To produce a formal written status report for management",
+                "For the Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as needed",
+                "For the Scrum Master to assign each Developer their tasks for the day"
+            ],
+            "correct_index": 2,
+            "explanation": "The Daily Scrum lets the Developers inspect progress toward the Sprint Goal and adapt the Sprint Backlog. It is not for the Scrum Master to assign work, not a reporting event for the Product Owner, and not a mechanism to produce management status reports.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-032",
+            "domain": "Scrum Events",
+            "stem": "What is the timebox for the Daily Scrum?",
+            "options": [
+                "Thirty minutes",
+                "One hour",
+                "Five minutes",
+                "Fifteen minutes"
+            ],
+            "correct_index": 3,
+            "explanation": "The Daily Scrum is timeboxed to fifteen minutes. Longer formats such as thirty minutes or an hour break the short daily cadence, and five minutes is not the prescribed timebox in the Scrum Guide.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-033",
+            "domain": "Scrum Events",
+            "stem": "A manager insists that the Daily Scrum is the only time the Developers may adjust their plan. Is the manager correct?",
+            "options": [
+                "No, the Developers can adjust their plan at any time during the Sprint",
+                "Yes, changes to the plan are allowed only during the Daily Scrum",
+                "Yes, but only if the Scrum Master approves the change first",
+                "No, because the plan is frozen once Sprint Planning ends"
+            ],
+            "correct_index": 0,
+            "explanation": "The Daily Scrum is not the only time the Developers may adjust their plan, which they may update at any point during the Sprint. Restricting change to the Daily Scrum, requiring approval, or freezing the plan all contradict empiricism and self-management.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-034",
+            "domain": "Scrum Events",
+            "stem": "A stakeholder asks what the Sprint Review is for. Which description is correct?",
+            "options": [
+                "To sign off a formal change request for the product",
+                "To inspect the outcome of the Sprint and determine future adaptations with stakeholders",
+                "To evaluate and approve each Developer's individual performance",
+                "To re-plan every remaining Sprint for the whole project"
+            ],
+            "correct_index": 1,
+            "explanation": "The Sprint Review inspects the Sprint outcome and determines future adaptations in collaboration with stakeholders. It is not a performance appraisal, not a full project re-planning session, and not a formal change-control sign-off.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-035",
+            "domain": "Scrum Events",
+            "stem": "For a one-month Sprint, what is the maximum timebox for the Sprint Review?",
+            "options": [
+                "Eight hours",
+                "One hour",
+                "Four hours",
+                "Two hours"
+            ],
+            "correct_index": 2,
+            "explanation": "The Sprint Review is timeboxed to a maximum of four hours for a one-month Sprint. Two hours or one hour are shorter than prescribed, and eight hours is the Sprint Planning timebox, not the Review timebox.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-036",
+            "domain": "Scrum Events",
+            "stem": "A team asks what the Sprint Retrospective is for. Which answer is correct?",
+            "options": [
+                "To review each Developer's salary and promotion prospects",
+                "To present the Increment to external stakeholders",
+                "To update the ordering of the Product Backlog",
+                "To plan ways to increase quality and effectiveness for the next Sprint"
+            ],
+            "correct_index": 3,
+            "explanation": "The Sprint Retrospective concludes the Sprint by planning ways to increase quality and effectiveness. Compensation review, stakeholder demonstrations, and product backlog ordering belong to other events or accountabilities, not the Retrospective.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-037",
+            "domain": "Scrum Events",
+            "stem": "Midway through a Sprint the Sprint Goal becomes obsolete because the market has changed. What does Scrum allow?",
+            "options": [
+                "The Product Owner may cancel the Sprint if the Sprint Goal is no longer relevant",
+                "The Developers may vote to cancel the Sprint without the Product Owner",
+                "The Scrum Master cancels the Sprint and reassigns the team",
+                "A Sprint can never be cancelled once it has begun"
+            ],
+            "correct_index": 0,
+            "explanation": "A Sprint may be cancelled when its goal becomes obsolete, and only the Product Owner has the authority to do so. Cancellation is not a Developers' vote, not a Scrum Master action, and is not forbidden, though it is rare and consumes resources.",
+            "reference": "Scrum Guide 2020 - Scrum Events"
+        },
+        {
+            "id": "csm-038",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "An onboarding session asks a new Product Owner to describe the Product Backlog. Which description is correct?",
+            "options": [
+                "A record of the minutes from each Daily Scrum",
+                "An emergent, ordered list of what is needed to improve the product",
+                "A frozen list of requirements signed before the first Sprint",
+                "The Developers' detailed technical plan for the current Sprint"
+            ],
+            "correct_index": 1,
+            "explanation": "The Product Backlog is an emergent, ordered list of what is needed to improve the product, and it is never complete. A frozen requirements list, a single Sprint's technical plan, and meeting minutes describe other things entirely.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-039",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "Each Scrum artifact includes a commitment that supports empiricism. Which commitment is associated with the Product Backlog?",
+            "options": [
+                "The Definition of Done",
+                "Velocity",
+                "The Product Goal",
+                "The Sprint Goal"
+            ],
+            "correct_index": 2,
+            "explanation": "The Product Goal is the commitment for the Product Backlog. The Sprint Goal commits the Sprint Backlog, the Definition of Done commits the Increment, and velocity is a planning observation rather than an artifact commitment.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-040",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A stakeholder asks what the Product Goal is. Which description is correct?",
+            "options": [
+                "A list of daily tasks for the Developers to complete",
+                "The definition of quality an Increment must meet",
+                "A summary of decisions made during the last Sprint Review",
+                "A long-term objective for the Scrum Team that describes a future state of the product"
+            ],
+            "correct_index": 3,
+            "explanation": "The Product Goal is a long-term objective that describes a future state of the product and guides the team's planning. Daily tasks belong to the Sprint Backlog, quality criteria are the Definition of Done, and review summaries are records rather than the goal.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-041",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "During Sprint Planning a team asks what the Sprint Backlog is made up of. Which answer is correct?",
+            "options": [
+                "The Sprint Goal, the selected Product Backlog items, and the plan for delivering them",
+                "Only the list of tasks assigned by the Scrum Master",
+                "The complete Product Backlog for the whole project",
+                "The organization's release plan for the coming quarter"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sprint Backlog is composed of the Sprint Goal, the set of selected Product Backlog items, and the plan for delivering them. It is not task assignments from the Scrum Master, not the whole Product Backlog, and not a release plan.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-042",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "Which commitment is associated with the Sprint Backlog?",
+            "options": [
+                "The release plan",
+                "The Sprint Goal",
+                "The Product Goal",
+                "The Definition of Done"
+            ],
+            "correct_index": 1,
+            "explanation": "The Sprint Goal is the commitment for the Sprint Backlog and expresses the single objective of the Sprint. The Product Goal commits the Product Backlog, the Definition of Done commits the Increment, and a release plan is not a Scrum artifact commitment.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-043",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A new team member asks what an Increment is. Which description is correct?",
+            "options": [
+                "A document that describes future requirements in detail",
+                "The meeting where work is demonstrated to management",
+                "A concrete stepping stone toward the Product Goal that is usable and adds value",
+                "The total set of Product Backlog items that remain unfinished"
+            ],
+            "correct_index": 2,
+            "explanation": "An Increment is a concrete stepping stone toward the Product Goal that is usable and adds value, and each Increment is additive to previous ones. Unfinished items, a requirements document, and a demonstration meeting are different concepts.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-044",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "Which commitment is associated with the Increment?",
+            "options": [
+                "The Product Goal",
+                "The Sprint Goal",
+                "Velocity",
+                "The Definition of Done"
+            ],
+            "correct_index": 3,
+            "explanation": "The Definition of Done is the commitment for the Increment and describes the quality state it must reach. The Product Goal commits the Product Backlog, the Sprint Goal commits the Sprint Backlog, and velocity is not an artifact commitment.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-045",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A team is drafting quality criteria and asks what the Definition of Done is. Which description is correct?",
+            "options": [
+                "A formal description of the state of the Increment when it meets the required quality measures",
+                "A checklist of the daily activities each Developer performs",
+                "The number of items selected for the current Sprint",
+                "A statement of the product's business case and return on investment"
+            ],
+            "correct_index": 0,
+            "explanation": "The Definition of Done is a formal description of the state of the Increment when it meets the required quality measures for the product. Daily activity checklists, Sprint item counts, and the business case are unrelated to this commitment.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-046",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "An organization already has a Definition of Done that all teams use. What must the Scrum Team do according to the Scrum Guide?",
+            "options": [
+                "Keep its Definition of Done secret from stakeholders",
+                "Use it as the minimum standard and may add further criteria if needed",
+                "Ignore it and define a completely separate Definition of Done",
+                "Let the Product Owner define the Definition of Done alone"
+            ],
+            "correct_index": 1,
+            "explanation": "If an organizational Definition of Done exists, the team must follow it as the minimum and may make it stricter. Ignoring it, letting the Product Owner define it alone, or hiding it all violate the rule that the Scrum Team owns and uses its Definition of Done.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-047",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "Several Scrum Teams work together on one product. What must they do about the Definition of Done?",
+            "options": [
+                "The Scrum Master writes one for all teams to follow",
+                "No Definition of Done is needed when teams share a product",
+                "Mutually define and comply with a shared Definition of Done",
+                "Each team keeps its own private Definition of Done"
+            ],
+            "correct_index": 2,
+            "explanation": "When multiple teams work on the same product they must mutually define and comply with a single shared Definition of Done so that the combined Increment is integrated and usable. Private definitions, a Scrum Master-imposed version, and having none would all break integration.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-048",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A Product Backlog item does not meet the Definition of Done by the end of the Sprint. What happens to it under Scrum?",
+            "options": [
+                "It is released anyway so that the Sprint is not wasted",
+                "It is deleted permanently from the Product Backlog",
+                "It is marked done to avoid slowing down the team",
+                "It returns to the Product Backlog for reconsideration and is not counted as part of the Increment"
+            ],
+            "correct_index": 3,
+            "explanation": "Work that does not meet the Definition of Done cannot be released and instead returns to the Product Backlog for reconsideration, and it is not part of the Increment. Releasing it, deleting it, or marking it done would undermine the Definition of Done and transparency.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-049",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A Product Owner asks what Product Backlog refinement is. Which description is correct?",
+            "options": [
+                "The ongoing activity of breaking down and further defining Product Backlog items",
+                "A one-time event held before the project starts",
+                "The Scrum Master reordering all backlog items for the team",
+                "A formal sign-off that freezes the Product Backlog"
+            ],
+            "correct_index": 0,
+            "explanation": "Refinement is the ongoing activity of breaking Product Backlog items into smaller, more precise ones and adding detail such as description and order. It is not a one-time event, not the Scrum Master's ordering job, and it never freezes the backlog.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        },
+        {
+            "id": "csm-050",
+            "domain": "Scrum Artifacts and Commitments",
+            "stem": "A manager asks how the Sprint Backlog changes during a Sprint. Which answer is correct?",
+            "options": [
+                "It is maintained solely by the Scrum Master",
+                "It is updated throughout the Sprint as more is learned, and it is a plan by and for the Developers",
+                "It is frozen at Sprint Planning and never changed",
+                "It is rewritten each day by the Product Owner"
+            ],
+            "correct_index": 1,
+            "explanation": "The Sprint Backlog is a plan by and for the Developers and is updated throughout the Sprint as more is learned. Freezing it, having the Product Owner rewrite it daily, or placing it under the Scrum Master all contradict the Developers' ownership of their plan.",
+            "reference": "Scrum Guide 2020 - Scrum Artifacts and Commitments"
+        }
+    ]
+}

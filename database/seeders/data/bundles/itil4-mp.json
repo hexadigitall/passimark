@@ -1,0 +1,857 @@
+{
+    "cert_key": "itil4-mp",
+    "title": "ITIL 4 Managing Professional (MP)",
+    "issuer": "PeopleCert / AXELOS",
+    "outline_file": "outlines/itil4-mp.json",
+    "variant_label": "ITIL 4 MP Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against per-module pass marks",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the four ITIL 4 Managing Professional module syllabi (CDS, DSV, HVIT, DPI). Not a capture of past exam questions.",
+    "source_label": "ITIL 4 Managing Professional practice bank",
+    "items": [
+        {
+            "id": "itil4-mp-001",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A service desk notices that requests often wait several days between the approval step and fulfilment. Which area should the team examine first to reduce this waiting?",
+            "options": [
+                "The value stream to identify queues and handoffs that add delay",
+                "The disciplinary policy for slow staff",
+                "The number of vendors on the approved list",
+                "The marketing plan for the coming quarter"
+            ],
+            "correct_index": 0,
+            "explanation": "Waiting between steps is a queue created by the structure of the value stream, so mapping handoffs reveals where work stalls. Disciplinary action, vendor-list size, and marketing plans do not address flow within request fulfilment.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-002",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A support team is deciding whether to handle a low-risk password reset at the first line or pass it to a specialist. Which concept should guide the decision?",
+            "options": [
+                "Letting the customer choose any queue at random",
+                "Shift-left, moving work to the point where it can be resolved most efficiently",
+                "Escalating every request to preserve specialist time",
+                "Assigning work by seniority regardless of complexity"
+            ],
+            "correct_index": 1,
+            "explanation": "Shift-left places resolution where it can be performed effectively, often at first line, improving speed and freeing specialists. Escalating everything or random queue assignment increases delay and cost, and seniority is not the right routing criterion.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-003",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A team's work is organised by function, and handoffs between groups cause errors and rework. What organisational change best improves this situation?",
+            "options": [
+                "Split the value stream into smaller functional silos",
+                "Introduce a weekly status report to track handoffs",
+                "Form cross-functional teams that own a value stream end to end",
+                "Add more approval gates between functions"
+            ],
+            "correct_index": 2,
+            "explanation": "Cross-functional ownership reduces the handoffs and rework that are the main losses in functionally organised work. More gates and more silos increase the problem, and reporting handoffs does not remove them.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-004",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "An organisation keeps starting new work before existing work is finished, and nothing gets delivered. Which practice should it apply?",
+            "options": [
+                "Pushing all urgent work to the front of the queue",
+                "Encouraging each team member to work on many items at once",
+                "Removing the backlog so teams are free to choose",
+                "Work-in-progress limits and pull-based flow management"
+            ],
+            "correct_index": 3,
+            "explanation": "Limiting work in progress and pulling work only when capacity frees up improves throughput and shortens lead time. Prioritising everything and multi-tasking overload the system, and removing the backlog removes prioritisation.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-005",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A provider wants to know whether a new service is delivering value to users. Which action most directly informs this judgement?",
+            "options": [
+                "Reviewing customer outcomes and experience measures for the service",
+                "Counting the number of internal meetings held",
+                "Measuring how many servers were purchased",
+                "Tracking the number of staff who attended training"
+            ],
+            "correct_index": 0,
+            "explanation": "Value is judged from the customer's perspective, so outcomes and experience measures are the right evidence. Activity counts such as meetings, purchases, and attendance describe effort rather than value delivered.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-006",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A service desk is overwhelmed by repeat contacts for the same known issue. Which improvement would reduce demand at source?",
+            "options": [
+                "Adding a phone menu that delays callers",
+                "Publishing a knowledge article and fixing the underlying cause",
+                "Hiring more first-line agents to answer the contacts",
+                "Increasing the speed of call answering"
+            ],
+            "correct_index": 1,
+            "explanation": "Addressing the root cause and enabling self-help reduces the demand itself, which is more effective than absorbing it. More agents and faster answering treat symptoms, and delaying callers harms experience without reducing demand.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-007",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A team is improving a value stream and must decide what to change first. Which input should take priority?",
+            "options": [
+                "The oldest item on the improvement register",
+                "The change that is easiest to publicise",
+                "Data on where the largest delays and failure demand occur",
+                "The personal preference of the most senior manager"
+            ],
+            "correct_index": 2,
+            "explanation": "Prioritising improvements by the size of delays and failure demand focuses effort where it will create the most value. Manager preference, the age of an entry, or public-relations value are not evidence-based criteria.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-008",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A service provider wants to move from a project-based way of working to a product-based one. What does a product-based approach emphasise?",
+            "options": [
+                "Temporary teams assembled only for each release",
+                "Handing the product to operations once the project closes",
+                "Measuring success by on-time project completion alone",
+                "Long-lived teams accountable for outcomes across the whole lifecycle"
+            ],
+            "correct_index": 3,
+            "explanation": "Product-based ways of working keep enduring teams accountable for value throughout the lifecycle. Temporary project teams, handover-then-close, and on-time completion as the only measure all reinforce the siloed project pattern being replaced.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-009",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A support team's members each specialise in a single technology, and the absence of one person halts work. What should the team develop?",
+            "options": [
+                "T-shaped skills that combine depth with broader capabilities",
+                "Deeper single-technology specialisation",
+                "Formal job descriptions that lock each person to one task",
+                "A rule that only specialists may resolve incidents"
+            ],
+            "correct_index": 0,
+            "explanation": "T-shaped capabilities let members cover related work and reduce single points of failure. Narrower specialisation and rigid descriptions worsen the dependency, and reserving work for specialists increases the bottleneck.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-010",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A provider wants new staff to become productive quickly within a value stream. Which action best supports this?",
+            "options": [
+                "Assigning newcomers unrelated administrative work first",
+                "Structured onboarding that builds knowledge of the stream and its practices",
+                "Letting newcomers learn only by shadowing for several months",
+                "Providing a policy manual and no further support"
+            ],
+            "correct_index": 1,
+            "explanation": "Structured onboarding that combines context, practices, and support shortens time to productivity. Undirected shadowing, manuals alone, or unrelated admin work do not build the capabilities the value stream needs.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-011",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A change team deploys to production and then discovers problems that testing missed. Which practice most improves this feedback?",
+            "options": [
+                "Adding more manual regression testers",
+                "Deploying less often to reduce exposure",
+                "Shortening the deployment pipeline and using automated testing",
+                "Extending approval meetings before deployment"
+            ],
+            "correct_index": 2,
+            "explanation": "A short pipeline with automated testing gives faster, more reliable feedback and catches problems sooner. More meetings and manual testing add delay, and deploying less often slows learning and increases risk per release.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-012",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A provider wants to reduce the cost of handling routine service requests without harming quality. Which approach fits best?",
+            "options": [
+                "Require specialist approval for every request",
+                "Raise the cost charged back to each user",
+                "Reduce the number of requests accepted each day",
+                "Standardise and automate high-volume, low-risk requests"
+            ],
+            "correct_index": 3,
+            "explanation": "Standardising and automating common low-risk requests lowers cost and keeps quality consistent. Adding approvals increases effort, charging users does not remove the work, and capping intake harms service rather than improving it.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-013",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A team argues that its culture is blocking improvement because mistakes are punished. What cultural shift best supports continual improvement?",
+            "options": [
+                "Build a blameless culture where errors become learning opportunities",
+                "Strengthen penalties to prevent any mistakes",
+                "Hide incidents from management to protect the team",
+                "Replace the team with more cautious people"
+            ],
+            "correct_index": 0,
+            "explanation": "Psychological safety and blameless learning let people surface problems and improve. Punishment, concealment, and replacement suppress the very information on which improvement depends.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-014",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "A provider needs to decide the order in which to deliver a set of new features. Which practice supports this decision?",
+            "options": [
+                "Allowing each team to pick what it prefers",
+                "Prioritising work by value, risk, and dependencies",
+                "Delivering in the order the requests were received",
+                "Delivering the easiest features first regardless of value"
+            ],
+            "correct_index": 1,
+            "explanation": "Prioritisation should weigh value, risk, and dependencies so the most important work flows first. Pure arrival order, ease, or individual preference ignore value and can delay critical outcomes.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-015",
+            "domain": "Create, Deliver and Support (CDS)",
+            "stem": "An incident has been resolved but the same failure recurs weekly. Which action best prevents recurrence?",
+            "options": [
+                "Reboot the affected systems on a fixed schedule",
+                "Instruct users to report the incident again next time",
+                "Conduct problem management to find and remove the root cause",
+                "Close incidents faster to improve statistics"
+            ],
+            "correct_index": 2,
+            "explanation": "Problem management identifies and eliminates the underlying cause, which stops recurrence. Faster closure, scheduled reboots, and repeated reporting leave the root cause in place.",
+            "reference": "ITIL 4 Managing Professional syllabus: Create, Deliver and Support (CDS)"
+        },
+        {
+            "id": "itil4-mp-016",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider maps how a customer interacts with it from first enquiry to ongoing use. What is this map called?",
+            "options": [
+                "A network topology diagram",
+                "A resource capacity plan",
+                "An organisational chart",
+                "A customer journey map across the service relationship"
+            ],
+            "correct_index": 3,
+            "explanation": "A customer journey map visualises the customer's experience and touchpoints over time. Network diagrams, capacity plans, and org charts describe provider internals rather than the customer's path.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-017",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A service agreement promises a response within one hour, but customers say they care more about being kept informed. What should the provider do?",
+            "options": [
+                "Add experience-based measures such as proactive updates alongside the SLA",
+                "Enforce the SLA more strictly and ignore the feedback",
+                "Remove all measures to avoid disappointment",
+                "Publish the SLA more widely but change nothing else"
+            ],
+            "correct_index": 0,
+            "explanation": "Experience measures such as proactive communication reflect what customers value beyond technical targets. Enforcing only the SLA or merely publishing it ignores the feedback, and removing all measures abandons accountability.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-018",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A new customer is joining a managed service. Which activity helps them start using the service successfully?",
+            "options": [
+                "Assigning the customer to a senior manager with no handover",
+                "Structured onboarding that sets expectations and confirms responsibilities",
+                "Sending the contract and waiting for the first incident",
+                "Providing access only after the first complaint"
+            ],
+            "correct_index": 1,
+            "explanation": "Onboarding aligns expectations, responsibilities, and support so the relationship starts well. Passive waiting, complaint-driven access, and unmanaged assignment leave the customer without a clear start.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-019",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider wants to understand what matters to a key customer segment before designing services. Which action should it take first?",
+            "options": [
+                "Copy the service design of the nearest competitor",
+                "Interview only the internal service team",
+                "Research the segment's needs, expectations, and desired outcomes",
+                "Design the service and then survey the segment"
+            ],
+            "correct_index": 2,
+            "explanation": "Understanding customer needs, expectations, and outcomes should precede design so the service is relevant. Designing first, copying a competitor, and listening only internally all risk building something the segment does not value.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-020",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A customer relationship has become transactional and the provider wants a more collaborative partnership. What should the provider do?",
+            "options": [
+                "Increase the number of invoices issued",
+                "Reduce communication to formal notices only",
+                "Enforce the contract terms strictly at every opportunity",
+                "Co-create value through joint planning and shared goals"
+            ],
+            "correct_index": 3,
+            "explanation": "Co-creation and joint planning build a collaborative relationship focused on shared outcomes. More invoices and rigid enforcement push the relationship toward transaction, and reducing communication erodes trust.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-021",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider receives frequent complaints about a slow service but no detail on where delay occurs. Which technique best identifies the improvement?",
+            "options": [
+                "Journey mapping the customer's experience to find pain points",
+                "Reviewing the provider's internal meeting minutes",
+                "Increasing the service price to manage demand",
+                "Surveying only the provider's own staff"
+            ],
+            "correct_index": 0,
+            "explanation": "Journey mapping locates the specific pain points in the customer's experience. Internal minutes, price increases, and provider-only surveys do not reveal the customer's perspective on the delay.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-022",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider wants to manage demand so that it can meet service commitments. Which approach is most effective?",
+            "options": [
+                "Refuse all requests that arrive unexpectedly",
+                "Shape demand and manage capacity to balance supply and demand",
+                "Accept every request and reduce quality when overloaded",
+                "Ignore demand trends and react after failures"
+            ],
+            "correct_index": 1,
+            "explanation": "Shaping demand and managing capacity balance the two sides of the relationship. Reducing quality under load harms value, ignoring trends causes failures, and blanket refusal damages service.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-023",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A customer is unsure which level of support to buy. What should the provider produce to help?",
+            "options": [
+                "A list of staff names and phone numbers",
+                "A network diagram of the data centre",
+                "A clear service catalogue describing offerings, options, and prices",
+                "A technical runbook of internal procedures"
+            ],
+            "correct_index": 2,
+            "explanation": "A service catalogue presents offerings, options, and prices in customer terms so choices are clear. Internal procedures, staff lists, and network diagrams do not describe what the customer can buy.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-024",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider wants to measure the quality of the service relationship, not just the technology. Which measure is most appropriate?",
+            "options": [
+                "The number of servers running",
+                "The count of changes deployed",
+                "The percentage of staff certified",
+                "Customer satisfaction and experience measures across key touchpoints"
+            ],
+            "correct_index": 3,
+            "explanation": "Relationship quality is reflected in satisfaction and experience at the touchpoints that matter to customers. Server counts, change counts, and certification rates are provider-internal and do not capture customer perception.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-025",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "During a service review, a customer raises concerns that are not covered in the contract. What should the provider do?",
+            "options": [
+                "Discuss the concerns openly and explore how to address them together",
+                "Refuse to discuss anything outside the contract",
+                "Agree to everything immediately without assessing impact",
+                "Escalate the customer to the account manager without discussion"
+            ],
+            "correct_index": 0,
+            "explanation": "Open discussion builds the relationship and can reveal valuable improvement opportunities. Contractual refusal damages trust, immediate agreement without impact assessment is reckless, and deflection avoids engagement.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-026",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider wants customers to adopt a self-service portal that many currently ignore. What should it do first?",
+            "options": [
+                "Increase the price of assisted support to punish its use",
+                "Understand the customer journey and remove obstacles to using the portal",
+                "Mandate portal use without any support",
+                "Remove all assisted channels immediately"
+            ],
+            "correct_index": 1,
+            "explanation": "Understanding the journey and removing friction encourages genuine adoption. Mandating use, removing assisted channels, or punitive pricing create resistance and poor experience rather than adoption.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-027",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A customer's needs are changing as their business grows. What should the service provider do?",
+            "options": [
+                "Wait for the customer to complain before acting",
+                "Terminate the relationship to avoid complexity",
+                "Review and adapt the service relationship and offerings as needs evolve",
+                "Keep the original service unchanged regardless of growth"
+            ],
+            "correct_index": 2,
+            "explanation": "Continually reviewing and adapting offerings keeps the service aligned with the customer's evolving needs. Rigidly holding to the original service, waiting for complaints, or exiting the relationship all fail the customer.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-028",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider handles interactions through many channels but customers say they must repeat information. What improvement is most needed?",
+            "options": [
+                "Add more channels to give customers choice",
+                "Close the digital channels and keep only the phone",
+                "Ask customers to start again in each channel",
+                "Integrate channels so context and history are shared between them"
+            ],
+            "correct_index": 3,
+            "explanation": "Integrating channels shares context so customers do not repeat themselves. Adding channels without integration multiplies the problem, closing digital channels reduces choice, and asking customers to repeat themselves is the fault being fixed.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-029",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "A provider wants to strengthen loyalty among its most valuable customers. What should it focus on?",
+            "options": [
+                "Delivering consistent value and proactively meeting their expectations",
+                "Offering one-off discounts regardless of service quality",
+                "Reducing contact to save cost",
+                "Standardising every customer into the same treatment"
+            ],
+            "correct_index": 0,
+            "explanation": "Loyalty grows from consistently delivered value and proactive attention to expectations. Discounts without quality, reduced contact, and treating every customer identically do not build a valued relationship.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-030",
+            "domain": "Drive Stakeholder Value (DSV)",
+            "stem": "Feedback shows that customers value speed, but the provider measures only correctness. What should the provider do?",
+            "options": [
+                "Report speed anecdotally without any measure",
+                "Add speed measures to the existing correctness measures",
+                "Stop measuring correctness entirely",
+                "Continue measuring only correctness and ignore the feedback"
+            ],
+            "correct_index": 1,
+            "explanation": "Aligning measures with what customers value means adding relevant measures alongside existing ones. Dropping correctness loses an important dimension, ignoring feedback misaligns the service, and anecdotal reporting lacks rigour.",
+            "reference": "ITIL 4 Managing Professional syllabus: Drive Stakeholder Value (DSV)"
+        },
+        {
+            "id": "itil4-mp-031",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "An organisation is pursuing digital transformation and asks what the term ultimately aims to achieve. Which answer is most accurate?",
+            "options": [
+                "Buying the newest tools available on the market",
+                "Moving every workload to a single cloud provider",
+                "Using digital technology to create new or improved value for customers",
+                "Replacing all staff with automation regardless of value"
+            ],
+            "correct_index": 2,
+            "explanation": "Digital transformation uses technology to improve or create customer value and business outcomes. Technology purchases, blanket automation, and single-cloud mandates are means, not the goal, and may not create value.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-032",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team wants faster feedback from production to reduce the time taken to detect failures. Which practice supports this most directly?",
+            "options": [
+                "Extending the release approval process",
+                "Increasing the batch size of each deployment",
+                "Freezing changes for longer periods",
+                "Instrumenting the service with monitoring and rapid feedback loops"
+            ],
+            "correct_index": 3,
+            "explanation": "Monitoring and rapid feedback loops shorten detection time. Longer approvals, larger batches, and change freezes all lengthen the feedback cycle and delay learning.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-033",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A high-velocity team is overwhelmed by unpredictable work. Which concept helps it respond when cause and effect are unclear?",
+            "options": [
+                "Recognising the work as complex and using probes and safe-to-fail experiments",
+                "Planning every detail far in advance with a fixed schedule",
+                "Applying strict command-and-control procedures",
+                "Ignoring uncertainty and following the original plan"
+            ],
+            "correct_index": 0,
+            "explanation": "In complex environments, small safe-to-fail probes generate learning when cause and effect are only clear in hindsight. Detailed long-range plans, rigid control, and ignoring uncertainty all fail under complexity.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-034",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A DevOps team wants to deploy small changes frequently without destabilising the service. Which enabler is most important?",
+            "options": [
+                "Assigning deployments to a single expert",
+                "Reliable automated deployment pipelines with automated testing",
+                "Manual sign-off by a change board for every commit",
+                "Larger releases to reduce the number of deployments"
+            ],
+            "correct_index": 1,
+            "explanation": "Automated pipelines with automated testing make frequent small releases safe and repeatable. Change-board approval per commit, larger releases, and relying on one person all slow delivery and increase risk.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-035",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team keeps accumulating shortcuts that slow future work. What is this accumulation called and how should it be managed?",
+            "options": [
+                "Capacity surplus, managed by using it up",
+                "Skill gap, managed by hiring",
+                "Technical debt, managed by repaying it deliberately and limiting new intake",
+                "Scope creep, managed by ignoring it"
+            ],
+            "correct_index": 2,
+            "explanation": "Shortcuts that create future cost are technical debt, which is managed by deliberate repayment and controlling new accumulation. It is not scope creep, surplus capacity, or purely a skill gap.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-036",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "An organisation wants to make better use of artificial intelligence in its services. What should it ensure first?",
+            "options": [
+                "That it adopts the most expensive AI platform available",
+                "That all decisions are automated without human oversight",
+                "That no data quality work is done before deployment",
+                "That the use case delivers genuine value and is ethically governed"
+            ],
+            "correct_index": 3,
+            "explanation": "AI should be adopted where it creates real value and is governed responsibly and ethically. Expensive platforms, removing oversight, and neglecting data quality undermine value and trust.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-037",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team consistently prioritises speed over stability and suffers frequent outages. What balance should it seek?",
+            "options": [
+                "Balancing velocity with resilience and reliability engineering",
+                "Maximising speed even if outages continue",
+                "Freezing all change to protect stability",
+                "Ignoring reliability until customers complain"
+            ],
+            "correct_index": 0,
+            "explanation": "High-velocity IT balances speed with resilience so the organisation can move fast without breaking trust. Pure speed causes outages, permanent freezes remove agility, and ignoring reliability until complaints is reactive.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-038",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A Lean improvement team wants to eliminate work that adds no value. How does Lean describe this wasteful work?",
+            "options": [
+                "Cost, to be passed to the customer",
+                "Waste, to be identified and removed from the value stream",
+                "Variance, to be absorbed by extra capacity",
+                "Risk, to be transferred to a supplier"
+            ],
+            "correct_index": 1,
+            "explanation": "Lean calls non-value-adding activity waste and seeks to remove it from the value stream. Variance, risk transfer, and cost pass-through are different concepts and do not describe the elimination of non-value work.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-039",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "An agile team wants to improve continuously using a disciplined, scientific routine. Which approach matches this intent?",
+            "options": [
+                "Annual planning with no interim review",
+                "Copying another team's process without adaptation",
+                "The improvement kata, using deliberate practice toward a target condition",
+                "Random changes made whenever problems appear"
+            ],
+            "correct_index": 2,
+            "explanation": "The improvement kata embeds scientific, iterative improvement toward a target condition. Random changes, annual-only planning, and uncritical copying lack the deliberate, learning-based discipline.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-040",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team wants to test risky changes without exposing all customers. Which technique is most appropriate?",
+            "options": [
+                "Deploying to all customers at once",
+                "Skipping testing to save time",
+                "Disabling monitoring to avoid noise",
+                "Canary or progressive release to a limited audience first"
+            ],
+            "correct_index": 3,
+            "explanation": "Canary or progressive release limits exposure and enables safe learning from real traffic. All-at-once deployment maximises impact, skipping testing increases defects, and disabling monitoring removes the feedback needed to detect problems.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-041",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A provider wants to shift from periodic, manual assurance to continuous assurance. What is the key change?",
+            "options": [
+                "Build automated checks and controls into the delivery pipeline continuously",
+                "Conduct a single large audit each year",
+                "Increase the number of manual reviewers",
+                "Defer all assurance until after go-live"
+            ],
+            "correct_index": 0,
+            "explanation": "Continuous assurance embeds automated controls in the pipeline so issues are caught as work proceeds. Annual audits, more manual reviewers, and post-go-live assurance all remain periodic and late.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-042",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team's incident response is slowed because no one knows who owns which component. What should be established?",
+            "options": [
+                "A policy that only managers may investigate",
+                "Clear service ownership and traceable mapping of components to owners",
+                "More escalation layers",
+                "A larger on-call rota with no ownership"
+            ],
+            "correct_index": 1,
+            "explanation": "Clear ownership and traceable component mapping speed diagnosis and accountability. More escalation and larger rotas without ownership add confusion, and restricting investigation to managers bottlenecks response.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-043",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "An organisation wants teams to learn from failure without fear. Which cultural trait is most important?",
+            "options": [
+                "A culture that punishes every mistake equally",
+                "A culture where only leaders speak about failures",
+                "A just culture that distinguishes errors from recklessness",
+                "A culture that hides failures to protect reputations"
+            ],
+            "correct_index": 2,
+            "explanation": "A just culture encourages candour by treating honest error differently from recklessness, which supports learning. Hiding failures, equal punishment, and leader-only discussion suppress the information needed to improve.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-044",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A team wants to reduce the time from idea to customer value. Which improvement helps most?",
+            "options": [
+                "Adding approval steps to control quality",
+                "Increasing the size of each release",
+                "Specialising each person into narrower tasks",
+                "Removing handoffs and waiting time in the value stream"
+            ],
+            "correct_index": 3,
+            "explanation": "Removing handoffs and waiting directly shortens the time from idea to value. Adding approvals, larger releases, and narrower specialisation all add delay and friction.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-045",
+            "domain": "High-velocity IT (HVIT)",
+            "stem": "A provider must assure a cloud service it does not fully control. Which approach is most appropriate?",
+            "options": [
+                "Apply shared-responsibility assurance using monitoring and evidence from the provider",
+                "Assume the cloud provider handles all risk",
+                "Perform no assurance because the platform is external",
+                "Rely solely on the vendor's marketing claims"
+            ],
+            "correct_index": 0,
+            "explanation": "Shared-responsibility models require the consumer to assure its own responsibilities using monitoring and provider evidence. Assuming all risk is transferred, skipping assurance, and relying on marketing leave the service unverified.",
+            "reference": "ITIL 4 Managing Professional syllabus: High-velocity IT (HVIT)"
+        },
+        {
+            "id": "itil4-mp-046",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "An organisation wants a clear statement of where it is going before it plans improvements. What should it establish first?",
+            "options": [
+                "A single performance metric for the whole company",
+                "A clear direction expressed through vision, mission, and objectives",
+                "A detailed task list for every team",
+                "A technology procurement plan"
+            ],
+            "correct_index": 1,
+            "explanation": "Vision, mission, and objectives give the direction that planning and improvement must serve. Task lists, procurement plans, and a single metric are too narrow or too late to define direction.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-047",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A governance body wants to ensure that decisions are made at the right level. What does effective governance provide?",
+            "options": [
+                "A hands-off approach with no accountability",
+                "A separate governance process for each team",
+                "Clear accountability, decision rights, and controls aligned to objectives",
+                "A rule that all decisions are made centrally"
+            ],
+            "correct_index": 2,
+            "explanation": "Governance defines accountability, decision rights, and controls so decisions support objectives. Centralising everything or removing accountability defeats governance, and fragmented per-team processes create inconsistency.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-048",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A team sets many performance measures but none of them change behaviour. What is the most likely problem?",
+            "options": [
+                "There are not enough measures",
+                "The measures are reported too frequently",
+                "Staff have not been punished for missing targets",
+                "The measures are not connected to the organisation's objectives and outcomes"
+            ],
+            "correct_index": 3,
+            "explanation": "Metrics drive behaviour only when they are clearly linked to objectives and outcomes. Adding more measures, changing frequency, or punishing staff do not fix the missing line of sight.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-049",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "An improvement programme has stalled and the team asks how to sustain momentum. Which approach is best?",
+            "options": [
+                "Use a structured continual improvement model with iterative steps and review",
+                "Wait for a crisis to force action",
+                "Replace the team and start again",
+                "Declare the improvement complete and move on"
+            ],
+            "correct_index": 0,
+            "explanation": "A structured, iterative improvement model with regular review sustains progress. Waiting for a crisis is reactive, replacing the team loses learning, and declaring completion prematurely ends the effort.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-050",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A transformation is meeting resistance because staff fear losing their roles. What should leaders do first?",
+            "options": [
+                "Postpone the change until resistance fades",
+                "Communicate the reasons for change and involve staff in shaping it",
+                "Ignore resistance and press ahead",
+                "Threaten staff with dismissal if they resist"
+            ],
+            "correct_index": 1,
+            "explanation": "Effective organisational change management addresses concerns through communication and involvement. Ignoring or threatening staff deepens resistance, and indefinitely postponing the change avoids rather than manages it.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-051",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A planning team wants to align many initiatives with strategy. Which approach best supports this?",
+            "options": [
+                "Fund initiatives in the order they were proposed",
+                "Let each team plan independently of strategy",
+                "Cascade objectives and use portfolio prioritisation tied to strategy",
+                "Approve every initiative that a department requests"
+            ],
+            "correct_index": 2,
+            "explanation": "Cascading objectives and portfolio prioritisation align initiatives with strategy. Approving everything, funding by proposal order, and independent planning create misalignment and wasted investment.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-052",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A provider wants to make risk-based decisions about which controls to apply. What should guide the choice?",
+            "options": [
+                "Apply every possible control to every process",
+                "Apply no controls to save cost",
+                "Choose controls based on the loudest stakeholder",
+                "Assess the likelihood and impact of risks and select proportionate controls"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk-based control selection weighs likelihood and impact so effort is proportionate. Applying everything is wasteful, applying nothing is negligent, and reacting to the loudest voice is not risk-based.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-053",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "Leaders want to empower teams while retaining appropriate oversight. Which arrangement best achieves this?",
+            "options": [
+                "Delegate authority within clear boundaries and monitor outcomes",
+                "Retain all decisions at the top and allow no delegation",
+                "Delegate without any boundaries or reporting",
+                "Delegate only trivial decisions and keep the rest central"
+            ],
+            "correct_index": 0,
+            "explanation": "Clear boundaries plus outcome monitoring gives empowerment with accountability. Retaining everything creates bottlenecks, unbounded delegation removes control, and delegating only trivia does not empower.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-054",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "An organisation's improvement efforts are fragmented across departments. What should it do to coordinate them?",
+            "options": [
+                "Stop all improvement until a single tool is bought",
+                "Establish a coherent improvement approach with shared methods and priorities",
+                "Let each department use a different method independently",
+                "Focus only on the loudest department's needs"
+            ],
+            "correct_index": 1,
+            "explanation": "A coherent approach with shared methods and priorities coordinates improvement across the organisation. Independent methods, favouritism, and halting work for a tool purchase all fragment or stall improvement.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-055",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A manager wants to measure whether an objective has been achieved. What makes a measure useful for this purpose?",
+            "options": [
+                "It measures many unrelated things at once",
+                "It changes definition each time it is reported",
+                "It is clearly defined, attributable, and linked to the objective",
+                "It is difficult to collect and rarely reported"
+            ],
+            "correct_index": 2,
+            "explanation": "Useful measures are clearly defined, attributable, and connected to the objective they assess. Hard-to-collect, overloaded, or inconsistently defined measures cannot reliably show achievement.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-056",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A change initiative succeeds in one region but fails in another. What should the organisation examine first?",
+            "options": [
+                "The intelligence of the staff in each region",
+                "The budget size of each region",
+                "The weather conditions at the time",
+                "The local context and how the change was adapted and communicated"
+            ],
+            "correct_index": 3,
+            "explanation": "Organisational change depends on context, adaptation, and communication, which often explain differing outcomes. Staff intelligence, budget size, and unrelated factors do not reliably explain the difference.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-057",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A leadership team wants to prioritise improvements across the whole organisation. Which input is most useful?",
+            "options": [
+                "A balanced view of objectives, risks, customer value, and current performance",
+                "Only the financial cost of each improvement",
+                "Only the opinion of the executive team",
+                "The order in which improvements were suggested"
+            ],
+            "correct_index": 0,
+            "explanation": "Prioritisation is best informed by a balanced view of objectives, risk, value, and performance. Cost alone, executive opinion alone, or suggestion order give an incomplete basis for enterprise priorities.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-058",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "An organisation wants improvement ideas to come from staff as well as leaders. What should it encourage?",
+            "options": [
+                "Rewarding only ideas that save the most money",
+                "A culture and channels where everyone can suggest and test improvements",
+                "A rule that only managers may propose changes",
+                "A suggestion box with no feedback or action"
+            ],
+            "correct_index": 1,
+            "explanation": "Broad participation requires culture and channels that let anyone contribute and see action. Manager-only proposals, ignored suggestions, and narrowly financial rewards discourage the wider involvement needed.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-059",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "A provider wants to decide how much freedom to give teams when applying practices. What should guide this?",
+            "options": [
+                "Complete freedom with no common standards at all",
+                "A different approach for each individual employee",
+                "The need for consistency where it matters and flexibility where it does not",
+                "Maximum standardisation of every step for all teams"
+            ],
+            "correct_index": 2,
+            "explanation": "Effective governance balances consistency where it matters with flexibility elsewhere. Total standardisation removes agility, no standards lose needed control, and per-employee variation prevents coherence.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        },
+        {
+            "id": "itil4-mp-060",
+            "domain": "Direct, Plan and Improve (DPI)",
+            "stem": "Leaders want to know whether their improvement efforts are producing results. What should they do?",
+            "options": [
+                "Collect data and never review it",
+                "Rely on gut feeling without any measures",
+                "Review results only once at the very end",
+                "Review agreed measures and outcomes regularly and act on the findings"
+            ],
+            "correct_index": 3,
+            "explanation": "Regular review of agreed measures and outcomes, followed by action, shows whether improvements work. Collecting without review, relying on instinct, and a single end review provide no timely insight.",
+            "reference": "ITIL 4 Managing Professional syllabus: Direct, Plan and Improve (DPI)"
+        }
+    ]
+}

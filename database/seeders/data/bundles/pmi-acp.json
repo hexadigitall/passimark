@@ -1,0 +1,1697 @@
+{
+    "cert_key": "pmi-acp",
+    "title": "PMI Agile Certified Practitioner (PMI-ACP)",
+    "issuer": "Project Management Institute",
+    "outline_file": "outlines/pmi-acp.json",
+    "variant_label": "PMI-ACP Real-Spec Practice",
+    "exam": {
+        "questions": 120,
+        "duration_minutes": 180,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the PMI-ACP exam content outline (domain/task/enabler structure). Not a capture of past exam questions.",
+    "source_label": "PMI-ACP practice bank",
+    "items": [
+        {
+            "id": "pmi-acp-001",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A sponsor insists the team follow the original detailed schedule even though customer feedback has invalidated several planned features. Which Agile Manifesto value is most directly at stake?",
+            "options": [
+                "Responding to change over following a plan",
+                "Contract negotiation over customer collaboration",
+                "Comprehensive documentation over working software",
+                "Following a defined process over individuals and interactions"
+            ],
+            "correct_index": 0,
+            "explanation": "The manifesto values responding to change over following a plan, so defending an outdated schedule after new feedback contradicts it. The other options present the left-hand items as if they were preferred, which inverts the manifesto's stated preference.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-002",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A Scrum Master observes that team members wait for direction on priorities instead of pulling work themselves. Which action best reflects servant leadership?",
+            "options": [
+                "Assign each member a daily task list to keep everyone busy",
+                "Remove obstacles and coach the team toward self-organization",
+                "Escalate the team's lack of initiative to the functional manager",
+                "Take over backlog refinement so work is always ready to pull"
+            ],
+            "correct_index": 1,
+            "explanation": "Servant leadership means serving the team by removing impediments and coaching it toward self-organization. Assigning tasks, escalating, or taking over refinement all increase dependence rather than build the team's capability to decide.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-003",
+            "domain": "Agile Principles and Mindset",
+            "stem": "During a value-stream review a team finds that finished stories wait three days for a manual approval before acceptance. This waiting time is best described as which lean concept?",
+            "options": [
+                "An increment of working software",
+                "Value-added work that customers pay for",
+                "Waste that should be reduced or eliminated",
+                "A control that always increases customer value"
+            ],
+            "correct_index": 2,
+            "explanation": "In lean thinking, waiting is one of the classic wastes because it consumes time without adding customer value. Approvals may be necessary, but the queue time itself is waste to be reduced, and it is certainly not value-added work or a product increment.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-004",
+            "domain": "Agile Principles and Mindset",
+            "stem": "Which statement best describes the relationship between an iteration and an increment?",
+            "options": [
+                "An iteration is the output, while an increment is the time box",
+                "Iterations and increments are two names for the same event",
+                "An increment must always span several iterations before it can be released",
+                "An iteration is a fixed time box, while an increment is the usable output produced within it"
+            ],
+            "correct_index": 3,
+            "explanation": "An iteration is a time-boxed cycle and an increment is the integrated, usable result created during that cycle. Reversing the definitions or treating them as synonyms confuses the container with the output.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-005",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A team stops displaying unfinished work at the daily stand-up so the board always looks green. Which Scrum pillar is being weakened?",
+            "options": [
+                "Transparency",
+                "Inspection",
+                "Adaptation",
+                "Timeboxing"
+            ],
+            "correct_index": 0,
+            "explanation": "Hiding unfinished work destroys transparency, which is the foundation that makes honest inspection and adaptation possible. Timeboxing is a practice rather than one of the three pillars.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-006",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A Kanban team starts new work whenever a board column has free capacity, and work in progress keeps growing. What should the team do?",
+            "options": [
+                "Add more people so every column moves faster",
+                "Set and enforce explicit work-in-progress limits to expose bottlenecks",
+                "Remove the board and track work in a spreadsheet",
+                "Ask each member to multitask across several items at once"
+            ],
+            "correct_index": 1,
+            "explanation": "Explicit work-in-progress limits stop the team from starting work faster than it finishes it and make bottlenecks visible. Adding people or multitasking increases work in progress, and abandoning the board removes the visual control.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-007",
+            "domain": "Agile Principles and Mindset",
+            "stem": "On an Extreme Programming team two developers write production code together at one workstation and rotate partners each day. Which core XP practice are they following?",
+            "options": [
+                "Collective code ownership",
+                "Continuous integration",
+                "Pair programming",
+                "Test-driven development"
+            ],
+            "correct_index": 2,
+            "explanation": "Pair programming is the XP practice of two people collaborating at one machine on the same code. Continuous integration, test-driven development, and collective ownership are separate XP practices with different mechanics.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-008",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A project has stable, well-understood requirements and a fixed regulatory deadline. Which delivery approach is most defensible?",
+            "options": [
+                "An agile approach because agile is always the better choice",
+                "No plan at all, letting the work self-organize",
+                "A pure Kanban flow with no commitments",
+                "A predictive plan-driven approach because change is low and compliance is fixed"
+            ],
+            "correct_index": 3,
+            "explanation": "Agile is a strong fit when change and uncertainty are high, but stable requirements with fixed compliance favour a more predictive approach. Claiming agile is always better ignores the manifesto's emphasis on choosing the right approach for the context.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-009",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A delivery lead assigns every task and reviews every commit before it can merge. Which agile principle does this most undermine?",
+            "options": [
+                "Self-organizing teams decide how to accomplish their work",
+                "Simplicity maximizes the work not done",
+                "Working software is the primary measure of progress",
+                "Sustainable pace should be maintained indefinitely"
+            ],
+            "correct_index": 0,
+            "explanation": "Micromanaging task assignment and gatekeeping commits removes the team's authority to organize its own work, violating the principle that self-organizing teams decide how to accomplish their work. The other principles are not the primary casualty here.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-010",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A developer discovers a serious defect that will delay the release but fears raising it. Which agile value most needs reinforcing?",
+            "options": [
+                "Simplicity",
+                "Courage",
+                "Focus",
+                "Respect"
+            ],
+            "correct_index": 1,
+            "explanation": "The agile values of courage and openness both matter, but the specific barrier here is fear of speaking up about bad news, which is a failure of courage. Focus and respect address different behaviours that are not the main obstacle.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-011",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A team member is assigned to five active projects and rarely finishes anything. Which agile value is most clearly being violated?",
+            "options": [
+                "Courage",
+                "Simplicity",
+                "Focus",
+                "Commitment"
+            ],
+            "correct_index": 2,
+            "explanation": "Spreading one person across five projects destroys focus, the discipline of limiting work in progress. The other agile values address different behaviours and are not the primary issue described.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-012",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A team openly shares estimates, risks, and mistakes during stand-ups without blame. Which agile value is best demonstrated?",
+            "options": [
+                "Courage",
+                "Commitment",
+                "Respect",
+                "Openness"
+            ],
+            "correct_index": 3,
+            "explanation": "Sharing information candidly about risks and mistakes is the essence of openness. Courage, commitment, and respect are related values but do not describe the transparent sharing of information as directly.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-013",
+            "domain": "Agile Principles and Mindset",
+            "stem": "During a debate one team member dismisses a colleague's idea by mocking their experience. Which agile value is most directly breached?",
+            "options": [
+                "Respect",
+                "Courage",
+                "Focus",
+                "Openness"
+            ],
+            "correct_index": 0,
+            "explanation": "Agile teams treat each other with respect and value every member's contribution, so mocking a colleague's experience violates that value. Courage, focus, and openness describe other values that are not the direct breach.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-014",
+            "domain": "Agile Principles and Mindset",
+            "stem": "The team agrees on the sprint goal and then unilaterally accepts extra work from a manager mid-sprint, missing the goal. Which value was compromised?",
+            "options": [
+                "Openness",
+                "Commitment",
+                "Courage",
+                "Simplicity"
+            ],
+            "correct_index": 1,
+            "explanation": "Commitment means the team accepts the sprint goal and works together to meet it, so letting outside work break the goal betrays that commitment. The other values are relevant to agile but not the one compromised by this behaviour.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-015",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A manager asks which single ceremony the team can adopt to become agile. What is the most accurate response?",
+            "options": [
+                "Buying an agile tool makes the team agile",
+                "Holding a retrospective once a year is enough",
+                "Agile is a mindset supported by practices, so ceremonies alone will not make a team agile",
+                "Adopting daily stand-ups is sufficient to become agile"
+            ],
+            "correct_index": 2,
+            "explanation": "Agile is fundamentally a mindset and set of values, with practices chosen to support it, so adopting a ceremony or tool without the underlying mindset does not create agility. The other options treat a single artifact as sufficient.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-016",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A stakeholder asks whether the project is progressing and requests the percentage of tasks completed. What does agile consider the primary measure of progress?",
+            "options": [
+                "Percentage of tasks marked complete",
+                "Number of hours logged",
+                "Volume of documentation produced",
+                "Working software delivered frequently"
+            ],
+            "correct_index": 3,
+            "explanation": "The manifesto states that working software is the primary measure of progress, because only integrated, usable output demonstrates real value. Task completion, hours, and documentation do not prove that anything works.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-017",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A contract is signed with fixed specifications and the vendor refuses to speak with the customer about changing needs. Which Agile Manifesto value is being ignored?",
+            "options": [
+                "Customer collaboration over contract negotiation",
+                "Individuals and interactions over processes and tools",
+                "Working software over comprehensive documentation",
+                "Responding to change over following a plan"
+            ],
+            "correct_index": 0,
+            "explanation": "Refusing customer collaboration and hiding behind the contract directly ignores the preference for customer collaboration over contract negotiation. The other values address tools, documentation, and change rather than the negotiation stance described.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-018",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A team proposes a forecasting spreadsheet with twenty inputs to plan a short sprint. Which agile principle should guide the response?",
+            "options": [
+                "Plans must be detailed to be credible",
+                "Simplicity, maximizing the amount of work not done, is essential",
+                "Comprehensive documentation should precede every sprint",
+                "All decisions must be approved by the sponsor"
+            ],
+            "correct_index": 1,
+            "explanation": "One of the twelve principles says simplicity, or maximizing the work not done, is essential. Over-engineering an artifact for a short sprint adds effort without value, and the other options contradict agile principles.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-019",
+            "domain": "Agile Principles and Mindset",
+            "stem": "A team must decide the architecture for a new product. Which principle best guides who decides?",
+            "options": [
+                "The sponsor should choose the technology stack personally",
+                "Architecture should be frozen before any coding begins",
+                "The best architectures emerge from self-organizing teams",
+                "The enterprise architect must specify every component up front"
+            ],
+            "correct_index": 2,
+            "explanation": "The twelve principles state that the best architectures, requirements, and designs emerge from self-organizing teams. Imposing architecture from outside the team or freezing it up front removes the team's ability to adapt the design as it learns.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-020",
+            "domain": "Agile Principles and Mindset",
+            "stem": "Leadership expects the team to work sixty-hour weeks for several months to hit a deadline. Which agile principle is most relevant?",
+            "options": [
+                "Teams should work as many hours as needed to finish",
+                "Overtime is the fastest way to increase velocity",
+                "Documentation is the primary measure of progress",
+                "Agile processes promote sustainable development and a constant pace"
+            ],
+            "correct_index": 3,
+            "explanation": "The principles call for sustainable development so sponsors, developers, and users can maintain a constant pace indefinitely. Chronic overtime degrades quality and velocity, and the other options contradict the principle.",
+            "reference": "PMI-ACP Exam Content Outline - Agile Principles and Mindset"
+        },
+        {
+            "id": "pmi-acp-021",
+            "domain": "Value-driven Delivery",
+            "stem": "The product owner has more candidate features than the team can deliver. Which practice best supports choosing the highest-value work first?",
+            "options": [
+                "Order the backlog by value and risk so the team pulls the most valuable items first",
+                "Work on features in the order they were requested",
+                "Let each developer pick whatever feature they find interesting",
+                "Deliver the easiest features first regardless of value"
+            ],
+            "correct_index": 0,
+            "explanation": "Value-driven delivery means prioritizing and sequencing the backlog so the most valuable and riskiest items are addressed first. Ordering by request date, developer interest, or ease ignores business value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-022",
+            "domain": "Value-driven Delivery",
+            "stem": "A team wants to validate a new product idea with the least effort. What is the best approach?",
+            "options": [
+                "Deliver a polished version of a non-essential feature first",
+                "Build a minimum viable product that delivers enough value to test the core hypothesis",
+                "Build every planned feature before any customer sees it",
+                "Skip customer feedback until the full product is complete"
+            ],
+            "correct_index": 1,
+            "explanation": "A minimum viable product is the smallest increment that lets the team test a hypothesis with real users and learn quickly. Building everything before feedback delays learning and risks delivering low value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-023",
+            "domain": "Value-driven Delivery",
+            "stem": "Which delivery style delivers value earliest and reduces risk?",
+            "options": [
+                "Delivering only when every requirement is complete",
+                "Delivering documentation first and software last",
+                "Delivering small increments frequently to obtain early feedback",
+                "Delivering one large release at the end of the project"
+            ],
+            "correct_index": 2,
+            "explanation": "Frequent incremental delivery produces value earlier and lets the team correct course based on feedback, reducing risk. A single big-bang release delays value and feedback and concentrates risk.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-024",
+            "domain": "Value-driven Delivery",
+            "stem": "Two features cost the same but one is expected to generate far more revenue. Which should generally be prioritized higher?",
+            "options": [
+                "The feature that is technically simpler",
+                "The feature requested by the loudest stakeholder",
+                "The feature that is listed first in the backlog",
+                "The feature with the higher expected return on investment"
+            ],
+            "correct_index": 3,
+            "explanation": "Value-driven delivery weighs expected return against cost, so the higher-ROI feature should generally come first. Technical ease, volume of requests, and list position are not value measures on their own.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-025",
+            "domain": "Value-driven Delivery",
+            "stem": "A team needs to protect the release date by clearly stating which requirements could be dropped. Which technique fits best?",
+            "options": [
+                "MoSCoW prioritization, ranking items as must, should, could, and will-not-have",
+                "Estimating every item to the nearest hour",
+                "Assigning all requirements equal priority",
+                "Deferring prioritization until the release is delivered"
+            ],
+            "correct_index": 0,
+            "explanation": "MoSCoW makes the drop candidates explicit, which lets the team protect the schedule by delivering must-haves first. Equal priorities or deferring the decision removes the ability to trade scope against time.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-026",
+            "domain": "Value-driven Delivery",
+            "stem": "Customers are delighted by a feature they never asked for but would miss if it were removed. How is this feature best classified in the Kano model?",
+            "options": [
+                "Indifferent feature",
+                "Attractive or delight feature",
+                "Must-be feature",
+                "Performance feature"
+            ],
+            "correct_index": 1,
+            "explanation": "In the Kano model an attractive or delight feature produces satisfaction when present but does not cause dissatisfaction when absent. Must-be features cause dissatisfaction when missing, performance features scale with how well they are done, and indifferent features do not affect satisfaction.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-027",
+            "domain": "Value-driven Delivery",
+            "stem": "A team sequences backlog items by dividing cost of delay by job size. Which method are they using?",
+            "options": [
+                "A simple majority vote",
+                "Random selection",
+                "Weighted shortest job first",
+                "First in, first out"
+            ],
+            "correct_index": 2,
+            "explanation": "Weighted shortest job first orders work by cost of delay divided by job duration, delivering the highest value per unit of effort first. The other options do not account for value or cost of delay.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-028",
+            "domain": "Value-driven Delivery",
+            "stem": "A team compares a feature that loses value quickly with one whose value is stable. Which concept helps decide the sequence?",
+            "options": [
+                "Story point total",
+                "Team velocity",
+                "Number of acceptance tests",
+                "Cost of delay"
+            ],
+            "correct_index": 3,
+            "explanation": "Cost of delay quantifies how much value is lost by delaying an item, so quickly-perishing value should be prioritized. Story points, velocity, and test counts describe effort or throughput, not the urgency of value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-029",
+            "domain": "Value-driven Delivery",
+            "stem": "Each story meets its acceptance criteria but the release fails integration testing. What most likely caused this?",
+            "options": [
+                "A weak definition of done that omitted integration and quality checks",
+                "Acceptance criteria that were too specific",
+                "A velocity that was too high",
+                "Too many stakeholders reviewing the story"
+            ],
+            "correct_index": 0,
+            "explanation": "Acceptance criteria confirm the story's intended behaviour, while the definition of done should include integration, quality, and release-readiness checks. A weak definition of done lets stories appear complete before they are truly releasable.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-030",
+            "domain": "Value-driven Delivery",
+            "stem": "What is the purpose of acceptance criteria on a user story?",
+            "options": [
+                "They record who wrote the story",
+                "They state the conditions the story must satisfy to be accepted by the product owner",
+                "They replace the definition of done for the team",
+                "They estimate the story's cost"
+            ],
+            "correct_index": 1,
+            "explanation": "Acceptance criteria define the specific conditions a story must meet to be accepted and are distinct from the definition of done, which applies to all work. They are not estimates or authorship records.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-031",
+            "domain": "Value-driven Delivery",
+            "stem": "The release date is fixed and scope is running over. What is the most agile response?",
+            "options": [
+                "Add people to force the same scope into the date",
+                "Ship everything untested to meet the date",
+                "Reduce or resequence scope so the highest-value items ship on time",
+                "Extend the deadline to fit all scope"
+            ],
+            "correct_index": 2,
+            "explanation": "Agile handles a fixed date by varying scope and prioritizing value, so trimming to the highest-value items protects the date and the customer. Extending the date, adding people late, or shipping untested work increases risk or erodes value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-032",
+            "domain": "Value-driven Delivery",
+            "stem": "Why do agile teams often prioritize by relative value rather than absolute dollar estimates?",
+            "options": [
+                "Absolute value can never be estimated",
+                "Relative value removes the need for a product owner",
+                "Relative value removes the need for a definition of done",
+                "Relative comparisons are faster and more reliable when precise value data is unavailable"
+            ],
+            "correct_index": 3,
+            "explanation": "Relative ranking lets teams order work quickly and consistently even when exact financial data is uncertain, which is common early on. It does not eliminate the product owner or the definition of done.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-033",
+            "domain": "Value-driven Delivery",
+            "stem": "A team is unsure which features matter because no one has stated the product's purpose. What artifact would help most?",
+            "options": [
+                "A concise product vision that describes the target customer and value",
+                "A detailed risk register",
+                "A resource histogram",
+                "A purchase order"
+            ],
+            "correct_index": 0,
+            "explanation": "A clear product vision aligns the team and stakeholders on whom the product serves and what value it delivers, which guides prioritization. A risk register, resource histogram, or purchase order does not clarify product direction.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-034",
+            "domain": "Value-driven Delivery",
+            "stem": "The product owner orders the backlog only by business value. Which additional factor should also influence ordering?",
+            "options": [
+                "The seniority of the person who requested each story",
+                "Risk, so uncertain and high-risk items are addressed early",
+                "Alphabetical order of story titles",
+                "The order stories were estimated"
+            ],
+            "correct_index": 1,
+            "explanation": "Prioritizing both value and risk lets the team learn about uncertain, risky items early, reducing the chance of late surprises. Alphabetical, estimate, or requester-seniority ordering do not reflect delivery value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-035",
+            "domain": "Value-driven Delivery",
+            "stem": "Which backlog strategy best reduces the risk of building something customers do not want?",
+            "options": [
+                "Wait until the backlog is fully refined before starting",
+                "Deliver features without involving customers",
+                "Deliver a thin slice of end-to-end functionality early and gather feedback",
+                "Build all backend components before any user-facing feature"
+            ],
+            "correct_index": 2,
+            "explanation": "A thin end-to-end slice produces something customers can react to early, exposing wrong assumptions before large investment. Building layers in isolation, waiting for full refinement, or ignoring customers delays and hides feedback.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-036",
+            "domain": "Value-driven Delivery",
+            "stem": "Which agile-friendly measure best communicates value delivered to a stakeholder who wants evidence of progress?",
+            "options": [
+                "A static Gantt chart created at kickoff",
+                "Total lines of code written",
+                "Number of meetings held",
+                "A burn-up chart showing completed, working functionality over time"
+            ],
+            "correct_index": 3,
+            "explanation": "A burn-up chart shows tangible delivered scope growing over time, which is evidence of value. A stale Gantt chart, code volume, and meeting counts do not demonstrate delivered value.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-037",
+            "domain": "Value-driven Delivery",
+            "stem": "A team includes many nice-to-have features in its first release. What is the likely consequence?",
+            "options": [
+                "Later feedback and reduced ability to change direction at low cost",
+                "Faster learning about customer needs",
+                "Lower cost of change",
+                "Earlier realization of core value"
+            ],
+            "correct_index": 0,
+            "explanation": "Loading the first release with nice-to-haves delays the feedback cycle and raises the cost of changing direction. Small, focused releases produce earlier learning and cheaper change.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-038",
+            "domain": "Value-driven Delivery",
+            "stem": "What must be true for an increment to be considered done in agile delivery?",
+            "options": [
+                "Its documentation has been written last",
+                "It meets the team's definition of done and is potentially releasable",
+                "It has passed a single developer's review",
+                "It has been deployed to production"
+            ],
+            "correct_index": 1,
+            "explanation": "An increment is done when it satisfies the definition of done and is potentially releasable, which typically includes quality checks. A developer review alone is insufficient, deployment is a release decision, and documentation timing is not the criterion.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-039",
+            "domain": "Value-driven Delivery",
+            "stem": "A team maps the steps from idea to customer and finds most time is spent waiting. What does this value-stream analysis reveal?",
+            "options": [
+                "The product owner is unnecessary",
+                "Estimation should be abandoned",
+                "The ratio of value-adding time to total lead time is low, indicating waste",
+                "The team is working at maximum efficiency"
+            ],
+            "correct_index": 2,
+            "explanation": "Value-stream analysis exposes the proportion of time that actually adds value versus waiting, and a low ratio signals waste to remove. It does not show maximum efficiency, nor does it argue against the product owner or estimation.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-040",
+            "domain": "Value-driven Delivery",
+            "stem": "Two stakeholders demand different top priorities and the product owner must decide. What should the product owner do?",
+            "options": [
+                "Give the top slot to whoever complained most recently",
+                "Ask the team to do both at the same time",
+                "Escalate to the sponsor without an analysis",
+                "Evaluate each request against product strategy and value and decide transparently"
+            ],
+            "correct_index": 3,
+            "explanation": "The product owner owns backlog order and should decide using strategy and value, then communicate the rationale. Reacting to the loudest voice, splitting the team, or escalating without analysis abdicates the role.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-041",
+            "domain": "Value-driven Delivery",
+            "stem": "Why do agile teams often refine backlog items just in time rather than detailing everything up front?",
+            "options": [
+                "Requirements change, so detail is more accurate when written close to when it is needed",
+                "Detailed requirements are never useful",
+                "Refinement is forbidden in agile",
+                "The product owner is too busy to plan"
+            ],
+            "correct_index": 0,
+            "explanation": "Just-in-time refinement keeps detail fresh and reduces wasted effort on items that may change or be dropped. It does not mean detail is never useful, refinement is expected, and it is a deliberate choice rather than a workload excuse.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-042",
+            "domain": "Value-driven Delivery",
+            "stem": "A feature is technically impressive but no customer would pay for it. How should it be treated?",
+            "options": [
+                "It should be added to every release",
+                "It should be deprioritized because it does not deliver customer value",
+                "It should be prioritized because it is technically challenging",
+                "It should be delivered before all other work"
+            ],
+            "correct_index": 1,
+            "explanation": "Value-driven delivery prioritizes work customers actually value, so technically impressive but unwanted work should be deprioritized. Prioritizing it for its difficulty or forcing it into releases wastes capacity.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-043",
+            "domain": "Value-driven Delivery",
+            "stem": "A team can release monthly or quarterly. Which approach generally delivers more business value sooner?",
+            "options": [
+                "Release only once, at the end of the project",
+                "Never release until every wish is implemented",
+                "Release monthly, because earlier delivery lets value and feedback arrive sooner",
+                "Release quarterly, because fewer releases mean less work"
+            ],
+            "correct_index": 2,
+            "explanation": "More frequent releases put value in customers' hands sooner and shorten the feedback loop, so monthly releases generally outperform quarterly ones. Batching everything into a single final release delays value and feedback.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-044",
+            "domain": "Value-driven Delivery",
+            "stem": "Who is accountable for ordering the product backlog in most agile frameworks?",
+            "options": [
+                "The Scrum Master",
+                "The development team as a whole",
+                "The project sponsor",
+                "The product owner"
+            ],
+            "correct_index": 3,
+            "explanation": "Ordering the backlog to maximize value is the product owner's accountability. The Scrum Master facilitates, the development team delivers, and the sponsor sets strategic context, but none of them owns backlog order.",
+            "reference": "PMI-ACP Exam Content Outline - Value-driven Delivery"
+        },
+        {
+            "id": "pmi-acp-045",
+            "domain": "Stakeholder Engagement",
+            "stem": "At the start of a project a product owner must decide whom to engage and how. What is the most useful first step?",
+            "options": [
+                "Identify stakeholders and analyze their influence and interest",
+                "Send everyone the same status report weekly",
+                "Invite all stakeholders to every stand-up",
+                "Wait until someone complains before engaging"
+            ],
+            "correct_index": 0,
+            "explanation": "Stakeholder analysis identifies who matters and how to engage them based on influence and interest, which tailors communication. Uniform reports, over-inviting, or waiting for complaints are inefficient or reactive.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-046",
+            "domain": "Stakeholder Engagement",
+            "stem": "A team wants passing visitors to understand project status without asking anyone. What should the team use?",
+            "options": [
+                "An email sent only to the sponsor",
+                "A visible information radiator such as a task board or burn-up chart",
+                "A status report stored on a shared drive",
+                "A private chat channel"
+            ],
+            "correct_index": 1,
+            "explanation": "Information radiators display key status where the team and visitors can see it without a request. Reports on a drive, private chats, and sponsor-only emails are not visible to passers-by.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-047",
+            "domain": "Stakeholder Engagement",
+            "stem": "A team delivers a feature and receives critical customer feedback. What is the most agile response?",
+            "options": [
+                "Ignore the feedback because the feature was in scope",
+                "Blame the customer for changing requirements",
+                "Treat the feedback as valuable input and adapt the backlog accordingly",
+                "Defend the feature and refuse to change it"
+            ],
+            "correct_index": 2,
+            "explanation": "Agile welcomes changing requirements as a competitive advantage, so critical feedback should shape the next increment. Defending, ignoring, or blaming the customer forfeits the chance to deliver better value.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-048",
+            "domain": "Stakeholder Engagement",
+            "stem": "A customer is available only for a single requirements workshop at the start. Why is this a risk?",
+            "options": [
+                "Workshops are not allowed in agile",
+                "Customers should never be involved in requirements",
+                "A single workshop always produces perfect requirements",
+                "Agile relies on ongoing customer collaboration, not a one-time handoff"
+            ],
+            "correct_index": 3,
+            "explanation": "Agile values continuous customer collaboration so requirements can evolve with feedback, so a single workshop becomes an outdated handoff. Workshops are useful, customers are essential, and no single session guarantees correctness.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-049",
+            "domain": "Stakeholder Engagement",
+            "stem": "A vendor insists on a fixed price for fixed scope on an uncertain product. What is the most agile negotiation stance?",
+            "options": [
+                "Negotiate a flexible scope with a fixed time and cost so value can adapt",
+                "Accept the terms and freeze all requirements",
+                "Reject any contract entirely",
+                "Sign and then change scope unilaterally later"
+            ],
+            "correct_index": 0,
+            "explanation": "Fixing time and cost while keeping scope flexible lets the team deliver the highest value under uncertainty. Freezing scope ignores uncertainty, rejecting all contracts is impractical, and unilateral change breaches trust.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-050",
+            "domain": "Stakeholder Engagement",
+            "stem": "A colocated team picks up information simply by overhearing nearby conversations. What is this called?",
+            "options": [
+                "Documentation review",
+                "Osmotic communication",
+                "Formal reporting",
+                "Escalation"
+            ],
+            "correct_index": 1,
+            "explanation": "Osmotic communication is the incidental absorption of information from being within earshot of teammates. It is not formal reporting, escalation, or documentation review.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-051",
+            "domain": "Stakeholder Engagement",
+            "stem": "During a refinement session a developer repeats a stakeholder's concern in their own words before responding. Which skill is being used?",
+            "options": [
+                "Command and control",
+                "Risk avoidance",
+                "Active listening through paraphrasing",
+                "Escalation"
+            ],
+            "correct_index": 2,
+            "explanation": "Paraphrasing what was said confirms understanding and is a hallmark of active listening. Escalation, command and control, and risk avoidance describe entirely different behaviours.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-052",
+            "domain": "Stakeholder Engagement",
+            "stem": "A distributed team misses nonverbal cues and members feel disconnected. What should the team do?",
+            "options": [
+                "Rely only on written messages for all communication",
+                "Ban informal conversation to save time",
+                "Require members to work in overlapping silence",
+                "Establish explicit communication norms and use video for key conversations"
+            ],
+            "correct_index": 3,
+            "explanation": "Explicit norms plus richer channels such as video compensate for missing nonverbal cues and build connection. Text-only or silent modes worsen isolation, and banning informal talk removes relationship building.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-053",
+            "domain": "Stakeholder Engagement",
+            "stem": "Two stakeholder groups want conflicting features and both threaten to withdraw support. What should the product owner do first?",
+            "options": [
+                "Facilitate a conversation that surfaces each group's underlying needs and trade-offs",
+                "Pick one group and ignore the other",
+                "Build both features simultaneously",
+                "Delay the project indefinitely"
+            ],
+            "correct_index": 0,
+            "explanation": "Surfacing underlying needs and trade-offs lets the groups find a workable priority rather than a winner-takes-all outcome. Ignoring a group, overcommitting the team, or stalling are not constructive resolutions.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-054",
+            "domain": "Stakeholder Engagement",
+            "stem": "During project chartering, what should the team and stakeholders agree on to guide collaboration?",
+            "options": [
+                "The complete technical design",
+                "The shared purpose, success criteria, and working agreements",
+                "The exact final delivery date",
+                "Each person's bonus structure"
+            ],
+            "correct_index": 1,
+            "explanation": "Chartering aligns the team and stakeholders on purpose, success criteria, and how they will work together. A fixed final date, compensation, and a full technical design are not the outcomes of a chartering session.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-055",
+            "domain": "Stakeholder Engagement",
+            "stem": "A remote stakeholder complains they are surprised by decisions made in daily meetings. What is the best fix?",
+            "options": [
+                "Tell the stakeholder to attend every meeting",
+                "Remove the stakeholder from the project",
+                "Agree on the decisions and updates the stakeholder needs and share them promptly",
+                "Stop holding daily meetings"
+            ],
+            "correct_index": 2,
+            "explanation": "The fix is to align on what the stakeholder needs to know and communicate it promptly, tailoring the channel and cadence. Cancelling meetings, imposing full attendance, or removing the stakeholder do not address the communication gap.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-056",
+            "domain": "Stakeholder Engagement",
+            "stem": "Which practice shortens the feedback loop between the team and its users?",
+            "options": [
+                "Writing a comprehensive specification before coding",
+                "Reviewing requirements once at kickoff",
+                "Deploying only at the end of the project",
+                "Demonstrating a working increment at the end of each iteration"
+            ],
+            "correct_index": 3,
+            "explanation": "Iteration reviews put working output in front of users regularly, shortening the feedback loop. Front-loaded specs, one-time reviews, and single end-of-project deployments all lengthen it.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-057",
+            "domain": "Stakeholder Engagement",
+            "stem": "A stakeholder demands detailed weekly progress reports before trusting the team. What should the team do?",
+            "options": [
+                "Offer transparency through visible artifacts and invite the stakeholder to reviews",
+                "Refuse all reporting as unagile",
+                "Hide problems so reports look positive",
+                "Report only successes and omit risks"
+            ],
+            "correct_index": 0,
+            "explanation": "Building trust comes from transparency and involvement, not from surface-level reports. Refusing all reporting damages the relationship, and hiding problems or omitting risks destroys credibility.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-058",
+            "domain": "Stakeholder Engagement",
+            "stem": "A team and its customer agree to a shared workspace where both can see and edit the backlog. What does this most directly improve?",
+            "options": [
+                "The team's office layout",
+                "Collaboration and shared understanding of priorities",
+                "Individual performance ratings",
+                "The need for a definition of done"
+            ],
+            "correct_index": 1,
+            "explanation": "A shared, editable backlog increases collaboration and aligns everyone on priorities. It does not set performance ratings, replace the definition of done, or concern office layout.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-059",
+            "domain": "Stakeholder Engagement",
+            "stem": "A manager asks the team to commit to overtime to meet a date the team considers unrealistic. How should the team respond?",
+            "options": [
+                "Refuse to discuss the topic",
+                "Promise the date and hide the risk",
+                "Negotiate scope and priorities transparently rather than silently accept overtime",
+                "Accept silently and hope for the best"
+            ],
+            "correct_index": 2,
+            "explanation": "Transparent negotiation about scope and priorities addresses the real constraint, whereas silent acceptance, refusal to talk, or hidden risk damages trust and quality. Sustainable pace should be protected.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-060",
+            "domain": "Stakeholder Engagement",
+            "stem": "What is the most effective way to ensure a product meets real user needs?",
+            "options": [
+                "Involve users only at final acceptance",
+                "Design based solely on internal opinions",
+                "Copy a competitor without research",
+                "Involve real users throughout development and respond to their feedback"
+            ],
+            "correct_index": 3,
+            "explanation": "Continuous user involvement and feedback keeps the product aligned with real needs. Late involvement, internal guesswork, or blind copying all risk building the wrong thing.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-061",
+            "domain": "Stakeholder Engagement",
+            "stem": "A stakeholder with high influence is currently resistant to the project. What should the product owner prioritize?",
+            "options": [
+                "Engage that stakeholder early and address their concerns directly",
+                "Ignore them because the team is busy",
+                "Only communicate with supportive stakeholders",
+                "Escalate them to be removed from the project"
+            ],
+            "correct_index": 0,
+            "explanation": "High-influence resistant stakeholders need early, direct engagement to address concerns and reduce risk. Ignoring them, avoiding them, or trying to remove them usually increases resistance and project risk.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-062",
+            "domain": "Stakeholder Engagement",
+            "stem": "When is feedback most useful in an agile delivery?",
+            "options": [
+                "Only during the annual review",
+                "As early and continuously as possible, before large investments are made",
+                "Only after the final release",
+                "Only when a defect is found in production"
+            ],
+            "correct_index": 1,
+            "explanation": "Early and continuous feedback lets the team adjust before cost and risk accumulate. Waiting for the final release, a production defect, or an annual review wastes the opportunity to correct course early.",
+            "reference": "PMI-ACP Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-acp-063",
+            "domain": "Team Performance",
+            "stem": "A new team argues openly about roles and goals during its first weeks. Which stage of team development is this?",
+            "options": [
+                "Norming",
+                "Performing",
+                "Storming",
+                "Forming"
+            ],
+            "correct_index": 2,
+            "explanation": "Storming is the stage where members surface differences about roles, goals, and methods. Forming is polite orientation, norming is agreement on norms, and performing is smooth high output.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-064",
+            "domain": "Team Performance",
+            "stem": "A team member repeatedly misses commitments. What coaching response is most appropriate?",
+            "options": [
+                "Criticize them publicly in the stand-up",
+                "Reassign all their work to others",
+                "Ignore the pattern and hope it improves",
+                "Have a private conversation to understand the cause and agree on support"
+            ],
+            "correct_index": 3,
+            "explanation": "Private, supportive conversation uncovers the cause and builds an improvement plan. Public criticism damages trust, reassigning work avoids the issue, and ignoring it lets performance decline.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-065",
+            "domain": "Team Performance",
+            "stem": "Two team members disagree about a technical approach and the debate is blocking progress. What should the Scrum Master do first?",
+            "options": [
+                "Facilitate a discussion so both perspectives are heard and a decision is reached",
+                "Decide for them based on seniority",
+                "Escalate immediately to the sponsor",
+                "Separate them onto different teams"
+            ],
+            "correct_index": 0,
+            "explanation": "Facilitating a collaborative discussion keeps ownership with the team and resolves the root disagreement. Imposing a decision, escalating prematurely, or separating members avoids rather than resolves the conflict.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-066",
+            "domain": "Team Performance",
+            "stem": "A team member is visibly upset after a design review. What is the most emotionally intelligent first response?",
+            "options": [
+                "Ignore the reaction completely",
+                "Acknowledge their feelings privately and listen before problem-solving",
+                "Tell them to keep emotions out of work",
+                "Announce the issue to the whole team"
+            ],
+            "correct_index": 1,
+            "explanation": "Emotional intelligence starts with recognizing and acknowledging feelings and listening, which builds trust before problem-solving. Dismissing emotions, publicizing them, or ignoring them erodes the relationship.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-067",
+            "domain": "Team Performance",
+            "stem": "A team keeps re-litigating basic working agreements. What should it create to settle this?",
+            "options": [
+                "A detailed risk register",
+                "An individual performance plan",
+                "A team charter with agreed ground rules and norms",
+                "A new Gantt chart"
+            ],
+            "correct_index": 2,
+            "explanation": "A team charter records shared working agreements and norms so the team does not repeatedly renegotiate them. A Gantt chart, risk register, or performance plan does not establish working agreements.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-068",
+            "domain": "Team Performance",
+            "stem": "A distributed team struggles with trust because members rarely see each other. What most helps?",
+            "options": [
+                "Require everyone to relocate",
+                "Communicate only through written status updates",
+                "Let each site work independently",
+                "Create regular synchronous touchpoints and rotate meeting times fairly"
+            ],
+            "correct_index": 3,
+            "explanation": "Regular synchronous contact and fair rotation of inconvenient meeting times builds trust across sites. Relocation is often impractical, text-only updates lack richness, and independent silos reduce cohesion.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-069",
+            "domain": "Team Performance",
+            "stem": "Which leadership behaviour best supports intrinsic motivation on an agile team?",
+            "options": [
+                "Give the team autonomy, purpose, and the chance to master its craft",
+                "Use close supervision and detailed task assignment",
+                "Offer only monetary rewards for velocity",
+                "Publicly rank team members against each other"
+            ],
+            "correct_index": 0,
+            "explanation": "Autonomy, purpose, and mastery drive intrinsic motivation, which supports self-organization. Close supervision, velocity bonuses, and public rankings tend to reduce intrinsic motivation and collaboration.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-070",
+            "domain": "Team Performance",
+            "stem": "A team lead is a bottleneck because every decision must pass through them. What should they do?",
+            "options": [
+                "Escalate decisions to the sponsor",
+                "Delegate decisions to the team and coach them to decide well",
+                "Keep deciding everything to maintain control",
+                "Leave the team with no guidance at all"
+            ],
+            "correct_index": 1,
+            "explanation": "Delegating decisions with coaching removes the bottleneck and grows the team's capability. Keeping control preserves the bottleneck, abandoning guidance is the opposite extreme, and escalating moves the bottleneck rather than removing it.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-071",
+            "domain": "Team Performance",
+            "stem": "A manager proposes comparing two teams by their velocity to rank performance. What is the best response?",
+            "options": [
+                "Increase the lower team's story point values",
+                "Use velocity to set individual bonuses",
+                "Explain that velocity is team-specific and should not be compared across teams",
+                "Compare the teams publicly each sprint"
+            ],
+            "correct_index": 2,
+            "explanation": "Velocity reflects a team's own estimation and context and is meaningful only as a within-team planning guide, not a cross-team score. Comparing teams, inflating points, or tying velocity to bonuses corrupts it.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-072",
+            "domain": "Team Performance",
+            "stem": "A team is blocked because only one person can perform a critical task. What should the team do?",
+            "options": [
+                "Keep the specialist as the only one able to do it",
+                "Hire another identical specialist and stop",
+                "Outsource the task permanently",
+                "Encourage knowledge sharing and cross-skilling as generalizing specialists"
+            ],
+            "correct_index": 3,
+            "explanation": "Generalizing specialists spread knowledge so the team is not blocked by a single point of failure. Retaining the single expert, hiring a clone, or outsourcing all preserve the fragility.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-073",
+            "domain": "Team Performance",
+            "stem": "A team plans a sprint without accounting for a member's planned leave. What is the likely result?",
+            "options": [
+                "Overcommitment and a missed sprint goal",
+                "A more accurate forecast",
+                "Higher velocity than expected",
+                "Improved team morale"
+            ],
+            "correct_index": 0,
+            "explanation": "Ignoring reduced capacity leads to overcommitment and a missed goal. Accurate forecasting requires realistic capacity, and overcommitting does not raise velocity or morale.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-074",
+            "domain": "Team Performance",
+            "stem": "Team members are afraid to admit mistakes. What should the Scrum Master foster?",
+            "options": [
+                "Detailed blame reports",
+                "Psychological safety so members can speak up without fear",
+                "Stricter punishment for errors",
+                "Competition between members"
+            ],
+            "correct_index": 1,
+            "explanation": "Psychological safety lets people admit mistakes and raise problems, which is essential for learning. Punishment, competition, and blame reporting increase fear and hide problems.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-075",
+            "domain": "Team Performance",
+            "stem": "A team switches from separate offices to a shared space. What is the main agile benefit?",
+            "options": [
+                "Fewer requirements to build",
+                "Automatic increases in velocity",
+                "Faster, richer communication and stronger shared understanding",
+                "Lower salary costs"
+            ],
+            "correct_index": 2,
+            "explanation": "Colocation enables faster, richer communication and shared understanding, which is the agile benefit. It does not reduce salaries, eliminate requirements, or automatically raise velocity.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-076",
+            "domain": "Team Performance",
+            "stem": "The team cannot access a needed test environment. As a servant leader, what should the Scrum Master do?",
+            "options": [
+                "Let the team solve it alone regardless of authority",
+                "Blame the operations group in the stand-up",
+                "Reorder the backlog instead",
+                "Work to remove the impediment so the team can proceed"
+            ],
+            "correct_index": 3,
+            "explanation": "A servant leader actively removes impediments, especially those the team lacks the authority to fix. Abandoning the team, assigning blame, or changing the backlog does not unblock the environment issue.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-077",
+            "domain": "Team Performance",
+            "stem": "A product owner is forming a new agile team. Which composition is most effective?",
+            "options": [
+                "A small, cross-functional, self-organizing group with the needed skills",
+                "A large group with many handoffs between specialists",
+                "A group where one person does all the work",
+                "A group with no shared goal"
+            ],
+            "correct_index": 0,
+            "explanation": "Small, cross-functional, self-organizing teams communicate better and can deliver end-to-end value with fewer handoffs. Large, siloed, single-contributor, or goal-less groups struggle to self-organize.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-078",
+            "domain": "Team Performance",
+            "stem": "During a retrospective the team blames an absent member for a missed goal. What should the facilitator do?",
+            "options": [
+                "Take the absent member's side publicly",
+                "Redirect toward systemic causes the whole team can improve",
+                "Support the blame and document it",
+                "End the retrospective immediately"
+            ],
+            "correct_index": 1,
+            "explanation": "A good facilitator redirects blame toward systemic causes the team controls, keeping the retrospective safe and productive. Endorsing blame, cancelling the session, or taking sides harms trust and learning.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-079",
+            "domain": "Team Performance",
+            "stem": "A team seems disengaged from routine work. Which action is most likely to restore motivation?",
+            "options": [
+                "Threaten consequences for low output",
+                "Increase the number of status meetings",
+                "Reconnect the work to a clear purpose and let the team see customer impact",
+                "Add more detailed task assignments"
+            ],
+            "correct_index": 2,
+            "explanation": "Connecting work to purpose and visible customer impact restores meaning and motivation. More control, threats, and extra meetings tend to reduce engagement further.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-080",
+            "domain": "Team Performance",
+            "stem": "Two team members have a minor disagreement they can resolve themselves. What should the Scrum Master do?",
+            "options": [
+                "Intervene immediately and decide for them",
+                "Escalate it to human resources",
+                "Document it as a formal incident",
+                "Allow them to resolve it themselves and offer support if needed"
+            ],
+            "correct_index": 3,
+            "explanation": "Minor conflicts that the parties can settle should be left to them, building their capability, with support available. Immediate intervention, escalation, or formal documentation is disproportionate.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-081",
+            "domain": "Team Performance",
+            "stem": "How should a Scrum Master give developmental feedback to a team member?",
+            "options": [
+                "Privately, specifically, and focused on behaviour and improvement",
+                "Publicly in the team channel",
+                "Vaguely so it does not offend",
+                "Only during annual performance reviews"
+            ],
+            "correct_index": 0,
+            "explanation": "Effective feedback is private, specific, and behaviour-focused so it is actionable and preserves dignity. Public, vague, or annual-only feedback is less effective and can damage trust.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-082",
+            "domain": "Team Performance",
+            "stem": "A team is deciding who will work on which area of the product. Which approach best supports self-organization?",
+            "options": [
+                "Give all work to the fastest member",
+                "Let team members self-select work based on skills and interest",
+                "Assign work strictly by manager decree",
+                "Rotate work by alphabetical order regardless of skill"
+            ],
+            "correct_index": 1,
+            "explanation": "Self-selection lets members match work to their skills and motivation, reinforcing self-organization and ownership. Manager decree, arbitrary rotation, or overloading one person undermines it.",
+            "reference": "PMI-ACP Exam Content Outline - Team Performance"
+        },
+        {
+            "id": "pmi-acp-083",
+            "domain": "Adaptive Planning",
+            "stem": "Why do agile teams estimate in story points rather than hours?",
+            "options": [
+                "Story points replace the need to plan",
+                "Story points eliminate uncertainty",
+                "Story points capture relative size and complexity without implying a precise duration",
+                "Story points are exact measures of time"
+            ],
+            "correct_index": 2,
+            "explanation": "Story points express relative size and complexity and avoid the false precision of hour estimates. They are not exact time measures, do not replace planning, and cannot remove uncertainty.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-084",
+            "domain": "Adaptive Planning",
+            "stem": "A team uses cards to estimate a story and discusses the largest and smallest estimates. Which technique is this?",
+            "options": [
+                "Critical path analysis",
+                "Earned value analysis",
+                "Function point counting",
+                "Planning poker with relative estimation"
+            ],
+            "correct_index": 3,
+            "explanation": "Planning poker is a consensus relative-estimation technique where outliers are discussed. Critical path, earned value, and function points are different analytical methods.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-085",
+            "domain": "Adaptive Planning",
+            "stem": "A team wants to visualize the user journey and slice releases across it. Which technique fits best?",
+            "options": [
+                "User story mapping that arranges stories along a user's activities",
+                "A network diagram",
+                "A resource histogram",
+                "A risk breakdown structure"
+            ],
+            "correct_index": 0,
+            "explanation": "Story mapping lays stories along the user journey and helps slice thin releases across activities. Network diagrams, resource histograms, and risk breakdown structures serve different purposes.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-086",
+            "domain": "Adaptive Planning",
+            "stem": "A team must forecast which features will ship in the next three months. What is the most agile input?",
+            "options": [
+                "The sponsor's preferred feature list",
+                "Historical velocity plus backlog priority to forecast likely scope",
+                "A detailed one-time schedule fixed at kickoff",
+                "The number of developers on the team"
+            ],
+            "correct_index": 1,
+            "explanation": "Release forecasting uses historical velocity and backlog order to estimate achievable scope, and is revised as facts change. A frozen schedule, team size alone, or a preferred list do not constitute a forecast.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-087",
+            "domain": "Adaptive Planning",
+            "stem": "The team cannot estimate a story because the technology is unfamiliar. What is the best next step?",
+            "options": [
+                "Exclude it from the backlog forever",
+                "Assign it to the least experienced member",
+                "Run a time-boxed spike to investigate and reduce uncertainty",
+                "Estimate it as zero and hope for the best"
+            ],
+            "correct_index": 2,
+            "explanation": "A time-boxed spike investigates the unknown so the team can estimate and plan realistically. Estimating zero, abandoning the item, or assigning it poorly increases risk instead of reducing it.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-088",
+            "domain": "Adaptive Planning",
+            "stem": "A team refines distant backlog items only at a high level and adds detail as they approach. What is this called?",
+            "options": [
+                "Scope creep",
+                "Gold plating",
+                "Change freeze",
+                "Progressive elaboration of plans"
+            ],
+            "correct_index": 3,
+            "explanation": "Progressive elaboration adds detail over time as understanding improves, which matches just-in-time planning. Scope creep, gold plating, and change freezes describe very different behaviours.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-089",
+            "domain": "Adaptive Planning",
+            "stem": "Early estimates on a new product are far less accurate than later ones. What does this illustrate?",
+            "options": [
+                "The cone of uncertainty narrows as more is learned",
+                "Estimation is impossible",
+                "Velocity is useless",
+                "Planning should be abandoned"
+            ],
+            "correct_index": 0,
+            "explanation": "The cone of uncertainty shows that estimate ranges narrow as knowledge grows, so early precision is not expected. It does not mean estimation or velocity are useless, nor that planning should stop.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-090",
+            "domain": "Adaptive Planning",
+            "stem": "A team pulls a story that lacks clear acceptance criteria and then stalls. What would have prevented this?",
+            "options": [
+                "More documentation after the story starts",
+                "A definition of ready ensuring stories are clear enough to start",
+                "A larger team",
+                "A longer deadline"
+            ],
+            "correct_index": 1,
+            "explanation": "A definition of ready checks that a story has enough clarity and criteria to be worked on. A larger team, longer deadline, or later documentation does not fix an unclear story.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-091",
+            "domain": "Adaptive Planning",
+            "stem": "Over six sprints a team completed an average of twenty points. If the remaining backlog is one hundred points, what is a reasonable forecast?",
+            "options": [
+                "One sprint",
+                "Twenty sprints",
+                "About five sprints, recognizing the estimate is approximate",
+                "Exactly five sprints with no uncertainty"
+            ],
+            "correct_index": 2,
+            "explanation": "Dividing remaining work by average velocity gives a rough forecast of about five sprints, but it remains an estimate that should be updated. Treating it as exact, or wildly misdividing, ignores how forecasting works.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-092",
+            "domain": "Adaptive Planning",
+            "stem": "What is the main purpose of regular backlog refinement?",
+            "options": [
+                "Complete the entire backlog in advance",
+                "Replace the product owner's decisions",
+                "Freeze requirements for the project",
+                "Keep the most valuable items ready and well-understood for upcoming work"
+            ],
+            "correct_index": 3,
+            "explanation": "Refinement keeps upcoming items clear, estimated, and ordered so planning is smooth. It does not aim to finish all items early, override the product owner, or freeze requirements.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-093",
+            "domain": "Adaptive Planning",
+            "stem": "How does agile planning differ from traditional detailed upfront planning?",
+            "options": [
+                "It plans in short cycles and adapts as new information appears",
+                "It plans everything once and never changes",
+                "It avoids any planning at all",
+                "It relies only on the sponsor's intuition"
+            ],
+            "correct_index": 0,
+            "explanation": "Agile planning is iterative and revisited each cycle so plans reflect new information. It does not abandon planning, freeze it, or rely on intuition alone.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-094",
+            "domain": "Adaptive Planning",
+            "stem": "A team wants to finish more work and improve flow. Which planning decision helps most?",
+            "options": [
+                "Estimate more precisely instead of limiting work in progress",
+                "Limit work in progress and finish work before starting more",
+                "Start every story at once",
+                "Add more stories to each sprint"
+            ],
+            "correct_index": 1,
+            "explanation": "Limiting work in progress and finishing before starting improves flow and throughput. Starting everything at once or adding scope worsens congestion, and precision alone does not fix flow.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-095",
+            "domain": "Adaptive Planning",
+            "stem": "How should a team determine how much work to pull into a sprint?",
+            "options": [
+                "Based on the total backlog size",
+                "Based on the number of stories ever created",
+                "Based on historical velocity and available capacity for that sprint",
+                "Based on the largest number the sponsor will accept"
+            ],
+            "correct_index": 2,
+            "explanation": "Sprint commitments should reflect the team's demonstrated velocity and realistic capacity. Sponsor wishes, backlog size, or historical story counts are not reliable planning inputs.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-096",
+            "domain": "Adaptive Planning",
+            "stem": "A team gives a story a wide estimate range because of unknowns. What is the best response?",
+            "options": [
+                "Force a single precise number to look confident",
+                "Drop the story immediately",
+                "Ignore the range and proceed as if certain",
+                "Accept the range and reduce uncertainty through investigation before committing"
+            ],
+            "correct_index": 3,
+            "explanation": "Wide ranges signal real uncertainty that should be reduced through investigation before commitment. Forcing precision, dropping the item, or ignoring the range misleads planning.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-097",
+            "domain": "Adaptive Planning",
+            "stem": "Mid-project, new information shows the original release plan is no longer viable. What should the team do?",
+            "options": [
+                "Replan based on current knowledge and value priorities",
+                "Continue the original plan regardless of the new information",
+                "Stop the project without discussion",
+                "Hide the change from stakeholders"
+            ],
+            "correct_index": 0,
+            "explanation": "Adaptive planning means revising the plan as facts change so it stays valuable and realistic. Persisting with a dead plan, stopping abruptly, or hiding the change are not constructive responses.",
+            "reference": "PMI-ACP Exam Content Outline - Adaptive Planning"
+        },
+        {
+            "id": "pmi-acp-098",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team identifies a new dependency that could delay a release. What is the most appropriate first action?",
+            "options": [
+                "Assign blame for creating the dependency",
+                "Record the risk, assess its impact, and plan a response",
+                "Ignore it until it happens",
+                "Remove it from the backlog"
+            ],
+            "correct_index": 1,
+            "explanation": "Identifying, assessing, and planning a response to a risk prepares the team to reduce or handle it. Ignoring it, deleting it, or assigning blame does not manage the risk.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-099",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team is blocked because a decision must come from an external committee. What is this best described as?",
+            "options": [
+                "A story point",
+                "A definition of done",
+                "An impediment the Scrum Master should help remove",
+                "A normal part of every task"
+            ],
+            "correct_index": 2,
+            "explanation": "Anything that blocks the team is an impediment, and removing it is a core Scrum Master responsibility. It is not a routine task component, a story point, or a definition of done.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-100",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A defect keeps reappearing after each quick fix. Which technique best finds the underlying cause?",
+            "options": [
+                "Fixing the symptom faster",
+                "Adding more testers only",
+                "Hiding the defect from stakeholders",
+                "Asking why repeatedly until the root cause is found"
+            ],
+            "correct_index": 3,
+            "explanation": "Repeated why questioning, as in the five whys, drives past symptoms to the underlying cause. Faster symptom fixes, testers alone, or concealment do not address the cause.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-101",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team wants to brainstorm the possible causes of a quality problem by category. Which tool fits best?",
+            "options": [
+                "An Ishikawa or fishbone diagram",
+                "A burndown chart",
+                "A velocity chart",
+                "A stakeholder map"
+            ],
+            "correct_index": 0,
+            "explanation": "An Ishikawa or fishbone diagram organizes potential causes into categories to structure a cause analysis. Burndown and velocity charts track progress, and a stakeholder map concerns people.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-102",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team wants to know how long, on average, a story takes from start to finish. Which measure should it track?",
+            "options": [
+                "Number of team members",
+                "Cycle time",
+                "Velocity",
+                "Story point total"
+            ],
+            "correct_index": 1,
+            "explanation": "Cycle time measures the elapsed time from when work starts to when it finishes. Velocity measures work per iteration, story points measure size, and team size is a capacity input.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-103",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team wants to see how much work is accumulating in each stage over time. Which chart best shows this?",
+            "options": [
+                "A Gantt chart",
+                "A resource histogram",
+                "A cumulative flow diagram",
+                "A burn-up chart of delivered scope"
+            ],
+            "correct_index": 2,
+            "explanation": "A cumulative flow diagram shows work-in-progress accumulating across stages over time, revealing bottlenecks. A burn-up shows delivered scope, a Gantt shows schedule, and a histogram shows resource allocation.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-104",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team consistently carries stories from one sprint into the next. What should the team examine first?",
+            "options": [
+                "The team members' salaries",
+                "The office location",
+                "The number of past projects",
+                "The causes of overcommitment and flow problems in its planning"
+            ],
+            "correct_index": 3,
+            "explanation": "Repeated spillover points to overcommitment or flow issues such as too much work in progress, which the team should investigate. Salaries, location, and project history are not the direct causes.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-105",
+            "domain": "Problem Detection and Resolution",
+            "stem": "Several stories are blocked waiting on a single external review. What should the team do?",
+            "options": [
+                "Make the blockage visible and work to resolve or bypass it",
+                "Ignore the blocked stories and start new ones",
+                "Mark the stories done anyway",
+                "Stop all work until the review clears"
+            ],
+            "correct_index": 0,
+            "explanation": "Making blocked work visible and actively resolving or bypassing the blockage restores flow. Ignoring the block, marking work done falsely, or stopping all work are not constructive.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-106",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A team wants to see whether quality is improving over successive iterations. What should it track?",
+            "options": [
+                "The number of team members",
+                "The trend of defects found and escaped over time",
+                "The number of meetings held",
+                "The size of the backlog"
+            ],
+            "correct_index": 1,
+            "explanation": "Tracking found and escaped defects over iterations shows whether quality is improving. Meetings, backlog size, and team size do not indicate quality trends.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-107",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A recurring problem affects several teams. What is the most effective response?",
+            "options": [
+                "Wait for the problem to resolve itself",
+                "Escalate upward without analysis",
+                "Convene the affected teams to find and fix the shared root cause",
+                "Let each team fix only its own symptoms"
+            ],
+            "correct_index": 2,
+            "explanation": "A shared problem needs the affected teams to identify and address the common root cause together. Fixing isolated symptoms, waiting, or escalating without analysis leaves the cause in place.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-108",
+            "domain": "Problem Detection and Resolution",
+            "stem": "A high-impact risk has a realistic chance of occurring. Which response best reduces its effect?",
+            "options": [
+                "Accept it and hope it does not happen",
+                "Ignore it because it has not occurred",
+                "Transfer blame to the team after it happens",
+                "Take proactive action now to reduce likelihood or impact"
+            ],
+            "correct_index": 3,
+            "explanation": "Proactive risk response reduces the probability or impact before the risk occurs. Passive acceptance, ignoring the risk, or retroactive blame do not reduce its effect.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-109",
+            "domain": "Problem Detection and Resolution",
+            "stem": "Work piles up in front of a single specialist. What does this indicate?",
+            "options": [
+                "A bottleneck that should be relieved through cross-training or load balancing",
+                "A perfectly balanced process",
+                "A need to add more work in progress",
+                "A definition of done problem"
+            ],
+            "correct_index": 0,
+            "explanation": "Work accumulating before one person signals a bottleneck, best relieved by cross-training or balancing load. It is not a sign of balance, more work in progress would worsen it, and it is unrelated to the definition of done.",
+            "reference": "PMI-ACP Exam Content Outline - Problem Detection and Resolution"
+        },
+        {
+            "id": "pmi-acp-110",
+            "domain": "Continuous Improvement",
+            "stem": "What is the primary purpose of a sprint retrospective?",
+            "options": [
+                "To re-estimate the entire backlog",
+                "To inspect how the team worked and agree on improvements",
+                "To assign blame for missed stories",
+                "To demo the product to customers"
+            ],
+            "correct_index": 1,
+            "explanation": "A retrospective inspects the team's process and interactions and produces agreed improvements. Blame, customer demos, and full re-estimation belong to other events.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-111",
+            "domain": "Continuous Improvement",
+            "stem": "A team makes one small process improvement every iteration. Which principle does this reflect?",
+            "options": [
+                "Gold plating",
+                "Scope creep",
+                "Continuous improvement, or kaizen",
+                "Change freeze"
+            ],
+            "correct_index": 2,
+            "explanation": "Small, ongoing improvements are the essence of kaizen and continuous improvement. Change freezes, gold plating, and scope creep are unrelated or opposite behaviours.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-112",
+            "domain": "Continuous Improvement",
+            "stem": "A team wants to find waste in its end-to-end process. Which activity helps most?",
+            "options": [
+                "Increasing the sprint length",
+                "Adding more status reports",
+                "Hiring more managers",
+                "Value stream mapping of the workflow"
+            ],
+            "correct_index": 3,
+            "explanation": "Value stream mapping makes waste and handoffs visible across the whole workflow. Longer sprints, more reports, or more managers do not reveal process waste.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-113",
+            "domain": "Continuous Improvement",
+            "stem": "A key team member is about to leave and holds unique knowledge. What should the team do?",
+            "options": [
+                "Pair and document critical knowledge to share it before departure",
+                "Let the knowledge leave with them",
+                "Assign all their work to one successor alone",
+                "Delay any knowledge transfer until after they leave"
+            ],
+            "correct_index": 0,
+            "explanation": "Pairing and documenting before departure preserves critical knowledge across the team. Letting it leave, concentrating it in one person, or delaying transfer risks losing it.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-114",
+            "domain": "Continuous Improvement",
+            "stem": "A team repeatedly shortcuts design to hit dates, and changes now take longer. What is the cause?",
+            "options": [
+                "Too few requirements",
+                "Accumulated technical debt slowing future work",
+                "Too much automated testing",
+                "Excessive refactoring"
+            ],
+            "correct_index": 1,
+            "explanation": "Repeated shortcuts accumulate technical debt, which increases the cost and time of later changes. Automated testing, refactoring, and requirements do not explain slowing change.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-115",
+            "domain": "Continuous Improvement",
+            "stem": "Practitioners across teams want to share knowledge about a shared discipline. What should they form?",
+            "options": [
+                "A steering committee",
+                "A procurement team",
+                "A community of practice",
+                "A change control board"
+            ],
+            "correct_index": 2,
+            "explanation": "A community of practice connects practitioners around a shared discipline to share knowledge. Change control boards, steering committees, and procurement teams serve governance or supply functions.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-116",
+            "domain": "Continuous Improvement",
+            "stem": "What does the phrase inspect and adapt mean in agile?",
+            "options": [
+                "Freeze the process after the first iteration",
+                "Only inspect the product once at the end",
+                "Adapt only the budget, never the work",
+                "Regularly review the product and process and adjust based on what is learned"
+            ],
+            "correct_index": 3,
+            "explanation": "Inspect and adapt means frequent review of product and process with adjustments based on findings. Freezing, one-time inspection, or adapting only the budget contradict it.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-117",
+            "domain": "Continuous Improvement",
+            "stem": "A retrospective produces several improvement ideas. What should the team do with them?",
+            "options": [
+                "Choose a few actionable improvements and track them to completion",
+                "List them and take no action",
+                "Delegate all of them to the Scrum Master",
+                "Discard them after the meeting"
+            ],
+            "correct_index": 0,
+            "explanation": "Improvements become real only when a few are selected, owned, and tracked. Listing without action, delegating all to one person, or discarding them wastes the retrospective.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-118",
+            "domain": "Continuous Improvement",
+            "stem": "A team's process has been unchanged for many iterations and performance has plateaued. What should a coach do?",
+            "options": [
+                "Add more team members instead",
+                "Challenge the team with data to experiment with new practices",
+                "Leave the process alone since it still works",
+                "Mandate a new process without discussion"
+            ],
+            "correct_index": 1,
+            "explanation": "A coach uses data to encourage experiments that break a plateau and renew improvement. Leaving it, imposing change, or adding people does not create learning.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-119",
+            "domain": "Continuous Improvement",
+            "stem": "How are lessons learned handled most effectively in agile?",
+            "options": [
+                "Ignored because agile has no documentation",
+                "Stored and never reviewed",
+                "Continuously captured and applied during the work, not only at the end",
+                "Collected once in a final report"
+            ],
+            "correct_index": 2,
+            "explanation": "Agile captures and applies lessons continuously so the team benefits immediately. A single final report, ignoring them, or storing without review fails to improve the work.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        },
+        {
+            "id": "pmi-acp-120",
+            "domain": "Continuous Improvement",
+            "stem": "A team wants to test whether a new practice improves its flow. What is the best approach?",
+            "options": [
+                "Adopt the practice permanently without measuring",
+                "Reject all new practices",
+                "Ask the sponsor to decide without data",
+                "Run a time-boxed experiment, measure the effect, and keep or revert based on results"
+            ],
+            "correct_index": 3,
+            "explanation": "A time-boxed experiment with measurement lets the team adopt what works and revert what does not. Permanent adoption without evidence, blanket rejection, or sponsor-only decisions are not evidence-based improvement.",
+            "reference": "PMI-ACP Exam Content Outline - Continuous Improvement"
+        }
+    ]
+}

@@ -583,6 +583,58 @@ class AuthoredBundleSeederTest extends TestCase
                 'Security' => 18,
                 'Automation' => 13,
             ]],
+            'itil4-f' => ['itil4-f', 40, [
+                'Key Concepts of Service Management' => 8,
+                'The Four Dimensions of Service Management' => 6,
+                'The ITIL Service Value System' => 12,
+                'The ITIL Guiding Principles' => 6,
+                'ITIL Management Practices' => 8,
+            ]],
+            'itil4-mp' => ['itil4-mp', 60, [
+                'Create, Deliver and Support (CDS)' => 15,
+                'Drive Stakeholder Value (DSV)' => 15,
+                'High-velocity IT (HVIT)' => 15,
+                'Direct, Plan and Improve (DPI)' => 15,
+            ]],
+            'pmi-acp' => ['pmi-acp', 120, [
+                'Agile Principles and Mindset' => 20,
+                'Value-driven Delivery' => 24,
+                'Stakeholder Engagement' => 18,
+                'Team Performance' => 20,
+                'Adaptive Planning' => 15,
+                'Problem Detection and Resolution' => 12,
+                'Continuous Improvement' => 11,
+            ]],
+            'csm' => ['csm', 50, [
+                'Scrum Theory and Principles' => 12,
+                'The Scrum Team' => 12,
+                'Scrum Events' => 13,
+                'Scrum Artifacts and Commitments' => 13,
+            ]],
+            'psm-i' => ['psm-i', 80, [
+                'Scrum Framework' => 30,
+                'Scrum Theory' => 10,
+                'Scrum Roles' => 15,
+                'Scrum Events' => 15,
+                'Scrum Artifacts' => 10,
+            ]],
+            'psm-ii' => ['psm-ii', 30, [
+                'Scrum Mastery' => 10,
+                'Facilitation and Coaching' => 10,
+                'Organizational Agility' => 10,
+            ]],
+            'pspo-i' => ['pspo-i', 80, [
+                'Product Ownership Fundamentals' => 20,
+                'Value and Product Backlog Management' => 20,
+                'Stakeholders and Customers' => 15,
+                'Scrum Framework as Applied by the Product Owner' => 25,
+            ]],
+            'safe-sa' => ['safe-sa', 45, [
+                'Lean-Agile Mindset' => 8,
+                'SAFe Principles' => 10,
+                'SAFe Lean-Agile Framework' => 15,
+                'Roles and Responsibilities' => 12,
+            ]],
         ];
     }
 

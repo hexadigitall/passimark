@@ -1,0 +1,577 @@
+{
+    "cert_key": "itil4-f",
+    "title": "ITIL 4 Foundation",
+    "issuer": "PeopleCert / AXELOS",
+    "outline_file": "outlines/itil4-f.json",
+    "variant_label": "ITIL 4 Foundation Real-Spec Practice",
+    "exam": {
+        "questions": 40,
+        "duration_minutes": 60,
+        "scoring": "26/40 to pass (65%)",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the ITIL 4 Foundation syllabus (service management key concepts, four dimensions, service value system, guiding principles, practices). Not a capture of past exam questions.",
+    "source_label": "ITIL 4 Foundation practice bank",
+    "items": [
+        {
+            "id": "itil4-f-001",
+            "domain": "Key Concepts of Service Management",
+            "stem": "A service provider delivers an application that runs without faults, but business users report that it does not help them achieve the results they expected. Which concept best explains the shortfall?",
+            "options": [
+                "The service produces outputs but not the desired outcomes",
+                "The service costs more than the consumer can afford",
+                "The service carries no risk for the consumer",
+                "The service lacks warranty because it is unavailable"
+            ],
+            "correct_index": 0,
+            "explanation": "Outcomes are the results enabled for the consumer, while outputs are the tangible deliverables. A faultless application is an output; if it does not enable the expected business result, the outcome is missing even though utility and warranty may both be present.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-002",
+            "domain": "Key Concepts of Service Management",
+            "stem": "A consumer chooses a cloud backup product because it can restore any file within minutes and is available almost all of the time. Which pair of concepts does this choice illustrate?",
+            "options": [
+                "Governance and compliance",
+                "Utility and warranty",
+                "Cost and risk",
+                "Outputs and outcomes"
+            ],
+            "correct_index": 1,
+            "explanation": "Utility is fitness for purpose, shown here by the ability to restore files within minutes, which enables the consumer's task. Warranty is fitness for use, shown by the high availability that gives the consumer confidence the service will work as agreed.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-003",
+            "domain": "Key Concepts of Service Management",
+            "stem": "A consumer compares keeping an in-house email server against a hosted service, weighing licence fees, staff time, and the chance of a data breach. What is the consumer primarily evaluating?",
+            "options": [
+                "The service value chain",
+                "The four dimensions of service management",
+                "The costs and risks of the service relationship",
+                "The seven guiding principles"
+            ],
+            "correct_index": 2,
+            "explanation": "Service relationships transfer or share costs and risks between provider and consumer. The consumer here is evaluating both the direct costs, such as fees and staff time, and the risks, such as the possibility of a data breach, which is exactly the cost-and-risk trade-off ITIL describes.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-004",
+            "domain": "Key Concepts of Service Management",
+            "stem": "Which statement best describes a service as defined in ITIL 4?",
+            "options": [
+                "An internal team that repairs technology faults",
+                "A contract that guarantees a fixed level of availability",
+                "A tangible product that a provider sells to a consumer",
+                "A means of enabling value co-creation by facilitating outcomes the customer wants, without the customer managing specific costs and risks"
+            ],
+            "correct_index": 3,
+            "explanation": "ITIL 4 defines a service as a means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks. A product, a repair team, or a contract may support a service but is not the definition itself.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-005",
+            "domain": "Key Concepts of Service Management",
+            "stem": "An organization buys payroll processing from a vendor, and the vendor depends on the organization to supply accurate employee data on time. Which term describes this two-way arrangement?",
+            "options": [
+                "A service relationship",
+                "A service value stream",
+                "A management practice",
+                "A governance body"
+            ],
+            "correct_index": 0,
+            "explanation": "A service relationship is the joint activity between a service provider and a service consumer, including both service provision and service consumption. The mutual dependency, where each side supplies something the other needs, is the defining feature of that relationship.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-006",
+            "domain": "Key Concepts of Service Management",
+            "stem": "A monitoring platform generates hundreds of daily alert files, yet management is disappointed because outages have not fallen. What should the provider examine first?",
+            "options": [
+                "The number of alert files produced each day",
+                "Whether the alerts are converting into the outcome of fewer outages",
+                "The colour scheme of the alert dashboard",
+                "The price of the monitoring licence"
+            ],
+            "correct_index": 1,
+            "explanation": "Outputs are the deliverables produced, in this case the alert files, while outcomes are the results the consumer wants, here fewer outages. Producing output is only valuable when it contributes to the desired outcome, so that linkage is what the provider must examine.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-007",
+            "domain": "Key Concepts of Service Management",
+            "stem": "ITIL 4 defines three roles within the service consumer. Which role is responsible for authorizing the budget that pays for the service?",
+            "options": [
+                "User",
+                "Customer",
+                "Sponsor",
+                "Supplier"
+            ],
+            "correct_index": 2,
+            "explanation": "In the consumer role the sponsor authorizes the budget for service consumption, the customer defines the requirements and agrees the expected outcomes, and the user actually uses the service. A supplier is a separate service provider, not a consumer role.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-008",
+            "domain": "Key Concepts of Service Management",
+            "stem": "A software team releases features and then ignores customer responses to them. Which ITIL 4 idea about value does this behaviour contradict?",
+            "options": [
+                "Value is measured only by system uptime",
+                "Value is fixed at the moment a contract is signed",
+                "Value is created by the provider acting alone",
+                "Value is co-created through an active relationship between provider and consumer"
+            ],
+            "correct_index": 3,
+            "explanation": "ITIL 4 treats value as co-created through the active participation of both provider and consumer. Ignoring customer responses removes the consumer from the relationship, so the provider is no longer co-creating value and loses the feedback needed to keep the service relevant.",
+            "reference": "ITIL 4 Foundation syllabus - Key Concepts of Service Management"
+        },
+        {
+            "id": "itil4-f-009",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "A service improvement fails because staff are anxious about the change, and no one has been given clear responsibility for it. Which dimension of service management does this illustrate?",
+            "options": [
+                "Organizations and people",
+                "Information and technology",
+                "Partners and suppliers",
+                "Value streams and processes"
+            ],
+            "correct_index": 0,
+            "explanation": "The organizations-and-people dimension covers roles, responsibilities, culture, and the way people are supported through change. Unclear ownership and staff anxiety are human and organizational concerns, so they sit squarely in that dimension rather than in technology or process.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-010",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "An organization cannot improve its incident handling because data is scattered across incompatible tools and there is no single source of truth. Which dimension does this point to?",
+            "options": [
+                "Organizations and people",
+                "Information and technology",
+                "Partners and suppliers",
+                "Value streams and processes"
+            ],
+            "correct_index": 1,
+            "explanation": "The information-and-technology dimension covers the information, knowledge, and technology needed to manage services. Fragmented, inconsistent data and tooling are failures of that dimension, which is why it must be addressed before incident handling can improve.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-011",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "A retailer's online checkout depends on a payment gateway run by an external company, and every change must be coordinated with that company. Which dimension is most directly involved?",
+            "options": [
+                "Organizations and people",
+                "Information and technology",
+                "Partners and suppliers",
+                "Value streams and processes"
+            ],
+            "correct_index": 2,
+            "explanation": "The partners-and-suppliers dimension covers an organization's relationships with other organizations involved in designing, delivering, and improving services. A critical external payment provider is exactly such a partner, so coordinating changes with it belongs to that dimension.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-012",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "Requests take far longer than necessary because work is handed between departments with duplicated approvals and no defined flow. Which dimension should be examined?",
+            "options": [
+                "Organizations and people",
+                "Information and technology",
+                "Partners and suppliers",
+                "Value streams and processes"
+            ],
+            "correct_index": 3,
+            "explanation": "The value-streams-and-processes dimension concerns how work flows through the organization to deliver value, including the activities, workflows, controls, and procedures. Duplicated approvals and an undefined flow are process design problems, so this is the dimension to examine.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-013",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "When planning a new service a team reviews staffing, tooling, supplier agreements, and workflow, but overlooks a new data-protection regulation. What does this omission illustrate?",
+            "options": [
+                "External factors such as legal and regulatory constraints must also be considered",
+                "Regulation plays no part in service management",
+                "Only the technology dimension ever matters",
+                "Suppliers are always responsible for compliance"
+            ],
+            "correct_index": 0,
+            "explanation": "The four dimensions are influenced by external factors such as political, economic, social, technological, legal, and environmental conditions. A new data-protection regulation is a legal factor, so ignoring it leaves the service design incomplete even though the four internal dimensions were reviewed.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-014",
+            "domain": "The Four Dimensions of Service Management",
+            "stem": "An improvement initiative addresses people and technology but ignores how suppliers and work flows contribute. What is the most likely consequence?",
+            "options": [
+                "The initiative is guaranteed to succeed",
+                "The improvement will be unbalanced because the four dimensions are interdependent",
+                "Supplier and workflow issues will resolve themselves",
+                "Only the technology dimension will need further attention"
+            ],
+            "correct_index": 1,
+            "explanation": "The four dimensions are interdependent, so they must be considered together for a service to be managed holistically. Addressing only people and technology while ignoring partners and value streams usually leaves gaps that undermine the improvement.",
+            "reference": "ITIL 4 Foundation syllabus - The Four Dimensions of Service Management"
+        },
+        {
+            "id": "itil4-f-015",
+            "domain": "The ITIL Service Value System",
+            "stem": "Which set of components makes up the ITIL service value system?",
+            "options": [
+                "People, process, technology, and partners",
+                "Strategy, design, transition, operation, and improvement",
+                "Guiding principles, governance, the service value chain, practices, and continual improvement",
+                "Plan, design, build, test, and run"
+            ],
+            "correct_index": 2,
+            "explanation": "The service value system comprises the guiding principles, governance, the service value chain, practices, and continual improvement. The other options describe generic lifecycle or process groupings and are not the components of the ITIL 4 service value system.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-016",
+            "domain": "The ITIL Service Value System",
+            "stem": "Which element is the central part of the service value system that converts demand into value across the organization?",
+            "options": [
+                "The configuration management database",
+                "The continual improvement register",
+                "The service catalogue",
+                "The service value chain"
+            ],
+            "correct_index": 3,
+            "explanation": "The service value chain is the central element of the service value system. It is an operating model of interconnected activities that transforms demand from stakeholders into value in the form of products and services.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-017",
+            "domain": "The ITIL Service Value System",
+            "stem": "A group of leaders sets a shared direction, priorities, and requirements for all four dimensions across the whole organization. Which service value chain activity does this describe?",
+            "options": [
+                "Plan",
+                "Obtain/build",
+                "Deliver and support",
+                "Engage"
+            ],
+            "correct_index": 0,
+            "explanation": "The plan activity ensures a shared understanding of the vision, current status, and improvement direction for all four dimensions and all products and services. Setting organization-wide direction and priorities is the purpose of plan.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-018",
+            "domain": "The ITIL Service Value System",
+            "stem": "A product owner regularly meets users and customers to understand their needs and to keep them informed about services. Which value chain activity does this describe?",
+            "options": [
+                "Improve",
+                "Engage",
+                "Obtain/build",
+                "Design and transition"
+            ],
+            "correct_index": 1,
+            "explanation": "The engage activity provides a good understanding of stakeholder needs, transparency, and continual engagement with all stakeholders. Meeting users and customers to understand needs and share information is the engage activity in action.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-019",
+            "domain": "The ITIL Service Value System",
+            "stem": "A team ensures that new and changed services meet stakeholder expectations for quality, cost, and time to market before they are made live. Which value chain activity is this?",
+            "options": [
+                "Improve",
+                "Plan",
+                "Design and transition",
+                "Deliver and support"
+            ],
+            "correct_index": 2,
+            "explanation": "The design and transition activity ensures that products and services continually meet stakeholder expectations for quality, cost, and time to market. Preparing new and changed services to satisfy those expectations before go-live is this activity.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-020",
+            "domain": "The ITIL Service Value System",
+            "stem": "An organization makes sure that service components are available when and where they are needed and that they meet agreed specifications. Which value chain activity is this?",
+            "options": [
+                "Plan",
+                "Engage",
+                "Design and transition",
+                "Obtain/build"
+            ],
+            "correct_index": 3,
+            "explanation": "The obtain/build activity ensures that service components are available when and where they are needed and that they meet agreed specifications. Sourcing or creating components to agreed requirements is the purpose of obtain/build.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-021",
+            "domain": "The ITIL Service Value System",
+            "stem": "A service desk keeps services operating and ensures that users can access them according to agreed specifications. Which value chain activity is this?",
+            "options": [
+                "Deliver and support",
+                "Plan",
+                "Improve",
+                "Engage"
+            ],
+            "correct_index": 0,
+            "explanation": "The deliver and support activity ensures that services are delivered and supported according to agreed specifications and stakeholder expectations. Operating services and keeping them accessible to users is the deliver and support activity.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-022",
+            "domain": "The ITIL Service Value System",
+            "stem": "A team reviews feedback and service performance to identify and act on opportunities to improve products, services, and practices across all value chain activities. Which activity is this?",
+            "options": [
+                "Obtain/build",
+                "Improve",
+                "Design and transition",
+                "Engage"
+            ],
+            "correct_index": 1,
+            "explanation": "The improve activity ensures continual improvement of products, services, and practices across all value chain activities and the four dimensions. Reviewing feedback and performance to act on improvement opportunities is exactly this activity.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-023",
+            "domain": "The ITIL Service Value System",
+            "stem": "Which description best matches a value stream in ITIL 4?",
+            "options": [
+                "A schedule of team holidays and shift patterns",
+                "A purchase order for new hardware",
+                "A specific combination of value chain activities and practices that the organization uses to respond to demand and create value for stakeholders",
+                "A complete inventory of every server in the data centre"
+            ],
+            "correct_index": 2,
+            "explanation": "A value stream is a specific combination of value chain activities and practices used to respond to a particular demand or trigger. It describes how the organization actually sequences work to create value, not an asset inventory or administrative record.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-024",
+            "domain": "The ITIL Service Value System",
+            "stem": "A board directs and controls the organization, sets policy, and holds management accountable for the performance of the service value system. Which component is this?",
+            "options": [
+                "Continual improvement",
+                "Practices",
+                "The service value chain",
+                "Governance"
+            ],
+            "correct_index": 3,
+            "explanation": "Governance is the component of the service value system by which the organization is directed and controlled. Setting direction, policy, and accountability for the service value system is the role of governance, exercised by the governing body.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-025",
+            "domain": "The ITIL Service Value System",
+            "stem": "In the service value system, which inputs enter the system as the starting point for creating value through the value chain?",
+            "options": [
+                "Opportunity and demand",
+                "Only approved budgets",
+                "Only regulatory audits",
+                "Only customer complaints"
+            ],
+            "correct_index": 0,
+            "explanation": "Opportunity and demand are the inputs that enter the service value system and drive the value chain. Demand represents the need for products and services, while opportunity represents possibilities to add value that did not previously exist.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-026",
+            "domain": "The ITIL Service Value System",
+            "stem": "Which component of the service value system provides the sets of organizational resources designed for performing work or accomplishing an objective?",
+            "options": [
+                "Governance",
+                "Practices",
+                "The service value chain",
+                "Guiding principles"
+            ],
+            "correct_index": 1,
+            "explanation": "A practice is a set of organizational resources designed for performing work or accomplishing an objective. Practices supply the resources such as people, information, technology, and processes that the value chain activities draw on.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Service Value System"
+        },
+        {
+            "id": "itil4-f-027",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "A team adds features that are technically impressive but that no customer requested and that do not support business goals. Which guiding principle is being ignored?",
+            "options": [
+                "Keep it simple and practical",
+                "Optimize and automate",
+                "Focus on value",
+                "Start where you are"
+            ],
+            "correct_index": 2,
+            "explanation": "Focus on value means everything the organization does should link back to value for itself, its customers, and other stakeholders. Building features that no customer wants and that do not serve business goals directly contradicts that principle.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-028",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "Before replacing an existing tool, a team reviews what already works well and can be reused. Which guiding principle does this reflect?",
+            "options": [
+                "Think and work holistically",
+                "Focus on value",
+                "Progress iteratively with feedback",
+                "Start where you are"
+            ],
+            "correct_index": 3,
+            "explanation": "Start where you are means considering what already exists and can be reused rather than building everything from scratch. Reviewing current capabilities before replacing a tool is the practical expression of this principle.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-029",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "A team delivers a small improvement every two weeks and adjusts the next step based on user reactions, rather than waiting for one large release. Which guiding principle applies?",
+            "options": [
+                "Progress iteratively with feedback",
+                "Collaborate and promote visibility",
+                "Focus on value",
+                "Keep it simple and practical"
+            ],
+            "correct_index": 0,
+            "explanation": "Progress iteratively with feedback means organizing work into smaller, manageable iterations and using feedback to shape the next step. Frequent small releases reviewed against user reactions are the essence of this principle.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-030",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "A team shares progress and risk information openly with stakeholders and works jointly with them to reach decisions. Which guiding principle is being applied?",
+            "options": [
+                "Think and work holistically",
+                "Collaborate and promote visibility",
+                "Optimize and automate",
+                "Start where you are"
+            ],
+            "correct_index": 1,
+            "explanation": "Collaborate and promote visibility means working together across boundaries and making work and information transparent. Jointly making decisions and openly sharing progress and risks demonstrates both elements of this principle.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-031",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "An improvement that speeds up one team accidentally creates a bottleneck for a downstream team. Which guiding principle was neglected?",
+            "options": [
+                "Focus on value",
+                "Start where you are",
+                "Think and work holistically",
+                "Progress iteratively with feedback"
+            ],
+            "correct_index": 2,
+            "explanation": "Think and work holistically means viewing the organization as an interrelated system rather than a collection of separate parts. Improving one team without considering its effect on the wider flow created a bottleneck, which this principle guards against.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-032",
+            "domain": "The ITIL Guiding Principles",
+            "stem": "A team redesigns a process by removing steps that add no value and then automates the remaining steps. Which pair of guiding principles is being applied together?",
+            "options": [
+                "Collaborate and promote visibility, and think and work holistically",
+                "Progress iteratively with feedback, and start where you are",
+                "Focus on value and start where you are",
+                "Keep it simple and practical, and optimize and automate"
+            ],
+            "correct_index": 3,
+            "explanation": "Keep it simple and practical means eliminating anything that adds no value, and optimize and automate means making effective use of human and technical resources to do more with less. Removing waste first and then automating applies both principles in the correct sequence.",
+            "reference": "ITIL 4 Foundation syllabus - The ITIL Guiding Principles"
+        },
+        {
+            "id": "itil4-f-033",
+            "domain": "ITIL Management Practices",
+            "stem": "Which practice is the entry point and single point of contact for the service provider with all of its users?",
+            "options": [
+                "Service desk",
+                "Service request management",
+                "Relationship management",
+                "Incident management"
+            ],
+            "correct_index": 0,
+            "explanation": "The service desk is the entry point and single point of contact for the service provider with all of its users. It handles incidents and service requests and acts as the communication channel between users and the provider.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-034",
+            "domain": "ITIL Management Practices",
+            "stem": "A user cannot access email and the service is disrupted. Which practice aims to minimize the negative impact by restoring normal service operation as quickly as possible?",
+            "options": [
+                "Change enablement",
+                "Incident management",
+                "Service level management",
+                "Problem management"
+            ],
+            "correct_index": 1,
+            "explanation": "Incident management aims to minimize the negative impact of incidents by restoring normal service operation as quickly as possible. A single disruption affecting a user is an incident, so restoring service quickly is its goal.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-035",
+            "domain": "ITIL Management Practices",
+            "stem": "After several identical outages, a team investigates the underlying cause so that the failures do not recur. Which practice is this?",
+            "options": [
+                "Monitoring and event management",
+                "Incident management",
+                "Problem management",
+                "Service continuity management"
+            ],
+            "correct_index": 2,
+            "explanation": "Problem management aims to reduce the likelihood and impact of incidents by identifying actual and potential causes of incidents and managing workarounds and known errors. Investigating the root cause of recurring outages to prevent recurrence is problem management.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-036",
+            "domain": "ITIL Management Practices",
+            "stem": "A team assesses proposed modifications and authorizes them so that risks are understood and service disruption is minimized. Which practice does this describe?",
+            "options": [
+                "Deployment management",
+                "Release management",
+                "Service configuration management",
+                "Change enablement"
+            ],
+            "correct_index": 3,
+            "explanation": "Change enablement aims to maximize the number of successful service and product changes by ensuring risks are properly assessed, authorizing changes to proceed, and managing the change schedule. Assessing and authorizing modifications is its purpose.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-037",
+            "domain": "ITIL Management Practices",
+            "stem": "A user asks for a standard piece of software to be installed through a predefined, low-risk procedure. Which practice handles this?",
+            "options": [
+                "Service request management",
+                "Change enablement",
+                "Incident management",
+                "Problem management"
+            ],
+            "correct_index": 0,
+            "explanation": "Service request management supports the agreed quality of a service by handling all predefined, user-initiated service requests in an effective and user-friendly manner. A standard software installation is a normal service request, not an incident.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-038",
+            "domain": "ITIL Management Practices",
+            "stem": "Which practice aligns the organization's services with changing business needs by identifying and making improvements to products, services, and practices?",
+            "options": [
+                "Capacity and performance management",
+                "Continual improvement",
+                "Service level management",
+                "Supplier management"
+            ],
+            "correct_index": 1,
+            "explanation": "The continual improvement practice aligns the organization's services with changing business needs through the ongoing improvement of products, services, and practices, or any element involved in the management of products and services.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-039",
+            "domain": "ITIL Management Practices",
+            "stem": "Which category of ITIL management practice includes deployment management, infrastructure and platform management, and software development and management?",
+            "options": [
+                "General management practices",
+                "Service management practices",
+                "Technical management practices",
+                "Governance practices"
+            ],
+            "correct_index": 2,
+            "explanation": "Technical management practices have been adapted from technology management domains for service management purposes. Deployment management, infrastructure and platform management, and software development and management are the three practices in this category.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        },
+        {
+            "id": "itil4-f-040",
+            "domain": "ITIL Management Practices",
+            "stem": "A team negotiates achievable targets, monitors service performance against them, and reports to stakeholders on whether the agreed levels are being met. Which practice is this?",
+            "options": [
+                "Service continuity management",
+                "Measurement and reporting",
+                "Relationship management",
+                "Service level management"
+            ],
+            "correct_index": 3,
+            "explanation": "Service level management sets clear, business-based targets for service levels and ensures delivery against them by collecting, monitoring, and reporting on performance. Negotiating targets and reporting against agreed levels is its core purpose.",
+            "reference": "ITIL 4 Foundation syllabus - ITIL Management Practices"
+        }
+    ]
+}
