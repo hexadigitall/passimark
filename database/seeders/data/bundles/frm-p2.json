@@ -1,0 +1,1137 @@
+{
+    "cert_key": "frm-p2",
+    "title": "Financial Risk Manager (FRM) Part II",
+    "issuer": "GARP",
+    "outline_file": "outlines/frm-p2.json",
+    "variant_label": "FRM Part II Real-Spec Practice",
+    "exam": {
+        "questions": 80,
+        "duration_minutes": 240,
+        "scoring": "Pass/fail against GARP passing standard",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the GARP FRM Part II curriculum (topics and weights). Not a capture of past exam questions.",
+    "source_label": "FRM Part II practice bank",
+    "items": [
+        {
+            "id": "frm-p2-001",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A portfolio is valued at 10,000,000 and its annual return volatility is 15 percent. Assuming returns are normally distributed and a one-tailed 95 percent confidence level corresponds to 1.645 standard deviations, which amount is closest to the one-year parametric value at risk?",
+            "options": [
+                "2,467,500",
+                "1,500,000",
+                "2,250,000",
+                "3,000,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Parametric value at risk equals the z-score times volatility times portfolio value, so 1.645 times 0.15 times 10,000,000 equals 2,467,500. Omitting the z-score gives 1,500,000, which ignores the confidence level.",
+            "reference": "GARP FRM Part II Curriculum - Value at Risk - Parametric Approach"
+        },
+        {
+            "id": "frm-p2-002",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A risk manager compares value at risk with expected shortfall for the same portfolio and confidence level. Which statement correctly describes expected shortfall?",
+            "options": [
+                "It cannot be sub-additive and therefore fails the coherence test",
+                "It is the average loss conditional on losses exceeding the value at risk threshold and is never smaller than value at risk",
+                "It is always smaller than value at risk because it averages the tail",
+                "It ignores the shape of the loss distribution beyond the value at risk threshold"
+            ],
+            "correct_index": 1,
+            "explanation": "Expected shortfall averages the losses in the tail beyond the value at risk cutoff, so it is at least as large as value at risk and, unlike value at risk, satisfies sub-additivity and is a coherent risk measure.",
+            "reference": "GARP FRM Part II Curriculum - Expected Shortfall"
+        },
+        {
+            "id": "frm-p2-003",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A bank estimates one-day value at risk at the 95 percent confidence level using 500 days of historical profit and loss observations. Which observation is closest to the value at risk cutoff?",
+            "options": [
+                "The 50th worst loss",
+                "The 475th worst loss",
+                "The 25th worst loss",
+                "The 5th worst loss"
+            ],
+            "correct_index": 2,
+            "explanation": "The 95 percent confidence level leaves a 5 percent tail, and 5 percent of 500 observations is 25, so the cutoff is close to the 25th worst loss. Choosing the 5th worst loss would correspond to a 99 percent confidence level.",
+            "reference": "GARP FRM Part II Curriculum - Non-parametric Approaches - Historical Simulation"
+        },
+        {
+            "id": "frm-p2-004",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "An analyst uses an exponentially weighted moving average model with a decay factor of 0.94. The previous day's variance estimate is 0.0004 and the most recent squared return is 0.0009. Which value is closest to the updated volatility estimate?",
+            "options": [
+                "2.00 percent",
+                "2.10 percent",
+                "2.24 percent",
+                "2.07 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The updated variance is 0.94 times 0.0004 plus 0.06 times 0.0009, which equals 0.00043, and its square root is about 0.02074, or 2.07 percent. Keeping the old variance of 0.0004 would give 2.00 percent and ignore the new return.",
+            "reference": "GARP FRM Part II Curriculum - Volatility Models - EWMA"
+        },
+        {
+            "id": "frm-p2-005",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A GARCH(1,1) model estimated on daily returns has omega equal to 0.000002, alpha equal to 0.08, and beta equal to 0.90. Which value is closest to the long-run volatility per day?",
+            "options": [
+                "1.00 percent",
+                "2.00 percent",
+                "0.50 percent",
+                "1.41 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The long-run variance is omega divided by one minus alpha minus beta, so 0.000002 divided by 0.02 equals 0.0001. Its square root is 0.01, or 1.00 percent per day.",
+            "reference": "GARP FRM Part II Curriculum - Volatility Models - GARCH"
+        },
+        {
+            "id": "frm-p2-006",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A risk analyst applies extreme value theory using the peaks-over-threshold approach to daily losses. Which distribution is fitted to the losses that exceed a high threshold?",
+            "options": [
+                "The lognormal distribution",
+                "The generalized Pareto distribution",
+                "The generalized extreme value distribution",
+                "The normal distribution"
+            ],
+            "correct_index": 1,
+            "explanation": "The peaks-over-threshold method models exceedances over a high threshold with the generalized Pareto distribution, whereas the generalized extreme value distribution is fitted to block maxima rather than threshold exceedances.",
+            "reference": "GARP FRM Part II Curriculum - Extreme Value Theory - Peaks over Threshold"
+        },
+        {
+            "id": "frm-p2-007",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A risk manager studies the maxima of daily losses measured over many blocks of equal length. According to the Fisher-Tippett theorem, which family of distributions is the limiting distribution of the block maxima?",
+            "options": [
+                "The Student t distribution",
+                "The Poisson distribution",
+                "The generalized extreme value distribution",
+                "The generalized Pareto distribution"
+            ],
+            "correct_index": 2,
+            "explanation": "The Fisher-Tippett theorem states that block maxima converge to the generalized extreme value distribution, which nests the Gumbel, Frechet, and Weibull cases depending on its shape parameter.",
+            "reference": "GARP FRM Part II Curriculum - Extreme Value Theory - Block Maxima"
+        },
+        {
+            "id": "frm-p2-008",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A portfolio has a one-day 95 percent value at risk of 1,000,000. Under the square-root-of-time rule, which amount is closest to the ten-day value at risk at the same confidence level?",
+            "options": [
+                "10,000,000",
+                "1,500,000",
+                "1,000,000",
+                "3,162,278"
+            ],
+            "correct_index": 3,
+            "explanation": "Scaling by the square root of time gives 1,000,000 times the square root of 10, or 3,162,278. Multiplying by ten would assume risk grows linearly with time and would overstate the ten-day figure.",
+            "reference": "GARP FRM Part II Curriculum - Value at Risk - Scaling and Horizon"
+        },
+        {
+            "id": "frm-p2-009",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "Under the Basel Committee's Fundamental Review of the Trading Book, which risk measure replaced value at risk as the primary internal-model measure?",
+            "options": [
+                "Expected shortfall at a 97.5 percent confidence level",
+                "Value at risk at a 99 percent confidence level",
+                "Expected shortfall at a 99 percent confidence level",
+                "Value at risk at a 95 percent confidence level"
+            ],
+            "correct_index": 0,
+            "explanation": "The Fundamental Review of the Trading Book replaced 99 percent ten-day value at risk with expected shortfall measured at a 97.5 percent confidence level, a level selected to be roughly comparable in severity.",
+            "reference": "GARP FRM Part II Curriculum - Fundamental Review of the Trading Book"
+        },
+        {
+            "id": "frm-p2-010",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A bank backtests its 99 percent one-day value at risk model over 250 trading days and records seven exceptions. Under the Basel traffic-light approach, into which zone does this result fall?",
+            "options": [
+                "The blue zone",
+                "The yellow zone",
+                "The green zone",
+                "The red zone"
+            ],
+            "correct_index": 1,
+            "explanation": "At 99 percent over 250 days the expected number of exceptions is about 2.5. Zero to four exceptions is green, five to nine is yellow, and ten or more is red, so seven exceptions fall in the yellow zone.",
+            "reference": "GARP FRM Part II Curriculum - Backtesting Value at Risk"
+        },
+        {
+            "id": "frm-p2-011",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A risk analyst wants to model the joint distribution of two asset returns while keeping the marginal distributions unchanged and concentrating dependence in the tails. Which tool is most appropriate?",
+            "options": [
+                "A single-factor regression",
+                "A moving average filter",
+                "A copula function",
+                "A variance-covariance matrix of returns"
+            ],
+            "correct_index": 2,
+            "explanation": "A copula separates the marginal distributions from the dependence structure, so it can introduce tail dependence while preserving each asset's marginal distribution. A covariance matrix captures only linear average dependence.",
+            "reference": "GARP FRM Part II Curriculum - Modeling Dependence - Copulas"
+        },
+        {
+            "id": "frm-p2-012",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A risk manager estimates a Vasicek short-rate model. Which feature distinguishes this model from a simple random walk of interest rates?",
+            "options": [
+                "The short rate can never become negative",
+                "The volatility of the short rate is constant across time",
+                "The model is calibrated only to option prices",
+                "The short rate is pulled toward a long-run mean level"
+            ],
+            "correct_index": 3,
+            "explanation": "The Vasicek model includes a mean-reversion term that pulls the short rate toward a long-run level, unlike a random walk. The possibility of negative rates is a known limitation rather than a feature.",
+            "reference": "GARP FRM Part II Curriculum - Term Structure Models"
+        },
+        {
+            "id": "frm-p2-013",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A bond position is worth 10,000,000 with a modified duration of 5.2. If yields rise by 0.40 percentage points, which amount is closest to the resulting loss using a duration approximation?",
+            "options": [
+                "208,000",
+                "52,000",
+                "520,000",
+                "2,080,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The approximate price change is minus modified duration times the yield change times value, so minus 5.2 times 0.0040 times 10,000,000 equals minus 208,000. Misplacing the decimal point produces the other choices.",
+            "reference": "GARP FRM Part II Curriculum - Interest Rate Risk and Duration"
+        },
+        {
+            "id": "frm-p2-014",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "Which advantage does Monte Carlo simulation offer over historical simulation when estimating value at risk?",
+            "options": [
+                "It avoids the need to estimate volatilities and correlations",
+                "It can generate scenarios for risks that are not present in the historical sample",
+                "It never requires any distributional assumption",
+                "It is always computationally cheaper than historical simulation"
+            ],
+            "correct_index": 1,
+            "explanation": "Monte Carlo simulation draws from an estimated model, so it can produce scenarios beyond those observed historically. It does rely on distributional and model assumptions and is typically more computationally intensive.",
+            "reference": "GARP FRM Part II Curriculum - Monte Carlo Simulation"
+        },
+        {
+            "id": "frm-p2-015",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "The implied volatility of an equity index option is well above its recent realized volatility. Which interpretation is most reasonable for a risk manager?",
+            "options": [
+                "Implied volatility is a backward-looking measure of past price moves",
+                "The gap proves the option is mispriced",
+                "The option market is pricing a higher expected future volatility than the recent past",
+                "Realized volatility is certain to rise to match implied volatility"
+            ],
+            "correct_index": 2,
+            "explanation": "Implied volatility is forward looking and reflects the market's expected future volatility, so a gap above realized volatility suggests the market expects more turbulence. It does not guarantee future realized moves and is not proof of mispricing.",
+            "reference": "GARP FRM Part II Curriculum - Volatility Markets and Implied Volatility"
+        },
+        {
+            "id": "frm-p2-016",
+            "domain": "Market Risk Measurement and Management",
+            "stem": "A fixed-income risk manager uses principal component analysis of the yield curve. Which result is typically observed?",
+            "options": [
+                "Each maturity's yield moves independently of the others",
+                "The first component explains less than ten percent of variation",
+                "Principal components require a full arbitrage-free term structure model",
+                "A few components, led by a level shift, explain most of the variation in yields"
+            ],
+            "correct_index": 3,
+            "explanation": "Principal component analysis of yield curves typically shows that a small number of factors, with a parallel level shift first, explain the large majority of yield variation. Yields at different maturities are highly correlated rather than independent.",
+            "reference": "GARP FRM Part II Curriculum - Principal Component Analysis"
+        },
+        {
+            "id": "frm-p2-017",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "In the Merton structural model of default, the equity of a leveraged firm is best described as which instrument written on the firm's assets?",
+            "options": [
+                "A European call option",
+                "A European put option",
+                "A forward contract",
+                "An interest rate swap"
+            ],
+            "correct_index": 0,
+            "explanation": "Shareholders have a residual claim and limited liability, so equity is equivalent to a European call option on the firm's assets with a strike equal to the face value of debt. Default occurs when assets fall below the debt barrier at maturity.",
+            "reference": "GARP FRM Part II Curriculum - Structural Models - Merton Model"
+        },
+        {
+            "id": "frm-p2-018",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A one-year credit default swap on a bond trades at a spread of 300 basis points and the expected loss given default is 60 percent. Using the simple spread-based approximation, which value is closest to the risk-neutral default probability?",
+            "options": [
+                "0.3 percent",
+                "5.0 percent",
+                "3.0 percent",
+                "1.8 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The approximation sets the spread equal to default probability times loss given default, so the probability is 0.03 divided by 0.60, or 5.0 percent. Using the spread itself as the probability ignores the loss given default.",
+            "reference": "GARP FRM Part II Curriculum - Estimating Default Probabilities"
+        },
+        {
+            "id": "frm-p2-019",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A pension fund buys credit protection on a corporate bond through a credit default swap. Which statement describes the fund's position?",
+            "options": [
+                "The fund transfers the bond's interest payments to the protection seller",
+                "The fund must physically hold the reference bond to the maturity date",
+                "The fund pays a periodic premium and receives a payment if the reference entity defaults",
+                "The fund receives a periodic premium and pays if the reference entity defaults"
+            ],
+            "correct_index": 2,
+            "explanation": "The protection buyer pays periodic premiums and is compensated upon a credit event of the reference entity. The protection seller receives the premium and bears the default loss, and physical ownership of the bond is not required.",
+            "reference": "GARP FRM Part II Curriculum - Credit Derivatives - Credit Default Swaps"
+        },
+        {
+            "id": "frm-p2-020",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A derivatives dealer computes a credit value adjustment on its over-the-counter portfolio. Which risk does this adjustment quantify?",
+            "options": [
+                "The loss from adverse movements in market prices",
+                "The cost of funding the collateral posted to a clearing house",
+                "The operational risk of a failed settlement",
+                "The expected loss from a counterparty defaulting on its derivative obligations"
+            ],
+            "correct_index": 3,
+            "explanation": "Credit value adjustment measures the market value of counterparty credit risk, that is, the expected loss if the counterparty defaults on its derivative obligations. It is distinct from market risk and from funding or settlement cost.",
+            "reference": "GARP FRM Part II Curriculum - Counterparty Credit Risk - CVA"
+        },
+        {
+            "id": "frm-p2-021",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A bank has sold protection on a company while also holding a large loan exposure to the same company. As the company's credit quality deteriorates, both exposures lose value together. Which term describes this situation?",
+            "options": [
+                "Wrong-way risk",
+                "Right-way risk",
+                "Basis risk",
+                "Spread risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Wrong-way risk arises when exposure to a counterparty increases as the counterparty's probability of default also increases, so the two losses are positively correlated. Right-way risk is the opposite relationship.",
+            "reference": "GARP FRM Part II Curriculum - Wrong-Way Risk"
+        },
+        {
+            "id": "frm-p2-022",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A defaulted loan has a face value of 10,000,000 and the bank expects to recover 4,500,000. Which value is closest to the loss given default?",
+            "options": [
+                "100 percent",
+                "55 percent",
+                "45 percent",
+                "4.5 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "Loss given default equals one minus the recovery rate. Recovery is 4,500,000 divided by 10,000,000, or 45 percent, so loss given default is 55 percent. Reporting the recovery rate as the loss is the common error.",
+            "reference": "GARP FRM Part II Curriculum - Loss Given Default and Recovery Rates"
+        },
+        {
+            "id": "frm-p2-023",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "An analyst computes an original Altman Z-score of 1.4 for a manufacturing firm. Which interpretation is most appropriate?",
+            "options": [
+                "The score cannot be interpreted without the firm's credit rating",
+                "A Z-score below 2.0 indicates a strong balance sheet",
+                "The firm falls in the distress zone with elevated bankruptcy risk",
+                "The firm is safely in the non-distress zone"
+            ],
+            "correct_index": 2,
+            "explanation": "For the original manufacturing Z-score, values below 1.81 fall in the distress zone, values above 2.99 are safe, and the middle range is grey. A score of 1.4 therefore signals meaningful financial distress.",
+            "reference": "GARP FRM Part II Curriculum - Credit Scoring and Altman Z-Score"
+        },
+        {
+            "id": "frm-p2-024",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "In a structural credit model, which combination makes a firm's distance to default larger?",
+            "options": [
+                "Lower asset value and higher asset volatility",
+                "Higher asset volatility and a lower default barrier",
+                "A smaller equity cushion and a higher debt level",
+                "Higher asset value relative to the default barrier and lower asset volatility"
+            ],
+            "correct_index": 3,
+            "explanation": "Distance to default measures how many standard deviations of asset value separate the firm from its default point, so a higher asset value and lower volatility both increase it. Higher leverage or volatility reduces the cushion.",
+            "reference": "GARP FRM Part II Curriculum - Distance to Default"
+        },
+        {
+            "id": "frm-p2-025",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A credit rating transition matrix shows the probabilities of moving between rating categories over one year. Which use is most appropriate for this matrix in credit risk management?",
+            "options": [
+                "Estimating multi-period default probabilities and migration risk",
+                "Setting the coupon of a newly issued bond",
+                "Computing the market risk of an equity portfolio",
+                "Determining the operational risk capital charge"
+            ],
+            "correct_index": 0,
+            "explanation": "A transition matrix lets an analyst compound one-year migration probabilities to obtain multi-period default probabilities and to model rating migration risk. It is not a market, operational, or pricing input by itself.",
+            "reference": "GARP FRM Part II Curriculum - Credit Rating Migration"
+        },
+        {
+            "id": "frm-p2-026",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "In a collateralized debt obligation, the senior tranche is protected from credit losses by the subordinated tranches. What is the effect of this structure?",
+            "options": [
+                "The equity tranche is the safest because it is last in the waterfall",
+                "The senior tranche bears losses only after subordinated tranches are exhausted",
+                "The senior tranche receives the highest coupon to compensate for first-loss exposure",
+                "All tranches share losses in proportion to their size"
+            ],
+            "correct_index": 1,
+            "explanation": "The waterfall allocates cash flows and losses by seniority, so the senior tranche absorbs losses only after junior tranches are exhausted, which makes it safer and lower yielding. The equity tranche takes first losses.",
+            "reference": "GARP FRM Part II Curriculum - Securitization and Tranches"
+        },
+        {
+            "id": "frm-p2-027",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A bank measures counterparty credit exposure on a derivative using potential future exposure. Which quantity does potential future exposure represent?",
+            "options": [
+                "The current mark-to-market value only",
+                "The maximum possible loss guaranteed by the contract",
+                "A high percentile of the distribution of future exposure over the life of the trade",
+                "The average exposure over the life of the trade"
+            ],
+            "correct_index": 2,
+            "explanation": "Potential future exposure is a high confidence percentile of the exposure profile at future dates and is used to set credit limits. Current exposure is the mark-to-market today and expected exposure is the average.",
+            "reference": "GARP FRM Part II Curriculum - Counterparty Credit Exposure - PFE"
+        },
+        {
+            "id": "frm-p2-028",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A master agreement allows a bank to net its derivative exposures with a defaulting counterparty. What is the primary credit risk benefit of netting?",
+            "options": [
+                "It eliminates market risk on the netted positions",
+                "It removes the need to post collateral",
+                "It transfers the counterparty's default risk to a clearing house",
+                "It reduces exposure by offsetting positive and negative mark-to-market positions"
+            ],
+            "correct_index": 3,
+            "explanation": "Close-out netting aggregates positive and negative values into a single net exposure, lowering the amount at risk on default. It does not remove market risk or the need for collateral on the remaining net position.",
+            "reference": "GARP FRM Part II Curriculum - Netting and Collateral"
+        },
+        {
+            "id": "frm-p2-029",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A reduced-form credit model specifies default as the first jump of a Poisson process with a hazard rate. Which statement characterizes this approach?",
+            "options": [
+                "Default is an exogenous event whose timing is driven by the hazard rate",
+                "Default occurs when asset value falls below the debt barrier",
+                "The model requires observing the firm's asset value directly",
+                "Default can occur only at debt maturity"
+            ],
+            "correct_index": 0,
+            "explanation": "Reduced-form models treat default as an unpredictable exogenous jump governed by a hazard rate, which can be calibrated to market spreads. Structural models instead link default to asset value crossing a barrier.",
+            "reference": "GARP FRM Part II Curriculum - Reduced-Form Credit Models"
+        },
+        {
+            "id": "frm-p2-030",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A portfolio's expected credit loss is 2,000,000 and its unexpected loss, measured as the standard deviation of credit losses, is 6,000,000. Which concept does the unexpected loss represent for capital purposes?",
+            "options": [
+                "The accounting provision set aside each year",
+                "The volatility of credit losses that economic capital must cover",
+                "The average annual loss the bank expects to incur",
+                "The maximum loss the portfolio can ever suffer"
+            ],
+            "correct_index": 1,
+            "explanation": "Unexpected loss is the standard deviation of the credit loss distribution and drives economic capital, while expected loss is covered by provisions and pricing. Neither equals the maximum possible loss.",
+            "reference": "GARP FRM Part II Curriculum - Expected and Unexpected Credit Loss"
+        },
+        {
+            "id": "frm-p2-031",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "A trader holds a bond position and expects credit spreads to widen because of deteriorating market sentiment. Which position would benefit from that view?",
+            "options": [
+                "Buying the underlying bond on margin",
+                "Writing a put option on the issuer's equity",
+                "Buying credit protection on the issuer through a credit default swap",
+                "Selling credit protection on the issuer through a credit default swap"
+            ],
+            "correct_index": 2,
+            "explanation": "Buying protection gains in value when the issuer's credit quality deteriorates and spreads widen. Selling protection, holding the bond, or writing a put all lose value under that scenario.",
+            "reference": "GARP FRM Part II Curriculum - Credit Spread Risk"
+        },
+        {
+            "id": "frm-p2-032",
+            "domain": "Credit Risk Measurement and Management",
+            "stem": "Two loans each have a one-year probability of default of 5 percent, and the joint probability of both defaulting is 0.5 percent. Which value is closest to the default correlation in this rare-event setting?",
+            "options": [
+                "1.00",
+                "0.50",
+                "0.90",
+                "0.05"
+            ],
+            "correct_index": 3,
+            "explanation": "Under independence the joint probability would be 0.25 percent, and the observed 0.5 percent implies a small positive correlation of roughly 0.05 once scaled by the individual default volatilities. Large values near one would require defaults to move almost together.",
+            "reference": "GARP FRM Part II Curriculum - Default Correlation"
+        },
+        {
+            "id": "frm-p2-033",
+            "domain": "Operational Risk and Resilience",
+            "stem": "Under the final Basel III reforms, which single approach is used to calculate operational risk capital for internationally active banks?",
+            "options": [
+                "The Standardised Measurement Approach",
+                "The Basic Indicator Approach",
+                "The Advanced Measurement Approach",
+                "The Internal Ratings-Based Approach"
+            ],
+            "correct_index": 0,
+            "explanation": "The final Basel III framework replaced the basic indicator, standardised, and advanced measurement approaches with a single Standardised Measurement Approach based on a business indicator and internal loss data. The internal ratings-based approach applies to credit risk.",
+            "reference": "GARP FRM Part II Curriculum - Basel Operational Risk Capital"
+        },
+        {
+            "id": "frm-p2-034",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank estimates that a processing error occurs 20 times a year on average and that the average loss per event is 50,000. Which amount is closest to the expected annual operational loss?",
+            "options": [
+                "500,000",
+                "1,000,000",
+                "100,000",
+                "250,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Expected loss is frequency times severity, so 20 events per year times 50,000 equals 1,000,000. Dividing rather than multiplying the two figures produces the smaller distractors.",
+            "reference": "GARP FRM Part II Curriculum - Expected Operational Loss"
+        },
+        {
+            "id": "frm-p2-035",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank models operational risk using the loss distribution approach. Which two distributions are combined to produce the aggregate loss distribution?",
+            "options": [
+                "A transition matrix and a recovery distribution",
+                "A yield curve and a hazard rate",
+                "A frequency distribution for the number of losses and a severity distribution for the size of losses",
+                "A market risk distribution and a credit risk distribution"
+            ],
+            "correct_index": 2,
+            "explanation": "The loss distribution approach estimates a frequency distribution for how often events occur and a severity distribution for their size, then convolves them into an aggregate loss distribution for capital. The other pairs belong to market or credit risk.",
+            "reference": "GARP FRM Part II Curriculum - Loss Distribution Approach"
+        },
+        {
+            "id": "frm-p2-036",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank conducts a risk and control self-assessment across its business units. Which outcome is the primary purpose of this exercise?",
+            "options": [
+                "To calculate the bank's regulatory credit risk capital",
+                "To set the bank's overnight lending rate",
+                "To price interest rate derivatives",
+                "To identify and assess operational risks and the effectiveness of controls owned by the business"
+            ],
+            "correct_index": 3,
+            "explanation": "A risk and control self-assessment is a forward-looking operational risk tool in which business lines identify risks, rate their likelihood and impact, and evaluate controls. It is not a credit, market, or pricing exercise.",
+            "reference": "GARP FRM Part II Curriculum - Risk and Control Self-Assessment"
+        },
+        {
+            "id": "frm-p2-037",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A financial institution maps its critical business services and sets impact tolerances for disruption. Which discipline does this activity primarily belong to?",
+            "options": [
+                "Operational resilience",
+                "Market risk management",
+                "Credit portfolio management",
+                "Liquidity coverage management"
+            ],
+            "correct_index": 0,
+            "explanation": "Operational resilience focuses on a firm's ability to prevent, adapt to, and recover from disruption of important business services within impact tolerances. It extends beyond traditional business continuity planning.",
+            "reference": "GARP FRM Part II Curriculum - Operational Resilience"
+        },
+        {
+            "id": "frm-p2-038",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A firm's business continuity plan specifies a recovery time objective for a critical payment system. What does the recovery time objective define?",
+            "options": [
+                "The cost of replacing the system",
+                "The target time within which the system must be restored after a disruption",
+                "The maximum data loss the firm can tolerate",
+                "The number of staff required to run the system"
+            ],
+            "correct_index": 1,
+            "explanation": "The recovery time objective sets the target duration for restoring a service after disruption. The recovery point objective, by contrast, defines the tolerable amount of data loss.",
+            "reference": "GARP FRM Part II Curriculum - Business Continuity - Recovery Objectives"
+        },
+        {
+            "id": "frm-p2-039",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A risk manager monitors a key risk indicator of the number of open high-severity technology incidents. What is the role of a key risk indicator?",
+            "options": [
+                "To replace the need for loss data collection",
+                "To set the bank's capital adequacy ratio",
+                "To provide an early warning signal of rising operational risk exposure",
+                "To determine the exact loss from a past event"
+            ],
+            "correct_index": 2,
+            "explanation": "Key risk indicators are forward-looking metrics that signal changes in the level of risk and prompt action before losses accumulate. They complement, rather than replace, loss data and capital calculations.",
+            "reference": "GARP FRM Part II Curriculum - Key Risk Indicators"
+        },
+        {
+            "id": "frm-p2-040",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank discovers that a valuation model used for illiquid positions relies on stale market inputs. Which type of risk does this issue primarily illustrate?",
+            "options": [
+                "Settlement risk",
+                "Wrong-way risk",
+                "Sovereign risk",
+                "Model risk"
+            ],
+            "correct_index": 3,
+            "explanation": "Model risk is the potential for adverse consequences from decisions based on incorrect or misused model outputs and reports. Stale inputs and flawed assumptions are classic sources of model risk.",
+            "reference": "GARP FRM Part II Curriculum - Model Risk Management"
+        },
+        {
+            "id": "frm-p2-041",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank outsources a critical technology service to a cloud provider. Which risk does this arrangement most directly create for the bank?",
+            "options": [
+                "Third-party and concentration risk",
+                "Interest rate risk",
+                "Foreign exchange translation risk",
+                "Credit spread risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Outsourcing critical functions creates third-party risk and can concentrate dependence on a single provider, so firms must conduct due diligence and maintain exit plans. It does not by itself create interest rate or foreign exchange exposure.",
+            "reference": "GARP FRM Part II Curriculum - Third-Party Risk"
+        },
+        {
+            "id": "frm-p2-042",
+            "domain": "Operational Risk and Resilience",
+            "stem": "Under the Basel operational risk taxonomy, a fine imposed by a regulator for mis-selling products falls into which event-type category?",
+            "options": [
+                "Execution, delivery, and process management",
+                "Clients, products, and business practices",
+                "External fraud",
+                "Damage to physical assets"
+            ],
+            "correct_index": 1,
+            "explanation": "The Basel taxonomy places mis-selling and regulatory fines related to improper business practices in the clients, products, and business practices category. External fraud concerns third-party theft or hacking.",
+            "reference": "GARP FRM Part II Curriculum - Operational Risk Event Types"
+        },
+        {
+            "id": "frm-p2-043",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank sets a data collection threshold for operational risk losses. What is the effect of raising the threshold?",
+            "options": [
+                "All losses become recorded regardless of size",
+                "The threshold has no effect on the loss distribution",
+                "Fewer small losses are captured, which can bias severity estimates upward",
+                "More small losses are captured, improving model accuracy"
+            ],
+            "correct_index": 2,
+            "explanation": "A higher threshold excludes more small losses, so the retained sample is skewed toward larger events and severity can be overestimated unless the truncation is modeled. It does not capture more small losses.",
+            "reference": "GARP FRM Part II Curriculum - Loss Data Collection"
+        },
+        {
+            "id": "frm-p2-044",
+            "domain": "Operational Risk and Resilience",
+            "stem": "Which statement distinguishes a control self-assessment from an independent internal audit?",
+            "options": [
+                "Self-assessment is performed by external regulators and audit by the business",
+                "Both are performed by the same team to avoid duplication",
+                "Audit is optional while self-assessment is legally mandated",
+                "Self-assessment is performed by the business and audit provides independent assurance"
+            ],
+            "correct_index": 3,
+            "explanation": "In a control self-assessment, business staff assess their own risks and controls, while internal audit provides independent, objective assurance. The two roles are deliberately separate to preserve independence.",
+            "reference": "GARP FRM Part II Curriculum - Control Self-Assessment and Audit"
+        },
+        {
+            "id": "frm-p2-045",
+            "domain": "Operational Risk and Resilience",
+            "stem": "An operational risk team uses scenario analysis to estimate the capital impact of a severe cyber attack that has never occurred. Why is scenario analysis valuable here?",
+            "options": [
+                "It can quantify tail risks that historical loss data do not contain",
+                "It replaces the need for any historical loss data",
+                "It guarantees the accuracy of the resulting capital estimate",
+                "It measures only high-frequency low-severity losses"
+            ],
+            "correct_index": 0,
+            "explanation": "Scenario analysis combines expert judgment with data to assess low-frequency, high-severity events that are absent from the historical record. It complements loss data and does not guarantee accuracy.",
+            "reference": "GARP FRM Part II Curriculum - Scenario Analysis"
+        },
+        {
+            "id": "frm-p2-046",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank purchases an insurance policy to cover operational risk losses. How does insurance most commonly affect operational risk capital under the Basel framework?",
+            "options": [
+                "It has no recognition under any circumstances",
+                "It can reduce the capital charge subject to eligibility and recognition limits",
+                "It removes the operational risk entirely from the bank's books",
+                "It increases the capital charge to reflect the premium cost"
+            ],
+            "correct_index": 1,
+            "explanation": "Insurance may be recognized as a mitigant that reduces the operational risk capital charge, but only within strict eligibility criteria and caps, and it never removes the underlying risk.",
+            "reference": "GARP FRM Part II Curriculum - Insurance as Risk Mitigation"
+        },
+        {
+            "id": "frm-p2-047",
+            "domain": "Operational Risk and Resilience",
+            "stem": "An operational risk manager classifies the causes of operational losses. Which set best represents the standard cause categories?",
+            "options": [
+                "Frequency, severity, and correlation",
+                "Senior, mezzanine, and equity tranches",
+                "People, processes, systems, and external events",
+                "Interest rates, credit spreads, and equity prices"
+            ],
+            "correct_index": 2,
+            "explanation": "Operational losses are commonly attributed to failures in people, processes, or systems, or to external events. The other choices describe market risk factors, loss-model parameters, or securitization tranches.",
+            "reference": "GARP FRM Part II Curriculum - Operational Risk Causes"
+        },
+        {
+            "id": "frm-p2-048",
+            "domain": "Operational Risk and Resilience",
+            "stem": "A bank's cyber resilience programme includes red-teaming and threat intelligence. Which objective do these activities serve?",
+            "options": [
+                "To guarantee that no data breach can ever occur",
+                "To shift cyber losses to the credit risk capital charge",
+                "To eliminate the need for employee security training",
+                "To test and strengthen the firm's ability to withstand and respond to cyber attacks"
+            ],
+            "correct_index": 3,
+            "explanation": "Red-teaming and threat intelligence help the firm anticipate, test, and improve its defenses and response to cyber threats. No control can guarantee that a breach will never occur.",
+            "reference": "GARP FRM Part II Curriculum - Cyber Resilience"
+        },
+        {
+            "id": "frm-p2-049",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank calculates its liquidity coverage ratio. Which quantity is in the numerator of this ratio?",
+            "options": [
+                "The stock of high-quality liquid assets",
+                "The total net cash outflows over one year",
+                "The bank's total equity capital",
+                "The value of available committed credit lines"
+            ],
+            "correct_index": 0,
+            "explanation": "The liquidity coverage ratio is the stock of high-quality liquid assets divided by net cash outflows over a 30-day stress period. It is a short-horizon liquidity measure, not a capital or one-year measure.",
+            "reference": "GARP FRM Part II Curriculum - Liquidity Coverage Ratio"
+        },
+        {
+            "id": "frm-p2-050",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "What is the minimum liquidity coverage ratio that a bank must maintain under the Basel liquidity standard?",
+            "options": [
+                "150 percent",
+                "100 percent",
+                "80 percent",
+                "50 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The liquidity coverage ratio must be at least 100 percent, meaning high-quality liquid assets cover stressed net outflows for 30 days. The net stable funding ratio has the same 100 percent minimum over a one-year horizon.",
+            "reference": "GARP FRM Part II Curriculum - Basel Liquidity Standards"
+        },
+        {
+            "id": "frm-p2-051",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank computes its net stable funding ratio. Over what horizon does this ratio require stable funding of assets and activities?",
+            "options": [
+                "One week",
+                "Overnight",
+                "One year",
+                "Thirty days"
+            ],
+            "correct_index": 2,
+            "explanation": "The net stable funding ratio promotes resilience over a one-year horizon by requiring available stable funding to cover required stable funding. The liquidity coverage ratio addresses the 30-day horizon.",
+            "reference": "GARP FRM Part II Curriculum - Net Stable Funding Ratio"
+        },
+        {
+            "id": "frm-p2-052",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank holds 200,000,000 of high-quality liquid assets. Over the 30-day stress horizon its expected outflows total 250,000,000 and its expected inflows total 20,000,000, both after the applicable caps. Which value is closest to its liquidity coverage ratio?",
+            "options": [
+                "80 percent",
+                "100 percent",
+                "125 percent",
+                "87 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Net cash outflows are 250,000,000 minus 20,000,000, or 230,000,000. Dividing 200,000,000 by 230,000,000 gives about 87 percent, which is below the 100 percent minimum.",
+            "reference": "GARP FRM Part II Curriculum - Liquidity Coverage Ratio - Calculation"
+        },
+        {
+            "id": "frm-p2-053",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "Under the Basel liquidity framework, which asset is classified as a Level 1 high-quality liquid asset?",
+            "options": [
+                "Central bank reserves",
+                "High-rated corporate bonds",
+                "Listed equity shares",
+                "Residential mortgage-backed securities"
+            ],
+            "correct_index": 0,
+            "explanation": "Level 1 assets include central bank reserves, cash, and certain sovereign securities, which carry no haircut. High-rated corporate bonds, listed equities, and residential mortgage-backed securities are lower-level assets with haircuts.",
+            "reference": "GARP FRM Part II Curriculum - High-Quality Liquid Assets"
+        },
+        {
+            "id": "frm-p2-054",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A trading desk can sell a bond position quickly without moving its price, while the bank as a whole struggles to roll over its wholesale deposits. Which statement correctly distinguishes these risks?",
+            "options": [
+                "Both are market liquidity risks",
+                "The first is market liquidity risk and the second is funding liquidity risk",
+                "The first is funding liquidity risk and the second is market liquidity risk",
+                "Both are funding liquidity risks"
+            ],
+            "correct_index": 1,
+            "explanation": "Market liquidity risk is the risk of being unable to trade an asset at or near its fair value, while funding liquidity risk is the risk of being unable to meet cash obligations as they fall due. The desk faces the former and the bank the latter.",
+            "reference": "GARP FRM Part II Curriculum - Funding and Market Liquidity"
+        },
+        {
+            "id": "frm-p2-055",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank prepares a contingency funding plan. What is the purpose of this plan?",
+            "options": [
+                "To value derivative positions for accounting purposes",
+                "To calculate expected credit losses on loans",
+                "To set out actions and funding sources for use under stressed liquidity conditions",
+                "To determine the bank's risk-weighted assets"
+            ],
+            "correct_index": 2,
+            "explanation": "A contingency funding plan documents how a bank will secure liquidity during a stress event, including available sources and escalation steps. It is a liquidity document, not a capital, accounting, or credit loss calculation.",
+            "reference": "GARP FRM Part II Curriculum - Contingency Funding Plan"
+        },
+        {
+            "id": "frm-p2-056",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "Under the liquidity coverage ratio framework, which category of retail deposits typically receives the lowest run-off rate in the stress calculation?",
+            "options": [
+                "Uninsured wholesale deposits",
+                "Non-operational corporate deposits",
+                "Foreign sovereign deposits",
+                "Insured, stable retail deposits"
+            ],
+            "correct_index": 3,
+            "explanation": "Insured and otherwise stable retail deposits are assumed to run off at a low rate, reflecting deposit insurance and relationship stability. Wholesale and less stable deposits carry higher run-off assumptions.",
+            "reference": "GARP FRM Part II Curriculum - Liquidity Stress Run-off Rates"
+        },
+        {
+            "id": "frm-p2-057",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank's assets reprice more quickly than its liabilities when interest rates rise. What is the effect on its net interest income in a rising-rate environment, all else equal?",
+            "options": [
+                "Net interest income tends to increase because assets reprice upward sooner",
+                "Net interest income tends to fall because liabilities reprice sooner",
+                "Net interest income is unaffected by the mismatch",
+                "Net interest income falls only if rates decline"
+            ],
+            "correct_index": 0,
+            "explanation": "When assets reprice faster than liabilities in a rising-rate environment, returns on assets adjust upward before funding costs, so net interest income tends to rise. The position is asset sensitive.",
+            "reference": "GARP FRM Part II Curriculum - Asset-Liability Management"
+        },
+        {
+            "id": "frm-p2-058",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank funds a 100,000,000 government bond position through repurchase agreements subject to a 2 percent haircut. Which amount is closest to the cash the bank can borrow?",
+            "options": [
+                "100,000,000",
+                "98,000,000",
+                "102,000,000",
+                "2,000,000"
+            ],
+            "correct_index": 1,
+            "explanation": "A 2 percent haircut means the lender advances 98 percent of the collateral's value, so the bank can borrow 100,000,000 times 0.98, or 98,000,000. The 2,000,000 figure is the haircut amount, not the cash raised.",
+            "reference": "GARP FRM Part II Curriculum - Repurchase Agreements and Haircuts"
+        },
+        {
+            "id": "frm-p2-059",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A bank manages its intraday liquidity to meet payment obligations during the business day. Which risk does effective intraday liquidity management primarily address?",
+            "options": [
+                "The risk of equity price declines",
+                "The risk of default by a borrower",
+                "The risk of failing to settle payments on time within the day",
+                "The risk of long-run solvency failure"
+            ],
+            "correct_index": 2,
+            "explanation": "Intraday liquidity management focuses on having sufficient funds at the right times during the day to settle obligations promptly. It is distinct from solvency, market, and credit risk.",
+            "reference": "GARP FRM Part II Curriculum - Intraday Liquidity Risk"
+        },
+        {
+            "id": "frm-p2-060",
+            "domain": "Liquidity and Treasury Risk Measurement",
+            "stem": "A treasurer runs a liquidity stress test that combines a market shock with a ratings downgrade and a deposit run. Why are such combined scenarios used?",
+            "options": [
+                "Because regulators require only single-factor tests",
+                "Because combined shocks are easier to model than single shocks",
+                "Because combined scenarios remove the need for a contingency funding plan",
+                "Because stresses often coincide and interact, producing larger outflows than isolated events"
+            ],
+            "correct_index": 3,
+            "explanation": "Liquidity stresses frequently occur together and reinforce one another, so combined scenarios reveal larger outflows than isolated tests and inform the contingency funding plan. Single-factor tests can understate the risk.",
+            "reference": "GARP FRM Part II Curriculum - Liquidity Stress Testing"
+        },
+        {
+            "id": "frm-p2-061",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A portfolio earned a return of 12 percent, the risk-free rate was 3 percent, and the portfolio's standard deviation was 15 percent. Which value is closest to the Sharpe ratio?",
+            "options": [
+                "0.60",
+                "0.80",
+                "0.20",
+                "1.33"
+            ],
+            "correct_index": 0,
+            "explanation": "The Sharpe ratio is excess return divided by total risk, so 0.12 minus 0.03 divided by 0.15 equals 0.60. Dividing the raw return by the standard deviation gives the incorrect figure of 0.80.",
+            "reference": "GARP FRM Part II Curriculum - Performance Measurement - Sharpe Ratio"
+        },
+        {
+            "id": "frm-p2-062",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A portfolio returned 11 percent, the risk-free rate was 4 percent, and the portfolio's beta was 1.4. Which value is closest to the Treynor ratio?",
+            "options": [
+                "0.20",
+                "0.05",
+                "0.07",
+                "0.10"
+            ],
+            "correct_index": 1,
+            "explanation": "The Treynor ratio is excess return per unit of systematic risk, so 0.11 minus 0.04 divided by 1.4 equals 0.05. Dividing by total risk rather than beta would give the Sharpe ratio instead.",
+            "reference": "GARP FRM Part II Curriculum - Performance Measurement - Treynor Ratio"
+        },
+        {
+            "id": "frm-p2-063",
+            "domain": "Risk Management and Investment Management",
+            "stem": "An active portfolio tracks its benchmark closely. Which measure best captures the active return per unit of active risk, also called tracking error?",
+            "options": [
+                "The Treynor ratio",
+                "The Sortino ratio",
+                "The information ratio",
+                "The Sharpe ratio"
+            ],
+            "correct_index": 2,
+            "explanation": "The information ratio divides the active return over the benchmark by the tracking error, measuring skill per unit of active risk. Sharpe and Treynor use total or systematic risk rather than active risk.",
+            "reference": "GARP FRM Part II Curriculum - Performance Measurement - Information Ratio"
+        },
+        {
+            "id": "frm-p2-064",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A portfolio returned 9 percent, the risk-free rate was 3 percent, the market return was 8 percent, and the portfolio's beta was 0.5. Using the capital asset pricing model, which value is closest to Jensen's alpha?",
+            "options": [
+                "6.0 percent",
+                "5.5 percent",
+                "2.5 percent",
+                "3.5 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The required return from the capital asset pricing model is 3 percent plus 0.5 times the 5 percent market risk premium, or 5.5 percent. Alpha is the actual 9 percent minus the required 5.5 percent, or 3.5 percent.",
+            "reference": "GARP FRM Part II Curriculum - Performance Measurement - Jensen's Alpha"
+        },
+        {
+            "id": "frm-p2-065",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A risk manager computes the marginal value at risk of a position within a portfolio. What does marginal value at risk measure?",
+            "options": [
+                "The change in portfolio value at risk from a small change in the position's weight",
+                "The value at risk of the position considered in isolation",
+                "The average value at risk across all positions",
+                "The position's contribution to total return"
+            ],
+            "correct_index": 0,
+            "explanation": "Marginal value at risk is the sensitivity of portfolio value at risk to a small change in a position's size and is used to allocate risk and optimize the portfolio. Stand-alone value at risk ignores diversification.",
+            "reference": "GARP FRM Part II Curriculum - Marginal Value at Risk"
+        },
+        {
+            "id": "frm-p2-066",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A portfolio's total value at risk is 5,000,000. Which property should the component values at risk of its positions satisfy?",
+            "options": [
+                "They are all equal to one another",
+                "They sum to the total portfolio value at risk",
+                "They each equal the stand-alone value at risk",
+                "They sum to zero"
+            ],
+            "correct_index": 1,
+            "explanation": "Component values at risk decompose the total portfolio value at risk and sum exactly to it, reflecting both each position's risk and its diversification with the rest. They differ from stand-alone values.",
+            "reference": "GARP FRM Part II Curriculum - Component Value at Risk"
+        },
+        {
+            "id": "frm-p2-067",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A portfolio manager estimates a two-factor model in which returns depend on industrial production surprises and unexpected inflation. Which theory underlies this approach?",
+            "options": [
+                "The Modigliani-Miller theorem",
+                "The expectations hypothesis",
+                "Arbitrage pricing theory",
+                "The capital asset pricing model"
+            ],
+            "correct_index": 2,
+            "explanation": "Arbitrage pricing theory allows returns to be driven by multiple systematic factors rather than the single market factor of the capital asset pricing model. The other theories address capital structure or interest rates.",
+            "reference": "GARP FRM Part II Curriculum - Factor Models - Arbitrage Pricing Theory"
+        },
+        {
+            "id": "frm-p2-068",
+            "domain": "Risk Management and Investment Management",
+            "stem": "The Fama-French three-factor model extends the market factor with which two additional factors?",
+            "options": [
+                "Momentum and liquidity",
+                "Inflation and term spread",
+                "Quality and low volatility",
+                "Size and value"
+            ],
+            "correct_index": 3,
+            "explanation": "The Fama-French three-factor model adds a size factor, small minus big, and a value factor, high book-to-market minus low. Momentum and liquidity appear only in later extensions.",
+            "reference": "GARP FRM Part II Curriculum - Factor Models - Fama-French"
+        },
+        {
+            "id": "frm-p2-069",
+            "domain": "Risk Management and Investment Management",
+            "stem": "An index fund is designed to replicate a benchmark with very low tracking error. What does low tracking error indicate?",
+            "options": [
+                "The fund's active return relative to the benchmark has low volatility",
+                "The fund earns a higher absolute return than the benchmark",
+                "The fund has no market exposure",
+                "The fund's beta is greater than one"
+            ],
+            "correct_index": 0,
+            "explanation": "Tracking error is the standard deviation of the difference between portfolio and benchmark returns, so a low value means active returns cluster tightly around the benchmark. It says nothing about the level of absolute return.",
+            "reference": "GARP FRM Part II Curriculum - Tracking Error"
+        },
+        {
+            "id": "frm-p2-070",
+            "domain": "Risk Management and Investment Management",
+            "stem": "A risk parity portfolio allocates capital so that each asset contributes equally to portfolio risk. Which input is central to this approach?",
+            "options": [
+                "The market capitalization of each asset",
+                "The risk contributions of assets, often based on volatility and correlation",
+                "The expected return of each asset relative to the others",
+                "The tax status of each asset"
+            ],
+            "correct_index": 1,
+            "explanation": "Risk parity equalizes each asset's contribution to total portfolio risk, which depends on volatilities and correlations rather than on expected returns. It differs from capitalization-weighted allocation.",
+            "reference": "GARP FRM Part II Curriculum - Risk Parity and Risk Budgeting"
+        },
+        {
+            "id": "frm-p2-071",
+            "domain": "Risk Management and Investment Management",
+            "stem": "Two equally sized positions each have a stand-alone one-day value at risk of 1,000,000. If their returns are perfectly positively correlated, which amount is closest to the portfolio value at risk?",
+            "options": [
+                "1,000,000",
+                "500,000",
+                "2,000,000",
+                "1,414,214"
+            ],
+            "correct_index": 2,
+            "explanation": "With perfect positive correlation there is no diversification benefit, so the portfolio value at risk is the sum of the stand-alone values, or 2,000,000. The 1,414,214 figure would apply only if returns were uncorrelated.",
+            "reference": "GARP FRM Part II Curriculum - Portfolio Value at Risk"
+        },
+        {
+            "id": "frm-p2-072",
+            "domain": "Risk Management and Investment Management",
+            "stem": "An investment committee sets a policy that no strategy may consume more than 20 percent of the portfolio's total risk budget. What is the purpose of this risk budgeting rule?",
+            "options": [
+                "To guarantee a minimum portfolio return",
+                "To eliminate market risk from the portfolio",
+                "To ensure all strategies have equal expected returns",
+                "To limit risk concentration from any single strategy regardless of its expected return"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk budgeting allocates the portfolio's total risk across strategies and caps concentration so that no single source dominates, independent of its return forecast. It does not guarantee returns or remove market risk.",
+            "reference": "GARP FRM Part II Curriculum - Risk Budgeting"
+        },
+        {
+            "id": "frm-p2-073",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "After the transition away from LIBOR, many contracts reference risk-free rates such as SOFR. Which feature distinguishes SOFR from LIBOR?",
+            "options": [
+                "SOFR is a secured, transaction-based overnight rate rather than an unsecured term rate",
+                "SOFR is an unsecured rate set by a panel of banks each morning",
+                "SOFR includes a fixed bank credit spread",
+                "SOFR is published only quarterly"
+            ],
+            "correct_index": 0,
+            "explanation": "SOFR is based on overnight repurchase transactions secured by Treasury collateral and is a nearly risk-free rate, whereas LIBOR was an unsecured term rate submitted by a panel. The two differ in credit and term characteristics.",
+            "reference": "GARP FRM Part II Curriculum - Reference Rate Reform"
+        },
+        {
+            "id": "frm-p2-074",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "A regulator requires banks to assess physical and transition climate risks. Which pair correctly distinguishes these two channels?",
+            "options": [
+                "Both risks are treated as market risk only",
+                "Physical risk arises from climate events, while transition risk arises from the shift to a low-carbon economy",
+                "Physical risk arises from policy changes, while transition risk arises from weather events",
+                "Both risks arise solely from carbon pricing"
+            ],
+            "correct_index": 1,
+            "explanation": "Physical risk stems from climate-related events such as floods and heatwaves, while transition risk stems from policy, technology, and market changes during the shift to a low-carbon economy. The two channels are distinct.",
+            "reference": "GARP FRM Part II Curriculum - Climate Risk"
+        },
+        {
+            "id": "frm-p2-075",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "Following post-crisis reforms, many standardized derivatives are centrally cleared. What is the main risk management rationale for central clearing?",
+            "options": [
+                "It eliminates the need for collateral to be posted",
+                "It transfers risk to the originating bank's depositors",
+                "It mutualizes counterparty risk through a central counterparty that nets and margins positions",
+                "It removes all market risk from derivative trades"
+            ],
+            "correct_index": 2,
+            "explanation": "A central counterparty stands between the two sides of a trade, nets positions, and collects margin, which mutualizes and manages counterparty risk. It does not remove market risk or collateral requirements.",
+            "reference": "GARP FRM Part II Curriculum - Central Clearing and Counterparty Risk"
+        },
+        {
+            "id": "frm-p2-076",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "A bank considers holding crypto-assets for its own account. Under the Basel Committee's treatment, how are crypto-assets generally treated for capital purposes?",
+            "options": [
+                "As Level 1 high-quality liquid assets",
+                "As cash equivalents with zero risk weight",
+                "As sovereign exposures with a zero risk weight",
+                "As high-risk exposures subject to a conservative capital treatment"
+            ],
+            "correct_index": 3,
+            "explanation": "The Basel Committee classifies most crypto-assets, including Bitcoin, in the highest risk group subject to a conservative 1,250 percent risk weight and a cap on exposure. They are not treated as cash or high-quality liquid assets.",
+            "reference": "GARP FRM Part II Curriculum - Crypto-Asset Risk"
+        },
+        {
+            "id": "frm-p2-077",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "A risk team adopts a machine learning model for credit decisions. Which governance concern most directly arises from using such a model?",
+            "options": [
+                "Model explainability and potential bias in automated decisions",
+                "The absence of any need for validation",
+                "The elimination of all credit risk",
+                "The removal of data privacy obligations"
+            ],
+            "correct_index": 0,
+            "explanation": "Machine learning models can be opaque and can embed historical bias, so explainability, fairness testing, and independent validation are key governance concerns. They do not eliminate credit risk or privacy duties.",
+            "reference": "GARP FRM Part II Curriculum - Artificial Intelligence and Machine Learning in Risk"
+        },
+        {
+            "id": "frm-p2-078",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "Regulators have focused on non-bank financial intermediation after episodes of market stress. Which concern motivates this focus?",
+            "options": [
+                "Non-bank activities carry no liquidity risk",
+                "Leverage and liquidity mismatches outside the banking system can amplify stress",
+                "Non-bank entities never use leverage",
+                "Non-banks are fully covered by deposit insurance"
+            ],
+            "correct_index": 1,
+            "explanation": "Non-bank financial intermediaries can build leverage and hold illiquid assets against redeemable liabilities, so their liquidity mismatches can amplify market stress. Deposit insurance and full leverage transparency generally do not apply to them.",
+            "reference": "GARP FRM Part II Curriculum - Non-Bank Financial Intermediation"
+        },
+        {
+            "id": "frm-p2-079",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "A clearing member defaults at a central counterparty. Which financial resource absorbs losses first under standard default management arrangements?",
+            "options": [
+                "The surviving members' equity only",
+                "The central counterparty's retained earnings only",
+                "The defaulting member's own margin and default fund contributions",
+                "The central bank's capital"
+            ],
+            "correct_index": 2,
+            "explanation": "Losses from a defaulting clearing member are met first from that member's initial margin and default fund contribution, in a defined waterfall before mutualized resources are used. Central bank capital and survivor equity come later in the sequence.",
+            "reference": "GARP FRM Part II Curriculum - Central Counterparty Default Management"
+        },
+        {
+            "id": "frm-p2-080",
+            "domain": "Current Issues in Financial Markets",
+            "stem": "Investors have increased allocations to private credit. Which risk is most characteristic of this asset class compared with publicly traded corporate bonds?",
+            "options": [
+                "Daily transparent market pricing",
+                "Exposure only to sovereign issuers",
+                "Guaranteed principal protection",
+                "Illiquidity and infrequent, model-based valuation"
+            ],
+            "correct_index": 3,
+            "explanation": "Private credit is illiquid, with infrequent transactions and valuations often based on models rather than traded prices, which complicates risk measurement. It is not daily-priced, sovereign-only, or principal-protected.",
+            "reference": "GARP FRM Part II Curriculum - Private Credit Markets"
+        }
+    ]
+}

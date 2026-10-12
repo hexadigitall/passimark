@@ -1,0 +1,1417 @@
+{
+    "cert_key": "frm-p1",
+    "title": "Financial Risk Manager (FRM) Part I",
+    "issuer": "GARP",
+    "outline_file": "outlines/frm-p1.json",
+    "variant_label": "FRM Part I Real-Spec Practice",
+    "exam": {
+        "questions": 100,
+        "duration_minutes": 240,
+        "scoring": "Pass/fail against GARP passing standard",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the GARP FRM Part I curriculum (four topics and weights). Not a capture of past exam questions.",
+    "source_label": "FRM Part I practice bank",
+    "items": [
+        {
+            "id": "frm-p1-001",
+            "domain": "Foundations of Risk Management",
+            "stem": "A bank is redesigning its risk governance and wants each layer to have a clear and non-overlapping role. Which allocation best matches the three lines of defense model?",
+            "options": [
+                "Business units own and manage risk, the risk function oversees and challenges, and internal audit gives independent assurance",
+                "Internal audit owns risk, the risk function performs daily trading, and business units sign off on their own controls",
+                "The risk function owns risk, business units give independent assurance, and internal audit sets the risk appetite",
+                "External auditors own risk, the board manages positions daily, and regulators approve each trade"
+            ],
+            "correct_index": 0,
+            "explanation": "The first line is the business that takes and owns risk, the second line is an independent risk function that oversees and challenges, and the third line is internal audit providing independent assurance to the board.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-002",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm's board approves a statement that limits total economic capital at risk to a level consistent with a single A credit rating. Which term best describes this statement?",
+            "options": [
+                "An accounting policy for revenue recognition",
+                "A risk appetite statement that links risk taking to a target solvency level",
+                "A trading mandate that fixes the exact position of every desk",
+                "A contingency plan for information technology outages only"
+            ],
+            "correct_index": 1,
+            "explanation": "A risk appetite statement expresses how much risk the firm is willing to take to meet its objectives, and linking it to a target rating ties risk capacity to a desired default probability.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-003",
+            "domain": "Foundations of Risk Management",
+            "stem": "A conglomerate manages credit, market, and operational risk in separate departments that never share data, and it repeatedly underestimates total exposure. Which weakness does this illustrate?",
+            "options": [
+                "Too much independence between the three lines of defense",
+                "Over-reliance on a single risk factor",
+                "A siloed approach that fails to aggregate risk across the enterprise",
+                "Excessive use of scenario analysis"
+            ],
+            "correct_index": 2,
+            "explanation": "When each risk type is managed in isolation with no enterprise-wide aggregation, the firm can miss correlations and concentrations, so it understates the total risk it faces.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-004",
+            "domain": "Foundations of Risk Management",
+            "stem": "Employees at a bank routinely hide losses to protect their bonuses, and senior managers tolerate the behavior. Which element of the risk management framework is most clearly deficient?",
+            "options": [
+                "The disaster recovery site location",
+                "The capital adequacy calculation",
+                "The pricing model validation schedule",
+                "The organization's risk culture and incentives"
+            ],
+            "correct_index": 3,
+            "explanation": "A culture that rewards short-term results and tolerates concealment undermines every control. Risk culture, tone at the top, and incentive design are foundational to an effective framework.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-005",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm wants its chief risk officer to be able to challenge business decisions without pressure. Which reporting arrangement best supports that independence?",
+            "options": [
+                "The chief risk officer reports directly to the board or its risk committee",
+                "The chief risk officer reports to the head of the largest trading desk",
+                "The chief risk officer reports only to the marketing department",
+                "The chief risk officer reports to the chief financial officer who also runs the trading desk"
+            ],
+            "correct_index": 0,
+            "explanation": "Independence is preserved when the chief risk officer has direct access and a reporting line to the board or its risk committee rather than to a business unit whose profits the officer must challenge.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-006",
+            "domain": "Foundations of Risk Management",
+            "stem": "A risk professional is asked to sign off on a model that she believes materially understates losses. According to the GARP Code of Conduct, which action is most appropriate?",
+            "options": [
+                "Adjust the numbers quietly to avoid conflict",
+                "Refuse to certify the model and escalate the concern through proper channels",
+                "Sign off because senior management requested it",
+                "Ignore the issue because model risk is not her responsibility"
+            ],
+            "correct_index": 1,
+            "explanation": "The code requires integrity and professional conduct, so a professional must not certify work she believes is misleading and should raise the concern appropriately rather than conceal it.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - The Risk Management Profession and Code of Conduct"
+        },
+        {
+            "id": "frm-p1-007",
+            "domain": "Foundations of Risk Management",
+            "stem": "Many firms entered the 2007 to 2009 crisis holding large positions in mortgage-backed securities while relying on short-term funding. Which lesson is most consistent with this pattern?",
+            "options": [
+                "Short-term funding is always safer than long-term funding",
+                "Market risk disappears when positions are marked to market",
+                "Liquidity risk and leverage can compound market losses far beyond model estimates",
+                "Securitization fully removes credit risk from the financial system"
+            ],
+            "correct_index": 2,
+            "explanation": "Leverage magnified losses while the reliance on short-term funding created a run when funding markets froze, showing how liquidity and leverage interact to produce losses larger than models predicted.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Risk Management Failures"
+        },
+        {
+            "id": "frm-p1-008",
+            "domain": "Foundations of Risk Management",
+            "stem": "A bank's pricing model performs well in normal markets but produces unreliable values during a crisis. Which risk is best illustrated?",
+            "options": [
+                "Herstatt risk",
+                "Prepayment risk",
+                "Settlement risk",
+                "Model risk arising from assumptions that fail in stressed conditions"
+            ],
+            "correct_index": 3,
+            "explanation": "Model risk is the risk of loss from decisions based on incorrect or misused models. Assumptions calibrated to calm markets, such as stable correlations, often break down under stress.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-009",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm allocates a fixed pool of economic capital across business units and requires each unit to earn an adequate return on that allocation. Which practice is this?",
+            "options": [
+                "Risk budgeting",
+                "Over-the-counter clearing",
+                "Collateral management",
+                "Duration matching"
+            ],
+            "correct_index": 0,
+            "explanation": "Risk budgeting distributes a scarce risk capacity, such as economic capital, to units and holds them accountable for returns earned relative to the risk they consume.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-010",
+            "domain": "Foundations of Risk Management",
+            "stem": "Which task belongs primarily to a bank's board of directors rather than to the daily risk function?",
+            "options": [
+                "Confirming each trader's intraday position limits",
+                "Setting the firm's risk appetite and overseeing the risk framework",
+                "Calculating daily value at risk numbers",
+                "Booking individual derivative trades"
+            ],
+            "correct_index": 1,
+            "explanation": "The board sets strategy and risk appetite and oversees the framework, while the risk function and business units handle daily measurement, limits, and trade execution.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-011",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm classifies the risk of loss from inadequate or failed internal processes, people, and systems as a single category. Which risk type is this?",
+            "options": [
+                "Credit risk",
+                "Liquidity risk",
+                "Operational risk",
+                "Market risk"
+            ],
+            "correct_index": 2,
+            "explanation": "Operational risk is defined as the risk of loss from inadequate or failed internal processes, people, and systems, or from external events, and it includes legal and fraud losses.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-012",
+            "domain": "Foundations of Risk Management",
+            "stem": "A bank uses securitization to move loans off its balance sheet. Which trade-off is most relevant to the bank's risk profile?",
+            "options": [
+                "It removes all risk from the originator",
+                "It eliminates the need for any capital",
+                "It guarantees higher returns with no additional risk",
+                "It reduces credit exposure but may retain reputation risk and pipeline risk"
+            ],
+            "correct_index": 3,
+            "explanation": "Securitization transfers credit exposure but the originator can still face reputation risk, pipeline risk on warehoused loans, and the need to support conduits that investors expect it to rescue.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-013",
+            "domain": "Foundations of Risk Management",
+            "stem": "A bank funds long-dated mortgages with deposits that customers can withdraw without notice. Which risk is most acute?",
+            "options": [
+                "Funding liquidity risk from maturity mismatch",
+                "Model risk only",
+                "Sovereign risk",
+                "Basis risk only"
+            ],
+            "correct_index": 0,
+            "explanation": "Mismatching illiquid long-term assets with withdrawable short-term liabilities creates funding liquidity risk because the bank may be unable to meet withdrawals without forced asset sales.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Risk Management Failures"
+        },
+        {
+            "id": "frm-p1-014",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm includes losses from fraud, legal penalties, and system outages in the same enterprise-wide capital calculation as market and credit risk. Which benefit does this provide?",
+            "options": [
+                "It eliminates market risk",
+                "It gives a more complete view of total risk and capital needs",
+                "It guarantees regulatory approval",
+                "It removes the need for insurance"
+            ],
+            "correct_index": 1,
+            "explanation": "Bringing operational, market, and credit risk into one capital framework gives a fuller picture of total risk, though aggregation must account for diversification and correlation rather than simply adding.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-015",
+            "domain": "Foundations of Risk Management",
+            "stem": "A bank's aggressive sales practices are legal but widely criticized in the press, and customers begin to leave. Which risk is the bank mainly facing?",
+            "options": [
+                "Country transfer risk",
+                "Settlement risk on securities trades",
+                "Reputational risk that can translate into funding and revenue losses",
+                "Pure interest rate risk"
+            ],
+            "correct_index": 2,
+            "explanation": "Reputational risk is the potential for loss from damage to the firm's standing. It often materializes indirectly through lost customers, higher funding costs, and regulatory scrutiny.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-016",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm expresses its willingness to accept risk using both qualitative statements and quantitative limits such as earnings volatility and capital ratios. Which document typically contains these?",
+            "options": [
+                "The employee handbook",
+                "The product brochure",
+                "The audited financial statements",
+                "The risk appetite and tolerance framework"
+            ],
+            "correct_index": 3,
+            "explanation": "The risk appetite and tolerance framework states risk philosophy in words and translates it into measurable limits and thresholds that guide decision making across the firm.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-017",
+            "domain": "Foundations of Risk Management",
+            "stem": "A firm examines how its portfolio would behave under a severe recession, a sharp rate rise, and a cyber attack. Which activity is this?",
+            "options": [
+                "Enterprise-wide scenario analysis and stress testing",
+                "Tax planning",
+                "Trade settlement",
+                "Collateral valuation"
+            ],
+            "correct_index": 0,
+            "explanation": "Scenario analysis and stress testing explore the effect of severe but plausible events that historical models may not capture, complementing statistical risk measures.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-018",
+            "domain": "Foundations of Risk Management",
+            "stem": "After a crisis, regulators require banks to hold more high-quality capital and to submit recovery plans. What is the main purpose of these requirements?",
+            "options": [
+                "To increase bank profitability",
+                "To reduce default risk and the need for public bailouts",
+                "To eliminate all market risk",
+                "To guarantee shareholder dividends"
+            ],
+            "correct_index": 1,
+            "explanation": "Higher capital and recovery planning aim to make institutions more resilient so that losses are absorbed by private capital rather than taxpayers, reducing systemic default risk.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Governance and the Risk Management Framework"
+        },
+        {
+            "id": "frm-p1-019",
+            "domain": "Foundations of Risk Management",
+            "stem": "Two business units each hold positions that are safe in isolation but lose money together during a market-wide downturn. Which issue must an enterprise risk report capture?",
+            "options": [
+                "The number of employees in each unit",
+                "The location of the head office",
+                "The correlation between the units' exposures",
+                "The color of the quarterly report cover"
+            ],
+            "correct_index": 2,
+            "explanation": "Correlation drives the benefit of diversification. When exposures become highly correlated in a downturn, apparent diversification vanishes and total risk can rise sharply, so the report must capture it.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-020",
+            "domain": "Foundations of Risk Management",
+            "stem": "A business unit reports a high profit but consumes a very large amount of economic capital. Which measure best reveals whether the unit is creating value after adjusting for risk?",
+            "options": [
+                "Number of trades executed",
+                "Gross revenue",
+                "Headcount growth",
+                "Risk-adjusted return on capital"
+            ],
+            "correct_index": 3,
+            "explanation": "Risk-adjusted return on capital divides risk-adjusted profit by the economic capital consumed, so it shows whether a unit earns enough to justify the risk it uses.",
+            "reference": "GARP FRM Part I Curriculum - Foundations of Risk Management - Enterprise Risk Management"
+        },
+        {
+            "id": "frm-p1-021",
+            "domain": "Quantitative Analysis",
+            "stem": "Two events A and B are independent, with the probability of A equal to 0.4 and the probability of B equal to 0.5. What is the probability of A given B?",
+            "options": [
+                "0.40",
+                "0.50",
+                "0.90",
+                "0.20"
+            ],
+            "correct_index": 0,
+            "explanation": "For independent events the conditional probability of A given B equals the unconditional probability of A, so it is 0.40. The value 0.20 is the joint probability of both events.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Fundamentals of Probability"
+        },
+        {
+            "id": "frm-p1-022",
+            "domain": "Quantitative Analysis",
+            "stem": "A disease affects 2 percent of a population. A test detects it correctly 95 percent of the time and gives a false positive for 10 percent of healthy people. A person tests positive. What is the probability the person has the disease?",
+            "options": [
+                "95.0 percent",
+                "16.2 percent",
+                "2.0 percent",
+                "10.0 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The joint probability of disease and a positive test is 0.02 times 0.95, which is 0.019, while the total positive rate is 0.019 plus 0.098, or 0.117. Dividing gives about 16.2 percent.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Fundamentals of Probability"
+        },
+        {
+            "id": "frm-p1-023",
+            "domain": "Quantitative Analysis",
+            "stem": "A random variable equals 1 with probability 0.3 and 0 with probability 0.7. What are its expected value and variance?",
+            "options": [
+                "A mean of 0.7 and a variance of 0.21",
+                "A mean of 0.21 and a variance of 0.3",
+                "A mean of 0.3 and a variance of 0.21",
+                "A mean of 0.3 and a variance of 0.3"
+            ],
+            "correct_index": 2,
+            "explanation": "For a Bernoulli variable the mean is the success probability, 0.3, and the variance is p times one minus p, so 0.3 times 0.7 equals 0.21.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Random Variables"
+        },
+        {
+            "id": "frm-p1-024",
+            "domain": "Quantitative Analysis",
+            "stem": "Asset X has a standard deviation of 12 percent and Asset Y has a standard deviation of 8 percent, and their covariance is 0.0048. What is the correlation?",
+            "options": [
+                "0.60",
+                "0.30",
+                "0.40",
+                "0.50"
+            ],
+            "correct_index": 3,
+            "explanation": "Correlation equals covariance divided by the product of the standard deviations, so 0.0048 divided by the quantity 0.12 times 0.08, which is 0.0096, equals 0.50.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Multivariate Random Variables"
+        },
+        {
+            "id": "frm-p1-025",
+            "domain": "Quantitative Analysis",
+            "stem": "Two independent normal random variables have standard deviations of 3 and 4. What is the standard deviation of their sum?",
+            "options": [
+                "5",
+                "7",
+                "1",
+                "25"
+            ],
+            "correct_index": 0,
+            "explanation": "For independent variables variances add, so the sum variance is 9 plus 16, which is 25, and the standard deviation is its square root of 5. Adding standard deviations directly would be wrong.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Multivariate Random Variables"
+        },
+        {
+            "id": "frm-p1-026",
+            "domain": "Quantitative Analysis",
+            "stem": "If the continuously compounded return on an asset is normally distributed, how is the asset price itself distributed?",
+            "options": [
+                "Uniformly distributed",
+                "Lognormally distributed",
+                "Exponentially distributed in all cases",
+                "Normally distributed"
+            ],
+            "correct_index": 1,
+            "explanation": "If the log of the price is normally distributed then the price is lognormally distributed. This is why option pricing models assume lognormal prices and a normal return.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Common Univariate Random Variables"
+        },
+        {
+            "id": "frm-p1-027",
+            "domain": "Quantitative Analysis",
+            "stem": "The number of operational risk losses in a year follows a Poisson distribution with a mean of 4. What are its mean and variance?",
+            "options": [
+                "A mean of 2 and a variance of 4",
+                "A mean of 4 and a variance of 16",
+                "A mean of 4 and a variance of 4",
+                "A mean of 4 and a variance of 2"
+            ],
+            "correct_index": 2,
+            "explanation": "A Poisson random variable has the distinctive property that its variance equals its mean, so both are 4.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Common Univariate Random Variables"
+        },
+        {
+            "id": "frm-p1-028",
+            "domain": "Quantitative Analysis",
+            "stem": "A trader makes 3 independent trades, each with a 0.4 probability of profit. What is the probability of exactly 2 profitable trades?",
+            "options": [
+                "0.400",
+                "0.160",
+                "0.480",
+                "0.288"
+            ],
+            "correct_index": 3,
+            "explanation": "The binomial probability is the number of combinations 3 times 0.4 squared times 0.6, which equals 3 times 0.16 times 0.6, or 0.288.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Common Univariate Random Variables"
+        },
+        {
+            "id": "frm-p1-029",
+            "domain": "Quantitative Analysis",
+            "stem": "A random variable is uniformly distributed between 0 and 10. What are its mean and variance?",
+            "options": [
+                "A mean of 5 and a variance of 8.33",
+                "A mean of 5 and a variance of 10",
+                "A mean of 10 and a variance of 8.33",
+                "A mean of 5 and a variance of 25"
+            ],
+            "correct_index": 0,
+            "explanation": "The uniform mean is the midpoint of 5 and the variance is the squared range width divided by twelve, so 100 divided by 12 equals about 8.33.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Common Univariate Random Variables"
+        },
+        {
+            "id": "frm-p1-030",
+            "domain": "Quantitative Analysis",
+            "stem": "A population has a standard deviation of 20. A sample of 100 independent observations is drawn. What is the standard error of the sample mean?",
+            "options": [
+                "0.2",
+                "2",
+                "20",
+                "200"
+            ],
+            "correct_index": 1,
+            "explanation": "The standard error of the mean is the population standard deviation divided by the square root of the sample size, so 20 divided by 10 equals 2.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Sample Moments"
+        },
+        {
+            "id": "frm-p1-031",
+            "domain": "Quantitative Analysis",
+            "stem": "A sample mean is 50 with a known population standard deviation of 10 and a sample size of 25. Using a z value of 1.96, what is the 95 percent confidence interval for the population mean?",
+            "options": [
+                "48.04 to 51.96",
+                "40.00 to 60.00",
+                "46.08 to 53.92",
+                "30.40 to 69.60"
+            ],
+            "correct_index": 2,
+            "explanation": "The standard error is 10 divided by 5, which is 2, so the interval is 50 plus or minus 1.96 times 2, or 50 plus or minus 3.92, giving 46.08 to 53.92.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Sample Moments"
+        },
+        {
+            "id": "frm-p1-032",
+            "domain": "Quantitative Analysis",
+            "stem": "A risk analyst sets a significance level of 5 percent and rejects a null hypothesis that is actually true. Which error has occurred and what is its probability?",
+            "options": [
+                "A Type I error with probability 95 percent",
+                "A power failure with probability 5 percent",
+                "A Type II error with probability 5 percent",
+                "A Type I error with probability 5 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Rejecting a true null hypothesis is a Type I error, and its probability equals the significance level, which is 5 percent. A Type II error would be failing to reject a false null.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Hypothesis Testing"
+        },
+        {
+            "id": "frm-p1-033",
+            "domain": "Quantitative Analysis",
+            "stem": "A statistician wants an unbiased estimator of the population variance from a sample. Which divisor should be used in the sum of squared deviations?",
+            "options": [
+                "n minus 1",
+                "n plus 1",
+                "the square root of n",
+                "n"
+            ],
+            "correct_index": 0,
+            "explanation": "Dividing by n minus 1 rather than n corrects the downward bias in the sample variance, a correction known as Bessel's correction.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Sample Moments"
+        },
+        {
+            "id": "frm-p1-034",
+            "domain": "Quantitative Analysis",
+            "stem": "In a simple linear regression of a stock's return on the market return, the estimated slope coefficient is 1.3. How should this be interpreted?",
+            "options": [
+                "The stock price equals 1.3 times the market level",
+                "The stock tends to rise 1.3 percent for each 1 percent rise in the market",
+                "The stock has 1.3 percent of unsystematic risk",
+                "The regression explains 1.3 percent of the variance"
+            ],
+            "correct_index": 1,
+            "explanation": "The slope is the expected change in the dependent variable for a one unit change in the independent variable, so the stock is expected to move 1.3 percent for each 1 percent move in the market.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Linear Regression"
+        },
+        {
+            "id": "frm-p1-035",
+            "domain": "Quantitative Analysis",
+            "stem": "A regression has an R-squared of 0.64. What does this value indicate?",
+            "options": [
+                "The residual standard error is 0.64",
+                "The model is correct 64 percent of the time",
+                "64 percent of the variation in the dependent variable is explained by the model",
+                "The slope coefficient equals 0.64"
+            ],
+            "correct_index": 2,
+            "explanation": "R-squared is the fraction of the total variation in the dependent variable explained by the regressors, so 0.64 means 64 percent is explained and 36 percent remains in the residuals.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Linear Regression"
+        },
+        {
+            "id": "frm-p1-036",
+            "domain": "Quantitative Analysis",
+            "stem": "In a regression the variance of the residuals rises with the size of the independent variable. What is the main consequence for ordinary least squares inference?",
+            "options": [
+                "R-squared becomes negative",
+                "The intercept becomes meaningless",
+                "The coefficient estimates become biased",
+                "Standard errors are estimated incorrectly, so t tests are unreliable"
+            ],
+            "correct_index": 3,
+            "explanation": "This is heteroskedasticity, which leaves the coefficient estimates unbiased but makes the usual standard errors wrong, so hypothesis tests can be misleading. Robust standard errors are a common fix.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Regression Diagnostics"
+        },
+        {
+            "id": "frm-p1-037",
+            "domain": "Quantitative Analysis",
+            "stem": "A regression coefficient is estimated as 0.8 with a standard error of 0.2. What is the t statistic and is the coefficient significant at the 5 percent level using a critical value of 1.96?",
+            "options": [
+                "A t statistic of 4.0, so the coefficient is significant",
+                "A t statistic of 0.25, so the coefficient is not significant",
+                "A t statistic of 4.0, so the coefficient is not significant",
+                "A t statistic of 1.6, so the coefficient is not significant"
+            ],
+            "correct_index": 0,
+            "explanation": "The t statistic is the coefficient divided by its standard error, so 0.8 divided by 0.2 equals 4.0, which exceeds 1.96, so the null of zero is rejected.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Linear Regression"
+        },
+        {
+            "id": "frm-p1-038",
+            "domain": "Quantitative Analysis",
+            "stem": "An analyst uses Monte Carlo simulation to estimate the value at risk of a complex portfolio. Which statement describes the main advantage of this method?",
+            "options": [
+                "It requires no assumptions about the distribution of risk factors",
+                "It can value instruments and capture non-linear and path-dependent exposures",
+                "It always converges after a single trial",
+                "It removes all estimation error"
+            ],
+            "correct_index": 1,
+            "explanation": "Monte Carlo simulation is flexible enough to reprice complex instruments under many scenarios, capturing non-linear and path-dependent payoffs, though it still needs distributional assumptions.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Simulation Methods"
+        },
+        {
+            "id": "frm-p1-039",
+            "domain": "Quantitative Analysis",
+            "stem": "A risk analyst repeatedly resamples the observed data with replacement to build an empirical distribution of an estimator. Which technique is being used?",
+            "options": [
+                "Linear interpolation",
+                "Principal component analysis",
+                "Bootstrapping",
+                "Discounted cash flow"
+            ],
+            "correct_index": 2,
+            "explanation": "Bootstrapping draws many resamples with replacement from the observed data to approximate the sampling distribution of a statistic without assuming a particular parametric form.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Simulation Methods"
+        },
+        {
+            "id": "frm-p1-040",
+            "domain": "Quantitative Analysis",
+            "stem": "A bank sorts 500 historical daily profit and loss observations and takes the 25th worst loss as its one-day value at risk. Which confidence level does this correspond to?",
+            "options": [
+                "99 percent",
+                "97.5 percent",
+                "90 percent",
+                "95 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The 25th worst of 500 observations sits in the worst 5 percent of outcomes, so the loss is a 95 percent one-day value at risk.",
+            "reference": "GARP FRM Part I Curriculum - Quantitative Analysis - Simulation Methods"
+        },
+        {
+            "id": "frm-p1-041",
+            "domain": "Financial Markets and Products",
+            "stem": "A trader holds a long futures position that gains 5,000 in a day. Under daily settlement, what happens to the trader's margin account at the close?",
+            "options": [
+                "The gain is credited because futures are marked to market each day",
+                "The gain is received only at contract maturity",
+                "The gain is paid to the exchange and never returned",
+                "No cash moves until the position is closed"
+            ],
+            "correct_index": 0,
+            "explanation": "Futures are marked to market daily, so gains and losses are settled in cash through the margin account at the end of each trading day rather than at maturity.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-042",
+            "domain": "Financial Markets and Products",
+            "stem": "Which feature most distinguishes a futures contract from a forward contract?",
+            "options": [
+                "Forwards always require daily settlement",
+                "Futures are traded on an exchange and settled daily through a clearinghouse",
+                "Forwards are always standardized with a clearinghouse",
+                "Futures have no margin requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Futures are exchange traded with standardized terms and daily settlement through a clearinghouse, while forwards are private, customized contracts that settle at maturity.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-043",
+            "domain": "Financial Markets and Products",
+            "stem": "A commodity's spot price is 50, the annual risk-free rate is 4 percent, and there are no storage or convenience benefits. What is the one-year forward price using continuous compounding?",
+            "options": [
+                "54.00",
+                "48.04",
+                "52.04",
+                "50.00"
+            ],
+            "correct_index": 2,
+            "explanation": "The forward price is the spot price grown at the risk-free rate, so 50 times e raised to 0.04, which equals 50 times 1.0408, or about 52.04.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Commodity Forwards and Futures"
+        },
+        {
+            "id": "frm-p1-044",
+            "domain": "Financial Markets and Products",
+            "stem": "The spot price of a good is 80, the present value of storage costs is 4, and the risk-free rate is 5 percent for one year. What is the one-year forward price with annual compounding?",
+            "options": [
+                "79.62",
+                "83.81",
+                "84.00",
+                "88.20"
+            ],
+            "correct_index": 3,
+            "explanation": "Storage costs raise the cost of carry. Adding the present value of storage of 4 to the spot price of 80 gives 84, then growing one year at 5 percent gives 88.20.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Commodity Forwards and Futures"
+        },
+        {
+            "id": "frm-p1-045",
+            "domain": "Financial Markets and Products",
+            "stem": "A stock index is at 1,000, the continuous dividend yield is 2 percent, and the continuous risk-free rate is 4 percent. What is the six-month forward price?",
+            "options": [
+                "1,010.05",
+                "1,020.20",
+                "990.05",
+                "1,000.00"
+            ],
+            "correct_index": 0,
+            "explanation": "The forward price is the index grown at the rate differential for half a year, so 1,000 times e raised to the quantity 0.02 times 0.5, which is about 1,010.05.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-046",
+            "domain": "Financial Markets and Products",
+            "stem": "The spot exchange rate is 1.20 dollars per euro, the one-year dollar rate is 3 percent, and the one-year euro rate is 1 percent. Ignoring transaction costs, what is the one-year forward rate with annual compounding?",
+            "options": [
+                "1.1760",
+                "1.2238",
+                "1.2000",
+                "1.2480"
+            ],
+            "correct_index": 1,
+            "explanation": "By covered interest rate parity the forward rate is the spot rate times the ratio of one plus the dollar rate to one plus the euro rate, so 1.20 times 1.03 divided by 1.01 equals about 1.2238.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Foreign Exchange Risk"
+        },
+        {
+            "id": "frm-p1-047",
+            "domain": "Financial Markets and Products",
+            "stem": "A long put has a strike price of 60 and the underlying is at 50 at expiration. What is the payoff to the option holder?",
+            "options": [
+                "60",
+                "0",
+                "10",
+                "50"
+            ],
+            "correct_index": 2,
+            "explanation": "A put pays the maximum of the strike minus the underlying price and zero, so 60 minus 50 equals 10.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Options Markets"
+        },
+        {
+            "id": "frm-p1-048",
+            "domain": "Financial Markets and Products",
+            "stem": "A European call sells for 5, the underlying stock is 50, and the present value of the strike is 47.62. Ignoring the stock's dividend, what should the European put price be under put-call parity?",
+            "options": [
+                "5.00",
+                "7.62",
+                "0.00",
+                "2.62"
+            ],
+            "correct_index": 3,
+            "explanation": "Put-call parity gives the put as the call plus the present value of the strike minus the stock, so 5 plus 47.62 minus 50 equals 2.62.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Options Markets"
+        },
+        {
+            "id": "frm-p1-049",
+            "domain": "Financial Markets and Products",
+            "stem": "Which statement about American and European options is correct?",
+            "options": [
+                "American options can be exercised at any time before expiration",
+                "European options can be exercised at any time",
+                "American options can be exercised only at maturity",
+                "Both can be exercised only at maturity"
+            ],
+            "correct_index": 0,
+            "explanation": "An American option may be exercised on any date up to and including expiration, while a European option may be exercised only at expiration. American options are therefore worth at least as much.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Options Markets"
+        },
+        {
+            "id": "frm-p1-050",
+            "domain": "Financial Markets and Products",
+            "stem": "In a plain vanilla interest rate swap, one party pays a fixed rate and receives a floating rate while the other does the reverse. What is the notional principal used for?",
+            "options": [
+                "It is exchanged at the start and end in every swap",
+                "It is used only to compute the interest payments and is not exchanged",
+                "It determines the swap's credit rating",
+                "It is paid as a fee to the dealer"
+            ],
+            "correct_index": 1,
+            "explanation": "In a plain vanilla interest rate swap the notional principal is a reference amount for calculating the interest payments and is not exchanged, though credit exposure depends on it.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Swaps"
+        },
+        {
+            "id": "frm-p1-051",
+            "domain": "Financial Markets and Products",
+            "stem": "A firm enters a currency swap to convert fixed-rate dollar debt into fixed-rate euro debt. Which feature is typical of this contract?",
+            "options": [
+                "No principal is ever exchanged",
+                "The swap can only settle in gold",
+                "Interest is exchanged in different currencies during the life and principal is exchanged at maturity",
+                "Only a single net payment in one currency is ever made"
+            ],
+            "correct_index": 2,
+            "explanation": "A currency swap exchanges interest payments in the two currencies during the life of the swap and normally exchanges the principal amounts at the start and at maturity.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Swaps"
+        },
+        {
+            "id": "frm-p1-052",
+            "domain": "Financial Markets and Products",
+            "stem": "Which statement about the credit risk of a plain vanilla interest rate swap without exchange of principal is most accurate?",
+            "options": [
+                "There is no credit risk because interest is netted",
+                "Credit risk is highest at the start of the swap",
+                "Credit risk equals the full notional principal throughout the swap's life",
+                "Credit risk varies over time and is greatest when the swap is deep in the money"
+            ],
+            "correct_index": 3,
+            "explanation": "Swap credit exposure is the cost of replacing the contract if the counterparty defaults, which is near zero at initiation and grows as the swap moves into the money.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Swaps"
+        },
+        {
+            "id": "frm-p1-053",
+            "domain": "Financial Markets and Products",
+            "stem": "The correlation between spot and futures price changes is 0.8, the spot standard deviation is 10 percent, and the futures standard deviation is 12 percent. What is the minimum variance hedge ratio?",
+            "options": [
+                "0.67",
+                "0.96",
+                "0.80",
+                "1.20"
+            ],
+            "correct_index": 0,
+            "explanation": "The minimum variance hedge ratio is the correlation times the spot standard deviation divided by the futures standard deviation, so 0.8 times 0.10 divided by 0.12 equals about 0.67.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-054",
+            "domain": "Financial Markets and Products",
+            "stem": "A portfolio worth 10 million has a beta of 1.2. The manager wants a beta of 0.8 and a stock index futures contract is priced at 250 with a multiplier of 250. How many contracts should be traded?",
+            "options": [
+                "Long 40 contracts",
+                "Short 64 contracts",
+                "Long 64 contracts",
+                "Short 160 contracts"
+            ],
+            "correct_index": 1,
+            "explanation": "The number of contracts is the beta change divided by the futures beta times the portfolio value divided by the contract value, so negative 0.4 times 10,000,000 divided by 62,500 equals negative 64, a short of 64.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-055",
+            "domain": "Financial Markets and Products",
+            "stem": "A firm hedges jet fuel exposure with heating oil futures because no jet fuel futures exist. Which risk is introduced by this mismatch?",
+            "options": [
+                "Prepayment risk",
+                "Sovereign risk",
+                "Basis risk from imperfect correlation between the two prices",
+                "Operational risk only"
+            ],
+            "correct_index": 2,
+            "explanation": "A cross hedge leaves basis risk because the hedged asset and the futures underlying are not identical, so their prices do not move together perfectly.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-056",
+            "domain": "Financial Markets and Products",
+            "stem": "A firm takes a long position in a forward rate agreement on a notional of 10 million for a 90-day period at a rate of 5 percent. At settlement the reference rate is 6 percent. Ignoring discounting, what is the approximate payment to the firm?",
+            "options": [
+                "10,000",
+                "50,000",
+                "0",
+                "25,000"
+            ],
+            "correct_index": 3,
+            "explanation": "The payoff is the rate difference times the notional times the fraction of the year, so 0.01 times 10,000,000 times 90 over 360 equals 25,000, paid to the long firm.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Futures and Forwards"
+        },
+        {
+            "id": "frm-p1-057",
+            "domain": "Financial Markets and Products",
+            "stem": "A bond pays a 6 percent annual coupon, has a face value of 1,000, and matures in two years. If the yield to maturity is 8 percent, what is the price using annual compounding?",
+            "options": [
+                "964.33",
+                "1,000.00",
+                "1,034.00",
+                "928.00"
+            ],
+            "correct_index": 0,
+            "explanation": "The price is the present value of a 60 coupon in one year, a 60 coupon in two years, and the 1,000 principal in two years, which sums to about 964.33 at an 8 percent yield.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Properties of Interest Rates"
+        },
+        {
+            "id": "frm-p1-058",
+            "domain": "Financial Markets and Products",
+            "stem": "The one-year spot rate is 3 percent and the two-year spot rate is 4 percent. What is the implied one-year forward rate for the period from year one to year two, using annual compounding?",
+            "options": [
+                "7.00 percent",
+                "5.01 percent",
+                "4.00 percent",
+                "3.00 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The forward rate satisfies one plus the two-year spot squared equal to one plus the one-year spot times one plus the forward. Solving gives about 5.01 percent.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Properties of Interest Rates"
+        },
+        {
+            "id": "frm-p1-059",
+            "domain": "Financial Markets and Products",
+            "stem": "A bond has a modified duration of 6. For a 0.5 percent increase in yield, what is the approximate percentage change in price?",
+            "options": [
+                "A fall of 0.3 percent",
+                "A fall of 30 percent",
+                "A fall of 3.0 percent",
+                "A rise of 3.0 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "The approximate price change is the negative modified duration times the yield change, so negative 6 times 0.005 equals negative 0.03, a fall of 3 percent.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Properties of Interest Rates"
+        },
+        {
+            "id": "frm-p1-060",
+            "domain": "Financial Markets and Products",
+            "stem": "A dealer sells securities to a counterparty and agrees to buy them back at a slightly higher price the next day. Which transaction is this?",
+            "options": [
+                "A currency swap",
+                "A credit default swap",
+                "A forward rate agreement",
+                "A repurchase agreement that provides short-term funding"
+            ],
+            "correct_index": 3,
+            "explanation": "A repurchase agreement is the sale of securities with a commitment to repurchase them later. The difference between the sale and repurchase prices is the financing rate.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Fixed Income Markets"
+        },
+        {
+            "id": "frm-p1-061",
+            "domain": "Financial Markets and Products",
+            "stem": "A 91-day Treasury bill with a face value of 100,000 is purchased for 98,000. What is the bank discount yield?",
+            "options": [
+                "7.91 percent",
+                "8.00 percent",
+                "8.19 percent",
+                "7.84 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The bank discount yield divides the discount of 2,000 by the face value of 100,000 and annualizes using a 360-day year, so 0.02 times 360 over 91 equals about 7.91 percent.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Fixed Income Markets"
+        },
+        {
+            "id": "frm-p1-062",
+            "domain": "Financial Markets and Products",
+            "stem": "A corporate bond yields 7 percent and a Treasury of the same maturity yields 4 percent. What is the credit spread?",
+            "options": [
+                "11 percent",
+                "3 percent",
+                "4 percent",
+                "7 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The credit spread is the corporate yield minus the Treasury yield of the same maturity, so 7 percent minus 4 percent equals 3 percent.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Corporate Bonds"
+        },
+        {
+            "id": "frm-p1-063",
+            "domain": "Financial Markets and Products",
+            "stem": "All else equal, how does the yield on a callable corporate bond compare with the yield on an otherwise identical option-free bond?",
+            "options": [
+                "The two yields are always identical",
+                "The callable bond pays no coupon",
+                "The callable bond yields more because the investor is short the call",
+                "The callable bond yields less because issuers are safer"
+            ],
+            "correct_index": 2,
+            "explanation": "The issuer's right to call the bond is valuable to the issuer and costly to the investor, so the callable bond must offer a higher yield to compensate for the reinvestment risk.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Corporate Bonds"
+        },
+        {
+            "id": "frm-p1-064",
+            "domain": "Financial Markets and Products",
+            "stem": "A trader places an order to sell a stock only if its price reaches 55 or higher. Which order type is this?",
+            "options": [
+                "A stop buy order",
+                "A short sale",
+                "A market order",
+                "A limit sell order"
+            ],
+            "correct_index": 3,
+            "explanation": "A limit sell order sets a minimum price at which the trader is willing to sell, so it executes at 55 or better. A market order would execute immediately at the best available price.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Equities"
+        },
+        {
+            "id": "frm-p1-065",
+            "domain": "Financial Markets and Products",
+            "stem": "An investor borrows shares and sells them, hoping to buy them back later at a lower price. Which position is this and what is the main risk?",
+            "options": [
+                "A short position with potentially unlimited loss if the price rises",
+                "A hedged position with no risk",
+                "A long position with unlimited gain",
+                "A long position with limited loss"
+            ],
+            "correct_index": 0,
+            "explanation": "This is a short sale. Losses are potentially unlimited because the share price can rise without bound, even though the maximum gain is the original sale price.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Equities"
+        },
+        {
+            "id": "frm-p1-066",
+            "domain": "Financial Markets and Products",
+            "stem": "A price-weighted index differs from a market value weighted index mainly in which way?",
+            "options": [
+                "The two indexing methods always give identical returns",
+                "A price-weighted index gives greater influence to higher priced stocks",
+                "A price-weighted index weights each stock by its shares outstanding",
+                "A price-weighted index ignores price changes"
+            ],
+            "correct_index": 1,
+            "explanation": "A price-weighted index gives each stock a weight proportional to its price, so high priced stocks dominate, while a value-weighted index weights by market capitalization.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Equities"
+        },
+        {
+            "id": "frm-p1-067",
+            "domain": "Financial Markets and Products",
+            "stem": "A bank quotes EUR/USD at 1.10. How should this quote be interpreted?",
+            "options": [
+                "The euro is fixed at 1.10 per dollar forever",
+                "The quote reflects the inflation rate difference only",
+                "One euro buys 1.10 dollars",
+                "One dollar buys 1.10 euros"
+            ],
+            "correct_index": 2,
+            "explanation": "The base currency is the euro and the quote currency is the dollar, so a rate of 1.10 means one euro is exchanged for 1.10 dollars.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Foreign Exchange Risk"
+        },
+        {
+            "id": "frm-p1-068",
+            "domain": "Financial Markets and Products",
+            "stem": "According to absolute purchasing power parity, how should the exchange rate between two countries relate to their price levels?",
+            "options": [
+                "The exchange rate is unrelated to prices",
+                "The exchange rate equals the sum of the two inflation rates",
+                "The exchange rate is always one to one",
+                "The exchange rate equals the ratio of the two countries' price levels"
+            ],
+            "correct_index": 3,
+            "explanation": "Absolute purchasing power parity holds that a basket of goods should cost the same in both countries once converted, so the exchange rate equals the ratio of the price levels.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Foreign Exchange Risk"
+        },
+        {
+            "id": "frm-p1-069",
+            "domain": "Financial Markets and Products",
+            "stem": "Covered interest rate parity links the forward exchange rate to the spot rate and the two countries' interest rates. If one country's interest rate is higher, what does parity imply about its currency in the forward market?",
+            "options": [
+                "The higher rate currency trades at a forward discount",
+                "The higher rate currency trades at a forward premium",
+                "The forward rate equals the spot rate",
+                "The forward market cannot price the currency"
+            ],
+            "correct_index": 0,
+            "explanation": "Covered interest parity implies that the currency with the higher interest rate trades at a forward discount, offsetting the rate advantage so that covered returns are equal.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Foreign Exchange Risk"
+        },
+        {
+            "id": "frm-p1-070",
+            "domain": "Financial Markets and Products",
+            "stem": "A trader buys a call option on a futures contract. Which statement describes this position most accurately?",
+            "options": [
+                "The trader owns the underlying physical commodity",
+                "The trader has the right but not the obligation to go long the futures contract",
+                "The trader must buy the futures contract at expiration",
+                "The trader is obligated to sell the futures contract"
+            ],
+            "correct_index": 1,
+            "explanation": "A call on a futures contract gives the holder the right, but not the obligation, to enter a long futures position at the strike price, and the option has a premium.",
+            "reference": "GARP FRM Part I Curriculum - Financial Markets and Products - Options Markets"
+        },
+        {
+            "id": "frm-p1-071",
+            "domain": "Valuation and Risk Models",
+            "stem": "A stock trades at 100. In one period it can rise to 110 or fall to 90, and the risk-free rate is 5 percent per period. What is the risk-neutral probability of an up move using discrete compounding?",
+            "options": [
+                "0.50",
+                "0.90",
+                "0.75",
+                "0.25"
+            ],
+            "correct_index": 2,
+            "explanation": "The risk-neutral probability is one plus the risk-free rate minus the down factor, all divided by the up factor minus the down factor, so 1.05 minus 0.90 over 0.20 equals 0.75.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Binomial Trees"
+        },
+        {
+            "id": "frm-p1-072",
+            "domain": "Valuation and Risk Models",
+            "stem": "A stock trades at 100 and can rise to 110 or fall to 90 in one period. The risk-free rate is 5 percent and the risk-neutral up probability is 0.75. What is the price of a one-period European call with a strike of 100 using discrete discounting?",
+            "options": [
+                "10.00",
+                "5.00",
+                "2.38",
+                "7.14"
+            ],
+            "correct_index": 3,
+            "explanation": "The call pays 10 in the up state and 0 in the down state, so the expected payoff is 0.75 times 10, which is 7.5, discounted one period at 5 percent to give about 7.14.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Binomial Trees"
+        },
+        {
+            "id": "frm-p1-073",
+            "domain": "Valuation and Risk Models",
+            "stem": "In the Black-Scholes-Merton model, which term equals the risk-neutral probability that a European call finishes in the money?",
+            "options": [
+                "The cumulative normal distribution of d2",
+                "The probability density of d1",
+                "The value d1 minus d2",
+                "The cumulative normal distribution of d1"
+            ],
+            "correct_index": 0,
+            "explanation": "In the Black-Scholes-Merton formula the cumulative normal of d2 is the risk-neutral probability that the call expires in the money, while the cumulative normal of d1 is the delta.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Black-Scholes-Merton Model"
+        },
+        {
+            "id": "frm-p1-074",
+            "domain": "Valuation and Risk Models",
+            "stem": "A call option has a delta of 0.6. All else equal, how does the option price change if the underlying stock rises by 1?",
+            "options": [
+                "It rises by about 1.00",
+                "It rises by about 0.60",
+                "It falls by about 0.60",
+                "It is unchanged"
+            ],
+            "correct_index": 1,
+            "explanation": "Delta measures the change in the option price for a one unit change in the underlying, so a delta of 0.6 means the call rises about 0.60 when the stock rises by 1.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Greeks"
+        },
+        {
+            "id": "frm-p1-075",
+            "domain": "Valuation and Risk Models",
+            "stem": "An option position has a high positive gamma. What does this imply about its delta as the underlying price changes?",
+            "options": [
+                "The delta is constant regardless of price moves",
+                "The position has no market risk",
+                "The delta changes rapidly for small moves in the underlying",
+                "The delta is always zero"
+            ],
+            "correct_index": 2,
+            "explanation": "Gamma is the rate of change of delta with respect to the underlying price, so a high gamma means delta is unstable and the hedge must be rebalanced frequently.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Greeks"
+        },
+        {
+            "id": "frm-p1-076",
+            "domain": "Valuation and Risk Models",
+            "stem": "Which Greek measures an option position's sensitivity to a change in the underlying's implied volatility?",
+            "options": [
+                "Theta",
+                "Delta",
+                "Gamma",
+                "Vega"
+            ],
+            "correct_index": 3,
+            "explanation": "Vega measures the change in the option price for a change in implied volatility. Delta measures the underlying price sensitivity and theta measures time decay.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Greeks"
+        },
+        {
+            "id": "frm-p1-077",
+            "domain": "Valuation and Risk Models",
+            "stem": "A European call is priced at 8, the stock is 60, the strike is 60, and the present value of the strike is 57.14. A European put is priced at 4. Is put-call parity satisfied?",
+            "options": [
+                "No, the put is underpriced relative to parity",
+                "Yes, the two sides are equal",
+                "No, the call is underpriced",
+                "Parity cannot be tested without dividends"
+            ],
+            "correct_index": 0,
+            "explanation": "Parity requires the call plus the present value of the strike to equal the put plus the stock. Here 8 plus 57.14 equals 65.14 while 4 plus 60 equals 64, so the put is too cheap by 1.14.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Black-Scholes-Merton Model"
+        },
+        {
+            "id": "frm-p1-078",
+            "domain": "Valuation and Risk Models",
+            "stem": "A non-dividend-paying stock has an American call option. When is early exercise of the call optimal before expiration?",
+            "options": [
+                "Whenever the option is in the money",
+                "It is never optimal because the option retains time value",
+                "Always, to lock in intrinsic value",
+                "Only when the stock price falls"
+            ],
+            "correct_index": 1,
+            "explanation": "For a non-dividend-paying stock an American call should never be exercised early because selling the option captures at least its intrinsic value plus remaining time value, so waiting is better.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Black-Scholes-Merton Model"
+        },
+        {
+            "id": "frm-p1-079",
+            "domain": "Valuation and Risk Models",
+            "stem": "A one-day 99 percent value at risk of 2 million means which of the following?",
+            "options": [
+                "The portfolio will lose exactly 2 million one day in a hundred",
+                "The portfolio cannot lose more than 2 million",
+                "There is about a 1 percent chance of losing more than 2 million in a day in normal markets",
+                "The maximum possible daily loss is 2 million"
+            ],
+            "correct_index": 2,
+            "explanation": "Value at risk is a percentile of the loss distribution, so a 99 percent one-day value at risk of 2 million means losses exceed 2 million with about 1 percent probability.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-080",
+            "domain": "Valuation and Risk Models",
+            "stem": "A portfolio worth 1,000,000 has a daily return with a mean of zero and a standard deviation of 2 percent. Using a 95 percent one-tailed normal value of 1.645, what is the daily value at risk?",
+            "options": [
+                "20,000",
+                "16,450",
+                "65,800",
+                "32,900"
+            ],
+            "correct_index": 3,
+            "explanation": "The value at risk is the z value times the standard deviation times the portfolio value, so 1.645 times 0.02 times 1,000,000 equals 32,900.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-081",
+            "domain": "Valuation and Risk Models",
+            "stem": "If the one-day value at risk of a portfolio is 100,000, what is the approximate ten-day value at risk under the square-root-of-time rule?",
+            "options": [
+                "316,228",
+                "1,000,000",
+                "100,000",
+                "200,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Under the square-root-of-time rule the ten-day value at risk is the one-day value times the square root of ten, so 100,000 times 3.1623 equals about 316,228.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-082",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank computes value at risk by revaluing its current portfolio under every historical return scenario and taking a percentile of the resulting losses. Which method is this?",
+            "options": [
+                "Parametric variance-covariance value at risk",
+                "Historical simulation",
+                "Monte Carlo simulation",
+                "Stress testing"
+            ],
+            "correct_index": 1,
+            "explanation": "Historical simulation applies actual past risk factor changes to the current portfolio and reads the loss percentile, avoiding a specific distributional assumption.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-083",
+            "domain": "Valuation and Risk Models",
+            "stem": "Which statement best describes expected shortfall relative to value at risk?",
+            "options": [
+                "It equals the value at risk divided by two",
+                "It ignores the tail of the distribution",
+                "It averages the losses that occur beyond the value at risk threshold",
+                "It is always smaller than value at risk"
+            ],
+            "correct_index": 2,
+            "explanation": "Expected shortfall is the average of the losses in the tail beyond the value at risk threshold, so it is at least as large as value at risk and describes tail severity.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Expected Shortfall"
+        },
+        {
+            "id": "frm-p1-084",
+            "domain": "Valuation and Risk Models",
+            "stem": "Value at risk is not always subadditive. What does this mean for a risk measure?",
+            "options": [
+                "Risk always falls when positions are combined",
+                "Value at risk can never be computed for two portfolios",
+                "Value at risk is always larger than expected shortfall",
+                "The combined value at risk of two portfolios can exceed the sum of their individual values at risk"
+            ],
+            "correct_index": 3,
+            "explanation": "Subadditivity requires that the risk of a combined portfolio not exceed the sum of the parts. Value at risk can violate this, which is one reason it is not a coherent risk measure.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Expected Shortfall"
+        },
+        {
+            "id": "frm-p1-085",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank backtests its 99 percent value at risk model over 250 trading days and observes 8 exceptions. What does this most likely indicate?",
+            "options": [
+                "The model underestimates risk and may need recalibration",
+                "The model is perfectly calibrated",
+                "The model overestimates risk",
+                "Backtesting cannot detect model errors"
+            ],
+            "correct_index": 0,
+            "explanation": "A 99 percent model over 250 days should produce roughly two or three exceptions. Eight is well above that, suggesting the model understates risk and should be reviewed.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-086",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank examines the effect on its portfolio of a hypothetical 200 basis point rise in interest rates and a 30 percent equity decline occurring together. Which activity is this?",
+            "options": [
+                "Routine daily profit attribution",
+                "Scenario stress testing",
+                "Trade settlement",
+                "Regression of returns"
+            ],
+            "correct_index": 1,
+            "explanation": "Stress testing applies severe but plausible scenarios, often combining moves in several risk factors, to estimate losses that statistical models may not capture.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Stress Testing"
+        },
+        {
+            "id": "frm-p1-087",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank maps an option portfolio onto its underlying risk factors and uses the position's delta to compute value at risk. Which limitation is most important?",
+            "options": [
+                "It cannot be used for bonds",
+                "It always overstates risk",
+                "It ignores the non-linear gamma effect for large moves",
+                "It requires no risk factor mapping"
+            ],
+            "correct_index": 2,
+            "explanation": "A delta-normal approach treats the option as linear in the underlying, so it misses gamma and understates losses when the underlying moves a lot and the payoff curves.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Value at Risk"
+        },
+        {
+            "id": "frm-p1-088",
+            "domain": "Valuation and Risk Models",
+            "stem": "Unexpected loss on a loan portfolio is best described as which quantity?",
+            "options": [
+                "The same as the expected loss",
+                "The recovery rate times the exposure",
+                "The coupon income on the portfolio",
+                "The difference between the worst-case loss at a chosen confidence level and the expected loss"
+            ],
+            "correct_index": 3,
+            "explanation": "Unexpected loss is the adverse deviation from expected loss at a chosen confidence level. It is what credit capital is meant to absorb, above the expected loss covered by pricing.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        },
+        {
+            "id": "frm-p1-089",
+            "domain": "Valuation and Risk Models",
+            "stem": "A loan has a probability of default of 2 percent, a loss given default of 60 percent, and an exposure at default of 1,000,000. What is the expected loss?",
+            "options": [
+                "12,000",
+                "20,000",
+                "600,000",
+                "1,200"
+            ],
+            "correct_index": 0,
+            "explanation": "Expected loss is the product of probability of default, loss given default, and exposure at default, so 0.02 times 0.60 times 1,000,000 equals 12,000.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        },
+        {
+            "id": "frm-p1-090",
+            "domain": "Valuation and Risk Models",
+            "stem": "In the Merton model of credit risk, when does a firm default on its debt?",
+            "options": [
+                "When its equity price falls by half",
+                "When the value of the firm's assets falls below the face value of its debt at maturity",
+                "When its cash flow turns negative in any quarter",
+                "When its credit rating is downgraded"
+            ],
+            "correct_index": 1,
+            "explanation": "The Merton model treats equity as a call option on the firm's assets. Default occurs at maturity if asset value is below the debt's face value, so shareholders receive nothing.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        },
+        {
+            "id": "frm-p1-091",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank uses a matrix showing the probability that a bond rated AA this year will be rated A, BBB, or default next year. What is this matrix called?",
+            "options": [
+                "A covariance matrix",
+                "A payoff matrix",
+                "A transition matrix",
+                "A correlation matrix"
+            ],
+            "correct_index": 2,
+            "explanation": "A transition matrix gives the probabilities of moving between credit ratings, including default, over a specified horizon and is central to credit portfolio models.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        },
+        {
+            "id": "frm-p1-092",
+            "domain": "Valuation and Risk Models",
+            "stem": "The Altman Z-score combines several financial ratios to estimate which quantity for a firm?",
+            "options": [
+                "Its expected market return",
+                "Its liquidity coverage ratio",
+                "Its option implied volatility",
+                "Its probability of bankruptcy or financial distress"
+            ],
+            "correct_index": 3,
+            "explanation": "The Altman Z-score is a weighted combination of accounting ratios that produces a score used to gauge a firm's likelihood of financial distress or bankruptcy.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        },
+        {
+            "id": "frm-p1-093",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank is exposed to a foreign borrower that is solvent but whose government blocks the conversion of local currency into dollars. Which risk is this?",
+            "options": [
+                "Transfer and convertibility risk",
+                "Market risk only",
+                "Model risk only",
+                "Prepayment risk"
+            ],
+            "correct_index": 0,
+            "explanation": "Transfer and convertibility risk is a form of country risk in which a sovereign prevents the conversion or transfer of funds abroad even though the borrower remains solvent.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Country Risk"
+        },
+        {
+            "id": "frm-p1-094",
+            "domain": "Valuation and Risk Models",
+            "stem": "In the loss distribution approach to operational risk, what generally determines the total capital estimate?",
+            "options": [
+                "The number of employees only",
+                "The frequency and severity distributions of losses combined by convolution or simulation",
+                "The accounting book value of fixed assets",
+                "The market value of the equity"
+            ],
+            "correct_index": 1,
+            "explanation": "The loss distribution approach models the number of loss events and the size of each loss, then combines them to form an aggregate loss distribution from which capital is read.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Stress Testing"
+        },
+        {
+            "id": "frm-p1-095",
+            "domain": "Valuation and Risk Models",
+            "stem": "A bank relies on one vendor's pricing model for all exotic derivatives. Which risk is most directly involved?",
+            "options": [
+                "Foreign exchange translation risk",
+                "Prepayment risk only",
+                "Model risk because the valuations may be wrong or shared by all users",
+                "Settlement risk only"
+            ],
+            "correct_index": 2,
+            "explanation": "Dependence on a single model creates concentrated model risk, because an error or inappropriate assumption would affect every valuation built on it across the firm.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Stress Testing"
+        },
+        {
+            "id": "frm-p1-096",
+            "domain": "Valuation and Risk Models",
+            "stem": "For a bond with a modified duration of 5 and a convexity of 40, what is the approximate percentage price change for a 100 basis point increase in yield?",
+            "options": [
+                "A fall of 5.0 percent",
+                "A fall of 5.2 percent",
+                "A rise of 4.8 percent",
+                "A fall of 4.8 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The change is the negative duration term plus the convexity term, so negative 5 times 0.01 plus 0.5 times 40 times 0.0001 equals negative 0.048, a fall of 4.8 percent.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Fixed Income Valuation"
+        },
+        {
+            "id": "frm-p1-097",
+            "domain": "Valuation and Risk Models",
+            "stem": "A manager wants to measure a bond portfolio's sensitivity to a change in just the five-year point of the yield curve. Which measure should be used?",
+            "options": [
+                "Key rate duration",
+                "Modified duration only",
+                "Macaulay duration only",
+                "Convexity only"
+            ],
+            "correct_index": 0,
+            "explanation": "Key rate duration measures the sensitivity of a portfolio to a change in a single point on the yield curve while holding other points constant, capturing non-parallel shifts.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Fixed Income Valuation"
+        },
+        {
+            "id": "frm-p1-098",
+            "domain": "Valuation and Risk Models",
+            "stem": "An option trader buys options and hedges the delta, seeking to profit from realized volatility. Which statement describes the typical position?",
+            "options": [
+                "The position is delta neutral only at expiration",
+                "The position is long gamma and short theta",
+                "The position is short gamma and long theta",
+                "The position has no time decay"
+            ],
+            "correct_index": 1,
+            "explanation": "Buying options and hedging delta leaves the trader long gamma but paying time decay. The position profits when realized volatility exceeds the implied volatility paid for the options.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Greeks"
+        },
+        {
+            "id": "frm-p1-099",
+            "domain": "Valuation and Risk Models",
+            "stem": "If out-of-the-money and in-the-money options both trade at higher implied volatilities than at-the-money options, what pattern is observed?",
+            "options": [
+                "A downward term structure only",
+                "Zero implied volatility",
+                "A volatility smile",
+                "A flat volatility surface"
+            ],
+            "correct_index": 2,
+            "explanation": "Higher implied volatility in the wings than at the money produces the smile or smirk pattern, showing that the constant volatility assumption of Black-Scholes does not hold.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Volatility Smiles"
+        },
+        {
+            "id": "frm-p1-100",
+            "domain": "Valuation and Risk Models",
+            "stem": "Which quantity represents the market value of counterparty credit risk on a derivatives portfolio?",
+            "options": [
+                "The delta of the portfolio",
+                "The notional principal",
+                "The collateral balance only",
+                "The credit value adjustment"
+            ],
+            "correct_index": 3,
+            "explanation": "The credit value adjustment is the difference between the risk-free value of a portfolio and its value allowing for the possibility of counterparty default, so it prices counterparty credit risk.",
+            "reference": "GARP FRM Part I Curriculum - Valuation and Risk Models - Measuring Credit Risk"
+        }
+    ]
+}

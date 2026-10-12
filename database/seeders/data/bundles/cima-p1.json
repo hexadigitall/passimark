@@ -1,0 +1,717 @@
+{
+    "cert_key": "cima-p1",
+    "title": "CIMA P1 - Management Accounting",
+    "issuer": "CIMA",
+    "outline_file": "outlines/cima-p1.json",
+    "variant_label": "CIMA P1 Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against CIMA scaled score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the CIMA P1 syllabus (management accounting). Not a capture of past exam questions.",
+    "source_label": "CIMA P1 practice bank",
+    "items": [
+        {
+            "id": "cima-p1-001",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A manufacturer pays 12,000 each month for factory rent, and this amount stays the same regardless of how many units are produced. Which cost classification best describes the factory rent?",
+            "options": [
+                "A fixed cost",
+                "A semi-variable cost",
+                "A stepped fixed cost",
+                "A variable cost"
+            ],
+            "correct_index": 0,
+            "explanation": "The rent is unchanged across all activity levels, so it is a fixed cost. A variable cost changes in proportion to output, a semi-variable cost has both fixed and variable parts, and a stepped fixed cost jumps at defined activity thresholds.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-002",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A company's total electricity cost was 8,000 when output was 1,000 units and 11,000 when output was 2,000 units. Using the high-low method, which amount is the variable cost per unit?",
+            "options": [
+                "3.50",
+                "3.00",
+                "5.00",
+                "8.00"
+            ],
+            "correct_index": 1,
+            "explanation": "The high-low method divides the change in cost by the change in activity, so 11,000 minus 8,000 equals 3,000, divided by 1,000 units gives 3.00 per unit. The other figures misapply the change in cost or use total cost instead.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-003",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A company's total electricity cost was 8,000 at 1,000 units and 11,000 at 2,000 units. Using the high-low method, which amount is the total fixed cost element?",
+            "options": [
+                "6,000",
+                "8,000",
+                "5,000",
+                "3,000"
+            ],
+            "correct_index": 2,
+            "explanation": "After finding the variable rate of 3.00 per unit, fixed cost is total cost minus variable cost at either point. At 1,000 units that is 8,000 minus 3,000, which equals 5,000.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-004",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A production department incurs 120,000 of overhead and expects to use 4,000 machine hours. Overhead is absorbed on machine hours. Which amount is the predetermined overhead absorption rate per machine hour?",
+            "options": [
+                "40.00",
+                "25.00",
+                "20.00",
+                "30.00"
+            ],
+            "correct_index": 3,
+            "explanation": "The predetermined rate is budgeted overhead divided by budgeted activity, so 120,000 divided by 4,000 hours equals 30.00 per hour. The other rates divide the same overhead by the wrong activity base.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-005",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A company budgeted to produce 10,000 units and absorbs overhead at 5 per unit. Actual overhead was 48,000 and actual production was 9,000 units. Which statement describes the resulting overhead position?",
+            "options": [
+                "Under-absorbed by 3,000",
+                "Over-absorbed by 3,000",
+                "Under-absorbed by 2,000",
+                "Over-absorbed by 5,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Absorbed overhead is 9,000 units times 5, which equals 45,000, and actual overhead was 48,000, so 3,000 of overhead was not recovered. A shortfall means overhead is under-absorbed.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-006",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "In a period when production exceeds sales, which statement correctly compares absorption costing profit with marginal costing profit?",
+            "options": [
+                "Absorption costing profit is lower because inventory is valued at variable cost only",
+                "Absorption costing profit is higher because fixed overhead is carried in closing inventory",
+                "Marginal costing profit is higher because fixed overhead is written off immediately",
+                "The two profit figures are always identical"
+            ],
+            "correct_index": 1,
+            "explanation": "When production exceeds sales, some fixed production overhead is carried forward in closing inventory under absorption costing, so it is charged to later periods and current profit is higher. Marginal costing expenses all fixed overhead as incurred.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-007",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A product sells for 40 and has a variable cost of 24 per unit. Which amount is the contribution per unit?",
+            "options": [
+                "40",
+                "64",
+                "16",
+                "24"
+            ],
+            "correct_index": 2,
+            "explanation": "Contribution is selling price minus variable cost, so 40 minus 24 equals 16 per unit. The 24 is the variable cost itself and 64 wrongly adds the two figures together.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-008",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A product sells for 40 and has a variable cost of 24 per unit. Which value is the contribution to sales ratio?",
+            "options": [
+                "60 percent",
+                "16 percent",
+                "24 percent",
+                "40 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Contribution per unit is 16, and the contribution to sales ratio is 16 divided by the 40 selling price, which equals 40 percent. The 60 percent figure is the variable cost ratio, not the contribution ratio.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-009",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A factory wants to assign machine set-up overhead to products more accurately. Which cost driver is most appropriate for set-up costs?",
+            "options": [
+                "Number of production set-ups",
+                "Direct labour hours worked",
+                "Machine hours run",
+                "Units of output sold"
+            ],
+            "correct_index": 0,
+            "explanation": "Set-up cost is driven by how often the machine is prepared, so the number of set-ups is the cause-and-effect driver. Direct labour hours, machine run hours and units sold do not reflect set-up activity.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-010",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "Which situation most likely causes traditional absorption costing to distort product costs?",
+            "options": [
+                "Variable costs happen to equal fixed costs in total",
+                "Low-volume complex products consume more support activity than high-volume simple products",
+                "All products consume overhead in proportion to direct labour hours",
+                "The company produces only a single product line"
+            ],
+            "correct_index": 1,
+            "explanation": "Traditional costing spreads overhead on volume bases such as labour hours, so it under-costs low-volume complex products that consume more support activity and over-costs high-volume simple ones. The distortion is greatest when overheads are large and products differ.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-011",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A product must sell for 60, and the company requires a profit margin of 25 percent of the selling price. Which amount is the target cost?",
+            "options": [
+                "40.00",
+                "48.00",
+                "45.00",
+                "15.00"
+            ],
+            "correct_index": 2,
+            "explanation": "The required profit is 25 percent of 60, which is 15, so the target cost is 60 minus 15, equal to 45.00. The 15 figure is the profit, not the cost.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-012",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "In target costing, which description best explains the cost gap?",
+            "options": [
+                "The difference between budgeted and actual selling price",
+                "The profit margin required by the company",
+                "The variable cost per unit of a product",
+                "The amount by which the estimated cost exceeds the target cost"
+            ],
+            "correct_index": 3,
+            "explanation": "The cost gap is the shortfall between the current estimated cost of a product and its target cost, and management must close it through design or process improvement. The other options describe unrelated measures.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-013",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A process completed 1,000 units and also had 400 units that were 50 percent complete for conversion. Which number of equivalent units for conversion is correct?",
+            "options": [
+                "1,200",
+                "1,400",
+                "1,000",
+                "800"
+            ],
+            "correct_index": 0,
+            "explanation": "Equivalent units weight partly finished output, so the 400 units at 50 percent count as 200 units. Adding the 1,000 completed gives 1,200 equivalent units.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-014",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "Which costing method is most appropriate for a manufacturer that produces large quantities of identical, continuously flowing output?",
+            "options": [
+                "Contract costing",
+                "Process costing",
+                "Job costing",
+                "Batch costing"
+            ],
+            "correct_index": 1,
+            "explanation": "Process costing suits continuous, homogeneous production where costs are averaged over output. Job and contract costing suit unique or bespoke work, and batch costing suits distinguishable groups of identical units.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-015",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "When production is heavily automated and direct labour is a small part of total cost, which overhead absorption basis is most appropriate?",
+            "options": [
+                "Direct labour cost",
+                "Number of employees",
+                "Machine hours",
+                "Direct labour hours"
+            ],
+            "correct_index": 2,
+            "explanation": "In an automated environment overhead is driven mainly by machine activity, so machine hours is the most logical and equitable basis. Labour-based bases become weak when labour is a minor part of cost.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-016",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "Which costing system would be most suitable for a firm building a single, unique bridge to a customer specification?",
+            "options": [
+                "Process costing",
+                "Marginal costing",
+                "Standard costing",
+                "Job costing"
+            ],
+            "correct_index": 3,
+            "explanation": "Job costing accumulates costs for each identifiable, customer-specific piece of work, which fits a unique bridge contract. Process costing suits continuous output, and marginal and standard costing are approaches rather than order-specific systems.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-017",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A hospital wants to measure the cost of providing inpatient care. Which cost unit is most appropriate?",
+            "options": [
+                "Patient-day",
+                "Kilogram of supplies",
+                "Machine hour",
+                "Number of staff"
+            ],
+            "correct_index": 0,
+            "explanation": "A cost unit should represent the service delivered, and a patient-day captures the length and intensity of inpatient care. Supplies, machine hours and staff numbers are resources consumed, not the service output.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-018",
+            "domain": "Cost Accounting for Decision and Control",
+            "stem": "A supervisor is paid a fixed salary to oversee output up to 10,000 units per month, after which a second supervisor must be hired. How is this cost best classified?",
+            "options": [
+                "A sunk cost",
+                "A stepped fixed cost",
+                "A purely variable cost",
+                "A semi-variable cost"
+            ],
+            "correct_index": 1,
+            "explanation": "The cost is constant within an activity range and then jumps when a new supervisor is needed, which is the definition of a stepped fixed cost. It is not variable, semi-variable or sunk.",
+            "reference": "CIMA P1 Syllabus - Cost Accounting for Decision and Control"
+        },
+        {
+            "id": "cima-p1-019",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Which statement best describes the main purpose of preparing a cash budget?",
+            "options": [
+                "To record the value of non-current assets",
+                "To determine the dividend policy of the company",
+                "To plan cash receipts and payments and ensure the business has enough liquidity",
+                "To calculate the profit for the accounting period"
+            ],
+            "correct_index": 2,
+            "explanation": "A cash budget forecasts the timing of cash inflows and outflows so management can plan for surpluses and arrange finance for deficits. Profit measurement comes from the income statement, not the cash budget.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-020",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "In preparing a master budget for a manufacturing company, which budget is normally prepared first?",
+            "options": [
+                "The production budget",
+                "The cash budget",
+                "The capital expenditure budget",
+                "The sales budget"
+            ],
+            "correct_index": 3,
+            "explanation": "Most budgets are driven by demand, so the sales budget is prepared first and feeds the production, materials, labour and cash budgets. Without a sales forecast the other budgets have no activity base.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-021",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Budgeted sales are 5,000 units, opening inventory is 800 units and the desired closing inventory is 1,000 units. Which number of units is the production budget?",
+            "options": [
+                "5,200",
+                "5,000",
+                "4,800",
+                "6,800"
+            ],
+            "correct_index": 0,
+            "explanation": "Production equals sales plus closing inventory minus opening inventory, so 5,000 plus 1,000 minus 800 equals 5,200 units. Ignoring inventory changes would leave 5,000.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-022",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Production is budgeted at 5,200 units, each using 3 kg of material. Opening material inventory is 2,000 kg and the desired closing inventory is 2,500 kg. Which quantity of material must be purchased?",
+            "options": [
+                "18,100 kg",
+                "16,100 kg",
+                "15,600 kg",
+                "14,600 kg"
+            ],
+            "correct_index": 1,
+            "explanation": "Material usage is 5,200 units times 3 kg, which is 15,600 kg. Purchases equal usage plus closing inventory minus opening inventory, so 15,600 plus 2,500 minus 2,000 equals 16,100 kg.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-023",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Which of the following is classified as a functional budget?",
+            "options": [
+                "The statement of financial position",
+                "The cash flow forecast for the whole company",
+                "The production budget",
+                "The master budget"
+            ],
+            "correct_index": 2,
+            "explanation": "Functional budgets relate to individual activities or departments, such as production, sales or materials. The master budget combines the functional budgets, so it is not itself a functional budget.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-024",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Which characteristic distinguishes zero-based budgeting from incremental budgeting?",
+            "options": [
+                "Budgets are always set at last year's level plus inflation",
+                "Only variable costs are included in the budget",
+                "The budget is prepared once every zero-based period",
+                "Every activity must be justified from scratch rather than by adjusting last year's figures"
+            ],
+            "correct_index": 3,
+            "explanation": "Zero-based budgeting builds each budget from zero and requires each activity to be justified on its merits, which exposes discretionary costs. Incremental budgeting simply adjusts the previous period's budget.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-025",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "A budget that is continually updated by adding a new period as the earliest one expires is best described as which type of budget?",
+            "options": [
+                "A rolling budget",
+                "A zero-based budget",
+                "A flexible budget",
+                "A fixed budget"
+            ],
+            "correct_index": 0,
+            "explanation": "A rolling budget always covers the same number of future periods by adding a new one when the oldest lapses, keeping the horizon constant. Flexible and fixed budgets relate to activity levels, not continual updating.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-026",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "A budget that is restated for the actual level of activity achieved, so that costs are compared on a like-for-like basis, is best described as which type of budget?",
+            "options": [
+                "A capital budget",
+                "A flexible budget",
+                "A rolling budget",
+                "A fixed budget"
+            ],
+            "correct_index": 1,
+            "explanation": "A flexible budget is adjusted to the actual activity level, which allows valid comparison with actual costs. A fixed budget is set for one planned activity level and is not restated.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-027",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Standard cost is 2 kg of material at 5 per kg. Actual production used 900 kg at 5.50 per kg. Which amount is the material price variance?",
+            "options": [
+                "500 adverse",
+                "500 favourable",
+                "450 adverse",
+                "450 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "The price variance is actual quantity times the difference between actual and standard price, so 900 times 0.50 equals 450. Because the actual price is higher than standard, the variance is adverse.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-028",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Standard cost is 2 kg of material at 5 per kg. Actual production of 500 units used 900 kg. Which amount is the material usage variance?",
+            "options": [
+                "500 adverse",
+                "450 favourable",
+                "900 adverse",
+                "500 favourable"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard usage for 500 units is 1,000 kg, and actual usage was 900 kg, so 100 kg were saved. Valuing the saving at the standard price gives 500 favourable.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-029",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Standard labour rate is 12 per hour. Actual hours worked were 1,050 at a rate of 12.50 per hour. Which amount is the labour rate variance?",
+            "options": [
+                "525 adverse",
+                "525 favourable",
+                "600 adverse",
+                "1,050 adverse"
+            ],
+            "correct_index": 0,
+            "explanation": "The rate variance is actual hours times the difference between the actual and standard rates, so 1,050 times 0.50 equals 525. Paying more than standard makes it adverse.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-030",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Standard labour is 2 hours per unit at 12 per hour. Actual production of 500 units took 1,050 hours. Which amount is the labour efficiency variance?",
+            "options": [
+                "1,050 adverse",
+                "600 adverse",
+                "600 favourable",
+                "525 adverse"
+            ],
+            "correct_index": 1,
+            "explanation": "Standard hours for 500 units are 1,000, and actual hours were 1,050, so 50 extra hours were used. Valuing them at the standard rate gives 600 adverse.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-031",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Budgeted fixed overhead was 40,000 and actual fixed overhead was 43,000. Which amount is the fixed overhead expenditure variance?",
+            "options": [
+                "43,000 adverse",
+                "40,000 favourable",
+                "3,000 adverse",
+                "3,000 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "The expenditure variance is actual fixed overhead minus budgeted fixed overhead, so 43,000 minus 40,000 equals 3,000. Spending more than budget makes it adverse.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-032",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Budgeted selling price was 20 per unit. Actual sales were 4,000 units at 19 per unit. Which amount is the sales price variance?",
+            "options": [
+                "4,000 favourable",
+                "1,000 adverse",
+                "20,000 adverse",
+                "4,000 adverse"
+            ],
+            "correct_index": 3,
+            "explanation": "The sales price variance is actual units times the difference between actual and budgeted price, so 4,000 times 1 equals 4,000. A lower actual price makes the variance adverse.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-033",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Which variance is calculated as the difference between actual and budgeted sales volume multiplied by the standard contribution per unit?",
+            "options": [
+                "The sales volume contribution variance",
+                "The sales price variance",
+                "The variable overhead efficiency variance",
+                "The fixed overhead capacity variance"
+            ],
+            "correct_index": 0,
+            "explanation": "The sales volume contribution variance measures the profit impact of selling more or fewer units, valued at standard contribution. The sales price variance uses value per unit, not volume.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-034",
+            "domain": "Budgeting and Budgetary Control",
+            "stem": "Which forecasting technique places declining weight on older observations through a single smoothing constant?",
+            "options": [
+                "Regression analysis",
+                "Exponential smoothing",
+                "Simple moving average",
+                "Time series decomposition"
+            ],
+            "correct_index": 1,
+            "explanation": "Exponential smoothing applies a smoothing constant so that recent data carry more weight and older data less. A simple moving average weights all periods in the window equally.",
+            "reference": "CIMA P1 Syllabus - Budgeting and Budgetary Control"
+        },
+        {
+            "id": "cima-p1-035",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "Which statement best describes a relevant cost for a short-term decision?",
+            "options": [
+                "A cost that is the same under every option",
+                "A non-cash book value of an asset",
+                "A future, incremental cash flow that differs between the alternatives",
+                "Any cost that has already been recorded in the accounts"
+            ],
+            "correct_index": 2,
+            "explanation": "Relevant costs are future, incremental and differ between options. Historical, committed and unavoidable costs do not change with the decision and are therefore irrelevant.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-036",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company spent 5,000 last year on a machine that has no resale value and no alternative use. In deciding whether to accept a special order using that machine, how should the 5,000 be treated?",
+            "options": [
+                "As an incremental cash cost of the order",
+                "As an opportunity cost of the order",
+                "As a relevant variable cost of the order",
+                "As a sunk cost that is irrelevant to the decision"
+            ],
+            "correct_index": 3,
+            "explanation": "The 5,000 was spent in the past and cannot be recovered, so it is a sunk cost and is irrelevant. Only future, incremental cash flows such as extra material and labour should affect the decision.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-037",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company holds 500 kg of a material in inventory that cost 4 per kg and is used regularly. A special order needs the material, and its current replacement cost is 5 per kg. Which amount is the relevant material cost for the order?",
+            "options": [
+                "2,500",
+                "2,000",
+                "500",
+                "5"
+            ],
+            "correct_index": 0,
+            "explanation": "Because the material is used regularly, taking it for the order means replacing it, so the relevant cost is the replacement cost of 500 kg at 5, which is 2,500. The historical cost of 2,000 is sunk.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-038",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company must use 100 hours of skilled labour on a contract. The workers are currently idle and are paid regardless, and there is no other work for them. Which amount is the relevant labour cost of the contract?",
+            "options": [
+                "250",
+                "0",
+                "1,500",
+                "100"
+            ],
+            "correct_index": 1,
+            "explanation": "The workers are paid whether or not the contract is taken, and their time has no alternative use, so there is no incremental labour cost and the relevant amount is zero. A lost contribution would only arise if the hours displaced other profitable work.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-039",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company can make a component for a variable cost of 18 per unit or buy it for 21 per unit. Annual requirement is 10,000 units and fixed costs are unaffected. Which decision should be taken?",
+            "options": [
+                "Make the component, saving 210,000 per year",
+                "There is no difference between the two options",
+                "Make the component, saving 30,000 per year",
+                "Buy the component, saving 30,000 per year"
+            ],
+            "correct_index": 2,
+            "explanation": "Making costs 180,000 in variable cost while buying costs 210,000, so making saves 30,000 per year. Since fixed costs are unaffected they are irrelevant, and the comparison turns on variable cost.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-040",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "Two products use the same machine, which is the limiting factor. Product P earns contribution of 12 per unit in 3 machine hours, and product Q earns 15 per unit in 5 machine hours. Which product should be prioritised?",
+            "options": [
+                "Product Q, because it earns 3.00 contribution per machine hour",
+                "Product Q, because its contribution per unit is higher",
+                "Neither, because the contributions per hour are equal",
+                "Product P, because it earns 4.00 contribution per machine hour"
+            ],
+            "correct_index": 3,
+            "explanation": "When machine hours are scarce, products are ranked by contribution per machine hour. Product P earns 12 divided by 3, which is 4.00, against Q's 15 divided by 5, which is 3.00, so P is preferred.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-041",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A machine has 8,000 hours available and each unit of a single product takes 4 machine hours. Demand is 3,000 units. Which number of units can be produced?",
+            "options": [
+                "2,000",
+                "3,000",
+                "8,000",
+                "1,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The machine can produce 8,000 divided by 4, which is 2,000 units, and this is below the 3,000 units demanded. The machine hours are the binding constraint, so output is capped at 2,000.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-042",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A product sells for 50 and has a variable cost of 30. Fixed costs are 200,000. Which number of units is the break-even point?",
+            "options": [
+                "20,000",
+                "10,000",
+                "4,000",
+                "6,667"
+            ],
+            "correct_index": 1,
+            "explanation": "Contribution per unit is 50 minus 30, which is 20, so break-even is 200,000 divided by 20, equal to 10,000 units. The 6,667 figure mistakenly divides fixed costs by the selling price.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-043",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A product sells for 50 with a variable cost of 30, and fixed costs are 200,000. Which amount is the break-even sales revenue?",
+            "options": [
+                "400,000",
+                "1,000,000",
+                "500,000",
+                "200,000"
+            ],
+            "correct_index": 2,
+            "explanation": "The contribution to sales ratio is 20 divided by 50, which is 40 percent, so break-even revenue is 200,000 divided by 0.40, equal to 500,000. That corresponds to 10,000 units at 50 each.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-044",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company has fixed costs of 200,000 and earns contribution of 20 per unit. It wants a profit of 60,000. Which number of units must be sold?",
+            "options": [
+                "3,000",
+                "10,000",
+                "16,000",
+                "13,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Required units equal fixed costs plus target profit divided by contribution per unit, so 260,000 divided by 20 equals 13,000 units. The 10,000 figure is the break-even point and ignores the target profit.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-045",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "Budgeted sales are 15,000 units and the break-even point is 10,000 units. Which number of units is the margin of safety?",
+            "options": [
+                "5,000",
+                "10,000",
+                "15,000",
+                "25,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The margin of safety is budgeted sales minus break-even sales, so 15,000 minus 10,000 equals 5,000 units. It measures how far sales can fall before a loss is made.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-046",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A product line makes a positive contribution but shows a net loss after apportioned fixed costs that would continue even if the line were dropped. What is the correct short-term decision?",
+            "options": [
+                "Retain the line only if it exactly breaks even",
+                "Retain the line, because it contributes towards fixed costs",
+                "Drop the line, because it reports a net loss",
+                "Drop the line, because contribution is irrelevant"
+            ],
+            "correct_index": 1,
+            "explanation": "If fixed costs continue regardless, dropping the line would remove its contribution and make total profit worse. It should be retained while it makes a positive contribution and no better use of the resources exists.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-047",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A company has spare capacity and receives a one-off order that will not affect normal sales. Which costs set the minimum acceptable price for the order in the short term?",
+            "options": [
+                "The normal selling price charged to regular customers",
+                "The total fixed costs of the factory",
+                "The incremental costs caused by accepting the order",
+                "The full absorption cost including apportioned fixed overhead"
+            ],
+            "correct_index": 2,
+            "explanation": "With spare capacity and no effect on normal sales, only the incremental costs change, so any price above them improves profit. Full cost and fixed overheads already incurred are not relevant to the short-term floor.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-048",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "A product has a full cost of 80 and the company applies a mark-up of 25 percent on full cost. Which amount is the selling price?",
+            "options": [
+                "105.00",
+                "60.00",
+                "96.00",
+                "100.00"
+            ],
+            "correct_index": 3,
+            "explanation": "A 25 percent mark-up on a full cost of 80 adds 20, giving a selling price of 100.00. Applying 25 percent as a margin on the selling price would wrongly give a different figure.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-049",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "There is a 0.6 probability of making a profit of 10,000 and a 0.4 probability of making a loss of 2,000. Which amount is the expected value of the profit?",
+            "options": [
+                "5,200",
+                "6,000",
+                "4,000",
+                "8,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The expected value is 0.6 times 10,000 plus 0.4 times minus 2,000, which is 6,000 minus 800, equal to 5,200. The 6,000 figure ignores the possibility of the loss.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        },
+        {
+            "id": "cima-p1-050",
+            "domain": "Short-term Commercial Decision-making",
+            "stem": "Which technique measures how much a single input, such as selling price, can change before a project breaks even?",
+            "options": [
+                "Payback period",
+                "Sensitivity analysis",
+                "Expected value analysis",
+                "Standard deviation"
+            ],
+            "correct_index": 1,
+            "explanation": "Sensitivity analysis calculates the percentage change in one variable that would eliminate the project's profit, so it identifies the most critical assumptions. Expected value and standard deviation address probability and risk, not the break-even change in one input.",
+            "reference": "CIMA P1 Syllabus - Short-term Commercial Decision-making"
+        }
+    ]
+}
