@@ -1,0 +1,717 @@
+{
+    "cert_key": "acca-pm",
+    "title": "ACCA PM - Performance Management",
+    "issuer": "ACCA",
+    "outline_file": "outlines/acca-pm.json",
+    "variant_label": "ACCA PM Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 180,
+        "scoring": "50% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the ACCA PM syllabus study guide. Not a capture of past exam questions.",
+    "source_label": "ACCA PM practice bank",
+    "items": [
+        {
+            "id": "acca-pm-001",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "Under activity-based costing a manufacturer wants to assign the cost of machine setups to its products. Which cost driver is most appropriate as the basis for charging setup costs to each product?",
+            "options": [
+                "Number of setups completed",
+                "Number of units produced",
+                "Direct labour hours worked",
+                "Machine hours run"
+            ],
+            "correct_index": 0,
+            "explanation": "Setup costs are driven by the number of setups performed because each setup consumes resources regardless of batch size, so setups completed is the correct driver. Units produced, direct labour hours and machine hours do not reflect setup activity.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-002",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A company currently absorbs production overhead on direct labour hours but finds that high-volume products are overstated in cost while low-volume, complex products are understated. Which system is most likely to correct this distortion?",
+            "options": [
+                "Standard absorption costing",
+                "Activity-based costing",
+                "Marginal costing",
+                "Process costing"
+            ],
+            "correct_index": 1,
+            "explanation": "Activity-based costing traces overhead to activities and then to products using activity-specific cost drivers, so complex low-volume products bear more overhead and the cross-subsidy created by a single volume-based rate is removed. Marginal costing ignores fixed overhead, and the others remain volume-based.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-003",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A company expects to sell a new product for $40 and requires a profit margin of 20 percent of the selling price. Using target costing, which target cost per unit should the company achieve?",
+            "options": [
+                "$33.33",
+                "$40.00",
+                "$32.00",
+                "$8.00"
+            ],
+            "correct_index": 2,
+            "explanation": "The required profit is 20 percent of the $40 selling price, which is $8.00, so the target cost is 40.00 minus 8.00, equal to $32.00. Treating the 20 percent as a markup on cost would give a different figure.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-004",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A product has a current estimated cost of $28 per unit but a target cost of $24 per unit. Which action is most consistent with a target costing approach?",
+            "options": [
+                "Raise the selling price to restore the required margin",
+                "Accept the gap because target costing sets a price not a cost",
+                "Allocate the $4 gap to production overhead",
+                "Redesign and value-engineer the product to close the $4 cost gap"
+            ],
+            "correct_index": 3,
+            "explanation": "Target costing treats the target cost as a maximum that must be achieved, so the firm uses value engineering and design changes to remove the $4 gap. Raising the price or absorbing the gap defeats the purpose of target costing.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-005",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A manufacturer accumulates all costs from design and development through to withdrawal, and assesses profitability over the whole life of a product rather than year by year. Which costing approach is being applied?",
+            "options": [
+                "Life-cycle costing",
+                "Absorption costing",
+                "Throughput accounting",
+                "Activity-based costing"
+            ],
+            "correct_index": 0,
+            "explanation": "Life-cycle costing accumulates every cost over the product's entire life so that large development costs are matched against the full sales stream. Annual absorption costing can make a product appear unprofitable in its early years.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-006",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A product incurs $100,000 of development cost before launch and will sell 50,000 units over its four-year life at $10 each, with variable cost of $6 per unit. Which value is the life-cycle profit per unit?",
+            "options": [
+                "$0.00",
+                "$2.00",
+                "$4.00",
+                "$1.00"
+            ],
+            "correct_index": 1,
+            "explanation": "Revenue is 50,000 multiplied by $10, giving $500,000, and variable cost is 50,000 multiplied by $6, giving $300,000, leaving $200,000 before development. Subtracting $100,000 of development gives $100,000 profit, or $2.00 per unit.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-007",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "In throughput accounting, which measure represents the rate at which the system generates money through sales?",
+            "options": [
+                "Operating expense",
+                "Contribution per unit",
+                "Throughput",
+                "Inventory"
+            ],
+            "correct_index": 2,
+            "explanation": "Throughput is defined as sales revenue minus material cost and is measured at the rate sales are made. Inventory and operating expenses are treated as fixed in the short term under throughput accounting.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-008",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A factory is limited by one bottleneck machine. Product X has a selling price of $50, a material cost of $20 and uses 5 minutes of bottleneck time. Which value is the throughput return per bottleneck minute?",
+            "options": [
+                "$10.00",
+                "$4.00",
+                "$30.00",
+                "$6.00"
+            ],
+            "correct_index": 3,
+            "explanation": "Throughput per unit is 50 minus 20, giving $30, and dividing by the 5 bottleneck minutes gives $6.00 per minute. Bottleneck time must be used to rank products because it is the scarce resource.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-009",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A product earns a throughput return of $30 per bottleneck minute and factory costs are $20 per bottleneck minute. Which value is the throughput accounting ratio?",
+            "options": [
+                "1.50",
+                "0.67",
+                "10.00",
+                "50.00"
+            ],
+            "correct_index": 0,
+            "explanation": "The throughput accounting ratio is throughput return per bottleneck minute divided by factory cost per bottleneck minute, so 30 divided by 20 equals 1.50. A ratio above one indicates satisfactory throughput profitability.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-010",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A company wants to identify and separately report the costs of waste disposal, emissions and other environmental impacts of its processes so that they can be managed and reduced. Which technique is most appropriate?",
+            "options": [
+                "Activity-based costing",
+                "Environmental management accounting",
+                "Life-cycle costing",
+                "Target costing"
+            ],
+            "correct_index": 1,
+            "explanation": "Environmental management accounting identifies and analyses environment-related costs and physical flows so that they can be controlled. The other techniques address cost assignment, product design or whole-life costing rather than environmental cost reporting.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-011",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A batch of 500 units uses 4 machine setups at $300 each and 200 machine hours at $12 each. Direct material is $8,000 and direct labour is $5,000. Under activity-based costing, which value is the total cost of the batch?",
+            "options": [
+                "$13,000",
+                "$18,000",
+                "$16,600",
+                "$15,400"
+            ],
+            "correct_index": 2,
+            "explanation": "Activity costs are 4 setups multiplied by $300, giving $1,200, and 200 hours multiplied by $12, giving $2,400, a total of $3,600. Adding direct material of $8,000 and direct labour of $5,000 gives a total of $16,600.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-012",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A company requires a profit margin of 25 percent on the selling price of a product whose target cost is $60. Which selling price must the company achieve under target costing?",
+            "options": [
+                "$75.00",
+                "$75.50",
+                "$90.00",
+                "$80.00"
+            ],
+            "correct_index": 3,
+            "explanation": "If cost is 75 percent of the selling price, the price is 60 divided by 0.75, equal to $80.00. Adding 25 percent to cost would wrongly give $75.00, which is a markup on cost rather than a margin on price.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-013",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "A product has a throughput accounting ratio below 1.0. What does this most likely indicate?",
+            "options": [
+                "It earns less throughput per bottleneck minute than the factory cost it consumes",
+                "It is the most profitable product and should be prioritised",
+                "The bottleneck should be permanently closed",
+                "Total factory costs are variable with output"
+            ],
+            "correct_index": 0,
+            "explanation": "A ratio below one means throughput return per bottleneck minute is less than factory cost per bottleneck minute, so the product may not justify scarce bottleneck time. Steps to improve the ratio, such as raising price or reducing material cost, should be explored.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-014",
+            "domain": "Specialist Cost and Management Accounting Techniques",
+            "stem": "In environmental management accounting, which of the following is an example of a prevention cost rather than a disposal cost?",
+            "options": [
+                "Paying landfill charges for process waste",
+                "Redesigning a process to eliminate a hazardous input",
+                "Paying a penalty for exceeding an emission limit",
+                "Treating contaminated effluent before discharge"
+            ],
+            "correct_index": 1,
+            "explanation": "Prevention costs are incurred to avoid creating waste or emissions in the first place. Treatment, disposal charges and penalties are incurred after the environmental impact has arisen and are not prevention costs.",
+            "reference": "ACCA PM Syllabus Study Guide - Specialist Cost and Management Accounting Techniques"
+        },
+        {
+            "id": "acca-pm-015",
+            "domain": "Decision-making Techniques",
+            "stem": "A product sells for $25, has a variable cost of $15 per unit and incurs fixed costs of $60,000. Which value is the break-even point in units?",
+            "options": [
+                "2,400 units",
+                "7,500 units",
+                "6,000 units",
+                "4,000 units"
+            ],
+            "correct_index": 2,
+            "explanation": "Contribution per unit is 25 minus 15, giving $10, so break-even units are fixed costs divided by contribution per unit, which is 60,000 divided by 10, equal to 6,000 units. Dividing fixed costs by the selling price is a common error.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-016",
+            "domain": "Decision-making Techniques",
+            "stem": "For the same product, budgeted sales are 8,000 units and the break-even point is 6,000 units. Which value is the margin of safety in units?",
+            "options": [
+                "6,000 units",
+                "8,000 units",
+                "14,000 units",
+                "2,000 units"
+            ],
+            "correct_index": 3,
+            "explanation": "The margin of safety is budgeted sales minus break-even sales, so 8,000 minus 6,000 equals 2,000 units, the amount by which sales can fall before a loss arises. Adding the two figures would overstate the margin.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-017",
+            "domain": "Decision-making Techniques",
+            "stem": "A product has a contribution of $12 per unit and fixed costs of $90,000. How many units must be sold to earn a target profit of $30,000?",
+            "options": [
+                "10,000 units",
+                "7,500 units",
+                "2,500 units",
+                "12,000 units"
+            ],
+            "correct_index": 0,
+            "explanation": "Required units are fixed costs plus target profit divided by contribution per unit, so 90,000 plus 30,000 divided by 12 equals 10,000 units. Using only the fixed costs would give break-even output rather than the target profit.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-018",
+            "domain": "Decision-making Techniques",
+            "stem": "A company reports sales of $400,000 and contribution of $160,000. Which value is the contribution to sales (C/S) ratio?",
+            "options": [
+                "250 percent",
+                "40 percent",
+                "60 percent",
+                "25 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The C/S ratio is contribution divided by sales, so 160,000 divided by 400,000 equals 40 percent, meaning each dollar of sales contributes 40 cents. The 60 percent figure is the variable cost ratio.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-019",
+            "domain": "Decision-making Techniques",
+            "stem": "Two products use the same scarce material. Product A has a contribution of $18 and uses 3 kg, while product B has a contribution of $20 and uses 5 kg. When material is scarce, which product should be ranked first?",
+            "options": [
+                "Product A, because its contribution per unit is higher",
+                "Product B, because it uses more material per unit",
+                "Product A, because it earns $6.00 per kg against $4.00 per kg",
+                "Product B, because it earns more contribution per unit"
+            ],
+            "correct_index": 2,
+            "explanation": "Scarce resources are allocated by contribution per unit of the limiting factor, so A gives 18 divided by 3, equal to $6.00 per kg, and B gives 20 divided by 5, equal to $4.00 per kg. Ranking by contribution per unit alone would wrongly favour B.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-020",
+            "domain": "Decision-making Techniques",
+            "stem": "A company has only 5,000 machine hours available. Product A earns $12 contribution per hour up to a maximum of 2,000 hours, and product B earns $8 per hour up to a maximum of 4,000 hours. Which value is the maximum contribution the company can earn?",
+            "options": [
+                "$60,000",
+                "$40,000",
+                "$52,000",
+                "$48,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Product A earns more per scarce hour, so satisfy it fully with 2,000 hours at $12, giving $24,000. The remaining 3,000 hours go to B at $8, giving $24,000, and the total maximum contribution is $48,000.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-021",
+            "domain": "Decision-making Techniques",
+            "stem": "A company has already spent $10,000 on a market research report for a possible new product, and the report cannot be resold. Which amount of this cost is relevant to the decision on whether to launch the product?",
+            "options": [
+                "$0, because it is a sunk cost",
+                "$10,000, because it was incurred for the product",
+                "$5,000, being half of the amount",
+                "$10,000 only if the product is rejected"
+            ],
+            "correct_index": 0,
+            "explanation": "The report cost is a past and irrecoverable outlay and is therefore a sunk cost that is irrelevant to any future decision. Only future incremental cash flows should influence the decision.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-022",
+            "domain": "Decision-making Techniques",
+            "stem": "A company owns a machine that could be rented out for $15,000 a year, but instead plans to use it on a new contract. Which value is the relevant cost of using the machine on the contract?",
+            "options": [
+                "The machine's current book value",
+                "$15,000, being the rental income forgone",
+                "$0, because the machine is already owned",
+                "The machine's original purchase cost"
+            ],
+            "correct_index": 1,
+            "explanation": "Where an owned asset has an alternative use, its relevant cost is the opportunity cost of the benefit forgone, here the $15,000 of rental income. Historic purchase cost and book value are sunk.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-023",
+            "domain": "Decision-making Techniques",
+            "stem": "A company makes a component at a variable cost of $14 per unit, with fixed costs absorbed at $6 per unit. A supplier offers the component for $17 per unit and the fixed costs would remain unchanged. Which decision is correct on financial grounds?",
+            "options": [
+                "Continue to make, saving $9 per unit against the buy price",
+                "Buy the component, saving $6 per unit",
+                "Continue to make, saving $3 per unit against the buy price",
+                "Buy the component, saving $3 per unit"
+            ],
+            "correct_index": 2,
+            "explanation": "Only the $14 variable cost is avoidable if production stops because the absorbed fixed cost continues. Making costs $14 against a $17 buy price, so continuing to make saves $3 per unit.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-024",
+            "domain": "Decision-making Techniques",
+            "stem": "A company can buy a component for $20 or make it at a variable cost of $16. Making it would use scarce capacity that currently earns contribution of $6 per unit. What is the relevant cost of making, and which decision follows?",
+            "options": [
+                "$16, so the company should make",
+                "$20, so the company is indifferent",
+                "$10, so the company should make",
+                "$22, so the company should buy"
+            ],
+            "correct_index": 3,
+            "explanation": "The relevant cost of making is the variable cost plus the contribution forgone, 16 plus 6, equal to $22, which exceeds the $20 buy price, so buying is cheaper. Ignoring the $6 opportunity cost would wrongly favour making.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-025",
+            "domain": "Decision-making Techniques",
+            "stem": "A project has a 0.30 probability of a $100,000 payoff and a 0.70 probability of a $40,000 payoff. Which value is the expected payoff?",
+            "options": [
+                "$58,000",
+                "$70,000",
+                "$40,000",
+                "$100,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Expected value is the probability-weighted sum, so 0.30 multiplied by 100,000 plus 0.70 multiplied by 40,000 equals 30,000 plus 28,000, giving $58,000. It is a long-run average that ignores the decision-maker's attitude to risk.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-026",
+            "domain": "Decision-making Techniques",
+            "stem": "A decision-maker is optimistic and, for each possible decision, examines only the best outcome. Which decision rule is being applied?",
+            "options": [
+                "Expected value",
+                "Maximax",
+                "Maximin",
+                "Minimax regret"
+            ],
+            "correct_index": 1,
+            "explanation": "Maximax selects the option with the highest possible payoff and reflects an optimistic and risk-seeking attitude. Maximin selects the best of the worst outcomes and suits a cautious decision-maker.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-027",
+            "domain": "Decision-making Techniques",
+            "stem": "A company uses full cost plus pricing. The full cost of a product is $40 and the company adds a markup of 25 percent on cost. Which selling price should be charged?",
+            "options": [
+                "$32.00",
+                "$65.00",
+                "$50.00",
+                "$45.00"
+            ],
+            "correct_index": 2,
+            "explanation": "Full cost plus pricing adds the markup to total cost, so 40 multiplied by 1.25 equals $50.00. Note that a 25 percent margin on the selling price would instead give 40 divided by 0.75, equal to $53.33.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-028",
+            "domain": "Decision-making Techniques",
+            "stem": "A company makes two products using two scarce resources and wants to find the production mix that maximises total contribution. Which technique is most appropriate?",
+            "options": [
+                "High-low analysis",
+                "Expected value analysis",
+                "Payback analysis",
+                "Linear programming"
+            ],
+            "correct_index": 3,
+            "explanation": "Linear programming optimises an objective function, here total contribution, subject to several constraints and is the standard technique when more than one resource is scarce. The other methods address cost behaviour, uncertainty or project appraisal.",
+            "reference": "ACCA PM Syllabus Study Guide - Decision-making Techniques"
+        },
+        {
+            "id": "acca-pm-029",
+            "domain": "Budgeting",
+            "stem": "Which of the following is a primary purpose of the budgeting process?",
+            "options": [
+                "To plan, coordinate and control activities and to motivate managers",
+                "To determine the company's audit fee",
+                "To set the rate of corporation tax",
+                "To calculate the current ratio"
+            ],
+            "correct_index": 0,
+            "explanation": "Budgets compel planning, coordinate the different functions, provide a control benchmark and can motivate managers, which are the core purposes of budgeting. Tax rates and audit fees are set externally and are not budgeting objectives.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-030",
+            "domain": "Budgeting",
+            "stem": "A budget is prepared by taking the previous year's figures and adding a percentage for inflation and growth, without questioning the underlying spending. Which type of budget is this?",
+            "options": [
+                "Activity-based budgeting",
+                "Incremental budgeting",
+                "Zero-based budgeting",
+                "Rolling budgeting"
+            ],
+            "correct_index": 1,
+            "explanation": "Incremental budgeting adjusts the prior period's budget for known changes, which is quick and stable but can perpetuate past inefficiencies. Zero-based budgeting instead rebuilds each budget from zero.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-031",
+            "domain": "Budgeting",
+            "stem": "Which feature best describes zero-based budgeting?",
+            "options": [
+                "The budget is continuously updated each period",
+                "Only variable costs are included in the budget",
+                "Every activity must justify its budget from a zero base rather than from last year's level",
+                "The budget always equals last year's figures plus inflation"
+            ],
+            "correct_index": 2,
+            "explanation": "Zero-based budgeting requires each cost centre to build and justify its budget from zero, which challenges existing spending but is time-consuming. Adding inflation to last year is incremental budgeting, and continuous updating describes a rolling budget.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-032",
+            "domain": "Budgeting",
+            "stem": "A company prepares a full twelve-month budget every quarter so that it always has a complete year of forward budget. Which type of budget is this?",
+            "options": [
+                "An incremental budget",
+                "A zero-based budget",
+                "A fixed budget",
+                "A rolling budget"
+            ],
+            "correct_index": 3,
+            "explanation": "A rolling budget is continually updated by adding a new period as the earliest expires, so the horizon stays constant and planning is more responsive. A fixed budget is set once for a single activity level.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-033",
+            "domain": "Budgeting",
+            "stem": "A budget that is prepared for the actual level of activity achieved, so that like-for-like comparison with actual results is possible, is called what?",
+            "options": [
+                "A flexible budget",
+                "A fixed budget",
+                "A rolling budget",
+                "A capital budget"
+            ],
+            "correct_index": 0,
+            "explanation": "A flexible budget is flexed to the actual activity level so that costs are compared on a consistent basis. A fixed budget is set for one planned activity level and does not adjust for actual output.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-034",
+            "domain": "Budgeting",
+            "stem": "At 2,000 machine hours total cost is $18,000, and at 3,000 machine hours total cost is $23,000. Using the high-low method, which value is the variable cost per machine hour?",
+            "options": [
+                "$23.00",
+                "$5.00",
+                "$9.00",
+                "$7.67"
+            ],
+            "correct_index": 1,
+            "explanation": "The variable cost per hour is the change in cost divided by the change in activity, so 23,000 minus 18,000 divided by 3,000 minus 2,000 equals $5.00. Dividing total cost by hours would incorrectly include fixed cost.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-035",
+            "domain": "Budgeting",
+            "stem": "Using the same data, which value is the fixed cost per period under the high-low method?",
+            "options": [
+                "$13,000",
+                "$5,000",
+                "$8,000",
+                "$10,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Fixed cost is total cost at either activity level minus the variable cost at that level, so 18,000 minus 2,000 multiplied by 5 equals $8,000, which is the same as 23,000 minus 3,000 multiplied by 5. The $5.00 is the variable cost per hour.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-036",
+            "domain": "Budgeting",
+            "stem": "In time-series analysis of monthly sales data, which component represents regular and predictable variations that repeat within a year?",
+            "options": [
+                "The trend",
+                "Cyclical variations",
+                "Random variations",
+                "Seasonal variations"
+            ],
+            "correct_index": 3,
+            "explanation": "Seasonal variations repeat within a twelve-month cycle and can be forecast. The trend is the long-term direction, cyclical variations span longer periods, and random variations are unpredictable.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-037",
+            "domain": "Budgeting",
+            "stem": "A company's production index was 120 in year 2 and 150 in year 3, using year 1 as the base year. Which value is the percentage increase in production from year 2 to year 3?",
+            "options": [
+                "25 percent",
+                "30 percent",
+                "20 percent",
+                "50 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The increase is 30 index points measured against year 2's value of 120, so 30 divided by 120 equals 25 percent. Dividing by the year 1 base of 100 would wrongly give 30 percent.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-038",
+            "domain": "Budgeting",
+            "stem": "On a 90 percent learning curve, cumulative average time per unit falls by 10 percent each time cumulative output doubles. If the first unit takes 100 hours, which value is the cumulative average time per unit for two units?",
+            "options": [
+                "100 hours",
+                "90 hours",
+                "80 hours",
+                "95 hours"
+            ],
+            "correct_index": 1,
+            "explanation": "At a 90 percent learning rate the cumulative average time for two units is 90 percent of the first unit's time, so 100 multiplied by 0.90 equals 90 hours. The second unit on its own takes 80 hours, which is a common but different figure.",
+            "reference": "ACCA PM Syllabus Study Guide - Budgeting"
+        },
+        {
+            "id": "acca-pm-039",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "A company purchased 5,000 kg of material at an actual cost of $4.20 per kg, while the standard price is $4.00 per kg. Which value is the material price variance?",
+            "options": [
+                "$200 adverse",
+                "$5,000 adverse",
+                "$1,000 adverse",
+                "$1,000 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "Price variance is the standard price minus the actual price times actual quantity, so 4.00 minus 4.20 multiplied by 5,000 equals $1,000 adverse. Paying above the standard price is adverse.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-040",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "The company used 4,800 kg of material to make 1,000 units, each of which should use 5 kg. The standard price is $4.00 per kg. Which value is the material usage variance?",
+            "options": [
+                "$800 adverse",
+                "$1,000 favourable",
+                "$1,200 adverse",
+                "$800 favourable"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard quantity for actual output is 1,000 multiplied by 5, giving 5,000 kg, so the usage variance is 5,000 minus 4,800 multiplied by $4.00, equal to $800 favourable. Using less material than standard is favourable.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-041",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "Employees worked 2,000 hours and were paid $15.50 per hour, while the standard rate is $15.00 per hour. Which value is the labour rate variance?",
+            "options": [
+                "$1,000 adverse",
+                "$1,000 favourable",
+                "$500 adverse",
+                "$100 adverse"
+            ],
+            "correct_index": 0,
+            "explanation": "Rate variance is the standard rate minus the actual rate times actual hours, so 15.00 minus 15.50 multiplied by 2,000 equals $1,000 adverse. An actual rate above standard is adverse.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-042",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "Those employees made 1,000 units in 2,000 hours when the standard allows 2.5 hours per unit, at a standard rate of $15 per hour. Which value is the labour efficiency variance?",
+            "options": [
+                "$5,000 favourable",
+                "$7,500 favourable",
+                "$7,500 adverse",
+                "$3,000 favourable"
+            ],
+            "correct_index": 1,
+            "explanation": "Standard hours for actual output are 1,000 multiplied by 2.5, giving 2,500. The efficiency variance is 2,500 minus 2,000 multiplied by $15, equal to $7,500 favourable, since fewer hours were used than standard.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-043",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "Budgeted fixed overhead was $50,000 and actual fixed overhead incurred was $53,000, with both budgeted and actual output at 10,000 units. Which value is the fixed overhead expenditure variance?",
+            "options": [
+                "$0",
+                "$2,500 adverse",
+                "$3,000 adverse",
+                "$3,000 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "Fixed overhead expenditure variance is budgeted fixed overhead minus actual fixed overhead, so 50,000 minus 53,000 equals $3,000 adverse. Spending more than budget is adverse.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-044",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "Budgeted fixed overhead was $50,000 for 10,000 units, but actual output was 9,000 units. The standard fixed overhead absorption rate is $5 per unit. Which value is the fixed overhead volume variance?",
+            "options": [
+                "$5,000 favourable",
+                "$4,000 adverse",
+                "$1,000 adverse",
+                "$5,000 adverse"
+            ],
+            "correct_index": 3,
+            "explanation": "Volume variance is actual output minus budgeted output times the standard absorption rate, so 9,000 minus 10,000 multiplied by $5 equals $5,000 adverse. Producing less than budgeted leaves overhead under-absorbed.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-045",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "A company budgeted to sell 2,000 units at $30 each but actually sold 2,000 units at $28 each. Which value is the sales price variance?",
+            "options": [
+                "$4,000 adverse",
+                "$4,000 favourable",
+                "$2,000 adverse",
+                "$1,000 adverse"
+            ],
+            "correct_index": 0,
+            "explanation": "Sales price variance is the actual price minus the standard price times actual units sold, so 28 minus 30 multiplied by 2,000 equals $4,000 adverse. Selling below the standard price is adverse.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-046",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "The standard contribution per unit is $10, budgeted sales were 2,000 units and actual sales were 2,300 units. Which value is the sales volume profit variance?",
+            "options": [
+                "$300 favourable",
+                "$3,000 favourable",
+                "$3,000 adverse",
+                "$2,300 favourable"
+            ],
+            "correct_index": 1,
+            "explanation": "Sales volume profit variance is actual units minus budgeted units times standard contribution, so 2,300 minus 2,000 multiplied by $10 equals $3,000 favourable. Selling more units than budgeted is favourable.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-047",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "A company sold 1,000 units in total, being 600 of product X with standard contribution $6 and 400 of product Y with standard contribution $10, against a standard mix of 50 to 50. Which value is the sales mix variance?",
+            "options": [
+                "$1,000 adverse",
+                "$600 favourable",
+                "$400 adverse",
+                "$400 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "At the standard mix, 500 units of each product would be sold, so the variance is 600 minus 500 multiplied by $6 plus 400 minus 500 multiplied by $10, giving 600 minus 1,000, equal to $400 adverse. The mix shifted towards the lower-contribution product X.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-048",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "A process used 4,000 kg of material in total, being 2,600 kg of A and 1,400 kg of B, against a standard mix of 60 percent A and 40 percent B. Standard costs are $3 per kg for A and $5 per kg for B. Which value is the material mix variance?",
+            "options": [
+                "$400 adverse",
+                "$600 favourable",
+                "$1,000 adverse",
+                "$400 favourable"
+            ],
+            "correct_index": 3,
+            "explanation": "At the standard mix of 4,000 kg, A would be 2,400 kg and B 1,600 kg. Actual mix cost is 2,600 multiplied by $3 plus 1,400 multiplied by $5, which is 14,800, against standard mix cost 2,400 multiplied by $3 plus 1,600 multiplied by $5, which is 15,200, so the variance is $400 favourable because more of the cheaper material A was used.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-049",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "After a budget was set, the standard price of a material rose because of an unexpected worldwide shortage. When variances are analysed into planning and operational, how should the effect of this shortage be classified?",
+            "options": [
+                "As a planning variance, because the standard itself has become out of date",
+                "As an operational variance, because purchasing paid the higher price",
+                "As a sales volume variance",
+                "As a fixed overhead capacity variance"
+            ],
+            "correct_index": 0,
+            "explanation": "Planning variances isolate the effect of errors or changes in the original standard, such as an unforeseen price change, from controllability. Operational variances compare actual performance with the revised standard.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        },
+        {
+            "id": "acca-pm-050",
+            "domain": "Standard Costing and Variance Analysis",
+            "stem": "A revised standard has been set to reflect a permanent change in the quality of material required. Which term describes the difference between actual results and this revised standard?",
+            "options": [
+                "Fixed overhead volume variance",
+                "Operational variance",
+                "Planning variance",
+                "Sales mix variance"
+            ],
+            "correct_index": 1,
+            "explanation": "Operational variances measure controllable performance against the revised and attainable standard. Planning variances measure the effect of the change in the standard itself.",
+            "reference": "ACCA PM Syllabus Study Guide - Standard Costing and Variance Analysis"
+        }
+    ]
+}

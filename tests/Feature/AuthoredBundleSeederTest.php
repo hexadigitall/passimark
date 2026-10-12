@@ -684,6 +684,57 @@ class AuthoredBundleSeederTest extends TestCase
                 'Improve' => 25,
                 'Control' => 20,
             ]],
+            'acca-bt' => ['acca-bt', 50, [
+                'Business Organisation Structure and Governance' => 12,
+                'Business Functions and the Wider Environment' => 10,
+                'Technology and Data in Business' => 14,
+                'The Accountant in Business and Professional Ethics' => 14,
+            ]],
+            'acca-ma' => ['acca-ma', 50, [
+                'The Nature, Source and Purpose of Management Information' => 10,
+                'Cost Accounting Techniques' => 18,
+                'Budgeting' => 12,
+                'Standard Costing and Performance Measurement' => 10,
+            ]],
+            'acca-fa' => ['acca-fa', 50, [
+                'The Context and Purpose of Financial Reporting' => 8,
+                'Recording Transactions and Events' => 18,
+                'Preparing a Trial Balance' => 10,
+                'Preparing Basic Financial Statements' => 14,
+            ]],
+            'acca-lw' => ['acca-lw', 50, [
+                'Essential Elements of the Legal System' => 8,
+                'The Law of Obligations' => 16,
+                'Employment Law' => 8,
+                'The Formation and Constitution of Business Organisations' => 10,
+                'Capital and the Financing of Companies and Management' => 8,
+            ]],
+            'acca-pm' => ['acca-pm', 50, [
+                'Specialist Cost and Management Accounting Techniques' => 14,
+                'Decision-making Techniques' => 14,
+                'Budgeting' => 10,
+                'Standard Costing and Variance Analysis' => 12,
+            ]],
+            'acca-tx' => ['acca-tx', 50, [
+                'The UK Tax System and Administration' => 8,
+                'Income Tax and National Insurance' => 16,
+                'Chargeable Gains' => 10,
+                'Corporation Tax' => 12,
+                'VAT and Other Taxes' => 4,
+            ]],
+            'acca-fr' => ['acca-fr', 50, [
+                'The Conceptual and Regulatory Framework for Financial Reporting' => 8,
+                'Accounting for Transactions in Financial Statements' => 16,
+                'Analysing the Financial Performance of an Entity' => 10,
+                'Preparation of Financial Statements (Including Consolidated)' => 16,
+            ]],
+            'acca-aa' => ['acca-aa', 50, [
+                'Audit Framework and Regulation' => 8,
+                'Planning and Risk Assessment' => 14,
+                'Internal Control' => 12,
+                'Audit Evidence and Procedures' => 10,
+                'Review and Reporting' => 6,
+            ]],
         ];
     }
 
