@@ -1,0 +1,1417 @@
+{
+    "cert_key": "sixsigma-gb",
+    "title": "Lean Six Sigma Green Belt",
+    "issuer": "Lean Six Sigma Certification Bodies",
+    "outline_file": "outlines/sixsigma-gb.json",
+    "variant_label": "Six Sigma Green Belt Real-Spec Practice",
+    "exam": {
+        "questions": 100,
+        "duration_minutes": 120,
+        "scoring": "Pass/fail against passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Lean Six Sigma Green Belt body of knowledge (DMAIC and intermediate quality/statistics concepts). Not a capture of past questions.",
+    "source_label": "Lean Six Sigma Green Belt practice bank",
+    "items": [
+        {
+            "id": "sixsigma-gb-001",
+            "domain": "Define",
+            "stem": "A project team is drafting the document that formally authorizes the improvement effort and names the project leader. Which element is essential in this project charter?",
+            "options": [
+                "A clear problem statement, goal, scope, and the authority granted to the project leader",
+                "The complete statistical analysis plan and final regression equations",
+                "A guarantee that the process will reach six sigma within one week",
+                "The names of every customer who will ever buy the product"
+            ],
+            "correct_index": 0,
+            "explanation": "A project charter authorizes the work and must contain the problem statement, measurable goal, scope, and the leader's authority. Statistical output belongs to Analyze, short deadlines and guarantees are unrealistic, and listing all customers is neither required nor feasible.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-002",
+            "domain": "Define",
+            "stem": "A Green Belt is told to write a problem statement for a defect-reduction project. Which wording best fits a good problem statement?",
+            "options": [
+                "Errors in billing are probably caused by untrained staff",
+                "Between January and March, the billing process produced a 4.2 percent error rate, exceeding the 1 percent target",
+                "The billing department is careless and needs to be replaced",
+                "We should buy new billing software to fix all errors"
+            ],
+            "correct_index": 1,
+            "explanation": "A good problem statement is measurable, time-bound, and free of blame or solutions. The other options state a cause, prescribe a solution, or make a personal judgment, none of which belong in a problem statement.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-003",
+            "domain": "Define",
+            "stem": "A team gathers raw customer comments from surveys and interviews but cannot turn them into measurable requirements. What is the best next step?",
+            "options": [
+                "Ask the project sponsor to write the specifications alone",
+                "Proceed directly to designing an experiment",
+                "Translate the voice of the customer into critical-to-quality characteristics with operational definitions",
+                "Discard the comments because they are not numeric"
+            ],
+            "correct_index": 2,
+            "explanation": "Voice-of-customer data must be translated into critical-to-quality characteristics with operational definitions before it can drive measurement. Discarding qualitative data loses insight, and letting only the sponsor translate weakens team ownership.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-004",
+            "domain": "Define",
+            "stem": "A team must ensure that two inspectors measure a coating thickness the same way. What must be written first for the measurement?",
+            "options": [
+                "A hypothesis test comparing the two inspectors before any measurement",
+                "A control chart with limits calculated from the target",
+                "A Pareto chart of coating colors",
+                "An operational definition that states the procedure, instrument, and decision criteria"
+            ],
+            "correct_index": 3,
+            "explanation": "An operational definition makes a measurement repeatable by specifying procedure, instrument, and accept or reject criteria. Testing or charting before the definition exists only measures the confusion.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-005",
+            "domain": "Define",
+            "stem": "A quality team estimates costs from scrap, rework, warranty claims, and lost goodwill. Which cost category are they measuring?",
+            "options": [
+                "Cost of poor quality",
+                "Cost of the project charter",
+                "Cost of a designed experiment",
+                "Cost of the control chart"
+            ],
+            "correct_index": 0,
+            "explanation": "Scrap, rework, warranty, and lost goodwill are the classic cost-of-poor-quality elements. The other options are project or tool costs, not the cost of failing to meet quality.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-006",
+            "domain": "Define",
+            "stem": "A team mapping the boundaries of a process wants a high-level view of suppliers, inputs, process steps, outputs, and customers. Which tool should they use?",
+            "options": [
+                "A full factorial experiment",
+                "A SIPOC diagram",
+                "A Gantt chart",
+                "An X-bar and R control chart"
+            ],
+            "correct_index": 1,
+            "explanation": "SIPOC stands for Suppliers, Inputs, Process, Outputs, and Customers and gives the high-level boundary view used in Define. Gantt charts track schedules, control charts monitor variation, and factorial designs are experiments.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-007",
+            "domain": "Define",
+            "stem": "A project sponsor asks the team to identify everyone who can affect or be affected by the improvement. Which activity should the team perform?",
+            "options": [
+                "A fractional factorial experiment",
+                "A control plan",
+                "Stakeholder analysis that maps influence and interest",
+                "A gage repeatability and reproducibility study"
+            ],
+            "correct_index": 2,
+            "explanation": "Stakeholder analysis maps influence and interest so the team can plan communication and engagement. Gage studies measure measurement systems, experiments test factors, and control plans sustain the result.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-008",
+            "domain": "Define",
+            "stem": "An executive provides resources, removes organizational barriers, and champions the project at the leadership level. Which role is this?",
+            "options": [
+                "The process operator",
+                "The external auditor",
+                "The equipment vendor",
+                "The project sponsor or champion"
+            ],
+            "correct_index": 3,
+            "explanation": "The sponsor or champion owns resources, removes barriers, and represents the project to leadership. Operators run the process, auditors assess compliance, and vendors supply equipment, none of which matches this role.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-009",
+            "domain": "Define",
+            "stem": "After the improvement project ends, a manager must keep the improved process performing day to day. Which role does this manager fill?",
+            "options": [
+                "The process owner",
+                "The Green Belt",
+                "The external consultant",
+                "The data-entry clerk"
+            ],
+            "correct_index": 0,
+            "explanation": "The process owner sustains and monitors the improved process after the project closes. The Green Belt leads the project, consultants advise, and clerks execute tasks, so none of them owns ongoing performance.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-010",
+            "domain": "Define",
+            "stem": "A project needs a person who leads the DMAIC project part time while keeping their normal job. Which role is this?",
+            "options": [
+                "A supplier",
+                "A Green Belt",
+                "A Master Black Belt",
+                "A process operator"
+            ],
+            "correct_index": 1,
+            "explanation": "A Green Belt leads improvement projects while typically retaining other duties. Master Black Belts coach and deploy the programme, operators run the process, and suppliers provide inputs.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-011",
+            "domain": "Define",
+            "stem": "A team must choose members for an improvement project. Which selection criterion is most appropriate?",
+            "options": [
+                "Members who all share the same opinion to avoid debate",
+                "Members with the least time available",
+                "Members with process knowledge, data skills, and authority to act on the change",
+                "Members chosen only because they are friends of the sponsor"
+            ],
+            "correct_index": 2,
+            "explanation": "Effective teams combine process knowledge, analytical skill, and decision authority. Choosing friends, avoiding diverse views, or picking the least available people undermines the project.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-012",
+            "domain": "Define",
+            "stem": "A team writes a goal statement for its charter. Which goal statement is best?",
+            "options": [
+                "Improve quality and make customers much happier as soon as possible",
+                "Eliminate all company problems using Lean Six Sigma",
+                "Study invoicing someday when staff are available",
+                "Reduce the invoice error rate from 8 percent to below 2 percent by June 30"
+            ],
+            "correct_index": 3,
+            "explanation": "A goal statement should be specific, measurable, time-bound, and tied to the problem. Vague wishes or open-ended studies give no target to measure against.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-013",
+            "domain": "Define",
+            "stem": "Before starting an improvement project, a team needs to justify the investment and expected benefit. Which document serves this purpose?",
+            "options": [
+                "The business case",
+                "The control chart",
+                "The Gage R and R report",
+                "The fishbone diagram"
+            ],
+            "correct_index": 0,
+            "explanation": "The business case links the project to strategic benefit and justifies the investment. Control charts and gage studies are technical tools, and a fishbone is a cause-analysis tool, not an investment justification.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-014",
+            "domain": "Define",
+            "stem": "A team is defining where the improvement project starts and stops in the overall process. What is this activity called?",
+            "options": [
+                "Establishing control limits",
+                "Scoping the project and fixing its boundaries",
+                "Running a confirmatory experiment",
+                "Computing the process capability index"
+            ],
+            "correct_index": 1,
+            "explanation": "Scoping defines the start and stop boundaries so the team works on a manageable process slice. Experiments, capability indices, and control limits occur in later phases.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-015",
+            "domain": "Define",
+            "stem": "A team wants to know which features of a product customers expect, which delight them, and which merely satisfy them. Which model should they apply?",
+            "options": [
+                "A paired t-test",
+                "A fractional factorial design",
+                "The Kano model",
+                "The p control chart"
+            ],
+            "correct_index": 2,
+            "explanation": "The Kano model classifies requirements as must-be, one-dimensional, or attractive based on customer satisfaction. The other options are statistical or experimental tools unrelated to preference classification.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-016",
+            "domain": "Define",
+            "stem": "A team translating customer needs into design requirements uses a matrix that connects what customers want with how the product can deliver it. Which tool is this?",
+            "options": [
+                "A control plan",
+                "An individuals and moving range chart",
+                "A chi-square test",
+                "Quality function deployment and its house of quality"
+            ],
+            "correct_index": 3,
+            "explanation": "Quality function deployment, shown as the house of quality, links customer requirements to technical design requirements. Control plans sustain processes, control charts monitor variation, and chi-square tests analyse categorical data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-017",
+            "domain": "Define",
+            "stem": "A team has many possible projects and must decide which defect type deserves attention first because it causes the greatest loss. Which tool helps prioritize?",
+            "options": [
+                "A Pareto chart ranking defects by frequency or impact",
+                "A run chart of a single operator's output",
+                "A Gage R and R study",
+                "A paired comparison t-test"
+            ],
+            "correct_index": 0,
+            "explanation": "A Pareto chart separates the vital few causes from the trivial many, supporting prioritization. Run charts show time behaviour, gage studies assess measurement, and paired t-tests compare two means.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-018",
+            "domain": "Define",
+            "stem": "As the Define phase closes, a review is held to confirm the charter, problem statement, and goal before moving on. What is this checkpoint called?",
+            "options": [
+                "A confirmatory experiment",
+                "A phase-gate or tollgate review",
+                "A Gage R and R acceptance run",
+                "A final control plan audit"
+            ],
+            "correct_index": 1,
+            "explanation": "A phase-gate or tollgate review confirms deliverables and grants approval to proceed. Gage studies, control-plan audits, and confirmatory experiments belong to later phases and other purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-019",
+            "domain": "Define",
+            "stem": "A team collects spoken and written customer comments and groups similar ideas to reveal common themes. Which Define tool are they using?",
+            "options": [
+                "A full factorial design",
+                "A capability analysis",
+                "An affinity diagram",
+                "A moving range chart"
+            ],
+            "correct_index": 2,
+            "explanation": "An affinity diagram groups brainstormed or verbatim comments into themes. Control charts, factorial designs, and capability analyses are used later and for different purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-020",
+            "domain": "Define",
+            "stem": "A team must decide who approves changes to project scope during the Define phase. What should the charter specify?",
+            "options": [
+                "The exact control limits for the process",
+                "The regression equation for the key output",
+                "The final p-value of the improvement test",
+                "The decision rights and authority of the project leader and sponsor"
+            ],
+            "correct_index": 3,
+            "explanation": "The charter records decision rights and authority so scope changes have a clear approver. Control limits, regression equations, and p-values are technical outputs from later phases.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-gb-021",
+            "domain": "Measure",
+            "stem": "A team wants to measure a call centre's performance. Which metric is a continuous measurement?",
+            "options": [
+                "The time in seconds each customer waits before an agent answers",
+                "Whether the customer was satisfied or not satisfied",
+                "The colour of the agent's badge",
+                "The department name handling the call"
+            ],
+            "correct_index": 0,
+            "explanation": "Waiting time in seconds is continuous because it can take any value on a scale. Satisfaction flags, badge colour, and department names are categorical or nominal data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-022",
+            "domain": "Measure",
+            "stem": "A team records whether each order passed or failed inspection. Which type of data is this?",
+            "options": [
+                "Interval-scale temperature data",
+                "Discrete or attribute data",
+                "Continuous data",
+                "Ratio-scale data with a true zero"
+            ],
+            "correct_index": 1,
+            "explanation": "Pass or fail records an attribute outcome and is therefore discrete. Continuous, ratio, and interval scales require measurements that can take many values, not a two-way classification.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-023",
+            "domain": "Measure",
+            "stem": "A survey asks customers to rank service as poor, fair, good, or excellent. Which measurement scale is this?",
+            "options": [
+                "Ratio",
+                "Interval",
+                "Ordinal",
+                "Nominal"
+            ],
+            "correct_index": 2,
+            "explanation": "The categories have a meaningful order but unequal and undefined distances, which defines an ordinal scale. Nominal has no order, and ratio and interval require numeric distances.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-024",
+            "domain": "Measure",
+            "stem": "A process has a few extreme outliers that pull the average upward. Which measure of central tendency best represents typical performance?",
+            "options": [
+                "The mean",
+                "The geometric range",
+                "The correlation coefficient",
+                "The median"
+            ],
+            "correct_index": 3,
+            "explanation": "The median resists the pull of extreme values, unlike the mean. The geometric range and correlation coefficient measure spread and association, not central tendency.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-025",
+            "domain": "Measure",
+            "stem": "Two processes have the same average but one is far more variable. Which statistic should the team compare to see the difference?",
+            "options": [
+                "The standard deviation",
+                "The mode",
+                "The sample count",
+                "The correlation coefficient"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard deviation measures spread around the mean and reveals variation differences. Mode describes the most frequent value, and sample count and correlation do not express process spread.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-026",
+            "domain": "Measure",
+            "stem": "A data set of fill volumes is roughly symmetric and bell shaped. Which distribution best describes it?",
+            "options": [
+                "The uniform distribution",
+                "The normal distribution",
+                "The binomial distribution",
+                "The Poisson distribution"
+            ],
+            "correct_index": 1,
+            "explanation": "A symmetric bell shape with tails is characteristic of the normal distribution. Binomial and Poisson model counts, and the uniform distribution is flat rather than bell shaped.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-027",
+            "domain": "Measure",
+            "stem": "A manager wants each department represented in a sample in proportion to its size. Which sampling method fits?",
+            "options": [
+                "Haphazard sampling",
+                "Snowball sampling",
+                "Stratified random sampling",
+                "Convenience sampling"
+            ],
+            "correct_index": 2,
+            "explanation": "Stratified sampling divides the population into groups and samples each in proportion to size. Convenience and haphazard sampling introduce bias, and snowball sampling is used for hidden populations.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-028",
+            "domain": "Measure",
+            "stem": "A team needs to estimate the population mean fill weight within a stated margin of error. Which factor most directly determines the required sample size?",
+            "options": [
+                "The number of colours on the product label",
+                "The name of the production manager",
+                "The age of the filling machine",
+                "The desired confidence level, margin of error, and process standard deviation"
+            ],
+            "correct_index": 3,
+            "explanation": "Sample size depends on confidence level, desired margin of error, and process variability. Label colours, manager names, and machine age do not enter the sample-size formula.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-029",
+            "domain": "Measure",
+            "stem": "Before trusting process data, a team studies whether the measurement system itself is adequate. What is this study called?",
+            "options": [
+                "A measurement system analysis",
+                "A capability study",
+                "A design of experiments",
+                "A control plan"
+            ],
+            "correct_index": 0,
+            "explanation": "Measurement system analysis quantifies variation from the measuring system before data are trusted. Capability studies assess the process, experiments test factors, and control plans sustain performance.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-030",
+            "domain": "Measure",
+            "stem": "A Gage R and R study separates variation from repeated readings by one operator and variation between operators. What do these two components represent?",
+            "options": [
+                "Accuracy and precision of the standard",
+                "Repeatability and reproducibility",
+                "Bias and linearity",
+                "Stability and capability"
+            ],
+            "correct_index": 1,
+            "explanation": "Repeatability is variation when one operator measures the same part repeatedly, and reproducibility is variation between operators. Bias, linearity, and stability are separate measurement properties.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-031",
+            "domain": "Measure",
+            "stem": "A measurement system consistently reads 0.5 grams higher than the true value across its range. Which property is violated?",
+            "options": [
+                "Reproducibility",
+                "Resolution",
+                "Accuracy, shown as a bias",
+                "Repeatability"
+            ],
+            "correct_index": 2,
+            "explanation": "A consistent offset from the true value is bias, a failure of accuracy. Repeatability and reproducibility concern variation, and resolution concerns the smallest detectable difference.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-032",
+            "domain": "Measure",
+            "stem": "A team assesses whether inspectors agree on a pass or fail judgment. Which study is appropriate?",
+            "options": [
+                "A Gage R and R for continuous data",
+                "A paired t-test",
+                "A regression analysis",
+                "An attribute agreement analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Attribute agreement analysis measures how well appraisers agree on categorical judgments. Continuous gage R and R, t-tests, and regression assume numeric measurements.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-033",
+            "domain": "Measure",
+            "stem": "A process is centred halfway between its specification limits. Which statement about its capability indices is true?",
+            "options": [
+                "Cp and Cpk are equal when the process is perfectly centred",
+                "Cpk is always larger than Cp",
+                "Cp is always smaller than Cpk",
+                "Cpk is undefined unless the process is off centre"
+            ],
+            "correct_index": 0,
+            "explanation": "Cpk equals Cp only when the process mean is exactly at the specification midpoint. When the process is off centre, Cpk falls below Cp, so Cpk is never larger than Cp.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-034",
+            "domain": "Measure",
+            "stem": "A process has a Cp of 2.0 but a Cpk of 1.1. What does the difference indicate?",
+            "options": [
+                "The specification limits are wrong",
+                "The process is capable in spread but is off centre, so centring would raise performance",
+                "The process spread cannot meet specifications at all",
+                "The measurement system must be biased"
+            ],
+            "correct_index": 1,
+            "explanation": "A high Cp with a lower Cpk shows the spread is capable but the mean is shifted, so centring improves capability. A wholly incapable spread would show a low Cp as well.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-035",
+            "domain": "Measure",
+            "stem": "A team reports a process sigma level of 4.5. What does the sigma level express?",
+            "options": [
+                "The number of operators on the line",
+                "The number of samples collected",
+                "How many process standard deviations fit between the process mean and the nearest specification limit",
+                "The number of defects produced each day"
+            ],
+            "correct_index": 2,
+            "explanation": "Sigma level counts standard deviations between the mean and the nearest specification limit. It is not a count of defects, operators, or samples.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-036",
+            "domain": "Measure",
+            "stem": "A team computes defects per million opportunities for a process. What is this metric called?",
+            "options": [
+                "Rolled throughput yield",
+                "Gage reproducibility",
+                "Cost of poor quality",
+                "DPMO, which supports the sigma-level conversion"
+            ],
+            "correct_index": 3,
+            "explanation": "Defects per million opportunities, DPMO, standardizes defect counts by opportunities and maps to a sigma level. Rolled throughput yield, gage studies, and cost of poor quality are different measures.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-037",
+            "domain": "Measure",
+            "stem": "A product passes through five steps, each with a 0.90 first-pass yield. Which measure combines them into overall yield?",
+            "options": [
+                "Rolled throughput yield, the product of the individual yields",
+                "The arithmetic average of the five yields",
+                "The largest of the five yields",
+                "The standard deviation of the yields"
+            ],
+            "correct_index": 0,
+            "explanation": "Rolled throughput yield multiplies the individual step yields to show overall first-pass performance. Averaging, taking the maximum, or using the standard deviation overstates the real yield.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-038",
+            "domain": "Measure",
+            "stem": "A team wants to express defects per unit for a process that has several possible defect types per unit. Which metric applies?",
+            "options": [
+                "The process mean",
+                "Defects per unit, which counts total defects divided by units inspected",
+                "First time yield of the final step only",
+                "The range of the sample"
+            ],
+            "correct_index": 1,
+            "explanation": "Defects per unit counts all defects found divided by the number of units inspected. First time yield treats only one step, and range and mean do not express defects per unit.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-039",
+            "domain": "Measure",
+            "stem": "A team establishes the current performance of a process before improving it. What is this study called?",
+            "options": [
+                "A pilot production run",
+                "A control plan",
+                "A baseline capability study",
+                "A confirmatory experiment"
+            ],
+            "correct_index": 2,
+            "explanation": "A baseline capability study documents the current process capability before changes, giving a reference for later comparison. Confirmatory experiments, pilots, and control plans come after improvement.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-040",
+            "domain": "Measure",
+            "stem": "A team wants a simple form on which operators tally the frequency of each defect type during production. Which tool is this?",
+            "options": [
+                "A control chart",
+                "A Gage R and R",
+                "A regression line",
+                "A check sheet"
+            ],
+            "correct_index": 3,
+            "explanation": "A check sheet is a structured tally form for recording defect frequencies at the point of work. Control charts monitor over time, gage studies assess measurement, and regression models relationships.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-041",
+            "domain": "Measure",
+            "stem": "A team plots the distribution of a continuous measurement to see its shape, centre, and spread. Which tool is this?",
+            "options": [
+                "A histogram",
+                "A Pareto chart",
+                "A run chart",
+                "A fishbone diagram"
+            ],
+            "correct_index": 0,
+            "explanation": "A histogram shows the frequency distribution and shape of continuous data. A Pareto chart ranks categories, a run chart shows time order, and a fishbone diagram organises cause ideas.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-042",
+            "domain": "Measure",
+            "stem": "A team compares the spread and centre of four machines using a plot that shows median, quartiles, and outliers. Which tool is this?",
+            "options": [
+                "A scatter plot",
+                "A box plot",
+                "A control chart",
+                "A check sheet"
+            ],
+            "correct_index": 1,
+            "explanation": "A box plot displays median, quartiles, whiskers, and outliers for comparing groups. Control charts study time behaviour, check sheets tally, and scatter plots show two-variable relationships.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-043",
+            "domain": "Measure",
+            "stem": "A team is choosing between collecting data on every unit and sampling a subset. Which situation best justifies sampling?",
+            "options": [
+                "A legal requirement to inspect every unit",
+                "A process with no measurable output",
+                "Destructive testing where inspecting every unit would ruin the product",
+                "A process that produces only ten units per year"
+            ],
+            "correct_index": 2,
+            "explanation": "Sampling is justified when 100 percent inspection is destructive, costly, or unnecessary. Very small populations, legal 100 percent mandates, and unmeasurable outputs do not call for sampling.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-044",
+            "domain": "Measure",
+            "stem": "A team notices that some process variation comes from many small, always-present sources while occasional spikes come from a specific fixable event. How are these two variation types classified?",
+            "options": [
+                "Special cause variation is always present, while common cause is occasional",
+                "Both types are always the fault of the operator",
+                "Neither type can be studied with data",
+                "Common cause variation is inherent, while special cause variation comes from an identifiable event"
+            ],
+            "correct_index": 3,
+            "explanation": "Common cause variation is the inherent, stable variation of the process, while special cause variation arises from a specific identifiable event. Reversing them or blaming operators misunderstands the concepts.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-045",
+            "domain": "Measure",
+            "stem": "A data collection plan is being written for the Measure phase. Which element must the plan specify?",
+            "options": [
+                "What to measure, how, by whom, when, and how many samples",
+                "The final control limits for the chart",
+                "The regression equation to be fitted",
+                "The pilot batch size for the new design"
+            ],
+            "correct_index": 0,
+            "explanation": "A data collection plan defines the measure, method, responsibility, timing, and sample size. Control limits, regression equations, and pilot sizes belong to later phases.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-gb-046",
+            "domain": "Analyze",
+            "stem": "A team wants to test whether a sample mean differs from a target value. Which family of tools applies?",
+            "options": [
+                "A Pareto chart",
+                "Hypothesis testing using the sample data",
+                "A control plan",
+                "A gage linearity study"
+            ],
+            "correct_index": 1,
+            "explanation": "Hypothesis testing determines whether an observed difference is statistically significant. Control plans, gage studies, and Pareto charts describe or monitor rather than test a mean against a target.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-047",
+            "domain": "Analyze",
+            "stem": "A test is stated as no difference between two group means, against the possibility of a difference. What is the no-difference statement called?",
+            "options": [
+                "The p-value",
+                "The confidence level",
+                "The null hypothesis",
+                "The alternative hypothesis"
+            ],
+            "correct_index": 2,
+            "explanation": "The null hypothesis states the default of no difference or no effect. The alternative hypothesis is its complement, while the p-value and confidence level are results of the test.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-048",
+            "domain": "Analyze",
+            "stem": "A team rejects a true null hypothesis. Which error has occurred?",
+            "options": [
+                "A Type II error",
+                "A power failure",
+                "A sampling bias",
+                "A Type I error"
+            ],
+            "correct_index": 3,
+            "explanation": "Rejecting a true null hypothesis is a Type I error. A Type II error is failing to reject a false null, while power is the chance of detecting a real effect and sampling bias is a design flaw.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-049",
+            "domain": "Analyze",
+            "stem": "A team fails to detect a real difference because the sample was too small. Which error has occurred?",
+            "options": [
+                "A Type II error, which is reduced by increasing power",
+                "A Type I error, which is reduced by lowering alpha",
+                "A centring error",
+                "A resolution error"
+            ],
+            "correct_index": 0,
+            "explanation": "Failing to detect a real effect is a Type II error, and increasing sample size raises power. A Type I error is a false alarm, and centring and resolution errors concern the measurement system.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-050",
+            "domain": "Analyze",
+            "stem": "A test returns a p-value of 0.03 with a significance level of 0.05. What is the correct conclusion?",
+            "options": [
+                "The sample size must be doubled before deciding",
+                "Reject the null hypothesis because the p-value is below the significance level",
+                "Accept the null hypothesis because the p-value is small",
+                "The result is inconclusive regardless of the level"
+            ],
+            "correct_index": 1,
+            "explanation": "When the p-value is below the chosen significance level, the null hypothesis is rejected. Small p-values argue against the null, and no mandatory doubling of the sample is required by the rule.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-051",
+            "domain": "Analyze",
+            "stem": "A team sets the risk of a false alarm before running a test. What is this chosen threshold called?",
+            "options": [
+                "The p-value",
+                "The effect size",
+                "The significance level, denoted alpha",
+                "The power of the test"
+            ],
+            "correct_index": 2,
+            "explanation": "The significance level alpha is the pre-chosen probability of a Type I error. Power is the chance of detecting an effect, the p-value is the observed result, and effect size measures the magnitude of a difference.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-052",
+            "domain": "Analyze",
+            "stem": "A team wants a high chance of detecting a real improvement of a given size. Which property should the test have?",
+            "options": [
+                "A high significance level",
+                "A small sample size",
+                "A wide confidence interval",
+                "High statistical power, achieved with larger samples and lower variation"
+            ],
+            "correct_index": 3,
+            "explanation": "Power is the probability of detecting a real effect and grows with sample size and lower variation. A high alpha raises false alarms, and small samples and wide intervals reduce power.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-053",
+            "domain": "Analyze",
+            "stem": "A single set of measurements is compared with a known standard mean. Which test is most appropriate?",
+            "options": [
+                "A one-sample t-test",
+                "A two-sample t-test",
+                "A chi-square test",
+                "A paired t-test"
+            ],
+            "correct_index": 0,
+            "explanation": "A one-sample t-test compares a single sample mean with a target or standard. Two-sample tests compare two groups, and paired and chi-square tests address different data structures.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-054",
+            "domain": "Analyze",
+            "stem": "The average output of two independent production lines must be compared. Which test fits?",
+            "options": [
+                "A chi-square test",
+                "A two-sample t-test",
+                "A one-sample t-test",
+                "A paired t-test"
+            ],
+            "correct_index": 1,
+            "explanation": "A two-sample t-test compares the means of two independent groups such as two lines. A one-sample test compares to a target, and paired and chi-square tests suit dependent or categorical data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-055",
+            "domain": "Analyze",
+            "stem": "The same parts are measured before and after a treatment, and the before-after differences matter. Which test fits?",
+            "options": [
+                "A chi-square test",
+                "A one-sample proportion test",
+                "A paired t-test",
+                "A two-sample t-test for independent groups"
+            ],
+            "correct_index": 2,
+            "explanation": "A paired t-test uses the differences within matched pairs such as the same parts before and after. Independent two-sample tests ignore the pairing, and the other tests address different data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-056",
+            "domain": "Analyze",
+            "stem": "A team compares the mean strength of a product made by three different machines. Which test is appropriate?",
+            "options": [
+                "A paired t-test",
+                "A chi-square test",
+                "A simple linear regression",
+                "A one-way analysis of variance"
+            ],
+            "correct_index": 3,
+            "explanation": "Analysis of variance compares means across three or more groups. A paired t-test handles two matched groups, a chi-square test handles counts, and regression models a continuous response on a predictor.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-057",
+            "domain": "Analyze",
+            "stem": "A team studies whether defect type is associated with shift, where both are categorical. Which test is appropriate?",
+            "options": [
+                "A chi-square test of independence",
+                "A one-sample t-test",
+                "A paired t-test",
+                "A one-way analysis of variance"
+            ],
+            "correct_index": 0,
+            "explanation": "A chi-square test of independence assesses association between two categorical variables. The t-tests and analysis of variance compare means, which do not apply to categorical counts.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-058",
+            "domain": "Analyze",
+            "stem": "A team finds that two variables move together, then concludes one causes the other. What is the flaw?",
+            "options": [
+                "Causation is proven whenever the correlation is positive",
+                "Correlation shows association, not causation, so a third factor or reverse causation is possible",
+                "Correlation can never be computed for two variables",
+                "Association only occurs in designed experiments"
+            ],
+            "correct_index": 1,
+            "explanation": "Correlation measures association only, and causation requires other evidence such as controlled experiments or temporal ordering. Correlation is computable, and a positive sign does not prove causation.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-059",
+            "domain": "Analyze",
+            "stem": "A simple linear regression gives a slope of 2.5 for the effect of temperature on shrinkage. How is the slope interpreted?",
+            "options": [
+                "The correlation between the variables is 2.5",
+                "The process mean shifts by 2.5 standard deviations",
+                "For each one-unit increase in temperature, shrinkage increases by 2.5 units on average",
+                "Shrinkage increases by 2.5 percent for every batch"
+            ],
+            "correct_index": 2,
+            "explanation": "The slope reports the average change in the response per one-unit change in the predictor. It is not a percentage, the correlation, or a shift in standard deviations.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-060",
+            "domain": "Analyze",
+            "stem": "A regression model has an R-squared of 0.85. What does this value mean?",
+            "options": [
+                "The model is 85 percent likely to be correct",
+                "The slope is statistically significant at 85 percent",
+                "The response will be wrong 15 percent of the time",
+                "About 85 percent of the variation in the response is explained by the model"
+            ],
+            "correct_index": 3,
+            "explanation": "R-squared is the proportion of response variation explained by the model. It is not a probability of correctness, a significance level, or an error rate.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-061",
+            "domain": "Analyze",
+            "stem": "In a multiple regression, two predictors are almost perfectly correlated with each other. Which problem does this cause?",
+            "options": [
+                "Multicollinearity, which inflates the variability of the coefficient estimates",
+                "A guaranteed increase in R-squared to one",
+                "The need for a chi-square test instead",
+                "A reduction in the number of observations required"
+            ],
+            "correct_index": 0,
+            "explanation": "Highly correlated predictors cause multicollinearity, making coefficient estimates unstable and hard to interpret. It does not force R-squared to one, change the test type, or reduce data needs.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-062",
+            "domain": "Analyze",
+            "stem": "Before trusting a regression model, a team checks residuals for constant variance, independence, and normality. Why is this done?",
+            "options": [
+                "Residuals prove causation directly",
+                "These assumptions must hold for the model's tests and intervals to be valid",
+                "Residuals only confirm that the slope is positive",
+                "Regression is valid without any assumptions"
+            ],
+            "correct_index": 1,
+            "explanation": "Regression inference relies on assumptions about residuals, so checking them validates the tests and intervals. Residuals neither prove causation nor confirm a positive slope, and assumptions are required.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-063",
+            "domain": "Analyze",
+            "stem": "A team tests whether process data are normally distributed before choosing a test method. Which approach fits?",
+            "options": [
+                "A Pareto analysis",
+                "A p control chart",
+                "A normality test such as the Anderson-Darling test",
+                "A gage reproducibility study"
+            ],
+            "correct_index": 2,
+            "explanation": "A normality test such as Anderson-Darling assesses whether data follow the normal distribution. Gage studies concern measurement, Pareto ranks causes, and p-charts monitor proportions.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-064",
+            "domain": "Analyze",
+            "stem": "A team repeatedly asks why a defect occurs until it reaches a fundamental cause. Which technique is this?",
+            "options": [
+                "A full factorial experiment",
+                "A gage R and R study",
+                "An R-squared calculation",
+                "The five whys"
+            ],
+            "correct_index": 3,
+            "explanation": "The five whys drills down by repeatedly asking why to reach a root cause. Factorial experiments, gage studies, and R-squared calculations serve different purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-065",
+            "domain": "Analyze",
+            "stem": "A team sorts possible causes of a defect into categories such as method, machine, and material. Which tool is this?",
+            "options": [
+                "A cause-and-effect or fishbone diagram",
+                "An individuals control chart",
+                "A regression residual plot",
+                "A check sheet of defect counts"
+            ],
+            "correct_index": 0,
+            "explanation": "A cause-and-effect or fishbone diagram organizes possible causes into categories for analysis. Control charts, residual plots, and check sheets serve other roles.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-066",
+            "domain": "Analyze",
+            "stem": "A team wants to see how a response varies across several process variables at once before experimenting. Which tool applies?",
+            "options": [
+                "A control plan",
+                "A multi-vari study",
+                "A paired t-test",
+                "A chi-square test"
+            ],
+            "correct_index": 1,
+            "explanation": "A multi-vari study examines variation across families of causes such as within-unit, between-unit, and temporal sources. The other tools address different questions or later phases.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-067",
+            "domain": "Analyze",
+            "stem": "A team assesses a failure mode's severity, occurrence, and detection to rank risks. Which tool is this?",
+            "options": [
+                "A Gage R and R study",
+                "A paired t-test",
+                "A failure mode and effects analysis",
+                "A Pareto chart"
+            ],
+            "correct_index": 2,
+            "explanation": "Failure mode and effects analysis rates severity, occurrence, and detection to prioritize risks. Pareto ranks observed causes, gage studies assess measurement, and t-tests compare means.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-gb-068",
+            "domain": "Improve",
+            "stem": "A team wants to learn how several process factors jointly affect a response. Which approach is best?",
+            "options": [
+                "A control chart of the current process",
+                "A Gage R and R study",
+                "A Pareto chart of defects",
+                "A statistically designed experiment"
+            ],
+            "correct_index": 3,
+            "explanation": "Designed experiments manipulate factors together to reveal their effects and interactions. Control charts, gage studies, and Pareto charts observe rather than manipulate factors.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-069",
+            "domain": "Improve",
+            "stem": "In a designed experiment, temperature is set at two values and pressure at three. What are temperature and pressure called?",
+            "options": [
+                "Factors, and their settings are called levels",
+                "Responses, and their settings are called blocks",
+                "Replicates, and their settings are called runs",
+                "Residuals, and their settings are called errors"
+            ],
+            "correct_index": 0,
+            "explanation": "Factors are the inputs varied by the experimenter, and the values chosen are levels. The response is the measured output, and replicates are repeated runs.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-070",
+            "domain": "Improve",
+            "stem": "A team wants to screen many factors quickly to find the few that matter. Which design is most efficient?",
+            "options": [
+                "A paired t-test",
+                "A fractional factorial or screening design",
+                "A full factorial of every combination",
+                "A single one-factor experiment"
+            ],
+            "correct_index": 1,
+            "explanation": "Fractional factorial and screening designs study many factors with fewer runs to identify the important ones. A full factorial is costly with many factors, and a single factor or t-test cannot screen many factors.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-071",
+            "domain": "Improve",
+            "stem": "An experiment shows that the effect of one factor changes depending on the level of another. What is this called?",
+            "options": [
+                "A replicate",
+                "A blocking factor",
+                "An interaction between the factors",
+                "A main effect"
+            ],
+            "correct_index": 2,
+            "explanation": "When one factor's effect depends on another's level, the factors interact. Main effects are the average effects, while replicates and blocks concern experimental structure.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-072",
+            "domain": "Improve",
+            "stem": "A team randomly orders the experimental runs to spread out nuisance variables. Why is this done?",
+            "options": [
+                "Randomization guarantees the null hypothesis is true",
+                "Randomization removes the need for replication",
+                "Randomization increases the required sample size",
+                "Randomization reduces bias from unknown or uncontrollable factors"
+            ],
+            "correct_index": 3,
+            "explanation": "Randomizing run order protects against hidden nuisance factors that could bias results. It does not guarantee a null result, replace replication, or by itself increase sample size.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-073",
+            "domain": "Improve",
+            "stem": "A team repeats the same experimental setting several times to estimate pure error. What is this practice called?",
+            "options": [
+                "Replication",
+                "Blocking",
+                "Randomization",
+                "Screening"
+            ],
+            "correct_index": 0,
+            "explanation": "Replication repeats runs at the same settings to estimate experimental error. Blocking groups runs to control nuisance factors, randomization orders runs, and screening selects factors.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-074",
+            "domain": "Improve",
+            "stem": "Runs must be made on two different days that may behave differently, so the team groups runs by day. What is this practice called?",
+            "options": [
+                "Interaction",
+                "Blocking",
+                "Replication",
+                "Randomization"
+            ],
+            "correct_index": 1,
+            "explanation": "Blocking groups runs to isolate the effect of a known nuisance variable such as day. Replication repeats runs, randomization orders them, and interaction is a factor relationship.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-075",
+            "domain": "Improve",
+            "stem": "A team lists motion, waiting, overproduction, and defects as targets for removal. Which methodology do these belong to?",
+            "options": [
+                "MSA, which studies measurement",
+                "Regression, which models relationships",
+                "Lean, which identifies the eight wastes",
+                "SPC, which monitors variation"
+            ],
+            "correct_index": 2,
+            "explanation": "Motion, waiting, overproduction, and defects are among the eight Lean wastes. SPC, MSA, and regression are statistical methods rather than waste-reduction frameworks.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-076",
+            "domain": "Improve",
+            "stem": "A workplace improvement sorts, sets in order, shines, standardizes, and sustains. Which Lean method is this?",
+            "options": [
+                "Value stream mapping",
+                "A designed experiment",
+                "A control chart",
+                "The 5S workplace organization method"
+            ],
+            "correct_index": 3,
+            "explanation": "Sort, set in order, shine, standardize, and sustain define 5S. Value stream mapping charts flow, while experiments and control charts serve different purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-077",
+            "domain": "Improve",
+            "stem": "A team maps all steps of a process and marks which add value and which do not. Which Lean tool is this?",
+            "options": [
+                "Value stream mapping",
+                "A Gage R and R study",
+                "A paired t-test",
+                "An R-squared calculation"
+            ],
+            "correct_index": 0,
+            "explanation": "Value stream mapping visualizes material and information flow to separate value-adding from non-value-adding steps. The other options are statistical tools.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-078",
+            "domain": "Improve",
+            "stem": "A team wants a rapid, focused improvement event over a few days with the people who do the work. What is this called?",
+            "options": [
+                "A quarterly audit",
+                "A kaizen or rapid improvement event",
+                "A full factorial experiment",
+                "A gage linearity study"
+            ],
+            "correct_index": 1,
+            "explanation": "A kaizen or rapid improvement event compresses improvement into a short focused workshop. Experiments and gage studies are technical methods, and audits check compliance rather than improve.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-079",
+            "domain": "Improve",
+            "stem": "A team installs a fixture that makes it physically impossible to assemble a part backward. Which Lean technique is this?",
+            "options": [
+                "SMED, or quick changeover",
+                "5S, or workplace organization",
+                "Poka-yoke, or mistake proofing",
+                "Kanban, or pull scheduling"
+            ],
+            "correct_index": 2,
+            "explanation": "Poka-yoke designs the process so errors cannot occur or are immediately detected. Kanban controls flow, SMED shortens changeovers, and 5S organizes the workplace.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-080",
+            "domain": "Improve",
+            "stem": "A team documents the best known method for each operation and posts it at the workstation. What is this called?",
+            "options": [
+                "A control chart",
+                "A screening design",
+                "A histogram",
+                "Standard work"
+            ],
+            "correct_index": 3,
+            "explanation": "Standard work documents the current best method so results are repeatable and improvement has a baseline. Charts, designs, and histograms analyse data rather than standardize the method.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-081",
+            "domain": "Improve",
+            "stem": "A team reduces the time to change over a machine from hours to minutes. Which Lean technique is this?",
+            "options": [
+                "Single minute exchange of die, or quick changeover",
+                "Poka-yoke, or mistake proofing",
+                "Value stream mapping",
+                "The five whys"
+            ],
+            "correct_index": 0,
+            "explanation": "Single minute exchange of die, or SMED, reduces changeover time. Poka-yoke prevents errors, value stream mapping visualizes flow, and the five whys finds root causes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-082",
+            "domain": "Improve",
+            "stem": "Production replenishes only what downstream operations consume, using signals to trigger work. Which Lean concept is this?",
+            "options": [
+                "A chi-square test",
+                "A pull system using kanban signals",
+                "A push system using forecasts",
+                "A full factorial design"
+            ],
+            "correct_index": 1,
+            "explanation": "A pull system with kanban triggers production based on downstream consumption. Push systems build to forecast, and the other options are statistical tools.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-083",
+            "domain": "Improve",
+            "stem": "A team scores candidate solutions against weighted criteria such as cost, impact, and effort. Which tool is this?",
+            "options": [
+                "A gage R and R study",
+                "A residual plot",
+                "A solution selection or prioritization matrix",
+                "A control chart"
+            ],
+            "correct_index": 2,
+            "explanation": "A weighted selection matrix scores options against criteria to support decisions. Control charts, gage studies, and residual plots are analysis tools, not decision matrices.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-084",
+            "domain": "Improve",
+            "stem": "A team tries a promising change on a small scale before full rollout. What is this step called?",
+            "options": [
+                "A full-scale launch",
+                "A phase-gate review",
+                "A gage study",
+                "A pilot study or trial run"
+            ],
+            "correct_index": 3,
+            "explanation": "A pilot tests the change on a limited scale to confirm benefits and reveal problems before full rollout. Full-scale launch skips the safeguard, while gates and gage studies serve different purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-085",
+            "domain": "Improve",
+            "stem": "An experiment identifies the factor settings that maximize yield while meeting constraints. Which activity is this?",
+            "options": [
+                "Optimizing the process using the experimental model",
+                "Monitoring the process with a control chart",
+                "Reducing measurement variation with a gage study",
+                "Documenting standard work"
+            ],
+            "correct_index": 0,
+            "explanation": "Optimization uses the fitted experimental model to choose factor settings that best meet the goal within constraints. Monitoring, measurement improvement, and documentation are separate activities.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-gb-086",
+            "domain": "Control",
+            "stem": "After improvements are validated, what must the team create to keep the gains in place?",
+            "options": [
+                "A screening experiment",
+                "A control plan that defines the measures, limits, and responses",
+                "A business case",
+                "A problem statement"
+            ],
+            "correct_index": 1,
+            "explanation": "A control plan specifies what to monitor, the limits, who responds, and what action to take. The business case and problem statement belong to Define, and screening belongs to Improve.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-087",
+            "domain": "Control",
+            "stem": "A team monitors a process over time to detect shifts from its stable baseline. What is this practice called?",
+            "options": [
+                "Measurement system analysis",
+                "Quality function deployment",
+                "Statistical process control",
+                "Design of experiments"
+            ],
+            "correct_index": 2,
+            "explanation": "Statistical process control uses control charts to detect changes from a stable baseline. Experiments, measurement studies, and QFD serve different purposes.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-088",
+            "domain": "Control",
+            "stem": "A control chart shows points that vary within limits with no pattern over time. What does this indicate?",
+            "options": [
+                "A special cause is definitely present",
+                "The measurement system is broken",
+                "The process mean has shifted upward",
+                "Only common cause variation is present and the process is stable"
+            ],
+            "correct_index": 3,
+            "explanation": "Points varying randomly within limits signal a stable process with only common cause variation. Special causes, shifts, and measurement failures would appear as patterns or out-of-limit points.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-089",
+            "domain": "Control",
+            "stem": "A team plots subgroup means and ranges when samples are collected in small subgroups. Which chart pair is this?",
+            "options": [
+                "An X-bar and R chart",
+                "An individuals and moving range chart",
+                "A p chart",
+                "A c chart"
+            ],
+            "correct_index": 0,
+            "explanation": "X-bar and R charts monitor subgroup means and within-subgroup ranges for small subgroups. Individuals charts suit single observations, and p and c charts track counts.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-090",
+            "domain": "Control",
+            "stem": "A process produces one unit at a time and the team charts each individual value with a moving range. Which chart pair is this?",
+            "options": [
+                "A u chart",
+                "An individuals and moving range chart",
+                "An X-bar and R chart",
+                "An np chart"
+            ],
+            "correct_index": 1,
+            "explanation": "Individuals and moving range charts handle single measurements taken one at a time. X-bar and R charts need subgroups, and np and u charts handle counts.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-091",
+            "domain": "Control",
+            "stem": "A team tracks the proportion of defective invoices in samples of varying size. Which control chart is appropriate?",
+            "options": [
+                "A c chart",
+                "An individuals chart",
+                "A p chart",
+                "An X-bar and R chart"
+            ],
+            "correct_index": 2,
+            "explanation": "A p chart monitors the proportion defective when sample sizes vary. X-bar and R and individuals charts handle continuous data, and c charts count defects in constant-size units.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-092",
+            "domain": "Control",
+            "stem": "A team counts the total number of defects per finished car, where each car can have several defects. Which chart is appropriate when the sample size is constant?",
+            "options": [
+                "A p chart",
+                "An X-bar and R chart",
+                "A moving range chart",
+                "A c chart"
+            ],
+            "correct_index": 3,
+            "explanation": "A c chart tracks the count of defects per constant-size inspection unit. A p chart tracks proportion defective, and X-bar, R, and moving range charts handle continuous data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-093",
+            "domain": "Control",
+            "stem": "A team monitors defects per unit where the inspection area or sample size varies between observations. Which chart is appropriate?",
+            "options": [
+                "A u chart",
+                "A c chart",
+                "An np chart",
+                "An X-bar chart"
+            ],
+            "correct_index": 0,
+            "explanation": "A u chart tracks defects per unit when the inspection unit size varies. A c chart assumes a constant unit, np charts count defective items, and X-bar charts handle continuous data.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-094",
+            "domain": "Control",
+            "stem": "A control chart's upper limit is far above the customer's specification limit. What does this signal?",
+            "options": [
+                "The chart was constructed incorrectly",
+                "The process can be stable yet still produce out-of-specification output, so capability is inadequate",
+                "The process is perfectly capable because it is stable",
+                "The specification limit must be moved to the control limit"
+            ],
+            "correct_index": 1,
+            "explanation": "Control limits come from process variation, not from customer requirements, so a stable process can still be incapable. Moving specifications or blaming the chart misreads the purpose of control limits.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-095",
+            "domain": "Control",
+            "stem": "Consecutive points on a control chart keep rising in one direction. Which condition does this indicate?",
+            "options": [
+                "A measurement resolution problem only",
+                "A correct process with no action needed",
+                "A non-random pattern such as a trend, suggesting a special cause",
+                "Perfect process stability"
+            ],
+            "correct_index": 2,
+            "explanation": "A sustained trend is a non-random pattern that signals a special cause requiring investigation. It is not stability, and while resolution could matter, a trend alone demands action.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-096",
+            "domain": "Control",
+            "stem": "Eight consecutive points fall on the same side of the centre line. How is this interpreted?",
+            "options": [
+                "It is normal variation because no point is outside the limits",
+                "It proves the process mean is exactly on target",
+                "It indicates the sample size was too small",
+                "It is a run or shift that signals a special cause even though points are within limits"
+            ],
+            "correct_index": 3,
+            "explanation": "A run of points on one side of the centre line signals a shift or special cause under standard run rules, even without an out-of-limit point. Being within limits does not make such a pattern normal.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-097",
+            "domain": "Control",
+            "stem": "After a control chart signals an out-of-control point, what should the team do first?",
+            "options": [
+                "Investigate for an assignable or special cause and correct it before resuming",
+                "Ignore it because one point does not matter",
+                "Recalculate the control limits to include the point",
+                "Stop measuring the process entirely"
+            ],
+            "correct_index": 0,
+            "explanation": "An out-of-control signal requires investigation for an assignable cause so it can be corrected. Ignoring it, folding the point into the limits, or stopping measurement all hide the problem.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-098",
+            "domain": "Control",
+            "stem": "A failure mode had a high risk priority number, and the team implemented a control to reduce it. What should happen next?",
+            "options": [
+                "Move the failure mode to a different process",
+                "Reassess severity, occurrence, and detection to confirm the risk priority number fell",
+                "Delete the failure mode from the analysis",
+                "Assume the control worked without further review"
+            ],
+            "correct_index": 1,
+            "explanation": "After adding controls, the FMEA is updated to re-rate the three factors and confirm risk fell. Deleting the mode, assuming success, or relocating it avoids verification.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-099",
+            "domain": "Control",
+            "stem": "A team needs to ensure operators keep following the improved method after the project ends. Which action best supports sustainment?",
+            "options": [
+                "Return the process to its previous method",
+                "Remove the control chart and stop monitoring",
+                "Train the operators, document standard work, and audit adherence over time",
+                "Rely on memory and verbal instructions only"
+            ],
+            "correct_index": 2,
+            "explanation": "Sustainment relies on training, documented standard work, and periodic audits. Relying on memory, reverting the method, or removing monitoring would let the gains erode.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-gb-100",
+            "domain": "Control",
+            "stem": "As a Lean Six Sigma project closes, the team records what worked and what did not for future projects. What is this deliverable called?",
+            "options": [
+                "A problem statement",
+                "A Gage R and R acceptance report",
+                "A screening experiment plan",
+                "Lessons learned and project closure documentation"
+            ],
+            "correct_index": 3,
+            "explanation": "Lessons learned and closure documentation capture what worked, what did not, and recommendations. Problem statements, gage reports, and experiment plans are earlier phase artifacts.",
+            "reference": "Lean Six Sigma Green Belt Body of Knowledge - Control"
+        }
+    ]
+}

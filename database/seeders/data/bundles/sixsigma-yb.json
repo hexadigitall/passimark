@@ -1,0 +1,857 @@
+{
+    "cert_key": "sixsigma-yb",
+    "title": "Lean Six Sigma Yellow Belt",
+    "issuer": "Lean Six Sigma Certification Bodies",
+    "outline_file": "outlines/sixsigma-yb.json",
+    "variant_label": "Six Sigma Yellow Belt Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Lean Six Sigma Yellow Belt body of knowledge (DMAIC and foundational quality concepts). Not a capture of past questions.",
+    "source_label": "Lean Six Sigma Yellow Belt practice bank",
+    "items": [
+        {
+            "id": "sixsigma-yb-001",
+            "domain": "Define",
+            "stem": "A process improvement team is drafting its project charter and the sponsor asks which element must be documented to authorize the team's work and define its boundaries. Which element belongs in the charter?",
+            "options": [
+                "The business case, problem statement, goal, scope, and team roles",
+                "The detailed statistical analysis plan and hypothesis tests",
+                "The individual performance ratings of each team member",
+                "The final solution design and its return on investment calculation"
+            ],
+            "correct_index": 0,
+            "explanation": "The project charter in the Define phase establishes the business case, problem and goal statements, scope boundaries, milestones, and team roles, while analysis and solution design occur in later phases.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-002",
+            "domain": "Define",
+            "stem": "Members of a new improvement team disagree about why the project exists and who has authority to make decisions. Which Define-phase document resolves these questions?",
+            "options": [
+                "The measurement system analysis report",
+                "The project charter, which records the purpose, scope, and authority",
+                "The control chart used to monitor the process",
+                "The Pareto chart of defect categories"
+            ],
+            "correct_index": 1,
+            "explanation": "The charter is the foundational Define document that names the problem, goal, scope, stakeholders, milestones, and decision authority, aligning the team before any measurement begins.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-003",
+            "domain": "Define",
+            "stem": "A hotel wants to improve guest satisfaction, so the team interviews guests, reads online reviews, and surveys frequent travelers. Which Six Sigma term describes the input gathered from these sources?",
+            "options": [
+                "Cost of Poor Quality",
+                "Statistical Process Control",
+                "Voice of the Customer",
+                "Critical to Quality"
+            ],
+            "correct_index": 2,
+            "explanation": "Collecting and analyzing customer needs, expectations, and feedback from multiple channels is the Voice of the Customer activity, which later yields measurable Critical to Quality requirements.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-004",
+            "domain": "Define",
+            "stem": "After gathering customer feedback, the team must translate a broad need such as a hotel that feels clean into something measurable. What does Six Sigma call this measurable customer requirement?",
+            "options": [
+                "A Voice of the Process metric",
+                "A Common Cause of variation",
+                "A Standard Operating Procedure",
+                "A Critical to Quality characteristic"
+            ],
+            "correct_index": 3,
+            "explanation": "A Critical to Quality characteristic converts a general customer need into a specific, measurable requirement that the process can be designed and monitored against.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-005",
+            "domain": "Define",
+            "stem": "Before mapping detailed steps, a team wants a one-page overview showing the process boundaries, the main steps, and who supplies inputs and receives outputs. Which Define tool should the team use?",
+            "options": [
+                "A SIPOC diagram",
+                "A control chart",
+                "A scatter plot",
+                "A Gage R&R study"
+            ],
+            "correct_index": 0,
+            "explanation": "A SIPOC diagram summarizes Suppliers, Inputs, Process steps, Outputs, and Customers at a high level, making it an effective scoping tool before detailed process mapping.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-006",
+            "domain": "Define",
+            "stem": "A team writes a problem statement that says the company should buy new software because the order entry process is bad. Why is this statement weak for a Define-phase charter?",
+            "options": [
+                "It is limited to a single department",
+                "It prescribes a solution and describes the problem vaguely",
+                "It contains too many numerical measurements",
+                "It names the process owner and the sponsor"
+            ],
+            "correct_index": 1,
+            "explanation": "A good problem statement describes the gap between current and desired performance with facts and scope but does not prescribe a solution, and this draft embeds a solution while using the vague word bad.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-007",
+            "domain": "Define",
+            "stem": "A project charter must include a goal statement. Which goal statement is written in an acceptable Define-phase form?",
+            "options": [
+                "Investigate whether order errors might be a problem",
+                "Install a new enterprise system to eliminate errors",
+                "Reduce order entry errors from 8 percent to below 2 percent by June 30",
+                "Make the order process much better as soon as possible"
+            ],
+            "correct_index": 2,
+            "explanation": "An effective goal statement is specific, measurable, time-bound, and free of a chosen solution, so the baseline-to-target improvement with a deadline is correct while the others are vague, exploratory, or solution-driven.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-008",
+            "domain": "Define",
+            "stem": "The charter team is defining scope. Which entry is an example of an item that should be listed under in-scope for an order-to-cash improvement project?",
+            "options": [
+                "The payroll process managed by the finance department",
+                "The supplier selection process owned by procurement",
+                "The annual marketing campaign planning process",
+                "The order entry steps performed by the inside sales team"
+            ],
+            "correct_index": 3,
+            "explanation": "In-scope items are the processes the team will actually improve, and the order entry steps belong to the order-to-cash process, while payroll, supplier selection, and marketing planning lie outside its boundary.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-009",
+            "domain": "Define",
+            "stem": "During Define, a team identifies everyone who affects or is affected by the process change and assesses their interest and influence. What is this Define-phase activity called?",
+            "options": [
+                "Stakeholder analysis",
+                "Measurement system analysis",
+                "Root cause analysis",
+                "Capability analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "Stakeholder analysis identifies the people and groups with an interest in or influence over the project and helps the team plan communication and engagement before changes are implemented.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-010",
+            "domain": "Define",
+            "stem": "A Yellow Belt is assigned to a project and needs someone to remove organizational barriers and approve resources. Which Define-phase role normally performs this function?",
+            "options": [
+                "The control chart operator",
+                "The project sponsor or champion",
+                "The data entry clerk",
+                "The external auditor"
+            ],
+            "correct_index": 1,
+            "explanation": "The sponsor or champion provides authority, resources, and barrier removal, while the Yellow Belt supports the project team and daily improvement work under that sponsorship.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-011",
+            "domain": "Define",
+            "stem": "A customer says they want a quick response to support tickets, and the team uses this statement to develop a measurable requirement of resolving tickets within four hours. Which pairing does this illustrate?",
+            "options": [
+                "A common cause translated into a special cause",
+                "A discrete measure translated into a continuous measure",
+                "A Voice of the Customer statement translated into a Critical to Quality requirement",
+                "A control limit translated into a specification limit"
+            ],
+            "correct_index": 2,
+            "explanation": "Translating a qualitative customer statement into a specific measurable requirement is exactly the Voice of the Customer to Critical to Quality conversion that makes customer needs actionable for the process.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-012",
+            "domain": "Define",
+            "stem": "A team has finished drafting its charter, problem statement, goal, scope, and SIPOC. What typically happens next at the end of the Define phase?",
+            "options": [
+                "The team immediately implements a permanent solution to the problem",
+                "The team disbands because the project is complete",
+                "The team asks the customer to operate the process for a week",
+                "The charter is reviewed and approved by the sponsor at a tollgate before measurement begins"
+            ],
+            "correct_index": 3,
+            "explanation": "Define concludes with a tollgate review where the sponsor approves the charter, confirming alignment and authorizing the team to proceed into the Measure phase.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-013",
+            "domain": "Define",
+            "stem": "A management team is choosing which improvement project to fund. Which criterion best indicates a strong candidate for a Lean Six Sigma project?",
+            "options": [
+                "It addresses a significant, recurring problem with measurable impact on customers or cost",
+                "It is the easiest project with no measurable effect on the business",
+                "It affects only one employee and happens once a year",
+                "It has already been solved so the team can claim a quick win"
+            ],
+            "correct_index": 0,
+            "explanation": "Good projects target meaningful, chronic problems whose improvement can be measured and tied to customer or business results, whereas trivial or already-solved efforts waste team capacity.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-014",
+            "domain": "Define",
+            "stem": "A well-written Define-phase problem statement should answer which key questions about the situation?",
+            "options": [
+                "What the final solution will look like and who will build it",
+                "What is wrong, where and when it occurs, how big the gap is, and what the impact is",
+                "Which vendor should be selected and at what price",
+                "Which team member caused the problem and when"
+            ],
+            "correct_index": 1,
+            "explanation": "A strong problem statement quantifies the what, where, when, magnitude, and impact of the gap without assigning blame or prescribing a solution, which are common defining mistakes.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-015",
+            "domain": "Define",
+            "stem": "A team completes the Define phase and wants to ensure the improved process has ongoing accountability after the project ends. Which role should the charter identify for this purpose?",
+            "options": [
+                "The data analyst",
+                "The customer",
+                "The process owner",
+                "The external consultant"
+            ],
+            "correct_index": 2,
+            "explanation": "The process owner is accountable for the process performance and for sustaining improvements after the project closes, so the charter should name this role from the start.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-yb-016",
+            "domain": "Measure",
+            "stem": "A team wants to see every step of the current order fulfillment process, including decision points and rework loops, to find where delays occur. Which Measure-phase tool is most appropriate?",
+            "options": [
+                "A project charter",
+                "A cause-and-effect diagram",
+                "A control plan",
+                "A detailed process flowchart"
+            ],
+            "correct_index": 3,
+            "explanation": "A detailed flowchart maps the actual sequence of steps, decisions, and loops so the team can locate delays and non-value-added activity, whereas the other tools serve scope, analysis, or control purposes.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-017",
+            "domain": "Measure",
+            "stem": "A team is classifying the measurements it will collect. Which of the following is a continuous, or variable, data type?",
+            "options": [
+                "The time in minutes to process a customer order",
+                "The number of defects found on an invoice",
+                "Whether an order was on time or late",
+                "The color category of a product option"
+            ],
+            "correct_index": 0,
+            "explanation": "Time measured on a continuous scale is variable data, while counts of defects are discrete, pass-or-fail results are attribute data, and color categories are nominal, so the processing time is continuous.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-018",
+            "domain": "Measure",
+            "stem": "A team records whether each delivered package arrived damaged or undamaged. Which type of data does this produce?",
+            "options": [
+                "Ordinal ranking data",
+                "Attribute, or discrete, data",
+                "Continuous data",
+                "Ratio data with a true zero"
+            ],
+            "correct_index": 1,
+            "explanation": "Pass-or-fail classification such as defective or not defective produces attribute data, which counts occurrences in categories rather than measuring on a continuous scale.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-019",
+            "domain": "Measure",
+            "stem": "Two analysts count defects differently because they disagree about what counts as a defect. What should the team create first to ensure consistent measurement?",
+            "options": [
+                "A fishbone diagram of causes",
+                "A pilot implementation plan",
+                "An operational definition of the defect",
+                "A control chart with fixed limits"
+            ],
+            "correct_index": 2,
+            "explanation": "An operational definition states precisely how a characteristic is measured and what qualifies, removing ambiguity so different people collect comparable data before analysis.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-020",
+            "domain": "Measure",
+            "stem": "Before collecting data, a team decides what to measure, how to measure it, who will collect it, when, and where. What is this Measure-phase deliverable called?",
+            "options": [
+                "A control plan",
+                "A Pareto chart",
+                "A solution selection matrix",
+                "A data collection plan"
+            ],
+            "correct_index": 3,
+            "explanation": "A data collection plan specifies the measures, operational definitions, sampling, responsibilities, and timing so the data is reliable and answers the project questions.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-021",
+            "domain": "Measure",
+            "stem": "A team discovers that two operators get different readings from the same gauge on the same parts. Which Measure-phase study addresses this measurement-system concern?",
+            "options": [
+                "A measurement system analysis, such as a Gage R&R study",
+                "A process capability analysis",
+                "A Pareto analysis of defect types",
+                "A five why analysis of causes"
+            ],
+            "correct_index": 0,
+            "explanation": "Gage R&R is part of measurement system analysis and quantifies repeatability and reproducibility so the team knows whether observed variation comes from the process or the measurement system.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-022",
+            "domain": "Measure",
+            "stem": "A scale consistently reads three pounds too high but gives the same reading each time. How is this measurement system best described?",
+            "options": [
+                "It is neither accurate nor precise",
+                "It is precise but not accurate",
+                "It is accurate but not precise",
+                "It is both accurate and precise"
+            ],
+            "correct_index": 1,
+            "explanation": "Consistency of repeated readings indicates precision, while the constant offset from the true value indicates a lack of accuracy, so the system is precise but biased.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-023",
+            "domain": "Measure",
+            "stem": "Why must a team evaluate the measurement system before trusting process data in the Measure phase?",
+            "options": [
+                "Measurement systems never change over time",
+                "Measurement data is always more accurate than process data",
+                "Measurement variation can inflate or hide the true process variation",
+                "Measurement studies replace the need to collect process data"
+            ],
+            "correct_index": 2,
+            "explanation": "If the measurement system itself contributes significant variation or bias, the team may draw wrong conclusions about the process, so measurement system analysis is a prerequisite for valid data.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-024",
+            "domain": "Measure",
+            "stem": "A process cycle time dataset contains one extreme outlier that raises the arithmetic average well above most values. Which measure of central tendency best represents a typical value in this situation?",
+            "options": [
+                "The mean",
+                "The range",
+                "The standard deviation",
+                "The median"
+            ],
+            "correct_index": 3,
+            "explanation": "The median is resistant to extreme values, so it describes the typical value better than the mean when outliers are present, while range and standard deviation describe spread rather than center.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-025",
+            "domain": "Measure",
+            "stem": "Two processes have the same average cycle time, but process A has a much larger standard deviation than process B. What does this indicate about process A?",
+            "options": [
+                "Its individual cycle times vary more widely around the average",
+                "Its average cycle time is higher than that of process B",
+                "It produces fewer units than process B",
+                "Its measurement system is invalid"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard deviation measures the spread of individual values around the mean, so a larger value means the cycle times are more dispersed even though the averages match.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-026",
+            "domain": "Measure",
+            "stem": "A team plots the frequency of cycle-time values in ordered intervals to see the shape, center, and spread of the distribution. Which tool is being used?",
+            "options": [
+                "A SIPOC diagram",
+                "A histogram",
+                "A Pareto chart",
+                "A control chart"
+            ],
+            "correct_index": 1,
+            "explanation": "A histogram shows the distribution of a continuous measure by grouping values into bins, revealing center, spread, and shape such as skew or multiple peaks.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-027",
+            "domain": "Measure",
+            "stem": "An overall defect rate looks acceptable, but the team suspects one shift performs far worse than the others. What measurement practice will reveal this difference?",
+            "options": [
+                "Removing the worst shift from the dataset",
+                "Increasing the sample size for the best shift only",
+                "Stratifying the data by shift before analysis",
+                "Averaging all shifts into a single number"
+            ],
+            "correct_index": 2,
+            "explanation": "Stratification separates data into meaningful subgroups such as shifts, so hidden differences are exposed instead of being masked by an overall average.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-028",
+            "domain": "Measure",
+            "stem": "An operator needs a simple, structured form to tally how often each defect category occurs as it happens on the line. Which data collection tool fits best?",
+            "options": [
+                "A control chart",
+                "A Gage R&R study",
+                "A force-field analysis",
+                "A check sheet"
+            ],
+            "correct_index": 3,
+            "explanation": "A check sheet is a structured tally form designed for collecting and organizing defect counts at the point of occurrence, making later Pareto analysis straightforward.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-029",
+            "domain": "Measure",
+            "stem": "Why does the Measure phase establish the current, or baseline, performance of the process?",
+            "options": [
+                "To quantify the starting point so later improvements can be objectively verified",
+                "To prove the process cannot be improved",
+                "To set the final specification limits",
+                "To select the project team members"
+            ],
+            "correct_index": 0,
+            "explanation": "A baseline gives a factual starting point against which the team measures the effect of changes, so improvement claims are supported by a before-and-after comparison.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-030",
+            "domain": "Measure",
+            "stem": "A team cannot measure every transaction, so it selects a representative subset to analyze. What is this subset called?",
+            "options": [
+                "A control limit",
+                "A sample",
+                "A population",
+                "A specification"
+            ],
+            "correct_index": 1,
+            "explanation": "A sample is the subset drawn from the larger population, and when selected representatively its statistics can be used to estimate the behavior of the whole process.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-yb-031",
+            "domain": "Analyze",
+            "stem": "After measuring a high defect rate, a team wants to determine the underlying reason the defects occur rather than just describing the symptoms. What is the goal of this Analyze-phase work?",
+            "options": [
+                "To write the control plan and standard work",
+                "To define the project scope and charter",
+                "To identify and verify the root cause of the problem",
+                "To select the final solution and set a budget"
+            ],
+            "correct_index": 2,
+            "explanation": "Root cause analysis in the Analyze phase seeks the fundamental reason a problem occurs and verifies it with data, so the team can later address the cause rather than the symptom.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-032",
+            "domain": "Analyze",
+            "stem": "A team brainstorms potential causes of late deliveries and organizes them into categories such as methods, machines, materials, and people. Which tool are they using?",
+            "options": [
+                "A control chart",
+                "A histogram",
+                "A process capability index",
+                "A cause-and-effect, or fishbone, diagram"
+            ],
+            "correct_index": 3,
+            "explanation": "The cause-and-effect or Ishikawa diagram arranges potential causes under standard categories to structure brainstorming and guide further verification.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-033",
+            "domain": "Analyze",
+            "stem": "Starting from a problem, a team repeatedly asks why until it reaches a fundamental cause it can act on. Which Analyze technique is this?",
+            "options": [
+                "The five why technique",
+                "The five S method",
+                "The SIPOC method",
+                "The Gage R&R method"
+            ],
+            "correct_index": 0,
+            "explanation": "The five why technique drills from a symptom to an actionable root cause by repeatedly asking why, though the number of whys can be more or fewer than five depending on the situation.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-034",
+            "domain": "Analyze",
+            "stem": "A team notices that a few defect categories account for most of the total defects and wants to prioritize where to focus. Which principle and tool apply here?",
+            "options": [
+                "The Hawthorne effect, shown with a scatter plot",
+                "The Pareto principle, shown with a Pareto chart",
+                "The central limit theorem, shown with a control chart",
+                "The theory of constraints, shown with a histogram"
+            ],
+            "correct_index": 1,
+            "explanation": "The Pareto principle holds that a small number of causes usually produce most of the effect, and a Pareto chart orders categories by frequency so the vital few are addressed first.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-035",
+            "domain": "Analyze",
+            "stem": "When constructing a Pareto chart from defect data, how should the category bars be arranged?",
+            "options": [
+                "In random order to avoid bias",
+                "By the date each defect was first observed",
+                "In descending order of frequency from left to right",
+                "Alphabetically by category name"
+            ],
+            "correct_index": 2,
+            "explanation": "Pareto charts rank categories from most to least frequent so the largest contributors are visually obvious and can be prioritized for action.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-036",
+            "domain": "Analyze",
+            "stem": "A team suspects that higher oven temperature is associated with more coating defects and plots temperature against defect count for many batches. Which tool are they using?",
+            "options": [
+                "A Pareto chart",
+                "A SIPOC diagram",
+                "A control plan",
+                "A scatter plot"
+            ],
+            "correct_index": 3,
+            "explanation": "A scatter plot displays paired values of two variables to reveal whether they are related and the direction of the relationship, supporting a hypothesis about cause and effect.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-037",
+            "domain": "Analyze",
+            "stem": "After brainstorming many possible causes, what should the team do before declaring a root cause confirmed?",
+            "options": [
+                "Verify the suspected cause against data to show it truly drives the problem",
+                "Accept the cause that the most senior member suggested",
+                "Select the cause that is easiest to fix without checking data",
+                "Stop analysis as soon as one cause is listed"
+            ],
+            "correct_index": 0,
+            "explanation": "Brainstorming produces hypotheses, so the team must test a suspected cause with data or direct observation to confirm it actually influences the problem before investing in solutions.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-038",
+            "domain": "Analyze",
+            "stem": "A team generates a long list of possible causes and needs to narrow it to the few the group agrees are most likely. Which technique helps the team prioritize the list efficiently?",
+            "options": [
+                "Writing a control plan",
+                "Multi-voting on the candidate causes",
+                "Calculating the process capability index",
+                "Plotting a control chart of defects"
+            ],
+            "correct_index": 1,
+            "explanation": "Multi-voting lets a group quickly reduce a large list of candidates to the most supported ones for deeper investigation, without lengthy debate over every item.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-039",
+            "domain": "Analyze",
+            "stem": "How does the five why technique differ from a cause-and-effect diagram during analysis?",
+            "options": [
+                "Five whys is used only in Control, while a cause-and-effect diagram is used only in Define",
+                "Five whys proves causation, while a cause-and-effect diagram cannot show causes",
+                "Five whys drills a single line of reasoning, while a cause-and-effect diagram broadens to many candidate causes",
+                "Five whys requires statistical software, while a cause-and-effect diagram does not"
+            ],
+            "correct_index": 2,
+            "explanation": "The cause-and-effect diagram expands the search across many potential causes at once, whereas the five why technique follows one causal chain in depth, and both still require data verification.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-040",
+            "domain": "Analyze",
+            "stem": "A team wants to rank potential failure modes by severity, likelihood of occurrence, and ability to detect them before the failures happen. Which Analyze tool is designed for this?",
+            "options": [
+                "A check sheet",
+                "A run chart",
+                "A stakeholder analysis",
+                "A failure mode and effects analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Failure mode and effects analysis scores failure modes on severity, occurrence, and detection to prioritize risks and preventive actions before problems reach the customer.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-041",
+            "domain": "Analyze",
+            "stem": "A team wants to confirm whether a change in material actually lowered the average defect rate using a formal comparison of before and after data. What category of analytical method does this represent?",
+            "options": [
+                "Hypothesis testing to compare the before and after results",
+                "Creating a control plan for the process",
+                "Writing the project charter",
+                "Building a SIPOC diagram"
+            ],
+            "correct_index": 0,
+            "explanation": "Hypothesis testing provides a statistical basis for deciding whether an observed difference between groups is real rather than due to chance, supporting evidence-based conclusions in Analyze.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-042",
+            "domain": "Analyze",
+            "stem": "A team says the problem is that too many invoices are wrong. Why is this less useful than identifying the root cause behind the wrong invoices?",
+            "options": [
+                "It includes the project goal and deadline",
+                "It describes the symptom rather than the underlying cause the team can eliminate",
+                "It is more measurable than a root cause statement",
+                "It identifies the process owner by name"
+            ],
+            "correct_index": 1,
+            "explanation": "Stating a symptom only tells the team what is observed, not why it happens, so without the root cause any fix risks treating the effect while the cause persists.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-yb-043",
+            "domain": "Improve",
+            "stem": "An Improve-phase team has generated several possible solutions to a verified root cause. Which approach is best for selecting the solution to implement?",
+            "options": [
+                "Select the most expensive option to appear serious",
+                "Let the newest team member decide alone",
+                "Evaluate options against agreed criteria such as impact, effort, cost, and risk",
+                "Choose the first idea that was suggested to save time"
+            ],
+            "correct_index": 2,
+            "explanation": "A structured evaluation against criteria such as impact, effort, cost, and risk selects the solution most likely to address the verified cause within constraints rather than relying on speed, cost, or authority.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-044",
+            "domain": "Improve",
+            "stem": "A team runs a small test of a proposed change, studies the results against its prediction, and then standardizes or adjusts the change. Which improvement cycle does this describe?",
+            "options": [
+                "Define-Measure-Analyze-Design",
+                "First-In-First-Out",
+                "Sort-Set-Shine-Standardize-Sustain",
+                "Plan-Do-Check-Act"
+            ],
+            "correct_index": 3,
+            "explanation": "Plan-Do-Check-Act is an iterative cycle in which a change is planned, tested on a small scale, evaluated against expectations, and then standardized or revised.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-045",
+            "domain": "Improve",
+            "stem": "In Lean thinking, which of the following is classified as one of the classic forms of waste?",
+            "options": [
+                "Waiting for materials or information between steps",
+                "Producing exactly to customer demand",
+                "Training employees to do their jobs well",
+                "Maintaining equipment in good working order"
+            ],
+            "correct_index": 0,
+            "explanation": "Waiting is one of the classic Lean wastes, while producing to demand, training people, and maintaining equipment are value-adding or necessary activities rather than waste.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-046",
+            "domain": "Improve",
+            "stem": "Workers regularly walk across the plant to fetch tools kept far from their workstations. Which Lean waste does this example illustrate?",
+            "options": [
+                "Defects",
+                "Motion",
+                "Overproduction",
+                "Inventory"
+            ],
+            "correct_index": 1,
+            "explanation": "Unnecessary movement of people, such as walking to retrieve distant tools, is the waste of motion, while the other options describe different wastes such as making too much, excess stock, or faulty output.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-047",
+            "domain": "Improve",
+            "stem": "A workplace improvement effort focuses on sorting, setting in order, shining, standardizing, and sustaining. Which Lean method does this describe?",
+            "options": [
+                "The SIPOC scoping method",
+                "The Gage R&R measurement method",
+                "The 5S workplace organization method",
+                "The five why root cause method"
+            ],
+            "correct_index": 2,
+            "explanation": "5S is a workplace organization method whose five steps, commonly translated as sort, set in order, shine, standardize, and sustain, create and maintain an efficient, safe work area.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-048",
+            "domain": "Improve",
+            "stem": "A facility holds a focused, short-duration event in which a cross-functional team redesigns a work area and implements improvements on the spot. What is this Lean activity called?",
+            "options": [
+                "A capability study",
+                "A tollgate review",
+                "A control chart review",
+                "A kaizen event"
+            ],
+            "correct_index": 3,
+            "explanation": "A kaizen event is a concentrated improvement workshop where a team analyzes a process and implements changes rapidly, often over a few days, to achieve quick and visible gains.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-049",
+            "domain": "Improve",
+            "stem": "A production line is redesigned so a part can only be inserted in the correct orientation, preventing an assembly error. Which Lean concept does this illustrate?",
+            "options": [
+                "Mistake-proofing, or poka-yoke",
+                "Total productive maintenance",
+                "Value stream mapping",
+                "Standard deviation"
+            ],
+            "correct_index": 0,
+            "explanation": "Mistake-proofing, or poka-yoke, designs the process or tooling so errors are prevented or immediately detected, making it hard or impossible to perform a step incorrectly.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-050",
+            "domain": "Improve",
+            "stem": "Before rolling a solution out across all locations, an Improve-phase team tests it at one site for a short period. What is a key reason to pilot the change?",
+            "options": [
+                "To skip verifying the root cause",
+                "To learn and refine the solution on a small scale before full deployment",
+                "To guarantee the solution cannot fail anywhere",
+                "To avoid measuring whether the change worked"
+            ],
+            "correct_index": 1,
+            "explanation": "A pilot limits the cost and risk of a change while providing real-world evidence to refine the solution, increasing the likelihood of success when it is deployed more widely.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-051",
+            "domain": "Improve",
+            "stem": "A team reviews its process map and finds several approval steps that customers do not value and that add delay without changing the output. What should the team focus on in the Improve phase?",
+            "options": [
+                "Keeping all steps but working faster on each",
+                "Automating every step without questioning its value",
+                "Eliminating or simplifying the non-value-added steps",
+                "Adding more approvals to increase control"
+            ],
+            "correct_index": 2,
+            "explanation": "Lean improvement targets non-value-added activity for elimination or simplification first, and automating or speeding up a step that has no customer value does not remove the underlying waste.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-052",
+            "domain": "Improve",
+            "stem": "An Improve team must ensure its chosen changes are actually put into practice and that people know what to do differently. Which action should accompany the solution implementation?",
+            "options": [
+                "Announce the change only after a year has passed",
+                "Leave each operator to keep using the old method",
+                "Remove all documentation to encourage flexibility",
+                "Communicate the changes and train the people who perform the process"
+            ],
+            "correct_index": 3,
+            "explanation": "Successful implementation requires communicating the change and training the workforce so the new method is adopted consistently, otherwise the process reverts to the old behavior.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-yb-053",
+            "domain": "Control",
+            "stem": "After an improvement is deployed, the team documents what will be monitored, by whom, how often, and what action to take if the process drifts. What is this Control-phase document called?",
+            "options": [
+                "A control plan",
+                "A project charter",
+                "A cause-and-effect diagram",
+                "A Voice of the Customer study"
+            ],
+            "correct_index": 0,
+            "explanation": "A control plan specifies the monitored characteristics, measurement methods, sampling frequency, responsibility, and reaction plan needed to hold the gains after the project ends.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-054",
+            "domain": "Control",
+            "stem": "A team wants to monitor a process over time and distinguish normal variation from unusual changes that require action. Which Control-phase tool is designed for this?",
+            "options": [
+                "A force-field analysis",
+                "A statistical process control chart",
+                "A Pareto chart of defect categories",
+                "A SIPOC diagram"
+            ],
+            "correct_index": 1,
+            "explanation": "A control chart plots process data over time with statistically derived limits so the team can separate routine common-cause variation from special-cause signals that call for investigation.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-055",
+            "domain": "Control",
+            "stem": "A process is stable and all output remains inside the control limits with no unusual patterns. What type of variation is present?",
+            "options": [
+                "No variation of any kind",
+                "Variation caused only by the customer",
+                "Common-cause variation that is inherent in the process",
+                "Special-cause variation from an assignable source"
+            ],
+            "correct_index": 2,
+            "explanation": "When a process is stable and points stay within limits without patterns, only common-cause variation is present, and reacting to it as if it were special would be over-adjustment.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-056",
+            "domain": "Control",
+            "stem": "On a control chart, several consecutive points fall well outside the upper control limit. What should the process operator do?",
+            "options": [
+                "Ignore the points because production must continue",
+                "Immediately recalculate the control limits to include the points",
+                "Assume the chart is broken and stop recording data",
+                "Investigate for a special cause and take corrective action using the reaction plan"
+            ],
+            "correct_index": 3,
+            "explanation": "Points outside the control limits are a classic out-of-control signal indicating a special cause, so the operator should follow the reaction plan and investigate rather than ignore or alter the limits.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-057",
+            "domain": "Control",
+            "stem": "A team wants to lock in an improved method so every operator performs the task the same proven way. Which Control-phase action supports this goal?",
+            "options": [
+                "Documenting and implementing standard work for the task",
+                "Returning to the previous informal method",
+                "Allowing each operator to choose any method",
+                "Postponing documentation until the next project"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard work documents the best known method and its key steps so the process stays consistent and the gains are not lost once the improvement team disbands.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-058",
+            "domain": "Control",
+            "stem": "A control plan specifies that if a monitored measurement exceeds its limit, the operator must notify the line lead and stop the batch. What part of the control plan is this?",
+            "options": [
+                "The measurement system analysis",
+                "The reaction or response plan",
+                "The problem statement",
+                "The data collection frequency"
+            ],
+            "correct_index": 1,
+            "explanation": "The reaction plan states the specific action to take when a monitored characteristic goes out of control, ensuring a consistent and timely response rather than an ad hoc one.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-059",
+            "domain": "Control",
+            "stem": "A work area uses labeled floor markings, shadow boards, and visible status displays so anyone can see whether the process is operating normally. Which Control-phase practice is this?",
+            "options": [
+                "Root cause analysis",
+                "Hypothesis testing",
+                "Visual management",
+                "Value stream mapping"
+            ],
+            "correct_index": 2,
+            "explanation": "Visual management makes process status and standards visible at a glance so deviations are noticed and corrected quickly, helping sustain control.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-yb-060",
+            "domain": "Control",
+            "stem": "At the end of a successful Lean Six Sigma project, the team transfers responsibility for monitoring the improved process to the process owner. Which Control-phase deliverable documents this handover?",
+            "options": [
+                "The original project charter with no measurements",
+                "The brainstormed list of all possible causes",
+                "The team meeting minutes from the Define phase",
+                "The completed control plan and updated standard work"
+            ],
+            "correct_index": 3,
+            "explanation": "Project closeout in Control hands the process owner the control plan, standard work, and monitoring responsibilities so the improvements are maintained after the team disbands.",
+            "reference": "Lean Six Sigma Yellow Belt Body of Knowledge - Control"
+        }
+    ]
+}

@@ -1,0 +1,1767 @@
+{
+    "cert_key": "sixsigma-bb",
+    "title": "Lean Six Sigma Black Belt",
+    "issuer": "Lean Six Sigma Certification Bodies",
+    "outline_file": "outlines/sixsigma-bb.json",
+    "variant_label": "Six Sigma Black Belt Real-Spec Practice",
+    "exam": {
+        "questions": 125,
+        "duration_minutes": 180,
+        "scoring": "Pass/fail against passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the Lean Six Sigma Black Belt body of knowledge (advanced DMAIC, statistics, and leadership). Not a capture of past questions.",
+    "source_label": "Lean Six Sigma Black Belt practice bank",
+    "items": [
+        {
+            "id": "sixsigma-bb-001",
+            "domain": "Define",
+            "stem": "A manufacturer is launching Lean Six Sigma across the enterprise and the executive team asks how the deployment should begin. What is the BEST first move?",
+            "options": [
+                "Align the deployment to strategic objectives and a phased project pipeline with leadership governance",
+                "Start with the single most complex technical problem to prove the method works",
+                "Let each department select its own projects and methods without central guidance",
+                "Train every employee to Black Belt level before approving any improvement project"
+            ],
+            "correct_index": 0,
+            "explanation": "Enterprise deployment succeeds when projects are tied to strategy, sponsored by leadership, and sequenced in a pipeline. Mass training before projects wastes budget, a single hard problem risks early failure, and uncoordinated department projects fragment effort.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-002",
+            "domain": "Define",
+            "stem": "A Black Belt has five candidate projects and must recommend which one to charter first. Which criterion is MOST appropriate for the selection decision?",
+            "options": [
+                "The project chosen by the department with the loudest internal advocate",
+                "The project with the largest financial benefit that is feasible within the available time and resources",
+                "The project that is technically the most interesting to the improvement team",
+                "The project that will finish the fastest regardless of its impact on customers"
+            ],
+            "correct_index": 1,
+            "explanation": "Project selection weighs business impact against feasibility so limited Black Belt capacity is spent where it returns the most value. Interest, speed alone, or internal politics ignore customer and financial return.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-003",
+            "domain": "Define",
+            "stem": "During project selection the team estimates the cost of poor quality. Why is this estimate important to the Define phase?",
+            "options": [
+                "It determines which statistical test the team will use later",
+                "It replaces the need to gather any customer data",
+                "It quantifies the hidden cost of current defects so the project can be justified financially",
+                "It guarantees the project will reach a six sigma level"
+            ],
+            "correct_index": 2,
+            "explanation": "Cost of poor quality translates waste, rework, and defects into money and supports the business case and charter. It does not substitute for customer data, assure a sigma target, or select statistical tools.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-004",
+            "domain": "Define",
+            "stem": "The team has collected voice of the customer statements but cannot act on them directly. What should the Black Belt do NEXT?",
+            "options": [
+                "Ask the sponsor to reword the customer comments",
+                "Discard statements that are not already numerical",
+                "Store the statements in the project file until the Improve phase",
+                "Translate the statements into measurable critical to quality characteristics"
+            ],
+            "correct_index": 3,
+            "explanation": "Voice of customer is actionable only when translated into critical to quality requirements that can be measured and controlled. Storing them, rewording them, or discarding non-numeric input leaves the project without verifiable requirements.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-005",
+            "domain": "Define",
+            "stem": "A financial controller distinguishes between hard and soft savings when reviewing a project charter. Which outcome is a HARD saving?",
+            "options": [
+                "A reduction in overtime pay that appears on the next payroll budget",
+                "An estimated avoidance of a cost that might be incurred next year",
+                "Improved employee morale measured by a survey",
+                "A projected revenue increase that depends on future market demand"
+            ],
+            "correct_index": 0,
+            "explanation": "Hard savings are verified reductions in actual spend that show up in the financial statements, such as lower overtime. Cost avoidance, survey results, and speculative revenue are soft benefits and are tracked separately.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-006",
+            "domain": "Define",
+            "stem": "A team debates which process steps create customer value. According to lean principles, how is value ultimately determined?",
+            "options": [
+                "By the finance function's cost allocation rules",
+                "By what the customer is willing to pay for",
+                "By the speed at which a machine can run",
+                "By the internal quality department's inspection criteria"
+            ],
+            "correct_index": 1,
+            "explanation": "Lean defines value from the customer's perspective, meaning a step adds value only if the customer would pay for it. Internal inspection, cost accounting, and machine speed do not define customer value.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-007",
+            "domain": "Define",
+            "stem": "A value stream map shows a production cell building far more units than the next step can consume. Which form of waste does this MOST clearly represent?",
+            "options": [
+                "Inventory",
+                "Motion",
+                "Overproduction",
+                "Transportation"
+            ],
+            "correct_index": 2,
+            "explanation": "Building more than the downstream process needs is overproduction, the waste that typically generates excess inventory. Transportation, inventory, and motion are related but distinct wastes in the standard lean list.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-008",
+            "domain": "Define",
+            "stem": "The Black Belt wants to distinguish value added from non-value added activities across the whole process. Which tool is BEST suited to this purpose?",
+            "options": [
+                "A design of experiments on the key machine",
+                "A gage repeatability and reproducibility study",
+                "A control chart of the final test result",
+                "A value stream map of the current state"
+            ],
+            "correct_index": 3,
+            "explanation": "A current state value stream map exposes cycle times, queues, and information flow so non-value added steps become visible. Control charts, experiments, and gage studies address variation rather than end to end flow.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-009",
+            "domain": "Define",
+            "stem": "A project charter is being drafted. Which element properly belongs in the charter rather than in a later phase?",
+            "options": [
+                "The problem statement, goal, scope, and business case",
+                "The control chart that will monitor the process",
+                "The validated root cause of the defect",
+                "The list of statistically significant factors"
+            ],
+            "correct_index": 0,
+            "explanation": "The charter establishes the problem, goal, boundaries, and business rationale up front. Root causes, significant factors, and control charts are outputs of Analyze, Improve, and Control, so they cannot precede the charter.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-010",
+            "domain": "Define",
+            "stem": "Two capital proposals promise similar total savings but differ in timing. Which financial metric accounts for the time value of money?",
+            "options": [
+                "Return on investment",
+                "Net present value",
+                "Total cost of ownership",
+                "Simple payback period"
+            ],
+            "correct_index": 1,
+            "explanation": "Net present value discounts future cash flows to today's value, so it reflects timing. Payback and simple return on investment ignore discounting, and total cost of ownership is a cost comparison rather than a time valued return.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-011",
+            "domain": "Define",
+            "stem": "A Black Belt needs authority to obtain resources and remove organizational barriers for the project. Whose role is primarily responsible for this?",
+            "options": [
+                "The process operator closest to the work",
+                "The project team's data analyst",
+                "The project Champion or Sponsor",
+                "The external consultant hired for training"
+            ],
+            "correct_index": 2,
+            "explanation": "The Champion or Sponsor holds organizational authority, secures resources, and clears barriers. Analysts, consultants, and operators contribute to the work but lack the mandate to remove cross functional obstacles.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-012",
+            "domain": "Define",
+            "stem": "A newly formed improvement team begins arguing about roles and how decisions will be made. Which stage of team development is this?",
+            "options": [
+                "Norming",
+                "Performing",
+                "Forming",
+                "Storming"
+            ],
+            "correct_index": 3,
+            "explanation": "Storming is the conflict stage where members negotiate roles, influence, and working norms. Forming is polite orientation, norming is agreement on norms, and performing is productive interdependence.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-013",
+            "domain": "Define",
+            "stem": "The Black Belt builds a responsibility matrix for the project. In the RACI scheme, how many people should be Accountable for a given task?",
+            "options": [
+                "Exactly one",
+                "At least two",
+                "As many as the task requires",
+                "None, because the team is self directed"
+            ],
+            "correct_index": 0,
+            "explanation": "Accountability must rest with a single person so ownership and decision rights are unambiguous. Multiple accountable parties create conflict, and a task with no accountable owner is not truly assigned.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-014",
+            "domain": "Define",
+            "stem": "A leadership team wants to set improvement targets by comparing its performance against the best performing organizations in its industry. What technique is this?",
+            "options": [
+                "Brainstorming",
+                "Benchmarking",
+                "Fault tree analysis",
+                "Force field analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Benchmarking compares processes and results against recognized best performers to set stretch targets. Brainstorming generates ideas, fault tree analysis traces failures, and force field analysis examines change forces.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-015",
+            "domain": "Define",
+            "stem": "An organization cascades its strategic objectives into annual improvement priorities at every level. Which practice is being described?",
+            "options": [
+                "Poka yoke mistake proofing",
+                "Total productive maintenance",
+                "Hoshin kanri policy deployment",
+                "Standard work instruction"
+            ],
+            "correct_index": 2,
+            "explanation": "Hoshin kanri deploys strategy into aligned goals and actions throughout the organization. Standard work, mistake proofing, and total productive maintenance are operational control methods rather than strategy deployment.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-016",
+            "domain": "Define",
+            "stem": "Improvement efforts keep stalling because departments optimize their own metrics at the expense of the whole process. What should the Black Belt emphasize?",
+            "options": [
+                "Punishment of departments that miss their local targets",
+                "More frequent departmental reporting to senior management",
+                "Stronger functional silos with individual department targets",
+                "End to end process thinking that optimizes flow across functions"
+            ],
+            "correct_index": 3,
+            "explanation": "Lean Six Sigma optimizes the whole process rather than local departmental metrics, since suboptimization harms flow and the customer. Reinforcing silos or punitive reporting deepens the problem.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-017",
+            "domain": "Define",
+            "stem": "A company already uses lean flow tools but still has unpredictable product quality. How does Six Sigma complement lean in this situation?",
+            "options": [
+                "Six Sigma reduces variation and defects in the steps that lean has streamlined",
+                "Six Sigma focuses only on reducing inventory and lead time",
+                "Six Sigma eliminates the need for any process measurement",
+                "Six Sigma replaces all lean tools with statistical process control"
+            ],
+            "correct_index": 0,
+            "explanation": "Lean removes waste and improves flow while Six Sigma reduces variation and defects, so the methods are complementary. Six Sigma does not replace lean tooling, focus on inventory, or remove the need for measurement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-018",
+            "domain": "Define",
+            "stem": "A DMAIC project reaches the end of the Measure phase and a tollgate review is scheduled. What is the primary purpose of the tollgate?",
+            "options": [
+                "To celebrate the team's progress and release the next budget automatically",
+                "To verify the phase deliverables are complete and decide whether to proceed",
+                "To renegotiate the project charter's scope and goal",
+                "To hand the project to the Control phase team immediately"
+            ],
+            "correct_index": 1,
+            "explanation": "A tollgate verifies that phase deliverables meet standards and provides a go or no go decision. It is not a celebration, not a charter rewrite, and not an early handover to Control.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-019",
+            "domain": "Define",
+            "stem": "Customers are surveyed about what would delight them versus what they simply expect. Which model organizes requirements into must be, performance, and delighter categories?",
+            "options": [
+                "The Deming chain reaction",
+                "The Taguchi loss function",
+                "The Kano model",
+                "The Shewhart cycle"
+            ],
+            "correct_index": 2,
+            "explanation": "The Kano model classifies customer requirements as must be, performance, or delighters to guide prioritization. The Shewhart cycle and Deming chain reaction address improvement cycles, and the loss function quantifies deviation cost.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-020",
+            "domain": "Define",
+            "stem": "A proposed process change is technically sound but front line staff resist it strongly. What should the Black Belt do FIRST?",
+            "options": [
+                "Proceed with the change and let staff adjust over time",
+                "Withdraw the change because resistance means it is wrong",
+                "Escalate the resistance to the sponsor so it is overruled",
+                "Engage those affected early to understand their concerns and involve them in the change"
+            ],
+            "correct_index": 3,
+            "explanation": "Change succeeds when affected people are engaged early and their concerns inform the solution. Overruling, forcing, or abandoning the change in the face of resistance are all poorer responses to a stakeholder issue.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-021",
+            "domain": "Define",
+            "stem": "A Black Belt's portfolio must demonstrate value to senior leadership. Which linkage makes that demonstration strongest?",
+            "options": [
+                "Tying each project's goals to the organization's strategic and financial scorecard",
+                "Counting the number of tool training sessions delivered",
+                "Reporting the number of meetings the team attended",
+                "Listing the statistical software used on each project"
+            ],
+            "correct_index": 0,
+            "explanation": "Leadership values projects that connect to strategic objectives and verified financial or customer results. Activity counts such as training, meetings, or software use do not demonstrate business value.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-022",
+            "domain": "Define",
+            "stem": "A project has met its goal and the team is disbanding. Which Define and closeout activity is MOST important before the team dissolves?",
+            "options": [
+                "Reminding leadership of the effort the team contributed",
+                "Archiving the lessons learned and formally handing off ownership to the process owner",
+                "Starting a new project immediately to keep the team together",
+                "Deleting the project data so it does not confuse future teams"
+            ],
+            "correct_index": 1,
+            "explanation": "Closeout captures lessons learned and transfers ownership to the process owner so gains are sustained. Starting new work prematurely, discarding data, or seeking recognition do not protect the improvement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Define"
+        },
+        {
+            "id": "sixsigma-bb-023",
+            "domain": "Measure",
+            "stem": "A team must choose what to measure for a continuous characteristic of a machined part. Which measurement type is MOST appropriate?",
+            "options": [
+                "A count of defects per unit",
+                "A go or no go attribute judgment",
+                "A continuous measurement of the dimension in millimetres",
+                "A pass or fail visual check"
+            ],
+            "correct_index": 2,
+            "explanation": "Continuous data records a magnitude on a scale and carries the most information, enabling more powerful analysis. Attribute judgments and defect counts are discrete and provide less resolution.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-024",
+            "domain": "Measure",
+            "stem": "A survey records customer satisfaction as poor, fair, good, or excellent. Which measurement scale is this?",
+            "options": [
+                "Interval",
+                "Ratio",
+                "Nominal",
+                "Ordinal"
+            ],
+            "correct_index": 3,
+            "explanation": "An ordered set of categories with a meaningful rank but undefined intervals is ordinal. Nominal data has no order, interval data has equal intervals, and ratio data has a true zero.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-025",
+            "domain": "Measure",
+            "stem": "A process time data set contains several extreme outliers that could distort the summary. Which measure of central tendency is MOST robust?",
+            "options": [
+                "The median",
+                "The range",
+                "The standard deviation",
+                "The arithmetic mean"
+            ],
+            "correct_index": 0,
+            "explanation": "The median is the middle value and is resistant to extreme observations, while the mean is pulled toward outliers. Range and standard deviation measure spread rather than central tendency.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-026",
+            "domain": "Measure",
+            "stem": "A normal distribution of measurements is being described to the team. Approximately what percentage of values falls within plus or minus one standard deviation of the mean?",
+            "options": [
+                "About 50 percent",
+                "About 68 percent",
+                "About 95 percent",
+                "About 99.7 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "In a normal distribution about 68 percent of values lie within one standard deviation of the mean. About 95 percent lies within two and about 99.7 percent within three standard deviations.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-027",
+            "domain": "Measure",
+            "stem": "A Black Belt takes repeated samples of size thirty from a non normal population and plots the sample means. What principle makes the distribution of sample means approximately normal?",
+            "options": [
+                "The Pareto principle",
+                "The empirical rule",
+                "The central limit theorem",
+                "The law of diminishing returns"
+            ],
+            "correct_index": 2,
+            "explanation": "The central limit theorem states that sample means from sufficiently large samples approach a normal distribution regardless of the population shape. The empirical rule describes normal data, and the other principles are unrelated.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-028",
+            "domain": "Measure",
+            "stem": "A process has a wide specification range but is running off centre toward the upper limit. Which capability index BEST reveals the off centring?",
+            "options": [
+                "Cpm",
+                "Number of samples",
+                "Cp",
+                "Cpk"
+            ],
+            "correct_index": 3,
+            "explanation": "Cpk incorporates the distance from the process mean to the nearest specification limit, so it drops when the process is off centre. Cp measures only spread relative to specifications.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-029",
+            "domain": "Measure",
+            "stem": "A Black Belt compares Cpk and Ppk for the same process and finds Ppk notably lower. What is the key difference between these two indices?",
+            "options": [
+                "Cpk uses within subgroup variation while Ppk uses overall long term variation",
+                "Cpk is only used for attribute data while Ppk is for variable data",
+                "Ppk ignores the process mean while Cpk uses it",
+                "Cpk is calculated from specification limits while Ppk is not"
+            ],
+            "correct_index": 0,
+            "explanation": "Cpk uses within subgroup standard deviation representing short term capability, while Ppk uses overall standard deviation representing long term performance. Both incorporate the mean and use specification limits.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-030",
+            "domain": "Measure",
+            "stem": "A supplier claims a six sigma process level. Approximately how many defects per million opportunities does a six sigma process produce with the traditional 1.5 sigma shift?",
+            "options": [
+                "6210 defects per million opportunities",
+                "3.4 defects per million opportunities",
+                "66,807 defects per million opportunities",
+                "308,537 defects per million opportunities"
+            ],
+            "correct_index": 1,
+            "explanation": "With the standard 1.5 sigma shift, a six sigma process corresponds to about 3.4 defects per million opportunities. The other figures correspond to much lower sigma levels.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-031",
+            "domain": "Measure",
+            "stem": "Before studying variation the team runs a gage repeatability and reproducibility study on the measurement system. What does this study quantify?",
+            "options": [
+                "The number of defective units produced per shift",
+                "The fraction of product that meets specification",
+                "The variation contributed by the measurement system and appraisers",
+                "The optimal machine settings for the process"
+            ],
+            "correct_index": 2,
+            "explanation": "A gage R and R study separates equipment repeatability and appraiser reproducibility, revealing whether the measurement system can be trusted. Capability, machine settings, and defect counts are separate concerns.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-032",
+            "domain": "Measure",
+            "stem": "In a measurement systems analysis, several operators measure the same parts and differ systematically from one another. Which component does this difference represent?",
+            "options": [
+                "Bias",
+                "Stability",
+                "Repeatability",
+                "Reproducibility"
+            ],
+            "correct_index": 3,
+            "explanation": "Reproducibility is the variation between appraisers measuring the same items. Repeatability is variation when one appraiser measures the same item repeatedly, bias is a shift from reference, and stability is change over time.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-033",
+            "domain": "Measure",
+            "stem": "Inspectors classify parts into three categories and the team wants agreement beyond what chance alone would produce. Which statistic is MOST appropriate?",
+            "options": [
+                "Cohen's kappa",
+                "Pearson's r",
+                "Cpk",
+                "DPMO"
+            ],
+            "correct_index": 0,
+            "explanation": "Cohen's kappa measures inter rater agreement corrected for chance, which is exactly the attribute agreement question. Pearson correlation, capability indices, and defect metrics address different concerns.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-034",
+            "domain": "Measure",
+            "stem": "A gage reads low by two grams on average across the entire range it is used to measure. Which measurement property is being described?",
+            "options": [
+                "Resolution",
+                "Linearity",
+                "Reproducibility",
+                "Repeatability"
+            ],
+            "correct_index": 1,
+            "explanation": "A consistent offset that holds across the operating range describes bias, while linearity describes how bias changes from small to large measurements. Reproducibility and repeatability are variation sources and resolution is the smallest readable increment.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-035",
+            "domain": "Measure",
+            "stem": "A population is known to contain three distinct operating shifts that may behave differently. Which sampling approach is MOST appropriate?",
+            "options": [
+                "Judgment sampling by the shift supervisor",
+                "Simple random sampling of the entire combined population",
+                "Stratified sampling with each shift sampled separately",
+                "Convenience sampling of the most accessible shift"
+            ],
+            "correct_index": 2,
+            "explanation": "Stratified sampling draws from each known subgroup so every shift is represented and differences become detectable. Simple random sampling may under sample a shift, while convenience and judgment sampling introduce bias.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-036",
+            "domain": "Measure",
+            "stem": "The team wants to detect a smaller effect than originally planned. How does this change the required sample size?",
+            "options": [
+                "The sample size must decrease to detect the smaller effect",
+                "The sample size is unaffected by the effect size",
+                "The sample size depends only on the number of operators",
+                "The sample size must increase to detect the smaller effect"
+            ],
+            "correct_index": 3,
+            "explanation": "Detecting smaller effects requires more data, so sample size increases as the effect to be detected shrinks. Effect size, power, alpha, and variation all drive the calculation, not operator count alone.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-037",
+            "domain": "Measure",
+            "stem": "A Black Belt designs subgroups for a control chart on a continuous process. What is the goal of forming rational subgroups?",
+            "options": [
+                "To keep variation within a subgroup as small as possible so shifts between subgroups are visible",
+                "To include every product made during the entire shift in one subgroup",
+                "To ensure each subgroup contains parts from different machines",
+                "To maximize the variation within each subgroup"
+            ],
+            "correct_index": 0,
+            "explanation": "Rational subgroups group items produced under similar conditions so within subgroup variation reflects common cause and between subgroup changes signal special cause. Mixing conditions within a subgroup hides those signals.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-038",
+            "domain": "Measure",
+            "stem": "A process produces continuous measurements and the team wants to monitor both the mean and the variation. Which control chart pair is MOST appropriate?",
+            "options": [
+                "A p chart and an np chart",
+                "An Xbar and R chart",
+                "A Pareto chart and a histogram",
+                "A scatter plot and a run chart"
+            ],
+            "correct_index": 1,
+            "explanation": "For continuous data the Xbar chart monitors the process mean and the R chart monitors within subgroup variation. Attribute charts handle count or proportion data, while Pareto, histogram, and scatter tools are not control charts.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-039",
+            "domain": "Measure",
+            "stem": "A team plots a series of measurements over time to look for trends. How does a control chart differ from an ordinary run chart?",
+            "options": [
+                "A control chart is used only for attribute data",
+                "A control chart does not use data over time",
+                "A control chart includes statistically derived control limits that distinguish common from special cause",
+                "A run chart always has more data points than a control chart"
+            ],
+            "correct_index": 2,
+            "explanation": "The defining feature of a control chart is its statistically calculated control limits, which separate common cause from special cause variation. Run charts lack these limits and apply to both variable and attribute data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-040",
+            "domain": "Measure",
+            "stem": "The Black Belt wants a quick visual summary of the shape, centre, and spread of a continuous data set. Which tool is MOST appropriate?",
+            "options": [
+                "A RACI chart",
+                "A control plan",
+                "A fault tree",
+                "A histogram"
+            ],
+            "correct_index": 3,
+            "explanation": "A histogram displays the frequency distribution so shape, centre, and spread are visible at a glance. RACI charts, control plans, and fault trees serve planning and analysis purposes, not distribution summarization.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-041",
+            "domain": "Measure",
+            "stem": "The team has a long list of defect categories and needs to focus on the few that account for most of the problem. Which tool is BEST?",
+            "options": [
+                "A Pareto chart",
+                "A box plot",
+                "A gage R and R study",
+                "A value stream map"
+            ],
+            "correct_index": 0,
+            "explanation": "A Pareto chart ranks categories by frequency so the vital few contributors stand out for priority action. Box plots show spread, gage studies assess measurement, and value stream maps show flow.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-042",
+            "domain": "Measure",
+            "stem": "A Black Belt examines a box plot of cycle times. Which quantity is represented by the box itself?",
+            "options": [
+                "The specification limits for the process",
+                "The interquartile range from the first to the third quartile",
+                "The full range from minimum to maximum",
+                "The mean plus and minus one standard deviation"
+            ],
+            "correct_index": 1,
+            "explanation": "The box spans the interquartile range between the first and third quartiles, with the median marked inside. Whiskers extend toward extremes, and specification limits are not part of a box plot.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-043",
+            "domain": "Measure",
+            "stem": "A Black Belt wants an initial visual check of whether two continuous variables are related. Which tool is MOST appropriate?",
+            "options": [
+                "A control chart",
+                "A responsibility matrix",
+                "A scatter plot",
+                "A pie chart"
+            ],
+            "correct_index": 2,
+            "explanation": "A scatter plot displays paired observations so the form, direction, and strength of a relationship are visible. Pie charts show composition, control charts track time sequence, and matrices assign responsibilities.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-044",
+            "domain": "Measure",
+            "stem": "Before collecting data the team writes precise operational definitions for each measure. Why is this step essential?",
+            "options": [
+                "It removes the need to validate the measurement system",
+                "It determines the statistical significance of the results",
+                "It guarantees the data will be normally distributed",
+                "It ensures everyone records the same thing in the same way so the data are consistent"
+            ],
+            "correct_index": 3,
+            "explanation": "Operational definitions specify exactly how each value is measured and recorded, preventing inconsistent data. They do not force normality, replace measurement validation, or determine significance.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-045",
+            "domain": "Measure",
+            "stem": "Two items each have several independent ways to be defective, and the team wants to express defects per unit opportunity. Which measure is being used?",
+            "options": [
+                "Defects per million opportunities",
+                "Rolled throughput yield",
+                "Process cycle efficiency",
+                "Defects per unit"
+            ],
+            "correct_index": 0,
+            "explanation": "Defects per million opportunities normalizes defects by the number of opportunities per unit so complex products can be compared. Defects per unit ignores opportunity count, and yield and cycle efficiency measure different things.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-046",
+            "domain": "Measure",
+            "stem": "A product passes through five process steps with individual yields of 0.95 each. How is overall rolled throughput yield determined?",
+            "options": [
+                "By adding the five yields together",
+                "By multiplying the individual step yields together",
+                "By taking the average of the five yields",
+                "By subtracting the smallest yield from the largest"
+            ],
+            "correct_index": 1,
+            "explanation": "Rolled throughput yield multiplies the individual step yields, so hidden factory losses compound. Adding, averaging, or taking a range does not represent the combined pass through probability.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-047",
+            "domain": "Measure",
+            "stem": "At the start of the Measure phase a team documents suppliers, inputs, process, outputs, and customers. What is this tool called?",
+            "options": [
+                "A Pugh matrix",
+                "A kanban board",
+                "A SIPOC diagram",
+                "A fault tree diagram"
+            ],
+            "correct_index": 2,
+            "explanation": "A SIPOC diagram frames the process by its suppliers, inputs, process steps, outputs, and customers at a high level. Fault trees, Pugh matrices, and kanban boards serve different analysis and control purposes.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-048",
+            "domain": "Measure",
+            "stem": "A Black Belt needs to establish how capable the process is before making changes. What must be established first?",
+            "options": [
+                "The optimized settings identified by an experiment",
+                "The corrected root cause of the defect",
+                "The final control plan for the process",
+                "A reliable baseline measurement of current process performance"
+            ],
+            "correct_index": 3,
+            "explanation": "A trustworthy baseline is required before improvement so the change can be proven. Optimized settings, corrected root causes, and control plans come from later phases and cannot precede the baseline.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-049",
+            "domain": "Measure",
+            "stem": "A team counts the number of nonconformities on each assembled unit. Which probability distribution MOST naturally models this count of events in a unit?",
+            "options": [
+                "The Poisson distribution",
+                "The normal distribution",
+                "The uniform distribution",
+                "The binomial distribution"
+            ],
+            "correct_index": 0,
+            "explanation": "The Poisson distribution models counts of rare events or defects in a unit of space or time. The binomial models the number of successes among a fixed number of trials, while normal and uniform model different situations.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-050",
+            "domain": "Measure",
+            "stem": "Baseline data show high overall variation, but when the Black Belt separates results by machine the pattern becomes clear. What technique was used?",
+            "options": [
+                "Poka yoke",
+                "Data stratification",
+                "Randomization",
+                "Replication"
+            ],
+            "correct_index": 1,
+            "explanation": "Stratifying data by a potential source such as machine reveals hidden differences that aggregate statistics obscure. Randomization and replication are experiment design techniques, and poka yoke is mistake proofing.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Measure"
+        },
+        {
+            "id": "sixsigma-bb-051",
+            "domain": "Analyze",
+            "stem": "A Black Belt sets up a hypothesis test to compare a new method against the current one. Which statement is the null hypothesis?",
+            "options": [
+                "The new method is worse than the current method",
+                "The new method produces more variation than the current method",
+                "There is no difference between the new method and the current method",
+                "The new method is better than the current method"
+            ],
+            "correct_index": 2,
+            "explanation": "The null hypothesis states no effect or no difference and is what the test attempts to reject. The other statements are directional alternative hypotheses that the data may support.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-052",
+            "domain": "Analyze",
+            "stem": "A test rejects a true null hypothesis and the team concludes a difference exists when it does not. Which error has occurred?",
+            "options": [
+                "A Type II error",
+                "A measurement error",
+                "A sampling frame error",
+                "A Type I error"
+            ],
+            "correct_index": 3,
+            "explanation": "A Type I error is falsely rejecting a true null hypothesis and is controlled by the significance level alpha. A Type II error is failing to reject a false null hypothesis.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-053",
+            "domain": "Analyze",
+            "stem": "A test fails to detect a real difference that truly exists in the process. Which error has occurred?",
+            "options": [
+                "A Type II error",
+                "A rounding error",
+                "A transcription error",
+                "A Type I error"
+            ],
+            "correct_index": 0,
+            "explanation": "A Type II error is failing to reject a false null hypothesis, missing a real effect. A Type I error is the opposite, rejecting a true null hypothesis.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-054",
+            "domain": "Analyze",
+            "stem": "A hypothesis test returns a p value of 0.03. How should the Black Belt interpret this value?",
+            "options": [
+                "There is a 3 percent probability the null hypothesis is true",
+                "If the null hypothesis were true, there is about a 3 percent chance of observing data this extreme",
+                "There is a 97 percent probability the alternative hypothesis is true",
+                "The effect size is 3 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "A p value is the probability of the observed data, or more extreme, assuming the null hypothesis is true. It is not the probability that the null or alternative is true and is not an effect size.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-055",
+            "domain": "Analyze",
+            "stem": "A team chooses a significance level of 0.05 before testing. What does this choice control?",
+            "options": [
+                "The size of the effect that will be detected",
+                "The number of samples that must be collected",
+                "The probability of making a Type I error if the null hypothesis is true",
+                "The probability of making a Type II error"
+            ],
+            "correct_index": 2,
+            "explanation": "The significance level alpha is the maximum acceptable probability of a Type I error. The Type II error rate, detectable effect size, and sample size are separate design choices related through power.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-056",
+            "domain": "Analyze",
+            "stem": "A Black Belt wants to increase the chance of detecting a real difference without changing the significance level. Which action increases the power of the test?",
+            "options": [
+                "Decrease the sample size",
+                "Increase the significance level to 0.20",
+                "Reduce the effect size assumed in the planning",
+                "Increase the sample size"
+            ],
+            "correct_index": 3,
+            "explanation": "Power rises with larger samples because the standard error of the estimate shrinks, making real effects easier to detect. Reducing the sample or assuming a smaller effect lowers power, and inflating alpha trades Type I risk for power.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-057",
+            "domain": "Analyze",
+            "stem": "A single sample mean is compared with a known target value and the population standard deviation is unknown. Which test is MOST appropriate?",
+            "options": [
+                "A one sample t test",
+                "A chi square test of independence",
+                "A two way analysis of variance",
+                "A paired t test"
+            ],
+            "correct_index": 0,
+            "explanation": "A one sample t test compares a single sample mean to a target when the population standard deviation must be estimated. Chi square tests associations, ANOVA compares several group means, and a paired test requires matched pairs.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-058",
+            "domain": "Analyze",
+            "stem": "Two independent production lines are compared on mean fill weight and the standard deviations are unknown. Which test is MOST appropriate?",
+            "options": [
+                "A paired t test",
+                "A two sample t test",
+                "A one sample z test with known sigma",
+                "A chi square goodness of fit test"
+            ],
+            "correct_index": 1,
+            "explanation": "A two sample t test compares the means of two independent groups with estimated variances. A z test needs a known sigma, chi square tests categorical fit, and a paired test requires related observations.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-059",
+            "domain": "Analyze",
+            "stem": "Each operator measures the same set of parts before and after training. Which test is MOST appropriate for comparing the before and after means?",
+            "options": [
+                "A one way analysis of variance",
+                "A chi square test of independence",
+                "A paired t test",
+                "A two sample t test for independent groups"
+            ],
+            "correct_index": 2,
+            "explanation": "The paired t test analyzes matched before and after observations on the same items, removing between item variation. An independent two sample test would ignore the pairing and lose power.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-060",
+            "domain": "Analyze",
+            "stem": "Four suppliers are compared on mean part hardness. Which test is MOST appropriate for a single factor with four levels?",
+            "options": [
+                "A paired t test of two suppliers",
+                "A chi square goodness of fit test",
+                "A simple linear regression",
+                "A one way analysis of variance"
+            ],
+            "correct_index": 3,
+            "explanation": "One way analysis of variance tests whether the means of three or more groups differ on one factor. Repeated pairwise t tests would inflate the Type I error rate, and the other methods answer different questions.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-061",
+            "domain": "Analyze",
+            "stem": "A study varies both temperature and pressure and the Black Belt wants to know whether the effect of temperature depends on pressure. What is being tested?",
+            "options": [
+                "An interaction effect",
+                "A main effect of temperature only",
+                "A blocking effect",
+                "A measurement repeatability effect"
+            ],
+            "correct_index": 0,
+            "explanation": "An interaction exists when the effect of one factor changes across levels of another, which is why a two way analysis of variance is used. A main effect describes the average influence of one factor alone.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-062",
+            "domain": "Analyze",
+            "stem": "An analysis of variance is planned and the Black Belt checks assumptions. Which set of assumptions must the data reasonably satisfy?",
+            "options": [
+                "A known population standard deviation for each group",
+                "Independent observations, normal residuals, and equal variances",
+                "A sample size greater than one hundred in every group",
+                "Exactly two factor levels and no interaction"
+            ],
+            "correct_index": 1,
+            "explanation": "Analysis of variance assumes independent observations, approximately normal residuals, and homogeneous variances. It does not require very large groups, exactly two levels, or known standard deviations.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-063",
+            "domain": "Analyze",
+            "stem": "Before a two sample t test the Black Belt wants to check whether two groups share the same variance. Which test compares variances?",
+            "options": [
+                "A chi square goodness of fit test",
+                "A sign test",
+                "An F test for equality of variances",
+                "A paired t test"
+            ],
+            "correct_index": 2,
+            "explanation": "The F test compares two variances as the ratio of their sample variances. Paired t tests compare means, chi square tests categorical fit, and the sign test is nonparametric for medians.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-064",
+            "domain": "Analyze",
+            "stem": "A team cross tabulates defect type against machine and asks whether the two categorical variables are associated. Which test is MOST appropriate?",
+            "options": [
+                "A one way analysis of variance",
+                "A regression of defect rate on machine speed",
+                "A paired t test",
+                "A chi square test of independence"
+            ],
+            "correct_index": 3,
+            "explanation": "The chi square test of independence evaluates whether two categorical variables are related in a contingency table. ANOVA and regression require continuous responses, and a paired t test compares paired means.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-065",
+            "domain": "Analyze",
+            "stem": "A team compares the observed counts of defect categories with the counts expected from historical proportions. Which test is MOST appropriate?",
+            "options": [
+                "A chi square goodness of fit test",
+                "A chi square test of independence",
+                "A two sample t test",
+                "An F test for variances"
+            ],
+            "correct_index": 0,
+            "explanation": "Goodness of fit compares observed category counts to expected proportions from a single population. The independence test compares two categorical variables against each other, while t and F tests handle continuous data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-066",
+            "domain": "Analyze",
+            "stem": "The Black Belt computes a Pearson correlation of minus 0.85 between temperature and strength. How should this be interpreted?",
+            "options": [
+                "Eighty five percent of the variation in strength is explained by temperature",
+                "There is a strong negative linear relationship between the two variables",
+                "The correlation proves that temperature causes strength to fall",
+                "There is no relationship between the two variables"
+            ],
+            "correct_index": 1,
+            "explanation": "A correlation of minus 0.85 indicates a strong downward linear association. Correlation does not prove causation, and the proportion of variation explained is the square of the correlation, not the correlation itself.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-067",
+            "domain": "Analyze",
+            "stem": "A simple linear regression models yield as a function of oven temperature. What does the slope coefficient represent?",
+            "options": [
+                "The strength of the linear relationship on a scale from minus one to one",
+                "The percentage of variation explained by the model",
+                "The change in predicted yield for each one unit increase in temperature",
+                "The predicted yield when temperature is zero"
+            ],
+            "correct_index": 2,
+            "explanation": "The slope gives the expected change in the response for a one unit change in the predictor. The intercept is the prediction at a predictor of zero, while the correlation and coefficient of determination describe fit.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-068",
+            "domain": "Analyze",
+            "stem": "Two predictors are highly correlated with each other in a multiple regression. Why is this a problem?",
+            "options": [
+                "It always makes the model's predictions completely wrong",
+                "It eliminates the need for a response variable",
+                "It automatically normalizes the residuals",
+                "It makes the individual coefficient estimates unstable and hard to interpret"
+            ],
+            "correct_index": 3,
+            "explanation": "Multicollinearity inflates the standard errors of the coefficients, making them unstable and difficult to interpret. It does not necessarily destroy predictions or remove the need for a response, nor does it fix residual behaviour.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-069",
+            "domain": "Analyze",
+            "stem": "A multiple regression is fitted and a predictor that does not improve the model is added. How does adjusted R squared behave compared with R squared?",
+            "options": [
+                "Adjusted R squared penalizes the addition of predictors that add little explanatory power",
+                "Adjusted R squared always rises when any predictor is added",
+                "Adjusted R squared ignores the number of predictors",
+                "Adjusted R squared is always larger than R squared"
+            ],
+            "correct_index": 0,
+            "explanation": "Adjusted R squared accounts for the number of predictors and can decrease when a weak predictor is added, while R squared never decreases. It cannot exceed R squared for the same model.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-070",
+            "domain": "Analyze",
+            "stem": "A Black Belt checks a variance inflation factor for each predictor in a regression. What does a large variance inflation factor indicate?",
+            "options": [
+                "A strong measurement repeatability problem",
+                "Serious multicollinearity among the predictors",
+                "A high level of process capability",
+                "A significant difference in group variances"
+            ],
+            "correct_index": 1,
+            "explanation": "A large variance inflation factor signals that a predictor is highly correlated with others, which destabilizes coefficients. Capability, variance equality, and repeatability are assessed with entirely different tools.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-071",
+            "domain": "Analyze",
+            "stem": "After fitting a regression the Black Belt plots the residuals against the fitted values. What does a random scatter with no pattern suggest?",
+            "options": [
+                "The residuals are not independent",
+                "The response variable must be categorical",
+                "The model assumptions of constant variance and correct form are reasonably met",
+                "The model is missing a strong predictor"
+            ],
+            "correct_index": 2,
+            "explanation": "A random residual scatter supports constant variance and an appropriate model form. A funnel or curved pattern would indicate unequal variance or a missing term, and residuals in regression come from a continuous response.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-072",
+            "domain": "Analyze",
+            "stem": "A team brainstorms possible causes of a defect and organizes them by machine, method, material, and people. Which tool is being used?",
+            "options": [
+                "A control chart",
+                "A design of experiments",
+                "A Pugh matrix",
+                "A cause and effect diagram"
+            ],
+            "correct_index": 3,
+            "explanation": "The cause and effect or fishbone diagram groups potential causes into categories such as the classic six Ms. Control charts monitor stability, experiments test factors, and Pugh matrices select concepts.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-073",
+            "domain": "Analyze",
+            "stem": "A Black Belt asks why a machine stopped, then asks why again for each answer until the underlying cause emerges. Which technique is this?",
+            "options": [
+                "The five whys",
+                "Fault tree analysis",
+                "Design of experiments",
+                "Statistical process control"
+            ],
+            "correct_index": 0,
+            "explanation": "The five whys drills from a symptom to a root cause by repeatedly asking why. Fault tree analysis works top down from an event through logic gates, while experiments and process control differ.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-074",
+            "domain": "Analyze",
+            "stem": "A safety critical failure is analyzed by tracing combinations of component failures that could produce it. Which backward, deductive tool is being used?",
+            "options": [
+                "A gage R and R study",
+                "Fault tree analysis",
+                "The five whys",
+                "A Pareto analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Fault tree analysis deduces how combinations of lower level failures lead to a top event using logic gates. The five whys follows a single causal chain, Pareto ranks frequencies, and gage studies assess measurement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-075",
+            "domain": "Analyze",
+            "stem": "A team compares the proportion of defective units from two work shifts. Which test is MOST appropriate?",
+            "options": [
+                "A one way analysis of variance",
+                "A simple linear regression",
+                "A test for two proportions",
+                "A paired t test"
+            ],
+            "correct_index": 2,
+            "explanation": "A two proportion test compares defect proportions between two independent groups. Paired t and ANOVA tests compare means, and regression models a continuous response.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-076",
+            "domain": "Analyze",
+            "stem": "Two independent samples are compared but the data are heavily skewed and the sample sizes are small. Which nonparametric test is MOST appropriate?",
+            "options": [
+                "The two sample t test",
+                "The F test for variances",
+                "The Pearson correlation test",
+                "The Mann Whitney U test"
+            ],
+            "correct_index": 3,
+            "explanation": "The Mann Whitney U test compares two independent groups using ranks without assuming normality, which suits small skewed samples. The t and F tests rely on normality, and correlation measures association rather than group difference.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-077",
+            "domain": "Analyze",
+            "stem": "Four groups are compared but the response is ordinal and the normality assumption fails. Which nonparametric test is MOST appropriate?",
+            "options": [
+                "The Kruskal Wallis test",
+                "The one way analysis of variance",
+                "The paired t test",
+                "The chi square test of independence"
+            ],
+            "correct_index": 0,
+            "explanation": "The Kruskal Wallis test is the nonparametric counterpart of one way analysis of variance for comparing several independent groups by ranks. ANOVA assumes normality, the paired t test handles two related groups, and chi square handles categorical association.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-078",
+            "domain": "Analyze",
+            "stem": "The same subjects are measured before and after an intervention and the differences are not normally distributed. Which nonparametric test is MOST appropriate?",
+            "options": [
+                "The two sample t test",
+                "The Wilcoxon signed rank test",
+                "The Mann Whitney U test",
+                "The Kruskal Wallis test"
+            ],
+            "correct_index": 1,
+            "explanation": "The Wilcoxon signed rank test handles paired or matched data nonparametrically. Mann Whitney and Kruskal Wallis compare independent groups, and the two sample t test assumes normal independent groups.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-079",
+            "domain": "Analyze",
+            "stem": "A ninety five percent confidence interval for the mean difference includes zero. What should the Black Belt conclude?",
+            "options": [
+                "There is a ninety five percent chance the difference is zero",
+                "The sample size was too large",
+                "The data are consistent with no difference at the five percent significance level",
+                "The difference is definitely zero"
+            ],
+            "correct_index": 2,
+            "explanation": "If zero lies inside the confidence interval the null hypothesis of no difference cannot be rejected at the matching significance level. A confidence interval gives a range of plausible values, not the probability that a specific value is true.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-080",
+            "domain": "Analyze",
+            "stem": "A Black Belt tracks one part through every process step and records variation from piece to piece and over time. Which family of study is being conducted?",
+            "options": [
+                "A gage linearity study",
+                "A design of experiments",
+                "A capability study of the final product only",
+                "A multi vari study"
+            ],
+            "correct_index": 3,
+            "explanation": "A multi vari study examines variation across positional, cyclical, and temporal families to localize the dominant source. Gage linearity, designed experiments, and final product capability address different questions.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Analyze"
+        },
+        {
+            "id": "sixsigma-bb-081",
+            "domain": "Improve",
+            "stem": "A Black Belt plans a two factor experiment in which each factor is tested at two levels. If every combination is run, what design is this?",
+            "options": [
+                "A full factorial design",
+                "A fractional factorial design",
+                "A randomized block design",
+                "An I MR control chart"
+            ],
+            "correct_index": 0,
+            "explanation": "A full factorial tests every combination of factor levels, so a two factor two level design has four runs. A fractional design uses only a subset, and blocking and control charts serve other purposes.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-082",
+            "domain": "Improve",
+            "stem": "A team must screen six factors quickly and can afford only a fraction of the full factorial runs. What is the main risk of using a resolution three design?",
+            "options": [
+                "It requires more runs than the full factorial",
+                "Main effects may be confounded with two factor interactions",
+                "No main effects can ever be estimated",
+                "The design cannot include any factor levels"
+            ],
+            "correct_index": 1,
+            "explanation": "Resolution three designs alias main effects with two factor interactions, which is acceptable for early screening but requires follow up. They still estimate main effects and use fewer runs than a full factorial.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-083",
+            "domain": "Improve",
+            "stem": "Twenty potential factors exist but capacity allows testing only a few. What is the BEST use of a screening experiment?",
+            "options": [
+                "To prove the process is in statistical control",
+                "To validate the measurement system",
+                "To identify the few factors that materially affect the response",
+                "To precisely optimize the settings of a known critical factor"
+            ],
+            "correct_index": 2,
+            "explanation": "Screening designs economically separate the vital few factors from the trivial many. Precise optimization follows screening, and process control and measurement validation use other tools.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-084",
+            "domain": "Improve",
+            "stem": "An experiment shows that increasing pressure raises yield, but only when temperature is high. What does this result demonstrate?",
+            "options": [
+                "Only a main effect of pressure",
+                "A blocking effect",
+                "A measurement bias",
+                "An interaction between pressure and temperature"
+            ],
+            "correct_index": 3,
+            "explanation": "The effect of pressure depending on the temperature level is an interaction between the two factors. A main effect would describe the average influence of pressure regardless of temperature.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-085",
+            "domain": "Improve",
+            "stem": "After screening reveals the critical factors, the Black Belt wants to find the settings that maximize yield. Which approach is BEST?",
+            "options": [
+                "A response surface method with a central composite design",
+                "A resolution three screening design",
+                "A one factor at a time search",
+                "A gage repeatability and reproducibility study"
+            ],
+            "correct_index": 0,
+            "explanation": "Response surface methods model curvature and locate optimal settings on the critical factors. A screening design is too coarse, one factor at a time misses interactions, and gage studies assess measurement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-086",
+            "domain": "Improve",
+            "stem": "A two level factorial experiment includes repeated runs at the centre of the factor ranges. What do these centre points test?",
+            "options": [
+                "Whether the process is in control",
+                "Whether curvature is present in the response",
+                "Whether the factors are correctly named",
+                "Whether the measurement system is capable"
+            ],
+            "correct_index": 1,
+            "explanation": "Adding centre points lets the design detect curvature that a straight line between two levels would miss. Factor naming, measurement capability, and control status are unrelated to centre point analysis.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-087",
+            "domain": "Improve",
+            "stem": "In a designed experiment the run order is randomized rather than arranged by factor level. Why is randomization used?",
+            "options": [
+                "To reduce the number of runs required",
+                "To make the response normally distributed",
+                "To protect against the effect of unknown nuisance variables",
+                "To guarantee the factors are independent"
+            ],
+            "correct_index": 2,
+            "explanation": "Randomizing run order spreads the influence of lurking variables evenly so they do not confound the factors. It does not change the number of runs, force independence of factors, or normalize the response.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-088",
+            "domain": "Improve",
+            "stem": "An experiment must be run across two shifts that are known to differ. How should the designer handle this known nuisance source?",
+            "options": [
+                "Ignore the shift and analyze all runs together",
+                "Run all one factor's high level on a single shift",
+                "Remove the shift variable from the study records",
+                "Use blocking so shift effects are separated from the factor effects"
+            ],
+            "correct_index": 3,
+            "explanation": "Blocking isolates a known nuisance variable so its effect does not contaminate the factor estimates. Ignoring or misallocating the shift confounds it with factors, and discarding the information is wasteful.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-089",
+            "domain": "Improve",
+            "stem": "A full factorial experiment repeats each treatment combination several times. What is the primary purpose of replication?",
+            "options": [
+                "To provide an estimate of experimental error and increase precision",
+                "To reduce the number of experimental runs",
+                "To eliminate the need for randomization",
+                "To ensure all factors are confounded"
+            ],
+            "correct_index": 0,
+            "explanation": "Replication supplies an independent estimate of pure error so effects can be tested for significance and precision improves. It increases rather than reduces runs and does not replace randomization.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-090",
+            "domain": "Improve",
+            "stem": "A Taguchi practitioner selects an orthogonal array for a robust design. What is the key property of an orthogonal array?",
+            "options": [
+                "It guarantees the response is normally distributed",
+                "Every level of each factor is balanced and independent of the others across runs",
+                "It contains only a single experimental run",
+                "It prevents any interaction from being studied"
+            ],
+            "correct_index": 1,
+            "explanation": "Orthogonal arrays balance factor levels so each factor can be estimated independently and efficiently. They contain many runs, can support some interaction study, and do not force a response distribution.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-091",
+            "domain": "Improve",
+            "stem": "A robust design seeks settings that perform well despite uncontrollable noise factors. Which metric is used to balance mean response and variability?",
+            "options": [
+                "The defects per unit count",
+                "The payback period",
+                "The signal to noise ratio",
+                "The Cp index"
+            ],
+            "correct_index": 2,
+            "explanation": "Taguchi's signal to noise ratio combines response mean and variability so robust settings can be compared. Capability, defect counts, and payback measure different attributes.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-092",
+            "domain": "Improve",
+            "stem": "A researcher changes one factor at a time while holding all others fixed. Why is this approach inferior to a designed experiment?",
+            "options": [
+                "It always produces statistically significant results",
+                "It requires a computer to perform",
+                "It eliminates variation from the process",
+                "It cannot reveal interactions between factors and needs more runs to cover the space"
+            ],
+            "correct_index": 3,
+            "explanation": "One factor at a time experiments miss interactions and are inefficient because they do not exploit the factorial structure. They do not guarantee significance, need no computer, and cannot remove process variation.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-093",
+            "domain": "Improve",
+            "stem": "A team assesses failure modes of a new product design before production. Which analysis is being performed?",
+            "options": [
+                "A design failure mode and effects analysis",
+                "A process failure mode and effects analysis",
+                "A measurement systems analysis",
+                "A control plan audit"
+            ],
+            "correct_index": 0,
+            "explanation": "Design failure mode and effects analysis examines the product design for potential failures before a process exists. Process failure mode and effects analysis addresses manufacturing steps, and the other tools serve different purposes.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-094",
+            "domain": "Improve",
+            "stem": "A process failure mode has severity nine, occurrence three, and detection four. What is its risk priority number?",
+            "options": [
+                "Thirty six",
+                "One hundred and eight",
+                "Sixteen",
+                "Eighteen"
+            ],
+            "correct_index": 1,
+            "explanation": "The risk priority number is the product of severity, occurrence, and detection, so nine times three times four equals one hundred and eight. The other values result from adding or multiplying the wrong combination of ratings.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-095",
+            "domain": "Improve",
+            "stem": "A team wants to translate customer requirements into design characteristics and rank their importance in a matrix. Which tool is MOST appropriate?",
+            "options": [
+                "Statistical process control",
+                "The five whys",
+                "Quality function deployment",
+                "Fault tree analysis"
+            ],
+            "correct_index": 2,
+            "explanation": "Quality function deployment uses the house of quality to link customer requirements to design characteristics and their importance. Fault trees, process control, and the five whys serve different analysis needs.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-096",
+            "domain": "Improve",
+            "stem": "A team compares several design concepts against weighted criteria to select the best option. Which tool is MOST appropriate?",
+            "options": [
+                "A control chart",
+                "A gage R and R study",
+                "A Poisson analysis",
+                "A Pugh matrix"
+            ],
+            "correct_index": 3,
+            "explanation": "A Pugh matrix scores concepts against criteria and a datum to support structured selection. Control charts monitor stability, gage studies assess measurement, and Poisson analysis models counts.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-097",
+            "domain": "Improve",
+            "stem": "A company needs a new process that does not yet exist and must design it to meet customer requirements from the start. Which approach is MOST appropriate?",
+            "options": [
+                "Design for Six Sigma using the DMADV sequence",
+                "DMAIC applied to the existing process",
+                "A gage repeatability study",
+                "A value stream map of the current state"
+            ],
+            "correct_index": 0,
+            "explanation": "Design for Six Sigma using DMADV defines, measures, analyzes, designs, and verifies a new process. DMAIC improves an existing process, and gage studies and current state maps assume a process already exists.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-098",
+            "domain": "Improve",
+            "stem": "An assembly workstation is redesigned so a part can only be inserted in the correct orientation. Which lean technique is being applied?",
+            "options": [
+                "Standard work",
+                "Poka yoke mistake proofing",
+                "Kanban scheduling",
+                "Total productive maintenance"
+            ],
+            "correct_index": 1,
+            "explanation": "Poka yoke designs the process so errors are prevented or immediately detected rather than inspected later. Kanban, maintenance, and standard work address scheduling, equipment, and method consistency.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-099",
+            "domain": "Improve",
+            "stem": "A workplace is reorganized by sorting, setting in order, shining, standardizing, and sustaining. Which lean method is being implemented?",
+            "options": [
+                "Design of experiments",
+                "Failure mode and effects analysis",
+                "The five S workplace organization method",
+                "Single minute exchange of die"
+            ],
+            "correct_index": 2,
+            "explanation": "The five S method applies the five disciplines of workplace organization and discipline. Single minute exchange of die reduces setup time, while experiments and failure analysis are analytic tools.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-100",
+            "domain": "Improve",
+            "stem": "A bottleneck machine loses capacity during long changeovers between products. Which lean technique directly targets this loss?",
+            "options": [
+                "The five whys",
+                "A Pareto chart",
+                "A gage linearity study",
+                "Single minute exchange of die setup reduction"
+            ],
+            "correct_index": 3,
+            "explanation": "Single minute exchange of die reduces changeover time so the bottleneck can produce more. The five whys and Pareto chart are analysis tools, and gage linearity concerns measurement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-101",
+            "domain": "Improve",
+            "stem": "A production line signals upstream only when downstream consumes parts. Which lean mechanism is being used?",
+            "options": [
+                "A pull system using kanban",
+                "A push system driven by forecasts",
+                "A statistical process control chart",
+                "A design of experiments"
+            ],
+            "correct_index": 0,
+            "explanation": "Kanban is a pull signal that replenishes only what downstream has consumed, limiting excess work in process. Push systems build to forecast, and process control and experiments address variation and factors.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-102",
+            "domain": "Improve",
+            "stem": "A plant wants one metric that combines equipment availability, performance, and quality. Which metric is being described?",
+            "options": [
+                "Process cycle efficiency",
+                "Overall equipment effectiveness",
+                "Rolled throughput yield",
+                "Defects per million opportunities"
+            ],
+            "correct_index": 1,
+            "explanation": "Overall equipment effectiveness multiplies availability, performance, and quality into a single equipment effectiveness measure. Yield, defect rates, and cycle efficiency describe different dimensions.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-103",
+            "domain": "Improve",
+            "stem": "Before rolling out a change plant wide the Black Belt runs it on a single line to confirm the results. Why is this pilot approach valuable?",
+            "options": [
+                "It guarantees the change will work everywhere",
+                "It replaces the need for a control plan",
+                "It verifies the improvement under real conditions and limits risk before full deployment",
+                "It eliminates the need to measure the results"
+            ],
+            "correct_index": 2,
+            "explanation": "A pilot confirms the solution in a live environment and contains the cost of any problem before full rollout. It still requires measurement and a control plan and cannot guarantee performance in every setting.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-104",
+            "domain": "Improve",
+            "stem": "Two candidate solutions both improve quality and the team must choose one. Which comparison is MOST appropriate?",
+            "options": [
+                "Choose the solution with the most advanced technology",
+                "Choose the solution preferred by the most senior manager",
+                "Choose the solution that requires no training",
+                "Weigh the expected benefits against the implementation cost and effort of each"
+            ],
+            "correct_index": 3,
+            "explanation": "Solutions are selected on expected benefit relative to cost and effort so limited resources are used well. Technology sophistication, hierarchy, and convenience are not reliable selection criteria.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-105",
+            "domain": "Improve",
+            "stem": "A team debates whether to inspect every unit or change the process so errors cannot occur. Which argument best reflects lean Six Sigma thinking?",
+            "options": [
+                "Prevent errors at the source with mistake proofing rather than rely on inspection",
+                "Increase inspection sampling to catch more defects downstream",
+                "Hire more inspectors to cover every shift",
+                "Accept the defect rate because inspection is cheaper"
+            ],
+            "correct_index": 0,
+            "explanation": "Lean Six Sigma favours preventing defects at the source through mistake proofing rather than detecting them later when cost and risk are higher. Adding inspection does not remove the causes of defects.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Improve"
+        },
+        {
+            "id": "sixsigma-bb-106",
+            "domain": "Control",
+            "stem": "A control chart shows one point just outside a control limit while the rest of the pattern is stable. What is the correct interpretation?",
+            "options": [
+                "The control limits must be recalculated immediately without investigation",
+                "A special cause is likely present and should be investigated",
+                "The process specification limits have changed",
+                "Common cause variation has increased permanently"
+            ],
+            "correct_index": 1,
+            "explanation": "A point beyond a control limit signals a special cause that warrants investigation before any recalculation. Control limits are not the same as specification limits, and common cause changes appear as patterns rather than a single excursion.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-107",
+            "domain": "Control",
+            "stem": "A process produces continuous data in subgroups of five parts. Which control chart pair is MOST appropriate for monitoring the mean and variability?",
+            "options": [
+                "A c chart and a u chart",
+                "An individual and moving range chart only",
+                "An Xbar and R chart",
+                "A p chart and an np chart"
+            ],
+            "correct_index": 2,
+            "explanation": "With continuous data in small subgroups, the Xbar chart monitors the mean and the R chart monitors range. p, np, c, and u charts handle attribute data, and I MR charts are for subgroup size one.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-108",
+            "domain": "Control",
+            "stem": "A process uses continuous data with subgroups of twelve measurements each. Which variability chart is preferred over the range chart?",
+            "options": [
+                "The p chart",
+                "The c chart",
+                "The np chart",
+                "The S chart"
+            ],
+            "correct_index": 3,
+            "explanation": "For larger subgroups the sample standard deviation, monitored on an S chart, is more efficient than the range. p, c, and np charts are used for attribute data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-109",
+            "domain": "Control",
+            "stem": "A process can only be sampled one measurement at a time, such as a daily laboratory result. Which control chart is MOST appropriate?",
+            "options": [
+                "An individuals and moving range chart",
+                "An Xbar and R chart with subgroup size five",
+                "A p chart with constant subgroup size",
+                "A c chart for defects per unit"
+            ],
+            "correct_index": 0,
+            "explanation": "The individuals chart with a moving range is designed for subgroup size one, where no rational subgroup is available. Xbar R charts need rational subgroups and p and c charts handle attribute data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-110",
+            "domain": "Control",
+            "stem": "A process records the fraction of units that are defective each day with a varying number inspected. Which control chart is MOST appropriate?",
+            "options": [
+                "An Xbar and S chart",
+                "A p chart",
+                "An np chart",
+                "A c chart"
+            ],
+            "correct_index": 1,
+            "explanation": "The p chart monitors the proportion defective and accommodates a varying sample size. The np chart requires a constant sample size, the c chart counts defects per unit, and Xbar S charts handle continuous data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-111",
+            "domain": "Control",
+            "stem": "A process inspects a constant number of units every hour and records how many are defective. Which control chart is MOST appropriate?",
+            "options": [
+                "A u chart",
+                "An individuals chart",
+                "An np chart",
+                "A p chart"
+            ],
+            "correct_index": 2,
+            "explanation": "The np chart plots the number defective with a constant subgroup size. The p chart is used when the sample size varies, the u chart counts defects per unit, and individuals charts are for continuous data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-112",
+            "domain": "Control",
+            "stem": "A constant size unit of product may contain several nonconformities and the team tracks the total number per unit. Which control chart is MOST appropriate?",
+            "options": [
+                "A u chart",
+                "A p chart",
+                "An np chart",
+                "A c chart"
+            ],
+            "correct_index": 3,
+            "explanation": "The c chart monitors the total count of defects in a constant sized inspection unit. The u chart handles a varying inspection unit, and p and np charts track defective units rather than defect counts.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-113",
+            "domain": "Control",
+            "stem": "Defects are counted but the size of the inspected area changes from sample to sample. Which control chart is MOST appropriate?",
+            "options": [
+                "A u chart",
+                "A c chart",
+                "An np chart",
+                "An Xbar and R chart"
+            ],
+            "correct_index": 0,
+            "explanation": "The u chart plots defects per unit and adjusts for a varying inspection unit size. The c chart assumes a constant unit, np charts count defective units at constant sample size, and Xbar R charts need continuous data.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-114",
+            "domain": "Control",
+            "stem": "A control chart shows eight consecutive points all above the centre line while none exceed the control limits. What does this pattern indicate?",
+            "options": [
+                "The measurement system is biased by exactly one unit",
+                "A special cause such as a sustained shift is present",
+                "The process is stable and requires no action",
+                "The specification limits are too wide"
+            ],
+            "correct_index": 1,
+            "explanation": "A run of eight or more points on one side of the centre line is a recognized out of control signal revealing a sustained shift. Stability, specification width, and a fixed measurement bias are not conclusions drawn from a run rule.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-115",
+            "domain": "Control",
+            "stem": "A Black Belt explains the difference between control limits and specification limits. Which statement is correct?",
+            "options": [
+                "Control limits and specification limits are always identical",
+                "Specification limits are calculated from the subgroup ranges",
+                "Control limits come from the process variation while specification limits come from customer requirements",
+                "Control limits come from customer requirements while specification limits come from the process"
+            ],
+            "correct_index": 2,
+            "explanation": "Control limits are derived from the process data and describe inherent variation, whereas specification limits are set by customers and design. The two are independent and are not calculated from each other.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-116",
+            "domain": "Control",
+            "stem": "Which element belongs in a process control plan produced during the Control phase?",
+            "options": [
+                "The list of candidate projects for next year",
+                "The raw experimental data from the Improve phase",
+                "The team charter and stakeholder register",
+                "The measure, sample size, frequency, and reaction plan for each critical characteristic"
+            ],
+            "correct_index": 3,
+            "explanation": "A control plan specifies what is monitored, how often, by whom, and the action to take when a signal occurs. Project lists, experimental raw data, and charters belong elsewhere.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-117",
+            "domain": "Control",
+            "stem": "An operator asks for the documented best method to perform a critical task within takt time. Which control tool provides this?",
+            "options": [
+                "Standard work instructions",
+                "A Pareto chart",
+                "A design of experiments",
+                "A fault tree analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard work documents the current best sequence, timing, and method so the improved process is performed consistently. Pareto charts, experiments, and fault trees are analysis tools, not work instructions.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-118",
+            "domain": "Control",
+            "stem": "A work area uses boards and floor markings so anyone can see at a glance whether the process is normal. Which control approach is being applied?",
+            "options": [
+                "Regression analysis",
+                "Visual management",
+                "Design of experiments",
+                "Hypothesis testing"
+            ],
+            "correct_index": 1,
+            "explanation": "Visual management makes process status and deviations obvious to everyone so problems surface quickly. Experiments, hypothesis tests, and regression are analytic techniques rather than shop floor controls.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-119",
+            "domain": "Control",
+            "stem": "After implementing an improvement the team wants to ensure the new method is followed consistently over time. Which control is MOST important?",
+            "options": [
+                "Removing all documentation to encourage flexibility",
+                "Cancelling the control chart now that the project is done",
+                "Documenting and controlling the standard operating procedures",
+                "Returning to the old method until results are confirmed"
+            ],
+            "correct_index": 2,
+            "explanation": "Controlled, current standard procedures keep the improved method in place so gains are not lost. Reverting or removing documentation invites drift, and retiring process monitoring abandons sustainment.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-120",
+            "domain": "Control",
+            "stem": "A control chart signals an out of control condition during routine monitoring. What should happen FIRST?",
+            "options": [
+                "Recalculate the control limits so the points fit inside",
+                "Ignore the signal until several more points appear",
+                "Adjust the process randomly until the signal disappears",
+                "Follow the documented reaction plan to contain and investigate the cause"
+            ],
+            "correct_index": 3,
+            "explanation": "The reaction plan tells the operator how to contain the problem and investigate the special cause. Recalculating limits or random adjustment distorts the chart, and ignoring the signal lets the problem grow.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-121",
+            "domain": "Control",
+            "stem": "A kaizen event produced improvements but management wants confidence the gains will last. Which follow up is MOST important?",
+            "options": [
+                "Tracking the key metrics over time and holding owners accountable for the results",
+                "Declaring success and moving the whole team to the next event immediately",
+                "Disbanding the team so it does not interfere with operations",
+                "Waiting a year before checking whether the gains held"
+            ],
+            "correct_index": 0,
+            "explanation": "Sustained gains require ongoing metric tracking and clear ownership after the event. Immediate disbandment or a long delay before checking allows the process to revert.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-122",
+            "domain": "Control",
+            "stem": "A process owner will take over a completed project. What should the Black Belt do to enable sustainment?",
+            "options": [
+                "Delay the handover until the next measurement cycle",
+                "Train the owner and operators on the new method and transfer the control plan and documentation",
+                "Keep all process knowledge with the Black Belt for future projects",
+                "Leave the owner to discover the new method from the control charts"
+            ],
+            "correct_index": 1,
+            "explanation": "Ownership transfer succeeds when the process owner and operators are trained and receive the control plan and documentation. Retaining knowledge, expecting self discovery, or delaying the handover undermines sustainment.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-123",
+            "domain": "Control",
+            "stem": "Management wants periodic assurance that a controlled process still follows its plan. What activity provides this?",
+            "options": [
+                "An additional design of experiments",
+                "A new stakeholder analysis",
+                "A regular control plan or process audit",
+                "A single one time capability study"
+            ],
+            "correct_index": 2,
+            "explanation": "Periodic control plan audits verify that monitoring, reaction plans, and standard work are actually followed. A one time study, an experiment, or a stakeholder analysis does not confirm ongoing adherence.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-124",
+            "domain": "Control",
+            "stem": "After an improvement the team installs a device that prevents a specific assembly error. How should this control be sustained?",
+            "options": [
+                "Rely on operators to remember to use the device",
+                "Remove the device once operators are trained",
+                "Mention the device only in the project final report",
+                "Include the device in standard work and preventive maintenance with checks on its function"
+            ],
+            "correct_index": 3,
+            "explanation": "Mistake proofing devices must be maintained and verified so they keep working, so they belong in standard work and preventive maintenance. Memory, removal after training, or a report mention will not sustain the control.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        },
+        {
+            "id": "sixsigma-bb-125",
+            "domain": "Control",
+            "stem": "A Black Belt is closing a project and wants to verify that the gains are real and durable. Which evidence is MOST convincing?",
+            "options": [
+                "Sustained performance on the key metrics for a period after the improvement",
+                "The team's verbal assurance that the process feels better",
+                "A single favorable measurement taken on the final day",
+                "The number of tools used during the project"
+            ],
+            "correct_index": 0,
+            "explanation": "Durable gains are demonstrated by sustained metric performance over time after the change. A verbal impression, a single measurement, or a tool count does not prove lasting improvement.",
+            "reference": "Lean Six Sigma Black Belt Body of Knowledge - Control"
+        }
+    ]
+}

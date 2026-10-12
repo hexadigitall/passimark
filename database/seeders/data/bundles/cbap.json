@@ -1,0 +1,1697 @@
+{
+    "cert_key": "cbap",
+    "title": "Certified Business Analysis Professional (CBAP)",
+    "issuer": "IIBA",
+    "outline_file": "outlines/cbap.json",
+    "variant_label": "CBAP Real-Spec Practice",
+    "exam": {
+        "questions": 120,
+        "duration_minutes": 210,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the BABOK v3 knowledge areas and the CBAP exam blueprint. Not a capture of past exam questions.",
+    "source_label": "CBAP practice bank",
+    "items": [
+        {
+            "id": "cbap-001",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A business analyst is deciding how much formality, ceremony, and documentation the business analysis work should carry, given the organization's culture and the risk of the initiative. Which planning task is being performed?",
+            "options": [
+                "Plan Business Analysis Approach",
+                "Plan Stakeholder Engagement",
+                "Plan Business Analysis Governance",
+                "Plan Business Analysis Information Management"
+            ],
+            "correct_index": 0,
+            "explanation": "Planning the business analysis approach sets the level of formality, timing of activities, and deliverables of the business analysis work. The other options are distinct planning tasks covering stakeholders, decision rights, and information storage.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-002",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "Before eliciting requirements, a business analyst builds a matrix that records each participant's influence, attitude toward the change, and communication preferences in order to decide who must be engaged closely. Which technique is being used?",
+            "options": [
+                "Sequence diagram",
+                "Stakeholder list, map, or personas",
+                "Data flow diagram",
+                "Decision table"
+            ],
+            "correct_index": 1,
+            "explanation": "A stakeholder list, map, or personas captures influence, attitude, and communication needs to guide engagement planning. The other options model data, logic, or interactions and are not stakeholder analysis techniques.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-003",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A business analyst is defining who may approve changes to business analysis information and how disputes will be escalated before the work proceeds. Which planning task covers this?",
+            "options": [
+                "Plan Stakeholder Engagement",
+                "Plan Business Analysis Approach",
+                "Plan Business Analysis Governance",
+                "Plan Business Analysis Information Management"
+            ],
+            "correct_index": 2,
+            "explanation": "Business analysis governance defines decision-making, approval, and escalation processes for business analysis information. The other tasks cover storage, people, and the overall approach respectively.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-004",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "The team is deciding how requirement statements, models, and their relationships will be captured, stored, and traced so that they remain consistent over time. Which planning task is this?",
+            "options": [
+                "Plan Business Analysis Governance",
+                "Plan Stakeholder Engagement",
+                "Identify Business Analysis Performance Improvements",
+                "Plan Business Analysis Information Management"
+            ],
+            "correct_index": 3,
+            "explanation": "Planning business analysis information management addresses the structure, storage, and traceability of requirement information. Governance concerns decisions, while the other tasks concern people and performance.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-005",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "After an initiative, a business analyst reviews whether the chosen elicitation and modelling approaches produced complete requirements and identifies ways to strengthen future business analysis work. Which task is this?",
+            "options": [
+                "Identify Business Analysis Performance Improvements",
+                "Plan Business Analysis Approach",
+                "Plan Business Analysis Governance",
+                "Plan Stakeholder Engagement"
+            ],
+            "correct_index": 0,
+            "explanation": "Identifying business analysis performance improvements examines how effective the business analysis work was and how it can be improved. The other tasks are performed earlier when planning the work.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-006",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "An initiative has stable, well-understood requirements and strict regulatory sign-off, so the business analyst plans a mostly predictive approach with baselined documentation. Which factor most influenced that decision?",
+            "options": [
+                "The frequency of team social events",
+                "The degree of expected change and the need for formal approval",
+                "The project manager's years of experience",
+                "The number of tools the team owns"
+            ],
+            "correct_index": 1,
+            "explanation": "Predictive planning suits requirements that are stable and require formal approval, while adaptive planning suits high uncertainty. Experience, tool ownership, and social factors do not determine the planning approach.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-007",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A business analyst on a product team plans to elaborate requirements just in time and expects them to change frequently, so detailed baselines would quickly become stale. Which approach is being planned?",
+            "options": [
+                "A waterfall approach with a frozen scope",
+                "A no-planning approach with no reviews",
+                "An adaptive, change-driven approach",
+                "A predictive, plan-driven approach"
+            ],
+            "correct_index": 2,
+            "explanation": "Adaptive approaches accommodate evolving requirements by elaborating detail just in time. Predictive and waterfall approaches assume stable scope, and abandoning planning altogether is not a recognised approach.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-008",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A stakeholder whose approval is essential is currently neutral and hard to schedule. What should the business analyst do when planning stakeholder engagement?",
+            "options": [
+                "Remove the stakeholder from the engagement plan to save time",
+                "Contact the stakeholder only to obtain a final signature",
+                "Postpone all contact until the solution is delivered",
+                "Plan deliberate engagement activities to keep the stakeholder informed and involved"
+            ],
+            "correct_index": 3,
+            "explanation": "Engagement planning should design activities that build and maintain the support of influential stakeholders. Removing, deferring, or limiting contact to a signature risks late opposition and rework.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-009",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "Two business units want opposing solutions, and the business analyst needs an agreed mechanism for resolving the conflict before it blocks progress. What should be planned?",
+            "options": [
+                "The decision-making and escalation process within business analysis governance",
+                "A new organizational chart for both business units",
+                "A detailed schedule of the elicitation sessions",
+                "A single prioritized list of all requirements"
+            ],
+            "correct_index": 0,
+            "explanation": "Governance establishes how conflicting views are decided and escalated. Organizational charts, session schedules, and a prioritized list do not by themselves resolve decision rights.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-010",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A business analyst must decide how much detail to record about each requirement and how that information will be organized so it can be reused on later work. This decision belongs to which task?",
+            "options": [
+                "Assess Requirements Changes",
+                "Plan Business Analysis Information Management",
+                "Plan Business Analysis Approach",
+                "Plan Stakeholder Engagement"
+            ],
+            "correct_index": 1,
+            "explanation": "Deciding the level of detail, structure, and storage of business analysis information is information management planning. The other tasks concern approach, people, or evaluating changes once they arise.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-011",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A business analyst wants objective evidence of whether the business analysis activities themselves are effective and where they should improve. What should the analyst establish?",
+            "options": [
+                "A stakeholder communication matrix",
+                "A requirements baseline",
+                "Business analysis performance measures and targets",
+                "A new set of functional requirements"
+            ],
+            "correct_index": 2,
+            "explanation": "Performance measures and targets give objective evidence about the effectiveness of the business analysis work. Requirements, communication matrices, and baselines are outputs of the work, not measures of it.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-012",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "Because of heavy regulatory scrutiny, a business analyst plans more rigorous verification and formal reviews for the requirements. This choice is driven mainly by which input?",
+            "options": [
+                "The number of stakeholders who are available",
+                "The color scheme of the reporting templates",
+                "The business analyst's personal preference",
+                "Risk and the organization's tolerance for it"
+            ],
+            "correct_index": 3,
+            "explanation": "High regulatory risk and low tolerance for error justify more formal, rigorous business analysis. Availability, presentation choices, and personal preference are not the primary drivers.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-013",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A dispersed group of stakeholders needs regular updates, but the business analyst has limited time. What should the stakeholder engagement plan specify?",
+            "options": [
+                "The communication format, frequency, and channels suited to each stakeholder group",
+                "A single monthly email sent to everyone",
+                "That updates will be given only when someone asks",
+                "That the sponsor will handle all communication"
+            ],
+            "correct_index": 0,
+            "explanation": "A tailored communication plan matches channel, format, and cadence to each group's needs and the analyst's constraints. One-size-fits-all email, on-demand updates, and delegation all fail to plan engagement.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-014",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "A change to a baselined requirement arrives, and the business analyst needs a pre-agreed route for evaluating and deciding it. Where should that route have been defined?",
+            "options": [
+                "In the resource management plan",
+                "In the business analysis governance approach",
+                "In the solution design document",
+                "In the test strategy"
+            ],
+            "correct_index": 1,
+            "explanation": "Governance defines how changes are evaluated, approved, and escalated. Design, test, and resource documents do not establish decision rights for requirement changes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-015",
+            "domain": "Business Analysis Planning and Monitoring",
+            "stem": "The business analyst wants to compare current business analysis practices against those of leading organizations before recommending improvements. Which technique is most relevant?",
+            "options": [
+                "MoSCoW prioritization",
+                "Storyboarding",
+                "Benchmarking and capability analysis",
+                "Five Whys"
+            ],
+            "correct_index": 2,
+            "explanation": "Benchmarking compares practices against recognised leaders, and capability analysis assesses what the organization can do. Five Whys, MoSCoW, and storyboarding address root causes, prioritization, and communication rather than benchmarking.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Business Analysis Planning and Monitoring"
+        },
+        {
+            "id": "cbap-016",
+            "domain": "Elicitation and Collaboration",
+            "stem": "Before a requirements workshop, the business analyst defines the objectives, selects the participants, and prepares the supporting materials. Which task is this?",
+            "options": [
+                "Conduct Elicitation",
+                "Confirm Elicitation Results",
+                "Communicate Business Analysis Information",
+                "Prepare for Elicitation"
+            ],
+            "correct_index": 3,
+            "explanation": "Preparation sets objectives, participants, and materials before elicitation begins. Conducting occurs during the session, confirming follows it, and communication is a separate ongoing task.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-017",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst needs many ideas from a diverse group in a short time and wants early contributions to be offered without criticism. Which elicitation technique is best?",
+            "options": [
+                "Brainstorming",
+                "Observation",
+                "Document analysis",
+                "Interface analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "Brainstorming generates a large number of ideas quickly and defers judgement to encourage participation. The other techniques investigate existing work, documents, or system interactions rather than generating ideas.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-018",
+            "domain": "Elicitation and Collaboration",
+            "stem": "After a series of interviews, the business analyst restates what was heard and checks with participants that the summary accurately reflects their intent. Which task is being performed?",
+            "options": [
+                "Manage Stakeholder Collaboration",
+                "Confirm Elicitation Results",
+                "Prepare for Elicitation",
+                "Conduct Elicitation"
+            ],
+            "correct_index": 1,
+            "explanation": "Confirming elicitation results verifies that captured information matches the participants' intent. Preparation and conducting happen earlier, and managing collaboration is a distinct ongoing task.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-019",
+            "domain": "Elicitation and Collaboration",
+            "stem": "A business analyst presents a one-page summary of requirement changes to executives but gives developers the full detail, because each group needs a different level of information. This illustrates what?",
+            "options": [
+                "Escalating the change for approval",
+                "Verifying the requirements before communicating them",
+                "Tailoring the format and level of detail to the audience",
+                "Omitting information from developers"
+            ],
+            "correct_index": 2,
+            "explanation": "Effective communication adapts the format, level of detail, and terminology to the audience. Withholding detail from developers, seeking approval, and verification are different concerns.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-020",
+            "domain": "Elicitation and Collaboration",
+            "stem": "A domain expert who was initially skeptical stops responding to requests for input. What should the business analyst do to sustain collaboration?",
+            "options": [
+                "Proceed with assumptions about the stakeholder's needs",
+                "Escalate the stakeholder's behavior to their manager",
+                "Replace the stakeholder with someone more cooperative",
+                "Engage the stakeholder directly to understand their concerns and rebuild the relationship"
+            ],
+            "correct_index": 3,
+            "explanation": "Managing stakeholder collaboration means addressing the cause of disengagement and rebuilding the working relationship. Assumptions, escalation, and replacement all avoid the underlying problem.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-021",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst needs to understand how one expert performs a complex task, including the reasoning behind each decision. Which technique is most appropriate?",
+            "options": [
+                "Interviews",
+                "Surveys",
+                "Document analysis",
+                "Sequence diagrams"
+            ],
+            "correct_index": 0,
+            "explanation": "Interviews allow the analyst to probe reasoning and follow up on responses, which a survey cannot. Document analysis and sequence diagrams capture existing records and interactions, not an expert's reasoning.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-022",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst suspects that workers describe their process differently from the way they actually perform it. Which technique best reveals the real work?",
+            "options": [
+                "Glossary development",
+                "Observation",
+                "Surveys",
+                "Brainstorming"
+            ],
+            "correct_index": 1,
+            "explanation": "Observation reveals how work is actually done, including workarounds that people may not report. Surveys rely on self-report, brainstorming generates ideas, and glossaries define terms.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-023",
+            "domain": "Elicitation and Collaboration",
+            "stem": "Several hundred employees across many locations must supply input, and the business analyst needs standardized responses efficiently. Which technique is best?",
+            "options": [
+                "Observation",
+                "Focus groups",
+                "Surveys or questionnaires",
+                "Facilitated workshops"
+            ],
+            "correct_index": 2,
+            "explanation": "Surveys gather standardized data from many respondents at low cost. Workshops and focus groups suit smaller groups, and observation cannot efficiently cover hundreds of people.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-024",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst wants to capture several customers' reactions to a proposed feature and observe how the group's views evolve. Which technique is appropriate?",
+            "options": [
+                "Document analysis",
+                "Data mining",
+                "Sequence diagrams",
+                "Focus groups"
+            ],
+            "correct_index": 3,
+            "explanation": "Focus groups elicit reactions and reveal group dynamics among selected participants. Document analysis and data mining use existing material, and sequence diagrams model interactions rather than gather opinions.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-025",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst needs stakeholders to resolve open issues and agree on requirements within a short, structured session. Which technique is most effective?",
+            "options": [
+                "Facilitated workshops",
+                "Surveys",
+                "Observation",
+                "Benchmarking"
+            ],
+            "correct_index": 0,
+            "explanation": "Facilitated workshops bring decision makers together to resolve issues and reach agreement efficiently. Surveys, observation, and benchmarking do not drive a group to a shared decision.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-026",
+            "domain": "Elicitation and Collaboration",
+            "stem": "Before meeting stakeholders, the business analyst wants to understand the existing policies, forms, and reports that describe the current process. Which technique provides this background?",
+            "options": [
+                "Focus groups",
+                "Document analysis",
+                "Brainstorming",
+                "Interviews"
+            ],
+            "correct_index": 1,
+            "explanation": "Document analysis mines existing materials for context and requirements. Brainstorming, interviews, and focus groups generate new information from people rather than from records.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-027",
+            "domain": "Elicitation and Collaboration",
+            "stem": "The business analyst is arranging a remote elicitation session and must consider time zones, tool access, and participant availability. This is part of which task?",
+            "options": [
+                "Approve Requirements",
+                "Measure Solution Performance",
+                "Prepare for Elicitation",
+                "Confirm Elicitation Results"
+            ],
+            "correct_index": 2,
+            "explanation": "Logistics such as scheduling, tools, and participants are handled while preparing for elicitation. The other tasks occur after elicitation or during solution evaluation.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-028",
+            "domain": "Elicitation and Collaboration",
+            "stem": "Elicitation produced conflicting statements from two stakeholders about the same requirement. What should the business analyst do with these results?",
+            "options": [
+                "Silently choose the more senior stakeholder's statement",
+                "Discard both statements and start the elicitation again",
+                "Include both contradictory statements in the final requirement",
+                "Record the conflict and seek clarification to resolve the discrepancy"
+            ],
+            "correct_index": 3,
+            "explanation": "Confirming results means surfacing conflicts and resolving them through clarification. Silently choosing, discarding, or keeping contradictions undermines requirement quality.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-029",
+            "domain": "Elicitation and Collaboration",
+            "stem": "To help non-technical stakeholders grasp a process quickly, the business analyst presents a simple visual model instead of a long textual description. This illustrates what?",
+            "options": [
+                "Selecting a communication format that fits the audience's needs",
+                "Reducing the accuracy of the information",
+                "Avoiding stakeholder validation of the requirements",
+                "Replacing elicitation with modelling"
+            ],
+            "correct_index": 0,
+            "explanation": "Choosing a format that suits the audience improves understanding and engagement. A simpler view need not reduce accuracy, and it does not remove validation or replace elicitation.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-030",
+            "domain": "Elicitation and Collaboration",
+            "stem": "A stakeholder was disappointed by past projects and doubts that the business analyst will deliver. What should the business analyst do to manage collaboration?",
+            "options": [
+                "Report the stakeholder's attitude as a project risk",
+                "Build trust by involving the stakeholder and demonstrating reliable follow-through",
+                "Promise results that cannot be guaranteed to win support",
+                "Limit the stakeholder's involvement to reduce friction"
+            ],
+            "correct_index": 1,
+            "explanation": "Trust is built through involvement and consistent delivery. Over-promising, excluding the stakeholder, or labeling their attitude as a risk all weaken collaboration rather than strengthen it.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Elicitation and Collaboration"
+        },
+        {
+            "id": "cbap-031",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The business analyst links each requirement to its source and to the design components that will satisfy it. Which task is this?",
+            "options": [
+                "Prioritize Requirements",
+                "Assess Requirements Changes",
+                "Trace Requirements",
+                "Maintain Requirements"
+            ],
+            "correct_index": 2,
+            "explanation": "Tracing requirements creates and maintains the relationships between requirements, their sources, and other work products. Maintaining, prioritizing, and assessing changes are separate tasks.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-032",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "After approval, the business analyst keeps the requirement statements accurate and reusable as small changes are agreed over time. Which task is this?",
+            "options": [
+                "Trace Requirements",
+                "Approve Requirements",
+                "Define Design Options",
+                "Maintain Requirements"
+            ],
+            "correct_index": 3,
+            "explanation": "Maintaining requirements keeps them accurate, current, and reusable across the life cycle. Tracing creates relationships, approval authorises them, and design options describe solutions.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-033",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The team cannot deliver everything in the next release, so the business analyst ranks requirements by value, risk, and cost. Which activity is this?",
+            "options": [
+                "Prioritizing requirements",
+                "Approving requirements",
+                "Tracing requirements",
+                "Modelling requirements"
+            ],
+            "correct_index": 0,
+            "explanation": "Prioritization orders requirements so the most valuable work is delivered first under constraints. Approval authorises, tracing links, and modelling describes requirements.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-034",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "A new regulatory rule arrives mid-project, and the business analyst evaluates the impact of adopting or rejecting it. Which task is this?",
+            "options": [
+                "Measure Solution Performance",
+                "Assess Requirements Changes",
+                "Maintain Requirements",
+                "Define Requirements Architecture"
+            ],
+            "correct_index": 1,
+            "explanation": "Assessing requirement changes analyses the impact of a proposed change before a decision is made. Maintenance, architecture, and measurement address different concerns.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-035",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "Stakeholders with the necessary authority sign off on a set of requirements so implementation may proceed. Which task is this?",
+            "options": [
+                "Prioritize Requirements",
+                "Validate Requirements",
+                "Approve Requirements",
+                "Trace Requirements"
+            ],
+            "correct_index": 2,
+            "explanation": "Approving requirements obtains agreement from authorized stakeholders so work can proceed. Tracing, prioritizing, and validating are distinct activities.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-036",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The business analyst links a business goal to the requirements derived from it and to the tests that verify them. This supports which purpose of traceability?",
+            "options": [
+                "Reducing the number of requirements to save effort",
+                "Replacing the need for stakeholder approval",
+                "Removing the need for verification",
+                "Confirming that the solution delivers value and covers its source"
+            ],
+            "correct_index": 3,
+            "explanation": "Traceability demonstrates coverage from goals to requirements to tests, supporting value and completeness. It does not reduce scope, replace approval, or remove verification.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-037",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The organization wants requirements from this initiative to be available for a future related product. What should the business analyst do?",
+            "options": [
+                "Structure and store the requirements so they can be reused",
+                "Delete the requirements once the project ends to save space",
+                "Keep the requirements only in the business analyst's notes",
+                "Convert the requirements into marketing material"
+            ],
+            "correct_index": 0,
+            "explanation": "Maintaining reusable requirements means they remain accessible and understandable for future work. Deletion, private notes, and repurposing as marketing all prevent legitimate reuse.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-038",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "Two stakeholders insist that their own requirements are the most important. What should the business analyst do first?",
+            "options": [
+                "Delay prioritization until the project is nearly complete",
+                "Facilitate a discussion using agreed prioritization criteria tied to project objectives",
+                "Award priority to the stakeholder with the largest budget",
+                "Ask the sponsor to decide without any analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Prioritization is resolved by applying agreed criteria against objectives, not by power or delay. The analyst should facilitate that discussion rather than defer it.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-039",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "A requested requirement change could affect other requirements, designs, and tests. What should the impact assessment cover?",
+            "options": [
+                "Only the schedule and cost estimates",
+                "Only the tests that already exist",
+                "The full effect of the change across all related business analysis information",
+                "Only the single requirement named in the request"
+            ],
+            "correct_index": 2,
+            "explanation": "Assessing a change examines its ripple effects across related requirements, models, and tests. Narrowing the assessment to one requirement, cost, or tests alone risks missed impacts.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-040",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The business analyst finds that the person asked to approve requirements does not hold the authority to do so. What should happen?",
+            "options": [
+                "Proceed anyway because agreement was given",
+                "Ask the project manager to sign instead of the stakeholder",
+                "Lower the requirement's priority to avoid approval",
+                "Identify and obtain approval from the stakeholder who holds the required authority"
+            ],
+            "correct_index": 3,
+            "explanation": "Approval must come from stakeholders with the appropriate authority, as defined in governance. Proceeding, substituting an approver, or avoiding approval creates unmanaged risk.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-041",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "A review finds that several requirements trace to no business goal. What does this indicate?",
+            "options": [
+                "The requirements may not be necessary and their value should be questioned",
+                "The requirements are mandatory and must be built first",
+                "The traceability model is incorrect and should be deleted",
+                "The business goals are out of date and should be ignored"
+            ],
+            "correct_index": 0,
+            "explanation": "Requirements with no trace to a goal deliver no clear value and should be challenged. Assuming they are mandatory, deleting the model, or ignoring the goals all hide the problem.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-042",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "The business analyst records each requirement's status, complexity, and owner so they can be managed throughout the life cycle. This is part of which task?",
+            "options": [
+                "Analyze Performance Measures",
+                "Maintain Requirements",
+                "Approve Requirements",
+                "Define Change Strategy"
+            ],
+            "correct_index": 1,
+            "explanation": "Recording attributes such as status, complexity, and ownership is part of maintaining requirements. Approval, strategy, and performance measurement are separate tasks.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-043",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "A low-value change request would delay a high-priority release. What is the most appropriate action?",
+            "options": [
+                "Reject all future change requests",
+                "Implement the change secretly without approval",
+                "Recommend deferring the change and document the decision",
+                "Accept the change and slip the release without discussion"
+            ],
+            "correct_index": 2,
+            "explanation": "Assessing the change means recommending a disposition that protects higher-value work and recording it. Slipping the release, blanket rejection, and unapproved implementation all bypass sound management.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-044",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "Requirements must be prioritized, but stakeholders cannot agree on what constitutes business value. Which basis for prioritization is most objective?",
+            "options": [
+                "The order in which requirements were raised",
+                "The seniority of the requester",
+                "A random draw to avoid argument",
+                "Agreed criteria tied to project objectives and measurable value"
+            ],
+            "correct_index": 3,
+            "explanation": "Objective, agreed criteria linked to objectives produce defensible priorities. Order of arrival, seniority, and random selection are arbitrary and cannot be justified.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-045",
+            "domain": "Requirements Life Cycle Management",
+            "stem": "Once a set of requirements has been approved, the team uses it as the reference against which proposed changes are compared. What is this reference called?",
+            "options": [
+                "A requirements baseline",
+                "A design option",
+                "A stakeholder map",
+                "A performance measure"
+            ],
+            "correct_index": 0,
+            "explanation": "A requirements baseline is the approved set of requirements against which changes are compared. Design options, stakeholder maps, and performance measures serve different purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Life Cycle Management"
+        },
+        {
+            "id": "cbap-046",
+            "domain": "Strategy Analysis",
+            "stem": "A business analyst examines the organization's existing processes, systems, and capabilities to understand why change is needed. Which task is this?",
+            "options": [
+                "Define Change Strategy",
+                "Analyze Current State",
+                "Define Future State",
+                "Assess Risks"
+            ],
+            "correct_index": 1,
+            "explanation": "Analysing the current state establishes the existing situation and the need for change. The other tasks describe the target, its risks, and the route to it.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-047",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst describes the desired business goals, the capabilities the organization will need, and the scope of the solution to be created. Which task is this?",
+            "options": [
+                "Assess Risks",
+                "Measure Solution Performance",
+                "Define Future State",
+                "Analyze Current State"
+            ],
+            "correct_index": 2,
+            "explanation": "Defining the future state sets goals, required capabilities, and scope. Current-state analysis looks backward, risk assessment evaluates uncertainty, and measurement happens after the solution is in use.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-048",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst identifies uncertainties that could prevent the organization from reaching its future state and evaluates their likelihood and impact. Which task is this?",
+            "options": [
+                "Define Future State",
+                "Analyze Current State",
+                "Define Requirements Architecture",
+                "Assess Risks"
+            ],
+            "correct_index": 3,
+            "explanation": "Assessing risks evaluates the uncertainties affecting the change and their potential effects. The other tasks describe states or structure requirements.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-049",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst compares possible routes from the current state to the future state and proposes the overall approach to the change. Which task is this?",
+            "options": [
+                "Define Change Strategy",
+                "Analyze Current State",
+                "Specify and Model Requirements",
+                "Validate Requirements"
+            ],
+            "correct_index": 0,
+            "explanation": "Defining the change strategy selects the overall approach for moving to the future state. The other tasks describe the present, specify requirements, or confirm value.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-050",
+            "domain": "Strategy Analysis",
+            "stem": "The difference between what the organization can do now and what it must be able to do is documented. What is this called?",
+            "options": [
+                "A requirements baseline",
+                "A gap analysis",
+                "A cost-benefit analysis",
+                "A risk register"
+            ],
+            "correct_index": 1,
+            "explanation": "A gap analysis compares current and desired capabilities to identify what the change must close. The other tools address cost and benefit, risks, or approved requirements.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-051",
+            "domain": "Strategy Analysis",
+            "stem": "A problem keeps recurring despite previous fixes. Which technique helps the business analyst find the underlying cause rather than a symptom?",
+            "options": [
+                "Cost-benefit analysis",
+                "A business model canvas",
+                "Root cause analysis such as the Five Whys or a fishbone diagram",
+                "Benchmarking against competitors"
+            ],
+            "correct_index": 2,
+            "explanation": "Root cause analysis traces symptoms back to their underlying cause so they can be addressed. The other techniques compare performance, weigh value, or describe a business model.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-052",
+            "domain": "Strategy Analysis",
+            "stem": "Before recommending change, the business analyst establishes the problem or opportunity that justifies action. What is this called?",
+            "options": [
+                "The design option",
+                "The change strategy",
+                "The performance baseline",
+                "The business need"
+            ],
+            "correct_index": 3,
+            "explanation": "The business need is the problem or opportunity that motivates change. Design options, change strategies, and baselines are defined later in response to that need.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-053",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst assesses the organization's internal strengths and weaknesses together with external opportunities and threats. Which technique is being used?",
+            "options": [
+                "SWOT analysis",
+                "Root cause analysis",
+                "Data mining",
+                "Sequence diagramming"
+            ],
+            "correct_index": 0,
+            "explanation": "SWOT analysis systematically examines internal strengths and weaknesses and external opportunities and threats. The other techniques serve different analytical purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-054",
+            "domain": "Strategy Analysis",
+            "stem": "While defining the future state, the business analyst sets boundaries on what the change will and will not include. This defines what?",
+            "options": [
+                "The solution architecture",
+                "The scope of the change",
+                "The change strategy",
+                "The risk tolerance"
+            ],
+            "correct_index": 1,
+            "explanation": "Setting boundaries on inclusion and exclusion defines the scope of the change. Strategy, risk tolerance, and architecture are related but distinct concepts.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-055",
+            "domain": "Strategy Analysis",
+            "stem": "The organization must comply with a statutory deadline that cannot be moved. How should this be treated when defining the future state?",
+            "options": [
+                "As a risk to be ignored if inconvenient",
+                "As a design option to be compared",
+                "As a constraint that bounds acceptable solutions",
+                "As an optional target to be negotiated"
+            ],
+            "correct_index": 2,
+            "explanation": "An immovable legal deadline is a constraint that limits acceptable solutions. Treating it as optional, ignorable, or merely one option misrepresents its binding nature.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-056",
+            "domain": "Strategy Analysis",
+            "stem": "A significant risk to the change strategy has been identified. What should the business analyst do?",
+            "options": [
+                "Ignore it because risks are only tracked during delivery",
+                "Remove the risk from consideration to avoid alarm",
+                "Convert the risk into a requirement and close it",
+                "Define a response to the risk and monitor it through the change"
+            ],
+            "correct_index": 3,
+            "explanation": "Assessing risks includes planning responses and monitoring them as the change proceeds. Ignoring, hiding, or prematurely closing the risk leaves it unmanaged.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-057",
+            "domain": "Strategy Analysis",
+            "stem": "Several ways exist to close the performance gap, each with different cost, risk, and benefit. What should the business analyst do?",
+            "options": [
+                "Compare the options against the business objectives and recommend one",
+                "Select the cheapest option without further analysis",
+                "Implement every option to be safe",
+                "Defer the decision to the solution vendor"
+            ],
+            "correct_index": 0,
+            "explanation": "Defining the change strategy compares options against objectives to reach a justified recommendation. Choosing on cost alone, doing everything, or deferring all judgement is unsound.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-058",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst wants a single-page view of how the organization creates, delivers, and captures value. Which technique is appropriate?",
+            "options": [
+                "Data flow diagram",
+                "Business model canvas",
+                "Use case diagram",
+                "Decision table"
+            ],
+            "correct_index": 1,
+            "explanation": "A business model canvas summarizes the value proposition, customers, and revenue and cost structure. The other models describe interactions, rules, or data rather than the business model.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-059",
+            "domain": "Strategy Analysis",
+            "stem": "A change appears beneficial locally but conflicts with the organization's stated strategy. What should the business analyst do?",
+            "options": [
+                "Approve the change and let strategy catch up",
+                "Cancel the initiative without analysis",
+                "Evaluate the change against the strategic context and raise the conflict",
+                "Ignore the strategy because the local benefit is clear"
+            ],
+            "correct_index": 2,
+            "explanation": "Strategy analysis tests changes against the wider strategic context and surfaces conflicts. Ignoring, rubber-stamping, or abandoning without analysis all bypass that test.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-060",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst inventories the skills, processes, and technologies the enterprise currently possesses. These are best described as what?",
+            "options": [
+                "Business objectives",
+                "Design options",
+                "Performance measures",
+                "Enterprise capabilities"
+            ],
+            "correct_index": 3,
+            "explanation": "Current skills, processes, and technologies are the enterprise's capabilities. Objectives, design options, and performance measures are future-facing or evaluative concepts.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-061",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst distinguishes broad desired outcomes from specific, measurable targets. The measurable targets are best described as what?",
+            "options": [
+                "Business objectives",
+                "Business needs",
+                "Constraints",
+                "Assumptions"
+            ],
+            "correct_index": 0,
+            "explanation": "Business objectives are specific, measurable targets that support broader goals. Needs motivate the work, while constraints and assumptions shape it without being measurable targets.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-062",
+            "domain": "Strategy Analysis",
+            "stem": "When defining the future state, the business analyst states how success will be judged after the change is implemented. What is this describing?",
+            "options": [
+                "The design option",
+                "The expected benefits and the measures used to track them",
+                "The current-state baseline",
+                "The risk register"
+            ],
+            "correct_index": 1,
+            "explanation": "Expected benefits and their measures define how value will be judged after implementation. Baselines describe the present, while risk registers and design options serve other purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-063",
+            "domain": "Strategy Analysis",
+            "stem": "The organization is willing to accept only small deviations from plan. How should this affect the change strategy?",
+            "options": [
+                "Ignore risk because the organization is cautious",
+                "Delay the change until all uncertainty disappears",
+                "Prefer lower-risk options that stay within the organization's tolerance",
+                "Choose the option with the largest potential upside regardless of risk"
+            ],
+            "correct_index": 2,
+            "explanation": "A low risk tolerance favours options whose exposure stays within accepted limits. Pursuing high upside, ignoring risk, or waiting for perfect certainty are not consistent with that tolerance.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-064",
+            "domain": "Strategy Analysis",
+            "stem": "The business analyst plans how the organization will move from the current to the future state, including the sequence of steps. This is part of which task?",
+            "options": [
+                "Analyze Current State",
+                "Prioritize Requirements",
+                "Verify Requirements",
+                "Define Change Strategy"
+            ],
+            "correct_index": 3,
+            "explanation": "Sequencing and planning the transition are part of defining the change strategy. Current-state analysis, prioritization, and verification address different concerns.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-065",
+            "domain": "Strategy Analysis",
+            "stem": "Analysis is complete and the business analyst must present the recommended course of action. What should the recommendation be based on?",
+            "options": [
+                "The option that best achieves the business objectives within known constraints",
+                "The option preferred by the most senior executive",
+                "The option that requires the least documentation",
+                "The first option identified during analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "A sound recommendation selects the option that best meets objectives within constraints. Seniority, documentation effort, and order of discovery are not valid bases for selection.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Strategy Analysis"
+        },
+        {
+            "id": "cbap-066",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst converts elicited information into structured, detailed requirement statements and models. Which task is this?",
+            "options": [
+                "Define Design Options",
+                "Specify and Model Requirements",
+                "Verify Requirements",
+                "Validate Requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Specifying and modelling requirements transforms elicitation results into structured requirement statements and models. Verification, validation, and design options are separate tasks.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-067",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst checks that requirements are well formed, unambiguous, and complete before stakeholders confirm their value. Which task is this?",
+            "options": [
+                "Specify and Model Requirements",
+                "Approve Requirements",
+                "Verify Requirements",
+                "Validate Requirements"
+            ],
+            "correct_index": 2,
+            "explanation": "Verification confirms that requirements are correctly written and internally complete. Validation confirms they will deliver value, while specification and approval are distinct steps.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-068",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst confirms that a set of requirements will actually deliver the business goals and meet stakeholder needs. Which task is this?",
+            "options": [
+                "Verify Requirements",
+                "Trace Requirements",
+                "Maintain Requirements",
+                "Validate Requirements"
+            ],
+            "correct_index": 3,
+            "explanation": "Validation confirms that requirements will deliver the intended value. Verification checks quality of form, tracing links items, and maintenance keeps them current.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-069",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst organizes related requirements and models into a coherent, consistent structure. Which task is this?",
+            "options": [
+                "Define Requirements Architecture",
+                "Specify and Model Requirements",
+                "Verify Requirements",
+                "Assess Requirements Changes"
+            ],
+            "correct_index": 0,
+            "explanation": "Defining the requirements architecture creates a consistent structure and relationships among requirements and models. Specifying produces them, verifying checks them, and assessing changes evaluates impact.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-070",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst identifies and describes alternative ways the solution could be designed to meet the requirements. Which task is this?",
+            "options": [
+                "Measure Solution Performance",
+                "Define Design Options",
+                "Define Requirements Architecture",
+                "Validate Requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Defining design options explores and describes how the solution might be built. Architecture structures requirements, validation confirms value, and measurement evaluates a delivered solution.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-071",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst compares the expected value and cost of candidate solutions and recommends one. Which task is this?",
+            "options": [
+                "Verify Requirements",
+                "Define Change Strategy",
+                "Analyze Potential Value and Recommend Solution",
+                "Define Design Options"
+            ],
+            "correct_index": 2,
+            "explanation": "Analysing potential value weighs benefits, costs, and risks to recommend a solution. Defining options generates them, verification checks form, and change strategy concerns the transition.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-072",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "Each requirement must have clear conditions that will demonstrate it has been satisfied. What are these conditions called?",
+            "options": [
+                "Design constraints",
+                "Stakeholder needs",
+                "Business goals",
+                "Acceptance criteria"
+            ],
+            "correct_index": 3,
+            "explanation": "Acceptance criteria state the conditions under which a requirement is considered satisfied. Constraints limit solutions, while needs and goals motivate requirements.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-073",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The team needs a description of the interactions between a user and a system to achieve a goal. Which model is appropriate?",
+            "options": [
+                "A use case diagram and scenario",
+                "An entity-relationship diagram",
+                "A state machine diagram",
+                "A decision table"
+            ],
+            "correct_index": 0,
+            "explanation": "Use cases describe interactions between actors and a system to reach a goal. Entity-relationship, state, and decision models describe data, states, and rules respectively.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-074",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst needs to show the entities in the business domain and the relationships among them. Which model is appropriate?",
+            "options": [
+                "A decision tree",
+                "An entity-relationship or class diagram",
+                "A use case diagram",
+                "A process flow diagram"
+            ],
+            "correct_index": 1,
+            "explanation": "Entity-relationship and class diagrams represent domain entities and their relationships. Use case, process, and decision models describe interactions, activities, and rules.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-075",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst needs to show the sequence of activities and decision points in a workflow. Which model is appropriate?",
+            "options": [
+                "A glossary",
+                "A state machine diagram",
+                "A process model such as a flowchart or BPMN diagram",
+                "A class diagram"
+            ],
+            "correct_index": 2,
+            "explanation": "Process models such as flowcharts and BPMN diagrams depict activity sequences and decision points. Class diagrams, glossaries, and state models serve other purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-076",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A set of business rules produces different outcomes depending on combinations of conditions. Which model best represents them?",
+            "options": [
+                "A sequence diagram",
+                "An entity-relationship diagram",
+                "A business model canvas",
+                "A decision table or decision tree"
+            ],
+            "correct_index": 3,
+            "explanation": "Decision tables and trees express outcomes for combinations of conditions in business rules. Sequence, entity-relationship, and canvas models address different information.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-077",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "An order changes status based on events, and the business analyst must show the allowed transitions. Which model is appropriate?",
+            "options": [
+                "A state machine diagram",
+                "A use case diagram",
+                "A data flow diagram",
+                "A decision table"
+            ],
+            "correct_index": 0,
+            "explanation": "A state machine diagram shows the states of an object and the events that trigger transitions. The other models describe interactions, data movement, or decision rules.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-078",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement mixes two separate needs and cannot be tested as written. Which quality characteristic does it violate?",
+            "options": [
+                "Traceability, because it lacks a source",
+                "Atomicity, because it is not a single cohesive requirement",
+                "Feasibility, because it cannot be built",
+                "Priority, because its importance is unclear"
+            ],
+            "correct_index": 1,
+            "explanation": "An atomic requirement expresses one need; combining two makes it hard to verify and manage. Feasibility, priority, and traceability are different quality characteristics.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-079",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement states that the system should be 'user friendly'. What should the business analyst do?",
+            "options": [
+                "Delete it because it cannot be met",
+                "Assign it the highest priority without change",
+                "Rewrite it with measurable, testable criteria",
+                "Accept it because stakeholders will understand the intent"
+            ],
+            "correct_index": 2,
+            "explanation": "Vague terms must be replaced with measurable criteria so the requirement can be verified. Accepting, deleting, or prioritizing it unchanged does not resolve the ambiguity.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-080",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement is well written but supports no business goal. What does validation reveal?",
+            "options": [
+                "The requirement is a non-functional requirement",
+                "The requirement must be built first",
+                "The requirement should be reclassified as a constraint",
+                "The requirement delivers no clear value and should be challenged"
+            ],
+            "correct_index": 3,
+            "explanation": "Validation checks alignment with goals, so a requirement with no goal support has questionable value. It is not automatically a non-functional requirement, a priority, or a constraint.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-081",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "Two models of the same business domain contradict each other. What should the business analyst do?",
+            "options": [
+                "Reconcile the models so the requirements architecture is consistent",
+                "Keep both models because each is useful alone",
+                "Delete the newer model to end the conflict",
+                "Present the discrepancy to stakeholders and let them choose"
+            ],
+            "correct_index": 0,
+            "explanation": "A coherent requirements architecture requires models to agree; contradictions must be reconciled. Retaining conflicts, deleting arbitrarily, or offloading the choice does not achieve consistency.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-082",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst weighs developing a component in-house against purchasing a product to meet a set of requirements. This is part of which task?",
+            "options": [
+                "Measuring solution performance",
+                "Defining and comparing design options",
+                "Verifying the requirements",
+                "Tracing the requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Build-versus-buy analysis compares candidate design options. Verification, tracing, and performance measurement serve different purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-083",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A design option is technically sound but violates a regulatory constraint. What should happen?",
+            "options": [
+                "Implement it and address the regulation later",
+                "Keep it as the only option to save time",
+                "Discard or revise the option because it breaches a constraint",
+                "Select it because it is technically strong"
+            ],
+            "correct_index": 2,
+            "explanation": "A design option that breaches a constraint is not viable and must be changed or set aside. Technical strength, deferral, or convenience do not override the constraint.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-084",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "To recommend between options, the business analyst weighs expected benefits against costs and risks over time. Which analysis is this?",
+            "options": [
+                "Root cause analysis",
+                "Stakeholder analysis",
+                "Data flow analysis",
+                "Cost-benefit and value analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Cost-benefit and value analysis compares benefits with costs and risks to support a recommendation. The other analyses address causes, stakeholders, or data movement.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-085",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "Two design options score similarly on value but differ on risk. What should the business analyst do in the recommendation?",
+            "options": [
+                "Present the trade-offs and recommend the option best aligned to objectives and risk tolerance",
+                "Choose the cheaper option automatically",
+                "Recommend both options simultaneously",
+                "Delay the recommendation indefinitely"
+            ],
+            "correct_index": 0,
+            "explanation": "A recommendation should expose the trade-offs and align with objectives and risk tolerance. Automatic cheapness, recommending everything, or indefinite delay does not support a decision.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-086",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "Stakeholders across the organization use the same term to mean different things. What should the business analyst produce?",
+            "options": [
+                "A project schedule",
+                "A glossary that defines the terms consistently",
+                "A new set of functional requirements",
+                "A redesigned business process"
+            ],
+            "correct_index": 1,
+            "explanation": "A glossary establishes shared definitions and removes ambiguity. Requirements, processes, and schedules do not resolve differing terminology by themselves.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-087",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement states a high-level capability that the business needs, without describing how it will be built. What type of requirement is this?",
+            "options": [
+                "A non-functional requirement",
+                "A transition requirement",
+                "A business or stakeholder requirement",
+                "An interface requirement"
+            ],
+            "correct_index": 2,
+            "explanation": "High-level capabilities expressed as needs are business or stakeholder requirements. Interface, non-functional, and transition requirements address connections, quality attributes, and migration.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-088",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement states that a transaction must complete within two seconds. What type of requirement is this?",
+            "options": [
+                "A business requirement",
+                "An interface requirement",
+                "A transition requirement",
+                "A non-functional requirement"
+            ],
+            "correct_index": 3,
+            "explanation": "A performance target such as response time is a non-functional requirement describing a quality attribute. Business, interface, and transition requirements address needs, connections, and migration.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-089",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The new system must exchange data with an existing billing system in a specified format and cadence. What type of requirement is this?",
+            "options": [
+                "An interface requirement",
+                "A non-functional requirement",
+                "A business requirement",
+                "A design constraint"
+            ],
+            "correct_index": 0,
+            "explanation": "Requirements describing exchanges between systems are interface requirements. Non-functional requirements state quality attributes, and business requirements state needs.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-090",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A requirement cannot be verified because no method exists to measure it. What should the business analyst do?",
+            "options": [
+                "Convert it into an assumption",
+                "Revise the requirement so it can be verified and tested",
+                "Accept it and rely on the developer's judgement",
+                "Move it to the backlog permanently"
+            ],
+            "correct_index": 1,
+            "explanation": "Verification requires a measurable basis, so the requirement must be revised. Deferring to judgement, shelving it, or reclassifying it as an assumption leaves it unverifiable.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-091",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst must choose which model to use to convey particular information. What should drive that choice?",
+            "options": [
+                "The model that requires the least drawing time",
+                "The model used on the previous project",
+                "The purpose of the model and the needs of the audience",
+                "The model the analyst knows best regardless of fit"
+            ],
+            "correct_index": 2,
+            "explanation": "Model choice should fit the information to be conveyed and the audience's needs. Familiarity, speed, and habit may lead to unsuitable models.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-092",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The business analyst shows how business requirements decompose into more detailed functional requirements. These links form what?",
+            "options": [
+                "The project schedule",
+                "The stakeholder map",
+                "The solution design",
+                "The requirements architecture and its relationships"
+            ],
+            "correct_index": 3,
+            "explanation": "Decomposition links are part of the requirements architecture that organizes requirements and their relationships. Schedules, stakeholder maps, and designs are separate artefacts.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-093",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "A design option is cheaper up front but has higher long-term maintenance cost. How should the business analyst treat it?",
+            "options": [
+                "Consider the full life-cycle cost in the value analysis",
+                "Choose it because the initial price is lowest",
+                "Ignore the maintenance cost as it is someone else's budget",
+                "Reject it because maintenance costs are irrelevant"
+            ],
+            "correct_index": 0,
+            "explanation": "Value analysis should reflect total life-cycle cost, not just the initial price. Choosing on price, ignoring ongoing cost, or dismissing maintenance produces a misleading comparison.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-094",
+            "domain": "Requirements Analysis and Design Definition",
+            "stem": "The value analysis depends on an assumption about future demand. What should the business analyst do with it?",
+            "options": [
+                "Remove the assumption and report no uncertainty",
+                "State the assumption explicitly and test its sensitivity",
+                "Hide the assumption to keep the analysis simple",
+                "Treat the assumption as a proven fact"
+            ],
+            "correct_index": 1,
+            "explanation": "Assumptions behind an analysis should be made explicit and tested for sensitivity so decision makers understand the risk. Hiding, asserting, or removing them misrepresents the analysis.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Requirements Analysis and Design Definition"
+        },
+        {
+            "id": "cbap-095",
+            "domain": "Solution Evaluation",
+            "stem": "After go-live, the business analyst collects data on how well the solution performs against the agreed measures. Which task is this?",
+            "options": [
+                "Assess Solution Limitations",
+                "Assess Enterprise Limitations",
+                "Measure Solution Performance",
+                "Analyze Performance Measures"
+            ],
+            "correct_index": 2,
+            "explanation": "Measuring solution performance gathers data against defined measures. Analysing measures and assessing limitations occur after the data is collected.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-096",
+            "domain": "Solution Evaluation",
+            "stem": "The business analyst compares actual solution results with the defined targets and interprets the differences. Which task is this?",
+            "options": [
+                "Measure Solution Performance",
+                "Recommend Actions to Increase Solution Value",
+                "Assess Enterprise Limitations",
+                "Analyze Performance Measures"
+            ],
+            "correct_index": 3,
+            "explanation": "Analysing performance measures interprets results against targets. Measurement gathers data, while assessing limitations and recommending actions follow from the analysis.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-097",
+            "domain": "Solution Evaluation",
+            "stem": "A component of the solution cannot handle the required transaction volume. Which task identifies this kind of internal limitation?",
+            "options": [
+                "Assess Solution Limitations",
+                "Assess Enterprise Limitations",
+                "Measure Solution Performance",
+                "Define Design Options"
+            ],
+            "correct_index": 0,
+            "explanation": "Limitations caused by the solution itself are assessed as solution limitations. Enterprise limitations come from outside the solution, and the other tasks relate to measurement or design.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-098",
+            "domain": "Solution Evaluation",
+            "stem": "The solution works as designed, but an outdated organizational policy prevents staff from using it. Which task addresses this kind of limitation?",
+            "options": [
+                "Verify Requirements",
+                "Assess Enterprise Limitations",
+                "Assess Solution Limitations",
+                "Measure Solution Performance"
+            ],
+            "correct_index": 1,
+            "explanation": "Limitations rooted in the wider enterprise, such as policy, are enterprise limitations. Solution limitations come from the solution itself, and the other tasks are unrelated.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-099",
+            "domain": "Solution Evaluation",
+            "stem": "After evaluating performance, the business analyst proposes changes that would help the organization realize more value from the solution. Which task is this?",
+            "options": [
+                "Define Requirements Architecture",
+                "Approve Requirements",
+                "Recommend Actions to Increase Solution Value",
+                "Assess Solution Limitations"
+            ],
+            "correct_index": 2,
+            "explanation": "Recommending actions to increase solution value follows from measuring and analysing performance. The other tasks belong to earlier life-cycle stages.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-100",
+            "domain": "Solution Evaluation",
+            "stem": "The business analyst selects indicators that will show whether the solution is delivering the expected benefits. These indicators are known as what?",
+            "options": [
+                "Design constraints",
+                "Acceptance criteria",
+                "Assumptions",
+                "Performance measures or key performance indicators"
+            ],
+            "correct_index": 3,
+            "explanation": "Performance measures or key performance indicators track whether benefits are realized. Constraints, acceptance criteria, and assumptions are different concepts.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-101",
+            "domain": "Solution Evaluation",
+            "stem": "To judge whether the solution has improved performance, the business analyst needs the level of performance that existed before it. What is this called?",
+            "options": [
+                "The performance baseline",
+                "The target benefit",
+                "The acceptance criterion",
+                "The design option"
+            ],
+            "correct_index": 0,
+            "explanation": "The performance baseline is the pre-solution level against which improvement is measured. Targets, criteria, and design options serve other purposes in evaluation.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-102",
+            "domain": "Solution Evaluation",
+            "stem": "Users are not trained on the new tool, so they avoid using it. Is this a solution limitation or an enterprise limitation?",
+            "options": [
+                "A design option, because the tool could be replaced",
+                "An enterprise limitation, because the cause lies outside the solution itself",
+                "A solution limitation, because the tool is at fault",
+                "A verification failure, because the requirement was unclear"
+            ],
+            "correct_index": 1,
+            "explanation": "Training gaps are organizational in nature, so they are enterprise limitations. The solution functions as designed, so it is not a solution limitation, verification failure, or design option.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-103",
+            "domain": "Solution Evaluation",
+            "stem": "The solution meets its technical requirements, but the organization is not gaining the intended benefit. What should the business analyst do?",
+            "options": [
+                "Immediately decommission the solution",
+                "Reduce the benefit targets to match current results",
+                "Investigate why value is not realized and recommend corrective actions",
+                "Declare the initiative a success because the requirements were met"
+            ],
+            "correct_index": 2,
+            "explanation": "Meeting technical requirements is not the same as realizing value, so the analyst should find and address the cause. Declaring success, decommissioning, or lowering targets avoids the problem.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-104",
+            "domain": "Solution Evaluation",
+            "stem": "Measures for a solution can only be meaningful once the solution has been in use long enough to produce results. What does this imply?",
+            "options": [
+                "The solution should be evaluated before it is used",
+                "The measures should be discarded",
+                "The solution should be judged only on technical functionality",
+                "The evaluation approach must account for when benefits are expected to appear"
+            ],
+            "correct_index": 3,
+            "explanation": "Evaluation timing must reflect when benefits can realistically appear. Measuring before use, discarding measures, or judging only on function would misrepresent value.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-105",
+            "domain": "Solution Evaluation",
+            "stem": "A solution measure is below target, and the business analyst must determine whether the cause is internal or external to the solution. What is the goal?",
+            "options": [
+                "To locate the limitation and recommend the right corrective action",
+                "To reassign blame to the correct team",
+                "To increase the target until results match",
+                "To stop measuring the solution"
+            ],
+            "correct_index": 0,
+            "explanation": "Determining the source of a shortfall lets the analyst recommend the correct action. Assigning blame, moving targets, or abandoning measurement does not improve value.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Solution Evaluation"
+        },
+        {
+            "id": "cbap-106",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "A group generates ideas, but a few dominant members suppress quieter participants. Which technique helps balance participation?",
+            "options": [
+                "A stakeholder survey",
+                "Nominal group technique",
+                "Unstructured brainstorming",
+                "A large facilitated workshop"
+            ],
+            "correct_index": 1,
+            "explanation": "The nominal group technique collects ideas individually before group discussion, reducing dominance. Unstructured brainstorming, larger workshops, and surveys do not address the imbalance as directly.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-107",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst must classify requirements as must-have, should-have, could-have, or won't-have for a release. Which technique is this?",
+            "options": [
+                "SWOT analysis",
+                "Data mining",
+                "MoSCoW prioritization",
+                "Benchmarking"
+            ],
+            "correct_index": 2,
+            "explanation": "MoSCoW prioritization sorts requirements into must, should, could, and won't categories. Benchmarking, SWOT, and data mining serve different analytical purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-108",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst compares the organization's process performance against that of leading organizations to set improvement targets. Which technique is this?",
+            "options": [
+                "Root cause analysis",
+                "Cost-benefit analysis",
+                "Decision analysis",
+                "Benchmarking"
+            ],
+            "correct_index": 3,
+            "explanation": "Benchmarking compares performance against recognised leaders to set targets. Root cause, cost-benefit, and decision analysis address causes, value, and choices respectively.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-109",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst analyses large volumes of operational data to find patterns that inform requirements. Which technique is this?",
+            "options": [
+                "Data mining",
+                "Focus groups",
+                "Observation",
+                "Glossary development"
+            ],
+            "correct_index": 0,
+            "explanation": "Data mining finds patterns in large data sets to support analysis. Focus groups and observation gather qualitative input, and glossaries define terminology.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-110",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst must choose among options that differ on several uncertain criteria. Which technique supports a structured choice?",
+            "options": [
+                "Sequence diagramming",
+                "Decision analysis",
+                "Document analysis",
+                "Interface analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Decision analysis applies structured criteria and weights to compare uncertain options. The other techniques examine documents, interfaces, or interactions.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-111",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst wants to record risks in a structured way and track their potential effects over the change. Which technique is appropriate?",
+            "options": [
+                "A use case model",
+                "A decision table",
+                "Risk analysis supported by a risk register",
+                "A glossary"
+            ],
+            "correct_index": 2,
+            "explanation": "Risk analysis combined with a risk register structures and tracks risks and their effects. Glossaries, use cases, and decision tables do not manage risks.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-112",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "A problem has many interacting causes, so the business analyst breaks it into parts to understand how each contributes. Which underlying competency is demonstrated?",
+            "options": [
+                "Tools and technology",
+                "Business knowledge",
+                "Interaction skills",
+                "Analytical thinking and problem solving"
+            ],
+            "correct_index": 3,
+            "explanation": "Decomposing a complex problem to understand its parts is analytical thinking and problem solving. The other competencies concern tools, domain knowledge, and working with people.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-113",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst stays objective when a stakeholder criticizes their analysis and avoids taking it personally. Which underlying competency is demonstrated?",
+            "options": [
+                "Behavioral characteristics such as objectivity and integrity",
+                "Analytical thinking",
+                "Business knowledge",
+                "Tools and technology"
+            ],
+            "correct_index": 0,
+            "explanation": "Maintaining objectivity and composure reflects behavioral characteristics. Analytical thinking concerns reasoning, while business knowledge and tools are separate competencies.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-114",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst understands the industry, the organization's products, and its operating model. Which underlying competency is demonstrated?",
+            "options": [
+                "Behavioral characteristics",
+                "Business knowledge",
+                "Communication skills",
+                "Interaction skills"
+            ],
+            "correct_index": 1,
+            "explanation": "Understanding the industry, products, and operating model is business knowledge. Communication, interaction, and behavioral competencies concern how the analyst works with people.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-115",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst explains a complex model clearly to both technical and business audiences. Which underlying competency is demonstrated?",
+            "options": [
+                "Tools and technology",
+                "Analytical thinking",
+                "Communication skills",
+                "Business knowledge"
+            ],
+            "correct_index": 2,
+            "explanation": "Conveying information clearly to different audiences is communication skill. Business knowledge, tools, and analytical thinking address domain, technology, and reasoning.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-116",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst guides a divided group to a shared decision and keeps the discussion productive. Which underlying competency is demonstrated?",
+            "options": [
+                "Communication skills",
+                "Analytical thinking",
+                "Tools and technology",
+                "Interaction skills such as facilitation and negotiation"
+            ],
+            "correct_index": 3,
+            "explanation": "Facilitating and negotiating with people to reach agreement are interaction skills. Communication concerns conveying information, while analytical thinking and tools are separate.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-117",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst selects and uses modelling and repository tools effectively to support the work. Which underlying competency is demonstrated?",
+            "options": [
+                "Tools and technology",
+                "Business knowledge",
+                "Interaction skills",
+                "Behavioral characteristics"
+            ],
+            "correct_index": 0,
+            "explanation": "Effective use of tools and technology is a distinct underlying competency. Business knowledge, interaction, and behavioral competencies address other areas.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-118",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst needs to define key terms precisely so that requirements are unambiguous to all readers. Which technique is appropriate?",
+            "options": [
+                "A decision table",
+                "A glossary",
+                "A risk register",
+                "A use case diagram"
+            ],
+            "correct_index": 1,
+            "explanation": "A glossary defines terms precisely and removes ambiguity. Risk registers, use cases, and decision tables address risks, interactions, and rules.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-119",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The team wants to identify what went well and what should change after completing an iteration. Which technique supports this?",
+            "options": [
+                "A data flow diagram",
+                "A cost-benefit analysis",
+                "A retrospective or lessons learned session",
+                "A stakeholder survey"
+            ],
+            "correct_index": 2,
+            "explanation": "Retrospectives and lessons learned sessions review what happened and identify improvements. Surveys, data flow diagrams, and cost-benefit analyses serve other purposes.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        },
+        {
+            "id": "cbap-120",
+            "domain": "Techniques and Underlying Competencies",
+            "stem": "The business analyst must convey a complex idea to stakeholders who respond better to pictures than to prose. Which competency or technique is most relevant?",
+            "options": [
+                "Analytical thinking alone",
+                "Business knowledge alone",
+                "Tools and technology alone",
+                "Visual modelling supported by effective communication"
+            ],
+            "correct_index": 3,
+            "explanation": "Visual modelling combined with communication skill conveys complex ideas to a visual audience. Analytical thinking, business knowledge, or tools alone do not address how the message is presented.",
+            "reference": "BABOK v3 / CBAP Exam Blueprint - Techniques and Underlying Competencies"
+        }
+    ]
+}

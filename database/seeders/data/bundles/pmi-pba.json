@@ -1,0 +1,2467 @@
+{
+    "cert_key": "pmi-pba",
+    "title": "PMI Professional in Business Analysis (PMI-PBA)",
+    "issuer": "Project Management Institute",
+    "outline_file": "outlines/pmi-pba.json",
+    "variant_label": "PMI-PBA Real-Spec Practice",
+    "exam": {
+        "questions": 175,
+        "duration_minutes": 240,
+        "scoring": "Pass/fail against a scaled passing score",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the PMI-PBA exam content outline (five domains and task/enabler structure). Not a capture of past questions.",
+    "source_label": "PMI-PBA practice bank",
+    "items": [
+        {
+            "id": "pmi-pba-001",
+            "domain": "Needs Assessment",
+            "stem": "A retail chain has seen online revenue fall for three consecutive quarters, and the sponsor wants to know what to do before committing budget. What should the business analyst do FIRST?",
+            "options": [
+                "Perform a situation assessment to define the problem and its root causes",
+                "Recommend replacing the e-commerce platform immediately",
+                "Write detailed functional requirements for a new website",
+                "Ask the development team to build a mobile application"
+            ],
+            "correct_index": 0,
+            "explanation": "A needs assessment begins by understanding the problem and its causes before proposing any solution. Jumping to a platform replacement or new features assumes the cause and risks solving the wrong problem.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-002",
+            "domain": "Needs Assessment",
+            "stem": "A sponsor requests a new executive dashboard but cannot explain which business problem it should solve. What is the MOST appropriate action for the business analyst?",
+            "options": [
+                "Record the dashboard as an approved requirement and move on",
+                "Clarify the underlying business problem and desired outcomes before defining the solution",
+                "Build the dashboard exactly as requested to satisfy the sponsor",
+                "Escalate the request to the PMO for a decision"
+            ],
+            "correct_index": 1,
+            "explanation": "The business analyst must establish the problem and outcomes first so the solution is justified. Building or baselining an undefined request risks delivering something of no value, and escalation avoids the analysis needed.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-003",
+            "domain": "Needs Assessment",
+            "stem": "A business analyst is preparing a business case for a proposed system. Which content is MOST essential to justify the investment?",
+            "options": [
+                "Marketing brochures from the preferred vendor",
+                "The personal preference of the chief information officer",
+                "Quantified costs, benefits, and risks that demonstrate expected value",
+                "The number of meetings held with each department"
+            ],
+            "correct_index": 2,
+            "explanation": "A business case justifies investment through quantified costs, benefits, and risks. Meeting counts, vendor brochures, and personal preferences are not evidence of value and cannot support a defensible decision.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-004",
+            "domain": "Needs Assessment",
+            "stem": "An organization wants to move from its current manual process to an automated future state. Which artifact best describes what must change?",
+            "options": [
+                "A resource-loaded project schedule",
+                "A software test plan",
+                "A stakeholder communication matrix",
+                "A gap analysis comparing current and desired capabilities"
+            ],
+            "correct_index": 3,
+            "explanation": "A gap analysis identifies the differences between the current and future states so the change can be scoped. Schedules, test plans, and communication matrices support execution but do not define what must change.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-005",
+            "domain": "Needs Assessment",
+            "stem": "A proposed solution looks attractive but its technical feasibility is unknown. What should the business analyst do?",
+            "options": [
+                "Conduct a feasibility assessment covering technical, financial, and operational factors",
+                "Approve the solution and resolve technical issues during development",
+                "Discard the idea because feasibility is uncertain",
+                "Ask the vendor to guarantee the result in writing"
+            ],
+            "correct_index": 0,
+            "explanation": "Feasibility must be assessed across technical, financial, and operational dimensions before commitment. Proceeding blindly, abandoning a viable idea, or relying on a vendor guarantee all substitute hope for analysis.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-006",
+            "domain": "Needs Assessment",
+            "stem": "Executives must compare two competing initiatives that have different costs and timelines. Which analysis BEST supports the decision?",
+            "options": [
+                "The order in which the ideas were submitted",
+                "A cost-benefit analysis showing return on investment for each option",
+                "A list of features requested by each department",
+                "The number of stakeholders who prefer each option"
+            ],
+            "correct_index": 1,
+            "explanation": "Investment choices are supported by cost-benefit analysis and return on investment. Feature lists, popularity, and submission order are not valid financial or strategic selection criteria.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-007",
+            "domain": "Needs Assessment",
+            "stem": "A business analyst is asked to define the difference between a business problem and a business opportunity. Which statement is correct?",
+            "options": [
+                "A problem belongs to operations, while an opportunity belongs to strategy",
+                "A problem requires a project, while an opportunity requires none",
+                "A problem is an adverse situation to correct, while an opportunity is a favorable circumstance to exploit",
+                "A problem always costs money, while an opportunity never does"
+            ],
+            "correct_index": 2,
+            "explanation": "A problem is a negative condition needing correction and an opportunity is a positive condition worth exploiting. Cost, organizational ownership, and the need for a project do not distinguish the two concepts.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-008",
+            "domain": "Needs Assessment",
+            "stem": "Before launching a major process change, leadership asks whether the organization can absorb it. Which assessment should the business analyst perform?",
+            "options": [
+                "A network bandwidth study",
+                "A vendor financial audit",
+                "A code review of the legacy system",
+                "An organizational readiness assessment of culture, skills, and capacity for change"
+            ],
+            "correct_index": 3,
+            "explanation": "Organizational readiness assesses whether culture, skills, and capacity can support the change. Technical, vendor, and code reviews do not address the organization's ability to adopt a new way of working.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-009",
+            "domain": "Needs Assessment",
+            "stem": "A company wants to know whether its customer service performance is competitive. What should the business analyst do?",
+            "options": [
+                "Benchmark current performance against industry peers and best practices",
+                "Copy a competitor's entire operating model without analysis",
+                "Assume current performance is adequate",
+                "Survey only internal managers about their feelings"
+            ],
+            "correct_index": 0,
+            "explanation": "Benchmarking compares performance to peers and best practices to reveal gaps. Blind copying, unfounded assumptions, and internal opinion alone do not establish competitive position.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-010",
+            "domain": "Needs Assessment",
+            "stem": "A business analyst must articulate why a proposed solution is worth pursuing. Which statement BEST expresses the value proposition?",
+            "options": [
+                "The project's planned delivery milestones",
+                "A concise description of the benefits the solution delivers and the needs it satisfies",
+                "A list of technologies the solution will use",
+                "The development team's preferred architecture"
+            ],
+            "correct_index": 1,
+            "explanation": "A value proposition connects the solution to the benefits it delivers and needs it satisfies. Technology choices, architecture, and milestones are implementation details, not a statement of value.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-011",
+            "domain": "Needs Assessment",
+            "stem": "To understand how work is actually performed today, the business analyst interviews staff and maps the workflow. Which technique is being applied?",
+            "options": [
+                "Benefits realization",
+                "Risk response planning",
+                "Current-state process modeling",
+                "Future-state prototyping"
+            ],
+            "correct_index": 2,
+            "explanation": "Mapping the workflow as it exists today is current-state process modeling. Prototyping addresses the future state, while benefits realization and risk response occur in later phases of the lifecycle.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-012",
+            "domain": "Needs Assessment",
+            "stem": "Stakeholders disagree about what the solution should achieve. What should the business analyst do to define the future state?",
+            "options": [
+                "Let the loudest stakeholder define the outcome",
+                "Postpone the discussion until development begins",
+                "Adopt the vendor's default configuration as the future state",
+                "Facilitate agreement on measurable desired outcomes and the capabilities needed to reach them"
+            ],
+            "correct_index": 3,
+            "explanation": "The future state is defined by agreed, measurable outcomes and required capabilities. Deferring, defaulting to a vendor, or yielding to the loudest voice leaves the target undefined and contested.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-013",
+            "domain": "Needs Assessment",
+            "stem": "A support desk has a high volume of repeat complaints, and management wants the true cause identified. Which technique is MOST appropriate?",
+            "options": [
+                "Root cause analysis such as the five whys or a fishbone diagram",
+                "Cost-benefit analysis",
+                "A Monte Carlo simulation",
+                "A resource histogram"
+            ],
+            "correct_index": 0,
+            "explanation": "Root cause analysis techniques such as the five whys and fishbone diagrams trace symptoms to their source. Cost-benefit, simulation, and resource tools address financial, schedule, and staffing questions instead.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-014",
+            "domain": "Needs Assessment",
+            "stem": "The sponsor keeps adding ideas that fall outside the original need. What should the business analyst do?",
+            "options": [
+                "Stop documenting scope to keep flexibility",
+                "Define and confirm the solution scope so out-of-scope ideas go through change control",
+                "Quietly accept every addition to avoid conflict",
+                "Remove the sponsor from the project"
+            ],
+            "correct_index": 1,
+            "explanation": "A confirmed solution scope gives a reference point so new ideas are evaluated rather than absorbed. Accepting everything causes scope creep, and removing the sponsor or abandoning documentation are not viable controls.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-015",
+            "domain": "Needs Assessment",
+            "stem": "A business analyst finds that staff lack the data skills required for a new analytics platform. What has the analyst identified?",
+            "options": [
+                "A coding defect",
+                "A network outage",
+                "A capability gap between the current workforce and the future-state need",
+                "A hardware constraint"
+            ],
+            "correct_index": 2,
+            "explanation": "A shortfall in the skills needed for the future state is a capability gap. Hardware, defects, and outages are technical conditions, not gaps between current and required organizational capability.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-016",
+            "domain": "Needs Assessment",
+            "stem": "Several business needs compete for the same limited funding. How should the business analyst help leaders choose?",
+            "options": [
+                "Fund every need equally to keep everyone happy",
+                "Choose the need with the largest number of requesters",
+                "Defer all decisions until next year",
+                "Prioritize needs by their contribution to strategic value and urgency"
+            ],
+            "correct_index": 3,
+            "explanation": "Needs should be prioritized by strategic value and urgency. Equal funding dilutes impact, request counts measure popularity rather than value, and indefinite deferral avoids the decision.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-017",
+            "domain": "Needs Assessment",
+            "stem": "The business case should demonstrate that options were compared. What should the business analyst include?",
+            "options": [
+                "An analysis of viable alternatives with their costs, benefits, and risks",
+                "Only the preferred option with no comparison",
+                "A single vendor quote",
+                "A summary of team preferences"
+            ],
+            "correct_index": 0,
+            "explanation": "A credible business case compares viable alternatives on costs, benefits, and risks. Presenting one option, a lone quote, or team preferences does not demonstrate that a sound choice was made.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-018",
+            "domain": "Needs Assessment",
+            "stem": "A public-sector project will not generate direct revenue but will improve citizen access. How should the business analyst treat this benefit?",
+            "options": [
+                "Exclude the project because it has no return on investment",
+                "Represent non-financial benefits qualitatively with clear measures in the business case",
+                "Ignore any benefit that cannot be expressed in currency",
+                "Estimate a fake revenue figure to justify funding"
+            ],
+            "correct_index": 1,
+            "explanation": "Non-financial benefits are represented with clear qualitative measures so value is still visible. Ignoring them, fabricating revenue, or excluding the project misrepresents the true rationale for the investment.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-019",
+            "domain": "Needs Assessment",
+            "stem": "The business case should justify action by addressing the alternative. Which statement captures the cost of inaction?",
+            "options": [
+                "The number of project meetings",
+                "The chosen programming language",
+                "The consequences and costs the organization avoids by acting now",
+                "The salary of the business analyst"
+            ],
+            "correct_index": 2,
+            "explanation": "The cost of inaction is the harm the organization avoids or incurs by acting or delaying. Analyst salary, meeting counts, and technology choices do not express the consequence of doing nothing.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-020",
+            "domain": "Needs Assessment",
+            "stem": "A regulator has issued a new data privacy rule, and the business analyst must respond. What drives this need?",
+            "options": [
+                "A discretionary feature request from marketing",
+                "A preference of the development team",
+                "An opportunity to increase advertising",
+                "A mandatory compliance requirement and the associated risk of non-compliance"
+            ],
+            "correct_index": 3,
+            "explanation": "Regulatory obligations create mandatory needs with legal and financial risk if unmet. Discretionary requests, developer preferences, and advertising opportunities are not compliance drivers.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-021",
+            "domain": "Needs Assessment",
+            "stem": "A proposed initiative aligns poorly with the organization's stated strategy. What should the business analyst recommend?",
+            "options": [
+                "Flag the misalignment in the business case for the sponsor to reconsider",
+                "Proceed because the requester is senior",
+                "Hide the misalignment to speed approval",
+                "Redefine the strategy to match the initiative"
+            ],
+            "correct_index": 0,
+            "explanation": "Misalignment should be surfaced so decision makers can weigh the investment against strategy. Proceeding on seniority, concealing the issue, or rewriting strategy to fit a project inverts the proper relationship.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-022",
+            "domain": "Needs Assessment",
+            "stem": "Two problems affect customers, but one causes far greater harm. What should the business analyst assess to guide prioritization?",
+            "options": [
+                "Which team owns each problem",
+                "The magnitude and impact of each problem",
+                "Which problem was reported first",
+                "Which problem is easier to solve"
+            ],
+            "correct_index": 1,
+            "explanation": "Prioritization is guided by the magnitude and impact of each problem. Reporting order, ease of solving, and ownership are not measures of how much harm a problem causes.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-023",
+            "domain": "Needs Assessment",
+            "stem": "A business case relies on assumptions about future demand. What should the business analyst do?",
+            "options": [
+                "Omit assumptions to keep the case simple",
+                "Use only the most optimistic assumption",
+                "Validate the assumptions with stakeholders and state the risks if they prove wrong",
+                "Present the assumptions as guaranteed facts"
+            ],
+            "correct_index": 2,
+            "explanation": "Assumptions should be validated and their consequences if wrong should be stated. Presenting them as facts, omitting them, or using only the optimistic case hides uncertainty from decision makers.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-024",
+            "domain": "Needs Assessment",
+            "stem": "An executive wants benefits delivered as early as possible. Which consideration should the business analyst add to the business case?",
+            "options": [
+                "The color scheme of the user interface",
+                "The length of each development sprint",
+                "The developer's years of experience",
+                "The expected time to value and opportunities for incremental delivery"
+            ],
+            "correct_index": 3,
+            "explanation": "Time to value and incremental delivery show when benefits begin. Interface styling, sprint length, and individual experience do not address the speed at which value is realized.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-025",
+            "domain": "Needs Assessment",
+            "stem": "Who should be named in the business case as accountable for realizing the benefits?",
+            "options": [
+                "The business owner who will use the solution to achieve the outcomes",
+                "The business analyst who wrote the document",
+                "The vendor who supplies the software",
+                "The tester who verified the release"
+            ],
+            "correct_index": 0,
+            "explanation": "The business owner is accountable for using the solution to achieve the outcomes. The analyst documents, the vendor supplies, and the tester verifies, but none of them owns the benefit.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-026",
+            "domain": "Needs Assessment",
+            "stem": "A firm suspects its product no longer meets customer expectations. Which analysis should the business analyst perform?",
+            "options": [
+                "A review of employee vacation balances",
+                "Customer and market analysis to understand needs and competitive position",
+                "An inventory count of office supplies",
+                "A network latency test"
+            ],
+            "correct_index": 1,
+            "explanation": "Customer and market analysis reveals whether the product still satisfies needs and how it compares to competitors. Inventory, network, and leave-balance reviews do not address product-market fit.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-027",
+            "domain": "Needs Assessment",
+            "stem": "A project cannot exceed a fixed regulatory deadline, and the business analyst must record it. This is an example of what?",
+            "options": [
+                "A benefit to be realized",
+                "A risk to be transferred",
+                "A constraint that limits solution options",
+                "An assumption to be validated later"
+            ],
+            "correct_index": 2,
+            "explanation": "A fixed deadline is a constraint that limits the options available. It is not an assumption, a benefit, or a risk to be transferred; these are distinct concepts in business analysis.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-028",
+            "domain": "Needs Assessment",
+            "stem": "A well-written problem statement is needed before solution design. What should it contain?",
+            "options": [
+                "The chosen technology and vendor",
+                "A detailed test script",
+                "The project budget breakdown",
+                "A clear description of the current adverse condition and its business impact"
+            ],
+            "correct_index": 3,
+            "explanation": "A problem statement describes the current adverse condition and its business impact. Technology choices, test scripts, and budget details belong to solution design and planning, not problem definition.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-029",
+            "domain": "Needs Assessment",
+            "stem": "A new technology could reduce processing costs significantly. How should the business analyst frame this?",
+            "options": [
+                "As a business opportunity with a value hypothesis to be assessed",
+                "As a mandatory requirement",
+                "As a defect to be corrected",
+                "As a personal initiative of the analyst"
+            ],
+            "correct_index": 0,
+            "explanation": "A potential improvement is framed as an opportunity with a value hypothesis to test. It is not yet a requirement or defect, and it should never be presented as a personal initiative of the analyst.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-030",
+            "domain": "Needs Assessment",
+            "stem": "The needs assessment is complete and approved. What should the business analyst do NEXT?",
+            "options": [
+                "Close the project",
+                "Plan stakeholder engagement and elicitation to develop and refine requirements",
+                "Stop work until development is scheduled",
+                "Begin coding the solution"
+            ],
+            "correct_index": 1,
+            "explanation": "Once the need is understood and approved, the next step is to engage stakeholders and elicit requirements. Coding, closing the project, or idling skips the essential business analysis work.",
+            "reference": "PMI-PBA Exam Content Outline - Needs Assessment"
+        },
+        {
+            "id": "pmi-pba-031",
+            "domain": "Stakeholder Engagement",
+            "stem": "A business analyst begins a new initiative and needs to determine who is affected by the change. What should the analyst do FIRST?",
+            "options": [
+                "Start writing requirements from the sponsor's request",
+                "Order new software licenses",
+                "Identify all stakeholders and analyze their interests and influence",
+                "Send a project kickoff email to the whole company"
+            ],
+            "correct_index": 2,
+            "explanation": "Stakeholder identification and analysis comes first so the right people are involved and informed. Broadcasting, writing requirements, and purchasing hardware all presume an understanding of stakeholders that has not yet been built.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-032",
+            "domain": "Stakeholder Engagement",
+            "stem": "A project has many stakeholders with differing levels of authority. Which tool helps the business analyst plan engagement?",
+            "options": [
+                "A Gantt chart of development tasks",
+                "A financial statement",
+                "A network diagram",
+                "A power and interest grid that classifies stakeholders by influence and concern"
+            ],
+            "correct_index": 3,
+            "explanation": "A power and interest grid classifies stakeholders by influence and concern to tailor engagement. Schedules, financial statements, and network diagrams serve other purposes and do not guide stakeholder strategy.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-033",
+            "domain": "Stakeholder Engagement",
+            "stem": "What is the primary purpose of a stakeholder register?",
+            "options": [
+                "To record each stakeholder's role, interests, influence, and engagement needs",
+                "To track the project budget by department",
+                "To list the software modules to be built",
+                "To schedule the test cycles"
+            ],
+            "correct_index": 0,
+            "explanation": "A stakeholder register records roles, interests, influence, and engagement needs. Budget tracking, module lists, and test scheduling are handled by other artifacts and are not its purpose.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-034",
+            "domain": "Stakeholder Engagement",
+            "stem": "A key stakeholder is influential but currently resistant to the change. What should the business analyst do?",
+            "options": [
+                "Ignore the resistance until go-live",
+                "Develop targeted engagement actions to understand and address the resistance",
+                "Exclude the stakeholder from communications",
+                "Report the stakeholder to the sponsor for discipline"
+            ],
+            "correct_index": 1,
+            "explanation": "Influential resistance is addressed through targeted engagement that uncovers and resolves concerns. Excluding, punishing, or ignoring the stakeholder increases the risk that the change fails.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-035",
+            "domain": "Stakeholder Engagement",
+            "stem": "A communication plan is being developed. What should determine the methods and frequency of communication?",
+            "options": [
+                "The cheapest available tool",
+                "A fixed weekly email to everyone regardless of need",
+                "Stakeholder information needs, preferences, and the criticality of the message",
+                "The business analyst's personal schedule"
+            ],
+            "correct_index": 2,
+            "explanation": "Effective communication planning is driven by stakeholder needs, preferences, and message criticality. Personal convenience, cost alone, and one-size-fits-all blasts do not meet stakeholder needs.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-036",
+            "domain": "Stakeholder Engagement",
+            "stem": "The sponsor's approval is required to baseline requirements, but the sponsor is often unavailable. What should the business analyst do?",
+            "options": [
+                "Approve the baseline without the sponsor",
+                "Ask the development team to approve instead",
+                "Delay the project indefinitely",
+                "Negotiate and document an approval approach and delegation that fits the sponsor's availability"
+            ],
+            "correct_index": 3,
+            "explanation": "The analyst should agree a practical approval and delegation approach with the sponsor. Self-approval or transferring authority to developers violates governance, and indefinite delay is unnecessary.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-037",
+            "domain": "Stakeholder Engagement",
+            "stem": "Two departments have conflicting expectations of the same solution. What should the business analyst do?",
+            "options": [
+                "Facilitate a joint discussion to surface the conflict and negotiate a mutually acceptable outcome",
+                "Support the department with the larger budget",
+                "Document both expectations and let developers choose",
+                "Escalate immediately without any analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "Facilitation lets stakeholders surface and resolve conflicting expectations directly. Favoring a budget, offloading the decision to developers, or escalating before analysis all avoid the analyst's responsibility.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-038",
+            "domain": "Stakeholder Engagement",
+            "stem": "A business analyst must gain cooperation from stakeholders over whom the analyst has no direct authority. Which approach is BEST?",
+            "options": [
+                "Wait for them to volunteer help",
+                "Build relationships and demonstrate how the change serves their interests",
+                "Threaten escalation to their managers",
+                "Ignore stakeholders who lack authority"
+            ],
+            "correct_index": 1,
+            "explanation": "Influence without authority is built through relationships and shared benefit. Threats damage trust, ignoring stakeholders loses their input, and passive waiting rarely yields cooperation.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-039",
+            "domain": "Stakeholder Engagement",
+            "stem": "Subject matter experts are needed to supply detailed knowledge. How should the business analyst engage them?",
+            "options": [
+                "Replace them with the business analyst's own assumptions",
+                "Ask them to write all the requirements alone",
+                "Involve them early and define their expected contributions and availability",
+                "Contact them only after the build is finished"
+            ],
+            "correct_index": 2,
+            "explanation": "Subject matter experts should be involved early with clear expectations of contribution and availability. Late contact, substitute assumptions, and delegating all requirements to them each undermine the analysis.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-040",
+            "domain": "Stakeholder Engagement",
+            "stem": "Who is MOST appropriate to formally approve the final set of requirements?",
+            "options": [
+                "The business analyst who authored them",
+                "The most vocal end user",
+                "The software vendor",
+                "The authorized business sponsor or designated approver"
+            ],
+            "correct_index": 3,
+            "explanation": "Formal approval belongs to the authorized sponsor or designated approver. Authors, vocal users, and vendors may contribute but do not hold the accountability for approving requirements.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-041",
+            "domain": "Stakeholder Engagement",
+            "stem": "A business analyst wants ongoing input from users during the project. What should be established?",
+            "options": [
+                "A feedback mechanism such as representatives, reviews, or surveys",
+                "A rule that users may not contact the team",
+                "A single communication at project close",
+                "A policy of verbal-only updates"
+            ],
+            "correct_index": 0,
+            "explanation": "A defined feedback mechanism keeps user input flowing throughout the project. Blocking contact, communicating only at close, or relying on untracked verbal updates prevents timely course correction.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-042",
+            "domain": "Stakeholder Engagement",
+            "stem": "A critical message must reach a dispersed audience consistently and be retrievable later. Which communication method is BEST?",
+            "options": [
+                "A casual comment during lunch",
+                "A written communication sent through an agreed channel and stored for reference",
+                "A rumor passed along the hallway",
+                "An unrecorded phone call"
+            ],
+            "correct_index": 1,
+            "explanation": "Critical messages need a consistent written channel with a retrievable record. Hallway rumors, unrecorded calls, and casual comments are neither consistent nor documented for later reference.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-043",
+            "domain": "Stakeholder Engagement",
+            "stem": "A stakeholder keeps requesting additions late in the project. What should the business analyst do?",
+            "options": [
+                "Refuse all changes without explanation",
+                "Redesign the solution secretly",
+                "Guide the request through the change control process and assess its impact",
+                "Accept every request to preserve the relationship"
+            ],
+            "correct_index": 2,
+            "explanation": "Late requests should flow through change control so their impact is assessed. Accepting everything causes scope creep, blanket refusal ignores valid needs, and secret redesign bypasses governance.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-044",
+            "domain": "Stakeholder Engagement",
+            "stem": "A regulatory body must be kept informed of compliance progress. How should this stakeholder be treated?",
+            "options": [
+                "As a low-priority stakeholder to contact only if asked",
+                "As a stakeholder with no communication needs",
+                "As an obstacle to be managed around",
+                "As a high-priority stakeholder with formal, scheduled reporting obligations"
+            ],
+            "correct_index": 3,
+            "explanation": "Regulators require formal, scheduled reporting and are high priority. Downgrading them, assuming no communication needs, or treating them as obstacles risks compliance and penalties.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-045",
+            "domain": "Stakeholder Engagement",
+            "stem": "The business analyst needs to clarify who is responsible, accountable, consulted, and informed for requirements decisions. Which tool applies?",
+            "options": [
+                "A RACI matrix",
+                "A burn-down chart",
+                "A data dictionary",
+                "A network topology diagram"
+            ],
+            "correct_index": 0,
+            "explanation": "A RACI matrix clarifies who is responsible, accountable, consulted, and informed. Burn-down, data dictionary, and network diagrams track progress, data definitions, and infrastructure instead.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-046",
+            "domain": "Stakeholder Engagement",
+            "stem": "A stakeholder has moved from resistant to supportive over the project. Which tool records this change in engagement?",
+            "options": [
+                "A capacity plan",
+                "A stakeholder engagement assessment matrix tracking current and desired engagement",
+                "A risk register of technical issues",
+                "A test summary report"
+            ],
+            "correct_index": 1,
+            "explanation": "An engagement assessment matrix records current versus desired engagement and shows movement over time. Risk, test, and capacity artifacts do not track stakeholder attitudes.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-047",
+            "domain": "Stakeholder Engagement",
+            "stem": "Mismatched expectations about delivery date are causing friction. What should the business analyst do?",
+            "options": [
+                "Avoid discussing dates entirely",
+                "Blame the schedule on the developers",
+                "Confirm and communicate a shared, realistic expectation with the stakeholders",
+                "Promise every date each stakeholder wants"
+            ],
+            "correct_index": 2,
+            "explanation": "Aligning stakeholders on a shared, realistic expectation resolves friction. Overpromising, avoiding the topic, and shifting blame all leave expectations mismatched and trust degraded.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-048",
+            "domain": "Stakeholder Engagement",
+            "stem": "A stakeholder issue cannot be resolved at the working level. What should the business analyst do?",
+            "options": [
+                "Conceal the issue to avoid attention",
+                "Resolve it by ignoring the stakeholder",
+                "Post the conflict publicly to force a decision",
+                "Follow the agreed escalation path while keeping stakeholders informed"
+            ],
+            "correct_index": 3,
+            "explanation": "Unresolved issues follow the agreed escalation path with ongoing communication. Concealment, ignoring the stakeholder, and public forcing are unprofessional and damage relationships.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-049",
+            "domain": "Stakeholder Engagement",
+            "stem": "Determining how often to communicate with a stakeholder should be based on what?",
+            "options": [
+                "The stakeholder's information needs and the project's risk and change rate",
+                "A fixed monthly cadence for everyone",
+                "The business analyst's workload",
+                "The number of emails already sent"
+            ],
+            "correct_index": 0,
+            "explanation": "Communication frequency should reflect information needs and project risk and change. Uniform cadence ignores differences, and analyst workload or past email volume are not valid drivers.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-050",
+            "domain": "Stakeholder Engagement",
+            "stem": "A previous project failed partly because a key stakeholder was not engaged early. What should the business analyst do on the new project?",
+            "options": [
+                "Delegate all engagement to the vendor",
+                "Identify and engage key stakeholders from the start and learn from past lessons",
+                "Repeat the previous approach exactly",
+                "Wait for stakeholders to make contact"
+            ],
+            "correct_index": 1,
+            "explanation": "Lessons from the past should drive early identification and engagement of key stakeholders. Repeating the mistake, waiting passively, or delegating engagement to a vendor repeats the failure.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-051",
+            "domain": "Stakeholder Engagement",
+            "stem": "An executive sponsor can advocate for the change and help overcome resistance. What role does this represent?",
+            "options": [
+                "A blocker who should be excluded",
+                "A tester of the final product",
+                "A champion who actively promotes the solution to others",
+                "A passive observer with no involvement"
+            ],
+            "correct_index": 2,
+            "explanation": "A sponsor who advocates for the change acts as a champion. Passive observers, excluded blockers, and testers do not perform the advocacy role that helps the solution succeed.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-052",
+            "domain": "Stakeholder Engagement",
+            "stem": "Actual end users rarely attend meetings, yet their acceptance is vital. What should the business analyst do?",
+            "options": [
+                "Speak for users based on assumptions",
+                "Exclude users until acceptance testing",
+                "Rely only on management's view of user needs",
+                "Include representative end users in elicitation and validation activities"
+            ],
+            "correct_index": 3,
+            "explanation": "Representative end users should participate in elicitation and validation so their real needs shape the solution. Assumptions, late involvement, and management-only views miss critical user requirements.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-053",
+            "domain": "Stakeholder Engagement",
+            "stem": "How can the business analyst confirm that stakeholder engagement is effective?",
+            "options": [
+                "By checking participation, feedback, agreement, and progress toward shared goals",
+                "By counting the number of meetings held",
+                "By measuring the length of emails sent",
+                "By assuming silence means agreement"
+            ],
+            "correct_index": 0,
+            "explanation": "Engagement effectiveness shows in participation, feedback, agreement, and goal progress. Meeting counts, email length, and interpreting silence as consent are weak or misleading indicators.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-054",
+            "domain": "Stakeholder Engagement",
+            "stem": "A new stakeholder joins the project midway. What should the business analyst do?",
+            "options": [
+                "Restart the entire project",
+                "Perform stakeholder analysis for the new participant and update engagement and communication plans",
+                "Ignore the change because plans are already set",
+                "Add the name without any analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "New stakeholders require analysis and updates to engagement and communication plans. Ignoring them, adding them without analysis, or restarting the project are disproportionate to a normal change.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-055",
+            "domain": "Stakeholder Engagement",
+            "stem": "A high-power, low-interest stakeholder could become disruptive if surprised. What engagement approach is appropriate?",
+            "options": [
+                "Ignore them completely",
+                "Give them ownership of all decisions",
+                "Keep the stakeholder adequately informed and manage their concerns without overloading them",
+                "Send every detail daily regardless of interest"
+            ],
+            "correct_index": 2,
+            "explanation": "High-power, low-interest stakeholders should be kept satisfied with adequate information without overload. Daily detail, complete neglect, and handing over all decisions all misread their needs.",
+            "reference": "PMI-PBA Exam Content Outline - Stakeholder Engagement"
+        },
+        {
+            "id": "pmi-pba-056",
+            "domain": "Elicitation",
+            "stem": "A business analyst must choose an elicitation technique for a topic that is sensitive and poorly understood. What should guide the choice?",
+            "options": [
+                "The technique the analyst used last time",
+                "The cheapest technique available",
+                "The technique the vendor recommends regardless of fit",
+                "The nature of the information needed, stakeholder characteristics, and available time and resources"
+            ],
+            "correct_index": 3,
+            "explanation": "Technique selection depends on the information needed, stakeholder characteristics, and constraints. Habit, cost alone, or vendor preference without fit analysis usually yields poor elicitation results.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-057",
+            "domain": "Elicitation",
+            "stem": "Before conducting elicitation sessions, what should the business analyst do?",
+            "options": [
+                "Define objectives, select participants, and prepare logistics and materials",
+                "Begin interviewing the first available person",
+                "Assume stakeholders will provide complete information spontaneously",
+                "Skip preparation to save time"
+            ],
+            "correct_index": 0,
+            "explanation": "Preparation establishes objectives, participants, logistics, and materials for effective elicitation. Interviewing at random, assuming complete information, and skipping preparation reduce the quality of results.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-058",
+            "domain": "Elicitation",
+            "stem": "Detailed, confidential information is needed from one expert. Which technique is MOST appropriate?",
+            "options": [
+                "A group brainstorming session",
+                "A one-on-one interview",
+                "A large open forum",
+                "An anonymous survey to the whole company"
+            ],
+            "correct_index": 1,
+            "explanation": "One-on-one interviews are suited to detailed, confidential information from a single expert. Forums, company-wide surveys, and group brainstorms lack the privacy and depth required here.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-059",
+            "domain": "Elicitation",
+            "stem": "Multiple stakeholders must reach agreement on a complex process. Which technique is BEST?",
+            "options": [
+                "A yes-or-no email poll",
+                "Reading the process manual alone",
+                "A facilitated workshop with structured activities",
+                "Separate hallway conversations"
+            ],
+            "correct_index": 2,
+            "explanation": "A facilitated workshop brings stakeholders together to reach agreement on complex topics. Side conversations, binary polls, and solo document reading cannot build consensus among multiple parties.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-060",
+            "domain": "Elicitation",
+            "stem": "The business analyst wants to capture shared perceptions and reactions among a small group of similar users. Which technique applies?",
+            "options": [
+                "A user acceptance test",
+                "A cost-benefit analysis",
+                "A data migration run",
+                "A focus group"
+            ],
+            "correct_index": 3,
+            "explanation": "A focus group elicits shared perceptions and reactions from a small, similar group. Acceptance testing, cost-benefit analysis, and data migration occur elsewhere in the lifecycle and serve different purposes.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-061",
+            "domain": "Elicitation",
+            "stem": "Documents describing how work is done may not match reality. Which technique reveals actual behavior?",
+            "options": [
+                "Observation or job shadowing of users as they work",
+                "Reviewing the organizational chart",
+                "Reading the annual report",
+                "Interviewing only the department head"
+            ],
+            "correct_index": 0,
+            "explanation": "Observation and job shadowing reveal what people actually do rather than what documents say. Org charts, annual reports, and single interviews do not capture real work behavior.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-062",
+            "domain": "Elicitation",
+            "stem": "Information is needed from many geographically dispersed stakeholders quickly. Which technique is MOST suitable?",
+            "options": [
+                "Unstructured observation",
+                "A structured questionnaire or survey",
+                "A single in-person workshop with everyone",
+                "A series of one-on-one interviews over months"
+            ],
+            "correct_index": 1,
+            "explanation": "A structured survey reaches many dispersed stakeholders quickly. A single in-person workshop, months of interviews, and unstructured observation cannot efficiently cover a large, distributed group.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-063",
+            "domain": "Elicitation",
+            "stem": "A business analyst reviews existing policies, manuals, and system documentation to understand requirements. Which technique is being used?",
+            "options": [
+                "Facilitated workshops",
+                "Focus groups",
+                "Document analysis",
+                "Prototyping"
+            ],
+            "correct_index": 2,
+            "explanation": "Reviewing existing policies, manuals, and documentation is document analysis. Prototyping, workshops, and focus groups involve interaction with people rather than review of written materials.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-064",
+            "domain": "Elicitation",
+            "stem": "A team needs to generate many creative ideas to address a problem. Which technique is appropriate?",
+            "options": [
+                "A root cause analysis only",
+                "A cost-benefit analysis",
+                "A network diagram",
+                "Brainstorming with rules that encourage open contribution"
+            ],
+            "correct_index": 3,
+            "explanation": "Brainstorming with ground rules generates a broad set of creative ideas. Root cause, cost-benefit, and network tools analyze or represent information rather than ideate widely.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-065",
+            "domain": "Elicitation",
+            "stem": "Stakeholders struggle to describe what they want in a screen. Which technique helps them react to a concrete representation?",
+            "options": [
+                "Prototyping",
+                "Benchmarking",
+                "A resource histogram",
+                "A RACI matrix"
+            ],
+            "correct_index": 0,
+            "explanation": "Prototyping gives stakeholders something concrete to react to so they can refine requirements. Benchmarking, resource histograms, and RACI matrices do not represent a user interface.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-066",
+            "domain": "Elicitation",
+            "stem": "An existing legacy system has no documentation, and its behavior must be understood. Which technique applies?",
+            "options": [
+                "Benchmarking against competitors",
+                "Reverse engineering to infer the system's logic and data",
+                "Focus groups with executives",
+                "A survey of new hires"
+            ],
+            "correct_index": 1,
+            "explanation": "Reverse engineering infers the logic and data of an undocumented system. Executive focus groups, new-hire surveys, and competitive benchmarking cannot expose an undocumented system's behavior.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-067",
+            "domain": "Elicitation",
+            "stem": "Requirements must be defined for how two systems exchange data. Which elicitation technique is MOST relevant?",
+            "options": [
+                "A process audit",
+                "A lessons-learned workshop",
+                "Interface analysis of the data and interactions between systems",
+                "A customer satisfaction survey"
+            ],
+            "correct_index": 2,
+            "explanation": "Interface analysis examines the data and interactions between systems to define integration requirements. Satisfaction surveys, process audits, and lessons-learned sessions address other concerns.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-068",
+            "domain": "Elicitation",
+            "stem": "A business analyst is planning elicitation and must decide what to elicit first. What should guide sequencing?",
+            "options": [
+                "The order in which stakeholders are alphabetized",
+                "The business analyst's personal preference",
+                "The vendor's implementation timeline",
+                "The business objectives and the highest-value, highest-uncertainty information"
+            ],
+            "correct_index": 3,
+            "explanation": "Elicitation sequencing should target the information with the highest value and uncertainty relative to objectives. Alphabetical order, personal preference, and vendor timelines do not prioritize learning.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-069",
+            "domain": "Elicitation",
+            "stem": "An elicitation session ends with unanswered questions. What should the business analyst do?",
+            "options": [
+                "Record follow-up actions and schedule additional elicitation as needed",
+                "Declare the session a failure and stop",
+                "Guess the answers to move forward",
+                "Wait for stakeholders to volunteer information"
+            ],
+            "correct_index": 0,
+            "explanation": "Unanswered questions become documented follow-ups with additional elicitation scheduled. Stopping, guessing, or waiting passively leaves requirements incomplete and unverified.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-070",
+            "domain": "Elicitation",
+            "stem": "Elicited information from several sources conflicts. What should the business analyst do NEXT?",
+            "options": [
+                "Discard the information and start over",
+                "Analyze the conflict, reconcile the sources, and confirm the agreed interpretation with stakeholders",
+                "Pick the answer from the most senior person and move on",
+                "Document all conflicting versions as requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Conflicts are resolved by analysis and reconciliation confirmed with stakeholders. Deferring to seniority, documenting contradictions as requirements, or discarding everything leaves the conflict unresolved.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-071",
+            "domain": "Elicitation",
+            "stem": "How should a business analyst confirm the accuracy of elicited requirements before baselining?",
+            "options": [
+                "Have the developers confirm requirements instead of stakeholders",
+                "Skip confirmation to save time",
+                "Review and validate the results with the source stakeholders and obtain their agreement",
+                "Assume the notes are correct and proceed"
+            ],
+            "correct_index": 2,
+            "explanation": "Accuracy is confirmed by reviewing and validating results with the source stakeholders. Assumptions, developer confirmation, and skipped reviews do not verify that the captured information is correct.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-072",
+            "domain": "Elicitation",
+            "stem": "What is the purpose of obtaining stakeholder sign-off on elicitation results?",
+            "options": [
+                "To transfer blame if requirements change",
+                "To satisfy a document-filing rule",
+                "To delay the project until everyone is free",
+                "To formally confirm a shared and accurate understanding of the elicited information"
+            ],
+            "correct_index": 3,
+            "explanation": "Sign-off confirms that stakeholders share and accept the elicited information. It is not about blame, filing, or delay; it is a checkpoint of mutual understanding before analysis continues.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-073",
+            "domain": "Elicitation",
+            "stem": "Key subject matter experts are too busy for a joint session. What should the business analyst do?",
+            "options": [
+                "Schedule shorter targeted sessions and adapt techniques to their availability",
+                "Force them to attend a full-day workshop",
+                "Proceed without their input entirely",
+                "Escalate them to the sponsor for discipline"
+            ],
+            "correct_index": 0,
+            "explanation": "Adapting to availability with shorter targeted sessions still captures expert knowledge. Forcing attendance, skipping their input, or escalating for discipline harms relationships and results.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-074",
+            "domain": "Elicitation",
+            "stem": "A survey is being designed. Which practice improves data quality?",
+            "options": [
+                "Make questions intentionally vague",
+                "Write clear, unbiased questions and pilot them with a small sample",
+                "Use leading questions to get desired answers",
+                "Include double-barreled questions to save space"
+            ],
+            "correct_index": 1,
+            "explanation": "Clear, unbiased questions tested in a pilot produce reliable data. Leading, double-barreled, and vague questions introduce bias and confuse respondents, degrading data quality.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-075",
+            "domain": "Elicitation",
+            "stem": "A workshop becomes dominated by one participant. What should the facilitator do?",
+            "options": [
+                "End the workshop immediately",
+                "Ignore the imbalance",
+                "Apply ground rules and facilitation techniques to ensure balanced participation",
+                "Allow the dominant voice to set all decisions"
+            ],
+            "correct_index": 2,
+            "explanation": "Facilitators use ground rules and techniques to balance participation. Letting one person dominate, ending the session, or ignoring the imbalance excludes other stakeholders and skews results.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-076",
+            "domain": "Elicitation",
+            "stem": "Which listening behavior best supports effective elicitation?",
+            "options": [
+                "Listening only for points that support a preconceived solution",
+                "Interrupting to speed the session",
+                "Taking no notes and relying on memory",
+                "Active listening with clarifying and confirming questions"
+            ],
+            "correct_index": 3,
+            "explanation": "Active listening with clarifying and confirming questions surfaces accurate information. Selective listening, interrupting, and relying on memory bias or lose important detail.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-077",
+            "domain": "Elicitation",
+            "stem": "The business analyst needs to move from broad understanding to specific detail during an interview. Which questioning approach is BEST?",
+            "options": [
+                "Start with open-ended questions, then use closed questions to confirm specifics",
+                "Use only closed questions throughout",
+                "Use only rhetorical questions",
+                "Avoid questions and rely on assumptions"
+            ],
+            "correct_index": 0,
+            "explanation": "Opening with open-ended questions explores the topic, and closed questions confirm specifics. Only-closed questions limit discovery, rhetorical questions gather no data, and avoiding questions yields assumptions.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-078",
+            "domain": "Elicitation",
+            "stem": "What should happen immediately after an elicitation session regarding the captured information?",
+            "options": [
+                "Delete the notes to protect privacy",
+                "Document the results promptly in a clear, organized form",
+                "Rely on memory to reconstruct it weeks later",
+                "Share raw unedited notes as final requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Results should be documented promptly while the information is fresh and accurate. Memory fades, raw notes are not requirements, and deleting notes loses valuable elicited information.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-079",
+            "domain": "Elicitation",
+            "stem": "How can a business analyst validate understanding with an elicitation participant?",
+            "options": [
+                "Send the notes only to the sponsor",
+                "Wait until acceptance testing to check",
+                "Restate and summarize what was heard and ask the participant to confirm or correct it",
+                "Assume agreement based on nodding"
+            ],
+            "correct_index": 2,
+            "explanation": "Restating and summarizing lets the participant confirm or correct the analyst's understanding. Nodding, sponsor-only review, and waiting until testing all delay or skip validation.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-080",
+            "domain": "Elicitation",
+            "stem": "Who should be selected to participate in elicitation?",
+            "options": [
+                "Only the most senior managers",
+                "Only the people easiest to schedule",
+                "Anyone who happens to be available",
+                "Representative stakeholders who collectively have the needed knowledge and authority"
+            ],
+            "correct_index": 3,
+            "explanation": "Participants should be selected for the knowledge and authority they collectively bring. Seniority alone, scheduling convenience, and random availability omit key perspectives and information.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-081",
+            "domain": "Elicitation",
+            "stem": "A workshop agenda has too many topics for the time allowed. What should the business analyst do?",
+            "options": [
+                "Prioritize topics and timebox each segment, deferring low-priority items",
+                "Extend the meeting indefinitely",
+                "Cut all discussion of controversial topics",
+                "Let the meeting run without an agenda"
+            ],
+            "correct_index": 0,
+            "explanation": "Prioritizing and timeboxing keeps the workshop focused and productive. Endless extension exhausts participants, avoiding controversy leaves issues unresolved, and no agenda loses control of the session.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-082",
+            "domain": "Elicitation",
+            "stem": "Stakeholders fear that candid feedback will be attributed to them. Which approach can increase honesty?",
+            "options": [
+                "Threaten consequences for criticism",
+                "Offer anonymity or confidentiality where appropriate",
+                "Require names on every comment",
+                "Publicly rank the feedback by source"
+            ],
+            "correct_index": 1,
+            "explanation": "Anonymity or confidentiality reduces fear and encourages candor. Mandatory names, public ranking of sources, and threats suppress honest input and reduce the quality of elicited information.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-083",
+            "domain": "Elicitation",
+            "stem": "A solution affects several departments, and each sees only part of the process. What elicitation format is BEST?",
+            "options": [
+                "A single survey to one department",
+                "Observation of one team only",
+                "A cross-functional workshop to build a shared end-to-end view",
+                "Independent isolated interviews with no sharing"
+            ],
+            "correct_index": 2,
+            "explanation": "A cross-functional workshop assembles all parties to build a shared end-to-end view. Isolated interviews, single-department surveys, and observing one team leave critical interfaces and gaps unseen.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-084",
+            "domain": "Elicitation",
+            "stem": "Experienced staff perform tasks from habit and cannot easily explain them. Which technique captures this tacit knowledge?",
+            "options": [
+                "A theoretical feasibility study",
+                "A financial audit",
+                "A network diagram",
+                "Observation of the staff performing the work"
+            ],
+            "correct_index": 3,
+            "explanation": "Observing staff as they work captures tacit knowledge they cannot articulate. Feasibility studies, financial audits, and network diagrams analyze other matters and do not reveal habitual work practices.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-085",
+            "domain": "Elicitation",
+            "stem": "Two stakeholders give contradictory requirements. What should the business analyst do?",
+            "options": [
+                "Facilitate resolution by clarifying needs and negotiating a shared requirement",
+                "Adopt both without analysis and let them coexist",
+                "Choose one at random",
+                "Drop the conflicting topic entirely"
+            ],
+            "correct_index": 0,
+            "explanation": "Facilitating resolution turns contradictory inputs into one negotiated requirement. Adopting both leaves unresolved contradictions, random choice is indefensible, and dropping the topic leaves a gap.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-086",
+            "domain": "Elicitation",
+            "stem": "After elicitation, the business analyst wants stakeholders to review outputs before they become requirements. What is the BEST approach?",
+            "options": [
+                "Only share with the sponsor",
+                "Distribute a clear summary for review and confirm corrections before baselining",
+                "Treat drafts as final immediately",
+                "Keep the outputs secret until development"
+            ],
+            "correct_index": 1,
+            "explanation": "A clear summary reviewed and corrected by stakeholders ensures accuracy before baselining. Treating drafts as final, secrecy, and sponsor-only review bypass the people who provided the information.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-087",
+            "domain": "Elicitation",
+            "stem": "Why should elicited information be traceable to its source?",
+            "options": [
+                "To inflate the documentation volume",
+                "To satisfy a formatting rule",
+                "To support verification, manage changes, and understand the rationale behind requirements",
+                "To assign blame when issues arise"
+            ],
+            "correct_index": 2,
+            "explanation": "Traceability to the source supports verification, change management, and understanding of rationale. Blame, documentation volume, and formatting rules are not the goal of traceability.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-088",
+            "domain": "Elicitation",
+            "stem": "At the close of an elicitation activity, what should the business analyst confirm with participants?",
+            "options": [
+                "That no further communication will occur",
+                "That all requirements are frozen forever",
+                "That participants will not be contacted again",
+                "That objectives were met, results are understood, and next steps are agreed"
+            ],
+            "correct_index": 3,
+            "explanation": "Closing an elicitation activity confirms objectives met, shared understanding, and agreed next steps. Promising no further contact, permanent freezing, or excluding follow-up contradicts iterative elicitation.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-089",
+            "domain": "Elicitation",
+            "stem": "How should a business analyst decide when enough elicitation has been done?",
+            "options": [
+                "When the information needed to define the solution is sufficiently complete and validated",
+                "When a fixed number of sessions has been held regardless of content",
+                "When stakeholders stop replying to emails",
+                "When the budget is nearly exhausted"
+            ],
+            "correct_index": 0,
+            "explanation": "Elicitation is complete when the needed information is sufficiently complete and validated. A fixed session count, silence, or budget exhaustion are not indicators that requirements are adequately understood.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-090",
+            "domain": "Elicitation",
+            "stem": "A first round of elicitation raises new questions about scope. What should the business analyst do?",
+            "options": [
+                "Delegate all open questions to developers",
+                "Plan an additional elicitation iteration to resolve the open questions",
+                "Ignore the new questions",
+                "Freeze scope and refuse further elicitation"
+            ],
+            "correct_index": 1,
+            "explanation": "Elicitation is iterative, so new questions lead to another planned round. Ignoring questions, freezing scope prematurely, or delegating them to developers leaves requirements unresolved.",
+            "reference": "PMI-PBA Exam Content Outline - Elicitation"
+        },
+        {
+            "id": "pmi-pba-091",
+            "domain": "Analysis",
+            "stem": "A business analyst is analyzing facts and opinions gathered during elicitation to define requirements. What is the purpose of requirements analysis?",
+            "options": [
+                "To begin coding the solution",
+                "To approve the project budget",
+                "To transform elicited information into a validated, agreed set of requirements",
+                "To collect more opinions from stakeholders"
+            ],
+            "correct_index": 2,
+            "explanation": "Requirements analysis turns elicited information into a validated, agreed set of requirements. Collecting more opinions is elicitation, while coding and budgeting belong to delivery and planning.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-092",
+            "domain": "Analysis",
+            "stem": "A requirement states that the system shall allow customers to reset their own passwords. What kind of requirement is this?",
+            "options": [
+                "A non-functional requirement about performance",
+                "A constraint on the project schedule",
+                "A business rule governing access policy",
+                "A functional requirement describing a capability the solution must provide"
+            ],
+            "correct_index": 3,
+            "explanation": "A statement that the system shall perform a specific behavior is a functional requirement. Performance is non-functional, and the statement is neither a schedule constraint nor a business rule.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-093",
+            "domain": "Analysis",
+            "stem": "A requirement states that the system shall respond to any user query in under two seconds. What kind of requirement is this?",
+            "options": [
+                "A non-functional requirement specifying a quality attribute",
+                "A functional requirement describing a feature",
+                "A business rule about access",
+                "A project assumption"
+            ],
+            "correct_index": 0,
+            "explanation": "Response time is a quality attribute, making this a non-functional requirement. It does not describe a feature, an access rule, or an assumption about the project environment.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-094",
+            "domain": "Analysis",
+            "stem": "A requirement states that only managers may approve expenses above a set threshold. This is BEST classified as what?",
+            "options": [
+                "A performance requirement",
+                "A business rule that constrains how the organization operates",
+                "A user interface requirement",
+                "A data migration requirement"
+            ],
+            "correct_index": 1,
+            "explanation": "A policy governing who may approve what is a business rule. Interface, migration, and performance requirements describe system qualities rather than organizational policy.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-095",
+            "domain": "Analysis",
+            "stem": "A requirement includes the condition that must be true for a user story to be accepted. What is this condition called?",
+            "options": [
+                "A change request",
+                "A risk response",
+                "An acceptance criterion that defines the condition of satisfaction",
+                "A project constraint"
+            ],
+            "correct_index": 2,
+            "explanation": "The condition that must be true for acceptance is an acceptance criterion. Constraints, change requests, and risk responses are distinct artifacts that do not define satisfaction of a story.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-096",
+            "domain": "Analysis",
+            "stem": "The business analyst models how actors interact with the system to achieve goals. Which model is being created?",
+            "options": [
+                "A data flow diagram of physical storage",
+                "A resource histogram",
+                "A network diagram",
+                "A use case model"
+            ],
+            "correct_index": 3,
+            "explanation": "Modeling actors and their goals against a system produces a use case model. Storage diagrams, resource histograms, and network diagrams represent data, staffing, and infrastructure instead.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-097",
+            "domain": "Analysis",
+            "stem": "A business analyst diagrams the sequence of activities that transform inputs into outputs. Which model applies?",
+            "options": [
+                "A process model such as a swimlane or activity diagram",
+                "A class diagram of objects",
+                "A cost-benefit model",
+                "A RACI chart"
+            ],
+            "correct_index": 0,
+            "explanation": "A sequence of activities transforming inputs to outputs is modeled with a process or activity diagram. Class diagrams model structure, and cost-benefit and RACI artifacts serve other purposes.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-098",
+            "domain": "Analysis",
+            "stem": "The team needs to understand the entities, attributes, and relationships that the solution must store. Which model is appropriate?",
+            "options": [
+                "A stakeholder map",
+                "A data model or entity-relationship diagram",
+                "A use case diagram",
+                "A Gantt chart"
+            ],
+            "correct_index": 1,
+            "explanation": "Entities, attributes, and relationships are represented in a data or entity-relationship model. Use case, Gantt, and stakeholder artifacts address interactions, schedules, and people instead.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-099",
+            "domain": "Analysis",
+            "stem": "A business analyst must describe the valid states of an order and the allowed transitions between them. Which model is useful?",
+            "options": [
+                "A resource calendar",
+                "A communication plan",
+                "A state diagram or state machine model",
+                "A pie chart"
+            ],
+            "correct_index": 2,
+            "explanation": "States and allowed transitions are captured in a state or state machine model. Pie charts, resource calendars, and communication plans do not represent lifecycle transitions of an entity.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-100",
+            "domain": "Analysis",
+            "stem": "Stakeholders cannot articulate detailed requirements, but they can react to a draft screen. Which analysis technique helps refine requirements?",
+            "options": [
+                "Cost-benefit analysis",
+                "Risk register analysis",
+                "Benchmarking",
+                "Prototyping to make requirements concrete and elicit feedback"
+            ],
+            "correct_index": 3,
+            "explanation": "Prototyping gives stakeholders a concrete artifact to react to, refining requirements. Cost-benefit, risk, and benchmarking analyses do not surface detailed interface expectations.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-101",
+            "domain": "Analysis",
+            "stem": "Requirements must be categorized for release planning as must-have, should-have, could-have, and will-not-have. Which technique is being used?",
+            "options": [
+                "MoSCoW prioritization",
+                "Monte Carlo analysis",
+                "Root cause analysis",
+                "Variance analysis"
+            ],
+            "correct_index": 0,
+            "explanation": "The must, should, could, and will-not categories are MoSCoW prioritization. Monte Carlo, root cause, and variance analysis address uncertainty, causation, and performance gaps.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-102",
+            "domain": "Analysis",
+            "stem": "A business analyst must prioritize requirements when both business value and implementation risk vary. Which approach is BEST?",
+            "options": [
+                "Prioritize alphabetically",
+                "Rank requirements by value against cost and risk so the highest-value items come first",
+                "Implement requirements in the order they were requested",
+                "Prioritize by the size of the requesting department"
+            ],
+            "correct_index": 1,
+            "explanation": "Prioritization should weigh value against cost and risk. Request order, department size, and alphabetical ordering carry no information about value or risk.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-103",
+            "domain": "Analysis",
+            "stem": "What is the goal of requirements verification?",
+            "options": [
+                "To estimate the project cost",
+                "To assign developers to tasks",
+                "To confirm that requirements are well-formed, complete, and consistent as written",
+                "To confirm the solution meets business needs once built"
+            ],
+            "correct_index": 2,
+            "explanation": "Verification confirms that requirements are well-formed, complete, and consistent. Confirming a built solution meets needs is validation, while cost and staffing are planning activities.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-104",
+            "domain": "Analysis",
+            "stem": "What is the goal of requirements validation?",
+            "options": [
+                "To check spelling and grammar only",
+                "To estimate the project schedule",
+                "To secure the software license",
+                "To confirm that the requirements accurately represent stakeholder needs and deliver value"
+            ],
+            "correct_index": 3,
+            "explanation": "Validation confirms that requirements accurately represent stakeholder needs and value. Proofreading, scheduling, and licensing are unrelated to ensuring the requirements are the right ones.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-105",
+            "domain": "Analysis",
+            "stem": "A requirement states that the system shall be user friendly. What quality characteristic is violated?",
+            "options": [
+                "It is ambiguous and not measurable",
+                "It is too short",
+                "It is a functional requirement",
+                "It is a business rule"
+            ],
+            "correct_index": 0,
+            "explanation": "User friendly is subjective and unmeasurable, so the requirement is ambiguous. Length, being functional, or being a business rule are not the defects present in this statement.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-106",
+            "domain": "Analysis",
+            "stem": "A requirement states that the system shall be fast. Which issue should the business analyst correct?",
+            "options": [
+                "The requirement is redundant",
+                "The requirement is not testable and needs a measurable threshold",
+                "The requirement is too detailed",
+                "The requirement is a constraint"
+            ],
+            "correct_index": 1,
+            "explanation": "Fast cannot be tested without a measurable threshold, so it must be quantified. The statement is not overly detailed, a constraint, or necessarily redundant; testability is the core defect.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-107",
+            "domain": "Analysis",
+            "stem": "During review, the business analyst finds that requirements omit important scenarios. Which quality is lacking?",
+            "options": [
+                "Testability",
+                "Feasibility",
+                "Completeness",
+                "Traceability"
+            ],
+            "correct_index": 2,
+            "explanation": "Missing important scenarios is a completeness defect. Traceability, testability, and feasibility are different quality characteristics and do not describe omitted content.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-108",
+            "domain": "Analysis",
+            "stem": "Two requirements contradict each other about the same field. Which quality issue exists?",
+            "options": [
+                "Ambiguity only",
+                "Redundancy only",
+                "Scope creep",
+                "Inconsistency that must be resolved before baselining"
+            ],
+            "correct_index": 3,
+            "explanation": "Contradictory statements about the same field are inconsistent and must be resolved before baselining. This is not mere ambiguity, redundancy, or scope creep, although consistency is at risk.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-109",
+            "domain": "Analysis",
+            "stem": "What is the primary purpose of a requirements traceability matrix?",
+            "options": [
+                "To link requirements to their sources, design, tests, and value throughout the lifecycle",
+                "To track the project budget",
+                "To list team members and their roles",
+                "To schedule deployment windows"
+            ],
+            "correct_index": 0,
+            "explanation": "A traceability matrix links requirements to sources, design, tests, and value across the lifecycle. Budget, staffing, and deployment scheduling are handled by other project artifacts.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-110",
+            "domain": "Analysis",
+            "stem": "Once requirements are approved and agreed, what does baselining them provide?",
+            "options": [
+                "A replacement for the business case",
+                "An agreed reference point against which changes are managed",
+                "A guarantee that no changes will ever occur",
+                "A substitute for testing"
+            ],
+            "correct_index": 1,
+            "explanation": "A baseline is the agreed reference for managing change. It does not guarantee no change, replace testing, or substitute for the business case, all of which serve different purposes.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-111",
+            "domain": "Analysis",
+            "stem": "A stakeholder requests a change to a baselined requirement. What should the business analyst do FIRST?",
+            "options": [
+                "Reject the change without review",
+                "Baseline a new version silently",
+                "Assess the impact of the change and route it through the change control process",
+                "Implement the change immediately"
+            ],
+            "correct_index": 2,
+            "explanation": "Changes are assessed for impact and routed through change control first. Immediate implementation, unreviewed rejection, and silent re-baselining bypass the process and hide consequences.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-112",
+            "domain": "Analysis",
+            "stem": "Information such as owner, priority, status, and source is recorded for each requirement. What are these called?",
+            "options": [
+                "Acceptance criteria",
+                "Business rules",
+                "Assumptions",
+                "Requirement attributes"
+            ],
+            "correct_index": 3,
+            "explanation": "Owner, priority, status, and source are requirement attributes used for management. Acceptance criteria define satisfaction, while business rules and assumptions are different concepts.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-113",
+            "domain": "Analysis",
+            "stem": "A project assumes that the vendor's API will remain stable, and it must also use an older database version. Which term applies to each?",
+            "options": [
+                "The stable API is an assumption and the database version is a constraint",
+                "Both are constraints",
+                "Both are assumptions",
+                "Both are benefits"
+            ],
+            "correct_index": 0,
+            "explanation": "A belief that must hold true is an assumption, while a fixed limitation is a constraint. Calling both the same ignores the difference between what is presumed and what is imposed.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-114",
+            "domain": "Analysis",
+            "stem": "A requirement cannot be implemented unless another requirement is delivered first. What is this relationship called?",
+            "options": [
+                "An out-of-scope requirement",
+                "A dependency between requirements",
+                "A conflict between requirements",
+                "A duplicate requirement"
+            ],
+            "correct_index": 1,
+            "explanation": "A sequential prerequisite relationship is a dependency. Conflict, duplication, and out-of-scope describe other relationships and are not the same as one requirement depending on another.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-115",
+            "domain": "Analysis",
+            "stem": "Several solution options must be compared against weighted criteria such as cost, risk, and fit. Which technique is appropriate?",
+            "options": [
+                "A burn-down chart",
+                "A control chart",
+                "A decision matrix or weighted scoring model",
+                "A fishbone diagram"
+            ],
+            "correct_index": 2,
+            "explanation": "A weighted decision matrix compares options against criteria transparently. Fishbone, burn-down, and control charts analyze causes, progress, and process stability rather than option selection.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-116",
+            "domain": "Analysis",
+            "stem": "The business analyst compares the requirements to what the proposed solution will actually deliver. What is being analyzed?",
+            "options": [
+                "The project's cost variance",
+                "The team's velocity",
+                "The number of defects",
+                "The gap between required capabilities and the proposed solution"
+            ],
+            "correct_index": 3,
+            "explanation": "Comparing requirements to what a solution delivers reveals the capability gap. Cost variance, velocity, and defect counts measure project performance rather than solution-requirement fit.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-117",
+            "domain": "Analysis",
+            "stem": "Leadership wants to choose among build, buy, and reuse options for a capability. What should the business analyst perform?",
+            "options": [
+                "A solution options analysis comparing each alternative's costs, benefits, and risks",
+                "A network design review",
+                "A staffing plan",
+                "A test strategy"
+            ],
+            "correct_index": 0,
+            "explanation": "Build, buy, and reuse alternatives are weighed in a solution options analysis. Network design, staffing, and test strategy each address a subset rather than the comparison itself.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-118",
+            "domain": "Analysis",
+            "stem": "A complex set of requirements must be broken into smaller, manageable pieces. Which approach is used?",
+            "options": [
+                "Random assignment of requirements",
+                "Decomposition of requirements into smaller deliverable components",
+                "Consolidation of all requirements into one item",
+                "Elimination of all but one requirement"
+            ],
+            "correct_index": 1,
+            "explanation": "Decomposition breaks complex requirements into manageable, deliverable pieces. Consolidation, elimination, and random assignment do not reduce complexity in a controlled way.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-119",
+            "domain": "Analysis",
+            "stem": "An interview reveals that users need a report that currently does not exist. Which step converts this into an analyzable requirement?",
+            "options": [
+                "Ignore the need until testing",
+                "Ask the user to write the code",
+                "Derive, document, and analyze candidate requirements from the elicited information",
+                "Send the interview notes straight to developers as final specification"
+            ],
+            "correct_index": 2,
+            "explanation": "Elicited information is converted into candidate requirements through derivation, documentation, and analysis. Raw notes, neglect, or asking users to code do not produce analyzed requirements.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-120",
+            "domain": "Analysis",
+            "stem": "The business analyst documents the current process and the desired process side by side. What is this analysis called?",
+            "options": [
+                "Cost-benefit analysis",
+                "Data migration",
+                "Risk analysis",
+                "As-is and to-be process modeling"
+            ],
+            "correct_index": 3,
+            "explanation": "Comparing the current and desired process is as-is and to-be modeling. Cost-benefit, data migration, and risk analysis are separate activities that do not compare process states.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-121",
+            "domain": "Analysis",
+            "stem": "A requirement from a previous project is almost identical to a current need. What should the business analyst do?",
+            "options": [
+                "Evaluate whether the existing requirement can be reused and adapted with stakeholder agreement",
+                "Copy it blindly without review",
+                "Reject it because it is old",
+                "Create a duplicate from scratch"
+            ],
+            "correct_index": 0,
+            "explanation": "Existing requirements may be reused after evaluation and stakeholder agreement. Blind copying, age-based rejection, and needless duplication ignore the potential for efficient reuse.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-122",
+            "domain": "Analysis",
+            "stem": "Requirements must be organized for stakeholder review and approval. What should the business analyst produce?",
+            "options": [
+                "A financial statement",
+                "A structured requirements package such as a requirements document or backlog",
+                "A resource-loaded schedule",
+                "A test log"
+            ],
+            "correct_index": 1,
+            "explanation": "Organizing requirements for review means producing a structured requirements package or backlog. Schedules, test logs, and financial statements do not present requirements for approval.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-123",
+            "domain": "Analysis",
+            "stem": "Who should approve the analyzed and documented requirements?",
+            "options": [
+                "The tester who will verify them",
+                "The infrastructure team",
+                "The authorized business stakeholders who own the need",
+                "The business analyst alone"
+            ],
+            "correct_index": 2,
+            "explanation": "Requirements are approved by the authorized business stakeholders who own the need. Analysts alone, testers, and infrastructure teams contribute but do not hold approval authority for business needs.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-124",
+            "domain": "Analysis",
+            "stem": "Two stakeholders disagree on the priority of a requirement. What should the business analyst do?",
+            "options": [
+                "Let the highest-paid stakeholder decide",
+                "Average the two priorities numerically",
+                "Defer the decision indefinitely",
+                "Facilitate a decision based on value, risk, and strategic alignment"
+            ],
+            "correct_index": 3,
+            "explanation": "Prioritization disputes are resolved by reference to value, risk, and strategy. Pay, numeric averaging, and indefinite deferral are arbitrary and do not reflect business merit.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-125",
+            "domain": "Analysis",
+            "stem": "A requirement conflicts with a regulatory constraint. What should the business analyst do?",
+            "options": [
+                "Highlight the conflict and treat compliance as a non-negotiable constraint",
+                "Ignore the regulation",
+                "Document the requirement as approved anyway",
+                "Remove all compliance requirements"
+            ],
+            "correct_index": 0,
+            "explanation": "Regulatory requirements are non-negotiable, so conflicts must be surfaced and resolved in favor of compliance. Ignoring the rule, approving the conflict, or deleting controls creates legal exposure.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-126",
+            "domain": "Analysis",
+            "stem": "A high-priority requirement has high technical risk. How should this be handled in prioritization?",
+            "options": [
+                "Escalate the decision to the vendor",
+                "Balance value against technical risk and plan mitigation or sequencing accordingly",
+                "Ignore risk and prioritize purely by value",
+                "Discard the requirement entirely"
+            ],
+            "correct_index": 1,
+            "explanation": "High-value requirements with high risk need a balance of value against risk plus mitigation planning. Ignoring risk, discarding the requirement, or outsourcing the decision harms value delivery.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-127",
+            "domain": "Analysis",
+            "stem": "An agile team regularly revisits and refines the backlog. What is the purpose of backlog refinement?",
+            "options": [
+                "To replace testing",
+                "To eliminate stakeholder input",
+                "To continuously analyze, clarify, and re-prioritize requirements as understanding grows",
+                "To freeze the backlog permanently"
+            ],
+            "correct_index": 2,
+            "explanation": "Refinement continuously analyzes, clarifies, and re-prioritizes items as understanding grows. Freezing the backlog, replacing testing, and removing stakeholder input defeat the purpose of ongoing refinement.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-128",
+            "domain": "Analysis",
+            "stem": "A requirement is written in the form of a role, a goal, and a benefit. What is this format called?",
+            "options": [
+                "A business rule",
+                "A constraint",
+                "A use case scenario",
+                "A user story capturing role, goal, and benefit"
+            ],
+            "correct_index": 3,
+            "explanation": "The role, goal, and benefit format is a user story. A business rule, constraint, or use case scenario has a different structure and purpose in requirements documentation.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-129",
+            "domain": "Analysis",
+            "stem": "A user story should be independent, negotiable, valuable, estimable, small, and testable. What is this set of criteria called?",
+            "options": [
+                "The INVEST criteria for good user stories",
+                "The RACI model",
+                "The MoSCoW method",
+                "The SMART goals framework"
+            ],
+            "correct_index": 0,
+            "explanation": "The set of independent, negotiable, valuable, estimable, small, and testable criteria is INVEST. RACI, MoSCoW, and SMART describe roles, prioritization, and goal setting respectively.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-130",
+            "domain": "Analysis",
+            "stem": "A large body of related user stories is grouped under a broader capability. What are these larger groupings called?",
+            "options": [
+                "Baselines and versions",
+                "Epics or themes that group related stories",
+                "Defects and incidents",
+                "Risks and issues"
+            ],
+            "correct_index": 1,
+            "explanation": "Related stories are grouped into epics or themes. Defects, risks, and baselines are different backlog and management items and do not describe a large capability grouping.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-131",
+            "domain": "Analysis",
+            "stem": "Requirements for how two systems exchange messages must be analyzed in detail. Which activity applies?",
+            "options": [
+                "Benefits realization",
+                "Resource leveling",
+                "Interface and integration requirements analysis",
+                "Stakeholder classification"
+            ],
+            "correct_index": 2,
+            "explanation": "System-to-system message exchange is analyzed as interface and integration requirements. Stakeholder classification, benefits realization, and resource leveling address other concerns.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-132",
+            "domain": "Analysis",
+            "stem": "Legacy data must be transferred to a new system with acceptable quality. Which requirements domain applies?",
+            "options": [
+                "User interface styling requirements",
+                "Facilities requirements",
+                "Marketing requirements",
+                "Data migration or data conversion requirements"
+            ],
+            "correct_index": 3,
+            "explanation": "Transferring legacy data is a data migration or conversion concern. Interface styling, facilities, and marketing requirements do not describe how data is moved and validated.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-133",
+            "domain": "Analysis",
+            "stem": "The solution must protect personal data and control access. Which class of requirements applies?",
+            "options": [
+                "Security and privacy requirements",
+                "Performance requirements",
+                "Usability requirements",
+                "Portability requirements"
+            ],
+            "correct_index": 0,
+            "explanation": "Data protection and access control are security and privacy requirements. Performance, usability, and portability describe speed, ease of use, and environment flexibility instead.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-134",
+            "domain": "Analysis",
+            "stem": "New legislation mandates certain controls in the solution. How should this be handled in analysis?",
+            "options": [
+                "Assume the vendor will handle it automatically",
+                "Translate the regulation into verifiable compliance requirements with traceability",
+                "Treat it as an optional nice-to-have",
+                "Ignore it until audit time"
+            ],
+            "correct_index": 1,
+            "explanation": "Regulation is translated into verifiable, traceable compliance requirements. Treating it as optional, deferring to audit, or assuming vendor coverage risks non-compliance and penalties.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-135",
+            "domain": "Analysis",
+            "stem": "During analysis, the business analyst identifies requirements that may not be achievable. What should be done?",
+            "options": [
+                "Delete them silently",
+                "Blame the stakeholders",
+                "Assess feasibility with the team and stakeholders and adjust, defer, or document the risk",
+                "Approve them anyway and hope for the best"
+            ],
+            "correct_index": 2,
+            "explanation": "Infeasible requirements are assessed with the team and stakeholders, then adjusted, deferred, or recorded as risk. Approving on hope, silent deletion, and blame hide rather than manage the issue.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-136",
+            "domain": "Analysis",
+            "stem": "A requirement delivers high value but is expensive. How should the business analyst advise the sponsor?",
+            "options": [
+                "Decide unilaterally to drop it",
+                "Hide the cost to gain approval",
+                "Implement it without any discussion",
+                "Present the value, cost, and trade-offs so the sponsor can make an informed decision"
+            ],
+            "correct_index": 3,
+            "explanation": "The analyst presents value, cost, and trade-offs so the sponsor decides with full information. Unilateral dropping, hiding costs, and proceeding without discussion remove informed decision making.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-137",
+            "domain": "Analysis",
+            "stem": "The business analyst must show how each requirement contributes to business objectives. What should be documented?",
+            "options": [
+                "The linkage from each requirement to the objectives and value it supports",
+                "The requirement's font style",
+                "The developer assigned to it",
+                "The test environment name"
+            ],
+            "correct_index": 0,
+            "explanation": "Documenting how requirements link to objectives and value demonstrates contribution. Styling, assignee, and environment names are irrelevant to showing business value alignment.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-138",
+            "domain": "Analysis",
+            "stem": "A scoring model is used to prioritize requirements by value, cost, and risk. What does this produce?",
+            "options": [
+                "A replacement for stakeholder input",
+                "A transparent, repeatable ranking to guide decisions",
+                "An exact prediction of project success",
+                "A guarantee that no changes will occur"
+            ],
+            "correct_index": 1,
+            "explanation": "A scoring model produces a transparent and repeatable ranking. It cannot promise success or freeze change and does not replace the judgment and input of stakeholders.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-139",
+            "domain": "Analysis",
+            "stem": "Requirements are reviewed together by peers to find defects early. What is this practice?",
+            "options": [
+                "A network scan",
+                "A budget audit",
+                "A formal requirements review or inspection",
+                "A post-implementation review"
+            ],
+            "correct_index": 2,
+            "explanation": "Peer examination of requirements to find defects early is a formal review or inspection. Post-implementation reviews, network scans, and budget audits occur for different reasons and times.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-140",
+            "domain": "Analysis",
+            "stem": "Ambiguous requirements survived review. What is the MOST effective way to resolve them?",
+            "options": [
+                "Let developers interpret them as they wish",
+                "Add more ambiguous detail",
+                "Remove all explanatory information",
+                "Meet with the source stakeholders to clarify intent and rewrite the requirement precisely"
+            ],
+            "correct_index": 3,
+            "explanation": "Ambiguity is resolved with the source stakeholders so intent is clarified and rewritten precisely. Developer guesswork, added vagueness, and removing context leave the ambiguity in place.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-141",
+            "domain": "Analysis",
+            "stem": "Requirements change frequently during the project. How should these changes be managed?",
+            "options": [
+                "Through version control and a defined change control process",
+                "By overwriting the original requirements without record",
+                "By ignoring the changes",
+                "By freezing all change permanently"
+            ],
+            "correct_index": 0,
+            "explanation": "Frequent change is managed with version control and a defined change control process. Overwriting without record, ignoring change, and permanent freezing all lose control or block necessary evolution.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-142",
+            "domain": "Analysis",
+            "stem": "Developers and testers need to understand the requirements clearly. What should the business analyst ensure?",
+            "options": [
+                "That requirements are written after development",
+                "That requirements are communicated in a form both groups can use to design and test",
+                "That requirements are kept secret until delivery",
+                "That only the business analyst reads them"
+            ],
+            "correct_index": 1,
+            "explanation": "Requirements must reach developers and testers in a usable form so they can design and verify. Secrecy, analyst-only access, and post-development documentation prevent that essential communication.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-143",
+            "domain": "Analysis",
+            "stem": "A requirement is technically elegant but delivers no measurable business value. What should the business analyst do?",
+            "options": [
+                "Add it to increase scope",
+                "Prioritize it above all others",
+                "Challenge the requirement and confirm whether it supports a real business need",
+                "Approve it because it is technically sound"
+            ],
+            "correct_index": 2,
+            "explanation": "Requirements must trace to real business value, so a technically elegant item with no value should be challenged. Approving it, adding scope, or over-prioritizing it wastes effort on low-value work.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-144",
+            "domain": "Analysis",
+            "stem": "The business analyst must ensure requirements remain aligned with the business case as changes occur. What is the BEST practice?",
+            "options": [
+                "Assume alignment never changes",
+                "Review alignment only at project closure",
+                "Delegate alignment checking to the vendor",
+                "Continuously trace and reassess requirements against objectives and value"
+            ],
+            "correct_index": 3,
+            "explanation": "Alignment is maintained by continuously tracing and reassessing requirements against objectives and value. Assumed alignment, closure-only review, and vendor delegation let drift go unnoticed.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-145",
+            "domain": "Analysis",
+            "stem": "A set of requirements is complete and consistent, and stakeholders have agreed. What is the NEXT logical step?",
+            "options": [
+                "Baseline the requirements and support solution design and delivery",
+                "Immediately declare the project complete",
+                "Stop documenting and disband the team",
+                "Delete the traceability matrix"
+            ],
+            "correct_index": 0,
+            "explanation": "Once agreed, requirements are baselined and used to support design and delivery. Declaring completion, disbanding, or deleting traceability skips design, build, and verification work.",
+            "reference": "PMI-PBA Exam Content Outline - Analysis"
+        },
+        {
+            "id": "pmi-pba-146",
+            "domain": "Solution Evaluation",
+            "stem": "Before a solution is released, measures of success should already exist. What should the business analyst define?",
+            "options": [
+                "The office seating plan",
+                "Performance measures and key indicators tied to the business objectives",
+                "The software license cost",
+                "The developers' names"
+            ],
+            "correct_index": 1,
+            "explanation": "Success measures and key indicators linked to objectives must be defined before release. Licensing, staffing names, and facilities do not measure whether the solution achieves its purpose.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-147",
+            "domain": "Solution Evaluation",
+            "stem": "A solution has been deployed. What is the purpose of solution evaluation?",
+            "options": [
+                "To reassign the project team",
+                "To recreate the business case from scratch",
+                "To assess how well the solution meets business needs and delivers expected value",
+                "To rewrite the requirements"
+            ],
+            "correct_index": 2,
+            "explanation": "Solution evaluation assesses how well the deployed solution meets needs and delivers value. Rewriting requirements, reassigning staff, and rebuilding the business case are not the purpose of evaluation.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-148",
+            "domain": "Solution Evaluation",
+            "stem": "Executives want to know whether the solution achieved the benefits promised in the business case. What should the business analyst do?",
+            "options": [
+                "Assume the benefits were achieved",
+                "Compare only the project budget",
+                "Ask the vendor for a certificate",
+                "Compare measured outcomes against the business case and report variances"
+            ],
+            "correct_index": 3,
+            "explanation": "Benefits are verified by comparing measured outcomes to the business case and reporting variances. Assumptions, budget-only comparison, and vendor certificates do not demonstrate realized benefits.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-149",
+            "domain": "Solution Evaluation",
+            "stem": "Benefits are realized only if they are actually measured and used. What does benefits realization management focus on?",
+            "options": [
+                "Ensuring the intended benefits are achieved and tracked after delivery",
+                "Counting the number of features built",
+                "Reducing the project headcount",
+                "Extending the schedule"
+            ],
+            "correct_index": 0,
+            "explanation": "Benefits realization management ensures intended benefits are achieved and tracked after delivery. Feature counts, headcount, and schedule length do not confirm value is realized in operations.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-150",
+            "domain": "Solution Evaluation",
+            "stem": "A solution is tested against the conditions required for acceptance. What are these conditions derived from?",
+            "options": [
+                "The project's meeting minutes",
+                "The agreed acceptance criteria and requirements",
+                "The vendor's marketing claims",
+                "The developer's preferences"
+            ],
+            "correct_index": 1,
+            "explanation": "Acceptance conditions are derived from agreed acceptance criteria and requirements. Marketing claims, developer preferences, and meeting minutes are not authoritative sources for acceptance.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-151",
+            "domain": "Solution Evaluation",
+            "stem": "Users report that a new system is slow and frustrating even though it meets the written requirements. What should the business analyst do FIRST?",
+            "options": [
+                "Immediately rebuild the system",
+                "Close the project as successful",
+                "Investigate the root cause of the performance gap before recommending action",
+                "Blame the users for not adapting"
+            ],
+            "correct_index": 2,
+            "explanation": "Evaluation should first investigate the root cause of the performance gap. Blaming users, rebuilding without diagnosis, and declaring success ignore the evidence and risk the wrong response.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-152",
+            "domain": "Solution Evaluation",
+            "stem": "Evaluation shows that a solution is underperforming. What should the business analyst recommend?",
+            "options": [
+                "Do nothing and wait",
+                "Abandon the solution without analysis",
+                "Ignore the data",
+                "Corrective actions based on evidence, with an assessment of options and impacts"
+            ],
+            "correct_index": 3,
+            "explanation": "Evidence-based corrective actions with assessed options and impacts are recommended. Inaction, abandonment without analysis, and ignoring data all prevent the organization from recovering value.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-153",
+            "domain": "Solution Evaluation",
+            "stem": "A solution reaches the end of its useful life and no longer provides value. What should the business analyst recommend?",
+            "options": [
+                "Assess options to enhance, replace, or retire the solution based on value",
+                "Continue using it regardless of value",
+                "Increase its cost without analysis",
+                "Hide the decline from stakeholders"
+            ],
+            "correct_index": 0,
+            "explanation": "When value declines, the analyst assesses options to enhance, replace, or retire the solution. Continuing regardless, raising costs, or concealing decline wastes resources and misleads stakeholders.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-154",
+            "domain": "Solution Evaluation",
+            "stem": "After a solution is delivered, what is the purpose of a lessons-learned activity?",
+            "options": [
+                "To justify more budget",
+                "To capture what worked and what did not so future efforts improve",
+                "To assign blame for failures",
+                "To extend the project timeline"
+            ],
+            "correct_index": 1,
+            "explanation": "Lessons learned capture successes and problems to improve future work. Blame, timeline extension, and budget justification are not the intent and undermine honest reflection.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-155",
+            "domain": "Solution Evaluation",
+            "stem": "A post-implementation review is conducted months after go-live. What does it typically assess?",
+            "options": [
+                "The vendor's stock price",
+                "The team's holiday schedule",
+                "Whether the solution delivered the expected benefits and how it is performing in operation",
+                "The accuracy of the original timesheets"
+            ],
+            "correct_index": 2,
+            "explanation": "A post-implementation review assesses benefit delivery and operational performance. Timesheets, vendor stock, and holiday schedules are unrelated to whether the solution achieved its intended outcomes.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-156",
+            "domain": "Solution Evaluation",
+            "stem": "End users formally verify that the solution meets their needs before go-live. What is this activity?",
+            "options": [
+                "Unit testing by developers",
+                "Code review",
+                "Load testing by operations",
+                "User acceptance testing and sign-off"
+            ],
+            "correct_index": 3,
+            "explanation": "End users formally verifying that their needs are met is user acceptance testing and sign-off. Unit tests, code reviews, and load tests are technical checks performed by the delivery team.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-157",
+            "domain": "Solution Evaluation",
+            "stem": "Leadership must decide whether to proceed to full deployment after a pilot. What decision is being made?",
+            "options": [
+                "A go or no-go decision based on evaluation evidence",
+                "A budget reforecast only",
+                "A staffing decision",
+                "A marketing decision"
+            ],
+            "correct_index": 0,
+            "explanation": "Deciding to proceed after a pilot is a go or no-go decision grounded in evaluation evidence. Budget, staffing, and marketing decisions may follow but do not define the deployment gate.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-158",
+            "domain": "Solution Evaluation",
+            "stem": "A new solution must move from the project team to the operations group. What must be ensured?",
+            "options": [
+                "That the project team keeps all knowledge",
+                "A structured transition including training, documentation, and support handover",
+                "An abrupt cutoff with no knowledge transfer",
+                "That operations is not informed"
+            ],
+            "correct_index": 1,
+            "explanation": "Transition requires structured training, documentation, and support handover. Abrupt cutoff, uninformed operations, and hoarded knowledge cause service failures once the project team leaves.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-159",
+            "domain": "Solution Evaluation",
+            "stem": "Evaluation shows low usage even though the solution works technically. What should the business analyst investigate?",
+            "options": [
+                "The developer's commute",
+                "The color of the corporate logo",
+                "Adoption barriers such as training, usability, communication, or resistance",
+                "The server room temperature"
+            ],
+            "correct_index": 2,
+            "explanation": "Low usage despite technical function points to adoption barriers like training, usability, communication, or resistance. Environmental, personal, and cosmetic factors do not explain user adoption.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-160",
+            "domain": "Solution Evaluation",
+            "stem": "After delivery, the business analyst meets stakeholders to confirm that needs were satisfied. What is being confirmed?",
+            "options": [
+                "That the budget was fully spent",
+                "That no changes occurred",
+                "That the team is disbanded",
+                "That the solution validated against the original business needs and expectations"
+            ],
+            "correct_index": 3,
+            "explanation": "Confirming with stakeholders validates that the solution satisfies the original needs and expectations. Spending the budget, avoiding change, and disbanding the team are not measures of need satisfaction.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-161",
+            "domain": "Solution Evaluation",
+            "stem": "A solution improves one metric but harms another. What should the business analyst assess?",
+            "options": [
+                "Unintended consequences and net impact across affected areas",
+                "Only the improved metric",
+                "Only the cost of the solution",
+                "The vendor's satisfaction"
+            ],
+            "correct_index": 0,
+            "explanation": "Evaluation must weigh unintended consequences and net impact across areas. Looking only at the improved metric, cost, or vendor satisfaction hides the harm and distorts the true effect.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-162",
+            "domain": "Solution Evaluation",
+            "stem": "To evaluate a solution fairly, performance should be compared against what?",
+            "options": [
+                "A single anecdote from one user",
+                "An agreed baseline and target measures established before or at delivery",
+                "The business analyst's intuition",
+                "The largest number reported anywhere"
+            ],
+            "correct_index": 1,
+            "explanation": "Fair evaluation compares performance to an agreed baseline and target measures. Intuition, the largest available number, and single anecdotes are not valid or comparable benchmarks.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-163",
+            "domain": "Solution Evaluation",
+            "stem": "What should guide the collection of data for solution evaluation?",
+            "options": [
+                "Only data that supports a favorable conclusion",
+                "A single informal conversation",
+                "Defined measures, reliable data sources, and a consistent collection method",
+                "Whatever data is easiest to find"
+            ],
+            "correct_index": 2,
+            "explanation": "Evaluation data should come from defined measures, reliable sources, and a consistent method. Convenience sampling, selective favorable data, and informal conversations produce biased conclusions.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-164",
+            "domain": "Solution Evaluation",
+            "stem": "Why does the timing of solution evaluation matter?",
+            "options": [
+                "Evaluation should happen only once, immediately at go-live",
+                "Timing never affects results",
+                "Evaluation should always be postponed indefinitely",
+                "Benefits and performance may emerge over time, so evaluation should occur at appropriate intervals"
+            ],
+            "correct_index": 3,
+            "explanation": "Benefits often emerge over time, so evaluation is scheduled at appropriate intervals. One-time immediate review, ignoring timing, and indefinite postponement all miss the point of when value appears.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-165",
+            "domain": "Solution Evaluation",
+            "stem": "Several candidate solutions were evaluated and one was selected. What should be documented about the others?",
+            "options": [
+                "The rationale for why they were not selected and the trade-offs considered",
+                "Nothing, because alternatives are irrelevant",
+                "Only their marketing materials",
+                "A guarantee they will never be reconsidered"
+            ],
+            "correct_index": 0,
+            "explanation": "Documenting why alternatives were not selected and the trade-offs preserves the decision rationale. Recording nothing, using marketing only, or foreclosing reconsideration reduces decision transparency.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-166",
+            "domain": "Solution Evaluation",
+            "stem": "The business analyst compares value delivered to value planned. What is being measured?",
+            "options": [
+                "The cost of training materials",
+                "The gap between expected and actual benefits of the solution",
+                "The number of meetings held",
+                "The team's velocity"
+            ],
+            "correct_index": 1,
+            "explanation": "Comparing delivered to planned value measures the benefits gap. Meeting counts, velocity, and training costs do not indicate whether the solution delivered the value that was expected.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-167",
+            "domain": "Solution Evaluation",
+            "stem": "Stakeholder satisfaction with a delivered solution needs to be gauged. Which approach is appropriate?",
+            "options": [
+                "Counting only positive comments",
+                "Waiting for complaints",
+                "Structured surveys or interviews against defined satisfaction measures",
+                "Ignoring feedback and assuming satisfaction"
+            ],
+            "correct_index": 2,
+            "explanation": "Structured surveys or interviews against defined measures gauge satisfaction reliably. Assumption, counting only positives, and waiting for complaints produce a skewed or absent picture.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-168",
+            "domain": "Solution Evaluation",
+            "stem": "Operations data such as uptime, response time, and error rate is reviewed after deployment. What is being assessed?",
+            "options": [
+                "The project's staffing plan",
+                "The marketing strategy",
+                "The organizational chart",
+                "The operational performance of the solution against its targets"
+            ],
+            "correct_index": 3,
+            "explanation": "Uptime, response time, and error rate assess operational performance against targets. Staffing plans, marketing strategy, and org charts are unrelated to runtime solution performance.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-169",
+            "domain": "Solution Evaluation",
+            "stem": "Evaluation identifies opportunities to improve a solution incrementally. What should the business analyst recommend?",
+            "options": [
+                "A continuous improvement plan with prioritized, measurable enhancements",
+                "A complete rebuild every time",
+                "No further action ever",
+                "Removing the measurement system"
+            ],
+            "correct_index": 0,
+            "explanation": "Incremental improvement is captured in a continuous improvement plan with prioritized, measurable enhancements. Perpetual rebuilds, permanent inaction, and removing measurement waste or block improvement.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-170",
+            "domain": "Solution Evaluation",
+            "stem": "What should happen to the results of a solution evaluation?",
+            "options": [
+                "They should be used only to assign blame",
+                "They should be documented and communicated to stakeholders to support decisions",
+                "They should be discarded after the meeting",
+                "They should be kept secret from the sponsor"
+            ],
+            "correct_index": 1,
+            "explanation": "Evaluation results are documented and communicated so stakeholders can make informed decisions. Discarding, concealing, and using results for blame prevent the findings from creating value.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-171",
+            "domain": "Solution Evaluation",
+            "stem": "Stakeholders feel the new solution does not match what they expected. What should the business analyst do?",
+            "options": [
+                "Ignore the feedback",
+                "Immediately terminate the project",
+                "Gather structured feedback, compare it to requirements and expectations, and recommend action",
+                "Tell stakeholders their expectations were wrong"
+            ],
+            "correct_index": 2,
+            "explanation": "The analyst gathers structured feedback and compares it to requirements and expectations before recommending action. Dismissing, ignoring, or terminating without analysis are premature or unhelpful responses.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-172",
+            "domain": "Solution Evaluation",
+            "stem": "A review reveals that expected benefits were never tracked. What should the business analyst recommend?",
+            "options": [
+                "Assume the benefits were achieved anyway",
+                "Write off the project as a loss without evidence",
+                "Remove the benefits from the business case",
+                "Establish benefit measures and assign ownership so value can be confirmed"
+            ],
+            "correct_index": 3,
+            "explanation": "Untracked benefits require establishing measures and assigning ownership so value can be confirmed. Assuming success, unjustified write-off, and deleting benefits from the case hide the truth.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-173",
+            "domain": "Solution Evaluation",
+            "stem": "The business analyst must present evaluation findings to the sponsor with a recommendation. What makes the recommendation credible?",
+            "options": [
+                "Evidence from measured data and a clear link to business objectives",
+                "A confident tone without data",
+                "The support of the loudest stakeholder",
+                "A promise of future success"
+            ],
+            "correct_index": 0,
+            "explanation": "Credible recommendations rest on measured evidence linked to business objectives. Confident tone, loudest-voice support, and future promises are not substitutes for data-driven analysis.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-174",
+            "domain": "Solution Evaluation",
+            "stem": "Who should own the continued realization of benefits after the project closes?",
+            "options": [
+                "The project's tester",
+                "The business owner or benefits owner accountable for the outcome",
+                "The business analyst permanently",
+                "The software vendor"
+            ],
+            "correct_index": 1,
+            "explanation": "The business or benefits owner remains accountable for realizing value after closure. Analysts, vendors, and testers have defined roles but do not own the ongoing benefits outcome.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        },
+        {
+            "id": "pmi-pba-175",
+            "domain": "Solution Evaluation",
+            "stem": "A solution meets its functional requirements but no longer supports the organization's strategy. What should the business analyst conclude?",
+            "options": [
+                "Strategy should be changed to match the solution",
+                "No action is ever needed",
+                "The solution may need to be enhanced, replaced, or retired to stay aligned with strategy",
+                "The solution is perfect because requirements were met"
+            ],
+            "correct_index": 2,
+            "explanation": "A solution must continue to support strategy, so declining alignment calls for enhancement, replacement, or retirement. Meeting requirements, changing strategy to fit, and taking no action ignore strategic value.",
+            "reference": "PMI-PBA Exam Content Outline - Solution Evaluation"
+        }
+    ]
+}

@@ -635,6 +635,55 @@ class AuthoredBundleSeederTest extends TestCase
                 'SAFe Lean-Agile Framework' => 15,
                 'Roles and Responsibilities' => 12,
             ]],
+            'prince2-f' => ['prince2-f', 60, [
+                'PRINCE2 Principles' => 8,
+                'PRINCE2 Themes' => 22,
+                'PRINCE2 Processes' => 24,
+                'Tailoring and the PRINCE2 Environment' => 6,
+            ]],
+            'prince2-p' => ['prince2-p', 68, [
+                'Applying PRINCE2 Principles' => 10,
+                'Applying PRINCE2 Themes' => 24,
+                'Applying PRINCE2 Processes' => 30,
+                'Tailoring PRINCE2 to a Project Environment' => 4,
+            ]],
+            'cbap' => ['cbap', 120, [
+                'Business Analysis Planning and Monitoring' => 15,
+                'Elicitation and Collaboration' => 15,
+                'Requirements Life Cycle Management' => 15,
+                'Strategy Analysis' => 20,
+                'Requirements Analysis and Design Definition' => 29,
+                'Solution Evaluation' => 11,
+                'Techniques and Underlying Competencies' => 15,
+            ]],
+            'pmi-pba' => ['pmi-pba', 175, [
+                'Needs Assessment' => 30,
+                'Stakeholder Engagement' => 25,
+                'Elicitation' => 35,
+                'Analysis' => 55,
+                'Solution Evaluation' => 30,
+            ]],
+            'sixsigma-yb' => ['sixsigma-yb', 60, [
+                'Define' => 15,
+                'Measure' => 15,
+                'Analyze' => 12,
+                'Improve' => 10,
+                'Control' => 8,
+            ]],
+            'sixsigma-gb' => ['sixsigma-gb', 100, [
+                'Define' => 20,
+                'Measure' => 25,
+                'Analyze' => 22,
+                'Improve' => 18,
+                'Control' => 15,
+            ]],
+            'sixsigma-bb' => ['sixsigma-bb', 125, [
+                'Define' => 22,
+                'Measure' => 28,
+                'Analyze' => 30,
+                'Improve' => 25,
+                'Control' => 20,
+            ]],
         ];
     }
 
