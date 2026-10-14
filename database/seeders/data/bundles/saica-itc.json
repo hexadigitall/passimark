@@ -1,0 +1,858 @@
+{
+    "cert_key": "saica-itc",
+    "title": "SAICA ITC South Africa",
+    "issuer": "South African Institute of Chartered Accountants",
+    "region": "AFRICA",
+    "outline_file": "outlines/saica-itc.json",
+    "variant_label": "SAICA ITC Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 180,
+        "scoring": "50% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public SAICA ITC syllabus. Not a capture of past exam questions.",
+    "source_label": "SAICA ITC practice bank",
+    "items": [
+        {
+            "id": "saica-itc-001",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A manufacturer buys a machine for R800,000, pays R40,000 for delivery and R30,000 for installation, and spends R25,000 training operators to use it. Under IAS 16, which amount should be capitalised as the cost of the machine?",
+            "options": [
+                "R870,000, being the purchase price, delivery and installation",
+                "R895,000, being the purchase price, delivery, installation and training",
+                "R800,000, being the purchase price only",
+                "R840,000, being the purchase price and delivery only"
+            ],
+            "correct_index": 0,
+            "explanation": "IAS 16 capitalises the purchase price plus directly attributable costs of bringing the asset to the location and condition for its intended use, so delivery and installation of R70,000 are added. Training does not qualify and is expensed, giving R870,000.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-002",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A construction company enters a contract to build a bridge over three years and controls the work in progress as it is performed. Under IFRS 15, on what basis should revenue be recognised?",
+            "options": [
+                "Only when the bridge is complete and handed over to the customer",
+                "Over time, measured by progress towards complete satisfaction of the performance obligation",
+                "When the contract is signed and the price is agreed",
+                "When the customer makes the final payment"
+            ],
+            "correct_index": 1,
+            "explanation": "Where the customer controls the asset as it is created, the performance obligation is satisfied over time and revenue is recognised by measuring progress. Waiting for completion would misstate each period.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-003",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company bundles equipment with a two-year maintenance service and charges a single price of R560,000. The equipment sells alone for R500,000 and the service alone for R100,000. Under IFRS 15, which amount is allocated to the equipment?",
+            "options": [
+                "R500,000, being the standalone selling price of the equipment",
+                "R560,000, being the entire transaction price",
+                "R466,667, being the standalone price proportion of the transaction price",
+                "R93,333, being the residual after the service"
+            ],
+            "correct_index": 2,
+            "explanation": "The transaction price is allocated on relative standalone selling prices. Equipment is 500,000 over the 600,000 total, so it receives 500,000 divided by 600,000 times 560,000, which is R466,667.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-004",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A retailer holds inventory that cost R120,000. Its estimated selling price is R150,000 and the costs still to be incurred to sell it are R35,000. Under IAS 2, which carrying amount should be reported?",
+            "options": [
+                "R120,000, being the original cost",
+                "R150,000, being the estimated selling price",
+                "R35,000, being the costs to sell",
+                "R115,000, being the net realisable value"
+            ],
+            "correct_index": 3,
+            "explanation": "Net realisable value is the estimated selling price less costs to complete and sell, so R150,000 minus R35,000 is R115,000. Inventory is measured at the lower of cost and net realisable value, so it is written down to R115,000.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-005",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "An item of plant has a carrying amount of R1,000,000. Its fair value less costs of disposal is R900,000 and its value in use is R950,000. Under IAS 36, which impairment loss should be recognised?",
+            "options": [
+                "R50,000, being the carrying amount less the recoverable amount",
+                "R100,000, being the carrying amount less fair value less costs of disposal",
+                "R0, because value in use exceeds fair value less costs of disposal",
+                "R150,000, being the drop from carrying amount to fair value"
+            ],
+            "correct_index": 0,
+            "explanation": "Recoverable amount is the higher of fair value less costs of disposal and value in use, so it is R950,000. The impairment loss is the carrying amount of R1,000,000 less R950,000, which is R50,000.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-006",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company faces a legal claim at year end. Legal advisers assess a 60 percent probability that the company will have to pay and reliably estimate the outflow at R500,000. Under IAS 37, how should this be treated?",
+            "options": [
+                "Recognise no provision because the outcome is uncertain",
+                "Recognise a provision of R500,000 and disclose it",
+                "Recognise a provision of R300,000, being the probability-weighted amount",
+                "Disclose a contingent liability without recognising a provision"
+            ],
+            "correct_index": 1,
+            "explanation": "A provision is recognised when there is a present obligation, an outflow is probable and the amount can be estimated reliably. All three are met, so R500,000 is provided rather than merely disclosed.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-007",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A lessee enters a five-year lease of office premises and recognises it under IFRS 16. Which amounts should the lessee recognise at the commencement date?",
+            "options": [
+                "Only a lease liability, with no asset",
+                "Nothing until the first lease payment is made",
+                "A right-of-use asset and a lease liability",
+                "A prepayment asset for the full lease term"
+            ],
+            "correct_index": 2,
+            "explanation": "IFRS 16 requires the lessee to recognise a right-of-use asset and a corresponding lease liability measured at the present value of future lease payments. Recognising nothing until payment would understate both sides of the balance sheet.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-008",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A machine costs R500,000, has an estimated residual value of R50,000 and a useful life of five years. Using the straight-line method, what is the annual depreciation charge?",
+            "options": [
+                "R100,000",
+                "R110,000",
+                "R50,000",
+                "R90,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Depreciable amount is cost less residual value, so R500,000 minus R50,000 is R450,000, spread over five years at R90,000 each. Ignoring the residual value would wrongly give R100,000.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-009",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "After the reporting date but before the financial statements are authorised for issue, a customer with a large receivable is placed in liquidation, and the customer's financial difficulty existed at the reporting date. Under IAS 10, how is this classified?",
+            "options": [
+                "An adjusting event, because it provides evidence of conditions existing at the reporting date",
+                "A non-adjusting event, because it occurred after the reporting date",
+                "An event that requires no disclosure",
+                "A prior period error that must be corrected"
+            ],
+            "correct_index": 0,
+            "explanation": "IAS 10 treats as adjusting any event that provides evidence of conditions that existed at the reporting date. The liquidation confirms the receivable was already impaired, so the financial statements are adjusted.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-010",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "An asset has a carrying amount of R600,000 and a tax base of R500,000. The corporate tax rate is 27 percent. Under IAS 12, what deferred tax balance arises?",
+            "options": [
+                "A deferred tax asset of R27,000",
+                "A deferred tax liability of R27,000",
+                "A deferred tax liability of R162,000",
+                "No deferred tax, because the difference is temporary"
+            ],
+            "correct_index": 1,
+            "explanation": "The taxable temporary difference is R100,000, being carrying amount less tax base. Multiplying by the 27 percent rate gives a deferred tax liability of R27,000, since future taxable profits will be higher.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-011",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A South African company holds a USD 10,000 monetary receivable. The exchange rate moved between the transaction date and the reporting date. Under IAS 21, how is the exchange difference treated?",
+            "options": [
+                "Added directly to the cost of the receivable",
+                "Recognised in other comprehensive income and never recycled",
+                "Recognised in profit or loss in the period in which it arises",
+                "Deferred until the receivable is settled"
+            ],
+            "correct_index": 2,
+            "explanation": "Monetary items are retranslated at the closing rate and the resulting exchange difference is recognised in profit or loss. Deferring it would misstate the reporting period in which the risk arose.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-012",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A bank applies IFRS 9 to its loan book. On initial recognition of a loan that has not had a significant increase in credit risk, which loss allowance is measured?",
+            "options": [
+                "A lifetime expected credit loss allowance",
+                "No allowance until a default occurs",
+                "An allowance equal to the full principal balance",
+                "A 12-month expected credit loss allowance"
+            ],
+            "correct_index": 3,
+            "explanation": "IFRS 9 requires a 12-month expected credit loss on assets whose credit risk has not increased significantly since initial recognition. Lifetime losses apply only after a significant increase in credit risk or default.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-013",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company buys new plant for cash during the year. In the statement of cash flows prepared under IAS 7, in which section is this presented?",
+            "options": [
+                "Investing activities",
+                "Operating activities",
+                "Financing activities",
+                "It is not presented because it is a cash transaction"
+            ],
+            "correct_index": 0,
+            "explanation": "Purchases of property, plant and equipment are investing activities because they relate to the acquisition of long-term assets. Operating activities concern revenue-producing activities and financing activities concern capital and borrowings.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-014",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company acquires a business for consideration of R1,000,000. The fair value of the identifiable net assets acquired is R850,000. Under IFRS 3, what goodwill arises?",
+            "options": [
+                "R1,000,000",
+                "R150,000",
+                "R850,000",
+                "R0, because the net assets are identifiable"
+            ],
+            "correct_index": 1,
+            "explanation": "Goodwill is consideration transferred less the fair value of identifiable net assets acquired, so R1,000,000 minus R850,000 is R150,000. Goodwill is an unidentifiable asset measured as a residual.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-015",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company reports profit attributable to ordinary shareholders of R2,000,000 and has 500,000 ordinary shares in issue throughout the year. Under IAS 33, what is the basic earnings per share?",
+            "options": [
+                "R0.40",
+                "R40.00",
+                "R4.00",
+                "R2.00"
+            ],
+            "correct_index": 2,
+            "explanation": "Basic earnings per share is profit attributable to ordinary shareholders divided by the weighted average number of ordinary shares, so R2,000,000 divided by 500,000 is R4.00.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-016",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "At the reporting date, management is aware of a material uncertainty that may cast significant doubt on the company's ability to continue as a going concern. Under IAS 1, what is required?",
+            "options": [
+                "Change the basis of preparation to a break-up basis immediately",
+                "Make no disclosure unless the entity has already ceased trading",
+                "Restate all prior-year figures on a liquidation basis",
+                "Disclose the material uncertainty so users can assess the going concern basis"
+            ],
+            "correct_index": 3,
+            "explanation": "IAS 1 requires disclosure of material uncertainties related to going concern when management is aware of them. Converting to a break-up basis is required only when the going concern assumption is no longer appropriate.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-017",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "Under the Companies Act 71 of 2008, a private company must be audited when its public interest score reaches a set level. Which factor increases a company's public interest score?",
+            "options": [
+                "The number of employees and the value of third-party liabilities",
+                "The number of directors only",
+                "The value of the company's share capital only",
+                "The age of the company since incorporation"
+            ],
+            "correct_index": 0,
+            "explanation": "The public interest score awards points for average number of employees, third-party liabilities, turnover and the number of members. Directors, share capital and age do not feature in the prescribed score.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-018",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "An investor holds 30 percent of the ordinary shares of another company and exercises significant influence. Under IAS 28, how is the investment subsequently measured?",
+            "options": [
+                "At fair value through profit or loss",
+                "Using the equity method, adjusting for the share of profit or loss",
+                "At cost less accumulated impairment only",
+                "By full consolidation of the investee"
+            ],
+            "correct_index": 1,
+            "explanation": "Significant influence triggers the equity method under IAS 28, under which the investment is adjusted for the investor's share of the associate's profit or loss. Full consolidation is reserved for control under IFRS 10.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-019",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "Under IFRS 10, a parent consolidates an investee. Which condition must be present for the parent to control the investee?",
+            "options": [
+                "Ownership of more than 50 percent of the voting shares in every case",
+                "A written management contract alone",
+                "Power over the investee, exposure to variable returns and the ability to use the power to affect those returns",
+                "The largest number of employees among the shareholders"
+            ],
+            "correct_index": 2,
+            "explanation": "IFRS 10 defines control as power over the investee, exposure to variable returns and the ability to use that power to affect the returns. A majority of votes is often sufficient but is not the only way to control.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-020",
+            "domain": "Financial Accounting and Reporting",
+            "stem": "A company holds a building to earn rentals and applies the fair value model to it under IAS 40. When the fair value rises during the year, where is the gain recognised?",
+            "options": [
+                "In other comprehensive income",
+                "Directly in retained earnings",
+                "Deferred until the property is sold",
+                "In profit or loss for the year"
+            ],
+            "correct_index": 3,
+            "explanation": "Under the IAS 40 fair value model, gains or losses from changes in fair value are recognised in profit or loss. Deferring the gain until sale would apply the cost model, which is a separate election.",
+            "reference": "SAICA ITC Syllabus - Financial Accounting and Reporting"
+        },
+        {
+            "id": "saica-itc-021",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor is engaged to express an opinion on financial statements. Under ISA 200, what level of assurance does an audit provide?",
+            "options": [
+                "Reasonable assurance that the financial statements are free from material misstatement",
+                "Absolute assurance that no misstatement of any size exists",
+                "Limited assurance sufficient for a review engagement",
+                "Assurance only over the accounting records, not the statements"
+            ],
+            "correct_index": 0,
+            "explanation": "ISA 200 states that an audit provides reasonable, not absolute, assurance, because of sampling, judgement and the inherent limitations of audit. Absolute assurance cannot be given.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-022",
+            "domain": "Audit and Assurance",
+            "stem": "In assessing the risk of material misstatement, an auditor identifies inherent risk. Under ISA 315, what does inherent risk represent?",
+            "options": [
+                "The risk that a control fails to prevent a misstatement",
+                "The susceptibility of an assertion to misstatement before consideration of any related controls",
+                "The risk that the auditor reaches the wrong conclusion",
+                "The risk that the client will not provide the records requested"
+            ],
+            "correct_index": 1,
+            "explanation": "ISA 315 defines inherent risk as the susceptibility of an assertion to a misstatement that could be material before considering any related controls. Control risk is the separate risk that controls fail to prevent or detect the misstatement.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-023",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor determines materiality for the audit of a manufacturer. Under ISA 320, what is materiality?",
+            "options": [
+                "Any error, however small, that the auditor discovers",
+                "The total value of the client's assets",
+                "An amount that could influence the economic decisions of users taken on the basis of the financial statements",
+                "A fixed percentage prescribed for all entities"
+            ],
+            "correct_index": 2,
+            "explanation": "ISA 320 describes materiality in terms of the amount that could influence users' economic decisions. It is a matter of professional judgement and varies with the entity, rather than being a fixed percentage.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-024",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor is gathering evidence about a bank balance and can choose among several sources. Under ISA 500, which evidence is generally the most reliable?",
+            "options": [
+                "An internally prepared bank reconciliation",
+                "An oral assurance given by the financial manager",
+                "A photocopy of a deposit slip held by the client",
+                "A confirmation received directly from the bank"
+            ],
+            "correct_index": 3,
+            "explanation": "ISA 500 ranks evidence obtained from independent external sources, and in documentary form, as more reliable. A direct bank confirmation is external and documentary, making it stronger than internal or oral evidence.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-025",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor sends a positive external confirmation to a customer but receives no reply. Under ISA 505, what should the auditor do?",
+            "options": [
+                "Perform alternative audit procedures to obtain relevant and reliable evidence",
+                "Treat the balance as correct without further work",
+                "Immediately issue a qualified opinion",
+                "Send the same confirmation repeatedly until a reply arrives"
+            ],
+            "correct_index": 0,
+            "explanation": "ISA 505 requires the auditor to investigate non-responses to positive confirmations by performing alternative procedures, such as examining subsequent cash receipts. Accepting the balance without work would leave the assertion untested.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-026",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor concludes that the financial statements give a true and fair view and contain no material misstatements. Under ISA 700, which opinion is expressed?",
+            "options": [
+                "A qualified opinion",
+                "An unmodified opinion",
+                "An adverse opinion",
+                "A disclaimer of opinion"
+            ],
+            "correct_index": 1,
+            "explanation": "When the financial statements are free from material misstatement, the auditor expresses an unmodified opinion. Qualified, adverse and disclaimer opinions are modifications under ISA 705 used only when misstatements or scope limitations exist.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-027",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor finds a misstatement that is material but does not affect the financial statements as a whole. Under ISA 705, which opinion is appropriate?",
+            "options": [
+                "An unmodified opinion",
+                "An adverse opinion",
+                "A qualified opinion",
+                "A disclaimer of opinion"
+            ],
+            "correct_index": 2,
+            "explanation": "A material but non-pervasive misstatement leads to a qualified opinion under ISA 705. An adverse opinion is reserved for misstatements that are both material and pervasive.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-028",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor concludes that a material uncertainty about going concern exists but management has disclosed it adequately. Under ISA 570, which report is issued?",
+            "options": [
+                "An adverse opinion on the financial statements",
+                "A qualified opinion for a limitation of scope",
+                "No opinion at all until the entity ceases to trade",
+                "An unmodified opinion with a separate section headed Material Uncertainty Related to Going Concern"
+            ],
+            "correct_index": 3,
+            "explanation": "Where the going concern disclosure is adequate, ISA 570 keeps an unmodified opinion and adds a separate section drawing attention to the material uncertainty. An adverse or qualified opinion is used only when disclosure is inadequate.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-029",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor is considering the risk of fraud in a client's revenue cycle. Under ISA 240, which responsibility does the auditor have?",
+            "options": [
+                "To maintain professional scepticism and assess the risk of material misstatement due to fraud",
+                "To guarantee that no fraud has occurred anywhere in the entity",
+                "To take over management's responsibility for preventing fraud",
+                "To report every immaterial irregularity to the media"
+            ],
+            "correct_index": 0,
+            "explanation": "ISA 240 requires the auditor to maintain professional scepticism and identify and assess risks of material misstatement due to fraud. Prevention of fraud remains the responsibility of management and those charged with governance.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-030",
+            "domain": "Audit and Assurance",
+            "stem": "An audit firm is deciding how long to retain its engagement files. Under ISA 230, for what minimum period from the date of the auditor's report should audit documentation be retained?",
+            "options": [
+                "One year",
+                "Five years",
+                "Ten years",
+                "Twenty years"
+            ],
+            "correct_index": 1,
+            "explanation": "ISA 230 requires audit documentation to be retained for a period no shorter than five years from the date of the auditor's report. Shorter retention would breach the standard's assembly and retention requirements.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-031",
+            "domain": "Audit and Assurance",
+            "stem": "An audit firm provides a valuation service to a client that it also audits, and the valuation affects the financial statements. Under the SAICA Code of Professional Conduct, which threat arises?",
+            "options": [
+                "An intimidation threat, because the client may pressure the firm",
+                "No threat, because valuation is a routine service",
+                "A self-review threat, because the firm would be reviewing its own work",
+                "A familiarity threat arising from a long association"
+            ],
+            "correct_index": 2,
+            "explanation": "A self-review threat arises when the firm evaluates the results of its own previous work, as happens when auditing a valuation it prepared. The Code does not treat such a service as automatically routine.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-032",
+            "domain": "Audit and Assurance",
+            "stem": "A South African public company prepares annual financial statements. Under the Companies Act 71 of 2008, which requirement applies to its financial statements?",
+            "options": [
+                "They need only be reviewed",
+                "They may be unaudited if the board agrees",
+                "They must be audited only if the public interest score falls below the threshold",
+                "They must be audited"
+            ],
+            "correct_index": 3,
+            "explanation": "The Companies Act requires public companies to have their annual financial statements audited. A review or an exemption is not available to a public company in the way it can be for certain private companies.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-033",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor plans to use the work of a client's internal audit function. Under ISA 610, what must the auditor first evaluate?",
+            "options": [
+                "The competence and objectivity of the internal auditors",
+                "The physical office location of the internal audit team",
+                "Whether the internal auditors are members of a professional body",
+                "The size of the internal audit budget compared with the external fee"
+            ],
+            "correct_index": 0,
+            "explanation": "ISA 610 requires the external auditor to evaluate the internal audit function's competence and objectivity before relying on its work. Location, membership and budget size are not the prescribed criteria.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-034",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor compares the client's gross profit margin with the prior year and finds an unexpected fall. Under ISA 520, which type of procedure is this?",
+            "options": [
+                "A test of control",
+                "An analytical procedure",
+                "A physical observation",
+                "A test of details of balances"
+            ],
+            "correct_index": 1,
+            "explanation": "ISA 520 defines analytical procedures as evaluations of financial information through analysis of plausible relationships, including ratio comparisons. Tests of control and tests of details examine individual items or controls instead.",
+            "reference": "SAICA ITC Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "saica-itc-035",
+            "domain": "Taxation",
+            "stem": "A South African resident earns rental income from a property located in South Africa. Under the Income Tax Act 58 of 1962, what is the definition of gross income for a resident?",
+            "options": [
+                "Only amounts received in cash from employment",
+                "Only income from a South African source",
+                "The total amount, in cash or otherwise, received by or accrued to the resident from any source, excluding receipts of a capital nature",
+                "The net profit after deducting all expenses"
+            ],
+            "correct_index": 2,
+            "explanation": "For a resident, gross income is the total amount, in cash or otherwise, received by or accrued to that resident from a source within or outside South Africa, excluding capital receipts. Foreign-source amounts are also included.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-036",
+            "domain": "Taxation",
+            "stem": "A manufacturer buys a new machine for R1,000,000 and brings it into use in its manufacturing process in the current year. Under section 12C of the Income Tax Act 58 of 1962, what is the first-year wear and tear allowance?",
+            "options": [
+                "R200,000, being 20 percent of the cost",
+                "R1,000,000, being the full cost",
+                "R250,000, being the cost spread over four years",
+                "R400,000, being 40 percent of the cost"
+            ],
+            "correct_index": 3,
+            "explanation": "Section 12C allows a manufacturing asset allowance of 40 percent in the year the asset is brought into use, then 20 percent in each of the next three years. The first-year allowance is thus R400,000.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-037",
+            "domain": "Taxation",
+            "stem": "A vendor makes a standard-rated sale of goods for R230,000, inclusive of VAT at 15 percent. What is the output VAT on the sale?",
+            "options": [
+                "R30,000",
+                "R34,500",
+                "R200,000",
+                "R23,000"
+            ],
+            "correct_index": 0,
+            "explanation": "To extract VAT from a VAT-inclusive amount, multiply by 15 over 115. R230,000 times 15 over 115 equals R30,000 and the net sale is R200,000. Applying 15 percent to the inclusive figure would overstate the tax.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-038",
+            "domain": "Taxation",
+            "stem": "A South African vendor makes a supply of goods that it exports to a customer in Namibia. How is this supply treated for VAT purposes under the VAT Act 89 of 1991?",
+            "options": [
+                "It is exempt, so no VAT is charged or claimed",
+                "It is zero-rated, provided the goods are exported as prescribed",
+                "It is standard-rated at 15 percent",
+                "It is disregarded because the customer is foreign"
+            ],
+            "correct_index": 1,
+            "explanation": "Exported goods are zero-rated when the export requirements are met, which means VAT is charged at 0 percent and input VAT may still be claimed. Exempt supplies, by contrast, carry no output VAT and no input deduction.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-039",
+            "domain": "Taxation",
+            "stem": "A company sells an investment asset for R800,000. Its base cost was R500,000 and it is not a primary residence. The company's inclusion rate is 80 percent. What taxable capital gain arises?",
+            "options": [
+                "R300,000",
+                "R60,000",
+                "R240,000",
+                "R150,000"
+            ],
+            "correct_index": 2,
+            "explanation": "The capital gain is R800,000 less R500,000, which is R300,000. Companies include 80 percent of the capital gain in taxable income, giving a taxable capital gain of R240,000.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-040",
+            "domain": "Taxation",
+            "stem": "A South African company has a year of assessment ending 28 February 2026. What is the standard corporate income tax rate applying to its taxable income?",
+            "options": [
+                "28 percent",
+                "30 percent",
+                "15 percent",
+                "27 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The corporate income tax rate is 27 percent for years of assessment ending on or after 31 March 2023, reduced from the earlier 28 percent. The 15 percent rate applies to VAT, not company tax.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-041",
+            "domain": "Taxation",
+            "stem": "A qualifying small business corporation earns taxable income of R80,000 for its year of assessment. Under the Income Tax Act 58 of 1962, what is its income tax liability?",
+            "options": [
+                "R0, because taxable income up to R95,750 is taxed at 0 percent",
+                "R21,600, being 27 percent of taxable income",
+                "R8,000, being 10 percent of taxable income",
+                "R80,000, being the full taxable income"
+            ],
+            "correct_index": 0,
+            "explanation": "A small business corporation is taxed on a graduated scale, and the first bracket up to R95,750 is taxed at 0 percent. Taxable income of R80,000 therefore attracts no income tax.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-042",
+            "domain": "Taxation",
+            "stem": "An employer deducts employees' tax from its employees' remuneration during January. Under the Income Tax Act 58 of 1962 and the Fourth Schedule, by when must the employer pay the amount over to SARS?",
+            "options": [
+                "By the last day of February each year",
+                "Within seven days after the end of the month in which the deduction was made",
+                "Within 30 days of the end of the year of assessment",
+                "Only when the annual employees' tax certificate is issued"
+            ],
+            "correct_index": 1,
+            "explanation": "Employees' tax must be paid to SARS within seven days after the end of the month in which it was deducted. Deferring payment to the end of the year would contravene the Fourth Schedule.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-043",
+            "domain": "Taxation",
+            "stem": "A resident individual donates R500,000 to an adult child who is not a public benefit organisation. What donations tax is payable, assuming the annual exemption has been exhausted?",
+            "options": [
+                "R0, because donations between family members are exempt",
+                "R150,000, being 30 percent of the donation",
+                "R100,000, being 20 percent of the donation",
+                "R50,000, being 10 percent of the donation"
+            ],
+            "correct_index": 2,
+            "explanation": "Donations tax is levied at 20 percent on the value of property disposed of by way of donation, up to the threshold of R30 million. The donation of R500,000 therefore attracts R100,000 of donations tax, and the donor is liable.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-044",
+            "domain": "Taxation",
+            "stem": "A deceased estate has a dutiable amount of R5,000,000 after applying the section 4A abatement. What estate duty is payable?",
+            "options": [
+                "R500,000, being 10 percent of the dutiable amount",
+                "R1,250,000, being 25 percent of the dutiable amount",
+                "R0, because the estate is below the threshold",
+                "R1,000,000, being 20 percent of the dutiable amount"
+            ],
+            "correct_index": 3,
+            "explanation": "Estate duty is levied at 20 percent on the dutiable amount up to R30 million, rising to 25 percent above that. The duty on R5,000,000 is therefore R1,000,000.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-045",
+            "domain": "Taxation",
+            "stem": "A company incurs expenditure during the year. Under section 11(a) of the Income Tax Act 58 of 1962, which expenditure is deductible from income?",
+            "options": [
+                "Expenditure actually incurred in the production of income that is not of a capital nature",
+                "Any expenditure, whether or not it produced income",
+                "Only expenditure paid in cash before year end",
+                "All capital expenditure on new plant"
+            ],
+            "correct_index": 0,
+            "explanation": "Section 11(a) permits a deduction for expenditure or losses actually incurred in the production of income that are not of a capital nature. Capital expenditure is dealt with separately through capital allowances.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-046",
+            "domain": "Taxation",
+            "stem": "A company earns income throughout its year of assessment ending on the last day of February. When is the first provisional tax payment due?",
+            "options": [
+                "On the last day of the year of assessment",
+                "Within six months after the commencement of the year of assessment",
+                "Within 12 months after the year end",
+                "Only once the annual return is assessed by SARS"
+            ],
+            "correct_index": 1,
+            "explanation": "The first provisional tax payment is due within six months after the commencement of the year of assessment, and the second by the end of that year. Paying only when the return is assessed would attract penalties.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-047",
+            "domain": "Taxation",
+            "stem": "A natural person carries on a trade and makes an assessed loss in the current year of assessment. Under the Income Tax Act 58 of 1962, how is the assessed loss generally treated?",
+            "options": [
+                "It is forfeited because the person is not a company",
+                "It is refunded in cash by SARS",
+                "It is carried forward and set off against future taxable income from that trade",
+                "It is carried back against the previous year's income automatically"
+            ],
+            "correct_index": 2,
+            "explanation": "An assessed loss is carried forward and deducted from the taxable income of subsequent years, provided the person continues to carry on a trade. It is not automatically carried back, and it is not refunded in cash.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-048",
+            "domain": "Taxation",
+            "stem": "A South African company declares and pays a dividend of R1,000,000 to its resident shareholders. What dividends tax must the company withhold?",
+            "options": [
+                "R270,000, being 27 percent of the dividend",
+                "R150,000, being 15 percent of the dividend",
+                "R0, because dividends are exempt from tax",
+                "R200,000, being 20 percent of the dividend"
+            ],
+            "correct_index": 3,
+            "explanation": "Dividends tax is levied at 20 percent on dividends paid by a resident company, and the company must withhold it. It is a tax on the shareholder that the company collects and pays over to SARS.",
+            "reference": "SAICA ITC Syllabus - Taxation"
+        },
+        {
+            "id": "saica-itc-049",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company has fixed costs of R300,000, a selling price of R50 per unit and variable costs of R30 per unit. What is the break-even point in units?",
+            "options": [
+                "15,000 units",
+                "10,000 units",
+                "6,000 units",
+                "20,000 units"
+            ],
+            "correct_index": 0,
+            "explanation": "Contribution per unit is R50 less R30, which is R20. Break-even units are fixed costs divided by contribution per unit, so R300,000 divided by R20 is 15,000 units.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-050",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A product sells for R50 and has variable costs of R30 per unit. What is the contribution margin ratio?",
+            "options": [
+                "60 percent",
+                "40 percent",
+                "20 percent",
+                "167 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "Contribution per unit is R20 and the selling price is R50, so the contribution margin ratio is R20 divided by R50, which is 40 percent. The variable cost ratio of 60 percent is the complement.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-051",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A manufacturer produces more units than it sells in a period, and fixed production overheads are absorbed into inventory. Compared with marginal costing, what is the effect on absorption costing profit?",
+            "options": [
+                "Absorption costing profit is lower, because more overhead is expensed",
+                "The two methods report identical profit in every period",
+                "Absorption costing profit is higher, because some fixed overhead is carried in closing inventory",
+                "Absorption costing profit is higher only when production equals sales"
+            ],
+            "correct_index": 2,
+            "explanation": "When production exceeds sales, closing inventory rises and absorption costing defers some fixed overhead to the balance sheet, raising current profit. Marginal costing expenses all fixed overhead immediately, so its profit is lower.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-052",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company uses 5,000 kilograms of material. The standard price is R10 per kilogram and the actual price paid is R11 per kilogram. What is the material price variance?",
+            "options": [
+                "R5,000 favourable",
+                "R1,000 adverse",
+                "R50,000 adverse",
+                "R5,000 adverse"
+            ],
+            "correct_index": 3,
+            "explanation": "The material price variance is the difference between standard and actual price multiplied by actual quantity, so (R10 less R11) times 5,000, which is R5,000 adverse. A higher actual price is unfavourable.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-053",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company produces 1,000 units. The standard time is four hours per unit at a standard rate of R50 per hour, and the actual hours worked were 4,200. What is the labour efficiency variance?",
+            "options": [
+                "R10,000 adverse",
+                "R10,000 favourable",
+                "R2,000 adverse",
+                "R200,000 adverse"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard hours for actual output are 4,000 and actual hours are 4,200, so the difference of 200 hours at R50 gives R10,000 adverse. Using more hours than standard is unfavourable.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-054",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company budgets production overheads of R400,000 and 20,000 machine hours. What is the overhead absorption rate per machine hour, on a machine-hour basis?",
+            "options": [
+                "R40 per machine hour",
+                "R20 per machine hour",
+                "R0.05 per machine hour",
+                "R200 per machine hour"
+            ],
+            "correct_index": 1,
+            "explanation": "The absorption rate is budgeted overhead divided by budgeted activity, so R400,000 divided by 20,000 hours is R20 per machine hour. This rate is used to charge overhead to production.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-055",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company is deciding whether to continue a project. It has already spent R100,000 on market research, and the remaining work will cost R50,000. Which cost is irrelevant to the decision?",
+            "options": [
+                "The R50,000 remaining cost of the work",
+                "The future incremental cash inflows from the project",
+                "The R100,000 already spent on market research",
+                "The opportunity cost of the resources still to be used"
+            ],
+            "correct_index": 2,
+            "explanation": "The R100,000 already spent is a sunk cost that cannot be recovered or changed by the decision, so it is irrelevant. Relevant costs are future, incremental cash flows, including opportunity costs.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-056",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A project costs R600,000 today and returns R350,000 at the end of each of the next two years. The discount rate is 10 percent. Which amount is closest to the net present value?",
+            "options": [
+                "R100,000",
+                "Negative R50,000",
+                "R107,438",
+                "R7,438"
+            ],
+            "correct_index": 3,
+            "explanation": "Discounting gives R318,182 and R289,256, which total R607,438. Subtracting the R600,000 outlay gives a net present value of about R7,438, so the positive net present value supports acceptance.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-057",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A project costs R400,000 and generates equal annual cash inflows of R100,000. Using the payback method, after how many years is the initial outlay recovered?",
+            "options": [
+                "4 years",
+                "5 years",
+                "3 years",
+                "2.5 years"
+            ],
+            "correct_index": 0,
+            "explanation": "Payback is the initial outlay divided by the annual cash inflow, so R400,000 divided by R100,000 is four years. Payback ignores the time value of money and cash flows after the cut-off.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-058",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company is financed 40 percent by debt at a pre-tax cost of 10 percent and 60 percent by equity at a cost of 15 percent. The tax rate is 27 percent. Which amount is closest to the weighted average cost of capital?",
+            "options": [
+                "13.0 percent",
+                "11.92 percent",
+                "10.0 percent",
+                "9.0 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The after-tax cost of debt is 10 percent times one minus 0.27, which is 7.3 percent. Weighting gives 0.40 times 7.3 plus 0.60 times 15, equal to 2.92 plus 9.0, so the weighted average cost of capital is about 11.92 percent.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-059",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company uses 10,000 units of a component each year. Ordering cost is R50 per order and holding cost is R4 per unit per year. Using the economic order quantity formula, what is the optimal order quantity?",
+            "options": [
+                "250 units",
+                "1,000 units",
+                "500 units",
+                "5,000 units"
+            ],
+            "correct_index": 2,
+            "explanation": "The economic order quantity is the square root of two times annual demand times ordering cost, divided by holding cost. That is the square root of 1,000,000 divided by 4, so 250,000, whose square root is 500 units.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        },
+        {
+            "id": "saica-itc-060",
+            "domain": "Managerial Accounting and Finance",
+            "stem": "A company makes two products on the same machine and machine hours are limited. Product A earns a contribution of R30 per unit and uses two hours, while product B earns R40 per unit and uses four hours. Which product should be prioritised?",
+            "options": [
+                "Product B, because it earns a higher contribution per unit",
+                "Product B, because it uses more machine hours per unit",
+                "Neither, because the products use the same machine",
+                "Product A, because it earns R15 of contribution per machine hour against R10 for B"
+            ],
+            "correct_index": 3,
+            "explanation": "When a resource is scarce, products are ranked by contribution per unit of the limiting factor. Product A gives R30 over two hours, or R15 per hour, compared with R10 per hour for B, so A is prioritised.",
+            "reference": "SAICA ITC Syllabus - Managerial Accounting and Finance"
+        }
+    ]
+}

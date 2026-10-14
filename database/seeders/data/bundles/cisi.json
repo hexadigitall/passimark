@@ -1,0 +1,718 @@
+{
+    "cert_key": "cisi",
+    "title": "CISI Investment Operations",
+    "issuer": "Chartered Institute for Securities and Investment",
+    "region": "UK-FINANCE",
+    "outline_file": "outlines/cisi.json",
+    "variant_label": "CISI Investment Operations Real-Spec Practice",
+    "exam": {
+        "questions": 50,
+        "duration_minutes": 60,
+        "scoring": "Pass/fail against passing standard",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public CISI Investment Operations Certificate syllabus. Not a capture of past exam questions.",
+    "source_label": "CISI Investment Operations practice bank",
+    "items": [
+        {
+            "id": "cisi-001",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An investor holds ordinary shares in a UK-listed company and wants to understand the rights attached to that holding. Which right does an ordinary shareholder normally hold?",
+            "options": [
+                "The right to vote at general meetings of the company",
+                "The right to a fixed dividend paid before any other distribution",
+                "The right to be repaid before creditors if the company is wound up",
+                "The right to redeem the shares for cash at any time at par value"
+            ],
+            "correct_index": 0,
+            "explanation": "Ordinary shares carry residual ownership, including voting rights and a claim on profits after all other obligations. Preference shares, not ordinary shares, carry a fixed dividend and priority on winding up, and ordinary shares are not redeemable at par on demand.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-002",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A portfolio manager buys a conventional gilt to obtain sterling exposure to a high-quality fixed-income asset. Which body is responsible for issuing UK government gilts?",
+            "options": [
+                "The Bank of England Monetary Policy Committee",
+                "The Debt Management Office acting for the UK government",
+                "A syndicate of UK clearing banks",
+                "The London Stock Exchange itself"
+            ],
+            "correct_index": 1,
+            "explanation": "Gilts are issued by the UK government through the Debt Management Office, which runs the issuance programme. The Bank of England sets interest rates, but it does not issue gilts for general investment, and the exchange only provides a venue for trading.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-003",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A corporate bond is trading below its par value and the investor intends to hold it to maturity. Which statement about the redemption yield relative to the coupon is correct?",
+            "options": [
+                "The redemption yield is lower than the coupon rate",
+                "The redemption yield equals the coupon rate",
+                "The redemption yield is higher than the coupon rate",
+                "The redemption yield is unrelated to the price paid"
+            ],
+            "correct_index": 2,
+            "explanation": "A bond bought at a discount yields more than its coupon because the investor also gains the price appreciation to par at maturity. A bond bought at a premium yields less than the coupon for the mirror-image reason.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-004",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A company in financial difficulty suspends the dividend on its preference shares before cutting the ordinary dividend. Which feature of preference shares explains this order of priority?",
+            "options": [
+                "Preference shares are always secured against company assets",
+                "Preference shareholders control the board through voting rights",
+                "Preference dividends are guaranteed by the UK government",
+                "Preference shareholders rank ahead of ordinary shareholders for dividends"
+            ],
+            "correct_index": 3,
+            "explanation": "Preference shares carry a fixed dividend that ranks ahead of the ordinary dividend, although it remains discretionary and is not guaranteed. They normally carry limited voting rights and are unsecured unless the terms specifically provide otherwise.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-005",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An operations analyst is asked to describe the obligation created by a standardised exchange-traded futures contract. Which statement is correct?",
+            "options": [
+                "Both parties are obliged to settle on the delivery or cash settlement date",
+                "Only the buyer has an obligation while the seller may walk away",
+                "The buyer has the right but not the obligation to transact",
+                "The contract can be cancelled at any time without cost"
+            ],
+            "correct_index": 0,
+            "explanation": "A future is a binding agreement on both parties to transact at the specified terms, with margin posted daily. The right but not the obligation to transact defines an option rather than a future, and futures cannot be cancelled freely at no cost.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-006",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An investor buys a call option on a stock expecting the price to rise. What is the maximum loss the option buyer can suffer if the position is held to expiry?",
+            "options": [
+                "The strike price of the option",
+                "The premium paid for the option",
+                "The full value of the underlying shares",
+                "An unlimited amount because the share price has no upper bound"
+            ],
+            "correct_index": 1,
+            "explanation": "An option buyer's loss is limited to the premium paid, because the buyer chooses whether to exercise. Unlimited loss belongs to a short seller of the underlying shares, not to the holder of a long call.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-007",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An investor asks how an open-ended investment company differs from a unit trust in the way it is priced. Which statement is correct?",
+            "options": [
+                "An open-ended investment company is closed-ended while a unit trust is open-ended",
+                "A unit trust is listed and trades at a premium or discount to net asset value",
+                "An open-ended investment company has a single price while a unit trust has historically had separate bid and offer prices",
+                "Both vehicles are priced by supply and demand on an exchange"
+            ],
+            "correct_index": 2,
+            "explanation": "Open-ended investment companies are priced on a single-price basis, whereas unit trusts traditionally quoted a bid and an offer price with an initial charge. Closed-ended investment trusts, not unit trusts, list and trade at premiums or discounts.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-008",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An adviser explains to a client that an exchange-traded fund trades throughout the day. Which feature distinguishes it from a conventional open-ended fund?",
+            "options": [
+                "It guarantees a return equal to the index it tracks",
+                "It cannot be redeemed in kind by authorised participants",
+                "It is available only to institutional investors",
+                "It can be bought and sold on an exchange during the trading day"
+            ],
+            "correct_index": 3,
+            "explanation": "Exchange-traded funds are listed and trade intraday, unlike open-ended funds priced once daily at a valuation point. They do not guarantee index returns, they can be created and redeemed by authorised participants, and they remain accessible to retail investors.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-009",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A closed-ended investment trust is trading at a discount to its net asset value. What does this mean for a buyer of the shares?",
+            "options": [
+                "The shares can be bought for less than the value of the trust underlying assets per share",
+                "The trust must redeem the shares at net asset value on demand",
+                "The trust is guaranteed to outperform its benchmark index",
+                "The manager will immediately buy back all shares at par value"
+            ],
+            "correct_index": 0,
+            "explanation": "A discount means the market price is below net asset value per share, so the buyer pays less than the underlying assets are worth. Closed-ended trusts do not redeem on demand, which is why discounts and premiums can persist.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-010",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A company raises new capital by issuing shares to investors for the first time. On which market does this fundraising take place?",
+            "options": [
+                "The secondary market",
+                "The primary market",
+                "The money market",
+                "The derivatives market"
+            ],
+            "correct_index": 1,
+            "explanation": "New securities are issued to investors in the primary market, with the proceeds going to the issuer. Subsequent trading between investors occurs in the secondary market and does not raise new capital for the company.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-011",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A dealer places an order to buy shares immediately at the best available price rather than at a specified limit. Which order type has been used?",
+            "options": [
+                "A limit order",
+                "A stop order",
+                "A market order",
+                "A fill-or-kill limit order"
+            ],
+            "correct_index": 2,
+            "explanation": "A market order seeks immediate execution at the prevailing best price. A limit order sets a maximum or minimum price and may not execute, while a stop order becomes active only once a trigger price is reached.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-012",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A UK equity index is described as market-capitalisation weighted. How is each constituent weight in the index determined?",
+            "options": [
+                "By the number of employees it has",
+                "By an equal weight given to every constituent",
+                "By the size of its annual dividend only",
+                "By the total market value of its shares in issue"
+            ],
+            "correct_index": 3,
+            "explanation": "In a market-capitalisation weighted index each company weight reflects share price multiplied by shares in issue, so larger companies dominate. Equal weighting and dividend weighting are alternative index methodologies.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-013",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "A treasury bill is issued at a discount and repaid at face value. Which feature makes it a money market instrument?",
+            "options": [
+                "Its short original maturity, typically under one year",
+                "Its high credit risk relative to government bonds",
+                "Its entitlement to a variable equity dividend",
+                "Its unlimited term with no redemption date"
+            ],
+            "correct_index": 0,
+            "explanation": "Money market instruments have short maturities, usually one year or less, and trade in large denominations. A long-dated or undated security belongs to the capital market rather than the money market.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-014",
+            "domain": "Investment, Securities and the Financial Markets",
+            "stem": "An equity trade is agreed on a Monday and settles two business days later under the standard convention. What is the settlement date?",
+            "options": [
+                "Monday",
+                "Wednesday",
+                "Tuesday",
+                "Friday"
+            ],
+            "correct_index": 1,
+            "explanation": "Under the T+2 convention settlement occurs two business days after the trade date, so a Monday trade settles on Wednesday. The settlement date determines when cash and securities actually change hands.",
+            "reference": "CISI Investment Operations Syllabus - Investment, Securities and the Financial Markets"
+        },
+        {
+            "id": "cisi-015",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A trade has been executed on an exchange and now needs to be agreed with the counterparty. Which stage of the trade lifecycle follows execution?",
+            "options": [
+                "Corporate action processing",
+                "Proxy voting",
+                "Trade capture and confirmation",
+                "Tax reclaim"
+            ],
+            "correct_index": 2,
+            "explanation": "After execution, trades are captured, enriched and confirmed between counterparties before clearing and settlement. Corporate actions and proxy voting occur later in the asset servicing stage of the lifecycle.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-016",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A central counterparty interposes itself between two trading parties. What risk does this arrangement primarily reduce?",
+            "options": [
+                "Market risk from adverse price movements",
+                "Operational risk from data entry errors",
+                "Foreign exchange translation risk",
+                "Counterparty credit risk between the original buyer and seller"
+            ],
+            "correct_index": 3,
+            "explanation": "By becoming the buyer to every seller and the seller to every buyer, the central counterparty mutualises and manages counterparty credit risk. It does not remove market risk, which remains with the trading parties.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-017",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "UK and Irish equities settle in the CREST system operated by Euroclear UK and Ireland. What role does this system perform?",
+            "options": [
+                "It acts as the central securities depository holding records of ownership",
+                "It sets the Bank of England base rate",
+                "It authorises investment firms to conduct regulated business",
+                "It publishes the FTSE 100 index"
+            ],
+            "correct_index": 0,
+            "explanation": "CREST is the UK and Irish central securities depository, holding uncertificated securities and effecting settlement. Rate setting, authorisation and index publication are carried out by other bodies.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-018",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "An operations manager must confirm the standard settlement cycle for most UK and European equity trades. Which cycle applies?",
+            "options": [
+                "Trade date plus five business days",
+                "Trade date plus two business days",
+                "Trade date plus thirty calendar days",
+                "Same day settlement"
+            ],
+            "correct_index": 1,
+            "explanation": "Most UK and European cash equity and bond trades settle on a T+2 basis. T+5 applies to some legacy and emerging markets, and same-day settlement is unusual for exchange-traded equities.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-019",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A settlement instruction is marked delivery-versus-payment. What does this mean for the two legs of the transaction?",
+            "options": [
+                "Securities are delivered before the cash is paid",
+                "Cash is paid before the securities are delivered",
+                "Securities are delivered only if the matching cash payment is made simultaneously",
+                "Both legs settle on different dates by prior agreement"
+            ],
+            "correct_index": 2,
+            "explanation": "Delivery-versus-payment links the two legs so that delivery happens only against simultaneous payment, reducing principal risk. Free-of-payment transfers move securities without a corresponding cash leg.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-020",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A fund appoints a global custodian to look after its assets. Which service is central to the custodian role?",
+            "options": [
+                "Choosing which shares the fund should buy",
+                "Deciding the fund asset allocation policy",
+                "Guaranteeing a minimum investment return",
+                "Safekeeping and administration of the client securities and cash"
+            ],
+            "correct_index": 3,
+            "explanation": "A custodian provides safekeeping, settlement and administration of assets, often using local sub-custodians. Investment decisions and asset allocation remain with the investment manager, and returns are never guaranteed.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-021",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A retail investor shares are held in a nominee account by the platform. Who is recorded as the legal owner on the company register?",
+            "options": [
+                "The nominee company, while the investor is the beneficial owner",
+                "The investor, while the nominee is the beneficial owner",
+                "The platform bank, acting as trustee",
+                "The company itself, acting as its own registrar"
+            ],
+            "correct_index": 0,
+            "explanation": "In a nominee arrangement the nominee company is the registered legal owner while the underlying investor retains beneficial ownership. This pooling is efficient but can affect voting and information rights.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-022",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A company announces a rights issue at a discount to the market price. What does the rights issue give existing shareholders?",
+            "options": [
+                "A guaranteed cash dividend in place of shares",
+                "The opportunity to buy additional new shares in proportion to their existing holding",
+                "The right to sell their existing shares back to the company at par",
+                "An obligation to buy shares whether or not they wish to"
+            ],
+            "correct_index": 1,
+            "explanation": "A rights issue offers existing holders the chance to subscribe for new shares pro rata to their holding, usually at a discount. The right can generally be taken up, sold or allowed to lapse, so it is an option rather than an obligation.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-023",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A company carries out a two-for-one stock split. What is the effect on an existing shareholder who holds 100 shares?",
+            "options": [
+                "The holding remains 100 shares but the value doubles",
+                "The holding becomes 50 shares of twice the former value",
+                "The holding becomes 200 shares of half the former value per share",
+                "The holding is cancelled and replaced by a cash payment"
+            ],
+            "correct_index": 2,
+            "explanation": "A split increases the number of shares while proportionally reducing the price, leaving the total holding value broadly unchanged. A reverse split consolidates shares, and a cash payment describes a redemption.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-024",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "Shares are quoted ex-dividend before the record date. What does an investor who buys the shares on the ex-dividend date lose?",
+            "options": [
+                "The right to vote at the next general meeting",
+                "Ownership of the shares themselves",
+                "The ability to sell the shares onwards",
+                "The right to receive the next declared dividend"
+            ],
+            "correct_index": 3,
+            "explanation": "Buying on or after the ex-dividend date means the entitlement to the declared dividend stays with the seller, so the buyer pays a lower price. Voting and ownership of the shares transfer normally.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-025",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "The operations team finds that the custodian cash record differs from the firm internal ledger. What is the standard term for this discrepancy?",
+            "options": [
+                "A reconciliation break",
+                "A corporate action election",
+                "A trade confirmation",
+                "A proxy vote instruction"
+            ],
+            "correct_index": 0,
+            "explanation": "A difference between two sets of records is called a reconciliation break and must be investigated and cleared. Confirmations and elections are other operational steps and are not anomalies.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-026",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A seller fails to deliver securities on the intended settlement date and the buyer buys in the stock. What is the purpose of the buy-in?",
+            "options": [
+                "To cancel the trade entirely with no further consequence",
+                "To obtain the securities elsewhere and pass the extra cost to the failing party",
+                "To transfer the trade to a different exchange",
+                "To convert the shares into a cash-settled derivative"
+            ],
+            "correct_index": 1,
+            "explanation": "A buy-in secures delivery from another source and charges the additional cost to the party that failed. It protects the buyer rather than simply voiding the original settlement obligation.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-027",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A dividend is paid on a foreign holding and the custodian collects it on the client behalf. Which asset servicing task does this represent?",
+            "options": [
+                "Proxy voting and shareholder meetings",
+                "Trade capture and confirmation",
+                "Income collection and cash entitlement processing",
+                "Order routing to the exchange"
+            ],
+            "correct_index": 2,
+            "explanation": "Collecting dividends and interest and applying the correct entitlements is income collection, an asset servicing function. Proxy voting and order routing are separate operational activities.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-028",
+            "domain": "Investment Operations and Asset Servicing",
+            "stem": "A long-only fund holds a large position in a company holding its annual general meeting. Which service ensures the fund shares are voted according to its voting policy?",
+            "options": [
+                "Buy-in management by the clearing house",
+                "Income collection by the registrar",
+                "Transaction reporting to the regulator",
+                "Proxy voting carried out by the custodian or a proxy agent"
+            ],
+            "correct_index": 3,
+            "explanation": "Where shares are held through a nominee, proxy voting services arrange for the client voting instructions to be cast at meetings. The clearing house, registrar and regulator perform unrelated functions.",
+            "reference": "CISI Investment Operations Syllabus - Investment Operations and Asset Servicing"
+        },
+        {
+            "id": "cisi-029",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm in the UK deals in investments as principal in a regulated activity. Which body authorises and supervises it for that activity?",
+            "options": [
+                "The Financial Conduct Authority",
+                "The Prudential Regulation Authority alone",
+                "The Debt Management Office",
+                "The Financial Ombudsman Service"
+            ],
+            "correct_index": 0,
+            "explanation": "The Financial Conduct Authority authorises and supervises investment firms conducting regulated activities in the UK, with the Prudential Regulation Authority sharing responsibility for some dual-regulated firms. The ombudsman handles complaints and does not authorise firms.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-030",
+            "domain": "Regulation and Compliance",
+            "stem": "Under the Senior Managers and Certification Regime, what must a firm do for individuals in certified roles?",
+            "options": [
+                "Apply to the regulator for approval of every individual",
+                "Assess and confirm their fitness and propriety at least annually",
+                "Register them only once at the point of hiring",
+                "Exempt them from the conduct rules"
+            ],
+            "correct_index": 1,
+            "explanation": "Certified persons must be assessed as fit and proper at least once a year, and the firm rather than the regulator issues the certificate. Only senior managers go through formal regulatory approval, and everyone remains subject to the conduct rules.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-031",
+            "domain": "Regulation and Compliance",
+            "stem": "An employee trades shares using confidential information about a pending takeover that has not been made public. Which offence has been committed?",
+            "options": [
+                "Market manipulation through false trading",
+                "Misleading statements in a prospectus",
+                "Insider dealing",
+                "A breach of the client money rules"
+            ],
+            "correct_index": 2,
+            "explanation": "Insider dealing is trading on price-sensitive information that is not publicly available. It is a distinct market abuse offence from manipulation, misleading statements and client money breaches.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-032",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm executes client orders and must take all sufficient steps to obtain the best possible result. Which factor is included in the best execution obligation?",
+            "options": [
+                "Only the price quoted at the moment of the order",
+                "Only the total commission charged to the client",
+                "The firm own trading position",
+                "Price, cost, speed, likelihood of execution and settlement, size and nature of the order"
+            ],
+            "correct_index": 3,
+            "explanation": "Best execution considers price, cost, speed, likelihood of execution and settlement, size, nature and any other relevant consideration. Price alone is not sufficient, and the firm own position must not determine the outcome.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-033",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm applies a lower level of protection to a large institutional client. Into which regulatory category is that client most likely placed?",
+            "options": [
+                "Eligible counterparty",
+                "Retail client",
+                "Professional client",
+                "Advisory client"
+            ],
+            "correct_index": 0,
+            "explanation": "Eligible counterparties are the least protected category, followed by professional clients, then retail clients, who receive the greatest protection. Advisory is a service type rather than a client category.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-034",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm provides an execution-only service for a complex product. Which test must it perform before proceeding?",
+            "options": [
+                "A full suitability assessment of the client objectives",
+                "An appropriateness assessment of the client knowledge and experience",
+                "No assessment, because the client has chosen the service",
+                "A credit check on the client income"
+            ],
+            "correct_index": 1,
+            "explanation": "For execution-only business in complex products the firm must assess appropriateness, that is whether the client has the knowledge and experience to understand the risk. Suitability applies to advised services rather than execution-only.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-035",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm executes a transaction in a financial instrument admitted to trading on a UK venue. Which obligation is most likely triggered?",
+            "options": [
+                "Publishing the transaction on the firm website",
+                "Obtaining prior approval from the exchange",
+                "Reporting details of the transaction to the regulator by the next working day",
+                "Notifying the Financial Ombudsman Service"
+            ],
+            "correct_index": 2,
+            "explanation": "Transaction reporting requires complete and accurate details to be sent to the regulator by the end of the next working day. Publication, exchange approval and ombudsman notification are not the reporting obligation.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-036",
+            "domain": "Regulation and Compliance",
+            "stem": "A new client wishes to open an investment account and the firm must verify their identity. Which process is being applied?",
+            "options": [
+                "Best execution monitoring",
+                "Transaction reporting",
+                "Proxy voting",
+                "Customer due diligence under the anti-money laundering rules"
+            ],
+            "correct_index": 3,
+            "explanation": "Customer due diligence, often called know your customer, verifies identity and assesses risk before a relationship begins. The other options are unrelated regulatory and operational processes.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-037",
+            "domain": "Regulation and Compliance",
+            "stem": "A retail client is unhappy with the firm handling of a complaint and has exhausted the internal process. Which body can review the complaint?",
+            "options": [
+                "The Financial Ombudsman Service",
+                "The Prudential Regulation Authority",
+                "The Financial Conduct Authority enforcement division",
+                "The Bank of England"
+            ],
+            "correct_index": 0,
+            "explanation": "The Financial Ombudsman Service independently resolves unresolved complaints between firms and eligible complainants. The regulator and the central bank are not complaint reviewers.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-038",
+            "domain": "Regulation and Compliance",
+            "stem": "An investment firm becomes insolvent and cannot return client assets it held. Which scheme may compensate eligible claimants?",
+            "options": [
+                "The Financial Ombudsman Service",
+                "The Financial Services Compensation Scheme",
+                "The Debt Management Office",
+                "The Pension Protection Fund"
+            ],
+            "correct_index": 1,
+            "explanation": "The Financial Services Compensation Scheme pays compensation to eligible claimants when an authorised firm fails. The ombudsman resolves disputes and the Pension Protection Fund covers certain pension schemes.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-039",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm must retain records of its client orders and transactions. What is the general regulatory approach to retention periods?",
+            "options": [
+                "Records may be deleted as soon as the trade settles",
+                "Records need only be kept until the client leaves",
+                "Records must be kept for the minimum period set by the regulator, commonly five years",
+                "Records have no minimum retention requirement"
+            ],
+            "correct_index": 2,
+            "explanation": "Regulated firms must keep records for a defined minimum, generally five years for many investment records, and this period can be extended. Immediate deletion would breach the record-keeping rules.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-040",
+            "domain": "Regulation and Compliance",
+            "stem": "A firm receives a payment from a third party that could compromise its duty to act in the client best interest. Which rule primarily governs this situation?",
+            "options": [
+                "The settlement discipline regime",
+                "The client money segregation rules",
+                "The corporation tax rules",
+                "The conflicts of interest and inducements requirements"
+            ],
+            "correct_index": 3,
+            "explanation": "Inducements and conflicts rules require firms to manage third-party payments that could impair their duty to clients. Settlement discipline, client money and tax rules address different risks.",
+            "reference": "CISI Investment Operations Syllabus - Regulation and Compliance"
+        },
+        {
+            "id": "cisi-041",
+            "domain": "Taxation and Client Money",
+            "stem": "A UK resident investor wants returns from a portfolio to be free of UK income tax and capital gains tax. Which wrapper is designed for this purpose?",
+            "options": [
+                "An individual savings account",
+                "A general investment account",
+                "A corporate bond fund held directly",
+                "A bare trust"
+            ],
+            "correct_index": 0,
+            "explanation": "An individual savings account shelters eligible investments from UK income tax and capital gains tax within the annual allowance. A general investment account offers no such shelter and a bare trust is a legal structure rather than a tax wrapper.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-042",
+            "domain": "Taxation and Client Money",
+            "stem": "An investor realises a gain on shares held outside a tax wrapper. Against which amount can the annual capital gain be offset?",
+            "options": [
+                "The personal savings allowance",
+                "The annual exempt amount for capital gains tax",
+                "The dividend nil-rate band",
+                "The trading allowance for property income"
+            ],
+            "correct_index": 1,
+            "explanation": "Each individual has an annual exempt amount that reduces the chargeable gain on disposals outside a wrapper. The personal savings and dividend allowances relate to income tax rather than capital gains.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-043",
+            "domain": "Taxation and Client Money",
+            "stem": "A UK investor receives dividends from shares held in a general investment account. How are those dividends treated for UK tax?",
+            "options": [
+                "They are always completely tax-free",
+                "They are subject only to capital gains tax",
+                "They are subject to income tax with a dividend nil-rate band applied first",
+                "They are taxed at the basic rate regardless of total income"
+            ],
+            "correct_index": 2,
+            "explanation": "Dividends are taxed as income, with a nil-rate band covering the first slice and rates rising with the taxpayer marginal band. They are not automatically tax-free and they are not capital gains.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-044",
+            "domain": "Taxation and Client Money",
+            "stem": "An investor buys shares in a UK-incorporated company electronically through CREST. Which tax is generally payable on the purchase?",
+            "options": [
+                "Value added tax",
+                "Inheritance tax",
+                "Income tax",
+                "Stamp duty reserve tax"
+            ],
+            "correct_index": 3,
+            "explanation": "Electronic purchases of UK shares generally incur stamp duty reserve tax, while paper transfers can attract stamp duty. Value added tax, inheritance tax and income tax apply to different events.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-045",
+            "domain": "Taxation and Client Money",
+            "stem": "An individual makes a contribution to a registered personal pension. What tax treatment generally applies to the contribution?",
+            "options": [
+                "The contribution receives tax relief at the individual marginal rate, subject to limits",
+                "The contribution is taxed as income when paid",
+                "No tax relief is available on pension contributions",
+                "Relief is given only at the basic rate to all taxpayers"
+            ],
+            "correct_index": 0,
+            "explanation": "Contributions to registered pension schemes attract tax relief, commonly at the individual marginal rate within the annual allowance. Tax is generally charged on withdrawals rather than contributions, and higher-rate relief can apply.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-046",
+            "domain": "Taxation and Client Money",
+            "stem": "A firm holds money belonging to clients under the client money rules. Which principle governs how that money must be treated?",
+            "options": [
+                "It may be used to fund the firm working capital",
+                "It must be segregated from the firm own money and held in trust",
+                "It must be transferred to the firm own bank account",
+                "It may be commingled freely with firm money"
+            ],
+            "correct_index": 1,
+            "explanation": "Client money must be segregated and held on trust so it is protected if the firm fails. Using client money for firm working capital or commingling it with firm money breaches the client money rules.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-047",
+            "domain": "Taxation and Client Money",
+            "stem": "A firm opens an account specifically titled to identify it as holding client money. What additional step is required to protect those balances?",
+            "options": [
+                "Depositing the money into an ordinary firm operating account",
+                "Investing the client money in the firm own shares",
+                "Acknowledging the trust status of the account with the bank",
+                "Using the money as security for a firm loan"
+            ],
+            "correct_index": 2,
+            "explanation": "Beyond a properly designated account, the firm should obtain an acknowledgement from the bank that the money is held on trust so the trust is recognised if the bank or firm fails. Using the money as firm security would defeat the protection.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-048",
+            "domain": "Taxation and Client Money",
+            "stem": "A UK fund receives a dividend from a foreign company and the foreign country deducts tax before payment. What is this deduction called?",
+            "options": [
+                "Stamp duty reserve tax",
+                "Capital gains tax",
+                "Inheritance tax",
+                "Withholding tax"
+            ],
+            "correct_index": 3,
+            "explanation": "Withholding tax is deducted at source by the paying country, and a double tax treaty may allow a reclaim or credit. The other taxes apply to different transactions and jurisdictions.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-049",
+            "domain": "Taxation and Client Money",
+            "stem": "A basic-rate UK taxpayer receives interest on cash held outside a wrapper. Which allowance may reduce the income tax on that interest?",
+            "options": [
+                "The personal savings allowance",
+                "The annual exempt amount",
+                "The dividend nil-rate band",
+                "The trading allowance"
+            ],
+            "correct_index": 0,
+            "explanation": "The personal savings allowance lets basic-rate taxpayers receive a set amount of savings interest free of income tax. The annual exempt amount applies to capital gains and the dividend nil-rate band to dividends.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        },
+        {
+            "id": "cisi-050",
+            "domain": "Taxation and Client Money",
+            "stem": "A firm provides discretionary investment management to an individual client. How is that service generally treated for value added tax?",
+            "options": [
+                "It is always standard-rated at the full rate",
+                "It is exempt from value added tax as a financial service, subject to specific rules",
+                "It is zero-rated because it is an export",
+                "It is outside the scope because it is a regulated activity"
+            ],
+            "correct_index": 1,
+            "explanation": "Discretionary investment management and many financial services are exempt from value added tax under the exemption for financial services, though the exact treatment depends on the service and the client. It is not automatically standard-rated or zero-rated.",
+            "reference": "CISI Investment Operations Syllabus - Taxation and Client Money"
+        }
+    ]
+}

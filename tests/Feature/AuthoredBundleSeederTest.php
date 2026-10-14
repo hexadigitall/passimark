@@ -798,6 +798,71 @@ class AuthoredBundleSeederTest extends TestCase
                 'Risk Management and Investment Management' => 12,
                 'Current Issues in Financial Markets' => 8,
             ]],
+            'ican-found' => ['ican-found', 60, [
+                'Financial Accounting' => 20,
+                'Business Mathematics and Statistics' => 15,
+                'Economics' => 15,
+                'Business and Management' => 10,
+            ]],
+            'ican-pro' => ['ican-pro', 60, [
+                'Corporate Reporting' => 18,
+                'Advanced Audit and Assurance' => 14,
+                'Taxation' => 14,
+                'Strategic Financial Management' => 14,
+            ]],
+            'icag-gh' => ['icag-gh', 60, [
+                'Financial Accounting' => 20,
+                'Management Accounting' => 14,
+                'Taxation and Business Law' => 14,
+                'Audit and Assurance' => 12,
+            ]],
+            'saica-itc' => ['saica-itc', 60, [
+                'Financial Accounting and Reporting' => 20,
+                'Audit and Assurance' => 14,
+                'Taxation' => 14,
+                'Managerial Accounting and Finance' => 12,
+            ]],
+            'zica-zm' => ['zica-zm', 60, [
+                'Financial Accounting' => 20,
+                'Management Accounting' => 14,
+                'Taxation and Business Law' => 14,
+                'Audit and Assurance' => 12,
+            ]],
+            'cibn' => ['cibn', 60, [
+                'Banking Operations and Practice' => 18,
+                'Financial Systems and Economics' => 14,
+                'Banking Law and Regulation' => 14,
+                'Management and Marketing of Financial Services' => 14,
+            ]],
+            'cisi' => ['cisi', 50, [
+                'Investment, Securities and the Financial Markets' => 14,
+                'Investment Operations and Asset Servicing' => 14,
+                'Regulation and Compliance' => 12,
+                'Taxation and Client Money' => 10,
+            ]],
+            'cipd-l3' => ['cipd-l3', 60, [
+                'Business, Culture and Change in Context' => 15,
+                'Principles of People Practice' => 15,
+                'Core Behaviours for People Professionals' => 15,
+                'Evidence-based Practice' => 15,
+            ]],
+            'cipd-l5' => ['cipd-l5', 60, [
+                'Strategic People Management' => 18,
+                'Organisational Performance and Culture' => 15,
+                'Talent Management and Workforce Planning' => 15,
+                'Employment Relationship and Law' => 12,
+            ]],
+            'aat-l2' => ['aat-l2', 60, [
+                'Bookkeeping Transactions and Controls' => 25,
+                'Principles of Costing' => 15,
+                'The Business Environment' => 20,
+            ]],
+            'aat-l4' => ['aat-l4', 60, [
+                'Financial Statements of Limited Companies' => 15,
+                'Management Accounting: Budgeting' => 15,
+                'Management Accounting: Decision and Control' => 15,
+                'Accounting Systems and Controls' => 15,
+            ]],
         ];
     }
 

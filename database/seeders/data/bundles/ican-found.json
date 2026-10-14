@@ -1,0 +1,858 @@
+{
+    "cert_key": "ican-found",
+    "title": "ICAN Foundation",
+    "issuer": "Institute of Chartered Accountants of Nigeria",
+    "region": "AFRICA",
+    "outline_file": "outlines/ican-found.json",
+    "variant_label": "ICAN Foundation Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "50% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public ICAN foundation-level syllabus. Not a capture of past exam questions.",
+    "source_label": "ICAN Foundation practice bank",
+    "items": [
+        {
+            "id": "ican-found-001",
+            "domain": "Financial Accounting",
+            "stem": "A sole trader has total assets of N850,000 and total liabilities of N350,000 at the year end, and the owner made no drawings or capital injections during the year. What is the amount of the owner's equity?",
+            "options": [
+                "N500,000",
+                "N1,200,000",
+                "N350,000",
+                "N850,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Under the accounting equation, equity equals assets minus liabilities, so N850,000 less N350,000 gives N500,000. Adding the two figures, or reporting liabilities or assets alone, misstates equity.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-002",
+            "domain": "Financial Accounting",
+            "stem": "A trader buys goods on credit from a supplier for N120,000. Which double entry correctly records this transaction in the trader's books?",
+            "options": [
+                "Debit Payables and credit Purchases",
+                "Debit Purchases and credit Payables",
+                "Debit Cash and credit Purchases",
+                "Debit Purchases and credit Cash"
+            ],
+            "correct_index": 1,
+            "explanation": "Goods bought on credit increase purchases (an expense) and create a payable, so purchases is debited and payables credited. No cash moves, so the cash account is not part of the entry.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-003",
+            "domain": "Financial Accounting",
+            "stem": "A machine is purchased for N600,000 and is expected to have a residual value of N60,000 after a useful life of five years. Using the straight-line method, what is the annual depreciation charge?",
+            "options": [
+                "N120,000",
+                "N100,000",
+                "N108,000",
+                "N132,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Straight-line depreciation spreads the depreciable amount, N600,000 less N60,000 = N540,000, over five years, giving N108,000 each year. Dividing the full cost by five ignores the residual value and overstates the charge.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-004",
+            "domain": "Financial Accounting",
+            "stem": "An asset costing N500,000 is depreciated at 20 percent per annum on the reducing balance method. What is the depreciation charge for the second year of the asset's life?",
+            "options": [
+                "N100,000",
+                "N64,000",
+                "N400,000",
+                "N80,000"
+            ],
+            "correct_index": 3,
+            "explanation": "The first year charge is 20 percent of N500,000, which is N100,000, leaving a carrying amount of N400,000. The second year charge is 20 percent of N400,000, which is N80,000.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-005",
+            "domain": "Financial Accounting",
+            "stem": "A business paid N180,000 in rent during the year and owed a further N30,000 of rent at the year end which had not yet been paid. What amount should be charged as rent expense for the year?",
+            "options": [
+                "N210,000",
+                "N180,000",
+                "N150,000",
+                "N30,000"
+            ],
+            "correct_index": 0,
+            "explanation": "On the accrual basis, the expense for the period includes rent incurred but unpaid at the year end, so N180,000 plus the N30,000 accrual gives N210,000. Charging only the cash paid ignores the accrual.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-006",
+            "domain": "Financial Accounting",
+            "stem": "A business paid N240,000 on 1 October for a twelve-month insurance policy starting that date. Its financial year ends on 31 December. What is the insurance expense for the current year?",
+            "options": [
+                "N180,000",
+                "N60,000",
+                "N240,000",
+                "N20,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Only three months of cover (October to December) belong to the current year, giving three-twelfths of N240,000, which is N60,000. The remaining N180,000 is a prepayment carried into the next year.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-007",
+            "domain": "Financial Accounting",
+            "stem": "Closing inventory cost N500,000 but, because of damage, it can only be sold for N460,000 after all further costs are met. At what amount should the inventory be valued?",
+            "options": [
+                "N500,000",
+                "N540,000",
+                "N460,000",
+                "N40,000"
+            ],
+            "correct_index": 2,
+            "explanation": "IAS 2 requires inventory to be measured at the lower of cost and net realisable value. Since the net realisable value of N460,000 is below cost, the inventory is written down to N460,000.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-008",
+            "domain": "Financial Accounting",
+            "stem": "A business has opening inventory of N200,000, purchases of N800,000 and closing inventory of N250,000. What is the cost of goods sold for the period?",
+            "options": [
+                "N1,250,000",
+                "N850,000",
+                "N700,000",
+                "N750,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Cost of goods sold equals opening inventory plus purchases minus closing inventory, so N200,000 + N800,000 - N250,000 = N750,000. Adding closing inventory instead of deducting it gives the wrong figure.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-009",
+            "domain": "Financial Accounting",
+            "stem": "A trader reports sales of N1,200,000 and a cost of goods sold of N750,000 for the year. What is the gross profit for the year?",
+            "options": [
+                "N450,000",
+                "N1,950,000",
+                "N750,000",
+                "N1,200,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Gross profit is sales revenue less the cost of goods sold, so N1,200,000 - N750,000 = N450,000. Adding the two figures instead of subtracting them is a common error.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-010",
+            "domain": "Financial Accounting",
+            "stem": "A bank statement shows a credit balance of N500,000. Cheques totalling N80,000 have been issued but not yet presented, and deposits of N50,000 are not yet credited. What is the corrected cash book balance?",
+            "options": [
+                "N530,000",
+                "N470,000",
+                "N500,000",
+                "N630,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Starting from the bank statement balance, add deposits not yet credited and deduct unpresented cheques: N500,000 + N50,000 - N80,000 = N470,000. Reversing these adjustments produces the wrong balance.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-011",
+            "domain": "Financial Accounting",
+            "stem": "A business has trade receivables of N400,000 and decides to create a provision for doubtful debts of 5 percent. What is the amount of the provision?",
+            "options": [
+                "N40,000",
+                "N380,000",
+                "N20,000",
+                "N25,000"
+            ],
+            "correct_index": 2,
+            "explanation": "The provision is 5 percent of the N400,000 receivable book, which equals N20,000. Deducting rather than applying the percentage, or using a wrong rate, misstates the allowance.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-012",
+            "domain": "Financial Accounting",
+            "stem": "Which of the following errors would cause the two sides of a trial balance to disagree in total?",
+            "options": [
+                "Posting a transaction to the wrong account of the same class",
+                "Omitting a transaction completely from the books",
+                "Recording a motor vehicle purchase in the motor expenses account",
+                "Posting only the debit side of a transaction to the ledger"
+            ],
+            "correct_index": 3,
+            "explanation": "A trial balance fails to agree only when the debits and credits of an entry are unequal. Posting one side alone breaks that equality, whereas wrong accounts, omission and misclassification keep both sides equal.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-013",
+            "domain": "Financial Accounting",
+            "stem": "Which of the following payments made by a manufacturing business is capital expenditure?",
+            "options": [
+                "Installation costs of a newly acquired machine",
+                "Repairs to an existing machine damaged in use",
+                "The annual maintenance contract for the factory",
+                "Fuel used by the delivery van during the year"
+            ],
+            "correct_index": 0,
+            "explanation": "Capital expenditure is incurred to acquire or bring an asset into working condition, so machine installation is capitalised. Repairs, maintenance and fuel are revenue costs charged to profit or loss.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-014",
+            "domain": "Financial Accounting",
+            "stem": "During the year a trader pays N120,000 for insurance, N60,000 for wages and N40,000 for a new delivery van. Which total should be charged to the income statement as revenue expenditure?",
+            "options": [
+                "N220,000",
+                "N180,000",
+                "N100,000",
+                "N40,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Insurance and wages are revenue expenditure and are charged to profit or loss, giving N120,000 + N60,000 = N180,000. The van is a non-current asset and is excluded from the charge.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-015",
+            "domain": "Financial Accounting",
+            "stem": "Which of the following would be classified as a current asset in a statement of financial position?",
+            "options": [
+                "Motor vehicles used in the business",
+                "A long-term bank loan received",
+                "Inventory held for resale",
+                "Freehold premises owned by the business"
+            ],
+            "correct_index": 2,
+            "explanation": "Inventory is expected to be converted into cash within the normal operating cycle, so it is a current asset. Motor vehicles and premises are non-current assets, and a bank loan is a liability.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-016",
+            "domain": "Financial Accounting",
+            "stem": "A business records rent as an expense in the period in which it is incurred even though payment is made later. Which accounting concept does this apply?",
+            "options": [
+                "The going concern assumption about the life of the business",
+                "The prudence convention of anticipating losses only",
+                "The consistency convention of applying methods uniformly",
+                "The accrual basis, matching income and expenses to the period"
+            ],
+            "correct_index": 3,
+            "explanation": "Recording expenses when incurred rather than when paid is the accrual basis, which matches costs to the period they relate to. Going concern, prudence and consistency address different issues.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-017",
+            "domain": "Financial Accounting",
+            "stem": "Two partners share profits in the ratio of three to two. If the partnership earns a profit of N500,000 for the year, what amount belongs to the partner entitled to the larger share?",
+            "options": [
+                "N300,000",
+                "N200,000",
+                "N250,000",
+                "N150,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The ratio of three to two has five parts in total, so the partner with the larger share receives three-fifths of N500,000, which is N300,000. Dividing the profit equally or using the wrong share misstates the entitlement.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-018",
+            "domain": "Financial Accounting",
+            "stem": "An asset with a cost of N200,000 and accumulated depreciation of N150,000 is sold for N60,000. What is the profit or loss on disposal?",
+            "options": [
+                "A loss of N10,000",
+                "A profit of N10,000",
+                "A profit of N60,000",
+                "A loss of N50,000"
+            ],
+            "correct_index": 1,
+            "explanation": "The carrying amount is N200,000 less N150,000, which is N50,000, and the sale proceeds are N60,000, giving a profit of N10,000. Comparing proceeds with original cost ignores accumulated depreciation.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-019",
+            "domain": "Financial Accounting",
+            "stem": "A supplier quotes a list price of N50,000 and allows a trade discount of 10 percent. What amount should be recorded in the purchaser's books for the goods at the time of purchase?",
+            "options": [
+                "N50,000",
+                "N42,750",
+                "N45,000",
+                "N47,500"
+            ],
+            "correct_index": 2,
+            "explanation": "Trade discount is deducted before the transaction is recorded, so the goods are entered at N50,000 less 10 percent, which is N45,000. A cash discount would only arise on prompt settlement and is not recorded here.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-020",
+            "domain": "Financial Accounting",
+            "stem": "Under the IASB conceptual framework, which of the following is an enhancing qualitative characteristic of useful financial information?",
+            "options": [
+                "Relevance",
+                "Faithful representation",
+                "Materiality",
+                "Comparability"
+            ],
+            "correct_index": 3,
+            "explanation": "Comparability is one of the enhancing characteristics that increase the usefulness of information already relevant and faithfully represented. Relevance and faithful representation are the fundamental characteristics, while materiality is an aspect of relevance.",
+            "reference": "ICAN Foundation Syllabus - Financial Accounting"
+        },
+        {
+            "id": "ican-found-021",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A sum of N50,000 is invested at simple interest of 8 percent per annum. What is the total interest earned over three years?",
+            "options": [
+                "N12,000",
+                "N13,000",
+                "N4,000",
+                "N15,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Simple interest is principal times rate times time, so N50,000 x 0.08 x 3 = N12,000. Using the annual figure only, or compounding it, gives the wrong total.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-022",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "N100,000 is invested at 10 percent per annum compounded annually. What is the total compound interest earned after two years?",
+            "options": [
+                "N20,000",
+                "N21,000",
+                "N22,000",
+                "N11,000"
+            ],
+            "correct_index": 1,
+            "explanation": "The investment grows to N100,000 x 1.10 x 1.10 = N121,000, so the interest is N21,000. Simple interest of N20,000 ignores the interest earned on the first year's interest.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-023",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A payment of N121,000 is due in two years' time and the discount rate is 10 percent per annum. What is the present value of that payment?",
+            "options": [
+                "N96,800",
+                "N110,000",
+                "N100,000",
+                "N121,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Present value equals the future amount divided by 1.10 squared, so N121,000 / 1.21 = N100,000. Discounting for only one year or not at all gives the other figures.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-024",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A data set consists of the values 4, 8, 10, 14 and 14. What is the arithmetic mean of the data set?",
+            "options": [
+                "14",
+                "8",
+                "12",
+                "10"
+            ],
+            "correct_index": 3,
+            "explanation": "The mean is the sum of the values divided by their count, so (4 + 8 + 10 + 14 + 14) / 5 = 50 / 5 = 10. Using the mode or an incorrect total gives the other answers.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-025",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "The values 3, 7, 9, 15, 21 and 25 are arranged in order. What is the median of these values?",
+            "options": [
+                "12",
+                "9",
+                "15",
+                "11"
+            ],
+            "correct_index": 0,
+            "explanation": "With an even number of values the median is the mean of the two middle values, so (9 + 15) / 2 = 12. Choosing one middle value or the mean of the whole set is incorrect.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-026",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "For the data set 2, 3, 3, 5, 7, 7, 7 and 9, what is the mode?",
+            "options": [
+                "3",
+                "7",
+                "5",
+                "9"
+            ],
+            "correct_index": 1,
+            "explanation": "The mode is the value that occurs most frequently, and 7 appears three times, more than any other value. The values 3 and 9 appear less often.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-027",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A data set contains the values 12, 5, 19, 8 and 14. What is the range of this data set?",
+            "options": [
+                "19",
+                "5",
+                "14",
+                "7"
+            ],
+            "correct_index": 2,
+            "explanation": "The range is the largest value minus the smallest, so 19 - 5 = 14. Reporting the maximum alone or an incorrect pair of values misstates the spread.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-028",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A fair six-sided die numbered 1 to 6 is rolled once. What is the probability that the outcome is an even number?",
+            "options": [
+                "1/3",
+                "1/6",
+                "2/3",
+                "1/2"
+            ],
+            "correct_index": 3,
+            "explanation": "There are three even outcomes (2, 4 and 6) out of six equally likely outcomes, so the probability is 3/6 = 1/2. Using only one even number or all six outcomes gives the wrong fraction.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-029",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "Two fair coins are tossed once. What is the probability that both coins show heads?",
+            "options": [
+                "1/4",
+                "1/2",
+                "1/3",
+                "3/4"
+            ],
+            "correct_index": 0,
+            "explanation": "The two tosses are independent, so the probability is 1/2 multiplied by 1/2, which equals 1/4. There are four equally likely outcomes and only one is two heads.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-030",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A sum of N180,000 is to be shared among three partners in the ratio of 2, 3 and 4. What is the largest share?",
+            "options": [
+                "N40,000",
+                "N80,000",
+                "N60,000",
+                "N90,000"
+            ],
+            "correct_index": 1,
+            "explanation": "The ratio has nine parts in total, so one part is N180,000 / 9 = N20,000 and the largest share of four parts is N80,000. Dividing equally ignores the ratio.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-031",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A trader buys a shirt for N4,000 and sells it at a mark-up of 25 percent on cost. What is the selling price?",
+            "options": [
+                "N4,250",
+                "N4,800",
+                "N5,000",
+                "N5,250"
+            ],
+            "correct_index": 2,
+            "explanation": "A mark-up of 25 percent on cost adds N1,000 to N4,000, giving a selling price of N5,000. Confusing mark-up on cost with a margin on selling price gives the wrong figure.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-032",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A business has fixed costs of N200,000, a selling price of N50 per unit and variable costs of N30 per unit. How many units must it sell to break even?",
+            "options": [
+                "4,000 units",
+                "6,667 units",
+                "2,000 units",
+                "10,000 units"
+            ],
+            "correct_index": 3,
+            "explanation": "Contribution per unit is N50 - N30 = N20, and break-even units equal fixed costs divided by contribution, so N200,000 / N20 = 10,000 units. Dividing by the selling price is a common error.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-033",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A student scores 70 marks in a course weighted 3 and 50 marks in a course weighted 1. What is the weighted average score?",
+            "options": [
+                "65",
+                "60",
+                "62.5",
+                "70"
+            ],
+            "correct_index": 0,
+            "explanation": "The weighted average is (70 x 3 + 50 x 1) / (3 + 1) = 260 / 4 = 65. Taking a simple average of 70 and 50 gives 60, which ignores the weights.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-034",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "A distribution has a mean of 50 and a standard deviation of 5. What is the coefficient of variation?",
+            "options": [
+                "5 percent",
+                "10 percent",
+                "0.1 percent",
+                "25 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The coefficient of variation is the standard deviation divided by the mean, so 5 / 50 = 0.10, or 10 percent. It expresses relative variability and is not the standard deviation itself.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-035",
+            "domain": "Business Mathematics and Statistics",
+            "stem": "The price index of a commodity rose from a base-level value of 100 in 2020 to 120 in 2024. What is the percentage increase in price over the period?",
+            "options": [
+                "120 percent",
+                "12 percent",
+                "20 percent",
+                "2 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "The increase is 120 minus 100, which is 20 index points on a base of 100, so the percentage rise is 20 percent. Reading the index itself as the percentage change is incorrect.",
+            "reference": "ICAN Foundation Syllabus - Business Mathematics and Statistics"
+        },
+        {
+            "id": "ican-found-036",
+            "domain": "Economics",
+            "stem": "A student with limited income must choose between buying a textbook and buying a concert ticket. In economic terms, what is the opportunity cost of buying the textbook?",
+            "options": [
+                "The price paid for the textbook",
+                "The total income of the student",
+                "The combined cost of both items",
+                "The value of the concert ticket forgone"
+            ],
+            "correct_index": 3,
+            "explanation": "Opportunity cost is the value of the next best alternative given up, which here is the concert ticket. The money price of the textbook is the accounting cost, not the opportunity cost.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-037",
+            "domain": "Economics",
+            "stem": "Which statement correctly describes the law of demand?",
+            "options": [
+                "Quantity demanded falls as price rises, other things held constant",
+                "Quantity demanded rises as price rises, other things held constant",
+                "Quantity supplied falls as price rises, other things held constant",
+                "Quantity demanded is unrelated to price in all markets"
+            ],
+            "correct_index": 0,
+            "explanation": "The law of demand states an inverse relationship between price and quantity demanded, with all else equal. The second statement reverses the relationship, and supply behaviour is a different concept.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-038",
+            "domain": "Economics",
+            "stem": "If the cost of producing a good falls, what is the most likely effect on its supply curve?",
+            "options": [
+                "The supply curve shifts to the left, reducing supply",
+                "The supply curve shifts to the right, increasing supply",
+                "The supply curve becomes vertical",
+                "The supply curve does not move at all"
+            ],
+            "correct_index": 1,
+            "explanation": "Lower production costs make supplying the good more profitable at every price, shifting supply to the right. A leftward shift would follow a rise in costs, not a fall.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-039",
+            "domain": "Economics",
+            "stem": "In a market the demand function is Qd = 100 - 2P and the supply function is Qs = 20 + 2P. What is the equilibrium price?",
+            "options": [
+                "40",
+                "30",
+                "20",
+                "80"
+            ],
+            "correct_index": 2,
+            "explanation": "Setting Qd equal to Qs gives 100 - 2P = 20 + 2P, so 80 = 4P and P = 20. Substituting the other candidate values does not balance the two functions.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-040",
+            "domain": "Economics",
+            "stem": "When the price of a good rises by 20 percent, quantity demanded falls by 20 percent. What is the price elasticity of demand?",
+            "options": [
+                "2, elastic",
+                "0.5, inelastic",
+                "0, perfectly inelastic",
+                "1, unit elastic"
+            ],
+            "correct_index": 3,
+            "explanation": "Price elasticity of demand is the percentage change in quantity divided by the percentage change in price, so 20 / 20 = 1, which is unit elastic. Any other ratio misreads the figures.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-041",
+            "domain": "Economics",
+            "stem": "A good has a negative income elasticity of demand. What type of good is it?",
+            "options": [
+                "An inferior good",
+                "A normal good",
+                "A luxury good",
+                "A complementary good"
+            ],
+            "correct_index": 0,
+            "explanation": "Negative income elasticity means demand falls as income rises, which defines an inferior good. Normal and luxury goods have positive income elasticity, while complementarity is measured by cross elasticity.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-042",
+            "domain": "Economics",
+            "stem": "The cross elasticity of demand between two goods is positive. What is the relationship between the goods?",
+            "options": [
+                "The goods are complements",
+                "The goods are substitutes",
+                "The goods are unrelated",
+                "The goods are both inferior"
+            ],
+            "correct_index": 1,
+            "explanation": "A positive cross elasticity means a rise in the price of one good increases demand for the other, so they are substitutes. Complements have negative cross elasticity, and unrelated goods have zero.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-043",
+            "domain": "Economics",
+            "stem": "Which statement best explains the law of diminishing marginal utility?",
+            "options": [
+                "As more units are produced, total cost always falls",
+                "As price rises, total revenue always rises",
+                "As more units of a good are consumed, the extra satisfaction from each additional unit falls",
+                "As income rises, consumption of every good falls"
+            ],
+            "correct_index": 2,
+            "explanation": "Diminishing marginal utility describes how the additional satisfaction gained from each extra unit of a good declines as consumption increases. The other statements confuse utility with cost or revenue behaviour.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-044",
+            "domain": "Economics",
+            "stem": "When marginal cost is below average cost, what is happening to average cost as output rises?",
+            "options": [
+                "Average cost is rising",
+                "Average cost is constant",
+                "Average cost is at its minimum",
+                "Average cost is falling"
+            ],
+            "correct_index": 3,
+            "explanation": "As long as the marginal cost of the next unit is below the average, that unit pulls the average down, so average cost is falling. Average cost rises once marginal cost exceeds it.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-045",
+            "domain": "Economics",
+            "stem": "Which of the following is a fixed cost for a factory in the short run?",
+            "options": [
+                "The rent paid on the factory building",
+                "The cost of raw materials used in production",
+                "Wages paid to workers on the production line",
+                "The electricity used to run the machines"
+            ],
+            "correct_index": 0,
+            "explanation": "Rent does not vary with output in the short run, so it is a fixed cost. Raw materials, production wages and machine electricity all vary with output and are therefore variable costs.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-046",
+            "domain": "Economics",
+            "stem": "In a perfectly competitive market, what is the position of an individual firm with respect to price?",
+            "options": [
+                "It sets a price above the market price",
+                "It is a price taker and accepts the market price",
+                "It faces a downward-sloping demand curve",
+                "It alone decides the market price"
+            ],
+            "correct_index": 1,
+            "explanation": "With many buyers and sellers and a homogeneous product, a single firm cannot influence price and is a price taker. A downward-sloping demand curve belongs to imperfectly competitive firms.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-047",
+            "domain": "Economics",
+            "stem": "Which feature best distinguishes a monopoly from other market structures?",
+            "options": [
+                "Many small firms selling identical products",
+                "A few large firms selling differentiated products",
+                "A single seller protected by barriers to entry",
+                "Perfect information available to all buyers"
+            ],
+            "correct_index": 2,
+            "explanation": "A monopoly exists where one firm supplies the whole market and barriers prevent new entrants. Many homogeneous sellers describes perfect competition, and a few differentiated sellers describes oligopoly.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-048",
+            "domain": "Economics",
+            "stem": "Which statement best defines inflation?",
+            "options": [
+                "A one-off increase in the price of a single good",
+                "A fall in the general level of prices",
+                "A rise in the quantity of money in circulation only",
+                "A sustained rise in the general level of prices"
+            ],
+            "correct_index": 3,
+            "explanation": "Inflation is a sustained increase in the general price level across the economy, not a single product's price. A general fall in prices is deflation, and money growth alone is only one possible cause.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-049",
+            "domain": "Economics",
+            "stem": "Which statement correctly describes gross domestic product?",
+            "options": [
+                "The market value of all final goods and services produced within a country in a period",
+                "The total income earned by a country's citizens anywhere in the world",
+                "The value of a country's exports less its imports",
+                "The total money supply held by households and firms"
+            ],
+            "correct_index": 0,
+            "explanation": "GDP measures the market value of final output produced within a country's borders over a period. Income earned abroad by citizens is captured by GNP, while exports less imports is net exports.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-050",
+            "domain": "Economics",
+            "stem": "Which of the following is an instrument of monetary policy?",
+            "options": [
+                "Changes in the rate of company income tax",
+                "Open market operations by the central bank",
+                "Increased government spending on roads",
+                "An increase in import tariffs"
+            ],
+            "correct_index": 1,
+            "explanation": "Monetary policy works through money supply and interest rates, and open market operations are a central bank instrument. Taxation, government spending and tariffs are tools of fiscal or trade policy.",
+            "reference": "ICAN Foundation Syllabus - Economics"
+        },
+        {
+            "id": "ican-found-051",
+            "domain": "Business and Management",
+            "stem": "Which management function is primarily concerned with setting objectives and deciding in advance how to achieve them?",
+            "options": [
+                "Controlling",
+                "Staffing",
+                "Planning",
+                "Co-ordinating"
+            ],
+            "correct_index": 2,
+            "explanation": "Planning is the function of setting objectives and choosing the means to reach them before action is taken. Controlling compares results with plans, while staffing and co-ordinating deal with people and effort.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-052",
+            "domain": "Business and Management",
+            "stem": "What is the likely organisational consequence of a narrow span of control?",
+            "options": [
+                "A flat structure with few levels of management",
+                "A complete absence of supervision",
+                "An increase in the number of subordinates per manager",
+                "A tall structure with many levels of management"
+            ],
+            "correct_index": 3,
+            "explanation": "A narrow span means each manager supervises few staff, which requires more management layers and produces a tall structure. A wide span produces a flatter structure with fewer levels.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-053",
+            "domain": "Business and Management",
+            "stem": "In Maslow's hierarchy of needs, which level represents the highest form of motivation?",
+            "options": [
+                "Self-actualisation",
+                "Safety needs",
+                "Social needs",
+                "Physiological needs"
+            ],
+            "correct_index": 0,
+            "explanation": "Self-actualisation sits at the top of Maslow's hierarchy, representing the drive to realise one's full potential. Safety, social and physiological needs are lower levels that must generally be met first.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-054",
+            "domain": "Business and Management",
+            "stem": "Which leadership style involves the leader consulting subordinates and sharing decision-making with them?",
+            "options": [
+                "Autocratic leadership",
+                "Democratic leadership",
+                "Laissez-faire leadership",
+                "Bureaucratic leadership"
+            ],
+            "correct_index": 1,
+            "explanation": "A democratic leader invites participation and shares decisions with the team. Autocratic leaders decide alone, laissez-faire leaders leave the team to itself, and bureaucratic leaders rely rigidly on rules.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-055",
+            "domain": "Business and Management",
+            "stem": "Which feature distinguishes a sole trader from a limited liability company?",
+            "options": [
+                "The sole trader must publish audited accounts",
+                "The sole trader has perpetual succession",
+                "The sole trader has unlimited personal liability for business debts",
+                "The sole trader raises capital by issuing shares"
+            ],
+            "correct_index": 2,
+            "explanation": "A sole trader is not a separate legal person and is personally liable for all business debts. Publishing audited accounts, perpetual succession and issuing shares are features of a company.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-056",
+            "domain": "Business and Management",
+            "stem": "What is an advantage of a limited liability company over a sole proprietorship when raising finance?",
+            "options": [
+                "It pays no tax on its profits",
+                "Its owners are free of all legal duties",
+                "It cannot be sued in its own name",
+                "It can issue shares to raise capital from many investors"
+            ],
+            "correct_index": 3,
+            "explanation": "A company can issue shares and thereby draw on capital from a wide group of investors, which a sole proprietor cannot do. Companies remain taxable, owe legal duties and can sue and be sued in their own name.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-057",
+            "domain": "Business and Management",
+            "stem": "Which of the following is not one of the traditional four elements of the marketing mix?",
+            "options": [
+                "People",
+                "Product",
+                "Price",
+                "Promotion"
+            ],
+            "correct_index": 0,
+            "explanation": "The traditional marketing mix is product, price, place and promotion. People belongs to the extended services mix rather than the original four Ps.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-058",
+            "domain": "Business and Management",
+            "stem": "In a SWOT analysis, which element represents an external factor facing a business?",
+            "options": [
+                "Strengths",
+                "Threats",
+                "Weaknesses",
+                "Core competences"
+            ],
+            "correct_index": 1,
+            "explanation": "Threats are external conditions that could harm the business, as are opportunities. Strengths, weaknesses and core competences are internal attributes of the firm.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-059",
+            "domain": "Business and Management",
+            "stem": "In corporate governance, to whom is the board of directors primarily accountable for the stewardship of a company?",
+            "options": [
+                "The company's suppliers",
+                "The trade unions",
+                "The shareholders",
+                "The competitors"
+            ],
+            "correct_index": 2,
+            "explanation": "The board is elected by and answerable to the shareholders, who own the company, for the stewardship of its assets and performance. Suppliers, unions and competitors are stakeholders but not the owners.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        },
+        {
+            "id": "ican-found-060",
+            "domain": "Business and Management",
+            "stem": "Which statement best describes a stakeholder of a business organisation?",
+            "options": [
+                "Only the shareholders who own the business",
+                "Only the customers who buy its products",
+                "Only the managers who run its operations",
+                "Any group or individual affected by the organisation's activities"
+            ],
+            "correct_index": 3,
+            "explanation": "A stakeholder is any party affected by, or able to affect, the organisation, including employees, customers, suppliers and communities. Shareholders, customers and managers are each only one subset of stakeholders.",
+            "reference": "ICAN Foundation Syllabus - Business and Management"
+        }
+    ]
+}

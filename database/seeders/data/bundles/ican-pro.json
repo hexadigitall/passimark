@@ -1,0 +1,858 @@
+{
+    "cert_key": "ican-pro",
+    "title": "ICAN Professional",
+    "issuer": "Institute of Chartered Accountants of Nigeria",
+    "region": "AFRICA",
+    "outline_file": "outlines/ican-pro.json",
+    "variant_label": "ICAN Professional Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 180,
+        "scoring": "50% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public ICAN professional-level syllabus (Corporate Reporting, Advanced Audit, Taxation, Strategic Financial Management). Not a capture of past exam questions.",
+    "source_label": "ICAN Professional practice bank",
+    "items": [
+        {
+            "id": "ican-pro-001",
+            "domain": "Corporate Reporting",
+            "stem": "A contractor agrees to build a warehouse for N20,000,000 and expects to finish one month late, so an agreed penalty clause will reduce the price by N2,000,000. Under IFRS 15, what transaction price should the contractor allocate to the performance obligation?",
+            "options": [
+                "N18,000,000, because the expected late-completion penalty is variable consideration that reduces the price",
+                "N20,000,000, because penalty clauses are ignored until they are actually incurred",
+                "N20,000,000, because the penalty is a contingent asset recognised only on completion",
+                "N2,000,000, because only the penalty amount is recognised as revenue"
+            ],
+            "correct_index": 0,
+            "explanation": "IFRS 15 requires variable consideration to be included in the transaction price when it is highly probable that there will not be a significant reversal. The expected penalty of N2,000,000 is deducted, giving N18,000,000, so waiting to recognise it or ignoring it is wrong.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-002",
+            "domain": "Corporate Reporting",
+            "stem": "A construction company builds a bridge for a customer over three years, and the customer controls the work in progress as it is created. When should the company recognise revenue under IFRS 15?",
+            "options": [
+                "When the bridge is completed and handed over to the customer",
+                "Over time, because the customer controls the asset as it is built",
+                "Only when the customer is invoiced at each milestone",
+                "When the contract is signed and the price is agreed"
+            ],
+            "correct_index": 1,
+            "explanation": "Because the customer controls the asset as it is created, the performance obligation is satisfied over time and revenue is recognised using a measure of progress. Point-in-time recognition or invoicing follows different criteria and is not appropriate here.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-003",
+            "domain": "Corporate Reporting",
+            "stem": "A company revalues its building from a carrying amount of N8,000,000 to a fair value of N10,000,000. What is the correct accounting treatment under IAS 16?",
+            "options": [
+                "Credit profit or loss with N2,000,000 as a gain",
+                "Debit the building account and credit share capital with N2,000,000",
+                "Credit a revaluation surplus of N2,000,000 to other comprehensive income",
+                "Recognise no entry until the building is eventually sold"
+            ],
+            "correct_index": 2,
+            "explanation": "IAS 16 requires an upward revaluation to be credited to other comprehensive income and accumulated in equity as a revaluation surplus unless it reverses a previous deficit. Putting the gain through profit or loss is only correct when it reverses an earlier impairment.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-004",
+            "domain": "Corporate Reporting",
+            "stem": "A cash-generating unit has a fair value less costs of disposal of N4,500,000 and a value in use of N4,200,000. Its carrying amount is N5,000,000. What is the impairment loss under IAS 36?",
+            "options": [
+                "N800,000, because value in use is used as the recoverable amount",
+                "Nil, because fair value less costs of disposal is below the carrying amount",
+                "N300,000, because the difference between the two measures is the loss",
+                "N500,000, because the recoverable amount is the higher measure at N4,500,000"
+            ],
+            "correct_index": 3,
+            "explanation": "The recoverable amount is the higher of fair value less costs of disposal and value in use, so it is N4,500,000. The impairment loss is N5,000,000 minus N4,500,000, which equals N500,000.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-005",
+            "domain": "Corporate Reporting",
+            "stem": "On 1 January a company enters a five-year lease with annual payments of N1,000,000 payable in arrears, and the incremental borrowing rate is 10 percent. Which amount is closest to the initial lease liability under IFRS 16?",
+            "options": [
+                "N3,791,000, being the present value of the five payments",
+                "N5,000,000, being the undiscounted total of the payments",
+                "N1,000,000, being the first payment only",
+                "N3,170,000, being the present value of an annuity due"
+            ],
+            "correct_index": 0,
+            "explanation": "IFRS 16 initially measures the lease liability at the present value of the lease payments not yet paid, discounted at the incremental borrowing rate. Discounting five payments of N1,000,000 at 10 percent gives approximately N3,791,000, not the undiscounted N5,000,000.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-006",
+            "domain": "Corporate Reporting",
+            "stem": "A company faces a legal claim where a present obligation exists, an outflow is more likely than not, and a reliable estimate can be made. Under IAS 37 what should be recognised?",
+            "options": [
+                "A contingent liability disclosed only in the notes",
+                "A provision measured at the best estimate of the expenditure required",
+                "A contingent asset recognised in profit or loss",
+                "No recognition until the court gives its judgement"
+            ],
+            "correct_index": 1,
+            "explanation": "IAS 37 requires a provision to be recognised when a present obligation exists from a past event, an outflow is probable, and the amount can be estimated reliably. Disclosure-only treatment applies to contingent liabilities whose outflow is not probable.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-007",
+            "domain": "Corporate Reporting",
+            "stem": "Which approach to impairment under IFRS 9 applies to trade receivables that do not contain a significant financing component?",
+            "options": [
+                "The general three-stage model only",
+                "The old incurred loss model applied at each year end",
+                "The simplified approach measuring a lifetime expected credit loss allowance",
+                "Fair value through other comprehensive income with no allowance"
+            ],
+            "correct_index": 2,
+            "explanation": "IFRS 9 permits the simplified approach for trade receivables, contract assets and lease receivables, measuring the loss allowance at an amount equal to lifetime expected credit losses. The general staged model applies where a significant financing component is present.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-008",
+            "domain": "Corporate Reporting",
+            "stem": "A Nigerian company has a receivable of USD 100,000 recorded when the rate was N1,500 per dollar. At the year end the rate is N1,600 per dollar. What exchange difference arises on the receivable?",
+            "options": [
+                "A loss of N10,000,000 because the naira weakened against the dollar",
+                "A gain of N100,000,000 because of the change in the rate",
+                "No exchange difference until the receivable is settled in cash",
+                "A gain of N10,000,000 because the naira weakened against the dollar"
+            ],
+            "correct_index": 3,
+            "explanation": "The naira carrying value rises from N100,000,000 to N160,000,000 as the rate moves from N1,500 to N1,600, giving a gain of N10,000,000. A weakening naira increases the naira value of foreign-currency monetary assets.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-009",
+            "domain": "Corporate Reporting",
+            "stem": "A company reports an asset with a carrying amount of N800,000 and a tax base of N600,000, and the tax rate is 25 percent. What deferred tax arises under IAS 12?",
+            "options": [
+                "A deferred tax liability of N50,000 on the taxable temporary difference",
+                "A deferred tax asset of N50,000 because the tax charge is lower",
+                "No deferred tax because the asset has not been sold",
+                "A deferred tax liability of N200,000 on the carrying amount"
+            ],
+            "correct_index": 0,
+            "explanation": "The carrying amount exceeds the tax base by N200,000, a taxable temporary difference, so the deferred tax liability is N200,000 times 25 percent, equal to N50,000. The liability reverses when the asset is recovered.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-010",
+            "domain": "Corporate Reporting",
+            "stem": "A company earns profit after tax of N4,000,000 and has 800,000 ordinary shares in issue throughout the year, with a cumulative preference dividend of N400,000. What is basic earnings per share?",
+            "options": [
+                "N5.00",
+                "N4.50, being profit after tax less the preference dividend, divided by 800,000 shares",
+                "N5.50, being profit after tax plus the preference dividend, divided by 800,000 shares",
+                "N0.20, being the reciprocal of the profit figure"
+            ],
+            "correct_index": 1,
+            "explanation": "Basic earnings per share is profit attributable to ordinary shareholders divided by the weighted average number of ordinary shares. Deducting the cumulative preference dividend gives N3,600,000 over 800,000 shares, which equals N4.50.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-011",
+            "domain": "Corporate Reporting",
+            "stem": "A parent acquires 100 percent of a subsidiary for N15,000,000 and the fair value of the identifiable net assets acquired is N11,000,000. What is goodwill on consolidation under IFRS 3?",
+            "options": [
+                "N15,000,000",
+                "N11,000,000",
+                "N4,000,000",
+                "N26,000,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Goodwill is the consideration transferred less the fair value of the identifiable net assets acquired, so N15,000,000 minus N11,000,000 equals N4,000,000. Adding the figures or ignoring net assets would misstate goodwill.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-012",
+            "domain": "Corporate Reporting",
+            "stem": "A parent owns 80 percent of a subsidiary whose profit for the year is N5,000,000, with no intra-group adjustments. What amount of profit is attributable to the non-controlling interest?",
+            "options": [
+                "N5,000,000",
+                "N4,000,000",
+                "Nil, because the parent controls the subsidiary",
+                "N1,000,000"
+            ],
+            "correct_index": 3,
+            "explanation": "The non-controlling interest holds 20 percent of the subsidiary, so its share of the profit is 20 percent of N5,000,000, which is N1,000,000. The parent reports the remaining N4,000,000.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-013",
+            "domain": "Corporate Reporting",
+            "stem": "Which of the following is classified as an investing activity in the statement of cash flows under IAS 7?",
+            "options": [
+                "Cash paid to purchase property, plant and equipment",
+                "Cash received from customers for goods sold",
+                "Dividends paid to shareholders",
+                "Interest paid on borrowings"
+            ],
+            "correct_index": 0,
+            "explanation": "Purchases and sales of long-term assets are investing activities. Cash from customers is an operating activity, while dividends paid and interest paid are classified as financing or operating rather than investing.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-014",
+            "domain": "Corporate Reporting",
+            "stem": "An entity holds inventory costing N500,000, its estimated selling price is N560,000 and the estimated selling costs are N80,000. At what amount should the inventory be carried under IAS 2?",
+            "options": [
+                "N560,000, being the estimated selling price",
+                "N480,000, being the net realisable value below cost",
+                "N500,000, being the original cost",
+                "N440,000, being the selling price less twice the selling costs"
+            ],
+            "correct_index": 1,
+            "explanation": "Net realisable value is the estimated selling price less the estimated costs of completion and sale, so N560,000 minus N80,000 equals N480,000. Inventory is measured at the lower of cost and net realisable value, so cost is written down to N480,000.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-015",
+            "domain": "Corporate Reporting",
+            "stem": "During the year a company spends N2,000,000 on research and N3,000,000 on development that meets the recognition criteria. How should the expenditure be treated under IAS 38?",
+            "options": [
+                "Capitalise all N5,000,000 as an intangible asset",
+                "Expense all N5,000,000 because internally generated assets are not recognised",
+                "Expense the N2,000,000 research and capitalise the N3,000,000 development",
+                "Capitalise the research and expense the development"
+            ],
+            "correct_index": 2,
+            "explanation": "IAS 38 prohibits capitalising research expenditure but requires development expenditure to be capitalised once the recognition criteria are met. The N2,000,000 is expensed and the qualifying N3,000,000 is capitalised.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-016",
+            "domain": "Corporate Reporting",
+            "stem": "An entity reports segments to its chief operating decision maker by product line. How should reportable operating segments be identified under IFRS 8?",
+            "options": [
+                "By legal entity only",
+                "By geographical region regardless of internal reporting",
+                "By the largest five revenue streams",
+                "On the basis of the internal reports reviewed by the chief operating decision maker"
+            ],
+            "correct_index": 3,
+            "explanation": "IFRS 8 uses the management approach, so operating segments are based on the internal reports regularly reviewed by the chief operating decision maker. Legal structure or a fixed geographic split is not the basis for identification.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-017",
+            "domain": "Corporate Reporting",
+            "stem": "A company's year end is 31 December. On 20 January, before the financial statements are approved, a customer with a large receivable is declared insolvent. What is the correct treatment under IAS 10?",
+            "options": [
+                "An adjusting event, because it provides evidence of conditions existing at the reporting date",
+                "A non-adjusting event, disclosed only in the notes",
+                "It is ignored because it occurred after the year end",
+                "Only the original sales revenue is reversed"
+            ],
+            "correct_index": 0,
+            "explanation": "The insolvency provides evidence about the recoverability of a receivable that existed at the reporting date, so it is an adjusting event and the receivable is written down. Non-adjusting events reflect conditions arising after the year end.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-018",
+            "domain": "Corporate Reporting",
+            "stem": "Which statement best describes the going concern assumption applied in preparing financial statements?",
+            "options": [
+                "Assets are always measured at their liquidation value",
+                "The entity is viewed as continuing in operation for the foreseeable future",
+                "The entity must be profitable in the current year for the basis to apply",
+                "The financial statements are prepared only on a cash basis"
+            ],
+            "correct_index": 1,
+            "explanation": "Under the going concern basis the entity is assumed to continue in operation for the foreseeable future, so assets are not stated at forced-sale amounts. Profitability is not required, and accrual rather than cash accounting still applies.",
+            "reference": "ICAN Professional Syllabus - Corporate Reporting"
+        },
+        {
+            "id": "ican-pro-019",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "Audit risk is a function of the risks of material misstatement and detection risk. Which component does the auditor directly control through the nature, timing and extent of procedures?",
+            "options": [
+                "Inherent risk",
+                "Control risk",
+                "Detection risk",
+                "Business risk"
+            ],
+            "correct_index": 2,
+            "explanation": "The auditor sets the nature, timing and extent of procedures, which determines detection risk. Inherent risk and control risk arise from the entity and are assessed by the auditor rather than controlled.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-020",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "An auditor sets materiality for the financial statements as a whole at N10,000,000 and finds a misstatement of N600,000 in a balance of N2,000,000 that users rely on heavily. What is the most appropriate conclusion?",
+            "options": [
+                "The misstatement is immaterial because it is below overall materiality",
+                "The misstatement is material only if it exceeds N500,000",
+                "Materiality cannot be applied to individual balances",
+                "The misstatement may still be material because it affects a sensitive balance"
+            ],
+            "correct_index": 3,
+            "explanation": "Although overall materiality is N10,000,000, a lower materiality may be set for particular classes of transactions or balances. A misstatement that exceeds that lower threshold is material even if it is below overall materiality.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-021",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "When the auditor assesses control risk at a low level and intends to rely on controls, what must the auditor do?",
+            "options": [
+                "Test the operating effectiveness of those controls",
+                "Perform only substantive procedures and ignore the controls",
+                "Reduce the amount of audit evidence gathered",
+                "Assume the controls operate effectively without testing them"
+            ],
+            "correct_index": 0,
+            "explanation": "To rely on controls the auditor must obtain evidence that they operated effectively throughout the period, usually by tests of controls. Assuming effectiveness without testing or abandoning controls is not permitted.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-022",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "Which source of audit evidence is generally the most reliable?",
+            "options": [
+                "A schedule prepared by the client's accounts clerk",
+                "A bank confirmation obtained directly by the auditor",
+                "A photocopy of a supplier invoice held by the client",
+                "An oral representation by the finance director"
+            ],
+            "correct_index": 1,
+            "explanation": "Evidence is more reliable when obtained from independent external sources and held directly by the auditor. A direct bank confirmation is external and auditor-controlled, so it outranks client-prepared schedules or oral representations.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-023",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "During the audit the auditor identifies a material uncertainty about going concern that is adequately disclosed in the financial statements. What should the auditor do?",
+            "options": [
+                "Issue an adverse opinion because of the uncertainty",
+                "Disclaim an opinion on the whole set of financial statements",
+                "Include a separate section in the report headed material uncertainty related to going concern",
+                "Do nothing because the disclosure is adequate"
+            ],
+            "correct_index": 2,
+            "explanation": "When a material uncertainty about going concern is adequately disclosed, the auditor expresses an unmodified opinion but draws attention through a separate section in the report. A disclaimer or adverse opinion is not appropriate when disclosure is adequate.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-024",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "The auditor's report is dated 15 March. On 20 March the auditor becomes aware of a fact that would have changed the report had it been known earlier. What is the auditor's responsibility?",
+            "options": [
+                "Ignore the fact because the report has already been signed",
+                "Immediately issue a new report without any enquiry",
+                "Resign from the engagement automatically",
+                "Discuss the matter with management and consider whether the financial statements need amendment"
+            ],
+            "correct_index": 3,
+            "explanation": "After the report is dated, if the auditor becomes aware of a fact that may have caused amendment, the auditor discusses it with management and, if appropriate, takes action to prevent reliance on the report. Silence or automatic resignation is not the required response.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-025",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "In a group audit a component auditor reports findings on a significant component. Who is responsible for the group audit opinion?",
+            "options": [
+                "The group engagement partner",
+                "The component auditor",
+                "The component's management",
+                "The parent's audit committee"
+            ],
+            "correct_index": 0,
+            "explanation": "The group engagement partner is responsible for the group audit opinion, including the direction, supervision and performance of the group engagement. Component auditors work under the group auditor's instructions and are not responsible for the group opinion.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-026",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "The auditor concludes that misstatements are material but not pervasive to the financial statements. Which opinion is appropriate?",
+            "options": [
+                "An unmodified opinion",
+                "A qualified opinion",
+                "An adverse opinion",
+                "A disclaimer of opinion"
+            ],
+            "correct_index": 1,
+            "explanation": "A qualified opinion is issued when misstatements are material but not pervasive. An adverse opinion applies when misstatements are both material and pervasive, and a disclaimer applies when the auditor cannot obtain sufficient appropriate evidence.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-027",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "Which entities are required to communicate key audit matters in the auditor's report under ISA 701?",
+            "options": [
+                "All entities, including small private companies",
+                "Only banks and insurance companies",
+                "Listed entities, and other entities when required or when the auditor chooses to do so",
+                "Only entities that have an internal audit function"
+            ],
+            "correct_index": 2,
+            "explanation": "ISA 701 requires key audit matters for audits of complete sets of general purpose financial statements of listed entities, and permits or requires them in other circumstances. It is not limited to banks or triggered by having an internal audit function.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-028",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "The auditor identifies a risk of material misstatement due to fraud in revenue recognition. What is the required response under ISA 240?",
+            "options": [
+                "Ignore it because fraud prevention is management's responsibility",
+                "Report directly to the police without further audit work",
+                "Reduce the extent of testing performed on revenue",
+                "Treat revenue recognition as a significant risk and design procedures accordingly"
+            ],
+            "correct_index": 3,
+            "explanation": "ISA 240 presumes a risk of fraud in revenue recognition, so the auditor treats it as a significant risk and designs appropriate procedures. Fraud prevention is management's responsibility, but the auditor must still respond to the assessed risk.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-029",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "An audit partner's close family member holds a direct financial interest in the audit client. What is the effect on independence?",
+            "options": [
+                "A self-interest threat that could compromise independence",
+                "No effect because the interest is held by a family member",
+                "An intimidation threat only",
+                "A threat that is always insignificant"
+            ],
+            "correct_index": 0,
+            "explanation": "A close family member's direct financial interest creates a self-interest threat to independence, and the interest should normally be disposed of before the individual continues on the engagement. It is not automatically insignificant.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-030",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "At the planning stage the auditor performs analytical procedures. What is their primary purpose at that stage?",
+            "options": [
+                "To obtain conclusive evidence that the accounts are correct",
+                "To enhance understanding of the entity and identify unusual relationships",
+                "To replace all substantive testing on the engagement",
+                "To satisfy the client's internal reporting requirements"
+            ],
+            "correct_index": 1,
+            "explanation": "Analytical procedures at the planning stage help the auditor understand the entity and highlight unusual or unexpected relationships that may indicate risks of material misstatement. They do not replace substantive testing or provide conclusive proof.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-031",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "An entity processes all sales through an automated system with programmed controls. What is a key advantage of programmed controls for the auditor?",
+            "options": [
+                "They eliminate the need for any audit testing",
+                "They cannot fail once they have been implemented",
+                "Their operating effectiveness can be tested using computer-assisted techniques",
+                "They remove all fraud risk from the sales cycle"
+            ],
+            "correct_index": 2,
+            "explanation": "Programmed controls can be tested through techniques such as test data or re-performance, which gives evidence of operating effectiveness. They do not eliminate audit testing or fraud risk, and they can fail if configuration changes occur.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-032",
+            "domain": "Advanced Audit and Assurance",
+            "stem": "Before accepting a new audit engagement, the auditor must establish whether the preconditions for an audit are present. Which matter is a precondition under ISA 210?",
+            "options": [
+                "The client's agreement that the auditor will also prepare the tax return",
+                "The client's willingness to pay the audit fee in advance",
+                "The existence of a separate internal audit department",
+                "Management's acknowledgement of its responsibility for the financial statements"
+            ],
+            "correct_index": 3,
+            "explanation": "ISA 210 requires management to acknowledge responsibility for preparing the financial statements and for providing the auditor with information, access and additional information. Tax services, prepayment or an internal audit function are not preconditions.",
+            "reference": "ICAN Professional Syllabus - Advanced Audit and Assurance"
+        },
+        {
+            "id": "ican-pro-033",
+            "domain": "Taxation",
+            "stem": "A Nigerian manufacturing company has a gross turnover of N500,000,000 and total fixed assets of N600,000,000. What companies income tax rate applies to its taxable profits under the current law?",
+            "options": [
+                "30 percent",
+                "0 percent",
+                "25 percent",
+                "15 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "A large company, being one with turnover above N100,000,000 or fixed assets above N250,000,000, is taxed at 30 percent. The zero rate applies to small companies, and 15 percent is the minimum effective tax rate for very large groups.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-034",
+            "domain": "Taxation",
+            "stem": "A Nigerian company has a gross turnover of N40,000,000 and fixed assets of N200,000,000, and it is not a professional services firm. What companies income tax rate applies under the current law?",
+            "options": [
+                "30 percent, because all companies pay the standard rate",
+                "0 percent, because it is a small company",
+                "15 percent, as the minimum effective rate",
+                "10 percent, as a reduced development rate"
+            ],
+            "correct_index": 1,
+            "explanation": "A small company, defined by turnover and fixed assets within the statutory thresholds and excluding professional services firms, is taxed at 0 percent. The 30 percent rate applies to large companies and 15 percent is the minimum effective tax rate for very large groups.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-035",
+            "domain": "Taxation",
+            "stem": "A Nigerian company has assessable profits of N50,000,000 for a year of assessment. What development levy is payable under the Nigeria Tax Act 2025?",
+            "options": [
+                "N1,500,000, being 3 percent of assessable profits",
+                "N1,250,000, being 2.5 percent of assessable profits",
+                "N2,000,000, being 4 percent of assessable profits",
+                "Nil, because the levy is payable only by multinational groups"
+            ],
+            "correct_index": 2,
+            "explanation": "The development levy is charged at 4 percent of assessable profits and consolidates the former tertiary education tax and other earmarked levies. On N50,000,000 it amounts to N2,000,000, not the older 3 or 2.5 percent rates.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-036",
+            "domain": "Taxation",
+            "stem": "A company makes standard-rated supplies of N5,000,000 and has recoverable input VAT of N150,000. The VAT rate is 7.5 percent and the company has no exempt supplies. What is the net VAT payable?",
+            "options": [
+                "N375,000, being the output VAT only",
+                "N150,000, being the input VAT only",
+                "N525,000, being output VAT plus input VAT",
+                "N225,000, being output VAT less recoverable input VAT"
+            ],
+            "correct_index": 3,
+            "explanation": "Output VAT is 7.5 percent of N5,000,000, which is N375,000. Deducting recoverable input VAT of N150,000 leaves net VAT payable of N225,000, so ignoring the input credit overstates the liability.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-037",
+            "domain": "Taxation",
+            "stem": "Which of the following supplies is exempt from value added tax in Nigeria?",
+            "options": [
+                "Basic food items and medical products",
+                "Commercial office rent",
+                "Professional consultancy fees",
+                "Imported luxury vehicles"
+            ],
+            "correct_index": 0,
+            "explanation": "Basic food items and medical and pharmaceutical products are exempt supplies under Nigeria's value added tax rules. Commercial rent, consultancy fees and most imported goods are taxable supplies rather than exempt.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-038",
+            "domain": "Taxation",
+            "stem": "A company reports a net profit of N10,000,000 that includes depreciation of N2,000,000 and a non-deductible donation of N500,000. What is the adjusted profit before capital allowances?",
+            "options": [
+                "N10,000,000, because no adjustment is needed",
+                "N12,500,000, after adding back both items",
+                "N7,500,000, after deducting both items",
+                "N10,500,000, adding back only the donation"
+            ],
+            "correct_index": 1,
+            "explanation": "Adjusted profit adds back disallowed expenses such as accounting depreciation and non-deductible donations, so N10,000,000 plus N2,000,000 plus N500,000 equals N12,500,000. Depreciation is replaced by capital allowances.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-039",
+            "domain": "Taxation",
+            "stem": "Under the Nigeria Tax Act 2025, how are capital allowances on qualifying capital expenditure generally claimed?",
+            "options": [
+                "As a single initial allowance of 50 percent plus annual allowances",
+                "Only on a reducing balance basis over the asset life",
+                "On a straight-line basis in equal annual instalments over the useful life",
+                "As a full deduction of the cost in the year of purchase"
+            ],
+            "correct_index": 2,
+            "explanation": "The Act moved qualifying capital expenditure onto a straight-line claim spread in equal annual instalments over the asset's useful life. The old initial and annual allowance mix and an immediate full deduction no longer apply.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-040",
+            "domain": "Taxation",
+            "stem": "A high-income individual falls into the top band of Nigeria's personal income tax scale. What is the highest marginal rate under the current law?",
+            "options": [
+                "24 percent",
+                "30 percent",
+                "19 percent",
+                "25 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Under the current personal income tax scale the highest marginal rate is 25 percent. The 30 percent rate applies to companies, and 24 percent was the previous top personal rate.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-041",
+            "domain": "Taxation",
+            "stem": "A Nigerian company realises a chargeable gain on the disposal of an investment property. At what rate is the gain taxed under the current law?",
+            "options": [
+                "At the companies income tax rate of 30 percent",
+                "At a flat capital gains rate of 10 percent",
+                "At the 15 percent minimum effective rate",
+                "Capital gains of companies are exempt from tax"
+            ],
+            "correct_index": 0,
+            "explanation": "The current law aligns the capital gains tax rate for companies with the companies income tax rate of 30 percent. The former flat 10 percent rate no longer applies to corporate chargeable gains.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-042",
+            "domain": "Taxation",
+            "stem": "A multinational group has turnover far above the statutory threshold. What minimum effective tax rate applies under the Nigeria Tax Act 2025?",
+            "options": [
+                "10 percent",
+                "15 percent",
+                "30 percent",
+                "0 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "A 15 percent minimum effective tax rate applies to constituent entities of large multinational groups and to other companies above the high turnover threshold. The 30 percent figure is the standard companies income tax rate for large companies.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-043",
+            "domain": "Taxation",
+            "stem": "Under the current law, when is a company regarded as a Nigerian company for tax purposes?",
+            "options": [
+                "Only when it is incorporated in Nigeria",
+                "When it earns income in a foreign currency",
+                "When it is incorporated in Nigeria or its central management and control is exercised in Nigeria",
+                "When its shares are listed on the Nigerian Exchange"
+            ],
+            "correct_index": 2,
+            "explanation": "A company is a Nigerian company if it is incorporated in Nigeria or if its central or effective place of management and control is in Nigeria. The currency of earnings or a stock exchange listing does not determine residence.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-044",
+            "domain": "Taxation",
+            "stem": "A Nigerian company pays annual rent of N8,000,000 to a landlord for its office premises. What withholding tax applies?",
+            "options": [
+                "5 percent, being N400,000",
+                "7.5 percent, being N600,000",
+                "No withholding tax on rent",
+                "10 percent, being N800,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Rent is subject to withholding tax at 10 percent, so N800,000 is deducted from the N8,000,000 payment. The 7.5 percent rate applies to value added tax, not to withholding tax on rent.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-045",
+            "domain": "Taxation",
+            "stem": "A Nigerian company pays a cash dividend of N4,000,000 to an individual shareholder. What withholding tax applies?",
+            "options": [
+                "10 percent, being N400,000",
+                "5 percent, being N200,000",
+                "7.5 percent, being N300,000",
+                "No withholding tax is required"
+            ],
+            "correct_index": 0,
+            "explanation": "Dividends paid by a Nigerian company are subject to withholding tax at 10 percent, giving N400,000, which the company remits to the tax authority. The 7.5 percent rate relates to value added tax.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-046",
+            "domain": "Taxation",
+            "stem": "How are goods exported from Nigeria treated for value added tax purposes?",
+            "options": [
+                "They are exempt, so related input VAT is not recoverable",
+                "They are zero-rated, so related input VAT is recoverable",
+                "They are standard-rated at 7.5 percent",
+                "They are entirely outside the scope of value added tax"
+            ],
+            "correct_index": 1,
+            "explanation": "Exports of goods are zero-rated, which means the rate is 0 percent but input VAT on related costs remains recoverable. An exempt supply would instead deny recovery of input VAT.",
+            "reference": "ICAN Professional Syllabus - Taxation"
+        },
+        {
+            "id": "ican-pro-047",
+            "domain": "Strategic Financial Management",
+            "stem": "A project costs N10,000,000 and generates annual cash inflows of N4,000,000 for three years. The discount rate is 10 percent. Which amount is closest to the net present value?",
+            "options": [
+                "N2,000,000, using the undiscounted inflows",
+                "N(474,000), being the present value of an annuity due",
+                "N(52,000), being the present value of inflows less the outlay",
+                "N948,000, being the present value of the inflows"
+            ],
+            "correct_index": 2,
+            "explanation": "The present value of N4,000,000 per year for three years at 10 percent is approximately N9,948,000. Subtracting the N10,000,000 outlay gives a net present value of approximately negative N52,000, so the project fails to recover its cost.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-048",
+            "domain": "Strategic Financial Management",
+            "stem": "A company is financed 40 percent by debt at a pre-tax cost of 8 percent and 60 percent by equity at a cost of 15 percent. The tax rate is 25 percent. What is the weighted average cost of capital?",
+            "options": [
+                "12.20 percent",
+                "10.20 percent",
+                "9.00 percent",
+                "11.40 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The after-tax cost of debt is 8 percent times 0.75, equal to 6 percent, and weighting it at 40 percent gives 2.4 percent. Equity at 15 percent weighted 60 percent gives 9 percent, so the weighted average cost of capital is 11.40 percent.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-049",
+            "domain": "Strategic Financial Management",
+            "stem": "The risk-free rate is 10 percent, the market return is 18 percent, and a company has a beta of 1.2. What is the required return on equity using the capital asset pricing model?",
+            "options": [
+                "19.6 percent",
+                "21.6 percent",
+                "16.0 percent",
+                "12.0 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The CAPM required return is the risk-free rate plus beta times the market risk premium. The premium is 18 minus 10, equal to 8 percent, so 10 plus 1.2 times 8 gives 19.6 percent.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-050",
+            "domain": "Strategic Financial Management",
+            "stem": "A project has an initial outlay of N5,000,000 and a single cash inflow of N6,000,000 after one year. What is the internal rate of return?",
+            "options": [
+                "16.7 percent",
+                "20 percent",
+                "10 percent",
+                "120 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The internal rate of return sets the net present value to zero, so 6,000,000 divided by one plus the rate equals 5,000,000. That gives a rate of 20 percent, while dividing the gain by the ending value would wrongly give 16.7 percent.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-051",
+            "domain": "Strategic Financial Management",
+            "stem": "A machine costs N12,000,000 and generates annual cash inflows of N3,000,000. What is the simple payback period?",
+            "options": [
+                "3 years",
+                "5 years",
+                "4 years",
+                "2.5 years"
+            ],
+            "correct_index": 2,
+            "explanation": "The payback period is the initial outlay divided by the constant annual inflow, so N12,000,000 divided by N3,000,000 equals four years. The measure ignores the time value of money and any cash flows after payback.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-052",
+            "domain": "Strategic Financial Management",
+            "stem": "A project has a positive net present value of N2,000,000 based on annual cash inflows of N5,000,000. Ignoring discounting timing, by what percentage could the inflows fall before the project breaks even?",
+            "options": [
+                "20 percent",
+                "10 percent",
+                "4 percent",
+                "40 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Sensitivity measures how far a variable can change before the decision reverses. The break-even fall is N2,000,000 divided by N5,000,000, which is 40 percent, so the inflows could drop by that proportion before net present value reaches zero.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-053",
+            "domain": "Strategic Financial Management",
+            "stem": "An entity's ordinary shares are priced at N20, the next dividend is expected to be N2.40, and dividends are expected to grow at 4 percent each year. What is the cost of equity using the dividend growth model?",
+            "options": [
+                "16 percent",
+                "12 percent",
+                "8 percent",
+                "20 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The dividend growth model gives the cost of equity as the next dividend divided by the ex-dividend price plus the growth rate. So N2.40 divided by N20 gives 12 percent, and adding the 4 percent growth gives 16 percent.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-054",
+            "domain": "Strategic Financial Management",
+            "stem": "A company issues irredeemable debt with an annual coupon of 9 percent and a market price of N90 per N100 nominal. The tax rate is 25 percent. What is the after-tax cost of debt?",
+            "options": [
+                "9.0 percent",
+                "7.5 percent",
+                "10.0 percent",
+                "6.75 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The pre-tax cost of debt is the coupon divided by the market price, so 9 divided by 90 equals 10 percent. Applying the tax shield gives 10 percent times 0.75, equal to 7.5 percent after tax.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-055",
+            "domain": "Strategic Financial Management",
+            "stem": "Which statement best reflects the traditional view of capital structure?",
+            "options": [
+                "Capital structure never affects the cost of capital",
+                "The cost of debt rises as gearing rises, with no compensating benefit",
+                "There is an optimal level of gearing at which the weighted average cost of capital is minimised",
+                "All-equity finance always minimises the cost of capital"
+            ],
+            "correct_index": 2,
+            "explanation": "The traditional view holds that moderate gearing lowers the weighted average cost of capital because cheaper debt replaces equity, giving an optimal capital structure. The irrelevance proposition is associated with Modigliani and Miller without taxes.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-056",
+            "domain": "Strategic Financial Management",
+            "stem": "Under the Modigliani-Miller dividend irrelevance proposition, what determines shareholder wealth?",
+            "options": [
+                "The split between dividends and retained earnings",
+                "The frequency of dividend payments",
+                "The dividend payout ratio alone",
+                "The investment policy that generates earnings"
+            ],
+            "correct_index": 3,
+            "explanation": "Modigliani and Miller argue that in perfect markets with a fixed investment policy, dividend policy does not affect shareholder wealth because home-made dividends can replicate any payout. Earnings generation and investment drive value.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-057",
+            "domain": "Strategic Financial Management",
+            "stem": "A company uses 40,000 units of an item each year. The cost of placing an order is N200 and the annual holding cost per unit is N4. What is the economic order quantity?",
+            "options": [
+                "2,000 units",
+                "4,000 units",
+                "20,000 units",
+                "1,000 units"
+            ],
+            "correct_index": 0,
+            "explanation": "The economic order quantity is the square root of twice the annual demand times the ordering cost, divided by the holding cost. That is the square root of 2 times 40,000 times 200 divided by 4, which is the square root of 4,000,000, equal to 2,000 units.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-058",
+            "domain": "Strategic Financial Management",
+            "stem": "A company has annual credit sales of N48,000,000 and offers 60 days credit. A factor would collect in 30 days. Ignoring bad debts and interest, what is the approximate reduction in receivables?",
+            "options": [
+                "N1,973,000",
+                "N3,945,000",
+                "N6,575,000",
+                "N2,000,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Receivables at 60 days are N48,000,000 times 60 divided by 365, about N7.89 million, and at 30 days about N3.95 million. The reduction is therefore about N3,945,000, so the other choices misstate the receivables change.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-059",
+            "domain": "Strategic Financial Management",
+            "stem": "A company earns after-tax profit of N30,000,000 and has 10,000,000 shares. Comparable listed companies trade on a price-earnings ratio of 12. What is the estimated value per share?",
+            "options": [
+                "N3.00",
+                "N360.00",
+                "N36.00",
+                "N30.00"
+            ],
+            "correct_index": 2,
+            "explanation": "Earnings per share is N30,000,000 divided by 10,000,000 shares, equal to N3.00. Applying the price-earnings multiple of 12 gives an estimated value of N36.00 per share, so ignoring the multiple understates the value.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        },
+        {
+            "id": "ican-pro-060",
+            "domain": "Strategic Financial Management",
+            "stem": "A Nigerian exporter will receive USD 500,000 in three months and fears a stronger naira. Which instrument locks in an exchange rate today for that future settlement?",
+            "options": [
+                "A bank overdraft denominated in naira",
+                "A purchase of the customer's shares",
+                "An interest rate swap",
+                "A forward foreign exchange contract"
+            ],
+            "correct_index": 3,
+            "explanation": "A forward contract fixes the exchange rate now for a future settlement, hedging the exporter against adverse currency movements. An interest rate swap manages interest risk, while an overdraft or share purchase does not lock in an exchange rate.",
+            "reference": "ICAN Professional Syllabus - Strategic Financial Management"
+        }
+    ]
+}

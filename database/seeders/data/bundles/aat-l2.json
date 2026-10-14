@@ -1,0 +1,858 @@
+{
+    "cert_key": "aat-l2",
+    "title": "AAT Level 2",
+    "issuer": "Association of Accounting Technicians",
+    "region": "UK-FINANCE",
+    "outline_file": "outlines/aat-l2.json",
+    "variant_label": "AAT Level 2 Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Pass/fail against passing standard",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public AAT Level 2 Foundation Certificate syllabus (bookkeeping, costing, business environment). Not a capture of past exam questions.",
+    "source_label": "AAT Level 2 practice bank",
+    "items": [
+        {
+            "id": "aat-l2-001",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A business buys inventory on credit for 500 from a supplier. Which double entry correctly records this transaction in the business ledgers?",
+            "options": [
+                "Debit purchases 500 and credit payables 500",
+                "Debit payables 500 and credit purchases 500",
+                "Debit inventory 500 and credit cash 500",
+                "Debit cash 500 and credit purchases 500"
+            ],
+            "correct_index": 0,
+            "explanation": "A credit purchase increases an expense, so purchases is debited, and it creates a liability, so the payables ledger control is credited. Reversing the two entries would record an increase in cash paid to the supplier.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-002",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A business sells goods on credit for 800 to a customer. Which double entry records this sale in the seller's ledgers?",
+            "options": [
+                "Debit sales 800 and credit receivables 800",
+                "Debit receivables 800 and credit sales 800",
+                "Debit cash 800 and credit sales 800",
+                "Debit receivables 800 and credit purchases 800"
+            ],
+            "correct_index": 1,
+            "explanation": "A credit sale creates an asset, so the receivables ledger control is debited, and it earns income, so the sales account is credited. Crediting purchases would be wrong because no goods were bought.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-003",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A supplier offers a 2 percent discount for early payment and the business pays 490 in full settlement of a 500 invoice. Which entry records the payment together with the discount received?",
+            "options": [
+                "Debit payables 490, credit bank 490 and debit discount received 10",
+                "Debit bank 500 and credit payables 500",
+                "Debit payables 500, credit bank 490 and credit discount received 10",
+                "Debit discount received 10, debit bank 490 and credit payables 500"
+            ],
+            "correct_index": 2,
+            "explanation": "The full 500 liability is cleared by debiting payables, while the bank only falls by 490. The 10 saved is other income, so discount received is credited to reflect the benefit of paying early.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-004",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A VAT-registered business makes a standard-rated credit sale of 2,000 goods plus VAT at 20 percent. Which entry records the sale with output VAT shown separately?",
+            "options": [
+                "Debit receivables 2,000, credit sales 2,000 and credit VAT payable 400",
+                "Debit receivables 2,400 and credit sales 2,400",
+                "Debit sales 2,000 and credit receivables 2,400",
+                "Debit receivables 2,400, credit sales 2,000 and credit VAT payable 400"
+            ],
+            "correct_index": 3,
+            "explanation": "The customer owes the gross amount of 2,400, so receivables is debited. Income is only 2,000 and the 400 of output VAT is a liability owed to the tax authority, so it is credited to the VAT account.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-005",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A business operates a petty cash imprest system with a float of 200. At the month end 140 has been spent and the float is restored. Which amount restores the imprest?",
+            "options": [
+                "140",
+                "60",
+                "200",
+                "340"
+            ],
+            "correct_index": 0,
+            "explanation": "Under the imprest system the cash is topped back up to the fixed float, so the reimbursement equals the amount spent, which is 140. The 60 is the cash still in the box and is not the amount of the top-up.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-006",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The bank statement shows a credit balance of 2,000 and there are unpresented cheques totalling 250. What is the adjusted bank statement balance when preparing a bank reconciliation?",
+            "options": [
+                "2,250",
+                "1,750",
+                "2,000",
+                "1,500"
+            ],
+            "correct_index": 1,
+            "explanation": "Unpresented cheques have been recorded in the cash book but not yet cleared the bank, so they must be deducted from the statement balance. Subtracting 250 from 2,000 gives an adjusted figure of 1,750.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-007",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A bookkeeper records the purchase of a delivery van in the motor expenses account instead of the motor vehicles account. Which type of error is this?",
+            "options": [
+                "An error of commission",
+                "An error of omission",
+                "An error of principle",
+                "An error of original entry"
+            ],
+            "correct_index": 2,
+            "explanation": "An error of principle occurs when a transaction is entered in the wrong class of account, such as treating capital expenditure as revenue expenditure. The double entry still balances, so the trial balance will not reveal it.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-008",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A bookkeeper posts an amount to the account of J. Smith instead of the similarly named J. Smyth. Which type of error has occurred?",
+            "options": [
+                "An error of principle",
+                "A compensating error",
+                "An error of omission",
+                "An error of commission"
+            ],
+            "correct_index": 3,
+            "explanation": "An error of commission is a mistake in the name of the account or the amount within the correct class of account, so the trial balance still balances. Entering a capital item as revenue would instead be an error of principle.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-009",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "An invoice for 450 is entered in the books as 540 in both the day book and the ledger. Which type of error is this?",
+            "options": [
+                "An error of original entry",
+                "An error of omission",
+                "An error of principle",
+                "A reversal of entries"
+            ],
+            "correct_index": 0,
+            "explanation": "An error of original entry arises when the wrong amount is entered but the same wrong figure is posted to both accounts, so the trial balance still agrees. Correcting it needs a journal to reduce both sides by 90.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-010",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A credit sale invoice is completely left out of the books, with neither the day book nor the ledger being affected. Which type of error is this?",
+            "options": [
+                "An error of commission",
+                "An error of omission",
+                "An error of original entry",
+                "A compensating error"
+            ],
+            "correct_index": 1,
+            "explanation": "A complete error of omission occurs when a transaction is entirely left out of the accounting records, so both debits and credits are missing equally. The trial balance still balances, which is why such errors go undetected by that check.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-011",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A trial balance fails to agree and a suspense account is opened with a credit balance of 90. Which statement describes the purpose of the suspense account?",
+            "options": [
+                "It records the profit made by the business for the period",
+                "It permanently replaces the bank account until the year end",
+                "It temporarily holds the difference between the two trial balance columns until the error is found",
+                "It is the account used to record all credit sales"
+            ],
+            "correct_index": 2,
+            "explanation": "The suspense account holds the imbalance so that a trial balance can still be produced while the underlying error is investigated. Once the error is found and corrected the suspense balance is cleared to nil.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-012",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A business both buys from and sells to the same trader and agrees to offset 300 owed in each direction. Which double entry records the contra between the ledgers?",
+            "options": [
+                "Debit receivables 300 and credit payables 300",
+                "Debit purchases 300 and credit sales 300",
+                "Debit bank 300 and credit receivables 300",
+                "Debit payables 300 and credit receivables 300"
+            ],
+            "correct_index": 3,
+            "explanation": "A contra reduces both balances at once, so the liability to the trader is debited and the amount owed by the trader is credited. No cash changes hands, so the bank account is not involved.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-013",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A business buys goods with a list price of 1,000 and receives a 10 percent trade discount before VAT is added. What is the net amount recorded in the purchases day book?",
+            "options": [
+                "900",
+                "1,000",
+                "1,100",
+                "1,080"
+            ],
+            "correct_index": 0,
+            "explanation": "A trade discount reduces the price charged and is deducted before the transaction is recorded, so the net entry is 900. VAT is computed on 900 and the trade discount itself is never posted to a ledger account.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-014",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A cash sale of 240 includes VAT at 20 percent. How much of the 240 is the output VAT element?",
+            "options": [
+                "48",
+                "40",
+                "20",
+                "24"
+            ],
+            "correct_index": 1,
+            "explanation": "When the total includes VAT, the net is found by dividing by 1.20, giving 200, and the VAT is the remaining 40. Taking 20 percent of the gross 240 would incorrectly give 48.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-015",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The receivables ledger control account has an opening debit balance of 3,000. Credit sales of 5,000 and receipts from customers of 4,200 are recorded. What is the closing balance?",
+            "options": [
+                "4,200",
+                "5,000",
+                "3,800",
+                "2,200"
+            ],
+            "correct_index": 2,
+            "explanation": "Opening receivables of 3,000 plus credit sales of 5,000 less receipts of 4,200 leaves 3,800 owed by customers. Receipts reduce the balance because they settle part of what customers owe.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-016",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The payables ledger control account begins with a credit balance of 2,000. Credit purchases of 3,500 and payments to suppliers of 3,000 occur. What is the closing balance?",
+            "options": [
+                "3,500",
+                "1,500",
+                "5,500",
+                "2,500"
+            ],
+            "correct_index": 3,
+            "explanation": "Opening payables of 2,000 plus new credit purchases of 3,500 less payments of 3,000 leaves 2,500 owed to suppliers. Payments reduce the liability because they settle amounts previously owed.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-017",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "Which transaction is normally recorded in the journal rather than in one of the books of prime entry?",
+            "options": [
+                "The correction of an error using a journal entry",
+                "A credit sale to a customer",
+                "A cash purchase of stationery",
+                "A credit purchase from a supplier"
+            ],
+            "correct_index": 0,
+            "explanation": "The journal is used for adjustments and corrections that do not arise from a source document such as an invoice. Credit sales, credit purchases and cash transactions are instead recorded in the day books or the cash book.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-018",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The bank statement shows bank charges of 25 that have not yet been entered in the cash book. Which entry records these charges?",
+            "options": [
+                "Debit bank 25 and credit bank charges 25",
+                "Debit bank charges 25 and credit bank 25",
+                "Debit bank charges 25 and credit cash 25",
+                "Debit purchases 25 and credit bank 25"
+            ],
+            "correct_index": 1,
+            "explanation": "Bank charges are an expense, so the bank charges account is debited, and they reduce the bank balance, so the bank account is credited. The opposite entry would wrongly increase the bank balance.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-019",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A direct debit of 120 for electricity appears on the bank statement but has not yet been entered in the cash book. Which entry is required?",
+            "options": [
+                "Debit bank 120 and credit electricity 120",
+                "Debit electricity 120 and credit payables 120",
+                "Debit electricity 120 and credit bank 120",
+                "Debit cash 120 and credit electricity 120"
+            ],
+            "correct_index": 2,
+            "explanation": "The direct debit pays an expense, so electricity is debited, and the bank balance falls, so bank is credited. This is an item in the cash book that the bank already knows about but the business has not yet recorded.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-020",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A customer's cheque for 200 is returned unpaid by the bank. Which entry reverses the original receipt in the seller's books?",
+            "options": [
+                "Debit bank 200 and credit receivables 200",
+                "Debit sales 200 and credit bank 200",
+                "Debit bank 200 and credit sales 200",
+                "Debit receivables 200 and credit bank 200"
+            ],
+            "correct_index": 3,
+            "explanation": "A dishonoured cheque cancels the earlier receipt, so the customer owes the money again and receivables is debited. The bank balance falls, so bank is credited, unwinding the original entry.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-021",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The cash book shows total receipts of 8,000 and total payments of 6,500. If the opening debit balance was 1,200, what is the closing balance?",
+            "options": [
+                "2,700",
+                "1,500",
+                "2,500",
+                "1,300"
+            ],
+            "correct_index": 0,
+            "explanation": "The closing balance is the opening 1,200 plus receipts of 8,000 less payments of 6,500, which equals 2,700. Receipts increase the balance while payments reduce it.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-022",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "Goods costing 150 are returned to a supplier by the buyer. Which entry records the return in the buyer's books?",
+            "options": [
+                "Debit purchases returns 150 and credit payables 150",
+                "Debit payables 150 and credit purchases returns 150",
+                "Debit payables 150 and credit purchases 150",
+                "Debit bank 150 and credit payables 150"
+            ],
+            "correct_index": 1,
+            "explanation": "A purchase return reduces the amount owed to the supplier, so payables is debited, and it reduces the cost of purchases, so the purchases returns account is credited. No cash is involved in a credit return.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-023",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "A customer returns goods worth 90 to the seller. Which entry records the sales return in the seller's books?",
+            "options": [
+                "Debit receivables 90 and credit sales returns 90",
+                "Debit sales 90 and credit receivables 90",
+                "Debit sales returns 90 and credit receivables 90",
+                "Debit bank 90 and credit sales returns 90"
+            ],
+            "correct_index": 2,
+            "explanation": "A sales return reduces income, so sales returns is debited, and it reduces what the customer owes, so receivables is credited. The original sale account is not debited directly because returns are tracked separately.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-024",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "Which statement best describes the purpose of extracting a trial balance from the ledger accounts?",
+            "options": [
+                "To prove that no fraud has taken place in the business",
+                "To calculate the profit for the period without further work",
+                "To confirm that every transaction has been recorded",
+                "To check that the total of the debit balances equals the total of the credit balances"
+            ],
+            "correct_index": 3,
+            "explanation": "A trial balance is an arithmetic check that the ledger totals agree, so debits equal credits. It cannot detect errors of principle, omission or commission, which is why it does not prove accuracy or the absence of fraud.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-025",
+            "domain": "Bookkeeping Transactions and Controls",
+            "stem": "The owner introduces capital of 10,000 in cash into the business. Which entry records this in the business books?",
+            "options": [
+                "Debit bank 10,000 and credit capital 10,000",
+                "Debit capital 10,000 and credit bank 10,000",
+                "Debit bank 10,000 and credit sales 10,000",
+                "Debit drawings 10,000 and credit bank 10,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Cash introduced increases the bank asset, so bank is debited, and it increases the owner's claim on the business, so the capital account is credited. Crediting sales would wrongly treat a capital injection as trading income.",
+            "reference": "AAT Level 2 Syllabus - Bookkeeping Transactions and Controls"
+        },
+        {
+            "id": "aat-l2-026",
+            "domain": "Principles of Costing",
+            "stem": "A manufacturer has direct materials of 4,000, direct labour of 2,500 and direct expenses of 500. What is the prime cost?",
+            "options": [
+                "6,500",
+                "7,000",
+                "7,500",
+                "4,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Prime cost is the sum of all direct costs, so 4,000 plus 2,500 plus 500 equals 7,000. Production overheads are added to prime cost later to give total production cost.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-027",
+            "domain": "Principles of Costing",
+            "stem": "Which of the following is best classified as a variable cost for a manufacturer?",
+            "options": [
+                "The annual factory rent",
+                "The salary of the factory manager",
+                "The direct materials used in each unit produced",
+                "The cost of insuring the factory building"
+            ],
+            "correct_index": 2,
+            "explanation": "A variable cost changes in total in direct proportion to output, so direct materials rise with each unit made. Factory rent, manager salary and building insurance are fixed costs that do not vary with production volume.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-028",
+            "domain": "Principles of Costing",
+            "stem": "A cost contains a fixed charge each month plus a constant amount for every unit produced. How is this cost best described?",
+            "options": [
+                "A fixed cost",
+                "A stepped cost",
+                "A sunk cost",
+                "A semi-variable cost"
+            ],
+            "correct_index": 3,
+            "explanation": "A semi-variable or mixed cost has both a fixed element and a variable element, such as a utility bill with a standing charge. A stepped cost instead jumps to a new fixed level when capacity is increased.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-029",
+            "domain": "Principles of Costing",
+            "stem": "Total cost is 5,000 at 1,000 units of output and 8,000 at 2,000 units. Using the high-low method, what is the variable cost per unit?",
+            "options": [
+                "3",
+                "5",
+                "4",
+                "8"
+            ],
+            "correct_index": 0,
+            "explanation": "The variable cost per unit is the change in cost divided by the change in activity, so 3,000 divided by 1,000 equals 3. Dividing a total cost by its units would wrongly include the fixed element.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-030",
+            "domain": "Principles of Costing",
+            "stem": "Total cost is 5,000 at 1,000 units and 8,000 at 2,000 units, giving a variable cost of 3 per unit. What is the total fixed cost?",
+            "options": [
+                "5,000",
+                "2,000",
+                "3,000",
+                "1,000"
+            ],
+            "correct_index": 1,
+            "explanation": "At 1,000 units the variable element is 3,000, so fixed cost is 5,000 minus 3,000, which equals 2,000. Checking at 2,000 units gives 8,000 minus 6,000, confirming the same fixed cost.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-031",
+            "domain": "Principles of Costing",
+            "stem": "A trader holds 100 units costing 5 each and then buys 200 units at 6 each. Under FIFO, what is the value of 150 units issued to production?",
+            "options": [
+                "900",
+                "750",
+                "800",
+                "1,050"
+            ],
+            "correct_index": 2,
+            "explanation": "FIFO issues the oldest inventory first, so 100 units at 5 give 500 and the next 50 units at 6 give 300. The total issue value is 800 rather than pricing all 150 units at the newer higher cost.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-032",
+            "domain": "Principles of Costing",
+            "stem": "Inventory of 200 units valued at 1,000 is followed by a purchase of 300 units for 1,800. Using the weighted average method, what is the average cost per unit after the purchase?",
+            "options": [
+                "6.00",
+                "5.00",
+                "5.50",
+                "5.60"
+            ],
+            "correct_index": 3,
+            "explanation": "The weighted average is total cost divided by total units, so 2,800 divided by 500 equals 5.60. Averaging the two unit prices without weighting for quantity would give the incorrect value of 5.50.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-033",
+            "domain": "Principles of Costing",
+            "stem": "A product sells for 20 and has a variable cost of 12 per unit. What is the contribution per unit?",
+            "options": [
+                "8",
+                "12",
+                "20",
+                "32"
+            ],
+            "correct_index": 0,
+            "explanation": "Contribution per unit is selling price less variable cost, so 20 minus 12 equals 8. This contribution is what each sale gives towards covering fixed costs and then generating profit.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-034",
+            "domain": "Principles of Costing",
+            "stem": "Fixed costs are 12,000 and contribution per unit is 8. What is the breakeven point in units?",
+            "options": [
+                "960",
+                "1,500",
+                "12,000",
+                "2,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Breakeven units equal fixed costs divided by contribution per unit, so 12,000 divided by 8 equals 1,500 units. At this level total contribution exactly covers the fixed costs and profit is nil.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-035",
+            "domain": "Principles of Costing",
+            "stem": "Sales revenue is 50,000 and total contribution is 20,000. What is the contribution to sales ratio?",
+            "options": [
+                "25 percent",
+                "60 percent",
+                "40 percent",
+                "20 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "The contribution to sales ratio is contribution divided by sales revenue, so 20,000 divided by 50,000 equals 40 percent. It shows the proportion of each pound of sales that contributes to fixed costs and profit.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-036",
+            "domain": "Principles of Costing",
+            "stem": "Budgeted sales are 2,000 units and breakeven sales are 1,500 units. What is the margin of safety in units?",
+            "options": [
+                "1,500",
+                "2,000",
+                "3,500",
+                "500"
+            ],
+            "correct_index": 3,
+            "explanation": "The margin of safety is budgeted sales minus breakeven sales, so 2,000 minus 1,500 equals 500 units. It measures how far sales can fall before the business makes a loss.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-037",
+            "domain": "Principles of Costing",
+            "stem": "Production overheads of 30,000 are absorbed on the basis of 6,000 direct labour hours. What is the overhead absorption rate per labour hour?",
+            "options": [
+                "5.00",
+                "0.20",
+                "6.00",
+                "30.00"
+            ],
+            "correct_index": 0,
+            "explanation": "The overhead absorption rate is total overheads divided by the absorption base, so 30,000 divided by 6,000 equals 5.00 per hour. Each job is then charged 5 for every labour hour it uses.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-038",
+            "domain": "Principles of Costing",
+            "stem": "An employee is paid 12 per hour for a 35-hour week and overtime at time and a half. If the employee works 40 hours, what is gross pay?",
+            "options": [
+                "480",
+                "510",
+                "540",
+                "420"
+            ],
+            "correct_index": 1,
+            "explanation": "Basic pay is 35 hours at 12, which is 420, and the 5 overtime hours are paid at 18 each, giving 90. Adding the two gives gross pay of 510, not the 480 that would ignore the overtime premium.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-039",
+            "domain": "Principles of Costing",
+            "stem": "Which cost would normally be classified as an indirect cost of running a factory?",
+            "options": [
+                "The raw materials used in making a product",
+                "The wages of machine operators on the production line",
+                "The salary of the factory supervisor",
+                "The royalties paid for each unit manufactured"
+            ],
+            "correct_index": 2,
+            "explanation": "Indirect costs cannot be traced to a single unit of output, and a supervisor oversees the whole factory rather than one product. Direct materials, direct labour and royalties can each be traced to specific units.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-040",
+            "domain": "Principles of Costing",
+            "stem": "Which of the following is best described as a direct expense of a particular job?",
+            "options": [
+                "The annual factory rent",
+                "The cost of heating the whole factory",
+                "The salary of the general manager",
+                "Royalties paid to the designer for each unit of that job produced"
+            ],
+            "correct_index": 3,
+            "explanation": "A direct expense is a cost other than materials or labour that can be traced to a specific cost unit, such as per-unit royalties. Factory rent, heating and the manager salary benefit all output and are indirect costs.",
+            "reference": "AAT Level 2 Syllabus - Principles of Costing"
+        },
+        {
+            "id": "aat-l2-041",
+            "domain": "The Business Environment",
+            "stem": "Which statement best describes a sole trader's liability for the debts of the business?",
+            "options": [
+                "The sole trader has unlimited liability and is personally responsible for all business debts",
+                "The sole trader's liability is limited to the capital they invested",
+                "The sole trader is liable only up to the value of the business premises",
+                "The sole trader has no personal responsibility for business debts"
+            ],
+            "correct_index": 0,
+            "explanation": "A sole trader is not a separate legal entity from the owner, so personal assets can be used to settle business debts. Limited liability applies only to incorporated entities such as limited companies.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-042",
+            "domain": "The Business Environment",
+            "stem": "A business is a separate legal entity from its owners and the owners' liability is limited. Which form of organisation does this describe?",
+            "options": [
+                "A sole trader",
+                "A limited company",
+                "An ordinary partnership",
+                "An unincorporated association"
+            ],
+            "correct_index": 1,
+            "explanation": "A limited company is incorporated and therefore a separate legal entity, so shareholders are liable only for any amount unpaid on their shares. Sole traders and ordinary partnerships do not have this protection.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-043",
+            "domain": "The Business Environment",
+            "stem": "In a general partnership with no written partnership agreement, how are profits shared between the partners?",
+            "options": [
+                "In proportion to the capital each partner introduced",
+                "In proportion to the hours each partner works",
+                "Equally between the partners",
+                "All to the partner who made the most sales"
+            ],
+            "correct_index": 2,
+            "explanation": "Where a partnership agreement is silent the default position of the Partnership Act 1890 applies, and profits are shared equally. Partners can only vary this by agreeing different terms in writing.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-044",
+            "domain": "The Business Environment",
+            "stem": "Which feature distinguishes a public limited company from a private limited company?",
+            "options": [
+                "It is not required to have a board of directors",
+                "Its owners always have unlimited liability",
+                "It cannot employ more than fifty people",
+                "Its shares may be offered for sale to the general public"
+            ],
+            "correct_index": 3,
+            "explanation": "A public limited company may offer its shares to the public and may be listed on a stock exchange, whereas a private company may not. Both are separate legal entities and both have limited liability.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-045",
+            "domain": "The Business Environment",
+            "stem": "Which group is best described as an internal stakeholder of a company?",
+            "options": [
+                "Its employees",
+                "Its customers",
+                "The tax authority",
+                "Its suppliers"
+            ],
+            "correct_index": 0,
+            "explanation": "Internal stakeholders are those working within the organisation, such as employees and managers. Customers, suppliers and the tax authority are external stakeholders who deal with the company from outside.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-046",
+            "domain": "The Business Environment",
+            "stem": "A firm analyses political, economic, social, technological, legal and environmental factors affecting it. Which framework is being applied?",
+            "options": [
+                "SWOT analysis",
+                "PESTLE analysis",
+                "The marketing mix",
+                "Break-even analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "PESTLE scans the six external macro-environmental influences named in the question. SWOT instead reviews internal strengths and weaknesses alongside external opportunities and threats.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-047",
+            "domain": "The Business Environment",
+            "stem": "A change in the national rate of inflation is best described as which part of the business environment?",
+            "options": [
+                "The internal environment",
+                "The micro competitive environment",
+                "The macro external environment",
+                "The operational environment"
+            ],
+            "correct_index": 2,
+            "explanation": "Inflation is a broad economic factor affecting the whole economy, so it belongs to the macro external environment. Internal factors are those inside the firm that management directly controls.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-048",
+            "domain": "The Business Environment",
+            "stem": "Under UK data protection law, which principle requires that personal data is processed lawfully, fairly and transparently?",
+            "options": [
+                "The storage limitation principle",
+                "The accuracy principle",
+                "The integrity and confidentiality principle",
+                "The first data protection principle"
+            ],
+            "correct_index": 3,
+            "explanation": "The first principle sets out lawfulness, fairness and transparency as the starting requirement for processing personal data. Storage limitation and accuracy are separate principles dealing with retention and correctness.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-049",
+            "domain": "The Business Environment",
+            "stem": "Which situation is most likely to be a red flag for money laundering that an accountant should report?",
+            "options": [
+                "Large cash payments that are inconsistent with a customer's normal business activity",
+                "A customer asking for a receipt for a small cash purchase",
+                "A customer paying an invoice by bank transfer within the agreed terms",
+                "A customer requesting a copy of their own statement of account"
+            ],
+            "correct_index": 0,
+            "explanation": "Unusually large or unexplained cash dealings that do not fit the customer's known activity are a recognised warning sign. Routine receipts, normal bank payments and statements of account are ordinary business conduct.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-050",
+            "domain": "The Business Environment",
+            "stem": "An accountant is asked to disclose a client's financial information to an unrelated third party. Which fundamental ethical principle is most directly relevant?",
+            "options": [
+                "Integrity",
+                "Confidentiality",
+                "Professional competence",
+                "Independence"
+            ],
+            "correct_index": 1,
+            "explanation": "Confidentiality requires an accountant not to disclose client information without proper authority unless there is a legal or professional duty to do so. Integrity and competence are distinct principles about honesty and skill.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-051",
+            "domain": "The Business Environment",
+            "stem": "An accountant allows a personal relationship with a supplier to influence a professional judgement. Which ethical principle has been breached?",
+            "options": [
+                "Confidentiality",
+                "Professional behaviour",
+                "Objectivity",
+                "Technical competence"
+            ],
+            "correct_index": 2,
+            "explanation": "Objectivity requires an accountant to avoid bias, conflict of interest and undue influence when making judgements. Confidentiality concerns information rather than bias, and competence concerns knowledge and skill.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-052",
+            "domain": "The Business Environment",
+            "stem": "Which arrangement is the best example of an internal control that reduces the risk of fraud when cash is handled?",
+            "options": [
+                "Allowing one person to receive, record and bank all cash",
+                "Keeping the cash box unlocked for quick access",
+                "Recording cash transactions only once a year",
+                "Segregating the duties of receiving cash from those of recording it"
+            ],
+            "correct_index": 3,
+            "explanation": "Segregation of duties means no single person controls a whole transaction, which makes concealment of fraud much harder. Concentrating all cash duties in one person is the very weakness that controls aim to remove.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-053",
+            "domain": "The Business Environment",
+            "stem": "Setting objectives and deciding in advance how resources will be used is best described as which management function?",
+            "options": [
+                "Planning",
+                "Controlling",
+                "Organising",
+                "Leading"
+            ],
+            "correct_index": 0,
+            "explanation": "Planning is the management function of setting objectives and deciding how to achieve them in advance. Controlling compares actual results with the plan, while organising arranges resources and reporting lines.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-054",
+            "domain": "The Business Environment",
+            "stem": "Recruitment, training and employee appraisal are the responsibility of which business function?",
+            "options": [
+                "Marketing",
+                "Human resources",
+                "Operations",
+                "Finance"
+            ],
+            "correct_index": 1,
+            "explanation": "The human resources function manages the employment relationship, including hiring, developing and appraising staff. Marketing deals with customers, operations with production and finance with money.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-055",
+            "domain": "The Business Environment",
+            "stem": "The marketing mix is often summarised as four Ps. Alongside product, price and place, which is the fourth element?",
+            "options": [
+                "Profit",
+                "Planning",
+                "Promotion",
+                "Packaging"
+            ],
+            "correct_index": 2,
+            "explanation": "The four Ps of the marketing mix are product, price, place and promotion, describing how a firm takes an offer to market. Profit and planning are outcomes and activities rather than elements of the mix.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-056",
+            "domain": "The Business Environment",
+            "stem": "A company adopts practices that reduce its environmental impact beyond what the law requires. Which concept does this best illustrate?",
+            "options": [
+                "Corporate governance",
+                "Cost leadership",
+                "Market segmentation",
+                "Corporate social responsibility"
+            ],
+            "correct_index": 3,
+            "explanation": "Corporate social responsibility is the idea that a business considers its impact on society and the environment beyond legal minimums. Corporate governance concerns how a company is directed and controlled rather than voluntary impact.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-057",
+            "domain": "The Business Environment",
+            "stem": "Which statement best describes corporate governance?",
+            "options": [
+                "The system by which companies are directed and controlled",
+                "The process of preparing the annual financial statements",
+                "The marketing of products to overseas customers",
+                "The day-to-day supervision of factory workers"
+            ],
+            "correct_index": 0,
+            "explanation": "Corporate governance is the framework of rules, practices and processes by which a company is directed and controlled. Preparing accounts is one activity within it, not a definition of governance itself.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-058",
+            "domain": "The Business Environment",
+            "stem": "Which UK Act places a duty on employers to ensure, so far as is reasonably practicable, the health, safety and welfare of their employees?",
+            "options": [
+                "The Data Protection Act 2018",
+                "The Health and Safety at Work etc. Act 1974",
+                "The Companies Act 2006",
+                "The Partnership Act 1890"
+            ],
+            "correct_index": 1,
+            "explanation": "The Health and Safety at Work etc. Act 1974 sets the general duty on employers to protect the health, safety and welfare of workers. The other Acts deal with data, company law and partnerships rather than workplace safety.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-059",
+            "domain": "The Business Environment",
+            "stem": "Which objective is most likely to be a primary aim of a commercial profit-seeking company?",
+            "options": [
+                "Providing free services to the local community",
+                "Avoiding the payment of any corporation tax",
+                "Maximising the wealth of its shareholders",
+                "Employing as many people as possible regardless of cost"
+            ],
+            "correct_index": 2,
+            "explanation": "A commercial company exists to generate returns for its owners, so maximising shareholder wealth through profit is its primary aim. Community service and maximum employment are typical of not-for-profit or social objectives.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        },
+        {
+            "id": "aat-l2-060",
+            "domain": "The Business Environment",
+            "stem": "Which statement best explains the purpose of a code of professional ethics for accounting technicians?",
+            "options": [
+                "To guarantee that every member makes a profit for their employer",
+                "To replace the need for any technical accounting training",
+                "To allow members to keep client money for personal use",
+                "To guide members to act with integrity and in the public interest"
+            ],
+            "correct_index": 3,
+            "explanation": "A professional code sets out the principles such as integrity, objectivity and confidentiality that protect the public interest. It supports but never replaces technical training, and it forbids the misuse of client funds.",
+            "reference": "AAT Level 2 Syllabus - The Business Environment"
+        }
+    ]
+}

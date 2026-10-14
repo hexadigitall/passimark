@@ -1,0 +1,858 @@
+{
+    "cert_key": "icag-gh",
+    "title": "ICAG Ghana",
+    "issuer": "Institute of Chartered Accountants, Ghana",
+    "region": "AFRICA",
+    "outline_file": "outlines/icag-gh.json",
+    "variant_label": "ICAG Ghana Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 180,
+        "scoring": "50% to pass",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public ICAG syllabus (financial accounting, management accounting, taxation and law, audit). Not a capture of past exam questions.",
+    "source_label": "ICAG Ghana practice bank",
+    "items": [
+        {
+            "id": "icag-gh-001",
+            "domain": "Financial Accounting",
+            "stem": "A machine is purchased for GHS 120,000 and is expected to have a useful life of eight years and a residual value of GHS 20,000. Using the straight-line method, what is the annual depreciation charge?",
+            "options": [
+                "12,500",
+                "15,000",
+                "17,500",
+                "20,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Straight-line depreciation is cost minus residual value divided by useful life, so 120,000 minus 20,000 equals 100,000, divided by eight years gives 12,500. Ignoring the residual value would wrongly give 15,000.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-002",
+            "domain": "Financial Accounting",
+            "stem": "A trader holds inventory that cost GHS 50,000. At the reporting date its estimated selling price is GHS 46,000 and the estimated costs of completing the sale are GHS 3,000. Under IAS 2, at what amount should the inventory be carried?",
+            "options": [
+                "50,000",
+                "43,000",
+                "46,000",
+                "47,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Net realisable value is the selling price less costs to complete, so 46,000 minus 3,000 equals 43,000. IAS 2 requires inventory to be carried at the lower of cost and net realisable value, so 43,000 is used rather than the 50,000 cost.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-003",
+            "domain": "Financial Accounting",
+            "stem": "A building with a carrying amount of GHS 400,000 is revalued to GHS 460,000. Under the revaluation model in IAS 16, how should the surplus of GHS 60,000 be treated?",
+            "options": [
+                "Recognised immediately in profit or loss as income",
+                "Deducted from the cost of the asset in the ledger",
+                "Recognised in other comprehensive income and accumulated in equity as a revaluation surplus",
+                "Deferred and recognised over the asset's remaining useful life"
+            ],
+            "correct_index": 2,
+            "explanation": "An upward revaluation is taken to other comprehensive income and accumulated in equity as a revaluation surplus, not to profit or loss. A reversal of a previous revaluation loss would instead be recognised in profit to the extent of that loss.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-004",
+            "domain": "Financial Accounting",
+            "stem": "Which of the following sets of conditions must all be met before a provision is recognised under IAS 37?",
+            "options": [
+                "A future operating loss is expected, the amount is material and management approves it",
+                "The obligation is only possible rather than probable and is disclosed in the notes instead",
+                "A board resolution has been passed even though no external obligation exists",
+                "There is a present obligation from a past event, an outflow of resources is probable, and the amount can be estimated reliably"
+            ],
+            "correct_index": 3,
+            "explanation": "IAS 37 requires a present obligation arising from a past event, a probable outflow of economic benefits, and a reliable estimate before a provision is recognised. A merely possible obligation is a contingent liability disclosed in the notes, not provided for.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-005",
+            "domain": "Financial Accounting",
+            "stem": "Under IFRS 15, at what point is revenue from a contract with a customer recognised?",
+            "options": [
+                "When the entity satisfies a performance obligation by transferring a promised good or service to the customer",
+                "When the customer places a firm order",
+                "When cash is received from the customer",
+                "When the written contract is signed by both parties"
+            ],
+            "correct_index": 0,
+            "explanation": "IFRS 15 recognises revenue when control of the promised good or service transfers to the customer, that is when a performance obligation is satisfied. The timing of cash receipt or contract signature does not by itself determine revenue recognition.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-006",
+            "domain": "Financial Accounting",
+            "stem": "Under IFRS 16, how does a lessee initially measure the right-of-use asset?",
+            "options": [
+                "At the total undiscounted lease payments over the whole lease term",
+                "At the amount of the initial lease liability, adjusted for payments made at or before commencement, initial direct costs and restoration costs",
+                "At the fair value of the underlying asset on the commencement date",
+                "At the sum of the first year's lease payments only"
+            ],
+            "correct_index": 1,
+            "explanation": "The right-of-use asset starts at the initial lease liability plus amounts paid at or before commencement, initial direct costs and estimated restoration costs. Using undiscounted payments would overstate the asset and ignore the time value of money.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-007",
+            "domain": "Financial Accounting",
+            "stem": "In a statement of cash flows prepared under IAS 7, how may interest paid by a non-financial entity be classified?",
+            "options": [
+                "Only within investing activities",
+                "Only within financing activities",
+                "Either within operating or within financing activities, applied consistently",
+                "Only within operating activities"
+            ],
+            "correct_index": 2,
+            "explanation": "IAS 7 permits interest paid to be classified as either operating or financing, provided the choice is applied consistently. It may not be shown in investing activities or freely switched each period.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-008",
+            "domain": "Financial Accounting",
+            "stem": "A company's financial statements were approved for issue on 20 March. On 5 March a customer owing a significant receivable entered liquidation. Under IAS 10, how should this be treated?",
+            "options": [
+                "As a non-adjusting event disclosed only in the notes",
+                "Ignored entirely because it occurred after the year end",
+                "Recognised as a prior period error in the opening retained earnings",
+                "As an adjusting event because it provides evidence of conditions that existed at the reporting date"
+            ],
+            "correct_index": 3,
+            "explanation": "The liquidation before the statements were approved confirms that the receivable was impaired at the reporting date, so it is an adjusting event. Non-adjusting events merely indicate conditions arising after the reporting date.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-009",
+            "domain": "Financial Accounting",
+            "stem": "An asset costs GHS 80,000 and is depreciated at 25 percent per year on the reducing balance method. What is the depreciation charge for the second year?",
+            "options": [
+                "15,000",
+                "20,000",
+                "12,500",
+                "30,000"
+            ],
+            "correct_index": 0,
+            "explanation": "First-year depreciation is 80,000 times 25 percent, which is 20,000, leaving a carrying amount of 60,000. Second-year depreciation is 60,000 times 25 percent, which is 15,000, because the reducing balance applies to the written-down value.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-010",
+            "domain": "Financial Accounting",
+            "stem": "A business paid GHS 9,000 during the year for insurance, of which GHS 1,500 relates to the following year. Under the accruals basis, what is the insurance expense for the current year?",
+            "options": [
+                "9,000",
+                "7,500",
+                "1,500",
+                "10,500"
+            ],
+            "correct_index": 1,
+            "explanation": "The amount relating to the next year is a prepayment and must be removed, so 9,000 minus 1,500 equals 7,500 of expense. Charging the full 9,000 would breach the accruals and matching principles.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-011",
+            "domain": "Financial Accounting",
+            "stem": "An asset has a carrying amount of GHS 500,000. Its fair value less costs of disposal is GHS 430,000 and its value in use is GHS 460,000. Under IAS 36, what is the recoverable amount?",
+            "options": [
+                "430,000",
+                "500,000",
+                "460,000",
+                "445,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Recoverable amount is the higher of fair value less costs of disposal and value in use, so the higher of 430,000 and 460,000 gives 460,000. Averaging the two figures is not permitted.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-012",
+            "domain": "Financial Accounting",
+            "stem": "Using a carrying amount of GHS 500,000 and a recoverable amount of GHS 460,000, what impairment loss is recognised under IAS 36?",
+            "options": [
+                "Nil",
+                "70,000",
+                "500,000",
+                "40,000"
+            ],
+            "correct_index": 3,
+            "explanation": "An impairment loss is the carrying amount less the recoverable amount, so 500,000 minus 460,000 equals 40,000. It is recognised immediately in profit or loss unless it reverses a previous revaluation surplus.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-013",
+            "domain": "Financial Accounting",
+            "stem": "At 31 December a business's cash book showed a debit balance of GHS 15,000. Cheques totalling GHS 2,000 had been issued but were unpresented, and a dividend of GHS 1,000 credited by the bank had not been entered in the cash book. What is the bank statement balance at that date?",
+            "options": [
+                "18,000",
+                "15,000",
+                "12,000",
+                "14,000"
+            ],
+            "correct_index": 0,
+            "explanation": "Unpresented cheques mean the bank has not yet reduced the balance, so add 2,000, and the unrecorded dividend also increases the bank balance by 1,000. Cash book 15,000 plus 2,000 plus 1,000 equals a bank statement balance of 18,000.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-014",
+            "domain": "Financial Accounting",
+            "stem": "A trial balance fails to agree by GHS 900 and a suspense account is opened. Which type of error would cause the trial balance to disagree by that amount?",
+            "options": [
+                "An entry posted to the wrong account of the same class",
+                "A one-sided entry of GHS 900 posted to the sales account only",
+                "A transaction completely omitted from the books",
+                "A transposition error that offsets itself elsewhere"
+            ],
+            "correct_index": 1,
+            "explanation": "A one-sided entry posts a debit or credit without its matching counterpart, so the two columns differ by that amount and the trial balance will not agree. Errors of omission or of posting to the wrong account of the same class leave the trial balance in agreement.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-015",
+            "domain": "Financial Accounting",
+            "stem": "Under IAS 2, which inventory cost formula is not permitted?",
+            "options": [
+                "First-in, first-out",
+                "Weighted average cost",
+                "Last-in, first-out",
+                "Specific identification for items that are not ordinarily interchangeable"
+            ],
+            "correct_index": 2,
+            "explanation": "IAS 2 prohibits the last-in, first-out formula. It permits first-in, first-out, weighted average cost, and specific identification where items are not interchangeable.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-016",
+            "domain": "Financial Accounting",
+            "stem": "An entity enters a contract with a fixed fee of GHS 100,000 and a performance bonus of GHS 20,000 that is highly probable not to reverse. Under IFRS 15, what transaction price should be used?",
+            "options": [
+                "100,000",
+                "80,000",
+                "110,000",
+                "120,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Variable consideration is included in the transaction price when it is highly probable that a significant reversal will not occur, so the fixed 100,000 plus the 20,000 bonus gives 120,000. Excluding the bonus would understate the transaction price.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-017",
+            "domain": "Financial Accounting",
+            "stem": "A company faces a legal claim where an outflow is possible but not probable and the amount cannot be estimated reliably. Under IAS 37, how should this be treated?",
+            "options": [
+                "Disclose a contingent liability in the notes unless the possibility of an outflow is remote",
+                "Recognise a provision in the financial statements",
+                "Recognise a contingent asset in the financial statements",
+                "Ignore the matter entirely in all circumstances"
+            ],
+            "correct_index": 0,
+            "explanation": "Because an outflow is only possible and not probable, no provision is recognised and the item is a contingent liability disclosed in the notes unless the outflow is remote. Contingent assets are never recognised before they are virtually certain.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-018",
+            "domain": "Financial Accounting",
+            "stem": "A company starts the year with retained earnings of GHS 200,000. During the year it makes a profit after tax of GHS 90,000 and pays dividends of GHS 30,000. What is the closing retained earnings?",
+            "options": [
+                "290,000",
+                "260,000",
+                "230,000",
+                "320,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Closing retained earnings equal the opening balance plus profit less dividends, so 200,000 plus 90,000 minus 30,000 equals 260,000. Adding dividends instead of deducting them would wrongly give 320,000.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-019",
+            "domain": "Financial Accounting",
+            "stem": "Under IFRS 16, how is the lease liability initially measured by a lessee?",
+            "options": [
+                "At the total undiscounted lease payments over the lease term",
+                "At the fair value of the underlying asset at inception",
+                "At the present value of lease payments not paid at the commencement date, discounted using the interest rate implicit in the lease",
+                "At the sum of the first year's lease payments only"
+            ],
+            "correct_index": 2,
+            "explanation": "The lease liability is measured at the present value of the lease payments not paid at the commencement date, discounted using the interest rate implicit in the lease or the lessee's incremental borrowing rate. Undiscounted payments overstate the liability.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-020",
+            "domain": "Financial Accounting",
+            "stem": "Which of the following is presented in the statement of changes in equity under IAS 1?",
+            "options": [
+                "Only the profit for the year",
+                "Only the dividends paid during the year",
+                "Only the closing balance of share capital",
+                "Total comprehensive income for the period, transactions with owners, and the opening and closing balances of each component of equity"
+            ],
+            "correct_index": 3,
+            "explanation": "The statement reconciles the opening and closing balances of each component of equity, showing total comprehensive income and transactions with owners such as dividends and share issues. Presenting profit alone would not explain the movement in equity.",
+            "reference": "ICAG Syllabus - Financial Accounting"
+        },
+        {
+            "id": "icag-gh-021",
+            "domain": "Management Accounting",
+            "stem": "A product sells for GHS 50 per unit with variable costs of GHS 30 per unit. What is the contribution per unit?",
+            "options": [
+                "20",
+                "30",
+                "50",
+                "80"
+            ],
+            "correct_index": 0,
+            "explanation": "Contribution is selling price less variable cost, so 50 minus 30 equals 20 per unit. This amount contributes towards fixed costs and then profit.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-022",
+            "domain": "Management Accounting",
+            "stem": "A product sells for GHS 50 per unit with variable costs of GHS 30 per unit and fixed costs of GHS 120,000. What is the break-even point in units?",
+            "options": [
+                "4,000",
+                "6,000",
+                "2,400",
+                "12,000"
+            ],
+            "correct_index": 1,
+            "explanation": "Contribution per unit is 50 minus 30, which is 20, and break-even units are fixed costs divided by contribution, so 120,000 divided by 20 equals 6,000 units. Dividing by selling price would wrongly give 2,400.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-023",
+            "domain": "Management Accounting",
+            "stem": "A product has a contribution to sales ratio of 40 percent and fixed costs of GHS 80,000. What is the break-even sales revenue?",
+            "options": [
+                "32,000",
+                "320,000",
+                "200,000",
+                "100,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Break-even revenue equals fixed costs divided by the contribution to sales ratio, so 80,000 divided by 0.40 equals 200,000. Multiplying fixed costs by the ratio would wrongly give 32,000.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-024",
+            "domain": "Management Accounting",
+            "stem": "Budgeted sales are 10,000 units and break-even sales are 6,000 units. What is the margin of safety in units?",
+            "options": [
+                "6,000",
+                "10,000",
+                "2,000",
+                "4,000"
+            ],
+            "correct_index": 3,
+            "explanation": "The margin of safety is budgeted sales minus break-even sales, so 10,000 minus 6,000 equals 4,000 units. It measures how far sales can fall before the business makes a loss.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-025",
+            "domain": "Management Accounting",
+            "stem": "The standard material cost for a unit is 4 kg at GHS 5 per kg. Actual production used 4,200 kg costing GHS 21,840. What is the material price variance?",
+            "options": [
+                "840 adverse",
+                "840 favourable",
+                "1,000 adverse",
+                "200 favourable"
+            ],
+            "correct_index": 0,
+            "explanation": "The actual price is 21,840 divided by 4,200, which is GHS 5.20 per kg, so the price variance is 5.00 minus 5.20 times 4,200 kg, giving 840 adverse. The 1,000 figure is the usage variance, not the price variance.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-026",
+            "domain": "Management Accounting",
+            "stem": "The standard usage is 4 kg per unit at GHS 5 per kg. Actual output was 1,000 units and actual usage was 4,200 kg. What is the material usage variance valued at the standard price?",
+            "options": [
+                "1,000 favourable",
+                "1,000 adverse",
+                "200 adverse",
+                "5,000 adverse"
+            ],
+            "correct_index": 1,
+            "explanation": "The standard quantity for actual output is 4 times 1,000, which is 4,000 kg. Usage variance is 4,000 minus 4,200 times GHS 5, giving 1,000 adverse because more material was used than allowed.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-027",
+            "domain": "Management Accounting",
+            "stem": "The standard labour rate is GHS 12 per hour. Actual hours worked were 2,500 at a total cost of GHS 31,250. What is the labour rate variance?",
+            "options": [
+                "1,250 favourable",
+                "1,500 adverse",
+                "1,250 adverse",
+                "250 favourable"
+            ],
+            "correct_index": 2,
+            "explanation": "The actual rate is 31,250 divided by 2,500, which is GHS 12.50 per hour, so the rate variance is 12.00 minus 12.50 times 2,500 hours, giving 1,250 adverse. Paying more than the standard rate is always adverse.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-028",
+            "domain": "Management Accounting",
+            "stem": "Budgeted overheads are GHS 150,000 and budgeted machine hours are 25,000. What is the overhead absorption rate per machine hour?",
+            "options": [
+                "6.40",
+                "6.15",
+                "5.77",
+                "6.00"
+            ],
+            "correct_index": 3,
+            "explanation": "The absorption rate is budgeted overheads divided by budgeted activity, so 150,000 divided by 25,000 equals GHS 6.00 per machine hour. Using actual figures would be wrong for a predetermined rate.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-029",
+            "domain": "Management Accounting",
+            "stem": "The overhead absorption rate is GHS 6 per machine hour. Actual machine hours were 26,000 and actual overheads were GHS 160,000. What is the amount of over- or under-absorption?",
+            "options": [
+                "4,000 under-absorbed",
+                "4,000 over-absorbed",
+                "10,000 under-absorbed",
+                "6,000 over-absorbed"
+            ],
+            "correct_index": 0,
+            "explanation": "Absorbed overhead is 6 times 26,000, which is 156,000, compared with actual overheads of 160,000. Because absorbed is less than actual, the difference of 4,000 is under-absorbed.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-030",
+            "domain": "Management Accounting",
+            "stem": "Two products use the same scarce machine. Product A has a contribution of GHS 30 and uses 2 machine hours, while Product B has a contribution of GHS 32 and uses 4 machine hours. Which product should be prioritised?",
+            "options": [
+                "Product B, because it has the higher contribution per unit",
+                "Product A, because it earns GHS 15 of contribution per machine hour",
+                "Product A, because it has the lower contribution per unit",
+                "Product B, because it uses more machine hours per unit"
+            ],
+            "correct_index": 1,
+            "explanation": "With a scarce resource, rank by contribution per unit of the limiting factor. Product A earns 30 divided by 2, which is 15 per machine hour, while Product B earns 32 divided by 4, which is 8, so Product A is prioritised.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-031",
+            "domain": "Management Accounting",
+            "stem": "A company must decide whether to accept a special order. Which cost is relevant to the decision?",
+            "options": [
+                "A sunk cost of machinery already purchased",
+                "A committed fixed cost that will be incurred regardless of the decision",
+                "The incremental variable cost of fulfilling the order",
+                "The historical book value of existing inventory that has no alternative use"
+            ],
+            "correct_index": 2,
+            "explanation": "Relevant costs are future, incremental cash flows that change with the decision, such as the extra variable cost of the order. Sunk costs, committed fixed costs and historical book values are the same whichever way the decision goes.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-032",
+            "domain": "Management Accounting",
+            "stem": "A project costs GHS 100,000 and generates annual cash inflows of GHS 25,000. What is the payback period?",
+            "options": [
+                "5 years",
+                "2.5 years",
+                "25 years",
+                "4 years"
+            ],
+            "correct_index": 3,
+            "explanation": "Payback is the initial outlay divided by the annual inflow, so 100,000 divided by 25,000 equals four years. Payback ignores the time value of money and cash flows after the payback date.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-033",
+            "domain": "Management Accounting",
+            "stem": "A project requires an initial outlay of GHS 50,000 and will generate a single cash inflow of GHS 60,500 at the end of year one. If the discount rate is 10 percent, what is the net present value?",
+            "options": [
+                "5,000",
+                "10,500",
+                "500",
+                "55,000"
+            ],
+            "correct_index": 0,
+            "explanation": "The present value of the inflow is 60,500 divided by 1.10, which is 55,000. Subtracting the 50,000 outlay gives a net present value of 5,000, so the project is acceptable.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-034",
+            "domain": "Management Accounting",
+            "stem": "When production exceeds sales in a period, how does profit reported under absorption costing compare with profit under marginal costing?",
+            "options": [
+                "Absorption profit is lower because fixed overhead is expensed immediately",
+                "Absorption profit is higher because fixed production overhead is carried forward in closing inventory",
+                "The two profits are always equal regardless of inventory movements",
+                "Marginal profit is higher because variable costs are excluded"
+            ],
+            "correct_index": 1,
+            "explanation": "Under absorption costing some fixed production overhead is deferred in closing inventory when production exceeds sales, so profit is higher than under marginal costing, which expenses all fixed overhead immediately. The difference equals the fixed overhead held in the inventory increase.",
+            "reference": "ICAG Syllabus - Management Accounting"
+        },
+        {
+            "id": "icag-gh-035",
+            "domain": "Taxation and Business Law",
+            "stem": "A VAT-registered trader makes standard-rated sales of GHS 200,000 and has input VAT of GHS 18,000. If the VAT rate is 15 percent, what is the VAT payable to the revenue authority?",
+            "options": [
+                "30,000",
+                "18,000",
+                "12,000",
+                "48,000"
+            ],
+            "correct_index": 2,
+            "explanation": "Output VAT is 200,000 times 15 percent, which is 30,000. Deducting the input VAT of 18,000 gives VAT payable of 12,000, because VAT is charged on the value added.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-036",
+            "domain": "Taxation and Business Law",
+            "stem": "A company reports accounting profit before tax of GHS 500,000. It has non-deductible expenses of GHS 40,000 and capital allowances of GHS 90,000. What is the chargeable income?",
+            "options": [
+                "540,000",
+                "430,000",
+                "590,000",
+                "450,000"
+            ],
+            "correct_index": 3,
+            "explanation": "Chargeable income starts from accounting profit, adds back non-deductible expenses and deducts capital allowances, so 500,000 plus 40,000 minus 90,000 equals 450,000. Deducting the expenses and adding the allowances would reverse the adjustments.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-037",
+            "domain": "Taxation and Business Law",
+            "stem": "Under Ghana's capital allowance regime, on which of the following is an allowance normally granted?",
+            "options": [
+                "Plant and machinery used in the production of income",
+                "Land held for resale by a dealer",
+                "Personal household furniture owned by a director",
+                "Trading stock held for sale"
+            ],
+            "correct_index": 0,
+            "explanation": "Capital allowances are granted on qualifying capital expenditure such as plant and machinery used in producing business income. Trading stock is relieved as a trading expense, and private assets such as a director's household furniture do not qualify.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-038",
+            "domain": "Taxation and Business Law",
+            "stem": "An employer deducts tax from an employee's salary under the Pay-As-You-Earn system. Which party is responsible for remitting the deducted tax to the Ghana Revenue Authority?",
+            "options": [
+                "The employee personally",
+                "The employer as the withholding agent",
+                "The employee's bank",
+                "The Social Security and National Insurance Trust"
+            ],
+            "correct_index": 1,
+            "explanation": "Under the Pay-As-You-Earn system the employer acts as an agent of the revenue authority, deducting tax from salaries and remitting it to the Ghana Revenue Authority. The employee does not remit the tax personally.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-039",
+            "domain": "Taxation and Business Law",
+            "stem": "Which statement best describes the nature of value added tax in Ghana?",
+            "options": [
+                "A direct tax on company profits",
+                "A tax levied on payroll only",
+                "A multi-stage indirect tax ultimately borne by the final consumer",
+                "A tax levied only on imports"
+            ],
+            "correct_index": 2,
+            "explanation": "Value added tax is an indirect tax charged at each stage of the supply chain, with the burden ultimately falling on the final consumer. A direct tax, by contrast, is levied on income or profits and cannot be passed on.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-040",
+            "domain": "Taxation and Business Law",
+            "stem": "In the law of contract, at what point is a bilateral contract normally formed?",
+            "options": [
+                "When one party makes an invitation to treat",
+                "When the offeror posts the offer",
+                "When the consideration is promised but not yet performed",
+                "When acceptance of the offer is communicated to the offeror"
+            ],
+            "correct_index": 3,
+            "explanation": "A bilateral contract is formed when unqualified acceptance is communicated to the offeror, creating a binding agreement. An invitation to treat is merely an invitation to negotiate and does not itself constitute an offer.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-041",
+            "domain": "Taxation and Business Law",
+            "stem": "Which of the following is an essential element for a valid simple contract?",
+            "options": [
+                "Offer, acceptance, consideration and intention to create legal relations",
+                "A written document executed under seal",
+                "Approval of the contract by a court",
+                "Payment in cash only"
+            ],
+            "correct_index": 0,
+            "explanation": "A valid simple contract requires offer and acceptance, consideration and an intention to create legal relations. A deed is a separate formality, and most simple contracts need not be in writing or approved by a court.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-042",
+            "domain": "Taxation and Business Law",
+            "stem": "An agent acts on behalf of a principal in dealings with a third party. Which statement best describes the relationship?",
+            "options": [
+                "The agent personally bears all contractual liability regardless of disclosure",
+                "The agent creates legal relations between the principal and a third party within the agent's authority",
+                "The agent is always an employee of the principal",
+                "The agent takes over the principal's obligations on insolvency"
+            ],
+            "correct_index": 1,
+            "explanation": "An agent who acts within actual or apparent authority binds the principal in contract with the third party, so the principal acquires the rights and liabilities. An agent need not be an employee and does not automatically bear the principal's liabilities.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-043",
+            "domain": "Taxation and Business Law",
+            "stem": "In a general partnership, what is the liability of each partner for the debts of the business?",
+            "options": [
+                "Limited to the capital each partner contributed",
+                "Limited to the amount of profit each partner received",
+                "Unlimited, with the partners jointly and severally liable",
+                "There is no personal liability at all"
+            ],
+            "correct_index": 2,
+            "explanation": "General partners have unlimited liability and are jointly and severally liable for partnership debts, so a creditor may recover the full debt from any one partner. Liability limited to capital contributed is a feature of a limited company or a limited partner.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-044",
+            "domain": "Taxation and Business Law",
+            "stem": "Under company law, what does the doctrine of separate legal personality mean for a registered company?",
+            "options": [
+                "The company is merely an extension of its directors",
+                "Shareholders are personally liable for all the company's debts",
+                "The company ceases to exist when a director resigns",
+                "The company is a legal person distinct from its shareholders and can own property and incur debts in its own name"
+            ],
+            "correct_index": 3,
+            "explanation": "On incorporation the company becomes a legal person separate from its members, able to own property, sue, be sued and incur debts in its own name. This separation is the foundation of limited liability and continues despite changes in the board.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-045",
+            "domain": "Taxation and Business Law",
+            "stem": "For a company limited by shares, what is the extent of a member's liability?",
+            "options": [
+                "Limited to any amount unpaid on the shares held",
+                "Unlimited personal liability for all company debts",
+                "Liability equal to the company's total assets",
+                "No obligation to pay anything on unpaid shares"
+            ],
+            "correct_index": 0,
+            "explanation": "A member of a company limited by shares is liable only for any amount unpaid on the shares, once the shares are fully paid the member owes the company nothing more. Creditors cannot usually look to members personally for company debts.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-046",
+            "domain": "Taxation and Business Law",
+            "stem": "A party breaches a contract and the innocent party wishes to claim damages. What is the purpose of damages for breach of contract?",
+            "options": [
+                "To punish the party in breach",
+                "To compensate the innocent party for losses arising from the breach",
+                "To transfer ownership of the business to the innocent party",
+                "To imprison the party in breach"
+            ],
+            "correct_index": 1,
+            "explanation": "Contract damages are compensatory, aiming to put the innocent party in the position it would have been in had the contract been performed. Their purpose is not to punish the wrongdoer, which distinguishes them from punitive penalties.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-047",
+            "domain": "Taxation and Business Law",
+            "stem": "Which of the following best describes the purpose of a tax return?",
+            "options": [
+                "It is an invoice issued by a supplier to a customer",
+                "It is a receipt for taxes already paid by an employer",
+                "It is a legal document in which a taxpayer reports income and computes the tax due",
+                "It is a demand for payment issued by a bank"
+            ],
+            "correct_index": 2,
+            "explanation": "A tax return is a formal statement in which a taxpayer reports income, deductions and reliefs and computes the tax payable or repayable. It is not an invoice, a receipt or a bank demand.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-048",
+            "domain": "Taxation and Business Law",
+            "stem": "Which of the following is generally regarded as a direct tax?",
+            "options": [
+                "Value added tax",
+                "Customs duty",
+                "Stamp duty",
+                "Company income tax"
+            ],
+            "correct_index": 3,
+            "explanation": "Company income tax is a direct tax levied on the profits of the company, which bears the burden. Value added tax, customs duty and stamp duty are indirect taxes collected on transactions and passed on to the consumer or payer.",
+            "reference": "ICAG Syllabus - Taxation and Business Law"
+        },
+        {
+            "id": "icag-gh-049",
+            "domain": "Audit and Assurance",
+            "stem": "In the audit risk model, which components together make up audit risk?",
+            "options": [
+                "Inherent risk, control risk and detection risk",
+                "Cash risk, business risk and fraud risk",
+                "Materiality, sampling and evidence",
+                "Planning, fieldwork and reporting"
+            ],
+            "correct_index": 0,
+            "explanation": "Audit risk is the product of inherent risk, control risk and detection risk. Inherent and control risk exist in the entity and are assessed by the auditor, while detection risk is controlled through the nature, timing and extent of audit procedures.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-050",
+            "domain": "Audit and Assurance",
+            "stem": "Which of the following provides the most reliable audit evidence about the existence of a debtor's balance?",
+            "options": [
+                "A verbal assurance from the finance director",
+                "A written confirmation received directly from the debtor",
+                "A copy of the client's internal sales ledger",
+                "Management's written representation alone"
+            ],
+            "correct_index": 1,
+            "explanation": "Evidence is more reliable when it is written, obtained from an independent source and received directly by the auditor. A confirmation from the debtor meets all three criteria, whereas internal records and management assurances are less persuasive.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-051",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor concludes that misstatements are material but not pervasive to the financial statements. Which opinion should be expressed?",
+            "options": [
+                "Unmodified opinion",
+                "Adverse opinion",
+                "Qualified opinion",
+                "Disclaimer of opinion"
+            ],
+            "correct_index": 2,
+            "explanation": "When misstatements or a limitation are material but not pervasive, the auditor expresses a qualified opinion. An adverse opinion is used when the effect is both material and pervasive.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-052",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor obtains sufficient evidence that the financial statements contain misstatements that are both material and pervasive. Which opinion is appropriate?",
+            "options": [
+                "Qualified opinion",
+                "Disclaimer of opinion",
+                "Unmodified opinion with an emphasis of matter paragraph",
+                "Adverse opinion"
+            ],
+            "correct_index": 3,
+            "explanation": "When misstatements are material and pervasive, the financial statements as a whole are not fairly presented and an adverse opinion is expressed. A qualified opinion is used only when the misstatement is material but not pervasive.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-053",
+            "domain": "Audit and Assurance",
+            "stem": "An auditor is unable to obtain sufficient appropriate audit evidence and concludes the possible effects are both material and pervasive. Which opinion should be issued?",
+            "options": [
+                "Disclaimer of opinion",
+                "Adverse opinion",
+                "Qualified opinion",
+                "Unmodified opinion"
+            ],
+            "correct_index": 0,
+            "explanation": "When the auditor cannot obtain evidence and the possible effects are material and pervasive, the auditor disclaims an opinion because the scope limitation prevents any conclusion on the statements. An adverse opinion requires evidence showing material and pervasive misstatement.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-054",
+            "domain": "Audit and Assurance",
+            "stem": "Which statement best describes the auditor's responsibility regarding going concern under ISA 570?",
+            "options": [
+                "The auditor guarantees that the entity will continue as a going concern",
+                "The auditor evaluates management's use of the going concern basis and considers the adequacy of the related disclosures",
+                "The auditor is responsible only for the entity's profit forecast",
+                "The auditor has no responsibility in relation to going concern"
+            ],
+            "correct_index": 1,
+            "explanation": "Under ISA 570 the auditor evaluates management's assessment of the entity's ability to continue as a going concern and considers the adequacy of the disclosures. The auditor does not guarantee the entity's survival but must report material uncertainties.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-055",
+            "domain": "Audit and Assurance",
+            "stem": "Which internal control measure best reduces the risk of fraud in the cash payments cycle?",
+            "options": [
+                "Having the same clerk record and authorise payments",
+                "Allowing purchases to be made without supporting documentation",
+                "Segregating the duties of authorising, recording and custody of cash",
+                "Paying suppliers only in cash"
+            ],
+            "correct_index": 2,
+            "explanation": "Segregation of duties prevents any one person from controlling a transaction from start to finish, reducing the opportunity for fraud and error. Combining authorisation and recording in one clerk removes that safeguard.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-056",
+            "domain": "Audit and Assurance",
+            "stem": "How is materiality best described in an audit conducted under International Standards on Auditing?",
+            "options": [
+                "A fixed percentage of revenue required by law",
+                "The total value of the entity's assets",
+                "The auditor's fee for the engagement",
+                "The amount by which misstatements could influence the economic decisions of users of the financial statements"
+            ],
+            "correct_index": 3,
+            "explanation": "Materiality is the threshold at which misstatements, individually or in aggregate, could influence the economic decisions of users. It is a matter of professional judgement and is not a fixed statutory percentage.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-057",
+            "domain": "Audit and Assurance",
+            "stem": "An audit firm holds a significant direct financial interest in an audit client. Which fundamental ethical principle is most directly threatened?",
+            "options": [
+                "Objectivity",
+                "Integrity",
+                "Confidentiality",
+                "Professional competence and due care"
+            ],
+            "correct_index": 0,
+            "explanation": "Holding a financial interest creates a self-interest threat to objectivity, because the auditor's judgement may be swayed by the firm's stake in the client. Independence in appearance and in mind must be maintained to safeguard objectivity.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-058",
+            "domain": "Audit and Assurance",
+            "stem": "When designing a sample, what does sampling risk represent?",
+            "options": [
+                "The risk of a natural disaster affecting the client's operations",
+                "The risk that the auditor's conclusion based on a sample differs from the conclusion that would be reached if the whole population were tested",
+                "The risk that the client refuses to pay the audit fee",
+                "The risk that the financial statements are free from material error"
+            ],
+            "correct_index": 1,
+            "explanation": "Sampling risk is the possibility that the sample leads to a different conclusion from testing the entire population. Auditors reduce it by increasing sample size and selecting items appropriately.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-059",
+            "domain": "Audit and Assurance",
+            "stem": "Which of the following activities is performed during the planning stage of an audit?",
+            "options": [
+                "Issuing the audit report to the shareholders",
+                "Preparing the client's financial statements",
+                "Performing the risk assessment and establishing the overall audit strategy",
+                "Paying the client's suppliers on its behalf"
+            ],
+            "correct_index": 2,
+            "explanation": "Audit planning involves understanding the entity, performing risk assessment and establishing the overall audit strategy and plan. Issuing the report occurs at the end of the engagement, and preparing statements or paying suppliers would impair independence.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        },
+        {
+            "id": "icag-gh-060",
+            "domain": "Audit and Assurance",
+            "stem": "What is the principal purpose of obtaining a written representation letter from management?",
+            "options": [
+                "To transfer responsibility for the financial statements to the auditor",
+                "To replace substantive testing entirely",
+                "To provide the audit opinion on behalf of the auditor",
+                "To confirm certain matters or to support other audit evidence on which the auditor relies"
+            ],
+            "correct_index": 3,
+            "explanation": "Written representations confirm matters for which other sufficient appropriate evidence may not reasonably be expected to exist, supporting the audit evidence already obtained. They do not transfer management's responsibility or substitute for the auditor's own procedures.",
+            "reference": "ICAG Syllabus - Audit and Assurance"
+        }
+    ]
+}
