@@ -988,9 +988,89 @@ class AuthoredBundleSeederTest extends TestCase
                 'Grammaire et Lexique' => 20,
             ]],
             'delf-b2' => ['delf-b2', 60, [
-                "Comprehension de l'oral" => 20,
+                'Comprehension de l\'oral' => 20,
                 'Comprehension des ecrits' => 20,
                 'Grammaire et Lexique' => 20,
+            ]],
+            'dalf-c1' => ['dalf-c1', 60, [
+                'Comprehension de l\'oral' => 20,
+                'Comprehension des ecrits' => 20,
+                'Lexique et Discours' => 20,
+            ]],
+            'dele-b1' => ['dele-b1', 60, [
+                'Comprension de lectura' => 20,
+                'Comprension auditiva' => 20,
+                'Gramatica y Vocabulario' => 20,
+            ]],
+            'dele-b2' => ['dele-b2', 60, [
+                'Comprension de lectura' => 20,
+                'Comprension auditiva' => 20,
+                'Gramatica y Vocabulario' => 20,
+            ]],
+            'goethe-a2' => ['goethe-a2', 60, [
+                'Lesen' => 20,
+                'Horen' => 20,
+                'Grammatik und Wortschatz' => 20,
+            ]],
+            'goethe-b1' => ['goethe-b1', 60, [
+                'Lesen' => 20,
+                'Horen' => 20,
+                'Grammatik und Wortschatz' => 20,
+            ]],
+            'goethe-b2' => ['goethe-b2', 60, [
+                'Lesen' => 20,
+                'Horen' => 20,
+                'Grammatik und Wortschatz' => 20,
+            ]],
+            'goethe-c1' => ['goethe-c1', 60, [
+                'Lesen' => 20,
+                'Horen' => 20,
+                'Grammatik und Wortschatz' => 20,
+            ]],
+            'celi-b2' => ['celi-b2', 60, [
+                'Comprensione della lettura' => 20,
+                'Comprensione dell\'ascolto' => 20,
+                'Grammatica e Lessico' => 20,
+            ]],
+            'telc-b2' => ['telc-b2', 60, [
+                'Leseverstehen' => 20,
+                'Horverstehen' => 20,
+                'Sprachbausteine' => 20,
+            ]],
+            'testdaf' => ['testdaf', 60, [
+                'Leseverstehen' => 20,
+                'Horverstehen' => 20,
+                'Grammatik und Wortschatz' => 20,
+            ]],
+            'cam-fce' => ['cam-fce', 60, [
+                'Reading and Use of English' => 20,
+                'Listening' => 20,
+                'Vocabulary and Grammar' => 20,
+            ]],
+            'cam-cae' => ['cam-cae', 60, [
+                'Reading and Use of English' => 20,
+                'Listening' => 20,
+                'Vocabulary and Grammar' => 20,
+            ]],
+            'cam-cpe' => ['cam-cpe', 60, [
+                'Reading and Use of English' => 20,
+                'Listening' => 20,
+                'Vocabulary and Grammar' => 20,
+            ]],
+            'ielts-g' => ['ielts-g', 60, [
+                'Reading' => 20,
+                'Listening' => 20,
+                'Grammar and Vocabulary' => 20,
+            ]],
+            'pte-a' => ['pte-a', 60, [
+                'Reading' => 20,
+                'Listening' => 20,
+                'Grammar and Vocabulary' => 20,
+            ]],
+            'pte-au' => ['pte-au', 60, [
+                'Reading' => 20,
+                'Listening' => 20,
+                'Grammar and Vocabulary' => 20,
             ]],
         ];
     }

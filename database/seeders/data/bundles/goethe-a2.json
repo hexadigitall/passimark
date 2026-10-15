@@ -1,0 +1,858 @@
+{
+    "cert_key": "goethe-a2",
+    "title": "Goethe-Zertifikat A2",
+    "issuer": "Goethe-Institut",
+    "region": "EU-LANG",
+    "outline_file": "outlines/goethe-a2.json",
+    "variant_label": "Goethe A2 Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "60% required",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public Goethe-Zertifikat A2 syllabus. Not a capture of past exam questions.",
+    "source_label": "Goethe A2 practice bank",
+    "items": [
+        {
+            "id": "goethe-a2-001",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine E-Mail von Anna: 'Hallo Tom, ich bin heute etwas verspätet. Warte bitte vor dem Kino auf mich. Bis gleich!' Was soll Tom tun?",
+            "options": [
+                "Vor dem Kino auf Anna warten.",
+                "Ins Kino ohne Anna gehen.",
+                "Anna zu Hause anrufen.",
+                "Eine andere Uhrzeit vorschlagen."
+            ],
+            "correct_index": 0,
+            "explanation": "Anna asks Tom to wait for her in front of the cinema, so he should stay there until she arrives.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-002",
+            "domain": "Lesen",
+            "stem": "Auf einem Schild in einem Park steht: 'Rasen betreten verboten. Hunde an der Leine führen.' Was ist hier nicht erlaubt?",
+            "options": [
+                "Auf den Wegen gehen.",
+                "Auf dem Rasen laufen.",
+                "Mit dem Hund spazieren gehen.",
+                "Auf einer Bank sitzen."
+            ],
+            "correct_index": 1,
+            "explanation": "The sign prohibits entering the lawn, so walking on the grass is not allowed while keeping dogs on leashes is required.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-003",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine Kleinanzeige: 'Suche Nachhilfe in Mathematik für Klasse 8. Zwei Stunden pro Woche. Tel.: 0123-45678.' Was sucht der Schreiber?",
+            "options": [
+                "Einen Job als Kassierer.",
+                "Ein Zimmer zum Mieten.",
+                "Einen Mathematiklehrer für seinen Sohn.",
+                "Einen Partner für Sport."
+            ],
+            "correct_index": 2,
+            "explanation": "The person is looking for math tutoring for 8th grade, which means they need a math teacher for their child.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-004",
+            "domain": "Lesen",
+            "stem": "In einem Supermarkt steht auf einem Regal: 'Angebot: Äpfel 2 kg für 3 Euro, nur bis Samstag.' Wann gilt dieses Angebot nicht mehr?",
+            "options": [
+                "Schon am Freitag.",
+                "Nur am Sonntag.",
+                "Jeden Montag.",
+                "Nach Samstag."
+            ],
+            "correct_index": 3,
+            "explanation": "The offer is valid only until Saturday, so it no longer applies after Saturday.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-005",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine SMS: 'Ich bin um 18 Uhr am Bahnhof. Holst du mich bitte ab?' Wer schreibt diese SMS und an wen?",
+            "options": [
+                "Jemand bittet eine andere Person, ihn abzuholen.",
+                "Ein Lehrer lädt seine Klasse ins Museum ein.",
+                "Ein Arzt ruft einen Patienten ins Krankenhaus.",
+                "Ein Kellner bestellt Essen für Gäste."
+            ],
+            "correct_index": 0,
+            "explanation": "The sender asks the recipient to pick them up at the train station at 18:00.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-006",
+            "domain": "Lesen",
+            "stem": "Auf einem Zettel in der WG steht: 'Bitte heute Geschirr spülen. Danke!' Worum bittet die Person?",
+            "options": [
+                "Die Wäsche zu waschen.",
+                "Das Geschirr nach dem Essen abzuwaschen.",
+                "Das Bad zu putzen.",
+                "Den Müll wegzubringen."
+            ],
+            "correct_index": 1,
+            "explanation": "The note asks flatmates to wash the dishes today.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-007",
+            "domain": "Lesen",
+            "stem": "Sie lesen einen Fahrplan: Der Bus Nummer 5 fährt von Montag bis Freitag alle 20 Minuten. Am Wochenende nur alle 40 Minuten. Was ist richtig?",
+            "options": [
+                "Am Samstag fährt der Bus öfter als unter der Woche.",
+                "Der Bus fährt am Wochenende gar nicht.",
+                "Am Samstag fährt der Bus seltener als unter der Woche.",
+                "Der Bus fährt immer im gleichen Takt."
+            ],
+            "correct_index": 2,
+            "explanation": "On weekends the bus runs every 40 minutes compared to every 20 minutes on weekdays, so less frequently.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-008",
+            "domain": "Lesen",
+            "stem": "Auf einer Speisekarte steht: 'Tagessuppe 3,50 Euro, Salat 4,50 Euro, Schnitzel mit Pommes 8,90 Euro.' Was kostet das Schnitzel mit Pommes?",
+            "options": [
+                "3,50 Euro.",
+                "4,50 Euro.",
+                "13,90 Euro.",
+                "8,90 Euro."
+            ],
+            "correct_index": 3,
+            "explanation": "The menu lists schnitzel with fries at 8.90 euros.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-009",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine Geburtstagskarte: 'Herzlichen Glückwunsch zum Geburtstag, lieber Max! Ich wünsche dir viel Glück und Gesundheit im neuen Lebensjahr.' Wer gratuliert wem?",
+            "options": [
+                "Jemand gratuliert Max zum Geburtstag.",
+                "Max gratuliert jemandem zum Geburtstag.",
+                "Jemand lädt Max zu einer Party ein.",
+                "Max kündigt seine Geburtstagsfeier an."
+            ],
+            "correct_index": 0,
+            "explanation": "The card congratulates Max on his birthday with good wishes.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-010",
+            "domain": "Lesen",
+            "stem": "An der Tür eines Geschäfts steht: 'Heute geschlossen wegen Krankheit.' Was bedeutet das?",
+            "options": [
+                "Das Geschäft hat nur bis Mittag geöffnet.",
+                "Das Geschäft hat heute nicht geöffnet.",
+                "Es gibt heute Sonderangebote.",
+                "Das Geschäft öffnet eine Stunde später."
+            ],
+            "correct_index": 1,
+            "explanation": "The store is closed today due to illness, so it will not be open.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-011",
+            "domain": "Lesen",
+            "stem": "Sie lesen einen Wetterbericht: 'Heute ist es bewölkt, am Nachmittag regnet es. Morgen wird es sonnig.' Wie wird das Wetter morgen sein?",
+            "options": [
+                "Regnerisch.",
+                "Schneit.",
+                "Sonnig.",
+                "Neblig."
+            ],
+            "correct_index": 2,
+            "explanation": "The forecast says tomorrow it will be sunny.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-012",
+            "domain": "Lesen",
+            "stem": "In einer Wohnung steht ein Zettel: 'Der Briefträger hat ein Paket für dich abgegeben. Es liegt bei Frau Meier im Erdgeschoss.' Wo ist das Paket?",
+            "options": [
+                "Beim Briefträger.",
+                "In der Postfiliale.",
+                "Auf dem Dachboden.",
+                "Bei Frau Meier im Erdgeschoss."
+            ],
+            "correct_index": 3,
+            "explanation": "The package was left with Mrs. Meier on the ground floor.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-013",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine Einladung: 'Komm doch am Samstag um 19 Uhr zu meiner Geburtstagsfeier! Adresse: Hauptstraße 12.' Wo findet die Feier statt?",
+            "options": [
+                "In der Hauptstraße 12.",
+                "Im Park.",
+                "Im Schwimmbad.",
+                "Am Bahnhof."
+            ],
+            "correct_index": 0,
+            "explanation": "The address given is Hauptstraße 12, so the party takes place there.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-014",
+            "domain": "Lesen",
+            "stem": "Auf einem Medikamentenbeipackzettel steht: 'Nehmen Sie die Tabletten dreimal täglich nach dem Essen ein.' Wann soll man die Tabletten nehmen?",
+            "options": [
+                "Nur einmal am Morgen.",
+                "Dreimal täglich nach dem Essen.",
+                "Vor dem Schlafengehen.",
+                "Auf leeren Magen."
+            ],
+            "correct_index": 1,
+            "explanation": "The instructions specify taking the tablets three times a day after meals.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-015",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine kurze Notiz: 'Bin einkaufen. Komme in einer Stunde zurück.' Wer hat diese Notiz geschrieben?",
+            "options": [
+                "Ein Verkäufer im Supermarkt.",
+                "Ein Busfahrer.",
+                "Jemand, der kurz einkaufen geht.",
+                "Ein Lehrer in der Schule."
+            ],
+            "correct_index": 2,
+            "explanation": "The writer says they are going shopping and will be back in an hour.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-016",
+            "domain": "Lesen",
+            "stem": "Auf einem Plakat steht: 'Fahrradverleih: 5 Euro pro Tag, 15 Euro für drei Tage. Ermäßigung für Studenten.' Für wen gibt es eine Ermäßigung?",
+            "options": [
+                "Für Rentner.",
+                "Für Kinder unter 6 Jahren.",
+                "Für Taxifahrer.",
+                "Für Studenten."
+            ],
+            "correct_index": 3,
+            "explanation": "The bike rental offers a discount for students.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-017",
+            "domain": "Lesen",
+            "stem": "Sie lesen eine E-Mail: 'Liebe Lisa, vielen Dank für die Einladung zur Party. Ich komme gern! Viele Grüße, Sarah.' Wie antwortet Sarah auf die Einladung?",
+            "options": [
+                "Sie nimmt die Einladung an.",
+                "Sie lehnt die Einladung ab.",
+                "Sie weiß noch nicht Bescheid.",
+                "Sie kommt auf jeden Fall zu spät."
+            ],
+            "correct_index": 0,
+            "explanation": "Sarah writes 'I would love to come', so she accepts the invitation.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-018",
+            "domain": "Lesen",
+            "stem": "In einem Bus steht: 'Bitte vorn einsteigen, hinten aussteigen.' Was ist richtig?",
+            "options": [
+                "Man steigt hinten ein und vorn aus.",
+                "Man steigt vorn ein und hinten aus.",
+                "Man steigt überall ein und aus.",
+                "Man darf nur in der Mitte einsteigen."
+            ],
+            "correct_index": 1,
+            "explanation": "Passengers should board at the front and exit at the back of the bus.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-019",
+            "domain": "Lesen",
+            "stem": "Sie lesen in einer Zeitschrift: 'Deutsch lernen leicht gemacht - mit Übungen für Anfänger und Fortgeschrittene.' Für wen ist dieser Artikel gedacht?",
+            "options": [
+                "Für professionelle Übersetzer.",
+                "Für Kinder in Kindergarten.",
+                "Für Menschen, die Deutsch lernen wollen.",
+                "Für erfahrene Germanisten."
+            ],
+            "correct_index": 2,
+            "explanation": "The article is about learning German easily with exercises for beginners and advanced learners.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-020",
+            "domain": "Lesen",
+            "stem": "Auf einem Parkticketautomat steht: 'Parkticket für 1 Stunde: 2 Euro. Nur Münzen oder EC-Karte.' Wie kann man das Ticket bezahlen?",
+            "options": [
+                "Nur mit Kreditkarte aus dem Ausland.",
+                "Nur mit einem Scheck.",
+                "Nur mit einem 100-Euro-Schein.",
+                "Mit Münzen oder EC-Karte."
+            ],
+            "correct_index": 3,
+            "explanation": "Payment is accepted with coins or an EC bank card.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Lesen"
+        },
+        {
+            "id": "goethe-a2-021",
+            "domain": "Horen",
+            "stem": "Sie hören eine Durchsage im Bahnhof: 'Der Zug nach München hat 10 Minuten Verspätung.' Was bedeutet die Durchsage?",
+            "options": [
+                "Der Zug fährt später als geplant ab.",
+                "Der Zug ist schon angekommen.",
+                "Der Zug wurde gestrichen.",
+                "Der Zug fährt heute nicht mehr."
+            ],
+            "correct_index": 0,
+            "explanation": "A 10-minute delay means the train will depart later than scheduled.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-022",
+            "domain": "Horen",
+            "stem": "Sie hören ein Telefonat: 'Könntest du bitte für mich Milch und Brot kaufen?' Wer wird um welchen Gefallen gebeten?",
+            "options": [
+                "Jemand bittet um eine Fahrkarte.",
+                "Jemand bittet um Einkäufe.",
+                "Jemand bittet um Geld.",
+                "Jemand bittet um ein Buch."
+            ],
+            "correct_index": 1,
+            "explanation": "The caller asks the other person to buy milk and bread for them.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-023",
+            "domain": "Horen",
+            "stem": "Sie hören im Radio: 'Das Wetter für morgen: Sonne und 25 Grad.' Was wird das Wetter morgen sein?",
+            "options": [
+                "Stürmisch und kalt.",
+                "Schnee und Frost.",
+                "Sonnig und warm.",
+                "Regen und 10 Grad."
+            ],
+            "correct_index": 2,
+            "explanation": "Tomorrow will be sunny with 25 degrees, so sunny and warm.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-024",
+            "domain": "Horen",
+            "stem": "Sie hören eine Ansage im Bus: 'Nächste Haltestelle: Hauptbahnhof.' Was soll der Fahrgast tun, wenn er dort aussteigen möchte?",
+            "options": [
+                "Weiter schlafen.",
+                "Umsteigen in ein Flugzeug.",
+                "Den Busfahrer nach dem Preis fragen.",
+                "Sich zum Aussteigen bereitmachen."
+            ],
+            "correct_index": 3,
+            "explanation": "The announcement indicates the next stop is the main station, so passengers wanting to get off should prepare to exit.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-025",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch zwischen zwei Personen: 'Wann treffen wir uns morgen?' - 'Um 15 Uhr vor dem Café.' Wann und wo treffen sie sich?",
+            "options": [
+                "Um 15 Uhr vor dem Café.",
+                "Um 9 Uhr im Kino.",
+                "Um 18 Uhr am Flughafen.",
+                "Um 12 Uhr im Schwimmbad."
+            ],
+            "correct_index": 0,
+            "explanation": "They agree to meet at 15:00 in front of the café.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-026",
+            "domain": "Horen",
+            "stem": "Sie hören eine Durchsage in einem Kaufhaus: 'Kunden werden gebeten, den Aufzug nur für den Transport von Kinderwagen zu benutzen.' Für was darf der Aufzug benutzt werden?",
+            "options": [
+                "Für Rollschuhfahren.",
+                "Nur für den Transport von Kinderwagen.",
+                "Für schnelle Rennen.",
+                "Zum Klettern."
+            ],
+            "correct_index": 1,
+            "explanation": "The elevator should only be used to transport strollers/prams as requested.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-027",
+            "domain": "Horen",
+            "stem": "Sie hören ein kurzes Gespräch: 'Wie geht es dir heute?' - 'Nicht so gut, ich habe Kopfschmerzen.' Wie fühlt sich die zweite Person?",
+            "options": [
+                "Sie ist sehr glücklich.",
+                "Sie hat großen Hunger.",
+                "Sie fühlt sich nicht wohl.",
+                "Sie ist total fit."
+            ],
+            "correct_index": 2,
+            "explanation": "Having a headache means the person doesn't feel well.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-028",
+            "domain": "Horen",
+            "stem": "Sie hören eine Nachricht auf dem Anrufbeantworter: 'Hallo, ich bin es, Maria. Ich rufe dich heute Abend um 20 Uhr wieder an.' Wann wird Maria wieder anrufen?",
+            "options": [
+                "Morgen früh um 7 Uhr.",
+                "Nächste Woche.",
+                "Gestern Nachmittag.",
+                "Heute Abend um 20 Uhr."
+            ],
+            "correct_index": 3,
+            "explanation": "Maria says she will call back this evening at 20:00.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-029",
+            "domain": "Horen",
+            "stem": "Sie hören im Supermarkt eine Durchsage: 'Achtung, im Bereich Obst und Gemüse gibt es heute 20 Prozent Rabatt.' Wo gibt es Rabatt?",
+            "options": [
+                "Im Obst- und Gemüsebereich.",
+                "An der Kasse.",
+                "Im Parkhaus.",
+                "Im Restaurant."
+            ],
+            "correct_index": 0,
+            "explanation": "The discount is offered in the fruit and vegetable section.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-030",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch: 'Möchtest du noch eine Tasse Kaffee?' - 'Nein danke, ich habe schon genug getrunken.' Was antwortet die Person?",
+            "options": [
+                "Sie möchte zwei Tassen mehr.",
+                "Sie lehnt dankend ab.",
+                "Sie bestellt einen Kuchen.",
+                "Sie weiß nicht, was Kaffee ist."
+            ],
+            "correct_index": 1,
+            "explanation": "The response 'No thank you, I've already had enough' politely declines another cup.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-031",
+            "domain": "Horen",
+            "stem": "Sie hören eine Ansage am Flughafen: 'Flug LH123 nach Frankfurt wird jetzt am Gate B15 zum Boarding aufgerufen.' Wo müssen die Passagiere hin?",
+            "options": [
+                "Zum Eingang A1.",
+                "Zur Gepäckausgabe.",
+                "Zum Gate B15.",
+                "Zum Parkdeck."
+            ],
+            "correct_index": 2,
+            "explanation": "Passengers are called to board at Gate B15.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-032",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch zwischen Freunden: 'Gehen wir heute Abend ins Kino?' - 'Ja, gute Idee!' Was haben sie beschlossen?",
+            "options": [
+                "Zu Hause zu bleiben.",
+                "Morgen zu arbeiten.",
+                "Früh ins Bett zu gehen.",
+                "Heute Abend ins Kino zu gehen."
+            ],
+            "correct_index": 3,
+            "explanation": "They agree to go to the cinema this evening.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-033",
+            "domain": "Horen",
+            "stem": "Sie hören eine Durchsage im Krankenhaus: 'Herr Müller wird gebeten, sich bitte im Wartezimmer 3 einzufinden.' Wohin soll Herr Müller gehen?",
+            "options": [
+                "Ins Wartezimmer 3.",
+                "Ins Labor 5.",
+                "In den Operationssaal.",
+                "In die Cafeteria."
+            ],
+            "correct_index": 0,
+            "explanation": "Mr. Müller is asked to go to waiting room 3.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-034",
+            "domain": "Horen",
+            "stem": "Sie hören ein Telefongespräch: 'Kannst du mir dein Wörterbuch für heute Abend leihen?' - 'Ja, ich bringe es dir nach der Arbeit vorbei.' Was passiert mit dem Wörterbuch?",
+            "options": [
+                "Er verkauft es.",
+                "Der Freund bringt es später vorbei.",
+                "Er wirft es weg.",
+                "Er vergisst es."
+            ],
+            "correct_index": 1,
+            "explanation": "The friend agrees to bring the dictionary over after work.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-035",
+            "domain": "Horen",
+            "stem": "Sie hören im Radio den Verkehrsfunk: 'Auf der A3 Richtung Frankfurt ist ein Stau zwischen den Ausfahrten Köln-Mülheim und Leverkusen.' Wo gibt es einen Stau?",
+            "options": [
+                "Auf der A1 in Berlin.",
+                "Auf der A8 bei München.",
+                "Auf der A3 zwischen Köln-Mülheim und Leverkusen.",
+                "Auf der A7 bei Hamburg."
+            ],
+            "correct_index": 2,
+            "explanation": "There is a traffic jam on the A3 between the exits Köln-Mülheim and Leverkusen.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-036",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch: 'Hast du Lust, heute mit ins Schwimmbad zu kommen?' - 'Leider kann ich nicht, ich muss noch Hausaufgaben machen.' Warum kann die Person nicht mitkommen?",
+            "options": [
+                "Weil sie schon im Urlaub ist.",
+                "Weil sie schwimmen nicht mag.",
+                "Weil das Schwimmbad geschlossen ist.",
+                "Weil sie Hausaufgaben machen muss."
+            ],
+            "correct_index": 3,
+            "explanation": "She cannot go because she still needs to do her homework.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-037",
+            "domain": "Horen",
+            "stem": "Sie hören eine Durchsage im Zug: 'Bitte alle Fahrgäste, überprüfen Sie Ihre Fahrkarten.' Was sollen die Fahrgäste tun?",
+            "options": [
+                "Ihre Fahrkarten überprüfen.",
+                "Ihre Koffer packen.",
+                "Aus dem Zug steigen.",
+                "Essen kaufen gehen."
+            ],
+            "correct_index": 0,
+            "explanation": "Passengers are asked to check/verify their tickets.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-038",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch in einem Restaurant: 'Was möchten Sie bestellen?' - 'Ich nehme ein Schnitzel mit Kartoffelsalat.' Was bestellt die Person?",
+            "options": [
+                "Eine Pizza Margherita.",
+                "Ein Schnitzel mit Kartoffelsalat.",
+                "Eine Gemüsesuppe.",
+                "Einen Fisch mit Reis."
+            ],
+            "correct_index": 1,
+            "explanation": "The customer orders a schnitzel with potato salad.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-039",
+            "domain": "Horen",
+            "stem": "Sie hören eine Ansage in der Schule: 'Der Unterricht fällt heute wegen einer Dienstbesprechung aus.' Was ist heute nicht wie geplant?",
+            "options": [
+                "Die Pause wird verlängert.",
+                "Es gibt eine Klassenfahrt.",
+                "Der Unterricht findet nicht statt.",
+                "Der Sporttag beginnt früher."
+            ],
+            "correct_index": 2,
+            "explanation": "Classes are cancelled today due to a staff meeting.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-040",
+            "domain": "Horen",
+            "stem": "Sie hören ein Gespräch: 'Wie spät ist es?' - 'Es ist halb acht.' Wie spät ist es?",
+            "options": [
+                "20:00 Uhr.",
+                "18:00 Uhr.",
+                "19:00 Uhr.",
+                "19:30 Uhr."
+            ],
+            "correct_index": 3,
+            "explanation": "Halb acht in German means half past seven, i.e. 19:30 in 24-hour format.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Horen"
+        },
+        {
+            "id": "goethe-a2-041",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Ich _______ heute Abend ins Kino gehen.",
+            "options": [
+                "möchte",
+                "möchtest",
+                "möchtet",
+                "möchten"
+            ],
+            "correct_index": 0,
+            "explanation": "The first person singular form of 'möchten/wollen' in this context is 'möchte' (Ich möchte).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-042",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Er kommt _______ Berlin und besucht seine Freunde.",
+            "options": [
+                "von",
+                "aus",
+                "nach",
+                "zu"
+            ],
+            "correct_index": 1,
+            "explanation": "The preposition 'aus' is used with cities/countries to indicate origin (coming from).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-043",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Das ist _______ Buch, das ich gestern gekauft habe.",
+            "options": [
+                "der",
+                "die",
+                "das",
+                "den"
+            ],
+            "correct_index": 2,
+            "explanation": "The demonstrative/article matches neuter 'Buch' in nominative - 'das'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-044",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Wir fahren morgen _______ München.",
+            "options": [
+                "in",
+                "auf",
+                "bei",
+                "nach"
+            ],
+            "correct_index": 3,
+            "explanation": "When traveling to cities or countries, German uses 'nach' (fahren nach München).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-045",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Meine Schwester _______ 25 Jahre alt.",
+            "options": [
+                "ist",
+                "hat",
+                "bin",
+                "seid"
+            ],
+            "correct_index": 0,
+            "explanation": "For age in German, we use 'sein' - 'Meine Schwester ist 25 Jahre alt'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-046",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Kannst du mir _______ Stift leihen?",
+            "options": [
+                "deiner",
+                "deinen",
+                "deines",
+                "deinem"
+            ],
+            "correct_index": 1,
+            "explanation": "The accusative masculine form for 'dein Stift' is 'deinen' (because Stift is masculine accusative object).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-047",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Ich habe gestern _______ Kuchen gebacken.",
+            "options": [
+                "ein",
+                "einer",
+                "einen",
+                "eines"
+            ],
+            "correct_index": 2,
+            "explanation": "Kuchen is masculine and the direct object in accusative takes 'einen'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-048",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "______ ist dein Lieblingsessen?",
+            "options": [
+                "Wer",
+                "Wie",
+                "Wo",
+                "Was"
+            ],
+            "correct_index": 3,
+            "explanation": "To ask about a thing (food), we use the question word 'Was'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-049",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Er _______ jeden Tag um 7 Uhr auf.",
+            "options": [
+                "steht",
+                "stehts",
+                "stehet",
+                "stehst"
+            ],
+            "correct_index": 0,
+            "explanation": "The third person singular of 'aufstehen' in present tense is 'steht ... auf'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-050",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Wir wohnen _______ einem großen Haus.",
+            "options": [
+                "auf",
+                "in",
+                "über",
+                "unter"
+            ],
+            "correct_index": 1,
+            "explanation": "When talking about living in a building, German uses the preposition 'in'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-051",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Gestern _______ ich mit meinen Freunden ins Theater.",
+            "options": [
+                "gehe",
+                "gehen",
+                "ging",
+                "geht"
+            ],
+            "correct_index": 2,
+            "explanation": "In the simple past, 'gehen' for first person singular is 'ging'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-052",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Ich trinke gern _______ Wasser.",
+            "options": [
+                "kalte",
+                "kalten",
+                "kalter",
+                "kaltes"
+            ],
+            "correct_index": 3,
+            "explanation": "Wasser is neuter, so the adjective ending is '-es' in this context (accusative neuter).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-053",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Das Auto gehört _______ Vater.",
+            "options": [
+                "meinem",
+                "mein",
+                "meine",
+                "meiner"
+            ],
+            "correct_index": 0,
+            "explanation": "Vater is masculine dative in this possessive construction - 'meinem Vater'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-054",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Wir _______ seit zwei Jahren in dieser Stadt.",
+            "options": [
+                "wohnten",
+                "wohnen",
+                "gewöhnt",
+                "wohnst"
+            ],
+            "correct_index": 1,
+            "explanation": "With 'seit' (for a duration), we use present tense to express ongoing action - 'wir wohnen seit zwei Jahren'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-055",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "______ kommst du nach Hause?",
+            "options": [
+                "Wer",
+                "Was",
+                "Wann",
+                "Welcher"
+            ],
+            "correct_index": 2,
+            "explanation": "To ask for time, we use the question word 'Wann'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-056",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Ich brauche _______ neue Brille.",
+            "options": [
+                "ein",
+                "einer",
+                "eines",
+                "eine"
+            ],
+            "correct_index": 3,
+            "explanation": "Brille is feminine, so the indefinite article in accusative is 'eine'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-057",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Er spricht Deutsch _______ als ich.",
+            "options": [
+                "besser",
+                "gut",
+                "gute",
+                "gutem"
+            ],
+            "correct_index": 0,
+            "explanation": "In comparisons (better than), we use the comparative form 'besser'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-058",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Ich habe _______ Geld dabei, nur zehn Euro.",
+            "options": [
+                "nicht viele",
+                "nicht viel",
+                "nicht vielen",
+                "nicht vielem"
+            ],
+            "correct_index": 1,
+            "explanation": "Geld is uncountable (neuter mass noun), so we use 'nicht viel' not 'nicht viele'.",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-059",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Wir müssen um 8 Uhr _______ Bahnhof sein.",
+            "options": [
+                "im",
+                "zum",
+                "am",
+                "ins"
+            ],
+            "correct_index": 2,
+            "explanation": "For locations in a general sense with 'sein', we use 'am Bahnhof' (at the station).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        },
+        {
+            "id": "goethe-a2-060",
+            "domain": "Grammatik und Wortschatz",
+            "stem": "Sie _______ immer pünktlich zum Unterricht kommen.",
+            "options": [
+                "sollst",
+                "sollen",
+                "sollt",
+                "soll"
+            ],
+            "correct_index": 3,
+            "explanation": "The third person singular form of 'sollen' in this context is 'soll' (Sie soll... formal).",
+            "reference": "Goethe-Zertifikat A2 Syllabus - Grammatik und Wortschatz"
+        }
+    ]
+}
