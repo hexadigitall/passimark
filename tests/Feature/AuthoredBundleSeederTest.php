@@ -863,6 +863,77 @@ class AuthoredBundleSeederTest extends TestCase
                 'Management Accounting: Decision and Control' => 15,
                 'Accounting Systems and Controls' => 15,
             ]],
+            'waec-art' => ['waec-art', 60, [
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Literature-in-English' => 15,
+                'Government' => 15,
+            ]],
+            'waec-sci' => ['waec-sci', 60, [
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Physics' => 15,
+                'Chemistry and Biology' => 15,
+            ]],
+            'wassce-gh' => ['wassce-gh', 60, [
+                'English Language' => 15,
+                'Core Mathematics' => 15,
+                'Integrated Science' => 15,
+                'Social Studies' => 15,
+            ]],
+            'neco' => ['neco', 60, [
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Biology' => 15,
+                'Chemistry' => 15,
+            ]],
+            'nabteb' => ['nabteb', 60, [
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Physics' => 15,
+                'Chemistry' => 15,
+            ]],
+            'bece-ng' => ['bece-ng', 60, [
+                'English Studies' => 15,
+                'Mathematics' => 15,
+                'Basic Science and Technology' => 15,
+                'Social Studies and Civic Education' => 15,
+            ]],
+            'gce-ng' => ['gce-ng', 60, [
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Government' => 15,
+                'Economics' => 15,
+            ]],
+            'jamb-sci' => ['jamb-sci', 60, [
+                'Use of English' => 15,
+                'Physics' => 15,
+                'Chemistry' => 15,
+                'Biology' => 15,
+            ]],
+            'jamb-art' => ['jamb-art', 60, [
+                'Use of English' => 15,
+                'Literature-in-English' => 15,
+                'Government' => 15,
+                'Christian Religious Studies' => 15,
+            ]],
+            'jamb-com' => ['jamb-com', 60, [
+                'Use of English' => 15,
+                'Mathematics' => 15,
+                'Economics' => 15,
+                'Commerce and Accounting' => 15,
+            ]],
+            'life-au' => ['life-au', 60, [
+                'Australian Values' => 20,
+                "Australia's History and Government" => 20,
+                'Australian Geography and Symbols' => 20,
+            ]],
+            'life-uk' => ['life-uk', 60, [
+                'The Values and Principles of the UK' => 12,
+                'What is the UK' => 12,
+                'A Long and Illustrious History' => 18,
+                'A Modern, Thriving Society' => 18,
+            ]],
         ];
     }
 
