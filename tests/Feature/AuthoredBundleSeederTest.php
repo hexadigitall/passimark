@@ -934,6 +934,64 @@ class AuthoredBundleSeederTest extends TestCase
                 'A Long and Illustrious History' => 18,
                 'A Modern, Thriving Society' => 18,
             ]],
+            'hsk-1' => ['hsk-1', 60, [
+                'Listening' => 30,
+                'Reading' => 30,
+            ]],
+            'hsk-4' => ['hsk-4', 60, [
+                'Listening' => 20,
+                'Reading' => 20,
+                'Writing' => 20,
+            ]],
+            'hsk-6' => ['hsk-6', 60, [
+                'Listening' => 20,
+                'Reading' => 20,
+                'Writing' => 20,
+            ]],
+            'jlpt-n1' => ['jlpt-n1', 60, [
+                'Vocabulary' => 20,
+                'Grammar and Reading' => 20,
+                'Listening' => 20,
+            ]],
+            'jlpt-n2' => ['jlpt-n2', 60, [
+                'Vocabulary' => 20,
+                'Grammar and Reading' => 20,
+                'Listening' => 20,
+            ]],
+            'jlpt-n3' => ['jlpt-n3', 60, [
+                'Vocabulary' => 20,
+                'Grammar and Reading' => 20,
+                'Listening' => 20,
+            ]],
+            'jlpt-n5' => ['jlpt-n5', 60, [
+                'Vocabulary' => 20,
+                'Grammar and Reading' => 20,
+                'Listening' => 20,
+            ]],
+            'topik-i' => ['topik-i', 60, [
+                'Listening' => 30,
+                'Reading' => 30,
+            ]],
+            'topik-ii' => ['topik-ii', 60, [
+                'Listening' => 20,
+                'Writing' => 20,
+                'Reading' => 20,
+            ]],
+            'delf-a2' => ['delf-a2', 60, [
+                "Comprehension de l'oral" => 20,
+                'Comprehension des ecrits' => 20,
+                'Grammaire et Vocabulaire' => 20,
+            ]],
+            'delf-b1' => ['delf-b1', 60, [
+                "Comprehension de l'oral" => 20,
+                'Comprehension des ecrits' => 20,
+                'Grammaire et Lexique' => 20,
+            ]],
+            'delf-b2' => ['delf-b2', 60, [
+                "Comprehension de l'oral" => 20,
+                'Comprehension des ecrits' => 20,
+                'Grammaire et Lexique' => 20,
+            ]],
         ];
     }
 
