@@ -1,0 +1,858 @@
+{
+    "cert_key": "emsat-math",
+    "title": "EmSAT Math",
+    "issuer": "Ministry of Education (UAE)",
+    "region": "MIDDLE-EAST",
+    "outline_file": "outlines/emsat-math.json",
+    "variant_label": "EmSAT Math Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Scaled score 500-1900",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public EmSAT Math syllabus. Not a capture of past exam questions.",
+    "source_label": "EmSAT Math practice bank",
+    "items": [
+        {
+            "id": "emsat-math-001",
+            "domain": "Algebra",
+            "stem": "Solve for x in the equation 4x - 7 = 25.",
+            "options": [
+                "8",
+                "6",
+                "7",
+                "9"
+            ],
+            "correct_index": 0,
+            "explanation": "Add 7 to both sides to get 4x = 32, then divide by 4 to get x = 8; the other choices come from adding or dividing incorrectly.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-002",
+            "domain": "Algebra",
+            "stem": "Solve for x in the equation 3(x + 2) = 21.",
+            "options": [
+                "7",
+                "5",
+                "9",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "Divide both sides by 3 to get x + 2 = 7, then subtract 2 to get x = 5; the other choices misapply the operations.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-003",
+            "domain": "Algebra",
+            "stem": "A straight line passes through the points (2, 1) and (6, 9). What is the slope of this line?",
+            "options": [
+                "4",
+                "8",
+                "2",
+                "1/2"
+            ],
+            "correct_index": 2,
+            "explanation": "Slope equals rise over run, so (9 - 1) divided by (6 - 2) = 8/4 = 2; the other values misread the coordinate differences.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-004",
+            "domain": "Algebra",
+            "stem": "A line has the equation y = 3x + 4. What is the y-intercept of this line?",
+            "options": [
+                "3",
+                "-4",
+                "1/3",
+                "4"
+            ],
+            "correct_index": 3,
+            "explanation": "In the slope-intercept form y = mx + b, the value b is the y-intercept, so it is 4; 3 is the slope and the others are incorrect.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-005",
+            "domain": "Algebra",
+            "stem": "If x + y = 12 and x - y = 4, what is the value of x?",
+            "options": [
+                "8",
+                "4",
+                "6",
+                "16"
+            ],
+            "correct_index": 0,
+            "explanation": "Adding the two equations eliminates y and gives 2x = 16, so x = 8; subtracting the equations instead would lead to y rather than x.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-006",
+            "domain": "Algebra",
+            "stem": "Simplify the expression (2x^3)(5x^2).",
+            "options": [
+                "10x^6",
+                "10x^5",
+                "7x^5",
+                "7x^6"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiply the coefficients to get 10 and add the exponents to get x raised to 3 + 2 = 5, giving 10x^5; the others add coefficients or multiply exponents.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-007",
+            "domain": "Algebra",
+            "stem": "Solve for x in the equation 5x - 3 = 2x + 9.",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "Subtract 2x and add 3 to both sides to get 3x = 12, so x = 4; the other choices come from moving terms incorrectly.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-008",
+            "domain": "Algebra",
+            "stem": "Factor the expression x^2 - 9 completely.",
+            "options": [
+                "(x - 9)(x + 1)",
+                "(x - 3)(x - 3)",
+                "(x + 9)(x - 1)",
+                "(x - 3)(x + 3)"
+            ],
+            "correct_index": 3,
+            "explanation": "This is a difference of squares, a^2 - b^2 = (a - b)(a + b), with a = x and b = 3, giving (x - 3)(x + 3); the others do not multiply back to x^2 - 9.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-009",
+            "domain": "Algebra",
+            "stem": "Solve the inequality 2x + 5 > 11.",
+            "options": [
+                "x > 3",
+                "x > 8",
+                "x < 3",
+                "x < 8"
+            ],
+            "correct_index": 0,
+            "explanation": "Subtract 5 from both sides to get 2x > 6, then divide by 2 to get x > 3; the other choices mishandle the operations or reverse the sign.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-010",
+            "domain": "Algebra",
+            "stem": "A quantity is increased from 40 to 50. What is the percent increase?",
+            "options": [
+                "10 percent",
+                "25 percent",
+                "20 percent",
+                "80 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The increase is 50 - 40 = 10, and 10 divided by the original 40 equals 0.25, which is a 25 percent increase; the others misplace the base value.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-011",
+            "domain": "Algebra",
+            "stem": "An amount of AED 60 is divided in the ratio 2 to 3. What is the larger share?",
+            "options": [
+                "24",
+                "30",
+                "36",
+                "40"
+            ],
+            "correct_index": 2,
+            "explanation": "The ratio has 2 + 3 = 5 parts, so each part is 60 divided by 5 = 12; the larger share is 3 times 12 = 36.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-012",
+            "domain": "Algebra",
+            "stem": "Evaluate the expression (3^2)(3^3).",
+            "options": [
+                "27",
+                "81",
+                "729",
+                "243"
+            ],
+            "correct_index": 3,
+            "explanation": "When multiplying powers with the same base, add the exponents to get 3^5, which equals 243; the others use a different exponent sum.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-013",
+            "domain": "Algebra",
+            "stem": "A line is parallel to y = 4x - 1 and passes through the point (0, 2). What is the equation of this line?",
+            "options": [
+                "y = 4x + 2",
+                "y = -4x + 2",
+                "y = 4x - 2",
+                "y = (1/4)x + 2"
+            ],
+            "correct_index": 0,
+            "explanation": "Parallel lines share the same slope 4, and the y-intercept is 2 because the point (0, 2) lies on the y-axis, giving y = 4x + 2.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-014",
+            "domain": "Algebra",
+            "stem": "What are the solutions to the equation x^2 - 5x + 6 = 0?",
+            "options": [
+                "x = 1 and x = 6",
+                "x = 2 and x = 3",
+                "x = -2 and x = -3",
+                "x = 5 and x = 6"
+            ],
+            "correct_index": 1,
+            "explanation": "Factor to (x - 2)(x - 3) = 0, so the solutions are x = 2 and x = 3; the other pairs do not satisfy the equation.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-015",
+            "domain": "Algebra",
+            "stem": "If 7x = 3x + 20, what is the value of x?",
+            "options": [
+                "4",
+                "20/7",
+                "5",
+                "10"
+            ],
+            "correct_index": 2,
+            "explanation": "Subtract 3x from both sides to get 4x = 20, then divide by 4 to get x = 5; the other values do not satisfy the equation.",
+            "reference": "EmSAT Math Syllabus - Algebra"
+        },
+        {
+            "id": "emsat-math-016",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A triangle has interior angles of 50 degrees and 60 degrees. What is the measure of the third angle?",
+            "options": [
+                "80 degrees",
+                "110 degrees",
+                "60 degrees",
+                "70 degrees"
+            ],
+            "correct_index": 3,
+            "explanation": "The interior angles of a triangle sum to 180 degrees, so the third angle is 180 - 50 - 60 = 70 degrees; the others forget the total or add instead.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-017",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A circle has a radius of 7 centimeters. What is the area of this circle?",
+            "options": [
+                "49 pi square centimeters",
+                "14 pi square centimeters",
+                "7 pi square centimeters",
+                "98 pi square centimeters"
+            ],
+            "correct_index": 0,
+            "explanation": "Area equals pi times the radius squared, so pi times 7 squared = 49 pi square centimeters; the others use the diameter or forget to square the radius.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-018",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A rectangle measures 8 meters by 5 meters. What is the area of this rectangle?",
+            "options": [
+                "26 square meters",
+                "40 square meters",
+                "13 square meters",
+                "80 square meters"
+            ],
+            "correct_index": 1,
+            "explanation": "The area of a rectangle is length times width, so 8 times 5 = 40 square meters; 26 is the perimeter and 80 doubles the product.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-019",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A right triangle has legs of length 3 and 4. What is the length of its hypotenuse?",
+            "options": [
+                "7",
+                "12",
+                "5",
+                "25"
+            ],
+            "correct_index": 2,
+            "explanation": "By the Pythagorean theorem, 3 squared plus 4 squared = 9 + 16 = 25, and the square root of 25 is 5; the others add the legs or stop before taking the root.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-020",
+            "domain": "Geometry and Trigonometry",
+            "stem": "What is the value of sin(30 degrees)?",
+            "options": [
+                "(sqrt 3)/2",
+                "1",
+                "(sqrt 2)/2",
+                "1/2"
+            ],
+            "correct_index": 3,
+            "explanation": "The sine of 30 degrees is a standard value equal to 1/2; (sqrt 3)/2 is the cosine of 30 degrees and 1 is the sine of 90 degrees.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-021",
+            "domain": "Geometry and Trigonometry",
+            "stem": "What is the value of cos(60 degrees)?",
+            "options": [
+                "1/2",
+                "(sqrt 3)/2",
+                "1",
+                "0"
+            ],
+            "correct_index": 0,
+            "explanation": "The cosine of 60 degrees is a standard value equal to 1/2; (sqrt 3)/2 is the cosine of 30 degrees and 0 is the cosine of 90 degrees.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-022",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A circle has a radius of 5 units. What is the circumference of this circle?",
+            "options": [
+                "25 pi units",
+                "10 pi units",
+                "5 pi units",
+                "20 pi units"
+            ],
+            "correct_index": 1,
+            "explanation": "Circumference is 2 times pi times the radius, so 2 times pi times 5 = 10 pi units; 25 pi would be the area, not the circumference.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-023",
+            "domain": "Geometry and Trigonometry",
+            "stem": "What is the volume of a cube with an edge length of 3 centimeters?",
+            "options": [
+                "9 cubic centimeters",
+                "18 cubic centimeters",
+                "27 cubic centimeters",
+                "54 cubic centimeters"
+            ],
+            "correct_index": 2,
+            "explanation": "The volume of a cube is the edge length cubed, so 3 cubed = 27 cubic centimeters; the others square the edge or multiply by the number of faces.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-024",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A triangle has a base of 10 units and a height of 6 units. What is the area of this triangle?",
+            "options": [
+                "60 square units",
+                "16 square units",
+                "80 square units",
+                "30 square units"
+            ],
+            "correct_index": 3,
+            "explanation": "The area of a triangle is one half times base times height, so 0.5 times 10 times 6 = 30 square units; 60 omits the factor of one half.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-025",
+            "domain": "Geometry and Trigonometry",
+            "stem": "An angle measures 35 degrees. What is the measure of its supplementary angle?",
+            "options": [
+                "145 degrees",
+                "55 degrees",
+                "35 degrees",
+                "325 degrees"
+            ],
+            "correct_index": 0,
+            "explanation": "Supplementary angles sum to 180 degrees, so the supplement is 180 - 35 = 145 degrees; 55 degrees would be the complementary angle.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-026",
+            "domain": "Geometry and Trigonometry",
+            "stem": "What is the value of tan(45 degrees)?",
+            "options": [
+                "0",
+                "1",
+                "(sqrt 3)/3",
+                "undefined"
+            ],
+            "correct_index": 1,
+            "explanation": "The tangent of 45 degrees is 1 because sine and cosine are both (sqrt 2)/2 at that angle; the other choices are tangent values at other angles.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-027",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Two triangles are similar with a scale factor of 2. If the smaller triangle has an area of 9 square units, what is the area of the larger triangle?",
+            "options": [
+                "18 square units",
+                "81 square units",
+                "36 square units",
+                "12 square units"
+            ],
+            "correct_index": 2,
+            "explanation": "For similar figures, area scales by the square of the scale factor, so 2 squared = 4 and 9 times 4 = 36 square units; the others use the scale factor once.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-028",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A right triangle has a hypotenuse of 13 and one leg of 5. What is the length of the other leg?",
+            "options": [
+                "8",
+                "144",
+                "18",
+                "12"
+            ],
+            "correct_index": 3,
+            "explanation": "By the Pythagorean theorem, the other leg squared equals 13 squared minus 5 squared = 169 - 25 = 144, and the square root is 12.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-029",
+            "domain": "Geometry and Trigonometry",
+            "stem": "What is the sum of the interior angles of a quadrilateral?",
+            "options": [
+                "360 degrees",
+                "180 degrees",
+                "270 degrees",
+                "540 degrees"
+            ],
+            "correct_index": 0,
+            "explanation": "A quadrilateral can be split into two triangles, each summing to 180 degrees, so the total is 2 times 180 = 360 degrees.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-030",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A cylinder has a radius of 2 units and a height of 5 units. What is the volume of this cylinder?",
+            "options": [
+                "10 pi cubic units",
+                "20 pi cubic units",
+                "40 pi cubic units",
+                "4 pi cubic units"
+            ],
+            "correct_index": 1,
+            "explanation": "The volume of a cylinder is pi times the radius squared times the height, so pi times 4 times 5 = 20 pi cubic units; the others forget to square the radius or double it.",
+            "reference": "EmSAT Math Syllabus - Geometry and Trigonometry"
+        },
+        {
+            "id": "emsat-math-031",
+            "domain": "Data Analysis and Statistics",
+            "stem": "What is the mean of the data set 4, 8, 6, and 10?",
+            "options": [
+                "6",
+                "8",
+                "7",
+                "28"
+            ],
+            "correct_index": 2,
+            "explanation": "The sum is 4 + 8 + 6 + 10 = 28, and dividing by the 4 values gives a mean of 7; 28 is the sum, not the mean.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-032",
+            "domain": "Data Analysis and Statistics",
+            "stem": "What is the median of the data set 3, 7, 9, 4, and 5?",
+            "options": [
+                "7",
+                "9",
+                "4",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "Ordered as 3, 4, 5, 7, 9 the middle value is 5, which is the median; the other choices are not the middle value of the ordered list.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-033",
+            "domain": "Data Analysis and Statistics",
+            "stem": "What is the mode of the data set 2, 3, 3, 5, and 7?",
+            "options": [
+                "3",
+                "2",
+                "5",
+                "7"
+            ],
+            "correct_index": 0,
+            "explanation": "The mode is the value that appears most often, and 3 appears twice, more than any other value in the set.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-034",
+            "domain": "Data Analysis and Statistics",
+            "stem": "What is the range of the data set 12, 5, 9, and 20?",
+            "options": [
+                "8",
+                "15",
+                "20",
+                "7"
+            ],
+            "correct_index": 1,
+            "explanation": "The range is the maximum minus the minimum, so 20 - 5 = 15; the other choices are single values or an incorrect difference.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-035",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A fair six-sided die is rolled once. What is the probability of rolling an even number?",
+            "options": [
+                "1/3",
+                "1/6",
+                "1/2",
+                "2/3"
+            ],
+            "correct_index": 2,
+            "explanation": "There are three even outcomes, 2, 4, and 6, out of six equally likely outcomes, so the probability is 3/6 = 1/2.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-036",
+            "domain": "Data Analysis and Statistics",
+            "stem": "In a class of 60 students, 15 walk to school. What percentage of the class walks to school?",
+            "options": [
+                "15 percent",
+                "40 percent",
+                "4 percent",
+                "25 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The fraction is 15 out of 60 = 0.25, which converts to 25 percent; the others use the wrong base or invert the fraction.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-037",
+            "domain": "Data Analysis and Statistics",
+            "stem": "The mean of five numbers is 8. If four of the numbers are 6, 7, 9, and 10, what is the fifth number?",
+            "options": [
+                "8",
+                "5",
+                "11",
+                "13"
+            ],
+            "correct_index": 0,
+            "explanation": "The total of all five numbers is 5 times 8 = 40, and the four known numbers sum to 32, so the fifth number is 40 - 32 = 8.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-038",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A student scores 80 on a test worth 40 percent of the grade and 90 on a test worth 60 percent. What is the weighted average?",
+            "options": [
+                "85",
+                "86",
+                "88",
+                "84"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiply each score by its weight, 80 times 0.4 = 32 and 90 times 0.6 = 54, then add the results to get 86.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-039",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A fair coin is flipped twice. What is the probability of getting heads on both flips?",
+            "options": [
+                "1/2",
+                "1/3",
+                "1/4",
+                "3/4"
+            ],
+            "correct_index": 2,
+            "explanation": "The flips are independent, so multiply the probabilities, 1/2 times 1/2 = 1/4; the other choices ignore the independence of the flips.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-040",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A bar chart shows that a shop sold 20 items on Monday, 30 on Tuesday, and 40 on Wednesday. What is the mean number of items sold per day?",
+            "options": [
+                "90",
+                "20",
+                "45",
+                "30"
+            ],
+            "correct_index": 3,
+            "explanation": "The total is 20 + 30 + 40 = 90 across 3 days, so the mean is 90 divided by 3 = 30; 90 is the total, not the mean.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-041",
+            "domain": "Data Analysis and Statistics",
+            "stem": "Which measure best describes how spread out the values of a data set are around its mean?",
+            "options": [
+                "Standard deviation",
+                "Mode",
+                "Median",
+                "The maximum value alone"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard deviation measures the typical distance of values from the mean, which is spread; the mode and median describe the center, not the spread.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-042",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A data set has a first quartile of 10 and a third quartile of 22. What is the interquartile range?",
+            "options": [
+                "32",
+                "12",
+                "16",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "The interquartile range is the third quartile minus the first quartile, so 22 - 10 = 12; the others add or halve the values incorrectly.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-043",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A scatterplot shows points rising from the lower left to the upper right. What relationship does this indicate between the two variables?",
+            "options": [
+                "A negative correlation",
+                "No correlation",
+                "A positive correlation",
+                "A circular relationship"
+            ],
+            "correct_index": 2,
+            "explanation": "Points rising to the right indicate that as one variable increases the other tends to increase, which is a positive correlation; a negative correlation would slope down.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-044",
+            "domain": "Data Analysis and Statistics",
+            "stem": "A researcher measures the height of every student in one class in order to describe that class. The class is best described as which of the following?",
+            "options": [
+                "A sample",
+                "A random variable",
+                "A single parameter",
+                "A population"
+            ],
+            "correct_index": 3,
+            "explanation": "When every member of the group of interest is measured, that whole group is the population; a sample is only a part of the group.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-045",
+            "domain": "Data Analysis and Statistics",
+            "stem": "How many different ways can 2 students be chosen from a group of 5 when order does not matter?",
+            "options": [
+                "10",
+                "20",
+                "25",
+                "5"
+            ],
+            "correct_index": 0,
+            "explanation": "Use combinations, 5 factorial divided by the product of 2 factorial and 3 factorial, which equals 10; 20 would count the choices as if order mattered.",
+            "reference": "EmSAT Math Syllabus - Data Analysis and Statistics"
+        },
+        {
+            "id": "emsat-math-046",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "A function is defined by f(x) = 3x - 2. What is the value of f(4)?",
+            "options": [
+                "12",
+                "10",
+                "14",
+                "9"
+            ],
+            "correct_index": 1,
+            "explanation": "Substitute x = 4 to get f(4) = 3 times 4 minus 2 = 12 - 2 = 10; the other choices misapply the operations.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-047",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "What is the domain of the function f(x) = the square root of (x - 3)?",
+            "options": [
+                "x is greater than 3",
+                "x is less than or equal to 3",
+                "x is greater than or equal to 3",
+                "all real numbers"
+            ],
+            "correct_index": 2,
+            "explanation": "The expression under a square root must be non-negative, so x - 3 is at least 0, which gives x greater than or equal to 3; all real numbers would let the radicand go negative.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-048",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "A function is defined by f(x) = x^2. What is the value of f(-3)?",
+            "options": [
+                "-9",
+                "6",
+                "-6",
+                "9"
+            ],
+            "correct_index": 3,
+            "explanation": "Squaring -3 gives 9 because a negative number multiplied by a negative number is positive; the other choices omit the square or keep the negative sign.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-049",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "Which equation represents a nonlinear function?",
+            "options": [
+                "y = x^2 + 1",
+                "y = 2x + 1",
+                "y = -3x",
+                "y = 0.5x - 4"
+            ],
+            "correct_index": 0,
+            "explanation": "A function is nonlinear when the variable is raised to a power other than one, as in y = x^2 + 1; the other equations graph as straight lines.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-050",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "Given f(x) = x + 1 and g(x) = 2x, what is the value of f(g(3))?",
+            "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "correct_index": 1,
+            "explanation": "First g(3) = 2 times 3 = 6, then f(6) = 6 + 1 = 7; the other choices evaluate the composition in the wrong order.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-051",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "For the function f(x) = x^2, what is the average rate of change from x = 1 to x = 3?",
+            "options": [
+                "2",
+                "8",
+                "4",
+                "3"
+            ],
+            "correct_index": 2,
+            "explanation": "The average rate of change is (f(3) - f(1)) divided by (3 - 1) = (9 - 1)/2 = 4; the others skip the division or misplace the values.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-052",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "What is the limit of (x^2 - 4) divided by (x - 2) as x approaches 2?",
+            "options": [
+                "0",
+                "2",
+                "undefined",
+                "4"
+            ],
+            "correct_index": 3,
+            "explanation": "Factor the numerator as (x - 2)(x + 2), cancel the common factor (x - 2), and evaluate x + 2 at x = 2 to get 4.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-053",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "An arithmetic sequence begins 3, 7, 11, 15. What is the next term of this sequence?",
+            "options": [
+                "19",
+                "18",
+                "21",
+                "23"
+            ],
+            "correct_index": 0,
+            "explanation": "The common difference is 4, so add 4 to 15 to get 19; the other choices use the wrong common difference.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-054",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "A quantity doubles every hour and starts at 5. Which expression gives its value after t hours?",
+            "options": [
+                "5 times t^2",
+                "5 times 2^t",
+                "5 + 2t",
+                "2 times 5^t"
+            ],
+            "correct_index": 1,
+            "explanation": "Doubling each hour is exponential growth with base 2, so the value is 5 times 2 raised to the power t; the other choices are linear or reverse the base.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-055",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "What is the inverse of the function f(x) = 2x + 6?",
+            "options": [
+                "the inverse of f at x equals 2x - 6",
+                "the inverse of f at x equals (x + 6)/2",
+                "the inverse of f at x equals (x - 6)/2",
+                "the inverse of f at x equals x/2 + 6"
+            ],
+            "correct_index": 2,
+            "explanation": "Swap x and y in y = 2x + 6 to get x = 2y + 6, then solve for y to get (x - 6)/2; the other choices do not undo the original function.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-056",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "The parabola y = (x - 2)^2 + 3 has its vertex at which point?",
+            "options": [
+                "(-2, 3)",
+                "(2, -3)",
+                "(3, 2)",
+                "(2, 3)"
+            ],
+            "correct_index": 3,
+            "explanation": "In vertex form y = (x - h)^2 + k the vertex is (h, k), so here h = 2 and k = 3, giving the vertex (2, 3).",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-057",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "The function f(x) = -2x + 5 is decreasing on which interval?",
+            "options": [
+                "all real numbers",
+                "x greater than 0",
+                "x less than 0",
+                "no interval"
+            ],
+            "correct_index": 0,
+            "explanation": "A linear function with a negative slope decreases everywhere, so it is decreasing on all real numbers; the sign of x does not change the slope.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-058",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "A function has f(1) = 2 and f(5) = 14. What is the average rate of change from x = 1 to x = 5?",
+            "options": [
+                "2",
+                "3",
+                "12",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "The average rate of change is (14 - 2) divided by (5 - 1) = 12/4 = 3; the other choices use the wrong difference or divisor.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-059",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "Which function is odd, meaning that f(-x) = -f(x) for all x?",
+            "options": [
+                "f(x) = x^2",
+                "f(x) = x + 2",
+                "f(x) = x^3",
+                "f(x) = 2"
+            ],
+            "correct_index": 2,
+            "explanation": "For f(x) = x^3, computing f(-x) = -x^3, which equals -f(x), so it is odd; x^2 is even and the other two are neither even nor odd.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        },
+        {
+            "id": "emsat-math-060",
+            "domain": "Functions and Calculus Readiness",
+            "stem": "A geometric sequence begins 2, 6, 18, 54. What is the next term of this sequence?",
+            "options": [
+                "108",
+                "216",
+                "60",
+                "162"
+            ],
+            "correct_index": 3,
+            "explanation": "The common ratio is 3, so multiply 54 by 3 to get 162; the other choices use an incorrect ratio or add instead of multiply.",
+            "reference": "EmSAT Math Syllabus - Functions and Calculus Readiness"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+  "cert_key": "qiyas-gat",
+  "title": "Qiyas GAT",
+  "issuer": "National Center for Assessment (Qiyas), Saudi Arabia",
+  "outline_source": "https://etec.gov.sa/en/products/centers-and-testing/qiays/gat",
+  "outline_retrieved": "2026-10-16",
+  "content_provenance": "Domain names and weights are reproduced from the public Qiyas General Aptitude Test (GAT) syllabus. Only the two published aptitude sections are recorded; no past-paper content is transcribed.",
+  "exam": {
+    "questions": 60,
+    "duration_minutes": 150,
+    "scoring": "Standardised score",
+    "adaptive": false
+  },
+  "domains": [
+    {
+      "number": 1,
+      "name": "Verbal Reasoning",
+      "weight": 50,
+      "sections": [
+        {
+          "name": "Vocabulary and Expression",
+          "objectives": [
+            { "id": "1.A.1", "text": "Synonyms and word meaning in context" },
+            { "id": "1.A.2", "text": "Antonyms" },
+            { "id": "1.A.3", "text": "Sentence completion" },
+            { "id": "1.A.4", "text": "Odd-one-out and classification" }
+          ]
+        },
+        {
+          "name": "Reading and Relationships",
+          "objectives": [
+            { "id": "1.B.1", "text": "Reading comprehension and main idea" },
+            { "id": "1.B.2", "text": "Inference from a short passage" },
+            { "id": "1.B.3", "text": "Verbal analogy relations" }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Quantitative Reasoning",
+      "weight": 50,
+      "sections": [
+        {
+          "name": "Arithmetic and Algebra",
+          "objectives": [
+            { "id": "2.A.1", "text": "Arithmetic and fractions" },
+            { "id": "2.A.2", "text": "Percentages and ratios" },
+            { "id": "2.A.3", "text": "Linear equations and sequences" }
+          ]
+        },
+        {
+          "name": "Geometry and Applied Problems",
+          "objectives": [
+            { "id": "2.B.1", "text": "Perimeter, area, and angles" },
+            { "id": "2.B.2", "text": "Speed, work, and rate problems" },
+            { "id": "2.B.3", "text": "Averages and basic probability" }
+          ]
+        }
+      ]
+    }
+  ]
+}

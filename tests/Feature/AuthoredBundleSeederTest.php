@@ -1072,6 +1072,57 @@ class AuthoredBundleSeederTest extends TestCase
                 'Listening' => 20,
                 'Grammar and Vocabulary' => 20,
             ]],
+            'emsat-eng' => ['emsat-eng', 60, [
+                'Reading Comprehension' => 20,
+                'Language and Grammar' => 20,
+                'Vocabulary' => 20,
+            ]],
+            'emsat-math' => ['emsat-math', 60, [
+                'Algebra' => 15,
+                'Geometry and Trigonometry' => 15,
+                'Data Analysis and Statistics' => 15,
+                'Functions and Calculus Readiness' => 15,
+            ]],
+            'qiyas-gat' => ['qiyas-gat', 60, [
+                'Verbal Reasoning' => 30,
+                'Quantitative Reasoning' => 30,
+            ]],
+            'qiyas-saat' => ['qiyas-saat', 60, [
+                'Biology' => 15,
+                'Chemistry' => 15,
+                'Physics' => 15,
+                'Mathematics' => 15,
+            ]],
+            'tawjihi-jo' => ['tawjihi-jo', 60, [
+                'Arabic Language' => 15,
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Science' => 15,
+            ]],
+            'thanaweya-eg' => ['thanaweya-eg', 60, [
+                'Arabic Language' => 15,
+                'English Language' => 15,
+                'Mathematics' => 15,
+                'Science' => 15,
+            ]],
+            'bac-ma' => ['bac-ma', 60, [
+                'Francais' => 15,
+                'Mathematics' => 15,
+                'Sciences de la Vie et de la Terre' => 15,
+                'Philosophie' => 15,
+            ]],
+            'moh-uae' => ['moh-uae', 60, [
+                'General Medicine and Nursing' => 15,
+                'Pharmacology and Medication Safety' => 15,
+                'Patient Care and Procedures' => 15,
+                'Medical Law and Ethics' => 15,
+            ]],
+            'haad' => ['haad', 60, [
+                'General Medicine and Nursing' => 15,
+                'Pharmacology and Medication Safety' => 15,
+                'Patient Safety and Procedures' => 15,
+                'Professional Ethics and Law' => 15,
+            ]],
         ];
     }
 
