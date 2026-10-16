@@ -1191,6 +1191,30 @@ class AuthoredBundleSeederTest extends TestCase
                 'Psychosocial Integrity' => 15,
                 'Physiological Integrity' => 15,
             ]],
+            'usmle-s1' => ['usmle-s1', 60, [
+                'Biochemistry and Molecular Biology' => 15,
+                'Physiology and Pathophysiology' => 15,
+                'Microbiology and Immunology' => 15,
+                'Pharmacology and Behavioral Science' => 15,
+            ]],
+            'usmle-s2' => ['usmle-s2', 60, [
+                'Internal Medicine' => 15,
+                'Surgery and Emergency Medicine' => 15,
+                'Pediatrics and Obstetrics-Gynecology' => 15,
+                'Psychiatry and Preventive Medicine' => 15,
+            ]],
+            'usmle-s3' => ['usmle-s3', 60, [
+                'Patient Management and Clinical Judgment' => 20,
+                'Pharmacology and Therapeutics' => 15,
+                'Biostatistics and Epidemiology' => 13,
+                'Medical Ethics and Patient Safety' => 12,
+            ]],
+            'pance' => ['pance', 60, [
+                'Cardiovascular and Respiratory' => 15,
+                'Gastrointestinal and Genitourinary' => 15,
+                'Musculoskeletal and Neurologic' => 15,
+                'Endocrine and Behavioral Medicine' => 15,
+            ]],
         ];
     }
 
