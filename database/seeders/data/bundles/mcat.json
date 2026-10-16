@@ -1,0 +1,858 @@
+{
+    "cert_key": "mcat",
+    "title": "MCAT",
+    "issuer": "Association of American Medical Colleges",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/mcat.json",
+    "variant_label": "MCAT Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 95,
+        "scoring": "472-528 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public MCAT content specifications. Not a capture of past test questions.",
+    "source_label": "MCAT practice bank",
+    "items": [
+        {
+            "id": "mcat-001",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A researcher adds a molecule that competes with the substrate for binding at the active site of an enzyme. Kinetic analysis shows that both Vmax and apparent Km change in a characteristic way. Which set of changes is most consistent with competitive inhibition?",
+            "options": [
+                "Vmax decreases; Km decreases",
+                "Vmax unchanged; apparent Km increases",
+                "Vmax increases; Km unchanged",
+                "Vmax decreases; Km unchanged"
+            ],
+            "correct_index": 1,
+            "explanation": "Competitive inhibitors occupy the active site but can be outcompeted by high substrate, so Vmax is unchanged while the apparent Km increases.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-002",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A cell biologist observes that, after DNA replication, each chromosome consists of two sister chromatids joined at the centromere in a diploid human germ line cell. Which process produced this structure?",
+            "options": [
+                "DNA replication during S phase of the cell cycle",
+                "Meiosis I, before crossing over",
+                "Mitosis, after cytokinesis completes",
+                "Meiosis II, after homolog separation"
+            ],
+            "correct_index": 0,
+            "explanation": "Sister chromatids are generated when the S phase duplicates each chromosome; they persist until mitosis or meiosis II separates them.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-003",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "During lagging-strand synthesis, short fragments are joined after primers are removed and gaps are filled. Which enzyme catalyzes the final joining of adjacent fragments into a continuous strand?",
+            "options": [
+                "Primase",
+                "Helicase",
+                "Topoisomerase",
+                "Ligase"
+            ],
+            "correct_index": 3,
+            "explanation": "DNA ligase seals the phosphodiester backbone between Okazaki fragments; the other enzymes make primers, unwind DNA, or relieve supercoiling.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-004",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "Under anaerobic conditions in a human skeletal muscle cell, glucose is converted to lactate to regenerate NAD+ so glycolysis can continue. Where in the cell does glycolysis itself occur, and how many net ATP molecules are produced per glucose during glycolysis?",
+            "options": [
+                "Mitochondrial matrix; 36 ATP",
+                "Cytoplasm; 2 ATP",
+                "Nucleus; 4 ATP",
+                "Endoplasmic reticulum; 30 ATP"
+            ],
+            "correct_index": 1,
+            "explanation": "Glycolysis occurs in the cytoplasm and yields a net of 2 ATP per glucose; the larger ATP totals require aerobic respiration in mitochondria.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-005",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A purified enzyme is heated to 80 degrees Celsius, and the protein loses its catalytic activity while peptide bonds remain intact. Which level of protein structure was most directly disrupted?",
+            "options": [
+                "Secondary and tertiary structure",
+                "Primary structure",
+                "Quaternary structure only",
+                "Covalent backbone structure"
+            ],
+            "correct_index": 0,
+            "explanation": "Heat denatures noncovalent interactions that maintain secondary and tertiary folding, but the primary sequence of peptide bonds is not broken.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-006",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A technician places red blood cells in a solution with a much lower solute concentration than the cytosol. After several minutes the cells swell and burst. Which term best describes the solution, and the movement of water?",
+            "options": [
+                "Hypertonic; water leaves the cells",
+                "Isotonic; no net water movement",
+                "Hypertonic; water enters the cells",
+                "Hypotonic; water enters the cells"
+            ],
+            "correct_index": 3,
+            "explanation": "A hypotonic solution has lower solute concentration, so water moves into the cells by osmosis, causing them to lyse.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-007",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "Escherichia coli grown with glucose alone represses transcription of genes for lactose metabolism; when lactose is present and glucose is depleted, those genes are transcribed. This arrangement is best described as which type of regulation?",
+            "options": [
+                "A repressible operon repressed by a corepressor",
+                "Constitutive expression of the lac genes",
+                "An inducible operon induced by allolactose",
+                "Positive control by cyclic AMP only"
+            ],
+            "correct_index": 2,
+            "explanation": "The lac operon is inducible: allolactose (derived from lactose) inactivates the lac repressor, allowing transcription when lactose is available.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-008",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A hormone binds a receptor on the outer surface of a target cell, activating a G protein that stimulates adenylyl cyclase and raises intracellular cyclic AMP. This receptor is most likely a member of which class?",
+            "options": [
+                "G protein-coupled receptor",
+                "Intracellular nuclear receptor",
+                "Receptor tyrosine kinase",
+                "Ligand-gated ion channel"
+            ],
+            "correct_index": 0,
+            "explanation": "Seven-transmembrane G protein-coupled receptors activate heterotrimeric G proteins, which modulate effectors such as adenylyl cyclase.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-009",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A peptide bond forms during protein synthesis when the amino group of one amino acid reacts with the carboxyl group of another, releasing a small molecule. Which molecule is released, and what type of bond is the new linkage?",
+            "options": [
+                "Water; an ether linkage",
+                "Carbon dioxide; a disulfide bond",
+                "Ammonia; a phosphodiester bond",
+                "Water; an amide linkage"
+            ],
+            "correct_index": 3,
+            "explanation": "Condensation of an amine and a carboxylic acid releases water and forms an amide bond, which is the peptide bond of proteins.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-010",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "In a chloroplast, the light-dependent reactions generate ATP and NADPH, and oxygen is released as a byproduct. Which internal compartment or structure is the primary site of these reactions?",
+            "options": [
+                "Stroma",
+                "Outer mitochondrial membrane",
+                "Cytoplasm",
+                "Thylakoid membrane"
+            ],
+            "correct_index": 3,
+            "explanation": "Photosystems and electron carriers embedded in the thylakoid membrane carry out the light reactions; the stroma hosts the Calvin cycle.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-011",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A bacterial population survives viral attack by storing short fragments of viral DNA and using them to recognize and cut matching incoming viral genomes. This adaptive defense system relies on which molecular mechanism?",
+            "options": [
+                "RNA interference guided by small RNAs in eukaryotes",
+                "Restriction enzymes that cut all foreign DNA indiscriminately",
+                "CRISPR arrays that direct Cas nucleases to foreign DNA",
+                "Histone methylation of the viral genome"
+            ],
+            "correct_index": 2,
+            "explanation": "CRISPR-Cas systems record viral sequences in the genome and use guide RNAs from those arrays to target matching foreign DNA for cleavage.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-012",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "Kinetic data show that an enzyme's activity increases as substrate approaches, and crystal structures reveal that the active site changes shape around the bound substrate. Which model of enzyme-substrate interaction does this support?",
+            "options": [
+                "Lock-and-key, with a rigid active site",
+                "Induced fit, with a flexible active site",
+                "Allosteric activation without substrate binding",
+                "Covalent catalysis involving permanent modification"
+            ],
+            "correct_index": 1,
+            "explanation": "A change in active-site conformation upon substrate binding is the defining feature of the induced-fit model, not the rigid lock-and-key model.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-013",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "Two cells in an adult human carry identical DNA sequences, yet one expresses keratin genes and the other expresses albumin genes. Which process best explains this difference?",
+            "options": [
+                "Differential gene expression and cell specialization",
+                "Differences in the primary structure of their DNA",
+                "Random mutation during each cell division",
+                "Alternative splicing of the histone genes only"
+            ],
+            "correct_index": 0,
+            "explanation": "Cell type is determined by which genes are turned on and off, so identical genomes can produce different proteomes through regulated expression.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-014",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "In the citric acid cycle, one molecule of acetyl-CoA is oxidized completely per turn. Which products are generated per turn of the cycle?",
+            "options": [
+                "Three NADH, one FADH2, and one GTP",
+                "Two NADH and two ATP directly",
+                "One NADH and four FADH2",
+                "Three ATP and one NADH"
+            ],
+            "correct_index": 0,
+            "explanation": "Each turn of the citric acid cycle yields 3 NADH, 1 FADH2, and 1 GTP (or ATP equivalent); further ATP comes from oxidative phosphorylation.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-015",
+            "domain": "Biological and Biochemical Foundations of Living Systems",
+            "stem": "A healthy couple has a child with an autosomal recessive metabolic disorder, though neither parent shows symptoms. What is the most likely genotype of each parent, and the probability that their next child is affected?",
+            "options": [
+                "Both parents are homozygous dominant; 0 percent",
+                "One parent is affected; 50 percent",
+                "Both parents are heterozygous for different disorders; 75 percent",
+                "Both parents are carriers; 25 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "An affected child from unaffected parents implies both parents are heterozygous carriers; a carrier-by-carrier cross yields 25 percent affected offspring.",
+            "reference": "MCAT Content Specifications - Biological and Biochemical Foundations of Living Systems"
+        },
+        {
+            "id": "mcat-016",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "A solution containing a weak acid and its conjugate base resists pH change when a small amount of strong base is added. Which species primarily neutralizes the added hydroxide ions in this buffer system?",
+            "options": [
+                "The weak acid itself",
+                "Water only",
+                "The conjugate base of the weak acid",
+                "The spectator counterion"
+            ],
+            "correct_index": 2,
+            "explanation": "In a buffer, the conjugate base reacts with added H+ and the weak acid reacts with added OH-, so the conjugate base neutralizes added hydroxide.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-017",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "When a warm metal block is placed in cooler water, the water temperature rises until the two reach thermal equilibrium. Which statement correctly describes the energy transfer and system enthalpy change?",
+            "options": [
+                "Heat flows from water to metal; the water process is endothermic",
+                "Heat flows from metal to water; the combined system's enthalpy is unchanged",
+                "Heat flows from water to metal; the combined system's enthalpy increases",
+                "No net heat flows once temperatures differ by one degree"
+            ],
+            "correct_index": 1,
+            "explanation": "Heat flows spontaneously from hotter to cooler bodies, and at equilibrium the total enthalpy of the isolated combined system is conserved.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-018",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "Blood flow through a vessel is often approximated by Poiseuille's law, in which flow rate depends on the fourth power of the radius. If the radius of a vessel doubles while pressure difference and viscosity stay constant, flow rate changes by which factor?",
+            "options": [
+                "2 times",
+                "16 times",
+                "4 times",
+                "8 times"
+            ],
+            "correct_index": 1,
+            "explanation": "Poiseuille's law gives flow proportional to radius to the fourth power, so doubling the radius multiplies flow by 2^4 = 16.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-019",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "In a galvanic cell, a spontaneous redox reaction drives an electric current. Which statement about the cell at standard conditions is correct?",
+            "options": [
+                "Oxidation occurs at the anode; the standard cell potential is positive",
+                "Oxidation occurs at the cathode; the cell potential is negative",
+                "Reduction occurs at the anode; the cell potential is positive",
+                "Both half-reactions occur at the same electrode"
+            ],
+            "correct_index": 0,
+            "explanation": "In a galvanic cell oxidation happens at the anode, reduction at the cathode, and spontaneity corresponds to a positive standard cell potential.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-020",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "For a reaction, doubling the concentration of reactant A doubles the rate, while changing the concentration of reactant B has no effect. What is the overall order of the reaction with respect to these reactants?",
+            "options": [
+                "First order in A, zeroth order in B; first order overall",
+                "Zeroth order overall",
+                "Second order in A only",
+                "First order in both A and B; second order overall"
+            ],
+            "correct_index": 0,
+            "explanation": "Rate proportional to [A] to the first power and independent of [B] means first order in A, zeroth order in B, and first order overall.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-021",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "The equilibrium N2 + 3 H2 yields 2 NH3 is exothermic. According to Le Chatelier's principle, which change shifts the equilibrium toward more ammonia at constant pressure?",
+            "options": [
+                "Adding an inert gas without changing volume",
+                "Increasing the volume of the reaction vessel",
+                "Removing ammonia as it forms is irrelevant to yield",
+                "Lowering the temperature"
+            ],
+            "correct_index": 3,
+            "explanation": "For an exothermic reaction, decreasing temperature favors the product side that releases heat, shifting equilibrium toward ammonia.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-022",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "An object is placed inside the focal length of a converging lens used as a simple magnifier. Which statement best describes the image formed?",
+            "options": [
+                "It is real, inverted, and smaller than the object",
+                "It is real, upright, and located at infinity",
+                "It is virtual, upright, and magnified",
+                "It is virtual, inverted, and the same size"
+            ],
+            "correct_index": 2,
+            "explanation": "A converging lens with the object inside its focal length produces an upright, magnified, virtual image on the same side as the object.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-023",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "A physical therapist pushes on a door near its hinges with a force of 60 N applied perpendicular to the door. Compared with pushing at the same magnitude at the outer edge, the torque produced near the hinges is which of the following?",
+            "options": [
+                "Larger, because the force is closer to the pivot",
+                "Smaller, because the lever arm is shorter",
+                "The same, because torque depends only on force magnitude",
+                "Zero, because the force is perpendicular"
+            ],
+            "correct_index": 1,
+            "explanation": "Torque equals force times the perpendicular lever arm distance to the pivot, so pushing closer to the hinges produces a smaller torque.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-024",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "Two point charges of equal magnitude are held a distance d apart in vacuum. If the distance between them is reduced to d/2 while the magnitudes stay fixed, how does the electrostatic force between them change?",
+            "options": [
+                "It becomes one fourth as strong",
+                "It stays the same",
+                "It becomes twice as strong",
+                "It becomes four times as strong"
+            ],
+            "correct_index": 3,
+            "explanation": "Coulomb's law makes force inversely proportional to the square of separation, so halving the distance multiplies the force by four.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-025",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "A weak acid has an acid dissociation constant of 1 times 10 to the power of negative 5. What is the approximate pH of a 0.1 M solution of this acid?",
+            "options": [
+                "1",
+                "5",
+                "3",
+                "7"
+            ],
+            "correct_index": 2,
+            "explanation": "For a weak acid, hydrogen ion concentration is approximately the square root of Ka times concentration, about 10^-3 M, giving a pH near 3.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-026",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "A calorimeter experiment shows that 4184 J of energy raises the temperature of exactly 1 kg of water by 1 degree Celsius. Which quantity of the water does this define?",
+            "options": [
+                "Its heat of vaporization",
+                "Its specific heat capacity",
+                "Its thermal conductivity",
+                "Its density change with temperature"
+            ],
+            "correct_index": 1,
+            "explanation": "The energy needed to raise a unit mass of a substance by one degree is its specific heat capacity, about 4184 J per kilogram per kelvin for water.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-027",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "A radioactive isotope used in medical imaging has a half-life of 6 hours. If a sample initially contains 20 mg, approximately how much remains after 24 hours?",
+            "options": [
+                "2.5 mg",
+                "12.5 mg",
+                "5 mg",
+                "1.25 mg"
+            ],
+            "correct_index": 0,
+            "explanation": "In 24 hours, four half-lives elapse, so the amount is halved four times: 20 to 10 to 5 to 2.5 to 1.25 mg, leaving 1.25 mg.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-028",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "The volume of a fixed amount of gas in a sealed syringe is halved by pushing the plunger at constant temperature. How does the pressure of the gas compare with its original value?",
+            "options": [
+                "It is half the original pressure",
+                "It is unchanged because temperature is constant",
+                "It is approximately twice the original pressure",
+                "It is four times the original pressure"
+            ],
+            "correct_index": 2,
+            "explanation": "Boyle's law states that pressure and volume are inversely proportional at constant temperature, so halving the volume doubles the pressure.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-029",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "The amino acid alanine has a carboxyl group with pKa near 2 and an amino group with pKa near 10. At physiological pH near 7.4, which species predominates?",
+            "options": [
+                "The fully protonated cation",
+                "The neutral zwitterion with deprotonated carboxyl and protonated amino group",
+                "The fully deprotonated anion",
+                "The molecule with both groups protonated and positively charged"
+            ],
+            "correct_index": 1,
+            "explanation": "Between the two pKa values, alanine exists as a zwitterion: the carboxyl is deprotonated and the amino group is protonated, giving no net charge.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-030",
+            "domain": "Chemical and Physical Foundations of Biological Systems",
+            "stem": "An IV bag is prepared so that its osmotic pressure matches that of blood plasma, preventing red blood cells from swelling or shrinking. Which statement explains why an isotonic saline solution has this effect?",
+            "options": [
+                "It contains no dissolved particles, so water cannot move",
+                "It has the same effective solute concentration as the cell interior, so there is no net water movement",
+                "It has higher solute concentration, so water always enters cells",
+                "It exerts atmospheric pressure only on the cell surface"
+            ],
+            "correct_index": 1,
+            "explanation": "Osmosis depends on effective particle concentration; an isotonic solution matches the cell's solute concentration, so no net water flow occurs.",
+            "reference": "MCAT Content Specifications - Chemical and Physical Foundations of Biological Systems"
+        },
+        {
+            "id": "mcat-031",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "After a child vomits several times in a hospital waiting room, the smell of the disinfectant used that day later triggers nausea without any illness. Which learning process best explains this change?",
+            "options": [
+                "Classical conditioning, with the disinfectant odor becoming a conditioned stimulus",
+                "Operant conditioning through negative reinforcement",
+                "Observational learning by watching the medical staff",
+                "Latent learning without any association"
+            ],
+            "correct_index": 0,
+            "explanation": "A neutral odor paired with an unconditioned response (nausea) later elicits that response by itself, which is classical conditioning.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-032",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A parent scolds a toddler every time the child touches a hot stove, and the frequency of the child's touching decreases. Which type of reinforcement or punishment is the scolding?",
+            "options": [
+                "Negative punishment: a pleasant stimulus is removed to decrease behavior",
+                "Positive reinforcement: a stimulus is added to increase behavior",
+                "Negative reinforcement: an aversive stimulus is removed to increase behavior",
+                "Positive punishment: an aversive stimulus is added to decrease behavior"
+            ],
+            "correct_index": 3,
+            "explanation": "Adding an unpleasant consequence (scolding) to reduce an unwanted behavior is positive punishment in the operant framework.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-033",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "When participants study a long list of words, they recall the earliest and latest items better than those in the middle. Which effect does this pattern illustrate, and what is the best explanation for the advantage of the earliest items?",
+            "options": [
+                "Spacing effect; early items were studied at longer intervals",
+                "Proactive interference; early items caused confusion of later ones",
+                "Serial position effect; early items benefit from greater rehearsal and consolidation",
+                "Déjà vu; early items feel familiar"
+            ],
+            "correct_index": 2,
+            "explanation": "The U-shaped recall pattern is the serial position effect; early items receive more rehearsal (the primacy effect), aiding long-term storage.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-034",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A four-year-old hides a toy under a blanket, then watches as an adult moves it to a box while the child's view is blocked. When asked where the adult will look first, the child points to the box. Which stage of cognitive development does this reasoning most closely reflect?",
+            "options": [
+                "Sensorimotor stage",
+                "Concrete operational stage",
+                "Preoperational stage, with limited theory of mind",
+                "Formal operational stage"
+            ],
+            "correct_index": 2,
+            "explanation": "Preschoolers commonly fail false-belief tasks because preoperational thought is egocentric, so the child assumes others share what the child knows.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-035",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "In Ainsworth's Strange Situation, a toddler becomes visibly distressed when the caregiver leaves, seeks close contact upon reunion, and is then able to explore again. Which attachment style is demonstrated?",
+            "options": [
+                "Avoidant attachment",
+                "Secure attachment",
+                "Disorganized attachment",
+                "Anxious-resistant attachment without reunion comfort"
+            ],
+            "correct_index": 1,
+            "explanation": "Distress at separation followed by using the caregiver as a secure base for renewed exploration is the hallmark of secure attachment.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-036",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "In a replication of Asch's classic line-judgment study, confederates unanimously pick a clearly wrong line, and about one third of critical trials elicit conformity from true participants. Which factor most reliably reduces this conformity in later studies?",
+            "options": [
+                "Having one confederate give a correct answer, breaking unanimity",
+                "Increasing the size of the unanimous majority beyond three",
+                "Removing any single dissenting confederate from the group",
+                "Making the perceptual task more difficult"
+            ],
+            "correct_index": 0,
+            "explanation": "Asch found that even one dissenting confederate sharply reduces conformity because unanimity of the majority is broken.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-037",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A commuter misses a meeting because a subway delay makes them late, but observers attribute the tardiness to the commuter's carelessness. Which concept best describes the observers' judgment?",
+            "options": [
+                "Self-serving bias protecting the commuter's self-esteem",
+                "Actor-observer asymmetry favoring situational attributions",
+                "Confirmation bias seeking disconfirming evidence",
+                "Fundamental attribution error overemphasizing dispositional causes"
+            ],
+            "correct_index": 3,
+            "explanation": "Observers overweigh the person's character and underweigh the situational subway delay, which is the fundamental attribution error.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-038",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "Many commonly prescribed antidepressants increase the availability of serotonin in the synaptic cleft by blocking its reuptake. Which claim about this mechanism is best supported by current evidence?",
+            "options": [
+                "The drugs instantly replace serotonin that the brain completely lacks",
+                "Serotonin reuptake inhibitors act only on peripheral tissues, not the brain",
+                "The drugs permanently delete serotonin transporter genes within days",
+                "Therapeutic effects depend on downstream neuroplastic changes that follow increased serotonergic signaling"
+            ],
+            "correct_index": 3,
+            "explanation": "SSRIs raise synaptic serotonin quickly, but clinical improvement tracks slower adaptations such as receptor sensitivity changes and neuroplasticity.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-039",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "Epidemiological data show that, across many countries, individuals with lower socioeconomic status have shorter average life expectancy and higher rates of chronic disease even after basic medical care is accounted for. Which explanation is most consistent with a biopsychosocial model?",
+            "options": [
+                "Genetics alone fully explain the differences between income groups",
+                "People with lower income intentionally avoid all preventive care",
+                "Differences in stress exposure, health behaviors, environmental hazards, and care access jointly affect health",
+                "The association is purely an artifact of measurement error"
+            ],
+            "correct_index": 2,
+            "explanation": "The biopsychosocial model treats health as shaped by interacting psychological, social, and biological factors such as chronic stress, neighborhood hazards, and access to care.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-040",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A manager privately believes that members of a certain group are unreliable but treats all employees equally and mentors group members as she mentors everyone else. Which statement best distinguishes prejudice from discrimination in this case?",
+            "options": [
+                "Discrimination is the negative attitude; prejudice would be the unequal behavior",
+                "Both terms refer only to illegal hiring decisions",
+                "Prejudice is the negative attitude; discrimination would be unequal behavior, which is absent here",
+                "Neither term applies because the manager's behavior was friendly"
+            ],
+            "correct_index": 2,
+            "explanation": "Prejudice refers to biased attitudes, while discrimination is biased action; the manager holds bias but does not act on it, so only prejudice is present.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-041",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A student spends an entire evening studying for an exam she did not want to take, then tells herself the material turned out to be genuinely interesting. Which concept best explains this post-decision change in attitude?",
+            "options": [
+                "Classical extinction of the original attitude",
+                "Cognitive dissonance reduction after effort justification",
+                "Operant shaping toward higher grades",
+                "Sensory adaptation to the study environment"
+            ],
+            "correct_index": 1,
+            "explanation": "Effort and a negative attitude create dissonance; the student resolves it by inflating the attitude's positivity, a classic dissonance-reduction effect.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-042",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "A clinical trial finds that patients receiving a new drug recover faster than untreated patients, but patients in the drug group were also younger on average. Which statement best describes the younger age variable?",
+            "options": [
+                "It is a confounding variable that offers an alternative explanation for the outcome difference",
+                "It is the independent variable manipulated by the researchers",
+                "It is the dependent variable measured by the study",
+                "It is a reliable operational definition of recovery"
+            ],
+            "correct_index": 0,
+            "explanation": "Age is related to both group assignment and recovery, so it confounds the comparison; randomization or matching would be needed to rule it out.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-043",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "Studies of monozygotic twins reared apart show moderate concordance for many psychological traits, and dizygotic twins reared together show lower concordance. Which conclusion is best supported by this pattern?",
+            "options": [
+                "The traits studied have no environmental component at all",
+                "Only identical twins share a family environment",
+                "Adoption eliminates all measurement error in twin studies",
+                "Genetic factors contribute to the traits, alongside environmental influences"
+            ],
+            "correct_index": 3,
+            "explanation": "Higher monozygotic concordance indicates genetic contribution, while incomplete concordance shows environment also matters; neither factor acts alone.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-044",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "In a large crowd witnessing a medical emergency, no single bystander calls for help immediately, yet help arrives quickly when one person is pointed to and told to call. Which concept best explains the initial delay?",
+            "options": [
+                "Social facilitation improving performance under observation",
+                "Diffusion of responsibility across many bystanders",
+                "Cognitive dissonance among the bystanders",
+                "Classical conditioning of emergency responses"
+            ],
+            "correct_index": 1,
+            "explanation": "The more bystanders present, the less personal responsibility each feels; assigning one person restores accountability, as in the bystander effect literature.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-045",
+            "domain": "Psychological, Social, and Biological Foundations of Behavior",
+            "stem": "Students from a group stereotyped as poor at mathematics perform worse on a difficult math test when their group identity is emphasized beforehand, compared with identical students tested without that reminder. Which phenomenon does this illustrate?",
+            "options": [
+                "Stereotype threat, in which stigma-related anxiety impairs performance",
+                "The Pygmalion effect, in which teacher expectations raise performance",
+                "Group polarization toward riskier decisions",
+                "Social loafing reducing individual effort in groups"
+            ],
+            "correct_index": 0,
+            "explanation": "Reminders of a negative stereotype create evaluative anxiety that consumes working memory and depresses performance, which is stereotype threat.",
+            "reference": "MCAT Content Specifications - Psychological, Social, and Biological Foundations of Behavior"
+        },
+        {
+            "id": "mcat-046",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "Historians once pictured the medieval city as a static relic of tradition. Recent scholarship, however, shows that medieval merchants innovated continuously in credit instruments, partnership contracts, and bookkeeping. These practices did not wait for the early modern period; they flourished in Italian and Flemish markets by the thirteenth century. What the earlier view mistook for slowness was in fact an absence of surviving paperwork, since informal agreements rarely entered the archive. Which choice best states the main idea of the passage?",
+            "options": [
+                "Medieval merchants invented modern double-entry bookkeeping in every region of Europe.",
+                "Early modern finance had no antecedents in earlier centuries.",
+                "Archives are the only reliable source for the history of commerce.",
+                "The image of medieval commercial stagnation rests partly on biased historical evidence."
+            ],
+            "correct_index": 3,
+            "explanation": "The passage argues that the older picture of stagnation distorted the record, and that missing paperwork, not missing innovation, produced that picture.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-047",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "One may grant, for the sake of argument, that free will is an illusion. Even so, the legal system could not simply abandon the vocabulary of choice; jurors, defendants, and lawmakers all reason in terms of reasons, and a society that spoke only of causes would find its deliberations paralyzed. The author's attitude toward the illusion argument can best be described as",
+            "options": [
+                "hostile, since the author dismisses the argument outright",
+                "ecstatic, since the author welcomes the argument's implications",
+                "concessive yet practical, accepting the premise but doubting its institutional consequences",
+                "indifferent, since the author refuses to engage with the argument at all"
+            ],
+            "correct_index": 2,
+            "explanation": "The phrase for the sake of argument signals concession, while the discussion of legal practice shows concern about real-world consequences, not rejection.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-048",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "A city banned cars from its riverfront park, and within two years bicycle counts tripled while pedestrian injuries near the park fell by half. Critics had predicted gridlock on adjacent streets, yet traffic engineers measured only a modest shift of short trips to parallel roads. Which inference is best supported by the passage?",
+            "options": [
+                "Some car trips suppressed by the ban were replaced by walking and cycling rather than rerouted.",
+                "The ban caused all traffic in the city to disappear.",
+                "Bicycle ridership citywide remained completely unchanged.",
+                "Pedestrian injuries fell because fewer people visited the park at all."
+            ],
+            "correct_index": 0,
+            "explanation": "Tripling cycling plus only modest rerouting suggests many former car trips converted to non-car modes; the other choices overstate or reverse the evidence.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-049",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "A biologist argues that a newly discovered frog toxin is a dietary adaptation, because the frogs that secrete it eat ants rich in the same alkaloids. Skeptics note that the frogs could obtain the alkaloids from environmental sources. Which finding would most weaken the dietary adaptation claim?",
+            "options": [
+                "The alkaloids are found in ant tissues at concentrations matching the frog's skin.",
+                "Frogs with access to ants secrete more of the toxin than frogs without access.",
+                "The toxin deters laboratory predators in feeding trials.",
+                "Frogs raised only on alkaloid-free diets still secrete the toxin in ordinary amounts."
+            ],
+            "correct_index": 3,
+            "explanation": "If frogs never exposed to the proposed dietary source still make the toxin normally, the diet cannot be necessary, weakening the dietary adaptation explanation.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-050",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "The essay opens with a night watchman describing the empty corridors of a shuttered mill, then pivots to the mill's record of labor disputes. Why does the author most likely begin with the watchman's anecdote?",
+            "options": [
+                "To prove that night watchmen were the mill's most important employees",
+                "To list the mill's production statistics for the year in question",
+                "To refute the mill owners' account of their profits",
+                "To give a human, sensory entry into a larger argument about industrial decline"
+            ],
+            "correct_index": 3,
+            "explanation": "The vivid anecdote functions as a rhetorical opening that grounds the essay's broader argument about decline in lived experience.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-051",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "To say that a map is not the territory is, of course, trivial; to say that a scientist's model is not the cell is likewise easy. The hard point arrives later. Models are tools, and tools, once adopted, quietly dictate which questions seem worth asking. As used in the passage, the word tools most nearly conveys that models",
+            "options": [
+                "are always more valuable than the phenomena they represent",
+                "must be discarded once a better one appears",
+                "shape inquiry itself in ways users rarely notice",
+                "are built only by professional instrument makers"
+            ],
+            "correct_index": 2,
+            "explanation": "The surrounding sentence about tools dictating which questions seem worth asking emphasizes their hidden influence on inquiry, not their literal value or construction.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-052",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "Text 1 argues that voter turnout declines because citizens are inundated with political messaging and disengage in self-defense. Text 2 argues that turnout falls where registration rules are procedurally demanding. How would the author of Text 1 most likely respond to Text 2?",
+            "options": [
+                "By conceding that registration rules are the single complete explanation",
+                "By noting that procedural barriers and message overload may both operate, while insisting the latter drives disengagement",
+                "By denying that any barrier to voting exists",
+                "By arguing that messaging increases registration rates"
+            ],
+            "correct_index": 1,
+            "explanation": "Text 1's author could accept that procedures matter while maintaining that overload is central, which is compatible with the pluralistic response in the correct choice.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-053",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "Economists expected that a carbon tax would raise the price of gasoline and reduce driving. In one northern region, however, the tax was followed by slightly higher driving rates in the first year. Commentators noted that the same year brought unusually mild weather and a regional economic boom. Which statement best resolves the apparent paradox?",
+            "options": [
+                "Mild weather and rising incomes can increase driving enough to offset a price-driven decrease in the first year.",
+                "Carbon taxes never change fuel prices in any region.",
+                "Economists predicted that driving would rise under all circumstances.",
+                "Mild weather always reduces total vehicle travel."
+            ],
+            "correct_index": 0,
+            "explanation": "Confounding factors such as weather and income can push driving upward even while the tax pushes it downward, resolving the apparent contradiction.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-054",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "The senator called the draft bill a modest beginning, though critics inside her own party labeled the same provisions a radical overhaul. To the senator, the word modest served less to describe the bill's scope than to lower expectations for what could pass this session. As used in the passage, the phrase modest beginning most nearly means",
+            "options": [
+                "a minimal step intended to manage political expectations",
+                "a complete solution already enacted into law",
+                "a drafting error the senator later regretted",
+                "a radical proposal hidden in cautious language"
+            ],
+            "correct_index": 0,
+            "explanation": "The sentence explicitly says the word's function was to lower expectations for what could pass, making it a modest first step by design.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-055",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "An argument proceeds in three steps. First, all successful public health campaigns share a feature, namely that they recruit trusted local messengers. Second, distrust of outsiders is high in the community in question. Third, therefore, a campaign run solely by outside experts will probably fail. Which choice best describes the argument's structure?",
+            "options": [
+                "It lists historical campaigns without drawing a conclusion.",
+                "It asserts a conclusion and then abandons it in the final sentence.",
+                "It compares two communities that differ only in population size.",
+                "It offers two premises that jointly support a conclusion about a specific campaign's likely failure."
+            ],
+            "correct_index": 3,
+            "explanation": "Two general and case-specific premises combine to warrant the particular conclusion, a straightforward deductive pattern.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-056",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "The board claims that moving the archive to a climate-controlled facility will preserve the documents indefinitely. Yet climate control slows chemical decay; it does not halt the slow acidification already under way in paper manufactured before 1850. Which assumption is the board's claim most likely to depend on?",
+            "options": [
+                "That pre-1850 paper contains no acid at all.",
+                "That climate control increases the temperature of the storage rooms.",
+                "That slowing decay to an acceptable rate is equivalent to stopping it, or that other treatments will finish the job.",
+                "That document preservation has never been attempted before."
+            ],
+            "correct_index": 2,
+            "explanation": "Since climate control only slows acidification, the claim that documents survive indefinitely assumes the residual decay is either tolerable or offset by further treatment.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-057",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "If the new licensing exam is made harder, fewer candidates will pass on the first attempt; if fewer pass on the first attempt, training programs will devote more resources to remediation. The author states that a harder exam will therefore shift resources toward remediation. Which statement, if true, most directly supports the author's conclusion?",
+            "options": [
+                "The exam's pass rate has remained stable for a decade.",
+                "Training programs have finite budgets that they reallocate in response to pass rates.",
+                "Some candidates prefer easier exams regardless of content.",
+                "Remediation programs are popular with the public."
+            ],
+            "correct_index": 1,
+            "explanation": "The argument needs the premise that programs respond to pass rates by reallocating scarce resources; without budget sensitivity the shift would not follow.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-058",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "Midway through the essay, the author quotes a factory foreman who calls the new machines silent killers of craft skill. The quote appears immediately before the author's own analysis of apprenticeship decline. The quotation most likely serves to",
+            "options": [
+                "replace the author's analysis with a worker's authority claim",
+                "provide contemporary testimony that grounds the author's subsequent argument",
+                "disprove the claim that craft skills declined",
+                "describe the machines' decibel levels for engineers"
+            ],
+            "correct_index": 1,
+            "explanation": "Placed just before the analysis, the foreman's remark supplies period evidence that the author then interprets, supporting rather than replacing the argument.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-059",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "An editorial praises the city's decision to publish all procurement contracts online, arguing that transparency deters corruption. A skeptical reader might object that published contracts could simply be written in opaque language that the public cannot interpret. How would the editorial author most likely respond to this objection?",
+            "options": [
+                "By arguing that opacity of language is a reason to publish more, together with plain-language summaries and machine-readable data.",
+                "By conceding that corruption is inevitable and ending the transparency program.",
+                "By claiming that the public has no right to read the contracts at all.",
+                "By insisting that corruption never involves procurement contracts."
+            ],
+            "correct_index": 0,
+            "explanation": "The author's goal is transparency, so the natural response is to address the interpretive barrier with summaries and accessible formats rather than abandon the policy.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        },
+        {
+            "id": "mcat-060",
+            "domain": "Critical Analysis and Reasoning Skills",
+            "stem": "Text 1 contends that antibiotic resistance spreads mainly through overprescription in outpatient clinics. Text 2 argues that agricultural antibiotic use in livestock, not clinics, drives the most resistance genes found in human infections. Which statement best describes how the two texts could both be correct?",
+            "options": [
+                "They measure different reservoirs and transmission routes of resistance, so both pathways may contribute in different settings.",
+                "They describe the identical mechanism and therefore contradict each other completely.",
+                "One text concerns bacteria while the other concerns viruses.",
+                "Resistance genes cannot travel between agricultural animals and humans."
+            ],
+            "correct_index": 0,
+            "explanation": "Outpatient and agricultural settings are distinct reservoirs with distinct transmission routes, so both can contribute without logical contradiction.",
+            "reference": "MCAT Content Specifications - Critical Analysis and Reasoning Skills"
+        }
+    ]
+}

@@ -1164,6 +1164,33 @@ class AuthoredBundleSeederTest extends TestCase
                 'Decision Making' => 20,
                 'Quantitative Ability and Data Interpretation' => 20,
             ]],
+            'act' => ['act', 60, [
+                'English' => 15,
+                'Mathematics' => 15,
+                'Reading' => 15,
+                'Science' => 15,
+            ]],
+            'lsat' => ['lsat', 60, [
+                'Logical Reasoning' => 30,
+                'Reading Comprehension' => 30,
+            ]],
+            'gmat-focus' => ['gmat-focus', 60, [
+                'Quantitative Reasoning' => 20,
+                'Verbal Reasoning' => 20,
+                'Data Insights' => 20,
+            ]],
+            'mcat' => ['mcat', 60, [
+                'Biological and Biochemical Foundations of Living Systems' => 15,
+                'Chemical and Physical Foundations of Biological Systems' => 15,
+                'Psychological, Social, and Biological Foundations of Behavior' => 15,
+                'Critical Analysis and Reasoning Skills' => 15,
+            ]],
+            'nclex-pn' => ['nclex-pn', 60, [
+                'Safe and Effective Care Environment' => 15,
+                'Health Promotion and Maintenance' => 15,
+                'Psychosocial Integrity' => 15,
+                'Physiological Integrity' => 15,
+            ]],
         ];
     }
 

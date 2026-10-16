@@ -1,0 +1,858 @@
+{
+    "cert_key": "lsat",
+    "title": "LSAT",
+    "issuer": "Law School Admission Council",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/lsat.json",
+    "variant_label": "LSAT Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 105,
+        "scoring": "120-180 scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public LSAT test specifications. Not a capture of past test questions.",
+    "source_label": "LSAT practice bank",
+    "items": [
+        {
+            "id": "lsat-001",
+            "domain": "Logical Reasoning",
+            "stem": "A columnist argues that because towns with more bookstores also tend to have lower crime rates, opening more bookstores in a town will reduce its crime rate. The columnist's argument is most vulnerable to criticism on the grounds that it",
+            "options": [
+                "assumes that a relationship observed between two features of towns must be causal",
+                "relies on a sample of towns that is too small to be representative",
+                "fails to define what counts as a bookstore",
+                "overlooks the possibility that some towns have no crime at all"
+            ],
+            "correct_index": 0,
+            "explanation": "The columnist moves from a correlation between bookstores and low crime to a causal claim without ruling out alternative explanations, which is the classic correlation-causation flaw.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-002",
+            "domain": "Logical Reasoning",
+            "stem": "A historian claims that a certain manuscript was written after the year 1200. To support this, the historian notes that the manuscript uses a word that first appears in written records around 1210. Which finding would most strengthen the historian's claim?",
+            "options": [
+                "Several museums own manuscripts that also use the word.",
+                "The manuscript contains a reference to a type of paper widely used only after the 1200s.",
+                "The historian has studied many manuscripts from the same region.",
+                "The manuscript is written in a neat and practiced hand."
+            ],
+            "correct_index": 1,
+            "explanation": "Additional evidence tied to a post-1200 feature directly supports the late date, whereas the other findings are irrelevant to when the manuscript was written.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-003",
+            "domain": "Logical Reasoning",
+            "stem": "A company concludes that its new training program improved sales because sales rose 15 percent in the quarter after the program began. Which fact, if true, would most weaken the company's conclusion?",
+            "options": [
+                "The program was mandatory for all sales staff.",
+                "The program lasted three weeks and was well attended.",
+                "A competitor raised its prices during the same quarter, driving customers to the company.",
+                "Sales rose by a larger margin in a previous quarter."
+            ],
+            "correct_index": 2,
+            "explanation": "A competitor's price increase offers an alternative cause for the sales rise, so the training program need not be responsible, which weakens the conclusion.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-004",
+            "domain": "Logical Reasoning",
+            "stem": "A researcher argues that a new drug lowers blood pressure, since patients who took it for a month showed lower readings than patients who took a placebo. The argument assumes which of the following?",
+            "options": [
+                "The drug has no side effects of any kind.",
+                "Blood pressure readings vary little from one measurement to the next.",
+                "The placebo was given to the same patients as the drug.",
+                "The two groups of patients did not differ in any other factor that affects blood pressure."
+            ],
+            "correct_index": 3,
+            "explanation": "For the comparison to isolate the drug's effect, the groups must be comparable in other blood-pressure factors, so this is a required assumption.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-005",
+            "domain": "Logical Reasoning",
+            "stem": "An editorial argues that if the city builds the new highway, traffic congestion will worsen, and therefore the city should not build the highway. Which of the following, if assumed, would allow the conclusion to be properly drawn?",
+            "options": [
+                "The city should not do anything that will worsen traffic congestion.",
+                "The highway would cost more than the city can afford.",
+                "Traffic congestion is already a problem in the city.",
+                "Some residents oppose building the highway."
+            ],
+            "correct_index": 0,
+            "explanation": "To move from the prediction of worse congestion to a recommendation not to build, the argument needs the principle that the city should avoid worsening congestion.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-006",
+            "domain": "Logical Reasoning",
+            "stem": "All members of the glee club who auditioned for the musical received a part, and no one who received a part failed the music theory exam. It follows that",
+            "options": [
+                "every member of the glee club received a part",
+                "every glee club member who auditioned passed the music theory exam",
+                "no one who failed the music theory exam auditioned",
+                "the music theory exam was difficult for most students"
+            ],
+            "correct_index": 1,
+            "explanation": "Those who auditioned got parts, and those with parts passed the exam, so auditioning glee members passed, while the other choices overreach the premises.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-007",
+            "domain": "Logical Reasoning",
+            "stem": "City parks are often justified as places for recreation, but their greatest value may be ecological. A single mature tree can absorb storm water, cool the surrounding air, and shelter dozens of species. Recreation can happen almost anywhere, whereas these ecological services cannot. The main conclusion of the passage is that",
+            "options": [
+                "city parks should be replaced by indoor recreation centers",
+                "parks are valuable mainly because people enjoy them",
+                "the ecological value of city parks may exceed their recreational value",
+                "mature trees are more important than smaller plants"
+            ],
+            "correct_index": 2,
+            "explanation": "The passage asserts that parks' ecological value may be greatest and contrasts it with recreation, which is the main point; the others distort it.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-008",
+            "domain": "Logical Reasoning",
+            "stem": "Proposal A would shorten commutes. But Proposal A also raises taxes, and taxpayers have rejected every measure that raises taxes. So Proposal A will be rejected. The reasoning proceeds by",
+            "options": [
+                "drawing an analogy between two different cities",
+                "appealing to the authority of a transportation expert",
+                "showing that the proposal's premise is self-contradictory",
+                "applying a general claim about taxpayer behavior to a particular proposal"
+            ],
+            "correct_index": 3,
+            "explanation": "The argument invokes the general rule that tax-raising measures are rejected and applies it to Proposal A, which is its method of reasoning.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-009",
+            "domain": "Logical Reasoning",
+            "stem": "Although the number of bicycles sold in a city rose sharply last year, the number of reported bicycle accidents fell. Which of the following, if true, would best help to explain the apparent discrepancy?",
+            "options": [
+                "The city built many new protected bike lanes during the same year.",
+                "Bicycles became more expensive over the same period.",
+                "The city's population grew slightly last year.",
+                "Some bicycle accidents are never reported."
+            ],
+            "correct_index": 0,
+            "explanation": "Protected lanes can cut accident rates even as ridership grows, resolving the puzzle; the other facts do not explain why accidents fell.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-010",
+            "domain": "Logical Reasoning",
+            "stem": "If a recipe calls for fresh basil, then it also calls for olive oil. This recipe calls for olive oil. Therefore, this recipe calls for fresh basil. Which of the following arguments exhibits a reasoning error most similar to the one above?",
+            "options": [
+                "If a number is even, it is divisible by two. This number is even, so it is divisible by two.",
+                "If a plant is a fern, it reproduces by spores. This plant reproduces by spores, so it is a fern.",
+                "If a bird is a robin, it has a red breast. This bird is a robin, so it has a red breast.",
+                "If a metal is iron, it rusts. This metal is not iron, so it does not rust."
+            ],
+            "correct_index": 1,
+            "explanation": "The original argument affirms the consequent, and only the fern argument repeats that mistake; the others are valid or commit a different error.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-011",
+            "domain": "Logical Reasoning",
+            "stem": "An advertisement claims that its toothpaste is recommended by more dentists than any other brand, so it must be the most effective toothpaste available. The advertisement's argument depends on the assumption that",
+            "options": [
+                "the toothpaste is available in most stores",
+                "most dentists use at least one brand of toothpaste",
+                "the dentists' recommendations are based on the toothpaste's effectiveness",
+                "the brand has been sold for many years"
+            ],
+            "correct_index": 2,
+            "explanation": "The leap from most recommended to most effective requires that recommendations reflect effectiveness, so that is the assumption the argument needs.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-012",
+            "domain": "Logical Reasoning",
+            "stem": "A study reports that students who play a musical instrument score higher on math tests than students who do not. The authors conclude that learning an instrument improves math ability. Which of the following, if true, most weakens the conclusion?",
+            "options": [
+                "Some students play more than one instrument.",
+                "The math tests were given on the same day to all students.",
+                "Playing an instrument requires regular practice.",
+                "Students from wealthier families are both more likely to afford instrument lessons and more likely to receive math tutoring."
+            ],
+            "correct_index": 3,
+            "explanation": "A common cause such as family wealth could explain both instrument playing and higher math scores, so the causal conclusion is weakened.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-013",
+            "domain": "Logical Reasoning",
+            "stem": "No employee who attended the optional safety workshop has had a workplace injury this year, although several employees who skipped the workshop have. The statements above, if true, most strongly support which conclusion?",
+            "options": [
+                "At least some workplace injuries this year involved employees who did not attend the workshop.",
+                "The workshop caused employees to avoid all injuries.",
+                "All employees who skipped the workshop were injured.",
+                "The workshop was mandatory for all employees."
+            ],
+            "correct_index": 0,
+            "explanation": "Several non-attendees had injuries, so at least some injuries involved non-attendees, while the other choices go beyond the evidence.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-014",
+            "domain": "Logical Reasoning",
+            "stem": "Some say the new library is unnecessary because the town already has a bookstore. But a bookstore sells books, whereas a library lends them free of charge to anyone. So the bookstore cannot replace the library. The statement that a bookstore sells books functions in the argument to",
+            "options": [
+                "concede a point that supports the objection to the library",
+                "identify a relevant difference that weakens the objection to the library",
+                "provide an example of another town's library",
+                "question whether the town needs books at all"
+            ],
+            "correct_index": 1,
+            "explanation": "The difference between selling and free lending undercuts the claim that a bookstore suffices, so it weakens the objection to the library.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-015",
+            "domain": "Logical Reasoning",
+            "stem": "A paleontologist hypothesizes that a certain dinosaur was warm-blooded because its fossils are found in regions that were cold when the dinosaur lived. Which finding would most strengthen this hypothesis?",
+            "options": [
+                "The dinosaur was larger than most of its predators.",
+                "The fossils were discovered by an experienced field team.",
+                "The dinosaur's bones show growth patterns associated with warm-blooded animals.",
+                "Other dinosaurs lived in warm regions at the same time."
+            ],
+            "correct_index": 2,
+            "explanation": "Warm-blooded growth patterns in the bones provide independent support for the hypothesis, while the other findings are incidental.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-016",
+            "domain": "Logical Reasoning",
+            "stem": "A mayor claims that a new curfew reduced juvenile crime, citing a drop in juvenile arrests in the year after the curfew took effect. Which of the following, if true, most weakens the mayor's claim?",
+            "options": [
+                "The curfew applied only to those under sixteen.",
+                "The mayor supported the curfew during the election.",
+                "Juvenile crime increased in a neighboring city.",
+                "In the same year, the police stopped arresting juveniles for minor offenses and issued warnings instead."
+            ],
+            "correct_index": 3,
+            "explanation": "If police stopped making arrests for minor offenses, the drop in arrests may reflect changed policy rather than less crime, which weakens the claim.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-017",
+            "domain": "Logical Reasoning",
+            "stem": "A factory installed machines that were supposed to speed up production, yet overall output per worker declined after the installation. Which of the following, if true, best explains the decline?",
+            "options": [
+                "Workers spent much of the first year learning to operate the new machines and could not work at full speed.",
+                "The machines were manufactured in another country.",
+                "The factory employs hundreds of workers.",
+                "Output had also declined two years earlier."
+            ],
+            "correct_index": 0,
+            "explanation": "A learning period would temporarily lower output just after installation, explaining the decline, whereas the other facts do not.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-018",
+            "domain": "Logical Reasoning",
+            "stem": "A scientist reasons as follows. Her theory predicts that a compound will dissolve in water, and in repeated trials the compound did dissolve in water. She concludes that her theory is correct. The scientist's reasoning is flawed because it",
+            "options": [
+                "relies on too few experimental trials",
+                "treats confirmation of a prediction as proof that the theory is true",
+                "uses a compound that is not widely available",
+                "fails to define the term theory"
+            ],
+            "correct_index": 1,
+            "explanation": "A successful prediction supports but does not prove a theory, and the argument wrongly treats confirmation as conclusive proof.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-019",
+            "domain": "Logical Reasoning",
+            "stem": "A principle states that a newspaper should publish a correction whenever it prints a factual error that could mislead readers. The Daily Star printed a factual error that could mislead readers, so the Daily Star should publish a correction. The application is valid because it",
+            "options": [
+                "proves that the error was intentional",
+                "shows that all newspapers make factual errors",
+                "correctly applies the stated principle to a situation that meets its condition",
+                "assumes that readers never notice errors"
+            ],
+            "correct_index": 2,
+            "explanation": "The situation satisfies the condition of the principle, so the principle yields the conclusion, and that is why the application is valid.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-020",
+            "domain": "Logical Reasoning",
+            "stem": "Anna argues that the city should fund the arts because the arts draw visitors who spend money downtown. Ben replies that the arts are worthwhile in themselves, regardless of whether they draw any visitors. Anna and Ben would be most likely to disagree over whether",
+            "options": [
+                "the city should fund anything at all",
+                "visitors ever spend money downtown",
+                "some art is better than other art",
+                "the arts are worthwhile only if they bring economic benefits"
+            ],
+            "correct_index": 3,
+            "explanation": "Anna justifies funding by economic benefit, while Ben values art intrinsically, so they differ over whether economic benefit is necessary.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-021",
+            "domain": "Logical Reasoning",
+            "stem": "Anyone who wants to attend the conference must register by Friday. Priya has not registered. It follows that",
+            "options": [
+                "Priya will not attend the conference unless she registers by Friday",
+                "Priya does not want to attend the conference",
+                "everyone except Priya has registered",
+                "the conference will be cancelled"
+            ],
+            "correct_index": 0,
+            "explanation": "Registration by Friday is necessary for attendance, so without it Priya cannot attend, while her desires and others' registrations are not implied.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-022",
+            "domain": "Logical Reasoning",
+            "stem": "Everything that is rare is expensive. This painting is expensive. Therefore, this painting is rare. Which one of the following most accurately describes the error in the reasoning?",
+            "options": [
+                "It uses the word expensive in two different senses.",
+                "It treats a condition that is necessary for being rare as if it were sufficient.",
+                "It generalizes from a single painting to all paintings.",
+                "It assumes that the painting was recently sold."
+            ],
+            "correct_index": 1,
+            "explanation": "Being expensive is necessary for rarity but not sufficient, and the argument reverses the conditional by treating the necessary condition as sufficient.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-023",
+            "domain": "Logical Reasoning",
+            "stem": "A dietitian claims that eating a handful of nuts daily lowers cholesterol, citing a study in which participants told to eat nuts daily had lower cholesterol than those not told to. A critic notes that the nut group may have changed other habits too. Which evidence would most help the dietitian answer the critic?",
+            "options": [
+                "The nuts used in the study were almonds.",
+                "The study lasted for six months.",
+                "Participants in both groups were given identical instructions about all other foods and exercise.",
+                "Cholesterol was measured only at the end of the study."
+            ],
+            "correct_index": 2,
+            "explanation": "Holding other habits equal across groups rules out the critic's alternative explanation, thereby supporting the dietitian's claim.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-024",
+            "domain": "Logical Reasoning",
+            "stem": "A teacher notes that no one can learn to write well without writing often. Since the class meets only once a week, the teacher concludes that students who write only during class cannot learn to write well. Which one of the following is the teacher's main conclusion?",
+            "options": [
+                "The class should meet more often.",
+                "Writing often is pleasant for students.",
+                "All students want to learn to write well.",
+                "Students who write only during class cannot learn to write well."
+            ],
+            "correct_index": 3,
+            "explanation": "The stated conclusion is that students who write only in class cannot learn to write well; the remaining statements are support or unwarranted.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-025",
+            "domain": "Logical Reasoning",
+            "stem": "A magazine surveys its readers and finds that 80 percent favor longer articles. The editors conclude that most people in the country favor longer articles. The editors' reasoning is flawed because",
+            "options": [
+                "readers who chose the magazine may not represent the country's population",
+                "longer articles take more time to read",
+                "the survey did not ask about shorter articles",
+                "the magazine has published articles for many years"
+            ],
+            "correct_index": 0,
+            "explanation": "A self-selected readership is not a representative sample of the whole country, so the generalization to all people is unsupported.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-026",
+            "domain": "Logical Reasoning",
+            "stem": "A rare plant thrives in a region that receives almost no rain, yet the plant dies when gardeners water it regularly. Which of the following, if true, best explains this?",
+            "options": [
+                "The plant is difficult to find in the wild.",
+                "The plant's roots rot when exposed to the amount of water that regular watering provides.",
+                "Gardeners often plant rare species in their yards.",
+                "The region has cool temperatures at night."
+            ],
+            "correct_index": 1,
+            "explanation": "Excess water causing root rot explains why regular watering kills a plant adapted to dry conditions, while the other facts do not.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-027",
+            "domain": "Logical Reasoning",
+            "stem": "A critic argues that a novel is poorly written because it has sold very few copies. The critic's argument assumes that",
+            "options": [
+                "the novel was published by a small press",
+                "the author has written other novels",
+                "how well written a novel is determines, at least in part, how many copies it sells",
+                "most readers prefer nonfiction to fiction"
+            ],
+            "correct_index": 2,
+            "explanation": "The inference from low sales to poor writing requires a link between writing quality and sales, so that connection is the assumption.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-028",
+            "domain": "Logical Reasoning",
+            "stem": "Every student who completed the advanced course either passed the certification exam or enrolled in a second advanced course. Marta completed the advanced course and did not enroll in a second advanced course. It follows that",
+            "options": [
+                "Marta failed the certification exam",
+                "Marta will enroll in a second advanced course later",
+                "Marta did not complete the advanced course",
+                "Marta passed the certification exam"
+            ],
+            "correct_index": 3,
+            "explanation": "With the second option in the either-or eliminated, the first must hold, so Marta passed the exam; the other choices contradict or overreach.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-029",
+            "domain": "Logical Reasoning",
+            "stem": "A columnist notes that some people argue for banning all cars from the city center to reduce pollution. The columnist responds that delivery vehicles, which are cars by any definition, must reach the center, so a total ban is impractical. The statement that delivery vehicles must reach the center serves to",
+            "options": [
+                "provide a reason for thinking that the proposed ban cannot be fully carried out",
+                "agree that pollution should be reduced by banning cars",
+                "show that delivery vehicles cause little pollution",
+                "define what counts as a car for the purpose of the ban"
+            ],
+            "correct_index": 0,
+            "explanation": "The delivery point supplies grounds for the claim that a total ban is impractical, which is the function the statement serves.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-030",
+            "domain": "Logical Reasoning",
+            "stem": "Anyone who exercises daily is healthy. Maria is healthy. So Maria exercises daily. Which one of the following arguments contains the same flawed pattern of reasoning?",
+            "options": [
+                "Every square is a rectangle, and this shape is a square, so it is a rectangle.",
+                "Every licensed driver passed a test, and Sam passed a test, so Sam is a licensed driver.",
+                "No cat is a reptile, and this animal is a cat, so it is not a reptile.",
+                "If it snows, school is cancelled, and school is not cancelled, so it did not snow."
+            ],
+            "correct_index": 1,
+            "explanation": "The original affirms the consequent, and only the licensed-driver argument repeats that error; the others are valid deductions.",
+            "reference": "LSAT Specifications - Logical Reasoning"
+        },
+        {
+            "id": "lsat-031",
+            "domain": "Reading Comprehension",
+            "stem": "For decades, historians treated the invention of the printing press as the single cause of the rapid spread of literacy in early modern Europe. More recent scholarship, however, shows that literacy had already been rising in many towns where manuscript copying and public reading aloud were common. The press accelerated an existing trend rather than creating it. The passage's main point is that",
+            "options": [
+                "the printing press had no effect on European literacy",
+                "historians no longer study early modern Europe",
+                "the printing press accelerated an increase in literacy that was already under way",
+                "public reading aloud disappeared after the printing press was invented"
+            ],
+            "correct_index": 2,
+            "explanation": "The passage argues that the press accelerated an existing trend, and the other choices misstate or contradict that claim.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-032",
+            "domain": "Reading Comprehension",
+            "stem": "The author begins by noting that honeybees are often called model citizens of the insect world, then describes how some bees rob nectar from flowers without pollinating them. The author ends by suggesting that the model-citizen label says more about our hopes than about bees. The primary purpose of the passage is to",
+            "options": [
+                "explain how to keep honeybees healthy",
+                "compare honeybees with other insects",
+                "argue that all insect behavior is selfish",
+                "challenge a familiar characterization of honeybees"
+            ],
+            "correct_index": 3,
+            "explanation": "The passage questions the model-citizen label, which is its primary purpose, while the other choices name goals the passage does not pursue.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-033",
+            "domain": "Reading Comprehension",
+            "stem": "A team studying a remote lake found that its fish contained high levels of a pollutant that is not produced anywhere nearby. The pollutant is known to travel long distances through the atmosphere and to accumulate in cold regions. The study's findings most strongly suggest that",
+            "options": [
+                "the pollutant reached the lake through atmospheric transport from a distant source",
+                "the lake is located near a large factory",
+                "the fish produce the pollutant themselves",
+                "the pollutant is harmless to the fish"
+            ],
+            "correct_index": 0,
+            "explanation": "The pollutant's known long-range atmospheric travel supports distant transport, and local production is ruled out by the passage.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-034",
+            "domain": "Reading Comprehension",
+            "stem": "The marsh wren builds several nests each season but uses only one. The unused nests, researchers propose, serve to confuse predators, which must search each nest before finding the one holding eggs. According to the passage, researchers propose that the unused nests",
+            "options": [
+                "provide shelter for other marsh birds",
+                "distract predators from the nest containing eggs",
+                "store food for the winter",
+                "are built by the female alone"
+            ],
+            "correct_index": 1,
+            "explanation": "The passage states the unused nests are thought to confuse predators searching for the egg nest, and the other options are not mentioned.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-035",
+            "domain": "Reading Comprehension",
+            "stem": "Many economists once assumed that people always act to maximize their own wealth. The author then cites a study in which participants gave away money even when no one was watching. The author's mention of the study primarily serves to",
+            "options": [
+                "prove that economists are untrustworthy",
+                "show how much money participants had",
+                "present evidence that conflicts with the economists' assumption",
+                "describe the history of economic thought"
+            ],
+            "correct_index": 2,
+            "explanation": "The study functions as counterevidence to the wealth-maximizing assumption, and the other choices misstate its role.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-036",
+            "domain": "Reading Comprehension",
+            "stem": "The new biography is meticulously researched and its prose is graceful, yet it treats its subject with a reverence that prevents any critical judgment. The result is a beautiful book that never quite explains the person it describes. The author's attitude toward the biography is best described as",
+            "options": [
+                "entirely hostile to the book and its author",
+                "indifferent to the book's style and content",
+                "unreservedly enthusiastic about its conclusions",
+                "admiring of its craft but critical of its perspective"
+            ],
+            "correct_index": 3,
+            "explanation": "The author praises the research and prose but faults the reverence, so the attitude is mixed rather than wholly positive or negative.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-037",
+            "domain": "Reading Comprehension",
+            "stem": "The theory was once considered settled, but a single reanalysis of the original data has left it unsettled. As used in the passage, the word unsettled most nearly means",
+            "options": [
+                "no longer firmly established",
+                "physically disturbed or disrupted",
+                "emotionally anxious",
+                "formally rejected by a court"
+            ],
+            "correct_index": 0,
+            "explanation": "In context, unsettled contrasts with settled and means no longer firmly established, not physically or emotionally disturbed.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-038",
+            "domain": "Reading Comprehension",
+            "stem": "Some argue that city life sharpens the mind because its constant stimuli demand quick decisions. Others respond that the same constant stimuli that some praise exhaust attention and leave city dwellers less able to concentrate. Which choice best states how the second view relates to the first?",
+            "options": [
+                "It denies that cities contain constant stimuli.",
+                "It accepts the same fact about city stimuli but draws the opposite conclusion about their effect.",
+                "It agrees that city life sharpens the mind.",
+                "It discusses a topic unrelated to the first view."
+            ],
+            "correct_index": 1,
+            "explanation": "Both views accept the constant stimuli, but the second reaches the opposite conclusion, so it accepts the fact while rejecting the inference.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-039",
+            "domain": "Reading Comprehension",
+            "stem": "A desert plant opens its pores at night to take in carbon dioxide and keeps them closed during the heat of the day. This limits water loss while still allowing the plant to carry on the process that uses carbon dioxide to make sugars. It can be inferred that the plant",
+            "options": [
+                "cannot make sugars at all",
+                "opens its pores widest at noon",
+                "can make sugars while largely avoiding daytime water loss",
+                "does not need carbon dioxide"
+            ],
+            "correct_index": 2,
+            "explanation": "By gathering carbon dioxide at night and closing its pores by day, the plant makes sugars while limiting water loss, contradicting the other options.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-040",
+            "domain": "Reading Comprehension",
+            "stem": "Critics of standardized testing often note that test scores correlate with family income. Defenders reply that the tests measure skills schools are meant to teach. The author argues that both sides overlook a simpler point, that the tests measure test-taking skill, which can be taught and is taught unevenly. The author's main point is that",
+            "options": [
+                "standardized tests should be abolished immediately",
+                "family income has no effect on test scores",
+                "schools do not teach any useful skills",
+                "both critics and defenders neglect the role of teachable test-taking skill"
+            ],
+            "correct_index": 3,
+            "explanation": "The author's claim is that both camps overlook test-taking skill, while the other choices misstate or exaggerate that claim.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-041",
+            "domain": "Reading Comprehension",
+            "stem": "An archaeologist argues that a set of stone tools was made by early humans because the tools' edges show a pattern of wear consistent with cutting plants. Which finding would most weaken the archaeologist's argument?",
+            "options": [
+                "The same wear pattern appears on stones shaped by natural stream action.",
+                "The tools are made of a common local stone.",
+                "The site is located near an ancient riverbed.",
+                "Early humans lived in the region for thousands of years."
+            ],
+            "correct_index": 0,
+            "explanation": "If natural processes produce the same wear, the wear alone does not indicate human use, which weakens the archaeologist's argument.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-042",
+            "domain": "Reading Comprehension",
+            "stem": "The author argues that the novels of a certain period are best understood not as portraits of individual lives but as records of a changing economy. The author then devotes several paragraphs to a novel that seems at first to focus only on one family. The discussion of this novel most likely serves to",
+            "options": [
+                "prove that the author dislikes the novel",
+                "show how even a family-centered novel reflects economic change",
+                "list the novel's characters in order of importance",
+                "argue that novels should avoid economic themes"
+            ],
+            "correct_index": 1,
+            "explanation": "Given the author's thesis, the family novel is examined to show it too records economic change, which is the discussion's function.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-043",
+            "domain": "Reading Comprehension",
+            "stem": "The oldest known maps were drawn on clay tablets and marked features such as rivers and hills. Because they showed only local areas, scholars believe they were used for practical tasks like finding water rather than for navigation across long distances. According to the passage, scholars believe the oldest maps were used mainly for",
+            "options": [
+                "navigating across oceans",
+                "teaching astronomy to children",
+                "practical local tasks such as finding water",
+                "recording the names of kings"
+            ],
+            "correct_index": 2,
+            "explanation": "The passage states the maps were local and likely used for practical tasks like finding water, so the other options are unsupported.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-044",
+            "domain": "Reading Comprehension",
+            "stem": "A study found that children who read aloud to a dog improved their reading fluency more than children who read aloud to an adult. The researchers suggest the dog provides a nonjudgmental audience, lowering the children's anxiety. The study most strongly supports the claim that",
+            "options": [
+                "dogs can understand everything children read",
+                "adults should never listen to children read",
+                "reading fluency cannot be improved after childhood",
+                "anxiety may hinder some children's reading fluency"
+            ],
+            "correct_index": 3,
+            "explanation": "The proposed anxiety mechanism, if correct, implies that anxiety hinders fluency, while the other claims are not supported by the study.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-045",
+            "domain": "Reading Comprehension",
+            "stem": "The proposal to rebuild the pier is bold, and its supporters are sincere, but they have never explained how the project would be paid for. Until they do, the plan remains a daydream. The author's attitude toward the proposal is best described as",
+            "options": [
+                "sympathetic to its aims but skeptical of its feasibility",
+                "completely indifferent",
+                "fully convinced it should proceed at once",
+                "hostile to the idea of rebuilding the pier in principle"
+            ],
+            "correct_index": 0,
+            "explanation": "The author calls the proposal bold and its supporters sincere but faults the financing, so the attitude is sympathetic yet skeptical.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-046",
+            "domain": "Reading Comprehension",
+            "stem": "The new evidence does not refute the old theory so much as qualify it. As used in the passage, the word qualify most nearly means",
+            "options": [
+                "prove it completely false",
+                "limit or modify its scope",
+                "become eligible for a reward",
+                "repeat it without change"
+            ],
+            "correct_index": 1,
+            "explanation": "Contrasted with refute, qualify means to limit or modify the theory's scope rather than to disprove it entirely.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-047",
+            "domain": "Reading Comprehension",
+            "stem": "Some argue that museums should return artifacts taken during colonial rule because the communities that made them retain a moral claim to them. Others agree that museums should return such artifacts but argue that the real reason is that doing so builds goodwill and encourages future loans and research. The two views differ most over",
+            "options": [
+                "whether artifacts were ever taken during colonial rule",
+                "whether museums house any artifacts at all",
+                "whether the case for returning artifacts rests on moral duty or on practical benefit",
+                "whether communities want their artifacts returned"
+            ],
+            "correct_index": 2,
+            "explanation": "One view grounds return in a moral claim and the other in practical benefit, so they differ over the basis of the case.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-048",
+            "domain": "Reading Comprehension",
+            "stem": "We tend to remember dramatic events, such as floods, as more frequent than they are, and to underestimate quiet, common causes of harm. This bias shapes how we spend money on safety, leaving us overprepared for the spectacular and underprepared for the ordinary. The passage's main point is that",
+            "options": [
+                "floods are the most common cause of harm",
+                "people should ignore rare dramatic events entirely",
+                "safety spending is always wasted",
+                "our memory of dramatic events can distort how we prepare for risks"
+            ],
+            "correct_index": 3,
+            "explanation": "The passage argues that a memory bias distorts risk preparation, while the other choices overstate or contradict its point.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-049",
+            "domain": "Reading Comprehension",
+            "stem": "A language with no known living speakers survived only in a set of recordings made a century ago. Linguists studying those recordings have reconstructed its grammar and now teach it in local schools. It can be inferred that",
+            "options": [
+                "a language can be revived from recorded evidence even without living speakers",
+                "the recordings were made by the last living speaker of the language",
+                "the language has more speakers today than ever before",
+                "linguists cannot study languages without living speakers"
+            ],
+            "correct_index": 0,
+            "explanation": "Reconstructing and teaching the language from recordings shows revival is possible without living speakers, contradicting the other options.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-050",
+            "domain": "Reading Comprehension",
+            "stem": "A critic praises a composer's early works, then notes that the composer's later works abandoned the very techniques that made the early works distinctive. The critic concludes that the later works are lesser achievements. The mention of the abandoned techniques serves to",
+            "options": [
+                "show that the composer was unskilled",
+                "explain why the critic regards the later works as weaker",
+                "list the composer's most popular pieces",
+                "argue that all early works are superior"
+            ],
+            "correct_index": 1,
+            "explanation": "The abandoned techniques explain the basis for the critic's judgment, which is the function the mention serves.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-051",
+            "domain": "Reading Comprehension",
+            "stem": "A historian claims that a king's unpopular tax caused a rebellion. The historian notes that the rebellion began two weeks after the tax was announced. Which finding would most weaken the historian's claim?",
+            "options": [
+                "The tax was later repealed.",
+                "The king had ruled for many years.",
+                "Plans for the rebellion were being made for months before the tax was announced.",
+                "The rebellion lasted less than a year."
+            ],
+            "correct_index": 2,
+            "explanation": "If the rebellion was planned before the tax, the tax cannot be its cause, which weakens the historian's causal claim.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-052",
+            "domain": "Reading Comprehension",
+            "stem": "Certain frogs freeze solid in winter and thaw in spring unharmed. Their cells survive because the frogs produce a substance that controls where ice forms, keeping it outside the cells. According to the passage, the substance helps the frogs by",
+            "options": [
+                "raising their body temperature above freezing",
+                "preventing any ice from forming in winter",
+                "allowing them to move while frozen",
+                "controlling where ice forms so that it stays outside their cells"
+            ],
+            "correct_index": 3,
+            "explanation": "The passage says the substance keeps ice outside the cells, and the other options misstate the mechanism described.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-053",
+            "domain": "Reading Comprehension",
+            "stem": "The author recounts how a once-ridiculed theory of continental drift gained acceptance as new evidence from the ocean floor accumulated, and urges readers to reserve judgment about today's unpopular ideas. The passage is primarily concerned with",
+            "options": [
+                "using a historical example to encourage open-mindedness toward new ideas",
+                "explaining the technical details of ocean-floor mapping",
+                "arguing that continental drift is still unproven",
+                "listing the scientists who rejected the theory"
+            ],
+            "correct_index": 0,
+            "explanation": "The historical case is used to urge open-mindedness toward new ideas, which is the passage's primary concern.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-054",
+            "domain": "Reading Comprehension",
+            "stem": "A city replaced its cash tolls with electronic sensors. Traffic at the toll plaza moved faster, but total revenue stayed the same, even though the number of vehicles did not change. It can be inferred that",
+            "options": [
+                "the sensors malfunctioned",
+                "the total tolls paid did not depend on how quickly vehicles passed the plaza",
+                "the number of vehicles increased",
+                "the city stopped collecting tolls"
+            ],
+            "correct_index": 1,
+            "explanation": "With the same vehicle count and the same revenue while speed rose, revenue is independent of passage speed, so the other options are unsupported.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-055",
+            "domain": "Reading Comprehension",
+            "stem": "The essayist describes the modern city as a machine for forgetting, then immediately describes a neighborhood where neighbors remember one another's names. The second description most likely serves to",
+            "options": [
+                "prove that cities have no memory at all",
+                "repeat the metaphor in different words",
+                "offer a counterexample to the essayist's own metaphor",
+                "describe the essayist's childhood home only"
+            ],
+            "correct_index": 2,
+            "explanation": "The neighborhood where people remember names contrasts with the machine for forgetting, so it functions as a counterexample.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-056",
+            "domain": "Reading Comprehension",
+            "stem": "Some argue that because bees are declining, farmers should plant wildflower strips to support them. Others accept that wildflower strips can help bees but reply that they are no substitute for reducing the pesticides that many scientists consider the main cause of the decline. The second view differs from the first mainly by",
+            "options": [
+                "denying that bees are declining",
+                "claiming that wildflowers harm bees",
+                "supporting the planting of wildflower strips without qualification",
+                "arguing that a proposed remedy addresses a symptom rather than the main cause"
+            ],
+            "correct_index": 3,
+            "explanation": "The second view accepts the remedy but argues it does not address the main cause, which is the difference from the first view.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-057",
+            "domain": "Reading Comprehension",
+            "stem": "A manuscript's ink was found to contain a pigment first manufactured in the 1800s, yet the manuscript is dated 1600. It can be inferred that",
+            "options": [
+                "the manuscript's stated date is probably inaccurate",
+                "the pigment was invented earlier than believed",
+                "the manuscript has no historical value",
+                "the ink was made from plant material"
+            ],
+            "correct_index": 0,
+            "explanation": "A pigment unavailable until the 1800s cannot appear in a 1600 manuscript, so the stated date is likely wrong, and the others are unsupported.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-058",
+            "domain": "Reading Comprehension",
+            "stem": "Advocates of a longer school day point to rising test scores at schools that adopted one. But those schools also hired tutors and reduced class sizes. Without separating these changes, we cannot credit the longer day. The passage's main point is that",
+            "options": [
+                "a longer school day always lowers test scores",
+                "the case for a longer school day is not established by the cited evidence",
+                "tutors and smaller classes have no effect on learning",
+                "schools should never change their schedules"
+            ],
+            "correct_index": 1,
+            "explanation": "The passage argues the evidence is confounded and so does not establish the longer day's benefit, while the other choices overstate it.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-059",
+            "domain": "Reading Comprehension",
+            "stem": "The report is thorough and its data are carefully checked. Its recommendations, however, follow from assumptions the authors never defend, and some of those assumptions are questionable. The author's attitude toward the report's recommendations is best described as",
+            "options": [
+                "entirely dismissive of the report",
+                "uncritically enthusiastic",
+                "approving of the data but doubtful about the recommendations",
+                "uninterested in the report's methods"
+            ],
+            "correct_index": 2,
+            "explanation": "The author praises the data but questions the undefended assumptions behind the recommendations, so the attitude toward them is doubtful.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lsat-060",
+            "domain": "Reading Comprehension",
+            "stem": "An author defends a controversial park policy, first acknowledging that critics raise serious concerns about cost. The author then shows that the projected cost was based on an error and is actually far lower. The acknowledgment of the critics' cost concerns serves to",
+            "options": [
+                "agree that the policy should be abandoned",
+                "show that cost is irrelevant to the debate",
+                "conclude the author's argument",
+                "set up the point that the author will later rebut"
+            ],
+            "correct_index": 3,
+            "explanation": "The author first grants the cost concern and then answers it, so the acknowledgment sets up the rebuttal that follows.",
+            "reference": "LSAT Specifications - Reading Comprehension"
+        }
+    ]
+}
