@@ -1251,6 +1251,50 @@ class AuthoredBundleSeederTest extends TestCase
                 'Reading Comprehension' => 30,
                 'Logical Analysis' => 30,
             ]],
+            'a-level-math' => ['a-level-math', 60, [
+                'Pure Mathematics' => 30,
+                'Mechanics and Statistics' => 30,
+            ]],
+            'gcse-math' => ['gcse-math', 60, [
+                'Number' => 15,
+                'Algebra' => 15,
+                'Ratio, Proportion and Rates of Change' => 15,
+                'Geometry and Statistics' => 15,
+            ]],
+            'a-level-sg' => ['a-level-sg', 60, [
+                'H2 Mathematics' => 20,
+                'H2 Physics' => 20,
+                'H2 Chemistry' => 20,
+            ]],
+            'o-level-sg' => ['o-level-sg', 60, [
+                'English' => 15,
+                'Mathematics' => 15,
+                'Combined Science' => 15,
+                'Humanities' => 15,
+            ]],
+            'psle-sg' => ['psle-sg', 60, [
+                'English' => 15,
+                'Mathematics' => 15,
+                'Science' => 15,
+                'Mother Tongue Languages' => 15,
+            ]],
+            'atar-au' => ['atar-au', 60, [
+                'English' => 15,
+                'Mathematics' => 15,
+                'Science' => 15,
+                'Humanities and Social Sciences' => 15,
+            ]],
+            'uk-driving' => ['uk-driving', 60, [
+                'Alertness and Safety' => 15,
+                'Vehicle Safety and Handling' => 15,
+                'Road Procedures and Signs' => 15,
+                'Incidents and Documentation' => 15,
+            ]],
+            'icpc' => ['icpc', 60, [
+                'Data Structures and Algorithms' => 20,
+                'Graphs and Dynamic Programming' => 20,
+                'Mathematics and Geometry' => 20,
+            ]],
         ];
     }
 

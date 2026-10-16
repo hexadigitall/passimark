@@ -1,0 +1,858 @@
+{
+    "cert_key": "a-level-math",
+    "title": "A-Level Mathematics (UK)",
+    "issuer": "Ofqual / UK Awarding Bodies",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/a-level-math.json",
+    "variant_label": "A-Level Maths Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Grade A*-E",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public UK A-Level Mathematics specification. Not a capture of past exam questions.",
+    "source_label": "A-Level Maths practice bank",
+    "items": [
+        {
+            "id": "a-level-math-001",
+            "domain": "Pure Mathematics",
+            "stem": "The equation 2x + 7 = 19 has a single solution. What is the value of x?",
+            "options": [
+                "12",
+                "13",
+                "6",
+                "5"
+            ],
+            "correct_index": 2,
+            "explanation": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-002",
+            "domain": "Pure Mathematics",
+            "stem": "Expand the product (x + 3)(x - 5). Which expression is correct?",
+            "options": [
+                "x^2 + 2x - 15",
+                "x^2 - 2x - 15",
+                "x^2 - 8x - 15",
+                "x^2 - 2x + 15"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiplying gives x^2 - 5x + 3x - 15, and combining the middle terms yields x^2 - 2x - 15.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-003",
+            "domain": "Pure Mathematics",
+            "stem": "Factorise the quadratic x^2 - 7x + 12 completely.",
+            "options": [
+                "(x - 3)(x - 4)",
+                "(x - 2)(x - 6)",
+                "(x - 1)(x - 12)",
+                "(x + 3)(x + 4)"
+            ],
+            "correct_index": 0,
+            "explanation": "The numbers -3 and -4 multiply to 12 and add to -7, so the factors are (x - 3)(x - 4).",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-004",
+            "domain": "Pure Mathematics",
+            "stem": "Find the value of the discriminant of the quadratic x^2 + 4x + 5.",
+            "options": [
+                "-4",
+                "36",
+                "4",
+                "-36"
+            ],
+            "correct_index": 0,
+            "explanation": "The discriminant is b^2 - 4ac = 16 - 20 = -4, which is negative.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-005",
+            "domain": "Pure Mathematics",
+            "stem": "Complete the square for x^2 + 6x + 2 in the form (x + p)^2 + q.",
+            "options": [
+                "(x + 3)^2 + 2",
+                "(x + 6)^2 - 7",
+                "(x + 3)^2 + 11",
+                "(x + 3)^2 - 7"
+            ],
+            "correct_index": 3,
+            "explanation": "Halving the coefficient of x gives p = 3, and q = 2 - 3^2 = -7, so the result is (x + 3)^2 - 7.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-006",
+            "domain": "Pure Mathematics",
+            "stem": "Simplify the expression 2^5 multiplied by 2^-3, giving your answer as a number.",
+            "options": [
+                "8",
+                "16",
+                "4",
+                "2"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiplying powers with the same base adds the indices, so 2^5 times 2^-3 = 2^2 = 4.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-007",
+            "domain": "Pure Mathematics",
+            "stem": "Solve the exponential equation 3^x = 81 for x.",
+            "options": [
+                "x = 3",
+                "x = 4",
+                "x = 27",
+                "x = 5"
+            ],
+            "correct_index": 1,
+            "explanation": "Since 81 = 3^4, and the bases are equal, the indices must be equal, so x = 4.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-008",
+            "domain": "Pure Mathematics",
+            "stem": "Evaluate log base 2 of 8 plus log base 2 of 4.",
+            "options": [
+                "32",
+                "5",
+                "12",
+                "3"
+            ],
+            "correct_index": 1,
+            "explanation": "log2 of 8 is 3 and log2 of 4 is 2, so the sum is 3 + 2 = 5.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-009",
+            "domain": "Pure Mathematics",
+            "stem": "Simplify the surd square root of 50 in the form k times root 2.",
+            "options": [
+                "5 root 2",
+                "25 root 2",
+                "2 root 5",
+                "10 root 5"
+            ],
+            "correct_index": 0,
+            "explanation": "Since 50 = 25 times 2, the root is root 25 times root 2, which simplifies to 5 root 2.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-010",
+            "domain": "Pure Mathematics",
+            "stem": "Rationalise the denominator of 6 divided by the square root of 3.",
+            "options": [
+                "3 root 2",
+                "2 root 6",
+                "2 root 3",
+                "6 root 3"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiplying numerator and denominator by root 3 gives 6 root 3 over 3, which simplifies to 2 root 3.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-011",
+            "domain": "Pure Mathematics",
+            "stem": "Differentiate y = x^3 - 4x with respect to x.",
+            "options": [
+                "3x^2 - 4x",
+                "3x^2 - 4",
+                "x^2 - 4",
+                "3x^2 + 4"
+            ],
+            "correct_index": 1,
+            "explanation": "Differentiating term by term gives dy/dx = 3x^2 - 4.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-012",
+            "domain": "Pure Mathematics",
+            "stem": "The function y = 5x^4 + 2x is differentiated. What is the value of dy/dx at x = 1?",
+            "options": [
+                "22",
+                "20",
+                "18",
+                "24"
+            ],
+            "correct_index": 0,
+            "explanation": "dy/dx = 20x^3 + 2, and substituting x = 1 gives 20 + 2 = 22.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-013",
+            "domain": "Pure Mathematics",
+            "stem": "Find the gradient of the tangent to the curve y = x^2 at the point where x = 3.",
+            "options": [
+                "9",
+                "3",
+                "12",
+                "6"
+            ],
+            "correct_index": 3,
+            "explanation": "The derivative dy/dx = 2x, so at x = 3 the gradient of the tangent is 6.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-014",
+            "domain": "Pure Mathematics",
+            "stem": "Evaluate the definite integral of 3x^2 + 2 with respect to x from 0 to 1.",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correct_index": 1,
+            "explanation": "Integrating gives x^3 + 2x, and evaluating from 0 to 1 gives 1 + 2 = 3.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-015",
+            "domain": "Pure Mathematics",
+            "stem": "Find the indefinite integral of 1/x with respect to x.",
+            "options": [
+                "ln x + c",
+                "x^2/2 + c",
+                "-1/x^2 + c",
+                "x + c"
+            ],
+            "correct_index": 0,
+            "explanation": "The integral of 1/x is the natural logarithm ln x plus the constant of integration c.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-016",
+            "domain": "Pure Mathematics",
+            "stem": "Evaluate the definite integral of 2x with respect to x from 1 to 3.",
+            "options": [
+                "4",
+                "6",
+                "9",
+                "8"
+            ],
+            "correct_index": 3,
+            "explanation": "Integrating gives x^2, and evaluating from 1 to 3 gives 9 - 1 = 8.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-017",
+            "domain": "Pure Mathematics",
+            "stem": "The curve y = x^2 - 4x + 1 has a stationary point. Find the x-coordinate of that point.",
+            "options": [
+                "4",
+                "-2",
+                "2",
+                "1"
+            ],
+            "correct_index": 2,
+            "explanation": "Setting the derivative 2x - 4 equal to zero gives x = 2.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-018",
+            "domain": "Pure Mathematics",
+            "stem": "At the stationary point of y = x^2 - 4x the second derivative is positive. What is the nature of this point?",
+            "options": [
+                "a minimum point",
+                "a maximum point",
+                "a point of inflection",
+                "a point of discontinuity"
+            ],
+            "correct_index": 0,
+            "explanation": "The second derivative is 2, which is positive, so the stationary point is a minimum.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-019",
+            "domain": "Pure Mathematics",
+            "stem": "State the exact value of sin 30 degrees.",
+            "options": [
+                "root 3/2",
+                "root 2/2",
+                "1",
+                "1/2"
+            ],
+            "correct_index": 3,
+            "explanation": "sin 30 degrees is one of the exact trigonometric values and equals 1/2.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-020",
+            "domain": "Pure Mathematics",
+            "stem": "State the exact value of cos 45 degrees.",
+            "options": [
+                "1/2",
+                "root 2/2",
+                "root 3/2",
+                "1"
+            ],
+            "correct_index": 1,
+            "explanation": "cos 45 degrees equals root 2 over 2, since the 45 degree triangle has equal legs.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-021",
+            "domain": "Pure Mathematics",
+            "stem": "State the exact value of tan 45 degrees.",
+            "options": [
+                "1",
+                "1/2",
+                "root 3",
+                "root 3/3"
+            ],
+            "correct_index": 0,
+            "explanation": "tan 45 degrees is 1 because the opposite and adjacent sides are equal for a 45 degree angle.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-022",
+            "domain": "Pure Mathematics",
+            "stem": "Solve sin x = 0.5 for x in the interval from 0 to 360 degrees.",
+            "options": [
+                "x = 30 and x = 60",
+                "x = 30 and x = 330",
+                "x = 60 and x = 120",
+                "x = 30 and x = 150"
+            ],
+            "correct_index": 3,
+            "explanation": "The principal value is 30 degrees, and the second solution in the range is 180 - 30 = 150 degrees.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-023",
+            "domain": "Pure Mathematics",
+            "stem": "For an acute angle with cos theta = 4/5, find the exact value of sin theta.",
+            "options": [
+                "1/5",
+                "5/3",
+                "3/5",
+                "4/5"
+            ],
+            "correct_index": 2,
+            "explanation": "Using sin^2 + cos^2 = 1 gives sin^2 = 1 - 16/25 = 9/25, so sin theta = 3/5.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-024",
+            "domain": "Pure Mathematics",
+            "stem": "Find the magnitude of the vector with components 3 and -4.",
+            "options": [
+                "7",
+                "1",
+                "5",
+                "25"
+            ],
+            "correct_index": 2,
+            "explanation": "The magnitude is the square root of 3^2 + (-4)^2, which is root 25 = 5.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-025",
+            "domain": "Pure Mathematics",
+            "stem": "Given a = 2i + 3j and b = i - j, find a + b.",
+            "options": [
+                "3i + 4j",
+                "3i + 2j",
+                "i + 2j",
+                "3i - 2j"
+            ],
+            "correct_index": 1,
+            "explanation": "Adding corresponding components gives (2 + 1)i and (3 - 1)j, so a + b = 3i + 2j.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-026",
+            "domain": "Pure Mathematics",
+            "stem": "Find the scalar product of the vectors with components (1, 2) and (3, 4).",
+            "options": [
+                "11",
+                "10",
+                "7",
+                "14"
+            ],
+            "correct_index": 0,
+            "explanation": "The scalar product is 1 times 3 plus 2 times 4, which is 3 + 8 = 11.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-027",
+            "domain": "Pure Mathematics",
+            "stem": "An arithmetic sequence has first term 3 and common difference 4. Find the tenth term.",
+            "options": [
+                "43",
+                "36",
+                "40",
+                "39"
+            ],
+            "correct_index": 3,
+            "explanation": "The nth term is a + (n - 1)d, so the tenth term is 3 + 9 times 4 = 39.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-028",
+            "domain": "Pure Mathematics",
+            "stem": "An arithmetic series has first term 2 and common difference 3. Find the sum of the first 10 terms.",
+            "options": [
+                "150",
+                "160",
+                "145",
+                "155"
+            ],
+            "correct_index": 3,
+            "explanation": "The sum is (n/2)(2a + (n - 1)d) = 5 times (4 + 27) = 155.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-029",
+            "domain": "Pure Mathematics",
+            "stem": "A geometric sequence has first term 2 and common ratio 3. Find the fourth term.",
+            "options": [
+                "18",
+                "162",
+                "54",
+                "24"
+            ],
+            "correct_index": 2,
+            "explanation": "The nth term is a times r^(n - 1), so the fourth term is 2 times 3^3 = 54.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-030",
+            "domain": "Pure Mathematics",
+            "stem": "In the binomial expansion of (1 + x)^5, find the coefficient of x^2.",
+            "options": [
+                "10",
+                "5",
+                "20",
+                "15"
+            ],
+            "correct_index": 0,
+            "explanation": "The coefficient is the binomial coefficient 5 choose 2, which equals 10.",
+            "reference": "A-Level Maths Specification - Pure Mathematics"
+        },
+        {
+            "id": "a-level-math-031",
+            "domain": "Mechanics and Statistics",
+            "stem": "A car starts from rest and accelerates at 2 m/s^2 for 5 seconds. Find the distance travelled.",
+            "options": [
+                "10 m",
+                "50 m",
+                "20 m",
+                "25 m"
+            ],
+            "correct_index": 3,
+            "explanation": "Using s = ut + 0.5at^2 with u = 0 gives s = 0.5 times 2 times 25 = 25 m.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-032",
+            "domain": "Mechanics and Statistics",
+            "stem": "A cyclist has initial velocity 3 m/s and accelerates at 2 m/s^2 for 4 seconds. Find the final velocity.",
+            "options": [
+                "8 m/s",
+                "14 m/s",
+                "11 m/s",
+                "5 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Using v = u + at gives v = 3 + 2 times 4 = 11 m/s.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-033",
+            "domain": "Mechanics and Statistics",
+            "stem": "A train travels at a constant velocity of 12 m/s for 5 seconds. Find the distance travelled.",
+            "options": [
+                "17 m",
+                "60 m",
+                "2.4 m",
+                "50 m"
+            ],
+            "correct_index": 1,
+            "explanation": "At constant velocity the distance is speed times time, so 12 times 5 = 60 m.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-034",
+            "domain": "Mechanics and Statistics",
+            "stem": "A mass of 4 kg experiences an acceleration of 3 m/s^2. Find the resultant force acting on it.",
+            "options": [
+                "7 N",
+                "1.33 N",
+                "0.75 N",
+                "12 N"
+            ],
+            "correct_index": 3,
+            "explanation": "By Newton's second law, force equals mass times acceleration, so 4 times 3 = 12 N.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-035",
+            "domain": "Mechanics and Statistics",
+            "stem": "Find the weight of a 5 kg mass, taking the acceleration due to gravity as 9.8 m/s^2.",
+            "options": [
+                "5 N",
+                "14.8 N",
+                "49 N",
+                "0.51 N"
+            ],
+            "correct_index": 2,
+            "explanation": "Weight is mass times gravity, so W = 5 times 9.8 = 49 N.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-036",
+            "domain": "Mechanics and Statistics",
+            "stem": "Two forces of 3 N and 4 N act at right angles to each other. Find the magnitude of the resultant force.",
+            "options": [
+                "7 N",
+                "5 N",
+                "1 N",
+                "12 N"
+            ],
+            "correct_index": 1,
+            "explanation": "For perpendicular forces the resultant is the square root of 3^2 + 4^2 = root 25 = 5 N.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-037",
+            "domain": "Mechanics and Statistics",
+            "stem": "A 2 kg object moves at 5 m/s. Find its momentum.",
+            "options": [
+                "10 kg m/s",
+                "2.5 kg m/s",
+                "7 kg m/s",
+                "0.4 kg m/s"
+            ],
+            "correct_index": 0,
+            "explanation": "Momentum is mass times velocity, so p = 2 times 5 = 10 kg m/s.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-038",
+            "domain": "Mechanics and Statistics",
+            "stem": "An object starts from rest and accelerates at 4 m/s^2 over a distance of 8 m. Find its final velocity.",
+            "options": [
+                "4 m/s",
+                "16 m/s",
+                "8 m/s",
+                "64 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Using v^2 = u^2 + 2as with u = 0 gives v^2 = 2 times 4 times 8 = 64, so v = 8 m/s.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-039",
+            "domain": "Mechanics and Statistics",
+            "stem": "A vehicle travelling at 20 m/s decelerates to rest in 4 seconds. Find its acceleration.",
+            "options": [
+                "5 m/s^2",
+                "-5 m/s^2",
+                "-4 m/s^2",
+                "-80 m/s^2"
+            ],
+            "correct_index": 1,
+            "explanation": "Acceleration is the change in velocity over time, so (0 - 20) divided by 4 = -5 m/s^2.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-040",
+            "domain": "Mechanics and Statistics",
+            "stem": "A ball is thrown vertically upwards with initial speed 20 m/s. Taking g = 10 m/s^2, find the time to maximum height.",
+            "options": [
+                "4 s",
+                "0.5 s",
+                "20 s",
+                "2 s"
+            ],
+            "correct_index": 3,
+            "explanation": "At maximum height the velocity is zero, so the time is u/g = 20/10 = 2 s.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-041",
+            "domain": "Mechanics and Statistics",
+            "stem": "A ball is projected vertically upwards with speed 20 m/s. Taking g = 10 m/s^2, find its maximum height.",
+            "options": [
+                "40 m",
+                "10 m",
+                "20 m",
+                "2 m"
+            ],
+            "correct_index": 2,
+            "explanation": "The maximum height is u^2 divided by 2g, so 400/20 = 20 m.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-042",
+            "domain": "Mechanics and Statistics",
+            "stem": "A force of 20 N acts at a perpendicular distance of 0.5 m from a pivot. Find the moment of the force.",
+            "options": [
+                "40 N m",
+                "10 N m",
+                "20.5 N m",
+                "0.025 N m"
+            ],
+            "correct_index": 1,
+            "explanation": "The moment is force times perpendicular distance, so 20 times 0.5 = 10 N m.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-043",
+            "domain": "Mechanics and Statistics",
+            "stem": "A block on a rough surface has a normal reaction of 50 N. Given the coefficient of friction is 0.4, find the limiting friction.",
+            "options": [
+                "20 N",
+                "125 N",
+                "0.008 N",
+                "54 N"
+            ],
+            "correct_index": 0,
+            "explanation": "Limiting friction is the coefficient times the normal reaction, so 0.4 times 50 = 20 N.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-044",
+            "domain": "Mechanics and Statistics",
+            "stem": "A runner covers a distance of 100 m in 20 seconds. Find the average speed.",
+            "options": [
+                "5 m/s",
+                "0.2 m/s",
+                "2000 m/s",
+                "10 m/s"
+            ],
+            "correct_index": 0,
+            "explanation": "Average speed is total distance over total time, so 100/20 = 5 m/s.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-045",
+            "domain": "Mechanics and Statistics",
+            "stem": "On a velocity-time graph a velocity increases from 0 to 15 m/s in 3 seconds. Find the acceleration.",
+            "options": [
+                "45 m/s^2",
+                "0.2 m/s^2",
+                "12 m/s^2",
+                "5 m/s^2"
+            ],
+            "correct_index": 3,
+            "explanation": "Acceleration is the gradient of a velocity-time graph, so 15/3 = 5 m/s^2.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-046",
+            "domain": "Mechanics and Statistics",
+            "stem": "A fair six-sided die is rolled once. Find the probability that the score is an even number.",
+            "options": [
+                "1/6",
+                "1/3",
+                "1/2",
+                "2/3"
+            ],
+            "correct_index": 2,
+            "explanation": "There are three even numbers out of six, so the probability is 3/6 = 1/2.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-047",
+            "domain": "Mechanics and Statistics",
+            "stem": "Events A and B are independent with P(A) = 0.4 and P(B) = 0.3. Find the probability of both A and B.",
+            "options": [
+                "0.7",
+                "0.12",
+                "0.58",
+                "0.1"
+            ],
+            "correct_index": 1,
+            "explanation": "For independent events P(A and B) = P(A) times P(B) = 0.4 times 0.3 = 0.12.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-048",
+            "domain": "Mechanics and Statistics",
+            "stem": "A bag contains 3 red and 2 blue balls. Two balls are taken without replacement. Find the probability that both are red.",
+            "options": [
+                "9/25",
+                "3/10",
+                "3/5",
+                "1/2"
+            ],
+            "correct_index": 1,
+            "explanation": "The probability is 3/5 times 2/4 = 6/20 = 3/10.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-049",
+            "domain": "Mechanics and Statistics",
+            "stem": "Mutually exclusive events A and B have P(A) = 0.5 and P(B) = 0.3. Find the probability of A or B.",
+            "options": [
+                "0.8",
+                "0.15",
+                "0.2",
+                "0.65"
+            ],
+            "correct_index": 0,
+            "explanation": "For mutually exclusive events P(A or B) = P(A) + P(B) = 0.5 + 0.3 = 0.8.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-050",
+            "domain": "Mechanics and Statistics",
+            "stem": "The probability that an event A occurs is 0.35. Find the probability that A does not occur.",
+            "options": [
+                "0.35",
+                "0.5",
+                "0.65",
+                "0.5 percent"
+            ],
+            "correct_index": 2,
+            "explanation": "The complement rule gives P(not A) = 1 - 0.35 = 0.65.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-051",
+            "domain": "Mechanics and Statistics",
+            "stem": "Find the mean of the data values 4, 7, 9 and 10.",
+            "options": [
+                "7",
+                "7.5",
+                "8",
+                "30"
+            ],
+            "correct_index": 1,
+            "explanation": "The mean is the total 30 divided by the four values, giving 30/4 = 7.5.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-052",
+            "domain": "Mechanics and Statistics",
+            "stem": "Find the median of the data values 3, 7, 9, 10 and 12.",
+            "options": [
+                "9",
+                "8",
+                "8.2",
+                "10"
+            ],
+            "correct_index": 0,
+            "explanation": "With the values in order, the middle value of the five numbers is 9.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-053",
+            "domain": "Mechanics and Statistics",
+            "stem": "Find the range of the data values 5, 9, 2 and 12.",
+            "options": [
+                "7",
+                "14",
+                "2",
+                "10"
+            ],
+            "correct_index": 3,
+            "explanation": "The range is the largest value minus the smallest, so 12 - 2 = 10.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-054",
+            "domain": "Mechanics and Statistics",
+            "stem": "A random variable X is binomial with n = 10 and p = 0.5. Find the expected value of X.",
+            "options": [
+                "10",
+                "5",
+                "0.5",
+                "2.5"
+            ],
+            "correct_index": 1,
+            "explanation": "The expectation of a binomial variable is np = 10 times 0.5 = 5.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-055",
+            "domain": "Mechanics and Statistics",
+            "stem": "A random variable X is binomial with n = 20 and p = 0.3. Find the variance of X.",
+            "options": [
+                "4.2",
+                "6",
+                "0.21",
+                "1.8"
+            ],
+            "correct_index": 0,
+            "explanation": "The variance of a binomial variable is np(1 - p) = 20 times 0.3 times 0.7 = 4.2.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-056",
+            "domain": "Mechanics and Statistics",
+            "stem": "For a standard normal distribution with mean 0, find the probability that Z is less than 0.",
+            "options": [
+                "0",
+                "1",
+                "0.34",
+                "0.5"
+            ],
+            "correct_index": 3,
+            "explanation": "The normal distribution is symmetric about its mean, so half the probability lies below the mean, giving 0.5.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-057",
+            "domain": "Mechanics and Statistics",
+            "stem": "A data set has lower quartile 4 and upper quartile 9. Find the interquartile range.",
+            "options": [
+                "13",
+                "2.25",
+                "5",
+                "6.5"
+            ],
+            "correct_index": 2,
+            "explanation": "The interquartile range is the upper quartile minus the lower quartile, so 9 - 4 = 5.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-058",
+            "domain": "Mechanics and Statistics",
+            "stem": "A scatter diagram gives a product moment correlation coefficient of 0.85. How is this best described?",
+            "options": [
+                "strong positive correlation",
+                "weak positive correlation",
+                "strong negative correlation",
+                "no correlation"
+            ],
+            "correct_index": 0,
+            "explanation": "A coefficient near plus 1 indicates a strong positive linear relationship, and 0.85 is close to 1.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-059",
+            "domain": "Mechanics and Statistics",
+            "stem": "A regression line is given by y = 2x + 3. Find the predicted value of y when x = 4.",
+            "options": [
+                "8",
+                "14",
+                "7",
+                "11"
+            ],
+            "correct_index": 3,
+            "explanation": "Substituting x = 4 gives y = 2 times 4 + 3 = 11.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        },
+        {
+            "id": "a-level-math-060",
+            "domain": "Mechanics and Statistics",
+            "stem": "A hypothesis test uses a 5 percent significance level. What does this level represent?",
+            "options": [
+                "the probability that the alternative is true",
+                "the probability of rejecting a true null hypothesis",
+                "the probability of making no error",
+                "the probability that the data are normal"
+            ],
+            "correct_index": 1,
+            "explanation": "The significance level is the probability of a Type I error, that is, rejecting the null hypothesis when it is actually true.",
+            "reference": "A-Level Maths Specification - Mechanics and Statistics"
+        }
+    ]
+}

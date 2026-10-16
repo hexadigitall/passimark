@@ -1,0 +1,858 @@
+{
+    "cert_key": "gcse-math",
+    "title": "GCSE Mathematics (UK)",
+    "issuer": "Ofqual / UK Awarding Bodies",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/gcse-math.json",
+    "variant_label": "GCSE Maths Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Grade 9-1",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public UK GCSE Mathematics specification. Not a capture of past exam questions.",
+    "source_label": "GCSE Maths practice bank",
+    "items": [
+        {
+            "id": "gcse-math-001",
+            "domain": "Number",
+            "stem": "A jacket costs £48. In a sale the price is reduced by 25%. What is the sale price of the jacket?",
+            "options": [
+                "£12",
+                "£36",
+                "£40",
+                "£60"
+            ],
+            "correct_index": 1,
+            "explanation": "25% of £48 is £12, so the sale price is £48 − £12 = £36. £12 is only the discount, and the other values do not follow from the price.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-002",
+            "domain": "Number",
+            "stem": "Work out the value of 3/4 + 1/6, giving your answer as a fraction in its simplest form.",
+            "options": [
+                "11/12",
+                "4/10",
+                "7/12",
+                "2/3"
+            ],
+            "correct_index": 0,
+            "explanation": "Rewrite with a common denominator of 12: 9/12 + 2/12 = 11/12. Adding numerators over denominators (4/10) or using a wrong denominator gives the distractors.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-003",
+            "domain": "Number",
+            "stem": "A number is written as 3.6 × 10^4 in standard form. What is its value as an ordinary number?",
+            "options": [
+                "0.00036",
+                "360",
+                "3600",
+                "36000"
+            ],
+            "correct_index": 3,
+            "explanation": "Multiplying 3.6 by 10^4 moves the digits four places, giving 36000; the other choices place the decimal point after the wrong number of places.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-004",
+            "domain": "Number",
+            "stem": "What is the highest common factor (HCF) of the numbers 84 and 120?",
+            "options": [
+                "840",
+                "6",
+                "24",
+                "12"
+            ],
+            "correct_index": 3,
+            "explanation": "84 = 2² × 3 × 7 and 120 = 2³ × 3 × 5, so the shared factors give 2² × 3 = 12. 840 is the LCM, and 6 and 24 are not the highest shared factor.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-005",
+            "domain": "Number",
+            "stem": "A bag contains only red, blue and green counters. 40% are red and 25% are blue. What percentage of the counters are green?",
+            "options": [
+                "25%",
+                "30%",
+                "35%",
+                "65%"
+            ],
+            "correct_index": 2,
+            "explanation": "The percentages must total 100%, so green is 100% − 40% − 25% = 35%. The other values misread the given percentages or the remainder.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-006",
+            "domain": "Number",
+            "stem": "Work out the value of 2.4 ÷ 0.06, giving your answer as a decimal.",
+            "options": [
+                "0.4",
+                "40",
+                "4",
+                "400"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiplying both numbers by 100 gives 240 ÷ 6 = 40. Dividing without scaling the divisor produces the smaller distractors.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-007",
+            "domain": "Number",
+            "stem": "Round the number 3.6784 to 2 decimal places.",
+            "options": [
+                "3.68",
+                "3.67",
+                "3.678",
+                "3.7"
+            ],
+            "correct_index": 0,
+            "explanation": "The third decimal digit is 8, which rounds the second digit 7 up to 8, giving 3.68; truncating gives 3.67 and 3.7 is only one decimal place.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-008",
+            "domain": "Number",
+            "stem": "Write the decimal 0.375 as a fraction in its simplest form.",
+            "options": [
+                "3/8",
+                "375/1000",
+                "3/4",
+                "5/8"
+            ],
+            "correct_index": 0,
+            "explanation": "0.375 = 375/1000, which cancels by 125 to 3/8. 375/1000 is not in simplest form and 3/4 = 0.75 and 5/8 = 0.625.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-009",
+            "domain": "Number",
+            "stem": "A car travels 180 km in 2.5 hours. What is its average speed in kilometres per hour?",
+            "options": [
+                "45",
+                "90",
+                "75",
+                "72"
+            ],
+            "correct_index": 3,
+            "explanation": "Average speed is distance ÷ time = 180 ÷ 2.5 = 72 km/h; 45 comes from dividing by 4, and 90 from halving 180.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-010",
+            "domain": "Number",
+            "stem": "Work out the value of (2^3 × 2^5) ÷ 2^4.",
+            "options": [
+                "2^2",
+                "16",
+                "32",
+                "2^12"
+            ],
+            "correct_index": 1,
+            "explanation": "Add the indices when multiplying and subtract when dividing: 3 + 5 − 4 = 4, so the value is 2^4 = 16; the others misapply the index laws.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-011",
+            "domain": "Number",
+            "stem": "A laptop costing £540 is later sold for £459. What is the percentage loss?",
+            "options": [
+                "15%",
+                "17.6%",
+                "18%",
+                "81%"
+            ],
+            "correct_index": 0,
+            "explanation": "The loss is £540 − £459 = £81, and 81 ÷ 540 × 100 = 15%. The other values use the wrong base or read the loss as a fraction of the sale price.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-012",
+            "domain": "Number",
+            "stem": "Work out the value of 5/8 of 96, giving your answer as a whole number.",
+            "options": [
+                "48",
+                "72",
+                "80",
+                "60"
+            ],
+            "correct_index": 3,
+            "explanation": "One eighth of 96 is 12, so five eighths is 12 × 5 = 60. 48 is half, 72 is three quarters and 80 is five sixths of 96.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-013",
+            "domain": "Number",
+            "stem": "Which of the following numbers is a prime number? Select one option.",
+            "options": [
+                "21",
+                "33",
+                "17",
+                "27"
+            ],
+            "correct_index": 2,
+            "explanation": "17 has no factors other than 1 and 17. 21 = 3 × 7, 33 = 3 × 11 and 27 = 3 × 9, so each is composite.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-014",
+            "domain": "Number",
+            "stem": "By rounding each number to the nearest whole number, estimate the value of 19.7 × 4.1.",
+            "options": [
+                "80",
+                "79",
+                "82",
+                "60"
+            ],
+            "correct_index": 0,
+            "explanation": "19.7 rounds to 20 and 4.1 rounds to 4, so the estimate is 20 × 4 = 80; 82 uses an unrounded product and 60 uses 15 × 4.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-015",
+            "domain": "Number",
+            "stem": "Write the decimal 0.75 as a percentage.",
+            "options": [
+                "0.75%",
+                "7.5%",
+                "150%",
+                "75%"
+            ],
+            "correct_index": 3,
+            "explanation": "To convert a decimal to a percentage multiply by 100, so 0.75 = 75%. The other choices divide by 100 or double the value.",
+            "reference": "GCSE Maths Specification - Number"
+        },
+        {
+            "id": "gcse-math-016",
+            "domain": "Algebra",
+            "stem": "Solve the equation 5x − 7 = 23 to find the value of x.",
+            "options": [
+                "x = 3",
+                "x = 4",
+                "x = 6",
+                "x = 16"
+            ],
+            "correct_index": 2,
+            "explanation": "Add 7 to both sides to get 5x = 30, then divide by 5 to give x = 6. The other values come from adding 7 incorrectly or dividing before adding.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-017",
+            "domain": "Algebra",
+            "stem": "Expand and simplify the expression 3(2x + 5) − 4(x − 2).",
+            "options": [
+                "2x + 7",
+                "2x + 23",
+                "2x − 7",
+                "10x + 7"
+            ],
+            "correct_index": 1,
+            "explanation": "3(2x + 5) = 6x + 15 and −4(x − 2) = −4x + 8; combining gives 2x + 23. Sign errors on the second bracket give the other results.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-018",
+            "domain": "Algebra",
+            "stem": "Factorise fully the expression 6x^2 + 9x.",
+            "options": [
+                "3(2x^2 + 3x)",
+                "x(6x + 9)",
+                "6x(x + 3)",
+                "3x(2x + 3)"
+            ],
+            "correct_index": 3,
+            "explanation": "The highest common factor of 6x^2 and 9x is 3x, giving 3x(2x + 3). The other factorisations are incomplete because a common factor remains inside the bracket.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-019",
+            "domain": "Algebra",
+            "stem": "The equation of a straight line is y = 3x − 4. What are the gradient and the y-intercept?",
+            "options": [
+                "gradient −4, y-intercept 3",
+                "gradient 3, y-intercept 4",
+                "gradient 3, y-intercept −4",
+                "gradient 4, y-intercept 3"
+            ],
+            "correct_index": 2,
+            "explanation": "In y = mx + c the gradient m is 3 and the y-intercept c is −4, so the line crosses the y-axis at (0, −4); the other options swap or drop the signs.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-020",
+            "domain": "Algebra",
+            "stem": "Solve the simultaneous equations x + y = 12 and x − y = 4. What is the value of x?",
+            "options": [
+                "x = 8",
+                "x = 4",
+                "x = 6",
+                "x = 2"
+            ],
+            "correct_index": 0,
+            "explanation": "Adding the two equations eliminates y and gives 2x = 16, so x = 8. Subtracting instead gives y, and the other values misread the result.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-021",
+            "domain": "Algebra",
+            "stem": "Make t the subject of the formula v = u + at.",
+            "options": [
+                "t = v − u − a",
+                "t = (v + u) / a",
+                "t = a(v − u)",
+                "t = (v − u) / a"
+            ],
+            "correct_index": 3,
+            "explanation": "Subtract u from both sides to get v − u = at, then divide by a, giving t = (v − u) / a. The other rearrangements divide by the wrong quantity.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-022",
+            "domain": "Algebra",
+            "stem": "Work out the value of 4x^2 when x = −3.",
+            "options": [
+                "−36",
+                "−12",
+                "36",
+                "12"
+            ],
+            "correct_index": 2,
+            "explanation": "Squaring −3 gives 9, and 4 × 9 = 36. The negative results treat (−3)² as negative, but a square is positive.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-023",
+            "domain": "Algebra",
+            "stem": "The nth term of a sequence is given by 4n − 3. What is the 10th term?",
+            "options": [
+                "40",
+                "37",
+                "34",
+                "43"
+            ],
+            "correct_index": 1,
+            "explanation": "Substitute n = 10: 4 × 10 − 3 = 37. The value 40 forgets to subtract 3, and the others use the wrong multiple.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-024",
+            "domain": "Algebra",
+            "stem": "Solve the inequality 3x + 2 < 17 to find the possible values of x.",
+            "options": [
+                "x > 5",
+                "x < 5",
+                "x < 15",
+                "x > 15"
+            ],
+            "correct_index": 1,
+            "explanation": "Subtract 2 to get 3x < 15, then divide by 3 to give x < 5. The other options reverse the inequality sign or divide by 3 incorrectly.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-025",
+            "domain": "Algebra",
+            "stem": "Expand and simplify the product (x + 4)(x − 3).",
+            "options": [
+                "x^2 + x − 12",
+                "x^2 − x − 12",
+                "x^2 + 7x − 12",
+                "x^2 + x + 12"
+            ],
+            "correct_index": 0,
+            "explanation": "Using FOIL: x^2 − 3x + 4x − 12 = x^2 + x − 12. The others come from combining the x terms wrongly or mishandling the constant sign.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-026",
+            "domain": "Algebra",
+            "stem": "The curve y = x^2 − 2x − 8 crosses the x-axis at two points. What are the x-coordinates of these points?",
+            "options": [
+                "x = −4 and x = 2",
+                "x = 8 and x = −1",
+                "x = 2 and x = −4",
+                "x = 4 and x = −2"
+            ],
+            "correct_index": 3,
+            "explanation": "Factorising gives (x − 4)(x + 2) = 0, so x = 4 or x = −2. The other pairs do not satisfy the equation.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-027",
+            "domain": "Algebra",
+            "stem": "A function is given by f(x) = 2x + 1. What is the value of f(−3)?",
+            "options": [
+                "7",
+                "−7",
+                "−5",
+                "5"
+            ],
+            "correct_index": 2,
+            "explanation": "Substitute −3: 2 × (−3) + 1 = −6 + 1 = −5. Sign errors give −7, and the positive results ignore the negative input.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-028",
+            "domain": "Algebra",
+            "stem": "Solve the equation x/3 + 2 = 7 to find the value of x.",
+            "options": [
+                "x = 3",
+                "x = 5",
+                "x = 15",
+                "x = 27"
+            ],
+            "correct_index": 2,
+            "explanation": "Subtract 2 to get x/3 = 5, then multiply by 3 to give x = 15. Not multiplying by 3 gives 5, and x = 27 comes from adding 2 instead.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-029",
+            "domain": "Algebra",
+            "stem": "The expression x^2 − 6x + 5 can be written as (x − p)^2 − q. What are the values of p and q?",
+            "options": [
+                "p = 3, q = −4",
+                "p = 3, q = 4",
+                "p = 6, q = 5",
+                "p = −3, q = 4"
+            ],
+            "correct_index": 1,
+            "explanation": "Completing the square: x^2 − 6x + 5 = (x − 3)^2 − 9 + 5 = (x − 3)^2 − 4, so p = 3 and q = 4. The other options mishandle the constant.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-030",
+            "domain": "Algebra",
+            "stem": "A sequence begins 5, 11, 17, 23. What is the nth term of this arithmetic sequence?",
+            "options": [
+                "5n + 6",
+                "6n + 5",
+                "5n − 1",
+                "6n − 1"
+            ],
+            "correct_index": 3,
+            "explanation": "The common difference is 6, so the nth term is 6n + c; using the first term, 6(1) + c = 5 gives c = −1, so the nth term is 6n − 1.",
+            "reference": "GCSE Maths Specification - Algebra"
+        },
+        {
+            "id": "gcse-math-031",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A recipe uses flour and sugar in the ratio 5:2. If 350 g of flour is used, what mass of sugar is needed?",
+            "options": [
+                "70 g",
+                "175 g",
+                "140 g",
+                "245 g"
+            ],
+            "correct_index": 2,
+            "explanation": "One part is 350 ÷ 5 = 70 g, so the sugar is 70 × 2 = 140 g. 70 g is a single part and 175 g reverses the ratio.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-032",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A map has a scale of 1:25000. Two towns are 6 cm apart on the map. What is the real distance in kilometres?",
+            "options": [
+                "15 km",
+                "1.5 km",
+                "0.15 km",
+                "150 km"
+            ],
+            "correct_index": 1,
+            "explanation": "The real distance is 6 × 25000 = 150000 cm, and 150000 ÷ 100000 = 1.5 km. The other choices misplace the decimal point.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-033",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "If 4 identical pens cost £3.20, what is the cost of 7 of these pens?",
+            "options": [
+                "£5.60",
+                "£5.20",
+                "£6.40",
+                "£4.80"
+            ],
+            "correct_index": 0,
+            "explanation": "One pen costs £3.20 ÷ 4 = £0.80, so 7 pens cost 7 × £0.80 = £5.60. The other amounts use the wrong multiplier or divide by 7.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-034",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A loan of £2000 is charged simple interest at 5% per year. How much interest is paid over 3 years?",
+            "options": [
+                "£100",
+                "£315",
+                "£300",
+                "£600"
+            ],
+            "correct_index": 2,
+            "explanation": "Simple interest is 2000 × 0.05 × 3 = £300. £100 is one year's interest, and £600 uses a 10% rate.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-035",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "An amount of £450 is increased by 8%. What is the new amount?",
+            "options": [
+                "£458",
+                "£486",
+                "£540",
+                "£36"
+            ],
+            "correct_index": 1,
+            "explanation": "The multiplier is 1.08, so 450 × 1.08 = £486. £36 is the 8% increase alone and £540 uses a 20% increase.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-036",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "Two quantities are in direct proportion. When x = 5, y = 20. What is the value of y when x = 8?",
+            "options": [
+                "32",
+                "40",
+                "25",
+                "30"
+            ],
+            "correct_index": 0,
+            "explanation": "For direct proportion y = kx, so k = 20 ÷ 5 = 4 and y = 4 × 8 = 32. The other values use an incorrect constant of proportionality.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-037",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A car uses 8 litres of fuel to travel 100 km. How many litres are needed to travel 250 km?",
+            "options": [
+                "16 litres",
+                "18 litres",
+                "25 litres",
+                "20 litres"
+            ],
+            "correct_index": 3,
+            "explanation": "Since 250 ÷ 100 = 2.5, the fuel needed is 2.5 × 8 = 20 litres. The other values scale by the wrong factor or divide the distance by the fuel.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-038",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "Share £360 between two people in the ratio 5:4. What is the larger share?",
+            "options": [
+                "£160",
+                "£200",
+                "£180",
+                "£220"
+            ],
+            "correct_index": 1,
+            "explanation": "There are 5 + 4 = 9 parts, so one part is £360 ÷ 9 = £40; the larger share is 5 × £40 = £200. £160 is the smaller share.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-039",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A population of 5000 increases by 20% each year. What is the population after 2 years?",
+            "options": [
+                "7200",
+                "6000",
+                "7000",
+                "10000"
+            ],
+            "correct_index": 0,
+            "explanation": "Using the multiplier 1.2 twice: 5000 × 1.2² = 5000 × 1.44 = 7200. 6000 is only one year's growth, and the others add simple increases.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-040",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "The ratio of boys to girls in a school is 3:5. There are 240 boys. How many girls are there?",
+            "options": [
+                "144",
+                "320",
+                "400",
+                "480"
+            ],
+            "correct_index": 2,
+            "explanation": "One part is 240 ÷ 3 = 80, so girls are 80 × 5 = 400. 144 reverses the ratio and 480 adds a further part.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-041",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A jacket is bought for £80 and sold for £92. What is the percentage profit?",
+            "options": [
+                "12%",
+                "15%",
+                "17.4%",
+                "23%"
+            ],
+            "correct_index": 1,
+            "explanation": "Profit is £12, and 12 ÷ 80 × 100 = 15%. 12% forgets to divide by the cost price, and 17.4% divides by the selling price.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-042",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "If y is inversely proportional to x, and y = 10 when x = 4, what is y when x = 8?",
+            "options": [
+                "5",
+                "20",
+                "2.5",
+                "40"
+            ],
+            "correct_index": 0,
+            "explanation": "For inverse proportion y = k/x, so k = 10 × 4 = 40 and y = 40 ÷ 8 = 5. The other values multiply instead of dividing.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-043",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A bank pays compound interest at 4% per year. How much is £500 worth after 2 years?",
+            "options": [
+                "£540.00",
+                "£520.00",
+                "£541.60",
+                "£540.80"
+            ],
+            "correct_index": 3,
+            "explanation": "500 × 1.04² = 500 × 1.0816 = £540.80. £540.00 uses simple interest, and £541.60 compounds for an extra period.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-044",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "Convert a speed of 54 km/h into metres per second.",
+            "options": [
+                "5.4 m/s",
+                "1.5 m/s",
+                "18 m/s",
+                "15 m/s"
+            ],
+            "correct_index": 3,
+            "explanation": "54 km/h is 54000 m in 3600 s, so 54000 ÷ 3600 = 15 m/s. The other values divide by the wrong conversion factor.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-045",
+            "domain": "Ratio, Proportion and Rates of Change",
+            "stem": "A shirt is priced at £40. In a sale the price is reduced by 15%. What is the sale price?",
+            "options": [
+                "£25",
+                "£35",
+                "£34",
+                "£6"
+            ],
+            "correct_index": 2,
+            "explanation": "The multiplier is 0.85, so 40 × 0.85 = £34. £6 is the discount alone and £35 subtracts a flat £5.",
+            "reference": "GCSE Maths Specification - Ratio, Proportion and Rates of Change"
+        },
+        {
+            "id": "gcse-math-046",
+            "domain": "Geometry and Statistics",
+            "stem": "A rectangle has a length of 12 cm and a width of 5 cm. What is the length of its diagonal?",
+            "options": [
+                "11 cm",
+                "13 cm",
+                "17 cm",
+                "14 cm"
+            ],
+            "correct_index": 1,
+            "explanation": "By Pythagoras, the diagonal is √(12² + 5²) = √169 = 13 cm. 17 cm adds the sides, and the others do not square correctly.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-047",
+            "domain": "Geometry and Statistics",
+            "stem": "The angles in a triangle are in the ratio 2:3:4. What is the size of the largest angle?",
+            "options": [
+                "80°",
+                "60°",
+                "40°",
+                "90°"
+            ],
+            "correct_index": 0,
+            "explanation": "There are 2 + 3 + 4 = 9 parts for 180°, so one part is 20° and the largest angle is 4 × 20° = 80°. The other values are the smaller angles or ignore the ratio.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-048",
+            "domain": "Geometry and Statistics",
+            "stem": "A circle has a radius of 7 cm. Using π = 22/7, what is the circumference of the circle?",
+            "options": [
+                "44 cm",
+                "22 cm",
+                "154 cm",
+                "88 cm"
+            ],
+            "correct_index": 0,
+            "explanation": "Circumference = 2πr = 2 × 22/7 × 7 = 44 cm. 154 cm is the area (πr²) and 22 cm uses the diameter formula only once.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-049",
+            "domain": "Geometry and Statistics",
+            "stem": "What is the mean of the numbers 4, 8, 6, 10 and 7?",
+            "options": [
+                "8",
+                "6.5",
+                "6",
+                "7"
+            ],
+            "correct_index": 3,
+            "explanation": "The total is 4 + 8 + 6 + 10 + 7 = 35, and 35 ÷ 5 = 7. The other values use the wrong total or divide by the wrong count.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-050",
+            "domain": "Geometry and Statistics",
+            "stem": "For the numbers 3, 7, 9, 4, 6 and 8, what is the median?",
+            "options": [
+                "6",
+                "6.5",
+                "7",
+                "8"
+            ],
+            "correct_index": 1,
+            "explanation": "Ordered, the values are 3, 4, 6, 7, 8, 9; with an even count the median is the mean of the middle two, (6 + 7) ÷ 2 = 6.5. The others pick a single middle value.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-051",
+            "domain": "Geometry and Statistics",
+            "stem": "A triangle has a base of 10 cm and a perpendicular height of 6 cm. What is its area?",
+            "options": [
+                "30 cm²",
+                "60 cm²",
+                "16 cm²",
+                "15 cm²"
+            ],
+            "correct_index": 0,
+            "explanation": "Area = ½ × base × height = ½ × 10 × 6 = 30 cm². 60 cm² forgets the factor of ½, and 16 cm² adds the dimensions.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-052",
+            "domain": "Geometry and Statistics",
+            "stem": "A cuboid measures 3 cm by 4 cm by 5 cm. What is its volume?",
+            "options": [
+                "12 cm³",
+                "24 cm³",
+                "47 cm³",
+                "60 cm³"
+            ],
+            "correct_index": 3,
+            "explanation": "Volume = length × width × height = 3 × 4 × 5 = 60 cm³. 47 cm³ adds the dimensions and 12 cm³ multiplies only two of them.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-053",
+            "domain": "Geometry and Statistics",
+            "stem": "The probability that a biased coin lands on heads is 0.35. What is the probability that it lands on tails?",
+            "options": [
+                "0.35",
+                "0.5",
+                "0.65",
+                "0.7"
+            ],
+            "correct_index": 2,
+            "explanation": "Probabilities sum to 1, so tails = 1 − 0.35 = 0.65. The other values repeat the heads probability or use an unrelated number.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-054",
+            "domain": "Geometry and Statistics",
+            "stem": "In a right-angled triangle the two shorter sides are 6 cm and 8 cm. What is the length of the hypotenuse?",
+            "options": [
+                "10 cm",
+                "14 cm",
+                "12 cm",
+                "48 cm"
+            ],
+            "correct_index": 0,
+            "explanation": "By Pythagoras, the hypotenuse is √(6² + 8²) = √100 = 10 cm. 14 cm adds the sides and 48 cm multiplies them.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-055",
+            "domain": "Geometry and Statistics",
+            "stem": "A fair six-sided die is rolled once. What is the probability of rolling a number greater than 4?",
+            "options": [
+                "1/6",
+                "1/2",
+                "2/3",
+                "1/3"
+            ],
+            "correct_index": 3,
+            "explanation": "The numbers greater than 4 are 5 and 6, so the probability is 2/6 = 1/3. 1/2 counts three outcomes and 2/3 considers all but two.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-056",
+            "domain": "Geometry and Statistics",
+            "stem": "What is the mode of the data set 2, 5, 3, 5, 7, 5, 4?",
+            "options": [
+                "2",
+                "3",
+                "5",
+                "7"
+            ],
+            "correct_index": 2,
+            "explanation": "The value 5 appears three times, more than any other, so the mode is 5. The other values are single occurrences or the largest number.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-057",
+            "domain": "Geometry and Statistics",
+            "stem": "The exterior angle of a regular polygon is 24°. How many sides does the polygon have?",
+            "options": [
+                "12",
+                "15",
+                "18",
+                "24"
+            ],
+            "correct_index": 1,
+            "explanation": "Exterior angles total 360°, so the number of sides is 360 ÷ 24 = 15. The other values divide 360 by a different angle.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-058",
+            "domain": "Geometry and Statistics",
+            "stem": "A bag contains 5 red and 3 blue balls. One ball is taken at random. What is the probability that it is red?",
+            "options": [
+                "3/5",
+                "3/8",
+                "1/2",
+                "5/8"
+            ],
+            "correct_index": 3,
+            "explanation": "There are 8 balls in total and 5 are red, so the probability is 5/8. 3/8 is the probability of blue and 3/5 reverses the ratio.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-059",
+            "domain": "Geometry and Statistics",
+            "stem": "For the data set 12, 5, 9, 20, 7, what is the range?",
+            "options": [
+                "8",
+                "20",
+                "15",
+                "12"
+            ],
+            "correct_index": 2,
+            "explanation": "The range is the largest value minus the smallest: 20 − 5 = 15. The other values are the maximum or a single value in the set.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        },
+        {
+            "id": "gcse-math-060",
+            "domain": "Geometry and Statistics",
+            "stem": "Angles on a straight line add up to 180°. If one angle on the line is 115°, what is the other angle?",
+            "options": [
+                "65°",
+                "75°",
+                "55°",
+                "115°"
+            ],
+            "correct_index": 0,
+            "explanation": "The two angles must sum to 180°, so the other is 180° − 115° = 65°. The other values add or subtract from the wrong total.",
+            "reference": "GCSE Maths Specification - Geometry and Statistics"
+        }
+    ]
+}
