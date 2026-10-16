@@ -1,0 +1,858 @@
+{
+    "cert_key": "pe-exam",
+    "title": "Principles and Practice of Engineering (PE) Exam",
+    "issuer": "National Council of Examiners for Engineering and Surveying",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/pe-exam.json",
+    "variant_label": "PE Exam Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass/Fail",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public NCEES PE exam specifications. Not a capture of past questions.",
+    "source_label": "PE Exam practice bank",
+    "items": [
+        {
+            "id": "pe-exam-001",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A simply supported steel beam carries a maximum factored bending moment of 12 kip-ft and has an elastic section modulus of 24 in^3. What maximum bending stress results at the extreme fiber?",
+            "options": [
+                "6.0 ksi",
+                "0.5 ksi",
+                "144 ksi",
+                "2.0 ksi"
+            ],
+            "correct_index": 0,
+            "explanation": "Bending stress equals moment divided by section modulus, so 12 kip-ft times 12 in/ft gives 144 kip-in, and 144/24 = 6.0 ksi. Dividing without converting units gives 0.5 ksi, multiplying the raw numbers gives 144, and 2.0 ksi comes from an incorrect conversion.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-002",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A pinned-pinned steel column is 120 in long, has a modulus of elasticity of 29,000 ksi and a weak axis moment of inertia of 100 in^4. What is its elastic critical buckling load?",
+            "options": [
+                "994 kips",
+                "3,975 kips",
+                "1,990 kips",
+                "497 kips"
+            ],
+            "correct_index": 2,
+            "explanation": "Euler buckling load is pi^2 times E times I divided by (K L)^2, so 9.8696 x 29,000 x 100 / (120)^2 gives about 1,990 kips for K = 1. Assuming K = 2 divides that by four to give 497 kips, and the other values reflect incorrect effective lengths or arithmetic.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-003",
+            "domain": "Analysis and Design of Systems",
+            "stem": "Water with a density of 1000 kg/m^3 flows from a reservoir at 30 kPa into a pipe section at 20 kPa with negligible elevation change. What velocity develops at the pipe section?",
+            "options": [
+                "3.16 m/s",
+                "4.47 m/s",
+                "6.32 m/s",
+                "141 m/s"
+            ],
+            "correct_index": 1,
+            "explanation": "Bernoulli's equation with no elevation change gives velocity as the square root of two times the pressure drop divided by density, so sqrt(2 x 10,000/1000) = sqrt(20) = 4.47 m/s. Omitting the factor of two gives 3.16 m/s, doubling the pressure drop gives 6.32 m/s, and omitting the density division gives 141 m/s.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-004",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A single phase load operates at 120 V and draws 10 A at unity power factor. What active power does the load consume?",
+            "options": [
+                "12 W",
+                "12 kW",
+                "120 W",
+                "1.2 kW"
+            ],
+            "correct_index": 3,
+            "explanation": "Active power equals voltage times current times power factor, so 120 x 10 x 1.0 = 1,200 W = 1.2 kW. The other choices misplace the decimal point or multiply the result by ten.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-005",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A heat engine absorbs 1,000 kJ of heat each cycle from a high temperature reservoir and rejects 600 kJ to a low temperature reservoir. What is its thermal efficiency?",
+            "options": [
+                "40 percent",
+                "60 percent",
+                "167 percent",
+                "25 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "Efficiency is net work divided by heat input, and the work per cycle is 1,000 minus 600 = 400 kJ, so 400/1,000 = 40 percent. Using the rejected fraction gives 60 percent, inverting the input to output ratio gives 167 percent, and comparing work to total heat transferred gives 25 percent.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-006",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A heat pump delivers 6,000 kJ of heat to a house while consuming 1,500 kJ of work each cycle. What is its coefficient of performance?",
+            "options": [
+                "3.0",
+                "4.0",
+                "5.0",
+                "0.25"
+            ],
+            "correct_index": 1,
+            "explanation": "The heat pump COP is desired heat output divided by work input, so 6,000/1,500 = 4.0. Using the heat absorbed from the outdoors (4,500/1,500) gives 3.0, taking work over heat gives 0.25, and 5.0 comes from adding rather than differencing the energy terms.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-007",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A point in a loaded steel member is in plane stress with sigma_x = 80 ksi, sigma_y = 40 ksi and tau_xy = 30 ksi. What is the maximum principal stress at that point?",
+            "options": [
+                "23.9 ksi",
+                "60.0 ksi",
+                "110 ksi",
+                "96.1 ksi"
+            ],
+            "correct_index": 3,
+            "explanation": "The principal stress equals the average normal stress plus the radius of Mohr's circle, so 60 + sqrt(20^2 + 30^2) = 60 + 36.1 = 96.1 ksi. The 60 ksi value is the circle center, 23.9 ksi is the minimum principal stress, and 110 ksi adds the shear stress directly.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-008",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A cantilever beam of length L carries a concentrated load P at its free end with constant EI. What is the maximum deflection of the beam?",
+            "options": [
+                "PL^2/(2EI)",
+                "PL^4/(8EI)",
+                "PL^3/(48EI)",
+                "PL^3/(3EI)"
+            ],
+            "correct_index": 3,
+            "explanation": "The standard case for a cantilever with an end load gives a tip deflection of PL^3/(3EI). PL^3/(48EI) is the midspan deflection of a simply supported beam with a center load, PL^2/(2EI) is the end slope expression, and PL^4/(8EI) belongs to a different loading.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-009",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A steel rod with E = 29,000 ksi and a coefficient of thermal expansion of 6.5 x 10^-6 per deg F is fully restrained while its temperature rises 100 deg F. What stress develops in the rod?",
+            "options": [
+                "18.9 ksi compressive",
+                "18.9 ksi tensile",
+                "1.9 ksi compressive",
+                "0 ksi because a restrained rod cannot develop stress"
+            ],
+            "correct_index": 0,
+            "explanation": "Thermal stress equals E times alpha times the temperature change, so 29,000 x 6.5e-6 x 100 = 18.9 ksi, and a temperature rise that is restrained pushes the rod into compression. Heating restrained material causes compression rather than tension, and 1.9 ksi misses a factor of ten.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-010",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A balanced three phase motor is supplied at 208 V and draws 20 A per phase at a power factor of 0.85. What is the approximate total three phase active power?",
+            "options": [
+                "7.21 kVA",
+                "6.12 kW",
+                "3.54 kW",
+                "14.4 kW"
+            ],
+            "correct_index": 1,
+            "explanation": "Three phase active power equals the square root of three times line voltage times line current times power factor, so 1.732 x 208 x 20 x 0.85 = 6.12 kW. The 7.21 kVA figure omits the power factor, 3.54 kW omits the square root of three, and 14.4 kW doubles the apparent power.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-011",
+            "domain": "Analysis and Design of Systems",
+            "stem": "In a planar truss, two members meet at a joint where no external load and no support reaction act, and the two members are not collinear. How many members at that joint carry force?",
+            "options": [
+                "Both members",
+                "Exactly one member",
+                "None of the members",
+                "Only the member with the larger cross sectional area"
+            ],
+            "correct_index": 2,
+            "explanation": "Summing force perpendicular to one of the members shows that member carries nothing, and since no load acts at the joint the other member carries nothing either, so both are zero force members. A load applied at the joint or collinear members would change this result.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-012",
+            "domain": "Analysis and Design of Systems",
+            "stem": "Water flows at 3 m/s through a pipe 0.5 m in diameter and 100 m long. With a Darcy friction factor of 0.02, what head loss due to friction results over that length?",
+            "options": [
+                "0.92 m",
+                "3.67 m",
+                "0.46 m",
+                "1.83 m"
+            ],
+            "correct_index": 3,
+            "explanation": "Darcy-Weisbach head loss is f times (L/D) times (V squared over 2g), so 0.02 x 200 x (9/19.62) = 4 x 0.459 = 1.83 m. The 0.46 m value is the velocity head alone, halving the result gives 0.92 m, and doubling gives 3.67 m.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-013",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A cooling coil handles 500 cubic feet per minute of air and the air temperature rises 20 deg F across the coil. What is the sensible heat transfer rate using the standard air conversion factor?",
+            "options": [
+                "10,800 Btu/h",
+                "21,600 Btu/h",
+                "540 Btu/h",
+                "108,000 Btu/h"
+            ],
+            "correct_index": 0,
+            "explanation": "Sensible heat equals 1.08 times CFM times the temperature difference, so 1.08 x 500 x 20 = 10,800 Btu/h. Omitting the temperature difference leaves 540 Btu/h, doubling the conversion factor gives 21,600 Btu/h, and 108,000 Btu/h is off by a decimal place.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-014",
+            "domain": "Analysis and Design of Systems",
+            "stem": "An electric motor runs at 1,800 rpm and drives a gear set with a 3 to 1 speed reduction. What is the rotational speed of the output shaft?",
+            "options": [
+                "5,400 rpm",
+                "600 rpm",
+                "1,800 rpm",
+                "300 rpm"
+            ],
+            "correct_index": 1,
+            "explanation": "A 3 to 1 reduction divides the input speed by three, so 1,800 divided by 3 equals 600 rpm. Multiplying instead of dividing gives 5,400 rpm, leaving the speed unchanged ignores the gear set, and 300 rpm would require a 6 to 1 ratio.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-015",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A 1,000 kg vehicle accelerates uniformly from rest to a speed of 20 m/s. What is the increase in its kinetic energy during this acceleration?",
+            "options": [
+                "20 kJ",
+                "400 kJ",
+                "200 kJ",
+                "100 kJ"
+            ],
+            "correct_index": 2,
+            "explanation": "Kinetic energy is one half m v squared, so 0.5 x 1,000 x 400 = 200,000 J = 200 kJ. Omitting the factor of one half gives 400 kJ, using m times v instead gives 20 kJ, and halving the result twice gives 100 kJ.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-016",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A steel beam section is limited to an allowable bending stress of 24 ksi and has a plastic section modulus of 100 in^3. What is the allowable moment capacity about the strong axis?",
+            "options": [
+                "100 kip-ft",
+                "400 kip-ft",
+                "2,400 kip-ft",
+                "200 kip-ft"
+            ],
+            "correct_index": 3,
+            "explanation": "Moment capacity equals allowable stress times section modulus, so 24 ksi x 100 in^3 = 2,400 kip-in, which converts to 200 kip-ft by dividing by 12 in/ft. Reporting the answer in kip-in gives 2,400, and the other values misplace the unit conversion.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-017",
+            "domain": "Analysis and Design of Systems",
+            "stem": "A simply supported beam of span L carries a concentrated load P at midspan with constant EI. What is the maximum deflection of this beam?",
+            "options": [
+                "PL^3/(3EI)",
+                "PL^4/(384EI)",
+                "5PL^4/(384EI)",
+                "PL^3/(48EI)"
+            ],
+            "correct_index": 3,
+            "explanation": "The standard case for a simply supported beam with a center load gives a midspan deflection of PL^3/(48EI). PL^3/(3EI) is the cantilever tip deflection, 5PL^4/(384EI) is the cantilever deflection under a uniform load, and PL^4/(384EI) mixes the point load span with the uniform load coefficient.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-018",
+            "domain": "Analysis and Design of Systems",
+            "stem": "Two resistors of 6 ohm and 3 ohm are connected in parallel across a 12 V source. What total current does the source supply to the combination?",
+            "options": [
+                "2 A",
+                "6 A",
+                "3 A",
+                "9 A"
+            ],
+            "correct_index": 1,
+            "explanation": "The parallel equivalent is 6 x 3 divided by (6 + 3) = 2 ohm, so the source current is 12 V divided by 2 ohm = 6 A, which matches branch currents of 2 A and 4 A. Confusing the equivalent resistance with the current gives 2 A, and 9 A adds the resistances as if they were in series.",
+            "reference": "NCEES PE Exam Specifications - Analysis and Design of Systems"
+        },
+        {
+            "id": "pe-exam-019",
+            "domain": "Project Management and Codes",
+            "stem": "A small project network has these activities and durations, A = 5 days with no predecessor, B = 4 days following A, C = 6 days following A, and D = 3 days following both B and C. What is the total float of activity B?",
+            "options": [
+                "5 days",
+                "0 days",
+                "2 days",
+                "3 days"
+            ],
+            "correct_index": 2,
+            "explanation": "The critical path is A, C, D at 14 days, while path A, B, D totals 12 days, so activity B has 14 minus 12 = 2 days of total float. Activities on the critical path have zero float, and A is common to both paths so it has none either.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-020",
+            "domain": "Project Management and Codes",
+            "stem": "A project has a budget at completion of 500,000 dollars, a planned value of 200,000 dollars, an earned value of 150,000 dollars and actual costs of 180,000 dollars. What is the cost variance?",
+            "options": [
+                "+30,000 dollars",
+                "-50,000 dollars",
+                "-20,000 dollars",
+                "-30,000 dollars"
+            ],
+            "correct_index": 3,
+            "explanation": "Cost variance equals earned value minus actual cost, so 150,000 minus 180,000 equals -30,000 dollars, meaning the completed work costs more than budgeted. Comparing planned value to actual cost gives -20,000, and the other options reverse the sign or compare the wrong fields.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-021",
+            "domain": "Project Management and Codes",
+            "stem": "A project has a planned value of 200,000 dollars, an earned value of 150,000 dollars, an actual cost of 180,000 dollars and a budget at completion of 500,000 dollars. What is the schedule performance index?",
+            "options": [
+                "0.75",
+                "0.83",
+                "1.20",
+                "1.33"
+            ],
+            "correct_index": 0,
+            "explanation": "The schedule performance index is earned value divided by planned value, so 150,000/200,000 = 0.75, which means the project is behind schedule. The cost performance index is 150,000/180,000 = 0.83, its inverse is 1.20, and planned over earned value gives 1.33.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-022",
+            "domain": "Project Management and Codes",
+            "stem": "An owner has a poorly defined scope but wants construction to start while the design is developed incrementally. Which project delivery arrangement best fits this situation?",
+            "options": [
+                "Fixed price lump sum for the complete scope at award",
+                "Cost plus fee with a guaranteed maximum price as the design develops",
+                "Unit price contract with a complete bid schedule",
+                "Design build turnkey with a fixed price set before design is complete"
+            ],
+            "correct_index": 1,
+            "explanation": "Cost reimbursable work lets construction proceed while the design matures, and a guaranteed maximum price caps the owner's exposure. Lump sum and unit price contracts require a defined scope to bid fairly, and a fixed price cannot be set before the design exists.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-023",
+            "domain": "Project Management and Codes",
+            "stem": "A code occupancy must egress 300 occupants through doors, and the code minimum clear width for doors is 0.2 in per occupant. What total clear width is required at the doors?",
+            "options": [
+                "30 in",
+                "15 in",
+                "60 in",
+                "120 in"
+            ],
+            "correct_index": 2,
+            "explanation": "Required width equals 0.2 in times 300 occupants = 60 in, which is 5 ft of clear width. The 0.15 in per occupant factor applies to other egress components rather than doors, and the remaining values apply the wrong per-occupant factor or halve the requirement.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-024",
+            "domain": "Project Management and Codes",
+            "stem": "Under the standard strength design load combinations referenced by the model building codes, which combination applies when the roof live load governs the roof design?",
+            "options": [
+                "1.4D",
+                "1.2D + 1.6L + 0.5Lr",
+                "0.9D + 1.0W",
+                "1.2D + 1.6Lr + L"
+            ],
+            "correct_index": 3,
+            "explanation": "When roof live load, snow or rain load controls, the governing combination is 1.2D + 1.6(Lr or S or R) + (L or 0.5W), matching 1.2D + 1.6Lr + L. The 1.4D combination applies when dead load alone governs, and the other options give the live load or wind the larger factor.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-025",
+            "domain": "Project Management and Codes",
+            "stem": "A design team must establish minimum dead, live, wind, seismic and snow loads for a new building. Which standard is the accepted reference used by the model codes for these loads?",
+            "options": [
+                "ASCE 7",
+                "ACI 318",
+                "AISC 360",
+                "NFPA 101"
+            ],
+            "correct_index": 0,
+            "explanation": "ASCE 7 provides the minimum design loads and associated criteria for buildings and other structures and is referenced by the International Building Code. ACI 318 covers concrete design, AISC 360 covers steel design, and NFPA 101 addresses egress and life safety.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-026",
+            "domain": "Project Management and Codes",
+            "stem": "Under the design build project delivery method, which party holds a single point of responsibility for both design and construction of the work?",
+            "options": [
+                "The owner",
+                "The design build entity",
+                "The construction manager at risk",
+                "The building official having jurisdiction"
+            ],
+            "correct_index": 1,
+            "explanation": "Design build places design and construction under one contracted entity, giving the owner a single point of responsibility. Design bid build splits that responsibility, a construction manager at risk holds only the construction contract, and the building official reviews for code compliance.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-027",
+            "domain": "Project Management and Codes",
+            "stem": "An activity on a project schedule has an optimistic time of 4 days, a most likely time of 7 days and a pessimistic time of 16 days. What is its expected duration using the PERT beta estimate?",
+            "options": [
+                "7 days",
+                "9 days",
+                "8 days",
+                "16 days"
+            ],
+            "correct_index": 2,
+            "explanation": "The PERT expected time is (a + 4m + b)/6, so (4 + 28 + 16)/6 = 48/6 = 8 days. Using the most likely time alone gives 7 days, taking the simple average of the three values gives 9 days, and adopting the pessimistic time gives 16 days.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-028",
+            "domain": "Project Management and Codes",
+            "stem": "A contractor finds a conflict between the structural and architectural drawings while work is in progress. What is the correct next step under standard project administration procedures?",
+            "options": [
+                "Follow the architectural drawings and note the conflict later",
+                "Stop all work on the project and abandon the contract",
+                "Price a change order using the contractor's own estimate only",
+                "Submit a request for information to the design professional for written clarification"
+            ],
+            "correct_index": 3,
+            "explanation": "Conflicts in the documents are resolved through a formal request for information answered by the design professional, and the answer becomes part of the contract documents. Proceeding on assumptions invites rework, abandoning the contract is unwarranted, and the contractor cannot set prices unilaterally.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-029",
+            "domain": "Project Management and Codes",
+            "stem": "Construction documents for a new occupancy must be reviewed and approved before work begins. Which party is responsible for enforcing code compliance and issuing the permit?",
+            "options": [
+                "The building official having jurisdiction",
+                "The project structural engineer of record",
+                "The owner's lender",
+                "The contractor's project manager"
+            ],
+            "correct_index": 0,
+            "explanation": "The authority having jurisdiction reviews the documents and issues the permit; designers certify their own work but cannot approve it. The lender controls financing and the contractor's manager runs construction, and neither holds regulatory approval authority.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-030",
+            "domain": "Project Management and Codes",
+            "stem": "A project quality team wants to identify the small number of defect causes responsible for most problems so corrective effort can be prioritised. Which quality tool is most appropriate?",
+            "options": [
+                "Control chart",
+                "Pareto chart",
+                "Gantt chart",
+                "Checklist"
+            ],
+            "correct_index": 1,
+            "explanation": "A Pareto chart ranks causes by frequency so the vital few problems stand out, matching the need to prioritise. A control chart shows whether a process is stable over time, a Gantt chart displays the schedule, and a checklist merely confirms that steps were completed.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-031",
+            "domain": "Project Management and Codes",
+            "stem": "A project risk has a 40 percent probability of occurring and would cost 250,000 dollars if it occurs. What is the expected monetary value of this risk?",
+            "options": [
+                "625,000 dollars",
+                "250,000 dollars",
+                "100,000 dollars",
+                "40,000 dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "Expected monetary value is probability times impact, so 0.40 x 250,000 = 100,000 dollars, the amount a rational project would budget against this risk. Dividing instead of multiplying gives 625,000 dollars, ignoring probability gives 250,000 dollars, and writing the probability as dollars gives 40,000 dollars.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-032",
+            "domain": "Project Management and Codes",
+            "stem": "A stakeholder proposes changes that affect the project scope, schedule and cost baselines. What formally authorises these baseline changes on a professionally managed project?",
+            "options": [
+                "A daily labour report",
+                "A request for information",
+                "A progress meeting minute",
+                "An approved change request processed through integrated change control"
+            ],
+            "correct_index": 3,
+            "explanation": "Only an approved change request updates the scope, schedule and cost baselines, and it must pass through integrated change control. Daily reports and meeting minutes document progress, while an RFI seeks clarification without changing any baseline.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-033",
+            "domain": "Project Management and Codes",
+            "stem": "Under the accessibility standard for accessible routes, what is the steepest running slope permitted for a ramp before the design is no longer compliant?",
+            "options": [
+                "1:12 (8.33 percent)",
+                "1:8 (12.5 percent)",
+                "1:20 (5 percent)",
+                "1:4 (25 percent)"
+            ],
+            "correct_index": 0,
+            "explanation": "A ramp is defined once the running slope exceeds 1:20, and the maximum slope permitted for a ramp under the standard is 1:12, or 8.33 percent. Slopes of 1:20 or flatter are treated as part of an accessible route without ramp requirements, and steeper slopes are not permitted.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-034",
+            "domain": "Project Management and Codes",
+            "stem": "How is a contractor typically compensated under a cost reimbursable contract that includes an agreed fee for profit?",
+            "options": [
+                "By a single fixed price paid at project award",
+                "By reimbursing allowable actual costs plus the agreed fee",
+                "By payment only after the owner resells the completed facility",
+                "By a fixed unit price for each completed element of work"
+            ],
+            "correct_index": 1,
+            "explanation": "Cost reimbursable contracts pay verified allowable costs plus a fee, which suits poorly defined scopes but requires cost auditing. A fixed price is the lump sum model, unit price pays per measured quantity, and payment is never tied to the owner reselling the facility.",
+            "reference": "NCEES PE Exam Specifications - Project Management and Codes"
+        },
+        {
+            "id": "pe-exam-035",
+            "domain": "Engineering Economics and Cost",
+            "stem": "An engineer deposits 10,000 dollars today in an account earning 6 percent interest compounded annually. What is the worth of this deposit after 5 years?",
+            "options": [
+                "12,000 dollars",
+                "13,000 dollars",
+                "13,382 dollars",
+                "15,000 dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "Future worth equals P(1+i)^n, so 10,000 x 1.06^5 = 10,000 x 1.3382 = 13,382 dollars. Simple interest over the same 5 years gives only 13,000 dollars, and the other values assume incorrect compounding or rates.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-036",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A machine returns 5,000 dollars at the end of each year for 10 years. What is the present worth of this uniform series at an interest rate of 8 percent?",
+            "options": [
+                "50,000 dollars",
+                "25,000 dollars",
+                "21,590 dollars",
+                "33,550 dollars"
+            ],
+            "correct_index": 3,
+            "explanation": "The present worth of an annuity is the annual amount times the P/A factor, and (P/A, 8 percent, 10) = 6.710, so 5,000 x 6.710 = 33,550 dollars. The undiscounted sum is 50,000 dollars, and the other values apply the wrong factor or interest rate.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-037",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A savings account pays a nominal interest rate of 12 percent compounded monthly. What is the effective annual interest rate on the account?",
+            "options": [
+                "12.68 percent",
+                "12.00 percent",
+                "12.36 percent",
+                "14.40 percent"
+            ],
+            "correct_index": 0,
+            "explanation": "The effective annual rate is (1 + 0.12/12)^12 minus 1, which equals 1.01^12 minus 1 = 12.68 percent. Ignoring compounding gives 12.00 percent, compounding semiannually gives 12.36 percent, and adding the nominal rate twice gives 14.40 percent.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-038",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A product has fixed costs of 200,000 dollars per year, a variable cost of 40 dollars per unit and a selling price of 90 dollars per unit. What is the annual break-even quantity?",
+            "options": [
+                "2,222 units",
+                "4,000 units",
+                "5,000 units",
+                "1,538 units"
+            ],
+            "correct_index": 1,
+            "explanation": "Break-even quantity equals fixed cost divided by the contribution margin, so 200,000/(90 minus 40) = 4,000 units. Dividing by the 90 dollar price gives 2,222 units, dividing by the 40 dollar variable cost gives 5,000 units, and adding the two costs gives 1,538 units.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-039",
+            "domain": "Engineering Economics and Cost",
+            "stem": "Alternative 1 costs 50,000 dollars now with no operating cost for 10 years. Alternative 2 costs 25,000 dollars now plus 4,000 dollars per year for 10 years. At 8 percent, which alternative has the lower present worth of cost?",
+            "options": [
+                "Alternative 2, because its initial cost is lower",
+                "The two alternatives are economically equivalent",
+                "Alternative 1, because its present worth cost of 50,000 dollars is below about 51,840 dollars for Alternative 2",
+                "Neither, because present worth cannot compare alternatives with equal service lives"
+            ],
+            "correct_index": 2,
+            "explanation": "The present worth of Alternative 2 is 25,000 + 4,000(P/A, 8 percent, 10) = 25,000 + 4,000(6.710) = 51,840 dollars, which exceeds 50,000 dollars, so Alternative 1 costs less in present worth. A lower first cost alone is not decisive once future costs are discounted.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-040",
+            "domain": "Engineering Economics and Cost",
+            "stem": "Equipment is purchased for 60,000 dollars with an estimated salvage value of 6,000 dollars at the end of a 6 year service life. What is the annual straight line depreciation charge?",
+            "options": [
+                "10,000 dollars",
+                "6,000 dollars",
+                "10,800 dollars",
+                "9,000 dollars"
+            ],
+            "correct_index": 3,
+            "explanation": "Straight line depreciation is cost minus salvage divided by the service life, so (60,000 minus 6,000)/6 = 9,000 dollars per year. Dividing the cost by life alone gives 10,000 dollars, the salvage value itself is 6,000 dollars, and using a 5 year life gives 10,800 dollars.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-041",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A perpetual endowment pays a scholarship of 10,000 dollars at the end of each year forever. What single amount deposited today at 5 percent would fund it as a capitalized cost?",
+            "options": [
+                "200,000 dollars",
+                "100,000 dollars",
+                "50,000 dollars",
+                "1,000,000 dollars"
+            ],
+            "correct_index": 0,
+            "explanation": "The capitalized cost of a perpetual uniform series is the annual amount divided by the interest rate, so 10,000/0.05 = 200,000 dollars. A 100,000 dollar deposit implies a 10 percent rate, 50,000 dollars implies a 20 percent rate, and 1,000,000 dollars implies a 1 percent rate.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-042",
+            "domain": "Engineering Economics and Cost",
+            "stem": "The real interest rate is 4 percent and the expected inflation rate is 3 percent. Using the exact Fisher relation, what is the corresponding nominal market interest rate?",
+            "options": [
+                "1.00 percent",
+                "7.12 percent",
+                "7.00 percent",
+                "12.00 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "The exact Fisher relation states that (1 + i) = (1 + i real)(1 + f), so 1.04 x 1.03 = 1.0712 and the nominal rate is 7.12 percent. Simply adding the two rates gives 7.00 percent, subtracting gives 1.00 percent, and multiplying the percentages gives 12.00 percent.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-043",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A firm has already spent 250,000 dollars on a feasibility study for a plant that is now up for funding approval. Which cost treatment is correct in the go or no-go decision?",
+            "options": [
+                "The 250,000 dollars already spent, because it was a large outlay",
+                "Interest charges on the 250,000 dollars already spent",
+                "Only future costs and revenues are relevant, because the study cost is sunk",
+                "The 250,000 dollars spread evenly over the next 5 years of operation"
+            ],
+            "correct_index": 2,
+            "explanation": "A sunk cost has already been incurred no matter what the decision turns out to be, so only future incremental cash flows should influence the choice. Spreading the study cost over future years or continuing to carry it does not change the fact that the money is gone.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-044",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A proposed project has a present worth of benefits of 1,200,000 dollars and a present worth of costs of 900,000 dollars. What is its benefit cost ratio?",
+            "options": [
+                "0.75",
+                "1.00",
+                "0.33",
+                "1.33"
+            ],
+            "correct_index": 3,
+            "explanation": "The benefit cost ratio is the present worth of benefits divided by the present worth of costs, so 1,200,000/900,000 = 1.33. Inverting the ratio gives 0.75, a ratio of 1.00 would mean equal benefits and costs, and the net present worth divided by costs gives 0.33.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-045",
+            "domain": "Engineering Economics and Cost",
+            "stem": "An investment of 80,000 dollars returns 20,000 dollars at the end of each year. What is the simple payback period for this investment, ignoring the time value of money?",
+            "options": [
+                "4 years",
+                "2 years",
+                "5 years",
+                "8 years"
+            ],
+            "correct_index": 0,
+            "explanation": "Simple payback is the initial investment divided by the annual return, so 80,000/20,000 = 4 years, with no interest considered. Inverting the ratio gives 2 years, and the 5 and 8 year answers would require annual returns of 16,000 and 10,000 dollars respectively.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-046",
+            "domain": "Engineering Economics and Cost",
+            "stem": "At an interest rate of 8 percent compounded annually, approximately how many years does a single deposit require to double in value?",
+            "options": [
+                "6 years",
+                "9 years",
+                "12 years",
+                "14 years"
+            ],
+            "correct_index": 1,
+            "explanation": "The rule of 72 gives 72/8 = 9 years, and the exact calculation ln(2)/ln(1.08) = 9.0 years confirms it. A 6 year doubling corresponds to about 12 percent, 12 years corresponds to 6 percent, and 14 years corresponds to about 5 percent.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-047",
+            "domain": "Engineering Economics and Cost",
+            "stem": "A concrete pour requires 120 cubic yards of material bid at 145 dollars per cubic yard plus a 6 percent sales tax on the material. What is the total material cost including tax?",
+            "options": [
+                "17,400 dollars",
+                "19,140 dollars",
+                "18,444 dollars",
+                "15,660 dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "The base cost is 120 x 145 = 17,400 dollars, and adding 6 percent tax gives 17,400 x 1.06 = 18,444 dollars. Omitting the tax gives 17,400 dollars, applying a 10 percent tax gives 19,140 dollars, and deducting 10 percent gives 15,660 dollars.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-048",
+            "domain": "Engineering Economics and Cost",
+            "stem": "When funds are limited and capital has alternative uses, which interest rate should be used to compare mutually exclusive alternatives on a present worth basis?",
+            "options": [
+                "The prime rate published by commercial banks",
+                "The expected inflation rate alone",
+                "The nominal borrowing rate before any fees",
+                "The minimum attractive rate of return reflecting the organisation's opportunity cost"
+            ],
+            "correct_index": 3,
+            "explanation": "The minimum attractive rate of return reflects the organisation's opportunity cost of capital, project risk and funding availability, so it is the correct discount rate for comparing alternatives. Prime rate, inflation alone and raw borrowing cost ignore what the funds could earn elsewhere.",
+            "reference": "NCEES PE Exam Specifications - Engineering Economics and Cost"
+        },
+        {
+            "id": "pe-exam-049",
+            "domain": "Professional Practice and Ethics",
+            "stem": "An engineer of record discovers a structural deficiency in a completed design and the owner refuses to correct it. Which action best reflects the NSPE Code of Ethics?",
+            "options": [
+                "Notify the owner in writing and, if the danger persists, report it to the proper authority",
+                "Remain silent because disclosing the deficiency would harm the firm",
+                "Alter the calculations so the deficiency cannot be detected",
+                "Defer the issue to the contractor without further action"
+            ],
+            "correct_index": 0,
+            "explanation": "The NSPE Code requires engineers to hold paramount the safety, health and welfare of the public, which means telling the client and then the proper authority when a hazard is not addressed. Confidentiality to a client never overrides a threat to public safety.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-050",
+            "domain": "Professional Practice and Ethics",
+            "stem": "What legal standard of care is expected when a licensed engineer performs professional services for a client under United States law?",
+            "options": [
+                "Perfection, so that no error of any kind is permitted",
+                "The degree of care and skill ordinarily exercised by members of the same profession in similar circumstances",
+                "Strict liability for any future failure of the completed structure",
+                "The same level of care as general construction labourers on the site"
+            ],
+            "correct_index": 1,
+            "explanation": "Professional liability applies the reasonable care and skill standard of the profession rather than a guarantee of perfection. An engineer is not an insurer of the structure, and the professional standard exceeds the care expected of general site labourers.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-051",
+            "domain": "Professional Practice and Ethics",
+            "stem": "An engineer is asked to incorporate drawings prepared by another firm into a larger project package. Under typical state licensure law, when may the engineer seal those documents?",
+            "options": [
+                "At any time, because the original preparer held a licence",
+                "Only after adding the engineer's own firm as primary designer of record",
+                "After performing a reasonable engineering review and accepting responsibility for the incorporated work",
+                "Only if the original engineer transfers the seal to the receiving firm"
+            ],
+            "correct_index": 2,
+            "explanation": "A seal represents the signing engineer's own professional judgment, so the engineer may seal another's work only after independent review and acceptance of responsibility. Seals cannot be transferred or lent, and the original licence covers only the original preparer's judgment.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-052",
+            "domain": "Professional Practice and Ethics",
+            "stem": "An engineer is asked by an owner to evaluate bids from a contractor who is a close relative of the engineer. What should the engineer do first under the ethics code?",
+            "options": [
+                "Award the contract to the relative to preserve the family relationship",
+                "Resign from engineering practice to avoid the situation entirely",
+                "Ignore the relationship because the bidding process is competitive",
+                "Disclose the relationship in writing to the owner and withdraw if a conflict of interest remains"
+            ],
+            "correct_index": 3,
+            "explanation": "Conflicts of interest must be disclosed promptly to the client, and the engineer should withdraw when the conflict cannot be managed. Ignoring or concealing the relationship breaches the duty of loyalty to the owner, and leaving the profession is unnecessary.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-053",
+            "domain": "Professional Practice and Ethics",
+            "stem": "Which fee arrangement is prohibited for licensed engineers under the NSPE Code of Ethics?",
+            "options": [
+                "A fee contingent on the outcome of a governmental agency decision or court case",
+                "A fixed fee for a clearly defined scope of design services",
+                "An hourly rate plus reimbursable expenses",
+                "A negotiated fee based on estimated labour hours and project complexity"
+            ],
+            "correct_index": 0,
+            "explanation": "Contingent fees tied to the outcome of governmental action or litigation are prohibited because they compromise independent professional judgment. Fixed, hourly and negotiated fees for ordinary design services are permitted arrangements.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-054",
+            "domain": "Professional Practice and Ethics",
+            "stem": "Which statement in an engineering firm's proposal is acceptable under the NSPE Code of Ethics?",
+            "options": [
+                "We guarantee that our design will satisfy every future revision of the code",
+                "Our staff includes engineers licensed in 20 states and we have completed 40 comparable treatment plant projects",
+                "We are the only firm in this region qualified to perform this work",
+                "Our fees are the lowest because our engineers work without pay"
+            ],
+            "correct_index": 1,
+            "explanation": "Factual statements about licences, staff qualifications and completed projects are permitted, while guarantees, claims of uniqueness and misleading fee statements are not. No engineer may warrant that a design will satisfy every future code revision.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-055",
+            "domain": "Professional Practice and Ethics",
+            "stem": "An engineer employed by a firm finds that a design prepared by the employer is defective and could endanger occupants, but management refuses to act. What should the engineer do?",
+            "options": [
+                "Post the defect on social media to create public pressure",
+                "Do nothing, because the engineer owes complete loyalty to the employer",
+                "Report the defect in writing to the employer and, if uncorrected, to the proper authority or affected public as the code allows",
+                "Revise the calculations so the defect is concealed from the reviewer"
+            ],
+            "correct_index": 2,
+            "explanation": "The code balances loyalty to the employer with the overriding duty to public safety, requiring notice to the employer first and to the proper authority or affected public if the hazard remains. An employer may not lawfully require concealment of a dangerous defect.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-056",
+            "domain": "Professional Practice and Ethics",
+            "stem": "Which sequence best describes the typical path to licensure as a professional engineer in the United States today?",
+            "options": [
+                "Pass the PE examination, then complete a four-year degree, then gain experience",
+                "Automatic licensure after ten years of engineering practice without examination",
+                "Complete a four-year degree and receive a licence without any examination",
+                "Graduate from an acceptable engineering programme, pass the FE examination, complete qualifying experience, then pass the PE examination"
+            ],
+            "correct_index": 3,
+            "explanation": "The usual path is an acceptable engineering degree, the Fundamentals of Engineering examination, a period of qualifying experience under licensed engineers, and then the Principles and Practice of Engineering examination. Most states require all four steps in that order.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-057",
+            "domain": "Professional Practice and Ethics",
+            "stem": "While serving as an expert witness in litigation, to whom does a licensed engineer owe the primary duty of objectivity?",
+            "options": [
+                "The court and the trier of fact, through objective and impartial technical testimony",
+                "The retaining party, regardless of what the technical analysis shows",
+                "The opposing counsel, in order to appear balanced",
+                "The jury, by advocating for the verdict the engineer prefers"
+            ],
+            "correct_index": 0,
+            "explanation": "Expert testimony is owed to the tribunal, so the engineer must give objective and unbiased technical opinion even when it harms the retaining party's case. Advocating for a desired outcome or verdict abandons the expert's professional duty.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-058",
+            "domain": "Professional Practice and Ethics",
+            "stem": "An engineer uses detailed calculations and drawings developed by a former colleague in a proposal without attribution. Which principle of the NSPE Code is violated?",
+            "options": [
+                "Competence of the engineer performing the work",
+                "Giving proper credit and avoiding plagiarism of another person's work",
+                "Avoiding conflicts of interest with clients",
+                "Charging only fair and reasonable fees"
+            ],
+            "correct_index": 1,
+            "explanation": "The code requires engineers to give credit where credit is due and to avoid plagiarism, whether or not the material is protected by copyright. Misusing another engineer's work also raises honesty concerns, but the credit rule is the principle directly violated.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-059",
+            "domain": "Professional Practice and Ethics",
+            "stem": "During a deposition an engineer is asked to assess the work of another engineer involved in a failed connection. What does the NSPE Code require of this assessment?",
+            "options": [
+                "Assume the other engineer was negligent because the connection failed",
+                "Refuse to comment, because engineers may never assess a peer's work",
+                "Assess the work objectively and professionally without unreasonably detracting from the other engineer's reputation",
+                "Publish the findings in the technical press before the deposition concludes"
+            ],
+            "correct_index": 2,
+            "explanation": "Engineers may evaluate the work of others when properly engaged to do so, but must be objective and avoid unfair or unprofessional criticism of a peer's reputation. Assuming negligence without analysis and making public statements are both improper.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        },
+        {
+            "id": "pe-exam-060",
+            "domain": "Professional Practice and Ethics",
+            "stem": "What is the typical continuing education obligation for renewal of a professional engineer licence in the United States?",
+            "options": [
+                "No jurisdiction requires any continuing education for PE licence renewal",
+                "Completion of a new PE examination at every renewal cycle",
+                "Four hundred hours of study during each two-year renewal period",
+                "A specified number of professional development hours per renewal period, commonly 15 to 30 per year depending on the state"
+            ],
+            "correct_index": 3,
+            "explanation": "Most states require a set number of professional development hours, often 15 to 30 per year or a matching two-year total, with ethics coursework in many jurisdictions. Renewal rarely involves re-examination, and every jurisdiction has some renewal requirement.",
+            "reference": "NCEES PE Exam Specifications - Professional Practice and Ethics"
+        }
+    ]
+}

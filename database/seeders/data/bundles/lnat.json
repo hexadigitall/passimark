@@ -1,0 +1,858 @@
+{
+    "cert_key": "lnat",
+    "title": "LNAT (Law National Aptitude Test)",
+    "issuer": "LNAT Consortium / Pearson",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/lnat.json",
+    "variant_label": "LNAT Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 95,
+        "scoring": "Section A scored",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public LNAT test specifications. Not a capture of past test questions.",
+    "source_label": "LNAT practice bank",
+    "items": [
+        {
+            "id": "lnat-001",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: City beehives have multiplied in the past decade, and municipal governments have welcomed them as a sign of environmental virtue. Yet ecologists point out that honeybees are managed livestock rather than wildlife: a single hive can hold fifty thousand insects that forage on the same urban flowers that solitary bees and hoverflies need. In several recorded cases, hive densities in inner-city parks rose while counts of wild bumblebees fell. Supporters of urban beekeeping answer that hives raise public interest in pollinators generally, which in turn produces more funding for wildflower planting.\n\nQuestion: The passage suggests that the debate over urban beekeeping is best understood as a dispute about",
+            "options": [
+                "whether the welfare of managed species should take priority over that of wild species",
+                "whether honeybees are capable of thriving in city environments at all",
+                "how much money municipal governments should devote to planting flowers",
+                "whether public enthusiasm for the environment is genuine or merely fashionable"
+            ],
+            "correct_index": 0,
+            "explanation": "The two sides weigh managed hives against competing wild pollinators, which is a question of priorities between kept and wild animals; the other options misstate what either side actually claims.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-002",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Libraries that have digitised their newspaper collections report a dramatic rise in readership, but the rise is uneven. Searches favour items that were already typeset cleanly, while handwritten marginalia, photographs pasted onto pages, and columns printed in small type are skipped or misread by the software. As a result, the most ordinary parts of the record now attract the most attention, while the parts that were idiosyncratic recede further from view.\n\nQuestion: Which of the following conclusions is best supported by the passage?",
+            "options": [
+                "The quality of nineteenth-century typesetting was higher than historians assumed.",
+                "Digitisation can alter which elements of a historical record become influential.",
+                "Handwritten documents should be excluded from digitisation projects.",
+                "Readers are less interested in newspapers than they were in the past."
+            ],
+            "correct_index": 1,
+            "explanation": "The passage says what gets scanned and read shapes what gets noticed, so digitisation changes influence within the record; the remaining choices go beyond or reverse the passage.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-003",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Researchers recording sound on healthy reefs hear snapping shrimp, grazing parrotfish, and the low grinding of coral feeders; on degraded reefs the same recordings are largely silent. Because many larval fish orient toward reef noise when settling, scientists hypothesise that the quiet of a damaged reef compounds its damage by discouraging the arrivals that might begin repair. Restoration groups have begun broadcasting recorded reef sound over barren areas, with some early evidence of increased settlement.\n\nQuestion: The author's main purpose is to",
+            "options": [
+                "describe a mechanism by which damage to a reef may become self-reinforcing, and a technique aimed at interrupting it",
+                "argue that sound pollution threatens coral more seriously than rising sea temperatures do",
+                "show that larval fish can distinguish many different kinds of reef noise",
+                "recommend that restoration groups stop planting coral by hand"
+            ],
+            "correct_index": 0,
+            "explanation": "The passage presents a feedback loop (silence discourages recovery) and the sound-restoration response to it; no option other than the first matches both halves of the passage.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-004",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Dictionary editors long resisted recording a word until it appeared in print several times, a policy that once made dictionaries seem slow to newcomers. Online usage corpora now allow editors to watch a word spreading across forums and transcripts within weeks. Some editors argue that speed itself is not the issue: a word that vanishes after a season still earns an entry, because a dictionary records a language in motion rather than fixing it permanently.\n\nQuestion: According to the passage, the change in editorial policy described reflects a decision about",
+            "options": [
+                "whether printed sources are more reliable than online ones",
+                "how many times a word must appear before it deserves attention",
+                "whether the internet has made print media obsolete",
+                "what a dictionary is meant to do rather than about how quickly words spread"
+            ],
+            "correct_index": 3,
+            "explanation": "The final sentence grounds the policy in the purpose of a dictionary, not in the speed of circulation; the other choices address issues the passage explicitly sets aside.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-005",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A trial in which forty companies moved to a four-day week reported higher revenue per employee and fewer sick days. Critics note that the participating firms were self-selected and that the trial coincided with a strong labour market, when firms struggled to recruit. They add that work such as hospital cover and customer support cannot simply be compressed into four days without hiring additional staff, a cost the reported figures did not include.\n\nQuestion: The critics mentioned in the passage would be most likely to agree with which of the following statements?",
+            "options": [
+                "Results drawn from firms that volunteer for a trial may not generalise to firms that do not.",
+                "A four-day week necessarily reduces the total number of hours worked.",
+                "The trial would have been more useful if it had run for a longer period.",
+                "Revenue per employee is not a meaningful measure of a firm's performance."
+            ],
+            "correct_index": 0,
+            "explanation": "Self-selection is the critics' first objection, and it says nothing learned from volunteers transfers to non-volunteers; the other statements are not raised by them.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-006",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: When a museum returns an object, it sometimes lends it back for display, and the lending arrangement rarely appears on the gallery label. Visitors therefore see a case full of contested objects with no indication that ownership has changed. A curator interviewed for the article argued that the label, not the deed, is what shapes public understanding: an object described as on loan from the source community reads very differently from one described as acquired in 1910.\n\nQuestion: The curator's argument places greatest weight on",
+            "options": [
+                "the legal title held by museums over their collections",
+                "the accuracy of acquisition records from the early twentieth century",
+                "the number of visitors who read gallery labels at all",
+                "how an object is described at the point where the public encounters it"
+            ],
+            "correct_index": 3,
+            "explanation": "The curator contrasts two wordings on a label, so the public description carries the argument; the alternatives concern law, records, or readership rather than wording.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-007",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Seed banks store samples of crop varieties against future disease, but a sample is only useful if someone eventually grows it. Breeders complain that requested accessions often arrive with poor germination rates, because the seeds were dried too aggressively or stored for decades. A bank's curator may therefore be judged by two incompatible standards: keeping everything alive for a century, and releasing material quickly enough that the collection influences current breeding.\n\nQuestion: The passage suggests that the difficulty facing seed banks is that",
+            "options": [
+                "long-term preservation and practical availability impose conflicting demands on the same collection",
+                "crop varieties cannot be preserved outside their natural growing conditions",
+                "breeders prefer to develop new varieties without using stored material",
+                "germination testing destroys the samples it examines"
+            ],
+            "correct_index": 0,
+            "explanation": "The final sentence names two standards that pull in opposite directions; nothing in the passage says storage is impossible, that breeders refuse stored seed, or that testing ruins it.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-008",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A city that replaced its old lamps with brighter LED lighting reported a fall in street crime in the treated areas. A follow-up study noted that the same neighbourhoods were also receiving new CCTV cameras and additional patrol beats during the evaluation period, and that crime had fallen citywide by a similar margin. The lighting programme, the study concluded, may still have been effective, but the published figures do not establish that it was.\n\nQuestion: Which of the following best summarises the study's conclusion?",
+            "options": [
+                "The recorded fall in crime cannot be attributed to the lighting on the evidence presented.",
+                "Brighter lighting has no effect on the amount of street crime.",
+                "CCTV cameras are a more effective crime-reduction measure than lighting.",
+                "Crime fell in the treated areas only because of the additional patrols."
+            ],
+            "correct_index": 0,
+            "explanation": "The study accepts that lighting might have worked but says the figures cannot show it, since other changes and the citywide trend are confounding; the stronger claims are denied.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-009",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A new translation of a fragmentary epic differs from its predecessors in a deliberate way: where earlier translators supplied connectives to smooth the gaps, this one leaves the breaks visible on the page. Reviewers are split. Some argue that the smooth versions concealed how much of the story was the translator's invention; others reply that the fragments cannot be judged as literature until they read as literature.\n\nQuestion: The disagreement described in the passage is primarily about",
+            "options": [
+                "how much of the original text has been lost over time",
+                "whether a translation should present the text as it survives or as it may once have read",
+                "which of the ancient epics is the most important",
+                "whether modern translators know enough ancient languages"
+            ],
+            "correct_index": 1,
+            "explanation": "One side wants the gaps hidden, the other wants a readable whole, so the dispute is about presentation of a damaged text; the other topics are not in issue.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-010",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Manufacturers of budget clothing note that a garment costing a few pounds is often worn fewer than ten times, while a mended one can last years. They point out, however, that repair requires skills and time that the same consumers spend earning the money the cheap garment saves. Several councils have funded repair cafés, and evaluations show steady attendance but small effects on total clothing purchases, because participants still buy the bulk of their wardrobes new.\n\nQuestion: The passage implies that repair cafés have had limited impact mainly because",
+            "options": [
+                "the skills taught at them are too difficult for ordinary participants",
+                "councils have withdrawn the funding after the first evaluation period",
+                "clothing bought new is of lower quality than it was in the past",
+                "attending them does not change the bulk of consumers' purchasing behaviour"
+            ],
+            "correct_index": 3,
+            "explanation": "The final clause gives the reason: purchases remain overwhelmingly new, so repairs do not move the total; attendance, skill level, and funding are described differently.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-011",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: The reintroduction of wolves to a national park is often credited with changing rivers: by thinning deer herds, the argument runs, wolves allowed saplings to return to banks and slow erosion. Ecologists caution that the celebrated case rests on a single, unusually visible sequence of events, and that comparable reintroductions elsewhere produced no such clean cascade. The caution does not show that the mechanism is wrong, only that a striking illustration is not the same as a general law.\n\nQuestion: The author's attitude toward the wolf-and-rivers story is best described as",
+            "options": [
+                "accepting the proposed mechanism while warning against generalising from one case",
+                "sceptical that wolves have any measurable effect on rivers",
+                "confident that the mechanism applies wherever wolves are reintroduced",
+                "indifferent to whether the story is true or false"
+            ],
+            "correct_index": 0,
+            "explanation": "The last sentence states the position exactly: the mechanism may hold, but one example cannot establish a general rule; the other attitudes go further than the author does.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-012",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Direct democracy enthusiasts point to states where citizens can put statutes to a public vote, arguing that legislators captured by lobbyists will not act on issues such as drug pricing. Opponents counter that the same process is open to well-funded campaigns, which can pay for signature gathering and advertising, and that complex technical measures are decided by voters with no staff to brief them. Both sides, notably, agree that turnout for these votes is far lower than for the elections that choose representatives.\n\nQuestion: Which of the following questions is most clearly left open by the passage?",
+            "options": [
+                "Whether legislatures sometimes fail to act on drug pricing",
+                "Whether gathering signatures for a petition costs money",
+                "Whether voters find technical measures difficult to understand",
+                "Whether low turnout undermines the democratic claim made for ballot measures"
+            ],
+            "correct_index": 3,
+            "explanation": "The passage states the turnout gap but never says what follows from it, so that question stays open; the other three are asserted or agreed within the passage.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-013",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Open-access journals charge the author rather than the reader, and the model has spread rapidly. Some publishers respond by levying a flat article fee regardless of the work's length, which encourages short papers; others charge by page, which encourages authors to pad. A society that switched to open access reported that its submissions grew while its page count fell, suggesting that the fee structure, not the authors' intentions, shapes what gets written.\n\nQuestion: According to the passage, the society's experience illustrates that",
+            "options": [
+                "the way a publication is funded can influence the form of the work submitted",
+                "authors no longer care about the length of their articles",
+                "open-access journals publish more work than subscription journals do",
+                "page-based fees are unfair to authors compared with flat fees"
+            ],
+            "correct_index": 0,
+            "explanation": "The passage links fee structure to page count, which is a funding model affecting form; publication volumes and fairness are not what the example demonstrates.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-014",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Painting roofs white reflects sunlight and lowers indoor temperatures, and city pilots have measured savings on air-conditioning. The same measurements show that the reflected heat can raise temperatures on the street below and in neighbouring buildings' windows at exactly the hour when pedestrians are about. A planner quoted in the report says the calculation therefore has to be done for a district rather than for a single building, even though the incentive schemes pay building owners individually.\n\nQuestion: The planner's point is that",
+            "options": [
+                "pedestrians suffer more from heat than residents of buildings do",
+                "a measure that benefits one building may impose costs that are visible only at the district scale",
+                "white paint is less effective than other available cooling materials",
+                "savings on air-conditioning have been exaggerated by the pilots"
+            ],
+            "correct_index": 1,
+            "explanation": "The planner contrasts a building-level benefit with a district-level cost, which is the first option; the passage makes no comparison of materials or of who suffers most.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-015",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Historians increasingly record interviews with people who lived through events that no documentary archive captured, and the recordings are valued for exactly what official papers omit: hesitation, contradiction, and the texture of routine. Yet memory is reconstructive, and an interview recorded forty years after an event may carry details absorbed later from photographs and news reports. The strongest uses of oral history, a methodologist writes, pair the account with whatever independent record exists and treat the discrepancies as evidence in their own right.\n\nQuestion: The methodologist would most likely regard an oral history that conflicts with a contemporaneous document as",
+            "options": [
+                "a source of evidence about both the event and the process of remembering",
+                "unusable until the narrator can be shown to have been mistaken",
+                "proof that documentary records from the period are unreliable",
+                "valuable only if the narrator personally witnessed the event"
+            ],
+            "correct_index": 0,
+            "explanation": "The methodologist explicitly calls discrepancies evidence, so conflict is informative rather than disqualifying; the other three treatments contradict that instruction.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-016",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A city that built protected cycle lanes reported a rise in cycling trips but a fall in bus speeds, as buses and bikes now compete for the same corridor at junctions. Transport officials note that each cyclist removed one car from the road, and that the congestion savings were largely cancelled by the delay to buses, whose passengers typically have no car alternative. The officials conclude that the lane programme should be judged by its total effect on people rather than by mode share alone.\n\nQuestion: The officials' conclusion implies that a transport policy should be assessed by",
+            "options": [
+                "the opinions of residents who use the affected corridor",
+                "its consequences for all travellers rather than by how many switch to one mode",
+                "the number of cars removed from the road, irrespective of any other effect",
+                "whether bus speeds remain unchanged after any scheme is implemented"
+            ],
+            "correct_index": 1,
+            "explanation": "The officials reject mode share as the measure in favour of total effect on people, which is the first option; the others substitute a different or narrower criterion.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-017",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A levy on sugary drinks was followed by a drop in sales of taxed products in the first year. Two explanations compete: consumers switched to untaxed drinks, or they bought drinks that manufacturers reformulated to fall below the tax threshold. A manufacturer's own figures show a sharp fall in sugar per bottle across its range, and a retailer's data show total sugar sold per customer falling more slowly than taxed sales did.\n\nQuestion: The passage supports which of the following about the first year after the levy?",
+            "options": [
+                "Part of the recorded drop in taxed sales reflects reformulation rather than reduced consumption.",
+                "Consumers stopped buying soft drinks altogether.",
+                "The retailer's figures contradict the manufacturer's figures.",
+                "Sales of untaxed drinks rose by more than taxed sales fell."
+            ],
+            "correct_index": 0,
+            "explanation": "Falling sugar per bottle with a slower fall in total sugar means some drinks stayed in the taxed category only after reformulation; the other claims are unsupported or contradicted.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-018",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A proposal to bring back a species extinct for several centuries is often presented as a conservation win. Skeptics in the field ask what habitat the creature would return to, since the ecosystems that supported it have been altered by agriculture and roads. They also note that the funds involved would protect several existing species from being lost. Advocates answer that a single charismatic result could attract the public attention that ordinary conservation struggles to win.\n\nQuestion: The advocates' reply is best characterised as",
+            "options": [
+                "shifting the basis of the argument from ecological benefit to public support",
+                "refuting the claim that the species' habitat has changed",
+                "showing that de-extinction costs less than protecting existing species",
+                "demonstrating that the species would survive if it were returned"
+            ],
+            "correct_index": 0,
+            "explanation": "The advocates concede nothing about habitat or cost and instead appeal to attention and funding, which is a change of grounds; the other readings are unsupported.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-019",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Retailers using the same pricing software have been accused of raising prices together without ever communicating. Investigators found that the software sets prices from a shared feed of competitors' prices, so a rise by one firm is copied by the others within days. The firms reply that a human buyer could do the same reading in an afternoon, and that the practice merely shortens a reaction time that has always existed.\n\nQuestion: Which of the following states the firms' central claim?",
+            "options": [
+                "Prices set by software cannot be checked by investigators.",
+                "The shared feed is supplied by a competitor rather than by an independent firm.",
+                "Consumers are unaware of how prices are determined.",
+                "The practice automates an ordinary form of market behaviour rather than creating a new one."
+            ],
+            "correct_index": 3,
+            "explanation": "The reply argues only that existing behaviour is done faster by machine, which is the first option; feed provenance and consumer awareness are never mentioned.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-020",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Beavers felled trees along a protected river and flooded a footpath, prompting complaints from walkers. Ecologists count the same works differently: the dams slowed water that would otherwise have rushed downstream after rain, and a gauge downstream recorded lower peaks for two seasons. The council's compromise allows the beavers to remain upstream of the footpath while it is raised, on the grounds that neither the amenity nor the flood benefit has to be given up entirely.\n\nQuestion: The council's compromise reflects the view that",
+            "options": [
+                "the conflict concerns a particular location rather than the beavers' presence as such",
+                "the flood benefits claimed by ecologists have not been demonstrated",
+                "walkers' complaints should take precedence over ecological interests",
+                "footpaths should never be built near rivers"
+            ],
+            "correct_index": 0,
+            "explanation": "Keeping the beavers while moving the path shows the objection is to flooding one spot, not to the animals; the passage accepts the flood benefit and does not reject paths.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-021",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Sales of vinyl records have risen for more than a decade, yet the pressings that reach shops are often quieter and thinner than the discs they replace, because the plants that make them are few and pressed for time. Collectors describe buying the record for the object and the sleeve as much as for the sound, and streaming figures for the same albums rise alongside the physical sales rather than falling behind them.\n\nQuestion: The passage suggests that the vinyl revival is best explained by",
+            "options": [
+                "consumers' preference for physical formats over digital ones",
+                "the record's value as an object rather than by the superiority of its sound",
+                "a decline in the quality of streamed recordings",
+                "the growth of independent record plants since the 2000s"
+            ],
+            "correct_index": 1,
+            "explanation": "Sound quality is explicitly described as weaker and streaming rises at the same time, so the appeal lies in the object; the other options conflict with those facts.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-022",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A study comparing two middle schools found that pupils at the school setting regular homework gained no measurable advantage in end-of-year tests, but reported markedly less sleep and more stress. The authors caution that the comparison covers one year and two schools, and that homework of a different kind, such as reading for pleasure, was not distinguished from worksheets in the data.\n\nQuestion: The authors' caution is directed principally at",
+            "options": [
+                "the breadth of the evidence on which their findings rest",
+                "the accuracy of the end-of-year tests used",
+                "the amount of sleep reported by pupils at both schools",
+                "the willingness of schools to participate in research"
+            ],
+            "correct_index": 0,
+            "explanation": "The caution points to one year, two schools, and an undifferentiated measure of homework, all limits of scope; the test's accuracy, reported sleep, and school willingness are not questioned.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-023",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Museum visitors who used an audio guide spent longer in front of objects but recalled less about them a week later than visitors who walked unaided. The researchers propose that the guide supplies an interpretation that the visitor stores instead of forming one, and that recall suffers when the voice is removed. An alternative trial, in which visitors were given three short written prompts and left to look, produced recall close to the unaided group's alongside the viewing time of the guided group.\n\nQuestion: The alternative trial is mentioned in order to",
+            "options": [
+                "demonstrate that visitors recall more when they are given no prompts at all",
+                "show that the disadvantage identified can be reduced without abandoning guidance entirely",
+                "prove that written prompts are superior to any form of audio guide",
+                "explain why visitors prefer to look at objects without assistance"
+            ],
+            "correct_index": 1,
+            "explanation": "The trial combines the guide's long viewing time with near-unaided recall, so it shows a fix rather than a total rejection of guidance; the other purposes misread the comparison.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-024",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Lenders have begun using rental payments and utility bills to score borrowers who lack a credit history. Supporters say the data bring adults into the mainstream of borrowing; critics reply that the same data reflect income volatility, so a borrower with irregular earnings is scored as riskier even when they have never defaulted. The critics add that an initial score, once issued, tends to anchor later decisions by other lenders.\n\nQuestion: Which of the following best states the critics' main objection?",
+            "options": [
+                "The new data may penalise borrowers for volatility rather than for their record of repayment.",
+                "Rental payments are difficult for lenders to obtain.",
+                "Borrowers without a credit history should not be lent to at all.",
+                "Lenders ignore the scores they are given when making decisions."
+            ],
+            "correct_index": 0,
+            "explanation": "The critics' point is that irregular income, not default history, drives the score, which is the first option; the others are never asserted or are contradicted by the anchoring claim.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-025",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Teams planting nursery-grown coral on damaged reefs report high survival rates in the first year. A review notes that most projects cover areas no larger than a few hundred square metres, that survival is measured soon after outplanting, and that the surrounding reef continues to degrade from heat and acidity. The review's authors argue that restoration can buy time only where the pressures that caused the damage have been addressed.\n\nQuestion: The review's authors would most likely agree that",
+            "options": [
+                "nursery-grown coral cannot survive on a natural reef",
+                "survival rates after one year are a reliable guide to long-term success",
+                "restoration teams should stop measuring survival after the first year",
+                "planting coral is worthwhile only alongside action on the underlying causes of damage"
+            ],
+            "correct_index": 3,
+            "explanation": "The last sentence conditions restoration on addressing the causes, which is the first option; the review treats first-year survival as too early and says nothing against nursery coral as such.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-026",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A study of house prices near a new wind farm found an average discount of five per cent, concentrated among properties within two kilometres. A second study, using a wider area, found no discount once the turbines were operating, but a discount before construction while the site was contested. The authors of the first study reply that their buyers cited noise and view, which the second study did not record.\n\nQuestion: The disagreement between the two studies concerns mainly",
+            "options": [
+                "at what stage any effect on prices occurs and what causes it",
+                "whether wind farms generate electricity efficiently",
+                "how many houses were included in each sample",
+                "whether property buyers tell researchers their real reasons"
+            ],
+            "correct_index": 0,
+            "explanation": "One study finds an operating-stage discount attributed to noise and view, the other a pre-construction dip, so timing and cause are the issue; efficiency and sample size are not disputed.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-027",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A programme offering university courses inside prisons reported that participants were re-arrested at a lower rate than comparable inmates over five years. Administrators caution that places are allocated by application, so the participants were already more motivated than the average inmate, and that the comparison group was drawn from a different intake year. They nonetheless point out that the programme's cost per participant was lower than a year of custody.\n\nQuestion: The administrators' caution serves to qualify the claim that",
+            "options": [
+                "the programme is cheap relative to imprisonment",
+                "prisoners are interested in taking university courses",
+                "some inmates are more motivated than others",
+                "the course itself caused the difference in re-arrest rates"
+            ],
+            "correct_index": 3,
+            "explanation": "Self-selection and a mismatched comparison group both bear on causation, so the caution targets the causal claim; cost and motivation are not what the caution qualifies.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-028",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: A county that lost its only local paper saw turnout at municipal elections fall sharply over the next two cycles, while turnout for national elections, covered by regional and national outlets, held steady. Researchers caution that the closure coincided with the departure of two large employers, and that residents in neighbouring counties without a paper did not show the same decline. What seems secure, one of them writes, is that something else changed at the same time.\n\nQuestion: The passage indicates that the researchers are confident about",
+            "options": [
+                "the claim that the loss of the employers had no effect on the county",
+                "the existence of a factor other than the paper's closure that may explain the fall",
+                "the claim that local papers raise turnout in national elections",
+                "the view that national elections matter more to voters than local ones"
+            ],
+            "correct_index": 1,
+            "explanation": "The quoted sentence concedes that a simultaneous change occurred, so the confounder is what they accept; the other options go beyond or invert their stated position.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-029",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: Schools that have moved their start time later report that attendance in the first period improves and that grades in the earliest lessons rise. Critics point out that later starts also shift the end of the day, so that after-school sport and part-time work are compressed, and that the studies come from districts where transport could be reorganised. Supporters concede the point and argue that the trade-off should be weighed rather than assumed.\n\nQuestion: Which of the following best captures the position of the supporters described?",
+            "options": [
+                "The drawbacks are real but do not automatically outweigh the benefits.",
+                "Later start times have no effect on attendance.",
+                "After-school work is more valuable than lessons in the first period.",
+                "The studies should be repeated in districts with different transport."
+            ],
+            "correct_index": 0,
+            "explanation": "The supporters accept the critics' point yet still favour weighing both sides, which is exactly the first option; they deny none of the claimed benefits.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-030",
+            "domain": "Reading Comprehension",
+            "stem": "Passage: The peak bloom of Kyoto's cherry trees has moved earlier over the past century, and the record is unusually long, allowing comparisons that most cities cannot make. Gardeners note that a late frost can destroy the flowers just as they open, so an earlier average does not guarantee more blossom; in two recent years the peak arrived early and was cut short. The record therefore supports a shift in timing without settling what happens to the blossom overall.\n\nQuestion: The passage supports the conclusion that",
+            "options": [
+                "gardeners in Kyoto oppose the planting of cherry trees",
+                "the peak bloom date has moved earlier every year for a century",
+                "the long record shows earlier peaks but does not show whether the blossom lasts longer",
+                "frosts have become more frequent as the peak has moved earlier"
+            ],
+            "correct_index": 2,
+            "explanation": "The last sentence distinguishes a demonstrated shift in timing from an open question about outcome; the passage gives no frost-frequency trend, no gardener opposition, and no year-on-year claim.",
+            "reference": "LNAT Test Specifications - Reading Comprehension"
+        },
+        {
+            "id": "lnat-031",
+            "domain": "Logical Analysis",
+            "stem": "City inspectors report that restaurants rated highly in cleanliness inspections have fewer customer complaints about service. They conclude that attention to cleanliness also improves service. The conclusion is vulnerable to criticism because it",
+            "options": [
+                "assumes that inspections are always carried out accurately",
+                "relies on complaints from customers who may be biased",
+                "ignores restaurants that were never inspected",
+                "treats a correlation between two features of an establishment as evidence that one causes the other"
+            ],
+            "correct_index": 3,
+            "explanation": "Moving from the joint occurrence of clean kitchens and few complaints to a causal claim without excluding other explanations is the correlation-causation error; the remaining objections are not the argument's weakness.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-032",
+            "domain": "Logical Analysis",
+            "stem": "A clinic found that patients who received a text reminder attended appointments more often than those who did not, and it concludes that the reminders cause better attendance. The conclusion depends on assuming that",
+            "options": [
+                "patients dislike receiving reminders of any kind",
+                "attendance was measured over a period of several years",
+                "the two groups of patients did not differ in other ways that independently affect attendance",
+                "text messages cost the clinic less than telephone calls"
+            ],
+            "correct_index": 2,
+            "explanation": "Without comparability between the groups some third factor could produce the difference, so the assumption is required; message cost, patient preference, and study length are irrelevant to the causal step.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-033",
+            "domain": "Logical Analysis",
+            "stem": "Engineers claim that a new bridge design withstands stronger winds than the old design, because a scale model of the new design survived a simulated storm that destroyed a model of the old one. Which finding, if true, most strengthens the engineers' claim?",
+            "options": [
+                "The engineers had previously designed bridges that survived real storms.",
+                "The new design uses more steel than the old design.",
+                "Observers at the test reported that the demonstration was impressive.",
+                "The two models were built to the same scale and subjected to identical wind profiles."
+            ],
+            "correct_index": 3,
+            "explanation": "Holding scale and exposure constant isolates the design as the difference that explains the outcome; the engineers' track record, material use, and audience reaction do not bear on the comparison.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-034",
+            "domain": "Logical Analysis",
+            "stem": "A commentary argues that homework should be abolished because students who skip homework do just as well in exams as students who complete it. Which fact, if true, most weakens the commentary's argument?",
+            "options": [
+                "Abolishing homework would give teachers more time to mark classwork.",
+                "Students who skip homework are more likely than others to have been taught the same material at home.",
+                "Some teachers set more homework than others do.",
+                "Exams are marked by people who do not know which students did the homework."
+            ],
+            "correct_index": 1,
+            "explanation": "If the skippers received the teaching elsewhere, equal results do not show homework is useless, so this supplies an alternative explanation that undercuts the argument; the others leave it intact.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-035",
+            "domain": "Logical Analysis",
+            "stem": "The union demands that the company either close the factory or raise wages. The company will not close the factory, so it must raise wages. The reasoning is flawed because it",
+            "options": [
+                "relies on the company's financial records being accurate",
+                "concludes that a demand has been accepted by the company",
+                "presents only two options when other possibilities are available",
+                "assumes that the union represents every worker in the factory"
+            ],
+            "correct_index": 2,
+            "explanation": "The disjunction appears to be the union's own framing rather than an exhaustive list, so ruling one side out does not force the other; the other criticisms are not structural to the inference.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-036",
+            "domain": "Logical Analysis",
+            "stem": "Every editor on the publishing committee is a reader, and at least some of the writers on the committee are editors. Which of the following conclusions follows logically from those statements?",
+            "options": [
+                "None of the writers on the committee is an editor.",
+                "Some of the writers on the committee are readers.",
+                "All of the readers on the committee are writers.",
+                "Some of the readers on the committee are not writers."
+            ],
+            "correct_index": 1,
+            "explanation": "The writers who are editors must also be readers because every editor reads, so the first conclusion follows; the rest either reverse the terms or contradict the premises.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-037",
+            "domain": "Logical Analysis",
+            "stem": "A council may close a park path at night if crime has been recorded on that path within the past year, and crime has been recorded on the path within the past year. The council therefore may close the path. Which principle, if valid, justifies the council's decision?",
+            "options": [
+                "An authority should close every path on which crime has ever been recorded anywhere in the town.",
+                "An authority may not act until a risk has materialised several times.",
+                "An authority may act to reduce a risk of the kind that has recently materialised in that particular place.",
+                "An authority may act whenever a majority of residents request it."
+            ],
+            "correct_index": 2,
+            "explanation": "The decision needs a licence linking recent local occurrence to preventive action, which the first principle supplies; the others either change the trigger or forbid acting on a single occurrence.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-038",
+            "domain": "Logical Analysis",
+            "stem": "A critic praises a novelist's early work and condemns the later work, saying the style has grown careless. The novelist replies that the critic once praised exactly the same traits as restraint in a writer the critic admires. The novelist's reply functions by",
+            "options": [
+                "showing that the critic has not read the later work",
+                "providing evidence that the later work is in fact carefully written",
+                "attacking the critic's motives for writing the review",
+                "pointing out that the critic applies a standard inconsistently"
+            ],
+            "correct_index": 3,
+            "explanation": "Citing the critic's opposite treatment of the same features exposes a double standard rather than defending the book; the reply offers no evidence about craft and says nothing of motive.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-039",
+            "domain": "Logical Analysis",
+            "stem": "Buses on a particular route became more frequent, and yet the average waiting time for passengers on that route rose. Which of the following, if true, best resolves the discrepancy?",
+            "options": [
+                "Passengers now take shorter journeys than they used to.",
+                "The revised timetable was published more widely than the old one.",
+                "The buses now tend to arrive in pairs, so the gaps between groups of buses are longer than they were.",
+                "Several of the new buses were added on a different route."
+            ],
+            "correct_index": 2,
+            "explanation": "Bunching raises the average gap even when more buses run per hour, which reconciles the two facts; the other options either change the route or would tend to reduce waiting time.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-040",
+            "domain": "Logical Analysis",
+            "stem": "A farmer switched one field to a new variety of wheat and harvested more per acre than the neighbouring fields that still used the old variety. The farmer concludes that the variety caused the increase. Which fact, if true, most strengthens that conclusion?",
+            "options": [
+                "Neighbouring farmers also reported good harvests that year.",
+                "The farmer had grown the new variety once before.",
+                "The fields were matched for soil, drainage, and treatment, and differed only in the variety planted.",
+                "The new variety has won awards in other regions."
+            ],
+            "correct_index": 2,
+            "explanation": "Eliminating every other difference between the fields makes the variety the only remaining candidate cause; awards, region-wide harvests, and past experience leave confounders in place.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-041",
+            "domain": "Logical Analysis",
+            "stem": "An employer claims that its wellness programme reduced sick days, since the total number of sick days fell by a fifth in the year after the programme began. Which fact, if true, most weakens the claim?",
+            "options": [
+                "Sick days had risen in each of the two years before the programme began.",
+                "The company hired more staff during the same period, so total sick days fell while sick days per employee did not.",
+                "The programme was optional and about half the staff chose to join it.",
+                "Employees reported that they enjoyed taking part in the programme."
+            ],
+            "correct_index": 1,
+            "explanation": "If headcount grew, a fall in the total is consistent with unchanged absence per person, so the programme need not have helped; the other facts are neutral or cut the other way.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-042",
+            "domain": "Logical Analysis",
+            "stem": "Because the museum's new café attracts more visitors each day than the old shop did, the trustees conclude that visitors now stay longer in the museum overall. The conclusion assumes that",
+            "options": [
+                "visitors who use the café also buy admission tickets",
+                "the old shop closed on the same day the café opened",
+                "the extra time spent in the café is not cancelled out by less time spent elsewhere in the museum",
+                "the café serves better food than the old shop did"
+            ],
+            "correct_index": 2,
+            "explanation": "A rise in total stay only follows if café time is additional rather than displaced, so that is the required assumption; food quality, ticket purchases, and timing are beside the point.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-043",
+            "domain": "Logical Analysis",
+            "stem": "A survey of commuters who cycle finds that most of them cycle to work at least three times a week, and on that basis concludes that most cyclists in the city cycle frequently. The reasoning is flawed because the sample",
+            "options": [
+                "asks respondents to estimate their own behaviour",
+                "excludes cyclists whose journeys are not commutes to work",
+                "was conducted during a week of unusually fine weather",
+                "includes too few of the commuters who drive"
+            ],
+            "correct_index": 1,
+            "explanation": "A conclusion about all cyclists drawn from commuters only omits leisure and other riders, so the sample does not represent the group; weather and self-report would affect different claims.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-044",
+            "domain": "Logical Analysis",
+            "stem": "Either the archive was mislabeled or the letter was written later than its stated date. The archive was not mislabeled. Which of the following must be true?",
+            "options": [
+                "The letter was written before its stated date.",
+                "The archive contains no other mislabeled items.",
+                "The stated date is inaccurate for reasons unrelated to the letter.",
+                "The letter was written later than its stated date."
+            ],
+            "correct_index": 3,
+            "explanation": "With one disjunct eliminated the other must hold, so the letter is later than stated; the premises say nothing about other items or about further reasons for the discrepancy.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-045",
+            "domain": "Logical Analysis",
+            "stem": "An argument runs: if the roof leaks, the ceiling stains. The ceiling is stained. Therefore the roof leaks. Which of the following arguments has the same logical structure?",
+            "options": [
+                "If the doors unlock, the alarm sounds. The alarm sounded. Therefore the doors unlocked.",
+                "If the ceiling stains, the roof is not repaired. The roof is not repaired, so the ceiling stains.",
+                "If the alarm sounds, the doors unlock. The doors are unlocked. Therefore the alarm sounded.",
+                "If the alarm sounds, the doors unlock. The alarm sounded. Therefore the doors unlocked."
+            ],
+            "correct_index": 2,
+            "explanation": "Both arguments take the consequent as true and infer the antecedent, which is the same invalid step; the second and third are valid inferences of a different kind, and the fourth has a different conclusion shape.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-046",
+            "domain": "Logical Analysis",
+            "stem": "A company argues that its policy of open communication means that employees may speak to any manager. Since the policy is open, the company says, the complaint that employees were silenced must be unfounded. The reasoning is questionable because it",
+            "options": [
+                "assumes that every complaint made by an employee is unfounded",
+                "relies on evidence gathered from a single department",
+                "concludes that a policy exists before it has been adopted",
+                "uses open in the sense of accessible in the first claim and in the sense of unrestricted in the second"
+            ],
+            "correct_index": 3,
+            "explanation": "The argument trades on two meanings of one word, so the claim and the conclusion do not connect; the other criticisms misdescribe the inference.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-047",
+            "domain": "Logical Analysis",
+            "stem": "Between 2000 and 2020 the number of bank branches in a country fell by half, and over the same period the number of reported frauds against personal accounts tripled. Some commentators link the two trends. Which fact, if true, most weakens the suggested link?",
+            "options": [
+                "Banks invested heavily in fraud detection after 2010.",
+                "Fewer customers visited branches in 2020 than in 2000.",
+                "The rise in fraud was concentrated in online banking, where branches play no part.",
+                "Some branches were closed in areas that later showed high fraud."
+            ],
+            "correct_index": 2,
+            "explanation": "If the increase occurred where branches are irrelevant, branch closures cannot be its cause, so the link is broken; the other facts are consistent with the proposed connection.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-048",
+            "domain": "Logical Analysis",
+            "stem": "A government grants a licence to a wind farm on the grounds that wind power emits no carbon while operating. For that reasoning to justify the grant, which of the following must be assumed?",
+            "options": [
+                "The licence will certainly be renewed after its first term.",
+                "Emissions during the operation of the wind farm are the relevant measure for this decision.",
+                "Wind power is cheaper than every other form of electricity generation.",
+                "No wildlife will be affected by the construction of the turbines."
+            ],
+            "correct_index": 1,
+            "explanation": "The argument treats one measure of emissions as decisive, so it must be assumed that this is the measure that matters; cost, wildlife, and renewal are additional matters the reasoning does not need.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-049",
+            "domain": "Logical Analysis",
+            "stem": "Critics say an examination has become too hard because the pass mark was raised. But the pass mark was raised only after the questions were found to be easier than intended, and the proportion of candidates reaching the old standard has barely changed. The main conclusion the speaker draws is that",
+            "options": [
+                "the pass mark should never be changed once set",
+                "candidates are performing better than in previous years",
+                "the examination has not in fact become harder for candidates",
+                "the original questions were poorly constructed"
+            ],
+            "correct_index": 2,
+            "explanation": "The speaker concedes the pass mark rose but argues the difficulty did not, which is the first conclusion; the others are not claimed and the last is not supported by an unchanged pass proportion.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-050",
+            "domain": "Logical Analysis",
+            "stem": "A reviewer writes that a history book cannot be reliable because the author relies heavily on diaries, and diaries are written by people who are often mistaken about their own motives. The reasoning is flawed in that it",
+            "options": [
+                "assumes that all diaries are written by the same kind of person",
+                "concludes that the author has never consulted other sources",
+                "denies that people can ever know their own motives",
+                "treats the imperfection of a source as grounds for dismissing any work built on it"
+            ],
+            "correct_index": 3,
+            "explanation": "That a source is imperfect does not make work using it unreliable, since flaws can be weighed and corrected; the other descriptions misstate what the reviewer actually assumes.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-051",
+            "domain": "Logical Analysis",
+            "stem": "An airline claims that its new boarding order reduces time on the ground, since aircraft using it left the gate an average of four minutes earlier than before. Which finding, if true, most strengthens the airline's claim?",
+            "options": [
+                "The airline also replaced its ground handling contractor in the same year.",
+                "The four-minute gain was smaller than the airline had predicted.",
+                "The comparison covered the same routes before and after the change, with aircraft type and staffing held constant.",
+                "Passengers reported that they preferred the new boarding order."
+            ],
+            "correct_index": 2,
+            "explanation": "Holding route, aircraft, and crew constant isolates the boarding order as the likely cause; passenger preference is irrelevant, the contractor change undermines, and a modest gain does not strengthen.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-052",
+            "domain": "Logical Analysis",
+            "stem": "Sales of a particular brand of coffee rose in supermarkets even though the brand raised its price twice during the same period. Which of the following, if true, best explains this outcome?",
+            "options": [
+                "The brand's advertising budget was cut during the period.",
+                "Coffee prices generally fell during the period.",
+                "Supermarkets reported higher profits on the brand.",
+                "The rival brand most often bought alongside it was withdrawn from sale during the period."
+            ],
+            "correct_index": 3,
+            "explanation": "Losing a close substitute can drive its buyers to the remaining brand even at a higher price, which resolves the apparent contradiction; the other facts do not explain rising sales.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-053",
+            "domain": "Logical Analysis",
+            "stem": "A landlord must return a tenancy deposit within fourteen days of the tenancy ending unless an item has been damaged beyond ordinary wear. A cupboard door was scratched by use, and the landlord keeps the deposit. Which principle, if valid, supports the decision?",
+            "options": [
+                "A deposit may be retained if the tenancy lasted less than a year.",
+                "A landlord may keep a deposit until a court decides otherwise.",
+                "A deposit may be retained only where the damage exceeds what normal use would produce.",
+                "A landlord may retain a deposit whenever the property is not perfectly clean."
+            ],
+            "correct_index": 2,
+            "explanation": "The rule turns on damage beyond ordinary wear and the scratch was caused by use, so retaining the deposit needs the first principle to be misapplied; the others rest on irrelevant conditions.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-054",
+            "domain": "Logical Analysis",
+            "stem": "Every parcel delivered by a courier was scanned, but not every scan produced a delivery notification. Which of the following must be true?",
+            "options": [
+                "Every parcel that produced a notification was delivered the same day.",
+                "Every scan produced a delivery notification.",
+                "Some parcel scans did not produce a delivery notification.",
+                "Some parcels were delivered without being scanned."
+            ],
+            "correct_index": 2,
+            "explanation": "If not every scan produced a notification, then at least one did not, which is the first statement; the second contradicts the premise and the last denies it, while the third is unknown.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-055",
+            "domain": "Logical Analysis",
+            "stem": "A senator opposes a national dietary guideline by citing a colleague who ate fatty food daily and lived to ninety-five. The senator's argument is weak because it",
+            "options": [
+                "concludes that dietary guidelines should be revised rather than withdrawn",
+                "generalises from a single case that cannot show what is typical",
+                "assumes that the colleague's diet was recorded inaccurately",
+                "relies on the opinion of a medical professional"
+            ],
+            "correct_index": 1,
+            "explanation": "One striking example cannot establish a general pattern, which is the flaw; the argument does not depend on a doctor or on a particular remedy, and it does not assume misrecorded data.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-056",
+            "domain": "Logical Analysis",
+            "stem": "A campaign argues that the town should not build a skatepark because the land is worth more to developers, who would pay more in business rates than the park would raise in revenue. Which fact, if true, most weakens the campaign's argument?",
+            "options": [
+                "The land has stood vacant for several years.",
+                "Several councillors have publicly supported the skatepark.",
+                "The rates from the development would be offset by new spending on schools and roads that the town would have to provide.",
+                "Skateparks are popular with teenagers in neighbouring towns."
+            ],
+            "correct_index": 2,
+            "explanation": "If development brings costs that cancel the higher rates, the financial case against the park collapses; popularity, vacancy, and councillor views do not address the rate comparison.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-057",
+            "domain": "Logical Analysis",
+            "stem": "A study finds that readers who summarise a text as they read remember more of it a week later than readers who read it once. The authors conclude that summarising causes better retention. The conclusion assumes that",
+            "options": [
+                "recall was tested immediately after the reading was finished",
+                "the difference in time spent reading does not fully account for the difference in recall",
+                "the summaries written by the readers were accurate accounts of the text",
+                "the texts used in the study were of moderate length"
+            ],
+            "correct_index": 1,
+            "explanation": "Summarisers may simply read for longer, so the causal claim requires that time alone does not explain the gap; summary accuracy, text length, and test timing are not needed.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-058",
+            "domain": "Logical Analysis",
+            "stem": "A researcher answers a criticism of her experiment by repeating it with a larger sample and obtaining the same result. Her reply functions primarily to",
+            "options": [
+                "demonstrate that a larger sample costs more to run",
+                "shift the discussion to the funding of the research",
+                "address the possibility that the original finding was a chance outcome",
+                "show that the critic has misread the original data"
+            ],
+            "correct_index": 2,
+            "explanation": "Replication on a larger sample is the standard response to a chance-result objection, so that is what the reply does; it asserts nothing about the critic reading the data wrongly.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-059",
+            "domain": "Logical Analysis",
+            "stem": "Each department in a firm met its own budget target, and the firm concludes that it therefore met its budget target as a whole. The reasoning is flawed because it",
+            "options": [
+                "assumes that the departments compete for the same funds",
+                "supposes that the firm's overall target was announced publicly",
+                "concludes that no department overspent in any single quarter",
+                "infers from the success of every part that the whole must also have succeeded"
+            ],
+            "correct_index": 3,
+            "explanation": "Targets set for parts need not combine into the target set for the whole, so the inference from parts to whole is unwarranted; the other descriptions do not fit the argument.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        },
+        {
+            "id": "lnat-060",
+            "domain": "Logical Analysis",
+            "stem": "A restaurant began requiring deposits for weekend tables, and the number of empty weekend tables fell. A reviewer notes that some diners who would previously have booked may now book elsewhere. The reviewer's final position is best stated as",
+            "options": [
+                "the fall in empty tables proves that no diner was lost",
+                "the policy achieved its aim, though not without a cost that should be acknowledged",
+                "the policy should be abandoned because it drove diners away",
+                "no-shows were never a serious problem for the restaurant"
+            ],
+            "correct_index": 1,
+            "explanation": "The reviewer accepts the drop in empty tables while flagging lost bookings, which is the balanced first option; the others overstate either the success or the harm.",
+            "reference": "LNAT Test Specifications - Logical Analysis"
+        }
+    ]
+}

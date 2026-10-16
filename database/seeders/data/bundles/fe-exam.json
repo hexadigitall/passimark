@@ -1,0 +1,858 @@
+{
+    "cert_key": "fe-exam",
+    "title": "Fundamentals of Engineering (FE) Exam",
+    "issuer": "National Council of Examiners for Engineering and Surveying",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/fe-exam.json",
+    "variant_label": "FE Exam Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass/Fail",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public NCEES FE exam specifications. Not a capture of past questions.",
+    "source_label": "FE Exam practice bank",
+    "items": [
+        {
+            "id": "fe-exam-001",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A single-variable function is defined as f(x) = 3x^4 - 2x^2 + 7. What is the derivative df/dx?",
+            "options": [
+                "12x^3 - 4x",
+                "12x^3 - 4x + 7",
+                "3x^3 - 2x^2",
+                "12x^4 - 4x^2"
+            ],
+            "correct_index": 0,
+            "explanation": "Applying the power rule term by term gives 3(4)x^3 - 2(2)x^1 = 12x^3 - 4x, and the constant differentiates to zero.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-002",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A calculus problem requires the definite integral of 6x^2 evaluated from x = 0 to x = 2. What is the value?",
+            "options": [
+                "16",
+                "12",
+                "24",
+                "8"
+            ],
+            "correct_index": 0,
+            "explanation": "The antiderivative of 6x^2 is 2x^3. Evaluating 2(2)^3 - 2(0)^3 yields 16.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-003",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A limit evaluation asks for lim of sin(3x)/x as x approaches 0. What is the limit?",
+            "options": [
+                "0",
+                "1",
+                "3",
+                "The limit does not exist"
+            ],
+            "correct_index": 2,
+            "explanation": "Using lim of sin(kx)/x = k as x approaches 0, the expression with k = 3 approaches 3. Equivalently write sin(3x)/x = 3 times sin(3x)/(3x).",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-004",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A thermal model uses y = ln(5x) for x greater than zero. What is the derivative dy/dx?",
+            "options": [
+                "1/(5x)",
+                "5/x",
+                "1/x",
+                "e raised to the 5x"
+            ],
+            "correct_index": 2,
+            "explanation": "ln(5x) = ln(5) + ln(x). The ln(5) term is constant, so dy/dx = 1/x.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-005",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A flow analysis needs the area enclosed between the curves y = x and y = x^2 over the interval from 0 to 1. What is that area?",
+            "options": [
+                "1/2",
+                "1/3",
+                "1/6",
+                "2/3"
+            ],
+            "correct_index": 2,
+            "explanation": "On [0,1], x is above x^2, so the integral of (x - x^2) dx from 0 to 1 equals 1/2 - 1/3 = 1/6.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-006",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A first-order system satisfies dy/dx = 3y with the initial condition y(0) = 2. Which expression gives y as a function of x?",
+            "options": [
+                "y = 2 times e raised to the 3x",
+                "y = e raised to the 3x plus 1",
+                "y = 2 times e raised to the negative 3x",
+                "y = 3 times e raised to the 2x"
+            ],
+            "correct_index": 0,
+            "explanation": "The general solution of dy/dx = 3y is y = C times e raised to the 3x. The initial condition forces C = 2.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-007",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A structural vibration obeys the equation y'' + 4y = 0. Which form correctly describes the general response?",
+            "options": [
+                "y = A cos(2x) + B sin(2x), a oscillation with period pi",
+                "y = A cos(4x) + B sin(4x), a oscillation with period pi/2",
+                "y = A times e raised to the 2x plus B times e raised to the negative 2x",
+                "y = A times e raised to the 4x, an unbounded growth"
+            ],
+            "correct_index": 0,
+            "explanation": "The characteristic equation r^2 + 4 = 0 gives purely imaginary roots plus or minus 2i, so the motion is harmonic with angular frequency 2 and period 2pi/2 = pi.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-008",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A stability check requires the determinant of the matrix with rows [2, 1] and [5, 3]. What is the determinant?",
+            "options": [
+                "6",
+                "1",
+                "7",
+                "-1"
+            ],
+            "correct_index": 1,
+            "explanation": "For a 2x2 matrix the determinant is ad - bc, so (2)(3) - (1)(5) = 6 - 5 = 1.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-009",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A modal analysis uses the matrix with rows [3, 0] and [0, 2]. What is the eigenvalue associated with the eigenvector [1, 0]?",
+            "options": [
+                "2",
+                "5",
+                "3",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiplying [3, 0] and [0, 2] by [1, 0] returns [3, 0] = 3 times [1, 0], so the associated eigenvalue is 3.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-010",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A force projection uses a = 2i + 3j - k and b = i - 2j + 4k. What is the dot product a . b?",
+            "options": [
+                "8",
+                "-4",
+                "12",
+                "-8"
+            ],
+            "correct_index": 3,
+            "explanation": "The dot product is (2)(1) + (3)(-2) + (-1)(4) = 2 - 6 - 4 = -8.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-011",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "Two fair six-sided dice are rolled. What is the probability that the sum of the up faces equals 7?",
+            "options": [
+                "1/12",
+                "1/6",
+                "1/9",
+                "5/36"
+            ],
+            "correct_index": 1,
+            "explanation": "Six of the 36 equally likely outcomes sum to 7, giving 6/36 = 1/6.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-012",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A reliability model uses a binomial distribution with n = 5 trials and success probability p = 0.5. What is the probability of exactly 2 successes?",
+            "options": [
+                "1/2",
+                "5/16",
+                "1/5",
+                "3/8"
+            ],
+            "correct_index": 1,
+            "explanation": "C(5,2) times (0.5)^5 = 10/32 = 5/16.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-013",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A quality control chart assumes a normal distribution. For a normal variable, what is the approximate probability of exceeding one standard deviation above the mean?",
+            "options": [
+                "0.025",
+                "0.050",
+                "0.159",
+                "0.500"
+            ],
+            "correct_index": 2,
+            "explanation": "About 68 percent of a normal population lies within one standard deviation of the mean, so the upper tail beyond mean plus one standard deviation holds roughly 16 percent, approximately 0.159.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-014",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A unit conversion is needed to express a vehicle speed of 60 miles per hour in feet per second. What is the converted speed?",
+            "options": [
+                "88 ft/s",
+                "66 ft/s",
+                "96 ft/s",
+                "100 ft/s"
+            ],
+            "correct_index": 0,
+            "explanation": "Multiply 60 mi/hr by 5280 ft/mi and divide by 3600 s/hr to obtain 88 ft/s.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-015",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A field is described by f(x, y) = x^2 y + y^3. What is the partial derivative of f with respect to x?",
+            "options": [
+                "2xy + 3y^2",
+                "2xy",
+                "x^2 + 3y^2",
+                "2x + 3y"
+            ],
+            "correct_index": 1,
+            "explanation": "Holding y constant, only the x^2 y term contributes, giving 2xy. The y^3 term vanishes under partial differentiation with respect to x.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-016",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A sensor returns the population data set 2, 4, 4, 4, 5, 5, 7, 9. What is the population standard deviation of these values?",
+            "options": [
+                "4",
+                "2.24",
+                "1.73",
+                "2"
+            ],
+            "correct_index": 3,
+            "explanation": "The mean is 5. The squared deviations sum to 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32. Dividing by 8 gives variance 4, so the standard deviation is 2.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-017",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "A process stream is a strong acid solution with a hydrogen ion concentration of 0.001 mol per liter. What is the pH of the solution?",
+            "options": [
+                "1",
+                "3",
+                "4",
+                "11"
+            ],
+            "correct_index": 1,
+            "explanation": "pH is the negative log base 10 of the hydrogen ion concentration, so -log10(0.001) = 3.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-018",
+            "domain": "Mathematics and Engineering Sciences",
+            "stem": "An object is dropped from rest. Using g = 9.8 m/s^2, what distance does it fall during the first 2 seconds?",
+            "options": [
+                "9.8 m",
+                "19.6 m",
+                "39.2 m",
+                "4.9 m"
+            ],
+            "correct_index": 1,
+            "explanation": "Free-fall distance is (1/2) g t^2, so 0.5 times 9.8 times 2^2 equals 19.6 m.",
+            "reference": "NCEES FE Exam Specifications - Mathematics and Engineering Sciences"
+        },
+        {
+            "id": "fe-exam-019",
+            "domain": "Statics and Dynamics",
+            "stem": "Two concurrent forces act at a point, one of 3 N due east and one of 4 N due north. What is the magnitude of the resultant force?",
+            "options": [
+                "5 N",
+                "7 N",
+                "1 N",
+                "12 N"
+            ],
+            "correct_index": 0,
+            "explanation": "The perpendicular forces form a 3-4-5 triangle, so the resultant magnitude is the square root of 9 + 16, which is 5 N.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-020",
+            "domain": "Statics and Dynamics",
+            "stem": "A wrench experiences a 10 N force applied perpendicular to its handle at a distance of 2 m from the pivot. What is the moment about the pivot?",
+            "options": [
+                "5 N.m",
+                "8 N.m",
+                "20 N.m",
+                "100 N.m"
+            ],
+            "correct_index": 2,
+            "explanation": "Moment equals force times perpendicular distance, so 10 N times 2 m gives 20 N.m.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-021",
+            "domain": "Statics and Dynamics",
+            "stem": "A simply supported beam of length L carries a uniformly distributed load of w per unit length over its entire span. What is the vertical reaction at each support?",
+            "options": [
+                "w L",
+                "2 w L",
+                "w L / 4",
+                "w L / 2"
+            ],
+            "correct_index": 3,
+            "explanation": "The total load is w L acting at midspan. Vertical equilibrium and symmetry give equal reactions of w L / 2 at each support.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-022",
+            "domain": "Statics and Dynamics",
+            "stem": "A plane truss joint connects exactly two collinear members and one non-collinear member, with no external load or support reaction at the joint. Which statement about the non-collinear member is correct?",
+            "options": [
+                "It carries a compressive force equal to half the collinear force",
+                "It is a zero-force member",
+                "It carries the full collinear force",
+                "It must be in tension by inspection"
+            ],
+            "correct_index": 1,
+            "explanation": "Summing force components perpendicular to the two collinear members leaves only the non-collinear member with a component, so its force must be zero to satisfy equilibrium.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-023",
+            "domain": "Statics and Dynamics",
+            "stem": "A block rests on a rough inclined plane with a coefficient of static friction of 0.6. At what inclination angle does impending sliding begin?",
+            "options": [
+                "15 degrees",
+                "45 degrees",
+                "31 degrees",
+                "60 degrees"
+            ],
+            "correct_index": 2,
+            "explanation": "Impending motion occurs when tan(theta) equals the static friction coefficient, so theta = arctan(0.6), which is approximately 31 degrees.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-024",
+            "domain": "Statics and Dynamics",
+            "stem": "A plate has the shape of a right triangle of height h. Measured from its base, at what distance does the centroid of the triangle lie?",
+            "options": [
+                "h / 2",
+                "h / 3",
+                "2h / 3",
+                "h / 4"
+            ],
+            "correct_index": 1,
+            "explanation": "The centroid of a triangle lies at one third of the altitude from the base, so the distance from the base is h / 3.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-025",
+            "domain": "Statics and Dynamics",
+            "stem": "A beam has a rectangular cross section of width b and height h. What is the second moment of area about the horizontal centroidal axis?",
+            "options": [
+                "b h^3 / 12",
+                "b h^2 / 6",
+                "b h^3 / 2",
+                "b h^3 / 3"
+            ],
+            "correct_index": 0,
+            "explanation": "Integrating y^2 over the rectangle gives I = b h^3 / 12 about the centroidal axis parallel to the width. The value b h^3 / 3 applies about the base, which lies a distance h/2 away and is larger by the parallel axis contribution.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-026",
+            "domain": "Statics and Dynamics",
+            "stem": "A block of mass m slides without friction down an incline of angle theta. What is the acceleration of the block parallel to the incline?",
+            "options": [
+                "g cos(theta)",
+                "g sin(theta)",
+                "g tan(theta)",
+                "g"
+            ],
+            "correct_index": 1,
+            "explanation": "Only the component of gravity parallel to the surface accelerates the block, giving a = g sin(theta). The perpendicular component is balanced by the normal force.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-027",
+            "domain": "Statics and Dynamics",
+            "stem": "A net force of 10 N acts on a 4 kg mass that is free to move on a frictionless surface. What is the acceleration of the mass?",
+            "options": [
+                "0.4 m/s^2",
+                "40 m/s^2",
+                "2.5 m/s^2",
+                "6.25 m/s^2"
+            ],
+            "correct_index": 2,
+            "explanation": "Newton's second law gives a = F/m = 10/4 = 2.5 m/s^2 in the direction of the net force.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-028",
+            "domain": "Statics and Dynamics",
+            "stem": "A projectile is launched at 30 degrees above the horizontal with a speed of 20 m/s. Using g = 9.8 m/s^2, how long does it take to reach its highest point?",
+            "options": [
+                "1.02 s",
+                "2.04 s",
+                "0.51 s",
+                "4.08 s"
+            ],
+            "correct_index": 0,
+            "explanation": "At the highest point the vertical velocity is zero. With an initial vertical component of 20 sin 30 = 10 m/s, the time is 10/9.8, approximately 1.02 s.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-029",
+            "domain": "Statics and Dynamics",
+            "stem": "A constant force of 6 N moves an object 5 m in the direction of the force. How much work does the force perform on the object?",
+            "options": [
+                "1.2 J",
+                "11 J",
+                "0 J",
+                "30 J"
+            ],
+            "correct_index": 3,
+            "explanation": "Work equals force times displacement in the force direction, so 6 N times 5 m gives 30 J.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-030",
+            "domain": "Statics and Dynamics",
+            "stem": "A vehicle travels around a circular curve of radius 20 m at a constant speed of 10 m/s. What is its centripetal acceleration?",
+            "options": [
+                "0.5 m/s^2",
+                "2 m/s^2",
+                "5 m/s^2",
+                "20 m/s^2"
+            ],
+            "correct_index": 2,
+            "explanation": "Centripetal acceleration is v^2/r = 100/20 = 5 m/s^2 directed toward the center of the curve.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-031",
+            "domain": "Statics and Dynamics",
+            "stem": "A constant force of 20 N acts for 3 s on a 5 kg mass that starts from rest. What is the change in velocity of the mass?",
+            "options": [
+                "3.33 m/s",
+                "30 m/s",
+                "12 m/s",
+                "60 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Impulse equals change in momentum, so F t = m times delta-v. Thus delta-v = 20 times 3 divided by 5 = 12 m/s.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-032",
+            "domain": "Statics and Dynamics",
+            "stem": "A gear train has a driving gear with 40 teeth rotating at 120 rpm and a driven gear with 20 teeth. What is the speed of the driven gear?",
+            "options": [
+                "240 rpm",
+                "60 rpm",
+                "480 rpm",
+                "30 rpm"
+            ],
+            "correct_index": 0,
+            "explanation": "Gear speed is inversely proportional to tooth count, so the driven speed is 120 times 40/20 = 240 rpm.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-033",
+            "domain": "Statics and Dynamics",
+            "stem": "The position of a particle along a straight path is given by s(t) = 2t^3 - 6t^2 + 4, with s in meters and t in seconds. What is the velocity at t = 3 s?",
+            "options": [
+                "12 m/s",
+                "0 m/s",
+                "18 m/s",
+                "24 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Velocity is the time derivative, v(t) = 6t^2 - 12t. At t = 3 this gives 54 - 36 = 18 m/s.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-034",
+            "domain": "Statics and Dynamics",
+            "stem": "A triangular distributed load on a beam rises linearly from zero to an intensity of w0 over a length L. What is the magnitude of the equivalent resultant load?",
+            "options": [
+                "w0 L",
+                "w0 L / 2",
+                "w0 L / 4",
+                "2 w0 L / 3"
+            ],
+            "correct_index": 1,
+            "explanation": "The resultant of a distributed load equals the area under its intensity diagram. The triangle area is (1/2) w0 L.",
+            "reference": "NCEES FE Exam Specifications - Statics and Dynamics"
+        },
+        {
+            "id": "fe-exam-035",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "An axial member of cross-sectional area 500 mm^2 carries a tensile force of 50 kN. What is the average normal stress in the member?",
+            "options": [
+                "10 MPa",
+                "1000 MPa",
+                "0.1 MPa",
+                "100 MPa"
+            ],
+            "correct_index": 3,
+            "explanation": "Average normal stress is force divided by area. 50,000 N divided by 500 mm^2 equals 100 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-036",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A bar that is 2 m long stretches by 1 mm under an axial load. What is the average axial strain in the bar?",
+            "options": [
+                "0.005",
+                "0.0005",
+                "0.05",
+                "2000"
+            ],
+            "correct_index": 1,
+            "explanation": "Strain is elongation divided by original length, so 0.001 m divided by 2 m equals 0.0005, a dimensionless quantity.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-037",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A steel rod 1 m long with a cross-sectional area of 100 mm^2 and modulus E = 200 GPa carries an axial force of 100 kN. What is the elongation of the rod?",
+            "options": [
+                "0.5 mm",
+                "50 mm",
+                "5 mm",
+                "0.05 mm"
+            ],
+            "correct_index": 2,
+            "explanation": "From Hooke's law, elongation equals F L divided by A E. With consistent units, 100,000 N times 1 m divided by (100 x 10^-6 m^2 times 200 x 10^9 Pa) equals 0.005 m, which is 5 mm.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-038",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A metal has a Poisson ratio of 0.3 and is loaded so that its axial strain is 0.001. What is the resulting lateral strain?",
+            "options": [
+                "0.0003",
+                "-0.0003",
+                "-0.003",
+                "3.3"
+            ],
+            "correct_index": 1,
+            "explanation": "Lateral strain equals the negative of the Poisson ratio times axial strain, so -0.3 times 0.001 = -0.0003. The negative sign indicates lateral contraction.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-039",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A steel bar with E = 200 GPa and a coefficient of thermal expansion of 12 x 10^-6 per degree C is fully restrained while its temperature rises by 50 degrees C. What thermal stress develops?",
+            "options": [
+                "12 MPa",
+                "1.2 GPa",
+                "120 MPa",
+                "60 MPa"
+            ],
+            "correct_index": 2,
+            "explanation": "Restrained thermal stress is E times alpha times delta-T. The product 200 GPa times 12 x 10^-6 times 50 equals 120 MPa in compression.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-040",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A bolt with a cross-sectional area of 200 mm^2 is loaded in single shear by a force of 20 kN. What is the average shear stress on the shear plane?",
+            "options": [
+                "50 MPa",
+                "200 MPa",
+                "20 MPa",
+                "100 MPa"
+            ],
+            "correct_index": 0,
+            "explanation": "In single shear the shear force acts on one plane, so the average shear stress is 20,000 N divided by 200 mm^2 = 100 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-041",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A point in plane stress has sigma_x = 80 MPa, sigma_y = 0, and zero shear stress. What is the maximum in-plane shear stress?",
+            "options": [
+                "40 MPa",
+                "80 MPa",
+                "0 MPa",
+                "120 MPa"
+            ],
+            "correct_index": 0,
+            "explanation": "With zero shear the given stresses are principal stresses of 80 and 0. The maximum in-plane shear is half their difference, (80 - 0)/2 = 40 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-042",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A beam section carries a maximum bending moment of 12 kN.m and has a section modulus of 60,000 mm^3. What is the maximum bending stress?",
+            "options": [
+                "20 MPa",
+                "200 MPa",
+                "2 MPa",
+                "2000 MPa"
+            ],
+            "correct_index": 1,
+            "explanation": "Bending stress equals moment divided by section modulus. Converting, 12 x 10^6 N.mm divided by 60,000 mm^3 gives 200 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-043",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A rectangular section has a width of 100 mm and a height of 200 mm. What is its second moment of area about the centroidal axis parallel to the width?",
+            "options": [
+                "33.3 x 10^6 mm^4",
+                "133.3 x 10^6 mm^4",
+                "66.7 x 10^6 mm^4",
+                "8.33 x 10^6 mm^4"
+            ],
+            "correct_index": 2,
+            "explanation": "For a rectangle about the centroidal axis parallel to the base, I = b h^3 / 12 = 100 times 200^3 divided by 12 = 66.7 x 10^6 mm^4.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-044",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A cantilever beam of length L and flexural rigidity EI carries a concentrated load P at its free end. Which expression gives the maximum deflection?",
+            "options": [
+                "P L^3 / (3 EI)",
+                "P L^3 / (48 EI)",
+                "P L^3 / (8 EI)",
+                "P L / (EI)"
+            ],
+            "correct_index": 0,
+            "explanation": "Standard beam tables give the free-end deflection of a cantilever under a tip load as P L^3 divided by 3 EI. The 48 denominator corresponds to a simply supported beam with a midspan load.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-045",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A structural steel has a yield strength of 250 MPa. With a factor of safety of 2.5 on yield, what is the allowable normal stress?",
+            "options": [
+                "625 MPa",
+                "250 MPa",
+                "125 MPa",
+                "100 MPa"
+            ],
+            "correct_index": 3,
+            "explanation": "The allowable stress is the yield strength divided by the factor of safety, so 250/2.5 = 100 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-046",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A tensile specimen is loaded and then unloaded before any permanent set is observed on the stress-strain record. In which region of the curve did the loading occur?",
+            "options": [
+                "The strain-hardening region beyond the proportional limit",
+                "The necking region just before fracture",
+                "The elastic region at or below the proportional limit",
+                "The perfectly plastic plateau at the yield stress"
+            ],
+            "correct_index": 3,
+            "explanation": "Loading and unloading within the elastic region returns the specimen to its original length with no permanent deformation. Any excursion beyond the proportional limit leaves residual strain.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-047",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A solid circular shaft of diameter 100 mm transmits a torque of 2 kN.m. What is the maximum shear stress on the outer surface?",
+            "options": [
+                "10.2 MPa",
+                "1.0 MPa",
+                "102 MPa",
+                "20.4 MPa"
+            ],
+            "correct_index": 1,
+            "explanation": "For torsion, tau = T r / J. With J = pi d^4 / 32 = 9.82 x 10^6 mm^4 and r = 50 mm, the stress is 2 x 10^6 times 50 divided by 9.82 x 10^6, approximately 10.2 MPa.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-048",
+            "domain": "Materials and Mechanics of Materials",
+            "stem": "A material is selected for a seismic link that must absorb energy through large inelastic strains without fracturing. Which mechanical property is the primary design consideration?",
+            "options": [
+                "Brittleness",
+                "Hardness",
+                "Fatigue limit",
+                "Ductility"
+            ],
+            "correct_index": 3,
+            "explanation": "Ductility measures a material's ability to deform plastically before fracture, which is what allows seismic links to dissipate energy. Brittleness is the opposite trait, while hardness and fatigue limit address wear and cyclic loading.",
+            "reference": "NCEES FE Exam Specifications - Materials and Mechanics of Materials"
+        },
+        {
+            "id": "fe-exam-049",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A contract promises a single payment of 10,000 dollars five years from now. At an interest rate of 8 percent per year, what is the present worth of that payment?",
+            "options": [
+                "14,693 dollars",
+                "6,806 dollars",
+                "6,209 dollars",
+                "7,350 dollars"
+            ],
+            "correct_index": 1,
+            "explanation": "Present worth equals F divided by (1 + i)^n. Dividing 10,000 by 1.08^5, which is about 1.4693, gives approximately 6,806 dollars.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-050",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A savings account quotes a nominal annual rate of 12 percent compounded monthly. What is the effective annual interest rate?",
+            "options": [
+                "12.00 percent",
+                "12.36 percent",
+                "12.68 percent",
+                "13.00 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "The effective annual rate is (1 + 0.12/12)^12 - 1 = 1.01^12 - 1, which is approximately 12.68 percent.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-051",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "An investment of 50,000 dollars must be recovered by equal annual receipts over 10 years at 10 percent interest. What annual equivalent amount is required?",
+            "options": [
+                "5,000 dollars",
+                "2,638 dollars",
+                "8,138 dollars",
+                "1,628 dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiply the present amount by the capital recovery factor (A/P, 10%, 10) = 0.16275. The annual equivalent is 50,000 times 0.16275, about 8,138 dollars.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-052",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A machine costs 120,000 dollars and is expected to save 30,000 dollars per year. Ignoring interest, what is the simple payback period?",
+            "options": [
+                "3 years",
+                "5 years",
+                "6 years",
+                "4 years"
+            ],
+            "correct_index": 0,
+            "explanation": "Simple payback is first cost divided by annual savings, so 120,000 divided by 30,000 equals 4 years.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-053",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A project requires 10,000 dollars now and returns 6,000 dollars at the end of year 1 and 6,000 dollars at the end of year 2. At 10 percent interest, what is the net present value?",
+            "options": [
+                "2,000 dollars",
+                "413 dollars",
+                "-413 dollars",
+                "-1,000 dollars"
+            ],
+            "correct_index": 2,
+            "explanation": "NPV = -10,000 + 6,000/1.1 + 6,000/1.21 = -10,000 + 5,455 + 4,959, which rounds to about +413 dollars, so the project is marginally acceptable.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-054",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A plant has fixed costs of 80,000 dollars per year, variable costs of 10 dollars per unit, and sells its output at 18 dollars per unit. How many units must be sold each year to break even?",
+            "options": [
+                "8,000 units",
+                "20,000 units",
+                "10,000 units",
+                "5,000 units"
+            ],
+            "correct_index": 2,
+            "explanation": "Break-even quantity is fixed cost divided by the contribution margin, so 80,000/(18 - 10) = 10,000 units.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-055",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A machine is purchased for 45,000 dollars with an estimated salvage value of 5,000 dollars after 5 years. Using straight-line depreciation, what is the annual depreciation charge?",
+            "options": [
+                "9,000 dollars",
+                "8,000 dollars",
+                "10,000 dollars",
+                "4,000 dollars"
+            ],
+            "correct_index": 0,
+            "explanation": "Straight-line depreciation spreads the depreciable base evenly, so (45,000 - 5,000)/5 = 8,000 dollars per year.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-056",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A public works proposal shows equivalent benefits of 150,000 dollars and equivalent costs of 120,000 dollars. What is the benefit-cost ratio and is the project justified?",
+            "options": [
+                "0.8, not justified",
+                "0.25, not justified",
+                "30,000 dollars of net benefit, ratio not applicable",
+                "1.25, justified"
+            ],
+            "correct_index": 2,
+            "explanation": "The benefit-cost ratio is 150,000/120,000 = 1.25. A ratio greater than 1.0 indicates the benefits exceed the costs, so the project is economically justified.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-057",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "During construction review an engineer finds that a foundation detail departs from the approved drawings in a way that could reduce the safety margin against overturning. What action best meets the engineer's obligations?",
+            "options": [
+                "Proceed because the contractor certified the work and the schedule is tight",
+                "Notify the client and the responsible public authority of the deficiency before the work continues",
+                "Note the issue only in personal records and say nothing until the final report",
+                "Approve the detail informally to avoid project delay"
+            ],
+            "correct_index": 0,
+            "explanation": "Codes of engineering ethics require the engineer to inform the client and, when public safety is affected, the appropriate authority. Remaining silent or approving informally betrays the duty to protect life, health, and property.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-058",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "A supervisor asks a recently licensed engineer to seal structural calculations the engineer did not check and does not fully understand. How should the engineer respond?",
+            "options": [
+                "Seal the documents because the supervisor takes responsibility for the content",
+                "Seal the documents after adding a disclaimer about the supervisor's review",
+                "Decline to seal until the calculations are reviewed and the engineer can take professional responsibility for them",
+                "Seal the documents because the analysis was performed by a reputable firm"
+            ],
+            "correct_index": 3,
+            "explanation": "A professional engineer may only seal work that the engineer has reviewed and can defend. Sealing unreviewed calculations, regardless of who prepared them, violates licensure rules and the duty to the public.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-059",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "While serving on a bid evaluation committee an engineer learns that a supplier of a shortlisted product has offered the engineer a expensive vacation. What is the appropriate response?",
+            "options": [
+                "Accept the gift since the supplier has already been shortlisted",
+                "Decline the gift and disclose the offer to the employer so the conflict is managed",
+                "Accept the gift but score the product lower to offset any appearance of bias",
+                "Keep the gift private and recuse yourself from the committee"
+            ],
+            "correct_index": 1,
+            "explanation": "Accepting gifts from parties seeking favorable decisions creates a conflict of interest. The correct course is to decline and disclose the offer so the employer can address the appearance of impropriety.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        },
+        {
+            "id": "fe-exam-060",
+            "domain": "Engineering Economics and Ethics",
+            "stem": "An engineer's employer pressures the engineer to omit a known but minor code deviation from a permit application to speed approval. Which principle should govern the engineer's decision?",
+            "options": [
+                "Employer instructions take priority once the engineer has raised the issue once",
+                "The omission may proceed if the deviation is later corrected after permit issuance",
+                "Commercial schedules justify omitting information that does not affect immediate safety",
+                "The engineer must hold public safety, health, and welfare paramount and include the deviation in the application"
+            ],
+            "correct_index": 0,
+            "explanation": "The fundamental canon of engineering practice places public safety, health, and welfare above all other duties, including employer and client interests. A known code deviation must be disclosed to the permitting authority rather than concealed.",
+            "reference": "NCEES FE Exam Specifications - Engineering Economics and Ethics"
+        }
+    ]
+}

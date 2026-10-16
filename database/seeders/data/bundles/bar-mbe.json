@@ -1,0 +1,858 @@
+{
+    "cert_key": "bar-mbe",
+    "title": "Multistate Bar Examination (MBE)",
+    "issuer": "National Conference of Bar Examiners",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/bar-mbe.json",
+    "variant_label": "MBE Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public MBE subject-matter outline. Not a capture of past test questions.",
+    "source_label": "MBE practice bank",
+    "items": [
+        {
+            "id": "bar-mbe-001",
+            "domain": "Civil Procedure",
+            "stem": "A Nevada corporation designs software only in Nevada and sells it to customers in all fifty states through its website. A Texas customer sues the corporation in a Texas state court over a defect in that software. The corporation has no offices, employees, or property in Texas but earns substantial revenue from Texas sales. Does the Texas court have personal jurisdiction?",
+            "options": [
+                "Yes, because the corporation purposefully availed itself of the Texas market and the claim arises from that activity.",
+                "No, because the corporation has no physical presence in Texas.",
+                "No, because personal jurisdiction requires consent in every state where a defendant is sued.",
+                "Yes, but only if the corporation registered to do business in Texas."
+            ],
+            "correct_index": 0,
+            "explanation": "Due process requires minimum contacts plus fairness; purposeful availment of the Texas market satisfies contacts, and physical presence or registration is not required.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-002",
+            "domain": "Civil Procedure",
+            "stem": "A citizen of Oregon sues a citizen of Washington in federal court for breach of contract and seeks $50,000 in damages. No federal claim is asserted, and the defendant does not contest the facts. May the federal court exercise subject-matter jurisdiction?",
+            "options": [
+                "Yes, because the parties are completely diverse.",
+                "No, because the amount in controversy does not exceed $75,000, so diversity jurisdiction is lacking.",
+                "Yes, because breach of contract is a federal question.",
+                "No, because diversity jurisdiction requires at least three parties."
+            ],
+            "correct_index": 1,
+            "explanation": "Diversity jurisdiction requires complete diversity and an amount in controversy over $75,000; the claim here falls short, and breach of contract is not a federal question.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-003",
+            "domain": "Civil Procedure",
+            "stem": "A plaintiff files suit in the District of Massachusetts. The only defendant resides in Connecticut, and all events giving rise to the claim occurred in Rhode Island. No defendant resides in Massachusetts. Where is venue proper under the general venue statute?",
+            "options": [
+                "In any district the plaintiff chooses.",
+                "Only in the district where the plaintiff resides.",
+                "In Rhode Island, where a substantial part of the events occurred, or in Connecticut if all defendants reside in that state.",
+                "In Massachusetts, because the plaintiff filed the action there."
+            ],
+            "correct_index": 2,
+            "explanation": "Venue lies where a substantial part of the events occurred or where all defendants reside, not simply where the plaintiff chooses to file.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-004",
+            "domain": "Civil Procedure",
+            "stem": "A plaintiff files a state-court action asserting only state-law claims and seeking $40,000. The defendant is a citizen of a different state and seeks to remove the case to federal court. Is removal proper?",
+            "options": [
+                "Yes, because the parties are diverse.",
+                "Yes, because any defendant may remove any case.",
+                "No, because state-law cases may never be removed.",
+                "No, because the amount in controversy does not exceed $75,000, so the federal court would lack diversity jurisdiction."
+            ],
+            "correct_index": 3,
+            "explanation": "A case is removable only if the federal court would have had original jurisdiction; here diversity fails on the amount in controversy, so removal is improper.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-005",
+            "domain": "Civil Procedure",
+            "stem": "A federal court hears a case under diversity jurisdiction and must decide whether to follow a state substantive rule that would change the outcome or a conflicting federal practice. Under the Erie doctrine, which governs?",
+            "options": [
+                "The federal practice, because federal courts always apply federal procedure.",
+                "State substantive law, because a federal court sitting in diversity applies the substantive law of the forum state.",
+                "Neither; the court may pick whichever rule is more efficient.",
+                "State law only if the state's highest court has already ruled on the question."
+            ],
+            "correct_index": 1,
+            "explanation": "Erie requires federal courts in diversity to apply state substantive law, while federal procedure governs where it does not displace substantive rights.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-006",
+            "domain": "Civil Procedure",
+            "stem": "A plaintiff sues a manufacturer and alleges only that the defendant's product was defective, without any facts about how or when the injury occurred. The defendant moves to dismiss for failure to state a claim. How should the court rule?",
+            "options": [
+                "Deny the motion, because a plaintiff need only give notice of the claim.",
+                "Deny the motion, because discovery will eventually reveal the facts.",
+                "Grant the motion, because the complaint offers only a conclusory allegation and not enough facts to make the claim plausible.",
+                "Grant the motion only if the plaintiff cannot afford counsel."
+            ],
+            "correct_index": 2,
+            "explanation": "A complaint must contain enough factual matter to render the claim plausible; a bare recital of an element without supporting facts does not survive dismissal.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-007",
+            "domain": "Civil Procedure",
+            "stem": "During discovery, a plaintiff seeks documents relevant to the subject matter, but producing them would impose an undue burden and cost on the defendant, who objects. What standard should the court apply?",
+            "options": [
+                "Relevance alone requires production regardless of burden or expense.",
+                "Discovery is confined to documents the plaintiff already knows about.",
+                "The defendant must produce everything requested without any objection.",
+                "The court may limit discovery if the burden or expense outweighs its likely benefit, considering the needs of the case and the parties' resources."
+            ],
+            "correct_index": 3,
+            "explanation": "Under proportionality limits, a court may restrict even relevant discovery when the burden or expense outweighs its likely benefit.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-008",
+            "domain": "Civil Procedure",
+            "stem": "A plaintiff sued a defendant for breach of a 2020 contract and obtained a final judgment on the merits. The plaintiff now sues the same defendant again on the same contract and the same breach. What effect does the first judgment have?",
+            "options": [
+                "The second suit is barred by claim preclusion because it arises from the same transaction and was or could have been litigated.",
+                "The second suit may proceed because every plaintiff is entitled to a fresh trial.",
+                "The second suit is barred only if the first judgment was appealed.",
+                "The second suit may proceed because the first judgment was civil rather than criminal."
+            ],
+            "correct_index": 0,
+            "explanation": "Claim preclusion bars a second action on the same claim between the same parties after a final judgment on the merits.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-009",
+            "domain": "Civil Procedure",
+            "stem": "In an earlier case, a court found that Driver ran a red light, a finding necessary to the judgment against Driver. In a later case between different parties, a plaintiff seeks to use that finding against Driver. May the plaintiff invoke issue preclusion?",
+            "options": [
+                "No, because the second case involves different parties.",
+                "Yes, but only if the plaintiff was a party to the first case.",
+                "Yes, because Driver had a full and fair opportunity to litigate the issue and it was necessarily decided.",
+                "No, because issue preclusion applies only in criminal cases."
+            ],
+            "correct_index": 2,
+            "explanation": "Once an issue is necessarily decided and fully litigated, issue preclusion may bind the same party in later litigation even against new opposing parties.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-010",
+            "domain": "Civil Procedure",
+            "stem": "A plaintiff brings a federal-question claim against one defendant and joins a related state-law claim against a different, non-diverse defendant arising from the same case or controversy. May the court hear the state-law claim?",
+            "options": [
+                "No, because the state claim is not within diversity jurisdiction.",
+                "No, because federal courts may never hear state-law claims.",
+                "Yes, but only if the plaintiff dismisses the federal claim.",
+                "Yes, under supplemental jurisdiction, because the claim is part of the same case or controversy, subject to the court's discretion."
+            ],
+            "correct_index": 3,
+            "explanation": "Supplemental jurisdiction reaches related state claims that form part of the same case or controversy as a claim with an independent federal basis.",
+            "reference": "MBE Subject Matter Outline - Civil Procedure"
+        },
+        {
+            "id": "bar-mbe-011",
+            "domain": "Constitutional Law",
+            "stem": "A taxpayer sues to challenge a federal agency's spending program, alleging only that the government is wasting money and that she pays federal taxes. Does she have Article III standing?",
+            "options": [
+                "No, because a generalized grievance about how tax money is spent is not a concrete, particularized injury.",
+                "Yes, because all citizens have standing to challenge federal spending.",
+                "Yes, because paying taxes is itself an injury in fact.",
+                "No, because standing is available only to states."
+            ],
+            "correct_index": 0,
+            "explanation": "Standing requires a concrete and particularized injury; a taxpayer's general objection to how federal money is spent is a generalized grievance.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-012",
+            "domain": "Constitutional Law",
+            "stem": "Congress enacts a law setting the wages of employees at a small farm that sells every crop within its own state and buys nothing from outside it. Under the Commerce Clause, is the law valid?",
+            "options": [
+                "Yes, because Congress may regulate any activity it chooses.",
+                "No, because the activity is purely local and does not substantially affect interstate commerce.",
+                "Yes, because farming always affects national markets.",
+                "No, because only states may regulate wages."
+            ],
+            "correct_index": 1,
+            "explanation": "Congress may regulate activities that substantially affect interstate commerce; purely local activity without such an effect lies beyond the commerce power.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-013",
+            "domain": "Constitutional Law",
+            "stem": "A state requires all milk sold within it to be pasteurized and bottled at a state-licensed facility inside the state. The rule heavily burdens out-of-state producers and adds nothing to existing federal health standards. Is the law valid under the Dormant Commerce Clause?",
+            "options": [
+                "Yes, because states may regulate health and safety.",
+                "Yes, because milk is a local product.",
+                "No, because states may never regulate milk.",
+                "No, because it discriminates against interstate commerce and its burden outweighs any legitimate local benefit."
+            ],
+            "correct_index": 3,
+            "explanation": "A state law that discriminates against interstate commerce is invalid unless it serves a legitimate local purpose that cannot be achieved by reasonable nondiscriminatory means.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-014",
+            "domain": "Constitutional Law",
+            "stem": "A state university adopts an admissions policy that classifies applicants by race and grants a preference based on that classification. Which standard of review applies under the Equal Protection Clause?",
+            "options": [
+                "Strict scrutiny, requiring a compelling governmental interest and narrow tailoring.",
+                "Rational basis review.",
+                "Intermediate scrutiny.",
+                "No review, because education is not a fundamental right."
+            ],
+            "correct_index": 0,
+            "explanation": "Racial classifications are suspect and trigger strict scrutiny, the most demanding standard of review.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-015",
+            "domain": "Constitutional Law",
+            "stem": "A state terminates a person's welfare benefits without any prior notice or hearing, and no emergency exists. The recipient challenges the termination. What process does the Constitution generally require?",
+            "options": [
+                "No process, because government benefits are a mere privilege.",
+                "Notice and a meaningful opportunity to be heard before the benefits are terminated.",
+                "A full jury trial before any termination.",
+                "Only a hearing after termination in every case."
+            ],
+            "correct_index": 1,
+            "explanation": "Procedural due process generally requires notice and a pre-termination opportunity to be heard when a protected interest is at stake and no emergency justifies delay.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-016",
+            "domain": "Constitutional Law",
+            "stem": "A city ordinance bans all signs on public property but permits flags and banners. A resident challenges the ban as a restriction on speech. How should a court analyze the ordinance?",
+            "options": [
+                "Under rational basis review only.",
+                "As per se invalid, because all speech is absolutely protected.",
+                "As a content-neutral regulation of the time, place, and manner of speech, valid if it serves a significant interest and leaves open alternative channels.",
+                "As valid, because symbols and signs are not speech."
+            ],
+            "correct_index": 2,
+            "explanation": "Content-neutral regulations of the time, place, or manner of speech are upheld if they serve a significant interest and do not foreclose alternative channels of communication.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-017",
+            "domain": "Constitutional Law",
+            "stem": "A public school district permits a student to deliver a prayer over the loudspeaker before football games, with the school's approval and equipment. A student challenges the practice. Under the Establishment Clause, is the practice constitutional?",
+            "options": [
+                "No, because the school's sponsorship and control of the prayer at a school event violates the Establishment Clause.",
+                "Yes, because the prayer is initiated by a student.",
+                "Yes, because football games are not part of school.",
+                "No, because all prayer is unlawful everywhere."
+            ],
+            "correct_index": 0,
+            "explanation": "Government sponsorship of religious exercise at a public school event violates the Establishment Clause even when a student delivers the prayer.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-018",
+            "domain": "Constitutional Law",
+            "stem": "A state enacts a neutral, generally applicable law that incidentally burdens a religious practice. Under current Free Exercise doctrine, which standard of review applies?",
+            "options": [
+                "Strict scrutiny, because any burden on religion is suspect.",
+                "Intermediate scrutiny, applied in all such cases.",
+                "Rational basis review, because a neutral and generally applicable law need not accommodate religious practice.",
+                "No standard, because the Religion Clauses never conflict."
+            ],
+            "correct_index": 2,
+            "explanation": "A neutral law of general applicability that only incidentally burdens religion is reviewed under rational basis and generally requires no religious exemption.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-019",
+            "domain": "Constitutional Law",
+            "stem": "A privately owned shopping mall bars a group from gathering signatures for a political petition on its premises. The group asserts a First Amendment violation. May it press a constitutional claim against the mall?",
+            "options": [
+                "Yes, because the mall is open to the public.",
+                "No, because the First Amendment restrains government action, and the mall is a private actor absent a sufficient state-action nexus.",
+                "Yes, because shopping is a form of expression.",
+                "No, because the First Amendment does not protect petitioning."
+            ],
+            "correct_index": 1,
+            "explanation": "The First Amendment limits governmental conduct; private entities are bound only when their actions are fairly attributable to the state.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-020",
+            "domain": "Constitutional Law",
+            "stem": "A federal statute comprehensively regulates a field and expressly bars states from imposing additional requirements in that field. A state nonetheless enacts a stricter rule. Is the state rule enforceable?",
+            "options": [
+                "Yes, because states may always impose stricter protections.",
+                "Yes, because federal law sets only a minimum floor.",
+                "No, because the state rule violates the First Amendment.",
+                "No, because federal law preempts state law when Congress expressly occupies the field."
+            ],
+            "correct_index": 3,
+            "explanation": "Under the Supremacy Clause, express preemption displaces state law in a field Congress has occupied.",
+            "reference": "MBE Subject Matter Outline - Constitutional Law"
+        },
+        {
+            "id": "bar-mbe-021",
+            "domain": "Contracts",
+            "stem": "A store mails a customer an advertisement listing a television at a stated price. The customer writes back ordering one television at that price. A contract is formed only if the advertisement is",
+            "options": [
+                "a firm offer supported by consideration.",
+                "a public offer to anyone who performs.",
+                "an offer rather than an invitation to deal, because an acceptance forms a contract only in response to an offer.",
+                "a promise to hold the price open for a stated time."
+            ],
+            "correct_index": 2,
+            "explanation": "Advertisements are usually invitations to negotiate; only if the ad is a definite offer does a reply operate as an acceptance creating a contract.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-022",
+            "domain": "Contracts",
+            "stem": "An uncle promises his nephew $5,000 if the nephew refrains from smoking until age twenty-one. The nephew relies on the promise and does not smoke. Is the promise enforceable?",
+            "options": [
+                "Yes, because the nephew's forborne right to smoke is valid consideration for the uncle's promise.",
+                "No, because the nephew gave up nothing of legal value.",
+                "No, because the promise was oral.",
+                "Yes, but only if the nephew already intended never to smoke."
+            ],
+            "correct_index": 0,
+            "explanation": "Forbearing a legal right that the promisor requested the promisee give up is consideration, so the promise is enforceable.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-023",
+            "domain": "Contracts",
+            "stem": "A buyer and a seller orally agree on the sale of custom-made goods priced at $2,000. Neither party is a merchant, and no writing is signed. The buyer later refuses to perform. Is the contract enforceable?",
+            "options": [
+                "Yes, because the parties reached a meeting of the minds.",
+                "Yes, because custom goods are always exempt from any writing requirement.",
+                "No, because a sale of goods for $500 or more requires a writing sufficient to indicate a contract, signed by the party to be charged.",
+                "No, because oral contracts are never enforceable."
+            ],
+            "correct_index": 2,
+            "explanation": "The UCC Statute of Frauds requires a signed writing for goods priced at $500 or more, and no exception applies to this oral agreement.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-024",
+            "domain": "Contracts",
+            "stem": "A seller of goods clearly and unequivocally tells the buyer, before the delivery date, that the seller will not deliver. The buyer has not yet paid. What may the buyer do?",
+            "options": [
+                "Do nothing until the delivery date passes.",
+                "Treat the statement as an anticipatory repudiation, sue immediately, and suspend the buyer's own performance.",
+                "Compel the seller to deliver by specific performance immediately.",
+                "Cancel the contract only after the delivery date."
+            ],
+            "correct_index": 1,
+            "explanation": "An unequivocal pre-performance repudiation lets the nonbreaching party sue at once, suspend performance, and treat the contract as at an end.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-025",
+            "domain": "Contracts",
+            "stem": "A homeowner contracts for a new roof. The roofer completes the work but uses a slightly different brand of shingles than specified, causing only a minor reduction in value. The homeowner refuses to pay. Can the homeowner withhold the entire contract price?",
+            "options": [
+                "Yes, because any deviation is a material breach.",
+                "Yes, because the homeowner may reject any incomplete performance.",
+                "No, because the roofer's breach discharges the homeowner entirely.",
+                "No, because the roofer substantially performed, so the homeowner must pay the price less damages for the minor defect."
+            ],
+            "correct_index": 3,
+            "explanation": "Substantial performance entitles the breaching party to the contract price minus damages for the nonmaterial deviation.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-026",
+            "domain": "Contracts",
+            "stem": "A father contracts with a builder to construct a house for the father's daughter, and the contract states that the builder will convey the house to the daughter. The builder breaches. May the daughter enforce the contract?",
+            "options": [
+                "Yes, because the daughter is an intended third-party beneficiary of the contract.",
+                "No, because she is not a party to the contract.",
+                "Yes, but only if she paid consideration.",
+                "No, because only the father may sue on the contract."
+            ],
+            "correct_index": 0,
+            "explanation": "A third party whom the contract is intended to benefit may enforce it, even without being a party or providing consideration.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-027",
+            "domain": "Contracts",
+            "stem": "A band contracts to perform at a concert hall. Before the performance date, the hall is destroyed by an unforeseen fire not caused by either party, and no substitute venue can be found. What is the band's obligation?",
+            "options": [
+                "The band must perform at the burned site anyway.",
+                "The band must pay the venue for the lost revenue.",
+                "The band remains fully liable for breach.",
+                "The band is discharged from performance because destruction of the venue makes performance impracticable without fault."
+            ],
+            "correct_index": 3,
+            "explanation": "An unforeseen event that makes performance impracticable and is not the fault of the party seeking discharge excuses performance.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-028",
+            "domain": "Contracts",
+            "stem": "A debtor owes a creditor under a disputed invoice for $1,000. The debtor sends a check for $700 offered in full satisfaction of the debt, and the creditor cashes the check. The creditor then sues for the $300 balance. Can the creditor recover?",
+            "options": [
+                "Yes, because the debt was for a liquidated amount.",
+                "No, because the parties formed an accord and satisfaction that discharged the disputed debt.",
+                "Yes, because cashing a check never discharges a debt.",
+                "No, because the debtor acted in bad faith."
+            ],
+            "correct_index": 1,
+            "explanation": "When a creditor accepts a good-faith tender offered in full satisfaction of a disputed claim, the accord and satisfaction discharges the debt.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-029",
+            "domain": "Contracts",
+            "stem": "A buyer contracts to purchase a machine for $10,000 when the market price is $10,000. The seller breaches, and the market price rises to $12,000 at the time of breach. What are the buyer's expectation damages?",
+            "options": [
+                "Nothing, because the buyer paid no reliance costs.",
+                "The full market price of $12,000.",
+                "$2,000, the difference between the market price and the contract price at the time of breach.",
+                "The full contract price of $10,000."
+            ],
+            "correct_index": 2,
+            "explanation": "For a seller's breach of a goods contract, the buyer recovers the difference between the market price and the contract price, measured at the time of breach.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-030",
+            "domain": "Contracts",
+            "stem": "A buyer contracts for goods, and the seller repudiates before delivery. The buyer reasonably buys substitute goods from another supplier at a higher price. What may the buyer recover?",
+            "options": [
+                "The difference between the cost of cover and the original contract price, plus incidental and consequential damages.",
+                "Nothing, because the buyer found substitute goods.",
+                "The full original contract price without proof of loss.",
+                "Only the buyer's reliance expenses, not the cover difference."
+            ],
+            "correct_index": 0,
+            "explanation": "Under the UCC, a buyer who covers may recover the difference between the cover cost and the contract price, plus incidental and consequential damages.",
+            "reference": "MBE Subject Matter Outline - Contracts"
+        },
+        {
+            "id": "bar-mbe-031",
+            "domain": "Criminal Law and Procedure",
+            "stem": "A man fires a gun into a crowded room intending to kill one person, but the bullet kills a different person. The man is charged with the death of the unintended victim. What is the man's criminal liability for the homicide?",
+            "options": [
+                "Guilty only of attempted murder of the intended victim.",
+                "Not guilty of any homicide, because he did not intend to kill the person who died.",
+                "Guilty only of manslaughter, because the victim was unanticipated.",
+                "Guilty of murder, because the intent to kill the intended victim transfers to the actual victim under transferred intent."
+            ],
+            "correct_index": 3,
+            "explanation": "Transferred intent holds a defendant liable for the harm actually caused when the intent to harm one person results in harm to another.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-032",
+            "domain": "Criminal Law and Procedure",
+            "stem": "During a botched convenience-store robbery, a robber's accomplice accidentally shoots and kills the store clerk. Both robbers are charged with the clerk's death under the felony-murder rule. Is the accomplice liable?",
+            "options": [
+                "No, because the accomplice did not fire the gun.",
+                "Yes, because the accomplice participated in the underlying dangerous felony in which the killing occurred.",
+                "No, because the killing was accidental.",
+                "Yes, but only if the accomplice intended the clerk to die."
+            ],
+            "correct_index": 1,
+            "explanation": "Felony murder holds participants in the underlying felony liable for a killing committed during that felony, even when another participant fires the fatal shot.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-033",
+            "domain": "Criminal Law and Procedure",
+            "stem": "A woman plans to burglarize a jewelry store. She buys lock picks and drives to the store but is arrested while still in her car a block away, before touching the store. Has she committed an attempt?",
+            "options": [
+                "Yes, because buying lock picks alone completes the attempt.",
+                "No, because she never reached the store.",
+                "Only if her conduct crossed the line from mere preparation to a substantial step toward the crime.",
+                "Yes, because she formed the intent to burglarize."
+            ],
+            "correct_index": 2,
+            "explanation": "Attempt requires an intent to commit the crime plus a substantial step beyond mere preparation; intent alone or remote acts are insufficient.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-034",
+            "domain": "Criminal Law and Procedure",
+            "stem": "A man is attacked without provocation and reasonably believes he is about to be killed. He responds with deadly force, which is necessary to repel the attack. Is the man's use of deadly force justified?",
+            "options": [
+                "No, because deadly force is never justified.",
+                "Yes, because a person may use deadly force when reasonably necessary to prevent imminent death or serious bodily harm.",
+                "No, because he should have been required to retreat in all circumstances.",
+                "Yes, because he was angry at the attacker."
+            ],
+            "correct_index": 1,
+            "explanation": "Self-defense justifies deadly force when a reasonable person would believe it is necessary to prevent imminent death or serious bodily harm.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-035",
+            "domain": "Criminal Law and Procedure",
+            "stem": "A defendant commits a crime but, because of a severe mental disease, did not know that his act was wrong. He raises the insanity defense under the M'Naghten test. Is he entitled to acquittal by reason of insanity?",
+            "options": [
+                "Yes, because the M'Naghten test excuses a defendant who, due to a mental disease, did not know the nature or wrongfulness of the act.",
+                "No, because insanity never excuses a crime.",
+                "Yes, because any mental illness establishes insanity.",
+                "No, because he committed the act."
+            ],
+            "correct_index": 0,
+            "explanation": "Under M'Naghten, a mental disease that prevents the defendant from knowing the act was wrong excuses criminal responsibility.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-036",
+            "domain": "Criminal Law and Procedure",
+            "stem": "Police lawfully arrest a driver for a minor traffic offense, handcuff him in the back of the patrol car, and then search the passenger compartment of his vehicle, finding a small bag of narcotics. Is the search valid?",
+            "options": [
+                "Yes, because any arrest of a driver allows a full search of the car.",
+                "Yes, because the car was at the scene of the arrest.",
+                "No, because after the arrestee was secured and no evidence of the traffic offense was likely in the car, the search was not a valid search incident to arrest.",
+                "No, because a warrant is always required for any vehicle search."
+            ],
+            "correct_index": 2,
+            "explanation": "A search incident to the arrest of an occupant is limited to the area of immediate control or to evidence of the offense of arrest; neither applies once the arrestee is secured.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-037",
+            "domain": "Criminal Law and Procedure",
+            "stem": "Police stop a car in which they have probable cause to believe contraband is located. May they search the car without a warrant?",
+            "options": [
+                "No, because the Fourth Amendment requires a warrant for every search.",
+                "Yes, because under the automobile exception, probable cause to believe a vehicle contains contraband permits a warrantless search of the vehicle.",
+                "Yes, but only after obtaining consent from the driver.",
+                "No, because a car is not a constitutionally protected area."
+            ],
+            "correct_index": 1,
+            "explanation": "The automobile exception allows a warrantless search of a vehicle when there is probable cause to believe it contains evidence or contraband.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-038",
+            "domain": "Criminal Law and Procedure",
+            "stem": "After a suspect is arrested and taken into custody, officers interrogate him without first advising him of his right to remain silent and to counsel. The suspect makes an incriminating statement. Is the statement admissible in the prosecution's case-in-chief?",
+            "options": [
+                "No, because statements obtained during custodial interrogation without the required warnings are inadmissible in the prosecution's case-in-chief.",
+                "Yes, because the statement was voluntary.",
+                "Yes, because the suspect was not formally charged.",
+                "No, because all confessions are inadmissible."
+            ],
+            "correct_index": 0,
+            "explanation": "Miranda warnings are required before custodial interrogation, and statements taken without them are generally inadmissible in the case-in-chief.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-039",
+            "domain": "Criminal Law and Procedure",
+            "stem": "After formal charges are filed, police deliberately elicit incriminating statements from the defendant in the absence of the lawyer he had already requested. Is the evidence admissible?",
+            "options": [
+                "Yes, because the defendant had not yet been convicted.",
+                "Yes, because he was not interrogated at a police station.",
+                "No, because once the Sixth Amendment right to counsel attaches, the government may not deliberately elicit statements without counsel.",
+                "No, because all post-charge statements are per se illegal."
+            ],
+            "correct_index": 2,
+            "explanation": "After formal charges, the Sixth Amendment right to counsel bars deliberate elicitation of statements without counsel present.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-040",
+            "domain": "Criminal Law and Procedure",
+            "stem": "Police execute a search warrant they reasonably believe is valid, but it is later found defective. The officers acted in good-faith reliance on the warrant. Should the evidence be suppressed?",
+            "options": [
+                "Yes, because the warrant was invalid.",
+                "Yes, because the exclusionary rule has no exceptions.",
+                "No, because evidence is always admissible if the search was warrantless.",
+                "No, because the good-faith exception to the exclusionary rule applies when officers reasonably rely on a defective warrant."
+            ],
+            "correct_index": 3,
+            "explanation": "The good-faith exception admits evidence obtained pursuant to objectively reasonable reliance on a later-invalidated warrant.",
+            "reference": "MBE Subject Matter Outline - Criminal Law and Procedure"
+        },
+        {
+            "id": "bar-mbe-041",
+            "domain": "Evidence",
+            "stem": "In a personal-injury trial, the plaintiff offers a graphic photograph of the injury to show its severity. The defendant objects that the photograph is unfairly prejudicial and likely to inflame the jury. How should the court rule?",
+            "options": [
+                "Admit the photograph because all relevant evidence is admissible.",
+                "Exclude the photograph because photographs are never admissible.",
+                "Exclude the photograph if its probative value is substantially outweighed by the danger of unfair prejudice or needless presentation of cumulative evidence.",
+                "Admit the photograph because the plaintiff may show any evidence of injury."
+            ],
+            "correct_index": 2,
+            "explanation": "Even relevant evidence may be excluded under Rule 403 when its probative value is substantially outweighed by unfair prejudice or cumulative presentation.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-042",
+            "domain": "Evidence",
+            "stem": "In a civil assault case arising from a bar fight, the defendant seeks to introduce evidence that the plaintiff has a violent character and was the first aggressor. The plaintiff objects. Is the evidence admissible?",
+            "options": [
+                "No, because character evidence is never admissible in civil cases.",
+                "Yes, because when a party claims self-defense, evidence of the alleged victim's violent character may be admissible to show the victim was the first aggressor.",
+                "Yes, because character evidence is always admissible to prove conduct.",
+                "No, because only the plaintiff may introduce character evidence."
+            ],
+            "correct_index": 1,
+            "explanation": "Although character evidence is generally inadmissible to prove conduct, a self-defense claim opens the door to the victim's violent character as first-aggressor proof.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-043",
+            "domain": "Evidence",
+            "stem": "A witness testifies that a bystander shouted, 'The blue car ran the red light!' moments after a crash. The statement is offered to prove that the blue car ran the red light. What is the best ruling?",
+            "options": [
+                "It is hearsay, but it likely falls within the excited-utterance exception, so it is admissible.",
+                "It is not hearsay because it is an opinion.",
+                "It is not hearsay because it was made by a bystander.",
+                "It is inadmissible hearsay with no applicable exception."
+            ],
+            "correct_index": 0,
+            "explanation": "The out-of-court statement is offered for its truth and thus is hearsay, but a startling event plus a statement made under its stress fits the excited-utterance exception.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-044",
+            "domain": "Evidence",
+            "stem": "During a phone call, a woman tells her friend, 'A man in a red jacket is walking toward my door right now.' The woman is later unavailable to testify. The prosecution offers the statement. Under the hearsay rules, the statement is",
+            "options": [
+                "inadmissible because the friend's testimony is inherently unreliable.",
+                "admissible as a present sense impression because it describes an event or condition made while the declarant was perceiving it.",
+                "inadmissible because it is an opinion rather than a fact.",
+                "admissible only if the woman testifies at trial."
+            ],
+            "correct_index": 1,
+            "explanation": "A statement describing an event or condition made while or immediately after the declarant perceives it is admissible as a present sense impression.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-045",
+            "domain": "Evidence",
+            "stem": "A hospital seeks to admit a patient's treatment record kept in the regular course of business, created near the time of the events by someone with knowledge. No custodian testifies, but the record is certified. Is the record admissible?",
+            "options": [
+                "Yes, as a business record, because it was made in the regular course of business and certification may substitute for live foundation testimony.",
+                "No, because a live custodian must always testify.",
+                "No, because medical records are always privileged.",
+                "Yes, but only to prove the patient was admitted, not to prove treatment."
+            ],
+            "correct_index": 0,
+            "explanation": "Business records are admissible under the business-records exception, and a certification can satisfy the foundation requirement.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-046",
+            "domain": "Evidence",
+            "stem": "The prosecution offers a written statement a witness made to police during a formal investigation, and the witness is unavailable at trial. The defendant objects under the Confrontation Clause. Is the statement admissible?",
+            "options": [
+                "Yes, because the witness is unavailable.",
+                "No, because the statement is testimonial hearsay, and the defendant had no prior opportunity to cross-examine the witness.",
+                "Yes, because statements to police are always reliable.",
+                "No, because all hearsay violates the Confrontation Clause."
+            ],
+            "correct_index": 1,
+            "explanation": "Testimonial statements by an unavailable declarant are barred by the Confrontation Clause unless the defendant had a prior opportunity to cross-examine.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-047",
+            "domain": "Evidence",
+            "stem": "The prosecution calls a witness and, on cross-examination, the defendant asks about the witness's prior felony conviction for fraud. The witness objects. Is the question permissible for impeachment?",
+            "options": [
+                "No, because prior convictions are never admissible.",
+                "Yes, but only if the conviction was for a violent crime.",
+                "Yes, because a prior conviction involving a dishonest act or false statement bears on the witness's credibility and may be used to impeach.",
+                "No, because only the prosecution may impeach a witness."
+            ],
+            "correct_index": 2,
+            "explanation": "Convictions for crimes involving dishonesty are admissible to attack a witness's character for truthfulness, subject to the court's discretion.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-048",
+            "domain": "Evidence",
+            "stem": "A witness testifies at trial, and the opposing party suggests the witness recently fabricated the story. The proponent then offers a statement the witness made before the alleged motive to fabricate arose. Is the prior statement admissible?",
+            "options": [
+                "No, because prior statements are always hearsay.",
+                "Yes, because all prior statements of a testifying witness are substantive evidence.",
+                "No, because the witness is available to testify.",
+                "Yes, because it is a prior consistent statement offered to rebut a charge of recent fabrication."
+            ],
+            "correct_index": 3,
+            "explanation": "A prior consistent statement is admissible to rehabilitate a witness when it rebuts an express or implied charge of recent fabrication or improper influence.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-049",
+            "domain": "Evidence",
+            "stem": "During litigation, the plaintiff seeks notes of a conversation between the defendant and the defendant's attorney made for the purpose of obtaining legal advice. The defendant asserts privilege. Must the notes be disclosed?",
+            "options": [
+                "No, because the attorney-client privilege protects confidential communications made for the purpose of seeking legal advice.",
+                "Yes, because the notes are relevant to the dispute.",
+                "Yes, because all documents are discoverable in litigation.",
+                "No, because the attorney is an officer of the court."
+            ],
+            "correct_index": 0,
+            "explanation": "Attorney-client privilege shields confidential communications made to obtain legal advice, so the notes are protected from compelled disclosure.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-050",
+            "domain": "Evidence",
+            "stem": "A party seeks to admit a photocopy of a contract to prove its terms, the original is available, and the opponent objects. Must the original be produced?",
+            "options": [
+                "No, because photocopies are always admissible.",
+                "Yes, because the best-evidence rule requires an original writing to prove its contents unless an exception excuses the original.",
+                "No, because the contract qualifies as a business record.",
+                "Yes, but only if the contract is handwritten."
+            ],
+            "correct_index": 1,
+            "explanation": "The best-evidence rule requires the original writing to prove its content; a copy is admissible only on a showing of an exception or that genuineness is not disputed.",
+            "reference": "MBE Subject Matter Outline - Evidence"
+        },
+        {
+            "id": "bar-mbe-051",
+            "domain": "Torts and Real Property",
+            "stem": "A driver speeds through a residential neighborhood and strikes a child who darts into the street. What duty of care did the driver owe the child?",
+            "options": [
+                "A duty to prevent all accidents regardless of fault.",
+                "No duty, because the child darted into the street.",
+                "A duty to exercise the reasonable care of a reasonably prudent driver under the circumstances.",
+                "A duty to drive at the exact posted speed at all times."
+            ],
+            "correct_index": 2,
+            "explanation": "A driver owes pedestrians a duty of reasonable care; breach that causes harm is actionable, and the child's sudden movement goes to comparative fault, not duty.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-052",
+            "domain": "Torts and Real Property",
+            "stem": "A defendant negligently leaves a loaded gun on a table. A child finds it, plays with it, and accidentally shoots a neighbor. Is the defendant liable for the neighbor's injury?",
+            "options": [
+                "No, because the child's act is an unforeseeable superseding cause.",
+                "No, because the child, not the defendant, fired the gun.",
+                "Yes, because the defendant is strictly liable for all harm involving guns.",
+                "Yes, because an accidental shooting by a child is a foreseeable consequence of leaving a loaded gun accessible."
+            ],
+            "correct_index": 3,
+            "explanation": "Proximate cause is satisfied when the intervening act is foreseeable; a child's accidental use of an accessible loaded gun is a foreseeable risk.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-053",
+            "domain": "Torts and Real Property",
+            "stem": "A company uses explosives to demolish a building in a populated area. A flying fragment injures a passerby. What standard of liability applies?",
+            "options": [
+                "No liability, because blasting is a lawful activity.",
+                "Strict liability, because blasting is an abnormally dangerous activity.",
+                "Negligence only, because the company took some precautions.",
+                "Liability only if the company intended to injure the passerby."
+            ],
+            "correct_index": 1,
+            "explanation": "An abnormally dangerous activity such as blasting subjects the actor to strict liability for harm caused by the activity.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-054",
+            "domain": "Torts and Real Property",
+            "stem": "A consumer is injured by a power tool whose design lacks a common safety guard, and the tool is sold without adequate warnings. The consumer sues the manufacturer. Under products liability, may the consumer recover?",
+            "options": [
+                "Only for breach of contract.",
+                "No, because the consumer did not buy directly from the manufacturer.",
+                "Yes, on a strict-liability theory based on a defective design and inadequate warning.",
+                "Only if the manufacturer was negligent."
+            ],
+            "correct_index": 2,
+            "explanation": "A manufacturer may be strictly liable when a product is unreasonably dangerous because of a design defect or inadequate warnings.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-055",
+            "domain": "Torts and Real Property",
+            "stem": "A newspaper publishes a false statement that a private individual embezzled money. The individual sues for defamation. What must the individual prove about the statement?",
+            "options": [
+                "Only that the statement was false.",
+                "Only that the statement caused economic loss.",
+                "That the newspaper acted with actual malice.",
+                "That it was false, defamatory, and published to a third party, and that the newspaper was at least negligent."
+            ],
+            "correct_index": 3,
+            "explanation": "A private plaintiff must prove a defamatory false statement was published and the publisher was at least negligent; actual malice is required only for public figures.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-056",
+            "domain": "Torts and Real Property",
+            "stem": "A man taps a stranger on the shoulder to get her attention, intending only to speak with her. The stranger is startled but not injured. Has the man committed a battery?",
+            "options": [
+                "No, because the contact was not harmful or offensive to a reasonable sense of personal dignity.",
+                "Yes, because any unconsented touching is a battery.",
+                "Yes, because the stranger was startled.",
+                "No, because the man intended only to speak."
+            ],
+            "correct_index": 0,
+            "explanation": "Battery requires an intent to cause harmful or offensive contact; a harmless tap to gain attention is generally not offensive to a reasonable person.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-057",
+            "domain": "Torts and Real Property",
+            "stem": "A woman builds a fence enclosing a strip of her neighbor's land, uses the strip openly and continuously for the statutory period, pays any required taxes, and treats it as her own. Who owns the strip after the statutory period?",
+            "options": [
+                "The neighbor, because title can never be lost by possession.",
+                "The state, because the land is reallocated to the government.",
+                "The woman, because she satisfied the elements of adverse possession.",
+                "Both the woman and the neighbor, as tenants in common."
+            ],
+            "correct_index": 2,
+            "explanation": "Open, continuous, hostile possession for the statutory period, with any required tax payment, transfers title to the adverse possessor.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-058",
+            "domain": "Torts and Real Property",
+            "stem": "A residential tenant's apartment becomes uninhabitable because the landlord fails to repair a broken heating system despite notice. The tenant stops paying rent. May the tenant lawfully withhold rent under the implied warranty of habitability?",
+            "options": [
+                "No, because a tenant must always pay rent regardless of conditions.",
+                "Yes, but only if the lease expressly authorizes it.",
+                "No, because the landlord's duty to repair is merely moral.",
+                "Yes, because a landlord's breach of the implied warranty of habitability may excuse rent or permit other remedies such as repair and deduct."
+            ],
+            "correct_index": 3,
+            "explanation": "The implied warranty of habitability requires habitable premises; a breach entitles the tenant to remedies including rent withholding, repair and deduct, or termination.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-059",
+            "domain": "Torts and Real Property",
+            "stem": "A property owner across whose land a neighbor holds a right-of-way for access to a public road sells the parcel. Does the easement continue against the new owner?",
+            "options": [
+                "Yes, because an easement appurtenant runs with the land and binds subsequent owners who have notice.",
+                "No, because easements end when the servient estate is sold.",
+                "Yes, but only if the new owner consents in writing.",
+                "No, because easements are personal to the original owner."
+            ],
+            "correct_index": 0,
+            "explanation": "An easement appurtenant benefits and burdens the affected lands, so it continues against successors who take with notice.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        },
+        {
+            "id": "bar-mbe-060",
+            "domain": "Torts and Real Property",
+            "stem": "An owner sells his land to a first buyer, who fails to record the deed. The owner then sells the same land to a second buyer who pays value, has no notice of the first sale, and records first. Who owns the land in a race-notice jurisdiction?",
+            "options": [
+                "The first buyer, because the first in time always wins.",
+                "The second buyer, because a bona fide purchaser who records first prevails over an earlier unrecorded conveyance.",
+                "The first buyer, because the second buyer's deed is a duplicate.",
+                "The state, because double sales invalidate both deeds."
+            ],
+            "correct_index": 1,
+            "explanation": "In a race-notice jurisdiction, a later bona fide purchaser who takes without notice and records first defeats the earlier unrecorded deed.",
+            "reference": "MBE Subject Matter Outline - Torts and Real Property"
+        }
+    ]
+}

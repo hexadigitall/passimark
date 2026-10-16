@@ -1,0 +1,85 @@
+{
+  "cert_key": "ucat-uk",
+  "title": "UCAT (University Clinical Aptitude Test)",
+  "issuer": "UCAT Consortium",
+  "region": "GLOBAL-ACADEMIC",
+  "outline_source": "https://www.ucat.ac.uk/about-ucat/test-format",
+  "outline_retrieved": "2026-10-16",
+  "content_provenance": "Subtest names, question counts and timing are reproduced from the public UCAT Consortium test format and scoring page. Weight is each subtest's share of the 184 published questions, rounded to whole percent. Skills listed are the published subtest constructs, not a verbatim objective list, and no past-paper content is transcribed.",
+  "exam": {
+    "questions": 184,
+    "duration_minutes": 111,
+    "scoring": "Scaled 300-900 per cognitive subtest, total 900-2700, Situational Judgement Bands 1-4",
+    "adaptive": false
+  },
+  "domains": [
+    {
+      "number": 1,
+      "name": "Verbal Reasoning",
+      "weight": 24,
+      "sections": [
+        {
+          "name": "Critical evaluation of written information",
+          "objectives": [
+            { "id": "1.A.1", "text": "Identify what can be concluded from a written passage" },
+            { "id": "1.A.2", "text": "Distinguish conclusions supported by the text from those that are not" },
+            { "id": "1.A.3", "text": "Evaluate an argument, assumption or claim" },
+            { "id": "1.A.4", "text": "Answer from the passage only, without outside knowledge" }
+          ]
+        }
+      ],
+      "objectives_complete": false
+    },
+    {
+      "number": 2,
+      "name": "Decision Making",
+      "weight": 19,
+      "sections": [
+        {
+          "name": "Sound decisions from complex information",
+          "objectives": [
+            { "id": "2.A.1", "text": "Draw conclusions from stated rules and conditions" },
+            { "id": "2.A.2", "text": "Evaluate arguments and identify the strongest consideration" },
+            { "id": "2.A.3", "text": "Interpret statistical and risk information in a scenario" },
+            { "id": "2.A.4", "text": "Choose the most appropriate course of action under constraints" }
+          ]
+        }
+      ],
+      "objectives_complete": false
+    },
+    {
+      "number": 3,
+      "name": "Quantitative Reasoning",
+      "weight": 20,
+      "sections": [
+        {
+          "name": "Critical evaluation of numerical information",
+          "objectives": [
+            { "id": "3.A.1", "text": "Interpret data presented in tables, charts and graphs" },
+            { "id": "3.A.2", "text": "Perform arithmetic with percentages, ratios and rates" },
+            { "id": "3.A.3", "text": "Convert between units and scales" },
+            { "id": "3.A.4", "text": "Work out averages, totals and cost comparisons" }
+          ]
+        }
+      ],
+      "objectives_complete": false
+    },
+    {
+      "number": 4,
+      "name": "Situational Judgement",
+      "weight": 37,
+      "sections": [
+        {
+          "name": "Judgement in real-world situations",
+          "objectives": [
+            { "id": "4.A.1", "text": "Identify critical factors in a situation" },
+            { "id": "4.A.2", "text": "Judge the most and least appropriate responses" },
+            { "id": "4.A.3", "text": "Apply professional integrity, confidentiality and safeguarding duties" },
+            { "id": "4.A.4", "text": "Consider perspective, teamwork and the duties owed to patients and colleagues" }
+          ]
+        }
+      ],
+      "objectives_complete": false
+    }
+  ]
+}

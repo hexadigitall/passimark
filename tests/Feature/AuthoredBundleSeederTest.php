@@ -1215,6 +1215,42 @@ class AuthoredBundleSeederTest extends TestCase
                 'Musculoskeletal and Neurologic' => 15,
                 'Endocrine and Behavioral Medicine' => 15,
             ]],
+            'bar-mbe' => ['bar-mbe', 60, [
+                'Civil Procedure' => 10,
+                'Constitutional Law' => 10,
+                'Contracts' => 10,
+                'Criminal Law and Procedure' => 10,
+                'Evidence' => 10,
+                'Torts and Real Property' => 10,
+            ]],
+            'mpre' => ['mpre', 60, [
+                'Regulation of the Legal Profession' => 15,
+                'The Client-Lawyer Relationship' => 15,
+                'Conflicts of Interest' => 15,
+                'Litigation and Transactions' => 15,
+            ]],
+            'fe-exam' => ['fe-exam', 60, [
+                'Mathematics and Engineering Sciences' => 18,
+                'Statics and Dynamics' => 16,
+                'Materials and Mechanics of Materials' => 14,
+                'Engineering Economics and Ethics' => 12,
+            ]],
+            'pe-exam' => ['pe-exam', 60, [
+                'Analysis and Design of Systems' => 18,
+                'Project Management and Codes' => 16,
+                'Engineering Economics and Cost' => 14,
+                'Professional Practice and Ethics' => 12,
+            ]],
+            'ucat-uk' => ['ucat-uk', 60, [
+                'Verbal Reasoning' => 15,
+                'Decision Making' => 15,
+                'Quantitative Reasoning' => 15,
+                'Situational Judgement' => 15,
+            ]],
+            'lnat' => ['lnat', 60, [
+                'Reading Comprehension' => 30,
+                'Logical Analysis' => 30,
+            ]],
         ];
     }
 
