@@ -1123,6 +1123,47 @@ class AuthoredBundleSeederTest extends TestCase
                 'Patient Safety and Procedures' => 15,
                 'Professional Ethics and Law' => 15,
             ]],
+            'jee-adv' => ['jee-adv', 60, [
+                'Physics' => 20,
+                'Chemistry' => 20,
+                'Mathematics' => 20,
+            ]],
+            'neet-ug' => ['neet-ug', 60, [
+                'Biology' => 30,
+                'Chemistry' => 15,
+                'Physics' => 15,
+            ]],
+            'gate-cs' => ['gate-cs', 60, [
+                'Algorithms and Data Structures' => 18,
+                'Operating Systems and Databases' => 16,
+                'Computer Networks and Security' => 14,
+                'Theory of Computation and Mathematics' => 12,
+            ]],
+            'gate-me' => ['gate-me', 60, [
+                'Engineering Mechanics and Strength of Materials' => 16,
+                'Thermodynamics and Heat Transfer' => 16,
+                'Fluid Mechanics and Machinery' => 14,
+                'Manufacturing and Industrial Engineering' => 14,
+            ]],
+            'upsc-pre' => ['upsc-pre', 60, [
+                'General Studies Paper I' => 40,
+                'CSAT Paper II' => 20,
+            ]],
+            'upsc-mains' => ['upsc-mains', 60, [
+                'Essay and Ethics' => 20,
+                'Governance and Polity' => 20,
+                'Economy and Environment' => 20,
+            ]],
+            'cat-india' => ['cat-india', 60, [
+                'Verbal Ability and Reading Comprehension' => 20,
+                'Data Interpretation and Logical Reasoning' => 20,
+                'Quantitative Ability' => 20,
+            ]],
+            'xat' => ['xat', 60, [
+                'Verbal and Logical Ability' => 20,
+                'Decision Making' => 20,
+                'Quantitative Ability and Data Interpretation' => 20,
+            ]],
         ];
     }
 

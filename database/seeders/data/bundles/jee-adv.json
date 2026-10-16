@@ -1,0 +1,858 @@
+{
+    "cert_key": "jee-adv",
+    "title": "JEE Advanced",
+    "issuer": "Indian Institutes of Technology (Joint Admission Board)",
+    "region": "APAC",
+    "outline_file": "outlines/jee-adv.json",
+    "variant_label": "JEE Advanced Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 180,
+        "scoring": "Varies by paper",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public JEE Advanced syllabus. Not a capture of past questions.",
+    "source_label": "JEE Advanced practice bank",
+    "items": [
+        {
+            "id": "jee-adv-001",
+            "domain": "Physics",
+            "stem": "A projectile is thrown with speed u at 30 degrees to the horizontal and lands on level ground. For the same launch speed, which other angle of projection gives the same horizontal range?",
+            "options": [
+                "60 degrees",
+                "45 degrees",
+                "75 degrees",
+                "90 degrees"
+            ],
+            "correct_index": 0,
+            "explanation": "Horizontal range R = u^2 sin(2theta)/g depends on sin(2theta), which is equal for complementary angles theta and 90 - theta. Since 90 - 30 = 60 degrees, the range is unchanged. A 45-degree throw gives the maximum range and would not match, while 75 and 90 degrees give smaller and zero range.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-002",
+            "domain": "Physics",
+            "stem": "A particle starts from rest and moves with uniform acceleration 3 m/s^2 along a straight line. The distance travelled during the 4th second of motion is equal to which of the following?",
+            "options": [
+                "12.0 m",
+                "10.5 m",
+                "9.0 m",
+                "13.5 m"
+            ],
+            "correct_index": 1,
+            "explanation": "The distance covered in the nth second is u + (a/2)(2n - 1). With u = 0, a = 3 and n = 4 this is (3/2)(7) = 10.5 m. Using a(2n)/2 without subtracting the previous second gives 12 m, and forgetting the factor 1/2 gives the larger value.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-003",
+            "domain": "Physics",
+            "stem": "A 2 kg block starts from rest and slides down a frictionless incline of vertical height 5 m. Its speed at the bottom of the incline is equal to which of the following (g = 10 m/s^2)?",
+            "options": [
+                "5 m/s",
+                "12.5 m/s",
+                "10 m/s",
+                "20 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Conservation of mechanical energy gives v = sqrt(2gh) = sqrt(2 times 10 times 5) = sqrt(100) = 10 m/s, independent of the incline angle. Dropping the factor 2 gives 5 m/s, and squaring errors produce the other values.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-004",
+            "domain": "Physics",
+            "stem": "A solid sphere of mass 2 kg and radius 0.1 m rolls without slipping. The fraction of its total kinetic energy that is rotational is equal to which of the following?",
+            "options": [
+                "1/2",
+                "2/5",
+                "5/7",
+                "2/7"
+            ],
+            "correct_index": 3,
+            "explanation": "For rolling without slipping the rotational fraction is (I/R^2)/(m + I/R^2). With I = (2/5)mR^2 this equals (2/5)/(7/5) = 2/7. The value 2/5 is the coefficient in the moment of inertia alone, and 5/7 is the translational fraction.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-005",
+            "domain": "Physics",
+            "stem": "A body of mass 1 kg is tied to a string of length 1 m and whirled in a vertical circle. The minimum speed at the lowest point needed to just complete the loop is equal to which of the following (g = 10 m/s^2)?",
+            "options": [
+                "sqrt(50) m/s",
+                "sqrt(10) m/s",
+                "sqrt(30) m/s",
+                "sqrt(20) m/s"
+            ],
+            "correct_index": 0,
+            "explanation": "The minimum speed at the top is sqrt(gL) = sqrt(10). Energy conservation between the lowest and highest points gives v_bottom^2 = v_top^2 + 4gL = 10 + 40 = 50, so v_bottom = sqrt(50). Quoting the top speed sqrt(10) is the classic distractor.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-006",
+            "domain": "Physics",
+            "stem": "A satellite orbits the Earth at a height equal to the Earth's radius R above the surface. If the surface gravitational acceleration is g, the orbital speed is equal to which of the following?",
+            "options": [
+                "sqrt(gR)",
+                "sqrt(gR/2)",
+                "sqrt(2gR)",
+                "sqrt(gR/4)"
+            ],
+            "correct_index": 1,
+            "explanation": "At orbital radius r = 2R gravity supplies the centripetal force so v^2 = GM/r, and since GM = gR^2 we get v^2 = gR^2/(2R) = gR/2, hence v = sqrt(gR/2). The choice sqrt(gR) is the circular speed at the surface, not at 2R, and sqrt(2gR) is the escape speed.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-007",
+            "domain": "Physics",
+            "stem": "A particle executes simple harmonic motion with amplitude A. At what displacement from the mean position is its kinetic energy equal to its potential energy?",
+            "options": [
+                "A/2",
+                "A/sqrt(3)",
+                "A/sqrt(2)",
+                "A"
+            ],
+            "correct_index": 2,
+            "explanation": "The total energy is (1/2)kA^2. Setting kinetic equal to potential makes each half the total, so (1/2)kx^2 = (1/4)kA^2 and x = A/sqrt(2). At x = A/2 the potential energy is only one-quarter of the total, so that is not equal to the kinetic energy.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-008",
+            "domain": "Physics",
+            "stem": "Two identical sound sources emit waves of the same frequency in phase. At a point where the path difference is one full wavelength, the resultant intensity compared with that of one source alone is equal to which of the following?",
+            "options": [
+                "two times",
+                "zero",
+                "equal",
+                "four times"
+            ],
+            "correct_index": 3,
+            "explanation": "A path difference of one wavelength is a phase difference of 2 pi, which is fully constructive. The amplitudes add to twice the single-source amplitude, and since intensity is proportional to amplitude squared the resultant is four times larger. Equal path difference would be needed for the intensity to stay the same.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-009",
+            "domain": "Physics",
+            "stem": "An ideal gas undergoes an isothermal expansion at temperature T from volume V to 2V. The work done by n moles of the gas is equal to which of the following?",
+            "options": [
+                "nRT ln 2",
+                "nRT",
+                "2nRT",
+                "(nRT)/2"
+            ],
+            "correct_index": 0,
+            "explanation": "For an isothermal process W = nRT ln(V2/V1) = nRT ln(2V/V) = nRT ln 2. The value nRT would require a volume ratio equal to e, and the other options omit the logarithm entirely.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-010",
+            "domain": "Physics",
+            "stem": "The efficiency of a Carnot engine operating between reservoirs at 500 K and 300 K is equal to which of the following?",
+            "options": [
+                "60 percent",
+                "40 percent",
+                "20 percent",
+                "80 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "Carnot efficiency is 1 - T_cold/T_hot = 1 - 300/500 = 0.4, which is 40 percent. The value 60 percent is the ratio T_cold/T_hot, a common slip, and is not the efficiency.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-011",
+            "domain": "Physics",
+            "stem": "Two point charges +q and -q are separated by a distance 2a. The electric potential at the midpoint of the line joining them is equal to which of the following?",
+            "options": [
+                "kq/a",
+                "2kq/a",
+                "zero",
+                "kq/(2a)"
+            ],
+            "correct_index": 2,
+            "explanation": "At the midpoint each charge is at distance a, so the potentials +kq/a and -kq/a cancel and the net potential is zero. The electric field there is not zero, which makes the field-related options tempting but incorrect.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-012",
+            "domain": "Physics",
+            "stem": "Three identical resistors of resistance R are connected first in series and then in parallel. The ratio of the series equivalent resistance to the parallel equivalent resistance is equal to which of the following?",
+            "options": [
+                "3",
+                "6",
+                "1/9",
+                "9"
+            ],
+            "correct_index": 3,
+            "explanation": "In series the equivalent resistance is 3R and in parallel it is R/3, so the ratio is 3R divided by R/3, which equals 9. The value 1/9 reverses the order of the two configurations.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-013",
+            "domain": "Physics",
+            "stem": "A wire carrying current I is bent into a circular loop of radius r. The magnetic field at the centre of the loop is equal to which of the following?",
+            "options": [
+                "(mu0 I)/(2r)",
+                "(mu0 I)/(4 pi r)",
+                "(mu0 I)/(2 pi r)",
+                "(mu0 I r)/2"
+            ],
+            "correct_index": 0,
+            "explanation": "The field at the centre of a circular loop is B = mu0 I/(2r). The expression mu0 I/(2 pi r) is the field at distance r from a long straight wire, and mu0 I/(4 pi r) is the Biot-Savart factor.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-014",
+            "domain": "Physics",
+            "stem": "A conducting rod of length L moves with speed v perpendicular to a uniform magnetic field B. The motional emf induced across the rod is equal to which of the following?",
+            "options": [
+                "BLv^2",
+                "BLv",
+                "Bv/L",
+                "BL/v"
+            ],
+            "correct_index": 1,
+            "explanation": "A charge in the moving rod experiences a Lorentz force and the emf developed across the rod is BLv. The other expressions have the wrong dimensions and cannot represent a potential difference.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-015",
+            "domain": "Physics",
+            "stem": "In a series LCR circuit driven at resonance, the impedance of the circuit is equal to which of the following?",
+            "options": [
+                "zero",
+                "infinite",
+                "equal to R",
+                "equal to the reactance"
+            ],
+            "correct_index": 2,
+            "explanation": "At resonance the inductive and capacitive reactances are equal and opposite and cancel, so the impedance falls to the resistance R. The impedance is minimum rather than zero, because the resistance is still present in the circuit.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-016",
+            "domain": "Physics",
+            "stem": "Light of wavelength lambda passes through a single slit of width a. The condition for the first minimum in the diffraction pattern is equal to which of the following?",
+            "options": [
+                "a sin(theta) = lambda/2",
+                "a sin(theta) = 2 lambda",
+                "a cos(theta) = lambda",
+                "a sin(theta) = lambda"
+            ],
+            "correct_index": 3,
+            "explanation": "Single-slit minima occur where a sin(theta) = m lambda with m = 1, 2, 3, so the first minimum satisfies a sin(theta) = lambda. The half-wavelength condition locates the first secondary maximum, not a minimum.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-017",
+            "domain": "Physics",
+            "stem": "A convex lens of focal length 20 cm forms a real image 60 cm from the lens. The object distance in front of the lens is equal to which of the following?",
+            "options": [
+                "30 cm",
+                "40 cm",
+                "15 cm",
+                "80 cm"
+            ],
+            "correct_index": 0,
+            "explanation": "Using 1/f = 1/v - 1/u with the real-is-positive convention, 1/20 = 1/60 - 1/u gives 1/u = 1/60 - 1/20 = -2/60, so u = -30 cm, meaning the object lies 30 cm in front of the lens. A sign slip gives the other distances.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-018",
+            "domain": "Physics",
+            "stem": "The de Broglie wavelength of an electron accelerated through a potential difference V is proportional to which of the following?",
+            "options": [
+                "V",
+                "1/sqrt(V)",
+                "V^2",
+                "1/V"
+            ],
+            "correct_index": 1,
+            "explanation": "From eV = p^2/(2m), the momentum p = sqrt(2meV) and the wavelength lambda = h/p = h/sqrt(2meV), which is proportional to 1/sqrt(V). Doubling the voltage reduces the wavelength by a factor sqrt(2) rather than halving it.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-019",
+            "domain": "Physics",
+            "stem": "In a photoelectric experiment, increasing the intensity of incident light of fixed frequency above the threshold increases which of the following?",
+            "options": [
+                "the maximum kinetic energy of the electrons",
+                "the threshold frequency of the metal",
+                "the number of photoelectrons emitted per second",
+                "the work function of the metal"
+            ],
+            "correct_index": 2,
+            "explanation": "Intensity fixes the number of photons arriving per second, so more electrons are emitted. The maximum kinetic energy depends on frequency through Einstein's equation, while the threshold frequency and work function are fixed properties of the metal.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-020",
+            "domain": "Physics",
+            "stem": "A radioactive sample has a half-life of 20 minutes. The fraction of the original sample remaining after 60 minutes is equal to which of the following?",
+            "options": [
+                "1/3",
+                "1/6",
+                "1/2",
+                "1/8"
+            ],
+            "correct_index": 3,
+            "explanation": "60 minutes is three half-lives, and each half-life halves the amount, so (1/2)^3 = 1/8 of the sample remains. Dividing by the number of half-lives would wrongly give 1/3.",
+            "reference": "JEE Advanced Syllabus - Physics"
+        },
+        {
+            "id": "jee-adv-021",
+            "domain": "Chemistry",
+            "stem": "The number of moles of oxygen atoms present in 1 mole of H2SO4 is equal to which of the following?",
+            "options": [
+                "4",
+                "2",
+                "1",
+                "8"
+            ],
+            "correct_index": 0,
+            "explanation": "The formula H2SO4 contains four oxygen atoms per formula unit, so 1 mole of the acid supplies 4 moles of oxygen atoms. The value 2 counts the hydrogen atoms, and 8 would require two formula units.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-022",
+            "domain": "Chemistry",
+            "stem": "Which of the following diatomic species has a bond order of 3 according to molecular orbital theory?",
+            "options": [
+                "O2",
+                "N2",
+                "F2",
+                "C2"
+            ],
+            "correct_index": 1,
+            "explanation": "N2 has 8 bonding and 2 antibonding electrons, giving a bond order of (8 - 2)/2 = 3. O2 has bond order 2, C2 has bond order 2, and F2 has bond order 1, so only N2 matches.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-023",
+            "domain": "Chemistry",
+            "stem": "The hybridisation of each carbon atom in an ethyne (C2H2) molecule is equal to which of the following?",
+            "options": [
+                "sp2",
+                "sp3",
+                "sp",
+                "sp3d"
+            ],
+            "correct_index": 2,
+            "explanation": "Each carbon in ethyne forms two sigma bonds and has no lone pair, giving a linear local geometry that corresponds to sp hybridisation. The sp2 and sp3 labels describe alkene and alkane carbons instead.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-024",
+            "domain": "Chemistry",
+            "stem": "For the reaction N2(g) + 3H2(g) giving 2NH3(g), which of the following relations between Kp and Kc holds (R is the gas constant and T the temperature)?",
+            "options": [
+                "Kp = Kc",
+                "Kp = Kc (RT)^2",
+                "Kp = Kc (RT)^-1",
+                "Kp = Kc (RT)^-2"
+            ],
+            "correct_index": 3,
+            "explanation": "For Kp = Kc(RT)^(delta n) the change in moles of gas is 2 - (1 + 3) = -2, so Kp = Kc(RT)^-2. Using the opposite sign gives the distractor with (RT)^2.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-025",
+            "domain": "Chemistry",
+            "stem": "The pH of a 0.01 M solution of a strong monobasic acid that dissociates completely is equal to which of the following?",
+            "options": [
+                "2",
+                "1",
+                "12",
+                "7"
+            ],
+            "correct_index": 0,
+            "explanation": "Complete dissociation gives [H+] = 0.01 = 10^-2 M, so pH = -log(10^-2) = 2. The value 12 is the corresponding pOH, and 7 would apply only to a neutral solution.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-026",
+            "domain": "Chemistry",
+            "stem": "The IUPAC name of the compound CH3-CH(OH)-CH3 is equal to which of the following?",
+            "options": [
+                "propan-1-ol",
+                "propan-2-ol",
+                "propanal",
+                "propanone"
+            ],
+            "correct_index": 1,
+            "explanation": "The three-carbon chain bears the hydroxyl group on the middle carbon, so the name is propan-2-ol. Propan-1-ol would put the OH on a terminal carbon, while propanal and propanone are carbonyl compounds with no hydroxyl group.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-027",
+            "domain": "Chemistry",
+            "stem": "Which of the following is an example of a nucleophilic substitution reaction?",
+            "options": [
+                "Addition of bromine to an alkene",
+                "Free-radical chlorination of methane",
+                "Hydrolysis of an alkyl halide with aqueous hydroxide",
+                "Elimination of HBr from an alkyl bromide"
+            ],
+            "correct_index": 2,
+            "explanation": "In the hydrolysis of an alkyl halide the hydroxide ion, a nucleophile, replaces the halide leaving group, so it is nucleophilic substitution. Bromine addition is electrophilic addition, chlorination is free-radical substitution, and HBr loss is elimination.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-028",
+            "domain": "Chemistry",
+            "stem": "The oxidation state of manganese in the permanganate ion MnO4^- is equal to which of the following?",
+            "options": [
+                "+4",
+                "+2",
+                "+6",
+                "+7"
+            ],
+            "correct_index": 3,
+            "explanation": "Let the oxidation state be x; then x + 4(-2) = -1, giving x = +7. The value +6 occurs in the manganate ion MnO4^2-, and +2 is the common state of the Mn^2+ ion.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-029",
+            "domain": "Chemistry",
+            "stem": "In aqueous solution, which of the hydrogen halides is the strongest acid?",
+            "options": [
+                "HI",
+                "HF",
+                "HCl",
+                "HBr"
+            ],
+            "correct_index": 0,
+            "explanation": "Acid strength increases down the group as the H-X bond becomes weaker, so HI dissociates most completely and is the strongest. HF is the weakest because of its strong bond and extensive hydrogen bonding in water.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-030",
+            "domain": "Chemistry",
+            "stem": "According to VSEPR theory, the molecular shape of ammonia (NH3) is equal to which of the following?",
+            "options": [
+                "trigonal planar",
+                "trigonal pyramidal",
+                "tetrahedral",
+                "bent"
+            ],
+            "correct_index": 1,
+            "explanation": "Nitrogen has three bonding pairs and one lone pair, so the electron geometry is tetrahedral but the molecular shape is trigonal pyramidal. A trigonal planar shape would need all three pairs to be bonding with no lone pair.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-031",
+            "domain": "Chemistry",
+            "stem": "When an aldehyde is warmed with Tollens' reagent, a positive test is indicated by the formation of which of the following?",
+            "options": [
+                "a red precipitate",
+                "a white precipitate",
+                "a silver mirror on the wall of the test tube",
+                "a colourless gas"
+            ],
+            "correct_index": 2,
+            "explanation": "Tollens' reagent oxidises the aldehyde while reducing silver ions to metallic silver, which deposits as a characteristic silver mirror. A red precipitate signals Fehling's test, and a white precipitate commonly indicates a halide test.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-032",
+            "domain": "Chemistry",
+            "stem": "The number of structural chain isomers of pentane (C5H12) is equal to which of the following?",
+            "options": [
+                "2",
+                "4",
+                "5",
+                "3"
+            ],
+            "correct_index": 3,
+            "explanation": "Pentane exists as three chain isomers - n-pentane, 2-methylbutane, and 2,2-dimethylpropane. Counting only the straight chain and one branched form gives 2 and misses the most highly branched isomer.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-033",
+            "domain": "Chemistry",
+            "stem": "By convention, the standard enthalpy of formation of an element in its most stable form at 298 K is equal to which of the following?",
+            "options": [
+                "zero",
+                "always negative",
+                "always positive",
+                "equal to its atomic mass"
+            ],
+            "correct_index": 0,
+            "explanation": "The standard enthalpy of formation of an element in its reference state is defined as exactly zero, which sets the scale for all other formation enthalpies. Compounds formed from their elements usually have non-zero values, often negative.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-034",
+            "domain": "Chemistry",
+            "stem": "At equal molality and assuming complete dissociation, which aqueous solution has the highest boiling point?",
+            "options": [
+                "0.1 m NaCl",
+                "0.1 m Al2(SO4)3",
+                "0.1 m glucose",
+                "0.1 m CaCl2"
+            ],
+            "correct_index": 1,
+            "explanation": "Boiling-point elevation is proportional to the number of dissolved particles. Al2(SO4)3 gives 5 ions, CaCl2 gives 3, NaCl gives 2, and glucose gives 1, so the aluminium sulfate solution boils highest.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-035",
+            "domain": "Chemistry",
+            "stem": "The correct order of increasing first ionisation enthalpy of the elements Na, Mg, Al and Si is equal to which of the following?",
+            "options": [
+                "Na < Mg < Al < Si",
+                "Mg < Na < Al < Si",
+                "Na < Al < Mg < Si",
+                "Al < Na < Mg < Si"
+            ],
+            "correct_index": 2,
+            "explanation": "Ionisation enthalpy generally increases across a period, but magnesium has a stable filled 3s subshell so it exceeds aluminium. The correct order is Na < Al < Mg < Si, and ignoring the magnesium anomaly wrongly places Mg before Al.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-036",
+            "domain": "Chemistry",
+            "stem": "The coordination number of the central metal ion in the complex [Fe(CN)6]^3- is equal to which of the following?",
+            "options": [
+                "3",
+                "4",
+                "2",
+                "6"
+            ],
+            "correct_index": 3,
+            "explanation": "Six cyanide ligands are directly bonded to the central iron ion, so the coordination number is 6. The overall charge -3 is unrelated to the coordination number, and 4 would describe a tetrahedral complex.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-037",
+            "domain": "Chemistry",
+            "stem": "The product formed when ethanol is heated with excess acidified potassium dichromate under strong oxidising conditions is equal to which of the following?",
+            "options": [
+                "ethanoic acid",
+                "ethanal",
+                "ethene",
+                "diethyl ether"
+            ],
+            "correct_index": 0,
+            "explanation": "Under strong oxidation the primary alcohol is carried past the aldehyde stage to ethanoic acid. Ethanal is only the intermediate, whereas ethene needs dehydration and ether needs acid-catalysed condensation of two alcohol molecules.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-038",
+            "domain": "Chemistry",
+            "stem": "The number of moles of electrons required to reduce 1 mole of Cr2O7^2- to Cr^3+ in acidic medium is equal to which of the following?",
+            "options": [
+                "3",
+                "6",
+                "7",
+                "2"
+            ],
+            "correct_index": 1,
+            "explanation": "The half-reaction Cr2O7^2- + 14H+ + 6e- gives 2Cr^3+ + 7H2O, so 6 moles of electrons reduce one mole of dichromate. The value 3 would be correct for only a single chromium atom, and 7 counts the water molecules.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-039",
+            "domain": "Chemistry",
+            "stem": "Among the following ionic solids, which one has the highest lattice energy for comparable structural type?",
+            "options": [
+                "NaCl",
+                "KCl",
+                "MgO",
+                "CsI"
+            ],
+            "correct_index": 2,
+            "explanation": "Lattice energy rises with the product of ionic charges and falls with increasing ionic size. MgO combines doubly charged ions with small radii, giving the highest lattice energy, while KCl and CsI have larger singly charged ions and much lower values.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-040",
+            "domain": "Chemistry",
+            "stem": "The van't Hoff factor i for a dilute aqueous solution of K2SO4 that dissociates completely is equal to which of the following?",
+            "options": [
+                "1",
+                "2",
+                "4",
+                "3"
+            ],
+            "correct_index": 3,
+            "explanation": "K2SO4 dissociates into two potassium ions and one sulfate ion, giving three particles per formula unit, so i = 3. The value 2 would fit a salt such as NaCl, which gives only two ions.",
+            "reference": "JEE Advanced Syllabus - Chemistry"
+        },
+        {
+            "id": "jee-adv-041",
+            "domain": "Mathematics",
+            "stem": "The value of the indefinite integral of x e^x with respect to x is equal to which of the following?",
+            "options": [
+                "e^x (x - 1) + C",
+                "e^x (x + 1) + C",
+                "(x^2 e^x)/2 + C",
+                "e^x + C"
+            ],
+            "correct_index": 0,
+            "explanation": "Integration by parts with u = x and dv = e^x dx gives x e^x - integral of e^x dx = e^x(x - 1) + C. The choice e^x(x + 1) comes from a sign slip, and (x^2 e^x)/2 ignores the product rule.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-042",
+            "domain": "Mathematics",
+            "stem": "The derivative of sin(x^2) with respect to x is equal to which of the following?",
+            "options": [
+                "cos(x^2)",
+                "2x cos(x^2)",
+                "2x sin(x^2)",
+                "-2x cos(x^2)"
+            ],
+            "correct_index": 1,
+            "explanation": "The chain rule gives cos(x^2) multiplied by the derivative of the inner function x^2, which is 2x, so the derivative is 2x cos(x^2). Omitting the inner derivative gives cos(x^2), and there is no minus sign here.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-043",
+            "domain": "Mathematics",
+            "stem": "The value of the limit as x tends to 0 of (sin 3x)/x is equal to which of the following?",
+            "options": [
+                "1",
+                "0",
+                "3",
+                "infinity"
+            ],
+            "correct_index": 2,
+            "explanation": "Since sin(kx)/x tends to k as x tends to 0, the limit is 3. The value 1 corresponds to sin x / x, and the ratio is finite and non-zero so it neither vanishes nor diverges.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-044",
+            "domain": "Mathematics",
+            "stem": "The general term of the arithmetic progression 5, 9, 13, 17, ... is equal to which of the following?",
+            "options": [
+                "4n - 1",
+                "5n",
+                "4n",
+                "4n + 1"
+            ],
+            "correct_index": 3,
+            "explanation": "The first term is 5 and the common difference is 4, so the nth term is 5 + (n - 1)4 = 4n + 1. The expression 4n - 1 gives 3 at n = 1, which does not match the first term.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-045",
+            "domain": "Mathematics",
+            "stem": "The number of ways of choosing a committee of 3 people from 10 people is equal to which of the following?",
+            "options": [
+                "120",
+                "30",
+                "720",
+                "1000"
+            ],
+            "correct_index": 0,
+            "explanation": "This is the combination C(10,3) = 10!/(3! 7!) = 120. The value 720 is the permutation P(10,3), which wrongly treats different orders within the committee as different committees.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-046",
+            "domain": "Mathematics",
+            "stem": "The probability of getting exactly two heads when a fair coin is tossed three times is equal to which of the following?",
+            "options": [
+                "1/8",
+                "3/8",
+                "1/2",
+                "2/3"
+            ],
+            "correct_index": 1,
+            "explanation": "There are C(3,2) = 3 favourable sequences out of 2^3 = 8 equally likely outcomes, so the probability is 3/8. The value 1/8 is the probability of all heads or all tails, and 1/2 is the probability of at least one head.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-047",
+            "domain": "Mathematics",
+            "stem": "The sum of the roots of the quadratic equation 2x^2 - 6x + 4 = 0 is equal to which of the following?",
+            "options": [
+                "-3",
+                "2",
+                "3",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "For ax^2 + bx + c = 0 the sum of the roots is -b/a = 6/2 = 3. The value 6 is -b and forgets to divide by a, while -3 has the sign reversed.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-048",
+            "domain": "Mathematics",
+            "stem": "The distance of the point (3, 4) from the origin in the coordinate plane is equal to which of the following?",
+            "options": [
+                "7",
+                "25",
+                "1",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "The distance is sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. The value 7 is the sum of the coordinates, which is not a Euclidean distance, and 25 is the squared distance.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-049",
+            "domain": "Mathematics",
+            "stem": "The slope of any line perpendicular to the line 2x + 3y = 6 is equal to which of the following?",
+            "options": [
+                "3/2",
+                "-2/3",
+                "2/3",
+                "-3/2"
+            ],
+            "correct_index": 0,
+            "explanation": "Rearranging gives y = -(2/3)x + 2, so the given slope is -2/3 and a perpendicular line has the negative reciprocal 3/2. The value -2/3 is the slope of the original line, not its perpendicular.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-050",
+            "domain": "Mathematics",
+            "stem": "The value of the determinant of the 2x2 matrix with first row (1, 2) and second row (3, 4) is equal to which of the following?",
+            "options": [
+                "2",
+                "-2",
+                "10",
+                "-10"
+            ],
+            "correct_index": 1,
+            "explanation": "The determinant is (1)(4) - (2)(3) = 4 - 6 = -2. The value 10 comes from adding the products 4 and 6 instead of subtracting, and the sign changes flip the result.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-051",
+            "domain": "Mathematics",
+            "stem": "The number of real roots of the equation x^2 - 4x + 7 = 0 is equal to which of the following?",
+            "options": [
+                "2",
+                "1",
+                "0",
+                "4"
+            ],
+            "correct_index": 2,
+            "explanation": "The discriminant is 16 - 28 = -12, which is negative, so the equation has no real roots. A negative discriminant gives a pair of complex conjugate roots rather than real ones, so the answer is zero.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-052",
+            "domain": "Mathematics",
+            "stem": "The value of the sum 1 + 2 + 3 + ... + 100 is equal to which of the following?",
+            "options": [
+                "5000",
+                "10100",
+                "10000",
+                "5050"
+            ],
+            "correct_index": 3,
+            "explanation": "Using n(n + 1)/2 with n = 100 gives 100 times 101 divided by 2, which is 5050. The value 10100 forgets the division by 2, and 5000 is a rounded estimate that is too small.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-053",
+            "domain": "Mathematics",
+            "stem": "The magnitude of the vector (3, 4) in the plane is equal to which of the following?",
+            "options": [
+                "5",
+                "7",
+                "25",
+                "12"
+            ],
+            "correct_index": 0,
+            "explanation": "The magnitude is sqrt(3^2 + 4^2) = 5. The value 25 is the squared magnitude, and 12 is the product of the two components, neither of which equals the length of the vector.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-054",
+            "domain": "Mathematics",
+            "stem": "The inverse of the function f(x) = 3x + 2, where it is defined, is equal to which of the following?",
+            "options": [
+                "(x + 2)/3",
+                "(x - 2)/3",
+                "3x - 2",
+                "1/(3x + 2)"
+            ],
+            "correct_index": 1,
+            "explanation": "Solving y = 3x + 2 for x gives x = (y - 2)/3, so the inverse function is (x - 2)/3. The choice (x + 2)/3 flips the sign of the constant, and 1/(3x + 2) is the reciprocal rather than the inverse function.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-055",
+            "domain": "Mathematics",
+            "stem": "The value of the product cos(60 degrees) times tan(45 degrees) is equal to which of the following?",
+            "options": [
+                "1",
+                "sqrt(3)/2",
+                "1/2",
+                "0"
+            ],
+            "correct_index": 2,
+            "explanation": "cos(60 degrees) = 1/2 and tan(45 degrees) = 1, so the product is 1/2. The value 1 would require cos(0 degrees), and sqrt(3)/2 is cos(30 degrees).",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-056",
+            "domain": "Mathematics",
+            "stem": "The area bounded by the curve y = x^2, the x-axis, and the lines x = 0 and x = 2 is equal to which of the following?",
+            "options": [
+                "4",
+                "16/3",
+                "2",
+                "8/3"
+            ],
+            "correct_index": 3,
+            "explanation": "The area is the integral of x^2 from 0 to 2, which is x^3/3 evaluated from 0 to 2, giving 8/3. The value 4 is the value of the function at x = 2 and confuses the ordinate with the area under the curve.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-057",
+            "domain": "Mathematics",
+            "stem": "If the matrix A has order 2x3 and the matrix B has order 3x2, then the order of the product AB is equal to which of the following?",
+            "options": [
+                "2x2",
+                "3x3",
+                "2x3",
+                "3x2"
+            ],
+            "correct_index": 0,
+            "explanation": "For the product AB the inner dimensions must agree, and 3 equals 3, so the product is defined. Its order is the outer pair, 2 and 2, giving 2x2. The order 3x3 belongs to the reversed product BA.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-058",
+            "domain": "Mathematics",
+            "stem": "The coordinates of the focus of the parabola y^2 = 8x are which of the following?",
+            "options": [
+                "(0, 2)",
+                "(2, 0)",
+                "(4, 0)",
+                "(0, 4)"
+            ],
+            "correct_index": 1,
+            "explanation": "Comparing y^2 = 8x with the standard form y^2 = 4ax gives 4a = 8, so a = 2 and the focus is (a, 0) = (2, 0). Placing the focus on the y-axis, as in (0, 2), reverses the axis of the parabola.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-059",
+            "domain": "Mathematics",
+            "stem": "The number of solutions of the equation sin(x) = 1/2 in the interval from 0 to 2 pi is equal to which of the following?",
+            "options": [
+                "1",
+                "3",
+                "2",
+                "4"
+            ],
+            "correct_index": 2,
+            "explanation": "sin(x) = 1/2 at x = pi/6 and x = 5pi/6 within the interval, giving two solutions. Sine is positive in the first and second quadrants, so within one full period there are exactly two solutions.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        },
+        {
+            "id": "jee-adv-060",
+            "domain": "Mathematics",
+            "stem": "The value of the binomial coefficient C(6, 2) is equal to which of the following?",
+            "options": [
+                "12",
+                "30",
+                "36",
+                "15"
+            ],
+            "correct_index": 3,
+            "explanation": "C(6,2) = 6!/(2! 4!) = (6 times 5)/2 = 15. The value 30 is the permutation P(6,2), which counts ordered selections and is twice the combination.",
+            "reference": "JEE Advanced Syllabus - Mathematics"
+        }
+    ]
+}

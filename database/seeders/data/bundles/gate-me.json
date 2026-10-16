@@ -1,0 +1,858 @@
+{
+    "cert_key": "gate-me",
+    "title": "GATE Mechanical",
+    "issuer": "IIT / National Coordination Board (India)",
+    "region": "APAC",
+    "outline_file": "outlines/gate-me.json",
+    "variant_label": "GATE ME Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 180,
+        "scoring": "Marks, negative marking for MCQs",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public GATE Mechanical Engineering syllabus. Not a capture of past questions.",
+    "source_label": "GATE ME practice bank",
+    "items": [
+        {
+            "id": "gate-me-001",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A force of 50 N acts perpendicular to a lever arm at a distance of 0.4 m from the pivot. What is the magnitude of the moment about the pivot?",
+            "options": [
+                "20 N·m",
+                "12.5 N·m",
+                "200 N·m",
+                "0.008 N·m"
+            ],
+            "correct_index": 0,
+            "explanation": "Moment equals force times perpendicular distance, so 50 N x 0.4 m = 20 N·m. Dividing instead of multiplying gives 125, a 4 m arm would be needed for 200 N·m, and 0.008 is force divided by distance.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-002",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A steel bar 2 m long and 100 mm^2 in cross-section carries an axial tensile load of 20 kN. Taking E = 200 GPa, what is the elongation?",
+            "options": [
+                "0.2 mm",
+                "2 mm",
+                "20 mm",
+                "0.02 mm"
+            ],
+            "correct_index": 1,
+            "explanation": "Stress is 20 kN / 100 mm^2 = 200 MPa, strain is 200 MPa / 200 GPa = 0.001, and elongation is 0.001 x 2000 mm = 2 mm. A factor-of-ten slip in stress or modulus gives the other options.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-003",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "In a uniaxial tension test the axial strain is 0.0010 and the lateral strain is -0.0003. What is Poisson's ratio?",
+            "options": [
+                "0.03",
+                "3.33",
+                "0.3",
+                "0.0003"
+            ],
+            "correct_index": 2,
+            "explanation": "Poisson's ratio is the negative of lateral strain divided by axial strain, so 0.0003 / 0.0010 = 0.3. Inverting the ratio gives 3.33 and a decimal slip gives 0.03.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-004",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A rivet of cross-sectional area 200 mm^2 carries a direct shear force of 40 kN. What is the average shear stress?",
+            "options": [
+                "20 MPa",
+                "80 MPa",
+                "800 MPa",
+                "200 MPa"
+            ],
+            "correct_index": 3,
+            "explanation": "Average shear stress is 40,000 N / 200 mm^2 = 200 N/mm^2 = 200 MPa. Dividing by a larger area would give 20 MPa or 80 MPa, and 800 MPa is a tenfold error.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-005",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A simply supported beam of span L carries a concentrated load W at mid-span. What is the maximum bending moment?",
+            "options": [
+                "WL/4",
+                "WL/2",
+                "WL/8",
+                "WL"
+            ],
+            "correct_index": 0,
+            "explanation": "Each reaction is W/2, and the mid-span moment is (W/2)(L/2) = WL/4. WL/2 belongs to a cantilever with an end load, and WL/8 to a beam fixed at both ends.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-006",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A cantilever of length L and flexural rigidity EI carries a point load W at its free end. What is the maximum deflection?",
+            "options": [
+                "W L^3 / (8EI)",
+                "W L^3 / (3EI)",
+                "W L^4 / (8EI)",
+                "W L^2 / (2EI)"
+            ],
+            "correct_index": 1,
+            "explanation": "A cantilever with an end load deflects by W L^3 / (3EI). W L^3 / (8EI) is the central-load deflection of a simply supported beam, and W L^4 / (8EI) is a distributed-load case.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-007",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A solid circular shaft of diameter d transmits a torque T. What is the maximum shear stress in the shaft?",
+            "options": [
+                "8T / (π d^3)",
+                "32T / (π d^3)",
+                "16T / (π d^3)",
+                "16T / (π d^4)"
+            ],
+            "correct_index": 2,
+            "explanation": "The polar section modulus of a solid shaft is π d^3 / 16, so the maximum shear stress is 16T/(π d^3). The π d^4 term is the polar moment of inertia, not the section modulus.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-008",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "For a rectangular beam section of width b and depth h, what is the elastic section modulus about the centroidal axis?",
+            "options": [
+                "b h^3 / 12",
+                "b h^2 / 12",
+                "b h^3 / 36",
+                "b h^2 / 6"
+            ],
+            "correct_index": 3,
+            "explanation": "Section modulus equals I divided by the extreme fibre distance. With I = b h^3/12 and y = h/2 this is b h^2/6. b h^3/12 is the moment of inertia, not the section modulus.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-009",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A column of length L is hinged at both ends. What is its effective length for Euler buckling?",
+            "options": [
+                "L",
+                "0.5 L",
+                "0.7 L",
+                "2 L"
+            ],
+            "correct_index": 0,
+            "explanation": "Both ends hinged corresponds to an effective-length factor of 1.0, so the effective length equals L. The values 0.5 L, 0.7 L and 2 L belong to fixed-fixed, fixed-pinned and fixed-free columns.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-010",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "At a point in a stressed body the state is pure shear of magnitude τ. What are the principal stresses?",
+            "options": [
+                "τ and τ",
+                "+τ and -τ",
+                "0 and τ",
+                "2τ and 0"
+            ],
+            "correct_index": 1,
+            "explanation": "For pure shear the principal stresses are +τ and -τ acting on planes at 45 degrees to the shear planes. They are equal in magnitude and opposite in sign, and neither lies along the original shear plane.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-011",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A block just begins to slide down a rough inclined plane of angle θ. What is the coefficient of static friction?",
+            "options": [
+                "sin θ",
+                "cos θ",
+                "tan θ",
+                "cot θ"
+            ],
+            "correct_index": 2,
+            "explanation": "At impending motion the friction force equals the downhill weight component, giving coefficient of friction = tan θ. Sine and cosine terms arise only from an incorrect force balance.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-012",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "What is the moment of inertia of a rectangle of width b and depth h about its centroidal axis parallel to the width?",
+            "options": [
+                "b h^3 / 3",
+                "h b^3 / 12",
+                "b h^3 / 36",
+                "b h^3 / 12"
+            ],
+            "correct_index": 3,
+            "explanation": "About the centroidal axis parallel to the width, the moment of inertia is b h^3/12. About the base it is b h^3/3, and h b^3/12 simply swaps the roles of b and h.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-013",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A projectile is launched with speed u at an angle θ to the horizontal on level ground. For what angle is the horizontal range maximum when air resistance is neglected?",
+            "options": [
+                "45°",
+                "30°",
+                "60°",
+                "90°"
+            ],
+            "correct_index": 0,
+            "explanation": "Range equals u^2 sin 2θ / g, which is greatest when sin 2θ = 1, that is when 2θ = 90° and θ = 45°. A 90° launch gives zero range, and 30° and 60° give equal smaller ranges.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-014",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "A simply supported beam carries a concentrated point load at an interior point. What happens to the shear force diagram at that point?",
+            "options": [
+                "It remains continuous",
+                "It jumps by the magnitude of the load",
+                "It becomes zero",
+                "It becomes a parabola"
+            ],
+            "correct_index": 1,
+            "explanation": "A concentrated transverse load causes a discontinuity in the shear force diagram equal to the load magnitude, while the bending moment diagram stays continuous. Distributed loads, not point loads, give a linear shear variation.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-015",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "What is the strain energy stored in an axially loaded bar of length L, area A and modulus E under an axial force P?",
+            "options": [
+                "P^2 L / (AE)",
+                "P L / (2A)",
+                "P^2 L / (2AE)",
+                "P^2 A / (2E L)"
+            ],
+            "correct_index": 2,
+            "explanation": "Strain energy is half the force times the extension, and with extension PL/(AE) this becomes P^2 L/(2AE). Omitting the one-half gives P^2 L/(AE), and the other forms misplace the variables.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-016",
+            "domain": "Engineering Mechanics and Strength of Materials",
+            "stem": "At a truss joint with exactly two non-collinear members and no external load or reaction, what is the axial force in each member?",
+            "options": [
+                "Both carry equal tension",
+                "One is always in compression",
+                "The joint cannot be in equilibrium",
+                "Both members carry zero axial force"
+            ],
+            "correct_index": 3,
+            "explanation": "Equilibrium of a joint with only two non-collinear members and no applied load or reaction requires both member forces to be zero. This is the standard zero-force-member rule for truss analysis.",
+            "reference": "GATE ME Syllabus - Engineering Mechanics and Strength of Materials"
+        },
+        {
+            "id": "gate-me-017",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "For a closed system undergoing a process, with heat added to the system taken as positive and work done by the system taken as positive, the first law of thermodynamics gives which expression for the change in internal energy?",
+            "options": [
+                "Q - W",
+                "Q + W",
+                "-Q + W",
+                "W - Q"
+            ],
+            "correct_index": 0,
+            "explanation": "With heat in positive and work out positive, the first law is delta U = Q - W. Reversing the work sign convention gives Q + W, and the other options simply flip the signs of the terms.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-018",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A Carnot engine operates between a source at 600 K and a sink at 300 K. What is its thermal efficiency?",
+            "options": [
+                "33%",
+                "50%",
+                "66%",
+                "100%"
+            ],
+            "correct_index": 1,
+            "explanation": "Carnot efficiency is 1 minus the ratio of sink to source temperature, so 1 - 300/600 = 0.50 or 50%. Using source over sink gives 0.5 too, but 66% and 33% come from misusing the temperature difference.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-019",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "An ideal gas at 300 K occupies 0.1 m^3 at 100 kPa. Taking the gas constant R = 0.287 kJ/(kg·K), what is the mass of the gas?",
+            "options": [
+                "1.16 kg",
+                "0.0116 kg",
+                "0.116 kg",
+                "11.6 kg"
+            ],
+            "correct_index": 2,
+            "explanation": "Using m = PV/(RT) with pressure in kPa gives (100 x 0.1)/(0.287 x 300) = 10/86.1 = 0.116 kg. Errors of a factor of ten come from unit slips in pressure or the gas constant.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-020",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "An ideal gas expands isothermally at temperature T from volume V1 to volume V2. What is the work done by the gas?",
+            "options": [
+                "mR(T2 - T1)",
+                "mCv(T2 - T1)",
+                "0",
+                "mRT ln(V2/V1)"
+            ],
+            "correct_index": 3,
+            "explanation": "For a reversible isothermal expansion of an ideal gas, work is the integral of P dV, which is mRT ln(V2/V1) because T is constant. The other options belong to adiabatic or constant-volume processes.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-021",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "The air-standard Otto cycle has a compression ratio r and specific-heat ratio γ. Which expression gives its thermal efficiency?",
+            "options": [
+                "1 - 1/r^(γ-1)",
+                "1 - 1/r^γ",
+                "1 - r^(γ-1)",
+                "1 - 1/r"
+            ],
+            "correct_index": 0,
+            "explanation": "Otto efficiency is 1 - 1/r^(γ-1), with the exponent equal to gamma minus one. Using the exponent gamma or dropping the exponent changes the value, and 1 - r^(γ-1) can even exceed one.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-022",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "For an internally reversible process transferring heat Q at a constant absolute temperature T, what is the entropy change of the system?",
+            "options": [
+                "QT",
+                "Q/T",
+                "T/Q",
+                "0"
+            ],
+            "correct_index": 1,
+            "explanation": "For internally reversible isothermal heat transfer the entropy change is Q/T. Entropy does change in an isothermal process, and the product QT or the ratio T/Q has the wrong dimensions.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-023",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A refrigerator removes 4 kW of heat from a cold space while consuming 2 kW of work. What is its coefficient of performance?",
+            "options": [
+                "0.5",
+                "4",
+                "2",
+                "8"
+            ],
+            "correct_index": 2,
+            "explanation": "Refrigerator COP is the heat removed divided by the work input, so 4 kW / 2 kW = 2. The reciprocal 0.5 is the mistake of dividing work by heat, and 4 and 8 ignore the work term.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-024",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "For an ideal gas, which relation correctly links the specific heats Cp and Cv with the gas constant R?",
+            "options": [
+                "Cp + Cv = R",
+                "Cv - Cp = R",
+                "Cp / Cv = R",
+                "Cp - Cv = R"
+            ],
+            "correct_index": 3,
+            "explanation": "Mayer's relation for an ideal gas states Cp - Cv = R. The ratio Cp/Cv is the specific-heat ratio gamma rather than R, and the sum or the reversed difference does not hold.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-025",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A plane wall of thickness L and area A has thermal conductivity k, with its two faces held at temperatures T1 and T2. What is the steady heat-transfer rate through the wall?",
+            "options": [
+                "kA(T1 - T2)/L",
+                "kL(T1 - T2)/A",
+                "A(T1 - T2)/(kL)",
+                "kA(T1 - T2)L"
+            ],
+            "correct_index": 0,
+            "explanation": "Integrating Fourier's law over a plane wall gives Q = kA(T1 - T2)/L. The thermal resistance is L/(kA), so placing L in the numerator inverts the resistance and gives the wrong dependence on thickness.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-026",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "Newton's law of cooling for convective heat transfer gives the heat-transfer rate as which expression?",
+            "options": [
+                "q = kA(Ts - T∞)",
+                "q = hA(Ts - T∞)",
+                "q = h(Ts - T∞)/A",
+                "q = hA(Ts - T∞)^4"
+            ],
+            "correct_index": 1,
+            "explanation": "Newton's law of cooling is q = hA(Ts - T∞), where h is the convection coefficient and A the surface area. Dropping A or using conductivity k misstates it, and the fourth power belongs to radiation.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-027",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A surface of emissivity ε and area A at absolute temperature T radiates to surroundings at absolute zero. Using the Stefan-Boltzmann constant σ, what is the net radiated flux?",
+            "options": [
+                "σT^4/ε",
+                "εσT",
+                "εσT^4",
+                "εσT^4/4"
+            ],
+            "correct_index": 2,
+            "explanation": "The Stefan-Boltzmann law gives a radiated flux of εσT^4 when the surroundings are at absolute zero. The emissivity multiplies the sigma T to the fourth term and does not divide it, and the exponent is four.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-028",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "For a cylindrical insulating layer with conductivity k and outer surface convection coefficient h, what is the critical radius of insulation?",
+            "options": [
+                "h/k",
+                "2k/h",
+                "k/(2h)",
+                "k/h"
+            ],
+            "correct_index": 3,
+            "explanation": "For a cylindrical layer the critical radius is k/h, below which adding insulation increases heat loss. The value 2k/h is the critical radius for a sphere, and h/k is merely the inverse ratio.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-029",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "For a steady-flow control volume with one inlet and one outlet and negligible kinetic and potential energy changes, which equation gives the steady-flow energy balance per unit mass?",
+            "options": [
+                "q - w = h2 - h1",
+                "q - w = h1 - h2",
+                "q + w = h2 - h1",
+                "q = h2 - h1"
+            ],
+            "correct_index": 0,
+            "explanation": "The steady-flow energy equation is q - w = h2 - h1 when kinetic and potential terms are negligible. Heat is positive when added and work positive when done by the system, giving the enthalpy rise on the right.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-030",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A heat pump delivers 9 kW of heat to a warm space while drawing 3 kW of electrical work. What is its coefficient of performance as a heat pump?",
+            "options": [
+                "0.33",
+                "3",
+                "6",
+                "12"
+            ],
+            "correct_index": 1,
+            "explanation": "Heat-pump COP is the heat delivered divided by the work input, so 9 kW / 3 kW = 3. The refrigerator COP would be (9 - 3)/3 = 2, and 0.33 is the reciprocal of the given ratio.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-031",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "In the Otto cycle, the compression ratio is defined as which volume ratio?",
+            "options": [
+                "V2/V1, the clearance volume over the total volume",
+                "the swept volume over the clearance volume",
+                "V1/V2, the total cylinder volume over the clearance volume",
+                "the clearance volume over the total volume"
+            ],
+            "correct_index": 2,
+            "explanation": "Compression ratio r = V1/V2 is the maximum cylinder volume (clearance plus swept) divided by the minimum clearance volume. The ratio V2/V1 is its reciprocal and is less than one, which cannot be a compression ratio.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-032",
+            "domain": "Thermodynamics and Heat Transfer",
+            "stem": "A Carnot refrigerator maintains a cold space at 270 K while rejecting heat to ambient at 300 K. What is its maximum coefficient of performance?",
+            "options": [
+                "0.9",
+                "10",
+                "0.1",
+                "9"
+            ],
+            "correct_index": 3,
+            "explanation": "Maximum COP is T_cold divided by (T_hot - T_cold), so 270/(300 - 270) = 9. Using the cold temperature without taking the difference or inverting the ratio gives the other options.",
+            "reference": "GATE ME Syllabus - Thermodynamics and Heat Transfer"
+        },
+        {
+            "id": "gate-me-033",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A liquid has a mass density of 800 kg/m^3. What is its specific gravity relative to water of density 1000 kg/m^3?",
+            "options": [
+                "0.8",
+                "1.25",
+                "8",
+                "0.08"
+            ],
+            "correct_index": 0,
+            "explanation": "Specific gravity is the liquid density divided by the water density, so 800/1000 = 0.8. The reciprocal 1.25 is a common slip, and 8 and 0.08 are decimal-point errors.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-034",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A Newtonian fluid is sheared between two parallel plates with a velocity gradient of 100 s^-1 and a dynamic viscosity of 0.5 Pa·s. What is the shear stress?",
+            "options": [
+                "0.005 Pa",
+                "50 Pa",
+                "200 Pa",
+                "5 Pa"
+            ],
+            "correct_index": 1,
+            "explanation": "Newton's law of viscosity gives shear stress = viscosity x velocity gradient = 0.5 x 100 = 50 Pa. Dividing instead of multiplying gives 0.005 Pa, and a factor-of-ten slip gives 5 Pa.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-035",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "Water flows through a pipe that narrows from an area of 0.04 m^2 to 0.01 m^2. If the velocity in the wider section is 2 m/s, what is the velocity in the narrow section?",
+            "options": [
+                "0.5 m/s",
+                "4 m/s",
+                "8 m/s",
+                "16 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "By continuity A1V1 = A2V2, so V2 = (0.04/0.01) x 2 = 8 m/s. The area falls by a factor of four, so the velocity rises by that factor; inverting the ratio gives 0.5 m/s.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-036",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "For steady, incompressible, frictionless flow along a streamline, which quantity does Bernoulli's equation show to be constant?",
+            "options": [
+                "p + ρV + ρgz",
+                "ρp + V^2/2 + z",
+                "pV + ρgz",
+                "p/ρ + V^2/2 + gz"
+            ],
+            "correct_index": 3,
+            "explanation": "Bernoulli's equation conserves the sum of pressure head p/rho, velocity head V^2/2 and elevation head gz along a streamline for inviscid incompressible flow. The other expressions misplace density or drop the squared velocity.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-037",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "Water of density 1000 kg/m^3 flows at 2 m/s through a pipe of diameter 0.05 m, and its dynamic viscosity is 0.001 Pa·s. What is the Reynolds number?",
+            "options": [
+                "1 x 10^5",
+                "1 x 10^3",
+                "5 x 10^4",
+                "2 x 10^5"
+            ],
+            "correct_index": 0,
+            "explanation": "Reynolds number = ρVD/μ = (1000 x 2 x 0.05)/0.001 = 100/0.001 = 1 x 10^5, which indicates turbulent flow. Using the radius instead of the diameter halves the value to 5 x 10^4.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-038",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "What is the gauge pressure at a depth of 5 m below the free surface of water, taking density as 1000 kg/m^3 and g as 9.81 m/s^2?",
+            "options": [
+                "4.9 kPa",
+                "49 kPa",
+                "490 kPa",
+                "9.81 kPa"
+            ],
+            "correct_index": 1,
+            "explanation": "Hydrostatic gauge pressure = ρgh = 1000 x 9.81 x 5 = 49,050 Pa, about 49 kPa. A missing factor of ten or using the depth in centimetres produces the other options.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-039",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A pump delivers 0.05 m^3/s of water against a total head of 20 m. Taking density as 1000 kg/m^3 and g as 9.81 m/s^2, what hydraulic power does the pump impart?",
+            "options": [
+                "0.981 kW",
+                "98.1 kW",
+                "9.81 kW",
+                "1 kW"
+            ],
+            "correct_index": 2,
+            "explanation": "Power = ρgQH = 1000 x 9.81 x 0.05 x 20 = 9810 W, about 9.81 kW. Omitting g or using the flow in litres per second without conversion gives a value off by a factor of ten or a thousand.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-040",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "The Darcy-Weisbach equation gives the frictional head loss in a pipe of diameter D, length L, friction factor f and mean velocity V. Which expression is correct?",
+            "options": [
+                "f L V / (2gD)",
+                "f L V^2 / (2g)",
+                "2gD / (f L V^2)",
+                "f L V^2 / (2gD)"
+            ],
+            "correct_index": 3,
+            "explanation": "Darcy-Weisbach gives head loss = f (L/D)(V^2/2g) = f L V^2/(2gD). The velocity is squared and the diameter divides, so dropping either changes the trend with flow rate.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-041",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A body of volume 0.02 m^3 is fully submerged in water. Taking density as 1000 kg/m^3 and g as 9.81 m/s^2, what is the buoyant force?",
+            "options": [
+                "196 N",
+                "19.6 N",
+                "1960 N",
+                "98 N"
+            ],
+            "correct_index": 0,
+            "explanation": "Buoyant force equals the weight of displaced water, ρgV = 1000 x 9.81 x 0.02, about 196 N. A decimal slip gives 19.6 N or 1960 N, and 98 N would correspond to half the volume.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-042",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A U-tube manometer using mercury of relative density 13.6 shows a height difference of 0.2 m. Taking water density as 1000 kg/m^3 and g as 9.81 m/s^2, what gauge pressure does it indicate?",
+            "options": [
+                "2.67 kPa",
+                "26.7 kPa",
+                "267 kPa",
+                "13.6 kPa"
+            ],
+            "correct_index": 1,
+            "explanation": "Gauge pressure = (relative density x 1000) x g x h = 13,600 x 9.81 x 0.2, about 26.7 kPa. Ignoring the 13.6 factor gives about 1.96 kPa, and a decimal slip gives 2.67 kPa.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-043",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "Which turbine is classified as an impulse turbine and is suited to high heads with small discharges?",
+            "options": [
+                "Francis turbine",
+                "Kaplan turbine",
+                "Pelton wheel",
+                "Propeller turbine"
+            ],
+            "correct_index": 2,
+            "explanation": "The Pelton wheel is an impulse turbine driven by high-velocity jets, best for high heads and low flows. Francis is a mixed-flow reaction turbine, and Kaplan and propeller turbines suit low heads and large flows.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-044",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "Cavitation in a centrifugal pump is best avoided by ensuring which condition at the pump inlet?",
+            "options": [
+                "That the discharge valve is fully closed",
+                "That the running speed is reduced to zero",
+                "That the impeller is removed from the casing",
+                "That NPSH available exceeds NPSH required"
+            ],
+            "correct_index": 3,
+            "explanation": "Cavitation occurs when the local pressure falls below the vapour pressure, so the net positive suction head available must exceed the net positive suction head required. Throttling or removing the impeller does not address this margin.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-045",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "The continuity equation for steady incompressible flow through a stream tube expresses conservation of which quantity?",
+            "options": [
+                "mass",
+                "energy",
+                "momentum",
+                "entropy"
+            ],
+            "correct_index": 0,
+            "explanation": "Continuity expresses conservation of mass, reducing to A1V1 = A2V2 for steady incompressible flow. Energy conservation is the Bernoulli or energy equation, momentum conservation is the momentum equation, and entropy belongs to the second law.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-046",
+            "domain": "Fluid Mechanics and Machinery",
+            "stem": "A boundary layer forms over a flat plate. By convention, the boundary-layer thickness is the distance from the plate to where the local fluid velocity reaches which value?",
+            "options": [
+                "50% of the free-stream velocity",
+                "99% of the free-stream velocity",
+                "exactly the free-stream velocity",
+                "zero"
+            ],
+            "correct_index": 1,
+            "explanation": "The boundary-layer thickness is conventionally taken where the velocity reaches 99% of the free-stream value. The layer merges asymptotically into the free stream, so there is no sharp edge where it equals the free-stream velocity exactly.",
+            "reference": "GATE ME Syllabus - Fluid Mechanics and Machinery"
+        },
+        {
+            "id": "gate-me-047",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In orthogonal metal cutting, Merchant's analysis gives which relation among the shear angle φ, the rake angle α and the friction angle β?",
+            "options": [
+                "2φ - β + α = 90°",
+                "φ + β + α = 90°",
+                "2φ + β - α = 90°",
+                "φ = 45° - α + β"
+            ],
+            "correct_index": 2,
+            "explanation": "Merchant's relation is 2φ + β - α = 90 degrees, linking the shear angle, friction angle and rake angle. Changing the signs of alpha or beta, or dropping the factor of two on phi, misplaces the shear plane.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-048",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "Taylor's tool-life equation relates cutting speed V and tool life T by V T^n = C. If n = 0.2 and C = 100, what is the tool life at a cutting speed of 50 m/min?",
+            "options": [
+                "8 min",
+                "16 min",
+                "64 min",
+                "32 min"
+            ],
+            "correct_index": 3,
+            "explanation": "Substituting gives 50 x T^0.2 = 100, so T^0.2 = 2 and T = 2^(1/0.2) = 2^5 = 32 min. Treating the exponent as 0.5 or 1 produces much shorter lives.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-049",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "A cylindrical workpiece of diameter 100 mm is turned at a spindle speed of 300 rpm. What is the cutting speed, taking diameter in mm and speed in rpm?",
+            "options": [
+                "94.2 m/min",
+                "30 m/min",
+                "942 m/min",
+                "9.42 m/min"
+            ],
+            "correct_index": 0,
+            "explanation": "Cutting speed = πDN/1000 = π x 100 x 300 / 1000, about 94.2 m/min. Omitting the factor of 1000 or the factor of pi gives the other options by orders of magnitude.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-050",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In sand casting, a riser is provided primarily for which purpose?",
+            "options": [
+                "To increase the melting point of the metal",
+                "To compensate for shrinkage during solidification",
+                "To reduce the pouring temperature",
+                "To provide draft for pattern removal"
+            ],
+            "correct_index": 1,
+            "explanation": "A riser is a reservoir of molten metal that feeds the casting as it shrinks, preventing shrinkage cavities. Draft angle and pouring temperature are separate design and process considerations.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-051",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In arc welding, what best defines the heat-affected zone in the base metal?",
+            "options": [
+                "It is the region melted and then resolidified",
+                "It is the region that remains completely unaffected",
+                "It is the region whose microstructure is altered without melting",
+                "It is the deposited filler metal"
+            ],
+            "correct_index": 2,
+            "explanation": "The heat-affected zone reaches temperatures high enough to change microstructure but below the melting point, so it is not melted. The melted region is the weld pool, and the deposited filler metal is the weld bead.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-052",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In limit gauging of a hole, which feature does the GO gauge check?",
+            "options": [
+                "The minimum material condition",
+                "Surface roughness",
+                "Concentricity",
+                "The maximum material condition"
+            ],
+            "correct_index": 3,
+            "explanation": "The GO gauge checks the maximum material condition, the smallest permissible hole, which must admit the gauge. The NO-GO gauge checks the minimum material condition, the largest permissible hole.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-053",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "For a deterministic inventory model with annual demand D, ordering cost S per order and holding cost H per unit per year, what is the economic order quantity?",
+            "options": [
+                "sqrt(2DS/H)",
+                "sqrt(2DH/S)",
+                "sqrt(DS/(2H))",
+                "sqrt(DH/(2S))"
+            ],
+            "correct_index": 0,
+            "explanation": "The economic order quantity balances ordering and holding costs and equals sqrt(2DS/H). Swapping S and H between the numerator and denominator changes the balance point and is a common transcription error.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-054",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In a project network, which statement best describes the critical path?",
+            "options": [
+                "It has the shortest total duration",
+                "It has the longest total duration and governs project completion",
+                "It uses the fewest resources",
+                "It contains only dummy activities"
+            ],
+            "correct_index": 1,
+            "explanation": "The critical path has the greatest total duration through the network, and its activities have zero total float, so any delay there delays the project. Shorter paths carry positive float.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-055",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "A firm has a fixed cost of 100,000, a selling price of 50 per unit and a variable cost of 30 per unit. What is the break-even quantity?",
+            "options": [
+                "3333 units",
+                "2000 units",
+                "5000 units",
+                "10000 units"
+            ],
+            "correct_index": 2,
+            "explanation": "Break-even quantity equals fixed cost divided by price minus variable cost, so 100,000/(50 - 30) = 5000 units. Using the price alone or forgetting to subtract the variable cost gives the other values.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-056",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In a moving-average forecast with a window of four, the demand for the last four periods is 10, 12, 14 and 16. What is the forecast for the next period?",
+            "options": [
+                "12",
+                "52",
+                "16",
+                "13"
+            ],
+            "correct_index": 3,
+            "explanation": "The four-period moving average is (10 + 12 + 14 + 16)/4 = 13. Summing without dividing gives 52, and using only the latest observation gives 16.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-057",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In a single-server queueing model with Poisson arrivals and exponential service times, what does the symbol λ represent?",
+            "options": [
+                "The mean arrival rate",
+                "The mean service rate",
+                "The average number in the system",
+                "The server utilization factor"
+            ],
+            "correct_index": 0,
+            "explanation": "In Kendall notation M/M/1, lambda is the mean arrival rate in arrivals per unit time, while mu is the mean service rate. Utilization is the derived ratio lambda/mu.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-058",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "Which welding process uses a non-consumable tungsten electrode together with an inert gas shield?",
+            "options": [
+                "MIG (GMAW)",
+                "TIG (GTAW)",
+                "SMAW",
+                "Oxy-acetylene welding"
+            ],
+            "correct_index": 1,
+            "explanation": "Gas tungsten arc welding uses a non-consumable tungsten electrode with an inert shielding gas. MIG uses a consumable wire electrode, SMAW uses a flux-coated consumable electrode, and oxy-acetylene is a flame process.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-059",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "In metal forming, hot working is generally preferred over cold working for which objective?",
+            "options": [
+                "Obtaining a better surface finish",
+                "Increasing strength through strain hardening",
+                "Achieving large deformation at lower forces",
+                "Holding tight dimensional tolerances"
+            ],
+            "correct_index": 2,
+            "explanation": "Hot working lowers flow stress and raises ductility, allowing large deformation at lower forces. Better finish, closer tolerances and strain hardening are advantages of cold working.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        },
+        {
+            "id": "gate-me-060",
+            "domain": "Manufacturing and Industrial Engineering",
+            "stem": "Which manufacturing process builds a solid part by melting a wire or powder layer by layer according to a CAD model?",
+            "options": [
+                "Injection moulding",
+                "Rolling",
+                "Electroplating",
+                "Additive manufacturing"
+            ],
+            "correct_index": 3,
+            "explanation": "Additive manufacturing deposits and fuses material layer upon layer from a CAD model. Injection moulding and rolling are shaping processes requiring tooling, and electroplating is a surface coating process.",
+            "reference": "GATE ME Syllabus - Manufacturing and Industrial Engineering"
+        }
+    ]
+}
