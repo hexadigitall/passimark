@@ -1347,6 +1347,53 @@ class AuthoredBundleSeederTest extends TestCase
                 'Geometry and Trigonometry' => 15,
                 'Statistics and Probability' => 15,
             ]],
+            'gaokao-eng' => ['gaokao-eng', 60, [
+                'Reading Comprehension' => 15,
+                'Language Knowledge' => 15,
+                'Cloze' => 15,
+                'Writing and Discourse' => 15,
+            ]],
+            'gaokao-math' => ['gaokao-math', 60, [
+                'Algebra' => 15,
+                'Functions and Sequences' => 15,
+                'Geometry and Vectors' => 15,
+                'Probability and Statistics' => 15,
+            ]],
+            'ssc-cgl' => ['ssc-cgl', 60, [
+                'Quantitative Aptitude' => 20,
+                'General Intelligence and Reasoning' => 20,
+                'English Comprehension' => 20,
+            ]],
+            'ibps-po' => ['ibps-po', 60, [
+                'Quantitative Aptitude' => 15,
+                'Reasoning Ability' => 15,
+                'English Language' => 15,
+                'General Awareness' => 15,
+            ]],
+            'enem-br' => ['enem-br', 60, [
+                'Linguagens e Codigos' => 15,
+                'Ciencias Humanas' => 15,
+                'Ciencias da Natureza' => 15,
+                'Matematica' => 15,
+            ]],
+            'kcse' => ['kcse', 60, [
+                'Mathematics' => 15,
+                'English' => 15,
+                'Sciences' => 15,
+                'Humanities' => 15,
+            ]],
+            'post-unical' => ['post-unical', 60, [
+                'Use of English' => 20,
+                'General Knowledge' => 15,
+                'Mathematics and Logic' => 15,
+                'Subject Combination' => 10,
+            ]],
+            'post-unilag' => ['post-unilag', 60, [
+                'Use of English' => 20,
+                'Mathematics and Logic' => 15,
+                'General Knowledge' => 15,
+                'Subject Combination' => 10,
+            ]],
         ];
     }
 

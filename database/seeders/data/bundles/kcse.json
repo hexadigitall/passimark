@@ -1,0 +1,858 @@
+{
+    "cert_key": "kcse",
+    "title": "Kenya KCSE",
+    "issuer": "Kenya National Examinations Council",
+    "region": "AFRICA",
+    "outline_file": "outlines/kcse.json",
+    "variant_label": "KCSE Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Grade A-E",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public KCSE syllabus. Not a capture of past exam questions.",
+    "source_label": "KCSE practice bank",
+    "items": [
+        {
+            "id": "kcse-001",
+            "domain": "Mathematics",
+            "stem": "If 5x + 3 = 28, what is the value of x?",
+            "options": [
+                "5",
+                "6",
+                "4",
+                "31"
+            ],
+            "correct_index": 0,
+            "explanation": "Subtracting 3 from both sides gives 5x = 25, so dividing by 5 gives x = 5.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-002",
+            "domain": "Mathematics",
+            "stem": "The quadratic equation x^2 - 5x + 6 = 0 has roots that are",
+            "options": [
+                "1 and 6",
+                "-2 and -3",
+                "5 and 6",
+                "2 and 3"
+            ],
+            "correct_index": 3,
+            "explanation": "Factorising gives (x - 2)(x - 3) = 0, so the roots are x = 2 and x = 3, since 2 + 3 = 5 and 2 x 3 = 6.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-003",
+            "domain": "Mathematics",
+            "stem": "If x + y = 12 and x - y = 4, what is the value of x?",
+            "options": [
+                "4",
+                "12",
+                "8",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "Adding the two equations gives 2x = 16, so x = 8 and then y = 4, which satisfies both equations.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-004",
+            "domain": "Mathematics",
+            "stem": "Expand the product of the expressions (x + 4) and (x - 3).",
+            "options": [
+                "x^2 + x + 12",
+                "x^2 - x - 12",
+                "x^2 + x - 12",
+                "x^2 + 7x - 12"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiplying out gives x^2 - 3x + 4x - 12, which simplifies to x^2 + x - 12.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-005",
+            "domain": "Mathematics",
+            "stem": "Factorise the expression x^2 - 16 completely.",
+            "options": [
+                "(x - 8)(x + 2)",
+                "(x - 4)(x + 4)",
+                "(x - 4)(x - 4)",
+                "(x - 2)(x + 8)"
+            ],
+            "correct_index": 1,
+            "explanation": "This is a difference of two squares, so x^2 - 16 = (x - 4)(x + 4); expanding confirms the middle terms cancel.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-006",
+            "domain": "Mathematics",
+            "stem": "Simplify 2^3 multiplied by 2^4 and give the result as a single number.",
+            "options": [
+                "128",
+                "64",
+                "256",
+                "32"
+            ],
+            "correct_index": 0,
+            "explanation": "Multiplying powers with the same base means adding the indices, so 2^3 x 2^4 = 2^7 = 128.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-007",
+            "domain": "Mathematics",
+            "stem": "Evaluate the logarithm to base 10 of 100.",
+            "options": [
+                "1",
+                "10",
+                "4",
+                "2"
+            ],
+            "correct_index": 3,
+            "explanation": "Since 10^2 = 100, the logarithm to base 10 of 100 equals 2.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-008",
+            "domain": "Mathematics",
+            "stem": "Simplify the surd expression the square root of 50 plus the square root of 18.",
+            "options": [
+                "68",
+                "2 root 2",
+                "4 root 2",
+                "8 root 2"
+            ],
+            "correct_index": 3,
+            "explanation": "Root 50 = 5 root 2 and root 18 = 3 root 2, so the sum is 5 root 2 + 3 root 2 = 8 root 2.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-009",
+            "domain": "Mathematics",
+            "stem": "The arithmetic progression 5, 9, 13 continues in the same pattern. What is its twelfth term?",
+            "options": [
+                "53",
+                "48",
+                "49",
+                "45"
+            ],
+            "correct_index": 2,
+            "explanation": "The first term is 5 and the common difference is 4, so the twelfth term is 5 + 11 x 4 = 5 + 44 = 49.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-010",
+            "domain": "Mathematics",
+            "stem": "The geometric progression 3, 6, 12 continues in the same pattern. What is its sixth term?",
+            "options": [
+                "96",
+                "48",
+                "64",
+                "192"
+            ],
+            "correct_index": 0,
+            "explanation": "The common ratio is 2, so the sixth term is 3 x 2^5 = 3 x 32 = 96.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-011",
+            "domain": "Mathematics",
+            "stem": "Differentiate y = 4x^2 + 3x with respect to x.",
+            "options": [
+                "8x^2 + 3",
+                "4x + 3",
+                "8x + 3x",
+                "8x + 3"
+            ],
+            "correct_index": 3,
+            "explanation": "Differentiating term by term gives 8x for 4x^2 and 3 for 3x, so dy/dx = 8x + 3.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-012",
+            "domain": "Mathematics",
+            "stem": "Find the indefinite integral of 6x with respect to x.",
+            "options": [
+                "6 + C",
+                "6x^2 + C",
+                "3x^2 + C",
+                "3x + C"
+            ],
+            "correct_index": 2,
+            "explanation": "The integral of 6x is 3x^2 plus a constant of integration, because differentiating 3x^2 returns 6x.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-013",
+            "domain": "Mathematics",
+            "stem": "In a right-angled triangle the side opposite an angle measures 3 cm and the hypotenuse measures 5 cm. What is the sine of the angle?",
+            "options": [
+                "0.75",
+                "0.6",
+                "0.8",
+                "1.67"
+            ],
+            "correct_index": 1,
+            "explanation": "Sine equals opposite divided by hypotenuse, so 3 divided by 5 gives 0.6.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-014",
+            "domain": "Mathematics",
+            "stem": "A principal of 20000 shillings earns simple interest at 5 per cent per year for 3 years. What is the total interest earned?",
+            "options": [
+                "1000 shillings",
+                "1500 shillings",
+                "13000 shillings",
+                "3000 shillings"
+            ],
+            "correct_index": 3,
+            "explanation": "Simple interest is principal x rate x time, so 20000 x 0.05 x 3 = 3000 shillings.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-015",
+            "domain": "Mathematics",
+            "stem": "Find the mean of the numbers 4, 7, 9, 10 and 15.",
+            "options": [
+                "8",
+                "10",
+                "9",
+                "11"
+            ],
+            "correct_index": 2,
+            "explanation": "The sum of the numbers is 45 and there are 5 numbers, so the mean is 45 divided by 5 = 9.",
+            "reference": "KCSE Syllabus - Mathematics"
+        },
+        {
+            "id": "kcse-016",
+            "domain": "English",
+            "stem": "Mwangi arrived at the market early, spread his bananas neatly and waited, but by noon only two buyers had come. He lowered his price and by evening he had sold everything. What does the passage suggest about Mwangi?",
+            "options": [
+                "He refused to change his price",
+                "He was flexible and adaptive when sales were slow",
+                "He left the market before noon",
+                "He sold all his bananas without any effort"
+            ],
+            "correct_index": 1,
+            "explanation": "Sales were slow until Mwangi lowered his price, after which he sold everything, so he adapted to the situation.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-017",
+            "domain": "English",
+            "stem": "When the results were announced, Achieng did not cheer or jump but stood quietly while her eyes filled with tears. What does her reaction suggest?",
+            "options": [
+                "She was deeply and quietly moved",
+                "She was angry and disappointed",
+                "She had not sat the examination",
+                "She did not understand the results"
+            ],
+            "correct_index": 0,
+            "explanation": "Standing quietly with tears in her eyes shows a deep, controlled emotion rather than loud celebration or anger.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-018",
+            "domain": "English",
+            "stem": "Choose the word nearest in meaning to reluctant as used in the sentence. The prefect was reluctant to punish his friend.",
+            "options": [
+                "Eager",
+                "Angry",
+                "Unwilling",
+                "Excited"
+            ],
+            "correct_index": 2,
+            "explanation": "Reluctant means unwilling or hesitant, so unwilling is nearest in meaning, while eager and excited are opposite in sense.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-019",
+            "domain": "English",
+            "stem": "Choose the word most nearly opposite in meaning to ancient as used in the sentence. They studied the ancient ruins of the coast.",
+            "options": [
+                "Historic",
+                "Modern",
+                "Famous",
+                "Old"
+            ],
+            "correct_index": 1,
+            "explanation": "Ancient means very old, so its opposite is modern, whereas historic, famous and old are not opposites of ancient.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-020",
+            "domain": "English",
+            "stem": "Fill the gap. Neither the teacher nor the students ____ present at the assembly.",
+            "options": [
+                "is",
+                "has been",
+                "was",
+                "were"
+            ],
+            "correct_index": 3,
+            "explanation": "With neither and nor the verb agrees with the nearer subject, students, which is plural, so the correct form is were.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-021",
+            "domain": "English",
+            "stem": "Fill the gap. If I ____ you, I would accept the offer without hesitation.",
+            "options": [
+                "was",
+                "am",
+                "were",
+                "be"
+            ],
+            "correct_index": 2,
+            "explanation": "The second conditional uses were for every subject, so the standard subjunctive form is If I were you.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-022",
+            "domain": "English",
+            "stem": "Fill the gap. He has been living in this town ____ 2010.",
+            "options": [
+                "for",
+                "since",
+                "from",
+                "during"
+            ],
+            "correct_index": 1,
+            "explanation": "Since is used with a point in time when an action started, while for is used with a period such as ten years.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-023",
+            "domain": "English",
+            "stem": "Fill the gap. We arrived ____ the airport long before dawn.",
+            "options": [
+                "at",
+                "on",
+                "into",
+                "in"
+            ],
+            "correct_index": 0,
+            "explanation": "We use at with points and small places such as an airport, while in is used for large areas and on for surfaces.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-024",
+            "domain": "English",
+            "stem": "In the expression to bury the hatchet, the speaker means to",
+            "options": [
+                "make peace and end a quarrel",
+                "hide a weapon in the ground",
+                "plan a secret attack",
+                "dig a hole for farming"
+            ],
+            "correct_index": 0,
+            "explanation": "To bury the hatchet is an idiom meaning to stop fighting and make peace, not a literal act of burying a tool.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-025",
+            "domain": "English",
+            "stem": "Which of the following words has its primary stress on the SECOND syllable?",
+            "options": [
+                "market",
+                "table",
+                "father",
+                "begin"
+            ],
+            "correct_index": 3,
+            "explanation": "Begin is stressed on the second syllable, beGIN, while market, table and father are stressed on the first syllable.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-026",
+            "domain": "English",
+            "stem": "Which of the following words contains a silent letter?",
+            "options": [
+                "hand",
+                "tent",
+                "comb",
+                "lamp"
+            ],
+            "correct_index": 2,
+            "explanation": "In the word comb the letter b is not pronounced, so it is silent, while hand, tent and lamp have no silent letters.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-027",
+            "domain": "English",
+            "stem": "Complete the sentence with the correct question tag. You are coming to the meeting, ____?",
+            "options": [
+                "isn't it",
+                "aren't you",
+                "are you",
+                "don't you"
+            ],
+            "correct_index": 1,
+            "explanation": "A positive statement takes a negative tag, and the auxiliary are with the subject you shortens to aren't you.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-028",
+            "domain": "English",
+            "stem": "Complete the emphatic sentence. Not only ____ the first prize, but he also set a new record.",
+            "options": [
+                "he did win",
+                "did he win",
+                "won he",
+                "he won"
+            ],
+            "correct_index": 1,
+            "explanation": "When not only begins a sentence the auxiliary comes before the subject, so the correct form is did he win.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-029",
+            "domain": "English",
+            "stem": "Fill the gap with the correct form of the verb. The news about the floods ____ very disturbing.",
+            "options": [
+                "is",
+                "are",
+                "were",
+                "have been"
+            ],
+            "correct_index": 0,
+            "explanation": "The word news is treated as singular in English, so the singular verb is is the one required here.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-030",
+            "domain": "English",
+            "stem": "Choose the correct reported form. The teacher said, Close the door. The teacher told us",
+            "options": [
+                "close the door",
+                "that close the door",
+                "to close the door",
+                "closing the door"
+            ],
+            "correct_index": 2,
+            "explanation": "An imperative in reported speech becomes a to-infinitive, so the teacher told us to close the door.",
+            "reference": "KCSE Syllabus - English"
+        },
+        {
+            "id": "kcse-031",
+            "domain": "Sciences",
+            "stem": "Which organelle is described as the powerhouse of the cell because it releases energy from food during respiration?",
+            "options": [
+                "Nucleus",
+                "Mitochondrion",
+                "Ribosome",
+                "Cell membrane"
+            ],
+            "correct_index": 1,
+            "explanation": "The mitochondrion is the site of aerobic respiration, where energy is released from food, so it is called the powerhouse of the cell.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-032",
+            "domain": "Sciences",
+            "stem": "The process by which green plants make food using sunlight, carbon dioxide and water is called",
+            "options": [
+                "Photosynthesis",
+                "Respiration",
+                "Transpiration",
+                "Digestion"
+            ],
+            "correct_index": 0,
+            "explanation": "Photosynthesis uses light energy to combine carbon dioxide and water into glucose, releasing oxygen, while the other processes do not make food.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-033",
+            "domain": "Sciences",
+            "stem": "Which enzyme in human saliva begins the digestion of starch in the mouth?",
+            "options": [
+                "Pepsin",
+                "Lipase",
+                "Trypsin",
+                "Salivary amylase"
+            ],
+            "correct_index": 3,
+            "explanation": "Salivary amylase, also called ptyalin, breaks down starch into simpler sugars in the mouth, while pepsin and trypsin act in the stomach and intestine.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-034",
+            "domain": "Sciences",
+            "stem": "Which gas is released as a product of aerobic respiration in living organisms?",
+            "options": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Nitrogen",
+                "Hydrogen"
+            ],
+            "correct_index": 1,
+            "explanation": "Aerobic respiration uses oxygen and releases carbon dioxide and water as products while releasing energy for the organism.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-035",
+            "domain": "Sciences",
+            "stem": "Which of the following is a characteristic feature of mammals?",
+            "options": [
+                "They have mammary glands that produce milk",
+                "They lay eggs on dry land",
+                "They have scales on the skin",
+                "They breathe through gills throughout life"
+            ],
+            "correct_index": 0,
+            "explanation": "Mammals are named for their mammary glands, which produce milk to feed their young, while the other features belong to other animal groups.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-036",
+            "domain": "Sciences",
+            "stem": "In a food chain, which organism is always the producer?",
+            "options": [
+                "A herbivore",
+                "A carnivore",
+                "A decomposer",
+                "A green plant"
+            ],
+            "correct_index": 3,
+            "explanation": "Green plants make their own food by photosynthesis, so they occupy the first trophic level as the producers in a food chain.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-037",
+            "domain": "Sciences",
+            "stem": "The atomic number of an element is equal to the number of",
+            "options": [
+                "neutrons in the nucleus",
+                "nucleons in the atom",
+                "protons in the nucleus",
+                "electrons in the outer shell"
+            ],
+            "correct_index": 2,
+            "explanation": "The atomic number is defined as the number of protons in the nucleus of an atom of the element.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-038",
+            "domain": "Sciences",
+            "stem": "What is the mass of 0.5 moles of carbon dioxide, given that its molar mass is 44 grams per mole?",
+            "options": [
+                "22 grams",
+                "44 grams",
+                "88 grams",
+                "11 grams"
+            ],
+            "correct_index": 0,
+            "explanation": "Mass equals moles multiplied by molar mass, so 0.5 x 44 = 22 grams of carbon dioxide.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-039",
+            "domain": "Sciences",
+            "stem": "A solution that turns blue litmus paper red has a pH value that is",
+            "options": [
+                "exactly 7",
+                "greater than 7",
+                "equal to 14",
+                "less than 7"
+            ],
+            "correct_index": 3,
+            "explanation": "Substances that turn blue litmus paper red are acids, and acids have a pH value below 7.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-040",
+            "domain": "Sciences",
+            "stem": "Which set of coefficients correctly balances the equation for the combustion of methane, shown as blanks before CH4, O2, CO2 and H2O?",
+            "options": [
+                "1, 1, 1, 2",
+                "1, 2, 1, 2",
+                "2, 2, 1, 2",
+                "1, 2, 2, 1"
+            ],
+            "correct_index": 1,
+            "explanation": "Balancing carbon, hydrogen and oxygen gives CH4 + 2O2 producing CO2 + 2H2O, so the coefficients are 1, 2, 1, 2.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-041",
+            "domain": "Sciences",
+            "stem": "A resistor of 10 ohms has a potential difference of 5 volts across it. What current flows through it?",
+            "options": [
+                "0.5 amperes",
+                "50 amperes",
+                "2 amperes",
+                "5 amperes"
+            ],
+            "correct_index": 0,
+            "explanation": "Ohm's law gives current equals voltage divided by resistance, so 5 divided by 10 = 0.5 amperes.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-042",
+            "domain": "Sciences",
+            "stem": "A car travels 150 metres in 10 seconds at constant speed. What is its speed?",
+            "options": [
+                "1.5 metres per second",
+                "1500 metres per second",
+                "10 metres per second",
+                "15 metres per second"
+            ],
+            "correct_index": 3,
+            "explanation": "Speed equals distance divided by time, so 150 divided by 10 = 15 metres per second.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-043",
+            "domain": "Sciences",
+            "stem": "A sound wave has a frequency of 50 hertz and a wavelength of 6 metres. What is its speed?",
+            "options": [
+                "56 metres per second",
+                "8.3 metres per second",
+                "300 metres per second",
+                "0.12 metres per second"
+            ],
+            "correct_index": 2,
+            "explanation": "Wave speed equals frequency multiplied by wavelength, so 50 x 6 = 300 metres per second.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-044",
+            "domain": "Sciences",
+            "stem": "Which of the following materials is a good conductor of electricity?",
+            "options": [
+                "Dry wood",
+                "Rubber",
+                "Copper",
+                "Plastic"
+            ],
+            "correct_index": 2,
+            "explanation": "Copper is a metal with free electrons that carry current, while dry wood, rubber and plastic are insulators.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-045",
+            "domain": "Sciences",
+            "stem": "A force of 200 newtons acts on an area of 4 square metres. What is the pressure exerted?",
+            "options": [
+                "800 pascals",
+                "50 pascals",
+                "204 pascals",
+                "0.02 pascals"
+            ],
+            "correct_index": 1,
+            "explanation": "Pressure equals force divided by area, so 200 divided by 4 = 50 pascals.",
+            "reference": "KCSE Syllabus - Sciences"
+        },
+        {
+            "id": "kcse-046",
+            "domain": "Humanities",
+            "stem": "Which of the following is the highest mountain in Kenya?",
+            "options": [
+                "Mount Kenya",
+                "Mount Elgon",
+                "Mount Kilimanjaro",
+                "Mount Longonot"
+            ],
+            "correct_index": 0,
+            "explanation": "Mount Kenya, rising above 5000 metres, is the highest mountain in Kenya, while Kilimanjaro lies in neighbouring Tanzania.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-047",
+            "domain": "Humanities",
+            "stem": "The Great Rift Valley in Kenya was mainly formed by",
+            "options": [
+                "river erosion over many years",
+                "deposition of sediments by wind",
+                "glacier movement across the surface",
+                "subsidence of the earth's crust along fault lines"
+            ],
+            "correct_index": 3,
+            "explanation": "The Rift Valley formed when blocks of the earth's crust sank along fault lines, a process known as faulting and subsidence.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-048",
+            "domain": "Humanities",
+            "stem": "A map has a scale of 1 to 50000. What ground distance is represented by 4 centimetres on the map?",
+            "options": [
+                "4 kilometres",
+                "20 kilometres",
+                "0.5 kilometres",
+                "2 kilometres"
+            ],
+            "correct_index": 3,
+            "explanation": "One centimetre represents 50000 centimetres, so 4 centimetres represent 200000 centimetres, which is 2 kilometres.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-049",
+            "domain": "Humanities",
+            "stem": "Which of the following lakes in Kenya is a freshwater lake?",
+            "options": [
+                "Lake Magadi",
+                "Lake Turkana",
+                "Lake Victoria",
+                "Lake Nakuru"
+            ],
+            "correct_index": 2,
+            "explanation": "Lake Victoria is a freshwater lake fed by rivers, while Magadi, Nakuru and Turkana are saline or alkaline lakes.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-050",
+            "domain": "Humanities",
+            "stem": "Kenya attained independence from British colonial rule in the year",
+            "options": [
+                "1963",
+                "1952",
+                "1964",
+                "1978"
+            ],
+            "correct_index": 0,
+            "explanation": "Kenya became independent on 12 December 1963, after years of struggle that included the Mau Mau uprising.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-051",
+            "domain": "Humanities",
+            "stem": "The Mau Mau uprising in Kenya was mainly a struggle against",
+            "options": [
+                "the spread of Christianity",
+                "the building of the railway",
+                "trade with Arab merchants",
+                "British colonial rule and land alienation"
+            ],
+            "correct_index": 3,
+            "explanation": "The Mau Mau fought British colonial rule and the loss of African land to settlers, demanding freedom and the return of land.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-052",
+            "domain": "Humanities",
+            "stem": "The 2010 Constitution of Kenya created a system of devolution that established",
+            "options": [
+                "8 provincial administrations",
+                "a single national assembly",
+                "47 county governments",
+                "five regional assemblies"
+            ],
+            "correct_index": 2,
+            "explanation": "The 2010 Constitution created 47 county governments, each with a governor and a county assembly, to bring services closer to the people.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-053",
+            "domain": "Humanities",
+            "stem": "Which of the following is one of the three arms of the government of Kenya?",
+            "options": [
+                "The police service",
+                "The judiciary",
+                "The civil service",
+                "The electoral commission"
+            ],
+            "correct_index": 1,
+            "explanation": "The three arms of government are the executive, the legislature and the judiciary, while the others are independent bodies or services.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-054",
+            "domain": "Humanities",
+            "stem": "The Bill of Rights in the Constitution of Kenya is mainly intended to",
+            "options": [
+                "collect taxes from all citizens",
+                "appoint judges to the courts",
+                "manage the country's foreign affairs",
+                "protect the fundamental rights and freedoms of individuals"
+            ],
+            "correct_index": 3,
+            "explanation": "The Bill of Rights safeguards individual freedoms such as life, equality and expression against the abuse of power.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-055",
+            "domain": "Humanities",
+            "stem": "Which body in Kenya is responsible for conducting elections and referenda?",
+            "options": [
+                "The Supreme Court",
+                "The National Assembly",
+                "The Independent Electoral and Boundaries Commission",
+                "The Council of Governors"
+            ],
+            "correct_index": 2,
+            "explanation": "The Independent Electoral and Boundaries Commission is mandated to conduct elections and referenda and to review boundaries.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-056",
+            "domain": "Humanities",
+            "stem": "The main function of the legislature in Kenya is to",
+            "options": [
+                "interpret the constitution in disputes",
+                "make laws on behalf of the people",
+                "implement government policy",
+                "command the armed forces"
+            ],
+            "correct_index": 1,
+            "explanation": "The legislature, made up of the National Assembly and the Senate, makes laws, while interpreting the constitution is the work of the judiciary.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-057",
+            "domain": "Humanities",
+            "stem": "Which of the following is a major cash crop grown in the highlands of Kenya?",
+            "options": [
+                "Tea",
+                "Cotton",
+                "Sorghum",
+                "Millet"
+            ],
+            "correct_index": 0,
+            "explanation": "Tea is grown widely in the cool, wet Kenyan highlands, while cotton, sorghum and millet do better in warmer and drier areas.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-058",
+            "domain": "Humanities",
+            "stem": "The Organisation of African Unity was formed in 1963 mainly to promote",
+            "options": [
+                "trade with Europe",
+                "the teaching of African languages",
+                "unity and cooperation among African states",
+                "the spread of Christianity in Africa"
+            ],
+            "correct_index": 2,
+            "explanation": "The OAU was founded to promote unity, solidarity and cooperation among independent African states and to help end colonialism.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-059",
+            "domain": "Humanities",
+            "stem": "In the parable of the Good Samaritan, the person who helped the injured traveller was",
+            "options": [
+                "a priest",
+                "a Samaritan",
+                "a Levite",
+                "the traveller's relative"
+            ],
+            "correct_index": 1,
+            "explanation": "A priest and a Levite passed by, but a Samaritan stopped, bandaged the wounds and paid for the traveller's care.",
+            "reference": "KCSE Syllabus - Humanities"
+        },
+        {
+            "id": "kcse-060",
+            "domain": "Humanities",
+            "stem": "The main source of the River Tana in Kenya is found in the",
+            "options": [
+                "coastal plains near Malindi",
+                "Lake Victoria basin",
+                "Rift Valley floor",
+                "Aberdare and Mount Kenya highlands"
+            ],
+            "correct_index": 3,
+            "explanation": "The River Tana rises in the central highlands around the Aberdare Range and Mount Kenya before flowing to the Indian Ocean.",
+            "reference": "KCSE Syllabus - Humanities"
+        }
+    ]
+}

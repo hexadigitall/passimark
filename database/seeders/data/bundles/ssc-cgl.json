@@ -1,0 +1,858 @@
+{
+  "cert_key": "ssc-cgl",
+  "title": "SSC CGL",
+  "issuer": "Staff Selection Commission (India)",
+  "region": "APAC",
+  "outline_file": "outlines/ssc-cgl.json",
+  "variant_label": "SSC CGL Real-Spec Practice",
+  "exam": {
+    "questions": 60,
+    "duration_minutes": 60,
+    "scoring": "Tier 1, negative marking",
+    "adaptive": false
+  },
+  "content_provenance": "Original practice items authored from the public SSC CGL syllabus. Not a capture of past exam questions.",
+  "source_label": "SSC CGL practice bank",
+  "items": [
+    {
+      "id": "ssc-cgl-001",
+      "domain": "Quantitative Aptitude",
+      "stem": "An article is sold for Rs 720 at a loss of 10 percent. What was the cost price of the article?",
+      "options": [
+        "Rs 800",
+        "Rs 792",
+        "Rs 648",
+        "Rs 880"
+      ],
+      "correct_index": 0,
+      "explanation": "If the cost price is C, then 0.90C = 720, so C = 720 / 0.90 = Rs 800. The other figures come from adding or subtracting 10 percent of the wrong base.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-002",
+      "domain": "Quantitative Aptitude",
+      "stem": "The average of five consecutive even numbers is 42. What is the largest of these five numbers?",
+      "options": [
+        "Rs 42",
+        "46",
+        "48",
+        "44"
+      ],
+      "correct_index": 1,
+      "explanation": "Even numbers centred on 42 are 38, 40, 42, 44 and 46, so the largest is 46. The average of consecutive terms is the middle term.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-003",
+      "domain": "Quantitative Aptitude",
+      "stem": "A train 180 m long running at 54 km per hour crosses a platform in 24 seconds. Find the length of the platform.",
+      "options": [
+        "150 m",
+        "200 m",
+        "180 m",
+        "240 m"
+      ],
+      "correct_index": 2,
+      "explanation": "54 km per hour equals 15 m per second, so the train covers 15 x 24 = 360 m in 24 seconds. Subtracting the train length gives a platform of 360 - 180 = 180 m.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-004",
+      "domain": "Quantitative Aptitude",
+      "stem": "If a is to b as 2 is to 3, and b is to c as 4 is to 5, find the ratio of a to c.",
+      "options": [
+        "2 : 5",
+        "3 : 5",
+        "5 : 8",
+        "8 : 15"
+      ],
+      "correct_index": 3,
+      "explanation": "Write b as 3 parts in the first ratio and 4 parts in the second; the common value is 12. Then a = 8 and c = 15, giving a : c = 8 : 15.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-005",
+      "domain": "Quantitative Aptitude",
+      "stem": "The simple interest on a sum for 3 years at 8 percent per annum is Rs 1,440. Find the sum.",
+      "options": [
+        "Rs 4,800",
+        "Rs 5,400",
+        "Rs 6,000",
+        "Rs 7,200"
+      ],
+      "correct_index": 2,
+      "explanation": "Simple interest equals P x R x T / 100, so 1440 = P x 8 x 3 / 100. This gives P = 1440 x 100 / 24 = Rs 6,000.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-006",
+      "domain": "Quantitative Aptitude",
+      "stem": "A can finish a piece of work in 12 days and B can finish it in 18 days. Working together, in how many days will they finish it?",
+      "options": [
+        "6 days",
+        "7 days",
+        "8 days",
+        "36/5 days"
+      ],
+      "correct_index": 3,
+      "explanation": "Their one-day work is 1/12 + 1/18 = 5/36, so together they need 36/5 days, which is 7.2 days. Adding or averaging the individual times is a common error.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-007",
+      "domain": "Quantitative Aptitude",
+      "stem": "Successive discounts of 20 percent and 10 percent are equivalent to a single discount of what percent?",
+      "options": [
+        "28 percent",
+        "30 percent",
+        "26 percent",
+        "32 percent"
+      ],
+      "correct_index": 0,
+      "explanation": "After both discounts the price is 0.80 x 0.90 = 0.72 of the marked price, an effective discount of 28 percent. Simply adding 20 and 10 gives the wrong 30 percent.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-008",
+      "domain": "Quantitative Aptitude",
+      "stem": "What is the value of the product 0.004 multiplied by 0.02?",
+      "options": [
+        "0.0008",
+        "0.00008",
+        "0.008",
+        "0.08"
+      ],
+      "correct_index": 1,
+      "explanation": "Multiplying 4 by 2 gives 8 and the decimal places add to five, so the product is 0.00008. A shift of one place in the decimal changes the answer by a factor of ten.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-009",
+      "domain": "Quantitative Aptitude",
+      "stem": "A shopkeeper marks an article 40 percent above cost price and then allows a discount of 25 percent. What is his profit percent?",
+      "options": [
+        "15 percent",
+        "5 percent",
+        "10 percent",
+        "8 percent"
+      ],
+      "correct_index": 1,
+      "explanation": "If cost is 100, the marked price is 140 and the selling price is 140 x 0.75 = 105, a profit of 5 percent. Subtracting the discount from the mark-up gives the wrong 15 percent.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-010",
+      "domain": "Quantitative Aptitude",
+      "stem": "The LCM of two numbers is 495 and their HCF is 5. If the sum of the two numbers is 100, find their difference.",
+      "options": [
+        "10",
+        "20",
+        "15",
+        "5"
+      ],
+      "correct_index": 0,
+      "explanation": "The product of the numbers is LCM x HCF = 2475. Solving the pair with sum 100 and product 2475 gives 55 and 45, so the difference is 10.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-011",
+      "domain": "Quantitative Aptitude",
+      "stem": "If x plus one over x equals 3, find the value of x squared plus one over x squared.",
+      "options": [
+        "9",
+        "11",
+        "6",
+        "7"
+      ],
+      "correct_index": 3,
+      "explanation": "Squaring x + 1/x = 3 gives x squared + 1/x squared + 2 = 9, so the required value is 7. Choosing 9 forgets to subtract the cross term 2.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-012",
+      "domain": "Quantitative Aptitude",
+      "stem": "The area of a circle is 154 square cm. Find its circumference, taking pi as 22/7.",
+      "options": [
+        "22 cm",
+        "88 cm",
+        "44 cm",
+        "66 cm"
+      ],
+      "correct_index": 2,
+      "explanation": "Pi r squared = 154 gives r squared = 49, so r = 7 cm. The circumference is 2 x 22/7 x 7 = 44 cm.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-013",
+      "domain": "Quantitative Aptitude",
+      "stem": "A sum becomes Rs 13,310 in 3 years at 10 percent per annum compound interest. Find the principal.",
+      "options": [
+        "Rs 12,100",
+        "Rs 11,000",
+        "Rs 12,500",
+        "Rs 10,000"
+      ],
+      "correct_index": 3,
+      "explanation": "The amount factor is 1.1 cubed, which equals 1.331. Dividing 13,310 by 1.331 gives Rs 10,000, so the principal is Rs 10,000.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-014",
+      "domain": "Quantitative Aptitude",
+      "stem": "The angles of a triangle are in the ratio 2 to 3 to 4. Find the measure of the largest angle.",
+      "options": [
+        "60 degrees",
+        "40 degrees",
+        "80 degrees",
+        "90 degrees"
+      ],
+      "correct_index": 2,
+      "explanation": "The ratio parts total 9, so each part is 180/9 = 20 degrees. The largest angle is 4 parts, that is 80 degrees.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-015",
+      "domain": "Quantitative Aptitude",
+      "stem": "For an acute angle theta, if sine theta equals 3/5, find the value of tangent theta.",
+      "options": [
+        "5/4",
+        "3/4",
+        "4/3",
+        "3/5"
+      ],
+      "correct_index": 1,
+      "explanation": "A right triangle with opposite 3 and hypotenuse 5 has adjacent side 4. Therefore tangent theta, the ratio of opposite to adjacent, is 3/4.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-016",
+      "domain": "Quantitative Aptitude",
+      "stem": "The average weight of 10 students is 45 kg. When one student leaves, the average of the remaining students becomes 44.5 kg. Find the weight of the student who left.",
+      "options": [
+        "49.5 kg",
+        "45 kg",
+        "50 kg",
+        "44.5 kg"
+      ],
+      "correct_index": 0,
+      "explanation": "The total weight falls from 450 kg to 9 x 44.5 = 400.5 kg, so the departing student weighed 450 - 400.5 = 49.5 kg.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-017",
+      "domain": "Quantitative Aptitude",
+      "stem": "A boat covers 24 km downstream in 2 hours and the same distance upstream in 3 hours. Find the speed of the stream.",
+      "options": [
+        "2 km per hour",
+        "4 km per hour",
+        "10 km per hour",
+        "1 km per hour"
+      ],
+      "correct_index": 0,
+      "explanation": "Downstream speed is 12 km/h and upstream speed is 8 km/h. The stream speed is half their difference, that is 2 km per hour.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-018",
+      "domain": "Quantitative Aptitude",
+      "stem": "What is the value of 15 percent of 480 added to 25 percent of 320?",
+      "options": [
+        "142",
+        "152",
+        "162",
+        "172"
+      ],
+      "correct_index": 1,
+      "explanation": "15 percent of 480 is 72 and 25 percent of 320 is 80. Their sum is 152.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-019",
+      "domain": "Quantitative Aptitude",
+      "stem": "A solid cube of side 4 cm is melted and recast into smaller cubes of side 1 cm. How many small cubes are formed?",
+      "options": [
+        "16",
+        "32",
+        "64",
+        "128"
+      ],
+      "correct_index": 2,
+      "explanation": "The volume is conserved. The large cube has volume 64 cubic cm and each small cube has volume 1 cubic cm, so 64 small cubes are formed.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-020",
+      "domain": "Quantitative Aptitude",
+      "stem": "Find the mean proportional between 4 and 25.",
+      "options": [
+        "14.5",
+        "20",
+        "100",
+        "10"
+      ],
+      "correct_index": 3,
+      "explanation": "The mean proportional is the square root of the product, that is the square root of 100, which equals 10. The value 20 is their arithmetic mean, not the mean proportional.",
+      "reference": "SSC CGL Syllabus - Quantitative Aptitude"
+    },
+    {
+      "id": "ssc-cgl-021",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Find the next term in the series 2, 6, 12, 20, 30, and so on.",
+      "options": [
+        "36",
+        "40",
+        "42",
+        "48"
+      ],
+      "correct_index": 2,
+      "explanation": "The terms increase by 4, 6, 8, 10, so the next difference is 12 and the next term is 30 + 12 = 42. Adding a constant instead of the growing difference gives a wrong term.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-022",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "In a certain code, the word CAT is written as DBU. Using the same rule, how is the word DOG written?",
+      "options": [
+        "EPG",
+        "FPH",
+        "DPH",
+        "EPH"
+      ],
+      "correct_index": 3,
+      "explanation": "Each letter is shifted one place forward in the alphabet, so D becomes E, O becomes P and G becomes H, giving EPH. The distractors change only some letters.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-023",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Among the following numbers, which one is not a prime number?",
+      "options": [
+        "9",
+        "3",
+        "5",
+        "7"
+      ],
+      "correct_index": 0,
+      "explanation": "The numbers 3, 5 and 7 have no divisors other than 1 and themselves, but 9 = 3 x 3, so 9 is composite and is the odd one out.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-024",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Pointing to a photograph, a man said that she is the daughter of his grandfather's only son. How is the girl related to the man?",
+      "options": [
+        "Daughter",
+        "Sister",
+        "Aunt",
+        "Cousin"
+      ],
+      "correct_index": 1,
+      "explanation": "The grandfather's only son is the man's father, and the daughter of the man's father is the man's sister. Calling her his daughter ignores that the father is shared.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-025",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Complete the series AZ, BY, CX and the next term.",
+      "options": [
+        "DV",
+        "DW",
+        "EW",
+        "CW"
+      ],
+      "correct_index": 1,
+      "explanation": "The first letter moves forward A, B, C, D while the second moves backward Z, Y, X, W, so the next term is DW.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-026",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "A man walks 5 km towards the north, then 3 km towards the east, and finally 5 km towards the south. How far and in which direction is he from the starting point?",
+      "options": [
+        "3 km east",
+        "5 km east",
+        "3 km west",
+        "13 km north"
+      ],
+      "correct_index": 0,
+      "explanation": "The northward and southward legs cancel each other, leaving only the 3 km eastward movement. He is therefore 3 km east of the start.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-027",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "In a row of 40 children, Ravi is twelfth from the left end. What is his position from the right end?",
+      "options": [
+        "27th",
+        "28th",
+        "30th",
+        "29th"
+      ],
+      "correct_index": 3,
+      "explanation": "The position from the right is 40 - 12 + 1 = 29, so Ravi is 29th from the right. Forgetting to add 1 gives the wrong 28th.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-028",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Given that all roses are flowers and some flowers fade quickly, which conclusion necessarily follows?",
+      "options": [
+        "Some roses fade quickly",
+        "All flowers are roses",
+        "Some flowers are roses",
+        "No flower is a rose"
+      ],
+      "correct_index": 2,
+      "explanation": "From all roses are flowers it necessarily follows that some flowers are roses. The statement about fading flowers does not connect to roses, so a conclusion about roses fading does not follow.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-029",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Find the missing number in the series 7, 14, 28, 56 and the next term.",
+      "options": [
+        "96",
+        "100",
+        "108",
+        "112"
+      ],
+      "correct_index": 3,
+      "explanation": "Each term is double the previous term, so the next term is 56 x 2 = 112. Adding a fixed amount instead of doubling gives a wrong term.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-030",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "A is the brother of B, B is the sister of C, and C is the father of D. How is A related to D?",
+      "options": [
+        "Father",
+        "Grandfather",
+        "Uncle",
+        "Brother"
+      ],
+      "correct_index": 2,
+      "explanation": "A is the brother of C, and C is D's father, so A is the brother of D's father, which makes A D's uncle. A is not D's father because C holds that relation.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-031",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Which number will replace the question mark in 3, 8, 15, 24, 35 and the next term?",
+      "options": [
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "correct_index": 1,
+      "explanation": "The terms follow the pattern n squared minus 1 for n = 2, 3, 4, 5, 6, so the next term is 7 squared minus 1 = 48.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-032",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "In a certain code, the word BLUE is written using the alphabet positions of its letters as B equals 2, L equals 12, U equals 21 and E equals 5. What is the code for the word RED?",
+      "options": [
+        "1854",
+        "1743",
+        "1853",
+        "1954"
+      ],
+      "correct_index": 0,
+      "explanation": "Using alphabet positions, R is 18, E is 5 and D is 4, so the code is 1854. Using a wrong position for any letter changes the result.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-033",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Arrange the following in a meaningful order of growth starting from the seed. The items are seed, tree, flower, fruit and plant.",
+      "options": [
+        "1, 5, 2, 3, 4",
+        "1, 2, 3, 4, 5",
+        "1, 3, 2, 4, 5",
+        "1, 5, 3, 2, 4"
+      ],
+      "correct_index": 0,
+      "explanation": "The natural sequence is seed, then plant, then tree, then flower, then fruit. Using the given numbering that is 1, 5, 2, 3, 4.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-034",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "What is the angle between the hour hand and the minute hand of a clock at half past three?",
+      "options": [
+        "90 degrees",
+        "75 degrees",
+        "60 degrees",
+        "85 degrees"
+      ],
+      "correct_index": 1,
+      "explanation": "At 3:30 the minute hand points at 180 degrees and the hour hand has moved to 105 degrees, so the angle between them is 75 degrees.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-035",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Which of the following is the odd one out among rectangle, square, triangle and rhombus?",
+      "options": [
+        "Rectangle",
+        "Square",
+        "Triangle",
+        "Rhombus"
+      ],
+      "correct_index": 2,
+      "explanation": "A rectangle, a square and a rhombus all have four sides, while a triangle has only three sides. The triangle is therefore the odd one out.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-036",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "A is taller than B but shorter than C. D is shorter than B. Who among them is the tallest?",
+      "options": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "correct_index": 3,
+      "explanation": "The order of height is D, then B, then A, then C, so C is the tallest. A is taller than B but not taller than C.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-037",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Find the missing term in the analogy where 6 is to 42 as 8 is to the unknown.",
+      "options": [
+        "56",
+        "64",
+        "72",
+        "80"
+      ],
+      "correct_index": 2,
+      "explanation": "The relation is product of the number and the next number, since 6 x 7 = 42. Applying the same rule, 8 x 9 = 72.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-038",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "If 2 marked with a cross and 3 gives 10, and 3 marked with a cross and 4 gives 21, then what does 4 marked with a cross and 5 give?",
+      "options": [
+        "30",
+        "32",
+        "35",
+        "36"
+      ],
+      "correct_index": 3,
+      "explanation": "The rule is product of the two numbers plus the square of the first, since 2 x 3 + 4 = 10 and 3 x 4 + 9 = 21. For 4 and 5 that is 20 + 16 = 36.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-039",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "How many times do the hour hand and the minute hand of a clock coincide in a full period of 24 hours?",
+      "options": [
+        "22",
+        "24",
+        "23",
+        "11"
+      ],
+      "correct_index": 0,
+      "explanation": "The hands coincide 11 times in 12 hours, so in 24 hours they coincide 22 times. Answering 24 is a common mistake.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-040",
+      "domain": "General Intelligence and Reasoning",
+      "stem": "Which of the following words cannot be formed using only the letters of the word ENVIRONMENT?",
+      "options": [
+        "MENTOR",
+        "MONEY",
+        "TONER",
+        "ENTER"
+      ],
+      "correct_index": 1,
+      "explanation": "The word ENVIRONMENT contains no letter Y, so MONEY cannot be formed. MENTOR, TONER and ENTER use only letters present in the word.",
+      "reference": "SSC CGL Syllabus - General Intelligence and Reasoning"
+    },
+    {
+      "id": "ssc-cgl-041",
+      "domain": "English Comprehension",
+      "stem": "Choose the word most similar in meaning to CANDID.",
+      "options": [
+        "Deceitful",
+        "Frank",
+        "Reserved",
+        "Hostile"
+      ],
+      "correct_index": 1,
+      "explanation": "Candid means open and truthful in expression, so frank is the closest synonym. Deceitful and reserved are close to opposite in sense.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-042",
+      "domain": "English Comprehension",
+      "stem": "Choose the word most opposite in meaning to FRUGAL.",
+      "options": [
+        "Extravagant",
+        "Thrifty",
+        "Economical",
+        "Prudent"
+      ],
+      "correct_index": 0,
+      "explanation": "Frugal means careful with money, so its antonym is extravagant. Thrifty, economical and prudent are all synonyms of frugal.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-043",
+      "domain": "English Comprehension",
+      "stem": "The idiom to let the cat out of the bag means to do what?",
+      "options": [
+        "To free an animal",
+        "To create confusion",
+        "To escape danger",
+        "To reveal a secret"
+      ],
+      "correct_index": 3,
+      "explanation": "The idiom to let the cat out of the bag means to disclose a secret, often by accident. It has nothing to do with animals or escape.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-044",
+      "domain": "English Comprehension",
+      "stem": "One word for a person who is unable to pay his debts is",
+      "options": [
+        "Debtor",
+        "Pauper",
+        "Insolvent",
+        "Miser"
+      ],
+      "correct_index": 2,
+      "explanation": "An insolvent person is legally unable to pay debts. A debtor merely owes money, and a miser is one who hoards money.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-045",
+      "domain": "English Comprehension",
+      "stem": "Choose the correctly spelt word from the following list.",
+      "options": [
+        "Seperate",
+        "Recieve",
+        "Occurence",
+        "Accommodate"
+      ],
+      "correct_index": 3,
+      "explanation": "Accommodate is spelt with double c and double m. The other spellings are common errors for separate, receive and occurrence.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-046",
+      "domain": "English Comprehension",
+      "stem": "Fill in the blank with the correct preposition. The committee could not arrive blank a unanimous decision.",
+      "options": [
+        "on",
+        "to",
+        "at",
+        "in"
+      ],
+      "correct_index": 2,
+      "explanation": "The correct collocation is to arrive at a decision, so at is the right preposition. Arrive on and arrive in usually refer to places.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-047",
+      "domain": "English Comprehension",
+      "stem": "Identify the part of the sentence that contains an error. The sentence is He is one of the best player in the team.",
+      "options": [
+        "He is one of the best",
+        "player",
+        "in the team",
+        "No error"
+      ],
+      "correct_index": 1,
+      "explanation": "After one of the best we need a plural noun, so player should be players. The phrase one of the best always takes a plural noun.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-048",
+      "domain": "English Comprehension",
+      "stem": "Choose the correct passive voice form of the sentence The teacher praised the boy.",
+      "options": [
+        "The boy was praised by the teacher",
+        "The boy is praised by the teacher",
+        "The boy has been praised by the teacher",
+        "The boy had praised the teacher"
+      ],
+      "correct_index": 0,
+      "explanation": "The simple past active becomes was or were plus the past participle in the passive, so the correct form is The boy was praised by the teacher.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-049",
+      "domain": "English Comprehension",
+      "stem": "Choose the correct indirect speech form of the sentence He said, I am busy now.",
+      "options": [
+        "He said that he was busy then",
+        "He said that I am busy now",
+        "He says that he is busy now",
+        "He said that he is busy now"
+      ],
+      "correct_index": 0,
+      "explanation": "In reported speech the present tense am shifts to the past was and now shifts to then, giving He said that he was busy then.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-050",
+      "domain": "English Comprehension",
+      "stem": "Choose the word that best completes the sentence. The scientist insisted that the findings were based on blank evidence.",
+      "options": [
+        "hearsay",
+        "empirical",
+        "anecdotal",
+        "dubious"
+      ],
+      "correct_index": 1,
+      "explanation": "Empirical evidence is based on observation and experiment, which fits a scientist's claim. Hearsay and anecdotal evidence are weak and informal.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-051",
+      "domain": "English Comprehension",
+      "stem": "Choose the word most similar in meaning to OBSOLETE.",
+      "options": [
+        "Modern",
+        "Rare",
+        "Outdated",
+        "Essential"
+      ],
+      "correct_index": 2,
+      "explanation": "Obsolete means no longer in use, so outdated is the closest synonym. Modern is its opposite and rare refers only to frequency.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-052",
+      "domain": "English Comprehension",
+      "stem": "Choose the word most opposite in meaning to BENEVOLENT.",
+      "options": [
+        "Kind",
+        "Generous",
+        "Charitable",
+        "Malevolent"
+      ],
+      "correct_index": 3,
+      "explanation": "Benevolent means wishing good to others, so malevolent, which means wishing harm, is the antonym. Kind, generous and charitable are synonyms.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-053",
+      "domain": "English Comprehension",
+      "stem": "The idiom a blessing in disguise means what?",
+      "options": [
+        "A hidden curse",
+        "A religious ritual",
+        "Something good that seems bad at first",
+        "A gift that is unwanted"
+      ],
+      "correct_index": 2,
+      "explanation": "A blessing in disguise is an apparent misfortune that later turns out to be beneficial. It is not a curse or an unwanted gift.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-054",
+      "domain": "English Comprehension",
+      "stem": "One word for a speech made without any preparation is",
+      "options": [
+        "Maiden speech",
+        "Eulogy",
+        "Soliloquy",
+        "Extempore"
+      ],
+      "correct_index": 3,
+      "explanation": "An extempore speech is delivered without prior preparation. A maiden speech is a first speech and a eulogy is a tribute to the dead.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-055",
+      "domain": "English Comprehension",
+      "stem": "Fill in the blank with the correct preposition. She is good blank mathematics.",
+      "options": [
+        "at",
+        "in",
+        "on",
+        "with"
+      ],
+      "correct_index": 0,
+      "explanation": "The adjective good takes the preposition at when referring to a skill, so good at mathematics is correct. Good in and good with are used differently.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-056",
+      "domain": "English Comprehension",
+      "stem": "Identify the part of the sentence that contains an error. The sentence is Each of the boys have done their work correctly.",
+      "options": [
+        "Each of the boys",
+        "have",
+        "done their work",
+        "correctly"
+      ],
+      "correct_index": 1,
+      "explanation": "The subject Each is singular, so it takes the singular verb has, not have. The phrase each of always takes a singular verb.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-057",
+      "domain": "English Comprehension",
+      "stem": "Choose the correct passive voice form of the sentence Someone has stolen my pen.",
+      "options": [
+        "My pen was stolen",
+        "My pen has been stolen",
+        "My pen is stolen by someone",
+        "My pen had been stolen"
+      ],
+      "correct_index": 1,
+      "explanation": "The present perfect active has stolen becomes has been plus the past participle in the passive, so My pen has been stolen is correct.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-058",
+      "domain": "English Comprehension",
+      "stem": "Choose the correct indirect speech form of the question She asked me, Where do you live?",
+      "options": [
+        "She asked me where I lived",
+        "She asked me where do you live",
+        "She asked me where did I live",
+        "She told me where I live"
+      ],
+      "correct_index": 0,
+      "explanation": "A reported question drops the question form, changes the tense to the past and uses normal word order, giving She asked me where I lived.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-059",
+      "domain": "English Comprehension",
+      "stem": "The idiom to bite the bullet means what?",
+      "options": [
+        "To eat hastily",
+        "To act foolishly",
+        "To start a fight",
+        "To endure hardship bravely"
+      ],
+      "correct_index": 3,
+      "explanation": "To bite the bullet means to face a painful or difficult situation with courage. It does not mean to eat, to fight or to act foolishly.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    },
+    {
+      "id": "ssc-cgl-060",
+      "domain": "English Comprehension",
+      "stem": "Choose the word most similar in meaning to MITIGATE.",
+      "options": [
+        "Aggravate",
+        "Provoke",
+        "Alleviate",
+        "Complicate"
+      ],
+      "correct_index": 2,
+      "explanation": "Mitigate means to make less severe, so alleviate is the closest synonym. Aggravate, provoke and complicate all suggest making matters worse.",
+      "reference": "SSC CGL Syllabus - English Comprehension"
+    }
+  ]
+}

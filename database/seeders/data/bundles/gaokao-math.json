@@ -1,0 +1,858 @@
+{
+    "cert_key": "gaokao-math",
+    "title": "Gaokao Mathematics",
+    "issuer": "China National College Entrance Examination",
+    "region": "APAC",
+    "outline_file": "outlines/gaokao-math.json",
+    "variant_label": "Gaokao Mathematics Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "150-point scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public Gaokao Mathematics syllabus. Not a capture of past exam questions.",
+    "source_label": "Gaokao Mathematics practice bank",
+    "items": [
+        {
+            "id": "gaokao-math-001",
+            "domain": "Algebra",
+            "stem": "The roots of the quadratic equation x^2 - 5x + 6 = 0 are:",
+            "options": [
+                "2 and 3",
+                "-2 and -3",
+                "1 and 6",
+                "-1 and -6"
+            ],
+            "correct_index": 0,
+            "explanation": "Factorising gives (x - 2)(x - 3) = 0, so the roots are x = 2 and x = 3. The other pairs multiply to 6 but their sums (13, 7, -7) do not match the coefficient -5.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-002",
+            "domain": "Algebra",
+            "stem": "If the complex number z equals 3 + 4i, then the modulus |z| is:",
+            "options": [
+                "7",
+                "5",
+                "25",
+                "sqrt(7)"
+            ],
+            "correct_index": 1,
+            "explanation": "The modulus is sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. Adding the real and imaginary parts gives 7, and 25 is the squared modulus.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-003",
+            "domain": "Algebra",
+            "stem": "The value of the logarithm log base 2 of 32 is:",
+            "options": [
+                "4",
+                "6",
+                "5",
+                "7"
+            ],
+            "correct_index": 2,
+            "explanation": "Since 2^5 = 32, the required exponent is 5. The choices 4 and 6 correspond to 2^4 = 16 and 2^6 = 64 respectively.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-004",
+            "domain": "Algebra",
+            "stem": "The value of (1 + i)^2, where i^2 = -1, is:",
+            "options": [
+                "2",
+                "2 + 2i",
+                "1",
+                "2i"
+            ],
+            "correct_index": 3,
+            "explanation": "(1 + i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i. Forgetting that i^2 = -1 gives the incorrect result 2 + 2i.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-005",
+            "domain": "Algebra",
+            "stem": "The number of ways to choose 2 objects from a set of 6 distinct objects is:",
+            "options": [
+                "15",
+                "12",
+                "30",
+                "36"
+            ],
+            "correct_index": 0,
+            "explanation": "This is the binomial coefficient C(6,2) = 6!/(2!4!) = (6 times 5)/2 = 15. Using the permutation P(6,2) = 30 wrongly counts order.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-006",
+            "domain": "Algebra",
+            "stem": "The sum of the first 20 positive integers 1 + 2 + ... + 20 is:",
+            "options": [
+                "190",
+                "210",
+                "200",
+                "220"
+            ],
+            "correct_index": 1,
+            "explanation": "Using n(n+1)/2 with n = 20 gives (20 times 21)/2 = 210. Forgetting to halve gives 420, and 190 is the sum only up to 19.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-007",
+            "domain": "Algebra",
+            "stem": "If 2^x = 8, then the value of the exponent x is:",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "correct_index": 2,
+            "explanation": "Writing 8 as 2^3 gives 2^x = 2^3, so x = 3. The choices 2 and 4 correspond to 2^2 = 4 and 2^4 = 16.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-008",
+            "domain": "Algebra",
+            "stem": "The determinant of the 2 by 2 matrix with first row (1, 2) and second row (3, 4) is:",
+            "options": [
+                "2",
+                "10",
+                "-10",
+                "-2"
+            ],
+            "correct_index": 3,
+            "explanation": "The determinant is 1 times 4 minus 2 times 3 = 4 - 6 = -2. Reversing the subtraction gives +2, and multiplying without subtracting gives 10 or -10.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-009",
+            "domain": "Algebra",
+            "stem": "For x not equal to 3, the expression (x^2 - 9)/(x - 3) simplifies to:",
+            "options": [
+                "x + 3",
+                "x - 3",
+                "x^2 + 3",
+                "x^2 - 3"
+            ],
+            "correct_index": 0,
+            "explanation": "Since x^2 - 9 = (x - 3)(x + 3), the factor (x - 3) cancels to leave x + 3. Writing x - 3 forgets the sign in the difference of two squares.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-010",
+            "domain": "Algebra",
+            "stem": "The number of distinct arrangements of the four letters in the word MATH is:",
+            "options": [
+                "12",
+                "24",
+                "16",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "All four letters are distinct, so the number of arrangements is 4! = 4 times 3 times 2 times 1 = 24. Using 4 choose 2 = 6 would be wrong.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-011",
+            "domain": "Algebra",
+            "stem": "If x + 1/x = 3, then the value of x^2 + 1/x^2 is:",
+            "options": [
+                "9",
+                "6",
+                "7",
+                "11"
+            ],
+            "correct_index": 2,
+            "explanation": "Squaring gives x^2 + 2 + 1/x^2 = 9, so x^2 + 1/x^2 = 9 - 2 = 7. Reporting 9 forgets to subtract the cross term 2.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-012",
+            "domain": "Algebra",
+            "stem": "The inequality x^2 - 4 < 0 is satisfied by real values of x that are:",
+            "options": [
+                "x > 2",
+                "x < -2",
+                "x < -2 or x > 2",
+                "-2 < x < 2"
+            ],
+            "correct_index": 3,
+            "explanation": "The expression factors as (x - 2)(x + 2) < 0, which holds when the factors have opposite signs, namely -2 < x < 2. The union x < -2 or x > 2 makes the product positive.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-013",
+            "domain": "Algebra",
+            "stem": "Using i^2 = -1, the value of i raised to the power 2023 is:",
+            "options": [
+                "-i",
+                "i",
+                "-1",
+                "1"
+            ],
+            "correct_index": 0,
+            "explanation": "Powers of i repeat with period 4, and 2023 = 4 times 505 plus 3, so i^2023 = i^3 = -i. Choosing i corresponds to a remainder of 1 and -1 to a remainder of 2.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-014",
+            "domain": "Algebra",
+            "stem": "The value of the product 27^(1/3) times 4^(1/2) is:",
+            "options": [
+                "5",
+                "6",
+                "9",
+                "12"
+            ],
+            "correct_index": 1,
+            "explanation": "27^(1/3) = 3 and 4^(1/2) = 2, so the product is 3 times 2 = 6. Adding the bases instead of multiplying gives 5, and squaring gives 9.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-015",
+            "domain": "Algebra",
+            "stem": "If x - y = 4 and xy = 5, then the value of x^2 + y^2 is:",
+            "options": [
+                "16",
+                "21",
+                "26",
+                "36"
+            ],
+            "correct_index": 2,
+            "explanation": "Since (x - y)^2 = x^2 - 2xy + y^2, we get 16 = x^2 + y^2 - 10, so x^2 + y^2 = 26. Using xy = 5 without doubling it gives 21.",
+            "reference": "Gaokao Mathematics Syllabus - Algebra"
+        },
+        {
+            "id": "gaokao-math-016",
+            "domain": "Functions and Sequences",
+            "stem": "The domain of the real-valued function f(x) = sqrt(x - 3) is:",
+            "options": [
+                "x > 3",
+                "x <= 3",
+                "all real numbers",
+                "x >= 3"
+            ],
+            "correct_index": 3,
+            "explanation": "The expression under a square root must be non-negative, so x - 3 >= 0, giving x >= 3. The strict inequality x > 3 wrongly excludes the valid endpoint x = 3.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-017",
+            "domain": "Functions and Sequences",
+            "stem": "If f(x) = 2x + 1, then the inverse function f inverse of x is:",
+            "options": [
+                "(x - 1)/2",
+                "(x + 1)/2",
+                "2x - 1",
+                "1/(2x + 1)"
+            ],
+            "correct_index": 0,
+            "explanation": "Solving y = 2x + 1 for x gives x = (y - 1)/2, so the inverse is (x - 1)/2. The reciprocal 1/(2x + 1) is not the inverse function.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-018",
+            "domain": "Functions and Sequences",
+            "stem": "For real x, the range of the function f(x) = x^2 is:",
+            "options": [
+                "y > 0",
+                "y >= 0",
+                "all real numbers",
+                "y <= 0"
+            ],
+            "correct_index": 1,
+            "explanation": "A square is never negative and every value y >= 0 is attained, so the range is y >= 0. The choice y > 0 excludes f(0) = 0.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-019",
+            "domain": "Functions and Sequences",
+            "stem": "An arithmetic sequence has first term 5 and common difference 3. Its 12th term is:",
+            "options": [
+                "35",
+                "41",
+                "38",
+                "44"
+            ],
+            "correct_index": 2,
+            "explanation": "The nth term is a + (n - 1)d = 5 + 11 times 3 = 38. Using 12 times 3 + 5 = 41 counts one extra common difference.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-020",
+            "domain": "Functions and Sequences",
+            "stem": "The sum of the arithmetic series 1 + 2 + 3 + ... + 10 is:",
+            "options": [
+                "45",
+                "50",
+                "100",
+                "55"
+            ],
+            "correct_index": 3,
+            "explanation": "Using n(n+1)/2 with n = 10 gives (10 times 11)/2 = 55. Forgetting to halve gives 110, and 45 is the sum only up to 9.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-021",
+            "domain": "Functions and Sequences",
+            "stem": "A geometric sequence begins 3, 6, 12, ... Its 6th term is:",
+            "options": [
+                "96",
+                "192",
+                "48",
+                "64"
+            ],
+            "correct_index": 0,
+            "explanation": "The first term is 3 and the ratio is 2, so the 6th term is 3 times 2^5 = 3 times 32 = 96. Using 2^6 instead of 2^5 gives 192.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-022",
+            "domain": "Functions and Sequences",
+            "stem": "The sum to infinity of the geometric series 4 + 2 + 1 + ... is:",
+            "options": [
+                "6",
+                "8",
+                "4",
+                "2"
+            ],
+            "correct_index": 1,
+            "explanation": "With first term a = 4 and ratio r = 1/2, the sum is a/(1 - r) = 4/(1 - 1/2) = 8. The value 4 is only the first term.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-023",
+            "domain": "Functions and Sequences",
+            "stem": "If f(x) = x^3, then the value of f(-2) is:",
+            "options": [
+                "8",
+                "-6",
+                "-8",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "Cubing -2 gives (-2) times (-2) times (-2) = -8. Dropping the sign gives 8, and squaring instead of cubing gives -6 or 6.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-024",
+            "domain": "Functions and Sequences",
+            "stem": "The function f(x) = |x| fails to be differentiable at the point:",
+            "options": [
+                "x = 1",
+                "every real x",
+                "x = 2",
+                "x = 0"
+            ],
+            "correct_index": 3,
+            "explanation": "The absolute value function has a sharp corner at x = 0 where the left and right derivatives differ, so it is not differentiable there. It is smooth at all other points.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-025",
+            "domain": "Functions and Sequences",
+            "stem": "An arithmetic sequence has 3rd term 10 and 8th term 25. Its common difference is:",
+            "options": [
+                "3",
+                "5",
+                "2",
+                "4"
+            ],
+            "correct_index": 0,
+            "explanation": "Between the 3rd and 8th terms there are 5 steps, so d = (25 - 10)/5 = 3. Choosing 5 confuses the number of steps with the difference.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-026",
+            "domain": "Functions and Sequences",
+            "stem": "For the sequence whose nth term is a_n = 2^n, the ratio a_5 / a_3 equals:",
+            "options": [
+                "2",
+                "4",
+                "8",
+                "16"
+            ],
+            "correct_index": 1,
+            "explanation": "Since a_5 = 32 and a_3 = 8, the ratio is 32/8 = 4, which also equals 2^(5 - 3) = 4. Subtracting the exponents to get 2 is a common error.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-027",
+            "domain": "Functions and Sequences",
+            "stem": "The number of terms in the arithmetic progression 7, 11, 15, ..., 47 is:",
+            "options": [
+                "9",
+                "10",
+                "11",
+                "12"
+            ],
+            "correct_index": 2,
+            "explanation": "With common difference 4, the count is (47 - 7)/4 + 1 = 10 + 1 = 11. Forgetting the final plus 1 yields 10.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-028",
+            "domain": "Functions and Sequences",
+            "stem": "The sum of the geometric series 2 + 4 + 8 + ... + 256 is:",
+            "options": [
+                "254",
+                "256",
+                "512",
+                "510"
+            ],
+            "correct_index": 3,
+            "explanation": "There are 8 terms (from 2^1 to 2^8), and the sum is 2(2^8 - 1)/(2 - 1) = 2 times 255 = 510. The last term 256 is not the sum.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-029",
+            "domain": "Functions and Sequences",
+            "stem": "If f(x) = log base 2 of x, then the value of f(8) is:",
+            "options": [
+                "3",
+                "4",
+                "2",
+                "6"
+            ],
+            "correct_index": 0,
+            "explanation": "Since 2^3 = 8, the logarithm base 2 of 8 is 3. The value 4 would correspond to f(16) = 4, and 2 to f(4) = 2.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-030",
+            "domain": "Functions and Sequences",
+            "stem": "The geometric mean of the two positive numbers 4 and 16 is:",
+            "options": [
+                "10",
+                "8",
+                "12",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "The geometric mean is sqrt(4 times 16) = sqrt(64) = 8. The arithmetic mean would instead be (4 + 16)/2 = 10.",
+            "reference": "Gaokao Mathematics Syllabus - Functions and Sequences"
+        },
+        {
+            "id": "gaokao-math-031",
+            "domain": "Geometry and Vectors",
+            "stem": "The distance between the points (0, 0) and (3, 4) in the plane is:",
+            "options": [
+                "7",
+                "4",
+                "5",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "Using the distance formula sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5. Adding the coordinates gives the distractor 7.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-032",
+            "domain": "Geometry and Vectors",
+            "stem": "The slope of the line passing through the points (1, 2) and (3, 8) is:",
+            "options": [
+                "2",
+                "-3",
+                "1/3",
+                "3"
+            ],
+            "correct_index": 3,
+            "explanation": "Slope = (8 - 2)/(3 - 1) = 6/2 = 3. Inverting gives 1/3, and reversing the subtraction order produces a sign error.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-033",
+            "domain": "Geometry and Vectors",
+            "stem": "The area of the triangle with vertices (0, 0), (4, 0) and (0, 3) is:",
+            "options": [
+                "6",
+                "12",
+                "10",
+                "7"
+            ],
+            "correct_index": 0,
+            "explanation": "The legs along the axes have lengths 4 and 3, so the area is (1/2) times 4 times 3 = 6. Forgetting the factor 1/2 gives 12.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-034",
+            "domain": "Geometry and Vectors",
+            "stem": "For the vectors a = (3, 4) and b = (1, 2), the dot product a dot b equals:",
+            "options": [
+                "7",
+                "11",
+                "10",
+                "12"
+            ],
+            "correct_index": 1,
+            "explanation": "The dot product is 3 times 1 + 4 times 2 = 3 + 8 = 11. Multiplying only the first components gives 3, which is not the dot product.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-035",
+            "domain": "Geometry and Vectors",
+            "stem": "If |a| = 3 and |b| = 4 and their dot product is 0, the angle between a and b is:",
+            "options": [
+                "0 degrees",
+                "30 degrees",
+                "90 degrees",
+                "180 degrees"
+            ],
+            "correct_index": 2,
+            "explanation": "A zero dot product means cos(theta) = 0, so the vectors are perpendicular and the angle is 90 degrees. Parallel vectors would give a nonzero dot product.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-036",
+            "domain": "Geometry and Vectors",
+            "stem": "The circle x^2 + y^2 - 4x + 6y - 12 = 0 has centre and radius:",
+            "options": [
+                "(2, 3), 5",
+                "(-2, -3), 25",
+                "(2, -3), 25",
+                "(2, -3), 5"
+            ],
+            "correct_index": 3,
+            "explanation": "Completing the square gives (x - 2)^2 + (y + 3)^2 = 25, so the centre is (2, -3) and the radius is sqrt(25) = 5. The constant 25 is the squared radius.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-037",
+            "domain": "Geometry and Vectors",
+            "stem": "The equation of the line with slope 2 that passes through the point (1, 3) is:",
+            "options": [
+                "y = 2x + 1",
+                "y = 2x - 1",
+                "y = x + 2",
+                "y = 3x - 3"
+            ],
+            "correct_index": 0,
+            "explanation": "Using y - 3 = 2(x - 1) gives y = 2x + 1. Substituting the point (1, 3) confirms it lies on this line, unlike y = 2x - 1.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-038",
+            "domain": "Geometry and Vectors",
+            "stem": "The perpendicular distance from the point (2, 3) to the line 3x + 4y - 5 = 0 is:",
+            "options": [
+                "2/5",
+                "13/5",
+                "5",
+                "13"
+            ],
+            "correct_index": 1,
+            "explanation": "The distance is |3 times 2 + 4 times 3 - 5| / sqrt(3^2 + 4^2) = 13/5. Using the unrooted sum 25 in the denominator gives 13/25.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-039",
+            "domain": "Geometry and Vectors",
+            "stem": "If the vectors (2, -1) and (k, 3) are perpendicular, then k equals:",
+            "options": [
+                "2",
+                "-3/2",
+                "3/2",
+                "-2"
+            ],
+            "correct_index": 2,
+            "explanation": "Perpendicular vectors have zero dot product: 2k + (-1) times 3 = 0, so 2k = 3 and k = 3/2. A sign error gives -3/2.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-040",
+            "domain": "Geometry and Vectors",
+            "stem": "The angle between the vectors (1, 0) and (1, 1) is:",
+            "options": [
+                "30 degrees",
+                "60 degrees",
+                "90 degrees",
+                "45 degrees"
+            ],
+            "correct_index": 3,
+            "explanation": "The cosine of the angle is (1 times 1 + 0 times 1)/(1 times sqrt(2)) = 1/sqrt(2), so the angle is 45 degrees. The value 1/sqrt(2) corresponds to 45, not 30 or 60.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-041",
+            "domain": "Geometry and Vectors",
+            "stem": "The midpoint of the segment joining the points (2, 4) and (6, 8) is:",
+            "options": [
+                "(4, 6)",
+                "(8, 12)",
+                "(2, 2)",
+                "(3, 5)"
+            ],
+            "correct_index": 0,
+            "explanation": "The midpoint coordinates are the averages ((2 + 6)/2, (4 + 8)/2) = (4, 6). Adding without dividing gives (8, 12).",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-042",
+            "domain": "Geometry and Vectors",
+            "stem": "The equation of the circle with centre at the origin and radius 3 is:",
+            "options": [
+                "x^2 + y^2 = 3",
+                "x^2 + y^2 = 9",
+                "x^2 + y^2 = 6",
+                "x + y = 9"
+            ],
+            "correct_index": 1,
+            "explanation": "A circle centred at the origin satisfies x^2 + y^2 = r^2, so with r = 3 it is x^2 + y^2 = 9. Writing 3 on the right forgets to square the radius.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-043",
+            "domain": "Geometry and Vectors",
+            "stem": "The unit vector in the direction of the vector (6, 8) is:",
+            "options": [
+                "(3, 4)",
+                "(6, 8)",
+                "(0.6, 0.8)",
+                "(1, 1)"
+            ],
+            "correct_index": 2,
+            "explanation": "The magnitude is sqrt(36 + 64) = 10, so the unit vector is (6/10, 8/10) = (0.6, 0.8). The vector (3, 4) has magnitude 5, not 1.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-044",
+            "domain": "Geometry and Vectors",
+            "stem": "The volume of a cube whose edge length is 3 is:",
+            "options": [
+                "9",
+                "18",
+                "81",
+                "27"
+            ],
+            "correct_index": 3,
+            "explanation": "The volume of a cube is the edge cubed, 3^3 = 27. Using 3^2 = 9 gives the area of one face rather than the volume.",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-045",
+            "domain": "Geometry and Vectors",
+            "stem": "If |a| = 2, |b| = 3 and the angle between them is 30 degrees, then |a cross b| equals:",
+            "options": [
+                "3",
+                "6",
+                "3*sqrt(3)",
+                "6*sqrt(3)"
+            ],
+            "correct_index": 0,
+            "explanation": "The magnitude of the cross product is |a||b|sin(theta) = 2 times 3 times sin(30) = 6 times (1/2) = 3. Using cos in place of sin would give 3*sqrt(3).",
+            "reference": "Gaokao Mathematics Syllabus - Geometry and Vectors"
+        },
+        {
+            "id": "gaokao-math-046",
+            "domain": "Probability and Statistics",
+            "stem": "A fair coin is tossed once. The probability of obtaining a head is:",
+            "options": [
+                "1/4",
+                "1/2",
+                "1",
+                "0"
+            ],
+            "correct_index": 1,
+            "explanation": "A fair coin has two equally likely outcomes and one of them is a head, so the probability is 1/2. The value 1/4 would require two tosses both to be heads.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-047",
+            "domain": "Probability and Statistics",
+            "stem": "A fair six-sided die is rolled once. The probability of obtaining a 6 is:",
+            "options": [
+                "1/2",
+                "1/3",
+                "1/6",
+                "1/4"
+            ],
+            "correct_index": 2,
+            "explanation": "There are six equally likely outcomes and only one is a 6, so the probability is 1/6. The value 1/2 describes even versus odd, which each have three outcomes.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-048",
+            "domain": "Probability and Statistics",
+            "stem": "The arithmetic mean of the data values 2, 4, 6 and 8 is:",
+            "options": [
+                "4",
+                "6",
+                "8",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "The sum is 20 and there are four values, so the mean is 20/4 = 5. The largest-but-one value 6 is not the mean.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-049",
+            "domain": "Probability and Statistics",
+            "stem": "If P(A) = 0.4 and P(B) = 0.5 and A and B are independent, then P(A and B) is:",
+            "options": [
+                "0.2",
+                "0.9",
+                "0.1",
+                "0.45"
+            ],
+            "correct_index": 0,
+            "explanation": "For independent events, P(A and B) = P(A) times P(B) = 0.4 times 0.5 = 0.2. Adding the probabilities gives 0.9, which is P(A or B) only when the events are disjoint.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-050",
+            "domain": "Probability and Statistics",
+            "stem": "The number of ways to select a committee of 2 people from 5 candidates is:",
+            "options": [
+                "20",
+                "10",
+                "5",
+                "25"
+            ],
+            "correct_index": 1,
+            "explanation": "This is the combination C(5,2) = (5 times 4)/(2 times 1) = 10. Counting ordered pairs gives 20, which is the permutation count.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-051",
+            "domain": "Probability and Statistics",
+            "stem": "The median of the sorted data values 3, 7, 9, 15 and 21 is:",
+            "options": [
+                "7",
+                "15",
+                "9",
+                "11"
+            ],
+            "correct_index": 2,
+            "explanation": "With five ordered values the median is the third, namely 9. The value 11 is the arithmetic mean (55/5), not the median.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-052",
+            "domain": "Probability and Statistics",
+            "stem": "A single card is drawn from a standard 52-card deck. The probability that it is an ace is:",
+            "options": [
+                "1/4",
+                "1/52",
+                "4/13",
+                "1/13"
+            ],
+            "correct_index": 3,
+            "explanation": "There are four aces among 52 cards, so the probability is 4/52 = 1/13. The value 1/4 is the probability of drawing a card of one particular suit.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-053",
+            "domain": "Probability and Statistics",
+            "stem": "The population variance of the data set 1, 2, 3, 4 and 5 is:",
+            "options": [
+                "2",
+                "10",
+                "3",
+                "4"
+            ],
+            "correct_index": 0,
+            "explanation": "The mean is 3 and the squared deviations sum to 4 + 1 + 0 + 1 + 4 = 10, so the variance is 10/5 = 2. Reporting 10 forgets to divide by the number of values.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-054",
+            "domain": "Probability and Statistics",
+            "stem": "Two fair dice are thrown. The probability that the sum of the two scores equals 7 is:",
+            "options": [
+                "1/12",
+                "1/6",
+                "1/9",
+                "5/36"
+            ],
+            "correct_index": 1,
+            "explanation": "There are 36 equally likely ordered outcomes and 6 of them sum to 7, giving 6/36 = 1/6. Counting only unordered pairs would misstate the sample space.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-055",
+            "domain": "Probability and Statistics",
+            "stem": "If A and B are mutually exclusive with P(A) = 0.3 and P(A or B) = 0.7, then P(B) is:",
+            "options": [
+                "0.3",
+                "0.7",
+                "0.4",
+                "0.21"
+            ],
+            "correct_index": 2,
+            "explanation": "For mutually exclusive events P(A or B) = P(A) + P(B), so P(B) = 0.7 - 0.3 = 0.4. Multiplying instead of adding would apply only to independent events.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-056",
+            "domain": "Probability and Statistics",
+            "stem": "Three fair coins are tossed together. The number of possible outcomes is:",
+            "options": [
+                "6",
+                "3",
+                "9",
+                "8"
+            ],
+            "correct_index": 3,
+            "explanation": "Each coin has 2 outcomes, so three coins give 2^3 = 8 outcomes. Multiplying 3 by 2 gives 6, which incorrectly treats the tosses as ordered selections.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-057",
+            "domain": "Probability and Statistics",
+            "stem": "The mean of the first five even numbers 2, 4, 6, 8 and 10 is:",
+            "options": [
+                "6",
+                "5",
+                "7",
+                "8"
+            ],
+            "correct_index": 0,
+            "explanation": "The sum is 30 and there are five values, so the mean is 30/5 = 6. The value 5 is the mean of the first five odd numbers, not these values.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-058",
+            "domain": "Probability and Statistics",
+            "stem": "The standard deviation of the data set 5, 5, 5 and 5 is:",
+            "options": [
+                "5",
+                "0",
+                "1",
+                "2.5"
+            ],
+            "correct_index": 1,
+            "explanation": "Every value equals the mean 5, so each deviation is 0 and the standard deviation is 0. The value 5 is the data value itself, not the spread.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-059",
+            "domain": "Probability and Statistics",
+            "stem": "The number of ordered arrangements of 2 objects chosen from 5 distinct objects is:",
+            "options": [
+                "10",
+                "25",
+                "20",
+                "15"
+            ],
+            "correct_index": 2,
+            "explanation": "This is the permutation P(5,2) = 5 times 4 = 20. Using the combination C(5,2) = 10 ignores the order that is required here.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        },
+        {
+            "id": "gaokao-math-060",
+            "domain": "Probability and Statistics",
+            "stem": "If the probability of an event A is 1/3, then the probability of the complement of A is:",
+            "options": [
+                "1/3",
+                "3",
+                "1/2",
+                "2/3"
+            ],
+            "correct_index": 3,
+            "explanation": "The complement has probability 1 - P(A) = 1 - 1/3 = 2/3. The value 1/3 repeats the event itself, and a probability cannot exceed 1.",
+            "reference": "Gaokao Mathematics Syllabus - Probability and Statistics"
+        }
+    ]
+}
