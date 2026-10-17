@@ -1,0 +1,858 @@
+{
+    "cert_key": "a",
+    "title": "CompTIA A+ Core",
+    "issuer": "CompTIA",
+    "region": "USA-CLOUD",
+    "outline_file": "outlines/a.json",
+    "variant_label": "CompTIA A+ Core Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "Pass 675/700 (scaled)",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public CompTIA A+ exam objectives. Not a capture of past exam questions.",
+    "source_label": "CompTIA A+ practice bank",
+    "items": [
+        {
+            "id": "a-001",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A technician needs to connect a Bluetooth headset to a laptop that lacks a built-in Bluetooth adapter. What is the most appropriate solution?",
+            "options": [
+                "Install a USB Bluetooth adapter",
+                "Replace the laptop motherboard",
+                "Use an Ethernet crossover cable",
+                "Connect via serial port"
+            ],
+            "correct_index": 0,
+            "explanation": "A USB Bluetooth adapter provides wireless Bluetooth connectivity for devices that do not have it integrated.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-002",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which type of mobile device display uses organic compounds that emit light when electrified, offering better contrast and power efficiency?",
+            "options": [
+                "CRT",
+                "OLED",
+                "LCD with CCFL",
+                "Plasma"
+            ],
+            "correct_index": 1,
+            "explanation": "OLED displays use organic light-emitting diodes to produce images with deep blacks and low power consumption.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-003",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A user reports intermittent Wi-Fi drops. The technician notices the device connects to a distant access point instead of a closer one. What setting could help resolve this issue?",
+            "options": [
+                "Disable MAC filtering",
+                "Change the SSID name",
+                "Enable band steering or adjust roaming sensitivity",
+                "Increase DHCP lease time"
+            ],
+            "correct_index": 2,
+            "explanation": "Adjusting roaming thresholds helps devices switch to stronger access points when moving through coverage areas.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-004",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which cellular technology provides the highest theoretical data speeds among current mainstream mobile standards?",
+            "options": [
+                "3G",
+                "GPRS",
+                "EDGE",
+                "5G"
+            ],
+            "correct_index": 3,
+            "explanation": "5G cellular networks offer significantly higher bandwidth and lower latency than previous generations.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-005",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A technician is configuring a wireless network. Which characteristic best describes the 2.4 GHz band compared to 5 GHz?",
+            "options": [
+                "Longer range and better wall penetration",
+                "Faster speeds with less interference",
+                "More non-overlapping channels",
+                "Shorter wavelength with higher attenuation"
+            ],
+            "correct_index": 0,
+            "explanation": "The 2.4 GHz band has longer wavelengths, allowing better wall penetration and greater range than 5 GHz.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-006",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which mobile device synchronization method allows changes to propagate between a device and a server over the internet in near real time?",
+            "options": [
+                "Local-only copy via USB drive",
+                "Cloud-based synchronization",
+                "Manual file transfer by email",
+                "Offline batch transfer"
+            ],
+            "correct_index": 1,
+            "explanation": "Cloud synchronization services automatically update data across devices when connected to the internet.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-007",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A technician notices a laptop cannot obtain an IP address on a network using DHCP. Which is the most likely cause?",
+            "options": [
+                "The subnet mask is configured statically",
+                "The DNS suffix is incorrect",
+                "The DHCP server is unreachable or not responding",
+                "The firewall is blocking HTTPS"
+            ],
+            "correct_index": 2,
+            "explanation": "If a DHCP server is down or unreachable, clients cannot obtain IP addresses automatically.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-008",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which networking protocol translates human-readable domain names into IP addresses?",
+            "options": [
+                "DHCP",
+                "ARP",
+                "NAT",
+                "DNS"
+            ],
+            "correct_index": 3,
+            "explanation": "DNS resolves domain names to IP addresses so clients can connect to network resources.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-009",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A user wants to protect sensitive data on a lost or stolen mobile device. Which feature should be configured in advance?",
+            "options": [
+                "Remote wipe",
+                "Screen saver timeout",
+                "Font smoothing",
+                "Auto-correct"
+            ],
+            "correct_index": 0,
+            "explanation": "Remote wipe allows data to be erased from a lost or stolen device to prevent unauthorized access.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-010",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which type of network cable is typically used to connect two computers directly without a switch?",
+            "options": [
+                "Straight-through cable",
+                "Ethernet crossover cable",
+                "Coaxial cable",
+                "Patch antenna cable"
+            ],
+            "correct_index": 1,
+            "explanation": "A crossover cable swaps transmit and receive pairs to allow direct device-to-device Ethernet connections.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-011",
+            "domain": "Mobile Devices and Networking",
+            "stem": "What is the primary purpose of a mobile device VPN when connected to public Wi-Fi?",
+            "options": [
+                "To increase internet speed",
+                "To bypass DNS caching",
+                "To encrypt network traffic and protect data in transit",
+                "To disable firewalls"
+            ],
+            "correct_index": 2,
+            "explanation": "VPNs create an encrypted tunnel that protects sensitive traffic on untrusted public networks.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-012",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which wireless technology is best suited for very short-range payments and data exchange between nearby devices?",
+            "options": [
+                "Wi-Fi",
+                "Bluetooth",
+                "LoRa",
+                "NFC"
+            ],
+            "correct_index": 3,
+            "explanation": "NFC supports very short-range communication commonly used for contactless payments and pairing.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-013",
+            "domain": "Mobile Devices and Networking",
+            "stem": "A laptop set to obtain an IP address automatically shows 169.254.x.x. What does this indicate?",
+            "options": [
+                "APIPA assignment due to DHCP failure",
+                "Successful static configuration",
+                "Router issued a public IP",
+                "DNS over HTTPS is active"
+            ],
+            "correct_index": 0,
+            "explanation": "APIPA assigns 169.254 addresses when a DHCP server cannot be reached by the client.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-014",
+            "domain": "Mobile Devices and Networking",
+            "stem": "Which component in a mobile device stores the operating system and user data persistently?",
+            "options": [
+                "RAM",
+                "Flash memory (eMMC/UFS/SSD)",
+                "GPU cache",
+                "CPU registers"
+            ],
+            "correct_index": 1,
+            "explanation": "Non-volatile flash storage retains the OS, apps, and user data when power is removed.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-015",
+            "domain": "Mobile Devices and Networking",
+            "stem": "When troubleshooting slow Wi-Fi speeds, which factor most commonly reduces throughput on a wireless network?",
+            "options": [
+                "Using shorter Ethernet cables",
+                "Enabling QoS",
+                "High channel congestion from nearby networks",
+                "Setting a static IP address"
+            ],
+            "correct_index": 2,
+            "explanation": "Channel congestion from nearby networks causes interference and reduces Wi-Fi throughput.",
+            "reference": "CompTIA A+ Exam Objectives - Mobile Devices and Networking"
+        },
+        {
+            "id": "a-016",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which type of RAM is most commonly used in modern desktop computers for main system memory?",
+            "options": [
+                "EDO RAM",
+                "FPM RAM",
+                "SDRAM with 72-pin SIMM",
+                "DDR4 SDRAM"
+            ],
+            "correct_index": 3,
+            "explanation": "DDR4 SDRAM is widely used in current desktop and laptop systems due to its speed and capacity improvements.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-017",
+            "domain": "Hardware and Virtualization",
+            "stem": "A technician needs to install additional storage in a laptop with no 2.5 inch bay available. What is the most appropriate option?",
+            "options": [
+                "NVMe M.2 SSD",
+                "IDE hard drive",
+                "SCSI drive",
+                "Floppy disk"
+            ],
+            "correct_index": 0,
+            "explanation": "M.2 NVMe SSDs are compact and common in modern laptops where space for traditional drives is limited.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-018",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which hardware component is responsible for converting AC power from a wall outlet to DC power for a computer?",
+            "options": [
+                "UPS",
+                "Power Supply Unit (PSU)",
+                "Surge protector",
+                "Voltage regulator module"
+            ],
+            "correct_index": 1,
+            "explanation": "The PSU converts alternating current to the direct current voltages needed by computer components.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-019",
+            "domain": "Hardware and Virtualization",
+            "stem": "A technician is building a PC and needs to ensure proper cooling for the CPU. Which of the following is most effective?",
+            "options": [
+                "Leaving the CPU exposed to air",
+                "Wrapping the CPU in insulating tape",
+                "A heatsink with a thermal paste and fan",
+                "Using an ungrounded power cable"
+            ],
+            "correct_index": 2,
+            "explanation": "A heatsink combined with thermal paste and an active fan dissipates heat effectively from the CPU.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-020",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which type of printer uses a laser beam to create an electrostatic image on a drum before transferring toner to paper?",
+            "options": [
+                "Inkjet printer",
+                "Dot matrix printer",
+                "Thermal printer",
+                "Laser printer"
+            ],
+            "correct_index": 3,
+            "explanation": "Laser printers use electrophotographic processes involving a laser, drum, toner, and fuser unit.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-021",
+            "domain": "Hardware and Virtualization",
+            "stem": "A user reports that their computer will not power on at all. What should be the first troubleshooting step for a technician?",
+            "options": [
+                "Verify power source and cable connections",
+                "Reinstall the operating system",
+                "Update device drivers",
+                "Run a disk defragmentation"
+            ],
+            "correct_index": 0,
+            "explanation": "Checking the power source, outlet, cables, and PSU connections is the logical first step for no-power issues.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-022",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which virtual machine feature allows a VM to run with minimal performance overhead by accessing hardware directly?",
+            "options": [
+                "Emulation only",
+                "Hardware-assisted virtualization (VT-x/AMD-V)",
+                "Pure software interpretation",
+                "Binary translation without extensions"
+            ],
+            "correct_index": 1,
+            "explanation": "Intel VT-x and AMD-V provide CPU extensions that enable efficient hardware-assisted virtualization.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-023",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which storage interface provides the fastest data transfer speeds for modern internal solid state drives?",
+            "options": [
+                "SATA III",
+                "PATA",
+                "PCIe NVMe",
+                "USB 2.0"
+            ],
+            "correct_index": 2,
+            "explanation": "PCIe NVMe interfaces offer significantly higher throughput compared to SATA-based SSDs.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-024",
+            "domain": "Hardware and Virtualization",
+            "stem": "A technician needs to replace a laptop battery. What safety precaution should be taken first?",
+            "options": [
+                "Pour water on the battery to cool it",
+                "Use metal tools to pry it open",
+                "Charge it to 100 percent first",
+                "Power off the laptop and unplug it from AC power"
+            ],
+            "correct_index": 3,
+            "explanation": "Always disconnect power sources before servicing batteries to prevent electrical hazards.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-025",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which motherboard form factor is commonly used in compact desktop systems with limited space?",
+            "options": [
+                "Micro-ATX",
+                "E-ATX",
+                "ATX full size",
+                "Extended ATX XL"
+            ],
+            "correct_index": 0,
+            "explanation": "Micro-ATX boards are smaller than standard ATX while still providing essential expansion slots.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-026",
+            "domain": "Hardware and Virtualization",
+            "stem": "What is the purpose of a hypervisor in a virtualization environment?",
+            "options": [
+                "To compile source code",
+                "To manage and allocate hardware resources to virtual machines",
+                "To filter email spam",
+                "To compress files"
+            ],
+            "correct_index": 1,
+            "explanation": "A hypervisor creates and runs VMs by abstracting physical hardware and allocating resources.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-027",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which type of expansion card would a technician install to provide additional video output capabilities?",
+            "options": [
+                "Sound card",
+                "NIC (network card)",
+                "GPU (graphics card)",
+                "RAID controller"
+            ],
+            "correct_index": 2,
+            "explanation": "A dedicated GPU accelerates graphics rendering and provides multiple display outputs.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-028",
+            "domain": "Hardware and Virtualization",
+            "stem": "A laser printer is producing faded printouts. Which component is most likely the cause and needs replacement?",
+            "options": [
+                "Fuser roller",
+                "Transfer belt",
+                "Pickup roller",
+                "Toner cartridge"
+            ],
+            "correct_index": 3,
+            "explanation": "Low toner levels in the cartridge typically result in faded or light print quality on laser printers.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-029",
+            "domain": "Hardware and Virtualization",
+            "stem": "Which of the following is a benefit of using solid state drives compared to traditional hard disk drives?",
+            "options": [
+                "Faster boot times and no moving parts",
+                "Higher mechanical durability from spinning disks",
+                "Lower cost per GB for all capacities",
+                "Better data recovery from physical damage"
+            ],
+            "correct_index": 0,
+            "explanation": "SSDs have no moving parts, resulting in faster access times, lower power consumption, and greater shock resistance.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-030",
+            "domain": "Hardware and Virtualization",
+            "stem": "What type of virtualization allows running multiple operating systems on a single physical host simultaneously?",
+            "options": [
+                "Single-task emulation",
+                "Full virtualization",
+                "Real-time operating system",
+                "Bare-metal BIOS only"
+            ],
+            "correct_index": 1,
+            "explanation": "Full virtualization enables multiple guest OSes to run independently on the same hardware via a hypervisor.",
+            "reference": "CompTIA A+ Exam Objectives - Hardware and Virtualization"
+        },
+        {
+            "id": "a-031",
+            "domain": "Operating Systems and Security",
+            "stem": "Which Windows utility is commonly used to view and manage running processes and system performance?",
+            "options": [
+                "Notepad",
+                "Calculator",
+                "Task Manager",
+                "Paint"
+            ],
+            "correct_index": 2,
+            "explanation": "Task Manager allows users to monitor and control running processes, applications, and system resource usage.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-032",
+            "domain": "Operating Systems and Security",
+            "stem": "A user needs to recover a deleted file from the Recycle Bin in Windows. Which action is correct?",
+            "options": [
+                "Delete it again",
+                "Empty the Recycle Bin",
+                "Cut and paste to root directory",
+                "Right-click the file and select Restore"
+            ],
+            "correct_index": 3,
+            "explanation": "Restoring from the Recycle Bin returns the file to its original location.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-033",
+            "domain": "Operating Systems and Security",
+            "stem": "Which file system is natively supported by modern Windows versions for internal drives and supports large file sizes with permissions?",
+            "options": [
+                "NTFS",
+                "FAT16",
+                "FAT12",
+                "CDFS"
+            ],
+            "correct_index": 0,
+            "explanation": "NTFS provides security permissions, encryption support, and large volume capabilities.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-034",
+            "domain": "Operating Systems and Security",
+            "stem": "Which Linux command displays the contents of a directory including hidden files?",
+            "options": [
+                "dir /a",
+                "ls -la",
+                "listall",
+                "showfiles"
+            ],
+            "correct_index": 1,
+            "explanation": "The ls -la command lists all files with detailed information including hidden entries.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-035",
+            "domain": "Operating Systems and Security",
+            "stem": "A technician needs to create a strong password policy for users. Which of the following is the best practice?",
+            "options": [
+                "Use the same password for all accounts",
+                "Allow single-word dictionary passwords",
+                "Require a mix of uppercase, lowercase, numbers, and special characters with minimum length",
+                "Never expire passwords"
+            ],
+            "correct_index": 2,
+            "explanation": "Strong passwords combine character types and sufficient length to resist brute force attacks.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-036",
+            "domain": "Operating Systems and Security",
+            "stem": "Which Windows feature allows users to run applications in an isolated environment for testing?",
+            "options": [
+                "Device Manager",
+                "Event Viewer",
+                "Disk Cleanup",
+                "Windows Sandbox"
+            ],
+            "correct_index": 3,
+            "explanation": "Windows Sandbox provides a temporary isolated desktop environment for safely running untrusted software.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-037",
+            "domain": "Operating Systems and Security",
+            "stem": "A user receives a suspicious email requesting login credentials. What type of attack is this?",
+            "options": [
+                "Phishing",
+                "Ransomware",
+                "DDoS",
+                "SQL injection"
+            ],
+            "correct_index": 0,
+            "explanation": "Phishing attempts to trick users into disclosing sensitive information through fraudulent messages.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-038",
+            "domain": "Operating Systems and Security",
+            "stem": "Which mobile operating system feature encrypts user data by default on modern devices?",
+            "options": [
+                "Plain text storage",
+                "File-based/full disk encryption",
+                "Unsecured cache",
+                "Open storage partition"
+            ],
+            "correct_index": 1,
+            "explanation": "Modern mobile OSes provide encryption to protect data if the device is lost or stolen.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-039",
+            "domain": "Operating Systems and Security",
+            "stem": "Which command in Windows is used to check and repair disk errors?",
+            "options": [
+                "format",
+                "copy",
+                "chkdsk",
+                "xcopy"
+            ],
+            "correct_index": 2,
+            "explanation": "The chkdsk utility scans for and attempts to fix filesystem errors on a disk.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-040",
+            "domain": "Operating Systems and Security",
+            "stem": "A technician needs to secure a workstation by preventing unauthorized physical access. Which is the most basic measure?",
+            "options": [
+                "Leave the PC unlocked",
+                "Disable the firewall",
+                "Share admin credentials",
+                "Use a strong login password and lock the screen when unattended"
+            ],
+            "correct_index": 3,
+            "explanation": "Locking the workstation and using authentication prevents unauthorized local access.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-041",
+            "domain": "Operating Systems and Security",
+            "stem": "Which type of malware encrypts a users files and demands payment for decryption?",
+            "options": [
+                "Ransomware",
+                "Worm",
+                "Trojan",
+                "Adware"
+            ],
+            "correct_index": 0,
+            "explanation": "Ransomware holds data hostage by encrypting files until a ransom is paid.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-042",
+            "domain": "Operating Systems and Security",
+            "stem": "Which Windows tool allows a user to configure automatic updates and security settings?",
+            "options": [
+                "Registry Editor",
+                "Windows Update & Security settings",
+                "Task Scheduler",
+                "System Configuration"
+            ],
+            "correct_index": 1,
+            "explanation": "The Windows Update & Security section manages patching, antivirus, and security features.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-043",
+            "domain": "Operating Systems and Security",
+            "stem": "A user wants to prevent others from accessing their files on a shared computer. What is the best approach?",
+            "options": [
+                "Place files on the desktop",
+                "Name files with a secret code",
+                "Set NTFS permissions on the files/folders",
+                "Hide files in a temp folder"
+            ],
+            "correct_index": 2,
+            "explanation": "NTFS permissions allow granular access control for files and directories.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-044",
+            "domain": "Operating Systems and Security",
+            "stem": "Which macOS feature provides disk encryption for the entire startup disk?",
+            "options": [
+                "Time Machine",
+                "Spotlight",
+                "Mission Control",
+                "FileVault"
+            ],
+            "correct_index": 3,
+            "explanation": "FileVault encrypts the startup disk to protect data from unauthorized access.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-045",
+            "domain": "Operating Systems and Security",
+            "stem": "Which security practice involves verifying a users identity using multiple factors like password and a code?",
+            "options": [
+                "Multi-factor authentication (MFA)",
+                "Single sign-on only",
+                "Anonymous access",
+                "Shared credentials"
+            ],
+            "correct_index": 0,
+            "explanation": "MFA requires two or more authentication factors, significantly improving account security.",
+            "reference": "CompTIA A+ Exam Objectives - Operating Systems and Security"
+        },
+        {
+            "id": "a-046",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A technician is troubleshooting a PC that boots to a blue screen. What is the most systematic first step?",
+            "options": [
+                "Randomly replace hardware components",
+                "Document the error code and search for known causes",
+                "Reformat the drive immediately",
+                "Disable all services without checking"
+            ],
+            "correct_index": 1,
+            "explanation": "Documenting the stop code helps identify the root cause and appropriate remediation steps.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-047",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "When replacing a component in a computer, which safety procedure should be followed first?",
+            "options": [
+                "Work while powered on for testing",
+                "Wear metal jewelry",
+                "Disconnect power and follow ESD precautions",
+                "Use wet hands for grip"
+            ],
+            "correct_index": 2,
+            "explanation": "ESD precautions and power disconnection prevent electrical damage and personal injury.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-048",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A user reports slow performance on their computer. Which step should a technician take first?",
+            "options": [
+                "Upgrade to the latest GPU",
+                "Install every available update at once",
+                "Delete all user files",
+                "Identify recent changes and check resource usage"
+            ],
+            "correct_index": 3,
+            "explanation": "Checking recent changes, CPU, memory, and disk usage helps pinpoint performance bottlenecks.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-049",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "Which documentation should a technician complete after resolving a service ticket?",
+            "options": [
+                "Record the solution, time, and any follow-up needed",
+                "Discard all notes",
+                "Only tell the user verbally",
+                "Leave the ticket open indefinitely"
+            ],
+            "correct_index": 0,
+            "explanation": "Proper ticket documentation ensures knowledge sharing and accountability.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-050",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A printer is displaying a paper jam error but no paper is visible. What should the technician do next?",
+            "options": [
+                "Force the paper tray closed harder",
+                "Check hidden areas like the rear access door and rollers",
+                "Replace the toner cartridge",
+                "Restart the print spooler only"
+            ],
+            "correct_index": 1,
+            "explanation": "Paper can be jammed in internal pathways not visible from the front of the printer.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-051",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A user complains that their laptop battery drains quickly. Which is the best initial troubleshooting step?",
+            "options": [
+                "Replace the motherboard",
+                "Increase screen resolution",
+                "Check battery health and power settings",
+                "Disable the touchpad"
+            ],
+            "correct_index": 2,
+            "explanation": "Assessing battery health and adjusting power settings identifies common causes of rapid drain.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-052",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "Which of the following is the proper order for troubleshooting methodology?",
+            "options": [
+                "Guess the fix and implement",
+                "Replace parts randomly",
+                "Call vendor immediately",
+                "Identify the problem, establish theory, test theory, plan action, verify, document"
+            ],
+            "correct_index": 3,
+            "explanation": "A structured troubleshooting methodology ensures efficient and repeatable problem resolution.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-053",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A technician needs to dispose of old lithium-ion batteries. What is the correct procedure?",
+            "options": [
+                "Follow local regulations for hazardous waste recycling",
+                "Throw them in regular trash",
+                "Incinerate them",
+                "Bury them in soil"
+            ],
+            "correct_index": 0,
+            "explanation": "Lithium-ion batteries are hazardous and must be recycled or disposed of per regulations.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-054",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A computer intermittently loses network connectivity. Which tool would best help diagnose the issue?",
+            "options": [
+                "MS Paint",
+                "ping and ipconfig/tracert tests",
+                "Calculator",
+                "Character Map"
+            ],
+            "correct_index": 1,
+            "explanation": "Network diagnostic commands help identify connectivity and routing issues.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-055",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "Which action demonstrates proper communication with a customer during troubleshooting?",
+            "options": [
+                "Use technical jargon without explanation",
+                "Blame the user for the issue",
+                "Ask clarifying questions and explain steps in simple terms",
+                "Rush through without confirmation"
+            ],
+            "correct_index": 2,
+            "explanation": "Clear, respectful communication builds trust and ensures user cooperation.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-056",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A technician is preparing to work on a server rack. What safety equipment or practice is important?",
+            "options": [
+                "Work alone in a dark room",
+                "Leave cables tangled",
+                "Ignore rack weight limits",
+                "Use proper lifting techniques and anti-static precautions"
+            ],
+            "correct_index": 3,
+            "explanation": "Server equipment can be heavy and sensitive; proper safety practices prevent injury and damage.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-057",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A user cannot access a specific website but can access others. What is the most likely cause to investigate first?",
+            "options": [
+                "DNS resolution or hosts file issue",
+                "Failed hard drive",
+                "Dead monitor",
+                "Corrupted printer driver"
+            ],
+            "correct_index": 0,
+            "explanation": "If only one site fails, DNS or local hosts file entries are common culprits.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-058",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "Which Windows command clears the local DNS cache?",
+            "options": [
+                "netstat /all",
+                "ipconfig /flushdns",
+                "ping localhost",
+                "tracert 127.0.0.1"
+            ],
+            "correct_index": 1,
+            "explanation": "Flushing DNS cache resolves stale or incorrect DNS entries.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-059",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "A mobile device will not charge when connected to a known-good charger. What should be checked first?",
+            "options": [
+                "Replace the screen",
+                "Update apps",
+                "Inspect the charging port for debris or damage",
+                "Reset keyboard settings"
+            ],
+            "correct_index": 2,
+            "explanation": "Debris or physical damage in the port often prevents proper charging contact.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        },
+        {
+            "id": "a-060",
+            "domain": "Troubleshooting and Procedures",
+            "stem": "After installing new RAM, a PC fails to boot and emits beep codes. What does this indicate?",
+            "options": [
+                "Correct installation",
+                "Successful POST",
+                "OS update required",
+                "Hardware compatibility or installation issue"
+            ],
+            "correct_index": 3,
+            "explanation": "Beep codes during POST typically signal hardware-related problems like memory issues.",
+            "reference": "CompTIA A+ Exam Objectives - Troubleshooting and Procedures"
+        }
+    ]
+}

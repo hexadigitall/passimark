@@ -1394,6 +1394,18 @@ class AuthoredBundleSeederTest extends TestCase
                 'General Knowledge' => 15,
                 'Subject Combination' => 10,
             ]],
+            'a' => ['a', 60, [
+                'Mobile Devices and Networking' => 15,
+                'Hardware and Virtualization' => 15,
+                'Operating Systems and Security' => 15,
+                'Troubleshooting and Procedures' => 15,
+            ]],
+            'dha' => ['dha', 60, [
+                'General Medicine and Nursing' => 15,
+                'Pharmacology and Medication Safety' => 15,
+                'Patient Care and Procedures' => 15,
+                'Medical Law and Ethics' => 15,
+            ]],
         ];
     }
 
