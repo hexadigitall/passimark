@@ -1,0 +1,858 @@
+{
+    "cert_key": "ib-math-aa-hl",
+    "title": "IB Mathematics Analysis and Approaches HL",
+    "issuer": "International Baccalaureate Organization",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ib-math-aa-hl.json",
+    "variant_label": "IB Math AA HL Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "1-7 IB scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public IB Math AA HL subject guide. Not a capture of past exam questions.",
+    "source_label": "IB Math AA HL practice bank",
+    "items": [
+        {
+            "id": "ib-math-aa-hl-001",
+            "domain": "Algebra and Functions",
+            "stem": "Solve the equation log base 2 of x plus log base 2 of (x minus 2) equals 3 for the real value of x.",
+            "options": [
+                "4",
+                "-2",
+                "2",
+                "8"
+            ],
+            "correct_index": 0,
+            "explanation": "Combining the logs gives log base 2 of x(x minus 2) equals 3, so x squared minus 2x equals 8 and x equals 4. The root x equals negative 2 is rejected because the log of a negative number is undefined.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-002",
+            "domain": "Algebra and Functions",
+            "stem": "An arithmetic sequence has first term 5 and common difference 3. Work out the value of the tenth term.",
+            "options": [
+                "29",
+                "32",
+                "35",
+                "38"
+            ],
+            "correct_index": 1,
+            "explanation": "The nth term is u_n equals 5 plus (n minus 1) times 3, so u_10 equals 5 plus 9 times 3 equals 32; the other options skip or add one term too many.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-003",
+            "domain": "Algebra and Functions",
+            "stem": "For the quadratic function f of x equals 2x squared minus 8x plus 5, state the x-coordinate of the vertex.",
+            "options": [
+                "-2",
+                "0",
+                "2",
+                "4"
+            ],
+            "correct_index": 2,
+            "explanation": "The vertex x-coordinate is minus b divided by 2a, which is 8 divided by 4 equals 2; the other values come from sign errors or from using the constant term.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-004",
+            "domain": "Algebra and Functions",
+            "stem": "An arithmetic series has first term 3 and common difference 4. Find the sum of the first 20 terms.",
+            "options": [
+                "780",
+                "800",
+                "810",
+                "820"
+            ],
+            "correct_index": 3,
+            "explanation": "S_20 equals 20/2 times (2 times 3 plus 19 times 4) equals 10 times 82 equals 820; the others follow from using 20 or 19 terms incorrectly.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-005",
+            "domain": "Algebra and Functions",
+            "stem": "In the expansion of (1 plus 2x) raised to the power 5, find the coefficient of x cubed.",
+            "options": [
+                "80",
+                "40",
+                "10",
+                "160"
+            ],
+            "correct_index": 0,
+            "explanation": "The general term is C(5,r)(2x)^r, so for x cubed r equals 3 and the coefficient is C(5,3) times 2 cubed equals 10 times 8 equals 80; the other values forget the power of 2 or use the wrong binomial coefficient.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-006",
+            "domain": "Algebra and Functions",
+            "stem": "Solve 2 raised to the power (x plus 1) equals 8 raised to the power (x minus 1).",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "correct_index": 1,
+            "explanation": "Writing 8 as 2 cubed gives x plus 1 equals 3x minus 3, so 4 equals 2x and x equals 2; the other options come from equating exponents incorrectly.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-007",
+            "domain": "Algebra and Functions",
+            "stem": "An infinite geometric series has first term 8 and common ratio one half. Find its sum.",
+            "options": [
+                "8",
+                "12",
+                "16",
+                "24"
+            ],
+            "correct_index": 2,
+            "explanation": "The sum is a divided by (1 minus r) equals 8 divided by one half equals 16; the others treat the series as finite or use the wrong ratio.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-008",
+            "domain": "Algebra and Functions",
+            "stem": "The polynomial f of x equals x cubed minus 3x squared plus 4x minus 2. Find the remainder when f of x is divided by (x minus 1).",
+            "options": [
+                "-2",
+                "4",
+                "2",
+                "0"
+            ],
+            "correct_index": 3,
+            "explanation": "By the remainder theorem the remainder is f(1) equals 1 minus 3 plus 4 minus 2 equals 0, so (x minus 1) is a factor; the other values are partial evaluations.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-009",
+            "domain": "Algebra and Functions",
+            "stem": "The graph of y equals g of x satisfies g of x equals f of (x minus 3) plus 2. Describe the transformation from f to g.",
+            "options": [
+                "Translation 3 units right and 2 units up",
+                "Translation 3 units left and 2 units up",
+                "Translation 3 units right and 2 units down",
+                "Reflection in the x-axis"
+            ],
+            "correct_index": 0,
+            "explanation": "Replacing x by x minus 3 shifts the graph 3 units right and adding 2 shifts it 2 units up; the other options reverse a sign or describe the wrong transformation.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-010",
+            "domain": "Algebra and Functions",
+            "stem": "For the rational function y equals (2x plus 1) divided by (x minus 3), state the equation of the horizontal asymptote.",
+            "options": [
+                "3",
+                "2",
+                "1",
+                "0"
+            ],
+            "correct_index": 1,
+            "explanation": "As x tends to infinity the function approaches the ratio of leading coefficients 2/1 equals 2, so y equals 2; the value 3 gives the vertical asymptote, not the horizontal one.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-011",
+            "domain": "Algebra and Functions",
+            "stem": "Find the product (3 plus 2i)(1 minus 4i), giving your answer in the form a plus bi.",
+            "options": [
+                "3 minus 8i",
+                "11 plus 10i",
+                "11 minus 10i",
+                "-5 minus 10i"
+            ],
+            "correct_index": 2,
+            "explanation": "Expanding gives 3 minus 12i plus 2i minus 8i squared equals 3 minus 10i plus 8 equals 11 minus 10i; the others mishandle the i squared term or the imaginary coefficients.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-012",
+            "domain": "Algebra and Functions",
+            "stem": "Solve the simultaneous equations x plus y equals 7 and 2x minus y equals 2.",
+            "options": [
+                "x equals 2, y equals 5",
+                "x equals 5, y equals 2",
+                "x equals 1, y equals 6",
+                "x equals 3, y equals 4"
+            ],
+            "correct_index": 3,
+            "explanation": "Adding the equations gives 3x equals 9 so x equals 3 and y equals 4; the other pairs do not satisfy both equations at once.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-013",
+            "domain": "Algebra and Functions",
+            "stem": "The function f is given by f of x equals 3x minus 2. Find its inverse function.",
+            "options": [
+                "(x plus 2) divided by 3",
+                "(x minus 2) divided by 3",
+                "3x plus 2",
+                "1 divided by (3x minus 2)"
+            ],
+            "correct_index": 0,
+            "explanation": "Swapping x and y and rearranging gives y equals (x plus 2) divided by 3; the other options make a sign error or give the reciprocal rather than the inverse.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-014",
+            "domain": "Algebra and Functions",
+            "stem": "State the largest domain of the real function f of x equals the square root of (2x minus 6).",
+            "options": [
+                "x is greater than or equal to 2",
+                "x is greater than or equal to 3",
+                "x is less than or equal to 3",
+                "x is greater than or equal to 6"
+            ],
+            "correct_index": 1,
+            "explanation": "The radicand must be non-negative, so 2x minus 6 is at least 0 and x is at least 3; the other inequalities come from mis-solving the linear inequality.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-015",
+            "domain": "Algebra and Functions",
+            "stem": "Find the sum of the geometric series 3 plus 6 plus 12 plus ... up to and including the tenth term.",
+            "options": [
+                "1533",
+                "2046",
+                "3069",
+                "3072"
+            ],
+            "correct_index": 2,
+            "explanation": "With a equals 3, r equals 2 and n equals 10, S_10 equals 3(2 to the 10 minus 1) equals 3069; the other values use 9 or 10 terms incorrectly.",
+            "reference": "IB Math AA HL Subject Guide - Algebra and Functions"
+        },
+        {
+            "id": "ib-math-aa-hl-016",
+            "domain": "Calculus",
+            "stem": "Given f of x equals x cubed minus 6x squared plus 5, find the value of the derivative f prime at x equals 2.",
+            "options": [
+                "12",
+                "0",
+                "-24",
+                "-12"
+            ],
+            "correct_index": 3,
+            "explanation": "f prime equals 3x squared minus 12x, so f prime at 2 is 12 minus 24 equals negative 12; the others come from using f(2) instead of f prime(2).",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-017",
+            "domain": "Calculus",
+            "stem": "Differentiate the function y equals sine of 3x with respect to x.",
+            "options": [
+                "3 cosine of 3x",
+                "cosine of 3x",
+                "-3 cosine of 3x",
+                "3 sine of 3x"
+            ],
+            "correct_index": 0,
+            "explanation": "The chain rule gives the derivative as 3 cosine of 3x; the others omit the inner derivative, change the sign, or keep the wrong trigonometric function.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-018",
+            "domain": "Calculus",
+            "stem": "Find the indefinite integral of 6x squared with respect to x.",
+            "options": [
+                "6x cubed plus C",
+                "2x cubed plus C",
+                "3x cubed plus C",
+                "12x plus C"
+            ],
+            "correct_index": 1,
+            "explanation": "Integrating gives 6 times x cubed over 3, which is 2x cubed plus C; the others fail to divide by the new exponent.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-019",
+            "domain": "Calculus",
+            "stem": "Evaluate the definite integral from 0 to 2 of 3x squared with respect to x.",
+            "options": [
+                "4",
+                "6",
+                "8",
+                "12"
+            ],
+            "correct_index": 2,
+            "explanation": "The antiderivative is x cubed, so the integral is 2 cubed minus 0 cubed equals 8; the others come from evaluating the integrand rather than the antiderivative.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-020",
+            "domain": "Calculus",
+            "stem": "Differentiate the function y equals x squared times e to the power x.",
+            "options": [
+                "2x e to the power x",
+                "x squared e to the power x",
+                "e to the power x times (x squared minus 2x)",
+                "e to the power x times (x squared plus 2x)"
+            ],
+            "correct_index": 3,
+            "explanation": "The product rule gives e to the power x times (x squared plus 2x); the others drop one product term or use the wrong sign on the 2x term.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-021",
+            "domain": "Calculus",
+            "stem": "Find the gradient of the tangent to the curve y equals x squared at the point where x equals 3.",
+            "options": [
+                "6",
+                "3",
+                "9",
+                "12"
+            ],
+            "correct_index": 0,
+            "explanation": "The derivative 2x evaluated at 3 equals 6, which is the tangent gradient; 9 is the y-coordinate and the others are arithmetic slips.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-022",
+            "domain": "Calculus",
+            "stem": "Evaluate the limit as x tends to 0 of sine of 5x divided by x.",
+            "options": [
+                "0",
+                "5",
+                "1",
+                "1/5"
+            ],
+            "correct_index": 1,
+            "explanation": "Using the standard limit sine of kx over x tends to k, the value is 5; the others ignore the argument 5x.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-023",
+            "domain": "Calculus",
+            "stem": "Find the second derivative of y equals x raised to the power 4.",
+            "options": [
+                "4x cubed",
+                "12x cubed",
+                "12x squared",
+                "24x"
+            ],
+            "correct_index": 2,
+            "explanation": "The first derivative is 4x cubed and the second is 12x squared; the others stop at the first derivative or miscalculate the coefficient.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-024",
+            "domain": "Calculus",
+            "stem": "Evaluate the definite integral from 1 to e of 1 divided by x with respect to x.",
+            "options": [
+                "e",
+                "0",
+                "e minus 1",
+                "1"
+            ],
+            "correct_index": 3,
+            "explanation": "The antiderivative is the natural logarithm, so the integral is ln(e) minus ln(1) equals 1; the others confuse the value of e with the logarithm.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-025",
+            "domain": "Calculus",
+            "stem": "Differentiate the function y equals (2x plus 1) raised to the power 5.",
+            "options": [
+                "10(2x plus 1) raised to the power 4",
+                "5(2x plus 1) raised to the power 4",
+                "2(2x plus 1) raised to the power 4",
+                "10(2x plus 1) raised to the power 5"
+            ],
+            "correct_index": 0,
+            "explanation": "The chain rule gives 5 times (2x plus 1) to the fourth times 2, which is 10(2x plus 1) to the fourth; the others miss the inner derivative or the reduced power.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-026",
+            "domain": "Calculus",
+            "stem": "The function f of x equals x cubed minus 3x has a local maximum. Find the x-coordinate of that local maximum.",
+            "options": [
+                "1",
+                "-1",
+                "0",
+                "3"
+            ],
+            "correct_index": 1,
+            "explanation": "Setting f prime equals 3x squared minus 3 equal to 0 gives x equals plus or minus 1; testing signs shows the local maximum is at x equals negative 1.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-027",
+            "domain": "Calculus",
+            "stem": "Find the area enclosed between the curve y equals x squared and the x-axis from x equals 0 to x equals 3.",
+            "options": [
+                "3",
+                "6",
+                "9",
+                "27"
+            ],
+            "correct_index": 2,
+            "explanation": "The area is the integral of x squared from 0 to 3, which is 3 cubed over 3 equals 9; the others evaluate the function or cube incorrectly.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-028",
+            "domain": "Calculus",
+            "stem": "Differentiate the function y equals x divided by (x plus 1).",
+            "options": [
+                "x divided by (x plus 1) squared",
+                "1 divided by (x plus 1)",
+                "(2x plus 1) divided by (x plus 1) squared",
+                "1 divided by (x plus 1) squared"
+            ],
+            "correct_index": 3,
+            "explanation": "The quotient rule gives ((x plus 1) minus x) divided by (x plus 1) squared equals 1 divided by (x plus 1) squared; the others make numerator or sign errors.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-029",
+            "domain": "Calculus",
+            "stem": "A particle has displacement s of t equals t cubed minus 6t squared. Find its acceleration at t equals 2.",
+            "options": [
+                "0",
+                "12",
+                "-12",
+                "24"
+            ],
+            "correct_index": 0,
+            "explanation": "Velocity is 3t squared minus 12t and acceleration is 6t minus 12, which at t equals 2 is 0; the others use velocity or a miscalculated derivative.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-030",
+            "domain": "Calculus",
+            "stem": "Find the indefinite integral of cosine of 2x with respect to x.",
+            "options": [
+                "sine of 2x plus C",
+                "one half sine of 2x plus C",
+                "-2 sine of 2x plus C",
+                "2 sine of 2x plus C"
+            ],
+            "correct_index": 1,
+            "explanation": "Integrating gives one half sine of 2x plus C because d/dx of that is cosine of 2x; the others forget to divide by the inner coefficient or change the sign.",
+            "reference": "IB Math AA HL Subject Guide - Calculus"
+        },
+        {
+            "id": "ib-math-aa-hl-031",
+            "domain": "Geometry and Trigonometry",
+            "stem": "The vectors a equals (2, -1) and b equals (3, 4) are given. Find their scalar product.",
+            "options": [
+                "6",
+                "10",
+                "2",
+                "-2"
+            ],
+            "correct_index": 2,
+            "explanation": "The scalar product is 2 times 3 plus (negative 1) times 4 equals 6 minus 4 equals 2; the others add or drop components.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-032",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Find the magnitude of the vector (6, 8).",
+            "options": [
+                "14",
+                "48",
+                "7",
+                "10"
+            ],
+            "correct_index": 3,
+            "explanation": "The magnitude is the square root of 36 plus 64 equals the square root of 100 equals 10; 14 adds the components and 48 multiplies them.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-033",
+            "domain": "Geometry and Trigonometry",
+            "stem": "State the exact value of sine of 30 degrees.",
+            "options": [
+                "0.5",
+                "0.866",
+                "1.0",
+                "0.577"
+            ],
+            "correct_index": 0,
+            "explanation": "Sine of 30 degrees is 1/2, or 0.5; 0.866 is sine of 60 degrees and 0.577 is tangent of 30 degrees.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-034",
+            "domain": "Geometry and Trigonometry",
+            "stem": "In a triangle, side a equals 8 is opposite angle A equals 30 degrees and angle B equals 45 degrees. Use the sine rule to find side b.",
+            "options": [
+                "5.66",
+                "11.31",
+                "8.00",
+                "4.00"
+            ],
+            "correct_index": 1,
+            "explanation": "The sine rule gives b equals 8 times sine 45 divided by sine 30 equals 8 times 0.7071 divided by 0.5, which is 11.31; the others invert the ratio or use the wrong angle.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-035",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Two sides of 5 and 7 enclose an angle of 60 degrees. Use the cosine rule to find the length of the third side.",
+            "options": [
+                "4.36",
+                "7.00",
+                "6.24",
+                "5.00"
+            ],
+            "correct_index": 2,
+            "explanation": "The third side squared is 25 plus 49 minus 2 times 5 times 7 times cosine 60 equals 39, so the side is the square root of 39, about 6.24; the others mishandle the cosine term.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-036",
+            "domain": "Geometry and Trigonometry",
+            "stem": "State the exact value of tangent of 45 degrees.",
+            "options": [
+                "0",
+                "0.5",
+                "1.732",
+                "1"
+            ],
+            "correct_index": 3,
+            "explanation": "Tangent of 45 degrees is 1 because sine and cosine are equal at that angle; 1.732 is tangent of 60 degrees and 0 is tangent of 0 degrees.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-037",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Solve cosine of x equals 0.5 for x in the interval from 0 to 180 degrees.",
+            "options": [
+                "60",
+                "30",
+                "90",
+                "120"
+            ],
+            "correct_index": 0,
+            "explanation": "The principal solution is x equals 60 degrees; 30 degrees gives a different cosine value and 120 degrees has cosine negative one half.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-038",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Using the Pythagorean identity, state the value of sine squared of 40 degrees plus cosine squared of 40 degrees.",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "0.5"
+            ],
+            "correct_index": 1,
+            "explanation": "The identity sine squared plus cosine squared of the same angle always equals 1; the other values contradict that identity.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-039",
+            "domain": "Geometry and Trigonometry",
+            "stem": "The line r equals (1, 2) plus t times the direction (3, -1). Find the point on the line when t equals 2.",
+            "options": [
+                "(4, 1)",
+                "(3, -1)",
+                "(7, 0)",
+                "(6, -2)"
+            ],
+            "correct_index": 2,
+            "explanation": "Substituting t equals 2 gives (1 plus 6, 2 minus 2) equals (7, 0); the others use t equals 1 or ignore the position vector.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-040",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A triangle has two sides of length 6 and 9 enclosing an angle of 30 degrees. Find its area.",
+            "options": [
+                "54",
+                "27",
+                "6.75",
+                "13.5"
+            ],
+            "correct_index": 3,
+            "explanation": "The area is one half times 6 times 9 times sine 30 equals 27 times 0.5 equals 13.5; the others omit the factor of one half or the sine term.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-041",
+            "domain": "Geometry and Trigonometry",
+            "stem": "The vectors (2, k) and (3, -6) are perpendicular. Find the value of k.",
+            "options": [
+                "1",
+                "-1",
+                "2",
+                "-2"
+            ],
+            "correct_index": 0,
+            "explanation": "Perpendicular vectors have zero scalar product, so 6 minus 6k equals 0 and k equals 1; the other values give a non-zero scalar product.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-042",
+            "domain": "Geometry and Trigonometry",
+            "stem": "State the equation of the circle with centre (2, -3) and radius 5.",
+            "options": [
+                "(x plus 2) squared plus (y minus 3) squared equals 25",
+                "(x minus 2) squared plus (y plus 3) squared equals 25",
+                "(x minus 2) squared plus (y minus 3) squared equals 25",
+                "(x plus 2) squared plus (y plus 3) squared equals 5"
+            ],
+            "correct_index": 1,
+            "explanation": "The standard form subtracts the centre coordinates and squares the radius, giving (x minus 2) squared plus (y plus 3) squared equals 25; the others reverse signs or forget to square the radius.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-043",
+            "domain": "Geometry and Trigonometry",
+            "stem": "Given sine of x equals 0.6 and cosine of x equals 0.8 for an acute angle x, find sine of 2x.",
+            "options": [
+                "0.48",
+                "1.4",
+                "0.96",
+                "0.28"
+            ],
+            "correct_index": 2,
+            "explanation": "The double-angle identity gives sine 2x equals 2 sine x cosine x equals 2 times 0.6 times 0.8 equals 0.96; the others forget the factor of 2 or subtract the squares.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-044",
+            "domain": "Geometry and Trigonometry",
+            "stem": "A sector has radius 6 and central angle pi/3 radians. Find the arc length.",
+            "options": [
+                "pi",
+                "3pi",
+                "pi/2",
+                "2pi"
+            ],
+            "correct_index": 3,
+            "explanation": "Arc length is r times the angle, so 6 times pi/3 equals 2pi; the others multiply or divide by the wrong factor.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-045",
+            "domain": "Geometry and Trigonometry",
+            "stem": "For the function y equals 3 sine of 2x, state its period.",
+            "options": [
+                "pi",
+                "2pi",
+                "pi/2",
+                "4pi"
+            ],
+            "correct_index": 0,
+            "explanation": "The period is 2pi divided by the coefficient 2, which is pi; the other values confuse the period with the amplitude or forget to divide.",
+            "reference": "IB Math AA HL Subject Guide - Geometry and Trigonometry"
+        },
+        {
+            "id": "ib-math-aa-hl-046",
+            "domain": "Statistics and Probability",
+            "stem": "Find the mean of the five values 4, 7, 9, 10 and 15.",
+            "options": [
+                "7",
+                "9",
+                "10",
+                "11"
+            ],
+            "correct_index": 1,
+            "explanation": "The mean is the total 45 divided by 5 equals 9; 7 and 10 are individual data values rather than the mean.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-047",
+            "domain": "Statistics and Probability",
+            "stem": "Find the median of the six values 3, 7, 8, 5, 12 and 9.",
+            "options": [
+                "7",
+                "8",
+                "7.5",
+                "8.5"
+            ],
+            "correct_index": 2,
+            "explanation": "In order the values are 3, 5, 7, 8, 9, 12, so the median is the average of the third and fourth equals 7.5; the others pick one middle value only.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-048",
+            "domain": "Statistics and Probability",
+            "stem": "Two fair dice are rolled. Find the probability that the sum of the two scores is 7.",
+            "options": [
+                "1/12",
+                "1/9",
+                "1/8",
+                "1/6"
+            ],
+            "correct_index": 3,
+            "explanation": "There are 36 equally likely outcomes and 6 of them sum to 7, giving 6/36 equals 1/6; the others use too few favourable outcomes.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-049",
+            "domain": "Statistics and Probability",
+            "stem": "Events A and B are independent with P(A) equals 0.5 and P(B) equals 0.4. Find P(A and B).",
+            "options": [
+                "0.2",
+                "0.9",
+                "0.1",
+                "0.45"
+            ],
+            "correct_index": 0,
+            "explanation": "For independent events P(A and B) equals 0.5 times 0.4 equals 0.2; 0.9 adds the probabilities, which is only valid for mutually exclusive events.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-050",
+            "domain": "Statistics and Probability",
+            "stem": "Given P(A and B) equals 0.12 and P(B) equals 0.4, find the conditional probability P(A given B).",
+            "options": [
+                "0.048",
+                "0.3",
+                "0.52",
+                "0.28"
+            ],
+            "correct_index": 1,
+            "explanation": "P(A given B) equals 0.12 divided by 0.4 equals 0.3; the others multiply the values or subtract them.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-051",
+            "domain": "Statistics and Probability",
+            "stem": "A fair six-sided die is rolled once. Find the expected value of the score.",
+            "options": [
+                "3",
+                "4",
+                "3.5",
+                "2.5"
+            ],
+            "correct_index": 2,
+            "explanation": "The expected value is the average (1 plus 2 plus 3 plus 4 plus 5 plus 6) divided by 6 equals 3.5; the others round or misread the average.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-052",
+            "domain": "Statistics and Probability",
+            "stem": "A variable is normally distributed with mean 100 and standard deviation 15. Find the z-score of the value 130.",
+            "options": [
+                "1",
+                "1.5",
+                "3",
+                "2"
+            ],
+            "correct_index": 3,
+            "explanation": "The z-score is (130 minus 100) divided by 15 equals 2; the others divide by the wrong value or use the mean instead of the difference.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-053",
+            "domain": "Statistics and Probability",
+            "stem": "A binomial variable has n equals 10 trials and probability of success p equals 0.5. Find the number of ways of obtaining exactly 3 successes.",
+            "options": [
+                "120",
+                "720",
+                "30",
+                "1000"
+            ],
+            "correct_index": 0,
+            "explanation": "The number of ways is C(10,3) equals 120; 720 is 6 factorial and 30 comes from 10 times 3.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-054",
+            "domain": "Statistics and Probability",
+            "stem": "A binomial variable has n equals 20 trials and probability p equals 0.3. Find its mean.",
+            "options": [
+                "3",
+                "6",
+                "9",
+                "0.6"
+            ],
+            "correct_index": 1,
+            "explanation": "The mean of a binomial variable is np equals 20 times 0.3 equals 6; the other values square or halve the product.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-055",
+            "domain": "Statistics and Probability",
+            "stem": "Find the variance of the data set 2, 4, 6, 8 and 10.",
+            "options": [
+                "4",
+                "6",
+                "8",
+                "40"
+            ],
+            "correct_index": 2,
+            "explanation": "The mean is 6, the squared deviations sum to 40, and dividing by 5 gives a variance of 8; 40 is the total sum of squares before division.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-056",
+            "domain": "Statistics and Probability",
+            "stem": "Find the number of ways of choosing 2 items from a set of 5 distinct items, where order does not matter.",
+            "options": [
+                "20",
+                "120",
+                "5",
+                "10"
+            ],
+            "correct_index": 3,
+            "explanation": "The number of combinations is C(5,2) equals 10; 20 counts ordered pairs, which double-counts each selection.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-057",
+            "domain": "Statistics and Probability",
+            "stem": "A disease affects 1 percent of a population. A test has sensitivity 95 percent and a false-positive rate of 10 percent. Find the probability that a person who tests positive actually has the disease.",
+            "options": [
+                "0.088",
+                "0.950",
+                "0.010",
+                "0.500"
+            ],
+            "correct_index": 0,
+            "explanation": "By Bayes the probability is (0.01 times 0.95) divided by (0.01 times 0.95 plus 0.99 times 0.1) equals 0.0095 divided by 0.1085, which is about 0.088; 0.95 wrongly takes the sensitivity as the answer.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-058",
+            "domain": "Statistics and Probability",
+            "stem": "A scatter diagram yields a product-moment correlation coefficient r equals 0.95. Interpret this value.",
+            "options": [
+                "No correlation between the variables",
+                "Strong positive linear correlation",
+                "Strong negative linear correlation",
+                "A cause-and-effect relationship"
+            ],
+            "correct_index": 1,
+            "explanation": "A value of r close to positive 1 indicates a strong positive linear relationship; correlation alone does not establish causation and a negative value would be near minus 1.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-059",
+            "domain": "Statistics and Probability",
+            "stem": "Find the number of distinct ways to arrange 4 different books on a shelf.",
+            "options": [
+                "4",
+                "12",
+                "24",
+                "16"
+            ],
+            "correct_index": 2,
+            "explanation": "The number of arrangements is 4 factorial equals 24; the other values confuse permutations with powers or partial products.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        },
+        {
+            "id": "ib-math-aa-hl-060",
+            "domain": "Statistics and Probability",
+            "stem": "For a normal distribution, state the approximate probability that a value lies within two standard deviations of the mean.",
+            "options": [
+                "0.50",
+                "0.68",
+                "0.99",
+                "0.95"
+            ],
+            "correct_index": 3,
+            "explanation": "Approximately 95 percent of a normal distribution lies within two standard deviations of the mean; 0.68 corresponds to one standard deviation and 0.99 to three.",
+            "reference": "IB Math AA HL Subject Guide - Statistics and Probability"
+        }
+    ]
+}

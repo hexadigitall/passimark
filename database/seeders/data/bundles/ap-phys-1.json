@@ -1,0 +1,858 @@
+{
+    "cert_key": "ap-phys-1",
+    "title": "AP Physics 1",
+    "issuer": "College Board",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ap-phys-1.json",
+    "variant_label": "AP Physics 1 Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "1-5 AP scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public AP Physics 1 course description. Not a capture of past exam questions.",
+    "source_label": "AP Physics 1 practice bank",
+    "items": [
+        {
+            "id": "ap-phys-1-001",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A cart rolls down a straight ramp with a constant acceleration of 2.0 m/s². If the cart starts from rest, how far does it travel in 3.0 s?",
+            "options": [
+                "9.0 m",
+                "3.0 m",
+                "6.0 m",
+                "18 m"
+            ],
+            "correct_index": 0,
+            "explanation": "Using d = ½at², the distance is ½(2.0)(3.0)² = 9.0 m. The other answers omit the factor of ½ or multiply velocity by time incorrectly.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-002",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A ball is thrown straight up and reaches its highest point. At that instant, which statement correctly describes the ball's velocity and acceleration?",
+            "options": [
+                "Velocity is zero; acceleration is zero.",
+                "Velocity is zero; acceleration is downward.",
+                "Velocity is upward; acceleration is zero.",
+                "Velocity is downward; acceleration is upward."
+            ],
+            "correct_index": 1,
+            "explanation": "At the top the instantaneous velocity is zero, but gravity still acts, so the acceleration remains downward at g. If acceleration were zero, the ball would hover.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-003",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A student measures the velocity of a toy car as 1.0 m/s at t = 1 s and 4.0 m/s at t = 3 s. What is the average acceleration of the car during this interval?",
+            "options": [
+                "0.75 m/s²",
+                "2.0 m/s²",
+                "1.5 m/s²",
+                "3.0 m/s²"
+            ],
+            "correct_index": 2,
+            "explanation": "Average acceleration is Δv/Δt = (4.0 − 1.0)/(3 − 1) = 1.5 m/s². The time interval is 2 s, not 3 s, so dividing by the wrong time gives the other values.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-004",
+            "domain": "Kinematics and Dynamics",
+            "stem": "Two forces act on a block, 5 N to the right and 12 N to the right. A friction force of 7 N acts to the left. What is the magnitude of the net force on the block?",
+            "options": [
+                "4 N",
+                "7 N",
+                "24 N",
+                "10 N"
+            ],
+            "correct_index": 3,
+            "explanation": "The forces to the right sum to 17 N, and subtracting the 7 N friction gives a net force of 10 N to the right. Adding all magnitudes or ignoring friction gives the wrong answers.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-005",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A rock is dropped from rest off a bridge and falls freely for 2.0 s before hitting the water. Ignoring air resistance, approximately how far does the rock fall? (Take g ≈ 10 m/s².)",
+            "options": [
+                "20 m",
+                "10 m",
+                "40 m",
+                "80 m"
+            ],
+            "correct_index": 0,
+            "explanation": "Free fall from rest gives d = ½gt² = ½(10)(2.0)² = 20 m. Multiplying g by t alone or forgetting the ½ produces the distractor values.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-006",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A 6.0 kg box accelerates at 3.0 m/s² across a horizontal floor when pushed by a horizontal force. If friction is negligible, what is the magnitude of the pushing force?",
+            "options": [
+                "2.0 N",
+                "18 N",
+                "9.0 N",
+                "54 N"
+            ],
+            "correct_index": 1,
+            "explanation": "By Newton's second law, F = ma = (6.0)(3.0) = 18 N. Dividing instead of multiplying or using g in place of a yields the other choices.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-007",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A car travels around a circular track at constant speed. Which statement about the car's acceleration is correct?",
+            "options": [
+                "The acceleration is zero because the speed does not change.",
+                "The acceleration points tangent to the track.",
+                "The acceleration points toward the center of the circle.",
+                "The acceleration points away from the center of the circle."
+            ],
+            "correct_index": 2,
+            "explanation": "Constant speed in a circle still involves changing velocity direction, so there is a centripetal acceleration directed toward the center. Tangential acceleration would change the speed.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-008",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A 0.14 kg baseball is hit by a bat, changing its velocity from −36 m/s to +64 m/s in 4.0 × 10⁻³ s. What is the magnitude of the average force exerted on the ball by the bat?",
+            "options": [
+                "1.2 × 10³ N",
+                "6.3 × 10³ N",
+                "9.0 × 10³ N",
+                "3.5 × 10³ N"
+            ],
+            "correct_index": 3,
+            "explanation": "Impulse equals change in momentum: FΔt = mΔv, with Δv = 64 − (−36) = 100 m/s. So F = (0.14)(100)/(4.0 × 10⁻³) = 3.5 × 10³ N. Treating the velocity change as only 64 − 36 = 28 m/s, or ignoring the sign reversal, gives the other values.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-009",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A box sits stationary on a ramp. In which direction does the force of static friction on the box point?",
+            "options": [
+                "Up the ramp, parallel to its surface.",
+                "Straight down toward the center of Earth.",
+                "Perpendicular to the ramp surface.",
+                "Down the ramp, parallel to its surface."
+            ],
+            "correct_index": 0,
+            "explanation": "Gravity pulls the box slightly down the ramp, so static friction opposes that tendency and points up the ramp. The normal force is perpendicular, and gravity is straight down.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-010",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A student riding an elevator standing still feels noticeably heavier as the elevator begins to move upward. Which statement best explains this sensation?",
+            "options": [
+                "The student's mass increases as the elevator moves upward.",
+                "The normal force on the student is greater than the student's weight during upward acceleration.",
+                "Earth's gravitational field is stronger higher up in the building.",
+                "The elevator exerts no force when it first starts moving."
+            ],
+            "correct_index": 1,
+            "explanation": "During upward acceleration the scale must push harder than gravity pulls, so the normal force exceeds the student's weight. Mass and the gravitational field do not change over a building's height.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-011",
+            "domain": "Kinematics and Dynamics",
+            "stem": "Two forces act on a particle, 8.0 N east and 6.0 N north. What is the magnitude of the resultant force on the particle?",
+            "options": [
+                "2.0 N",
+                "7.0 N",
+                "10.0 N",
+                "14.0 N"
+            ],
+            "correct_index": 2,
+            "explanation": "The perpendicular forces combine by the Pythagorean theorem: √(8.0² + 6.0²) = 10.0 N. Simply adding the magnitudes gives 14.0 N, which is too large.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-012",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A skydiver falls at terminal velocity. Which statement about the forces on the skydiver is correct?",
+            "options": [
+                "Air resistance is greater than gravity, so the skydiver slows down.",
+                "Gravity no longer acts once terminal velocity is reached.",
+                "The net force equals the weight of the skydiver divided by two.",
+                "The upward force of air resistance equals the downward force of gravity."
+            ],
+            "correct_index": 3,
+            "explanation": "Terminal velocity means zero acceleration, so the net force is zero: air resistance exactly balances gravity. If gravity stopped or forces were unbalanced, the motion would change.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-013",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A motorcycle starts from rest and accelerates uniformly to 20 m/s in 5.0 s. What is the motorcycle's average velocity during this time?",
+            "options": [
+                "10 m/s",
+                "5.0 m/s",
+                "20 m/s",
+                "40 m/s"
+            ],
+            "correct_index": 0,
+            "explanation": "For constant acceleration from rest, average velocity is (v₀ + v)/2 = (0 + 20)/2 = 10 m/s. Using the final velocity alone overstates the average.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-014",
+            "domain": "Kinematics and Dynamics",
+            "stem": "In a tug-of-war, a team pulls on a rope with a force of 4500 N. According to Newton's third law, what is the magnitude of the force that the rope exerts back on the team?",
+            "options": [
+                "0 N, because the rope cannot pull on people.",
+                "Exactly 4500 N, directed opposite to the team's pull.",
+                "Less than 4500 N, since some force is used to accelerate the rope.",
+                "Greater than 4500 N, because the rope also supports its own weight."
+            ],
+            "correct_index": 1,
+            "explanation": "Action–reaction pairs are always equal in magnitude and opposite in direction, so the rope pulls back with exactly 4500 N. The rope's mass affects internal tension, not the pair's equality.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-015",
+            "domain": "Kinematics and Dynamics",
+            "stem": "A ball is launched horizontally from a cliff. At the same instant, an identical ball is dropped from rest from the same height. Neglecting air resistance, which statement is true just before the balls hit the ground?",
+            "options": [
+                "The launched ball has a greater speed because it was given an initial push.",
+                "The dropped ball hits the ground first because it falls straight down.",
+                "Both balls have the same vertical velocity when they land.",
+                "Both balls land at the same time, but the dropped ball has greater vertical velocity."
+            ],
+            "correct_index": 2,
+            "explanation": "Horizontal and vertical motions are independent, so both balls fall the same distance in the same time and acquire the same vertical velocity. The launched ball also has a horizontal velocity component, so its total speed is larger.",
+            "reference": "AP Physics 1 Course Description - Kinematics and Dynamics"
+        },
+        {
+            "id": "ap-phys-1-016",
+            "domain": "Energy and Momentum",
+            "stem": "A 2.0 kg cart rolls without friction at 3.0 m/s. How much kinetic energy does the cart have?",
+            "options": [
+                "3.0 J",
+                "6.0 J",
+                "18 J",
+                "9.0 J"
+            ],
+            "correct_index": 3,
+            "explanation": "Kinetic energy is ½mv² = ½(2.0)(3.0)² = 9.0 J. Squaring the speed is essential; using mv or ½mv gives the distractor values.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-017",
+            "domain": "Energy and Momentum",
+            "stem": "A 0.50 kg ball is held 1.2 m above the ground and released from rest. Taking the ground as zero gravitational potential energy, what is the total mechanical energy of the ball just after it is released? (Use g = 10 m/s².)",
+            "options": [
+                "6.0 J",
+                "1.2 J",
+                "3.0 J",
+                "12 J"
+            ],
+            "correct_index": 0,
+            "explanation": "Just after release, the ball has gravitational potential energy mgh = (0.50)(10)(1.2) = 6.0 J and no kinetic energy, so total mechanical energy is 6.0 J, which is conserved throughout the fall.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-018",
+            "domain": "Energy and Momentum",
+            "stem": "A constant friction force of 6.0 N does −36 J of work on a box as it slides across a floor. How far does the box slide?",
+            "options": [
+                "12 m",
+                "6.0 m",
+                "30 m",
+                "42 m"
+            ],
+            "correct_index": 1,
+            "explanation": "Work equals force times displacement in the direction of the force: W = −Fd, so d = 36/6.0 = 6.0 m. The negative sign shows friction opposes the motion.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-019",
+            "domain": "Energy and Momentum",
+            "stem": "A spring with spring constant 200 N/m is compressed 0.15 m from its equilibrium position. How much elastic potential energy is stored in the spring?",
+            "options": [
+                "4.5 J",
+                "15 J",
+                "2.25 J",
+                "30 J"
+            ],
+            "correct_index": 2,
+            "explanation": "Elastic potential energy is ½kx² = ½(200)(0.15)² = ½(200)(0.0225) = 2.25 J. The compression must be squared before multiplying by ½k; skipping the square gives the larger distractors.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-020",
+            "domain": "Energy and Momentum",
+            "stem": "Two ice skaters, initially at rest, push off from each other and move in opposite directions. Considering the two skaters as a system, which quantity is conserved during the push?",
+            "options": [
+                "The kinetic energy of the system",
+                "The velocity of each skater",
+                "The mechanical energy of each skater",
+                "The momentum of the system"
+            ],
+            "correct_index": 3,
+            "explanation": "With no external horizontal forces, the total momentum of the two-skater system is conserved and remains zero. Kinetic energy is not conserved because the skaters' muscles convert chemical energy into mechanical energy.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-021",
+            "domain": "Energy and Momentum",
+            "stem": "A 1200 kg car traveling at 15 m/s collides with a wall and rebounds at 10 m/s in the opposite direction. The collision lasts 0.20 s. What is the magnitude of the average force exerted on the car by the wall?",
+            "options": [
+                "1.5 × 10⁵ N",
+                "3.0 × 10⁴ N",
+                "9.0 × 10⁴ N",
+                "1.8 × 10⁵ N"
+            ],
+            "correct_index": 0,
+            "explanation": "The change in velocity is 10 − (−15) = 25 m/s, so F = mΔv/Δt = (1200)(25)/0.20 = 1.5 × 10⁵ N. Treating the rebound speed as a mere reduction to 10 m/s without the sign change gives the smaller force.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-022",
+            "domain": "Energy and Momentum",
+            "stem": "A 0.20 kg ball moving at 8.0 m/s to the right collides with a stationary 0.60 kg ball and sticks to it. What is the speed of the combined balls immediately after the collision?",
+            "options": [
+                "1.0 m/s",
+                "2.0 m/s",
+                "4.0 m/s",
+                "6.0 m/s"
+            ],
+            "correct_index": 1,
+            "explanation": "Momentum is conserved in this perfectly inelastic collision: (0.20)(8.0) = (0.20 + 0.60)v, so v = 1.6/0.80 = 2.0 m/s. Kinetic energy is not conserved, but momentum is.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-023",
+            "domain": "Energy and Momentum",
+            "stem": "A 60 kg student runs at 4.0 m/s and grabs a hanging rope, swinging upward. Ignoring air resistance, what is the maximum height the student reaches above the starting point? (Use g = 10 m/s².)",
+            "options": [
+                "0.40 m",
+                "1.2 m",
+                "0.80 m",
+                "2.4 m"
+            ],
+            "correct_index": 2,
+            "explanation": "Mechanical energy is conserved: ½mv² = mgh, so h = v²/(2g) = (4.0)²/20 = 0.80 m. The student's mass cancels, so it does not affect the height.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-024",
+            "domain": "Energy and Momentum",
+            "stem": "Which situation best illustrates an inelastic collision?",
+            "options": [
+                "Two billiard balls bounce off each other with total kinetic energy unchanged.",
+                "Two magnets repel each other without touching as they pass.",
+                "A ball bounces off a wall and returns with the same speed it had before.",
+                "Two lumps of clay collide and stick together, losing kinetic energy to heat."
+            ],
+            "correct_index": 3,
+            "explanation": "In an inelastic collision the objects deform or stick together, and some kinetic energy is converted to other forms such as heat and sound. Sticking clay is the classic example.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-025",
+            "domain": "Energy and Momentum",
+            "stem": "A constant net force of 25 N acts on a 10 kg cart initially at rest over a displacement of 8.0 m. What is the final speed of the cart?",
+            "options": [
+                "6.3 m/s",
+                "4.0 m/s",
+                "8.0 m/s",
+                "10 m/s"
+            ],
+            "correct_index": 0,
+            "explanation": "Work done by the net force is W = Fd = 200 J, which becomes kinetic energy: ½mv² = 200, so v = √(200 × 2 / 10) ≈ 6.3 m/s. Using v = F/m or skipping the square root gives the wrong results.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-026",
+            "domain": "Energy and Momentum",
+            "stem": "A ball is thrown upward and reaches its maximum height. Neglecting air resistance, what is the ball's mechanical energy at that instant?",
+            "options": [
+                "Zero, because the ball has stopped.",
+                "All gravitational potential energy, equal to its initial mechanical energy.",
+                "All kinetic energy, since the ball still has mass.",
+                "Less than its initial mechanical energy because kinetic energy was destroyed."
+            ],
+            "correct_index": 1,
+            "explanation": "With no nonconservative forces, mechanical energy is conserved; at the top, the kinetic energy has been entirely converted to gravitational potential energy of the same total amount. Kinetic energy is transferred, not destroyed.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-027",
+            "domain": "Energy and Momentum",
+            "stem": "Two objects have the same momentum. Object A has twice the mass of object B. How do their kinetic energies compare?",
+            "options": [
+                "A has twice the kinetic energy of B.",
+                "A has four times the kinetic energy of B.",
+                "A has half the kinetic energy of B.",
+                "They have equal kinetic energies."
+            ],
+            "correct_index": 2,
+            "explanation": "Since K = p²/(2m), kinetic energy is inversely proportional to mass at fixed momentum, so the more massive object A has half the kinetic energy of B. Doubling mass halves K when p is the same.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-028",
+            "domain": "Energy and Momentum",
+            "stem": "A 0.050 kg bullet traveling at 400 m/s embeds itself in a 2.0 kg wooden block resting on a frictionless table. What is the speed of the block and bullet immediately after the collision?",
+            "options": [
+                "2.0 m/s",
+                "8.0 m/s",
+                "20 m/s",
+                "10 m/s"
+            ],
+            "correct_index": 3,
+            "explanation": "Conservation of momentum gives (0.050)(400) = (0.050 + 2.0)v, so v = 20/2.05 ≈ 9.8 m/s, which rounds to the listed 10 m/s. The bullet's momentum is shared over the full mass, so the final speed is far below 400 m/s.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-029",
+            "domain": "Energy and Momentum",
+            "stem": "A student pushes a crate up a frictionless ramp at constant speed. During this process, which energy changes correctly describe the crate-Earth system?",
+            "options": [
+                "The crate's gravitational potential energy increases while its kinetic energy stays constant.",
+                "The crate's kinetic energy increases and its potential energy decreases.",
+                "Both kinetic and potential energy of the crate decrease.",
+                "The total mechanical energy of the crate-Earth system decreases."
+            ],
+            "correct_index": 0,
+            "explanation": "Constant speed means kinetic energy is unchanged, while rising height increases gravitational potential energy. The student's push is an external force doing positive work, so system mechanical energy increases rather than decreases.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-030",
+            "domain": "Energy and Momentum",
+            "stem": "A pendulum bob is released from rest at height h and swings through its lowest point. At the lowest point, which expression gives the speed of the bob in terms of h and g?",
+            "options": [
+                "v = 2gh",
+                "v = √(2gh)",
+                "v = √(gh)",
+                "v = gh/2"
+            ],
+            "correct_index": 1,
+            "explanation": "Energy conservation gives mgh = ½mv², so v = √(2gh). The mass cancels, and the square root with the factor of 2 comes directly from solving the energy equation.",
+            "reference": "AP Physics 1 Course Description - Energy and Momentum"
+        },
+        {
+            "id": "ap-phys-1-031",
+            "domain": "Waves and Oscillations",
+            "stem": "A wave on a string has a frequency of 8.0 Hz and a wavelength of 0.50 m. What is the speed of the wave?",
+            "options": [
+                "0.063 m/s",
+                "8.5 m/s",
+                "4.0 m/s",
+                "16 m/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Wave speed is v = fλ = (8.0)(0.50) = 4.0 m/s. Dividing instead of multiplying, or adding the quantities, produces the other values.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-032",
+            "domain": "Waves and Oscillations",
+            "stem": "A mass attached to a spring oscillates with a period of 0.80 s. If the mass is replaced with one of twice the value and the spring is unchanged, what is the new period?",
+            "options": [
+                "0.40 s",
+                "0.80 s",
+                "1.6 s",
+                "1.1 s"
+            ],
+            "correct_index": 3,
+            "explanation": "The period of a mass-spring oscillator is T = 2π√(m/k). Doubling the mass multiplies the period by √2 ≈ 1.4, giving about 1.1 s. The period is not proportional to mass alone.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-033",
+            "domain": "Waves and Oscillations",
+            "stem": "A horizontal spring-mass system oscillates with amplitude A. At the point of maximum displacement from equilibrium, which statement is correct?",
+            "options": [
+                "The kinetic energy is zero and the spring force is maximum.",
+                "The kinetic energy is maximum and the spring force is zero.",
+                "Both kinetic energy and the spring force are maximum.",
+                "Both kinetic energy and the spring force are zero."
+            ],
+            "correct_index": 0,
+            "explanation": "At maximum displacement the mass momentarily stops, so kinetic energy is zero, while the spring is stretched or compressed the most, so the restoring force F = −kx has maximum magnitude.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-034",
+            "domain": "Waves and Oscillations",
+            "stem": "A wave transfers energy from one place to another without permanently transporting matter. Which example best demonstrates this principle?",
+            "options": [
+                "A boat traveling across a lake to the opposite shore.",
+                "A crest moving along a rope while the rope's particles move mostly up and down.",
+                "A ball rolling from the top of a hill to the bottom.",
+                "Air rushing out of an open door when wind blows."
+            ],
+            "correct_index": 1,
+            "explanation": "In a mechanical wave the medium's particles oscillate about fixed positions while the disturbance travels along the rope. The boat, ball, and moving air all transport matter from place to place.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-035",
+            "domain": "Waves and Oscillations",
+            "stem": "A student notices that the loud sound of a stereo shakes a windowpane. Why does the window vibrate at the same frequency as the sound wave?",
+            "options": [
+                "Constructive interference between two stereo speakers.",
+                "A standing wave that forms only inside solid glass.",
+                "Forced vibration of the pane driven by the pressure variations of the sound.",
+                "Resonance that occurs only when the sound frequency is zero."
+            ],
+            "correct_index": 2,
+            "explanation": "Sound pressure variations exert a periodic force on the pane, forcing it to vibrate at the driving frequency. Resonance requires the driving frequency to match a natural frequency of the pane, and interference between speakers is a different phenomenon.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-036",
+            "domain": "Waves and Oscillations",
+            "stem": "A wave travels from air into water at the same frequency. Compared with its speed in air, what is the wave's speed in water?",
+            "options": [
+                "Lower, because water is denser.",
+                "The same, because the frequency does not change.",
+                "Zero, because waves cannot cross between media.",
+                "Higher, because sound travels faster in liquids than in gases."
+            ],
+            "correct_index": 3,
+            "explanation": "Sound travels faster in water than in air because of water's greater bulk modulus and stiffness of interactions. Frequency stays the same across the boundary, while wavelength changes to compensate.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-037",
+            "domain": "Waves and Oscillations",
+            "stem": "A rope fixed at both ends is shaken to produce the fundamental standing wave shown, with two nodes at the ends and one antinode in the middle. If the rope's length is 1.2 m, what is the wavelength of this standing wave?",
+            "options": [
+                "2.4 m",
+                "0.60 m",
+                "1.2 m",
+                "4.8 m"
+            ],
+            "correct_index": 0,
+            "explanation": "The fundamental has half a wavelength spanning the rope, so L = λ/2 and λ = 2L = 2.4 m. Counting a full wavelength per rope length would give 1.2 m, which is off by a factor of two.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-038",
+            "domain": "Waves and Oscillations",
+            "stem": "Two identical speakers, connected to the same oscillator, produce sound waves in phase. A listener stands at a point where the path difference from the two speakers is half a wavelength. What does the listener hear?",
+            "options": [
+                "Complete constructive interference, louder than either speaker alone.",
+                "Complete destructive interference, near silence.",
+                "A beat frequency equal to twice the oscillator frequency.",
+                "Nothing, because waves from the speakers cannot reach the listener."
+            ],
+            "correct_index": 1,
+            "explanation": "A path difference of λ/2 means the waves arrive out of phase, crest meeting trough, producing destructive interference and a quiet spot. Path differences of whole wavelengths give constructive interference instead.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-039",
+            "domain": "Waves and Oscillations",
+            "stem": "A mass on a spring oscillates with amplitude 0.10 m. At what distance from equilibrium is the magnitude of the mass's acceleration greatest?",
+            "options": [
+                "0 m",
+                "0.05 m",
+                "0.10 m",
+                "0.07 m"
+            ],
+            "correct_index": 2,
+            "explanation": "Acceleration is a = −(k/m)x, so its magnitude is greatest where the displacement is greatest, at the amplitude 0.10 m. At equilibrium the restoring force and acceleration are zero.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-040",
+            "domain": "Waves and Oscillations",
+            "stem": "Two tuning forks vibrate at 256 Hz and 260 Hz. A listener hears a beat. What is the beat frequency?",
+            "options": [
+                "2 Hz",
+                "258 Hz",
+                "516 Hz",
+                "4 Hz"
+            ],
+            "correct_index": 3,
+            "explanation": "Beat frequency equals the difference of the two frequencies: |260 − 256| = 4 Hz. The average or sum of the frequencies is not the beat rate.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-041",
+            "domain": "Waves and Oscillations",
+            "stem": "A simple pendulum swings with small amplitude. If the pendulum is taken to a location where g is smaller, how does the period change?",
+            "options": [
+                "The period increases, because T = 2π√(L/g) contains g in the denominator.",
+                "The period decreases, because the restoring force is weaker.",
+                "The period stays the same, because period depends only on length.",
+                "The period stays the same, because amplitude does not change."
+            ],
+            "correct_index": 0,
+            "explanation": "For small oscillations the period is T = 2π√(L/g); a smaller g therefore makes the period longer. Amplitude independence holds only for small angles and does not remove the g dependence.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-042",
+            "domain": "Waves and Oscillations",
+            "stem": "Which of the following waves is longitudinal?",
+            "options": [
+                "A wave on a rope shaken up and down.",
+                "A sound wave traveling through air.",
+                "A water surface wave in a shallow pool.",
+                "A wave on a string fixed to a vibrating blade."
+            ],
+            "correct_index": 1,
+            "explanation": "In a sound wave in air, particle displacement is parallel to the direction of travel, with compressions and rarefactions — the defining feature of a longitudinal wave. Rope and water waves have transverse motion.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-043",
+            "domain": "Waves and Oscillations",
+            "stem": "A wave pulse on a string strikes a fixed end and returns inverted. Why does this inversion occur?",
+            "options": [
+                "Absorbs the wave's energy completely.",
+                "Reverses the wave's frequency.",
+                "Reflects the wave with a 180-degree phase change due to the boundary condition.",
+                "Creates a second pulse that interferes constructively."
+            ],
+            "correct_index": 2,
+            "explanation": "At a fixed end the string cannot move, so the boundary exerts an inverted reflected pulse to satisfy that condition, producing a half-cycle phase shift. Energy is largely reflected, not absorbed, and frequency is unchanged.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-044",
+            "domain": "Waves and Oscillations",
+            "stem": "The amplitude of a wave is increased while its frequency and speed remain constant. What happens to the energy transported by the wave?",
+            "options": [
+                "The transported energy decreases.",
+                "The transported energy stays the same.",
+                "No energy is transported by any wave.",
+                "The transported energy increases."
+            ],
+            "correct_index": 3,
+            "explanation": "The power carried by a mechanical wave is proportional to the square of its amplitude, so a larger amplitude transports more energy per second at the same frequency and speed.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-045",
+            "domain": "Waves and Oscillations",
+            "stem": "A spring-mass system oscillates in simple harmonic motion with period T. The mass is now moved twice as far from equilibrium and released from rest. What is the new period?",
+            "options": [
+                "T",
+                "T/2",
+                "2T",
+                "4T"
+            ],
+            "correct_index": 0,
+            "explanation": "The period T = 2π√(m/k) depends only on the mass and spring constant, not on amplitude. Doubling the release distance doubles the amplitude and the total energy, but the period stays T.",
+            "reference": "AP Physics 1 Course Description - Waves and Oscillations"
+        },
+        {
+            "id": "ap-phys-1-046",
+            "domain": "Electricity and Circuits",
+            "stem": "A 12 V battery is connected across a resistor, producing a current of 0.50 A. What is the resistance of the resistor?",
+            "options": [
+                "6.0 Ω",
+                "24 Ω",
+                "12 Ω",
+                "60 Ω"
+            ],
+            "correct_index": 1,
+            "explanation": "By Ohm's law, R = V/I = 12/0.50 = 24 Ω. Multiplying instead of dividing gives 6.0 Ω, which is incorrect for resistance.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-047",
+            "domain": "Electricity and Circuits",
+            "stem": "Two identical resistors are connected in series with a battery. Compared with the equivalent resistance of a single resistor, how does the equivalent resistance of the series combination compare?",
+            "options": [
+                "Half the resistance.",
+                "The same resistance.",
+                "Twice the resistance.",
+                "Four times the resistance."
+            ],
+            "correct_index": 2,
+            "explanation": "Resistances in series add: R_eq = R + R = 2R. In parallel, by contrast, the equivalent resistance would be R/2.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-048",
+            "domain": "Electricity and Circuits",
+            "stem": "A circuit contains a 6.0 V battery and a 3.0 Ω resistor. How much electrical energy is dissipated by the resistor in 4.0 s?",
+            "options": [
+                "12 J",
+                "24 J",
+                "36 J",
+                "48 J"
+            ],
+            "correct_index": 3,
+            "explanation": "Power is P = V²/R = (6.0)²/3.0 = 12 W, so energy dissipated in 4.0 s is Pt = 48 J. Using I²R with the wrong current or forgetting to multiply by time gives the other values.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-049",
+            "domain": "Electricity and Circuits",
+            "stem": "Two point charges of equal magnitude attract each other with a force F. If the distance between them is halved and each charge's magnitude is doubled, what is the new force?",
+            "options": [
+                "16F",
+                "F/4",
+                "F",
+                "4F"
+            ],
+            "correct_index": 0,
+            "explanation": "Coulomb's law gives F ∝ q₁q₂/r². Quadruplying the product of charges and dividing the distance by two (which multiplies the force by four) yields 4 × 4 = 16 times the original force.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-050",
+            "domain": "Electricity and Circuits",
+            "stem": "In an isolated metallic conductor at electrostatic equilibrium, which statement is true?",
+            "options": [
+                "Electric charges flow freely along the surface.",
+                "Any net charge resides on the surface and the electric field inside is zero.",
+                "Any net charge is uniformly distributed throughout the volume.",
+                "A strong electric field points from the center to the surface."
+            ],
+            "correct_index": 1,
+            "explanation": "In equilibrium, free charges rearrange until the field inside the conductor's material is zero, and any excess charge sits on the surface. No steady current flows in a conductor at electrostatic equilibrium.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-051",
+            "domain": "Electricity and Circuits",
+            "stem": "An electron moves in the direction opposite to the electric field lines at a point in space. As it moves, how does the electric potential energy of the electron-field system change?",
+            "options": [
+                "Increases, because the electron moves toward higher potential.",
+                "Stays constant, because electrons have no charge.",
+                "Decreases, because the electric force does positive work on the electron.",
+                "Increases, because kinetic energy is converted to potential energy."
+            ],
+            "correct_index": 2,
+            "explanation": "Electric field lines point in the direction of force on a positive charge, so an electron feels a force opposite the field and moves with that force, meaning the field does positive work and potential energy decreases.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-052",
+            "domain": "Electricity and Circuits",
+            "stem": "A light bulb is rated 60 W when connected to a 120 V source. What current flows through the bulb when it operates at this rating?",
+            "options": [
+                "0.20 A",
+                "2.0 A",
+                "7200 A",
+                "0.50 A"
+            ],
+            "correct_index": 3,
+            "explanation": "Power is P = VI, so I = P/V = 60/120 = 0.50 A. Dividing voltage by power or multiplying them gives the incorrect distractors.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-053",
+            "domain": "Electricity and Circuits",
+            "stem": "A positively charged object is brought near, but does not touch, an uncharged metal sphere that is resting on an insulating stand. The sphere becomes polarized. What happens when the charged object is then removed?",
+            "options": [
+                "The sphere returns to having no net charge and no separation of charge.",
+                "The sphere is left with a net positive charge.",
+                "The sphere is left with a net negative charge.",
+                "The sphere discharges to the ground through the stand."
+            ],
+            "correct_index": 0,
+            "explanation": "Induction separates charge while the external object is present, but no charge is transferred. When the external charge is removed, the electrons redistribute and the sphere returns to an uncharged state.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-054",
+            "domain": "Electricity and Circuits",
+            "stem": "Three identical resistors, each of resistance R, are connected in parallel across a battery. What is the equivalent resistance of the combination?",
+            "options": [
+                "R",
+                "R/3",
+                "3R",
+                "6R"
+            ],
+            "correct_index": 1,
+            "explanation": "For n identical resistors in parallel, R_eq = R/n, so three in parallel give R/3. Connecting them in series instead would give 3R.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-055",
+            "domain": "Electricity and Circuits",
+            "stem": "A student rubs a glass rod with silk, transferring electrons from the rod to the silk. Compared with its original state, what is the net charge of the glass rod now?",
+            "options": [
+                "Has gained electrons and is negatively charged.",
+                "Is electrically neutral, since charge was merely rearranged.",
+                "Has lost electrons and is positively charged.",
+                "Has gained protons from the silk."
+            ],
+            "correct_index": 2,
+            "explanation": "Electrons are the mobile carriers; losing them leaves a deficit of negative charge, so the rod becomes positively charged and the silk equally negative. Protons in glass nuclei do not move in this process.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-056",
+            "domain": "Electricity and Circuits",
+            "stem": "In the circuit shown, current flows out of the positive terminal of the battery, through a single loop containing two resistors in series, and back to the negative terminal. How does the current through each resistor compare?",
+            "options": [
+                "The larger resistor carries more current.",
+                "The smaller resistor carries more current.",
+                "The current splits, with more flowing through the larger resistor.",
+                "The current is the same through both resistors."
+            ],
+            "correct_index": 3,
+            "explanation": "In a single-loop series circuit there is only one path for charge flow, so the same current passes through every component. The voltage drops, however, differ in proportion to each resistance.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-057",
+            "domain": "Electricity and Circuits",
+            "stem": "As more identical light bulbs are added in parallel to a circuit connected to an ideal battery, what happens to the total current drawn from the battery?",
+            "options": [
+                "Increases, because the equivalent resistance decreases.",
+                "Decreases, because there are more paths for the current.",
+                "Stays the same, because the battery voltage is constant.",
+                "Increases, because each bulb adds its resistance in series."
+            ],
+            "correct_index": 0,
+            "explanation": "Each new parallel branch lowers the equivalent resistance (1/R_eq grows with each branch), so by I = V/R_eq the battery must supply more total current. Parallel branches add conductance, not resistance.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-058",
+            "domain": "Electricity and Circuits",
+            "stem": "The magnitude of the electric field at a distance r from a point charge Q is E. At what distance from the same charge is the electric field magnitude E/4?",
+            "options": [
+                "r/4",
+                "2r",
+                "r/2",
+                "4r"
+            ],
+            "correct_index": 1,
+            "explanation": "The field of a point charge falls off as 1/r². To reduce the field by a factor of four, the distance must double: (2r)² = 4r², so the field becomes E/4.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-059",
+            "domain": "Electricity and Circuits",
+            "stem": "A 9.0 V battery is connected in series with two resistors of 2.0 Ω and 4.0 Ω. What is the potential difference across the 4.0 Ω resistor?",
+            "options": [
+                "2.0 V",
+                "3.0 V",
+                "6.0 V",
+                "9.0 V"
+            ],
+            "correct_index": 2,
+            "explanation": "The total resistance is 6.0 Ω, so the current is 1.5 A. The voltage across the 4.0 Ω resistor is IR = (1.5)(4.0) = 6.0 V; the remaining 3.0 V drops across the 2.0 Ω resistor.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        },
+        {
+            "id": "ap-phys-1-060",
+            "domain": "Electricity and Circuits",
+            "stem": "Which change to a simple circuit containing a single resistor and an ideal battery will always increase the power dissipated by the resistor?",
+            "options": [
+                "Increasing the resistance while keeping the battery voltage constant.",
+                "Decreasing the battery voltage while keeping the resistance constant.",
+                "Replacing the resistor with an open switch.",
+                "Decreasing the resistance while keeping the battery voltage constant."
+            ],
+            "correct_index": 3,
+            "explanation": "With a constant voltage source, power dissipated is P = V²/R, which grows when R decreases. Increasing R lowers the power, and reducing the voltage lowers it as well; an open switch dissipates no power.",
+            "reference": "AP Physics 1 Course Description - Electricity and Circuits"
+        }
+    ]
+}

@@ -1,0 +1,858 @@
+{
+    "cert_key": "ap-chem",
+    "title": "AP Chemistry",
+    "issuer": "College Board",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ap-chem.json",
+    "variant_label": "AP Chemistry Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "1-5 AP scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public AP Chemistry course description. Not a capture of past exam questions.",
+    "source_label": "AP Chemistry practice bank",
+    "items": [
+        {
+            "id": "ap-chem-001",
+            "domain": "Atomic Structure and Properties",
+            "stem": "A photoelectron spectrum of a neutral atom shows peaks at binding energies corresponding to the 1s, 2s, and 2p subshells. Which statement best explains why the 1s peak appears at the largest binding energy?",
+            "options": [
+                "The 1s electrons are closest to the nucleus, so they are held most tightly and require the most energy to remove.",
+                "The 1s electrons are the easiest to remove because they are the outermost electrons.",
+                "The 1s peak reflects the greatest number of electrons in that subshell.",
+                "Binding energy depends only on the number of neutrons in the nucleus."
+            ],
+            "correct_index": 0,
+            "explanation": "Binding energy rises as electrons are held more tightly; 1s electrons lie nearest the nucleus and are least shielded, so they need the most energy to remove. The other choices confuse binding energy with electron count, outer-shell position, or nuclear neutrons.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-002",
+            "domain": "Atomic Structure and Properties",
+            "stem": "What is the ground-state electron configuration of the Fe2+ ion? (Fe, Z = 26)",
+            "options": [
+                "[Ar] 3d4 4s2",
+                "[Ar] 3d6",
+                "[Ar] 3d6 4s2",
+                "[Ar] 3d5 4s1"
+            ],
+            "correct_index": 1,
+            "explanation": "Neutral iron is [Ar] 3d6 4s2, and the two 4s electrons are removed first, leaving [Ar] 3d6. The other options either keep 4s electrons or remove the wrong number of electrons.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-003",
+            "domain": "Atomic Structure and Properties",
+            "stem": "How many water molecules are present in 2.00 mol of H2O? (Avogadro's number = 6.02 x 10^23)",
+            "options": [
+                "6.02 x 10^23 molecules",
+                "3.01 x 10^23 molecules",
+                "1.20 x 10^24 molecules",
+                "1.20 x 10^23 molecules"
+            ],
+            "correct_index": 2,
+            "explanation": "Moles are converted to molecules by multiplying by Avogadro's number: 2.00 x 6.02 x 10^23 = 1.20 x 10^24. The other choices use the wrong factor or miscount the power of ten.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-004",
+            "domain": "Atomic Structure and Properties",
+            "stem": "A sample of an element contains 75.0% of an isotope with mass 35.0 u and 25.0% of an isotope with mass 37.0 u. What is the average atomic mass of the sample?",
+            "options": [
+                "36.0 u",
+                "35.5 u",
+                "34.5 u",
+                "37.0 u"
+            ],
+            "correct_index": 1,
+            "explanation": "The weighted average is 0.750(35.0) + 0.250(37.0) = 35.5 u. The other choices use unweighted values or reverse the abundances.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-005",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Among the elements K, Ca, Ga, and Br, which has the largest atomic radius?",
+            "options": [
+                "K",
+                "Ca",
+                "Ga",
+                "Br"
+            ],
+            "correct_index": 0,
+            "explanation": "Atomic radius decreases left to right across a period as nuclear charge grows while electrons enter the same shell. K is furthest left, so it is largest; Ca, Ga, and Br are progressively smaller.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-006",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Which element has the highest first ionization energy: Na, Mg, Si, or Cl?",
+            "options": [
+                "Na",
+                "Cl",
+                "Mg",
+                "Si"
+            ],
+            "correct_index": 1,
+            "explanation": "First ionization energy increases across a period as effective nuclear charge rises, so Cl is highest among these period-3 elements. Na is lowest, and Mg and Si lie between.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-007",
+            "domain": "Atomic Structure and Properties",
+            "stem": "According to Coulomb's law, the electrostatic force of attraction between a nucleus and an electron increases when which change occurs?",
+            "options": [
+                "The nuclear charge decreases and the electron moves farther away.",
+                "The nuclear charge decreases and the electron moves closer.",
+                "The nuclear charge increases and the electron moves closer.",
+                "The nuclear charge increases and the electron moves farther away."
+            ],
+            "correct_index": 2,
+            "explanation": "Coulomb's law makes force proportional to the product of the charges and inversely proportional to the square of the distance, so greater nuclear charge and shorter distance both increase attraction.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-008",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Two atoms are isotopes of the same element. Which quantity must be identical for both atoms?",
+            "options": [
+                "The number of neutrons",
+                "The mass number",
+                "The number of nucleons",
+                "The number of protons"
+            ],
+            "correct_index": 3,
+            "explanation": "Isotopes of an element share the same atomic number, which is the number of protons. They differ in neutrons, so mass number and nucleon count also differ.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-009",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Which particle has the largest radius: Cl, Cl-, K, or K+?",
+            "options": [
+                "Cl-",
+                "Cl",
+                "K+",
+                "K"
+            ],
+            "correct_index": 0,
+            "explanation": "Gaining an electron expands the electron cloud and increases electron-electron repulsion, so Cl- is larger than Cl. K+ is smaller than K because it loses its outer shell, and it is smaller than Cl-.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-010",
+            "domain": "Atomic Structure and Properties",
+            "stem": "The successive ionization energies of a neutral element show a very large jump between the second and third ionization energies. To which group does the element most likely belong?",
+            "options": [
+                "Group 1",
+                "Group 2",
+                "Group 13",
+                "Group 17"
+            ],
+            "correct_index": 1,
+            "explanation": "A large jump after the second electron indicates that only two electrons are relatively easy to remove, matching a group 2 element with two valence electrons. Group 1 would jump after the first, and groups 13 and 17 have more valence electrons.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-011",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Which rule states that electrons occupy orbitals of equal energy singly before any orbital receives a second electron?",
+            "options": [
+                "The octet rule",
+                "The Pauli exclusion principle",
+                "Hund's rule",
+                "The Aufbau principle"
+            ],
+            "correct_index": 2,
+            "explanation": "Hund's rule governs the filling of degenerate orbitals, placing electrons singly with parallel spins first. The Aufbau principle concerns overall energy order, the Pauli principle limits two electrons per orbital, and the octet rule concerns bonding.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-012",
+            "domain": "Atomic Structure and Properties",
+            "stem": "What is the mass percent of oxygen in carbon dioxide? (C = 12.0 g/mol, O = 16.0 g/mol)",
+            "options": [
+                "50.0%",
+                "36.4%",
+                "72.7%",
+                "27.3%"
+            ],
+            "correct_index": 2,
+            "explanation": "CO2 has a molar mass of 44.0 g/mol with 32.0 g of oxygen, so the mass percent is 32.0/44.0 x 100 = 72.7%. Choosing 27.3% gives the carbon share, and the others misweight the atoms.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-013",
+            "domain": "Atomic Structure and Properties",
+            "stem": "How many moles of oxygen atoms are present in 1.0 mol of Al2(SO4)3?",
+            "options": [
+                "12 mol",
+                "4.0 mol",
+                "8.0 mol",
+                "3.0 mol"
+            ],
+            "correct_index": 0,
+            "explanation": "Each formula unit contains three sulfate groups with four oxygen atoms each, giving 12 oxygen atoms per formula unit, so 1.0 mol of the compound contains 12 mol of oxygen atoms. The other choices miscount the sulfate groups or the oxygen atoms per group.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-014",
+            "domain": "Atomic Structure and Properties",
+            "stem": "Why is the first ionization energy of Mg greater than that of Al?",
+            "options": [
+                "Al has a larger nuclear charge, which always lowers ionization energy.",
+                "Mg has a filled 3s subshell, while Al's valence electron is in a higher-energy, more shielded 3p orbital.",
+                "Mg has more protons than Al, so its electrons are held less tightly.",
+                "Al is a metal, and metals always have higher ionization energies than nonmetals."
+            ],
+            "correct_index": 1,
+            "explanation": "Removing an electron from Mg breaks a filled 3s subshell, whereas Al's electron comes from the higher-energy 3p orbital that is better shielded from the nucleus, so Al's first ionization energy is lower despite its larger nuclear charge.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-015",
+            "domain": "Atomic Structure and Properties",
+            "stem": "An electron in a hydrogen atom drops from the n = 3 level to the n = 2 level. Which statement correctly describes the change?",
+            "options": [
+                "The atom absorbs a photon whose energy equals the gap between the levels.",
+                "The electron's energy increases and no photon is involved.",
+                "The atom emits a photon whose energy equals the gap between the two levels.",
+                "The atom emits an electron and becomes an ion."
+            ],
+            "correct_index": 2,
+            "explanation": "When an electron falls to a lower energy level, the excess energy is released as a photon with energy equal to the difference between the levels. Absorption would occur for an upward transition, and no electron is ejected.",
+            "reference": "AP Chemistry Course Description - Atomic Structure and Properties"
+        },
+        {
+            "id": "ap-chem-016",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "When the equation __ C3H8 + __ O2 -> __ CO2 + __ H2O is balanced with the smallest whole-number coefficients, what is the coefficient of O2?",
+            "options": [
+                "3",
+                "4",
+                "7",
+                "5"
+            ],
+            "correct_index": 3,
+            "explanation": "Balancing gives C3H8 + 5 O2 -> 3 CO2 + 4 H2O, so the O2 coefficient is 5. The value 3 is the CO2 coefficient, 4 balances water, and 7 does not conserve oxygen.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-017",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "For the reaction N2 + 3 H2 -> 2 NH3, 2.0 mol of N2 is mixed with 2.0 mol of H2. Which reactant is limiting?",
+            "options": [
+                "H2, because 2.0 mol of N2 would require 6.0 mol of H2",
+                "N2, because it has the larger molar mass",
+                "Neither; the reactants are in the exact stoichiometric ratio",
+                "Both, because equal moles of each were used"
+            ],
+            "correct_index": 0,
+            "explanation": "The balanced equation requires 3 mol H2 per 1 mol N2, so 2.0 mol N2 needs 6.0 mol H2. Only 2.0 mol H2 is available, making H2 limiting; equal moles do not imply a stoichiometric match.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-018",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "A reaction has a theoretical yield of 10.0 g, and a student isolates 8.5 g of product. What is the percent yield?",
+            "options": [
+                "8.5%",
+                "85%",
+                "15%",
+                "117%"
+            ],
+            "correct_index": 1,
+            "explanation": "Percent yield is actual divided by theoretical times 100: (8.5/10.0) x 100 = 85%. The other values misplace the decimal or invert the ratio.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-019",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "What is the molarity of a solution prepared by dissolving 0.50 mol of NaCl in enough water to make 2.0 L of solution?",
+            "options": [
+                "1.0 M",
+                "4.0 M",
+                "0.25 M",
+                "0.50 M"
+            ],
+            "correct_index": 2,
+            "explanation": "Molarity is moles of solute divided by liters of solution: 0.50 mol / 2.0 L = 0.25 M. The other choices divide in the wrong direction or ignore the volume.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-020",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "What volume of 12.0 M HCl is required to prepare 250 mL of 1.00 M HCl?",
+            "options": [
+                "3.00 L",
+                "2.08 mL",
+                "12.0 mL",
+                "20.8 mL"
+            ],
+            "correct_index": 3,
+            "explanation": "Using M1V1 = M2V2: V1 = (1.00 M)(250 mL)/(12.0 M) = 20.8 mL. The other values misapply the dilution relationship.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-021",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "What is the net ionic equation for the reaction between AgNO3(aq) and NaCl(aq)?",
+            "options": [
+                "AgNO3(aq) + NaCl(aq) -> AgCl(aq) + NaNO3(aq)",
+                "Ag+(aq) + Cl-(aq) -> AgCl(s)",
+                "Na+(aq) + NO3-(aq) -> NaNO3(s)",
+                "Ag+(aq) + Na+(aq) -> AgNa(s)"
+            ],
+            "correct_index": 1,
+            "explanation": "Silver and chloride ions combine to form the insoluble solid AgCl, while Na+ and NO3- are spectator ions. The other equations form a soluble or nonexistent product, or keep the reaction molecular.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-022",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "Which compound is soluble in water at room temperature?",
+            "options": [
+                "AgCl",
+                "NaNO3",
+                "BaSO4",
+                "CaCO3"
+            ],
+            "correct_index": 1,
+            "explanation": "Most sodium and nitrate salts are soluble, so NaNO3 dissolves. AgCl, BaSO4, and CaCO3 are common insoluble salts and would precipitate.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-023",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "In the reaction 2 Fe + 3 Cl2 -> 2 FeCl3, which species is oxidized?",
+            "options": [
+                "Cl2",
+                "FeCl3",
+                "Fe",
+                "Neither species changes oxidation state."
+            ],
+            "correct_index": 2,
+            "explanation": "Iron goes from oxidation state 0 to +3, losing electrons, so it is oxidized. Chlorine is reduced from 0 to -1, and FeCl3 is the product rather than the species that is oxidized.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-024",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "What is the oxidation number of manganese in the permanganate ion, MnO4-?",
+            "options": [
+                "+2",
+                "+4",
+                "+8",
+                "+7"
+            ],
+            "correct_index": 3,
+            "explanation": "Oxygen is assigned -2, giving a total of -8 for four oxygens; the ion's overall charge is -1, so Mn must be +7. The other values do not sum with the oxygen charge to -1.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-025",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "How many grams of water are produced when 2.0 mol of H2 reacts completely with excess O2? (2 H2 + O2 -> 2 H2O; H2O = 18.0 g/mol)",
+            "options": [
+                "36 g",
+                "18 g",
+                "9.0 g",
+                "72 g"
+            ],
+            "correct_index": 0,
+            "explanation": "The 2:2 mole ratio gives 2.0 mol H2O, and 2.0 mol x 18.0 g/mol = 36 g. The other values use one mole of water or double the correct amount.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-026",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "A 25.0 mL sample of HCl is titrated to its endpoint with 20.0 mL of 0.100 M NaOH. What is the concentration of the HCl?",
+            "options": [
+                "0.125 M",
+                "0.0800 M",
+                "0.100 M",
+                "0.0500 M"
+            ],
+            "correct_index": 1,
+            "explanation": "At the endpoint the moles of acid equal the moles of base: (0.100 M)(20.0 mL) = M(25.0 mL), so M = 0.0800 M. The other values misplace the volumes.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-027",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "What volume does 1.0 mol of an ideal gas occupy at standard temperature and pressure (STP)?",
+            "options": [
+                "11.2 L",
+                "24.5 L",
+                "22.4 L",
+                "44.8 L"
+            ],
+            "correct_index": 2,
+            "explanation": "At STP one mole of an ideal gas occupies 22.4 L. The value 11.2 L is the volume of half a mole, and the others do not match the standard molar volume.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-028",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "How many moles of solute are dissolved in 500. mL of a 0.200 M KNO3 solution?",
+            "options": [
+                "0.500 mol",
+                "0.200 mol",
+                "2.00 mol",
+                "0.100 mol"
+            ],
+            "correct_index": 3,
+            "explanation": "Moles equals molarity times liters: 0.200 M x 0.500 L = 0.100 mol. The other choices treat the volume as liters directly or invert the relationship.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-029",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "A compound is 40.0% carbon, 6.7% hydrogen, and 53.3% oxygen by mass. What is its empirical formula? (C = 12.0, H = 1.0, O = 16.0 g/mol)",
+            "options": [
+                "CH2O",
+                "C2H4O2",
+                "CHO",
+                "C2H6O"
+            ],
+            "correct_index": 0,
+            "explanation": "Dividing each percentage by the atomic mass gives about 3.33 mol C, 6.7 mol H, and 3.33 mol O, a 1:2:1 ratio, so the empirical formula is CH2O. C2H4O2 is a molecular formula with the same ratio, and the others do not match the ratio.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-030",
+            "domain": "Chemical Reactions and Stoichiometry",
+            "stem": "Which pair of aqueous solutions, when mixed, produces a precipitate?",
+            "options": [
+                "NaCl and KNO3",
+                "Na2SO4 and BaCl2",
+                "KOH and HCl",
+                "NaNO3 and NH4Cl"
+            ],
+            "correct_index": 1,
+            "explanation": "Mixing sulfate and barium ions forms insoluble BaSO4, a precipitate. NaCl with KNO3 and NaNO3 with NH4Cl give only soluble combinations, and KOH with HCl neutralizes without a precipitate.",
+            "reference": "AP Chemistry Course Description - Chemical Reactions and Stoichiometry"
+        },
+        {
+            "id": "ap-chem-031",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "For the reaction A + B -> C, doubling [A] doubles the rate, and doubling [B] quadruples the rate. What is the rate law?",
+            "options": [
+                "rate = k[A][B]",
+                "rate = k[A]^2[B]",
+                "rate = k[A][B]^2",
+                "rate = k[A]^2[B]^2"
+            ],
+            "correct_index": 2,
+            "explanation": "Doubling [A] has a first-order effect, and doubling [B] causes a fourfold increase, a second-order effect, so the rate law is k[A][B]^2. The other choices assign the wrong exponents.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-032",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "For the rate law rate = k[A]^2[B], what is the overall reaction order?",
+            "options": [
+                "1",
+                "2",
+                "0",
+                "3"
+            ],
+            "correct_index": 3,
+            "explanation": "Overall order is the sum of the exponents in the rate law: 2 + 1 = 3. The individual orders are 2 in A and 1 in B, and the other choices report one of those alone or zero.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-033",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "A first-order reaction has a rate constant of 0.693 min^-1. What is its half-life?",
+            "options": [
+                "1.00 min",
+                "0.693 min",
+                "2.00 min",
+                "0.347 min"
+            ],
+            "correct_index": 0,
+            "explanation": "For a first-order reaction, t1/2 = 0.693/k = 0.693/0.693 = 1.00 min. The other choices copy the rate constant or halve and double it incorrectly.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-034",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "What are the units of the rate constant k for a second-order reaction?",
+            "options": [
+                "s^-1",
+                "M^-1 s^-1",
+                "M s^-1",
+                "M^-2 s^-1"
+            ],
+            "correct_index": 1,
+            "explanation": "Because the rate (M/s) equals k times a concentration squared, k must carry units of M^-1 s^-1 so the units match. The others correspond to zero-, first-, and third-order reactions.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-035",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "How does a catalyst increase the rate of a reaction?",
+            "options": [
+                "It raises the energy of the products.",
+                "It increases the activation energy of the forward reaction.",
+                "It provides an alternative pathway with a lower activation energy.",
+                "It increases the temperature of the reaction mixture."
+            ],
+            "correct_index": 2,
+            "explanation": "A catalyst offers a new reaction pathway that lowers the activation energy, so a larger fraction of collisions succeeds. It does not change product energy, raise the barrier, or supply heat.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-036",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "According to the Arrhenius equation, why does increasing temperature increase the rate of most reactions?",
+            "options": [
+                "The activation energy decreases as temperature rises.",
+                "The orientation of collisions becomes more favorable.",
+                "The concentration of the reactants increases.",
+                "A larger fraction of molecules possess energy exceeding the activation energy."
+            ],
+            "correct_index": 3,
+            "explanation": "Higher temperature shifts the Maxwell-Boltzmann distribution so more molecules exceed the activation energy, increasing the rate constant. The activation energy itself is essentially unchanged, and concentration is unaffected by heating.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-037",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "How much heat is absorbed when 100. g of water is warmed from 25.0 to 35.0 degrees C? (specific heat of water = 4.18 J/g-degrees C)",
+            "options": [
+                "418 J",
+                "41.8 kJ",
+                "10.5 kJ",
+                "4.18 kJ"
+            ],
+            "correct_index": 3,
+            "explanation": "q = mc(delta T) = (100. g)(4.18 J/g-degrees C)(10.0 degrees C) = 4180 J, or 4.18 kJ. The others misplace the decimal or use the wrong temperature change.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-038",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "Which of the following physical processes is exothermic?",
+            "options": [
+                "Melting ice",
+                "Condensing steam",
+                "Boiling water",
+                "Sublimation of dry ice"
+            ],
+            "correct_index": 1,
+            "explanation": "Condensation releases heat as gas molecules lose energy to form a liquid, so it is exothermic. Melting, boiling, and sublimation all require energy input and are endothermic.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-039",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "Given N2 + O2 -> 2 NO with delta H = +180 kJ and 2 NO + O2 -> 2 NO2 with delta H = -112 kJ, what is delta H for N2 + 2 O2 -> 2 NO2?",
+            "options": [
+                "-292 kJ",
+                "+292 kJ",
+                "+68 kJ",
+                "-68 kJ"
+            ],
+            "correct_index": 2,
+            "explanation": "Adding the two reactions cancels NO and gives the target equation, so the enthalpies add: +180 + (-112) = +68 kJ. The other values subtract or reverse the signs.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-040",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "A reaction has a negative change in enthalpy estimated from bond energies. This result indicates that which of the following is true?",
+            "options": [
+                "The bonds broken are stronger than the bonds formed.",
+                "The reaction absorbs energy overall.",
+                "No bonds are broken during the reaction.",
+                "The bonds formed are stronger than the bonds broken."
+            ],
+            "correct_index": 3,
+            "explanation": "A negative enthalpy change means energy is released, which happens when the new bonds formed are stronger than the bonds broken. A positive value would indicate stronger bonds broken, and bonds are always both broken and formed.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-041",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "Which change is accompanied by an increase in entropy (positive change in S)?",
+            "options": [
+                "CaCO3(s) -> CaO(s) + CO2(g)",
+                "H2O(g) -> H2O(l)",
+                "2 mol of gas -> 1 mol of gas",
+                "H2O(l) -> H2O(s)"
+            ],
+            "correct_index": 0,
+            "explanation": "Producing a gas from a solid greatly increases disorder, so entropy rises. Condensation and freezing decrease entropy, and combining two moles of gas into one decreases the number of gas particles.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-042",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "For a reaction, the change in enthalpy is negative and the change in entropy is positive. What is true of the change in Gibbs free energy?",
+            "options": [
+                "It is positive at all temperatures.",
+                "It is negative at all temperatures.",
+                "It is negative only at high temperature.",
+                "It equals zero at all temperatures."
+            ],
+            "correct_index": 1,
+            "explanation": "Since delta G = delta H - T(delta S), a negative enthalpy and a positive entropy both push delta G negative at every temperature, so the reaction is spontaneous throughout.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-043",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "For a reaction, delta H = -100. kJ and delta S = -0.200 kJ/K at 300. K. What is delta G?",
+            "options": [
+                "-160 kJ",
+                "+40 kJ",
+                "-40 kJ",
+                "+160 kJ"
+            ],
+            "correct_index": 2,
+            "explanation": "Compute with delta G = delta H - T(delta S) = -100 kJ - (300 K)(-0.200 kJ/K) = -100 + 60 = -40 kJ. The other values add or subtract the entropy term incorrectly.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-044",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "A plot of ln[A] versus time for a reaction is a straight line with a negative slope. What is the reaction order with respect to A?",
+            "options": [
+                "Zero order",
+                "Second order",
+                "Third order",
+                "First order"
+            ],
+            "correct_index": 3,
+            "explanation": "A linear ln[A] versus time plot is the signature of a first-order reaction, whose integrated rate law is ln[A] = -kt + ln[A]0. Zero order gives a linear [A] plot, and second order a linear 1/[A] plot.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-045",
+            "domain": "Kinetics and Thermodynamics",
+            "stem": "According to collision theory, a reaction occurs only when reactant molecules collide with which combination of conditions?",
+            "options": [
+                "Sufficient energy and the proper orientation",
+                "Sufficient energy alone, regardless of orientation",
+                "The proper orientation alone, regardless of energy",
+                "Equal masses and equal speeds"
+            ],
+            "correct_index": 0,
+            "explanation": "A successful collision requires both enough energy to overcome the activation barrier and an orientation that allows bonds to form. Energy or orientation alone is not sufficient, and mass and speed are not requirements.",
+            "reference": "AP Chemistry Course Description - Kinetics and Thermodynamics"
+        },
+        {
+            "id": "ap-chem-046",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "What is the correct equilibrium-constant expression (Kc) for N2(g) + 3 H2(g) <=> 2 NH3(g)?",
+            "options": [
+                "Kc = [NH3]^2 / ([N2][H2]^3)",
+                "Kc = [N2][H2]^3 / [NH3]^2",
+                "Kc = [NH3]^2 [N2][H2]^3",
+                "Kc = [NH3] / ([N2][H2])"
+            ],
+            "correct_index": 0,
+            "explanation": "The equilibrium constant places products over reactants, each raised to its coefficient, giving [NH3]^2 divided by [N2][H2]^3. The other expressions invert the ratio or use the wrong exponents.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-047",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "For an exothermic reaction at equilibrium, what happens when the temperature is increased?",
+            "options": [
+                "The equilibrium shifts toward products.",
+                "The equilibrium shifts toward reactants.",
+                "The equilibrium is unaffected.",
+                "The value of K increases."
+            ],
+            "correct_index": 1,
+            "explanation": "Adding heat favors the endothermic direction, which for an exothermic reaction is the reverse, shifting equilibrium toward reactants and decreasing K. The other choices either ignore temperature or assume the wrong shift.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-048",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "For the equilibrium N2(g) + 3 H2(g) <=> 2 NH3(g), what happens when the pressure is increased by decreasing the volume?",
+            "options": [
+                "The equilibrium shifts toward the side with more gas moles.",
+                "The equilibrium is unchanged.",
+                "The equilibrium shifts toward the products, which have fewer gas moles.",
+                "The equilibrium shifts toward the reactants."
+            ],
+            "correct_index": 2,
+            "explanation": "Increasing pressure favors the side with fewer moles of gas, which is the product side with 2 mol instead of 4 mol. The other choices reverse or ignore this rule.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-049",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "At equilibrium a mixture has [N2] = 0.10 M, [H2] = 0.30 M, and [NH3] = 0.20 M. What is Kc for N2 + 3 H2 <=> 2 NH3?",
+            "options": [
+                "15",
+                "1.5",
+                "150",
+                "0.15"
+            ],
+            "correct_index": 0,
+            "explanation": "Kc = [NH3]^2/([N2][H2]^3) = (0.20)^2 / ((0.10)(0.30)^3) = 0.040/0.0027 = 15. The other values misplace the decimal or cube incorrectly.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-050",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "For a reaction at a given temperature, the reaction quotient Q is less than the equilibrium constant K. In which direction will the reaction proceed?",
+            "options": [
+                "It is at equilibrium already.",
+                "It proceeds toward the reactants.",
+                "It stops reacting.",
+                "It proceeds toward the products."
+            ],
+            "correct_index": 3,
+            "explanation": "When Q is less than K, the reaction has too few products relative to equilibrium, so it shifts forward toward products until Q equals K. A reverse shift would require Q greater than K.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-051",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "What is the pH of a 0.010 M solution of HCl, a strong acid?",
+            "options": [
+                "12.0",
+                "0.010",
+                "1.0",
+                "2.0"
+            ],
+            "correct_index": 3,
+            "explanation": "HCl dissociates completely, so [H+] = 0.010 M and pH = -log(0.010) = 2.0. The value 1.0 corresponds to 0.10 M, and 12.0 would be a basic pH.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-052",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "A solution has [OH-] = 1.0 x 10^-3 M. What is its pH?",
+            "options": [
+                "3.0",
+                "13.0",
+                "11.0",
+                "1.0"
+            ],
+            "correct_index": 2,
+            "explanation": "pOH = -log(1.0 x 10^-3) = 3.0, and pH = 14.0 - 3.0 = 11.0. Choosing 3.0 reports pOH, and the other values misapply the relationship.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-053",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "Which substance is a weak acid in aqueous solution?",
+            "options": [
+                "HCl",
+                "HNO3",
+                "H2SO4",
+                "CH3COOH"
+            ],
+            "correct_index": 3,
+            "explanation": "Acetic acid ionizes only partially, making it a weak acid. HCl, HNO3, and H2SO4 ionize essentially completely and are strong acids.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-054",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "A 0.10 M solution of a weak monoprotic acid has [H+] = 1.0 x 10^-3 M. What is Ka?",
+            "options": [
+                "1.0 x 10^-6",
+                "1.0 x 10^-5",
+                "1.0 x 10^-3",
+                "1.0 x 10^-2"
+            ],
+            "correct_index": 1,
+            "explanation": "Ka = [H+][A-]/[HA] = (1.0 x 10^-3)^2 / 0.10 = 1.0 x 10^-5. The other values fail to square the hydrogen ion concentration or ignore the acid concentration.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-055",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "A buffer of acetic acid and sodium acetate resists pH change primarily because of which property?",
+            "options": [
+                "It neutralizes all added acid and base completely.",
+                "The salt keeps the solution neutral at pH 7.",
+                "It contains comparable amounts of a weak acid and its conjugate base.",
+                "Acetic acid is a strong acid that reacts with everything."
+            ],
+            "correct_index": 2,
+            "explanation": "A buffer holds pH stable because it has both a weak acid to consume added base and its conjugate base to consume added acid. Buffers do not maintain pH 7, and acetic acid is weak, not strong.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-056",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "Using the Henderson-Hasselbalch equation, what is the pH of a buffer in which [A-] equals [HA]?",
+            "options": [
+                "pH = pKa",
+                "pH = 7.00 always",
+                "pH = 14.0 - pKa",
+                "pH = pKa + 1"
+            ],
+            "correct_index": 0,
+            "explanation": "When [A-] equals [HA], the logarithmic term becomes log(1) = 0, so pH = pKa. The other choices add constants or assume neutrality, which equal concentrations do not imply.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-057",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "What is the pH at the equivalence point of a titration between a strong acid and a strong base?",
+            "options": [
+                "Less than 7",
+                "Greater than 7",
+                "Exactly 14",
+                "Exactly 7"
+            ],
+            "correct_index": 3,
+            "explanation": "A strong acid and strong base react completely to form a neutral salt and water, so the equivalence point is at pH 7. Weak-acid or weak-base titrations would give the other values.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-058",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "The Ksp of AgCl is 1.8 x 10^-10. What is the molar solubility of AgCl in pure water?",
+            "options": [
+                "1.8 x 10^-10 M",
+                "1.3 x 10^-5 M",
+                "1.8 x 10^-5 M",
+                "9.0 x 10^-11 M"
+            ],
+            "correct_index": 1,
+            "explanation": "For AgCl, Ksp = s^2, so s equals the square root of 1.8 x 10^-10 = 1.3 x 10^-5 M. The other values forget to take the square root or halve the value incorrectly.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-059",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "Solid NaCl is added to a saturated solution of AgCl. What effect does this have on the solubility of AgCl?",
+            "options": [
+                "It increases the solubility of AgCl.",
+                "It has no effect on the solubility of AgCl.",
+                "It decreases the solubility of AgCl because of the common ion.",
+                "It increases the solubility because Na+ reacts with Ag+."
+            ],
+            "correct_index": 2,
+            "explanation": "NaCl contributes Cl-, a common ion, so the equilibrium shifts to form more solid AgCl and its solubility decreases. Sodium ion does not react with silver ion, and added chloride cannot increase solubility.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        },
+        {
+            "id": "ap-chem-060",
+            "domain": "Equilibrium and Acids-Bases",
+            "stem": "In the reaction HCl + H2O -> H3O+ + Cl-, what is the conjugate base of HCl?",
+            "options": [
+                "Cl-",
+                "H2O",
+                "H3O+",
+                "HCl"
+            ],
+            "correct_index": 0,
+            "explanation": "A conjugate base forms when an acid donates a proton, so removing H+ from HCl leaves Cl-. H2O acts as the base, H3O+ is its conjugate acid, and HCl is the original acid.",
+            "reference": "AP Chemistry Course Description - Equilibrium and Acids-Bases"
+        }
+    ]
+}

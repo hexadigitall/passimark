@@ -1295,6 +1295,58 @@ class AuthoredBundleSeederTest extends TestCase
                 'Graphs and Dynamic Programming' => 20,
                 'Mathematics and Geometry' => 20,
             ]],
+            'toefl-ibt' => ['toefl-ibt', 60, [
+                'Listening' => 15,
+                'Reading' => 15,
+                'Speaking' => 15,
+                'Writing' => 15,
+            ]],
+            'toeic' => ['toeic', 60, [
+                'Listening' => 30,
+                'Reading' => 30,
+            ]],
+            'ap-bio' => ['ap-bio', 60, [
+                'Molecules and Cells' => 15,
+                'Heredity and Evolution' => 15,
+                'Organisms and Populations' => 15,
+                'Ecology and Experimental Design' => 15,
+            ]],
+            'ap-calc-ab' => ['ap-calc-ab', 60, [
+                'Limits and Continuity' => 15,
+                'Differentiation' => 15,
+                'Integration and Accumulation' => 15,
+                'Differential Equations and Applications' => 15,
+            ]],
+            'ap-chem' => ['ap-chem', 60, [
+                'Atomic Structure and Properties' => 15,
+                'Chemical Reactions and Stoichiometry' => 15,
+                'Kinetics and Thermodynamics' => 15,
+                'Equilibrium and Acids-Bases' => 15,
+            ]],
+            'ap-phys-1' => ['ap-phys-1', 60, [
+                'Kinematics and Dynamics' => 15,
+                'Energy and Momentum' => 15,
+                'Waves and Oscillations' => 15,
+                'Electricity and Circuits' => 15,
+            ]],
+            'ib-bio-hl' => ['ib-bio-hl', 60, [
+                'Cell Biology and Genetics' => 15,
+                'Molecular Biology and Metabolism' => 15,
+                'Physiology and Ecology' => 15,
+                'Evolution and Diversity' => 15,
+            ]],
+            'ib-chem-hl' => ['ib-chem-hl', 60, [
+                'Stoichiometry and Atomic Structure' => 15,
+                'Bonding and Energetics' => 15,
+                'Kinetics and Equilibrium' => 15,
+                'Organic Chemistry' => 15,
+            ]],
+            'ib-math-aa-hl' => ['ib-math-aa-hl', 60, [
+                'Algebra and Functions' => 15,
+                'Calculus' => 15,
+                'Geometry and Trigonometry' => 15,
+                'Statistics and Probability' => 15,
+            ]],
         ];
     }
 

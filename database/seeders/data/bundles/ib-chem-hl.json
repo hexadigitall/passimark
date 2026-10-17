@@ -1,0 +1,858 @@
+{
+    "cert_key": "ib-chem-hl",
+    "title": "IB Chemistry HL",
+    "issuer": "International Baccalaureate Organization",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ib-chem-hl.json",
+    "variant_label": "IB Chemistry HL Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "1-7 IB scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public IB Chemistry HL subject guide. Not a capture of past exam questions.",
+    "source_label": "IB Chemistry HL practice bank",
+    "items": [
+        {
+            "id": "ib-chem-hl-001",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "How many moles of carbon dioxide are produced when 8.0 g of methane burns completely in excess oxygen? (Molar mass of CH4 = 16.0 g/mol)",
+            "options": [
+                "0.50 mol",
+                "1.0 mol",
+                "2.0 mol",
+                "8.0 mol"
+            ],
+            "correct_index": 0,
+            "explanation": "Divide the mass by the molar mass to get 8.0 / 16.0 = 0.50 mol of CH4. The equation CH4 + 2O2 -> CO2 + 2H2O gives one mole of CO2 per mole of CH4, so 0.50 mol of CO2 forms. The other options skip the division or misread the 1 to 1 ratio.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-002",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "A compound contains 40.0 percent carbon, 6.7 percent hydrogen, and 53.3 percent oxygen by mass. What is its empirical formula?",
+            "options": [
+                "C2H4O2",
+                "CH2O",
+                "CHO",
+                "C2H2O"
+            ],
+            "correct_index": 1,
+            "explanation": "Convert each percentage to moles by dividing by the atomic mass to get C 3.33, H 6.7, and O 3.33, then divide by the smallest value to get the ratio 1 to 2 to 1, which is CH2O. C2H4O2 is a multiple and not empirical, while CHO and C2H2O give the wrong ratios.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-003",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "Which electron configuration represents the ground-state arrangement of a neutral chromium atom, which has atomic number 24?",
+            "options": [
+                "[Ar] 4s2 3d4",
+                "[Ar] 4s2 3d6",
+                "[Ar] 3d5 4s1",
+                "[Ar] 3d4 4s2"
+            ],
+            "correct_index": 2,
+            "explanation": "Chromium is one of the exceptions to the aufbau order because a half-filled 3d subshell with a single 4s electron is more stable, giving [Ar] 3d5 4s1. The other configurations either fill 4s incorrectly or place the wrong number of d electrons.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-004",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "Boron consists of two isotopes with relative masses 10.0 and 11.0. If the relative atomic mass of boron is 10.8, what is the percentage abundance of the isotope with mass 11.0?",
+            "options": [
+                "20 percent",
+                "10.8 percent",
+                "50 percent",
+                "80 percent"
+            ],
+            "correct_index": 3,
+            "explanation": "Let x be the fraction of the 11.0 isotope, so 10.0(1 - x) + 11.0x = 10.8, which simplifies to 10.0 + x = 10.8 and gives x = 0.80, an abundance of 80 percent. The other values do not satisfy the weighted average.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-005",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "Nitrogen and hydrogen react to form ammonia according to N2 + 3H2 -> 2NH3. If 1.0 mol of nitrogen reacts with 2.0 mol of hydrogen, what is the maximum amount of ammonia that can form?",
+            "options": [
+                "1.33 mol",
+                "2.0 mol",
+                "0.67 mol",
+                "3.0 mol"
+            ],
+            "correct_index": 0,
+            "explanation": "Hydrogen is the limiting reagent because 2.0 mol of H2 needs only 0.67 mol of N2. Using the ratio 2 NH3 per 3 H2 gives 2.0 x (2/3) = 1.33 mol of NH3. The other values assume nitrogen limits the reaction or misapply the ratio.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-006",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "What volume does 4.4 g of carbon dioxide occupy at standard temperature and pressure? (Molar mass of CO2 = 44.0 g/mol; molar volume = 22.4 L/mol at STP)",
+            "options": [
+                "1.12 L",
+                "2.24 L",
+                "4.48 L",
+                "22.4 L"
+            ],
+            "correct_index": 1,
+            "explanation": "The amount is 4.4 / 44.0 = 0.10 mol, and multiplying by the molar volume gives 0.10 x 22.4 = 2.24 L. The other options misplace the decimal or use one mole instead of 0.10 mol.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-007",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "A student dilutes 25.0 cm3 of 0.200 mol/dm3 hydrochloric acid to a final volume of 100.0 cm3. What is the concentration of the diluted acid?",
+            "options": [
+                "0.800 mol/dm3",
+                "0.100 mol/dm3",
+                "0.050 mol/dm3",
+                "0.200 mol/dm3"
+            ],
+            "correct_index": 2,
+            "explanation": "The moles of acid stay constant at 0.0250 x 0.200 = 0.00500 mol. Dividing by the new volume of 0.100 dm3 gives 0.050 mol/dm3. The other options scale the volume the wrong way or forget the dilution factor.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-008",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "In the reaction 2Mg + O2 -> 2MgO, what mass of magnesium oxide forms when 2.4 g of magnesium burns completely? (Molar masses are Mg = 24.0 and MgO = 40.0 g/mol)",
+            "options": [
+                "2.4 g",
+                "8.0 g",
+                "1.0 g",
+                "4.0 g"
+            ],
+            "correct_index": 3,
+            "explanation": "The amount of magnesium is 2.4 / 24.0 = 0.10 mol. The equation shows a 1 to 1 ratio of Mg to MgO, so 0.10 mol of MgO forms, and 0.10 x 40.0 = 4.0 g. The other masses misapply the molar mass or the ratio.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-009",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "25.0 cm3 of sodium hydroxide solution is neutralised by 20.0 cm3 of 0.100 mol/dm3 sulfuric acid according to 2NaOH + H2SO4 -> Na2SO4 + 2H2O. What is the concentration of the sodium hydroxide?",
+            "options": [
+                "0.160 mol/dm3",
+                "0.080 mol/dm3",
+                "0.200 mol/dm3",
+                "0.100 mol/dm3"
+            ],
+            "correct_index": 0,
+            "explanation": "The acid amount is 0.0200 x 0.100 = 0.00200 mol. The equation needs two moles of NaOH per mole of H2SO4, so 0.00400 mol of NaOH is present, and 0.00400 / 0.0250 = 0.160 mol/dm3. The other values ignore the 2 to 1 ratio or the volume.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-010",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "Which statement correctly explains the general increase in first ionisation energy across Period 3 from sodium to argon?",
+            "options": [
+                "Nuclear charge decreases while shielding increases across the period.",
+                "Nuclear charge increases while shielding stays roughly constant, so outer electrons are held more strongly.",
+                "Atomic radius increases steadily across the period.",
+                "The number of occupied electron shells increases across the period."
+            ],
+            "correct_index": 1,
+            "explanation": "Across a period the nuclear charge rises while the outer electrons are added to the same shell, so shielding is nearly constant and the effective attraction grows. The other statements reverse the trend or describe down a group rather than across.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-011",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "A sample of gas has a density of 1.25 g/dm3 at standard temperature and pressure. What is its molar mass? (Molar volume = 22.4 dm3/mol at STP)",
+            "options": [
+                "12.5 g/mol",
+                "22.4 g/mol",
+                "28.0 g/mol",
+                "32.0 g/mol"
+            ],
+            "correct_index": 2,
+            "explanation": "One mole occupies 22.4 dm3, so the mass of one mole is 1.25 x 22.4 = 28.0 g, giving a molar mass of 28.0 g/mol. The other values misplace the decimal or use the wrong volume.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-012",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "A hydrocarbon has the empirical formula CH2 and a molar mass of 56.0 g/mol. What is its molecular formula?",
+            "options": [
+                "CH2",
+                "C3H6",
+                "C2H4",
+                "C4H8"
+            ],
+            "correct_index": 3,
+            "explanation": "The empirical formula mass is 12.0 + 2.0 = 14.0 g/mol. Dividing 56.0 by 14.0 gives a factor of 4, so the molecular formula is C4H8. The other options use the wrong multiplying factor.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-013",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "The ion 56Fe2+ has how many protons, neutrons, and electrons respectively? (Atomic number of iron = 26)",
+            "options": [
+                "26 protons, 30 neutrons, 24 electrons",
+                "26 protons, 30 neutrons, 28 electrons",
+                "26 protons, 56 neutrons, 24 electrons",
+                "30 protons, 26 neutrons, 24 electrons"
+            ],
+            "correct_index": 0,
+            "explanation": "The atomic number gives 26 protons, and the mass number gives 56 - 26 = 30 neutrons. The 2+ charge means two electrons have been lost, so a neutral 26 electrons becomes 24. The other options miscount the neutrons or the electron loss.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-014",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "A reaction is expected to produce 0.50 mol of product but only 0.35 mol is obtained. What is the percentage yield?",
+            "options": [
+                "50 percent",
+                "70 percent",
+                "35 percent",
+                "85 percent"
+            ],
+            "correct_index": 1,
+            "explanation": "Percentage yield is actual divided by theoretical times 100, so 0.35 / 0.50 x 100 = 70 percent. The other values report the actual or theoretical amount directly or use the wrong ratio.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-015",
+            "domain": "Stoichiometry and Atomic Structure",
+            "stem": "How many molecules are present in 0.25 mol of water? (Avogadro constant = 6.02 x 10^23 per mol)",
+            "options": [
+                "6.02 x 10^23",
+                "1.20 x 10^23",
+                "1.51 x 10^23",
+                "2.41 x 10^23"
+            ],
+            "correct_index": 2,
+            "explanation": "Multiply the amount by the Avogadro constant to get 0.25 x 6.02 x 10^23 = 1.51 x 10^23 molecules. The other values use the wrong multiple of the constant.",
+            "reference": "IB Chemistry HL Subject Guide - Stoichiometry and Atomic Structure"
+        },
+        {
+            "id": "ib-chem-hl-016",
+            "domain": "Bonding and Energetics",
+            "stem": "For the reaction N2 + 3H2 -> 2NH3, the enthalpy change is -92 kJ per mole of nitrogen. What is the enthalpy change for the reverse reaction 2NH3 -> N2 + 3H2?",
+            "options": [
+                "-92 kJ",
+                "-46 kJ",
+                "+46 kJ",
+                "+92 kJ"
+            ],
+            "correct_index": 3,
+            "explanation": "Reversing a reaction changes the sign of the enthalpy change while keeping the same magnitude, so the reverse reaction has +92 kJ. The other values keep the wrong sign or halve the magnitude.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-017",
+            "domain": "Bonding and Energetics",
+            "stem": "Using average bond enthalpies H-H = 436, Cl-Cl = 243, and H-Cl = 431 kJ/mol, what is the enthalpy change for H2 + Cl2 -> 2HCl?",
+            "options": [
+                "-183 kJ",
+                "+183 kJ",
+                "-431 kJ",
+                "+120 kJ"
+            ],
+            "correct_index": 0,
+            "explanation": "Bonds broken cost 436 + 243 = 679 kJ, and bonds formed release 2 x 431 = 862 kJ. The enthalpy change is 679 - 862 = -183 kJ, an exothermic reaction. The other values reverse the sign or use a single bond enthalpy.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-018",
+            "domain": "Bonding and Energetics",
+            "stem": "Which pair of elements would most likely form a covalent bond with the greatest polarity?",
+            "options": [
+                "H and H",
+                "H and Cl",
+                "Cl and Cl",
+                "C and H"
+            ],
+            "correct_index": 1,
+            "explanation": "Bond polarity grows with the electronegativity difference between the atoms. Hydrogen and chlorine have a large difference, so the H-Cl bond is the most polar, while H-H and Cl-Cl are nonpolar and C-H is only weakly polar.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-019",
+            "domain": "Bonding and Energetics",
+            "stem": "What is the shape of a methane molecule and what bond angle does it have?",
+            "options": [
+                "Trigonal planar, 120 degrees",
+                "Bent, 104.5 degrees",
+                "Tetrahedral, 109.5 degrees",
+                "Linear, 180 degrees"
+            ],
+            "correct_index": 2,
+            "explanation": "Methane has four bonding pairs around carbon with no lone pairs, so the electron pairs arrange tetrahedrally with a bond angle of 109.5 degrees. The other shapes describe molecules with lone pairs or fewer electron domains.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-020",
+            "domain": "Bonding and Energetics",
+            "stem": "Which of the following substances has hydrogen bonding as its strongest intermolecular force?",
+            "options": [
+                "CH4",
+                "HCl",
+                "CO2",
+                "CH3OH"
+            ],
+            "correct_index": 3,
+            "explanation": "Hydrogen bonding requires hydrogen attached to a small, highly electronegative atom such as oxygen, nitrogen, or fluorine. Only methanol has an O-H group, so the other substances rely on weaker dispersion or dipole forces.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-021",
+            "domain": "Bonding and Energetics",
+            "stem": "How much energy is needed to raise the temperature of 100 g of water by 10.0 degrees Celsius? (Specific heat capacity of water = 4.18 J/g/degree Celsius)",
+            "options": [
+                "4180 J",
+                "418 J",
+                "41.8 J",
+                "41800 J"
+            ],
+            "correct_index": 0,
+            "explanation": "Use q = mc(delta T) = 100 x 4.18 x 10.0 = 4180 J. The other values misplace the decimal, dropping or adding a factor of ten.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-022",
+            "domain": "Bonding and Energetics",
+            "stem": "Which equation represents the second ionisation energy of magnesium?",
+            "options": [
+                "Mg(g) -> Mg+(g) + e-",
+                "Mg+(g) -> Mg2+(g) + e-",
+                "Mg(g) -> Mg2+(g) + 2e-",
+                "Mg+(g) + e- -> Mg(g)"
+            ],
+            "correct_index": 1,
+            "explanation": "The second ionisation energy removes the second electron from a singly charged gaseous ion, so it is Mg+(g) -> Mg2+(g) + e-. The first option is the first ionisation energy, the third removes two electrons, and the fourth is the reverse process.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-023",
+            "domain": "Bonding and Energetics",
+            "stem": "Diamond and graphite are both forms of carbon. Why does graphite conduct electricity while diamond does not?",
+            "options": [
+                "Graphite contains free protons that carry charge.",
+                "Diamond has a giant ionic lattice that blocks electrons.",
+                "Graphite has delocalised electrons between its layers, while diamond has electrons localised in sigma bonds.",
+                "Diamond is a metal and metals do not conduct when solid."
+            ],
+            "correct_index": 2,
+            "explanation": "In graphite each carbon bonds to three others, leaving one delocalised electron per atom to move between the layers and carry current. In diamond all four outer electrons are locked into sigma bonds, so no free electrons are available.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-024",
+            "domain": "Bonding and Energetics",
+            "stem": "The standard enthalpy of formation of a compound is defined as the enthalpy change when certain conditions are met. Which of the following best completes that definition?",
+            "options": [
+                "One mole of the compound is burned completely in oxygen.",
+                "One mole of the compound is dissolved in a large excess of water.",
+                "Any amount of the compound is formed from its elements in any states.",
+                "One mole of the compound is formed from its elements in their standard states."
+            ],
+            "correct_index": 3,
+            "explanation": "The standard enthalpy of formation always refers to forming exactly one mole of compound from its elements in their standard states. The first option describes combustion and the others use the wrong amount or non-standard states.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-025",
+            "domain": "Bonding and Energetics",
+            "stem": "Carbon dioxide has polar carbon-oxygen bonds yet the molecule has no net dipole moment. What is the best explanation?",
+            "options": [
+                "The molecule is linear, so the two equal bond dipoles cancel.",
+                "The carbon-oxygen bonds are actually nonpolar.",
+                "The molecule is bent, which cancels the bond dipoles.",
+                "Carbon dioxide is an ionic compound."
+            ],
+            "correct_index": 0,
+            "explanation": "The two C-O bond dipoles are equal and point in opposite directions along a straight line, so their vector sum is zero and the molecule is nonpolar. The bonds are genuinely polar, the molecule is linear not bent, and carbon dioxide is covalent.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-026",
+            "domain": "Bonding and Energetics",
+            "stem": "The bond angle in ammonia is about 107 degrees rather than the 109.5 degrees of methane. What causes this difference?",
+            "options": [
+                "The nitrogen atom is much larger than a carbon atom.",
+                "A lone pair on nitrogen repels the bonding pairs more strongly than bonding pairs repel each other.",
+                "The hydrogen atoms attract each other and pull the bonds together.",
+                "Ammonia is a linear molecule with two lone pairs."
+            ],
+            "correct_index": 1,
+            "explanation": "Ammonia has three bonding pairs and one lone pair on nitrogen. Because a lone pair is more repulsive, it squeezes the N-H bonds closer together, reducing the angle to about 107 degrees. The other options misstate the bonding or geometry.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-027",
+            "domain": "Bonding and Energetics",
+            "stem": "Bond enthalpies are usually quoted as average values rather than exact values for a specific molecule. Why is this the case?",
+            "options": [
+                "Because bonds do not store any chemical energy.",
+                "Because bond enthalpies can only be measured in liquids.",
+                "Because the energy needed to break a given bond varies slightly with the surrounding molecular environment.",
+                "Because breaking a bond always releases energy."
+            ],
+            "correct_index": 2,
+            "explanation": "The same type of bond, such as an O-H bond, needs slightly different energies in different molecules, so chemists quote an average over many compounds. Bonds do store energy, can be measured in gases, and require energy to break, so the other statements are false.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-028",
+            "domain": "Bonding and Energetics",
+            "stem": "Given that the enthalpy of combustion of carbon is -394 kJ/mol and of carbon monoxide is -283 kJ/mol, what is the enthalpy change for 2C + O2 -> 2CO?",
+            "options": [
+                "-111 kJ",
+                "-677 kJ",
+                "+222 kJ",
+                "-222 kJ"
+            ],
+            "correct_index": 3,
+            "explanation": "For C + 1/2 O2 -> CO, the enthalpy change is -394 - (-283) = -111 kJ/mol. For two moles of CO the value doubles to -222 kJ. The other values use one mole, add the enthalpies, or flip the sign.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-029",
+            "domain": "Bonding and Energetics",
+            "stem": "Which property is typical of an ionic compound such as sodium chloride?",
+            "options": [
+                "It has a high melting point because of the strong electrostatic attractions in its lattice.",
+                "It conducts electricity well when solid.",
+                "It has a low melting point because its molecules are held by weak forces.",
+                "It is a soft solid that conducts electricity only when solid."
+            ],
+            "correct_index": 0,
+            "explanation": "Ionic solids are held together by strong electrostatic forces throughout a giant lattice, giving high melting points. They do not conduct when solid because the ions are fixed, but they do conduct when molten or dissolved, so the other options are incorrect.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-030",
+            "domain": "Bonding and Energetics",
+            "stem": "Boron trifluoride is a nonpolar molecule even though its B-F bonds are polar. Which reason best explains this?",
+            "options": [
+                "Boron trifluoride is a bent molecule.",
+                "Boron trifluoride is trigonal planar, so the three bond dipoles cancel.",
+                "Fluorine is less electronegative than boron.",
+                "Boron trifluoride has a lone pair on boron."
+            ],
+            "correct_index": 1,
+            "explanation": "With three bonding pairs and no lone pairs, boron trifluoride is trigonal planar. The three equal bond dipoles are arranged 120 degrees apart and cancel to give no net dipole. The other options misstate the shape, electronegativity, or lone pairs.",
+            "reference": "IB Chemistry HL Subject Guide - Bonding and Energetics"
+        },
+        {
+            "id": "ib-chem-hl-031",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "A piece of magnesium ribbon reacts faster with dilute acid when it is cut into small pieces. Which factor is responsible for the increased rate?",
+            "options": [
+                "A higher activation energy",
+                "A lower temperature",
+                "A larger surface area of the reactant",
+                "A smaller concentration of acid"
+            ],
+            "correct_index": 2,
+            "explanation": "Cutting the ribbon exposes more surface area, so more particles can collide with the acid per unit time and the rate rises. Activation energy is unchanged, and a lower temperature or lower concentration would slow the reaction.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-032",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "Raising the temperature increases the rate of a reaction mainly because which change occurs?",
+            "options": [
+                "The activation energy decreases.",
+                "The particles become larger and collide more often.",
+                "The fraction of successful collisions falls.",
+                "A greater fraction of molecules has energy equal to or above the activation energy."
+            ],
+            "correct_index": 3,
+            "explanation": "Temperature raises the average kinetic energy, shifting the Maxwell-Boltzmann distribution so more molecules exceed the activation energy. Collision frequency rises only slightly, and the activation energy itself is unchanged.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-033",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "For the equilibrium N2(g) + 3H2(g) <-> 2NH3(g), which expression correctly gives the equilibrium constant Kc?",
+            "options": [
+                "[NH3]^2 / ([N2][H2]^3)",
+                "([N2][H2]^3) / [NH3]^2",
+                "[NH3] / ([N2][H2])",
+                "[NH3]^2 / ([N2][H2])"
+            ],
+            "correct_index": 0,
+            "explanation": "The equilibrium constant places product concentrations to the power of their coefficients over reactant concentrations to the power of theirs, giving [NH3]^2 / ([N2][H2]^3). The other expressions invert the ratio or use the wrong powers.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-034",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "The reaction N2O4(g) <-> 2NO2(g) is endothermic in the forward direction. Which change shifts the position of equilibrium to the right?",
+            "options": [
+                "Increasing the pressure",
+                "Increasing the temperature",
+                "Adding a catalyst",
+                "Adding an inert gas at constant volume"
+            ],
+            "correct_index": 1,
+            "explanation": "For an endothermic forward reaction, raising the temperature favours the forward direction because the system absorbs the added heat. Increasing pressure favours the side with fewer gas moles, and a catalyst or added inert gas at constant volume does not shift the position.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-035",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "For the equilibrium 2SO2(g) + O2(g) <-> 2SO3(g), how does increasing the pressure affect the position of equilibrium?",
+            "options": [
+                "It shifts the equilibrium to the left.",
+                "It has no effect on the position.",
+                "It shifts the equilibrium to the right, where there are fewer moles of gas.",
+                "It stops the reaction completely."
+            ],
+            "correct_index": 2,
+            "explanation": "There are three moles of gas on the left and two on the right. Increasing pressure favours the side with fewer gas moles to reduce the pressure, so the equilibrium shifts right. The other options misread the mole balance or ignore Le Chatelier's principle.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-036",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "For a reaction that is first order with respect to A, how does doubling the concentration of A affect the initial rate?",
+            "options": [
+                "The rate stays the same.",
+                "The rate quadruples.",
+                "The rate halves.",
+                "The rate doubles."
+            ],
+            "correct_index": 3,
+            "explanation": "For a first-order dependence the rate is proportional to the concentration, so doubling A doubles the rate. Quadrupling would require second order, and no change would indicate zero order.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-037",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "How does a catalyst increase the rate of a reaction?",
+            "options": [
+                "It provides an alternative pathway with a lower activation energy.",
+                "It increases the activation energy of the reaction.",
+                "It shifts the position of equilibrium to the right.",
+                "It is consumed during the reaction."
+            ],
+            "correct_index": 0,
+            "explanation": "A catalyst lowers the activation energy by offering a different reaction pathway, so more collisions are successful and the rate rises. It does not change the position of equilibrium and is regenerated rather than consumed.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-038",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "At equilibrium a mixture contains [H2] = 0.20 mol/dm3, [I2] = 0.20 mol/dm3, and [HI] = 1.60 mol/dm3 for H2 + I2 <-> 2HI. What is the value of Kc?",
+            "options": [
+                "4.0",
+                "64",
+                "0.25",
+                "16"
+            ],
+            "correct_index": 1,
+            "explanation": "Kc = [HI]^2 / ([H2][I2]) = (1.60)^2 / (0.20 x 0.20) = 2.56 / 0.040 = 64. The other values invert the ratio or forget to square the HI concentration.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-039",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "Two gases react rapidly once mixed, while the same substances in solid form react very slowly. Which factor best explains the difference?",
+            "options": [
+                "Gases always have a lower activation energy than solids.",
+                "Solids have more frequent collisions than gases.",
+                "Gaseous particles move freely and collide frequently with sufficient energy.",
+                "Solids cannot undergo chemical reactions at all."
+            ],
+            "correct_index": 2,
+            "explanation": "In the gas phase the particles move rapidly and mix freely, so they collide often and with enough energy to react. Solids react slowly because their particles are locked in place and only surface particles meet, not because activation energy or reactivity disappears.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-040",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "Which statement best describes a system at dynamic equilibrium?",
+            "options": [
+                "The forward reaction has stopped completely.",
+                "The concentrations of reactants and products are equal.",
+                "The reaction has gone to completion.",
+                "The rates of the forward and reverse reactions are equal and the concentrations remain constant."
+            ],
+            "correct_index": 3,
+            "explanation": "At dynamic equilibrium both reactions continue at equal rates, so the concentrations stop changing even though reactions keep occurring. Neither reaction stops, the concentrations need not be equal, and the reaction has not gone to completion.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-041",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "For the equilibrium Fe3+(aq) + SCN-(aq) <-> FeSCN2+(aq), what happens when a few drops of concentrated Fe3+ solution are added?",
+            "options": [
+                "The equilibrium shifts to the right, forming more FeSCN2+.",
+                "The equilibrium shifts to the left, forming more reactants.",
+                "The value of Kc increases.",
+                "No change occurs in the system."
+            ],
+            "correct_index": 0,
+            "explanation": "Adding Fe3+ increases the concentration of a reactant, so by Le Chatelier's principle the system shifts right to use it up and form more product. Kc depends only on temperature, so it does not change.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-042",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "In an experiment, doubling the concentration of reactant X while keeping all others constant quadruples the rate. What is the order of reaction with respect to X?",
+            "options": [
+                "Zero order",
+                "Second order",
+                "First order",
+                "Third order"
+            ],
+            "correct_index": 1,
+            "explanation": "If the rate scales with the square of the concentration, the reaction is second order in X. Zero order would leave the rate unchanged, first order would double it, and third order would multiply it by eight.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-043",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "On an energy profile diagram, the activation energy of a reaction is represented by the energy difference between which two features?",
+            "options": [
+                "The products and the reactants",
+                "Two intermediate states",
+                "The reactants and the transition state",
+                "The products and the transition state"
+            ],
+            "correct_index": 2,
+            "explanation": "Activation energy is the energy that reactant particles must gain to reach the transition state, so it is measured from the reactants to the peak. The difference between products and reactants gives the enthalpy change instead.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-044",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "For an exothermic forward reaction, how does an increase in temperature affect the value of the equilibrium constant Kc?",
+            "options": [
+                "Kc increases.",
+                "Kc stays the same.",
+                "Kc doubles exactly.",
+                "Kc decreases."
+            ],
+            "correct_index": 3,
+            "explanation": "An exothermic forward reaction releases heat, so raising the temperature shifts the equilibrium back towards the reactants, reducing the product to reactant ratio and lowering Kc. Only temperature changes Kc, and for exothermic reactions the change is a decrease.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-045",
+            "domain": "Kinetics and Equilibrium",
+            "stem": "Which factor does not affect the position of equilibrium for a given reversible reaction?",
+            "options": [
+                "A catalyst",
+                "Temperature",
+                "Pressure",
+                "Concentration of reactants"
+            ],
+            "correct_index": 0,
+            "explanation": "A catalyst speeds up the forward and reverse reactions equally, so it helps the system reach equilibrium faster but does not change where the equilibrium lies. Temperature, pressure, and concentration each can shift the position.",
+            "reference": "IB Chemistry HL Subject Guide - Kinetics and Equilibrium"
+        },
+        {
+            "id": "ib-chem-hl-046",
+            "domain": "Organic Chemistry",
+            "stem": "Which functional group is present in a molecule of ethanol, whose formula is CH3CH2OH?",
+            "options": [
+                "Carboxylic acid",
+                "Hydroxyl, as in an alcohol",
+                "Aldehyde",
+                "Amine"
+            ],
+            "correct_index": 1,
+            "explanation": "Ethanol contains an -OH group bonded to a carbon, which is the hydroxyl group of an alcohol. A carboxylic acid needs a -COOH group, an aldehyde a -CHO group, and an amine a nitrogen group, none of which are present.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-047",
+            "domain": "Organic Chemistry",
+            "stem": "What is the IUPAC name of the compound CH3CH2CH2COOH?",
+            "options": [
+                "Propanal",
+                "Propan-1-ol",
+                "Butanoic acid",
+                "Butan-1-ol"
+            ],
+            "correct_index": 2,
+            "explanation": "The -COOH group makes this a carboxylic acid and its carbon counts towards the chain, giving four carbons and the name butanoic acid. Propanal and propan-1-ol have only three carbons, and butan-1-ol lacks the acid group.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-048",
+            "domain": "Organic Chemistry",
+            "stem": "Which reagent would you add to ethene to produce ethanol in a single addition reaction?",
+            "options": [
+                "Hydrogen gas with a nickel catalyst",
+                "Bromine water",
+                "Concentrated sulfuric acid on its own",
+                "Steam with an acid catalyst"
+            ],
+            "correct_index": 3,
+            "explanation": "Hydration of ethene with steam over an acid catalyst adds water across the double bond to give ethanol. Hydrogenation would give ethane, bromine water gives a dibromo compound, and sulfuric acid alone is not the hydration reagent.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-049",
+            "domain": "Organic Chemistry",
+            "stem": "How many structural isomers have the molecular formula C4H10?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correct_index": 0,
+            "explanation": "The two isomers are the straight chain butane and the branched 2-methylpropane. No further arrangements are possible with four carbons and ten hydrogens that obey the normal tetravalency of carbon.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-050",
+            "domain": "Organic Chemistry",
+            "stem": "Which statement correctly describes a homologous series?",
+            "options": [
+                "All members have identical physical properties.",
+                "Members differ by one CH2 unit and share the same functional group.",
+                "All members have exactly the same molecular formula.",
+                "Members have no general formula."
+            ],
+            "correct_index": 1,
+            "explanation": "A homologous series is a family of compounds with the same functional group and a general formula, where successive members differ by a CH2 unit. Physical properties change gradually along the series, and members have different molecular formulas.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-051",
+            "domain": "Organic Chemistry",
+            "stem": "Oxidising a primary alcohol with acidified potassium dichromate(VI) and distilling the product first produces which compound?",
+            "options": [
+                "A ketone",
+                "A carboxylic acid directly",
+                "An aldehyde",
+                "An alkene"
+            ],
+            "correct_index": 2,
+            "explanation": "Distilling the aldehyde out as it forms prevents further oxidation, so a primary alcohol gives an aldehyde first. Without distillation it would oxidise on to a carboxylic acid, and ketones come from secondary alcohols.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-052",
+            "domain": "Organic Chemistry",
+            "stem": "Ethanoic acid reacts with ethanol in the presence of a strong acid catalyst to produce which substances?",
+            "options": [
+                "An aldehyde and water",
+                "An amine and hydrogen",
+                "A ketone and carbon dioxide",
+                "An ester and water"
+            ],
+            "correct_index": 3,
+            "explanation": "A carboxylic acid reacting with an alcohol under acid catalysis undergoes esterification to give an ester and water. Aldehydes, amines, and ketones are not the products of this reaction.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-053",
+            "domain": "Organic Chemistry",
+            "stem": "When hydrogen bromide adds across propene, the major product is 2-bromopropane. Which reason best explains the observed regioselectivity?",
+            "options": [
+                "The more stable secondary carbocation intermediate is favoured.",
+                "Bromine always bonds to the terminal carbon regardless of structure.",
+                "Propene is a symmetrical alkene with two identical ends.",
+                "The reaction is a substitution rather than an addition."
+            ],
+            "correct_index": 0,
+            "explanation": "Protonation of propene can give a primary or a secondary carbocation, and the secondary one is more stable, so the major product forms from it and bromine ends up on the middle carbon. Propene is unsymmetrical, and the reaction is an addition.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-054",
+            "domain": "Organic Chemistry",
+            "stem": "Which observation most directly shows that an unknown hydrocarbon contains a carbon-carbon double bond?",
+            "options": [
+                "It burns with a yellow, smoky flame.",
+                "It decolourises bromine water rapidly.",
+                "It gives a white precipitate with silver nitrate solution.",
+                "It has a pH below 7 in water."
+            ],
+            "correct_index": 1,
+            "explanation": "Alkenes add bromine across the double bond, so bromine water is decolourised from orange-brown to colourless, which is the standard test. Flame colour, silver nitrate, and pH do not test for a double bond.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-055",
+            "domain": "Organic Chemistry",
+            "stem": "The bond angles around each carbon atom in ethene are about 120 degrees. What does this indicate about the bonding at each carbon?",
+            "options": [
+                "Each carbon is sp3 hybridised and tetrahedral.",
+                "Each carbon is sp hybridised and linear.",
+                "Each carbon is sp2 hybridised and trigonal planar.",
+                "Each carbon forms four single bonds."
+            ],
+            "correct_index": 2,
+            "explanation": "A bond angle of 120 degrees around each carbon is characteristic of sp2 hybridisation and a trigonal planar arrangement, with the double bond formed from one sigma and one pi bond. sp3 would give 109.5 degrees and sp would give 180 degrees.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-056",
+            "domain": "Organic Chemistry",
+            "stem": "Complete combustion of 1.0 mol of an alkane produces 3.0 mol of carbon dioxide. Which alkane is it?",
+            "options": [
+                "Methane, CH4",
+                "Ethane, C2H6",
+                "Butane, C4H10",
+                "Propane, C3H8"
+            ],
+            "correct_index": 3,
+            "explanation": "Each carbon in the alkane produces one mole of CO2, so 3.0 mol of CO2 means three carbon atoms, which is propane. Methane, ethane, and butane would give one, two, and four moles of CO2 respectively.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-057",
+            "domain": "Organic Chemistry",
+            "stem": "Alkanes react with chlorine in the presence of ultraviolet light by which mechanism?",
+            "options": [
+                "Free-radical substitution",
+                "Electrophilic addition",
+                "Nucleophilic substitution",
+                "Acid-base neutralisation"
+            ],
+            "correct_index": 0,
+            "explanation": "Ultraviolet light splits chlorine molecules into chlorine radicals, which then substitute hydrogen atoms on the alkane in a free-radical chain reaction. Electrophilic addition needs a double bond, and the others do not describe this halogenation.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-058",
+            "domain": "Organic Chemistry",
+            "stem": "Nylon is formed when a dicarboxylic acid reacts with a diamine. What type of polymerisation is this?",
+            "options": [
+                "Addition polymerisation",
+                "Condensation polymerisation",
+                "Free-radical polymerisation",
+                "Anionic addition polymerisation"
+            ],
+            "correct_index": 1,
+            "explanation": "The acid and amine groups react with the elimination of a small molecule, usually water, to link the monomers, which defines condensation polymerisation. Addition polymerisation instead joins monomers without losing any atoms.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-059",
+            "domain": "Organic Chemistry",
+            "stem": "Which molecule is chiral, meaning it contains a carbon atom bonded to four different groups?",
+            "options": [
+                "CH2Cl2",
+                "CH3CH2OH",
+                "CHFClBr",
+                "CH3Cl"
+            ],
+            "correct_index": 2,
+            "explanation": "In CHFClBr the central carbon is bonded to four different atoms, hydrogen, fluorine, chlorine, and bromine, so the molecule is chiral. The other molecules have at least two identical groups on the central carbon and are not chiral.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        },
+        {
+            "id": "ib-chem-hl-060",
+            "domain": "Organic Chemistry",
+            "stem": "A hydrocarbon with the molecular formula C2H4 is an alkene. Which product forms when it is hydrogenated completely?",
+            "options": [
+                "Ethyne",
+                "Methanol",
+                "Ethanol",
+                "Ethane"
+            ],
+            "correct_index": 3,
+            "explanation": "Complete hydrogenation adds one hydrogen molecule across the C=C double bond, converting ethene into ethane. Ethyne is a different, less hydrogenated alkyne, and methanol and ethanol contain oxygen that is not added here.",
+            "reference": "IB Chemistry HL Subject Guide - Organic Chemistry"
+        }
+    ]
+}

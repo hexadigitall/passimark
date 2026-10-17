@@ -1,0 +1,858 @@
+{
+    "cert_key": "ap-bio",
+    "title": "AP Biology",
+    "issuer": "College Board",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ap-bio.json",
+    "variant_label": "AP Biology Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "1-5 AP scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public AP Biology course description. Not a capture of past exam questions.",
+    "source_label": "AP Biology practice bank",
+    "items": [
+        {
+            "id": "ap-bio-001",
+            "domain": "Molecules and Cells",
+            "stem": "Water molecules are held together by hydrogen bonds between the slightly positive hydrogen of one molecule and the slightly negative oxygen of another. Which property of water most directly results from these hydrogen bonds?",
+            "options": [
+                "Water has a high specific heat, so it resists large changes in temperature.",
+                "Ice is denser than liquid water and sinks in a pond.",
+                "Water readily dissolves nonpolar oils and fats.",
+                "Water boils at a lower temperature than most other liquids."
+            ],
+            "correct_index": 0,
+            "explanation": "The extensive hydrogen bonding network lets water absorb much energy while changing temperature only slightly, giving it a high specific heat. Ice is actually less dense than liquid water, water does not dissolve nonpolar oils well, and water has a relatively high boiling point.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-002",
+            "domain": "Molecules and Cells",
+            "stem": "A researcher measures the rate of an enzyme-catalyzed reaction at several temperatures. The rate rises from 10 to 40 degrees Celsius and then falls sharply above 50 degrees Celsius. Which explanation best accounts for the sharp decrease above 50 degrees Celsius?",
+            "options": [
+                "The substrate concentration becomes limiting only at high temperatures.",
+                "The enzyme denatures, so the shape of its active site is disrupted.",
+                "The enzyme concentration increases sharply at high temperature.",
+                "The reaction becomes spontaneous and no longer needs the enzyme."
+            ],
+            "correct_index": 1,
+            "explanation": "Heat disrupts the weak bonds that maintain a protein's three-dimensional shape, so the active site loses its complementarity to the substrate and activity drops. The substrate is supplied in excess, enzyme concentration does not rise with heat, and the reaction still depends on the catalyst.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-003",
+            "domain": "Molecules and Cells",
+            "stem": "A single-celled organism is placed in a solution whose solute concentration is much higher than that inside the cell. Assuming the solute cannot cross the membrane, which observation is most likely?",
+            "options": [
+                "The cell swells as water moves in and may burst.",
+                "Water moves into the cell faster than it leaves.",
+                "The cell shrinks as water moves out toward the hypertonic solution.",
+                "No net water movement occurs across the membrane."
+            ],
+            "correct_index": 2,
+            "explanation": "The outside solution is hypertonic, so water diffuses out of the cell down its concentration gradient and the cell shrinks. Swelling would occur in a hypotonic solution, and net movement stops only when the solutions are isotonic.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-004",
+            "domain": "Molecules and Cells",
+            "stem": "During aerobic cellular respiration, the largest share of ATP is produced by which mechanism?",
+            "options": [
+                "Substrate-level phosphorylation during glycolysis",
+                "Fermentation reactions that regenerate NAD+",
+                "Direct transfer of phosphate groups from glucose to ADP",
+                "Oxidative phosphorylation driven by the proton gradient across the inner mitochondrial membrane"
+            ],
+            "correct_index": 3,
+            "explanation": "The electron transport chain pumps protons to create a gradient, and ATP synthase uses that gradient to make most of the ATP. Glycolysis and the Krebs cycle contribute far less through substrate-level phosphorylation, and fermentation produces no ATP beyond glycolysis.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-005",
+            "domain": "Molecules and Cells",
+            "stem": "The light-dependent reactions of photosynthesis produce which molecules that are then consumed by the Calvin cycle?",
+            "options": [
+                "ATP and NADPH",
+                "Glucose and oxygen gas",
+                "Carbon dioxide and water",
+                "Pyruvate and NADH"
+            ],
+            "correct_index": 0,
+            "explanation": "The light reactions convert light energy into the chemical energy carriers ATP and NADPH, which the Calvin cycle uses to reduce carbon dioxide into sugar. Oxygen is a byproduct released to the atmosphere, carbon dioxide and water are inputs, and pyruvate and NADH belong to respiration.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-006",
+            "domain": "Molecules and Cells",
+            "stem": "Which statement best describes the primary structure of a protein?",
+            "options": [
+                "The overall three-dimensional shape of a folded polypeptide",
+                "The linear sequence of amino acids joined by peptide bonds",
+                "The assembly of several polypeptide subunits into a complex",
+                "The coiling of a polypeptide chain into repeating alpha-helices"
+            ],
+            "correct_index": 1,
+            "explanation": "Primary structure is simply the order of amino acids in the chain, which is determined by the gene. The three-dimensional shape is tertiary structure, subunit assembly is quaternary structure, and alpha-helices are part of secondary structure.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-007",
+            "domain": "Molecules and Cells",
+            "stem": "A ligand normally binds a cell-surface receptor and triggers a signal transduction pathway. A mutation prevents the receptor from binding the ligand. Which outcome is most likely?",
+            "options": [
+                "The signaling pathway becomes permanently activated without any ligand.",
+                "The cell immediately produces much more ATP than usual.",
+                "The pathway fails to activate in response to the ligand.",
+                "The ligand moves directly into the nucleus to control genes."
+            ],
+            "correct_index": 2,
+            "explanation": "If the receptor cannot bind its ligand, the signal is never received and the downstream response does not occur. The pathway would not switch on without a signal, ATP production is not tied to this receptor, and the ligand relies on the receptor rather than entering the nucleus directly.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-008",
+            "domain": "Molecules and Cells",
+            "stem": "An enzyme is tested at several pH values. Its activity is highest at pH 7 and is nearly zero at pH 3. Which interpretation of these data is best?",
+            "options": [
+                "The enzyme functions best in strongly acidic conditions.",
+                "The pH of the solution has no measurable effect on this enzyme.",
+                "The substrate is destroyed at pH 7 but stable at pH 3.",
+                "The enzyme's activity depends on pH and is optimal near pH 7."
+            ],
+            "correct_index": 3,
+            "explanation": "Enzymes have an optimal pH at which their active site shape best fits the substrate; here activity peaks at pH 7 and collapses at pH 3. The data contradict the claim that pH is irrelevant or that the enzyme prefers acid, and nothing indicates the substrate is destroyed.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-009",
+            "domain": "Molecules and Cells",
+            "stem": "A student measures the mass of potato cores after 30 minutes in sucrose solutions of different concentrations. The data are 0.0 M: +8 percent, 0.2 M: +3 percent, 0.4 M: -1 percent, and 0.6 M: -6 percent change in mass. What is the approximate solute concentration of the potato tissue?",
+            "options": [
+                "About 0.3 M",
+                "About 0.0 M",
+                "About 0.6 M",
+                "About 0.1 M"
+            ],
+            "correct_index": 0,
+            "explanation": "The tissue's concentration equals the external concentration that produces no net change in mass. The change crosses zero between 0.2 M and 0.4 M, close to 0.3 M; 0.0 M and 0.6 M produce clearly positive and negative changes, and 0.1 M would still show a gain.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-010",
+            "domain": "Molecules and Cells",
+            "stem": "Which statement best describes the role of ATP in cellular metabolism?",
+            "options": [
+                "ATP stores the cell's genetic information in its phosphate groups.",
+                "ATP couples energy-releasing reactions to energy-requiring reactions.",
+                "ATP is a permanent energy reserve that the cell never breaks down.",
+                "ATP forms the structural backbone of the plasma membrane."
+            ],
+            "correct_index": 1,
+            "explanation": "ATP hydrolysis releases usable energy that drives endergonic processes, so ATP acts as the cell's energy currency linking exergonic and endergonic reactions. Genetic information is stored in nucleic acids, ATP is continually recycled rather than permanent, and membranes are built from phospholipids.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-011",
+            "domain": "Molecules and Cells",
+            "stem": "Which cellular structure is the primary site of protein synthesis?",
+            "options": [
+                "The mitochondrion",
+                "The Golgi apparatus",
+                "The ribosome",
+                "The lysosome"
+            ],
+            "correct_index": 2,
+            "explanation": "Ribosomes translate messenger RNA into polypeptide chains, making them the site of protein synthesis. Mitochondria carry out respiration, the Golgi modifies and packages proteins, and lysosomes contain digestive enzymes.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-012",
+            "domain": "Molecules and Cells",
+            "stem": "As a cell grows larger, its volume increases faster than its surface area. What is the most important consequence of this relationship for the cell?",
+            "options": [
+                "The cell can exchange materials with its environment more easily.",
+                "The cell no longer needs transport proteins in its membrane.",
+                "The rate of diffusion increases in direct proportion to the volume.",
+                "The cell becomes less efficient at moving materials across the membrane relative to its needs."
+            ],
+            "correct_index": 3,
+            "explanation": "A decreasing surface-area-to-volume ratio means less membrane area is available per unit of internal volume, so exchange becomes less able to meet the cell's needs and limits cell size. Larger cells do not exchange more easily, and diffusion distance also becomes a problem, not an advantage.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-013",
+            "domain": "Molecules and Cells",
+            "stem": "Students use a respirometer to measure oxygen consumption at 25 degrees Celsius. After 20 minutes, germinating seeds consumed 2.4 mL of oxygen while non-germinating seeds consumed 0.2 mL. Which conclusion is best supported by these data?",
+            "options": [
+                "Germinating seeds carry out aerobic respiration faster than non-germinating seeds.",
+                "Non-germinating seeds carry out more photosynthesis than germinating seeds.",
+                "Germinating seeds consumed no oxygen during the experiment.",
+                "Temperature had no effect on the rate of respiration."
+            ],
+            "correct_index": 0,
+            "explanation": "Higher oxygen consumption indicates a faster rate of aerobic respiration, so germinating seeds respired faster. The data show the germinating seeds did consume oxygen, they say nothing about photosynthesis or temperature effects, and the difference directly contradicts the remaining choices.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-014",
+            "domain": "Molecules and Cells",
+            "stem": "A cell has a water potential of -0.6 MPa, and the solution surrounding it has a water potential of -0.2 MPa. In which direction will water move, and why?",
+            "options": [
+                "Out of the cell, because the cell has the lower water potential.",
+                "Into the cell, because water moves toward the lower water potential inside the cell.",
+                "No net movement, because the two potentials are equal in magnitude.",
+                "Out of the cell, because water always moves toward higher solute concentration."
+            ],
+            "correct_index": 1,
+            "explanation": "Water always moves from higher water potential to lower water potential. Since -0.2 MPa is higher than -0.6 MPa, water moves from the solution into the cell. The potentials are not equal, and water does not move toward the higher (less negative) potential.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-015",
+            "domain": "Molecules and Cells",
+            "stem": "Which change would most likely denature a protein by disrupting its tertiary structure?",
+            "options": [
+                "Adding a buffer that holds the pH constant",
+                "Diluting the protein in a large volume of water",
+                "Heating the protein well above its normal working temperature",
+                "Adding additional substrate to the solution"
+            ],
+            "correct_index": 2,
+            "explanation": "Excess heat breaks the hydrogen bonds and other weak interactions that hold a protein in its folded shape, destroying tertiary structure. Buffering protects pH, dilution alone does not unfold a protein, and adding substrate does not denature the enzyme.",
+            "reference": "AP Biology Course Description - Molecules and Cells"
+        },
+        {
+            "id": "ap-bio-016",
+            "domain": "Heredity and Evolution",
+            "stem": "Crossing over during prophase I of meiosis increases genetic variation in gametes by doing which of the following?",
+            "options": [
+                "Doubling the chromosome number of each gamete",
+                "Separating sister chromatids into different cells",
+                "Deleting entire chromosomes from the cell",
+                "Exchanging corresponding segments between homologous chromosomes"
+            ],
+            "correct_index": 3,
+            "explanation": "During crossing over, homologous chromosomes swap matching segments, creating new combinations of alleles on each chromatid. Chromosome number is halved rather than doubled, chromatid separation occurs later in the division, and whole chromosomes are not deleted.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-017",
+            "domain": "Heredity and Evolution",
+            "stem": "Two pea plants that are both heterozygous for a single gene (Aa) are crossed. What is the probability that an offspring shows the recessive phenotype?",
+            "options": [
+                "1/4",
+                "1/2",
+                "3/4",
+                "0"
+            ],
+            "correct_index": 0,
+            "explanation": "An Aa by Aa cross gives a 1 AA : 2 Aa : 1 aa ratio, and only aa shows the recessive phenotype, so the probability is 1/4. A 1/2 or 3/4 result would require different parental genotypes, and the recessive phenotype is possible.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-018",
+            "domain": "Heredity and Evolution",
+            "stem": "In fruit flies, eye color is an X-linked trait, with red eyes dominant to white eyes. A heterozygous red-eyed female is crossed with a white-eyed male. What fraction of the male offspring are expected to have white eyes?",
+            "options": [
+                "0",
+                "1/2",
+                "3/4",
+                "All of them"
+            ],
+            "correct_index": 1,
+            "explanation": "The female produces X chromosomes carrying either the red or white allele, and sons receive their single X from the mother. Half of the sons therefore inherit the white allele and have white eyes. Since the mother is heterozygous, not all sons are affected and not all are unaffected.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-019",
+            "domain": "Heredity and Evolution",
+            "stem": "DNA replication is described as semiconservative. What does this term mean?",
+            "options": [
+                "Both strands of the original molecule are broken down and replaced.",
+                "Each new molecule contains two newly synthesized strands of DNA.",
+                "Each new DNA molecule contains one original strand and one newly made strand.",
+                "Only RNA, not DNA, is produced during the process."
+            ],
+            "correct_index": 2,
+            "explanation": "Semiconservative replication means each parent strand serves as a template, so every new double helix keeps one old strand and gains one new strand. Neither strand pair is entirely new, and the process copies DNA rather than making RNA.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-020",
+            "domain": "Heredity and Evolution",
+            "stem": "Which sequence correctly describes the flow of biological information during protein synthesis?",
+            "options": [
+                "Protein to RNA to DNA",
+                "DNA to protein to RNA",
+                "RNA to DNA to protein",
+                "DNA to RNA to protein"
+            ],
+            "correct_index": 3,
+            "explanation": "Genetic information is transcribed from DNA into messenger RNA and then translated from RNA into protein. The reverse flows describe processes that are not the standard path of gene expression.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-021",
+            "domain": "Heredity and Evolution",
+            "stem": "A mutation changes a single DNA base in a gene, but the amino acid sequence of the resulting protein is unchanged. What type of mutation is this?",
+            "options": [
+                "A silent, or synonymous, mutation",
+                "A frameshift mutation",
+                "A nonsense mutation",
+                "A chromosomal duplication"
+            ],
+            "correct_index": 0,
+            "explanation": "Because the genetic code is redundant, several codons can specify the same amino acid, so a base change can leave the protein unchanged; this is a silent mutation. Frameshift and nonsense mutations alter the amino acid sequence or shorten the protein, and a duplication changes chromosome structure.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-022",
+            "domain": "Heredity and Evolution",
+            "stem": "In a population at Hardy-Weinberg equilibrium, the frequency of the recessive allele q is 0.2. What is the expected frequency of homozygous recessive individuals?",
+            "options": [
+                "0.2",
+                "0.04",
+                "0.32",
+                "0.16"
+            ],
+            "correct_index": 1,
+            "explanation": "Homozygous recessive frequency equals q squared, which is 0.2 times 0.2, or 0.04. The value 0.2 is the allele frequency itself, 0.32 is 2pq for heterozygotes, and 0.16 would correspond to q of 0.4.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-023",
+            "domain": "Heredity and Evolution",
+            "stem": "A population of insects is sprayed with a new insecticide. After several generations, most surviving insects carry a resistance allele. Which process best explains this outcome?",
+            "options": [
+                "The insects deliberately chose to become resistant to the spray.",
+                "The insecticide directed mutations that created resistance in each insect.",
+                "Natural selection favored insects that already carried resistance alleles.",
+                "Resistant insects were the only ones that migrated into the area."
+            ],
+            "correct_index": 2,
+            "explanation": "Genetic variation already present in the population included some resistant individuals, and the insecticide acted as a selective pressure that let them survive and reproduce. Organisms do not choose to mutate, and the environment selects existing variation rather than causing specific beneficial mutations on demand.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-024",
+            "domain": "Heredity and Evolution",
+            "stem": "Which situation best illustrates genetic drift?",
+            "options": [
+                "A predator consistently removes the slowest prey each season.",
+                "An allele spreads because it improves an organism's survival.",
+                "Mating preferences gradually change allele frequencies in a population.",
+                "A random flood kills most individuals, changing allele frequencies by chance."
+            ],
+            "correct_index": 3,
+            "explanation": "Genetic drift is a change in allele frequencies caused by random events, not by the fitness of the alleles. A flood that randomly eliminates most of the population is a classic example. Predation on the slowest prey and mating preferences are forms of selection, not drift.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-025",
+            "domain": "Heredity and Evolution",
+            "stem": "A pedigree shows a trait appearing in every generation and affecting males and females in roughly equal numbers. Which pattern of inheritance is most consistent with this pedigree?",
+            "options": [
+                "An autosomal dominant trait",
+                "A sex-linked recessive trait",
+                "A mitochondrial trait",
+                "A trait caused by nondisjunction"
+            ],
+            "correct_index": 0,
+            "explanation": "A trait in every generation with both sexes affected equally fits dominant inheritance on an autosome. Sex-linked recessive traits appear more often in males and can skip generations, mitochondrial traits pass only through mothers, and nondisjunction is not a simple pedigree pattern.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-026",
+            "domain": "Heredity and Evolution",
+            "stem": "In the DNA double helix, adenine pairs with which base, and how many hydrogen bonds hold that pair together?",
+            "options": [
+                "Guanine, with three hydrogen bonds",
+                "Thymine, with two hydrogen bonds",
+                "Cytosine, with three hydrogen bonds",
+                "Uracil, with two hydrogen bonds"
+            ],
+            "correct_index": 1,
+            "explanation": "By complementary base pairing, adenine bonds with thymine in DNA using two hydrogen bonds, while guanine pairs with cytosine using three. Uracil replaces thymine only in RNA.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-027",
+            "domain": "Heredity and Evolution",
+            "stem": "The genes of the lac operon are expressed only when lactose is present and glucose is absent. What is the role of the repressor protein?",
+            "options": [
+                "It activates transcription whenever lactose is absent.",
+                "It chemically destroys lactose inside the cell.",
+                "It binds the operator and blocks transcription when lactose is absent.",
+                "It permanently shuts down the operon under all conditions."
+            ],
+            "correct_index": 2,
+            "explanation": "When lactose is absent, the repressor binds the operator and physically blocks RNA polymerase, preventing transcription. When lactose is present it binds the repressor and removes it, allowing expression. The repressor does not destroy lactose or permanently silence the operon.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-028",
+            "domain": "Heredity and Evolution",
+            "stem": "Two populations of frogs live on opposite sides of a wide river. Over time they no longer interbreed and can no longer produce fertile offspring together. This outcome is best described as which process?",
+            "options": [
+                "Convergent evolution",
+                "Genetic drift within a single population",
+                "Artificial selection by breeders",
+                "Speciation resulting from reproductive isolation"
+            ],
+            "correct_index": 3,
+            "explanation": "The populations have become reproductively isolated and cannot produce fertile offspring, which defines speciation. Convergent evolution is unrelated species evolving similar traits, genetic drift is a random change in one population, and no human breeder is involved here.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-029",
+            "domain": "Heredity and Evolution",
+            "stem": "In a dihybrid cross of two heterozygous pea plants, a student counts 315 round-yellow, 108 round-green, 101 wrinkled-yellow, and 32 wrinkled-green seeds. Which expected ratio do these numbers most closely match?",
+            "options": [
+                "9:3:3:1",
+                "1:1:1:1",
+                "3:1",
+                "1:2:1"
+            ],
+            "correct_index": 0,
+            "explanation": "Dividing the counts by the smallest value (32) gives roughly 9.8:3.4:3.2:1, which closely matches the 9:3:3:1 ratio expected when two genes assort independently. The other ratios would produce very different proportions among the four categories.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-030",
+            "domain": "Heredity and Evolution",
+            "stem": "Which observation provides the strongest evidence that two different species share a common ancestor?",
+            "options": [
+                "The two species currently live in the same habitat.",
+                "The two species have homologous structures with similar underlying anatomy.",
+                "The two species eat the same kind of food.",
+                "The two species grow to the same body size."
+            ],
+            "correct_index": 1,
+            "explanation": "Homologous structures share a common underlying anatomical plan inherited from a common ancestor, which is strong evidence of shared descent. Sharing a habitat, diet, or body size can result from similar environments and does not by itself indicate common ancestry.",
+            "reference": "AP Biology Course Description - Heredity and Evolution"
+        },
+        {
+            "id": "ap-bio-031",
+            "domain": "Organisms and Populations",
+            "stem": "When body temperature rises above its set point, sensors detect the change and responses cool the body back toward normal. This regulation is an example of which mechanism?",
+            "options": [
+                "Positive feedback",
+                "A control system with no set point",
+                "Negative feedback",
+                "An open control loop"
+            ],
+            "correct_index": 2,
+            "explanation": "A negative feedback loop counteracts a deviation from the set point, returning the system toward normal; cooling the body when it overheats is exactly this. Positive feedback would amplify the change, and homeostasis requires a set point.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-032",
+            "domain": "Organisms and Populations",
+            "stem": "A population introduced to a new habitat grows rapidly at first and then slows as resources become scarce. Which pattern best describes this growth?",
+            "options": [
+                "A straight line of constant increase",
+                "Continued exponential growth with no limit",
+                "Immediate decline in population size",
+                "Logistic growth that levels off at the carrying capacity"
+            ],
+            "correct_index": 3,
+            "explanation": "Slowdown as resources are depleted describes logistic growth, which approaches the environment's carrying capacity. Exponential growth would continue unchecked, and the population clearly increases rather than declining or growing in a straight line.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-033",
+            "domain": "Organisms and Populations",
+            "stem": "A population of rabbits has 200 individuals and a per capita growth rate of 0.1 per year with unlimited resources. Using the equation for exponential growth, what is the approximate increase in the population after one year?",
+            "options": [
+                "20 individuals",
+                "2 individuals",
+                "200 individuals",
+                "100 individuals"
+            ],
+            "correct_index": 0,
+            "explanation": "Exponential growth rate equals r times N, so 0.1 times 200 equals 20 individuals added in one year. The other values misapply the growth rate or confuse the increase with the original population size.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-034",
+            "domain": "Organisms and Populations",
+            "stem": "A vaccine exposes the body to an inactivated pathogen and leads to the production of memory cells. What is the main advantage of these memory cells?",
+            "options": [
+                "They prevent any future exposure to the pathogen.",
+                "They allow a faster and stronger immune response on later exposure.",
+                "They destroy all cells in the body indiscriminately.",
+                "They manufacture antibiotics against the pathogen."
+            ],
+            "correct_index": 1,
+            "explanation": "Memory cells persist after the first exposure and respond quickly and vigorously if the pathogen returns, often preventing illness. They cannot prevent exposure, they target the specific pathogen rather than all cells, and antibiotics are not produced by the immune system.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-035",
+            "domain": "Organisms and Populations",
+            "stem": "Which statement best explains why negative feedback is important for maintaining homeostasis in an organism?",
+            "options": [
+                "It amplifies changes to push conditions further from the set point.",
+                "It operates without any internal set point to maintain.",
+                "It counteracts deviations from a set point to keep internal conditions stable.",
+                "It functions only in plants and not in animals."
+            ],
+            "correct_index": 2,
+            "explanation": "Negative feedback detects departures from a set point and reverses them, keeping internal conditions within a stable range. Amplifying a change describes positive feedback, homeostasis depends on set points, and feedback loops occur in both plants and animals.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-036",
+            "domain": "Organisms and Populations",
+            "stem": "A freshwater fish lives in an environment that is hypotonic to its body fluids. To maintain water balance, the fish most likely does which of the following?",
+            "options": [
+                "Drinks large amounts of the surrounding water.",
+                "Actively pumps salts out of its body into the water.",
+                "Stops regulating water and solutes entirely.",
+                "Produces large amounts of dilute urine and takes in salts."
+            ],
+            "correct_index": 3,
+            "explanation": "In fresh water, water tends to enter the fish by osmosis and salts tend to be lost, so the fish excretes copious dilute urine and actively absorbs salts. Drinking large volumes or pumping salts out would worsen the imbalance, and osmoregulation continues at all times.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-037",
+            "domain": "Organisms and Populations",
+            "stem": "Water and dissolved minerals move upward through a plant mainly in which tissue, driven by the pull of transpiration?",
+            "options": [
+                "The xylem",
+                "The phloem",
+                "The cambium",
+                "The epidermis"
+            ],
+            "correct_index": 0,
+            "explanation": "Transpiration from the leaves pulls water up through the xylem, whose dead, hollow cells form continuous tubes. The phloem transports sugars, the cambium produces new vascular tissue, and the epidermis is the outer protective layer.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-038",
+            "domain": "Organisms and Populations",
+            "stem": "In a maze experiment, mice find the food reward faster with each repeated trial. Which type of behavior does this improvement most likely demonstrate?",
+            "options": [
+                "An innate fixed action pattern",
+                "A learned behavior developed through experience",
+                "A simple taxis toward light",
+                "Innate migration to a fixed location"
+            ],
+            "correct_index": 1,
+            "explanation": "Improved performance over repeated trials indicates learning based on experience. A fixed action pattern is an unvarying innate response, a taxis is directed movement toward or away from a stimulus, and migration is a seasonal innate behavior.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-039",
+            "domain": "Organisms and Populations",
+            "stem": "In a lichen, a fungus and an alga live together. The alga photosynthesizes and supplies food, while the fungus provides structure and retains moisture. This relationship is best described as which of the following?",
+            "options": [
+                "Parasitism",
+                "Competition",
+                "Mutualism",
+                "Predation"
+            ],
+            "correct_index": 2,
+            "explanation": "Both partners benefit, with the alga providing food and the fungus providing shelter and moisture, which defines mutualism. Parasitism benefits one partner at the other's expense, competition harms both, and predation involves one organism consuming another.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-040",
+            "domain": "Organisms and Populations",
+            "stem": "Insulin is released when blood glucose rises and acts to lower blood glucose back toward its normal range. This action is best described as which of the following?",
+            "options": [
+                "A ligand that never changes the behavior of target cells",
+                "An enzyme that directly digests glucose in the blood",
+                "A neurotransmitter acting on nerve cells only",
+                "A hormone that operates within a negative feedback loop"
+            ],
+            "correct_index": 3,
+            "explanation": "Insulin is a hormone that signals cells to take up glucose, reversing the rise and thereby maintaining homeostasis through negative feedback. It is not an enzyme, and its role is not limited to nerve cells, while it clearly does change target cell behavior.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-041",
+            "domain": "Organisms and Populations",
+            "stem": "A student measures a person's breathing rate at rest and after exercise, recording 12 breaths per minute at rest and 28 breaths per minute after exercise. Which explanation best accounts for the increase?",
+            "options": [
+                "Exercise raised carbon dioxide levels, so breathing increased to remove the excess.",
+                "Exercise reduced the body's need for oxygen, so breathing increased.",
+                "Breathing rate is unrelated to the level of physical activity.",
+                "The person stopped cellular respiration during exercise."
+            ],
+            "correct_index": 0,
+            "explanation": "Exercise increases cellular respiration, raising carbon dioxide and lowering blood pH, which stimulates faster breathing to expel the carbon dioxide. Exercise increases rather than decreases oxygen demand, breathing is clearly linked to activity, and respiration does not stop.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-042",
+            "domain": "Organisms and Populations",
+            "stem": "A species produces large numbers of small offspring and provides little or no parental care. This reproductive strategy is most likely favored in which type of environment?",
+            "options": [
+                "A stable environment with intense competition among offspring",
+                "An unpredictable environment where offspring survival is generally low",
+                "An environment with no predators or other dangers",
+                "An environment with unlimited resources and no mortality"
+            ],
+            "correct_index": 1,
+            "explanation": "Producing many offspring with little care is advantageous where chance of survival is low, because the odds that at least some survive improve with numbers. In stable, competitive, or low-mortality environments, fewer offspring with more parental care are typically favored.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-043",
+            "domain": "Organisms and Populations",
+            "stem": "Which sequence best describes how a signal is transmitted across a chemical synapse between two neurons?",
+            "options": [
+                "An electrical signal jumps directly across the synaptic cleft.",
+                "The postsynaptic neuron releases neurotransmitters onto the presynaptic neuron.",
+                "An action potential triggers release of neurotransmitters that bind receptors on the postsynaptic cell.",
+                "Hormones carry the electrical signal across the synaptic cleft."
+            ],
+            "correct_index": 2,
+            "explanation": "At a chemical synapse, an arriving action potential causes the presynaptic neuron to release neurotransmitters into the cleft, where they bind receptors on the postsynaptic cell and trigger a new signal. Neurotransmitters are released by the presynaptic cell, and hormones are not the signaling molecules at a synapse.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-044",
+            "domain": "Organisms and Populations",
+            "stem": "A population of 500 deer lives in a reserve with an estimated carrying capacity of 500. Which statement best describes the expected growth of this population?",
+            "options": [
+                "The population will continue to grow exponentially.",
+                "The population will decline rapidly toward zero.",
+                "The population will double in size each year.",
+                "Growth will be near zero because the population is at carrying capacity."
+            ],
+            "correct_index": 3,
+            "explanation": "When a population is at the carrying capacity, births and deaths balance and growth is near zero. Exponential growth and doubling would require resources well beyond the carrying capacity, and the population is not expected to crash simply because it is at capacity.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-045",
+            "domain": "Organisms and Populations",
+            "stem": "An ectotherm such as a lizard regulates its body temperature primarily by which means?",
+            "options": [
+                "Behavioral adjustments such as basking in the sun or seeking shade",
+                "Generating heat through sustained shivering alone",
+                "Producing sweat to release excess heat",
+                "Holding a strictly constant internal temperature regardless of the environment"
+            ],
+            "correct_index": 0,
+            "explanation": "Ectotherms rely mainly on external heat sources and behavior, moving between sun and shade to adjust body temperature. Shivering and sweating are limited in ectotherms, and they do not maintain a strictly constant internal temperature as endotherms do.",
+            "reference": "AP Biology Course Description - Organisms and Populations"
+        },
+        {
+            "id": "ap-bio-046",
+            "domain": "Ecology and Experimental Design",
+            "stem": "A student wants to test whether light intensity affects the growth of bean plants. Which factor is the independent variable in this experiment?",
+            "options": [
+                "The final height of the plants",
+                "The light intensity provided to the plants",
+                "The type of soil used in the pots",
+                "The volume of water given to each plant"
+            ],
+            "correct_index": 1,
+            "explanation": "The independent variable is the factor the experimenter deliberately changes, here the light intensity. Final height is the measured dependent variable, and soil type and water volume are controlled variables held constant across treatments.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-047",
+            "domain": "Ecology and Experimental Design",
+            "stem": "In the bean-plant experiment, all plants receive the same soil, water, and temperature. Why are these factors held constant across all treatment groups?",
+            "options": [
+                "To increase the number of treatment groups being tested",
+                "To make the plants grow faster during the experiment",
+                "To control confounding variables so only the tested factor differs",
+                "Because they are the independent variable of the study"
+            ],
+            "correct_index": 2,
+            "explanation": "Holding other factors constant prevents them from confounding the results, so any differences can be attributed to the tested variable. These factors are controlled variables, not additional treatments, and they are not designed to speed growth.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-048",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Why do researchers include several plants in each treatment group rather than using only one plant per group?",
+            "options": [
+                "To make the experiment finish more quickly",
+                "To avoid having to use a control group",
+                "To allow more than one independent variable to be tested",
+                "To reduce the effect of individual variation and random error"
+            ],
+            "correct_index": 3,
+            "explanation": "Replicating each treatment reduces the influence of individual differences and random error, making the results more reliable. Replication does not replace the control group, does not add independent variables, and does not by itself speed up the experiment.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-049",
+            "domain": "Ecology and Experimental Design",
+            "stem": "About 10 percent of the energy at one trophic level is transferred to the next level. If producers capture 20,000 kcal of energy, how much energy is available to secondary consumers?",
+            "options": [
+                "200 kcal",
+                "2,000 kcal",
+                "20 kcal",
+                "20,000 kcal"
+            ],
+            "correct_index": 0,
+            "explanation": "Primary consumers receive 10 percent of 20,000, or 2,000 kcal, and secondary consumers receive 10 percent of that, or 200 kcal. The value 2,000 is the energy at the primary consumer level, and the other values misapply the transfer rate.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-050",
+            "domain": "Ecology and Experimental Design",
+            "stem": "In a food web, a sharp decrease in the population of a primary consumer would most directly affect which of the following?",
+            "options": [
+                "The amount of sunlight reaching the ecosystem",
+                "Both the producers it eats and the predators that eat it",
+                "Only the nutrient content of the soil",
+                "The producers it eats, but no other organisms"
+            ],
+            "correct_index": 1,
+            "explanation": "A primary consumer links producers and higher trophic levels, so its decline affects both the producers it consumes and the predators that depend on it. Sunlight is not controlled by consumers, soil nutrients are only indirectly affected, and the effects extend beyond the producers alone.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-051",
+            "domain": "Ecology and Experimental Design",
+            "stem": "A biologist captures, marks, and releases 100 fish. Later she captures 80 fish, and 20 of these are marked. Using the mark-recapture method, what is the estimated population size?",
+            "options": [
+                "200",
+                "160",
+                "400",
+                "800"
+            ],
+            "correct_index": 2,
+            "explanation": "The estimate is the number marked times the number recaptured divided by the number of marked recaptures: (100 times 80) divided by 20, which equals 400. The other values do not follow from this proportion.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-052",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Which factor is most likely a density-dependent limitation on the growth of a population?",
+            "options": [
+                "A sudden forest fire that burns the habitat",
+                "A drought that affects all areas equally",
+                "A flood that kills individuals without regard to their number",
+                "Increased competition for limited food as population density rises"
+            ],
+            "correct_index": 3,
+            "explanation": "A density-dependent factor intensifies as population density increases, and competition for limited food fits because more individuals means less food per individual. Fires, droughts, and floods are density-independent because their impact does not depend on population size.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-053",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Which process removes carbon dioxide from the atmosphere and stores its carbon in the tissues of living organisms?",
+            "options": [
+                "Photosynthesis",
+                "Cellular respiration",
+                "Combustion of fossil fuels",
+                "Decomposition of dead organisms"
+            ],
+            "correct_index": 0,
+            "explanation": "Photosynthesis uses atmospheric carbon dioxide to build sugars, incorporating carbon into living tissue. Respiration, combustion, and decomposition all release carbon dioxide back to the atmosphere rather than removing it.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-054",
+            "domain": "Ecology and Experimental Design",
+            "stem": "After a glacier retreats, bare rock is first colonized by lichens and mosses, later by shrubs, and eventually by trees. This sequence is best described as which of the following?",
+            "options": [
+                "A climax community that never changes afterward",
+                "Primary succession beginning on newly exposed bare rock",
+                "Secondary succession following a disturbance of existing soil",
+                "A population crash caused by resource exhaustion"
+            ],
+            "correct_index": 1,
+            "explanation": "Succession that starts on bare rock with no pre-existing soil is primary succession. Secondary succession occurs where soil already exists, a climax community is the relatively stable endpoint rather than the sequence, and this progression is not a population crash.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-055",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Two habitats have the same number of species, but in Habitat A individuals are spread fairly evenly among species, while in Habitat B one species is far more abundant than the rest. Which habitat has greater species diversity?",
+            "options": [
+                "Habitat B, because one species is clearly dominant",
+                "Neither, because species richness is identical in both habitats",
+                "Habitat A, because species abundances are more evenly distributed",
+                "Both habitats are identical in diversity"
+            ],
+            "correct_index": 2,
+            "explanation": "Species diversity includes both richness and evenness, so a habitat with more even abundances, such as Habitat A, is more diverse even when richness is equal. Dominance by one species lowers evenness, and identical richness does not mean identical diversity.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-056",
+            "domain": "Ecology and Experimental Design",
+            "stem": "A scientist claims that a new fertilizer increases crop yield. Which experimental design would best test this claim?",
+            "options": [
+                "Treat every plot with fertilizer and then measure the yield in each.",
+                "Measure the yield of a single plot repeatedly over many years.",
+                "Compare yields from two fields that already differ in soil, water, and sunlight.",
+                "Randomly assign plots to fertilized and untreated groups, then compare yields."
+            ],
+            "correct_index": 3,
+            "explanation": "The strongest test uses a control group and random assignment so that the only systematic difference between groups is the fertilizer. Treating all plots or measuring one plot provides no comparison, and fields that differ in many ways would confound the result.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-057",
+            "domain": "Ecology and Experimental Design",
+            "stem": "A student counts 70 purple and 30 white flowers while expecting a 1:1 ratio. A chi-square test gives a value much larger than the critical value at p = 0.05. What is the appropriate conclusion?",
+            "options": [
+                "The observed numbers differ significantly from the expected ratio.",
+                "The observed numbers closely match the expected ratio.",
+                "The experiment lacked a control group and cannot be interpreted.",
+                "The data prove that the expected ratio is mathematically impossible."
+            ],
+            "correct_index": 0,
+            "explanation": "A chi-square value beyond the critical value at p = 0.05 means the deviation from the expected ratio is statistically significant, so the null hypothesis is rejected. It does not show a match, does not concern the control group, and does not prove anything impossible.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-058",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Two treatment groups both have a mean plant height of 15 cm, but one group has a standard error of 1 cm and the other a standard error of 4 cm. What does the smaller standard error indicate about the first group?",
+            "options": [
+                "Its true mean is definitely exactly 15 cm.",
+                "Its measurements are more precise, clustering more tightly around the mean.",
+                "It contained more than twice as many plants as the second group.",
+                "Standard error measures the maximum value in the data set."
+            ],
+            "correct_index": 1,
+            "explanation": "A smaller standard error indicates less variability and greater precision of the sample mean estimate. It does not guarantee that the true mean equals the sample mean, does not by itself specify sample size, and is not a maximum value.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-059",
+            "domain": "Ecology and Experimental Design",
+            "stem": "Why are most food chains limited to only about four or five trophic levels?",
+            "options": [
+                "Predators are unable to eat more than four different kinds of prey.",
+                "There are not enough species on Earth to form longer chains.",
+                "Too much energy is lost as heat at each level to support many more levels.",
+                "Producers generate an unlimited supply of energy for consumers."
+            ],
+            "correct_index": 2,
+            "explanation": "Because only about 10 percent of energy passes to the next trophic level and the rest is lost largely as heat, the energy remaining after several transfers is too small to support additional levels. The limit is about energy, not the number of prey species or global species counts.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        },
+        {
+            "id": "ap-bio-060",
+            "domain": "Ecology and Experimental Design",
+            "stem": "A researcher tests whether a drug reduces bacterial growth. One plate receives the drug, and a second plate receives an equal volume of the solvent without the drug. Why is the second plate included?",
+            "options": [
+                "To test the effect of a second, different drug.",
+                "To grow extra bacteria needed for the experiment.",
+                "To measure the drug's side effects on human cells.",
+                "It is a control showing that the solvent alone does not reduce growth."
+            ],
+            "correct_index": 3,
+            "explanation": "The solvent-only plate is a control that isolates the effect of the drug from the effect of the solvent. Without it, any reduction in growth could be due to the solvent rather than the drug. It does not test a second drug, add bacteria, or involve human cells.",
+            "reference": "AP Biology Course Description - Ecology and Experimental Design"
+        }
+    ]
+}

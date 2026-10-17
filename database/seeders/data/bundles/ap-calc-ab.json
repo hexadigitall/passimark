@@ -1,0 +1,858 @@
+{
+    "cert_key": "ap-calc-ab",
+    "title": "AP Calculus AB",
+    "issuer": "College Board",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/ap-calc-ab.json",
+    "variant_label": "AP Calculus AB Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 90,
+        "scoring": "1-5 AP scale",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public AP Calculus AB course description. Not a capture of past exam questions.",
+    "source_label": "AP Calculus AB practice bank",
+    "items": [
+        {
+            "id": "ap-calc-ab-001",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of (x² − 4)/(x − 2) as x approaches 2?",
+            "options": [
+                "4",
+                "2",
+                "0",
+                "The limit does not exist"
+            ],
+            "correct_index": 0,
+            "explanation": "Factor the numerator as (x − 2)(x + 2) and cancel the common factor, leaving x + 2, which approaches 4 as x approaches 2. Direct substitution alone gives the undefined form 0/0.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-002",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of sin(3x)/(5x) as x approaches 0?",
+            "options": [
+                "0",
+                "3/5",
+                "5/3",
+                "1"
+            ],
+            "correct_index": 1,
+            "explanation": "Rewrite the expression as (3/5)·(sin(3x)/(3x)). Since sin(3x)/(3x) approaches 1 as x approaches 0, the limit is 3/5, not 1 or 5/3.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-003",
+            "domain": "Limits and Continuity",
+            "stem": "Suppose that −x² ≤ f(x) ≤ x² for every value of x. What is the limit of f(x) as x approaches 0?",
+            "options": [
+                "−1",
+                "1",
+                "0",
+                "The limit cannot be determined"
+            ],
+            "correct_index": 2,
+            "explanation": "Both bounding functions −x² and x² approach 0 as x approaches 0, so by the squeeze theorem f(x) must also approach 0. The values ±1 come from misreading the bound.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-004",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of 1/x as x approaches 0 from the positive side?",
+            "options": [
+                "0",
+                "Negative infinity",
+                "1",
+                "Positive infinity"
+            ],
+            "correct_index": 3,
+            "explanation": "As x approaches 0 through positive values, 1/x grows without bound in the positive direction, so the one-sided limit is positive infinity. The other choices contradict the sign of 1/x for x > 0.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-005",
+            "domain": "Limits and Continuity",
+            "stem": "Let f be defined by f(x) = kx + 3 for x ≤ 2 and f(x) = x² − 1 for x > 2. What value of k makes f continuous at x = 2?",
+            "options": [
+                "2",
+                "0",
+                "−2",
+                "1"
+            ],
+            "correct_index": 1,
+            "explanation": "Continuity requires the two pieces to agree at x = 2: 2k + 3 = 2² − 1 = 3, so 2k = 0 and k = 0. The other values leave a jump at x = 2.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-006",
+            "domain": "Limits and Continuity",
+            "stem": "For a function f, the limit of f(x) as x approaches 1 from the left is 2, the limit from the right is 5, and f(1) = 2. How would you classify the behavior of f at x = 1?",
+            "options": [
+                "Jump discontinuity",
+                "Removable discontinuity",
+                "Infinite discontinuity",
+                "No discontinuity"
+            ],
+            "correct_index": 0,
+            "explanation": "The one-sided limits are both finite but unequal, which is exactly the definition of a jump discontinuity. A removable discontinuity would require the two one-sided limits to be equal.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-007",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of (3x² + 2x)/(5x² − 7) as x increases without bound?",
+            "options": [
+                "0",
+                "3/7",
+                "3/5",
+                "The limit does not exist"
+            ],
+            "correct_index": 2,
+            "explanation": "Divide numerator and denominator by x² to get (3 + 2/x)/(5 − 7/x²). As x grows without bound the terms 2/x and 7/x² vanish, leaving 3/5.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-008",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of (1 − cos x)/x² as x approaches 0?",
+            "options": [
+                "0",
+                "1",
+                "Positive infinity",
+                "1/2"
+            ],
+            "correct_index": 3,
+            "explanation": "Using 1 − cos x = 2 sin²(x/2), the ratio becomes 2[sin(x/2)/(x)]²·(1/2)·... more simply, the standard limit (1 − cos x)/x² approaches 1/2 as x approaches 0. The graph near 0 confirms a finite value below 1.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-009",
+            "domain": "Limits and Continuity",
+            "stem": "Let f(x) = 1/(x − 4)². What happens to the values of f(x) as x approaches 4?",
+            "options": [
+                "f(x) approaches 0",
+                "f(x) increases without bound",
+                "f(x) approaches 4",
+                "f(x) approaches 1"
+            ],
+            "correct_index": 1,
+            "explanation": "The numerator stays at 1 while the denominator (x − 4)² shrinks toward 0 through positive values, so the quotient grows without bound as x approaches 4 from either side.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-010",
+            "domain": "Limits and Continuity",
+            "stem": "Let f be continuous on the interval [0, 4] with f(0) = −1 and f(4) = 5. Which of the following conclusions is guaranteed by the Intermediate Value Theorem?",
+            "options": [
+                "f(c) = −2 for some c in (0, 4)",
+                "f′(c) = 0 for some c in (0, 4)",
+                "f(c) = 0 for some c in (0, 4)",
+                "f(c) = 6 for some c in (0, 4)"
+            ],
+            "correct_index": 2,
+            "explanation": "Because f is continuous and −1 < 0 < 5, the Intermediate Value Theorem guarantees a zero in (0, 4). The values −2 and 6 lie outside the guaranteed range, and no differentiability is given for a zero derivative.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-011",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of |x|/x as x approaches 0?",
+            "options": [
+                "The limit does not exist",
+                "The limit equals 0",
+                "The limit equals 1",
+                "The limit equals −1"
+            ],
+            "correct_index": 0,
+            "explanation": "For x > 0 the expression equals 1, and for x < 0 it equals −1. Since the one-sided limits disagree, the two-sided limit does not exist.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-012",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of (sqrt(x + 4) − 2)/x as x approaches 0?",
+            "options": [
+                "1/2",
+                "1/4",
+                "0",
+                "2"
+            ],
+            "correct_index": 1,
+            "explanation": "Multiply by the conjugate to obtain x/[x(sqrt(x + 4) + 2)] = 1/(sqrt(x + 4) + 2), which approaches 1/(2 + 2) = 1/4 as x approaches 0.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-013",
+            "domain": "Limits and Continuity",
+            "stem": "If f is continuous at x = a, what is the limit of 3f(x) − 2 as x approaches a?",
+            "options": [
+                "3a − 2",
+                "f(a) − 2",
+                "3f(a) − 2",
+                "The limit cannot be determined"
+            ],
+            "correct_index": 2,
+            "explanation": "Continuity means lim f(x) = f(a), and limits respect sums and constant multiples, so the limit of 3f(x) − 2 equals 3f(a) − 2. Substituting the input a instead of the output f(a) is the common error.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-014",
+            "domain": "Limits and Continuity",
+            "stem": "What is the limit of 2^x as x approaches negative infinity?",
+            "options": [
+                "2",
+                "1",
+                "Positive infinity",
+                "0"
+            ],
+            "correct_index": 3,
+            "explanation": "A negative exponent means 1 divided by a large positive power of 2, so 2^x approaches 0 as x decreases without bound. The horizontal asymptote of the graph is the x-axis.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-015",
+            "domain": "Limits and Continuity",
+            "stem": "Let f(x) = (x² − 5x + 6)/(x − 2). What is the limit of f(x) as x approaches 2?",
+            "options": [
+                "0",
+                "2",
+                "The limit does not exist",
+                "−1"
+            ],
+            "correct_index": 3,
+            "explanation": "Factor the numerator as (x − 2)(x − 3) and cancel, leaving x − 3, which approaches −1 as x approaches 2. The function is undefined at 2, but the limit still exists and equals −1.",
+            "reference": "AP Calculus AB Course Description - Limits and Continuity"
+        },
+        {
+            "id": "ap-calc-ab-016",
+            "domain": "Differentiation",
+            "stem": "If f(x) = 5x³ − 4x + 7, what is the value of f′(1)?",
+            "options": [
+                "11",
+                "15",
+                "8",
+                "9"
+            ],
+            "correct_index": 0,
+            "explanation": "Differentiate term by term: f′(x) = 15x² − 4. Evaluating at x = 1 gives 15 − 4 = 11. The value 15 comes from forgetting to subtract the constant term's derivative.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-017",
+            "domain": "Differentiation",
+            "stem": "If f(x) = x² sin x, which expression gives f′(x)?",
+            "options": [
+                "2x cos x",
+                "2x sin x + x² cos x",
+                "2x cos x + x² sin x",
+                "x² cos x"
+            ],
+            "correct_index": 1,
+            "explanation": "The product rule gives (x²)′ sin x + x²(sin x)′ = 2x sin x + x² cos x. The other choices differentiate only one factor or replace a derivative with the original function.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-018",
+            "domain": "Differentiation",
+            "stem": "If f(x) = (x + 1)/(x − 1), what is the derivative f′(x)?",
+            "options": [
+                "1/(x − 1)²",
+                "−1/(x − 1)²",
+                "−2/(x − 1)²",
+                "2/(x − 1)²"
+            ],
+            "correct_index": 2,
+            "explanation": "By the quotient rule the numerator is (x − 1)(1) − (x + 1)(1) = −2, so f′(x) = −2/(x − 1)². The other answers result from miscomputing that numerator.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-019",
+            "domain": "Differentiation",
+            "stem": "If f(x) = (3x² + 1)^5, which expression gives f′(x)?",
+            "options": [
+                "5(3x² + 1)^4",
+                "30(3x² + 1)^5",
+                "15x(3x² + 1)^4",
+                "30x(3x² + 1)^4"
+            ],
+            "correct_index": 3,
+            "explanation": "Apply the chain rule: the outer derivative 5(3x² + 1)^4 multiplies the inner derivative 6x, giving 30x(3x² + 1)^4. One distractor uses 3x as the inner derivative and another leaves the power unchanged.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-020",
+            "domain": "Differentiation",
+            "stem": "If f(x) = e^(2x), what is the value of f′(0)?",
+            "options": [
+                "2",
+                "0",
+                "1",
+                "e²"
+            ],
+            "correct_index": 0,
+            "explanation": "The chain rule gives f′(x) = 2e^(2x), and at x = 0 this equals 2e⁰ = 2. Since e⁰ = 1, the answer is 2 rather than e² or 1.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-021",
+            "domain": "Differentiation",
+            "stem": "If f(x) = ln(x² + 1), what is the value of f′(1)?",
+            "options": [
+                "2",
+                "1",
+                "1/2",
+                "ln 2"
+            ],
+            "correct_index": 1,
+            "explanation": "The chain rule gives f′(x) = 2x/(x² + 1), so f′(1) = 2/2 = 1. The value 2 forgets to divide by the inner function, and ln 2 ignores differentiation entirely.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-022",
+            "domain": "Differentiation",
+            "stem": "If f is differentiable at x = 4, which of the following must be true of f at x = 4?",
+            "options": [
+                "f′(4) = 0",
+                "f″(4) exists",
+                "f is continuous at x = 4",
+                "f has a local maximum at x = 4"
+            ],
+            "correct_index": 2,
+            "explanation": "Differentiability implies continuity, so f must be continuous at x = 4. Nothing forces the derivative to vanish, the second derivative to exist, or an extremum to occur there.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-023",
+            "domain": "Differentiation",
+            "stem": "If x² + y² = 25, what is dy/dx evaluated at the point (3, 4)?",
+            "options": [
+                "4/3",
+                "3/4",
+                "−4/3",
+                "−3/4"
+            ],
+            "correct_index": 3,
+            "explanation": "Implicit differentiation gives 2x + 2y(dy/dx) = 0, so dy/dx = −x/y. At (3, 4) this equals −3/4; the positive options ignore the negative sign from moving 2x across.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-024",
+            "domain": "Differentiation",
+            "stem": "What is the derivative of arcsin(x) evaluated at x = 1/2?",
+            "options": [
+                "2/√3",
+                "1/2",
+                "√3/2",
+                "1/√3"
+            ],
+            "correct_index": 0,
+            "explanation": "d/dx arcsin x = 1/√(1 − x²), so at x = 1/2 the value is 1/√(1 − 1/4) = 1/√(3/4) = 2/√3. The option √3/2 is cos(π/6) and is a distractor from a different formula.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-025",
+            "domain": "Differentiation",
+            "stem": "What is the equation of the line tangent to the graph of f(x) = x³ − 2x at the point (1, −1)?",
+            "options": [
+                "y = −x + 1",
+                "y = x − 2",
+                "y = 2x − 3",
+                "y = −2x + 1"
+            ],
+            "correct_index": 1,
+            "explanation": "f′(x) = 3x² − 2, so the slope at x = 1 is 1. Point-slope form y + 1 = 1(x − 1) simplifies to y = x − 2, which also passes through (1, −1).",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-026",
+            "domain": "Differentiation",
+            "stem": "The expression lim h→0 [(2 + h)³ − 8]/h defines the derivative of a function at a point. What is the value of this limit?",
+            "options": [
+                "8",
+                "10",
+                "12",
+                "6"
+            ],
+            "correct_index": 2,
+            "explanation": "This is the derivative of x³ at x = 2: 3x² = 3(4) = 12. Expanding (2 + h)³ = 8 + 12h + 6h² + h³ and dividing by h leaves 12 + 6h + h², which approaches 12.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-027",
+            "domain": "Differentiation",
+            "stem": "If f(x) = 4x⁴ − 3x², what is the value of f″(1)?",
+            "options": [
+                "48",
+                "36",
+                "6",
+                "42"
+            ],
+            "correct_index": 3,
+            "explanation": "Differentiate twice: f′(x) = 16x³ − 6x and f″(x) = 48x² − 6. Evaluating at x = 1 gives 48 − 6 = 42; the value 48 forgets to subtract the second term.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-028",
+            "domain": "Differentiation",
+            "stem": "What is the derivative of tan x evaluated at x = π/4?",
+            "options": [
+                "2",
+                "1",
+                "√2",
+                "1/2"
+            ],
+            "correct_index": 0,
+            "explanation": "Since d/dx tan x = sec² x and cos(π/4) = √2/2, we get sec(π/4) = √2 and therefore sec²(π/4) = 2. The option √2 confuses sec² with sec.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-029",
+            "domain": "Differentiation",
+            "stem": "If f(x) = sin(2x³), which expression gives f′(x)?",
+            "options": [
+                "cos(2x³)",
+                "2x² cos(2x³)",
+                "6x² cos(2x³)",
+                "6x² sin(2x³)"
+            ],
+            "correct_index": 2,
+            "explanation": "The chain rule multiplies the outer derivative cos(2x³) by the inner derivative 6x², giving 6x² cos(2x³). The other choices drop a factor of 3 or differentiate the outer function incorrectly.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-030",
+            "domain": "Differentiation",
+            "stem": "Let f(x) = x² for x < 2 and f(x) = kx − 4 for x ≥ 2. What value of k makes f differentiable at x = 2?",
+            "options": [
+                "2",
+                "8",
+                "6",
+                "4"
+            ],
+            "correct_index": 3,
+            "explanation": "Matching derivatives gives 2(2) = k, so k = 4, and this value also makes the pieces agree because 4(2) − 4 = 4 = 2². The other values fail the derivative test, the continuity test, or both.",
+            "reference": "AP Calculus AB Course Description - Differentiation"
+        },
+        {
+            "id": "ap-calc-ab-031",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the value of the definite integral of 3x² from 0 to 2?",
+            "options": [
+                "8",
+                "4",
+                "12",
+                "6"
+            ],
+            "correct_index": 0,
+            "explanation": "An antiderivative of 3x² is x³, so by the Fundamental Theorem of Calculus the integral equals 2³ − 0³ = 8. Multiplying 3 by 2 is a misreading of the integration rule.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-032",
+            "domain": "Integration and Accumulation",
+            "stem": "Which expression is an antiderivative of 6x² − 4x + 3?",
+            "options": [
+                "18x⁴ − 4x² + 3x + C",
+                "2x³ − 2x² + 3x + C",
+                "6x³ − 4x² + 3x + C",
+                "2x³ − 4x² + 3 + C"
+            ],
+            "correct_index": 1,
+            "explanation": "Reverse the power rule: ∫6x² dx = 2x³, ∫4x dx = 2x², and ∫3 dx = 3x, giving 2x³ − 2x² + 3x + C. The other choices add 1 to exponents or drop terms instead of dividing.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-033",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the indefinite integral of e^(3x) with respect to x?",
+            "options": [
+                "e^(3x) + C",
+                "3e^(3x) + C",
+                "(1/3)e^(3x) + C",
+                "e^(3x)/(3x) + C"
+            ],
+            "correct_index": 2,
+            "explanation": "Because the derivative of e^(3x) is 3e^(3x), an antiderivative must divide by 3, giving (1/3)e^(3x) + C. Multiplying by 3 reverses the chain rule in the wrong direction.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-034",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the value of the definite integral of 2t + 1 from 1 to 4?",
+            "options": [
+                "16",
+                "20",
+                "14",
+                "18"
+            ],
+            "correct_index": 3,
+            "explanation": "An antiderivative is t² + t, so the integral equals (4² + 4) − (1² + 1) = 20 − 2 = 18. The value 20 evaluates only the upper limit and forgets the subtraction.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-035",
+            "domain": "Integration and Accumulation",
+            "stem": "What is d/dx of the definite integral of sin t from 0 to x³?",
+            "options": [
+                "sin(x³) · 3x²",
+                "sin(x³)",
+                "3x²",
+                "sin x · 3x²"
+            ],
+            "correct_index": 0,
+            "explanation": "By the Fundamental Theorem of Calculus combined with the chain rule, evaluate the integrand at the upper limit and multiply by the derivative of that limit: sin(x³) · 3x².",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-036",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the indefinite integral of 2x(x² + 1)³ with respect to x?",
+            "options": [
+                "(x² + 1)^4 + C",
+                "(1/4)(x² + 1)^4 + C",
+                "2(x² + 1)^4 + C",
+                "(1/3)(x² + 1)^4 + C"
+            ],
+            "correct_index": 1,
+            "explanation": "Let u = x² + 1, so du = 2x dx. The integral becomes ∫u³ du = u⁴/4 + C = (1/4)(x² + 1)^4 + C. The other choices use the wrong power rule exponent or forget to divide.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-037",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the average value of f(x) = x² on the interval [0, 4]?",
+            "options": [
+                "64/3",
+                "16",
+                "16/3",
+                "8"
+            ],
+            "correct_index": 2,
+            "explanation": "The average value is (1/(4 − 0))∫₀⁴ x² dx = (1/4)(64/3) = 16/3. The choice 64/3 omits division by the interval length, and 16 is simply f(4).",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-038",
+            "domain": "Integration and Accumulation",
+            "stem": "Let g(x) be the definite integral of t² − 4 from 1 to x. At which value of x does g have a relative minimum?",
+            "options": [
+                "x = −2",
+                "x = 1",
+                "x = 4",
+                "x = 2"
+            ],
+            "correct_index": 3,
+            "explanation": "By the Fundamental Theorem of Calculus, g′(x) = x² − 4, which changes from negative to positive at x = 2. At x = −2 the derivative changes from positive to negative, giving a relative maximum instead.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-039",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the right Riemann sum with 4 equal subintervals for f(x) = x² on the interval [0, 2]?",
+            "options": [
+                "15/4",
+                "7/4",
+                "3",
+                "17/4"
+            ],
+            "correct_index": 0,
+            "explanation": "Each subinterval has width 1/2, and the right endpoints are 1/2, 1, 3/2, and 2. The sum is (1/2)(0.25 + 1 + 2.25 + 4) = 15/4. The value 7/4 is the left Riemann sum.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-040",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the indefinite integral of (x + 3/x) for x > 0?",
+            "options": [
+                "ln(3x²) + C",
+                "x²/2 + 3 ln x + C",
+                "x²/2 + 3/x + C",
+                "x² + 3 ln x + C"
+            ],
+            "correct_index": 1,
+            "explanation": "Split the integrand: the antiderivative of x is x²/2 and the antiderivative of 3/x is 3 ln x for x > 0. The other choices differentiate powers instead of integrating them.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-041",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the value of the definite integral of cos x from 0 to π/2?",
+            "options": [
+                "0",
+                "π/2",
+                "1",
+                "−1"
+            ],
+            "correct_index": 2,
+            "explanation": "An antiderivative of cos x is sin x, so the integral equals sin(π/2) − sin 0 = 1 − 0 = 1. The value π/2 is the length of the interval, not the area.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-042",
+            "domain": "Integration and Accumulation",
+            "stem": "What is d/dx of the definite integral of t³ from x to 5?",
+            "options": [
+                "x³",
+                "(625/4) − x⁴/4",
+                "125",
+                "−x³"
+            ],
+            "correct_index": 3,
+            "explanation": "Rewrite the integral as the difference of two integrals with a fixed lower limit; the constant part differentiates to 0 and the variable part contributes a negative sign, leaving −x³.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-043",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the indefinite integral of cos(4x) with respect to x?",
+            "options": [
+                "(1/4) sin(4x) + C",
+                "−(1/4) sin(4x) + C",
+                "4 sin(4x) + C",
+                "sin(4x) + C"
+            ],
+            "correct_index": 0,
+            "explanation": "Since the derivative of sin(4x) is 4 cos(4x), divide by 4 to get (1/4) sin(4x) + C. The negative sign belongs to an antiderivative of cosine functions like −cos x, not to sin.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-044",
+            "domain": "Integration and Accumulation",
+            "stem": "If f is continuous on [2, 6] and the definite integral of f from 2 to 6 equals 12, what is the average value of f on that interval?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "The average value equals the integral divided by the interval length: 12/(6 − 2) = 3. Dividing by 12 or by the endpoints themselves gives the other distractors.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-045",
+            "domain": "Integration and Accumulation",
+            "stem": "What is the indefinite integral of 1/x² with respect to x?",
+            "options": [
+                "ln(x²) + C",
+                "1/x + C",
+                "−2/x³ + C",
+                "−1/x + C"
+            ],
+            "correct_index": 3,
+            "explanation": "Write x^(−2) and apply the power rule: x^(−1)/(−1) = −1/x, so the antiderivative is −1/x + C. The choice 1/x is close but its derivative is −1/x², the opposite sign.",
+            "reference": "AP Calculus AB Course Description - Integration and Accumulation"
+        },
+        {
+            "id": "ap-calc-ab-046",
+            "domain": "Differential Equations and Applications",
+            "stem": "Which of the following functions satisfies the differential equation dy/dx = 3y?",
+            "options": [
+                "y = e^(3x)",
+                "y = 3eˣ",
+                "y = 3x²",
+                "y = ln(3x)"
+            ],
+            "correct_index": 0,
+            "explanation": "The general solution of dy/dx = 3y is y = Ce^(3x), so y = e^(3x) works because its derivative 3e^(3x) equals 3y. For y = 3eˣ the two sides are 3eˣ and 9eˣ, which never agree.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-047",
+            "domain": "Differential Equations and Applications",
+            "stem": "A population grows at a rate proportional to its size and doubles every 6 years. Which expression models the population P at time t years, starting from P₀?",
+            "options": [
+                "P = P₀·2^(6t)",
+                "P = P₀·2^(t/6)",
+                "P = P₀(1 + 2t)",
+                "P = P₀ e^(6t)"
+            ],
+            "correct_index": 1,
+            "explanation": "Doubling every 6 years means the exponent of 2 is t/6, so P = P₀·2^(t/6). An exponent of 6t would double every 1/6 year, and 1 + 2t grows linearly rather than exponentially.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-048",
+            "domain": "Differential Equations and Applications",
+            "stem": "Let dy/dx = x + y with y(0) = 1. Using one step of Euler's method with step size 0.5, what is the approximate value of y at x = 0.5?",
+            "options": [
+                "1.0",
+                "2.0",
+                "1.5",
+                "0.5"
+            ],
+            "correct_index": 2,
+            "explanation": "Euler's step is y₁ = y₀ + h·f(x₀, y₀) = 1 + 0.5(0 + 1) = 1.5. The value 1.0 ignores the step's slope, and 2.0 adds the slope without the step size.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-049",
+            "domain": "Differential Equations and Applications",
+            "stem": "Which of the following is an equilibrium solution of the differential equation dy/dx = y − 3?",
+            "options": [
+                "y = −3",
+                "y = 3x",
+                "y = 0",
+                "y = 3"
+            ],
+            "correct_index": 3,
+            "explanation": "An equilibrium solution is constant, so its derivative is 0; setting y − 3 = 0 gives y = 3, which satisfies the equation for every x. The other choices have nonzero derivatives.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-050",
+            "domain": "Differential Equations and Applications",
+            "stem": "What is the particular solution of dy/dx = 2x that satisfies the initial condition y(1) = 3?",
+            "options": [
+                "y = x² + 2",
+                "y = 2x + 1",
+                "y = x² + 1",
+                "y = 2x² + 1"
+            ],
+            "correct_index": 0,
+            "explanation": "Integrating gives y = x² + C, and y(1) = 3 forces 1 + C = 3, so C = 2 and y = x² + 2. The choice y = x² + 1 satisfies the differential equation but not the initial condition.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-051",
+            "domain": "Differential Equations and Applications",
+            "stem": "If dy/dx = −y/x and y(2) = 3, what is the value of y when x = 4?",
+            "options": [
+                "6",
+                "3/2",
+                "3/4",
+                "12"
+            ],
+            "correct_index": 1,
+            "explanation": "Separating variables gives dy/y = −dx/x, so y = k/x. The condition y(2) = 3 gives k = 6, and therefore y(4) = 6/4 = 3/2. The other values mishandle the constant of proportionality.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-052",
+            "domain": "Differential Equations and Applications",
+            "stem": "The radius of a circle increases at a constant rate of 3 cm/s. How fast is the area of the circle increasing at the instant when the radius is 5 cm?",
+            "options": [
+                "15π cm²/s",
+                "6π cm²/s",
+                "30π cm²/s",
+                "75π cm²/s"
+            ],
+            "correct_index": 2,
+            "explanation": "Differentiate A = πr² with respect to time: dA/dt = 2πr(dr/dt) = 2π(5)(3) = 30π cm²/s. The value 15π omits the factor of 2 from the power rule.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-053",
+            "domain": "Differential Equations and Applications",
+            "stem": "A 13-meter ladder leans against a vertical wall, and its bottom slides away from the wall at 2 m/s. How fast is the top of the ladder sliding down when the bottom is 5 meters from the wall?",
+            "options": [
+                "2 m/s",
+                "5/3 m/s",
+                "13/5 m/s",
+                "5/6 m/s"
+            ],
+            "correct_index": 3,
+            "explanation": "From x² + y² = 169 with x = 5 we get y = 12. Implicit differentiation in time gives dy/dt = −(x/y)(dx/dt) = −(5/12)(2) = −5/6, so the top slides down at 5/6 m/s.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-054",
+            "domain": "Differential Equations and Applications",
+            "stem": "A rectangle has a fixed perimeter of 20 meters. Which dimensions produce the rectangle of greatest area?",
+            "options": [
+                "5 m by 5 m",
+                "4 m by 6 m",
+                "3 m by 7 m",
+                "2 m by 8 m"
+            ],
+            "correct_index": 0,
+            "explanation": "The sides sum to 10, so the area x(10 − x) is a downward parabola maximized at x = 5, giving a 5 by 5 square with area 25. The other pairs have areas 24, 21, and 16.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-055",
+            "domain": "Differential Equations and Applications",
+            "stem": "A particle moves along a line with velocity v(t) = t² − 4t + 3. What is the acceleration of the particle at time t = 4?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "correct_index": 1,
+            "explanation": "Acceleration is the derivative of velocity: a(t) = 2t − 4, so a(4) = 8 − 4 = 4. The value 3 is the velocity v(4), not the acceleration.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-056",
+            "domain": "Differential Equations and Applications",
+            "stem": "A function f satisfies the hypotheses of the Mean Value Theorem on [1, 5] and f(5) − f(1) = 12. What value must f′(c) take for at least one c in (1, 5)?",
+            "options": [
+                "12",
+                "4",
+                "3",
+                "1/3"
+            ],
+            "correct_index": 2,
+            "explanation": "The Mean Value Theorem gives f′(c) = (f(5) − f(1))/(5 − 1) = 12/4 = 3. The value 4 is the length of the interval, and 12 forgets to divide by that length.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-057",
+            "domain": "Differential Equations and Applications",
+            "stem": "A drug leaves the bloodstream at a rate proportional to the amount present. Starting with 100 mg, only 50 mg remains after 2 hours. How much remains after 4 hours?",
+            "options": [
+                "12.5 mg",
+                "50 mg",
+                "75 mg",
+                "25 mg"
+            ],
+            "correct_index": 3,
+            "explanation": "The amount halves every 2 hours, so after 4 hours, two half-lives, 100 mg is reduced to 25 mg. The value 12.5 mg would require a third half-life at 6 hours.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-058",
+            "domain": "Differential Equations and Applications",
+            "stem": "A population measured in thousands is modeled by dy/dx = 0.2y(1 − y/50). What is the carrying capacity predicted by this logistic model?",
+            "options": [
+                "50",
+                "100",
+                "0.2",
+                "0"
+            ],
+            "correct_index": 0,
+            "explanation": "The logistic equation dy/dx = ky(1 − y/K) has carrying capacity K, so K = 50 thousand. At y = 50 the growth factor (1 − y/50) is 0 and the population stops changing.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-059",
+            "domain": "Differential Equations and Applications",
+            "stem": "Which of the following functions is a solution of the differential equation dy/dx = 2y?",
+            "options": [
+                "y = 2x",
+                "y = Ce^(2x)",
+                "y = 2eˣ",
+                "y = x²"
+            ],
+            "correct_index": 1,
+            "explanation": "Separating variables gives y = Ce^(2x), whose derivative 2Ce^(2x) equals 2y. For y = 2eˣ the two sides are 2eˣ and 4eˣ, and for y = 2x they are 2 and 4x, which never agree.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        },
+        {
+            "id": "ap-calc-ab-060",
+            "domain": "Differential Equations and Applications",
+            "stem": "A tank's volume changes at the constant rate dV/dt = −5 cubic meters per minute. What is the total decrease in volume from t = 0 to t = 8 minutes?",
+            "options": [
+                "8 m³",
+                "5 m³",
+                "40 m³",
+                "10 m³"
+            ],
+            "correct_index": 2,
+            "explanation": "The total change is the integral of the rate over 8 minutes, so the decrease equals |−5 × 8| = 40 m³. The other choices confuse the rate with the time or misapply the multiplication.",
+            "reference": "AP Calculus AB Course Description - Differential Equations and Applications"
+        }
+    ]
+}
