@@ -1,0 +1,858 @@
+{
+    "cert_key": "gotranscript",
+    "title": "GoTranscript Transcription Test",
+    "issuer": "GoTranscript",
+    "region": "GLOBAL-ACADEMIC",
+    "outline_file": "outlines/gotranscript.json",
+    "variant_label": "GoTranscript Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 60,
+        "scoring": "Editors rate 5 (96-100%) down to 1 (0-82%); 3 transcriptions below 3.6 average is a fail",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public GoTranscript transcription guidelines. Not a capture of past test questions.",
+    "source_label": "GoTranscript practice bank",
+    "items": [
+        {
+            "id": "gotranscript-001",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "A speaker in a clean verbatim file says \"gonna\". How should this word be written in the transcript?",
+            "options": [
+                "gonna",
+                "gunna",
+                "going to",
+                "gon' to"
+            ],
+            "correct_index": 2,
+            "explanation": "Clean verbatim expands slang to its standard form, so \"gonna\" becomes \"going to\"; leaving the slang spelling is a full verbatim choice, and the other spellings are not words.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-002",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In clean verbatim, the spoken word \"gotcha\" must be written as which of the following?",
+            "options": [
+                "got you",
+                "gotcha",
+                "gotten you",
+                "got yer"
+            ],
+            "correct_index": 0,
+            "explanation": "Clean verbatim expands slang to its standard form, so \"gotcha\" becomes \"got you\"; keeping \"gotcha\" is the full-verbatim treatment and the other options are not standard English.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-003",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In clean verbatim, the reactions \"yeah\", \"yep\", \"yup\" and \"mm-hmm\" should all be written as which word?",
+            "options": [
+                "uh-huh",
+                "yes",
+                "okay",
+                "right"
+            ],
+            "correct_index": 1,
+            "explanation": "The guidelines require \"yeah\", \"yep\", \"yap\", \"yup\" and \"mm-hmm\" to be normalised to \"yes\" in clean verbatim; the other words are not the specified normalisation.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-004",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "The word \"alright\" appears in a clean verbatim transcript. How must it be written?",
+            "options": [
+                "alright",
+                "allright",
+                "all-right",
+                "all right"
+            ],
+            "correct_index": 3,
+            "explanation": "The rules state \"alright\" must be written as \"all right\" in clean verbatim; the other forms are either the unedited spelling or non-standard hyphenated variants.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-005",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "How must the affirmative \"OK\" or \"Ok\" always be spelled, in every verbatim format?",
+            "options": [
+                "OK",
+                "Okay",
+                "Ok",
+                "O.K."
+            ],
+            "correct_index": 1,
+            "explanation": "The guidelines state never to spell \"Ok\" or \"OK\" and that it must always be spelled \"Okay\" regardless of the verbatim format.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-006",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "Which of these is transcribed in full verbatim but removed in clean verbatim?",
+            "options": [
+                "Names of people",
+                "Emphasis words",
+                "Spoken contractions",
+                "Fillers and stutters"
+            ],
+            "correct_index": 3,
+            "explanation": "Full verbatim keeps fillers, stutters, false starts and repetitions, while clean verbatim removes them; names, emphasis words and contractions are kept in both formats.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-007",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "A speaker exclaims \"Oh my God\" in a clean verbatim file. What should the transcriber do?",
+            "options": [
+                "Keep the expression",
+                "Replace it with a neutral phrase",
+                "Delete it as a filler",
+                "Mark it unintelligible"
+            ],
+            "correct_index": 0,
+            "explanation": "Expressions such as \"Oh my God\", \"Oh dear\", \"Oh my\", \"Oh boy\" and \"Oh\" are kept regardless of verbatim type, so the transcriber should not delete or rewrite them.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-008",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "A speaker repeats a word for emphasis: \"No, no, no.\" In clean verbatim, how is this handled?",
+            "options": [
+                "Reduce it to a single \"No\"",
+                "Mark the repeats unintelligible",
+                "Keep the repetition",
+                "Replace it with \"No\" once"
+            ],
+            "correct_index": 2,
+            "explanation": "Clean verbatim removes ordinary repetitions but keeps repetitions of words that express emphasis, such as \"No, no, no\" or \"very, very happy\".",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-009",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In full verbatim, how is a spoken contraction such as \"it's\" handled?",
+            "options": [
+                "Expanded to \"it is\"",
+                "Kept exactly as spoken",
+                "Changed to \"its\"",
+                "Marked as slang"
+            ],
+            "correct_index": 1,
+            "explanation": "Spoken contractions must never be changed; if a speaker says \"it's\", it is kept as \"it's\" regardless of the verbatim type.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-010",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In clean verbatim, when may a \"yeah\" or \"yes\" reaction be kept in the text?",
+            "options": [
+                "Never",
+                "Whenever it appears",
+                "Only at the start of a paragraph",
+                "When it answers a question"
+            ],
+            "correct_index": 3,
+            "explanation": "For clean verbatim, the yes/yeah reactions are omitted to keep the text fluent, unless they are answers to a question asked of the speaker.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-011",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In clean verbatim, when is a false start kept rather than removed?",
+            "options": [
+                "When it adds information",
+                "When it is longer than five words",
+                "When the speaker repeats it",
+                "Never"
+            ],
+            "correct_index": 0,
+            "explanation": "Clean verbatim removes false starts unless they add information; a false start that carries meaning is retained.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-012",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In clean verbatim, the slang \"wanna\" must be written as which of the following?",
+            "options": [
+                "wanna",
+                "wan na",
+                "want to",
+                "wanna to"
+            ],
+            "correct_index": 2,
+            "explanation": "Clean verbatim expands \"gonna\", \"wanna\", \"gotcha\" and similar slang to full words, so \"wanna\" becomes \"want to\".",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-013",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "A speaker uses \"you know\" in a sentence. In clean verbatim, what should the transcriber do?",
+            "options": [
+                "Always delete it",
+                "Keep it if removing it changes the meaning",
+                "Always keep it",
+                "Mark it inaudible"
+            ],
+            "correct_index": 1,
+            "explanation": "Words like \"you know\", \"like\", \"so\" and \"kind of\" are removed as fillers only when they do not change the meaning; context decides, so they must not be deleted blindly.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-014",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "In full verbatim, how are fillers such as \"uh\" and \"um\" treated?",
+            "options": [
+                "Removed as fillers",
+                "Replaced with commas",
+                "Marked unintelligible",
+                "Transcribed as spoken"
+            ],
+            "correct_index": 3,
+            "explanation": "Full verbatim includes everything the speaker says, so fillers, stutters, false starts and repetitions are all transcribed rather than cleaned up.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-015",
+            "domain": "Verbatim Formats and Editing",
+            "stem": "Which statement best describes full verbatim?",
+            "options": [
+                "It includes everything the speaker says",
+                "It removes all fillers",
+                "It paraphrases the speaker",
+                "It corrects the speaker's grammar"
+            ],
+            "correct_index": 0,
+            "explanation": "Full verbatim transcribes everything the speaker says, including fillers and stutters, whereas clean verbatim removes those; no format paraphrases or corrects grammar.",
+            "reference": "GoTranscript transcriber guidelines - Verbatim Formats and Editing"
+        },
+        {
+            "id": "gotranscript-016",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "What is the required format for a timestamp in a GoTranscript file?",
+            "options": [
+                "(00:00:00)",
+                "00:00:00",
+                "[00:00:00]",
+                "<00:00:00>"
+            ],
+            "correct_index": 2,
+            "explanation": "The timestamping format must be square brackets around the time, [00:00:00], and the mark is bolded.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-017",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "How often must timestamps be inserted when the client requests interval timestamping?",
+            "options": [
+                "Every 2 minutes",
+                "Every 5 minutes",
+                "Every 10 minutes",
+                "At the start only"
+            ],
+            "correct_index": 0,
+            "explanation": "One of the timestamping types places a timestamp every 2 minutes; the alternative is a timestamp at every speaker change.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-018",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "A transcriber handles the portion of a file from 20 to 30 minutes. Where should the timestamps begin?",
+            "options": [
+                "At 00:00:00",
+                "At 20:00:00",
+                "At 10:00:00",
+                "At 30:00:00"
+            ],
+            "correct_index": 1,
+            "explanation": "Timestamping always considers the whole file, so a segment starting at 20 minutes must begin its timestamps at 20:00:00, not reset to zero.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-019",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "A comment next to the file asks the transcriber to use the embedded time. What must the transcriber do?",
+            "options": [
+                "Ignore the comment",
+                "Add 00:00:00 to every line",
+                "Use the on-screen tool clock only",
+                "Download the file to read the burned-in time"
+            ],
+            "correct_index": 3,
+            "explanation": "When the client asks for the embedded or burned-in time, the file must be downloaded so the video can be watched and the correct in-picture time used.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-020",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "How must a speaker label be formatted in the transcript?",
+            "options": [
+                "Name in quotes, then a hyphen",
+                "Name in bold, then a colon and a single space",
+                "Name in capitals, then a tab",
+                "Name, then a semicolon"
+            ],
+            "correct_index": 1,
+            "explanation": "Speaker labels are written in bold followed by a colon and one space; a tab must never be used to separate the label from the speech.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-021",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "Which key must never be used to separate a speaker label from the speech?",
+            "options": [
+                "Space",
+                "Colon",
+                "Enter",
+                "Tab"
+            ],
+            "correct_index": 3,
+            "explanation": "The guidelines allow only one space after the colon of a speaker label and explicitly forbid using the Tab button.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-022",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "When the transcriber cannot tell who is speaking, what is placed before the speaker label?",
+            "options": [
+                "A question mark",
+                "A colon",
+                "An asterisk",
+                "A hyphen"
+            ],
+            "correct_index": 0,
+            "explanation": "If the speaker cannot be positively identified, a question mark is added before the label, for example \"?David\" or \"?Speaker 3\".",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-023",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "What do the guidelines say about speaker labels when only one person is speaking?",
+            "options": [
+                "Omit the label",
+                "Use \"Speaker\" without a number",
+                "Always include a label",
+                "Bold the first line only"
+            ],
+            "correct_index": 2,
+            "explanation": "The rules require a speaker label even when there is only one speaker; a label is never omitted for a single-speaker file.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-024",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "If a speaker is introduced by full name, what may be done later in the file?",
+            "options": [
+                "Switch to initials only",
+                "Drop to the last name",
+                "Add a second label type",
+                "Reuse \"Speaker 1\""
+            ],
+            "correct_index": 1,
+            "explanation": "After the full name appears, the last name may be used later, just as a title such as Doctor or Pastor may be dropped; this is optional and not an error.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-025",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "Which of these is the most descriptive speaker label for the person hosting a talk show?",
+            "options": [
+                "Person 1",
+                "Speaker",
+                "Male voice",
+                "Host"
+            ],
+            "correct_index": 3,
+            "explanation": "Labels should describe the speaker's role as specifically as possible, such as Host, Interviewer, Interviewee, Facilitator, Caller or Receiver.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-026",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "Besides speaker labels, what else may be bolded in a transcript?",
+            "options": [
+                "Marks that carry a timestamp",
+                "Every proper noun",
+                "The first word of each paragraph",
+                "Nothing related to time"
+            ],
+            "correct_index": 0,
+            "explanation": "Everything with a timestamp is bolded, and nothing except the speaker labels and timed marks should be bolded.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-027",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "If the speaker's name appears in the file title, how should it be used?",
+            "options": [
+                "Ignored, since titles are unreliable",
+                "Replaced with a generic role name",
+                "Used as the speaker label",
+                "Put in square brackets"
+            ],
+            "correct_index": 2,
+            "explanation": "If a speaker's name is mentioned in the audio or shown in the file title, that name is used as the speaker label.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-028",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "Which bracket style must timestamps and notes use?",
+            "options": [
+                "Parentheses ( )",
+                "Square brackets [ ]",
+                "Curly braces { }",
+                "Angle brackets < >"
+            ],
+            "correct_index": 1,
+            "explanation": "Notes and marks use square brackets; the guidelines state to never use parentheses instead of square brackets.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-029",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "Which marks should carry a timestamp and be bolded?",
+            "options": [
+                "Only speaker labels",
+                "Only the first line",
+                "Only paragraph breaks",
+                "Inaudible, unintelligible and similar timed marks"
+            ],
+            "correct_index": 3,
+            "explanation": "Every mark that contains a time, such as [inaudible 00:00:00] or [pause 00:00:00], is bolded, along with speaker labels and timestamp marks.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-030",
+            "domain": "Timestamping and Speaker Labels",
+            "stem": "A speaker is consistently addressed as \"Doctor\". The guidelines say this title may be:",
+            "options": [
+                "Dropped later in the file",
+                "Never used at all",
+                "Repeated on every line",
+                "Written inside brackets"
+            ],
+            "correct_index": 0,
+            "explanation": "Titles such as Doctor or Pastor may be dropped later in the transcription once established; keeping or dropping them is optional and not treated as an error.",
+            "reference": "GoTranscript transcriber guidelines - Timestamping and Speaker Labels"
+        },
+        {
+            "id": "gotranscript-031",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "[inaudible 00:00:00] should be used when the speech cannot be heard because of:",
+            "options": [
+                "The speaker's accent",
+                "The speaker's grammar",
+                "Poor recording or noise",
+                "A foreign language"
+            ],
+            "correct_index": 2,
+            "explanation": "[inaudible 00:00:00] is used when speech cannot be heard at all because of poor recording or background noise, unlike unintelligible speech which is heard but not understood.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-032",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "[unintelligible 00:00:00] is used when the speech:",
+            "options": [
+                "Can be heard but cannot be understood",
+                "Cannot be heard at all",
+                "Is a foreign language",
+                "Is too quiet to record"
+            ],
+            "correct_index": 0,
+            "explanation": "[unintelligible 00:00:00] marks speech that can be heard but cannot be understood, for example because of the speaker's manner of speech or accent.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-033",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Which keyboard shortcut inserts the inaudible tag in the GoTranscript tool?",
+            "options": [
+                "Ctrl + I",
+                "Ctrl + K",
+                "Ctrl + N",
+                "Ctrl + U"
+            ],
+            "correct_index": 1,
+            "explanation": "Ctrl + K inserts [inaudible 00:00:00], while Ctrl + I inserts the unintelligible tag.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-034",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Which keyboard shortcut inserts the unintelligible tag?",
+            "options": [
+                "Ctrl + K",
+                "Ctrl + M",
+                "Ctrl + D",
+                "Ctrl + I"
+            ],
+            "correct_index": 3,
+            "explanation": "Ctrl + I inserts [unintelligible 00:00:00], while Ctrl + K is used for the inaudible tag.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-035",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Which note is correctly written for a brief laugh?",
+            "options": [
+                "(Laughs)",
+                "Laughing",
+                "[Laughing out loud]",
+                "[laughs]"
+            ],
+            "correct_index": 3,
+            "explanation": "Sound-event notes use square brackets and lower-case wording, so [laughs] is correct; parentheses are forbidden and the full phrase is not the standard tag.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-036",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Which markings may a transcriber use when speech cannot be made out?",
+            "options": [
+                "Only [inaudible] and [unintelligible]",
+                "Any descriptive note",
+                "Custom abbreviations",
+                "Blank brackets"
+            ],
+            "correct_index": 0,
+            "explanation": "The rules forbid inventing markings and allow only [inaudible 00:00:00] and [unintelligible 00:00:00] for unclear speech.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-037",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "An audio file contains a long section of sung lyrics. How should the lyrics be transcribed?",
+            "options": [
+                "As one long paragraph",
+                "Omitted entirely",
+                "Like a poem, broken per line",
+                "Marked [inaudible]"
+            ],
+            "correct_index": 2,
+            "explanation": "Lyrics are the stated exception to the paragraph rule and should be transcribed like a poem, with line breaks.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-038",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "What is the maximum recommended length of a paragraph in a transcript?",
+            "options": [
+                "About 1,000 characters",
+                "About 500 characters",
+                "About 50 characters",
+                "There is no limit"
+            ],
+            "correct_index": 1,
+            "explanation": "Paragraphs should not exceed about 500 symbols, roughly 100 words or three to four lines in the transcription tool.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-039",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "A speaker uses a conjunction such as \"and\" or \"so\" to join long stretches of thought. What should the transcriber do?",
+            "options": [
+                "Mark it unintelligible",
+                "Remove the whole clause",
+                "Keep one very long paragraph",
+                "Create a sentence break at the conjunction"
+            ],
+            "correct_index": 3,
+            "explanation": "Conjunctions joining longer stretches of thought are good places to divide sentences, and the conjunction is often cut when it is not needed.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-040",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "A transcriber cannot make out a phrase at 4 minutes 24 seconds. Which mark is correct?",
+            "options": [
+                "[unintelligible 00:04:24]",
+                "[inaudible 4:24]",
+                "(unintelligible 00:04:24)",
+                "[unclear]"
+            ],
+            "correct_index": 0,
+            "explanation": "The mark uses square brackets, the full hh:mm:ss time and the fixed wording, so [unintelligible 00:04:24] is correct; parentheses and custom tags are not allowed.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-041",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Speech is heard but too accented to understand at 2 minutes 24 seconds. Which mark is correct?",
+            "options": [
+                "[inaudible 00:02:24]",
+                "[pause 00:02:24]",
+                "[unintelligible 00:02:24]",
+                "[noise 00:02:24]"
+            ],
+            "correct_index": 2,
+            "explanation": "Speech that is audible but cannot be understood is marked [unintelligible], so [unintelligible 00:02:24] applies, whereas [inaudible] is for speech that cannot be heard.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-042",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "Which statement about sound-event notes is correct?",
+            "options": [
+                "They replace all punctuation",
+                "They use brackets and are not bolded",
+                "They must be written in capitals",
+                "They always carry timestamps"
+            ],
+            "correct_index": 1,
+            "explanation": "Sound-event notes use square brackets, are lower-case and are not bolded, because only speaker labels and timed marks are bolded.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-043",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "The guidelines forbid inventing markings. Which pair is the ONLY allowed set for unclear speech?",
+            "options": [
+                "[sic] and [clarify]",
+                "[crosstalk] and [noise]",
+                "[inaudible] and [laughs]",
+                "[inaudible] and [unintelligible]"
+            ],
+            "correct_index": 3,
+            "explanation": "Only [inaudible 00:00:00] and [unintelligible 00:00:00] may be used for unclear speech; [sic] is explicitly forbidden and other phrase tags are not allowed for this purpose.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-044",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "A speaker spells a name aloud as \"A-N-N-A\" in a general interview transcript. How is this handled?",
+            "options": [
+                "Always omit the spelled letters",
+                "Include the spelling for all transcript types",
+                "Include it, except in dictation-type transcripts",
+                "Mark the spelling unintelligible"
+            ],
+            "correct_index": 2,
+            "explanation": "A spelled-out word is included for all transcript types except dictation, where the letters are left out.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-045",
+            "domain": "Sound Events and Non-Speech Markings",
+            "stem": "What should a transcriber do when a speaker mispronounces a word, for example saying \"nitche\" for \"niche\"?",
+            "options": [
+                "Write it phonetically",
+                "Use the correct spelling",
+                "Mark it unintelligible",
+                "Add a [sic] tag"
+            ],
+            "correct_index": 1,
+            "explanation": "The correct spelling is always used for misspoken words, so the transcriber writes \"niche\"; the [sic] tag is not permitted.",
+            "reference": "GoTranscript transcriber guidelines - Sound Events and Non-Speech Markings"
+        },
+        {
+            "id": "gotranscript-046",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "According to the number rule, which sentence is correctly written?",
+            "options": [
+                "I have 9 apples and ten pears",
+                "I have 9 apples and 10 pears",
+                "I have nine apples and 10 pears",
+                "I have nine apples and ten pears"
+            ],
+            "correct_index": 2,
+            "explanation": "Single-digit numbers are spelled out and all other numbers use numerals, so \"nine\" and \"10\" are correct.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-047",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should the slang amount \"1 grand\" be written?",
+            "options": [
+                "$1,000",
+                "1 thousand",
+                "$1000 grand",
+                "1,000 grand"
+            ],
+            "correct_index": 0,
+            "explanation": "Under the money exception, \"1 grand\" is written as $1,000; the slang is expanded into a proper currency figure.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-048",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should a percentage such as zero point two percent be written?",
+            "options": [
+                "0.2 percent",
+                "0.2%",
+                "zero point two %",
+                "0.2 per cent"
+            ],
+            "correct_index": 1,
+            "explanation": "Percentages use the numeral and the percent sign, so 0.2% is correct rather than spelling out the number or the word percent.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-049",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How is the British slang amount \"eight quid\" correctly written?",
+            "options": [
+                "8 quid",
+                "eight pounds",
+                "£8 quid",
+                "£8"
+            ],
+            "correct_index": 3,
+            "explanation": "The guidelines give \"8 quid is £8\", so the slang is converted to the currency symbol and numeral, £8.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-050",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should a fraction such as one third be written?",
+            "options": [
+                "one third",
+                "1/3",
+                "1 third",
+                "one-third"
+            ],
+            "correct_index": 1,
+            "explanation": "Fractions are written with numerals and a slash, so one third is written 1/3.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-051",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How is the Bible citation \"John chapter one verses two to three\" written?",
+            "options": [
+                "John 1 2-3",
+                "John 1:2 to 3",
+                "John 1.2-3",
+                "John 1:2-3"
+            ],
+            "correct_index": 3,
+            "explanation": "Bible citations use chapter, colon, verse and a range, giving John 1:2-3.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-052",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should a US postal code such as 91210 be written?",
+            "options": [
+                "91210",
+                "91 210",
+                "91,210",
+                "nine one two one zero"
+            ],
+            "correct_index": 0,
+            "explanation": "Postal codes are written as a plain numeral string, 91210, not spelled out or split.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-053",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should a phone number be written?",
+            "options": [
+                "123 456 789",
+                "(123) 456789",
+                "123-456-789",
+                "123.456.789"
+            ],
+            "correct_index": 2,
+            "explanation": "Phone numbers use numeral groups separated by hyphens, as in 123-456-789.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-054",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "When a direct quotation is introduced, which punctuation precedes it?",
+            "options": [
+                "A colon",
+                "A comma",
+                "A semicolon",
+                "No punctuation"
+            ],
+            "correct_index": 1,
+            "explanation": "Quotations are introduced by a comma, not a colon, for example: She said, \"Don't bother telling me.\"",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-055",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "Where does a comma or period go relative to closing quotation marks?",
+            "options": [
+                "Always outside",
+                "Wherever the speaker paused",
+                "Before the opening mark",
+                "Inside the quotation marks"
+            ],
+            "correct_index": 3,
+            "explanation": "Commas and periods always go inside the quotation marks in this style.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-056",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "The quotation itself is a question: She asked, \"Can you help me?\" Where does the question mark go?",
+            "options": [
+                "Inside the quotation marks",
+                "Outside the quotation marks",
+                "Before the opening quote",
+                "It is omitted"
+            ],
+            "correct_index": 0,
+            "explanation": "Because the quotation itself is the question, the question mark sits inside the closing quotation marks.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-057",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "Which punctuation mark must never be used in a GoTranscript transcript?",
+            "options": [
+                "Semicolon",
+                "Colon",
+                "Exclamation mark",
+                "Comma"
+            ],
+            "correct_index": 2,
+            "explanation": "The guidelines state never to use exclamation marks, even where the speaker sounds emphatic.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-058",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "A sentence trails off unfinished. Which mark ends it?",
+            "options": [
+                "A single hyphen",
+                "A double dash",
+                "An ellipsis",
+                "A period"
+            ],
+            "correct_index": 1,
+            "explanation": "An incomplete sentence ends with a double dash, which signals that the sentence was not completed.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-059",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How are film, book, magazine and song titles treated in the transcript?",
+            "options": [
+                "In bold",
+                "In quotation marks",
+                "In capital letters",
+                "In italics"
+            ],
+            "correct_index": 3,
+            "explanation": "Film, book, magazine and song titles, plus artworks, plays, TV and radio programs and foreign expressions, are italicised.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        },
+        {
+            "id": "gotranscript-060",
+            "domain": "Numbers, Punctuation, and Grammar",
+            "stem": "How should the abbreviation \"United States of America\" be written?",
+            "options": [
+                "USA",
+                "U.S.A.",
+                "U.S.A",
+                "U.S.A.."
+            ],
+            "correct_index": 0,
+            "explanation": "Abbreviations and acronyms take no periods or dashes in this style, so USA is correct and PhD, not Ph.D.",
+            "reference": "GoTranscript transcriber guidelines - Numbers, Punctuation, and Grammar"
+        }
+    ]
+}

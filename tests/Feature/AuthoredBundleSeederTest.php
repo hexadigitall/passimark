@@ -1448,6 +1448,12 @@ class AuthoredBundleSeederTest extends TestCase
                 'Web Application Attacks' => 15,
                 'Privilege Escalation and Tunneling' => 15,
             ]],
+            'gotranscript' => ['gotranscript', 60, [
+                'Verbatim Formats and Editing' => 15,
+                'Timestamping and Speaker Labels' => 15,
+                'Sound Events and Non-Speech Markings' => 15,
+                'Numbers, Punctuation, and Grammar' => 15,
+            ]],
         ];
     }
 
