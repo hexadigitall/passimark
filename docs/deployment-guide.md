@@ -41,9 +41,14 @@ DB_CONNECTION=sqlite          # or mysql / pgsql
 # DB_PASSWORD=...
 
 SESSION_DRIVER=database       # file is fine for one node
-CACHE_STORE=database
+CACHE_STORE=file              # required: the project ships no `cache` table
 QUEUE_CONNECTION=database
 ```
+
+> `CACHE_STORE` must be `file` (or redis), **not** `database`: the app ships no `cache` table
+> and no cache-table migration, so `CACHE_STORE=database` (Laravel's default) makes any
+> `Cache::remember` route — e.g. `GET /catalog/search` — return a 500. The value matches the
+> file session driver for a single node; use Redis when scaling out.
 
 > `APP_DEBUG=false` and a real `APP_URL` are mandatory: the public `/verify/{credentialId}` page
 > and the certificate QR codes must resolve to the deployed origin.
@@ -60,6 +65,24 @@ QUEUE_CONNECTION=database
 
 `SEED_REGIONS`, `SEED_CERTS`, and `SEED_LIMIT` narrow the worldwide/uniform seeders for a
 smaller demo footprint.
+
+### Authored cert bundles (recommended content)
+
+Beyond the three `SEED_CATALOG` paths, the catalog ships **203 authored bundles** — one
+`database/seeders/data/bundles/<cert_key>.json` per certification. Omitting `--bundle` seeds
+every validated bundle, but seeding each bank individually avoids a single slow bank exceeding
+the command timeout:
+
+```bash
+php artisan passimark:validate-bundle cisa        # optional pre-check (items, domain split, key balance)
+php artisan passimark:seed-bundle --bundle=cisa
+```
+
+`validate-bundle` reports item counts, the per-domain split, and the A–D answer-key balance
+without touching the DB; `seed-bundle` is idempotent per track. See
+[content-format.md](content-format.md) for the file format and
+[sprint-7-9c-authored-bundle-catalog.md](sprint-7-9c-authored-bundle-catalog.md) for the
+inventory and provenance.
 
 ---
 

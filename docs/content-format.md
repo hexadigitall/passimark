@@ -100,9 +100,21 @@ see balance before anything touches the database.
 
 ## Status of outlines
 
-Already recorded:
-- `data/outlines/cisa.json` — domains/weights verified from ISACA (18/18/12/26/26);
-  subtopics present for domains 1-2, domains 3-5 marked incomplete rather than guessed.
+The catalog is now authored, not generated: **203 bundles** live in
+`database/seeders/data/bundles/` (see Sprint 7.9c), seeded one cert at a time with
+`php artisan passimark:seed-bundle --bundle=<key>`. The synthetic `seed:uniform-205`
+pools from Sprint 7.9b are fully displaced (`uniform205=0`).
+
+`outline_file` is optional, so not every bank carries one. 21 outlines are recorded under
+`data/outlines/`:
+
+- `cisa.json` — domains/weights verified from ISACA (18/18/12/26/26); subtopics present for
+  domains 1-2, domains 3-5 marked incomplete rather than guessed.
+- `gotranscript.json` — 4 domains (Verbatim Formats and Editing; Timestamping and Speaker
+  Labels; Sound Events and Non-Speech Markings; Numbers, Punctuation, and Grammar), weight 25 each.
+- 19 further blueprints: `acca-bt`, `acca-f1-f4`, `cat-india`, `delf-a2`, `delf-b1`, `delf-b2`,
+  `emsat-math`, `goethe-b1`, `ib-bio-hl`, `ican-skills`, `nclex-pn`, `nclex-rn`, `pance`,
+  `qiyas-gat`, `qiyas-saat`, `saica-itc`, `thanaweya-eg`, `toefl-ibt`, `ucat-uk`.
 
 Any cert you author needs its own outline recorded the same way before we can claim
 blueprint-weighted sessions.

@@ -152,13 +152,23 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 - New `CertificateIssuanceTest` (4 tests: auto issuance + format, owner-only access, public verify valid/unknown, approval-gated issuance, PWA manifest). Full suite **104 tests / 29,906 assertions** green; `npm run build` clean (`app-BlcdREX9.js` 456.94 kB / 132.38 kB gzip); migration applied to the dev DB.
 
 ## Sprint 7.9b: Uniform-205 question coverage
-**Status:** **done** (the Uniform-205 catalog gradient shipped in 7.6 with every session pool empty — reviewing was a spreadsheet exercise)
+**Status:** **done** (the Uniform-205 catalog gradient shipped in 7.6 with every session pool empty — reviewing was a spreadsheet exercise). **Superseded by Sprint 7.9c below**, which replaces these generated pools with authored, real-spec banks.
 **Evidence:** [sprint-7-9b-uniform-205-question-coverage.md](sprint-7-9b-uniform-205-question-coverage.md)
 - **`App\Services\PracticeQuestionBank\UniformQuestionBankGenerator`** — deterministic content builder (seed = `crc32('uniform|'.code.'|'.order.'|'.index)`), producing a 4-option, 1-correct item per (cert, session, index) with IRT bounds (difficulty −1.5…2, discrimination 0.8…1.8, guessing 0.25), domain + Bloom tags from the session's own context, explanation, catalog reference, and `external_id = ub-{code}-s{order}-q{index}` — byte-for-byte reproducible across runs/environments.
 - **`Uniform205QuestionBankSeeder`** — idempotent: a session pool is skipped whenever that session already holds any question, so re-runs never double-insert. Fills each session to its exact `questions_target`, tags every question (`passimark_question_tag` domain + Bloom pivots), reports `{certs, sessions, questions}`; `SEED_LIMIT`/`SEED_CERTS` still narrow CI/dev runs.
 - **Migration `2026_01_01_000015`** — index on `passimark_questions.session_id` (*critical perf fix*: the seeder's idempotency `exists()` + per-session bulk inserts stay O(log n) instead of a full table scan — collapsed the 9+ min pre-index run).
 - **`DatabaseSeeder`** uniform path: `Uniform205CatalogSeeder` → **`Uniform205QuestionBankSeeder`**.
 - **Verified:** `SEED_CATALOG=uniform` fresh seed on scratch SQLite — **205 certs / 2,870 sessions / 8,610 exams / 167,133 questions** in ~73 s; new `Uniform205QuestionBankSeederTest` (fills every session to its exact target, deterministic + idempotent re-runs, 4 options / single correct key, tags, IRT bounds, region grouping); full suite **110 tests / 44,586 assertions** green; `npm run build` clean; `php -l` clean; dev DB reseeded to the complete Uniform-205 catalog with full question coverage.
+
+## Sprint 7.9c: Authored bundle catalog (synthetic Uniform-205 displaced)
+**Status:** **done** (content sprint; replaces the generated 7.9b pools with real-spec authored banks)
+**Evidence:** [sprint-7-9c-authored-bundle-catalog.md](sprint-7-9c-authored-bundle-catalog.md)
+- **203 authored bundles** in `database/seeders/data/bundles/<cert_key>.json` (one JSON per cert, `content_provenance`/`source_label`/real `reference`/explanation on every item, no psychometric keys). Seeded via `php artisan passimark:seed-bundle --bundle=<key>`; keys rotate deterministically so A–D stays balanced. Format: [content-format.md](content-format.md).
+- **Synthetic content fully displaced:** `tracks=209`, `authored=203`, `uniform205=0` (203 authored + CISSP `seed:cissp-bundle` + 5 `enterprise-*` role bundles). Security wave (CEH/CHFI/GCFA/GCIH/GPEN/GSEC/OSCP) plus the **GoTranscript** transcription-test bundle (60 items, `GLOBAL-ACADEMIC`) landed here.
+- **Guard caught real corruption:** `gmat-focus.json` had been truncated to 48 items with a duplicate id; restored from HEAD, re-validated, re-seeded. Per-wave guard lives in `AuthoredBundleSeederTest::realLengthBundles()`.
+- **Verified:** full suite **437 tests / 122,969 assertions** green; `integrity` probe clean (890 sessions / 14,768 questions; 0 orphans, 0 non-null psychometrics/theta, 0 bad keys, 0 empty explanations/references; key spread A4084/B3737/C3487/D3460); live HTTP smoke on `/`, `/catalog/search`, `/certs/{key}`, `/certs/{cert}/{slug}`, `/api/sessions`, `/api/progress`, `/passimark/focus` all 200.
+- **Bug fixed:** `/catalog/search` 500'd in dev (`no such table: cache` — the project has no cache table and `phpunit.xml` masks it with `CACHE_STORE=array`). `.env`/`.env.example` now set `CACHE_STORE=file` (commit `885fbc4`).
+- **Commits:** `c8a73bf` (security wave), `116bb71` (GoTranscript), `885fbc4` (cache store).
 
 ## Sprint 8.1: First-run funnel + one-student catalog chrome (Lock → Splash → Intro → Auth → Focus → Permissions → Dashboard)
 
