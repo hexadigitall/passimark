@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Head, Link, router } from '@inertiajs/react';
-import { AlertTriangle, ArrowUpRight, BookOpen, Check, Database, ShieldCheck, Timer, X } from 'lucide-react';
+import { AlertTriangle, ArrowUpRight, BookOpen, Check, Database, FileArchive, ShieldCheck, Timer, X } from 'lucide-react';
 import DashboardLayout from '../../Layouts/DashboardLayout';
 
 const tileValue = (tile) => {
@@ -67,6 +67,9 @@ export default function AdminDashboard({ pending = [], events = [], needsAttenti
             </Link>
             <Link href="/admin/import" className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700">
               <BookOpen className="h-4 w-4" /> Import questions
+            </Link>
+            <Link href="/admin/packages" className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-slate-700">
+              <FileArchive className="h-4 w-4" /> Packages
             </Link>
           </div>
         </div>

@@ -14,13 +14,20 @@ use Illuminate\Support\Facades\DB;
  * Imports .psmk packages. Version 1 is strictly create-only inside a database transaction:
  * it never overwrites an existing session, never touches learner progress, never unlocks
  * progression, and always leaves an audit record in passimark_package_imports.
+ *
+ * `on_duplicate` governs a package whose checksum already imported:
+ *   - `create` (default, V1 behaviour) inserts a second copy;
+ *   - `skip`   is a no-op that records a `skipped` audit row (checksum idempotency);
+ *   - `fail`   refuses the import and records a `failed` audit row.
  */
 final class PackageImporter
 {
+    public const DUPLICATE_MODES = ['create', 'skip', 'fail'];
+
     /**
      * @param array $opts cert_slug (override target), cert_key, variant_label (bundle category/
-     *        variant placement), uploaded_by (User id|null), original_filename
-     * @return array{package_id:string, content_type:string, checksum:string, created:array<string,int>}
+     *        variant placement), uploaded_by (User id|null), original_filename, on_duplicate
+     * @return array{package_id:string, content_type:string, checksum:string, created:array<string,int>, skipped?:bool}
      */
     public static function import(string $path, array $opts = []): array
     {
@@ -33,7 +40,40 @@ final class PackageImporter
         $manifest = $result['manifest'];
         $content = $result['content'];
 
+        $onDuplicate = $opts['on_duplicate'] ?? 'create';
+        if (! in_array($onDuplicate, self::DUPLICATE_MODES, true)) {
+            throw new PassimarkPackageException("Unknown on_duplicate mode '{$onDuplicate}'.");
+        }
+        $duplicateOf = self::importedCount($checksum);
+
+        if ($duplicateOf > 0 && $onDuplicate === 'skip') {
+            PassimarkPackageImport::create([
+                'uploaded_by' => $opts['uploaded_by'] ?? null,
+                'original_filename' => $opts['original_filename'] ?? basename($path),
+                'package_id' => $manifest['package_id'],
+                'checksum' => $checksum,
+                'content_type' => $manifest['content_type'],
+                'summary' => null,
+                'status' => 'skipped',
+                'error_report' => null,
+            ]);
+
+            return [
+                'package_id' => $manifest['package_id'],
+                'content_type' => $manifest['content_type'],
+                'checksum' => $checksum,
+                'created' => ['tracks' => 0, 'sessions' => 0, 'exams' => 0, 'questions' => 0],
+                'skipped' => true,
+            ];
+        }
+
         try {
+            if ($duplicateOf > 0 && $onDuplicate === 'fail') {
+                throw new PassimarkPackageException(
+                    'This package was already imported (checksum ' . substr($checksum, 0, 12) . ').'
+                );
+            }
+
             $summary = DB::transaction(function () use ($manifest, $content, $opts, $checksum) {
                 $slug = $opts['cert_slug'] ?? $content['cert_slug'];
                 $packageId = $manifest['package_id'] ?? md5($checksum);
@@ -110,6 +150,89 @@ final class PackageImporter
             ]);
             throw $e;
         }
+    }
+
+    /**
+     * Validates a package and returns the plan an import would execute, without writing any
+     * content. Powers the upload-preview UI and makes duplicate detection inspectable up front.
+     *
+     * @return array{valid:bool, errors:array<int,string>, warnings:array<int,string>,
+     *   checksum:?string, package_id:?string, content_type:?string, title:?string, producer:?string,
+     *   cert_slug:?string, counts:array{sessions:int, exams:int, questions:int},
+     *   duplicate:bool, existing_imports:int}
+     */
+    public static function preview(string $path, array $opts = []): array
+    {
+        $result = PackageValidator::validate($path);
+        $manifest = $result['manifest'];
+        $content = $result['content'];
+
+        $checksum = is_file($path) ? hash('sha256', (string) file_get_contents($path)) : null;
+
+        $plan = [
+            'valid' => $result['valid'],
+            'errors' => $result['errors'],
+            'warnings' => $result['warnings'],
+            'checksum' => $checksum,
+            'package_id' => $manifest['package_id'] ?? null,
+            'content_type' => $manifest['content_type'] ?? null,
+            'title' => $manifest['title'] ?? null,
+            'producer' => $manifest['producer']['name'] ?? null,
+            'cert_slug' => $opts['cert_slug'] ?? ($content['cert_slug'] ?? null),
+            'counts' => ['sessions' => 0, 'exams' => 0, 'questions' => 0],
+            'duplicate' => false,
+            'existing_imports' => 0,
+        ];
+
+        if (! $result['valid'] || ! is_array($manifest) || ! is_array($content)) {
+            return $plan;
+        }
+
+        $plan['counts'] = self::planCounts($manifest, $content);
+
+        if ($checksum !== null) {
+            $plan['existing_imports'] = PassimarkPackageImport::where('checksum', $checksum)
+                ->where('status', 'imported')
+                ->count();
+            $plan['duplicate'] = $plan['existing_imports'] > 0;
+        }
+
+        return $plan;
+    }
+
+    private static function importedCount(string $checksum): int
+    {
+        return PassimarkPackageImport::where('checksum', $checksum)->where('status', 'imported')->count();
+    }
+
+    private static function planCounts(array $manifest, array $content): array
+    {
+        $counts = ['sessions' => 0, 'exams' => 0, 'questions' => 0];
+
+        switch ($manifest['content_type'] ?? null) {
+            case 'module':
+                $counts['sessions'] = 1;
+                $counts['exams'] = count($content['module']['exams'] ?? []);
+                $counts['questions'] = count($content['module']['questions'] ?? []);
+                break;
+            case 'exam':
+                $counts['sessions'] = 1;
+                $counts['exams'] = 1;
+                $counts['questions'] = count($content['questions'] ?? []);
+                break;
+            case 'course':
+                foreach ($content['modules'] ?? [] as $module) {
+                    $counts['sessions'] += 1;
+                    $counts['exams'] += count($module['exams'] ?? []);
+                    $counts['questions'] += count($module['questions'] ?? []);
+                }
+                break;
+            case 'item-bank':
+                $counts['questions'] = count($content['items'] ?? []);
+                break;
+        }
+
+        return $counts;
     }
 
     private static function importModule(array $module, PassimarkCertificationTrack $track, string $slug): array

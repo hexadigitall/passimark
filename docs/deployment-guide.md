@@ -84,6 +84,19 @@ without touching the DB; `seed-bundle` is idempotent per track. See
 [sprint-7-9c-authored-bundle-catalog.md](sprint-7-9c-authored-bundle-catalog.md) for the
 inventory and provenance.
 
+### Importing `.psmk` packages
+
+Instructors and admins can import a portable `.psmk`/`.psme`/`.psmm` package from the UI at
+`/admin/packages` (upload → dry-run preview → import) or via the CLI. Re-imports are handled by
+`--on-duplicate` (`create` | `skip` | `fail`; `skip` is the idempotent default for the UI):
+
+```bash
+php artisan passimark:package:import path/to/module.psmk --on-duplicate=skip
+```
+
+V1 import is create-only (it never overwrites content or learner progress). See
+[sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md).
+
 ---
 
 ## 3. Install

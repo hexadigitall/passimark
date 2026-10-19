@@ -205,14 +205,15 @@ resume/θ/next required session above catalog, favorites first).
 - **gates:** suite 110 / 44,586 green; build green
 
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
-**Status:** Phase A+B **done** (C-E planned)
+**Status:** Phase A+B **done**, Phase C **in progress** (C-start shipped; D-E planned)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
 - Landed as `720c1d2` on `feature/sprint-9-psmk-packages` (branched from `55268cf`, Sprint 5)
 - RFC **adopted** — one canonical `.psmk` ZIP package (manifest + content), `.psme`/`.psmm` as accepted aliases (extension is a hint; `manifest.content_type` authoritative)
 - migration 000007: `external_id` UUIDs on sessions/exams/questions + `passimark_package_imports` audit — done
 - `App\Support\PsmkZip` dependency-free ZIP codec + `PassimarkPackage\{Validator,Exporter,Importer}` + `PackagingSpec` — done; module/exam/course export + transactional **create-only** import that never unlocks progression and always audits
 - CLI `passimark:package:export` / `passimark:package:import` — done; standard-ZIP output verified with system `tar`; full suite **36 tests / 6,733 assertions** green
-- Remaining (Phase C-E): admin upload/preview UI, update-by-external_id & conflict modes, media assets/signatures, CSV→QTI→PDF source adapters via a review staging model, schema publication
+- **Phase C (start) — done:** `POST /admin/packages/preview` dry-run + `POST /admin/packages/import` + `GET /admin/packages` (`PassimarkPackageController`, `role:instructor,admin`), the `Passimark/PackageImport` upload→preview→import screen (linked from the admin dashboard), and checksum duplicate modes (`PackageImporter::preview()` + `on_duplicate` = `create|skip|fail`, CLI `--on-duplicate`). New `PackageImportHttpTest` (8 tests). Full suite **445 tests / 123,014 assertions** green; `npm run build` green.
+- Remaining (Phase C-E): update-by-external_id overwrite semantics, media `assets/` + signatures + quotas + malware scanning, CSV→QTI→PDF source adapters via a review staging model, schema publication
 
 ## Known open risks (not yet scheduled)
 - No frontend/browser automated tests — only PHPUnit backend coverage exists

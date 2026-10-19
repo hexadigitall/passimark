@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, PassimarkFunnelController, CertificateController, AuthController};
+use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, PassimarkFunnelController, PassimarkPackageController, CertificateController, AuthController};
 use Illuminate\Support\Facades\Route;
 
 // Public credential verification (QR target) — no auth so a scanned code resolves anywhere.
@@ -71,6 +71,9 @@ Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(func
     Route::post('/passimark/progress/{progress}/reject', [PassimarkAdminController::class,'reject'])->name('admin.reject');
     Route::post('/passimark/questions/import', [PassimarkAdminController::class,'importQuestions'])->name('admin.import');
     Route::get('/import', [PassimarkAdminController::class,'importPage'])->name('admin.import.page');
+    Route::get('/packages', [PassimarkPackageController::class,'page'])->name('admin.packages.page');
+    Route::post('/packages/preview', [PassimarkPackageController::class,'preview'])->name('admin.packages.preview');
+    Route::post('/packages/import', [PassimarkPackageController::class,'import'])->name('admin.packages.import');
     Route::post('/sessions', [PassimarkAdminController::class,'storeSession'])->name('admin.sessions.store');
     Route::put('/sessions/{session}', [PassimarkAdminController::class,'updateSession'])->name('admin.sessions.update');
     Route::delete('/sessions/{session}', [PassimarkAdminController::class,'destroySession'])->name('admin.sessions.destroy');
