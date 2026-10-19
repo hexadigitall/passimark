@@ -1,0 +1,858 @@
+{
+    "cert_key": "ceh",
+    "title": "EC-Council CEH",
+    "issuer": "EC-Council",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/ceh.json",
+    "variant_label": "CEH Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 60-85% scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public EC-Council CEH exam blueprint. Not a capture of past exam questions.",
+    "source_label": "CEH practice bank",
+    "items": [
+        {
+            "id": "ceh-001",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A tester queries a registry service to learn which organization owns a domain, when it was created, and who serves as its registrar. Which protocol answers on TCP port 43 for this lookup?",
+            "options": [
+                "WHOIS",
+                "SNMP",
+                "SMTP",
+                "RDP"
+            ],
+            "correct_index": 0,
+            "explanation": "WHOIS answers on TCP 43 and returns registrar, registration dates and contact records for a domain. SNMP manages devices on UDP 161, SMTP carries mail on TCP 25, and RDP provides remote desktops on TCP 3389, none of which expose domain ownership.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-002",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker rolls a Google search operator to list every indexed page that belongs to only one target domain. Which operator narrows the result set to a single site?",
+            "options": [
+                "inurl qualifier",
+                "site qualifier",
+                "cache qualifier",
+                "link qualifier"
+            ],
+            "correct_index": 1,
+            "explanation": "The site qualifier restricts results to pages under one domain, which is ideal for footprinting a single target. The inurl qualifier matches text inside the URL path, the cache qualifier retrieves a stored snapshot, and the link qualifier listed pages linking to a URL.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-003",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An analyst wants to transform a domain, email address, and company name into an interactive map of related hosts and people. Which OSINT tool is built for that link analysis?",
+            "options": [
+                "Nmap",
+                "Hydra",
+                "Maltego",
+                "John the Ripper"
+            ],
+            "correct_index": 2,
+            "explanation": "Maltego applies transforms to seed entities and graphs the relationships between people, domains and infrastructure. Nmap scans ports, Hydra performs online password attacks, and John the Ripper cracks offline hashes; none graph OSINT relationships.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-004",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A tester copies an entire target website to a local directory so the pages can be reviewed offline for comments, directory names, and hidden links. What is this footprinting activity called?",
+            "options": [
+                "Port knocking",
+                "Session hijacking",
+                "ARP poisoning",
+                "Website mirroring"
+            ],
+            "correct_index": 3,
+            "explanation": "Website mirroring saves the target site locally so structure, comments and linked resources can be studied without leaving more requests. Port knocking, session hijacking and ARP poisoning are active exploitation techniques, not offline reconnaissance.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-005",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "During DNS footprinting, an attacker retrieves the record that identifies the servers responsible for accepting email for a target domain. Which record type is that?",
+            "options": [
+                "MX",
+                "A",
+                "PTR",
+                "SOA"
+            ],
+            "correct_index": 0,
+            "explanation": "MX records name the mail exchangers for a domain, which reveals mail filtering and hosting infrastructure. A records map names to IPv4, PTR records map addresses back to names, and SOA records describe zone authority, not mail routing.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-006",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker downloads documents a company published on its website and extracts author names, software versions, and internal file paths. What artifact is being harvested?",
+            "options": [
+                "NetBIOS name table entries",
+                "Document metadata",
+                "ARP cache records",
+                "MAC address tables"
+            ],
+            "correct_index": 1,
+            "explanation": "Office and PDF files often embed author, application and path metadata that leaks useful details about the target. NetBIOS names, ARP caches and MAC tables are host and link-layer artifacts and are not carried inside published documents.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-007",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A tester wants to read a version of a target web page that Google stored earlier, even though the live page has since changed. Which search operator returns that stored copy?",
+            "options": [
+                "info qualifier",
+                "related qualifier",
+                "cache qualifier",
+                "define qualifier"
+            ],
+            "correct_index": 2,
+            "explanation": "The cache qualifier returns the search engine's stored snapshot of a page, which may expose content removed from the live site. The info qualifier shows summary information, the related qualifier lists similar sites, and the define qualifier returns dictionary definitions.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-008",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker sends a request to a name server asking it to transfer its entire zone database. What is the objective of this zone transfer attempt?",
+            "options": [
+                "To encrypt DNS traffic between the client and server",
+                "To reset the target name server to factory defaults",
+                "To push a spoofed record into the target zone",
+                "To copy all DNS records and map the internal namespace of the target"
+            ],
+            "correct_index": 3,
+            "explanation": "A zone transfer (AXFR) to a misconfigured server returns every record in the zone, exposing hosts and subdomains for mapping. It does not encrypt DNS, reset the server, or write records; a denied transfer is the expected secure response.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-009",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A footprinting pass returns the responsible organization, administrative contacts, and name servers associated with a target IP block. Which registry source supplies those allocation details?",
+            "options": [
+                "Regional Internet Registry lookup",
+                "Local hosts file on the tester",
+                "The target web server banner",
+                "The target ARP cache"
+            ],
+            "correct_index": 0,
+            "explanation": "Regional Internet Registries publish WHOIS allocation records linking IP ranges to organizations and contacts. A local hosts file only reflects the tester's own entries, a web banner reveals a service version, and an ARP cache is local link data.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-010",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker calls a help desk while impersonating a manager and persuades staff to reveal internal system details. Which footprinting category does this activity belong to?",
+            "options": [
+                "Packet fragmentation",
+                "Social engineering",
+                "Port scanning",
+                "Password cracking"
+            ],
+            "correct_index": 1,
+            "explanation": "Social engineering manipulates people into disclosing information rather than attacking systems. Packet fragmentation, port scanning and password cracking are technical actions against network or authentication layers, not against human trust.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-011",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A tester needs to gather employee email addresses and public hostnames for a target by automatically cycling through many search engines. Which tool is designed for that collection?",
+            "options": [
+                "Wireshark",
+                "tcpdump",
+                "theHarvester",
+                "Nessus"
+            ],
+            "correct_index": 2,
+            "explanation": "theHarvester queries search engines and public sources to collect emails, subdomains and employee names. Wireshark and tcpdump capture packets, and Nessus scans for vulnerabilities; none of them perform passive OSINT collection.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-012",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker reads job postings and press releases to infer which firewalls, cloud platforms, and applications a company runs, without sending any packet to the target. What is this called?",
+            "options": [
+                "Active banner grabbing",
+                "SYN flooding",
+                "Privilege escalation",
+                "Passive information gathering"
+            ],
+            "correct_index": 3,
+            "explanation": "Passive gathering uses public sources and sends no traffic to the target, so it is hard to detect. Banner grabbing, SYN flooding and privilege escalation all touch the target and are active techniques.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-013",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "While reviewing a target site, a tester reads a file that instructs web crawlers which paths not to index. What can this file disclose to the tester?",
+            "options": [
+                "Directory and file paths an administrator may want hidden",
+                "The private encryption key of the web server",
+                "The plaintext passwords of website users",
+                "The internal routing table of the web host"
+            ],
+            "correct_index": 0,
+            "explanation": "A robots.txt file lists disallowed paths, which often points to administrative or sensitive directories worth probing. It never contains private keys, user passwords, or routing tables, because it is a public crawler instruction file.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-014",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "An attacker resolves an IP address backward to discover the hostname registered for it. Which DNS record provides that reverse mapping during footprinting?",
+            "options": [
+                "A",
+                "PTR",
+                "AAAA",
+                "CNAME"
+            ],
+            "correct_index": 1,
+            "explanation": "PTR records live in reverse zones and map an IP address to a hostname. A records map names to IPv4, AAAA records map names to IPv6, and CNAME records alias one name to another; none of those perform reverse lookups.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-015",
+            "domain": "Reconnaissance and Footprinting",
+            "stem": "A security team wants to reduce the footprint an organization exposes to outside scanners. Which measure most directly limits that exposure?",
+            "options": [
+                "Increase the length of every user password",
+                "Enable full packet logging on internal switches",
+                "Strip metadata and minimize technical detail published on public sites",
+                "Deploy an intrusion prevention system at the core"
+            ],
+            "correct_index": 2,
+            "explanation": "Removing document metadata, detailed diagrams and verbose public content shrinks the information an attacker can collect passively. Longer passwords, packet logging and an IPS address other risks but do not reduce the public footprint itself.",
+            "reference": "EC-Council CEH Blueprint - Reconnaissance and Footprinting"
+        },
+        {
+            "id": "ceh-016",
+            "domain": "Scanning and Enumeration",
+            "stem": "An attacker sets the FIN, PSH, and URG flags together in a single TCP probe against a target port. Which scan technique is being performed?",
+            "options": [
+                "SYN scan",
+                "ACK scan",
+                "Idle scan",
+                "Xmas scan"
+            ],
+            "correct_index": 3,
+            "explanation": "An Xmas scan lights up the FIN, PSH and URG flags so the packet looks decorated. A SYN scan sets only SYN, an ACK scan sets only ACK to map firewall rules, and an idle scan spoofs a third-party host to stay anonymous.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-017",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester wants to probe ports without completing the full TCP three-way handshake so the scan is less likely to be logged by an application. Which Nmap option performs this?",
+            "options": [
+                "-sS",
+                "-sT",
+                "-sU",
+                "-sn"
+            ],
+            "correct_index": 0,
+            "explanation": "The -sS option is a TCP SYN half-open scan that resets instead of completing the handshake. -sT uses a full connect, -sU scans UDP, and -sn performs host discovery without port probing.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-018",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester sends a bare TCP packet with only the ACK flag set to determine whether a firewall filters a port rather than to learn open or closed state. Which scan is this?",
+            "options": [
+                "FIN scan",
+                "ACK scan",
+                "NULL scan",
+                "UDP scan"
+            ],
+            "correct_index": 1,
+            "explanation": "An ACK scan never classifies a port as open or closed; it reports filtered versus unfiltered based on how the firewall reacts. FIN and NULL scans infer port state, and a UDP scan probes UDP services directly.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-019",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester sends TCP probes with no control flags set at all. Which scan technique relies on this empty flag header?",
+            "options": [
+                "Xmas scan",
+                "SYN scan",
+                "NULL scan",
+                "ACK scan"
+            ],
+            "correct_index": 2,
+            "explanation": "A NULL scan turns every flag off, so compliant hosts drop the packet on open ports and reply with RST on closed ports. Xmas scans set FIN, PSH and URG, while SYN and ACK scans set flags of their own.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-020",
+            "domain": "Scanning and Enumeration",
+            "stem": "An attacker analyzes the TCP window size and initial sequence number behavior of a host to guess which operating system is running. Which Nmap capability performs this?",
+            "options": [
+                "Ping sweep with -sn",
+                "UDP scan with -sU",
+                "Service version scan with -sV",
+                "OS fingerprinting with -O"
+            ],
+            "correct_index": 3,
+            "explanation": "The -O option inspects IP and TCP stack quirks to fingerprint the operating system. -sn only finds live hosts, -sU probes UDP ports, and -sV identifies service versions rather than the OS.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-021",
+            "domain": "Scanning and Enumeration",
+            "stem": "An administrator asks which TCP port modern Windows file and printer sharing uses directly over the network without NetBIOS. Which port should be confirmed during enumeration?",
+            "options": [
+                "445",
+                "139",
+                "161",
+                "389"
+            ],
+            "correct_index": 0,
+            "explanation": "SMB runs directly over TCP 445 on current Windows systems. TCP 139 is legacy NetBIOS session service, UDP 161 is SNMP, and TCP 389 is LDAP, so those are not the direct sharing port.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-022",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester connects to a Windows host with an empty username and password and lists shared folders, users, and groups. Which enumeration technique is this?",
+            "options": [
+                "DNS zone transfer",
+                "SMB null session enumeration",
+                "SNMP walk",
+                "Banner grabbing"
+            ],
+            "correct_index": 1,
+            "explanation": "A null session is an unauthenticated SMB connection that older or misconfigured hosts allow, exposing shares and account data. Zone transfers, SNMP walks and banner grabbing use different services and reveal different information.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-023",
+            "domain": "Scanning and Enumeration",
+            "stem": "During scanning, an attacker queries devices using the default read string public and retrieves interface and system details. Which service is being enumerated?",
+            "options": [
+                "FTP",
+                "RDP",
+                "SNMP",
+                "SMTP"
+            ],
+            "correct_index": 2,
+            "explanation": "SNMP community strings such as public and private are authentication values, and defaults let attackers read device data. FTP, RDP and SMTP use account credentials and do not rely on community strings.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-024",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester needs to query a directory service and dump user accounts, groups, and organizational units. Which command-line tool performs this LDAP enumeration?",
+            "options": [
+                "arp-scan",
+                "hping3",
+                "nikto",
+                "ldapsearch"
+            ],
+            "correct_index": 3,
+            "explanation": "ldapsearch issues LDAP queries and can return directory entries such as users and groups. arp-scan discovers local hosts, hping3 crafts custom packets, and nikto scans web servers, so none enumerate directory contents.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-025",
+            "domain": "Scanning and Enumeration",
+            "stem": "A scan sends a single TCP packet with only the FIN flag set and treats a returned RST as a closed port. Which technique is in use?",
+            "options": [
+                "FIN scan",
+                "SYN scan",
+                "Xmas scan",
+                "ACK scan"
+            ],
+            "correct_index": 0,
+            "explanation": "A FIN scan sends one FIN packet and infers closed ports from a returning RST, while open ports stay silent. SYN scans open a half handshake, Xmas scans set three flags, and ACK scans map firewall filtering.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-026",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester connects to each open port and reads the text a service offers on connect. What does the returned banner most directly reveal?",
+            "options": [
+                "The private key of the TLS certificate",
+                "The service name and version number",
+                "The password hashes of local users",
+                "The MAC address of the client"
+            ],
+            "correct_index": 1,
+            "explanation": "Banner grabbing captures the greeting a service sends, which usually names the product and version so known issues can be matched. It does not expose private keys, password hashes, or client MAC addresses.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-027",
+            "domain": "Scanning and Enumeration",
+            "stem": "A tester wants to find open statistic and discovery services that answer only on a connectionless protocol. Which Nmap option scans UDP ports?",
+            "options": [
+                "-sS",
+                "-sA",
+                "-sU",
+                "-sN"
+            ],
+            "correct_index": 2,
+            "explanation": "The -sU option sends UDP probes and interprets ICMP unreachable replies. -sS is a TCP SYN scan, -sA is a TCP ACK scan, and -sN is a TCP NULL scan, so none of them probe UDP services.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-028",
+            "domain": "Scanning and Enumeration",
+            "stem": "An attacker issues a single query to a name server and receives the complete set of records for the zone. Which query type produces this result?",
+            "options": [
+                "PTR",
+                "MX",
+                "SOA",
+                "AXFR"
+            ],
+            "correct_index": 3,
+            "explanation": "AXFR requests an authoritative full-zone transfer and returns every record when the server is misconfigured. PTR, MX and SOA queries each return only their specific record type and never a full dump.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-029",
+            "domain": "Scanning and Enumeration",
+            "stem": "A consultant wants to enumerate active hosts without sending any probe that the target can attribute back to the tester. Which approach fits this requirement?",
+            "options": [
+                "Passive host discovery by analyzing mirrored traffic",
+                "An aggressive Nmap ping sweep of the whole range",
+                "A TCP connect scan of every port",
+                "An Xmas scan across the subnet"
+            ],
+            "correct_index": 0,
+            "explanation": "Passive discovery reads existing traffic, often from a SPAN or mirror port, so no probe reaches the target. Ping sweeps, connect scans and Xmas scans all send packets that a defender can attribute to the scanner.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-030",
+            "domain": "Scanning and Enumeration",
+            "stem": "A hardening team wants to blunt port scanning and service enumeration against its servers. Which control is the most effective direct measure?",
+            "options": [
+                "Lengthen the organization password policy",
+                "Enforce a default-deny firewall and disable unused services",
+                "Increase the size of the server memory",
+                "Turn off event logging to reduce noise"
+            ],
+            "correct_index": 1,
+            "explanation": "A default-deny firewall combined with disabling unused services removes the exposed ports and banners scanners rely on. Password rules, memory size and disabled logging do not reduce the attack surface a scan can reach or identify.",
+            "reference": "EC-Council CEH Blueprint - Scanning and Enumeration"
+        },
+        {
+            "id": "ceh-031",
+            "domain": "System Hacking and Malware",
+            "stem": "A cracking tool cycles through every possible character combination up to a chosen length until the password is found. Which password attack is this?",
+            "options": [
+                "Dictionary attack",
+                "Rainbow table attack",
+                "Brute-force attack",
+                "Hybrid attack"
+            ],
+            "correct_index": 2,
+            "explanation": "A brute-force attack exhaustively tries all combinations, guaranteeing a match eventually but costing time. A dictionary attack tries words, a rainbow table uses precomputed hashes, and a hybrid mixes words with substitutions.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-032",
+            "domain": "System Hacking and Malware",
+            "stem": "An attacker recovers passwords quickly by looking up captured hashes in a large precomputed table rather than cracking each one. Which technique is being used?",
+            "options": [
+                "Brute-force attack",
+                "Keylogging",
+                "Phishing",
+                "Rainbow table attack"
+            ],
+            "correct_index": 3,
+            "explanation": "Rainbow tables trade storage for time by precomputing hash chains, so a matching hash is guessed almost instantly. Brute force computes hashes on the fly, while keylogging and phishing capture credentials without cracking hashes at all.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-033",
+            "domain": "System Hacking and Malware",
+            "stem": "Malicious code is packaged inside a legitimate-looking application so it runs only after the user launches that application. Which malware type does this describe?",
+            "options": [
+                "Trojan horse",
+                "Worm",
+                "Rootkit",
+                "Adware"
+            ],
+            "correct_index": 0,
+            "explanation": "A Trojan hides its payload in an apparently useful program and depends on the user running it. A worm self-replicates without a host, a rootkit hides existing access, and adware displays ads rather than concealing a payload.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-034",
+            "domain": "System Hacking and Malware",
+            "stem": "A piece of malware spreads across a network on its own, infecting new hosts with no user action and no host program to attach to. Which malware type is this?",
+            "options": [
+                "Trojan",
+                "Worm",
+                "Ransomware",
+                "Spyware"
+            ],
+            "correct_index": 1,
+            "explanation": "A worm self-propagates by exploiting network services, requiring no user interaction and no carrier file. A Trojan needs a user to run it, ransomware encrypts for extortion, and spyware secretly gathers information without self-spreading.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-035",
+            "domain": "System Hacking and Malware",
+            "stem": "A penetration tester configures a payload that connects from the victim back to the attacker's listening host and provides an interactive command prompt. Which payload type is this?",
+            "options": [
+                "Bind shell",
+                "Port scan",
+                "Reverse shell",
+                "ACK flood"
+            ],
+            "correct_index": 2,
+            "explanation": "A reverse shell has the victim initiate the outbound connection to the attacker, which often bypasses inbound firewall rules. A bind shell listens on the victim instead, a port scan gathers information, and an ACK flood is denial of service.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-036",
+            "domain": "System Hacking and Malware",
+            "stem": "After entering a host as an ordinary user, an attacker raises their access until they can change protected system settings. What is this step called?",
+            "options": [
+                "Footprinting",
+                "Pivoting",
+                "Covering tracks",
+                "Privilege escalation"
+            ],
+            "correct_index": 3,
+            "explanation": "Privilege escalation turns limited access into administrator or root rights so security controls can be changed. Footprinting precedes the attack, pivoting moves to other hosts, and covering tracks removes evidence afterwards.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-037",
+            "domain": "System Hacking and Malware",
+            "stem": "An attacker wants malicious code to run every time a Windows host reboots. Which built-in facility is commonly abused to schedule that recurring execution?",
+            "options": [
+                "Task Scheduler",
+                "ipconfig",
+                "nslookup",
+                "netstat"
+            ],
+            "correct_index": 0,
+            "explanation": "The Windows Task Scheduler can trigger programs on a schedule or at logon, providing persistence across reboots. ipconfig, nslookup and netstat are diagnostic commands that display configuration or connections and do not persist code.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-038",
+            "domain": "System Hacking and Malware",
+            "stem": "An attacker authenticates to a Windows service using a captured NTLM hash directly, without ever learning the plaintext password. Which technique is this?",
+            "options": [
+                "Pass the ticket",
+                "Pass the hash",
+                "Password spraying",
+                "Credential stuffing"
+            ],
+            "correct_index": 1,
+            "explanation": "Pass the hash replays a captured NTLM hash to authenticate because the protocol accepts the hash itself. Pass the ticket uses a Kerberos ticket, spraying tries a few passwords widely, and stuffing reuses breached credential pairs.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-039",
+            "domain": "System Hacking and Malware",
+            "stem": "A tester recovers plaintext from captured password hashes using a tool that supports many hash formats and mangling rules. Which tool is designed for this?",
+            "options": [
+                "Nmap",
+                "Wireshark",
+                "John the Ripper",
+                "Netcat"
+            ],
+            "correct_index": 2,
+            "explanation": "John the Ripper cracks offline password hashes across many formats and supports word-mangling rules. Nmap scans networks, Wireshark analyzes packets, and Netcat moves raw data; none of them crack password hashes.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-040",
+            "domain": "System Hacking and Malware",
+            "stem": "A victim finds that files are suddenly encrypted and a note demands cryptocurrency to restore them. Which malware category does this behavior define?",
+            "options": [
+                "Rootkit",
+                "Keylogger",
+                "Botnet",
+                "Ransomware"
+            ],
+            "correct_index": 3,
+            "explanation": "Ransomware encrypts data and demands payment for the decryption key, which is its defining behavior. A rootkit hides access, a keylogger captures keystrokes, and a botnet conscripts hosts into a remotely controlled network.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-041",
+            "domain": "System Hacking and Malware",
+            "stem": "Malware alters kernel structures and hides its files and processes so that system tools no longer report it. Which class of malware does this?",
+            "options": [
+                "Rootkit",
+                "Worm",
+                "Logic bomb",
+                "Adware"
+            ],
+            "correct_index": 0,
+            "explanation": "A rootkit compromises the operating system itself so its presence and activity stay concealed from normal tools. A worm spreads, a logic bomb triggers on a condition, and adware shows advertisements; none hides at the kernel level.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-042",
+            "domain": "System Hacking and Malware",
+            "stem": "An attacker conceals a malicious payload inside the pixel data of an ordinary image before sending it onward. Which technique is being used?",
+            "options": [
+                "Encryption",
+                "Steganography",
+                "Compression",
+                "Fragmentation"
+            ],
+            "correct_index": 1,
+            "explanation": "Steganography hides the existence of data inside a carrier such as an image so the transfer looks benign. Encryption hides the content but not its presence, compression shrinks data, and fragmentation splits packets at the network layer.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-043",
+            "domain": "System Hacking and Malware",
+            "stem": "A responder lists the processes running on a Windows host to spot a suspicious executable consuming resources. Which command provides that process list?",
+            "options": [
+                "whois",
+                "dig",
+                "tasklist",
+                "traceroute"
+            ],
+            "correct_index": 2,
+            "explanation": "tasklist enumerates running processes with their names and memory use, which supports spotting malicious programs. whois queries domain records, dig resolves DNS, and traceroute maps network paths; none list local processes.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-044",
+            "domain": "System Hacking and Malware",
+            "stem": "Software installed on a workstation secretly records every key the user presses and forwards the log to an attacker. Which tool category is this?",
+            "options": [
+                "Packet sniffer",
+                "Vulnerability scanner",
+                "Port scanner",
+                "Keylogger"
+            ],
+            "correct_index": 3,
+            "explanation": "A keylogger captures keystrokes to recover credentials and messages. A packet sniffer captures network traffic, a vulnerability scanner checks for weaknesses, and a port scanner discovers listening services; none record typed input.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-045",
+            "domain": "System Hacking and Malware",
+            "stem": "A hardening team wants to reduce the chance that offline cracking recovers credentials after a hash leak. Which two measures most directly help?",
+            "options": [
+                "Long passphrases and a modern salted hashing algorithm",
+                "Shorter passwords and shared service accounts",
+                "Disabling account lockout and reducing password length",
+                "Reusing one password across all systems"
+            ],
+            "correct_index": 0,
+            "explanation": "Long passphrases raise the search space and salted modern hashes defeat precomputed tables and limit reuse. Shorter passwords, shared or reused credentials, and disabled lockout all make cracking easier rather than harder.",
+            "reference": "EC-Council CEH Blueprint - System Hacking and Malware"
+        },
+        {
+            "id": "ceh-046",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker inserts crafted characters into a login field so the backend database returns records the developer never intended to expose. Which web attack is this?",
+            "options": [
+                "Cross-site scripting",
+                "SQL injection",
+                "Cross-site request forgery",
+                "Clickjacking"
+            ],
+            "correct_index": 1,
+            "explanation": "SQL injection breaks out of an unsanitized query and manipulates the database itself. Cross-site scripting runs script in a browser, CSRF forces an unintended request, and clickjacking overlays a page to capture clicks, none of which alter SQL.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-047",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker stores a script in a comment field so that it executes in the browser of every visitor who views that page. Which vulnerability allows this?",
+            "options": [
+                "SQL injection",
+                "Cross-site request forgery",
+                "Cross-site scripting",
+                "Directory traversal"
+            ],
+            "correct_index": 2,
+            "explanation": "Cross-site scripting executes attacker-supplied script in victims' browsers because output was not encoded. SQL injection targets the database, CSRF triggers state-changing requests, and directory traversal reads files outside the web root.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-048",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A logged-in user visits a malicious page that silently causes their browser to submit an authenticated money transfer. Which attack abuses the user's existing session this way?",
+            "options": [
+                "Cross-site scripting",
+                "SQL injection",
+                "Clickjacking",
+                "Cross-site request forgery"
+            ],
+            "correct_index": 3,
+            "explanation": "CSRF makes the victim's browser send an authenticated request the user never intended, because the site trusts the session cookie. XSS runs attacker script, SQL injection manipulates a query, and clickjacking tricks a click, but none forge a request on their own.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-049",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A tester places a sequence of parent-directory characters into a web parameter and reads a configuration file stored outside the site root. Which flaw is being exploited?",
+            "options": [
+                "Directory traversal",
+                "Cross-site scripting",
+                "Cross-site request forgery",
+                "Server-side request forgery"
+            ],
+            "correct_index": 0,
+            "explanation": "Directory traversal uses ../ sequences to climb out of the web root and read arbitrary files. XSS and CSRF attack browsers or sessions, and SSRF makes the server fetch internal resources, not read local files by path.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-050",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A tester automates a check of a web server for outdated components, dangerous files, and common misconfigurations. Which command-line scanner is built for this?",
+            "options": [
+                "John the Ripper",
+                "Nikto",
+                "hping3",
+                "Wireshark"
+            ],
+            "correct_index": 1,
+            "explanation": "Nikto scans web servers for known files, headers and misconfigurations. John the Ripper cracks hashes, hping3 crafts packets, and Wireshark captures traffic; none of them audit web server configuration.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-051",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker floods a wireless network with forged management frames so that connected clients are forcibly disconnected. Which wireless attack is this?",
+            "options": [
+                "Evil twin",
+                "WPS PIN attack",
+                "Deauthentication attack",
+                "Bluejacking"
+            ],
+            "correct_index": 2,
+            "explanation": "A deauthentication attack forges management frames to drop clients, often to capture the handshake on reconnect. An evil twin imitates an access point, a WPS attack guesses the pairing PIN, and bluejacking targets Bluetooth messages.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-052",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker sets up a rogue access point that broadcasts the same SSID as a legitimate one to lure users into connecting. Which attack is this?",
+            "options": [
+                "Deauthentication",
+                "WEP cracking",
+                "Bluesnarfing",
+                "Evil twin"
+            ],
+            "correct_index": 3,
+            "explanation": "An evil twin is a rogue access point cloning a legitimate SSID so victims associate with the attacker's hardware. Deauthentication disconnects clients, WEP cracking recovers a weak key, and bluesnarfing steals Bluetooth data.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-053",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker sends unsolicited text messages to discoverable Bluetooth devices in a crowded public area. Which Bluetooth attack is being performed?",
+            "options": [
+                "Bluejacking",
+                "Bluesnarfing",
+                "Bluebugging",
+                "Bluesmack"
+            ],
+            "correct_index": 0,
+            "explanation": "Bluejacking sends unsolicited messages to a Bluetooth device and does not steal data. Bluesnarfing copies data, bluebugging takes control of the device, and bluesmack sends malformed frames to cause denial of service.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-054",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A tester discovers that a cloud storage bucket allows anonymous read access and exposes customer records. Which cloud weakness does this represent?",
+            "options": [
+                "an expired TLS certificate on the API",
+                "a misconfigured storage bucket exposed to the public",
+                "a weak Wi-Fi pre-shared key",
+                "an unpatched Bluetooth stack"
+            ],
+            "correct_index": 1,
+            "explanation": "Storage buckets default to private, and an anonymous-read setting is a classic misconfiguration that leaks data. An expired certificate affects trust, a weak Wi-Fi key affects wireless access, and a Bluetooth flaw is unrelated to object storage exposure.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-055",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A cloud architect replaces long-lived API access keys with credentials that expire after a short time. Which practice is being applied?",
+            "options": [
+                "Hardcoding a shared administrator key",
+                "Storing static passwords in source code",
+                "Use of temporary identity credentials through a role",
+                "Sharing one root account across the team"
+            ],
+            "correct_index": 2,
+            "explanation": "Assuming a role issues short-lived, automatically rotated credentials, shrinking the window an attacker can misuse a leaked key. Hardcoded keys, embedded passwords and a shared root account all create long-lived, high-value secrets.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-056",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker tricks a web application into fetching a URL of the attacker's choosing, which returns the cloud instance metadata endpoint instead. Which flaw is exploited?",
+            "options": [
+                "Cross-site scripting",
+                "Cross-site request forgery",
+                "SQL injection",
+                "Server-side request forgery"
+            ],
+            "correct_index": 3,
+            "explanation": "SSRF abuses a server-side fetch to reach internal services such as the metadata endpoint and retrieve credentials. XSS and CSRF run in the victim's browser, and SQL injection manipulates a database query rather than making the server issue a request.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-057",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A wireless assessment finds a network using an older encryption scheme whose short initialization vectors make it routinely crackable. Which scheme is it?",
+            "options": [
+                "WEP",
+                "WPA2",
+                "WPA3",
+                "IEEE 802.1X"
+            ],
+            "correct_index": 0,
+            "explanation": "WEP reuses short initialization vectors, so captured traffic can recover the key in minutes. WPA2 uses CCMP, WPA3 adds SAE, and 802.1X provides port-based authentication, all of which are far more resistant than WEP.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-058",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A web administrator adds a response header so that browsers refuse to connect to the site over plain HTTP for a set period. Which header enforces this upgrade?",
+            "options": [
+                "X-Frame-Options",
+                "Strict-Transport-Security",
+                "Content-Security-Policy",
+                "Referrer-Policy"
+            ],
+            "correct_index": 1,
+            "explanation": "Strict-Transport-Security (HSTS) tells browsers to use HTTPS only for the configured lifetime. X-Frame-Options blocks framing, Content-Security-Policy restricts resource sources, and Referrer-Policy controls referrer data, none of which force HTTPS.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-059",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "An attacker loads a transparent layer over a legitimate page so the victim's clicks land on hidden controls. Which attack is this?",
+            "options": [
+                "Cross-site scripting",
+                "SQL injection",
+                "Clickjacking",
+                "Session fixation"
+            ],
+            "correct_index": 2,
+            "explanation": "Clickjacking overlays invisible elements and frames so the user clicks something unintended. XSS injects script, SQL injection attacks the database, and session fixation pre-sets a session ID; none rely on a visual overlay trick.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        },
+        {
+            "id": "ceh-060",
+            "domain": "Web, Wireless and Cloud Security",
+            "stem": "A cloud team wants each automated job to have only the exact permissions it needs and nothing more. Which principle should guide the identity policies?",
+            "options": [
+                "Security through obscurity",
+                "Implicit full access",
+                "Shared administrative roles",
+                "Least privilege"
+            ],
+            "correct_index": 3,
+            "explanation": "Least privilege grants only the permissions a principal needs, limiting blast radius if it is compromised. Obscurity hides rather than restricts, implicit full access over-grants, and shared admin roles destroy accountability and widen access.",
+            "reference": "EC-Council CEH Blueprint - Web, Wireless and Cloud Security"
+        }
+    ]
+}

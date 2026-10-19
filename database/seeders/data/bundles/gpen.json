@@ -1,0 +1,858 @@
+{
+    "cert_key": "gpen",
+    "title": "GIAC GPEN",
+    "issuer": "GIAC (SANS Institute)",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/gpen.json",
+    "variant_label": "GPEN Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 71% scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public GPEN exam objectives. Not a capture of past exam questions.",
+    "source_label": "GPEN practice bank",
+    "items": [
+        {
+            "id": "gpen-001",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Before any active testing begins on a client network, which engagement document defines authorized testing windows, prohibited techniques, and points of contact?",
+            "options": [
+                "Rules of engagement",
+                "Marketing statement of work",
+                "Employee handbook",
+                "Disaster recovery plan"
+            ],
+            "correct_index": 0,
+            "explanation": "The rules of engagement translate the contract into operational authorization, specifying scope, timing, methods, and contacts. The other documents do not govern testing activity.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-002",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "A tester gathers registrar, creation-date, and registrant contact information for a target domain without sending any traffic to the target infrastructure. Which technique is this?",
+            "options": [
+                "Port scanning the surrounding /24",
+                "WHOIS lookups against the registry",
+                "Directory brute forcing",
+                "ARP poisoning the local segment"
+            ],
+            "correct_index": 1,
+            "explanation": "WHOIS queries against domain registries and regional internet registries are passive, because they return registration data from third-party databases without touching the target's systems.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-003",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which DNS record type identifies the mail servers that accept email delivery for a domain?",
+            "options": [
+                "A",
+                "CNAME",
+                "MX",
+                "TXT"
+            ],
+            "correct_index": 2,
+            "explanation": "MX records name the hosts responsible for accepting SMTP mail for a domain. A records map names to IPs, CNAMEs alias names, and TXT records carry arbitrary text such as SPF data.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-004",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which public source lets a tester enumerate subdomains by mining logged TLS certificate issuance records?",
+            "options": [
+                "Passive DNS databases",
+                "NetBIOS session queries",
+                "SMTP banner captures",
+                "Certificate transparency logs"
+            ],
+            "correct_index": 3,
+            "explanation": "Certificate transparency logs publicly record every issued TLS certificate, including subdomain names, so hostnames can be discovered without contacting the target directly.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-005",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which combination of search-engine operators narrows results to PDF documents hosted on a specific organization's site during OSINT?",
+            "options": [
+                "The filetype operator combined with the site operator",
+                "The intitle operator combined with allinurl",
+                "The cache operator combined with related",
+                "The link operator combined with inurl"
+            ],
+            "correct_index": 0,
+            "explanation": "The filetype operator restricts results to a given file extension and the site operator restricts results to one domain, a standard way to surface leaked or public documents such as policies and org charts.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-006",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "A tester wants to discover internet-exposed cameras and industrial devices by searching service banners. Which search service indexes such device fingerprints?",
+            "options": [
+                "Censys",
+                "Shodan",
+                "DNSlytics",
+                "crt.sh"
+            ],
+            "correct_index": 1,
+            "explanation": "Shodan continuously crawls internet hosts and indexes banner data from services such as cameras, SCADA gear, and databases. crt.sh mines certificates, not service banners.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-007",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "A tester suspects an authoritative DNS server permits full zone replication. Which dig query type attempts a zone transfer?",
+            "options": [
+                "dig PTR",
+                "dig ANY",
+                "dig AXFR",
+                "dig SOA"
+            ],
+            "correct_index": 2,
+            "explanation": "AXFR is the zone-transfer query; if permitted to an unauthorized client it reveals every record in the zone. PTR resolves reverse names, ANY asks for all types at a name, and SOA returns zone metadata.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-008",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which public data maps IP prefixes and origin autonomous systems to an organization, helping scope cloud and network assets during reconnaissance?",
+            "options": [
+                "SMTP banner catalogs",
+                "TLS certificate logs",
+                "WHOIS registrant profiles",
+                "Regional internet registry route objects"
+            ],
+            "correct_index": 3,
+            "explanation": "Regional internet registries publish route objects and allocations that tie IP prefixes to autonomous systems and organizations, mapping the network space a client actually announces.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-009",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which open-source tool is primarily used to harvest email addresses and subdomains from search engines and public sources?",
+            "options": [
+                "theHarvester",
+                "Hashcat",
+                "John the Ripper",
+                "Aircrack-ng"
+            ],
+            "correct_index": 0,
+            "explanation": "theHarvester aggregates emails and hostnames from public search and datastore sources. Hashcat and John are password crackers and Aircrack-ng targets wireless networks.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-010",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "What is the purpose of an SPF record published in a domain's DNS?",
+            "options": [
+                "Encrypt zone transfers",
+                "Declare hosts authorized to send mail for the domain",
+                "Sign DNS queries",
+                "Publish TLS private keys"
+            ],
+            "correct_index": 1,
+            "explanation": "SPF lists the servers permitted to send email for a domain so receivers can reject forged senders. It does not encrypt transfers, sign queries, or publish keys.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-011",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "What distinguishes passive reconnaissance from active reconnaissance in an authorized engagement?",
+            "options": [
+                "Passive uses only social engineering techniques",
+                "Passive always requires valid credentials",
+                "Active sends traffic that touches the target's systems",
+                "Active is limited to DNS queries only"
+            ],
+            "correct_index": 2,
+            "explanation": "Active reconnaissance contacts or probes the target's infrastructure, such as scanning ports; passive work uses only third-party and public data. The other statements misstate passive methods.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-012",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which service or tool surveys what web server software, frameworks, and analytics a site runs by analyzing HTTP responses at scale?",
+            "options": [
+                "Shodan",
+                "crt.sh",
+                "DNSDumpster",
+                "BuiltWith"
+            ],
+            "correct_index": 3,
+            "explanation": "BuiltWith profiles the technologies a website uses from its HTTP responses and page assets. Shodan indexes service banners, crt.sh certificates, and DNSDumpster DNS relationships.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-013",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Mapping an organization's employees and job roles on professional networking sites primarily supports which later attack technique?",
+            "options": [
+                "Password spraying with plausible account names",
+                "Rendering the network topology",
+                "Decrypting captured wireless traffic",
+                "Generating rogue TLS certificates"
+            ],
+            "correct_index": 0,
+            "explanation": "Harvested names and email patterns feed targeted password spraying and phishing. Employee OSINT does not reveal topology, decrypt traffic, or mint certificates.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-014",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "Which DNS record type maps a public IP address back to a hostname through reverse lookups?",
+            "options": [
+                "SRV",
+                "PTR",
+                "NS",
+                "MX"
+            ],
+            "correct_index": 1,
+            "explanation": "PTR records in the in-addr.arpa space resolve IPs to hostnames. SRV locates services, NS delegates zones, and MX names mail servers.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-015",
+            "domain": "Reconnaissance and OSINT",
+            "stem": "During OSINT, a tester locates live credentials for a third-party SaaS portal that is explicitly out of scope. What is the correct action?",
+            "options": [
+                "Use the credentials to assess the portal",
+                "Publish the finding on a public forum",
+                "Report the discovery to the client and stop, without accessing the account",
+                "Change the password as proof of control"
+            ],
+            "correct_index": 2,
+            "explanation": "Out-of-scope systems remain unauthorized; the tester reports the discovery and preserves it as evidence. Accessing, changing, or publishing the account would exceed the engagement's legal authorization.",
+            "reference": "GIAC GPEN Objectives - Reconnaissance and OSINT"
+        },
+        {
+            "id": "gpen-016",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap scan type sends SYN probes and leaves connections half-open, requiring raw-socket privileges on the scanning host?",
+            "options": [
+                "-sT full connect scan",
+                "-sU UDP scan",
+                "-sN null scan",
+                "-sS stealth SYN scan"
+            ],
+            "correct_index": 3,
+            "explanation": "The -sS SYN scan builds packets at the socket layer and never completes the handshake, so it needs root. -sT uses ordinary connect() calls and needs no special privileges.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-017",
+            "domain": "Scanning and Exploitation",
+            "stem": "Hosts on the target network ignore ICMP echo requests. Which Nmap option treats every host as online and scans the requested ports anyway?",
+            "options": [
+                "-Pn treat hosts as online",
+                "-sn ping scan only",
+                "-n disable DNS resolution",
+                "-nf skip first octet"
+            ],
+            "correct_index": 0,
+            "explanation": "-Pn skips host discovery and probes every target directly, defeating ICMP filtering. -sn is host discovery only, and -n merely disables reverse DNS lookups.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-018",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap option interrogates open ports to fingerprint the service and application versions listening on them?",
+            "options": [
+                "-O",
+                "-sV",
+                "-A",
+                "-sC"
+            ],
+            "correct_index": 1,
+            "explanation": "-sV probes open ports and matches responses against a version database. -O is OS detection, -sC runs default scripts, and -A bundles several detection features together.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-019",
+            "domain": "Scanning and Exploitation",
+            "stem": "Scanning UDP services such as DNS and SNMP is notoriously slow. Which Nmap flag performs a UDP scan?",
+            "options": [
+                "-sT",
+                "-sS",
+                "-sU",
+                "-sA"
+            ],
+            "correct_index": 2,
+            "explanation": "-sU sends UDP datagrams and interprets ICMP unreachable or empty replies, which is slow because open UDP services often stay silent. The other flags scan TCP.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-020",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap option attempts operating-system fingerprinting by analyzing how the target's IP stack responds to crafted probes?",
+            "options": [
+                "-sV version detection",
+                "--traceroute",
+                "-b FTP bounce",
+                "-O OS detection"
+            ],
+            "correct_index": 3,
+            "explanation": "-O sends unusual TCP, UDP, and ICMP probes and scores the response pattern against a fingerprint database. -sV identifies services, not operating systems.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-021",
+            "domain": "Scanning and Exploitation",
+            "stem": "A stateless firewall filters on packet flags. Which Nmap option splits probes into small fragments to slip past such rules?",
+            "options": [
+                "-f fragment packets into eight-byte pieces",
+                "-D send decoy addresses",
+                "--source-port 53 spoof queries",
+                "-O fingerprint the OS"
+            ],
+            "correct_index": 0,
+            "explanation": "-f fragments IP packets so header-matching firewall rules may not see the full probe. -D adds decoys and --source-port spoofs the source port, but neither fragments traffic.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-022",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap option interleaves spoofed decoy addresses with the real scan source to confuse intrusion-detection attribution?",
+            "options": [
+                "-sI idle scan",
+                "-D decoy mode",
+                "-f fragment",
+                "-R force resolution"
+            ],
+            "correct_index": 1,
+            "explanation": "-D emits scans from a mix of decoy and real addresses so logs and IDS alerts point at innocent hosts. -sI is a separate idle-scan technique using a zombie host.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-023",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap timing template is the slowest and most cautious, inserting long delays between probes?",
+            "options": [
+                "-T3 normal",
+                "-T4 fast",
+                "-T0 paranoid",
+                "-T5 insane"
+            ],
+            "correct_index": 2,
+            "explanation": "-T0 is the paranoid template with the longest waits between probes. -T5 is the fastest and most likely to drop packets and alert defenses.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-024",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Nmap option runs the default set of NSE scripts against discovered services during a scan?",
+            "options": [
+                "-sV version probes",
+                "-O OS detection",
+                "--open skip closed ports",
+                "-sC default scripts"
+            ],
+            "correct_index": 3,
+            "explanation": "-sC is shorthand for running the default NSE script category, adding checks such as SMB enumeration and HTTP title grabs alongside the scan.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-025",
+            "domain": "Scanning and Exploitation",
+            "stem": "A Meterpreter session opens because the compromised target connects out to the tester's listener. What type of shell is this?",
+            "options": [
+                "Reverse shell",
+                "Bind shell",
+                "Web shell",
+                "Virtual shell"
+            ],
+            "correct_index": 0,
+            "explanation": "A reverse shell initiates the connection from the target back to the attacker, which passes NAT and egress filters more easily. A bind shell listens on the target and waits for the attacker to connect in.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-026",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which msfvenom option sets the listener IP address that gets embedded into a generated reverse payload?",
+            "options": [
+                "LPORT",
+                "LHOST",
+                "RHOST",
+                "SRVHOST"
+            ],
+            "correct_index": 1,
+            "explanation": "LHOST is the local host the payload calls back to. LPORT is the callback port, RHOST is the remote target for exploit modules, and SRVHOST binds a module's own server.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-027",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which Windows SMBv1 flaw provides remote code execution and is commonly exploited through Metasploit's EternalBlue module?",
+            "options": [
+                "CVE-2019-0708",
+                "MS08-067",
+                "MS17-010",
+                "MS15-034"
+            ],
+            "correct_index": 2,
+            "explanation": "MS17-010 is the SMBv1 flaw weaponized as EternalBlue. CVE-2019-0708 is BlueKeep in RDP, MS08-067 is an older Windows Server service flaw, and MS15-034 is an HTTP.sys issue.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-028",
+            "domain": "Scanning and Exploitation",
+            "stem": "The historic vsftpd 2.3.4 backdoor opens which additional TCP port when a specially crafted username is submitted?",
+            "options": [
+                "31337",
+                "4444",
+                "1337",
+                "6200"
+            ],
+            "correct_index": 3,
+            "explanation": "Submitting a username ending with the smiley sequence triggers the backdoor, which listens on port 6200 and yields a shell. The other ports are common placeholders, not this backdoor.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-029",
+            "domain": "Scanning and Exploitation",
+            "stem": "Which local command-line tool searches an Exploit-DB archive for public exploits matching a discovered product and version?",
+            "options": [
+                "searchsploit",
+                "enum4linux",
+                "smbclient",
+                "crackmapexec"
+            ],
+            "correct_index": 0,
+            "explanation": "searchsploit is the local Exploit-DB interface for finding public exploit code by keyword or version. The other tools enumerate or attack SMB services, not exploit archives.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-030",
+            "domain": "Scanning and Exploitation",
+            "stem": "In Metasploit, which module type checks ports and fingerprints services without delivering an exploit payload?",
+            "options": [
+                "exploit",
+                "auxiliary",
+                "payload",
+                "post"
+            ],
+            "correct_index": 1,
+            "explanation": "Auxiliary modules perform tasks such as scanning, fuzzing setup, and service fingerprinting without exploiting. Exploit modules deliver payloads, post modules run after a session, and payloads are the shellcode staged inside.",
+            "reference": "GIAC GPEN Objectives - Scanning and Exploitation"
+        },
+        {
+            "id": "gpen-031",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "On a compromised Linux host, which command lists the sudo privileges granted to the current user and is a first-stop privilege-escalation check?",
+            "options": [
+                "id -a",
+                "uname -r",
+                "sudo -l",
+                "cat /etc/hosts"
+            ],
+            "correct_index": 2,
+            "explanation": "sudo -l reveals exactly which commands the user may run as other accounts, exposing misconfigurations such as NOPASSWD root entries. The other commands show identity, kernel, or host mappings.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-032",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "Which command searches a Linux filesystem for SUID binaries that may be abused to execute programs with elevated privileges?",
+            "options": [
+                "find / -name '*.so'",
+                "ls -la /var/tmp",
+                "grep -r SUID /etc",
+                "find / -perm -4000"
+            ],
+            "correct_index": 3,
+            "explanation": "-perm -4000 matches files with the SUID bit set, whose owner's privileges apply at execution. The other commands locate libraries, list a directory, or search text, not SUID bits.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-033",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "A Windows service points to an executable whose path contains spaces but lacks quotation marks, such as a binary under Program Files. Which weakness is this?",
+            "options": [
+                "Unquoted service path",
+                "Sticky handle leak",
+                "DLL search order hijack",
+                "Weak registry ACL on HKCU"
+            ],
+            "correct_index": 0,
+            "explanation": "Windows tries intermediate path segments such as a top-level Program executable before the real binary, so planting a matching executable escalates privileges. That is the unquoted service path weakness.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-034",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "The directory containing a service's executable is writable by the tester's low-privilege account. Which technique most directly yields SYSTEM?",
+            "options": [
+                "Enable auditing via group policy",
+                "Replace the service binary and restart the service",
+                "Patch the kernel driver",
+                "Dump the SAM hive offline"
+            ],
+            "correct_index": 1,
+            "explanation": "If the binary path is writable, replacing it with a payload that adds a backdoor and restarting the service executes it as the service account, usually SYSTEM. The other actions need different privileges or do not escalate.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-035",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "A compromised service account holds SeImpersonatePrivilege. Which class of tools abuses this right to obtain SYSTEM on the host?",
+            "options": [
+                "Golden ticket forging utilities",
+                "LSASS dump parsers",
+                "Potato-style token impersonation exploits",
+                "NTLM relay listeners only"
+            ],
+            "correct_index": 2,
+            "explanation": "Potato-family exploits coerce a privileged authentication and then use SeImpersonatePrivilege to impersonate that token locally. Forging tickets and parsing dumps are lateral-movement or credential techniques, not this local escalation.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-036",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "Both the HKLM and HKCU AlwaysInstallElevated registry values are set to 1. What happens when a low-privilege user launches an MSI package?",
+            "options": [
+                "It installs silently with user-context rights only",
+                "It always prompts for domain admin credentials",
+                "It is blocked by SmartScreen in every case",
+                "It installs with SYSTEM privileges"
+            ],
+            "correct_index": 3,
+            "explanation": "AlwaysInstallElevated tells Windows Installer to run packages with elevated SYSTEM rights regardless of the user, so any user-supplied MSI becomes a local privilege escalation.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-037",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "cmdkey /list shows saved credentials for a domain service account on a shared workstation. Which command can replay them to start a process as that account?",
+            "options": [
+                "runas /savecred",
+                "net group /domain",
+                "gpupdate /force",
+                "tasklist /v"
+            ],
+            "correct_index": 0,
+            "explanation": "runas with the saved credentials reuses the stored secret to launch a process as the service account without knowing its password. The other commands query groups, refresh policy, or list processes.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-038",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "You hold only an NTLM hash for a domain administrator, not the cleartext password. Which tool family executes commands over SMB using that hash?",
+            "options": [
+                "hashcat",
+                "impacket psexec-style scripts",
+                "responder",
+                "tcpdump"
+            ],
+            "correct_index": 1,
+            "explanation": "Impacket's psexec, smbexec, and wmiexec authenticate to SMB by replaying the NTLM hash, a pass-the-hash technique. Hashcat cracks hashes, responder captures them, and tcpdump only captures traffic.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-039",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "An attacker requests Kerberos service tickets for accounts that expose SPNs, then cracks the tickets offline to recover passwords. Which technique is this?",
+            "options": [
+                "Pass the ticket",
+                "Overpass the hash",
+                "Kerberoasting",
+                "AS-REP roasting"
+            ],
+            "correct_index": 2,
+            "explanation": "Kerberoasting abuses the right of any domain user to request RC4-encrypted service tickets and crack them offline. AS-REP roasting targets accounts without pre-authentication, and pass the ticket reuses a stolen ticket rather than cracking it.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-040",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "Enumeration shows a domain account has Kerberos pre-authentication disabled. Which offline attack applies to that account?",
+            "options": [
+                "Kerberoasting",
+                "Golden ticket forgery",
+                "DCSync replication",
+                "AS-REP roasting"
+            ],
+            "correct_index": 3,
+            "explanation": "Without pre-authentication, an attacker can request an encrypted AS-REP for the account and crack it offline, which is AS-REP roasting. Kerberoasting needs valid credentials and an SPN; DCSync needs domain-level rights.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-041",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "An internal web server is reachable only from a compromised pivot host. Which SSH command forwards the tester's local port 8080 to that internal server?",
+            "options": [
+                "ssh -L forward local port 8080 to the internal server through the pivot",
+                "ssh -R forward remote port 8080 from the pivot back outward",
+                "ssh -D open a SOCKS proxy listener on the pivot",
+                "ssh -N with no forwarding requested"
+            ],
+            "correct_index": 0,
+            "explanation": "The -L flag creates a local forward, so the tester's local port 8080 is sent through the SSH connection to the internal web server. -R forwards in the opposite direction, -D opens a SOCKS proxy, and -N alone forwards nothing.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-042",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "A SOCKS proxy listener runs on a pivot host. Which combination lets local tools such as crackmapexec route their traffic through that proxy?",
+            "options": [
+                "socat plus netcat chaining",
+                "proxychains plus a SOCKS listener",
+                "arping plus hping3 crafting",
+                "iptables plus masquerading only"
+            ],
+            "correct_index": 1,
+            "explanation": "proxychains rewrites TCP connections from any tool through a configured SOCKS proxy, which here is the listener on the pivot. The other combinations do not transparently tunnel arbitrary tool traffic.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-043",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "With domain administrator access to a workstation, which Impacket script uses directory replication services to pull every account's hashes from the domain controller?",
+            "options": [
+                "GetUserSPNs.py",
+                "smbclient.py",
+                "secretsdump.py",
+                "lookupsid.py"
+            ],
+            "correct_index": 2,
+            "explanation": "secretsdump.py performs DCSync-style replication and also parses SAM, SYSTEM, and NTDS.dit material to dump hashes. GetUserSPNs.py requests service tickets, and the others list shares or SIDs.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-044",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "A root cron job executes a shell script stored in a directory writable by the tester's account. Which action yields root execution?",
+            "options": [
+                "Edit /etc/fstab on the root volume",
+                "Disable the local firewall",
+                "Change the system timezone",
+                "Plant a malicious script in the writable path"
+            ],
+            "correct_index": 3,
+            "explanation": "Overwriting or replacing the cron-executed script with attacker code runs that code as root at the next schedule. The other actions need root already or do not escalate privileges.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-045",
+            "domain": "Privilege Escalation and Pivoting",
+            "stem": "An NFS export is shared with no_root_squash enabled. What risk does this create for a tester with local user access on a mount client?",
+            "options": [
+                "Remote users can create files that appear owned by root on the server",
+                "Squash silently maps all users to the guest account",
+                "The share disables authentication entirely",
+                "The export is forced to NFS version 2 only"
+            ],
+            "correct_index": 0,
+            "explanation": "Root squash normally maps remote root to nobody; disabling it lets a client-side root-owned file land on the share as true root, enabling privilege escalation on the NFS server.",
+            "reference": "GIAC GPEN Objectives - Privilege Escalation and Pivoting"
+        },
+        {
+            "id": "gpen-046",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Which section of a professional penetration test report summarizes business impact and key recommendations for non-technical executives?",
+            "options": [
+                "Appendix of raw scan output",
+                "Executive summary",
+                "Methodology timeline",
+                "Tool license inventory"
+            ],
+            "correct_index": 1,
+            "explanation": "The executive summary translates technical results into business risk for leadership. Raw scans belong in appendices and the methodology supports, but does not replace, the summary.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-047",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Which framework provides a standardized method for scoring the severity of an individual vulnerability in a report finding?",
+            "options": [
+                "NIST SP 800-53 controls",
+                "ISO 27001",
+                "CVSS",
+                "COBIT"
+            ],
+            "correct_index": 2,
+            "explanation": "The Common Vulnerability Scoring System produces a comparable severity score for a vulnerability. NIST 800-53, ISO 27001, and COBIT are control or governance frameworks, not per-vulnerability scorers.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-048",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "A tester hands captured digital evidence to the client's legal team. What documentation must accompany that transfer?",
+            "options": [
+                "A software license inventory",
+                "The tester's resume",
+                "A marketing summary",
+                "A chain-of-custody record"
+            ],
+            "correct_index": 3,
+            "explanation": "Chain-of-custody documentation records who collected, transferred, and received each item and when, preserving evidentiary integrity. Without it, evidence may be challenged or excluded.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-049",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "An attacker modified file timestamps so malicious files blend in with operating system files. Which anti-forensic technique is this?",
+            "options": [
+                "Timestomping",
+                "File carving",
+                "Journaling",
+                "Slack collection"
+            ],
+            "correct_index": 0,
+            "explanation": "Timestomping alters MACB timestamps to evade timeline analysis. Carving recovers files from raw media, journaling records filesystem metadata, and slack collection reads leftover data in clusters.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-050",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "After achieving the engagement objectives, the tester removes planted accounts, cron jobs, and uploaded tools. This primarily satisfies which requirement?",
+            "options": [
+                "Improving the speed of future scans",
+                "Restoring the environment and honoring the rules of engagement",
+                "Increasing the number of reportable findings",
+                "Validating the client's backup system"
+            ],
+            "correct_index": 1,
+            "explanation": "Cleanup returns systems to their pre-test state and fulfills the rules of engagement, which typically require removing persistence. It does not add findings or test backups.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-051",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Why does each reportable finding need supporting evidence such as screenshots, command output, or packet captures?",
+            "options": [
+                "It shortens the final report length",
+                "It replaces the need for remediation advice",
+                "It lets the client reproduce and validate the issue",
+                "It is required only for marketing purposes"
+            ],
+            "correct_index": 2,
+            "explanation": "Evidence makes each finding verifiable and reproducible by the client's staff during remediation and retest. Claims without evidence cannot be validated or prioritized confidently.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-052",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "How should remediation recommendations be ordered in a professional penetration test report?",
+            "options": [
+                "Alphabetically by vulnerability name",
+                "By exploit availability on social media",
+                "By the order in which tests were executed",
+                "By risk to the business, highest first"
+            ],
+            "correct_index": 3,
+            "explanation": "Recommendations are prioritized by business risk so leadership fixes the most damaging issues first. Test order and alphabetization carry no risk meaning.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-053",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "What is the primary purpose of a closing debrief meeting with the client after fieldwork ends?",
+            "options": [
+                "To walk stakeholders through key findings and next steps",
+                "To run additional exploits against live systems",
+                "To renegotiate the engagement scope",
+                "To collect final payment only"
+            ],
+            "correct_index": 0,
+            "explanation": "The debrief communicates high-level results, answers questions, and aligns on remediation and retest plans. Fieldwork is closed, so further exploitation and scope changes are out of place.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-054",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Where should captured password hashes, session tokens, and other sensitive loot be stored during and after the engagement?",
+            "options": [
+                "On a public paste site for quick sharing",
+                "In an encrypted, access-controlled artifact store",
+                "Inside the report's executive summary",
+                "On shared marketing network drives"
+            ],
+            "correct_index": 1,
+            "explanation": "Engagement artifacts are client secrets and belong in encrypted, access-controlled storage with limited retention. Public or shared drives expose them to theft and violate confidentiality obligations.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-055",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "The client has patched the issues from the report. What activity properly closes out the technical side of the engagement?",
+            "options": [
+                "Issuing a press release about the test",
+                "Signing a new sales contract",
+                "A retest that verifies each reported fix",
+                "Deleting all work papers immediately"
+            ],
+            "correct_index": 2,
+            "explanation": "A retest confirms each remediated finding is actually fixed and updates the report status. Deleting work papers may violate retention duties, and sales or publicity are unrelated to closeout.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-056",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "While testing, a tester copies customer records far beyond what the engagement objective required. Which principle does this violate?",
+            "options": [
+                "Defense in depth",
+                "Separation of duties",
+                "Non-repudiation",
+                "Data minimization"
+            ],
+            "correct_index": 3,
+            "explanation": "Data minimization means collecting only what the objective needs; hoarding extra client data increases breach exposure and breaks the engagement agreement. The other terms describe different security concepts.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-057",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Which report practice most improves a client's ability to track and verify remediation of each issue over time?",
+            "options": [
+                "Assigning each finding a unique ID with tracked status",
+                "Omitting remediation details to keep the report short",
+                "Combining all severities into one aggregate score",
+                "Hiding evidence to protect the tester's methods"
+            ],
+            "correct_index": 0,
+            "explanation": "Unique finding IDs plus status tracking let both teams follow issues from discovery through retest. Hiding evidence or aggregating severities makes individual remediation impossible to follow.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-058",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "Why map report findings to control frameworks such as NIST CSF or PCI DSS when the client requests it?",
+            "options": [
+                "To replace technical evidence with control names",
+                "So remediation can be tied to specific regulatory or policy obligations",
+                "To increase the engagement invoice",
+                "To avoid recommending concrete fixes"
+            ],
+            "correct_index": 1,
+            "explanation": "Framework mapping shows which audited controls each finding affects, helping clients justify remediation to regulators and management. It complements, rather than replaces, technical detail.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-059",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "After the final report is delivered, what is the tester's obligation regarding engagement artifacts containing client secrets?",
+            "options": [
+                "Keep copies indefinitely as portfolio material",
+                "Post anonymized extracts publicly",
+                "Securely dispose of client data per the engagement agreement",
+                "Forward copies to a personal mailbox"
+            ],
+            "correct_index": 2,
+            "explanation": "The rules of engagement and confidentiality terms require secure disposal or return of client data after the agreed retention window. Keeping or sharing copies creates needless breach risk.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        },
+        {
+            "id": "gpen-060",
+            "domain": "Post-Exploitation and Reporting",
+            "stem": "A draft finding states only that the network was weak, with no evidence or risk rating. What is the primary defect?",
+            "options": [
+                "It is too long for a management audience",
+                "It includes too many screenshots",
+                "It names the tools the tester used",
+                "It is not specific, measurable, or actionable for remediation"
+            ],
+            "correct_index": 3,
+            "explanation": "Findings must be specific and evidenced so they can be validated, prioritized, and fixed. A vague claim gives the client nothing to remediate, regardless of length or tool mentions.",
+            "reference": "GIAC GPEN Objectives - Post-Exploitation and Reporting"
+        }
+    ]
+}

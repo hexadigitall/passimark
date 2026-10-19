@@ -1,0 +1,858 @@
+{
+    "cert_key": "gcfa",
+    "title": "GIAC GCFA",
+    "issuer": "GIAC (SANS Institute)",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/gcfa.json",
+    "variant_label": "GCFA Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 71% scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public GCFA exam objectives. Not a capture of past exam questions.",
+    "source_label": "GCFA practice bank",
+    "items": [
+        {
+            "id": "gcfa-001",
+            "domain": "Forensic Data Collection",
+            "stem": "During a live response an analyst must collect the most volatile evidence first. Which source should be captured before anything else?",
+            "options": [
+                "CPU registers and cache",
+                "A physical image of the hard drive",
+                "Archived nightly backups",
+                "Logs already replicated to a remote server"
+            ],
+            "correct_index": 0,
+            "explanation": "The order of volatility puts CPU registers and cache at the top because they vanish when power is lost or the process changes state. Disk images, backups and remote logs persist longer, so they are collected later.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-002",
+            "domain": "Forensic Data Collection",
+            "stem": "An examiner must acquire a suspect hard drive without modifying its contents. Which component enforces this during a hardware acquisition?",
+            "options": [
+                "A degausser",
+                "A write blocker",
+                "A disk defragmentation tool",
+                "A switched port analyzer"
+            ],
+            "correct_index": 1,
+            "explanation": "A write blocker permits read commands while blocking any write to the source drive so the evidence is not altered. A degausser destroys data, defragmentation rewrites the disk, and a port analyzer captures network traffic.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-003",
+            "domain": "Forensic Data Collection",
+            "stem": "After imaging a drive the examiner computes MD5 and SHA-256 values of both the source and the image. What is the main purpose of comparing them?",
+            "options": [
+                "To encrypt the acquired image at rest",
+                "To compress the image and save storage space",
+                "To verify the image is a bit-for-bit copy of the source",
+                "To assign a drive letter to the evidence"
+            ],
+            "correct_index": 2,
+            "explanation": "Matching hash values demonstrate that the image faithfully reproduces the source without alteration. Encryption, compression and drive letters are unrelated to integrity verification.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-004",
+            "domain": "Forensic Data Collection",
+            "stem": "A seized computer was already powered off and its disk removed before an examiner arrived. Which approach best preserves the disk contents?",
+            "options": [
+                "Boot the original operating system and copy files",
+                "Power on the machine and export the user profile",
+                "Defragment the volume and then image it",
+                "Image the disk through a hardware write blocker"
+            ],
+            "correct_index": 3,
+            "explanation": "With a dead-box system the safest path is a write-blocked bit-for-bit image. Booting the original OS changes timestamps and writes to disk, and defragmentation rewrites data.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-005",
+            "domain": "Forensic Data Collection",
+            "stem": "An active intrusion is generating suspicious traffic between two hosts. Which collection method captures the packets for later analysis?",
+            "options": [
+                "A full packet capture from a SPAN port or network tap",
+                "A summary of NetFlow records alone",
+                "The router address resolution cache",
+                "A printed copy of the firewall rule set"
+            ],
+            "correct_index": 0,
+            "explanation": "Only a full packet capture preserves the packet payloads and headers needed to reconstruct sessions and extract artifacts. NetFlow gives metadata, and caches and rule sets contain no payload.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-006",
+            "domain": "Forensic Data Collection",
+            "stem": "Which acquisition is required to recover running process data such as open handles and injected code that never touches disk?",
+            "options": [
+                "A full disk image",
+                "A physical memory capture",
+                "A registry hive export",
+                "An event log export"
+            ],
+            "correct_index": 1,
+            "explanation": "Live process structures, handles and injected code exist only in RAM, so a physical memory capture is needed. Disk, registry and event log collections capture persistent storage instead.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-007",
+            "domain": "Forensic Data Collection",
+            "stem": "What does a properly maintained chain of custody primarily demonstrate about a piece of evidence?",
+            "options": [
+                "That the suspect has confessed to the crime",
+                "That the evidence will always be admitted in court",
+                "Who handled it, when, and how it was transferred",
+                "The financial value of the seized asset"
+            ],
+            "correct_index": 2,
+            "explanation": "A chain of custody is an unbroken record of custody transfers that supports the claim the evidence was not tampered with. It does not establish guilt, admissibility by itself, or value.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-008",
+            "domain": "Forensic Data Collection",
+            "stem": "Which of the following is more volatile than the contents of a hard drive and should be collected earlier?",
+            "options": [
+                "A file sitting in the Recycle Bin",
+                "A document in an archive folder",
+                "The registry hives stored on disk",
+                "The routing table and ARP cache"
+            ],
+            "correct_index": 3,
+            "explanation": "Routing tables, ARP caches and other in-memory network state change constantly and disappear on reboot, making them more volatile than disk-resident files or registry hives.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-009",
+            "domain": "Forensic Data Collection",
+            "stem": "An examiner needs an image format that stores case metadata and supports compression while remaining widely accepted in court. Which format fits?",
+            "options": [
+                "EnCase Evidence File format",
+                "A raw sector-by-sector dd copy",
+                "An ISO 9660 optical image",
+                "A compressed tar archive of files"
+            ],
+            "correct_index": 0,
+            "explanation": "The EnCase Evidence File stores checksums, case metadata and optional compression in one forensically sound container. Raw dd lacks metadata, ISO is for optical media, and tar copies files rather than sectors.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-010",
+            "domain": "Forensic Data Collection",
+            "stem": "Which document best defines the systems an examiner is legally authorized to collect from?",
+            "options": [
+                "The corporate organization chart",
+                "A search warrant or written authorization memo",
+                "A vendor firewall administration guide",
+                "The suspect's employment history"
+            ],
+            "correct_index": 1,
+            "explanation": "Legal authority for collection comes from a warrant, court order or a signed authorization defining scope. An org chart, vendor guide or HR file cannot authorize seizure of evidence.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-011",
+            "domain": "Forensic Data Collection",
+            "stem": "A large drive contains only a small amount of used data. Which acquisition option reduces collection time while still supporting file recovery?",
+            "options": [
+                "A full physical image of the entire drive only",
+                "Reformatting the drive before acquisition",
+                "A sparse or logical evidence acquisition",
+                "Reading only the master boot record"
+            ],
+            "correct_index": 2,
+            "explanation": "A sparse or logical collection captures allocated data and unallocated gaps of interest, cutting time and size. A full physical image always copies everything, while reformatting destroys data and the boot record holds no files.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-012",
+            "domain": "Forensic Data Collection",
+            "stem": "What should be done to show that a forensic image has not been modified since it was acquired?",
+            "options": [
+                "Rename the image files to match the case number",
+                "Convert the image to a different evidence format",
+                "Store the image back on the source drive",
+                "Recompute and compare the hash before analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "Rehashing the image and matching it to the acquisition hash proves the bytes are unchanged. Renaming or converting changes the container, and storing it on the source drive risks overwriting evidence.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-013",
+            "domain": "Forensic Data Collection",
+            "stem": "Evidence resides in a cloud tenant the organization controls. Which collection approach is most defensible?",
+            "options": [
+                "Export provider logs and API metadata and record their hashes",
+                "Wait for the provider to age the data out",
+                "Capture only screenshots of the admin console",
+                "Ask the account owner to forward files by email"
+            ],
+            "correct_index": 0,
+            "explanation": "Exporting tenant logs and metadata with recorded hashes creates a verifiable, reproducible record. Screenshots and emailed copies are easily challenged, and waiting for deletion destroys evidence.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-014",
+            "domain": "Forensic Data Collection",
+            "stem": "Which of the following should generally be collected last during a live acquisition because it is the least volatile?",
+            "options": [
+                "Running process structures",
+                "Disk-resident files and slack space",
+                "Active network connections",
+                "Loaded kernel modules"
+            ],
+            "correct_index": 1,
+            "explanation": "Disk contents survive reboots and persist longest, so they are least volatile. Processes, connections and kernel modules are all memory-resident and must be captured first.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-015",
+            "domain": "Forensic Data Collection",
+            "stem": "An organization has thousands of endpoints but very few examiners. Which approach collects a defined set of high-value artifacts for rapid review?",
+            "options": [
+                "A full physical image of every endpoint",
+                "Degaussing every drive to preserve it",
+                "A targeted triage collection of selected artifacts",
+                "Booting each endpoint and copying the desktop"
+            ],
+            "correct_index": 2,
+            "explanation": "Triage collection gathers a curated set of high-value artifacts such as event logs, prefetch and registry keys at scale. Full images of every host are impractical, and degaussing destroys data.",
+            "reference": "GIAC GCFA Objectives - Forensic Data Collection"
+        },
+        {
+            "id": "gcfa-016",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which artifact, recovered from a memory image, lists the processes that were running when the capture was taken?",
+            "options": [
+                "The disk master file table",
+                "The firewall rule base",
+                "The DNS zone file",
+                "The process list parsed from the memory image"
+            ],
+            "correct_index": 3,
+            "explanation": "Memory analysis tools walk the kernel process structures to enumerate running processes at capture time. The MFT, firewall rules and DNS zones are disk or network artifacts and do not list live processes.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-017",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "A process appears in the memory process list but has no corresponding executable on disk. What is the most likely explanation?",
+            "options": [
+                "The executable was deleted after the process started",
+                "The process is an ordinary Windows service",
+                "The memory image was corrupted during capture",
+                "The disk was protected by a write blocker"
+            ],
+            "correct_index": 0,
+            "explanation": "Once a program is running its image can be deleted from disk while the process continues, a common anti-forensic and malware behavior. Write blocking affects capture, not the presence of a file.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-018",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which memory artifact reveals the remote endpoints a process was communicating with at the moment of capture?",
+            "options": [
+                "The pagefile contents on disk",
+                "Active network connection structures in memory",
+                "The basic input output system settings",
+                "The print spooler queue"
+            ],
+            "correct_index": 1,
+            "explanation": "Volatile socket and connection structures in memory map processes to their local and remote endpoints. BIOS settings and print queues are unrelated, and the pagefile alone does not reliably enumerate live connections.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-019",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which finding in a memory image most strongly suggests process injection by malware?",
+            "options": [
+                "A signed system DLL loaded during startup",
+                "A user print job in the spool queue",
+                "Executable memory regions not backed by a file on disk",
+                "A scheduled overnight backup task"
+            ],
+            "correct_index": 2,
+            "explanation": "Injected code often resides in executable pages with no on-disk backing file, which is anomalous. Signed startup DLLs, print jobs and backup tasks are normal activity.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-020",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "In file system timeline analysis, what four timestamps does the MACB mnemonic represent?",
+            "options": [
+                "Memory, Application, CPU and Bus",
+                "Malware, Attack, Compromise and Breach",
+                "Mount, Access, Copy and Backup",
+                "Modified, Accessed, Changed and Birth timestamps"
+            ],
+            "correct_index": 3,
+            "explanation": "MACB stands for Modified, Accessed, Changed (entry modification) and Birth (creation), the core NTFS timestamps used to order file events. The other options are invented expansions.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-021",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "An NTFS file carries two timestamp sets. Which pair must an examiner compare to detect timestomping?",
+            "options": [
+                "The standard information and file name timestamps",
+                "The bitmap and boot records",
+                "The master file table mirror and volume serial",
+                "The secure and object identifier records"
+            ],
+            "correct_index": 0,
+            "explanation": "Tools that alter times typically change only the standard information attribute, leaving the file name attribute behind. Comparing the two sets exposes the discrepancy, whereas the other pairs hold unrelated metadata.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-022",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which tool or process produces a single merged chronology from disk, memory and log sources?",
+            "options": [
+                "A single antivirus scan",
+                "A super timeline built with log2timeline and Plaso",
+                "A network port scan",
+                "A disk defragmentation pass"
+            ],
+            "correct_index": 1,
+            "explanation": "Super timeline tools such as log2timeline and Plaso normalize and merge many artifact sources into one chronology. Antivirus, port scans and defragmentation do not build timelines.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-023",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which Windows security event ID records that the audit log was cleared?",
+            "options": [
+                "4624",
+                "4688",
+                "1102",
+                "7045"
+            ],
+            "correct_index": 2,
+            "explanation": "Event ID 1102 is written when the security log is cleared. 4624 records a successful logon, 4688 a process creation, and 7045 a new service installation.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-024",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which NTFS artifact records changes to files and directories as the volume is used over time?",
+            "options": [
+                "The master file table mirror",
+                "The volume boot record",
+                "The volume label record",
+                "The USN change journal"
+            ],
+            "correct_index": 3,
+            "explanation": "The update sequence number journal logs create, delete and modify operations as they occur. The MFT mirror, boot record and volume label hold structural metadata, not a change history.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-025",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which Windows artifact can show that an executable ran and how many times, even after the executable file is deleted?",
+            "options": [
+                "Prefetch files",
+                "The hosts file",
+                "The DNS client cache",
+                "The ARP cache"
+            ],
+            "correct_index": 0,
+            "explanation": "Prefetch files record execution counts and referenced paths and often survive deletion of the executable. The hosts file, DNS cache and ARP cache record name resolution and network state instead.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-026",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "A workstation clock was found to be five minutes fast. What must the examiner do before merging its artifacts into a timeline?",
+            "options": [
+                "Delete the inconsistent timestamps",
+                "Normalize the timestamps to a common time basis",
+                "Exclude the machine from the investigation entirely",
+                "Change the suspect system time and re-capture"
+            ],
+            "correct_index": 1,
+            "explanation": "Offsetting or normalizing skewed timestamps aligns events across systems without discarding evidence. Deleting or altering the source timestamps would compromise the evidence.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-027",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "What is the primary output of a super timeline construction process?",
+            "options": [
+                "A list of open network ports",
+                "A dump of local password hashes",
+                "A chronological merged view of events from many sources",
+                "A complete copy of physical memory"
+            ],
+            "correct_index": 2,
+            "explanation": "A super timeline places events from files, logs, registry and other sources on one axis so activity can be correlated. Port lists, hash dumps and memory captures are separate kinds of output.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-028",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which Windows event log field identifies the specific type of activity that occurred across systems?",
+            "options": [
+                "The computer name",
+                "The configured log size",
+                "The channel display color",
+                "The event ID"
+            ],
+            "correct_index": 3,
+            "explanation": "The event ID is the code that identifies the activity type, such as logon or service installation. Computer name and log size are context, and channels have no color field.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-029",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "Which Windows artifact records per-application resource usage such as bytes sent and received over time?",
+            "options": [
+                "The System Resource Usage Monitor database",
+                "The master file table",
+                "The Prefetch directory",
+                "The application compatibility cache"
+            ],
+            "correct_index": 0,
+            "explanation": "SRUM records per-application network and resource consumption with timestamps, useful for spotting exfiltration. The MFT, Prefetch and the compatibility cache track file and execution metadata instead.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-030",
+            "domain": "Memory and Timeline Analysis",
+            "stem": "A file shows standard information times older than its file name times. What does this discrepancy most likely indicate?",
+            "options": [
+                "Normal behavior of every NTFS volume",
+                "The timestamps were altered, possibly by a timestomping tool",
+                "The file was never actually created",
+                "The drive is beginning to fail"
+            ],
+            "correct_index": 1,
+            "explanation": "After timestomping, the mtimes in the standard information attribute rarely match the file name attribute, revealing manipulation. Normal files keep consistent values, and drive failure does not reorder these attributes.",
+            "reference": "GIAC GCFA Objectives - Memory and Timeline Analysis"
+        },
+        {
+            "id": "gcfa-031",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which activity best describes an anti-forensic technique?",
+            "options": [
+                "Backing up a server on a nightly schedule",
+                "Encrypting data in transit between sites",
+                "Actions taken to prevent, delay or mislead forensic analysis",
+                "Enrolling endpoints in an endpoint detection agent"
+            ],
+            "correct_index": 2,
+            "explanation": "Anti-forensics deliberately degrades the availability or trustworthiness of evidence. Backups, transport encryption and EDR enrollment are legitimate operational or defensive activities.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-032",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "An attacker runs a command that empties the Windows security log. Which artifact helps an examiner detect that this happened?",
+            "options": [
+                "Event ID 4688 for process creation",
+                "The boot configuration data store",
+                "The local hosts file",
+                "Event ID 1102 in the security log"
+            ],
+            "correct_index": 3,
+            "explanation": "Windows records a log-cleared event as 1102 before the entries are removed. Process creation is 4688, while the boot configuration store and hosts file are unrelated.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-033",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "A suspect used a secure deletion utility on a hard drive. What is the examiner's most realistic expectation?",
+            "options": [
+                "File contents are likely unrecoverable but tool artifacts may remain",
+                "Every trace of the activity is now gone permanently",
+                "The drive has become write protected",
+                "The master file table has been encrypted"
+            ],
+            "correct_index": 0,
+            "explanation": "Wiping overwrites data, making recovery unlikely, but traces such as prefetch entries or the utility's own files can show it was run. No tool makes all evidence vanish, and wiping does not enable write protection.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-034",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which characteristic of file timestamps can signal that a timestomping utility was used?",
+            "options": [
+                "A creation time that matches the file name attribute",
+                "Timestamps with zeroed or inconsistent sub-second precision",
+                "A valid digital signature on the file",
+                "A scheduled task pointing to the file"
+            ],
+            "correct_index": 1,
+            "explanation": "Timestomping tools often leave sub-second precision set to zero or inconsistent with the NTFS 100-nanosecond granularity. Matching attributes and valid signatures are normal.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-035",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which NTFS feature can conceal data inside a file without changing that file's visible size?",
+            "options": [
+                "The master file table mirror",
+                "Volume shadow copies",
+                "Alternate data streams",
+                "The volume boot sector"
+            ],
+            "correct_index": 2,
+            "explanation": "Alternate data streams attach hidden content to a file while the default stream's reported size stays the same. The MFT mirror, shadow copies and boot sector serve other purposes.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-036",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "A kernel mode rootkit is suspected. Which memory finding supports that conclusion?",
+            "options": [
+                "A scheduled overnight backup job",
+                "A normal operating system update package",
+                "A user document in the home folder",
+                "A loaded driver absent from disk or with a mismatched signature"
+            ],
+            "correct_index": 3,
+            "explanation": "Rootkits often load drivers that have no matching file on disk or whose signatures do not validate, which indicates tampering. Backups, updates and documents are ordinary.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-037",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which Windows artifact records executables the system considered running and can persist after the executable is deleted?",
+            "options": [
+                "The application compatibility cache",
+                "The Recycle Bin",
+                "The local hosts file",
+                "The DNS resolver cache"
+            ],
+            "correct_index": 0,
+            "explanation": "The application compatibility cache, often called ShimCache, logs paths and metadata of executables seen by the system. The Recycle Bin, hosts file and DNS cache record deleted files or name resolution instead.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-038",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which Windows artifact can provide the hash and first-seen path of a program that previously executed?",
+            "options": [
+                "The volume boot record",
+                "The Amcache registry hive",
+                "The security accounts manager file alone",
+                "The pagefile header"
+            ],
+            "correct_index": 1,
+            "explanation": "Amcache stores metadata including file hashes and first execution paths for programs. The boot record, SAM and pagefile header do not carry this execution information.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-039",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "A security log suddenly contains a multi-hour gap with no logon events. Which attacker action could produce that gap?",
+            "options": [
+                "Enabling additional audit policy categories",
+                "Increasing the maximum log file size",
+                "Selectively clearing or editing the event log",
+                "Installing an endpoint detection agent"
+            ],
+            "correct_index": 2,
+            "explanation": "Deleting or editing log records removes the events and leaves telltale gaps. Enabling auditing, enlarging the log and installing agents all add or preserve events rather than remove them.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-040",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Why does wiping free space complicate recovery of deleted files?",
+            "options": [
+                "It encrypts the master file table",
+                "It changes the volume serial number",
+                "It disables any attached write blocker",
+                "It overwrites unallocated clusters that might still hold file content"
+            ],
+            "correct_index": 3,
+            "explanation": "Free space wiping writes over the unallocated clusters where deleted file content lived, so carving finds nothing. It does not encrypt the MFT, alter the serial number or affect a write blocker.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-041",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "How does packing hinder static analysis of a malware sample?",
+            "options": [
+                "The real code is compressed or encrypted and must be unpacked to read",
+                "It adds a trusted digital signature to the file",
+                "It reduces the file size with no other effect",
+                "It changes the file extension to a system type"
+            ],
+            "correct_index": 0,
+            "explanation": "Packed samples conceal their actual instructions behind a decompression stub, hiding strings and imports. Packing does not add trusted signatures, and its purpose is more than size reduction.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-042",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "An examiner finds unallocated sectors beyond the last visible partition. What could this indicate?",
+            "options": [
+                "A normal and expected NTFS characteristic",
+                "A hidden or previously used partition not shown by the OS",
+                "An automatic pagefile expansion",
+                "A restore point created by the backup tool"
+            ],
+            "correct_index": 1,
+            "explanation": "Space past the last partition can hide a removed or concealed partition used to store data. NTFS does not leave such gaps by design, and pagefiles and restore points reside within partitions.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-043",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which technique conceals a message inside an ordinary image file?",
+            "options": [
+                "Compression",
+                "Hashing",
+                "Steganography",
+                "Defragmentation"
+            ],
+            "correct_index": 2,
+            "explanation": "Steganography hides data within another carrier, such as embedding text in image pixels. Compression reduces size, hashing produces a digest, and defragmentation reorganizes disk blocks.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-044",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "An attacker deletes the Prefetch directory to remove execution evidence. Which alternative artifact may still show prior execution?",
+            "options": [
+                "The Recycle Bin",
+                "The DNS zone file",
+                "The ARP cache",
+                "The application compatibility cache or Amcache"
+            ],
+            "correct_index": 3,
+            "explanation": "ShimCache and Amcache independently record programs the system has seen or executed, so they can corroborate execution after Prefetch is deleted. The Recycle Bin, DNS zones and ARP cache do not track program execution.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-045",
+            "domain": "Anti-Forensics and Artifacts",
+            "stem": "Which registry location is commonly abused to launch malware when a user logs on?",
+            "options": [
+                "The Run key under the user or local machine hive",
+                "The boot configuration data store",
+                "The reserved records of the master file table",
+                "The pagefile header"
+            ],
+            "correct_index": 0,
+            "explanation": "Run and RunOnce keys provide autostart persistence at logon. The boot configuration store controls boot options, and the MFT and pagefile header are unrelated to autostart.",
+            "reference": "GIAC GCFA Objectives - Anti-Forensics and Artifacts"
+        },
+        {
+            "id": "gcfa-046",
+            "domain": "Reporting and Methodology",
+            "stem": "Which NIST publication provides guidance on integrating forensic techniques into incident response?",
+            "options": [
+                "NIST SP 800-53",
+                "NIST SP 800-86",
+                "NIST SP 800-41",
+                "NIST SP 800-40"
+            ],
+            "correct_index": 1,
+            "explanation": "SP 800-86 is the Guide to Integrating Forensic Techniques into Incident Response. SP 800-53 covers security controls, SP 800-41 firewalls, and SP 800-40 patch management.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-047",
+            "domain": "Reporting and Methodology",
+            "stem": "What is the primary purpose of a forensic examination report?",
+            "options": [
+                "Demonstrate the examiner's technical skill",
+                "List every file found on the examined disk",
+                "Communicate findings and their basis clearly to a decision maker",
+                "Replace the chain of custody record"
+            ],
+            "correct_index": 2,
+            "explanation": "A report translates technical analysis into findings a reader can understand and act on. It is not a skills showcase, a raw file listing, or a substitute for custody documentation.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-048",
+            "domain": "Reporting and Methodology",
+            "stem": "In United States federal courts, which standard governs the admissibility of expert testimony?",
+            "options": [
+                "The HIPAA privacy rule",
+                "The PCI DSS framework",
+                "The COBIT governance framework",
+                "The Daubert standard"
+            ],
+            "correct_index": 3,
+            "explanation": "Daubert requires that expert testimony rest on reliable methods applied properly to the facts. HIPAA, PCI DSS and COBIT are privacy, payment security and governance frameworks, not evidence standards.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-049",
+            "domain": "Reporting and Methodology",
+            "stem": "Why must an examiner document each tool and its version used during analysis?",
+            "options": [
+                "So the findings can be independently reproduced and defended",
+                "To advertise the tool vendor in the report",
+                "To increase the overall length of the report",
+                "To satisfy the suspect's right to the software"
+            ],
+            "correct_index": 0,
+            "explanation": "Recording tools and versions lets another examiner repeat the work and validate the conclusions, which is essential for defensibility. Advertising, report length and suspect access are not the reasons.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-050",
+            "domain": "Reporting and Methodology",
+            "stem": "What is the purpose of a peer review of a forensic report?",
+            "options": [
+                "Approve the investigation budget",
+                "Have a qualified examiner check the analysis and conclusions for errors",
+                "Assign blame for the security incident",
+                "Remove sensitive details before filing"
+            ],
+            "correct_index": 1,
+            "explanation": "Peer review provides a second qualified opinion on method and conclusions, catching mistakes before the report is relied upon. Budget, blame and redaction are handled elsewhere.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-051",
+            "domain": "Reporting and Methodology",
+            "stem": "Before collecting evidence from an employee laptop, what should the examiner confirm first?",
+            "options": [
+                "The employee has verbally agreed at some point",
+                "The laptop battery is fully charged",
+                "The organization has the legal authority or consent to collect",
+                "The endpoint antivirus definitions are current"
+            ],
+            "correct_index": 2,
+            "explanation": "Collection must rest on clear legal authority such as a policy, warrant or consent. Battery charge and antivirus state are operationally useful but do not authorize seizure.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-052",
+            "domain": "Reporting and Methodology",
+            "stem": "Which value should a report include so a reader can verify evidence integrity?",
+            "options": [
+                "The examiner's home mailing address",
+                "The suspect's account password",
+                "The office wireless network name",
+                "The acquisition hash values of the images"
+            ],
+            "correct_index": 3,
+            "explanation": "Publishing the hashes lets any reader rehash the evidence and confirm it is unchanged. Personal details, passwords and network names are irrelevant and may be sensitive.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-053",
+            "domain": "Reporting and Methodology",
+            "stem": "Which property makes a forensic methodology defensible to a court?",
+            "options": [
+                "Repeatable documented steps another examiner could follow",
+                "Results that vary with the examiner's mood",
+                "Unrecorded ad hoc techniques chosen on the spot",
+                "Reliance on a single unverified tool"
+            ],
+            "correct_index": 0,
+            "explanation": "Documented, repeatable procedures that yield consistent results are the foundation of defensible analysis. Ad hoc, undocumented and unverified methods invite challenges.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-054",
+            "domain": "Reporting and Methodology",
+            "stem": "According to the NIST incident response lifecycle, which phase immediately follows detection and analysis?",
+            "options": [
+                "Preparation",
+                "Containment, eradication and recovery",
+                "Evidence acquisition",
+                "Post-incident activity"
+            ],
+            "correct_index": 1,
+            "explanation": "Once an incident is detected and analyzed, responders contain it, eradicate the cause and recover operations. Preparation comes first, and post-incident activity follows recovery.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-055",
+            "domain": "Reporting and Methodology",
+            "stem": "Which statement best describes an examiner's duty when testifying as an expert witness?",
+            "options": [
+                "Advocate strongly for the party that retained them",
+                "Guarantee that the suspect will be convicted",
+                "Provide impartial, well-supported opinions based on the evidence",
+                "Withhold findings that are unfavorable to their side"
+            ],
+            "correct_index": 2,
+            "explanation": "An expert witness owes the court an impartial opinion grounded in the evidence. Advocacy, guaranteed outcomes and withholding unfavorable findings all undermine that duty.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-056",
+            "domain": "Reporting and Methodology",
+            "stem": "Which standard addresses competence and quality for testing and calibration laboratories, including digital forensic work?",
+            "options": [
+                "ISO 9001",
+                "PCI DSS",
+                "COBIT",
+                "ISO/IEC 17025"
+            ],
+            "correct_index": 3,
+            "explanation": "ISO/IEC 17025 specifies the competence, method validation and quality requirements laboratories must meet. ISO 9001 covers quality management generally, while PCI DSS and COBIT address payment security and IT governance.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-057",
+            "domain": "Reporting and Methodology",
+            "stem": "How should an examiner separate factual observations from interpretation in a report?",
+            "options": [
+                "State the factual findings and clearly label interpretive conclusions",
+                "Merge the two so the reader cannot tell them apart",
+                "Present only interpretive opinions without the facts",
+                "Present only raw data with no conclusions at all"
+            ],
+            "correct_index": 0,
+            "explanation": "Clearly distinguishing what was observed from what it may mean lets the reader weigh the evidence. Blending the two, hiding facts or omitting conclusions all reduce a report's value.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-058",
+            "domain": "Reporting and Methodology",
+            "stem": "Who is the typical intended audience of a technical forensic report?",
+            "options": [
+                "Only the examiner who performed the analysis",
+                "Decision makers such as investigators, counsel or management",
+                "The suspect who is the subject of the case",
+                "The vendor that sold the forensic tool"
+            ],
+            "correct_index": 1,
+            "explanation": "Reports are written for the people who must act on the findings, such as investigators, attorneys and management. Writing only for the examiner, suspect or vendor misses the audience's needs.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-059",
+            "domain": "Reporting and Methodology",
+            "stem": "A report describes a break in the chain of custody for a key item. What is the likely consequence?",
+            "options": [
+                "The evidence automatically proves the case",
+                "The examiner receives an automatic promotion",
+                "The integrity and admissibility of the evidence may be challenged",
+                "Nothing changes because custody records are optional"
+            ],
+            "correct_index": 2,
+            "explanation": "A gap in custody lets the opposing side argue the item could have been altered or substituted, weakening admissibility. It neither strengthens the case nor is harmless.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        },
+        {
+            "id": "gcfa-060",
+            "domain": "Reporting and Methodology",
+            "stem": "Which activity closes the incident response process by improving how future incidents are handled?",
+            "options": [
+                "Deleting the collected evidence",
+                "Disabling event logging to save space",
+                "Re-imaging systems without documenting changes",
+                "A post-incident lessons-learned review"
+            ],
+            "correct_index": 3,
+            "explanation": "A lessons-learned review captures what worked and what to change for next time. Deleting evidence, disabling logging and undocumented re-imaging all reduce future readiness.",
+            "reference": "GIAC GCFA Objectives - Reporting and Methodology"
+        }
+    ]
+}

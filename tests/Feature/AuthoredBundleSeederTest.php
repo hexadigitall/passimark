@@ -1406,6 +1406,48 @@ class AuthoredBundleSeederTest extends TestCase
                 'Patient Care and Procedures' => 15,
                 'Medical Law and Ethics' => 15,
             ]],
+            'ceh' => ['ceh', 60, [
+                'Reconnaissance and Footprinting' => 15,
+                'Scanning and Enumeration' => 15,
+                'System Hacking and Malware' => 15,
+                'Web, Wireless and Cloud Security' => 15,
+            ]],
+            'chfi' => ['chfi', 60, [
+                'Forensic Investigation Process' => 15,
+                'Disk and File System Forensics' => 15,
+                'Network and Mobile Forensics' => 15,
+                'Incident Response and Reporting' => 15,
+            ]],
+            'gcfa' => ['gcfa', 60, [
+                'Forensic Data Collection' => 15,
+                'Memory and Timeline Analysis' => 15,
+                'Anti-Forensics and Artifacts' => 15,
+                'Reporting and Methodology' => 15,
+            ]],
+            'gcih' => ['gcih', 60, [
+                'Incident Handling Process' => 15,
+                'Attack Techniques and Vectors' => 15,
+                'Detection and Containment' => 15,
+                'Eradication and Recovery' => 15,
+            ]],
+            'gpen' => ['gpen', 60, [
+                'Reconnaissance and OSINT' => 15,
+                'Scanning and Exploitation' => 15,
+                'Privilege Escalation and Pivoting' => 15,
+                'Post-Exploitation and Reporting' => 15,
+            ]],
+            'gsec' => ['gsec', 60, [
+                'Security Fundamentals and Policy' => 15,
+                'Access Control and Cryptography' => 15,
+                'Network and Host Security' => 15,
+                'Defense in Depth and Operations' => 15,
+            ]],
+            'oscp' => ['oscp', 60, [
+                'Information Gathering and Scanning' => 15,
+                'Exploitation and Buffer Overflows' => 15,
+                'Web Application Attacks' => 15,
+                'Privilege Escalation and Tunneling' => 15,
+            ]],
         ];
     }
 

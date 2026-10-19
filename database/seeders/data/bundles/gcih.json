@@ -1,0 +1,858 @@
+{
+    "cert_key": "gcih",
+    "title": "GIAC GCIH",
+    "issuer": "GIAC (SANS Institute)",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/gcih.json",
+    "variant_label": "GCIH Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 71% scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public GCIH exam objectives. Not a capture of past exam questions.",
+    "source_label": "GCIH practice bank",
+    "items": [
+        {
+            "id": "gcih-001",
+            "domain": "Incident Handling Process",
+            "stem": "During the incident handling process, which step establishes the authority and procedures needed to respond before an incident occurs?",
+            "options": [
+                "Preparation",
+                "Identification",
+                "Containment",
+                "Recovery"
+            ],
+            "correct_index": 0,
+            "explanation": "Preparation involves establishing policies, procedures, communication plans, and building an incident response team before any incidents occur.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-002",
+            "domain": "Incident Handling Process",
+            "stem": "Which phase of incident handling focuses on confirming whether a reported event is indeed a security incident requiring a response?",
+            "options": [
+                "Eradication",
+                "Identification",
+                "Recovery",
+                "Lessons Learned"
+            ],
+            "correct_index": 1,
+            "explanation": "The identification phase validates alerts, determines scope, and confirms whether an event is a true incident that warrants escalation.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-003",
+            "domain": "Incident Handling Process",
+            "stem": "When an incident is first detected, what is the most critical action to take before making major changes to affected systems?",
+            "options": [
+                "Immediately reformat all affected drives",
+                "Delete suspicious files without examination",
+                "Document all evidence and preserve the current state",
+                "Disconnect from the internet without logging actions"
+            ],
+            "correct_index": 2,
+            "explanation": "Proper evidence preservation and documentation are essential from the start to maintain chain of custody and support later analysis.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-004",
+            "domain": "Incident Handling Process",
+            "stem": "In the incident handling life cycle, which step follows identification and focuses on limiting the impact of the incident?",
+            "options": [
+                "Preparation",
+                "Lessons Learned",
+                "Recovery",
+                "Containment"
+            ],
+            "correct_index": 3,
+            "explanation": "After identifying an incident, containment strategies are implemented to prevent further damage while investigation proceeds safely.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-005",
+            "domain": "Incident Handling Process",
+            "stem": "What is the primary goal of the containment phase in incident response compared to other phases of the handling process?",
+            "options": [
+                "To limit damage and prevent the incident from spreading further",
+                "To restore all systems to full production status immediately",
+                "To publicly disclose the incident to all stakeholders",
+                "To close all network ports permanently after the event"
+            ],
+            "correct_index": 0,
+            "explanation": "Containment aims to isolate affected systems and prevent propagation while preserving evidence and buying time for eradication efforts.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-006",
+            "domain": "Incident Handling Process",
+            "stem": "Which of the following represents a key output from the lessons learned phase that improves future incident response capabilities?",
+            "options": [
+                "A final backup of all compromised data regardless of integrity",
+                "An updated incident response plan with process improvements",
+                "A list of terminated employees suspected in the incident",
+                "An irreversible deletion of all incident-related artifacts"
+            ],
+            "correct_index": 1,
+            "explanation": "Lessons learned should result in actionable improvements to procedures, tools, training, and detection capabilities for future incidents.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-007",
+            "domain": "Incident Handling Process",
+            "stem": "When prioritizing incidents during the identification phase, which factor should be given the most weight in determining response urgency?",
+            "options": [
+                "The time of day the alert was generated by automated systems",
+                "The alphabetical order of systems listed in the inventory",
+                "The potential business impact and criticality of affected assets",
+                "The length of the log entries associated with the detection"
+            ],
+            "correct_index": 2,
+            "explanation": "Business impact analysis helps responders prioritize incidents based on data sensitivity, system criticality, and operational disruption.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-008",
+            "domain": "Incident Handling Process",
+            "stem": "During preparation, an organization creates a jump bag with tools and equipment for incident response. This practice primarily supports which objective?",
+            "options": [
+                "Eliminating the need for digital forensic analysis entirely",
+                "Preventing all future security incidents from occurring",
+                "Guaranteeing successful prosecution in all legal cases",
+                "Ensuring rapid and standardized response capabilities"
+            ],
+            "correct_index": 3,
+            "explanation": "A prepared jump bag contains trusted tools, documentation, and supplies to enable consistent, efficient response regardless of location.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-009",
+            "domain": "Incident Handling Process",
+            "stem": "Which principle is most important when establishing communication channels during an active incident response operation?",
+            "options": [
+                "Using pre-defined, secure channels to control information flow",
+                "Broadcasting all technical details on public social media platforms",
+                "Sharing passwords and evidence through unsecured chat rooms",
+                "Discussing incident specifics over unencrypted cellular calls"
+            ],
+            "correct_index": 0,
+            "explanation": "Secure, pre-established communication channels prevent information leaks and maintain operational security during incident handling.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-010",
+            "domain": "Incident Handling Process",
+            "stem": "In incident handling, what distinguishes a short-term containment strategy from a long-term containment strategy for affected systems?",
+            "options": [
+                "Short-term permanently destroys systems while long-term rebuilds them instantly",
+                "Short-term aims for immediate isolation while long-term maintains business continuity safely",
+                "Short-term ignores the incident while long-term waits for it to resolve itself",
+                "Short-term requires full production access while long-term blocks all access"
+            ],
+            "correct_index": 1,
+            "explanation": "Short-term containment stops immediate damage, while long-term containment balances security controls with continued business operations.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-011",
+            "domain": "Incident Handling Process",
+            "stem": "When forming an incident response team, what is the best approach to ensure coverage of all necessary technical and business functions?",
+            "options": [
+                "Staff the team exclusively with junior security analysts for cost savings",
+                "Limit membership to network administrators to maintain technical focus",
+                "Include representatives from IT, security, legal, HR, and business units",
+                "Form a team of only executive leadership to make all technical decisions"
+            ],
+            "correct_index": 2,
+            "explanation": "A cross-functional team ensures technical response aligns with legal, HR, communications, and business requirements during incidents.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-012",
+            "domain": "Incident Handling Process",
+            "stem": "What is the primary reason for maintaining detailed incident logs throughout the entire incident handling process?",
+            "options": [
+                "To generate random statistics for annual security reports without context",
+                "To occupy storage space on security monitoring systems indefinitely",
+                "To confuse future investigators with excessive unrelated information",
+                "To create an auditable record for analysis, reporting, and potential legal action"
+            ],
+            "correct_index": 3,
+            "explanation": "Comprehensive logging provides traceability, supports post-incident analysis, and maintains evidentiary integrity for legal proceedings.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-013",
+            "domain": "Incident Handling Process",
+            "stem": "During the identification phase, which source of information is most likely to provide the earliest indication of a security incident?",
+            "options": [
+                "Security monitoring alerts from SIEM or intrusion detection systems",
+                "Quarterly vulnerability assessment reports filed months earlier",
+                "Annual security awareness training completion certificates",
+                "Hardware inventory spreadsheets updated at year-end review"
+            ],
+            "correct_index": 0,
+            "explanation": "Real-time monitoring and alerting systems can detect anomalous activity as it occurs, enabling faster incident identification.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-014",
+            "domain": "Incident Handling Process",
+            "stem": "Which statement best describes the relationship between containment, eradication, and recovery phases in the incident handling process?",
+            "options": [
+                "They must be performed in strict isolation with no activities occurring in parallel",
+                "They often overlap as containment stabilizes systems before full eradication and recovery",
+                "They are completely independent phases with no dependencies between them",
+                "They can only be executed after all legal proceedings have concluded"
+            ],
+            "correct_index": 1,
+            "explanation": "Practical incident response allows phases to overlap; containment provides safety while eradication and recovery proceed methodically.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-015",
+            "domain": "Incident Handling Process",
+            "stem": "Before declaring an incident resolved, what critical activity should be completed to reduce the likelihood of similar incidents recurring?",
+            "options": [
+                "Immediately purge all incident documentation from company records",
+                "Re-enable all previously disabled accounts without verification",
+                "Conduct a thorough lessons learned review with actionable recommendations",
+                "Restore all compromised systems without applying security patches"
+            ],
+            "correct_index": 2,
+            "explanation": "Lessons learned reviews identify root causes and drive process improvements that strengthen defenses against future incidents.",
+            "reference": "GIAC GCIH Objectives - Incident Handling Process"
+        },
+        {
+            "id": "gcih-016",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which type of attack involves an adversary intercepting and potentially modifying communication between two parties without their knowledge?",
+            "options": [
+                "Denial of service attack",
+                "Brute force password guessing",
+                "Port scanning reconnaissance",
+                "Man-in-the-middle attack"
+            ],
+            "correct_index": 3,
+            "explanation": "A man-in-the-middle attack positions the attacker between legitimate communicating parties to eavesdrop or alter transmitted data.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-017",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What is the primary characteristic that distinguishes a spear phishing attack from a general phishing campaign?",
+            "options": [
+                "Spear phishing is highly targeted at specific individuals or organizations",
+                "Spear phishing always uses completely random generic messages",
+                "Spear phishing only targets government agencies with no other victims",
+                "Spear phishing cannot include attachments or malicious links"
+            ],
+            "correct_index": 0,
+            "explanation": "Spear phishing uses personalized information and targets specific individuals, making it more convincing than broad phishing campaigns.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-018",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which attack vector typically exploits unpatched software vulnerabilities to gain unauthorized access to a target system?",
+            "options": [
+                "Dictionary attacks against strong password policies",
+                "Remote code execution through a known vulnerability",
+                "Social engineering at a physical security checkpoint",
+                "Dumpster diving for discarded paper documents"
+            ],
+            "correct_index": 1,
+            "explanation": "Remote code execution exploits software flaws to run arbitrary code, often without requiring user interaction if unpatched.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-019",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "In a SQL injection attack, what does an attacker manipulate to execute unauthorized database commands?",
+            "options": [
+                "Encrypted TLS certificates on the web server",
+                "Static HTML content served to all visitors",
+                "Unvalidated user input in application queries",
+                "Cached browser images stored locally on client systems"
+            ],
+            "correct_index": 2,
+            "explanation": "SQL injection occurs when applications fail to sanitize user input, allowing attackers to inject malicious SQL statements.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-020",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What is the defining characteristic of a drive-by download attack against unsuspecting users?",
+            "options": [
+                "Users must manually install software from trusted vendor websites",
+                "The download requires explicit administrator approval for every file",
+                "Malicious code is delivered only through physical USB devices",
+                "Malware is downloaded automatically when visiting a compromised website"
+            ],
+            "correct_index": 3,
+            "explanation": "Drive-by downloads exploit browser or plugin vulnerabilities to install malware without user consent when visiting malicious sites.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-021",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which technique involves an attacker using stolen credentials from one system to access other systems within the same environment?",
+            "options": [
+                "Credential reuse and lateral movement",
+                "ARP cache poisoning across isolated VLANs",
+                "MAC address filtering on wireless networks",
+                "Network address translation on perimeter firewalls"
+            ],
+            "correct_index": 0,
+            "explanation": "Lateral movement with stolen credentials allows attackers to expand their foothold across interconnected systems using valid accounts.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-022",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What distinguishes a cross-site scripting (XSS) attack from other web application attacks in terms of its primary target?",
+            "options": [
+                "XSS exclusively targets database server configuration files",
+                "XSS targets the web browser and user session of other visitors",
+                "XSS focuses only on compromising the underlying operating system kernel",
+                "XSS attacks only affect the web server's physical hardware components"
+            ],
+            "correct_index": 1,
+            "explanation": "Cross-site scripting injects malicious scripts that execute in victims' browsers, potentially stealing session tokens or credentials.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-023",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which attack method relies on overwhelming a system or network with traffic to make it unavailable to legitimate users?",
+            "options": [
+                "Privilege escalation through kernel exploits",
+                "Fileless malware execution in memory",
+                "Distributed denial of service attack",
+                "Zero-day exploit against endpoint protection"
+            ],
+            "correct_index": 2,
+            "explanation": "DDoS attacks flood targets with excessive traffic from multiple sources, exhausting resources and causing service disruption.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-024",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What is the key characteristic of a zero-day vulnerability that makes it particularly dangerous for defenders?",
+            "options": [
+                "A comprehensive patch has been available for over five years",
+                "The vulnerability is only exploitable on completely obsolete systems",
+                "Detailed remediation steps are published in all security textbooks",
+                "No patch or fix exists because it is unknown to the vendor"
+            ],
+            "correct_index": 3,
+            "explanation": "Zero-day vulnerabilities lack vendor-provided fixes, giving defenders no immediate remediation path when exploited in the wild.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-025",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which social engineering technique involves an attacker creating a false sense of urgency to manipulate victims into bypassing security controls?",
+            "options": [
+                "Pretexting with urgent requests to take immediate action",
+                "Passive network sniffing without any victim interaction",
+                "Port scanning during scheduled maintenance windows",
+                "Hash cracking using precomputed rainbow tables"
+            ],
+            "correct_index": 0,
+            "explanation": "Social engineers exploit urgency, fear, or authority to pressure victims into making security-compromising decisions quickly.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-026",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "In the context of password attacks, what makes a brute force attack different from a dictionary attack?",
+            "options": [
+                "Brute force only uses common words from published dictionaries",
+                "Brute force tries all possible character combinations systematically",
+                "Brute force cannot attempt numeric passwords under any circumstances",
+                "Brute force is limited to passwords under four characters in length"
+            ],
+            "correct_index": 1,
+            "explanation": "Brute force exhaustively tries every possible combination, while dictionary attacks only try known words and common passwords.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-027",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which technique allows malware to evade detection by executing only in system memory without writing files to disk?",
+            "options": [
+                "Statically compiled executables stored in system32 directory",
+                "Signed driver files installed through trusted update mechanisms",
+                "Fileless malware that resides in volatile memory",
+                "Well-documented configuration files placed in standard locations"
+            ],
+            "correct_index": 2,
+            "explanation": "Fileless malware operates in RAM and leverages legitimate system tools, making it harder for traditional file-based antivirus to detect.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-028",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What is the primary purpose of an adversary conducting reconnaissance before launching an attack against a target organization?",
+            "options": [
+                "To randomly select targets without understanding their defenses",
+                "To immediately deploy destructive malware without any prior planning",
+                "To notify the target organization about their security weaknesses in advance",
+                "To gather information about systems, users, and vulnerabilities to improve attack success"
+            ],
+            "correct_index": 3,
+            "explanation": "Reconnaissance helps attackers identify viable entry points, understand defenses, and craft targeted attacks with higher success rates.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-029",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "Which type of attack takes advantage of a time-of-check to time-of-use (TOCTOU) race condition in software?",
+            "options": [
+                "An exploit that manipulates state between validation and execution",
+                "A distributed scan of all TCP ports across multiple subnets",
+                "A replay attack against properly encrypted authentication tokens",
+                "A rainbow table attack against salted password hashes"
+            ],
+            "correct_index": 0,
+            "explanation": "TOCTOU vulnerabilities occur when a program checks a resource and uses it later, allowing changes between the check and use.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-030",
+            "domain": "Attack Techniques and Vectors",
+            "stem": "What is the main objective of a watering hole attack in comparison to other targeted attack vectors?",
+            "options": [
+                "To directly attack every internet-connected device simultaneously",
+                "To compromise a website frequented by the target group to infect visitors",
+                "To brute force administrative accounts across random organizations",
+                "To phish credentials only through postal mail correspondence"
+            ],
+            "correct_index": 1,
+            "explanation": "Watering hole attacks compromise legitimate websites that targets regularly visit, infecting them when they browse the site.",
+            "reference": "GIAC GCIH Objectives - Attack Techniques and Vectors"
+        },
+        {
+            "id": "gcih-031",
+            "domain": "Detection and Containment",
+            "stem": "Which type of detection method identifies malicious activity based on deviations from established normal behavior patterns?",
+            "options": [
+                "Signature-based detection using known malware hashes",
+                "Static detection relying solely on file naming conventions",
+                "Anomaly-based detection that flags unusual activity",
+                "Whitelist detection blocking everything not explicitly allowed"
+            ],
+            "correct_index": 2,
+            "explanation": "Anomaly-based detection establishes a baseline of normal activity and alerts when deviations exceed acceptable thresholds.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-032",
+            "domain": "Detection and Containment",
+            "stem": "When analyzing network traffic for signs of compromise, which indicator is most suggestive of command and control communication?",
+            "options": [
+                "Normal HTTPS traffic to well-known cloud service providers",
+                "Standard DNS queries for internal hostnames during business hours",
+                "Expected NTP synchronization traffic to authorized time servers",
+                "Periodic beaconing to uncommon domains at regular intervals"
+            ],
+            "correct_index": 3,
+            "explanation": "C2 beacons often exhibit regular timing and connect to domains not associated with normal business operations.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-033",
+            "domain": "Detection and Containment",
+            "stem": "What is the primary advantage of using a honeypot in an environment for detecting malicious activity?",
+            "options": [
+                "It attracts attackers away from production systems while generating high-fidelity alerts",
+                "It replaces all production servers with decoy systems to save costs",
+                "It automatically blocks all network traffic without generating alerts",
+                "It prevents attackers from discovering any real systems on the network"
+            ],
+            "correct_index": 0,
+            "explanation": "Honeypots are intentionally vulnerable decoys that produce low-noise alerts when interacted with, indicating malicious activity.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-034",
+            "domain": "Detection and Containment",
+            "stem": "Which log source is most valuable for detecting unauthorized access attempts to critical systems over time?",
+            "options": [
+                "Printer queue logs showing completed print jobs from last month",
+                "Authentication logs showing login success and failure patterns",
+                "Temperature sensor logs from server room HVAC systems",
+                "Web proxy cache hit statistics for static content"
+            ],
+            "correct_index": 1,
+            "explanation": "Authentication logs reveal brute force attempts, credential stuffing, and unauthorized login patterns across systems.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-035",
+            "domain": "Detection and Containment",
+            "stem": "During incident detection, what does a correlation rule in a SIEM platform help analysts accomplish?",
+            "options": [
+                "Store raw log data without any processing or analysis capabilities",
+                "Delete duplicate log entries without preserving original timestamps",
+                "Combine multiple events from different sources to identify complex attack patterns",
+                "Generate random alerts regardless of actual security events"
+            ],
+            "correct_index": 2,
+            "explanation": "SIEM correlation rules link related events across sources to detect multi-stage attacks that individual logs might miss.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-036",
+            "domain": "Detection and Containment",
+            "stem": "What is the most appropriate initial containment action for a workstation suspected of active malware infection?",
+            "options": [
+                "Leave it connected to allow continued monitoring of attacker activity",
+                "Immediately shut it down to prevent all further network communication",
+                "Format the hard drive without creating any forensic images first",
+                "Isolate the workstation from the network while preserving volatile evidence"
+            ],
+            "correct_index": 3,
+            "explanation": "Network isolation contains the threat while allowing collection of volatile memory and other evidence before further actions.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-037",
+            "domain": "Detection and Containment",
+            "stem": "Which containment strategy is most suitable when an infected system must remain operational for critical business functions?",
+            "options": [
+                "Implement strict firewall rules and access controls to limit its communication",
+                "Completely disconnect it from all power sources indefinitely",
+                "Grant it unrestricted internet access to monitor attacker behavior",
+                "Remove all security controls to avoid disrupting legitimate processes"
+            ],
+            "correct_index": 0,
+            "explanation": "Restrictive firewalling and access controls contain threats while allowing essential business processes to continue safely.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-038",
+            "domain": "Detection and Containment",
+            "stem": "What type of indicator of compromise (IOC) would include a known malicious file hash value?",
+            "options": [
+                "A network-based indicator showing unusual packet fragmentation sizes",
+                "A host-based indicator that can identify specific malware files",
+                "A behavioral indicator of normal user login patterns throughout the day",
+                "An environmental indicator related to server rack temperature fluctuations"
+            ],
+            "correct_index": 1,
+            "explanation": "File hashes are host-based IOCs that uniquely identify malicious files for detection and blocking across endpoints.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-039",
+            "domain": "Detection and Containment",
+            "stem": "When collecting volatile evidence from a live system during detection, which artifact should be prioritized for acquisition?",
+            "options": [
+                "Archived log files stored on remote backup tapes from last year",
+                "Unmodified operating system installation media in original packaging",
+                "Physical memory contents before the system is powered down",
+                "Static documentation files that have not changed in months"
+            ],
+            "correct_index": 2,
+            "explanation": "Volatile memory contains running processes, network connections, and encryption keys that are lost when power is removed.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-040",
+            "domain": "Detection and Containment",
+            "stem": "Which detection technique relies on comparing observed activity against a database of known malicious patterns or signatures?",
+            "options": [
+                "Behavioral detection establishing statistical baselines over time",
+                "Heuristic detection using only machine learning algorithms",
+                "Anomaly detection with no prior knowledge of threats",
+                "Signature-based detection matching known threats"
+            ],
+            "correct_index": 3,
+            "explanation": "Signature-based detection is effective for known threats but cannot detect novel or obfuscated attacks without updated signatures.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-041",
+            "domain": "Detection and Containment",
+            "stem": "What is the primary purpose of creating a system image or forensic copy during containment activities?",
+            "options": [
+                "To preserve evidence in a forensically sound manner for later analysis",
+                "To overwrite the original disk with clean data immediately",
+                "To permanently delete all suspicious files from the original media",
+                "To compress evidence and discard original timestamps for efficiency"
+            ],
+            "correct_index": 0,
+            "explanation": "Forensic images create bit-for-bit copies that preserve original evidence integrity while allowing analysis on a separate system.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-042",
+            "domain": "Detection and Containment",
+            "stem": "Which network-based detection method can identify malicious traffic by examining packet payloads for known attack patterns?",
+            "options": [
+                "Simple packet counting without examining payload data",
+                "Deep packet inspection to analyze payload content",
+                "Source IP address logging with no content inspection",
+                "Interface bandwidth monitoring without packet analysis"
+            ],
+            "correct_index": 1,
+            "explanation": "Deep packet inspection examines packet contents for signatures, though encrypted traffic can limit its effectiveness.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-043",
+            "domain": "Detection and Containment",
+            "stem": "When an incident spans multiple systems, what is the best approach to maintain containment boundaries effectively?",
+            "options": [
+                "Connect all affected systems to the public internet for easier monitoring",
+                "Merge infected and clean systems onto the same production VLAN immediately",
+                "Segment affected systems into an isolated containment network with controlled access",
+                "Remove all network segmentation controls to simplify investigation"
+            ],
+            "correct_index": 2,
+            "explanation": "Isolating affected systems in a dedicated containment network prevents spread while allowing controlled analysis and remediation.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-044",
+            "domain": "Detection and Containment",
+            "stem": "Which alert triage consideration is most important when evaluating the validity of a detection alert?",
+            "options": [
+                "Automatically escalating every alert to executive leadership immediately",
+                "Treating all alerts with identical priority regardless of context",
+                "Ignoring alerts that occur outside normal business hours by default",
+                "Assessing the alert against known context and eliminating false positives"
+            ],
+            "correct_index": 3,
+            "explanation": "Effective triage filters false positives by considering asset criticality, attack patterns, and environmental context.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-045",
+            "domain": "Detection and Containment",
+            "stem": "In host-based detection, what does the presence of unusual process execution chains often indicate?",
+            "options": [
+                "Potential malicious activity using process injection or living-off-the-land techniques",
+                "Normal system boot sequence executing standard Windows services",
+                "Legitimate software updates installing from trusted vendor repositories",
+                "Scheduled maintenance tasks running as configured by administrators"
+            ],
+            "correct_index": 0,
+            "explanation": "Unusual parent-child process relationships can indicate malware abusing legitimate tools to evade detection.",
+            "reference": "GIAC GCIH Objectives - Detection and Containment"
+        },
+        {
+            "id": "gcih-046",
+            "domain": "Eradication and Recovery",
+            "stem": "What is the primary objective of the eradication phase in incident response after containment is established?",
+            "options": [
+                "To restore systems to production without investigating the root cause",
+                "To remove the root cause and all traces of the malicious activity",
+                "To preserve all malware artifacts indefinitely for future use",
+                "To re-enable compromised accounts without changing their credentials"
+            ],
+            "correct_index": 1,
+            "explanation": "Eradication focuses on eliminating malware, closing vulnerabilities, and addressing the underlying conditions that enabled the incident.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-047",
+            "domain": "Eradication and Recovery",
+            "stem": "Before rebuilding compromised systems, what is the most reliable method to ensure complete removal of persistent malware?",
+            "options": [
+                "Run antivirus scans repeatedly until no threats are detected",
+                "Manually delete suspicious files identified in log analysis",
+                "Rebuild from known-good backups or perform a clean installation",
+                "Apply registry edits to remove malware references"
+            ],
+            "correct_index": 2,
+            "explanation": "Clean installations or verified backups provide the highest assurance against persistent threats like rootkits or bootkits.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-048",
+            "domain": "Eradication and Recovery",
+            "stem": "When restoring data from backups after an incident, what verification step is critical to prevent reintroducing compromised files?",
+            "options": [
+                "Restore the most recent backup regardless of when it was created",
+                "Use backups from after the incident to capture all recent changes",
+                "Combine multiple backup sets without any integrity checking",
+                "Verify backup integrity and ensure backups were created before the incident"
+            ],
+            "correct_index": 3,
+            "explanation": "Only backups taken before compromise should be restored, and their integrity must be verified to avoid reinfection.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-049",
+            "domain": "Eradication and Recovery",
+            "stem": "Which action is essential during eradication to address the vulnerability that initially allowed the attack to succeed?",
+            "options": [
+                "Apply relevant security patches and harden the affected systems",
+                "Increase log retention without addressing the underlying flaw",
+                "Disable all monitoring tools to reduce system resource usage",
+                "Open additional network ports to improve application performance"
+            ],
+            "correct_index": 0,
+            "explanation": "Patching vulnerabilities and hardening configurations prevents the same attack vector from being exploited again.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-050",
+            "domain": "Eradication and Recovery",
+            "stem": "During recovery, what is the best practice for testing restored systems before returning them to full production?",
+            "options": [
+                "Immediately connect restored systems to production without any testing",
+                "Conduct validation testing in a segregated environment to confirm functionality and security",
+                "Skip all testing to minimize downtime for business operations",
+                "Test only basic network connectivity while ignoring application functionality"
+            ],
+            "correct_index": 1,
+            "explanation": "Thorough testing in a controlled environment ensures systems are clean, functional, and secure before production deployment.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-051",
+            "domain": "Eradication and Recovery",
+            "stem": "What is the purpose of implementing additional monitoring during the recovery phase after an incident?",
+            "options": [
+                "To reduce overall security monitoring costs for the organization",
+                "To collect less data than was collected before the incident occurred",
+                "To detect any signs of residual compromise or reinfection early",
+                "To disable alerting mechanisms until all systems are fully restored"
+            ],
+            "correct_index": 2,
+            "explanation": "Enhanced monitoring provides early warning of incomplete eradication or new attack attempts targeting recently restored systems.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-052",
+            "domain": "Eradication and Recovery",
+            "stem": "Which credential management action should typically be performed during eradication if accounts were compromised?",
+            "options": [
+                "Preserve existing passwords to avoid disrupting user workflows",
+                "Share compromised account credentials with other teams for analysis",
+                "Never change passwords and rely solely on network isolation",
+                "Force password resets for all affected and potentially exposed accounts"
+            ],
+            "correct_index": 3,
+            "explanation": "Resetting credentials invalidates stolen passwords and prevents attackers from regaining access to compromised accounts.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-053",
+            "domain": "Eradication and Recovery",
+            "stem": "What is a key consideration when deciding between restoring from backups versus rebuilding systems from scratch?",
+            "options": [
+                "The level of confidence needed that all malware has been fully removed",
+                "The color scheme of the operating system interface preferences",
+                "The brand of backup tape hardware used for storage",
+                "The font size used in system log files during the incident"
+            ],
+            "correct_index": 0,
+            "explanation": "Rebuilding from scratch offers higher assurance against advanced persistent threats, while backups restore data faster but require verification.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-054",
+            "domain": "Eradication and Recovery",
+            "stem": "During the recovery phase, what does a phased approach to returning systems to production help minimize?",
+            "options": [
+                "Documentation requirements for change management processes",
+                "Risk by validating each stage before expanding access",
+                "Time needed to complete all recovery activities",
+                "Communication overhead between technical teams"
+            ],
+            "correct_index": 1,
+            "explanation": "Phased recovery allows controlled validation and rollback capability if issues arise during restoration to production.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-055",
+            "domain": "Eradication and Recovery",
+            "stem": "Which step is important to ensure that eradication efforts have been successful across the affected environment?",
+            "options": [
+                "Assume success based solely on the absence of visible alerts",
+                "Stop all security scanning to avoid impacting system performance",
+                "Perform comprehensive vulnerability scanning and IOC validation",
+                "Rely only on user reports to confirm systems are clean"
+            ],
+            "correct_index": 2,
+            "explanation": "Active validation using scanning tools and IOC checks confirms threats have been removed and systems are properly hardened.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-056",
+            "domain": "Eradication and Recovery",
+            "stem": "What is the primary goal of recovery time objectives (RTOs) when planning incident recovery activities?",
+            "options": [
+                "To determine the maximum number of users allowed on systems",
+                "To calculate storage requirements for archived incident logs",
+                "To establish password complexity requirements for all accounts",
+                "To define acceptable downtime limits for critical business functions"
+            ],
+            "correct_index": 3,
+            "explanation": "RTOs specify the maximum acceptable time to restore critical services after an incident, guiding recovery prioritization.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-057",
+            "domain": "Eradication and Recovery",
+            "stem": "After removing malware, why is it important to review and revoke any unauthorized changes to system configurations?",
+            "options": [
+                "Attackers may have modified settings to maintain persistence or weaken security",
+                "System configurations always revert to default automatically after malware removal",
+                "Configuration changes have no impact on future security posture",
+                "Unauthorized changes improve overall system performance and stability"
+            ],
+            "correct_index": 0,
+            "explanation": "Adversaries often create backdoors, modify services, or weaken security controls to ensure continued access after initial compromise.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-058",
+            "domain": "Eradication and Recovery",
+            "stem": "Which security control is most effective to prevent reinfection when reconnecting recovered systems to the network?",
+            "options": [
+                "Grant all recovered systems full administrative access to the entire network",
+                "Apply the latest patches, updated signatures, and proper network segmentation",
+                "Disable host-based firewalls to allow unrestricted communication",
+                "Connect systems directly to the internet without any perimeter controls"
+            ],
+            "correct_index": 1,
+            "explanation": "Hardened systems with current patches, updated detection signatures, and proper segmentation reduce reinfection risk.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-059",
+            "domain": "Eradication and Recovery",
+            "stem": "What documentation should be updated during recovery to reflect the changes made to prevent future incidents?",
+            "options": [
+                "Only personal contact lists for the incident response team members",
+                "Outdated marketing materials unrelated to technical infrastructure",
+                "Network diagrams, system baselines, and incident response procedures as needed",
+                "Archived emails from previous years with no relevance to security"
+            ],
+            "correct_index": 2,
+            "explanation": "Accurate documentation of changes ensures future responders understand the current environment and applied security improvements.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        },
+        {
+            "id": "gcih-060",
+            "domain": "Eradication and Recovery",
+            "stem": "Before formally closing an incident, what validation confirms that recovery objectives have been met successfully?",
+            "options": [
+                "Close the incident as soon as systems are powered on without verification",
+                "Assume recovery is complete when all technical staff leave for the day",
+                "Rely solely on verbal confirmation from a single team member",
+                "Verify systems meet business requirements, security baselines, and monitoring shows normal operations"
+            ],
+            "correct_index": 3,
+            "explanation": "Formal closure requires objective validation that security, functionality, and monitoring criteria are all satisfied.",
+            "reference": "GIAC GCIH Objectives - Eradication and Recovery"
+        }
+    ]
+}

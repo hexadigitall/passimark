@@ -1,0 +1,858 @@
+{
+    "cert_key": "chfi",
+    "title": "EC-Council CHFI",
+    "issuer": "EC-Council",
+    "region": "USA-SECURITY",
+    "outline_file": "outlines/chfi.json",
+    "variant_label": "CHFI Real-Spec Practice",
+    "exam": {
+        "questions": 60,
+        "duration_minutes": 120,
+        "scoring": "Pass 60-85% scaled",
+        "adaptive": false
+    },
+    "content_provenance": "Original practice items authored from the public EC-Council CHFI exam blueprint. Not a capture of past exam questions.",
+    "source_label": "CHFI practice bank",
+    "items": [
+        {
+            "id": "chfi-001",
+            "domain": "Forensic Investigation Process",
+            "stem": "A forensic investigator arrives at a running workstation that is suspected of transmitting stolen data. What should be the first action taken before any evidence collection begins?",
+            "options": [
+                "Document the volatile state of the system, including running processes and open network connections",
+                "Shut down the workstation immediately to prevent further data loss",
+                "Pull the power cord to preserve the contents of RAM",
+                "Install forensic imaging software on the suspect workstation"
+            ],
+            "correct_index": 0,
+            "explanation": "Volatile evidence such as running processes, open connections, logged-on users and RAM contents is lost on shutdown, so it must be captured and documented first. Powering off, installing tools, or imaging before documenting violates the order of volatility.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-002",
+            "domain": "Forensic Investigation Process",
+            "stem": "In the order of volatility defined for digital forensics, which class of evidence is generally considered the most volatile and therefore the first to be collected?",
+            "options": [
+                "Backups and archival tape media",
+                "RAM contents and CPU cache",
+                "Disk drive contents",
+                "Printed log reports"
+            ],
+            "correct_index": 1,
+            "explanation": "RAM, CPU cache and network state disappear within seconds of power loss, making them the most volatile tier. Disk contents, backups and printouts persist far longer, so they are collected later in the sequence.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-003",
+            "domain": "Forensic Investigation Process",
+            "stem": "During an investigation the examiner must prove that a seized hard drive has not been altered since acquisition. Which procedure best establishes this?",
+            "options": [
+                "Comparing the drive serial number with the asset register",
+                "Recording the drive capacity in the evidence log",
+                "Generating a cryptographic hash of the evidence image and verifying it before and after analysis",
+                "Taking a photograph of the drive before it leaves the scene"
+            ],
+            "correct_index": 2,
+            "explanation": "Cryptographic hash values such as MD5 or SHA-256 computed at acquisition and re-verified after analysis prove the evidence bitstream is unchanged. Asset records and photographs support handling but do not detect content modification.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-004",
+            "domain": "Forensic Investigation Process",
+            "stem": "Which element is the primary purpose of maintaining a chain of custody document for digital evidence?",
+            "options": [
+                "To encrypt the evidence while it is in storage",
+                "To speed up the analysis by parallelizing examiner work",
+                "To replace the need for cryptographic hashing",
+                "To record every person who handled the evidence and when, establishing its integrity and accountability"
+            ],
+            "correct_index": 3,
+            "explanation": "Chain of custody tracks each transfer, handler and time so the court can see the evidence was continuously controlled and untampered. It complements but never replaces hashing, and it is about accountability, not encryption or speed.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-005",
+            "domain": "Forensic Investigation Process",
+            "stem": "An examiner needs to duplicate a suspect SATA drive without writing anything back to it. Which tool approach satisfies this requirement?",
+            "options": [
+                "A hardware or software write blocker used together with forensic imaging software",
+                "A standard file copy utility run with administrator rights",
+                "A disk defragmentation pass before imaging",
+                "Formatting the drive to a fresh file system before copying"
+            ],
+            "correct_index": 0,
+            "explanation": "A write blocker (hardware or software) allows read access while blocking all write operations, preserving the original evidence state during imaging. Plain file copies, defragmentation or formatting all modify the source drive.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-006",
+            "domain": "Forensic Investigation Process",
+            "stem": "Which statement best distinguishes a forensic image from a simple file-level backup of a suspect drive?",
+            "options": [
+                "A forensic image is stored in the cloud while a backup stays on tape",
+                "A forensic image is a bit-for-bit copy including unallocated space, slack and metadata, verified by hash",
+                "A forensic image only captures deleted files",
+                "A backup is always hashed while a forensic image is not"
+            ],
+            "correct_index": 1,
+            "explanation": "A forensic image replicates every sector, including unallocated space, slack and file system metadata, and is hash-verified for integrity. Backups capture only selected files or allocated data, losing deleted content and layout details.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-007",
+            "domain": "Forensic Investigation Process",
+            "stem": "A suspected insider threat case involves mail servers and file shares hosted on live corporate systems. What is the most appropriate next step after obtaining proper legal authorization?",
+            "options": [
+                "Wait for the employee to voluntarily hand over the laptop",
+                "Delete suspicious mailboxes to prevent spread of malware",
+                "Begin forensic acquisition and analysis of the relevant systems and mail stores under the approved scope",
+                "Publicly announce the investigation to deter other insiders"
+            ],
+            "correct_index": 2,
+            "explanation": "Once legal authority (policy, warrant or consent) is in place, the investigation proceeds with scoped acquisition of the implicated systems, including mail stores and file shares. Deleting data destroys evidence and announcing tips off the subject.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-008",
+            "domain": "Forensic Investigation Process",
+            "stem": "Which activity belongs to the evidence collection phase rather than the analysis phase of a digital forensic investigation?",
+            "options": [
+                "Carving files from unallocated space",
+                "Recovering browser history from an image",
+                "Correlating log entries with timeline artifacts",
+                "Acquiring a bit-stream image of the suspect drive with hash verification"
+            ],
+            "correct_index": 3,
+            "explanation": "Acquiring a verified bit-stream image of the source media is a collection task performed before any examination. File carving, history recovery and correlation are analysis activities carried out on the working copy.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-009",
+            "domain": "Forensic Investigation Process",
+            "stem": "What is the main reason a forensic investigator should analyze a working copy of an evidence image instead of the original media?",
+            "options": [
+                "Analysis could alter or overwrite evidence, so the pristine original is preserved for verification or re-examination",
+                "Working copies are always larger than the original",
+                "The original media may not be readable by standard tools",
+                "Working copies decrypt encrypted files automatically"
+            ],
+            "correct_index": 0,
+            "explanation": "Analysis activities can write to mounted file systems and modify metadata; using a verified working copy keeps the original evidence pristine for hash re-verification, defense re-examination or a second opinion.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-010",
+            "domain": "Forensic Investigation Process",
+            "stem": "During evidence acquisition from a running Windows server, which item should be captured first according to the order of volatility?",
+            "options": [
+                "The pagefile.sys contents",
+                "Registers, cache and RAM contents",
+                "Router and switch configuration files",
+                "Archived tape backups in the safe"
+            ],
+            "correct_index": 1,
+            "explanation": "CPU registers, caches and physical memory vanish instantly on power-off, so they precede pagefile, network device state and removable or archived media, which persist much longer.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-011",
+            "domain": "Forensic Investigation Process",
+            "stem": "An organization's policy requires that all forensic work products can be reproduced by an independent examiner. Which practice most directly supports this requirement?",
+            "options": [
+                "Using undocumented proprietary scripts without recording parameters",
+                "Relying on examiner memory for the investigative steps",
+                "Maintaining detailed documentation of tools, versions, commands, hash values and steps taken",
+                "Analyzing only encrypted containers to keep the method confidential"
+            ],
+            "correct_index": 2,
+            "explanation": "Reproducibility depends on complete, contemporaneous documentation of every tool, version, parameter, hash and action so another examiner can repeat the process and reach the same result.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-012",
+            "domain": "Forensic Investigation Process",
+            "stem": "Which type of evidence is obtained by capturing data directly from a running system's memory rather than from its storage media?",
+            "options": [
+                "Disk-based file evidence",
+                "Network-based testimonial evidence",
+                "Removable media evidence",
+                "Volatile memory or live forensic evidence"
+            ],
+            "correct_index": 3,
+            "explanation": "Live or memory forensics acquires volatile data such as RAM contents, running processes and network sockets from a running system. Disk, network captures and removable media are different acquisition sources.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-013",
+            "domain": "Forensic Investigation Process",
+            "stem": "A forensic examiner is asked which cryptographic algorithm is preferred today for producing evidence integrity hashes, given known weaknesses in MD5. What is the best answer?",
+            "options": [
+                "SHA-256 or stronger members of the SHA-2 family",
+                "ROT13 encoding for speed",
+                "CRC32 because it detects all tampering",
+                "DES encryption of the image"
+            ],
+            "correct_index": 0,
+            "explanation": "SHA-256 (or SHA-512) is the current recommended choice for forensic hashing because MD5 and SHA-1 have practical collision weaknesses. CRC32 is only an error check, not collision-resistant, and encryption does not provide integrity proof.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-014",
+            "domain": "Forensic Investigation Process",
+            "stem": "Which statement about scope definition in a forensic investigation is correct?",
+            "options": [
+                "Scope should be kept vague to allow maximum flexibility during analysis",
+                "A clearly defined legal and technical scope focuses collection, limits exposure to unrelated private data, and bounds admissibility challenges",
+                "Scope only matters for civil cases, not criminal ones",
+                "Scope is defined by the forensic tool vendor at installation"
+            ],
+            "correct_index": 1,
+            "explanation": "A precise, authorized scope tells the team what systems, timeframes and data types are in-bounds, which protects privacy, conserves effort and withstands legal scrutiny. Vague scope invites spoliation and over-collection claims.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-015",
+            "domain": "Forensic Investigation Process",
+            "stem": "In the standard CHFI investigative phases, what immediately follows the evidence acquisition step?",
+            "options": [
+                "Public release of the final report",
+                "Destruction of the original media",
+                "Forensic analysis of the acquired evidence on a working copy",
+                "Disciplinary action against the suspect"
+            ],
+            "correct_index": 2,
+            "explanation": "After acquisition, the workflow proceeds to examination and analysis of a verified working copy, followed by reporting and, where required, presentation. Original media is retained, not destroyed, and personnel actions follow findings.",
+            "reference": "EC-Council CHFI Blueprint - Forensic Investigation Process"
+        },
+        {
+            "id": "chfi-016",
+            "domain": "Disk and File System Forensics",
+            "stem": "On a Windows system, which NTFS metadata file acts as a relational database of every file and directory on the volume, including entries for deleted files?",
+            "options": [
+                "$LogFile",
+                "$Bitmap",
+                "$Secure",
+                "$MFT"
+            ],
+            "correct_index": 3,
+            "explanation": "The Master File Table ($MFT) contains at least one record for every file and directory on an NTFS volume, and its records persist briefly after deletion. $LogFile journals transactions, $Bitmap tracks free clusters, and $Secure stores ACLs.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-017",
+            "domain": "Disk and File System Forensics",
+            "stem": "An examiner recovers data that lies between the end of a file's logical content and the end of its last allocated cluster. What is this region called?",
+            "options": [
+                "File slack (residual data in the last cluster)",
+                "Unallocated slack space",
+                "Boot sector residue",
+                "Alternate data stream"
+            ],
+            "correct_index": 0,
+            "explanation": "File slack is the bytes between the logical end-of-file and the cluster boundary; remnants of previous files often survive there. Unallocated space is entirely free clusters, which is a different region.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-018",
+            "domain": "Disk and File System Forensics",
+            "stem": "Which disk addressing scheme replaced the 28-bit CHS scheme and is used to address sectors on modern drives with large capacities?",
+            "options": [
+                "CHS (Cylinder-Head-Sector)",
+                "LBA (Logical Block Addressing)",
+                "MAPI addressing",
+                "Token-ring frame offsets"
+            ],
+            "correct_index": 1,
+            "explanation": "LBA linearly numbers sectors from zero and replaced CHS, which was limited to about 8 GB with 28-bit fields. Modern tools report and address media in LBAs, which forensic imagers record for reproducibility.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-019",
+            "domain": "Disk and File System Forensics",
+            "stem": "A forensic tool recovers a JPEG by locating the start-of-image and end-of-image markers inside unallocated clusters rather than using file system pointers. Which technique is this?",
+            "options": [
+                "File system metadata parsing",
+                "Registry hive rebuilding",
+                "File signature (file carving) analysis",
+                "Alternate data stream extraction"
+            ],
+            "correct_index": 2,
+            "explanation": "File carving identifies file type magic bytes such as JPEG SOI/EOI markers and reconstructs the file directly from raw clusters, bypassing file system metadata, which is essential for deleted or fragmented files.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-020",
+            "domain": "Disk and File System Forensics",
+            "stem": "Which partition table format uses GUIDs to identify partitions and stores multiple redundant copies of its partition map?",
+            "options": [
+                "MBR (Master Boot Record)",
+                "FAT12 superblock",
+                "BSD disklabel only",
+                "GPT (GUID Partition Table)"
+            ],
+            "correct_index": 3,
+            "explanation": "GPT is part of UEFI and keeps a primary and backup partition table plus CRC checksums, making it more resilient than the single-copy MBR with its four primary-partition limit.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-021",
+            "domain": "Disk and File System Forensics",
+            "stem": "On a Linux ext4 file system, which metadata structure stores a file's size, permissions, timestamps and the pointers to its data blocks?",
+            "options": [
+                "The inode",
+                "The superblock only",
+                "The journal root directory",
+                "The swap area header"
+            ],
+            "correct_index": 0,
+            "explanation": "Each ext4 file has an inode holding its attributes, timestamps and block pointers; directory entries simply map names to inode numbers. The superblock holds volume-level data, not per-file attributes.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-022",
+            "domain": "Disk and File System Forensics",
+            "stem": "Windows NTFS records MAC (Modified, Accessed, Created) times in each $MFT record. Which pair of timestamps is stored in UTC in the $STANDARD_INFORMATION attribute?",
+            "options": [
+                "MFT entry modified and entry accessed times",
+                "All four timestamps including birth (M) and change (E) times are stored in UTC in $STANDARD_INFORMATION",
+                "Created and last-modified times",
+                "Accessed and deleted times only"
+            ],
+            "correct_index": 1,
+            "explanation": "The $STANDARD_INFORMATION attribute stores the classic MAC times plus birth (M) and change (E) times, all in UTC. Examiners convert to local time for reporting; timestomping attacks often target these fields.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-023",
+            "domain": "Disk and File System Forensics",
+            "stem": "An investigator suspects a user concealed data in an NTFS file by appending a second stream not visible in Explorer. What NTFS feature is being exploited?",
+            "options": [
+                "Journaling via $LogFile",
+                "Cluster remapping",
+                "Alternate Data Streams (ADS)",
+                "Volume shadow hard links"
+            ],
+            "correct_index": 2,
+            "explanation": "NTFS Alternate Data Streams allow multiple data streams on one file; one stream is the visible file content and others can hide data. ADS is a classic steganography and data-hiding vector examined with tools such as streams.exe.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-024",
+            "domain": "Disk and File System Forensics",
+            "stem": "Which file system did Microsoft introduce with Windows Vista that uses a journaling layout optimized for large volumes and includes features such as transactional NTFS support?",
+            "options": [
+                "FAT16",
+                "exFAT",
+                "NTFS",
+                "ReFS"
+            ],
+            "correct_index": 3,
+            "explanation": "Resilient File System (ReFS) was introduced with Windows Server 2012 for integrity and resiliency, using metadata checksums and proactive repair. NTFS is the long-standing Windows default, FAT16 is legacy, and exFAT targets removable media.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-025",
+            "domain": "Disk and File System Forensics",
+            "stem": "What do the Windows shortcut (.lnk) files located in the Recent folder primarily reveal to a forensic examiner?",
+            "options": [
+                "Evidence of files and folders recently opened, including paths, volumes and sometimes icon timestamps",
+                "The password hash of the user who created them",
+                "The full contents of the files they point to",
+                "Network firewall rule changes"
+            ],
+            "correct_index": 0,
+            "explanation": ".lnk files record targets the user recently accessed, exposing drive letters, UNC paths and sometimes embedded timestamps from the target file, which helps prove file presence even if the file was deleted.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-026",
+            "domain": "Disk and File System Forensics",
+            "stem": "On a Linux system, where does the forensic investigator typically find logs of user commands executed through common shells such as bash?",
+            "options": [
+                "/etc/shadow",
+                "~/.bash_history per user account",
+                "/var/log/apt/history.log only",
+                "The swap partition exclusively"
+            ],
+            "correct_index": 1,
+            "explanation": "Interactive shells write command history to per-user files such as ~/.bash_history, which can be deleted but often survives. /etc/shadow stores password hashes and /var/log/apt history covers package operations, not shell commands.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-027",
+            "domain": "Disk and File System Forensics",
+            "stem": "A FAT32 file system stores a file larger than its cluster size as a chain of clusters linked through the file allocation table. What is the forensic significance of fragmentation in this design?",
+            "options": [
+                "Fragmented files are always recoverable byte-perfect from the FAT alone",
+                "FAT32 does not support files larger than one cluster",
+                "Fragmentation scatters file content across non-contiguous clusters, complicating recovery when entries are damaged",
+                "Fragmentation encrypts the file content automatically"
+            ],
+            "correct_index": 2,
+            "explanation": "FAT chains point to scattered clusters; if the table entries are damaged or the file is deleted, carving fragmented content is much harder. FAT32 does support multi-cluster files, and it provides neither encryption nor guaranteed recovery.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-028",
+            "domain": "Disk and File System Forensics",
+            "stem": "Why is the Windows registry valuable forensic evidence on a suspect workstation?",
+            "options": [
+                "It contains the browser cache of all users",
+                "It holds a full copy of the page file",
+                "It logs every keystroke by default",
+                "It stores user profiles, installed software, USB device history, and other system activity artifacts"
+            ],
+            "correct_index": 3,
+            "explanation": "Registry hives record installed programs, user profile lists, mounted devices (for example USB storages under the mounted devices and Enum keys), and Run keys evidencing persistence. It is not a browser cache, pagefile copy or keylogger by default.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-029",
+            "domain": "Disk and File System Forensics",
+            "stem": "An examiner notices the created and modified timestamps of a suspect text file are earlier than the timestamps recorded when the user claims to have created it. Which technique is the most likely explanation?",
+            "options": [
+                "A timestomping tool that altered the file's timestamp metadata",
+                "Automatic NTFS defragmentation",
+                "A cluster remap caused by S.M.A.R.T. reallocation",
+                "The file was written through an Alternate Data Stream"
+            ],
+            "correct_index": 0,
+            "explanation": "Timestomping tools overwrite MACB timestamps in $STANDARD_INFORMATION (or $FILE_NAME) to mislead timelines. Examiners counter by comparing with $FILE_NAME times, $LogFile journal entries and event logs.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-030",
+            "domain": "Disk and File System Forensics",
+            "stem": "What is the purpose of a disk snapshot or volume shadow copy in the context of live system forensics?",
+            "options": [
+                "To permanently erase free space on the suspect volume",
+                "To capture a point-in-time copy of in-use files and volumes without dismounting them",
+                "To encrypt the volume before imaging",
+                "To convert NTFS to FAT32 for tool compatibility"
+            ],
+            "correct_index": 1,
+            "explanation": "Volume shadow copies let an examiner capture consistent point-in-time images of files and even entire volumes that are locked by the running OS, avoiding shutdown. They do not erase, encrypt or convert file systems.",
+            "reference": "EC-Council CHFI Blueprint - Disk and File System Forensics"
+        },
+        {
+            "id": "chfi-031",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Which record source allows an investigator to reconstruct who communicated with whom, when, and for how long on an IP network even when full packet payloads were not retained?",
+            "options": [
+                "DHCP lease files only",
+                "ARP cache dumps",
+                "NetFlow or IPFIX flow records",
+                "ICMP echo statistics"
+            ],
+            "correct_index": 2,
+            "explanation": "NetFlow/IPFIX summarize conversations with source/destination addresses, ports, timestamps and byte counts, enabling communication metadata reconstruction without full payloads. DHCP, ARP and ICMP alone do not capture session records.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-032",
+            "domain": "Network and Mobile Forensics",
+            "stem": "During network forensics, what does a protocol analyzer capture when the interface is operating in promiscuous mode?",
+            "options": [
+                "Only traffic addressed to the analyzer host",
+                "Encrypted traffic automatically decrypted in transit",
+                "Wireless management frames only",
+                "All frames visible on the network segment, not just those destined to the analyzer"
+            ],
+            "correct_index": 3,
+            "explanation": "Promiscuous mode delivers every frame the NIC sees on the segment to the capture software, not only frames addressed to it, enabling full traffic recording. Captures remain encrypted unless keys or plaintext sources are obtained separately.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-033",
+            "domain": "Network and Mobile Forensics",
+            "stem": "An investigator is analyzing an email suspected of spoofing the sender. Which message header field should be examined first to determine the actual submitting mail server?",
+            "options": [
+                "The Received: chain of headers",
+                "The To: header",
+                "The signature block",
+                "The subject line encoding"
+            ],
+            "correct_index": 0,
+            "explanation": "Received: headers are appended by each MTA in turn, so the bottom-most entries show the true originating server and client IP, revealing spoofing when they contradict the From: address. Subject and signatures are easily forged.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-034",
+            "domain": "Network and Mobile Forensics",
+            "stem": "In Wi-Fi forensics, which wireless frame types are used by an attacker to broadcast a forged beacon or deauthentication frame during a common attack?",
+            "options": [
+                "Control frames only",
+                "Management frames",
+                "Data frames exclusively",
+                "QoS null frames"
+            ],
+            "correct_index": 1,
+            "explanation": "Beacon and deauthentication frames are 802.11 management frames, which are often unauthenticated by default, enabling fake AP beacons and client kick attacks. Capturing these frames is core to wireless incident evidence.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-035",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Which mobile device artifact can tie a specific physical handset to a cellular subscriber identity?",
+            "options": [
+                "The device Wi-Fi MAC alone",
+                "The installed application package names only",
+                "The IMEI stored on the handset and the IMSI stored on the SIM card",
+                "The screen unlock pattern"
+            ],
+            "correct_index": 2,
+            "explanation": "The IMEI identifies the handset hardware and the IMSI on the SIM identifies the subscriber, and carrier records map IMSI to the account. App names or a Wi-Fi MAC do not establish the subscriber binding as directly.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-036",
+            "domain": "Network and Mobile Forensics",
+            "stem": "A smartphone GPS navigation app left a trail of coordinates with timestamps. What type of digital evidence does this represent?",
+            "options": [
+                "Network flow metadata",
+                "Boot sector evidence",
+                "Email header evidence",
+                "Geospatial or location-based artifact evidence"
+            ],
+            "correct_index": 3,
+            "explanation": "Location traces from GPS apps, geotagged photos and cell tower records are geospatial artifacts that establish movement and presence. They are distinct from network metadata, storage-layer or email evidence.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-037",
+            "domain": "Network and Mobile Forensics",
+            "stem": "When capturing packets for later forensic analysis, why should the investigator record the capture start time in UTC and note any dropped packets?",
+            "options": [
+                "To synchronize the timeline with host and other log sources and to preserve the capture's integrity and completeness",
+                "To reduce the pcap file size on disk",
+                "To enable automatic decryption of TLS sessions",
+                "To convert the capture into a flow record format"
+            ],
+            "correct_index": 0,
+            "explanation": "UTC timestamps allow correlation with host logs and other evidence, and documenting packet loss quantifies capture completeness, both of which are required for a defensible timeline. Neither drops nor UTC settings decrypt traffic.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-038",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Which iOS forensic source contains the majority of messaging metadata and application data when a full file system extraction is available?",
+            "options": [
+                "The device's SIM card only",
+                "The data partition stores and app containers (for example chat databases in app sandboxes)",
+                "The baseband firmware region",
+                "The USB accessory protocol logs"
+            ],
+            "correct_index": 1,
+            "explanation": "Chat histories, call logs and app metadata reside in the user data partition inside per-application containers and system databases; SIM cards primarily hold subscriber data and a small contact list, while baseband firmware is not user data.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-039",
+            "domain": "Network and Mobile Forensics",
+            "stem": "An investigator must capture evidence from a suspect machine's network traffic to an external command-and-control server. Which approach yields the most complete evidentiary packet record?",
+            "options": [
+                "Relying solely on firewall aggregate counters",
+                "Reviewing only NetFlow top-talker reports",
+                "Spanning the switch port to a dedicated capture host running a packet sniffer that writes a full pcap",
+                "Asking the suspect for screenshots of their connections"
+            ],
+            "correct_index": 2,
+            "explanation": "Port mirroring (SPAN) to a capture host running a sniffer records the full packets in a pcap for deep analysis. Counters and flow reports give metadata only, and suspect-supplied screenshots are not reliable evidence.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-040",
+            "domain": "Network and Mobile Forensics",
+            "stem": "What do DHCP server logs typically enable a network forensic investigator to determine?",
+            "options": [
+                "The content of user emails",
+                "The plaintext of TLS sessions",
+                "File carved from unallocated disk space",
+                "Which MAC address leased which IP address at a given time, aiding host identification"
+            ],
+            "correct_index": 3,
+            "explanation": "DHCP logs bind MAC addresses, hostnames and leased IP addresses with timestamps, which anchors a suspect host to network activity during the incident window. They do not reveal message content or decrypt TLS.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-041",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Which Android artifact records the order in which applications were installed and, on many devices, when they were last updated?",
+            "options": [
+                "The package manager usage and installed packages databases on the data partition",
+                "The battery stats history",
+                "The bootloader unlock status",
+                "The radio interface log only"
+            ],
+            "correct_index": 0,
+            "explanation": "Android package manager artifacts on the data partition enumerate installed APKs, install and update times, and permissions, which is central to mobile app forensics. Battery or bootloader state does not record install history.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-042",
+            "domain": "Network and Mobile Forensics",
+            "stem": "A captured pcap shows many small UDP packets sent in sequence to varying destination ports on a remote host, which strongly resembles which reconnaissance technique?",
+            "options": [
+                "An HTTP session resumption",
+                "A UDP port scan used to enumerate open services",
+                "A DNS zone transfer",
+                "An SMTP relay conversation"
+            ],
+            "correct_index": 1,
+            "explanation": "Sequential UDP probes to multiple ports are characteristic of a UDP port scan; many services reply with ICMP unreachable when closed, while open ports respond with application data. DNS transfers use TCP, and this pattern is not HTTP or SMTP.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-043",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Which artifact on a mobile device can reveal that a messaging application deleted a conversation, when the app overwrote its own database records?",
+            "options": [
+                "The carrier billing statement",
+                "The device's charging cycle count",
+                "The free space of the data partition, where unallocated blocks may still hold SQLite WAL or journal pages of the deleted messages",
+                "The bootloader message queue"
+            ],
+            "correct_index": 2,
+            "explanation": "When an app deletes rows from its SQLite database, prior pages often remain in unallocated space, WAL or journal files, and can be recovered by carving. Carrier billing shows only aggregate usage, not message content.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-044",
+            "domain": "Network and Mobile Forensics",
+            "stem": "Why is encrypted network traffic such as HTTPS more difficult to analyze in network forensics, and what is the standard investigative response?",
+            "options": [
+                "Because packets cannot be captured at all; the response is to abandon network evidence",
+                "Because encrypted traffic never appears in pcaps; the response is to rely on DNS logs only",
+                "Because encryption corrupts checksums; the response is to recalculate MD5 values of the capture",
+                "Because payloads are unreadable without keys; investigators combine endpoint collection, key recovery or SSL proxy sources with metadata analysis"
+            ],
+            "correct_index": 3,
+            "explanation": "TLS protects payload confidentiality, so analysts pivot to endpoint artifacts, session keys, organizational SSL inspection mirrors, and connection metadata (SNI, endpoints, timing). The traffic is still capturable and metadata remains visible.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-045",
+            "domain": "Network and Mobile Forensics",
+            "stem": "In social media forensics, which element is most valuable for establishing the authenticity of a suspect's online post?",
+            "options": [
+                "Server-side post identifiers, timestamps and associated IP or session metadata obtained through legal process",
+                "The profile picture chosen by the user",
+                "A screen capture taken by an investigator without metadata",
+                "The number of likes on the post"
+            ],
+            "correct_index": 0,
+            "explanation": "Authenticity rests on platform-attested identifiers, immutable timestamps and account session metadata obtained via lawful request or preserved export. Screenshots lack provenance, and pictures or like counts prove little.",
+            "reference": "EC-Council CHFI Blueprint - Network and Mobile Forensics"
+        },
+        {
+            "id": "chfi-046",
+            "domain": "Incident Response and Reporting",
+            "stem": "Which phase of the incident response process involves identifying indicators of compromise and confirming that an incident has actually occurred?",
+            "options": [
+                "Preparation",
+                "Detection and analysis",
+                "Containment",
+                "Post-incident activity"
+            ],
+            "correct_index": 1,
+            "explanation": "Detection and analysis is where alerts are triaged, IOCs are validated and the incident's scope and severity are determined. Preparation precedes incidents, containment follows confirmation, and lessons-learned work is last.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-047",
+            "domain": "Incident Response and Reporting",
+            "stem": "During which incident handling phase is it appropriate to isolate an infected subnet from the rest of the corporate network?",
+            "options": [
+                "Identification only",
+                "Eradication",
+                "Containment",
+                "Recovery"
+            ],
+            "correct_index": 2,
+            "explanation": "Containment limits the incident's spread while evidence is preserved and a plan is prepared; network segmentation or isolation is a classic containment action. Eradication removes the threat, and recovery restores normal operations afterward.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-048",
+            "domain": "Incident Response and Reporting",
+            "stem": "What is the primary purpose of the lessons-learned meeting held after an incident is closed?",
+            "options": [
+                "To assign criminal penalties to the attacker",
+                "To decide which vendor to purchase next year",
+                "To permanently delete all incident evidence",
+                "To review what happened, identify improvements and update procedures and controls to reduce recurrence"
+            ],
+            "correct_index": 3,
+            "explanation": "The post-incident review captures the timeline, response effectiveness and gaps, then feeds concrete improvements into policies, detection content and training. Evidence is retained per policy, and punishment or procurement are not its goals.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-049",
+            "domain": "Incident Response and Reporting",
+            "stem": "Which document formally records the transfer of a seized laptop from the on-site analyst to the laboratory examiner, with date, time and signatures?",
+            "options": [
+                "The chain of custody form",
+                "The incident severity matrix",
+                "The business continuity plan",
+                "The acceptable use policy"
+            ],
+            "correct_index": 0,
+            "explanation": "A chain of custody form documents each possession transfer of evidence, preserving accountability and admissibility. Severity matrices, continuity plans and AUPs are governance documents, not evidence transfer records.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-050",
+            "domain": "Incident Response and Reporting",
+            "stem": "An incident report is being prepared for executive leadership. Which content is most appropriate for the executive summary section?",
+            "options": [
+                "Raw packet captures and full memory dumps",
+                "A concise statement of business impact, root cause, actions taken and recommended next steps",
+                "A list of every IOC in hexadecimal",
+                "The examiner's tool license keys"
+            ],
+            "correct_index": 1,
+            "explanation": "Executives need business impact, root cause, response summary and recommendations in plain language; deep technical artifacts belong in appendices for investigators. License keys are irrelevant to any audience.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-051",
+            "domain": "Incident Response and Reporting",
+            "stem": "A forensic examiner is asked to testify in court about their findings. What is the examiner's foremost obligation when giving expert testimony?",
+            "options": [
+                "To advocate for the prosecuting party regardless of findings",
+                "To withhold any findings that weaken the case",
+                "To present truthful, objective opinions based on sound methodology and the evidence examined",
+                "To rely on personal experience instead of documented evidence"
+            ],
+            "correct_index": 2,
+            "explanation": "An expert witness owes a duty of honesty and objectivity to the court; opinions must rest on reliable methodology and examined evidence. Advocating a side, withholding inconvenient findings or ignoring evidence undermines credibility and violates forensic ethics.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-052",
+            "domain": "Incident Response and Reporting",
+            "stem": "Which classification describes an incident where an attacker has actively compromised a production server and is exfiltrating customer data, requiring immediate attention?",
+            "options": [
+                "Low severity",
+                "Medium severity",
+                "Informational only",
+                "High or critical severity"
+            ],
+            "correct_index": 3,
+            "explanation": "Active compromise with ongoing data exfiltration from production systems presents maximum business and legal risk, warranting high/critical classification and immediate escalation. Low, medium or informational ratings understate active breach impact.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-053",
+            "domain": "Incident Response and Reporting",
+            "stem": "During eradication, which action correctly removes the threat while supporting recovery?",
+            "options": [
+                "Removing malware, closing exploited vulnerabilities and resetting compromised credentials on affected systems",
+                "Reformatting every server in the data center indiscriminately",
+                "Paying the ransom to obtain the decryption key and taking no further action",
+                "Disabling all logging to free disk space for tools"
+            ],
+            "correct_index": 0,
+            "explanation": "Eradication eliminates the attacker's foothold (malware, persistence mechanisms, weak credentials) and patches the exploited weakness so recovery is clean. Blanket reformatting, paying ransoms or disabling logging are inappropriate responses.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-054",
+            "domain": "Incident Response and Reporting",
+            "stem": "What is the recommended action regarding the affected systems immediately after eradication is complete?",
+            "options": [
+                "Keep them offline indefinitely regardless of business need",
+                "Restore them to verified normal operations through controlled recovery and monitoring",
+                "Return them to production without validation to save time",
+                "Delete all logs to start fresh"
+            ],
+            "correct_index": 1,
+            "explanation": "The recovery phase restores systems from trusted backups or clean builds, validates integrity and applies heightened monitoring to detect resurgence. Immediate unvalidated return to production risks re-infection, and logs must be preserved.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-055",
+            "domain": "Incident Response and Reporting",
+            "stem": "Which component of a forensic report should present the tools used, versions, hash values of evidence images and the steps taken during the examination?",
+            "options": [
+                "The marketing summary",
+                "The employee performance evaluation",
+                "The methodology and evidence handling section",
+                "The future budget request"
+            ],
+            "correct_index": 2,
+            "explanation": "A methodology and evidence handling section documents tools with versions, acquisition hashes, and the examination workflow so the process is transparent and reproducible. None of the other listed components belongs in a forensic report.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-056",
+            "domain": "Incident Response and Reporting",
+            "stem": "Under many data protection regimes, a breach involving personal data of EU residents must be reported to the supervisory authority within which general timeframe?",
+            "options": [
+                "Within 30 calendar days of discovery in all cases",
+                "Only if the data was sold",
+                "Reporting is optional if encryption was partially used",
+                "Without undue delay and, where feasible, not later than 72 hours after becoming aware"
+            ],
+            "correct_index": 3,
+            "explanation": "The GDPR breach notification duty requires notifying the supervisory authority within 72 hours of awareness where feasible, with documentation even when delayed; other regimes set similar prompt deadlines. Fixed 30-day or optional rules misstate the standard duty.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-057",
+            "domain": "Incident Response and Reporting",
+            "stem": "Why should indicators of compromise derived from a finished investigation be added to organizational detection controls?",
+            "options": [
+                "To enable faster detection and containment of the same or similar attack techniques in the future",
+                "To increase the storage used by SIEM platforms",
+                "To satisfy a vendor marketing requirement",
+                "To allow the attacker to resume access safely"
+            ],
+            "correct_index": 0,
+            "explanation": "Ingesting IOCs and TTPs into SIEM content, EDR rules and firewalls shortens dwell time for related intrusions and closes the loop from response back to prevention. Storage or marketing are not drivers, and access is never restored to attackers.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-058",
+            "domain": "Incident Response and Reporting",
+            "stem": "An investigator discovers that a suspect's workstation was subjected to an anti-forensics tool that overwrote free space with random data. Which consequence for the investigation is most significant?",
+            "options": [
+                "The drive's serial number becomes unreadable",
+                "Deleted file remnants in unallocated space are destroyed, hindering recovery of prior activity",
+                "The file system changes from NTFS to FAT32 automatically",
+                "Hash values of remaining files change on their own"
+            ],
+            "correct_index": 1,
+            "explanation": "Wiping free space overwrites the clusters where deleted files and pagefile remnants lived, destroying much recoverable evidence. The file system and hashes of intact files are unaffected, and the serial number remains readable.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-059",
+            "domain": "Incident Response and Reporting",
+            "stem": "What is the appropriate way to document uncertain findings in a forensic report?",
+            "options": [
+                "Omit anything that is not fully proven to make the report stronger",
+                "Exaggerate certainty to satisfy management",
+                "State findings with appropriate confidence levels and clearly separate facts from analyst opinion",
+                "Replace uncertain findings with assumptions without disclosure"
+            ],
+            "correct_index": 2,
+            "explanation": "Credible reports label facts versus interpretation and express confidence honestly, which strengthens rather than weakens testimony. Omission, exaggeration or undisclosed assumptions are impeachable under cross-examination.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        },
+        {
+            "id": "chfi-060",
+            "domain": "Incident Response and Reporting",
+            "stem": "Before an organization can collect forensic evidence from employee devices, which governance element must be in place to support lawful and consistent action?",
+            "options": [
+                "A social media policy for personal accounts only",
+                "An informal verbal agreement from the help desk",
+                "A publicly posted press release",
+                "A documented computer and email use policy informing users of monitoring and investigation rights"
+            ],
+            "correct_index": 3,
+            "explanation": "A clear, acknowledged acceptable use and monitoring policy establishes the organization's authority to image and examine corporate devices and sets user expectations, supporting both consistent response and legal defensibility.",
+            "reference": "EC-Council CHFI Blueprint - Incident Response and Reporting"
+        }
+    ]
+}
