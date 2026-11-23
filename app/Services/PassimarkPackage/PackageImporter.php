@@ -24,6 +24,9 @@ final class PackageImporter
 {
     public const DUPLICATE_MODES = ['create', 'skip', 'fail'];
 
+    /** `create` always inserts; `update` upserts records by `external_id` (in place). */
+    public const IMPORT_MODES = ['create', 'update'];
+
     /**
      * @param array $opts cert_slug (override target), cert_key, variant_label (bundle category/
      *        variant placement), uploaded_by (User id|null), original_filename, on_duplicate
@@ -43,6 +46,11 @@ final class PackageImporter
         $onDuplicate = $opts['on_duplicate'] ?? 'create';
         if (! in_array($onDuplicate, self::DUPLICATE_MODES, true)) {
             throw new PassimarkPackageException("Unknown on_duplicate mode '{$onDuplicate}'.");
+        }
+
+        $mode = $opts['mode'] ?? 'create';
+        if (! in_array($mode, self::IMPORT_MODES, true)) {
+            throw new PassimarkPackageException("Unknown import mode '{$mode}'.");
         }
         $duplicateOf = self::importedCount($checksum);
 
@@ -74,12 +82,13 @@ final class PackageImporter
                 );
             }
 
-            $summary = DB::transaction(function () use ($manifest, $content, $opts, $checksum) {
+            $summary = DB::transaction(function () use ($manifest, $content, $opts, $checksum, $mode) {
                 $slug = $opts['cert_slug'] ?? $content['cert_slug'];
                 $packageId = $manifest['package_id'] ?? md5($checksum);
                 $source = 'import:' . $packageId;
 
                 $created = ['tracks' => 0, 'sessions' => 0, 'exams' => 0, 'questions' => 0];
+                $updated = ['sessions' => 0, 'exams' => 0, 'questions' => 0];
 
                 $placed = PassimarkCertificationTrack::placeBundle(
                     [
@@ -98,27 +107,18 @@ final class PackageImporter
                 $created['tracks'] += $placed['created'] ? 1 : 0;
 
                 if ($manifest['content_type'] === 'module') {
-                    $m = self::importModule($content['module'], $track, $slug);
-                    $created['sessions'] += 1;
-                    $created['exams'] += $m['exams'];
-                    $created['questions'] += $m['questions'];
+                    self::mergeCounts($created, $updated, self::importModule($content['module'], $track, $slug, $mode));
                 } elseif ($manifest['content_type'] === 'exam') {
-                    $e = self::importExam($content, $track, $slug);
-                    $created['sessions'] += 1;
-                    $created['exams'] += 1;
-                    $created['questions'] += $e['questions'];
+                    self::mergeCounts($created, $updated, self::importExam($content, $track, $slug, $mode));
                 } elseif ($manifest['content_type'] === 'course') {
                     foreach ($content['modules'] as $module) {
-                        $m = self::importModule($module, $track, $slug);
-                        $created['sessions'] += 1;
-                        $created['exams'] += $m['exams'];
-                        $created['questions'] += $m['questions'];
+                        self::mergeCounts($created, $updated, self::importModule($module, $track, $slug, $mode));
                     }
                 } else {
                     throw new PassimarkPackageException('item-bank packages are not importable in version 1.');
                 }
 
-                return $created;
+                return ['created' => $created, 'updated' => $updated];
             });
 
             PassimarkPackageImport::create([
@@ -127,7 +127,7 @@ final class PackageImporter
                 'package_id' => $manifest['package_id'],
                 'checksum' => $checksum,
                 'content_type' => $manifest['content_type'],
-                'summary' => $summary,
+                'summary' => $mode === 'update' ? $summary['created'] + ['updated' => $summary['updated']] : $summary['created'],
                 'status' => 'imported',
             ]);
 
@@ -135,7 +135,8 @@ final class PackageImporter
                 'package_id' => $manifest['package_id'],
                 'content_type' => $manifest['content_type'],
                 'checksum' => $checksum,
-                'created' => $summary,
+                'created' => $summary['created'],
+                'updated' => $summary['updated'],
             ];
         } catch (\Throwable $e) {
             PassimarkPackageImport::create([
@@ -157,8 +158,8 @@ final class PackageImporter
      * content. Powers the upload-preview UI and makes duplicate detection inspectable up front.
      *
      * @return array{valid:bool, errors:array<int,string>, warnings:array<int,string>,
-     *   checksum:?string, package_id:?string, content_type:?string, title:?string, producer:?string,
      *   cert_slug:?string, counts:array{sessions:int, exams:int, questions:int},
+     *   existing_matches:array{sessions:int, exams:int, questions:int},
      *   duplicate:bool, existing_imports:int}
      */
     public static function preview(string $path, array $opts = []): array
@@ -180,6 +181,7 @@ final class PackageImporter
             'producer' => $manifest['producer']['name'] ?? null,
             'cert_slug' => $opts['cert_slug'] ?? ($content['cert_slug'] ?? null),
             'counts' => ['sessions' => 0, 'exams' => 0, 'questions' => 0],
+            'existing_matches' => ['sessions' => 0, 'exams' => 0, 'questions' => 0],
             'duplicate' => false,
             'existing_imports' => 0,
         ];
@@ -189,6 +191,7 @@ final class PackageImporter
         }
 
         $plan['counts'] = self::planCounts($manifest, $content);
+        $plan['existing_matches'] = self::existingMatches($manifest, $content);
 
         if ($checksum !== null) {
             $plan['existing_imports'] = PassimarkPackageImport::where('checksum', $checksum)
@@ -235,78 +238,125 @@ final class PackageImporter
         return $counts;
     }
 
-    private static function importModule(array $module, PassimarkCertificationTrack $track, string $slug): array
+    private static function importModule(array $module, PassimarkCertificationTrack $track, string $slug, string $mode = 'create'): array
     {
-        $session = PassimarkSession::create([
-            ...self::sessionFields($module),
-            'certification_track_id' => $track->id,
-            'cert_slug' => $slug,
-            'external_id' => $module['external_id'],
-            'is_open' => false,
-        ]);
+        $sessionRes = self::upsertSession(self::sessionFields($module), $module['external_id'], $track, $slug, $mode);
+        $session = $sessionRes['session'];
 
-        $firstExamId = null;
+        $created = ['sessions' => $sessionRes['created'] ? 1 : 0, 'exams' => 0, 'questions' => 0];
+        $updated = ['sessions' => $sessionRes['created'] ? 0 : 1, 'exams' => 0, 'questions' => 0];
+
+        $firstExamId = $session->exams()->orderBy('id')->value('id');
         foreach ($module['exams'] ?? [] as $examData) {
-            $exam = PassimarkExam::create([
-                'session_id' => $session->id,
-                'external_id' => $examData['external_id'],
-                'title' => $examData['title'],
-                'mode' => $examData['mode'],
-                'question_count' => $examData['question_count'],
-                'time_minutes' => $examData['time_minutes'] ?? null,
-                'is_final' => $examData['is_final'] ?? false,
-                'irt_enabled' => $examData['irt_enabled'] ?? ($examData['mode'] === 'cat'),
-            ]);
-            $firstExamId ??= $exam->id;
+            $examRes = self::upsertExam($examData, $session, $mode);
+            $firstExamId ??= $examRes['exam']->id;
+            $examRes['created'] ? $created['exams']++ : $updated['exams']++;
         }
 
-        $questionCount = 0;
         foreach ($module['questions'] ?? [] as $q) {
-            $question = PassimarkQuestion::create([
-                ...self::questionFields($q),
-                'session_id' => $session->id,
-                'exam_id' => $firstExamId,
-            ]);
-            $questionCount += 1;
+            $questionRes = self::upsertQuestion($q, $session, $firstExamId, $mode);
+            $questionRes['created'] ? $created['questions']++ : $updated['questions']++;
         }
 
-        return ['exams' => count($module['exams'] ?? []), 'questions' => $questionCount];
+        return ['created' => $created, 'updated' => $updated];
     }
 
-    private static function importExam(array $content, PassimarkCertificationTrack $track, string $slug): array
+    private static function importExam(array $content, PassimarkCertificationTrack $track, string $slug, string $mode = 'create'): array
     {
         $examData = $content['exam'];
         $sessionData = $examData['session'];
 
-        $session = PassimarkSession::create([
-            ...self::sessionFields($sessionData),
-            'certification_track_id' => $track->id,
-            'cert_slug' => $slug,
-            'external_id' => $sessionData['external_id'],
-            'is_open' => false,
-            'questions_target' => $sessionData['questions_target'] ?? $examData['question_count'],
-        ]);
+        $sessionFields = self::sessionFields($sessionData);
+        $sessionFields['questions_target'] = $sessionData['questions_target'] ?? $examData['question_count'];
 
-        $exam = PassimarkExam::create([
-            'session_id' => $session->id,
-            'external_id' => $examData['external_id'],
-            'title' => $examData['title'],
-            'mode' => $examData['mode'],
-            'question_count' => $examData['question_count'],
-            'time_minutes' => $examData['time_minutes'] ?? null,
-            'is_final' => $examData['is_final'] ?? false,
-            'irt_enabled' => $examData['irt_enabled'] ?? ($examData['mode'] === 'cat'),
-        ]);
+        $sessionRes = self::upsertSession($sessionFields, $sessionData['external_id'], $track, $slug, $mode);
+        $session = $sessionRes['session'];
+
+        $created = ['sessions' => $sessionRes['created'] ? 1 : 0, 'exams' => 0, 'questions' => 0];
+        $updated = ['sessions' => $sessionRes['created'] ? 0 : 1, 'exams' => 0, 'questions' => 0];
+
+        $examRes = self::upsertExam($examData, $session, $mode);
+        $examRes['created'] ? $created['exams']++ : $updated['exams']++;
 
         foreach ($content['questions'] ?? [] as $q) {
-            PassimarkQuestion::create([
-                ...self::questionFields($q),
-                'session_id' => $session->id,
-                'exam_id' => $exam->id,
-            ]);
+            $questionRes = self::upsertQuestion($q, $session, $examRes['exam']->id, $mode);
+            $questionRes['created'] ? $created['questions']++ : $updated['questions']++;
         }
 
-        return ['questions' => count($content['questions'] ?? [])];
+        return ['created' => $created, 'updated' => $updated];
+    }
+
+    private static function upsertSession(array $fields, string $externalId, PassimarkCertificationTrack $track, string $slug, string $mode): array
+    {
+        if ($mode === 'update') {
+            $existing = PassimarkSession::where('external_id', $externalId)
+                ->where('certification_track_id', $track->id)
+                ->first();
+            if ($existing) {
+                $existing->update([...$fields, 'certification_track_id' => $track->id, 'cert_slug' => $slug]);
+                return ['session' => $existing, 'created' => false];
+            }
+        }
+
+        $session = PassimarkSession::create([
+            ...$fields,
+            'certification_track_id' => $track->id,
+            'cert_slug' => $slug,
+            'external_id' => $externalId,
+            'is_open' => false,
+        ]);
+
+        return ['session' => $session, 'created' => true];
+    }
+
+    private static function upsertExam(array $examData, PassimarkSession $session, string $mode): array
+    {
+        $fields = self::examFields($examData);
+
+        if ($mode === 'update') {
+            $existing = PassimarkExam::where('external_id', $fields['external_id'])
+                ->where('session_id', $session->id)
+                ->first();
+            if ($existing) {
+                $existing->update($fields);
+                return ['exam' => $existing, 'created' => false];
+            }
+        }
+
+        $exam = PassimarkExam::create([...$fields, 'session_id' => $session->id]);
+
+        return ['exam' => $exam, 'created' => true];
+    }
+
+    private static function upsertQuestion(array $q, PassimarkSession $session, ?int $examId, string $mode): array
+    {
+        $fields = self::questionFields($q);
+
+        if ($mode === 'update') {
+            $existing = PassimarkQuestion::where('external_id', $fields['external_id'])
+                ->where('session_id', $session->id)
+                ->first();
+            if ($existing) {
+                $existing->update($fields);
+                return ['question' => $existing, 'created' => false];
+            }
+        }
+
+        $question = PassimarkQuestion::create([
+            ...$fields,
+            'session_id' => $session->id,
+            'exam_id' => $examId,
+        ]);
+
+        return ['question' => $question, 'created' => true];
+    }
+
+    private static function mergeCounts(array &$created, array &$updated, array $delta): void
+    {
+        foreach (['sessions', 'exams', 'questions'] as $key) {
+            $created[$key] += $delta['created'][$key] ?? 0;
+            $updated[$key] += $delta['updated'][$key] ?? 0;
+        }
     }
 
     private static function sessionFields(array $s): array
@@ -326,6 +376,19 @@ final class PackageImporter
         ];
     }
 
+    private static function examFields(array $e): array
+    {
+        return [
+            'external_id' => $e['external_id'],
+            'title' => $e['title'],
+            'mode' => $e['mode'],
+            'question_count' => $e['question_count'],
+            'time_minutes' => $e['time_minutes'] ?? null,
+            'is_final' => $e['is_final'] ?? false,
+            'irt_enabled' => $e['irt_enabled'] ?? ($e['mode'] === 'cat'),
+        ];
+    }
+
     private static function questionFields(array $q): array
     {
         $correct = array_values(array_intersect(
@@ -341,6 +404,7 @@ final class PackageImporter
 
         return [
             'external_id' => $q['external_id'],
+            'type' => $q['type'] ?? 'single_choice',
             'content' => $q['prompt'],
             'options' => $options,
             'correct_key' => $q['key'] ?? ($correct[0] ?? null),
@@ -351,6 +415,64 @@ final class PackageImporter
             'bloom_level' => $q['taxonomy']['bloom_level'] ?? null,
             'explanation' => $q['explanation'] ?? null,
             'reference' => $q['reference'] ?? null,
+            'interactive_payload' => $q['interactive_payload'] ?? null,
+            'exhibits' => $q['exhibits'] ?? null,
         ];
+    }
+
+    private static function existingMatches(array $manifest, array $content): array
+    {
+        $ids = self::collectExternalIds($manifest, $content);
+
+        return [
+            'sessions' => $ids['sessions'] ? PassimarkSession::whereIn('external_id', $ids['sessions'])->count() : 0,
+            'exams' => $ids['exams'] ? PassimarkExam::whereIn('external_id', $ids['exams'])->count() : 0,
+            'questions' => $ids['questions'] ? PassimarkQuestion::whereIn('external_id', $ids['questions'])->count() : 0,
+        ];
+    }
+
+    private static function collectExternalIds(array $manifest, array $content): array
+    {
+        $ids = ['sessions' => [], 'exams' => [], 'questions' => []];
+
+        $collect = function (array $session) use (&$ids) {
+            if (! empty($session['external_id'])) {
+                $ids['sessions'][] = $session['external_id'];
+            }
+            foreach ($session['exams'] ?? [] as $exam) {
+                if (! empty($exam['external_id'])) {
+                    $ids['exams'][] = $exam['external_id'];
+                }
+            }
+            foreach ($session['questions'] ?? [] as $question) {
+                if (! empty($question['external_id'])) {
+                    $ids['questions'][] = $question['external_id'];
+                }
+            }
+        };
+
+        switch ($manifest['content_type'] ?? null) {
+            case 'module':
+                $collect($content['module'] ?? []);
+                break;
+            case 'exam':
+                $exam = $content['exam'] ?? [];
+                $collect([...($exam['session'] ?? []), 'exams' => [$exam], 'questions' => $content['questions'] ?? []]);
+                break;
+            case 'course':
+                foreach ($content['modules'] ?? [] as $module) {
+                    $collect($module);
+                }
+                break;
+            case 'item-bank':
+                foreach ($content['items'] ?? [] as $q) {
+                    if (! empty($q['external_id'])) {
+                        $ids['questions'][] = $q['external_id'];
+                    }
+                }
+                break;
+        }
+
+        return $ids;
     }
 }

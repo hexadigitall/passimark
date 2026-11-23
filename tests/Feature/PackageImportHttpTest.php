@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\PassimarkPackageImport;
+use App\Models\PassimarkQuestion;
 use App\Models\PassimarkSession;
 use App\Models\User;
 use App\Support\PsmkZip;
@@ -183,6 +184,66 @@ class PackageImportHttpTest extends TestCase
 
         $this->assertSame($sessionsAfterFirst, PassimarkSession::count());
         $this->assertSame(1, PassimarkPackageImport::where('status', 'skipped')->count());
+    }
+
+    public function test_preview_reports_existing_matches_for_update(): void
+    {
+        $this->actingAs($this->admin())
+            ->post('/admin/packages/import', ['package' => $this->packageUpload(), 'on_duplicate' => 'create'])
+            ->assertOk();
+
+        $this->actingAs($this->admin())
+            ->post('/admin/packages/preview', ['package' => $this->packageUpload()])
+            ->assertOk()
+            ->assertJsonPath('existing_matches.sessions', 1)
+            ->assertJsonPath('existing_matches.exams', 1)
+            ->assertJsonPath('existing_matches.questions', 1);
+    }
+
+    public function test_update_mode_overwrites_in_place_by_external_id(): void
+    {
+        $this->actingAs($this->admin())
+            ->post('/admin/packages/import', ['package' => $this->packageUpload(), 'on_duplicate' => 'create'])
+            ->assertOk();
+
+        $session = PassimarkSession::where('external_id', 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa')->firstOrFail();
+        $question = PassimarkQuestion::where('external_id', 'cccccccc-cccc-4ccc-8ccc-cccccccccccc')->firstOrFail();
+
+        $content = $this->moduleContent();
+        $content['module']['title'] = 'Security Governance (v2)';
+        $content['module']['questions'][0]['prompt'] = 'Updated question?';
+
+        $sessionsBefore = PassimarkSession::count();
+        $questionsBefore = PassimarkQuestion::count();
+
+        $response = $this->actingAs($this->admin())->post('/admin/packages/import', [
+            'package' => $this->packageUpload(null, $content),
+            'on_duplicate' => 'create',
+            'mode' => 'update',
+        ])->assertOk();
+
+        $response->assertJsonPath('created.sessions', 0);
+        $response->assertJsonPath('updated.sessions', 1);
+        $response->assertJsonPath('updated.questions', 1);
+
+        $this->assertSame($sessionsBefore, PassimarkSession::count());
+        $this->assertSame($questionsBefore, PassimarkQuestion::count());
+        $this->assertSame($session->id, PassimarkSession::where('external_id', $session->external_id)->value('id'));
+        $this->assertSame('Security Governance (v2)', $session->fresh()->title);
+        $this->assertSame('Updated question?', $question->fresh()->content);
+    }
+
+    public function test_update_mode_creates_when_no_external_id_matches(): void
+    {
+        $response = $this->actingAs($this->admin())->post('/admin/packages/import', [
+            'package' => $this->packageUpload(),
+            'on_duplicate' => 'skip',
+            'mode' => 'update',
+        ])->assertOk();
+
+        $response->assertJsonPath('created.sessions', 1);
+        $response->assertJsonPath('updated.sessions', 0);
+        $response->assertJsonPath('updated.questions', 0);
     }
 
     public function test_fail_mode_rejects_a_duplicate(): void

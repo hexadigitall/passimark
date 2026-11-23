@@ -69,10 +69,12 @@ final class PackageExporter
             'producer' => ['name' => PackagingSpec::PRODUCER_NAME, 'version' => PackagingSpec::FORMAT_VERSION],
         ];
 
-        $binary = PsmkZip::build([
+        $entries = [
             'manifest.json' => self::json($manifest),
             'content.json' => self::json($content),
-        ]);
+        ];
+
+        $binary = PsmkZip::build($entries);
 
         return [
             'package_id' => $packageId,
@@ -131,13 +133,15 @@ final class PackageExporter
 
         return [
             'external_id' => (string) $q->external_id ?: (string) Str::uuid(),
-            'type' => PackagingSpec::ITEM_TYPE,
+            'type' => $q->type ?: PackagingSpec::ITEM_TYPE,
             'prompt' => $q->content,
             'choices' => array_values(array_map(fn ($o) => ['id' => $o['key'] ?? '?', 'text' => $o['text'] ?? ''], $options)),
             'correct_choice_ids' => $correctKeys,
             'key' => $q->correct_key ?? ($correctKeys[0] ?? null),
             'explanation' => $q->explanation,
             'reference' => $q->reference,
+            'interactive_payload' => $q->interactive_payload,
+            'exhibits' => $q->exhibits,
             'taxonomy' => ['domain' => $q->domain, 'bloom_level' => $q->bloom_level],
             'irt_3pl' => [
                 'difficulty' => $q->difficulty,

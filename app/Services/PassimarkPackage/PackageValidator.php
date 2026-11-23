@@ -65,9 +65,16 @@ final class PackageValidator
         }
 
         foreach ($names as $name) {
-            if (! in_array($name, PackagingSpec::ROOT_FILES, true)) {
-                $errors[] = "Unexpected entry '{$name}'. Version 1 packages contain exactly " . implode(' and ', PackagingSpec::ROOT_FILES) . '.';
+            if (in_array($name, PackagingSpec::ROOT_FILES, true)) {
+                continue;
             }
+            if (str_starts_with($name, 'assets/')) {
+                continue;
+            }
+            if (str_starts_with($name, 'signatures/')) {
+                continue;
+            }
+            $errors[] = "Unexpected entry '{$name}'. Allowed: manifest.json, content.json, assets/*, signatures/*.";
         }
         foreach (PackagingSpec::ROOT_FILES as $required) {
             if (! in_array($required, $names, true)) {
@@ -182,40 +189,63 @@ final class PackageValidator
         if (! PackagingSpec::isUuid($q['external_id'] ?? null)) {
             $errors[] = "{$prefix}.external_id must be a UUID.";
         }
-        if (($q['type'] ?? null) !== PackagingSpec::ITEM_TYPE) {
-            $errors[] = "{$prefix}.type must be 'single_choice' in version 1.";
+        if (! in_array($q['type'] ?? null, PackagingSpec::ITEM_TYPES, true)) {
+            $errors[] = "{$prefix}.type must be a valid item type.";
         }
         if (! is_string($q['prompt'] ?? null) || trim($q['prompt']) === '') {
             $errors[] = "{$prefix}.prompt is required.";
         }
-        if (! is_array($q['choices'] ?? null) || count($q['choices']) < 2 || count($q['choices']) > 6) {
-            $errors[] = "{$prefix}.choices must be an array of 2 to 6 choices.";
-        } else {
-            $ids = [];
-            foreach ($q['choices'] as $i => $choice) {
-                $id = $choice['id'] ?? null;
-                $text = $choice['text'] ?? null;
-                if (! is_string($id) || $id === '' || strlen($id) > 8) {
-                    $errors[] = "{$prefix}.choices[{$i}].id must be a non-empty string of at most 8 characters.";
+
+        $isSingle = ($q['type'] ?? null) === 'single_choice';
+        $isMultiple = ($q['type'] ?? null) === 'multiple_choice';
+
+        if ($isSingle || $isMultiple) {
+            $maxChoices = $isSingle ? 6 : 10;
+            if (! is_array($q['choices'] ?? null) || count($q['choices']) < 2 || count($q['choices']) > $maxChoices) {
+                $errors[] = $isSingle
+                    ? "{$prefix}.choices must be an array of 2 to 6 choices."
+                    : "{$prefix}.choices must be an array of 2 to {$maxChoices} choices.";
+            } else {
+                $ids = [];
+                foreach ($q['choices'] as $i => $choice) {
+                    $id = $choice['id'] ?? null;
+                    $text = $choice['text'] ?? null;
+                    if (! is_string($id) || $id === '' || strlen($id) > 8) {
+                        $errors[] = "{$prefix}.choices[{$i}].id must be a non-empty string of at most 8 characters.";
+                    }
+                    if (! is_string($text) || trim($text) === '') {
+                        $errors[] = "{$prefix}.choices[{$i}].text is required.";
+                    }
+                    if ($id !== null) {
+                        $ids[] = $id;
+                    }
                 }
-                if (! is_string($text) || trim($text) === '') {
-                    $errors[] = "{$prefix}.choices[{$i}].text is required.";
-                }
-                if ($id !== null) {
-                    $ids[] = $id;
+                if (count($ids) !== count(array_unique($ids))) {
+                    $errors[] = "{$prefix}.choices ids must be unique.";
                 }
             }
-            if (count($ids) !== count(array_unique($ids))) {
-                $errors[] = "{$prefix}.choices ids must be unique.";
-            }
-        }
-        $correct = $q['correct_choice_ids'] ?? null;
-        if (! is_array($correct) || count($correct) !== 1) {
-            $errors[] = "{$prefix}.correct_choice_ids must contain exactly one choice id.";
-        } else {
-            $validIds = array_column(is_array($q['choices'] ?? null) ? $q['choices'] : [], 'id');
-            if (! in_array($correct[0], $validIds, true)) {
-                $errors[] = "{$prefix}.correct_choice_ids must reference an existing choice id.";
+            $correct = $q['correct_choice_ids'] ?? null;
+            if ($isSingle) {
+                if (! is_array($correct) || count($correct) !== 1) {
+                    $errors[] = "{$prefix}.correct_choice_ids must contain exactly one choice id.";
+                } else {
+                    $validIds = array_column(is_array($q['choices'] ?? null) ? $q['choices'] : [], 'id');
+                    if (! in_array($correct[0], $validIds, true)) {
+                        $errors[] = "{$prefix}.correct_choice_ids must reference an existing choice id.";
+                    }
+                }
+            } else {
+                if (! is_array($correct) || count($correct) < 1) {
+                    $errors[] = "{$prefix}.correct_choice_ids must contain at least one choice id.";
+                } else {
+                    $validIds = array_column(is_array($q['choices'] ?? null) ? $q['choices'] : [], 'id');
+                    foreach ($correct as $cid) {
+                        if (! in_array($cid, $validIds, true)) {
+                            $errors[] = "{$prefix}.correct_choice_ids must reference an existing choice id.";
+                            break;
+                        }
+                    }
+                }
             }
         }
         if (isset($q['key']) && ! in_array($q['key'], array_column(is_array($q['choices'] ?? null) ? $q['choices'] : [], 'id'), true)) {

@@ -9,9 +9,10 @@ class PassimarkPackageImport extends Command
 {
     protected $signature = 'passimark:package:import {file : path to a .psmk/.psme/.psmm package}
         {--cert_slug= : override the destination certification slug}
-        {--on-duplicate=create : create | skip | fail when this checksum was already imported}';
+        {--on-duplicate=create : create | skip | fail when this checksum was already imported}
+        {--mode=create : create | update (upsert by external_id)}';
 
-    protected $description = 'Import a .psmk (or .psme/.psmm) package into the catalog (create-only)';
+    protected $description = 'Import a .psmk (or .psme/.psmm) package into the catalog';
 
     public function handle(): int
     {
@@ -26,6 +27,7 @@ class PassimarkPackageImport extends Command
                 'cert_slug' => $this->option('cert_slug'),
                 'original_filename' => basename($file),
                 'on_duplicate' => $this->option('on-duplicate'),
+                'mode' => $this->option('mode'),
             ]);
         } catch (\Throwable $e) {
             $this->error($e->getMessage());
@@ -39,7 +41,10 @@ class PassimarkPackageImport extends Command
 
         $this->info("Imported {$summary['content_type']} package {$summary['package_id']} (sha256 {$summary['checksum']})");
         foreach ($summary['created'] as $kind => $count) {
-            $this->line("  {$kind}: {$count}");
+            $this->line("  created {$kind}: {$count}");
+        }
+        foreach (array_filter($summary['updated'] ?? [], fn ($count) => $count > 0) as $kind => $count) {
+            $this->line("  updated {$kind}: {$count}");
         }
 
         return self::SUCCESS;

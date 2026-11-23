@@ -8,6 +8,7 @@ export default function PackageImport({ imports = [] }) {
   const [file, setFile] = useState(null);
   const [certSlug, setCertSlug] = useState('');
   const [onDuplicate, setOnDuplicate] = useState('skip');
+  const [mode, setMode] = useState('create');
   const [plan, setPlan] = useState(null);
   const [error, setError] = useState('');
   const [status, setStatus] = useState('');
@@ -17,7 +18,10 @@ export default function PackageImport({ imports = [] }) {
     const form = new FormData();
     form.append('package', file);
     if (certSlug) form.append('cert_slug', certSlug);
-    if (withDuplicate) form.append('on_duplicate', onDuplicate);
+    if (withDuplicate) {
+      form.append('on_duplicate', onDuplicate);
+      form.append('mode', mode);
+    }
     return form;
   };
 
@@ -37,7 +41,6 @@ export default function PackageImport({ imports = [] }) {
         body: buildForm(),
       });
       const data = await res.json().catch(() => ({}));
-      if (!response) throw new Error('Preview failed.');
       if (!res.ok) throw new Error(data.message || Object.values(data.errors || {}).flat().join(' ') || 'Preview failed.');
       setPlan(data);
     } catch (previewError) {
@@ -66,7 +69,10 @@ export default function PackageImport({ imports = [] }) {
       setStatus(
         data.skipped
           ? 'This package was already imported — skipped (no duplicate content created).'
-          : `Imported ${data.content_type} package: ${data.created.sessions} session(s), ${data.created.exams} exam(s), ${data.created.questions} question(s).`
+          : `Imported ${data.content_type} package: created ${data.created.sessions} session(s), ${data.created.exams} exam(s), ${data.created.questions} question(s)` +
+            (data.updated
+              ? `; updated ${data.updated.sessions} session(s), ${data.updated.exams} exam(s), ${data.updated.questions} question(s).`
+              : '.')
       );
       setPlan(null);
     } catch (importError) {
@@ -114,7 +120,7 @@ export default function PackageImport({ imports = [] }) {
               />
             </label>
 
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
               <label className="grid gap-2 text-sm text-slate-300">
                 Cert slug override (optional)
                 <input
@@ -135,6 +141,17 @@ export default function PackageImport({ imports = [] }) {
                   <option value="skip">Skip (recommended)</option>
                   <option value="create">Create a duplicate copy</option>
                   <option value="fail">Reject the import</option>
+                </select>
+              </label>
+              <label className="grid gap-2 text-sm text-slate-300">
+                Import strategy
+                <select
+                  value={mode}
+                  onChange={(event) => setMode(event.target.value)}
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-3 text-white"
+                >
+                  <option value="create">Create new copies</option>
+                  <option value="update">Update existing (by external_id)</option>
                 </select>
               </label>
             </div>
@@ -193,6 +210,13 @@ export default function PackageImport({ imports = [] }) {
                   <dt className="text-slate-500">Questions</dt>
                   <dd>{plan.counts.questions}</dd>
                 </dl>
+                {plan.existing_matches &&
+                  plan.existing_matches.sessions + plan.existing_matches.exams + plan.existing_matches.questions > 0 && (
+                    <p className="mt-3 rounded-lg border border-sky-500/30 bg-sky-500/10 p-3 text-sky-200">
+                      Update strategy will overwrite {plan.existing_matches.sessions} session(s), {plan.existing_matches.exams} exam(s) and{' '}
+                      {plan.existing_matches.questions} question(s) matching existing external_id(s).
+                    </p>
+                  )}
                 {plan.duplicate && (
                   <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-amber-200">
                     This exact package (checksum {plan.checksum?.slice(0, 12)}) has already been imported {plan.existing_imports} time(s).

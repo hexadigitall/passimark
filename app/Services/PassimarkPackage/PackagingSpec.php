@@ -20,12 +20,24 @@ final class PackagingSpec
     public const MODES = ['timed', 'practice', 'cat'];
     public const PHASE_TYPES = ['cert', 'lesson', 'phase', 'domain', 'mock', 'final'];
     public const ITEM_TYPE = 'single_choice';
+    public const ITEM_TYPES = [
+        'single_choice',
+        'multiple_choice',
+        'drag_drop',
+        'build_list',
+        'hotspot',
+        'cloze',
+        'create_tree',
+        'fill_blank',
+        'case_study',
+        'simulation',
+    ];
 
     public const ROOT_FILES = ['manifest.json', 'content.json'];
 
-    public const MAX_FILES = 5;
-    public const MAX_TOTAL_BYTES = 10 * 1024 * 1024;
-    public const MAX_PER_FILE_BYTES = 4 * 1024 * 1024;
+    public const MAX_FILES = 50;
+    public const MAX_TOTAL_BYTES = 50 * 1024 * 1024;
+    public const MAX_PER_FILE_BYTES = 25 * 1024 * 1024;
     public const MAX_QUESTIONS_PER_MODULE = 1000;
     public const MAX_MODULES_PER_COURSE = 1000;
 

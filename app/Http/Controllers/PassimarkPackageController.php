@@ -37,6 +37,7 @@ class PassimarkPackageController extends Controller
         $request->validate([
             'package' => 'required|file|max:10240',
             'on_duplicate' => 'nullable|in:create,skip,fail',
+            'mode' => 'nullable|in:create,update',
         ]);
 
         try {
@@ -45,6 +46,7 @@ class PassimarkPackageController extends Controller
                 'uploaded_by' => $request->user()->id,
                 'original_filename' => $request->file('package')->getClientOriginalName(),
                 'on_duplicate' => $request->input('on_duplicate') ?: 'skip',
+                'mode' => $request->input('mode') ?: 'create',
             ]);
         } catch (\Throwable $e) {
             return response()->json(['message' => $e->getMessage()], 422);
