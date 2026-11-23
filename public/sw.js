@@ -1,4 +1,4 @@
-const CACHE = 'passimark-v2';
+const CACHE = 'passimark-v3';
 
 // Only ever cache immutable, content-hashed build output. Documents (HTML) and
 // data responses are NEVER cached: an HTML shell pins a specific bundle hash, so
@@ -36,18 +36,21 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Documents and Inertia payloads: network only. When offline, fail cleanly
-    // rather than answering with a shell that references a bundle we no longer have.
-    const isDocument = request.mode === 'navigate'
-        || request.headers.get('X-Inertia')
-        || request.headers.get('Accept')?.includes('text/html');
-
-    if (isDocument) {
-        event.respondWith(fetch(request));
+    // The PWA manifest is safe to serve from cache (name is stable, contents are tiny).
+    if (url.pathname === '/manifest.json') {
+        event.respondWith(caches.match(request).then((cached) => cached || fetch(request)));
         return;
     }
 
-    // Hashed build assets: cache-first is correct because the name is the hash.
+    // Only ever touch content-hashed build output. Everything else — documents,
+    // Inertia payloads, dev-server paths (/assets, /@vite), data responses — goes
+    // straight to the network. Caching a dev bundle would pin a chunk graph that
+    // 404s the moment a real build replaces it, blanking the app on the next
+    // navigation. Hashed /build/ filenames are immutable, so cache-first is correct.
+    if (!url.pathname.startsWith('/build/')) {
+        return;
+    }
+
     event.respondWith(
         caches.match(request).then((cached) => cached || fetch(request).then((response) => {
             if (response.ok && response.type === 'basic') {

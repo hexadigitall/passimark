@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/crates/tauri-config-schema/schema.json",
+  "productName": "Passimark Desktop",
+  "version": "2.0.0",
+  "identifier": "com.passimark.desktop",
+  "build": {
+    "frontendDist": "../public"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Passimark Desktop",
+        "label": "main",
+        "width": 1280,
+        "height": 840,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "center": true
+      },
+      {
+        "title": "Exhibit Dossier",
+        "label": "exhibit",
+        "width": 800,
+        "height": 650,
+        "minWidth": 480,
+        "minHeight": 360,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "visible": false,
+        "alwaysOnTop": false
+      },
+      {
+        "title": "Candidate Scratchpad",
+        "label": "scratchpad",
+        "width": 540,
+        "height": 500,
+        "minWidth": 380,
+        "minHeight": 300,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "visible": false,
+        "alwaysOnTop": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: http: data: blob:;"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "fileAssociations": [
+      {
+        "ext": ["psmk"],
+        "name": "Passimark Certification Package",
+        "description": "Passimark Portable Assessment Container",
+        "role": "Editor"
+      },
+      {
+        "ext": ["psme"],
+        "name": "Passimark Encrypted Exam",
+        "description": "Passimark Secure Encrypted Exam Container",
+        "role": "Viewer"
+      },
+      {
+        "ext": ["vce"],
+        "name": "Visual CertExam File",
+        "description": "Legacy Visual CertExam Exam File",
+        "role": "Viewer"
+      }
+    ]
+  }
+}

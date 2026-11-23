@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/crates/tauri-config-schema/schema.json",
+  "identifier": "default",
+  "description": "Default capabilities for Passimark Desktop",
+  "windows": ["main", "exhibit", "scratchpad"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "fs:default",
+    "fs:allow-read-file",
+    "fs:allow-write-file",
+    "shell:default"
+  ]
+}
