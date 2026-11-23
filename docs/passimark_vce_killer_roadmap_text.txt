@@ -1,0 +1,92 @@
+================================================================================
+PASSIMARK: ADAPTIVE EXAM INTELLIGENCE REPOSITORY
+TECHNICAL ROADMAP, CODEBASE REMEDIATION & VCE SUPERIORITY SPRINT PLAN
+================================================================================
+Publisher: Hexadigitall Inc.
+Architecture: Laravel 11 + Inertia.js + React 18 + Tailwind CSS
+Psychometric Core: IRT 3-Parameter Logistic (3PL) Adaptive Engine
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & COMPETITIVE POSITIONING
+--------------------------------------------------------------------------------
+Passimark is designed to supersede legacy certification simulators like Visual 
+CertExam Suite (VCE). While VCE relies on static, file-based exam execution, 
+Passimark introduces real-time Computerized Adaptive Testing (CAT) using Item 
+Response Theory (IRT). 
+
+To achieve decisive market dominance over VCE, Passimark is expanding beyond adaptive 
+testing to support rich interactive question types, non-linear exam review, 
+visual GUI authoring, and a portable file packaging format (.pmkx) paired with an 
+offline player engine.
+
+--------------------------------------------------------------------------------
+2. CURRENT CODEBASE AUDIT & REMEDIATION ISSUES
+--------------------------------------------------------------------------------
+[CRITICAL FIX 1] Hardcoded Pass Score
+- File: app/Http/Controllers/PassimarkController.php (finish method)
+- Issue: Uses hardcoded pass threshold of 70 instead of $attempt->session->pass_score.
+
+[CRITICAL FIX 2] Missing Authorization Ownership Guards
+- File: app/Http/Controllers/PassimarkController.php (answer and finish methods)
+- Issue: Lacks $attempt->user_id === Auth::id() check, creating security risks.
+
+[CRITICAL FIX 3] Null Safety on Session 46 Approval
+- File: app/Http/Controllers/PassimarkAdminController.php (approve method)
+- Issue: Fails when approving Session 46 as $next session object is null.
+
+[CRITICAL FIX 4] CAT Question Exhaustion
+- File: app/Services/CatEngine.php (shouldTerminate method)
+- Issue: Seeder contains 25 questions per session, but CAT mode targets 75-150.
+  Engine must gracefully end exams if question pools run out.
+
+--------------------------------------------------------------------------------
+3. MASTER SPRINT ROADMAP (SPRINTS 4 THROUGH 9)
+--------------------------------------------------------------------------------
+
+SPRINT 4: Schema Expansion, Security Hardening & Core Fixes
+--------------------------------------------------------------------------------
+- S4.1 Migration: Add 'type', 'exhibits', 'attachments' to passimark_questions.
+- S4.2 Security: Enforce ownership checks ($attempt->user_id === Auth::id()).
+- S4.3 Gating: Fix Session 46 null pointer in PassimarkAdminController.
+- S4.4 CatEngine: Add question exhaustion guard in CatEngine::shouldTerminate().
+
+SPRINT 5: VCE-Killer Question Types & Interactive UI Engine
+--------------------------------------------------------------------------------
+- S5.1 Multi-Select UI (QuestionMultiSelect.jsx) with min/max bounds.
+- S5.2 Drag-and-Drop UI (QuestionDragDrop.jsx) for matching and ordering.
+- S5.3 Hotspot UI (QuestionHotspot.jsx) with SVG/Canvas image click targets.
+- S5.4 Reorder UI (QuestionReorder.jsx) with touch/drag sorting support.
+- S5.5 Case Study Panel (CaseStudyViewer.jsx) with split scenario viewer.
+- S5.6 Answer Evaluator (app/Services/AnswerEvaluator.php) for complex JSON.
+
+SPRINT 6: Exam Navigation, Review Palette & Dual-Engine Modes
+--------------------------------------------------------------------------------
+- S6.1 Question Matrix Drawer (ExamNavigator.jsx) for non-linear jumping.
+- S6.2 Flag for Review system persisted in passimark_attempt_answers.
+- S6.3 Pre-Submit Review Screen (ReviewModal.jsx) summarizing unanswered/flagged.
+- S6.4 Post-Exam Item Review (ExamResultsReview.jsx) with domain filtering.
+
+SPRINT 7: Passimark Designer GUI Content Authoring & Importer
+--------------------------------------------------------------------------------
+- S7.1 Visual GUI Editor (Pages/Admin/Designer.jsx) for Sessions and Questions.
+- S7.2 WYSIWYG & LaTeX Math Editor (QuestionEditor.jsx) with exhibit manager.
+- S7.3 Bulk CSV/JSON Importer (app/Services/ContentImporter.php).
+- S7.4 Text/VCE Parser converting legacy dumps into native JSON.
+
+SPRINT 8: .pmkx File Format Specification & Standalone Player Engine
+--------------------------------------------------------------------------------
+- S8.1 .pmkx Specification: Compressed package containing manifest.json, 
+       questions.json, media assets, and cryptographic checksum signature.
+- S8.2 Exporter Service (app/Services/PackageExporter.php).
+- S8.3 Offline Player Engine: Standalone web app (IndexedDB/WASM) and 
+       native desktop/mobile wrappers (Electron/Tauri & Capacitor).
+
+SPRINT 9: Enterprise Analytics, Psychometrics & Production Release
+--------------------------------------------------------------------------------
+- S9.1 Domain Mastery Radar & Ability Curve (MasteryAnalytics.jsx).
+- S9.2 Test Suite: Automated PHPUnit tests for CAT engine & answer evaluators.
+- S9.3 CI/CD & Deployment: Dockerization, caching, and database indexing.
+
+================================================================================
+END OF ROADMAP DOCUMENTATION - HEXADIGITALL INC.
+================================================================================

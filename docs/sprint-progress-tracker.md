@@ -164,7 +164,7 @@ This is the live index of sprint status. Detailed task lists and evidence live i
 **Status:** **done** (content sprint; replaces the generated 7.9b pools with real-spec authored banks)
 **Evidence:** [sprint-7-9c-authored-bundle-catalog.md](sprint-7-9c-authored-bundle-catalog.md)
 - **203 authored bundles** in `database/seeders/data/bundles/<cert_key>.json` (one JSON per cert, `content_provenance`/`source_label`/real `reference`/explanation on every item, no psychometric keys). Seeded via `php artisan passimark:seed-bundle --bundle=<key>`; keys rotate deterministically so A–D stays balanced. Format: [content-format.md](content-format.md).
-- **Synthetic content fully displaced:** `tracks=209`, `authored=203`, `uniform205=0` (203 authored + CISSP `seed:cissp-bundle` + 5 `enterprise-*` role bundles). Security wave (CEH/CHFI/GCFA/GCIH/GPEN/GSEC/OSCP) plus the **GoTranscript** transcription-test bundle (60 items, `GLOBAL-ACADEMIC`) landed here.
+- **Synthetic content fully displaced:** `tracks=209`, `authored=203`, `uniform205=0` (203 authored + CISSP `seed:cissp-bundle` + 5 `enterprise-*` role bundles). Security wave (CEH/CHFI/GCFA/GCIH/GPEN/GSEC/OSCP) plus the **GoTranscript** transcription-test bundle (now 114 items in 6 guide-derived domains, `GLOBAL-ACADEMIC`) landed here.
 - **Guard caught real corruption:** `gmat-focus.json` had been truncated to 48 items with a duplicate id; restored from HEAD, re-validated, re-seeded. Per-wave guard lives in `AuthoredBundleSeederTest::realLengthBundles()`.
 - **Verified:** full suite **437 tests / 122,969 assertions** green; `integrity` probe clean (890 sessions / 14,768 questions; 0 orphans, 0 non-null psychometrics/theta, 0 bad keys, 0 empty explanations/references; key spread A4084/B3737/C3487/D3460); live HTTP smoke on `/`, `/catalog/search`, `/certs/{key}`, `/certs/{cert}/{slug}`, `/api/sessions`, `/api/progress`, `/passimark/focus` all 200.
 - **Bug fixed:** `/catalog/search` 500'd in dev (`no such table: cache` — the project has no cache table and `phpunit.xml` masks it with `CACHE_STORE=array`). `.env`/`.env.example` now set `CACHE_STORE=file` (commit `885fbc4`).
@@ -205,18 +205,27 @@ resume/θ/next required session above catalog, favorites first).
 - **gates:** suite 110 / 44,586 green; build green
 
 ## Sprint 9: Portable packages & sharing (.psmk / .psme / .psmm)
-**Status:** Phase A+B **done**, Phase C **in progress** (C-start shipped; D-E planned)
+**Status:** Phase A+B **done**, Phase C **done**, Phase D **done** (staging model + SourceAdapter for CSV/XLSX/QTI/Moodle XML/GIFT/PDF review workflow)
 **Evidence:** [sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md), [sprint-9-portable-packages-sharing-report.md](sprint-9-portable-packages-sharing-report.md), [passimark-file-format-rfc.md](passimark-file-format-rfc.md)
 - Landed as `720c1d2` on `feature/sprint-9-psmk-packages` (branched from `55268cf`, Sprint 5)
 - RFC **adopted** — one canonical `.psmk` ZIP package (manifest + content), `.psme`/`.psmm` as accepted aliases (extension is a hint; `manifest.content_type` authoritative)
 - migration 000007: `external_id` UUIDs on sessions/exams/questions + `passimark_package_imports` audit — done
 - `App\Support\PsmkZip` dependency-free ZIP codec + `PassimarkPackage\{Validator,Exporter,Importer}` + `PackagingSpec` — done; module/exam/course export + transactional **create-only** import that never unlocks progression and always audits
 - CLI `passimark:package:export` / `passimark:package:import` — done; standard-ZIP output verified with system `tar`; full suite **36 tests / 6,733 assertions** green
-- **Phase C (start) — done:** `POST /admin/packages/preview` dry-run + `POST /admin/packages/import` + `GET /admin/packages` (`PassimarkPackageController`, `role:instructor,admin`), the `Passimark/PackageImport` upload→preview→import screen (linked from the admin dashboard), and checksum duplicate modes (`PackageImporter::preview()` + `on_duplicate` = `create|skip|fail`, CLI `--on-duplicate`). New `PackageImportHttpTest` (8 tests). Full suite **445 tests / 123,014 assertions** green; `npm run build` green.
-- Remaining (Phase C-E): update-by-external_id overwrite semantics, media `assets/` + signatures + quotas + malware scanning, CSV→QTI→PDF source adapters via a review staging model, schema publication
+- **Phase C (start) — done:** `POST /admin/packages/preview` dry-run + `POST /admin/packages/import` + `GET /admin/packages` (`PassimarkPackageController`, `role:instructor,admin`), the `Passimark/PackageImport` upload→preview→import screen (linked from the admin dashboard), and checksum duplicate modes (`PackageImporter::preview()` + `on_duplicate` = `create|skip|fail`, CLI `--on-duplicate`). New `PackageImportHttpTest` (8 tests).
+- **Phase C (update-by-external_id) — done:** `PackageImporter::import(..., ['mode' => 'create'|'update'])` (`IMPORT_MODES`) updates matching sessions/exams/questions **in place** by `external_id` (scoped to the resolved track/session), preserving DB ids and learner attempts; creates only on miss. Summary reports `updated.{sessions,exams,questions}`; `preview()` reports `existing_matches`; CLI `--mode`; "Import strategy" selector in the UI. +3 tests. Full suite **448 tests / 123,033 assertions** green; `npm run build` green.
+- Remaining (Phase C-E): media `assets/` + signatures + quotas + malware scanning, CSV→QTI→PDF source adapters via a review staging model, schema publication
 
-## Known open risks (not yet scheduled)
-- No frontend/browser automated tests — only PHPUnit backend coverage exists
+## Content patch: GoTranscript bank re-authored from the official guidelines
+**Status:** done (bundle + outline rewritten; platform fix for lazily created CAT exams)
+**Evidence:** [sprint-7-9c-authored-bundle-catalog.md](sprint-7-9c-authored-bundle-catalog.md) §"GoTranscript bank re-authored against the official guidelines"
+- The seeded GoTranscript course did not match GoTranscript's own transcriber-test guidance (invented domains, ~40 uncovered rules, one item that broke the number-combination rule). The bank was rewritten from the two primary sources: the [transcription guidelines](https://gotranscript.com/transcription-guidelines) (28 rules) and the [step-by-step test walkthrough](https://gotranscript.com/public/step-by-step-guide-to-signing-up-and-taking-the-gotranscript-transcription-test).
+- **114 items** (`gotranscript-001`..`gotranscript-114`), 6 domains × 19: Full and Clean Verbatim; Timestamps, Speaker Labels and Layout; Sound Events and Non-Speech Markings; Numbers, Times and Measurements; Dashes, Quotation Marks and Italics; The Test Job, Ratings and House Style. `outlines/gotranscript.json` rewritten to the same 6 domains (weight 16.67, sections A–O, `outline_source` = guide URL, retrieved 2026-10-22).
+- Every item cites the rule it came from and quotes it in the explanation; 35 answer keys were wrong in the first pass and were corrected after review. `passimark:validate-bundle gotranscript` → clean; `passimark:seed-bundle --bundle=gotranscript` → 1 track / 6 sessions / 114 questions.
+- **Verified live:** a seeded learner ran session 1 end to end — 19/19 correct, score 100, passed, result page showed every explanation, and the track flipped to "Session 1 • Completed".
+- **Platform fix:** a session can only serve its own items, so the lazily created CAT exam advertised the 150-question default for a 19-item session ("Question 19 of 150", 12% progress). `PassimarkController::start()` now caps `question_count` at the real pool size.
+
+## Known open risks (not yet scheduled)- No frontend/browser automated tests — only PHPUnit backend coverage exists
 - No design tokens / typography scale — **closed in Sprint 7**: `tailwind.config.js` now extends `pm.deep`/`pm.brand`/`pm.accent` + display font + ring shadow (typography scale remains optional polish)
 - CI workflow exists ([.github/workflows/ci.yml](../.github/workflows/ci.yml)) but has not yet been exercised on a pushed branch/PR
 - `.psmk` source conversion (PDF/VCE/CSV/QTI adapters), upload UI, and update modes remain Phase C-E of Sprint 9 ([sprint-9-portable-packages-sharing.md](sprint-9-portable-packages-sharing.md)); the V1 author package (export/import/audit) is shipped
@@ -224,3 +233,220 @@ resume/θ/next required session above catalog, favorites first).
 
 
 - **White-screen (recurring-class): PERMANENTLY CLOSED.** Root cause = JSX identifiers the build cannot see pass Vite but ReferenceError in browser -> blank. Fix = ErrorBoundary wrapping the ONE createRoot mount point in resources/js/app.jsx; faults render a named recovery panel + reload, never white. Build green + suite green.
+
+
+## Sprint 10: Multi-Format Question Taxonomy & Interactive Engine
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Migration `2026_01_01_000019_expand_question_types_and_payloads`**: Adds `type` (indexed), `interactive_payload` (JSON), and `exhibits` (JSON) to `passimark_questions`, plus `interaction_response` (JSON) to `passimark_attempt_answers`.
+- **Polymorphic `App\Services\AnswerEvaluator`**: Comprehensive server-side evaluation for `single_choice`, `multiple_choice` (exact match & partial credit), `drag_drop` (slot matching), `hotspot` (circular Euclidean distance, rectangular bounds, polygon ray-casting), `build_list` (sequence order), and `fill_blank` (case normalization and regex patterns).
+- **Candidate Answer Protection**: `AnswerEvaluator::sanitizeForCandidate()` and `PassimarkController::presentQuestion()` ensure `correct_source_id`, `target_bounds`, and answer keys are never leaked to the client during active CAT and Timed assessments.
+- **Frontend Interactive Renderers (`resources/js/Components/Items/`)**:
+  - `QuestionSingleChoice.jsx`: Single radio selection with strikethrough.
+  - `QuestionMultiSelect.jsx`: Multi-choice checkboxes with selection limits.
+  - `QuestionDragDrop.jsx`: Drag-and-drop & touch-friendly tap-to-place slot pairing container.
+  - `QuestionHotspot.jsx`: Responsive SVG canvas overlay mapping click coordinates on exhibit diagrams.
+- **`Exam.jsx` Integration**: Polymorphic renderer wired to `question.type`, supports rich media exhibits (images, code blocks), and seamlessly handles interactive answer submissions.
+- **Verified**: New `AnswerEvaluatorTest` (6 tests / 26 assertions) + `InteractiveQuestionsTest` (2 tests / 9 assertions) green; full PHPUnit suite (464 tests / 123,395 assertions) green; `npm run build` clean (2,017 modules).
+
+## Sprint 11: Advanced Item Types & Case Studies
+**Status:** done
+- Completed polymorphic evaluation in `AnswerEvaluator` for `cloze`, `create_tree`, `build_list`, `fill_blank`, and `case_study`.
+- Created interactive item renderers: `QuestionReorder.jsx`, `QuestionCloze.jsx`, `QuestionCreateTree.jsx`, `QuestionFillBlank.jsx`.
+- Authored multi-tab exhibit dossier `CaseStudyViewer.jsx` with persistent candidate scratchpad and log clipboard.
+- Verified with `tests/Unit/AnswerEvaluatorTest.php` and `tests/Feature/AdvancedQuestionsTest.php`.
+
+## Sprint 12: Dual-Mode Navigation & Proctoring Chrome
+**Status:** done
+- Migration `2026_01_01_000020_add_pause_and_navigation_state_to_attempts`: Added `paused_at`, `remaining_seconds`, and `session_state` JSON.
+- Free-roam out-of-order navigation and question skipping in Timed and Practice modes while preserving strict linear forward-only IRT CAT progression.
+- Stateful Pause/Resume with full-screen proctoring overlay.
+- Advanced scientific and IPv4 CIDR subnetting calculator (`AdvancedCalculator.jsx`).
+- Pre-submission review modal (`PreSubmitReviewModal.jsx`) with palette jump links and unanswered warnings.
+- Verified with `tests/Feature/DualModeNavigationAndProctoringTest.php`.
+
+## Sprint 13: Passimark Designer GUI (WYSIWYG Authoring Studio)
+**Status:** done
+- Dual-pane split-screen authoring studio in `resources/js/Pages/Passimark/Designer.jsx` matching and exceeding VCE Designer.
+- Left panel: Item builders for all 10 question formats, Markdown/LaTeX toolbars, and psychometric IRT 3PL calibrator.
+- Right panel: Live Candidate Emulator running interactive item components in real time.
+- Verified with `tests/Feature/DesignerTest.php`.
+
+## Sprint 14: Universal Import Subsystem & Legacy VCE Converter
+**Status:** done
+- Migration `2026_10_25_200400_add_fields_to_passimark_import_tables` + models `PassimarkImportBatch` and `PassimarkImportItem`.
+- Implemented `SourceAdapter` contract and third-party format adapters:
+  - `CsvSourceAdapter.php`: Standard CSV/TSV with automated header detection, options parsing, and psychometrics.
+  - `GiftSourceAdapter.php`: Moodle GIFT format (single choice, multiple choice, true/false, fill-in-blank, matching).
+  - `MoodleXmlSourceAdapter.php`: Moodle XML quiz export with embedded base64 image asset extraction.
+  - `QtiSourceAdapter.php`: IMS QTI 2.x/3.x XML assessments and QTI package ZIP archives.
+  - `VceSourceAdapter.php`: Flagship Visual CertExam (.vce) binary parser, reverse-engineering zlib compressed containers, extracting embedded PNG/JPEG diagrams into assets, and mapping question records.
+- Staging and conversion pipeline `ImportStagingService.php`:
+  - Upload -> Parse -> Normalize -> Validate -> Persist to Staging DB.
+  - Export to standard `.psmk` portable assessment package with diagrams in `assets/`.
+  - Direct injection into Passimark curriculum sessions.
+- Admin UI pages: `resources/js/Pages/Passimark/Import/Index.jsx` and `Show.jsx`.
+- Verified with `tests/Feature/UniversalImporterTest.php` (7 tests / 72 assertions 100% green). Production build `npm run build` clean (2,027 modules in 25.71s).
+
+## Sprint 11: Advanced Item Types & Case Study Testlet Engine
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Advanced Polymorphic Evaluators (`App\Services\AnswerEvaluator`)**:
+  - `evaluateCloze()`: Validates inline blank dropdown selections against `blanks` configurations with exact/case-insensitive matching and partial credit scoring.
+  - `evaluateCreateTree()`: Validates parent-child component linkages across both array-of-edges and map formats against `correct_edges`.
+  - `evaluateBuildList()`: Validates procedural sequence ordering with support for both exact match and `kendall_tau_partial` scoring strategies.
+  - `evaluateFillBlank()`: Free text matching with case sensitivity controls, whitespace normalization, and regex validation.
+  - `sanitizeForCandidate()`: Deep answer stripping ensuring `correct_answer`, `correct_edges`, `accepted_answers`, and case study `sub_items` are never delivered to candidates in CAT and Timed modes.
+- **Frontend Item Renderers (`resources/js/Components/Items/`)**:
+  - `QuestionReorder.jsx`: Interactive build list allowing drag-and-drop or tactile Up/Down reordering from an available items bank.
+  - `QuestionCloze.jsx`: Inline `<select>` dropdowns nested directly within paragraph text with live completion counters.
+  - `QuestionCreateTree.jsx`: Visual hierarchical architecture builder with indented tree branches, component attach dropdowns, and root node banners.
+  - `QuestionFillBlank.jsx`: Clean monospace text entry with character counter, instant validation, and clear button.
+- **Case Study Exhibit Dossier (`resources/js/Components/Exhibits/CaseStudyViewer.jsx`)**:
+  - Multi-tab exhibit container: Scenario Overview, Network Topologies/Diagrams, Server Logs/Code snippets, and Corporate Policies.
+  - Image lightbox with diagram zoom/pan toggle.
+  - Monospace code/log viewer with 1-click clipboard copy.
+  - Candidate persistent notes auto-saved to session state.
+- **Exam Player Integration (`resources/js/Pages/Passimark/Exam.jsx`)**:
+  - Wired polymorphic rendering across all 10 item types.
+  - Rendered `CaseStudyViewer` seamlessly alongside or within exam questions having attached exhibits or case studies.
+  - Wired candidate notes and submission payloads.
+- **Verified**:
+  - `tests/Unit/AnswerEvaluatorTest.php`: 10 tests / 50 assertions passed (100%).
+  - `tests/Feature/AdvancedQuestionsTest.php`: 4 tests / 17 assertions passed (100%).
+  - `tests/Feature/BrandPaletteTest.php`: 9 tests / 40 assertions passed (100%).
+  - `npm run build`: 2,022 modules transformed cleanly with zero errors.
+
+## Sprint 12: Dual-Mode Navigation, Stateful Timer & Proctoring Chrome
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Database Schema Migration (`2026_01_01_000020_add_pause_and_navigation_state_to_attempts`)**:
+  - Added `paused_at` (timestamp), `remaining_seconds` (integer), and `session_state` (JSON) to `passimark_attempts`.
+- **Non-Linear Free-Roam Navigation Engine**:
+  - Decoupled linear forward-only logic for Timed and Practice modes while strictly preserving forward-only progression for adaptive CAT mode (`PassimarkController::exam` pre-loads sanitized question pool; `answer()` enforces linear step only on `mode === 'cat'`).
+  - Answer persistence via `updateOrCreate` allowing candidates to re-visit, update, or answer questions out of sequence without database collisions or duplicate records.
+  - Interactive palette grid allowing 1-click jumps to any question in the exam.
+  - Palette filtering tabs (`All`, `Unanswered`, `Flagged`) for rapid candidate review triage.
+- **Stateful Proctoring Chrome & Aids**:
+  - `POST /passimark/attempt/{attempt}/pause` and `POST /passimark/attempt/{attempt}/resume`: Full assessment pause with encrypted snapshot retention, background timer halt, and full-screen pause modal.
+  - `POST /passimark/attempt/{attempt}/state`: Periodic background auto-saving of candidate navigation index, flagged items, and scratchpad notes.
+  - Advanced On-Screen Calculator (`resources/js/Components/Chrome/AdvancedCalculator.jsx`):
+    - Scientific Math: arithmetic, roots, powers, logarithms (`log`/`ln`), trigonometry (`sin`/`cos`/`tan`).
+    - IPv4 Subnetting: calculates Network Address, Broadcast Address, Subnet Mask, Wildcard, Usable Host Range, and Total/Usable Hosts from IP & CIDR prefix.
+    - Bitwise & Radix: Decimal, Hexadecimal, Binary, `AND`, `OR`, `XOR`, `NOT`, and bit shifting.
+  - Pre-Submit Review Screen (`resources/js/Components/Chrome/PreSubmitReviewModal.jsx`):
+    - Comprehensive pre-flight modal displaying summary stats (total, answered, unanswered, flagged), filtering chips, unanswered warning banner, and 1-click question jump links.
+  - Persistent strikethrough options map and text highlight tool in `Exam.jsx`.
+- **Verified**:
+  - `tests/Feature/DualModeNavigationAndProctoringTest.php`: 3 tests / 31 assertions passed (100% green).
+  - `tests/Feature/BrandPaletteTest.php`: 9 tests / 40 assertions passed (100% green).
+  - Combined targeted test suite (28 tests / 147 assertions) 100% green.
+  - `npm run build`: 2,024 modules transformed cleanly in 20.3s.
+
+## Sprint 13: WYSIWYG Visual Exam Designer & Authoring Suite
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Authoring GUI (`resources/js/Pages/Passimark/Designer.jsx`)**:
+  - Side-by-side split screen WYSIWYG authoring interface for all 10 item types.
+  - Real-time instant rendering preview updating with zero keystroke lag.
+  - Psychometrics configurator: IRT difficulty $b \in [-3.0, 3.0]$, discrimination $a \in [0.01, 3.0]$, guessing $c \in [0.0, 0.99]$.
+  - Exhibit and case study tab authoring with diagram URL embedding and markdown preview.
+- **CRUD Endpoints (`PassimarkAdminController`)**:
+  - `storeQuestion()`, `updateQuestion()`, `destroyQuestion()`.
+- **Verified**:
+  - `tests/Feature/DesignerTest.php`: 4 tests / 15 assertions passed (100% green).
+
+## Sprint 14: Universal Import Subsystem & Legacy VCE Converter
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Universal Multi-Format Ingestion Engine (`App\Services\PassimarkImport`)**:
+  - Source Adapters: CSV/TSV, Moodle GIFT grammar, Moodle XML (with base64 embedded diagrams), IMS QTI 2.x/3.x assessment packages.
+  - `VceSourceAdapter`: Reverse-engineers zlib-compressed binary VCE containers, deep-scans byte streams for embedded PNG/JPEG diagram signatures, extracts images to `assets/`, and reconstructs questions.
+- **Staging & Packaging Pipeline**:
+  - `ImportStagingService`: `createBatch()`, `exportToPsmk()` (generates valid `.psmk` packages with diagram assets), `importBatchToSession()`.
+  - Upgraded `PackagingSpec`, `PackageValidator`, `PackageExporter`, and `PackageImporter` across all 10 item formats.
+- **Verified**:
+  - `tests/Feature/UniversalImporterTest.php`: 7 tests / 72 assertions passed (100% green).
+
+## Sprint 15: Mobile Offline Architecture & Embedded SQLite Engine
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Standalone Capacitor Configuration**:
+  - `capacitor.config.json` decoupled from dev IPs for standalone offline mobile execution from local bundles.
+- **Embedded SQLite Persistence (`resources/js/Services/Offline/SqliteDatabase.js`)**:
+  - Pre-compiled schema migrations creating local tables (`tracks`, `sessions`, `exams`, `questions`, `attempts`, `attempt_answers`, `sync_queue`).
+  - Offline Question Bank query engine with instant local caching.
+- **Client-Side CAT & IRT 3PL Psychometrics**:
+  - `CatEngine.js`: Newton-Raphson MLE, Fisher information item selection, ability bounds $[-3.0, +3.0]$.
+  - `AnswerEvaluator.js`: Polymorphic evaluation across all 10 question formats with 0ms latency.
+  - `OfflineExamRunner.js`: Complete standalone exam runner lifecycle.
+- **Bi-Directional Cloud Synchronization**:
+  - `SyncQueue.js`: Auto-synchronization on connectivity restoration.
+  - `MobileSyncController.php`: `GET /api/mobile/sync/download` and `POST /api/mobile/sync/upload` with anti-cheat timestamp checks, duplicate idempotency, progression updates, and deterministic credential minting.
+- **Verified**:
+  - `tests/Feature/MobileSyncTest.php`: 4 tests / 31 assertions passed (100% green).
+
+## Sprint 16: Mobile Touch Ergonomics & Candidate Comfort
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Haptic Feedback Engine (`resources/js/Services/Mobile/HapticFeedback.js`)**:
+  - Tactile vibration patterns for choice selection, strikethrough strikes, countdown warnings (5-minute and 1-minute alert pulses), and completion milestones via `navigator.vibrate`.
+- **Thumb-Zone Navigation Bar (`resources/js/Components/Chrome/ThumbZoneBar.jsx`)**:
+  - Fixed mobile bottom-bar adhering to touch ergonomics and iOS safe area insets (`env(safe-area-inset-bottom)`), placing Previous, Next/Submit, Flag, and Palette actions within immediate one-handed thumb reach (`lg:hidden`).
+- **Gesture-Friendly Bottom-Sheet Palette (`resources/js/Components/Chrome/BottomSheetPalette.jsx`)**:
+  - Drag handle drawer modal replacing the desktop side palette on mobile viewports.
+  - Interactive grid with quick filters (`All`, `Unanswered`, `Flagged`) and direct 1-tap question jumping.
+- **Pinch-and-Pan Exhibit Lightbox (`resources/js/Components/Exhibits/PinchZoomDiagram.jsx`)**:
+  - Touch-based pinch-to-zoom (1x - 4x) and 2-finger panning for network topologies and diagrams with double-tap zoom reset.
+- **True OLED Dark Mode**:
+  - Pure `#000000` pitch black mode with persistent state (`localStorage['pmk_oled_mode']`) and dynamic header toggle button (`Moon`/`Sun`).
+- **Horizontal Swipe Transitions**:
+  - Natural left-swipe (Next/Submit) and right-swipe (Previous) gestures on touchscreens.
+- **Verified**:
+  - `tests/Feature/MobileErgonomicsTest.php`: 2 tests / 14 assertions passed (100% green).
+
+## Sprint 17: Native Desktop Application (Tauri 2.0 / Rust) with Multi-Window Capabilities & OS File Associations
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Tauri 2.0 Rust Core Desktop Shell (`src-tauri/`)**:
+  - Native desktop configuration in `tauri.conf.json` with app identifier `com.passimark.desktop`.
+  - Cargo manifest (`Cargo.toml`) with Tauri 2.0 core, embedded SQLite (`rusqlite`), cryptographic hashing (`sha2`), and package extraction (`zip`).
+  - Native multi-window detachment commands in `src/commands.rs`: `detach_exhibit_window`, `detach_scratchpad_window`, `inspect_package_file`, and `get_desktop_runtime_info`.
+  - Desktop entrypoint in `src/main.rs` with OS file association argument parsing on launch.
+- **OS File Associations**:
+  - Registered `.psmk` (Passimark Certification Container), `.psme` (Passimark Encrypted Container), and `.vce` (Visual CertExam Legacy Container).
+- **Desktop Multi-Window Detachment Bridge (`resources/js/Services/Desktop/TauriBridge.js`)**:
+  - Seamless bridge detecting Tauri desktop runtime (`window.__TAURI__`) while falling back to cross-window popup communication for dual-monitor web browsers.
+  - Case study exhibit detachment: 1-click pop-out of network topologies, code snippets, and logs into a secondary monitor.
+  - Detachable floating scratchpad with live bi-directional sync to exam session state.
+- **VCE-Parity Physical Keyboard Navigation**:
+  - Single-key instant choice selection (`1`-`9`, `A`-`I`).
+  - Proctoring shortcuts: `Ctrl+F` (Flag), `Ctrl+S` (Strike), `Ctrl+P` (Palette), `Ctrl+K`/`Alt+C` (Calculator), `Esc` (Pause), `Ctrl+Enter` (Submit), and `←`/`→` (Previous/Next).
+  - Keyboard shortcuts reference modal (`resources/js/Components/Chrome/DesktopShortcutsModal.jsx`).
+- **Desktop Inspector Backend (`App\Http\Controllers\DesktopController`)**:
+  - `GET /api/desktop/info`: Runtime capabilities, memory targets (<45MB), and file associations.
+  - `POST /api/desktop/inspect`: Validates `.psmk` packages (using `PsmkZip`) and `.vce` containers (using `VceSourceAdapter`).
+- **Verified**:
+  - `tests/Feature/DesktopIntegrationTest.php`: 2 tests / 6 assertions passed (100% green).
+
+## Sprint 18: Spaced Repetition Engine, AI Explanations & Production Hardening
+**Status:** done
+**Evidence:** [docs/systematic-phases-sprints-roadmap.md](docs/systematic-phases-sprints-roadmap.md)
+- **Leitner 5-Box Spaced Repetition Engine (`App\Services\SpacedRepetition\LeitnerEngine`)**:
+  - Database schema migration `2026_10_26_100000_create_passimark_spaced_repetitions_table.php` and Eloquent Model `PassimarkSpacedRepetition`.
+  - Mathematical scheduling: Box 1 (12 hours), Box 2 (3 days), Box 3 (7 days), Box 4 (14 days), Box 5 (30 days - Mastered).
+  - Immediate regression to Box 1 upon incorrect response for rapid concept re-anchoring.
+  - Automated progression hook inside `PassimarkController::answer()`.
+  - Dynamic "Daily Drill" question generator targeting due reviews prioritized by box level and lowest-ability domains.
+- **AI Tutoring & Distractor Explanation Generator (`App\Services\AiTutoring\ExplanationGenerator`)**:
+  - Deep conceptual breakdown for candidate review during Practice mode explaining *why* a chosen distractor is flawed and the underlying exam rule.
+  - `AiTutorController.php`: `GET /api/drill/daily`, `GET /api/drill/stats`, and `POST /api/tutor/explain`.
+- **Frontend Spaced Repetition & AI Explanations**:
+  - `DailyDrillCard.jsx` embedded in candidate `Dashboard.jsx`.
+  - `AiDistractorExplainer.jsx` embedded in `Exam.jsx` feedback stage.
+- **Verified**:
+  - `tests/Unit/LeitnerEngineTest.php`: 3 tests / 15 assertions passed (100% green).
+  - `tests/Feature/SpacedRepetitionAndAiTutorTest.php`: 3 tests / 17 assertions passed (100% green).
+  - Combined suite (14 tests / 83 assertions) 100% green.
+  - `npm run build`: 2,043 modules transformed cleanly in 9.92s with zero warnings.
+

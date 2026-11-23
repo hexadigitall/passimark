@@ -78,3 +78,39 @@ driver). See the deployment guide's `.env` matrix.
   weighting to the real blueprint.
 - The 5 `enterprise-*` role bundles and the CISSP textbook bundle are separate sources and are
   not counted among the 203 authored `seed:authored:*` tracks.
+
+## GoTranscript bank re-authored against the official guidelines
+
+The first GoTranscript bank was written from memory of the transcriber test and did not match
+GoTranscript's own guidance. It was rewritten from the primary sources:
+
+- **Sources.** https://gotranscript.com/transcription-guidelines (the 28-rule guide GoTranscript
+  tells applicants to read before the test) and
+  https://gotranscript.com/public/step-by-step-guide-to-signing-up-and-taking-the-gotranscript-transcription-test
+  (how the test is actually run). Both are recorded in the bundle's `content_provenance` and in
+  the new `guide` block (`name`, `url`, `test_job`, `structure`).
+- **Shape.** 114 items (`gotranscript-001`..`gotranscript-114`), 6 domains × 19 — Full and Clean
+  Verbatim; Timestamps, Speaker Labels and Layout; Sound Events and Non-Speech Markings; Numbers,
+  Times and Measurements; Dashes, Quotation Marks and Italics; The Test Job, Ratings and House
+  Style. `outlines/gotranscript.json` rewritten to the same 6 domains (weight 16.67 each,
+  sections A–O with objectives, `outline_source` = the guidelines URL, `outline_retrieved`
+  2026-10-22). The domain split is ours — GoTranscript publishes no blueprint.
+- **Citations.** Every item carries a `reference` that names the rule it comes from
+  ("GoTranscript transcriber guidelines - …") or the walkthrough page, and an explanation that
+  quotes the rule. 35 answer keys were wrong in the first pass and were corrected after review.
+- **Structure facts encoded.** Part 1 is a guidelines quiz (100% required, one or more correct
+  answers per item), Part 2 is the test job itself (clean verbatim, no timestamping), results are
+  reviewable for 60 days, payments run every Friday, a >4.5 average rating opens the editor path,
+  and 3 transcripts averaging ≤3.6 leads to removal.
+- **Exam framing.** The `exam` block states the real test is 1 hour with 1–2 items, so the bank
+  is practice material, not a mock of the real scoring. `source_label` is "GoTranscript practice
+  bank"; the description says the bank is authored from the public guide, is not a capture of
+  past test questions, and is not endorsed by GoTranscript.
+- **Verification.** `php artisan passimark:validate-bundle gotranscript` → clean (0 errors,
+  0 warnings); `passimark:seed-bundle --bundle=gotranscript` → 1 track, 6 sessions, 114 questions
+  with rotated options; a live learner run through session 1 answered 19/19 correct (score 100,
+  passed) and the result page showed every explanation and reference.
+- **Platform fix found while verifying.** A session can only serve the items attached to it, so
+  the lazily created CAT exam advertised the 150-question default for a 19-item session
+  ("Question 19 of 150", 12% progress). `PassimarkController::start()` now caps the exam's
+  `question_count` at the real pool size.

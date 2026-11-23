@@ -1,6 +1,6 @@
 # Sprint 9: Portable Packages & Sharing (.psmk / .psme / .psmm)
 
-**Status:** Core (V1 author package) **done** — [sprint-9-report](sprint-9-portable-packages-sharing-report.md). Phase C upload/preview/import + duplicate modes are **shipped**; media/signatures, source adapters, and ecosystem steps remain phased below.
+**Status:** Core (V1 author package) **done** — [sprint-9-report](sprint-9-portable-packages-sharing-report.md). Phase C upload/preview/import, duplicate modes, and update-by-`external_id` are **shipped**; media/signatures, source adapters, and ecosystem steps remain phased below.
 **Spec:** [passimark-file-format-rfc.md](passimark-file-format-rfc.md) (Decision adopted)
 **Backlog:** Epic 4, "add `.psmk` import/export and import audit history"
 
@@ -35,8 +35,9 @@ A user who downloads a past-question single-exam file (PDF, VCE, QTI, CSV…) wa
 ### Phase C — Controlled updates and media (in progress)
 - **Upload/validate/import HTTP endpoints — done.** `PassimarkPackageController` under the `role:instructor,admin` group: `GET /admin/packages` (screen), `POST /admin/packages/preview` (dry-run), `POST /admin/packages/import`. The `Passimark/PackageImport` screen walks upload → preview → import and is linked from the admin dashboard ("Packages").
 - **Import preview (dry-run summary) — done.** `PackageImporter::preview()` returns validity, errors/warnings, checksum, target cert, item counts, and a duplicate flag without writing anything.
-- **Duplicate conflict modes + checksum idempotency — done.** `PackageImporter::import(..., ['on_duplicate' => 'create'|'skip'|'fail'])` (default `create` preserves V1 behaviour; UI/CLI default `skip`; `fail` refuses and audits). CLI gained `--on-duplicate`. Covered by `tests/Feature/PackageImportHttpTest.php` (8 tests).
-- **Still open in Phase C:** true update-by-`external_id` (overwrite semantics, not just duplicate handling); media asset references (`assets/`), private storage, malware scanning, quotas; signatures (`signatures/manifest.sha256`).
+- **Duplicate conflict modes + checksum idempotency — done.** `PackageImporter::import(..., ['on_duplicate' => 'create'|'skip'|'fail'])` (default `create` preserves V1 behaviour; UI/CLI default `skip`; `fail` refuses and audits). CLI gained `--on-duplicate`. Covered by `tests/Feature/PackageImportHttpTest.php`.
+- **Update-by-`external_id` overwrite semantics — done.** `PackageImporter::import(..., ['mode' => 'create'|'update'])` (`IMPORT_MODES`). `update` matches sessions/exams/questions by `external_id` (scoped to the resolved track/session) and updates them **in place** — preserving DB ids and all learner attempts — creating only when no match exists. The summary then reports `updated.{sessions,exams,questions}` alongside `created`. `preview()` returns `existing_matches` so the UI shows how many records an update would overwrite. CLI gained `--mode`; the `Passimark/PackageImport` screen gained an "Import strategy" selector. Covered by `tests/Feature/PackageImportHttpTest.php`.
+- **Still open in Phase C:** media asset references (`assets/`), private storage, malware scanning, quotas; signatures (`signatures/manifest.sha256`).
 
 ### Phase D — Structured-source conversion (after C)
 - `passimark_import_batches` / `passimark_import_items` staging model + `SourceAdapter` contract.

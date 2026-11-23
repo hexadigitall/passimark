@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passimark - VCE-Killer Technical Roadmap & Sprint Documentation</title>
+    <style>
+        :root {
+            --bg-main: #0F172A;
+            --bg-card: #1E293B;
+            --accent-emerald: #10B981;
+            --accent-teal: #14B8A6;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-color: #334155;
+            --code-bg: #020617;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+            }
+            .card, .code-block {
+                border: 1px solid #cbd5e1 !important;
+                background-color: #f8fafc !important;
+                color: #0f172a !important;
+            }
+            .accent-text {
+                color: #059669 !important;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-badge {
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-teal));
+            color: #000;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 12px 0 6px 0;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .accent-text {
+            color: var(--accent-emerald);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--accent-emerald);
+        }
+
+        .code-block {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            color: #38bdf8;
+        }
+
+        .sprint-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+        }
+
+        .sprint-number {
+            background-color: var(--accent-emerald);
+            color: #000;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .print-btn {
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-teal));
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <span class="brand-badge">Hexadigitall Architecture Spec</span>
+                <h1>Passimark: Adaptive Exam Intelligence</h1>
+                <div class="subtitle">VCE-Outperforming Technical Roadmap & Portable Packaging (.pmkx) Specification</div>
+            </div>
+            <button class="print-btn no-print" onclick="window.print()">Export / Print PDF</button>
+        </div>
+
+        <div class="card">
+            <h2 class="accent-text">Executive Strategy & Competitive Positioning</h2>
+            <p>Passimark is engineered to completely supersede legacy exam tools such as Visual CertExam (VCE) Suite. By combining modern Item Response Theory (IRT 3PL) computerized adaptive testing with standalone file portability, rich interactive question formats, and cloud analytics, Passimark provides a superior candidate experience.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capability Matrix</th>
+                        <th>Visual CertExam (VCE)</th>
+                        <th>Passimark Core (Post-Sprint 9)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Testing Engine</strong></td>
+                        <td>Static / Sequential</td>
+                        <td><strong>Adaptive IRT 3PL + Linear Timed + Practice</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Item Formats</strong></td>
+                        <td>8 Basic Formats</td>
+                        <td><strong>10+ Advanced Formats (Case Studies, Hotspots, Audio)</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Authoring Experience</strong></td>
+                        <td>Desktop VCE Designer</td>
+                        <td><strong>Passimark Web Designer + Live Preview & Importer</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>File Package Format</strong></td>
+                        <td><code>.vce</code> (Proprietary)</td>
+                        <td><strong><code>.pmkx</code> (Open ZIP Container + Crypto Signature)</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Execution Platform</strong></td>
+                        <td>Desktop App Only</td>
+                        <td><strong>Cross-Platform PWA, Web SaaS & Native Desktop/Mobile</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2 class="accent-text">Codebase Audit & Core Hardening</h2>
+            <ul>
+                <li><strong>Dynamic Threshold Evaluation:</strong> Updated <code>PassimarkController::finish()</code> to evaluate scores against <code>$attempt->session->pass_score</code>.</li>
+                <li><strong>Strict Ownership Protection:</strong> Reinforced authorization checks verifying <code>$attempt->user_id === Auth::id()</code> across all mutation endpoints.</li>
+                <li><strong>Session 46 Null Safety:</strong> Resolved edge case in <code>PassimarkAdminController::approve()</code> when approving terminal curriculum sessions.</li>
+                <li><strong>Adaptive Exhaustion Safety:</strong> Enhanced <code>CatEngine::shouldTerminate()</code> to handle question pool depletion without hangs.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 4</span>
+                <h3 style="margin: 0;">Schema Expansion & Backend Security</h3>
+            </div>
+            <ul>
+                <li>Migration extensions adding <code>type</code>, <code>exhibits</code>, and <code>attachments</code> to <code>passimark_questions</code>.</li>
+                <li>Implementation of server-side answer evaluation engines for multi-format inputs.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 5</span>
+                <h3 style="margin: 0;">VCE-Killer Interactive Item Engine</h3>
+            </div>
+            <ul>
+                <li><strong>Multi-Select & Drag-Drop:</strong> Checkbox matrices and HTML5 drag-and-drop ordering/matching.</li>
+                <li><strong>Hotspot & Reorder:</strong> Interactive SVG image target coordinates and touch-optimized list reordering.</li>
+                <li><strong>Case Study Viewer:</strong> Split-screen scenario reader with tabbed exhibits.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 6</span>
+                <h3 style="margin: 0;">Dual-Engine Navigation & Item Review Palette</h3>
+            </div>
+            <ul>
+                <li>Non-linear navigation grid with flagging and incomplete filters for Timed/Practice modes.</li>
+                <li>Forward-only adaptive item locking retained for CAT mode.</li>
+                <li>Post-exam item review interface with explanations and domain filtering.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 7</span>
+                <h3 style="margin: 0;">Passimark Designer GUI & Importers</h3>
+            </div>
+            <ul>
+                <li>Web-based visual GUI content authoring suite for exams, sessions, and items.</li>
+                <li>WYSIWYG editor with KaTeX math rendering and exhibit file management.</li>
+                <li>CSV/JSON bulk importer and legacy text/VCE dump converter.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 8</span>
+                <h3 style="margin: 0;">.pmkx File Format & Standalone Player Engine</h3>
+            </div>
+            <p>Engineers Passimark's open single-file exam container format (<code>.pmkx</code>) and offline player:</p>
+            <div class="code-block">
+my-exam-package.pmkx
+├── manifest.json       # Exam metadata, session layout, pass threshold
+├── content/
+│   └── questions.json  # Question bank with IRT 3PL parameters (a, b, c)
+├── assets/             # Images, network diagrams, audio exhibits
+└── signature.sha256    # Cryptographic integrity signature
+            </div>
+            <ul>
+                <li>Offline execution via IndexedDB and SQLite WASM inside PWAs.</li>
+                <li>Native desktop executables (Electron/Tauri) and mobile apps (Capacitor).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="sprint-header">
+                <span class="sprint-number">Sprint 9</span>
+                <h3 style="margin: 0;">Enterprise Analytics & Release Hardening</h3>
+            </div>
+            <ul>
+                <li>CISO-grade domain mastery radar charts and candidate IRT ability (&theta;) curves.</li>
+                <li>Automated PHPUnit test suites and production deployment pipelines.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

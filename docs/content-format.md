@@ -110,8 +110,12 @@ pools from Sprint 7.9b are fully displaced (`uniform205=0`).
 
 - `cisa.json` — domains/weights verified from ISACA (18/18/12/26/26); subtopics present for
   domains 1-2, domains 3-5 marked incomplete rather than guessed.
-- `gotranscript.json` — 4 domains (Verbatim Formats and Editing; Timestamping and Speaker
-  Labels; Sound Events and Non-Speech Markings; Numbers, Punctuation, and Grammar), weight 25 each.
+- `gotranscript.json` — 6 domains, weight 16.67 each, written against GoTranscript's own
+  public transcriber guidelines (https://gotranscript.com/transcription-guidelines): Full and
+  Clean Verbatim; Timestamps, Speaker Labels and Layout; Sound Events and Non-Speech Markings;
+  Numbers, Times and Measurements; Dashes, Quotation Marks and Italics; The Test Job, Ratings
+  and House Style. GoTranscript publishes no exam blueprint, so the domain split is ours and
+  `outline_source` records the guide it was derived from.
 - 19 further blueprints: `acca-bt`, `acca-f1-f4`, `cat-india`, `delf-a2`, `delf-b1`, `delf-b2`,
   `emsat-math`, `goethe-b1`, `ib-bio-hl`, `ican-skills`, `nclex-pn`, `nclex-rn`, `pance`,
   `qiyas-gat`, `qiyas-saat`, `saica-itc`, `thanaweya-eg`, `toefl-ibt`, `ucat-uk`.
