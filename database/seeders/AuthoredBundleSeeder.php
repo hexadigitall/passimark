@@ -223,23 +223,35 @@ class AuthoredBundleSeeder extends Seeder
     private function rotateOptions(array $item): array
     {
         $texts = array_values($item['options']);
-        $shift = crc32($item['id']) % count($texts);
+        $count = count($texts);
+        $shift = crc32($item['id']) % $count;
 
         $rotated = [];
         foreach ($texts as $offset => $text) {
-            $rotated[] = $texts[($offset + $shift) % count($texts)];
+            $rotated[] = $texts[($offset + $shift) % $count];
         }
 
-        $correctIndex = (((int) $item['correct_index']) - $shift + count($texts)) % count($texts);
-        $correctKey = chr(65 + $correctIndex);
+        $correctKeys = [];
+        if (isset($item['correct_indices']) && is_array($item['correct_indices'])) {
+            foreach ($item['correct_indices'] as $ci) {
+                $rotatedIndex = (((int) $ci) - $shift + $count) % $count;
+                $correctKeys[] = chr(65 + $rotatedIndex);
+            }
+            sort($correctKeys);
+        } else {
+            $correctIndex = (((int) $item['correct_index']) - $shift + $count) % $count;
+            $correctKeys[] = chr(65 + $correctIndex);
+        }
 
         $options = [];
         foreach ($rotated as $offset => $text) {
             $key = chr(65 + $offset);
-            $options[] = ['key' => $key, 'text' => $text, 'is_correct' => $key === $correctKey];
+            $options[] = ['key' => $key, 'text' => $text, 'is_correct' => in_array($key, $correctKeys, true)];
         }
 
-        return [$options, $correctKey];
+        $primaryKey = $correctKeys[0] ?? 'A';
+
+        return [$options, $primaryKey];
     }
 
     private function ensureTag(string $type, string $label): PassimarkTag

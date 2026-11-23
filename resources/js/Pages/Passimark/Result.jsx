@@ -97,8 +97,12 @@ export default function Result({ attempt, answers = [], history = [], review_unl
 												{answer.exposed ? (
 													<div className="mt-3 space-y-2">
 														<p className="text-sm text-slate-300">
-															<span className="text-brand-300">Correct answer:</span> <span className="font-mono text-slate-100">{answer.question?.correct_key}</span>
-															<span className="ml-2 text-slate-400">{answer.question?.options?.find((option) => option.key === answer.question?.correct_key)?.text}</span>
+															<span className="text-brand-300">{(answer.question?.correct_keys?.length || 0) > 1 ? 'Correct answers:' : 'Correct answer:'}</span> <span className="font-mono text-slate-100">{answer.question?.correct_keys?.length ? answer.question.correct_keys.join(', ') : answer.question?.correct_key}</span>
+															<span className="ml-2 text-slate-400">
+																{answer.question?.correct_keys?.length
+																	? answer.question.correct_keys.map((k) => answer.question?.options?.find((option) => option.key === k)?.text).filter(Boolean).join('; ')
+																	: answer.question?.options?.find((option) => option.key === answer.question?.correct_key)?.text}
+															</span>
 														</p>
 														{answer.question?.explanation && <p className="rounded-lg bg-slate-800 p-3 text-sm leading-relaxed text-slate-300">{answer.question.explanation}</p>}
 													</div>

@@ -57,7 +57,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
   return (
     <>
       <Head title="Choose your focus" />
-      <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
+      <div className="relative flex min-h-screen items-center justify-center overflow-clip bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-brand-500 opacity-20 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-500 opacity-20 blur-3xl" />
@@ -124,7 +124,7 @@ export default function Focus({ funnel, options = [], selected = null }) {
 
             <fieldset className="mt-3">
               <legend className="sr-only">Choose a certification</legend>
-              <div className="max-h-64 space-y-1 overflow-y-auto rounded-lg border border-slate-700 bg-slate-900/60 p-1.5">
+              <div className="relative max-h-64 space-y-1 overflow-y-auto rounded-lg border border-slate-700 bg-slate-900/60 p-1.5">
                 {visible.length === 0 ? (
                   <p className="px-3 py-6 text-center text-sm text-slate-500">
                     Nothing matches &quot;{query}&quot;. Try a broader term.

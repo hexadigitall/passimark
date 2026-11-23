@@ -39,8 +39,11 @@ class ReviewService
                         ->map(fn ($option) => ['key' => $option['key'], 'text' => $option['text']])
                         ->values(),
                     'correct_key' => ($answer->is_correct || $unlocked)
-                        ? ($answer->question->correct_key ?? collect($answer->question->options)->firstWhere('is_correct', true)['key'] ?? null)
+                        ? ($answer->question->correct_key ?? collect($answer->question->options)->filter(fn($o)=>!empty($o['is_correct']))->pluck('key')->implode(','))
                         : null,
+                    'correct_keys' => ($answer->is_correct || $unlocked)
+                        ? collect($answer->question->options)->filter(fn($o)=>!empty($o['is_correct']))->pluck('key')->values()->all()
+                        : [],
                     'explanation' => ($answer->is_correct || $unlocked) ? $answer->question->explanation : null,
                 ],
             ])->values(),

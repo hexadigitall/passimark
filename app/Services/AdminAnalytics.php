@@ -473,8 +473,12 @@ class AdminAnalytics
             ->map(fn ($r) => ['bloom' => $r->bloom, 'questions' => (int) $r->questions, 'used' => (int) $r->used, 'accuracy' => $this->pct($r->correct, $r->used, 1)])
             ->all();
 
-        $difficultyBands = ['easy' => 0, 'mid' => 0, 'hard' => 0];
+        // Items without measured parameters carry a null difficulty by design
+        // (authored bundles ship no psychometric keys). Counting those as "easy"
+        // would report the whole catalogue as calibrated when none of it is.
+        $difficultyBands = ['easy' => 0, 'mid' => 0, 'hard' => 0, 'uncalibrated' => 0];
         foreach (PassimarkQuestion::query()->pluck('difficulty') as $d) {
+            if ($d === null) { $difficultyBands['uncalibrated']++; continue; }
             if ($d < 0.33) $difficultyBands['easy']++;
             elseif ($d <= 0.67) $difficultyBands['mid']++;
             else $difficultyBands['hard']++;

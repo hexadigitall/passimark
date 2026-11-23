@@ -2,29 +2,192 @@
   "cert_key": "gotranscript",
   "title": "GoTranscript Transcription Test",
   "issuer": "GoTranscript",
-  "region": "GLOBAL-ACADEMIC",
-  "source_label": "GoTranscript practice bank",
-  "content_provenance": "Domain names are our own grouping of the public GoTranscript transcriber guidelines (major rules, speaker labels, timestamping, sound events, numbers and punctuation). Each domain carries an equal 25% weight because the practice bank spreads 60 items evenly across them. The guidelines are a public reference document, not a syllabused exam blueprint.",
+  "outline_source": "https://gotranscript.com/transcription-guidelines",
+  "outline_retrieved": "2026-10-22",
+  "content_provenance": "The domain names, weights and objectives are our own organisation of GoTranscript's public transcriber guidelines - the instructions the company tells applicants to read before taking its transcription test. GoTranscript publishes no exam blueprint and no domain weights, so the six equal-weight domains here group the guidelines' own sections (verbatim formats, timestamping and speaker labels, sound events and non-speech markings, numbers and times, dashes and quotation marks, the test job and ratings) so that a practice bank can be spread evenly across them.",
+  "exam": {
+    "questions": 114,
+    "duration_minutes": 120,
+    "scoring": "Practice bank: six sessions of 19 items, pass mark 70% per session. GoTranscript's own test is different: a guidelines quiz that must be passed with 100% correct (each question can have one or more correct answers), then a test job transcribed in clean verbatim with no timestamping. Live work is rated 5 (96-100% accuracy) down to 1 (0-82%), and three transcriptions with an average of 3.6 or lower mean removal from the transcriber team.",
+    "adaptive": false
+  },
   "domains": [
     {
-      "id": "verbatim",
-      "name": "Verbatim Formats and Editing",
-      "weight": 25
+      "number": 1,
+      "name": "Full and Clean Verbatim",
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "A - Verbatim types",
+          "objectives": [
+            { "id": "1.A.1", "text": "Full verbatim: the text is transcribed exactly as it sounds, including all the utterances of the speakers" },
+            { "id": "1.A.2", "text": "Clean verbatim: speech errors, false starts (unless they add information), stutters, repetitions and filler words are removed" },
+            { "id": "1.A.3", "text": "Expressions such as 'Oh my God' are kept regardless of verbatim type" },
+            { "id": "1.A.4", "text": "Slang is expanded in clean verbatim: gotcha to got you, gonna to going to, wanna to want to, 'cause to because" },
+            { "id": "1.A.5", "text": "'Yeah', 'yep', 'yap', 'yup' and 'mm-hmm' are written as 'yes'; 'alright' as 'all right'; 'Ok' and 'OK' as 'Okay'" },
+            { "id": "1.A.6", "text": "Repetitions that express emphasis are kept; filler words that change the meaning of the phrase are kept" },
+            { "id": "1.A.7", "text": "Affirmative and negative forms: Mm-hmm, Mm (affirmative) or Mm-mm (negative); Uh-huh (affirmative) or Uh-uh (negative)" },
+            { "id": "1.A.8", "text": "Spoken contractions are never changed" },
+            { "id": "1.A.9", "text": "Clean verbatim sentences avoid starting with a conjunction; expand the sentence instead" }
+          ]
+        }
+      ]
     },
     {
-      "id": "timestamps-labels",
-      "name": "Timestamping and Speaker Labels",
-      "weight": 25
+      "number": 2,
+      "name": "Timestamps, Speaker Labels and Layout",
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "B - Timestamping",
+          "objectives": [
+            { "id": "2.B.1", "text": "Timestamp format is [00:00:00] and timestamps are always bold" },
+            { "id": "2.B.2", "text": "Timestamping types: every 2 minutes, or every time the speaker changes" },
+            { "id": "2.B.3", "text": "Always consider the whole file when timestamping; embedded or burned-in time must be read from the downloaded file" }
+          ]
+        },
+        {
+          "name": "C - Speaker labels",
+          "objectives": [
+            { "id": "2.C.1", "text": "Use the speaker's name from the audio or the file title, and always use a label even for one speaker" },
+            { "id": "2.C.2", "text": "Make each speaker's role as descriptive as possible; the last name and titles may be dropped later in the file" },
+            { "id": "2.C.3", "text": "Add a question mark before the label when the speaker cannot be identified" },
+            { "id": "2.C.4", "text": "Labels are bold, followed by a colon and a space; never use the Tab button" }
+          ]
+        },
+        {
+          "name": "D - Document layout",
+          "objectives": [
+            { "id": "2.D.1", "text": "Paragraphs are at most 500 symbols (about 100 words or 3-4 lines); lyrics are transcribed like a poem" },
+            { "id": "2.D.2", "text": "Sentence divisions at conjunctions; every sentence ends with a punctuation mark and starts with a capital letter" },
+            { "id": "2.D.3", "text": "Never use () instead of [], and never use exclamation marks" },
+            { "id": "2.D.4", "text": "A comma before a coordinating conjunction that precedes an independent clause" }
+          ]
+        }
+      ]
     },
     {
-      "id": "sound-events",
+      "number": 3,
       "name": "Sound Events and Non-Speech Markings",
-      "weight": 25
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "E - Inaudible and unintelligible",
+          "objectives": [
+            { "id": "3.E.1", "text": "[inaudible 00:00:00] when speech cannot be heard due to poor recording or noise (Ctrl + K)" },
+            { "id": "3.E.2", "text": "[unintelligible 00:00:00] when speech can be heard but cannot be understood (Ctrl + I)" },
+            { "id": "3.E.3", "text": "Only these two marks are allowed, they must not be invented, and they must specify the time" }
+          ]
+        },
+        {
+          "name": "F - Sound events",
+          "objectives": [
+            { "id": "3.F.1", "text": "Sound events that are significant to the audio are noted in either format, in square brackets, without timestamps" },
+            { "id": "3.F.2", "text": "Notes are in present or progressive tense, at most two words, grammatically correct and lower case" },
+            { "id": "3.F.3", "text": "Sounds the speaker makes go on the same line; sounds not made by the speaker go on a separate line" },
+            { "id": "3.F.4", "text": "[background noise], [crosstalk], [silence], [pause 00:00:00] and [sound cut] and where each one goes" },
+            { "id": "3.F.5", "text": "[silence] covers 4 to 10 seconds; [pause 00:00:00] is for longer pauses, is bolded and always stands alone" },
+            { "id": "3.F.6", "text": "Foreign language is marked [foreign language] or a named language; authors, titles and expressions are researched instead" }
+          ]
+        },
+        {
+          "name": "G - Weight and brackets",
+          "objectives": [
+            { "id": "3.G.1", "text": "Everything with a time-stamp is bolded, and nothing else besides speaker labels and timed marks is bolded" },
+            { "id": "3.G.2", "text": "Square brackets are used for notes and marks; round brackets are never used" }
+          ]
+        }
+      ]
     },
     {
-      "id": "numbers-grammar",
-      "name": "Numbers, Punctuation, and Grammar",
-      "weight": 25
+      "number": 4,
+      "name": "Numbers, Times and Measurements",
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "H - Number rules",
+          "objectives": [
+            { "id": "4.H.1", "text": "Single-digit numbers are spelled out; all other numbers use numerals" },
+            { "id": "4.H.2", "text": "A sentence that mixes small and large numbers writes every number in numerals" },
+            { "id": "4.H.3", "text": "Exceptions for readability: money, years and eras, age, percentages, measurements, equations, fractions, postal code, phone number and Bible citation" },
+            { "id": "4.H.4", "text": "Money conversions: 1 grand is $1,000, 5 bucks is $5, 8 quid is £8, half a million dollars is $500,000" }
+          ]
+        },
+        {
+          "name": "I - Times and capitalised series",
+          "objectives": [
+            { "id": "4.I.1", "text": "Times of day always capitalize AM and PM; with o'clock the numbers are spelled out" },
+            { "id": "4.I.2", "text": "Nouns that are part of a series are capitalized (Grade 8, Section B, Chapter 1, Article VI); smaller divisions are not (page 1, paragraph 7)" }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Dashes, Quotation Marks and Italics",
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "J - Double dashes and single dashes",
+          "objectives": [
+            { "id": "5.J.1", "text": "Double dashes for a change of thought (false start), a speech error or an incomplete sentence" },
+            { "id": "5.J.2", "text": "A single dash when the speech is interrupted but the speaker continues his thought" },
+            { "id": "5.J.3", "text": "Full verbatim stutters and repetitions use a single dash" }
+          ]
+        },
+        {
+          "name": "K - Quotation marks",
+          "objectives": [
+            { "id": "5.K.1", "text": "Direct quotations use double quotation marks and are introduced by a comma, not a colon" },
+            { "id": "5.K.2", "text": "Commas and periods go inside the quotation marks; the question mark goes inside when the quotation itself is the question" },
+            { "id": "5.K.3", "text": "Internal dialogues are direct quotations; indirect quotations take no quotation marks" },
+            { "id": "5.K.4", "text": "The first word of a quoted complete sentence is capitalized" }
+          ]
+        },
+        {
+          "name": "L - Italics, abbreviations and links",
+          "objectives": [
+            { "id": "5.L.1", "text": "Italicize titles, artworks, plays, TV and radio programs and foreign expressions" },
+            { "id": "5.L.2", "text": "Do not italicize social media sites, company names, the Bible, books within it or other sacred writings" },
+            { "id": "5.L.3", "text": "Abbreviations and acronyms take no dashes or periods (USA, PhD); Dr., Mrs. in American English" },
+            { "id": "5.L.4", "text": "Research proper capitalization (iPhone, UCLA, SaaS) and write links as www.facebook.com/groups/gotranscript" }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "name": "The Test Job, Ratings and House Style",
+      "weight": 16.67,
+      "sections": [
+        {
+          "name": "M - The test",
+          "objectives": [
+            { "id": "6.M.1", "text": "Part 1 is a guidelines quiz that must be passed with 100% correct; each question can have one or more correct answers" },
+            { "id": "6.M.2", "text": "Part 2 is a test job transcribed in clean verbatim with no timestamping; read the provided instructions again first" },
+            { "id": "6.M.3", "text": "The review of a submitted test job can take up to 60 days" }
+          ]
+        },
+        {
+          "name": "N - Ratings and standing",
+          "objectives": [
+            { "id": "6.N.1", "text": "Ratings run from 5 (96-100% accuracy) down to 1 (0-82%); editors rate accuracy, grammar and research" },
+            { "id": "6.N.2", "text": "Three transcriptions with an average of 3.6 or lower mean removal; an average better than 4.5 opens the editor path" },
+            { "id": "6.N.3", "text": "Not preparing transcriptions to the requirements can mean removal from the team of transcribers" }
+          ]
+        },
+        {
+          "name": "O - Work flow and house style",
+          "objectives": [
+            { "id": "6.O.1", "text": "The flow: client upload, e-mail, transcription jobs page showing turnaround time, text format and timestamping type" },
+            { "id": "6.O.2", "text": "Earnings on the stats page, payments every weekend on Friday, bad audio reported and refunded" },
+            { "id": "6.O.3", "text": "US (American) spelling and Grammarly; et cetera is kept unless the client asks otherwise" },
+            { "id": "6.O.4", "text": "Curse words are transcribed word for word" },
+            { "id": "6.O.5", "text": "Customer dictated instructions are followed but never transcribed; spelled-out names are included except in dictation-type transcripts" },
+            { "id": "6.O.6", "text": "Never paraphrase or correct the speaker, no [sic] tag, and use the correct spelling for misspoken words" }
+          ]
+        }
+      ]
     }
   ]
 }

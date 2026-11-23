@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\{PassimarkSession, PassimarkExam, PassimarkQuestion, PassimarkAttempt, PassimarkProgress};
 use App\Services\CatEngine;
+use App\Services\AnswerEvaluator;
 use App\Services\Irt\Irt3PL;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -154,10 +155,49 @@ class PassimarkController extends Controller
     {
         abort_unless($attempt->user_id === Auth::id() && !$attempt->finished_at, 404);
 
+        $attempt->load('session', 'exam');
+        $isCat = $attempt->mode === 'cat';
+
+        $existingAnswers = $attempt->answers()
+            ->get()
+            ->keyBy('question_id')
+            ->map(fn ($ans) => [
+                'question_id' => $ans->question_id,
+                'selected_option' => $ans->selected_option,
+                'interaction_response' => $ans->interaction_response,
+                'is_correct' => $attempt->mode === 'practice' ? (bool)$ans->is_correct : null,
+                'time_spent' => $ans->time_spent,
+            ]);
+
+        $questions = null;
+        $currentQuestion = null;
+
+        if (!$isCat) {
+            // For Timed and Practice: pre-load all exam questions (sanitized) so navigation is instantaneous
+            $limit = $attempt->exam->question_count ?? 25;
+            $rawQuestions = PassimarkQuestion::where('session_id', $attempt->session_id)
+                ->orderBy('id')
+                ->take($limit)
+                ->get();
+
+            $questions = $rawQuestions->map(fn ($q) => $this->presentQuestion($q, $attempt->mode))->values()->all();
+
+            $answeredIds = $existingAnswers->keys()->all();
+            $firstUnanswered = $rawQuestions->firstWhere(fn ($q) => !in_array($q->id, $answeredIds, true));
+            $currentQuestion = $this->presentQuestion($firstUnanswered ?? $rawQuestions->first(), $attempt->mode);
+        } else {
+            $currentQuestion = $this->presentQuestion(CatEngine::nextQuestion($attempt), $attempt->mode);
+        }
+
         return Inertia::render('Passimark/Exam', [
-            'attempt' => $attempt->load('session', 'exam'),
-            'question' => $this->presentQuestion(CatEngine::nextQuestion($attempt), $attempt->mode),
-            'answeredCount' => $attempt->answers()->count(),
+            'attempt' => $attempt,
+            'question' => $currentQuestion,
+            'questions' => $questions,
+            'existingAnswers' => $existingAnswers,
+            'answeredCount' => $existingAnswers->count(),
+            'isPaused' => $attempt->paused_at !== null,
+            'remainingSeconds' => $attempt->remaining_seconds,
+            'sessionState' => $attempt->session_state ?? [],
         ]);
     }
 
@@ -190,20 +230,28 @@ class PassimarkController extends Controller
             return null;
         }
         $reveal = $mode === 'practice';
-        $options = collect($question->options);
+        $options = collect($question->options ?? []);
+        $correctKeys = $options->filter(fn ($o) => !empty($o['is_correct']))->pluck('key')->map(fn ($k) => (string) $k)->values()->all();
+        $multi = count($correctKeys) > 1 || ($question->type === 'multiple_choice');
+        $type = $question->type ?? ($multi ? 'multiple_choice' : 'single_choice');
 
         $payload = [
             'id' => $question->id,
+            'type' => $type,
             'content' => $question->content,
             'domain' => $question->domain,
             'b_difficulty' => $question->difficulty,
+            'multi_select' => $multi,
+            'correct_keys' => $multi ? $correctKeys : [],
             'options' => $options->map(fn ($option) => array_merge(
                 ['key' => $option['key'], 'text' => $option['text']],
                 $reveal ? ['is_correct' => (bool) ($option['is_correct'] ?? false)] : []
             ))->values(),
+            'interactive_payload' => AnswerEvaluator::sanitizeForCandidate($question, $reveal),
+            'exhibits' => $question->exhibits ?? [],
         ];
 
-        if ($reveal) {
+        if ($reveal && !$multi) {
             $payload['correct_key'] = $question->correct_key ?? ($options->firstWhere('is_correct', true)['key'] ?? null);
         }
 
@@ -214,7 +262,24 @@ class PassimarkController extends Controller
         $prog = PassimarkProgress::where('user_id',Auth::id())->where('session_id',$session->id)->firstOrFail();
         abort_unless(in_array($prog->status,['open','approved','in_progress','completed']),403,'Session locked. Awaiting instructor approval.');
         $mode = $r->validate(['mode' => ['nullable', Rule::in(['cat', 'timed', 'practice'])]])['mode'] ?? 'cat';
-        $exam = $session->exams()->firstOrCreate(['mode'=>$mode],['title'=>"{$session->title} - ".strtoupper($mode),'question_count'=>$mode==='cat'?150:25]);
+        // An exam can only ever serve the items attached to its own session, so the
+        // advertised length is capped by that pool. Authored bundle sessions hold
+        // 19 items each; advertising the 150-item CAT default made a finished
+        // session read as "Question 19 of 150" with a 12% progress bar.
+        $pool = (int) PassimarkQuestion::where('session_id', $session->id)->count();
+        $defaultCount = $mode==='cat'?150:25;
+        $exam = $session->exams()->firstOrCreate(
+            ['mode'=>$mode],
+            [
+                'title'=>"{$session->title} - ".strtoupper($mode),
+                'question_count'=>$pool>0?min($defaultCount,$pool):$defaultCount,
+                // Every CAT exam runs the v4 IRT engine - that is the platform
+                // invariant the catalog seeders hold. A CAT exam created without
+                // it fell back to the legacy path, which then scored the attempt
+                // with item parameters that authored bundles do not carry.
+                'irt_enabled'=>$mode==='cat',
+            ]
+        );
         $existing = PassimarkAttempt::where('user_id', Auth::id())
             ->where('session_id', $session->id)
             ->where('mode', $mode)
@@ -231,26 +296,149 @@ class PassimarkController extends Controller
     }
     public function answer(Request $r, PassimarkAttempt $attempt){
         abort_unless($attempt->user_id === Auth::id() && !$attempt->finished_at, 404);
-        $r->validate(['question_id'=>'required|integer','selected'=>'required|string','time_spent'=>'nullable|integer|min:0']);
+        $r->validate([
+            'question_id' => 'required|integer',
+            'selected' => 'nullable|string',
+            'selections' => 'nullable|array',
+            'selections.*' => 'string',
+            'interaction_response' => 'nullable',
+            'time_spent' => 'nullable|integer|min:0',
+        ]);
+
         $q = PassimarkQuestion::findOrFail($r->question_id);
         abort_unless($q->session_id === $attempt->session_id, 422, 'Question does not belong to this assessment.');
-        abort_unless($q->id === CatEngine::nextQuestion($attempt)?->id, 422, 'Question is not the current assessment question.');
-        abort_unless(collect($q->options)->pluck('key')->contains($r->selected), 422, 'Selected option is invalid.');
-        $correctKey = collect($q->options)->firstWhere('is_correct',true)['key'] ?? null;
-        $isCorrect = $r->selected === $correctKey;
-        $attempt->answers()->create(['question_id'=>$q->id,'selected_option'=>$r->selected,'is_correct'=>$isCorrect,'time_spent'=>$r->time_spent??0]);
-        if($attempt->mode==='cat'){
-            if(CatEngine::usesIrt($attempt)){
-                $attempt->update(['theta'=>Irt3PL::mle(CatEngine::answeredParams($attempt), $attempt->theta)['theta']]);
+        if ($attempt->mode === 'cat') {
+            abort_unless($q->id === CatEngine::nextQuestion($attempt)?->id, 422, 'Question is not the current assessment question.');
+        }
+
+        $type = $q->type ?? 'single_choice';
+        $submission = [
+            'selected' => $r->selected,
+            'selections' => $r->selections,
+            'interaction_response' => $r->interaction_response,
+        ];
+
+        $interactiveTypes = ['drag_drop', 'hotspot', 'build_list', 'fill_blank', 'cloze', 'create_tree', 'case_study', 'simulation'];
+
+        if (!in_array($type, $interactiveTypes, true)) {
+            $selected = $r->selected ?? implode(',', collect($r->selections ?? [])->filter()->map(fn($v)=>trim((string)$v))->filter()->sort()->values()->all());
+            abort_unless(is_string($selected) && $selected !== '', 422, 'Please select at least one answer.');
+            $options = collect($q->options ?? []);
+            $allKeys = $options->pluck('key')->map(fn($k)=>(string)$k);
+            foreach (preg_split('/[,\s]+/', $selected) as $k) {
+                $k = trim((string)$k);
+                if ($k === '') continue;
+                abort_unless($allKeys->contains($k), 422, 'Selected option is invalid.');
+            }
+        } else {
+            abort_unless(
+                !empty($r->interaction_response) || !empty($r->selected) || !empty($r->selections),
+                422,
+                'Please provide an answer.'
+            );
+        }
+
+        $evalResult = AnswerEvaluator::evaluate($q, $submission);
+        $isCorrect = $evalResult['is_correct'];
+
+        $existingAns = $attempt->answers()->where('question_id', $q->id)->first();
+        $totalTime = ($existingAns?->time_spent ?? 0) + (int)($r->time_spent ?? 0);
+
+        $attempt->answers()->updateOrCreate(
+            ['question_id' => $q->id],
+            [
+                'selected_option' => $evalResult['selected_summary'],
+                'interaction_response' => $evalResult['raw_response'],
+                'is_correct' => $isCorrect,
+                'time_spent' => $totalTime,
+            ]
+        );
+
+        // Spaced repetition Leitner progression tracking
+        try {
+            app(\App\Services\SpacedRepetition\LeitnerEngine::class)->recordAttempt($attempt->user_id, $q->id, $isCorrect);
+        } catch (\Throwable $e) {
+            // Non-blocking for exam continuity
+        }
+
+        if ($attempt->mode === 'cat') {
+            if (CatEngine::usesIrt($attempt)) {
+                $attempt->update(['theta' => Irt3PL::mle(CatEngine::answeredParams($attempt), $attempt->theta)['theta']]);
             } else {
-                $attempt->updateTheta($isCorrect,$q->difficulty,$q->discrimination,$q->guessing);
+                $attempt->updateTheta($isCorrect, $q->difficulty, $q->discrimination, $q->guessing);
             }
             $attempt->refresh();
+            $next = CatEngine::nextQuestion($attempt);
+            if (CatEngine::shouldTerminate($attempt) || !$next) {
+                return $this->finish($attempt);
+            }
+        } else {
+            $next = CatEngine::nextQuestion($attempt);
+            if (!$next) {
+                return $this->finish($attempt);
+            }
         }
-        $next = CatEngine::nextQuestion($attempt);
-        if(CatEngine::shouldTerminate($attempt) || !$next){ return $this->finish($attempt); }
-        return response()->json(['correct'=>$isCorrect,'explanation'=>$attempt->mode==='practice'?$q->explanation:null,'next'=>$this->presentQuestion($next, $attempt->mode),'theta'=>$attempt->theta,'answeredCount'=>$attempt->answers()->count()]);
+
+        return response()->json([
+            'correct' => $isCorrect,
+            'score' => $evalResult['score'],
+            'feedback' => $evalResult['feedback'] ?? null,
+            'explanation' => $attempt->mode === 'practice' ? $q->explanation : null,
+            'next' => $this->presentQuestion($next, $attempt->mode),
+            'theta' => $attempt->theta,
+            'answeredCount' => $attempt->answers()->count(),
+            'question_id' => $q->id,
+        ]);
     }
+
+    public function pause(Request $request, PassimarkAttempt $attempt)
+    {
+        abort_unless($attempt->user_id === Auth::id() && !$attempt->finished_at, 404);
+        $data = $request->validate([
+            'remaining_seconds' => 'nullable|integer|min:0',
+            'session_state' => 'nullable|array',
+        ]);
+
+        $attempt->update([
+            'paused_at' => now(),
+            'remaining_seconds' => $data['remaining_seconds'] ?? $attempt->remaining_seconds,
+            'session_state' => array_merge($attempt->session_state ?? [], $data['session_state'] ?? []),
+        ]);
+
+        return response()->json([
+            'status' => 'paused',
+            'remaining_seconds' => $attempt->remaining_seconds,
+        ]);
+    }
+
+    public function resume(Request $request, PassimarkAttempt $attempt)
+    {
+        abort_unless($attempt->user_id === Auth::id() && !$attempt->finished_at, 404);
+        $attempt->update(['paused_at' => null]);
+
+        return response()->json([
+            'status' => 'resumed',
+            'remaining_seconds' => $attempt->remaining_seconds,
+            'session_state' => $attempt->session_state ?? [],
+        ]);
+    }
+
+    public function saveState(Request $request, PassimarkAttempt $attempt)
+    {
+        abort_unless($attempt->user_id === Auth::id() && !$attempt->finished_at, 404);
+        $data = $request->validate([
+            'remaining_seconds' => 'nullable|integer|min:0',
+            'session_state' => 'nullable|array',
+        ]);
+
+        $attempt->update([
+            'remaining_seconds' => $data['remaining_seconds'] ?? $attempt->remaining_seconds,
+            'session_state' => array_merge($attempt->session_state ?? [], $data['session_state'] ?? []),
+        ]);
+
+        return response()->json(['status' => 'saved']);
+    }
+
     public function finish(PassimarkAttempt $attempt){
         abort_unless($attempt->user_id === Auth::id(), 404);
         if ($attempt->finished_at) {

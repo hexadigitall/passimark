@@ -23,6 +23,8 @@ export default function DashboardLayout({ children }) {
         ? [
             { href: '/', label: 'Overview', icon: BookOpen },
             { href: '/admin/passimark', label: 'Control Center', icon: Database },
+            { href: '/admin/designer', label: 'Passimark Designer', icon: BookOpen },
+            { href: '/admin/imports', label: 'Universal Importer (VCE)', icon: Database },
             { href: '/admin/import', label: 'Import Questions', icon: Database },
             { href: '/profile', label: 'Profile', icon: BarChart3 },
             { href: '/settings', label: 'Settings', icon: Settings },

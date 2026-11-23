@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Head, Link, router } from '@inertiajs/react';
 import { ArrowRight, Lock, Play, Search, Target, TrendingUp } from 'lucide-react';
 import DashboardLayout from '../../Layouts/DashboardLayout';
+import OfflineSyncStatus from '../../Components/Mobile/OfflineSyncStatus';
+import DailyDrillCard from '../../Components/Chrome/DailyDrillCard';
 
 /**
  * The one-student dashboard.
@@ -34,7 +36,9 @@ export default function Dashboard({
     <DashboardLayout>
       <Head title={focus ? `${focus.title} — Dashboard` : 'Dashboard'} />
 
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl space-y-5">
+        <OfflineSyncStatus />
+        <DailyDrillCard />
         {focus ? (
           <>
             <header className="border-b border-slate-800 pb-5">

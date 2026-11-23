@@ -18,7 +18,7 @@ export default function Settings({ user, preferences = {} }) {
 
   const submit = (e) => {
     e.preventDefault();
-    patch(route('settings.update'), {
+    patch('/settings', {
       preserveScroll: true,
       onSuccess: () => window.alert('Preferences saved.'),
       onError: () => window.alert('Could not save preferences.'),

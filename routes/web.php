@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, PassimarkFunnelController, PassimarkPackageController, CertificateController, AuthController};
+use App\Http\Controllers\{PassimarkController, PassimarkAdminController, PassimarkCatalogController, PassimarkFunnelController, PassimarkPackageController, PassimarkImportController, PassimarkImportBatchController, MobileSyncController, CertificateController, AuthController, DesktopController, AiTutorController};
 use Illuminate\Support\Facades\Route;
 
 // Public credential verification (QR target) — no auth so a scanned code resolves anywhere.
@@ -35,10 +35,20 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/passimark/attempt/{attempt}/result', [PassimarkController::class,'result'])->name('passimark.result');
     Route::post('/passimark/session/{session}/start', [PassimarkController::class,'start'])->name('passimark.start');
     Route::post('/passimark/attempt/{attempt}/answer', [PassimarkController::class,'answer'])->name('passimark.answer');
+    Route::post('/passimark/attempt/{attempt}/pause', [PassimarkController::class,'pause'])->name('passimark.pause');
+    Route::post('/passimark/attempt/{attempt}/resume', [PassimarkController::class,'resume'])->name('passimark.resume');
+    Route::post('/passimark/attempt/{attempt}/state', [PassimarkController::class,'saveState'])->name('passimark.state');
     Route::post('/passimark/attempt/{attempt}/finish', [PassimarkController::class,'finish'])->name('passimark.finish');
     Route::post('/passimark/session/{session}/request-approval', [PassimarkController::class,'requestApproval'])->name('passimark.approval.request');
     Route::get('/passimark/session/{session}/review', [PassimarkController::class,'review'])->name('passimark.review');
     Route::get('/certificate/{progress}', [CertificateController::class,'show'])->name('passimark.certificate');
+    Route::get('/api/mobile/sync/download', [MobileSyncController::class, 'download'])->name('api.mobile.sync.download');
+    Route::post('/api/mobile/sync/upload', [MobileSyncController::class, 'upload'])->name('api.mobile.sync.upload');
+    Route::get('/api/desktop/info', [DesktopController::class, 'info'])->name('api.desktop.info');
+    Route::post('/api/desktop/inspect', [DesktopController::class, 'inspect'])->name('api.desktop.inspect');
+    Route::get('/api/drill/daily', [AiTutorController::class, 'drill'])->name('api.drill.daily');
+    Route::get('/api/drill/stats', [AiTutorController::class, 'stats'])->name('api.drill.stats');
+    Route::post('/api/tutor/explain', [AiTutorController::class, 'explain'])->name('api.tutor.explain');
 });
 
 // Funnel — pre-login ladder. Rung 1 (Lock) is what a guest lands on at '/', so the
@@ -61,6 +71,7 @@ Route::middleware(['auth'])->prefix('passimark')->name('passimark.funnel.')->gro
 
 Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(function(){
     Route::get('/passimark', [PassimarkAdminController::class,'index'])->name('admin.passimark');
+    Route::get('/designer', [PassimarkAdminController::class,'designer'])->name('admin.designer');
     Route::get('/reports/learners', [PassimarkAdminController::class,'reportLearners'])->name('admin.reports.learners');
     Route::get('/reports/attempts', [PassimarkAdminController::class,'reportAttempts'])->name('admin.reports.attempts');
     Route::get('/reports/sessions', [PassimarkAdminController::class,'reportSessions'])->name('admin.reports.sessions');
@@ -74,6 +85,13 @@ Route::middleware(['auth','role:instructor,admin'])->prefix('admin')->group(func
     Route::get('/packages', [PassimarkPackageController::class,'page'])->name('admin.packages.page');
     Route::post('/packages/preview', [PassimarkPackageController::class,'preview'])->name('admin.packages.preview');
     Route::post('/packages/import', [PassimarkPackageController::class,'import'])->name('admin.packages.import');
+    Route::resource('imports', PassimarkImportBatchController::class)->names('admin.imports');
+    Route::post('/imports/upload', [PassimarkImportController::class,'upload'])->name('admin.imports.upload_new');
+    Route::post('/imports/{import}/upload', [PassimarkImportController::class,'upload'])->name('admin.imports.upload');
+    Route::post('/imports/{import}/extract', [PassimarkImportController::class,'extract'])->name('admin.imports.extract');
+    Route::post('/imports/{import}/normalize', [PassimarkImportController::class,'normalize'])->name('admin.imports.normalize');
+    Route::post('/imports/{import}/review', [PassimarkImportController::class,'review'])->name('admin.imports.review');
+    Route::match(['get', 'post'], '/imports/{import}/export', [PassimarkImportController::class,'export'])->name('admin.imports.export');
     Route::post('/sessions', [PassimarkAdminController::class,'storeSession'])->name('admin.sessions.store');
     Route::put('/sessions/{session}', [PassimarkAdminController::class,'updateSession'])->name('admin.sessions.update');
     Route::delete('/sessions/{session}', [PassimarkAdminController::class,'destroySession'])->name('admin.sessions.destroy');

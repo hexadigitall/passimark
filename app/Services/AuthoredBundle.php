@@ -173,8 +173,26 @@ class AuthoredBundle
             }
 
             $ci = $item['correct_index'] ?? null;
-            if (! is_int($ci) || $ci < 0 || $ci > 3) {
-                $errors[] = "{$where} (\"{$id}\"): correct_index must be an integer 0-3.";
+            $cis = $item['correct_indices'] ?? null;
+            if (is_array($cis)) {
+                if ($cis === [] || count($cis) < 2 || count($cis) > 4) {
+                    $errors[] = "{$where} (\"{$id}\"): correct_indices must be an array of 2-4 integers 0-3.";
+                } else {
+                    foreach ($cis as $idx) {
+                        if (! is_int($idx) || $idx < 0 || $idx > 3) {
+                            $errors[] = "{$where} (\"{$id}\"): correct_indices must contain integers 0-3.";
+                            break;
+                        }
+                    }
+                    if ($cis === array_values(array_unique($cis))) {
+                        // ok
+                    } else {
+                        $errors[] = "{$where} (\"{$id}\"): correct_indices must not contain duplicates.";
+                    }
+                    // track for balance? skip single-index balance check
+                }
+            } elseif (! is_int($ci) || $ci < 0 || $ci > 3) {
+                $errors[] = "{$where} (\"{$id}\"): correct_index must be an integer 0-3 (or correct_indices array for multi-answer).";
             } else {
                 $counts[chr(65 + $ci)]++;
                 if ($ci === 0) {

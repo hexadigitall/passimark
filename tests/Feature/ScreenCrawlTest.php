@@ -316,6 +316,78 @@ class ScreenCrawlTest extends TestCase
         $this->assertStringContainsString('role="progressbar"', $progress);
     }
 
+    /**
+     * The browser has no route() helper. This app ships no Ziggy, so a bare
+     * route('settings.update') in a screen is a ReferenceError at click time:
+     * "route is not defined". The settings screen shipped exactly that, and
+     * the fault panel caught it - which turned "save my preferences" into a
+     * runtime error page. Screens must name their paths directly.
+     */
+    public function test_screens_never_call_the_missing_route_helper(): void
+    {
+        $it = new \RecursiveIteratorIterator(
+            new \RecursiveDirectoryIterator(resource_path('js'), \FilesystemIterator::SKIP_DOTS)
+        );
+
+        $checked = 0;
+
+        foreach ($it as $file) {
+            if (! $file->isFile() || ! in_array($file->getExtension(), ['js', 'jsx'], true)) {
+                continue;
+            }
+
+            $checked++;
+            $source = (string) file_get_contents($file->getPathname());
+
+            $this->assertDoesNotMatchRegularExpression(
+                '/(?<![.\w$])route\s*\(/',
+                $source,
+                basename($file->getPathname()) . ' calls route(); this app has no route() helper in the browser'
+            );
+        }
+
+        $this->assertGreaterThan(0, $checked, 'no frontend sources were scanned');
+    }
+
+    /**
+     * The focus picker hides 209 radios with sr-only, which is position:
+     * absolute. Their containing block has to be the scrolling list itself.
+     * When it was not, every radio resolved against the page wrapper, and
+     * clicking one scrolled that wrapper (overflow-hidden is still
+     * programmatically scrollable) - dragging the whole card 12,000px out of
+     * the viewport. The learner saw a blank screen with no way back.
+     */
+    public function test_focus_picker_scrolls_inside_its_own_list(): void
+    {
+        $source = (string) file_get_contents(resource_path('js/Pages/Passimark/Funnel/Focus.jsx'));
+
+        $this->assertStringContainsString(
+            'sr-only',
+            $source,
+            'the focus picker no longer hides its radios; this guard needs revisiting'
+        );
+
+        preg_match('/<div className="([^"]*overflow-y-auto[^"]*)"/', $source, $list);
+        $this->assertNotEmpty($list, 'the focus picker has no scrolling list of certifications');
+
+        $this->assertStringContainsString(
+            'relative',
+            $list[1],
+            'the certification list is not positioned, so its sr-only radios resolve '
+            . 'against an outer ancestor and scroll the card out of the viewport'
+        );
+
+        preg_match('/<div className="([^"]*min-h-screen[^"]*)"/', $source, $wrapper);
+        $this->assertNotEmpty($wrapper, 'the focus page wrapper changed shape');
+
+        $this->assertStringContainsString(
+            'overflow-clip',
+            $wrapper[1],
+            'the focus page wrapper is a scroll container again; focusing a radio can '
+            . 'drag the card out of the viewport and leave a blank screen'
+        );
+    }
+
     /** The entry chunk is whatever the Vite manifest points the app entry at. */
     private function entryChunk(): ?string
     {

@@ -93,7 +93,14 @@ class PassimarkSeeder extends Seeder
             $sess->tags()->syncWithoutDetaching([$this->ensureTag('domain', $sess->domain)->id]);
             // Create 3 exam modes
             foreach(['cat','timed','practice'] as $mode){
-                PassimarkExam::create(['session_id'=>$sess->id,'title'=>"{$sess->title} - ".strtoupper($mode),'mode'=>$mode,'question_count'=>$mode==='cat'?150:25]);
+                PassimarkExam::create([
+                    'session_id'=>$sess->id,
+                    'title'=>"{$sess->title} - ".strtoupper($mode),
+                    'mode'=>$mode,
+                    'question_count'=>$mode==='cat'?150:25,
+                    // CAT exams run the v4 IRT engine; timed and practice do not.
+                    'irt_enabled'=>$mode==='cat',
+                ]);
             }
             // Seed sample questions for first 5 sessions
             if($num<=5){
