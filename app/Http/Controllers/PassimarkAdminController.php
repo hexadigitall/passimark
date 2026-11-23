@@ -74,6 +74,21 @@ class PassimarkAdminController extends Controller
         return Inertia::render('Passimark/Reports/Approvals', $analytics->approvals($request->string('filter', 'all')->toString()));
     }
 
+    public function designer(Request $request)
+    {
+        $tracks = PassimarkCertificationTrack::with('sessions')->orderBy('title')->get();
+        $sessions = PassimarkSession::with('certificationTrack')->orderBy('title')->get();
+        $tags = PassimarkTag::orderBy('type')->orderBy('label')->get();
+        $editingQuestion = null;
+
+        if ($request->filled('question_id')) {
+            $editingQuestion = PassimarkQuestion::with(['tags', 'session.certificationTrack'])
+                ->find($request->integer('question_id'));
+        }
+
+        return Inertia::render('Passimark/Designer', compact('tracks', 'sessions', 'tags', 'editingQuestion'));
+    }
+
     public function index(Request $request){ 
         $pending = PassimarkProgress::with(['user','session'])->where('status','pending_approval')->get();
         // Questions are not eager-loaded through the session. That loaded all 162,938 rows
@@ -315,16 +330,23 @@ class PassimarkAdminController extends Controller
 
     private function questionData(Request $request, bool $partial = false): array
     {
-        $data = $request->validate([
+        $type = $request->input('type', 'single_choice');
+        $isChoiceType = in_array($type, ['single_choice', 'multiple_choice'], true);
+
+        $rules = [
             'session_id' => [$partial ? 'sometimes' : 'required', 'integer', 'exists:passimark_sessions,id'],
             'exam_id' => ['nullable', 'integer', 'exists:passimark_exams,id'],
+            'type' => ['sometimes', 'string', Rule::in(['single_choice', 'multiple_choice', 'drag_drop', 'hotspot', 'build_list', 'cloze', 'create_tree', 'fill_blank', 'case_study', 'simulation'])],
             'content' => [$partial ? 'sometimes' : 'required', 'string'],
-            'options' => [$partial ? 'sometimes' : 'required', 'array', 'min:2'],
-            'options.*.key' => ['required', 'string', 'distinct'],
-            'options.*.text' => ['required', 'string'],
-            'options.*.is_correct' => ['required', 'boolean'],
-            'difficulty' => ['sometimes', 'numeric'],
-            'discrimination' => ['sometimes', 'numeric', 'min:0'],
+            'options' => [$isChoiceType ? ($partial ? 'sometimes' : 'required') : 'nullable', 'array', $isChoiceType ? 'min:2' : 'min:0'],
+            'options.*.key' => ['required_with:options', 'string'],
+            'options.*.text' => ['required_with:options', 'string'],
+            'options.*.is_correct' => ['required_with:options', 'boolean'],
+            'interactive_payload' => ['nullable', 'array'],
+            'exhibits' => ['nullable', 'array'],
+            'correct_key' => ['nullable', 'string', 'max:255'],
+            'difficulty' => ['sometimes', 'numeric', 'between:-3.0,3.0'],
+            'discrimination' => ['sometimes', 'numeric', 'between:0.01,3.0'],
             'guessing' => ['sometimes', 'numeric', 'between:0,1'],
             'domain' => [$partial ? 'sometimes' : 'nullable', 'string', 'max:255'],
             'bloom_level' => ['nullable', 'string', 'max:255'],
@@ -332,10 +354,20 @@ class PassimarkAdminController extends Controller
             'tag_ids.*' => ['integer', 'exists:passimark_tags,id'],
             'explanation' => ['nullable', 'string'],
             'reference' => ['nullable', 'string', 'max:255'],
-        ]);
-        if (array_key_exists('options', $data) && !collect($data['options'])->contains('is_correct', true)) {
-            abort(422, 'At least one option must be correct.');
+        ];
+
+        $data = $request->validate($rules);
+
+        if ($isChoiceType && array_key_exists('options', $data) && is_array($data['options'])) {
+            if (!collect($data['options'])->contains('is_correct', true)) {
+                abort(422, 'At least one option must be correct.');
+            }
         }
+
+        if (!$partial && (!array_key_exists('options', $data) || $data['options'] === null)) {
+            $data['options'] = [];
+        }
+
         if (!empty($data['exam_id'])) {
             $exam = PassimarkExam::findOrFail($data['exam_id']);
             if (!empty($data['session_id'])) {
