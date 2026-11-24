@@ -39,17 +39,25 @@ export default function MobileApp() {
       {/* Mobile App Header */}
       <header className="flex h-14 shrink-0 items-center justify-between border-b border-slate-900 bg-slate-950 px-4">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-500 font-bold text-slate-950 text-xs shadow-md shadow-brand-500/20">
-            PM
-          </div>
+          <img 
+            src="./images/passimark/passimark_icon_128x128.png" 
+            alt="Passimark" 
+            className="h-7 w-7 object-contain drop-shadow"
+            onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+          />
           <div>
-            <h1 className="text-sm font-bold text-slate-100 leading-tight">Passimark Mobile</h1>
+            <h1 className="text-sm font-bold text-slate-100 leading-tight flex items-center gap-1.5">
+              Passimark
+              <span className="rounded bg-brand-500/15 px-1 py-0.2 text-[9px] font-mono font-bold text-brand-400">
+                MOBILE
+              </span>
+            </h1>
             <p className="text-[10px] text-brand-400 font-mono">Native SQLite Engine</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="flex items-center gap-1 rounded-full bg-slate-900 border border-slate-800 px-2 py-0.5 text-[10px] text-slate-400">
+          <span className="flex items-center gap-1 rounded-full bg-slate-900 border border-slate-800 px-2.5 py-0.5 text-[10px] text-slate-300">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
             <span>SQLite Offline</span>
           </span>

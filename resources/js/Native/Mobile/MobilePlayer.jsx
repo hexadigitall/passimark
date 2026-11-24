@@ -134,6 +134,18 @@ export default function MobilePlayer({ exam, mode = 'practice', onExitToLibrary 
   const isAnswered = currentAnswer !== undefined && currentAnswer !== null && currentAnswer !== '';
   const currentStrikes = strikethroughs[currentQ.id] || [];
 
+  const normalizedOptions = (currentQ.options || []).map((opt, idx) => {
+    if (typeof opt === 'string') {
+      const key = String.fromCharCode(65 + idx);
+      return { key, text: opt, is_correct: currentQ.correct_key === key };
+    }
+    return {
+      key: opt.key || String.fromCharCode(65 + idx),
+      text: opt.text || opt.label || opt.content || '',
+      is_correct: Boolean(opt.is_correct),
+    };
+  });
+
   const bgClass = isOledMode ? 'bg-[#000000]' : 'bg-slate-950';
   const cardClass = isOledMode ? 'bg-[#0a0a0a] border-zinc-800' : 'bg-slate-900/80 border-slate-800';
 
@@ -192,6 +204,12 @@ export default function MobilePlayer({ exam, mode = 'practice', onExitToLibrary 
         </button>
 
         <div className="flex items-center gap-2">
+          <img 
+            src="./images/passimark/passimark_icon_128x128.png" 
+            alt="Passimark" 
+            className="h-5 w-5 object-contain drop-shadow"
+            onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+          />
           <span className="font-bold text-slate-200">{exam.code}</span>
           <span className="text-slate-600">|</span>
           <span className="text-slate-400">Q {currentIndex + 1}/{questions.length}</span>
@@ -244,69 +262,90 @@ export default function MobilePlayer({ exam, mode = 'practice', onExitToLibrary 
 
         {/* Item Renderers */}
         <div className="mt-5 flex flex-col gap-2.5">
-          {currentQ.type === 'single_choice' && (
-            <div className="flex flex-col gap-2.5">
-              {currentQ.options?.map((opt) => {
-                const isSelected = currentAnswer === opt.key;
-                const isStruck = currentStrikes.includes(opt.key);
-                return (
-                  <div
-                    key={opt.key}
-                    onClick={() => !isStruck && handleSelectOption(opt.key)}
-                    className={`flex items-start justify-between rounded-xl border p-3.5 active:scale-[0.99] transition-all ${
-                      isSelected
-                        ? 'border-brand-500 bg-brand-500/15 text-slate-100'
-                        : isStruck
-                        ? 'border-zinc-800/40 bg-zinc-950/40 text-zinc-600 opacity-40'
-                        : `${cardClass} text-slate-200`
-                    }`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg font-mono text-xs font-bold ${
-                        isSelected ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-300'
-                      }`}>
-                        {opt.key}
-                      </span>
-                      <span className={`text-xs md:text-sm mt-0.5 ${isStruck ? 'line-through' : ''}`}>
-                        {opt.text}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-
-          {currentQ.type === 'multiple_choice' && (
+          {(currentQ.type === 'multiple_choice' || (Array.isArray(currentQ.correct_key) && currentQ.correct_key.length > 1)) ? (
             <QuestionMultiSelect
-              question={currentQ}
-              selectedKeys={Array.isArray(currentAnswer) ? currentAnswer : []}
-              onSelectKey={handleSelectOption}
+              options={normalizedOptions}
+              selections={Array.isArray(currentAnswer) ? currentAnswer : []}
+              onChange={(keys) => handleSelectOption(keys)}
+              strikes={new Set(currentStrikes)}
+              onToggleStrike={toggleStrike}
+              minSelections={Array.isArray(currentQ.correct_key) ? currentQ.correct_key.length : 2}
+              maxSelections={Array.isArray(currentQ.correct_key) ? currentQ.correct_key.length : null}
             />
-          )}
-
-          {currentQ.type === 'drag_drop' && (
+          ) : currentQ.type === 'drag_drop' ? (
             <QuestionDragDrop
-              payload={currentQ.interactive_payload}
-              answers={typeof currentAnswer === 'object' ? currentAnswer : {}}
-              onAnswerChange={handleInteractiveAnswer}
+              payload={currentQ.interactive_payload || {}}
+              value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : {}}
+              onChange={handleInteractiveAnswer}
             />
-          )}
-
-          {currentQ.type === 'hotspot' && (
+          ) : currentQ.type === 'hotspot' ? (
             <QuestionHotspot
-              payload={currentQ.interactive_payload}
-              selectedCoordinate={typeof currentAnswer === 'object' ? currentAnswer : null}
-              onSelectCoordinate={handleInteractiveAnswer}
+              payload={currentQ.interactive_payload || {}}
+              value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : null}
+              onChange={handleInteractiveAnswer}
             />
-          )}
-
-          {currentQ.type === 'build_list' && (
+          ) : currentQ.type === 'build_list' ? (
             <QuestionReorder
-              payload={currentQ.interactive_payload}
-              arrangedItems={Array.isArray(currentAnswer) ? currentAnswer : []}
-              onSequenceChange={handleInteractiveAnswer}
+              payload={currentQ.interactive_payload || {}}
+              value={Array.isArray(currentAnswer) ? currentAnswer : []}
+              onChange={handleInteractiveAnswer}
             />
+          ) : currentQ.type === 'cloze' ? (
+            <QuestionCloze
+              payload={currentQ.interactive_payload || {}}
+              value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : {}}
+              onChange={handleInteractiveAnswer}
+            />
+          ) : currentQ.type === 'create_tree' ? (
+            <QuestionCreateTree
+              payload={currentQ.interactive_payload || {}}
+              value={Array.isArray(currentAnswer) ? currentAnswer : []}
+              onChange={handleInteractiveAnswer}
+            />
+          ) : currentQ.type === 'fill_blank' ? (
+            <QuestionFillBlank
+              payload={currentQ.interactive_payload || {}}
+              value={typeof currentAnswer === 'string' ? currentAnswer : ''}
+              onChange={handleInteractiveAnswer}
+            />
+          ) : (
+            /* Single choice, Case study, or any other option-bearing item */
+            <div className="flex flex-col gap-2.5">
+              {normalizedOptions.length > 0 ? (
+                normalizedOptions.map((opt) => {
+                  const isSelected = currentAnswer === opt.key;
+                  const isStruck = currentStrikes.includes(opt.key);
+                  return (
+                    <div
+                      key={opt.key}
+                      onClick={() => !isStruck && handleSelectOption(opt.key)}
+                      className={`flex items-start justify-between rounded-xl border p-3.5 active:scale-[0.99] transition-all cursor-pointer ${
+                        isSelected
+                          ? 'border-brand-500 bg-brand-500/15 text-slate-100 ring-1 ring-brand-500'
+                          : isStruck
+                          ? 'border-zinc-800/40 bg-zinc-950/40 text-zinc-600 opacity-40'
+                          : `${cardClass} text-slate-200`
+                      }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg font-mono text-xs font-bold ${
+                          isSelected ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-300'
+                        }`}>
+                          {opt.key}
+                        </span>
+                        <span className={`text-xs md:text-sm mt-0.5 ${isStruck ? 'line-through' : ''}`}>
+                          {opt.text}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-5 text-center text-xs text-slate-400">
+                  Follow the prompt instructions above to complete your answer.
+                </div>
+              )}
+            </div>
           )}
         </div>
 

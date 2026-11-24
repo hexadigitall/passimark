@@ -85,6 +85,20 @@ export default function DesktopDesigner() {
       {/* Left Column: Question Outline / List */}
       <div className="w-72 shrink-0 border-r border-slate-800 bg-slate-900/60 p-4 flex flex-col justify-between overflow-y-auto">
         <div>
+          {/* Studio Brand Badge */}
+          <div className="flex items-center gap-2.5 pb-3.5 mb-3 border-b border-slate-800/80">
+            <img 
+              src="./images/passimark/passimark_icon_128x128.png" 
+              alt="Passimark" 
+              className="h-6 w-6 object-contain"
+              onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+            />
+            <div>
+              <div className="text-xs font-bold text-slate-200 leading-tight">Passimark Designer</div>
+              <div className="text-[10px] text-brand-400 font-mono">WYSIWYG Studio</div>
+            </div>
+          </div>
+
           <div className="flex items-center justify-between text-xs font-semibold text-slate-300 mb-3">
             <span>Authored Item Bank ({questions.length})</span>
             <button

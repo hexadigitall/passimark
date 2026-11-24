@@ -40,7 +40,37 @@ export default function DesktopLibrary({ onSelectExam, onFileLoad }) {
 
   return (
     <div className="flex flex-1 flex-col overflow-y-auto bg-slate-950 p-6 text-slate-100">
-      {/* Top Banner: Drag & Drop Container */}
+      {/* Brand Header Banner */}
+      <div className="flex items-center justify-between border-b border-slate-800/80 pb-5 mb-6">
+        <div className="flex items-center gap-4">
+          <img 
+            src="./images/passimark/passimark_original_transparent.png" 
+            alt="Passimark Logo" 
+            className="h-12 w-auto object-contain drop-shadow"
+            onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+          />
+          <div>
+            <div className="flex items-center gap-2.5">
+              <h1 className="text-xl font-extrabold tracking-tight text-slate-100">
+                Passimark Certification Suite
+              </h1>
+              <span className="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-400 border border-emerald-500/20">
+                v2.0 VCE Superiority
+              </span>
+            </div>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Psychometrically Grounded IRT 3PL Simulator • Native Multi-Window Desktop Engine • Hexadigitall Inc.
+            </p>
+          </div>
+        </div>
+        <div className="hidden sm:flex items-center gap-2">
+          <span className="rounded-lg bg-slate-900 border border-slate-800 px-3 py-1.5 text-xs text-slate-400 font-mono">
+            Tauri 2.0 Rust Core
+          </span>
+        </div>
+      </div>
+
+      {/* Drag & Drop Ingestion Container */}
       <div 
         onDragEnter={handleDrag}
         onDragOver={handleDrag}

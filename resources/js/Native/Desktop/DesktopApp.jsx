@@ -5,6 +5,7 @@ import DesktopPlayer from './DesktopPlayer';
 import DesktopDesigner from './DesktopDesigner';
 import DesktopShortcutsModal from '../../Components/Chrome/DesktopShortcutsModal';
 import { TauriBridge } from '../../Services/Desktop/TauriBridge';
+import { PackageParser } from '../../Services/Desktop/PackageParser';
 
 export default function DesktopApp() {
   const [activeMode, setActiveMode] = useState('player'); // 'player' | 'designer'
@@ -15,6 +16,7 @@ export default function DesktopApp() {
   const [showCalculator, setShowCalculator] = useState(false);
   const [calcInput, setCalcInput] = useState('');
   const [calcResult, setCalcResult] = useState('');
+  const [importStatus, setImportStatus] = useState(null);
 
   // Handle Tauri OS file association launch
   useEffect(() => {
@@ -22,7 +24,6 @@ export default function DesktopApp() {
       const unlistenPromise = window.__TAURI__.event.listen('open-package-file', (event) => {
         const filePath = event.payload?.path;
         if (filePath) {
-          // File was opened via double click
           handleLoadPackagePath(filePath);
         }
       });
@@ -34,40 +35,21 @@ export default function DesktopApp() {
 
   const handleLoadPackagePath = async (filePath) => {
     try {
+      setImportStatus('Parsing file with native desktop core...');
       if (window.__TAURI__?.core?.invoke) {
-        const meta = await window.__TAURI__.core.invoke('inspect_package_file', { filePath });
-        if (meta?.is_valid) {
-          // Loaded package
-          const customExam = {
-            id: `pkg-${Date.now()}`,
-            code: meta.filename.split('.')[0].toUpperCase(),
-            title: `Imported: ${meta.filename}`,
-            category: 'Imported Certification',
-            passingScore: 700,
-            timeLimitMinutes: 90,
-            questions: [
-              {
-                id: 'imp-q1',
-                type: 'single_choice',
-                number: 1,
-                domain: 'Imported Domain',
-                content: `Package ${meta.filename} (${Math.round(meta.size_bytes / 1024)} KB) successfully parsed by native Passimark desktop core.`,
-                options: [
-                  { key: 'A', text: 'Option A (Verified)', is_correct: true },
-                  { key: 'B', text: 'Option B (Distractor)', is_correct: false },
-                ],
-                correct_key: 'A',
-                explanation: 'Native packaging inspection confirmed valid package header and checksum.',
-              },
-            ],
-          };
-          setActiveExam(customExam);
+        const parsed = await window.__TAURI__.core.invoke('parse_package_file', { filePath });
+        if (parsed && parsed.questions?.length > 0) {
+          setActiveExam(parsed);
+          setExamMode('practice');
           setShowLibrary(false);
+          setImportStatus(null);
+          return;
         }
       }
     } catch (err) {
-      console.error('Failed to load file association:', err);
+      console.warn('Native parser fallback:', err);
     }
+    setImportStatus(null);
   };
 
   const handleSelectExam = (exam, selectedMode) => {
@@ -76,27 +58,23 @@ export default function DesktopApp() {
     setShowLibrary(false);
   };
 
-  const handleFileLoad = (file) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const parsed = JSON.parse(e.target.result);
-        const customExam = {
-          id: `custom-${Date.now()}`,
-          code: file.name.split('.')[0].toUpperCase(),
-          title: file.name,
-          category: 'Custom Package',
-          passingScore: 700,
-          timeLimitMinutes: 90,
-          questions: Array.isArray(parsed) ? parsed : (parsed.questions || []),
-        };
-        setActiveExam(customExam);
+  const handleFileLoad = async (file) => {
+    try {
+      setImportStatus(`Parsing ${file.name}...`);
+      const parsedExam = await PackageParser.parseFile(file);
+      if (parsedExam && parsedExam.questions?.length > 0) {
+        setActiveExam(parsedExam);
+        setExamMode('practice');
         setShowLibrary(false);
-      } catch (err) {
-        alert('Loaded package format is being parsed. Validating headers...');
+      } else {
+        alert(`No questions could be extracted from ${file.name}. Please ensure this is a valid .vce, .psmk, or .json file.`);
       }
-    };
-    reader.readAsText(file);
+    } catch (err) {
+      console.error('Failed to parse package:', err);
+      alert(`Error reading ${file.name}: ${err.message}`);
+    } finally {
+      setImportStatus(null);
+    }
   };
 
   const handleCalculatorEval = () => {
