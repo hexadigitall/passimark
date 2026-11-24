@@ -450,3 +450,24 @@ resume/θ/next required session above catalog, favorites first).
   - Combined suite (14 tests / 83 assertions) 100% green.
   - `npm run build`: 2,043 modules transformed cleanly in 9.92s with zero warnings.
 
+## Milestone v2.0 Release Candidate 1 (v2.0.0-rc1)
+**Status:** complete
+**Evidence:** Branch `release/v2.0-vce-superiority`, Tag `v2.0.0-rc1`
+- **Native Desktop Binary Compilation**:
+  - Provisioned official Rust 1.100.0 toolchain (`rustc`, `cargo`).
+  - Generated multi-resolution Windows app icons (`icon.ico`, `32x32.png`, `128x128.png`, `Square30x30Logo.png`, `Square150x150Logo.png`).
+  - Compiled native Windows binary: `src-tauri/target/debug/passimark-desktop.exe` (21.4 MB, zero warnings, zero errors).
+- **Native Mobile Asset Synchronization**:
+  - Synchronized web assets and Capacitor 8 native configuration for Android (`android/app/src/main/assets/public`) and iOS (`ios/App/App/public`).
+  - Decoupled `capacitor.config.json` for standalone offline boot without external server dependencies.
+- **Automated Subsystem Health Check CLI**:
+  - Command: `php artisan passimark:system-check`.
+  - Audits all 10 core subsystems: Database, IRT 3PL Psychometrics, Spaced Repetition, AI Tutoring, Question Taxonomy Evaluator, Packaging (.psmk), Import Adapters, Mobile Assets, Desktop Binary, Credential Minting.
+  - Output: `ALL 10/10 PASSIMARK SUBSYSTEMS OPERATIONAL & VERIFIED`.
+- **Automated End-to-End System Integration Test**:
+  - `tests/Feature/EndToEndSystemWalkthroughTest.php`: Continuous automated verification of the complete system audit, candidate daily drill, AI distractor reasoning, desktop bridge, zero answer leakage, and deterministic credentials.
+- **Full Suite Verification**:
+  - **502 tests / 123,685 assertions (100% GREEN, 0 errors, 0 failures)**.
+  - `npm run build`: 2,043 modules compiled cleanly in 42.84s.
+
+
