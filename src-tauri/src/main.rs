@@ -6,7 +6,7 @@ mod commands;
 use commands::{
     detach_exhibit_window, detach_scratchpad_window, get_desktop_runtime_info, inspect_package_file,
 };
-use tauri::{Emitter, Manager};
+use tauri::Emitter;
 
 fn main() {
     tauri::Builder::default()
@@ -31,7 +31,7 @@ fn main() {
                     let app_handle = app.handle().clone();
                     let file_arg = potential_file.clone();
                     tauri::async_runtime::spawn(async move {
-                        tokio::time::sleep(tokio::time::Duration::from_millis(600)).await;
+                        std::thread::sleep(std::time::Duration::from_millis(600));
                         let _ = app_handle.emit(
                             "open-package-file",
                             serde_json::json!({ "path": file_arg }),
