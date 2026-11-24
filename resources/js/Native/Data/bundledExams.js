@@ -87,7 +87,7 @@ export const BUNDLED_EXAMS = [
         domain: 'Network Security Architecture',
         content: 'Review the firewall topology exhibit. Click directly on the security zone that hosts publicly accessible reverse-proxy servers and Web Application Firewalls (WAF).',
         interactive_payload: {
-          image_src: '/images/passimark/topology_sample.png',
+          image_src: './images/passimark/topology_sample.svg',
           target_bounds: { x: 48, y: 35, radius: 18 },
         },
         irt_a: 1.70,

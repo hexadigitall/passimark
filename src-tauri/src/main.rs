@@ -5,6 +5,7 @@ mod commands;
 
 use commands::{
     detach_exhibit_window, detach_scratchpad_window, get_desktop_runtime_info, inspect_package_file,
+    parse_package_file,
 };
 use tauri::Emitter;
 
@@ -17,6 +18,7 @@ fn main() {
             detach_exhibit_window,
             detach_scratchpad_window,
             inspect_package_file,
+            parse_package_file,
             get_desktop_runtime_info
         ])
         .setup(|app| {

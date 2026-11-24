@@ -195,6 +195,19 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
   const isAnswered = currentAnswer !== undefined && currentAnswer !== null && currentAnswer !== '';
   const currentStrikes = strikethroughs[currentQ.id] || [];
 
+  // Bulletproof options normalization
+  const normalizedOptions = (currentQ.options || []).map((opt, idx) => {
+    if (typeof opt === 'string') {
+      const key = String.fromCharCode(65 + idx);
+      return { key, text: opt, is_correct: currentQ.correct_key === key };
+    }
+    return {
+      key: opt.key || String.fromCharCode(65 + idx),
+      text: opt.text || opt.label || opt.content || '',
+      is_correct: Boolean(opt.is_correct),
+    };
+  });
+
   if (showResult) {
     const result = calculateScore();
     return (
@@ -261,6 +274,12 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
       {/* Exam Header Bar */}
       <div className="flex h-12 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/80 px-4 text-xs">
         <div className="flex items-center gap-3">
+          <img 
+            src="./images/passimark/passimark_icon_128x128.png" 
+            alt="Passimark" 
+            className="h-6 w-6 object-contain drop-shadow"
+            onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+          />
           <span className="font-bold text-slate-200">{exam.code}</span>
           <span className="text-slate-600">|</span>
           <span className="text-slate-400">Question {currentIndex + 1} of {questions.length}</span>
@@ -336,104 +355,102 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
 
               {/* Interactive Item Renderers */}
               <div className="mt-6">
-                {currentQ.type === 'single_choice' && (
-                  <div className="flex flex-col gap-2.5">
-                    {currentQ.options?.map((opt, idx) => {
-                      const isSelected = currentAnswer === opt.key;
-                      const isStruck = currentStrikes.includes(opt.key);
-                      return (
-                        <div
-                          key={opt.key}
-                          onClick={() => !isStruck && handleSelectOption(opt.key)}
-                          className={`group flex items-start justify-between rounded-xl border p-3.5 cursor-pointer transition-all ${
-                            isSelected
-                              ? 'border-brand-500 bg-brand-500/10 text-slate-100 shadow-sm'
-                              : isStruck
-                              ? 'border-slate-800/50 bg-slate-950/40 text-slate-600 opacity-50'
-                              : 'border-slate-800 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/80'
-                          }`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md font-mono text-xs font-bold ${
-                              isSelected ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-400 group-hover:text-slate-200'
-                            }`}>
-                              {opt.key}
-                            </span>
-                            <span className={`text-sm ${isStruck ? 'line-through' : ''}`}>
-                              {opt.text}
-                            </span>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleStrike(opt.key);
-                            }}
-                            title="Strike through option"
-                            className="text-xs text-slate-600 hover:text-slate-400 px-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                          >
-                            {isStruck ? 'Unstrike' : 'Strike'}
-                          </button>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-
-                {currentQ.type === 'multiple_choice' && (
+                {/* 1. Multiple Choice */}
+                {(currentQ.type === 'multiple_choice' || (Array.isArray(currentQ.correct_key) && currentQ.correct_key.length > 1)) ? (
                   <QuestionMultiSelect
-                    question={currentQ}
-                    selectedKeys={Array.isArray(currentAnswer) ? currentAnswer : []}
-                    onSelectKey={handleSelectOption}
+                    options={normalizedOptions}
+                    selections={Array.isArray(currentAnswer) ? currentAnswer : []}
+                    onChange={(keys) => handleSelectOption(keys)}
+                    strikes={new Set(currentStrikes)}
+                    onToggleStrike={toggleStrike}
+                    minSelections={Array.isArray(currentQ.correct_key) ? currentQ.correct_key.length : 2}
+                    maxSelections={Array.isArray(currentQ.correct_key) ? currentQ.correct_key.length : null}
                   />
-                )}
-
-                {currentQ.type === 'drag_drop' && (
+                ) : currentQ.type === 'drag_drop' ? (
                   <QuestionDragDrop
-                    payload={currentQ.interactive_payload}
-                    answers={typeof currentAnswer === 'object' ? currentAnswer : {}}
-                    onAnswerChange={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : {}}
+                    onChange={handleInteractiveAnswer}
                   />
-                )}
-
-                {currentQ.type === 'hotspot' && (
+                ) : currentQ.type === 'hotspot' ? (
                   <QuestionHotspot
-                    payload={currentQ.interactive_payload}
-                    selectedCoordinate={typeof currentAnswer === 'object' ? currentAnswer : null}
-                    onSelectCoordinate={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : null}
+                    onChange={handleInteractiveAnswer}
                   />
-                )}
-
-                {currentQ.type === 'build_list' && (
+                ) : currentQ.type === 'build_list' ? (
                   <QuestionReorder
-                    payload={currentQ.interactive_payload}
-                    arrangedItems={Array.isArray(currentAnswer) ? currentAnswer : []}
-                    onSequenceChange={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={Array.isArray(currentAnswer) ? currentAnswer : []}
+                    onChange={handleInteractiveAnswer}
                   />
-                )}
-
-                {currentQ.type === 'cloze' && (
+                ) : currentQ.type === 'cloze' ? (
                   <QuestionCloze
-                    payload={currentQ.interactive_payload}
-                    selections={typeof currentAnswer === 'object' ? currentAnswer : {}}
-                    onSelectionChange={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={typeof currentAnswer === 'object' && currentAnswer !== null ? currentAnswer : {}}
+                    onChange={handleInteractiveAnswer}
                   />
-                )}
-
-                {currentQ.type === 'create_tree' && (
+                ) : currentQ.type === 'create_tree' ? (
                   <QuestionCreateTree
-                    payload={currentQ.interactive_payload}
-                    treeState={typeof currentAnswer === 'object' ? currentAnswer : {}}
-                    onTreeChange={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={Array.isArray(currentAnswer) ? currentAnswer : []}
+                    onChange={handleInteractiveAnswer}
                   />
-                )}
-
-                {currentQ.type === 'fill_blank' && (
+                ) : currentQ.type === 'fill_blank' ? (
                   <QuestionFillBlank
-                    payload={currentQ.interactive_payload}
-                    textInput={typeof currentAnswer === 'string' ? currentAnswer : ''}
-                    onTextChange={handleInteractiveAnswer}
+                    payload={currentQ.interactive_payload || {}}
+                    value={typeof currentAnswer === 'string' ? currentAnswer : ''}
+                    onChange={handleInteractiveAnswer}
                   />
+                ) : (
+                  /* Single choice, Case study, or any other option-bearing item */
+                  <div className="flex flex-col gap-2.5">
+                    {normalizedOptions.length > 0 ? (
+                      normalizedOptions.map((opt) => {
+                        const isSelected = currentAnswer === opt.key;
+                        const isStruck = currentStrikes.includes(opt.key);
+                        return (
+                          <div
+                            key={opt.key}
+                            onClick={() => !isStruck && handleSelectOption(opt.key)}
+                            className={`group flex items-start justify-between rounded-xl border p-3.5 cursor-pointer transition-all ${
+                              isSelected
+                                ? 'border-brand-500 bg-brand-500/10 text-slate-100 shadow-sm'
+                                : isStruck
+                                ? 'border-slate-800/50 bg-slate-950/40 text-slate-600 opacity-50'
+                                : 'border-slate-800 bg-slate-900/40 hover:border-slate-700 hover:bg-slate-900/80'
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md font-mono text-xs font-bold ${
+                                isSelected ? 'bg-brand-500 text-slate-950' : 'bg-slate-800 text-slate-400 group-hover:text-slate-200'
+                              }`}>
+                                {opt.key}
+                              </span>
+                              <span className={`text-sm ${isStruck ? 'line-through' : ''}`}>
+                                {opt.text}
+                              </span>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleStrike(opt.key);
+                              }}
+                              title="Strike through option"
+                              className="text-xs text-slate-600 hover:text-slate-400 px-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                            >
+                              {isStruck ? 'Unstrike' : 'Strike'}
+                            </button>
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-6 text-center text-xs text-slate-400">
+                        Interactive task ready. Follow the prompt instructions above to complete your answer.
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
 

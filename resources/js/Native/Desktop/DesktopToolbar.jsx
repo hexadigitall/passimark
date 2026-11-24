@@ -28,12 +28,20 @@ export default function DesktopToolbar({
     <header className="flex h-11 select-none items-center justify-between border-b border-slate-800 bg-slate-900 px-3 text-xs text-slate-300">
       {/* Left: Brand + Native Menus */}
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2 pr-2 border-r border-slate-800">
-          <div className="flex h-6 w-6 items-center justify-center rounded bg-brand-500 font-bold text-slate-950 text-xs">
-            PM
-          </div>
-          <span className="font-semibold text-slate-100 tracking-tight">Passimark Desktop</span>
-          <span className="rounded bg-slate-800 px-1.5 py-0.5 text-[10px] text-brand-400 font-mono">v2.0 (Tauri Core)</span>
+        <div className="flex items-center gap-2.5 pr-3 border-r border-slate-800">
+          <img 
+            src="./images/passimark/passimark_icon_128x128.png" 
+            alt="Passimark" 
+            className="h-6 w-6 object-contain drop-shadow"
+            onError={(e) => { e.currentTarget.src = './images/passimark/icon.png'; }}
+          />
+          <span className="font-bold text-slate-100 tracking-tight flex items-center gap-1.5">
+            Passimark
+            <span className="rounded bg-brand-500/15 px-1.5 py-0.5 text-[9px] text-brand-400 font-mono font-bold border border-brand-500/30">
+              VCE SUITE
+            </span>
+          </span>
+          <span className="rounded bg-slate-800/80 px-1.5 py-0.5 text-[10px] text-slate-400 font-mono">v2.0</span>
         </div>
 
         {/* Native OS Menu Dropdowns */}

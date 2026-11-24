@@ -7,7 +7,7 @@ export default function QuestionReorder({
   onChange,
   disabled = false,
 }) {
-  const availableItems = payload.available_items || [];
+  const availableItems = payload.available_items || payload.items || [];
   const sequence = Array.isArray(value) ? value : [];
 
   // Lookup map for fast item text retrieval
