@@ -134,16 +134,16 @@ export default function MobilePlayer({ exam, mode = 'practice', onExitToLibrary 
   const isAnswered = currentAnswer !== undefined && currentAnswer !== null && currentAnswer !== '';
   const currentStrikes = strikethroughs[currentQ.id] || [];
 
-  const normalizedOptions = (currentQ.options || []).map((opt, idx) => {
-    if (typeof opt === 'string') {
-      const key = String.fromCharCode(65 + idx);
-      return { key, text: opt, is_correct: currentQ.correct_key === key };
-    }
-    return {
-      key: opt.key || String.fromCharCode(65 + idx),
-      text: opt.text || opt.label || opt.content || '',
-      is_correct: Boolean(opt.is_correct),
-    };
+  const rawOpts = currentQ.options || currentQ.choices || currentQ.answers || [];
+  const normalizedOptions = rawOpts.map((opt, idx) => {
+    const key = opt.key || opt.letter || String.fromCharCode(65 + idx);
+    const text = typeof opt === 'string' ? opt : (opt.text || opt.label || opt.content || opt.value || '');
+    const isCorrect = typeof opt === 'object' && opt.is_correct !== undefined
+      ? Boolean(opt.is_correct)
+      : (Array.isArray(currentQ.correct_key || currentQ.answer)
+          ? (currentQ.correct_key || currentQ.answer).includes(key)
+          : (currentQ.correct_key || currentQ.answer) === key);
+    return { key, text, is_correct: isCorrect };
   });
 
   const bgClass = isOledMode ? 'bg-[#000000]' : 'bg-slate-950';
@@ -244,8 +244,8 @@ export default function MobilePlayer({ exam, mode = 'practice', onExitToLibrary 
               </span>
             )}
           </div>
-          <p className="text-sm font-medium leading-relaxed text-slate-100">
-            {currentQ.content}
+          <p className="text-sm font-medium leading-relaxed text-slate-100 whitespace-pre-line">
+            {currentQ.content || currentQ.stem || currentQ.question || currentQ.text || 'Question Prompt'}
           </p>
         </div>
 
