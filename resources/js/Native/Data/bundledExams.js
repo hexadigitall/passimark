@@ -122,22 +122,22 @@ export const BUNDLED_EXAMS = [
     ],
   },
   {
-    id: 'aws-saa-c03',
+    id: 'aws-solutions-architect',
     code: 'SAA-C03',
-    title: 'AWS Certified Solutions Architect — Associate (SAA-C03)',
-    category: 'Cloud Architecture',
+    title: 'AWS Certified Solutions Architect – Associate (SAA-C03)',
+    category: 'Cloud Engineering',
     passingScore: 720,
     maxScore: 1000,
     timeLimitMinutes: 130,
-    mode: 'cat',
-    description: 'Rigorous multi-tier high-availability architecture, cost optimization, disaster recovery, and decoupled serverless patterns.',
+    mode: 'practice',
+    description: 'Scenario-driven cloud architecture assessment focused on multi-region high availability, cost optimization, and secure hybrid network topologies.',
     questions: [
       {
         id: 'aws-q1',
         type: 'single_choice',
         number: 1,
         domain: 'Design Resilient Architectures',
-        content: 'An enterprise application requires durable block storage supporting up to 64,000 IOPS with millisecond latencies across an active Cassandra database cluster deployed on EC2. Which Amazon EBS volume type meets these operational metrics?',
+        content: 'An enterprise e-commerce platform requires an ultra-low latency (< 1ms) persistent block storage volume capable of sustaining up to 64,000 IOPS for an Oracle database deployed on EC2. Which Amazon EBS volume type meets these operational metrics?',
         options: [
           { key: 'A', text: 'General Purpose SSD (gp3)', is_correct: false },
           { key: 'B', text: 'Provisioned IOPS SSD (io2 Block Express)', is_correct: true },
@@ -181,46 +181,483 @@ export const BUNDLED_EXAMS = [
     maxScore: 1000,
     timeLimitMinutes: 180,
     mode: 'cat',
-    description: 'Computer Adaptive Testing (CAT) simulating (ISC)² variable-length item routing using 3PL IRT scoring and Fisher Information optimization.',
+    description: 'Computer Adaptive Testing (CAT) simulating (ISC)² variable-length item routing using 3PL IRT scoring and Fisher Information optimization (25 authentic flagship questions).',
     questions: [
       {
         id: 'cissp-q1',
         type: 'single_choice',
         number: 1,
-        domain: 'Domain 1: Security and Risk Management',
-        content: 'When designing an enterprise access control matrix, the primary objective of separation of duties (SoD) is to:',
+        domain: 'Security and Risk Management',
+        content: 'An organization’s Chief Information Security Officer (CISO) is establishing an Information Security Management System (ISMS) to achieve international accreditation. Which standard should the CISO select to structure the program requirements?',
         options: [
-          { key: 'A', text: 'Prevent single-point collusion and fraudulent transactions by dividing critical task authorizations', is_correct: true },
-          { key: 'B', text: 'Enforce mandatory access control across classified multi-level file systems', is_correct: false },
-          { key: 'C', text: 'Minimize biometric false rejection rates in multi-factor authentication systems', is_correct: false },
-          { key: 'D', text: 'Eliminate administrative overhead during employee role transitions', is_correct: false },
+          { key: 'A', text: 'ISO/IEC 27002', is_correct: false },
+          { key: 'B', text: 'ISO/IEC 27001', is_correct: true },
+          { key: 'C', text: 'NIST SP 800-53', is_correct: false },
+          { key: 'D', text: 'COBIT', is_correct: false }
         ],
-        correct_key: 'A',
-        irt_a: 2.10,
-        irt_b: 0.15,
-        irt_c: 0.20,
-        explanation: 'Separation of duties (SoD) mandates that no single individual has total authority to execute a high-risk process end-to-end, preventing fraud and error through dual oversight.',
-        reference: '(ISC)² CISSP CBK Domain 1 — Access Governance',
+        correct_key: 'B',
+        irt_a: 1.95,
+        irt_b: -1.98,
+        irt_c: 0.2,
+        explanation: 'ISO/IEC 27001 specifies the auditable requirements for establishing, operating, and certifying an ISMS. ISO 27002 provides recommended security controls (guidelines). NIST SP 800-53 is a US federal control catalog, and COBIT is an IT governance framework.',
+        reference: 'CISSP CBK Security and Risk Management'
       },
       {
         id: 'cissp-q2',
         type: 'single_choice',
         number: 2,
-        domain: 'Domain 3: Security Architecture and Engineering',
+        domain: 'Security and Risk Management',
+        content: 'During a security audit, an administrator discovers that an unauthorized script modified system log entries on a core database server. Which arm of the CIA triad has been directly breached?',
+        options: [
+          { key: 'A', text: 'Confidentiality', is_correct: false },
+          { key: 'B', text: 'Authenticity', is_correct: false },
+          { key: 'C', text: 'Integrity', is_correct: true },
+          { key: 'D', text: 'Availability', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 2.1,
+        irt_b: -1.8,
+        irt_c: 0.2,
+        explanation: 'Integrity guarantees that data is protected against unauthorized modification or alteration. The unauthorized modification of log files violates integrity (Alteration in the DAD triad).',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q3',
+        type: 'single_choice',
+        number: 3,
+        domain: 'Security and Risk Management',
+        content: 'Which of the following represents the MOST effective primary objective of an information security governance program?',
+        options: [
+          { key: 'A', text: 'Ensuring total compliance with international privacy laws', is_correct: false },
+          { key: 'B', text: 'Aligning security strategy with corporate business goals', is_correct: true },
+          { key: 'C', text: 'Deploying automated zero-trust architectural boundaries', is_correct: false },
+          { key: 'D', text: 'Eliminating all high-priority technical vulnerabilities', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 2.25,
+        irt_b: -1.62,
+        irt_c: 0.2,
+        explanation: 'The overarching goal of security governance is aligning security strategy with enterprise business strategy and risk tolerance. Compliance and technical vulnerability mitigation are sub-components of governance, not its primary driver.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q4',
+        type: 'single_choice',
+        number: 4,
+        domain: 'Security and Risk Management',
+        content: 'An enterprise is mapping its internal IT service management (ITSM) and incident handling workflows to an established industry framework. Which framework is explicitly designed for IT service operations?',
+        options: [
+          { key: 'A', text: 'ITIL', is_correct: true },
+          { key: 'B', text: 'COBIT', is_correct: false },
+          { key: 'C', text: 'NIST SP 800-37', is_correct: false },
+          { key: 'D', text: 'ISO 27001', is_correct: false }
+        ],
+        correct_key: 'A',
+        irt_a: 2.4,
+        irt_b: -1.44,
+        irt_c: 0.2,
+        explanation: 'ITIL (Information Technology Infrastructure Library) focuses on IT service management (ITSM) lifecycle operations and service delivery. COBIT focuses on enterprise IT governance.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q5',
+        type: 'single_choice',
+        number: 5,
+        domain: 'Security and Risk Management',
+        content: 'An attacker uses network sniffing software to capture unencrypted password hashes transmitted across an internal network subnet. This attack represents a failure of which CIA concept?',
+        options: [
+          { key: 'A', text: 'Integrity', is_correct: false },
+          { key: 'B', text: 'Availability', is_correct: false },
+          { key: 'C', text: 'Non-repudiation', is_correct: false },
+          { key: 'D', text: 'Confidentiality', is_correct: true }
+        ],
+        correct_key: 'D',
+        irt_a: 1.8,
+        irt_b: -1.26,
+        irt_c: 0.2,
+        explanation: 'Intercepting and viewing sensitive data (passwords) violates Confidentiality (resulting in Disclosure).',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q6',
+        type: 'single_choice',
+        number: 6,
+        domain: 'Security and Risk Management',
+        content: 'Who bears ultimate legal responsibility and accountability for information security governance within an enterprise?',
+        options: [
+          { key: 'A', text: 'Chief Information Security Officer (CISO)', is_correct: false },
+          { key: 'B', text: 'Senior Management / Board of Directors', is_correct: true },
+          { key: 'C', text: 'Data Custodians', is_correct: false },
+          { key: 'D', text: 'Chief Technology Officer (CTO)', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.95,
+        irt_b: -1.08,
+        irt_c: 0.2,
+        explanation: 'Due care and due diligence dictate that ultimate liability and fiduciary responsibility always rest with executive leadership (Board of Directors and Senior Management).',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q7',
+        type: 'single_choice',
+        number: 7,
+        domain: 'Security and Risk Management',
+        content: 'Which NIST Special Publication defines the official Risk Management Framework (RMF) for federal information systems?',
+        options: [
+          { key: 'A', text: 'NIST SP 800-53', is_correct: false },
+          { key: 'B', text: 'NIST SP 800-30', is_correct: false },
+          { key: 'C', text: 'NIST SP 800-37', is_correct: true },
+          { key: 'D', text: 'NIST SP 800-61', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 2.1,
+        irt_b: -0.9,
+        irt_c: 0.2,
+        explanation: 'NIST SP 800-37 defines the Risk Management Framework (RMF). SP 800-53 provides the security control catalog, SP 800-30 covers risk assessments, and SP 800-61 covers incident handling.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q8',
+        type: 'single_choice',
+        number: 8,
+        domain: 'Security and Risk Management',
+        content: 'A software company undergoes a vendor assessment. The auditor requests evidence demonstrating that management takes prudent and responsible steps to protect company assets. What legal concept does this demonstrate?',
+        options: [
+          { key: 'A', text: 'Due Care', is_correct: true },
+          { key: 'B', text: 'Due Diligence', is_correct: false },
+          { key: 'C', text: 'Indemnification', is_correct: false },
+          { key: 'D', text: 'Strict Liability', is_correct: false }
+        ],
+        correct_key: 'A',
+        irt_a: 2.25,
+        irt_b: -0.72,
+        irt_c: 0.2,
+        explanation: 'Due care means implementing the proper actions and controls that a reasonable person would take. Due diligence is the ongoing verification and investigative practice to confirm controls work.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q9',
+        type: 'single_choice',
+        number: 9,
+        domain: 'Security and Risk Management',
+        content: 'In quantitative risk analysis, if an asset value (AV) is $500,000 and the Exposure Factor (EF) for a flood event is 40%, what is the Single Loss Expectancy (SLE)?',
+        options: [
+          { key: 'A', text: '$100,000', is_correct: false },
+          { key: 'B', text: '$200,000', is_correct: true },
+          { key: 'C', text: '$250,000', is_correct: false },
+          { key: 'D', text: '$400,000', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 2.4,
+        irt_b: -0.54,
+        irt_c: 0.2,
+        explanation: 'SLE = Asset Value (AV) * Exposure Factor (EF) = $500,000 * 0.40 = $200,000.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q10',
+        type: 'single_choice',
+        number: 10,
+        domain: 'Security and Risk Management',
+        content: 'If an organization determines that the Annualized Rate of Occurrence (ARO) for a server outage is 0.5 (once every two years) and the SLE is $80,000, what is the maximum justifiable annual expenditure for a countermeasure?',
+        options: [
+          { key: 'A', text: '$80,000', is_correct: false },
+          { key: 'B', text: '$40,000', is_correct: true },
+          { key: 'C', text: '$160,000', is_correct: false },
+          { key: 'D', text: '$20,000', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.8,
+        irt_b: -0.36,
+        irt_c: 0.2,
+        explanation: 'Annualized Loss Expectancy (ALE) = SLE * ARO = $80,000 * 0.5 = $40,000. Countermeasure annual cost should never exceed ALE.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q11',
+        type: 'single_choice',
+        number: 11,
+        domain: 'Security and Risk Management',
+        content: 'Purchasing cybersecurity insurance to offset financial liabilities from potential ransomware attacks is an example of which risk response strategy?',
+        options: [
+          { key: 'A', text: 'Risk Mitigation', is_correct: false },
+          { key: 'B', text: 'Risk Avoidance', is_correct: false },
+          { key: 'C', text: 'Risk Transfer', is_correct: true },
+          { key: 'D', text: 'Risk Acceptance', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 1.95,
+        irt_b: -0.18,
+        irt_c: 0.2,
+        explanation: 'Transferring financial liability to a third party (such as an insurance underwriter) is Risk Transfer / Sharing.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q12',
+        type: 'single_choice',
+        number: 12,
+        domain: 'Security and Risk Management',
+        content: 'Which role in an organization is ultimately accountable for determining data sensitivity classifications and granting access rights?',
+        options: [
+          { key: 'A', text: 'Data Custodian', is_correct: false },
+          { key: 'B', text: 'Data Owner / Information Owner', is_correct: true },
+          { key: 'C', text: 'Security Administrator', is_correct: false },
+          { key: 'D', text: 'Database Administrator (DBA)', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 2.1,
+        irt_b: 0.0,
+        irt_c: 0.2,
+        explanation: 'The Data Owner (typically a business manager) determines classification and authorizes access. The Data Custodian implements technical safeguards on behalf of the owner.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q13',
+        type: 'single_choice',
+        number: 13,
+        domain: 'Security and Risk Management',
+        content: 'When designing an enterprise access control matrix, the primary objective of separation of duties (SoD) is to:',
+        options: [
+          { key: 'A', text: 'Prevent single-point collusion and fraudulent transactions by dividing critical task authorizations', is_correct: true },
+          { key: 'B', text: 'Enforce mandatory access control across classified multi-level file systems', is_correct: false },
+          { key: 'C', text: 'Minimize biometric false rejection rates in multi-factor authentication systems', is_correct: false },
+          { key: 'D', text: 'Eliminate administrative overhead during employee role transitions', is_correct: false }
+        ],
+        correct_key: 'A',
+        irt_a: 2.25,
+        irt_b: 0.18,
+        irt_c: 0.2,
+        explanation: 'Separation of duties (SoD) mandates that no single individual has total authority to execute a high-risk process end-to-end, preventing fraud and error through dual oversight.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q14',
+        type: 'single_choice',
+        number: 14,
+        domain: 'Security and Risk Management',
         content: 'In the Bell-LaPadula mathematical security model, which axiomatic property prevents a subject with high security clearance from writing sensitive data to an object at a lower clearance level (No Write Down)?',
         options: [
           { key: 'A', text: 'The Simple Security Property (*-property)', is_correct: false },
           { key: 'B', text: 'The Star Property (*-property)', is_correct: true },
           { key: 'C', text: 'The Discretionary Security Property', is_correct: false },
-          { key: 'D', text: 'The Biba Invocation Property', is_correct: false },
+          { key: 'D', text: 'The Biba Invocation Property', is_correct: false }
         ],
         correct_key: 'B',
-        irt_a: 2.40,
-        irt_b: 0.70,
-        irt_c: 0.25,
+        irt_a: 2.4,
+        irt_b: 0.36,
+        irt_c: 0.2,
         explanation: 'The Bell-LaPadula Star (*)-Property prevents high-clearance subjects from writing classified data into unclassified receptacles ("No Write Down"), preserving confidentiality.',
-        reference: 'Bell-LaPadula Security Model (DoD Standard)',
+        reference: 'CISSP CBK Security and Risk Management'
       },
+      {
+        id: 'cissp-q15',
+        type: 'single_choice',
+        number: 15,
+        domain: 'Security and Risk Management',
+        content: 'Which integrity-focused security model enforces separation of duties and well-formed transactions using Constrained Data Items (CDIs) and Transformation Procedures (TPs)?',
+        options: [
+          { key: 'A', text: 'Biba Model', is_correct: false },
+          { key: 'B', text: 'Clark-Wilson Model', is_correct: true },
+          { key: 'C', text: 'Bell-LaPadula Model', is_correct: false },
+          { key: 'D', text: 'Brewer-Nash (Chinese Wall) Model', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.8,
+        irt_b: 0.54,
+        irt_c: 0.2,
+        explanation: 'The Clark-Wilson model is explicitly built around commercial integrity, mandating transformation procedures (TPs) acting on constrained data items (CDIs) with strict separation of duties.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q16',
+        type: 'single_choice',
+        number: 16,
+        domain: 'Security and Risk Management',
+        content: 'Which security model is specifically engineered to dynamically prevent conflicts of interest by restricting access based on a subject’s past query history?',
+        options: [
+          { key: 'A', text: 'Brewer-Nash (Chinese Wall)', is_correct: true },
+          { key: 'B', text: 'Graham-Denning', is_correct: false },
+          { key: 'C', text: 'Harrison-Ruzzo-Ullman (HRU)', is_correct: false },
+          { key: 'D', text: 'Take-Grant Model', is_correct: false }
+        ],
+        correct_key: 'A',
+        irt_a: 1.95,
+        irt_b: 0.72,
+        irt_c: 0.2,
+        explanation: 'The Brewer-Nash (Chinese Wall) model dynamically builds access boundaries around conflict-of-interest data classes based on what the user has previously accessed.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q17',
+        type: 'single_choice',
+        number: 17,
+        domain: 'Security and Risk Management',
+        content: 'Under the General Data Protection Regulation (GDPR), within what timeframe must a data controller report a personal data breach to the supervisory authority?',
+        options: [
+          { key: 'A', text: '24 hours', is_correct: false },
+          { key: 'B', text: '48 hours', is_correct: false },
+          { key: 'C', text: '72 hours', is_correct: true },
+          { key: 'D', text: '30 business days', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 2.1,
+        irt_b: 0.9,
+        irt_c: 0.2,
+        explanation: 'Article 33 of GDPR mandates notification to the relevant supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q18',
+        type: 'single_choice',
+        number: 18,
+        domain: 'Security and Risk Management',
+        content: 'Which US regulation mandates strict governance and internal accounting controls to prevent corporate financial reporting fraud for publicly traded companies?',
+        options: [
+          { key: 'A', text: 'HIPAA', is_correct: false },
+          { key: 'B', text: 'Sarbanes-Oxley Act (SOX)', is_correct: true },
+          { key: 'C', text: 'Gramm-Leach-Bliley Act (GLBA)', is_correct: false },
+          { key: 'D', text: 'FISMA', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 2.25,
+        irt_b: 1.08,
+        irt_c: 0.2,
+        explanation: 'The Sarbanes-Oxley Act of 2002 (SOX) protects investors from fraudulent corporate accounting practices through Section 404 internal controls audits.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q19',
+        type: 'single_choice',
+        number: 19,
+        domain: 'Security and Risk Management',
+        content: 'What is the standard burden of proof required to secure a conviction in criminal law proceedings in common law jurisdictions?',
+        options: [
+          { key: 'A', text: 'Preponderance of the evidence', is_correct: false },
+          { key: 'B', text: 'Clear and convincing evidence', is_correct: false },
+          { key: 'C', text: 'Beyond a reasonable doubt', is_correct: true },
+          { key: 'D', text: 'Probable cause', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 2.4,
+        irt_b: 1.26,
+        irt_c: 0.2,
+        explanation: 'Criminal convictions require proof beyond a reasonable doubt. Civil law relies on a preponderance of the evidence.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q20',
+        type: 'single_choice',
+        number: 20,
+        domain: 'Security and Risk Management',
+        content: 'Which of the following offboarding procedures is MOST critical to execute immediately upon the termination of a systems engineer?',
+        options: [
+          { key: 'A', text: 'Conducting a formal exit interview', is_correct: false },
+          { key: 'B', text: 'Disabling all logical user accounts and system access', is_correct: true },
+          { key: 'C', text: 'Collecting physical badges and parking passes', is_correct: false },
+          { key: 'D', text: 'Signing a post-employment non-compete waiver', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.8,
+        irt_b: 1.44,
+        irt_c: 0.2,
+        explanation: 'Disabling all logical access accounts prevents unauthorized system access, data exfiltration, or malicious destruction upon termination.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q21',
+        type: 'single_choice',
+        number: 21,
+        domain: 'Security and Risk Management',
+        content: 'An organization enforces a policy where two separate financial officers are required to key in independent halves of an authorization code to approve Wire Transfers over $1,000,000. This is an example of:',
+        options: [
+          { key: 'A', text: 'Least Privilege', is_correct: false },
+          { key: 'B', text: 'Dual Control', is_correct: true },
+          { key: 'C', text: 'Job Rotation', is_correct: false },
+          { key: 'D', text: 'Need to Know', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.95,
+        irt_b: 1.62,
+        irt_c: 0.2,
+        explanation: 'Dual control requires two individuals to act together to complete a high-risk operation.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q22',
+        type: 'single_choice',
+        number: 22,
+        domain: 'Security and Risk Management',
+        content: 'What form of legal protection automatically applies to an author\'s original written software code as soon as it is written in a tangible file?',
+        options: [
+          { key: 'A', text: 'Copyright', is_correct: true },
+          { key: 'B', text: 'Trademark', is_correct: false },
+          { key: 'C', text: 'Patent', is_correct: false },
+          { key: 'D', text: 'Trade Secret', is_correct: false }
+        ],
+        correct_key: 'A',
+        irt_a: 2.1,
+        irt_b: 1.8,
+        irt_c: 0.2,
+        explanation: 'Copyright protection attaches automatically upon the creation of an original work fixed in a tangible medium.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q23',
+        type: 'single_choice',
+        number: 23,
+        domain: 'Security and Risk Management',
+        content: 'A company requires all employees to attend annual cybersecurity training and sign an Acceptable Use Policy (AUP). What type of control is being implemented?',
+        options: [
+          { key: 'A', text: 'Technical Control', is_correct: false },
+          { key: 'B', text: 'Physical Control', is_correct: false },
+          { key: 'C', text: 'Administrative Control', is_correct: true },
+          { key: 'D', text: 'Corrective Control', is_correct: false }
+        ],
+        correct_key: 'C',
+        irt_a: 2.25,
+        irt_b: 1.98,
+        irt_c: 0.2,
+        explanation: 'Security awareness training, policies, and AUP sign-offs are administrative (management) controls.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q24',
+        type: 'single_choice',
+        number: 24,
+        domain: 'Security and Risk Management',
+        content: 'A CISSP holder is asked by their employer to perform an offensive penetration test on a competitor’s cloud infrastructure without written consent. Refusing this request aligns directly with which ISC2 Ethics Canon?',
+        options: [
+          { key: 'A', text: 'Canon 1: Protect society and infrastructure', is_correct: false },
+          { key: 'B', text: 'Canon 2: Act honorably, honestly, justly, responsibly, and legally', is_correct: true },
+          { key: 'C', text: 'Canon 3: Provide diligent service to principals', is_correct: false },
+          { key: 'D', text: 'Canon 4: Advance and protect the profession', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 2.4,
+        irt_b: 2.16,
+        irt_c: 0.2,
+        explanation: 'Canon 2 mandates acting legally and honorably. Performing unauthorized hacking violates computer misuse laws.',
+        reference: 'CISSP CBK Security and Risk Management'
+      },
+      {
+        id: 'cissp-q25',
+        type: 'single_choice',
+        number: 25,
+        domain: 'Security and Risk Management',
+        content: 'What is the primary purpose of executing a Non-Disclosure Agreement (NDA) during employee onboarding?',
+        options: [
+          { key: 'A', text: 'Granting logical access privileges to proprietary files', is_correct: false },
+          { key: 'B', text: 'Establishing legal enforceability to protect confidential information', is_correct: true },
+          { key: 'C', text: 'Ensuring compliance with local labor union regulations', is_correct: false },
+          { key: 'D', text: 'Authorizing background checks through credit agencies', is_correct: false }
+        ],
+        correct_key: 'B',
+        irt_a: 1.8,
+        irt_b: 2.34,
+        irt_c: 0.2,
+        explanation: 'NDAs establish a legally binding requirement for employees to protect organizational secrets and confidential assets.',
+        reference: 'CISSP CBK Security and Risk Management'
+      }
     ],
   },
 ];

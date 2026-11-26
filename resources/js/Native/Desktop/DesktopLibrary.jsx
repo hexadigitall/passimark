@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { BUNDLED_EXAMS } from '../Data/bundledExams';
 
-export default function DesktopLibrary({ onSelectExam, onFileLoad }) {
+export default function DesktopLibrary({ onSelectExam, onFileLoad, onOpenPasteModal }) {
   const [selectedExamId, setSelectedExamId] = useState(BUNDLED_EXAMS[0].id);
   const [examMode, setExamMode] = useState('practice'); // practice, timed, cat
   const [dragActive, setDragActive] = useState(false);
@@ -92,17 +92,25 @@ export default function DesktopLibrary({ onSelectExam, onFileLoad }) {
           Drag and drop your <span className="text-brand-400 font-mono">.psmk</span> (Passimark), <span className="text-blue-400 font-mono">.vce</span> (Visual CertExam), or <span className="text-purple-400 font-mono">.psme</span> (Encrypted) package anywhere into this window.
         </p>
 
-        <div className="mt-4 flex items-center gap-3">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
           <label className="cursor-pointer rounded-lg bg-slate-800 px-4 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700 hover:text-white transition-colors border border-slate-700 flex items-center gap-2">
             <FolderOpen className="h-4 w-4 text-brand-400" />
-            <span>Browse Local File</span>
+            <span>Browse Local File (.vce, .psmk, .txt)</span>
             <input 
               type="file" 
-              accept=".psmk,.vce,.psme,.json" 
+              accept=".psmk,.vce,.psme,.json,.txt,.csv,.md" 
               className="hidden" 
               onChange={handleFileInput}
             />
           </label>
+          <button
+            type="button"
+            onClick={onOpenPasteModal}
+            className="rounded-lg bg-slate-800/90 px-4 py-2 text-xs font-medium text-emerald-300 hover:bg-slate-700 hover:text-emerald-200 transition-colors border border-slate-700 flex items-center gap-2"
+          >
+            <FileCode className="h-4 w-4 text-emerald-400" />
+            <span>Paste Exam Dump Text</span>
+          </button>
         </div>
       </div>
 

@@ -171,14 +171,15 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
     questions.forEach((q) => {
       const ans = answers[q.id];
       if (!ans) return;
-      if (q.type === 'single_choice' && ans === q.correct_key) correctCount++;
-      else if (q.type === 'multiple_choice' && Array.isArray(ans) && Array.isArray(q.correct_key)) {
-        if (ans.length === q.correct_key.length && ans.every((k) => q.correct_key.includes(k))) correctCount++;
+      const correct = q.correct_key || q.answer;
+      if (q.type === 'single_choice' && ans === correct) correctCount++;
+      else if (q.type === 'multiple_choice' && Array.isArray(ans) && Array.isArray(correct)) {
+        if (ans.length === correct.length && ans.every((k) => correct.includes(k))) correctCount++;
       } else if (q.type === 'drag_drop' && typeof ans === 'object') {
         const targets = q.interactive_payload?.targets || [];
         const isMatch = targets.every((t) => ans[t.id] === t.correct_source_id);
         if (isMatch) correctCount++;
-      } else if (ans === q.correct_key) {
+      } else if (ans === correct) {
         correctCount++;
       }
     });
@@ -196,16 +197,16 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
   const currentStrikes = strikethroughs[currentQ.id] || [];
 
   // Bulletproof options normalization
-  const normalizedOptions = (currentQ.options || []).map((opt, idx) => {
-    if (typeof opt === 'string') {
-      const key = String.fromCharCode(65 + idx);
-      return { key, text: opt, is_correct: currentQ.correct_key === key };
-    }
-    return {
-      key: opt.key || String.fromCharCode(65 + idx),
-      text: opt.text || opt.label || opt.content || '',
-      is_correct: Boolean(opt.is_correct),
-    };
+  const rawOpts = currentQ.options || currentQ.choices || currentQ.answers || [];
+  const normalizedOptions = rawOpts.map((opt, idx) => {
+    const key = opt.key || opt.letter || String.fromCharCode(65 + idx);
+    const text = typeof opt === 'string' ? opt : (opt.text || opt.label || opt.content || opt.value || '');
+    const isCorrect = typeof opt === 'object' && opt.is_correct !== undefined
+      ? Boolean(opt.is_correct)
+      : (Array.isArray(currentQ.correct_key || currentQ.answer)
+          ? (currentQ.correct_key || currentQ.answer).includes(key)
+          : (currentQ.correct_key || currentQ.answer) === key);
+    return { key, text, is_correct: isCorrect };
   });
 
   if (showResult) {
@@ -342,15 +343,17 @@ export default function DesktopPlayer({ exam, mode = 'practice', onExitToLibrary
               <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm">
                 <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
                   <span className="font-semibold text-brand-400 uppercase tracking-wider text-[10px]">
-                    Item Type: {currentQ.type.replace('_', ' ')}
+                    Item Type: {(currentQ.type || 'single_choice').replace('_', ' ')}
                   </span>
                   <span className="text-slate-500">
                     Difficulty: b = {currentQ.irt_b ?? 0.0} | Discrimination: a = {currentQ.irt_a ?? 1.5}
                   </span>
                 </div>
-                <p className="text-sm md:text-base font-medium text-slate-100 leading-relaxed">
-                  {currentQ.content}
-                </p>
+                <div className="max-h-72 overflow-y-auto pr-2">
+                  <p className="text-sm md:text-base font-medium text-slate-100 leading-relaxed whitespace-pre-line">
+                    {currentQ.content || currentQ.stem || currentQ.question || currentQ.text || 'Question Prompt'}
+                  </p>
+                </div>
               </div>
 
               {/* Interactive Item Renderers */}

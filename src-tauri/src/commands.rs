@@ -151,6 +151,27 @@ pub async fn parse_package_file(file_path: String) -> Result<serde_json::Value, 
         }
     }
 
+    // Detect encrypted Visual CertExam container (0x85 0xA8 magic + low printable ASCII ratio)
+    let sample_len = buffer.len().min(4096);
+    let printable_count = buffer[..sample_len]
+        .iter()
+        .filter(|&&b| (b >= 32 && b <= 126) || b == b'\n' || b == b'\r' || b == b'\t')
+        .count();
+    let printable_ratio = if sample_len > 0 {
+        printable_count as f64 / sample_len as f64
+    } else {
+        0.0
+    };
+
+    if buffer.starts_with(&[0x85, 0xA8]) || (ext == "vce" && printable_ratio < 0.82) {
+        return Ok(serde_json::json!({
+            "error": "ENCRYPTED_VCE",
+            "filename": filename,
+            "title": filename.trim_end_matches(&format!(".{}", ext)),
+            "message": "Avanset proprietary container encryption detected. Modern .vce files are protected by AES/SQLCipher lock-in. Export as Text or PDF in VCE Designer, or paste your question text directly."
+        }));
+    }
+
     // Heuristic extraction of printable ASCII/Latin1 strings for VCE / binary files
     let mut printable_lines = Vec::new();
     let mut current_chunk = Vec::new();
@@ -256,6 +277,15 @@ pub async fn parse_package_file(file_path: String) -> Result<serde_json::Value, 
     }
 
     if questions.is_empty() {
+        if buffer.starts_with(&[0x85, 0xA8]) || ext == "vce" {
+            return Ok(serde_json::json!({
+                "error": "ENCRYPTED_VCE",
+                "filename": filename,
+                "title": base_name,
+                "message": "Avanset proprietary container encryption detected. Modern .vce files are protected by AES/SQLCipher lock-in. Export as Text or PDF in VCE Designer, or paste your question text directly."
+            }));
+        }
+
         questions.push(serde_json::json!({
             "id": "imp-q1",
             "number": 1,
